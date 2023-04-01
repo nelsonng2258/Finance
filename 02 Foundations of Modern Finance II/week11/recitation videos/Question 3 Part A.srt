@@ -1,0 +1,480 @@
+0
+00:00:00,000 --> 00:00:01,875
+PROFESSOR: In this question, I will teach you
+
+1
+00:00:01,875 --> 00:00:05,190
+how to construct arbitrage trading strategies
+
+2
+00:00:05,190 --> 00:00:07,290
+in foreign exchange markets.
+
+3
+00:00:07,290 --> 00:00:11,070
+Suppose that, currently, the currency pay rate United States
+
+4
+00:00:11,070 --> 00:00:12,210
+dollar to Japanese yen--
+
+5
+00:00:12,210 --> 00:00:16,890
+USD, JPY-- trades at 105.
+
+6
+00:00:16,890 --> 00:00:18,920
+This means that for one United States dollar,
+
+7
+00:00:18,920 --> 00:00:22,290
+you get 105 Japanese yen.
+
+8
+00:00:22,290 --> 00:00:28,230
+Now also, suppose that USD-JPY currency pair,
+
+9
+00:00:28,230 --> 00:00:30,660
+one-year forward on that currency pair
+
+10
+00:00:30,660 --> 00:00:33,300
+currently trades at 106.
+
+11
+00:00:33,300 --> 00:00:36,390
+Now we will also assume that the current US one-year risk-free
+
+12
+00:00:36,390 --> 00:00:40,440
+interest rate is 1%, and the current Japanese one-year
+
+13
+00:00:40,440 --> 00:00:43,770
+risk-free interest rate is 3%.
+
+14
+00:00:43,770 --> 00:00:47,310
+So the goal is to construct an arbitrage trading
+
+15
+00:00:47,310 --> 00:00:53,410
+strategy that pays $100 right now and nothing in the future.
+
+16
+00:00:53,410 --> 00:00:56,220
+Let me mention that all of these interest rates
+
+17
+00:00:56,220 --> 00:01:02,070
+and the current pricing of this currency pair's exchange rates
+
+18
+00:01:02,070 --> 00:01:07,240
+are hypothetical and may not reflect the current reality.
+
+19
+00:01:07,240 --> 00:01:08,980
+Let's start solving this question
+
+20
+00:01:08,980 --> 00:01:13,960
+by assuming that we borrow x United States dollars today.
+
+21
+00:01:13,960 --> 00:01:16,990
+We will keep $100 to ourselves and consume it
+
+22
+00:01:16,990 --> 00:01:18,860
+because this is what we want.
+
+23
+00:01:18,860 --> 00:01:22,270
+We want to construct a strategy that gives us $100 right now.
+
+24
+00:01:22,270 --> 00:01:24,850
+So out of this x borrowed amount,
+
+25
+00:01:24,850 --> 00:01:26,800
+we keep $100 to ourselves.
+
+26
+00:01:26,800 --> 00:01:30,550
+And then the rest, x minus 100, what
+
+27
+00:01:30,550 --> 00:01:32,800
+we will do with this is we will exchange it
+
+28
+00:01:32,800 --> 00:01:38,110
+right now to Japanese yen at the current spot exchange rate,
+
+29
+00:01:38,110 --> 00:01:42,490
+and then we will invest this amount of Japanese yen
+
+30
+00:01:42,490 --> 00:01:46,570
+into the one-year risk-free Japanese bond that pays us
+
+31
+00:01:46,570 --> 00:01:48,670
+3% interest rate.
+
+32
+00:01:48,670 --> 00:01:53,380
+Now the question is, how much will we get in one year?
+
+33
+00:01:53,380 --> 00:01:56,050
+Well, let's see.
+
+34
+00:01:56,050 --> 00:02:00,220
+This is how much USD we have today, x minus 100.
+
+35
+00:02:00,220 --> 00:02:02,740
+We're exchanging this into Japanese yen,
+
+36
+00:02:02,740 --> 00:02:05,500
+and the current exchange rate is 105,
+
+37
+00:02:05,500 --> 00:02:10,509
+so this is how much Japanese yen we have after we exchanged
+
+38
+00:02:10,509 --> 00:02:12,250
+this USD amount.
+
+39
+00:02:12,250 --> 00:02:15,610
+And then we're earning 3% interest rate on this amount
+
+40
+00:02:15,610 --> 00:02:18,910
+in Japanese yen, and the interest rate is 3%,
+
+41
+00:02:18,910 --> 00:02:24,130
+so this is multiplied by 1 plus 3%.
+
+42
+00:02:24,130 --> 00:02:26,320
+So this is how much in Japanese yen
+
+43
+00:02:26,320 --> 00:02:31,090
+we will get in one year from this investment strategy.
+
+44
+00:02:31,090 --> 00:02:34,370
+Now, what are our liabilities?
+
+45
+00:02:34,370 --> 00:02:38,740
+Well, we borrowed x United States dollars,
+
+46
+00:02:38,740 --> 00:02:41,590
+and we borrowed it at the risk-free rate of 1%.
+
+47
+00:02:41,590 --> 00:02:44,410
+So therefore, in year one, we owe
+
+48
+00:02:44,410 --> 00:02:49,280
+the bank or whoever we borrowed this from x times 1 plus 1%.
+
+49
+00:02:49,280 --> 00:02:54,250
+And so our liabilities are in the United States dollars.
+
+50
+00:02:54,250 --> 00:02:56,680
+Now, because our income is in Japanese yen,
+
+51
+00:02:56,680 --> 00:03:00,250
+we can convert these liabilities in the Japanese yen
+
+52
+00:03:00,250 --> 00:03:03,220
+as well so that that way we can match our income
+
+53
+00:03:03,220 --> 00:03:06,200
+and our liabilities in the same currency.
+
+54
+00:03:06,200 --> 00:03:08,740
+So now if this is our liabilities in the United
+
+55
+00:03:08,740 --> 00:03:12,040
+States in year one, what would be
+
+56
+00:03:12,040 --> 00:03:16,160
+these liabilities in Japanese yen one year from now?
+
+57
+00:03:16,160 --> 00:03:18,880
+Well, we can know this for sure if we
+
+58
+00:03:18,880 --> 00:03:23,110
+lock into the current one-year forward exchange rate that
+
+59
+00:03:23,110 --> 00:03:24,850
+currently trades at 106.
+
+60
+00:03:24,850 --> 00:03:28,360
+So if we do that, then our liabilities one year
+
+61
+00:03:28,360 --> 00:03:35,920
+from now in Japanese yen would be x times 1 plus 1% times 106.
+
+62
+00:03:35,920 --> 00:03:39,610
+Now since we expressed both our income and our liabilities
+
+63
+00:03:39,610 --> 00:03:41,860
+in Japanese yen, all we have to do
+
+64
+00:03:41,860 --> 00:03:44,230
+is to make sure that our liabilities-- or we have
+
+65
+00:03:44,230 --> 00:03:49,190
+enough income to satisfy our liabilities in one year.
+
+66
+00:03:49,190 --> 00:03:52,330
+So all we have to do is we have to equate
+
+67
+00:03:52,330 --> 00:03:55,270
+our income to our liabilities, and this is the equation
+
+68
+00:03:55,270 --> 00:03:56,410
+that we have.
+
+69
+00:03:56,410 --> 00:03:59,020
+This is a very simple equation with just one unknown.
+
+70
+00:03:59,020 --> 00:04:00,520
+We're solving it for x.
+
+71
+00:04:00,520 --> 00:04:06,190
+And x here would equal to $9,922 United States dollars.
+
+72
+00:04:06,190 --> 00:04:08,770
+So therefore, to construct, given this information,
+
+73
+00:04:08,770 --> 00:04:11,410
+to construct an arbitrage trading strategy that
+
+74
+00:04:11,410 --> 00:04:18,040
+pays $100 today, we need to borrow $9,922 United States
+
+75
+00:04:18,040 --> 00:04:21,050
+dollars and do the following steps.
+
+76
+00:04:21,050 --> 00:04:26,950
+So we can keep $100 to ourselves if we convert the remaining
+
+77
+00:04:26,950 --> 00:04:31,030
+amount, which is $9,922, into Japanese yen,
+
+78
+00:04:31,030 --> 00:04:33,290
+invest our income--
+
+79
+00:04:33,290 --> 00:04:36,540
+and if we lock into this forward rate as well--
+
+80
+00:04:36,540 --> 00:04:38,620
+our income in one year is exactly
+
+81
+00:04:38,620 --> 00:04:41,590
+enough to pay our liabilities that we
+
+82
+00:04:41,590 --> 00:04:45,710
+owe our bank from whom we borrowed this x dollar amount.
+
+83
+00:04:45,710 --> 00:04:47,860
+Now, what makes this arbitrage possible
+
+84
+00:04:47,860 --> 00:04:51,970
+in this particular example is the fact that this forward
+
+85
+00:04:51,970 --> 00:04:53,680
+is mispriced.
+
+86
+00:04:53,680 --> 00:04:58,840
+In other words, you get too high of an income in Japanese yen
+
+87
+00:04:58,840 --> 00:05:00,940
+relative to the United States dollars
+
+88
+00:05:00,940 --> 00:05:03,610
+so that at the current forward exchange rate,
+
+89
+00:05:03,610 --> 00:05:05,320
+you're getting a good deal, and you're
+
+90
+00:05:05,320 --> 00:05:07,690
+able to do this so-called carry trade,
+
+91
+00:05:07,690 --> 00:05:10,780
+borrow in the low yielding currency,
+
+92
+00:05:10,780 --> 00:05:15,640
+convert this amount of low yielding currency
+
+93
+00:05:15,640 --> 00:05:18,730
+into high yielding currency, invest there, and earn profit
+
+94
+00:05:18,730 --> 00:05:20,400
+by doing that.
+
+95
+00:05:20,400 --> 00:05:25,180
+Now, in fact, this is how we price forwards,
+
+96
+00:05:25,180 --> 00:05:28,960
+by assuming that such profitable trading strategy is not
+
+97
+00:05:28,960 --> 00:05:29,810
+possible.
+
+98
+00:05:29,810 --> 00:05:32,050
+So therefore, the foreign exchange rate
+
+99
+00:05:32,050 --> 00:05:35,380
+here has to be such that when you're
+
+100
+00:05:35,380 --> 00:05:38,290
+trying to construct this particular trading strategy,
+
+101
+00:05:38,290 --> 00:05:40,430
+you get exactly 0 at the end.
+
+102
+00:05:40,430 --> 00:05:42,820
+So the fact that this is possible here
+
+103
+00:05:42,820 --> 00:05:45,220
+is just indicative of the fact that this forward
+
+104
+00:05:45,220 --> 00:05:47,230
+is currently mispriced.
+
+105
+00:05:47,230 --> 00:05:50,200
+Now, let me make one remark.
+
+106
+00:05:50,200 --> 00:05:54,100
+Recall that when we started this construction of this arbitrage
+
+107
+00:05:54,100 --> 00:05:55,960
+trading strategy, we started by assuming
+
+108
+00:05:55,960 --> 00:05:59,170
+that we borrow x in USD.
+
+109
+00:05:59,170 --> 00:06:01,810
+What if, by solving this, we would
+
+110
+00:06:01,810 --> 00:06:04,840
+have gotten a negative number at the very end?
+
+111
+00:06:04,840 --> 00:06:07,030
+In this case, what it would have implied
+
+112
+00:06:07,030 --> 00:06:10,060
+is that we borrowed in the wrong currency, in other words,
+
+113
+00:06:10,060 --> 00:06:12,220
+in more expensive currency.
+
+114
+00:06:12,220 --> 00:06:14,350
+In that case, if we get the negative number here
+
+115
+00:06:14,350 --> 00:06:15,725
+at the end, what we need to do is
+
+116
+00:06:15,725 --> 00:06:18,040
+that we need just to reverse the chain of arguments
+
+117
+00:06:18,040 --> 00:06:21,640
+and actually borrow a certain amount in Japanese yen
+
+118
+00:06:21,640 --> 00:06:24,400
+and repeat the process by converting it into USD
+
+119
+00:06:24,400 --> 00:06:29,790
+and investing in the United States risk-free securities.
+

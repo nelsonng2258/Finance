@@ -1,0 +1,200 @@
+
+PROFESSOR: We'll now solve for the optimal composition
+of the tangency portfolio analytically.
+We start with some notation.
+There are n risky assets in the market.
+We collect the expected returns into a vector, r-bar.
+The vector of expected excess returns is x-bar.
+We denote the covariance matrix of returns by sigma.
+I is the vector of once.
+And w is the vector of portfolio weights of the risky assets.
+Note that because the vector of portfolio weights
+includes only the risky assets, these weights
+do not need to sum up to one.
+Instead, we explicitly substitute out the weight
+of the risk-free asset.
+The weight of the risk-free asset in the portfolio
+is equal to one minus the scalar product
+of the vector of portfolio weights
+with the vector of once.
+We now state the mean variance portfolio choice problem.
+The objective is to minimize the variance of the portfolio,
+which is given by the covariance matrix of risky asset
+returns multiplied on both sides by the vector of portfolio
+weights.
+We minimize portfolio variance, subject to the constraint
+on the expected excess return.
+The expected excess return on the portfolio
+must be equal to the target m.
+We solve this problem for an arbitrary level of the expected
+return target.
+We use the method of Lagrange multipliers to characterize
+the optimal solution.
+The Lagrangian is a quadratic function
+of portfolio weights with the multiplier on the constraint
+given by 2 times lambda.
+We obtain the first order optimality conditions
+by differentiating the Lagrangian with respect
+to the vector of portfolio weights.
+The first order conditions are sufficient to characterize
+the optimal portfolio because the Lagrangian is a convex
+function.
+Recall that the covariance matrix of returns
+is positive definite.
+In vector form, the solution of the first order optimality
+conditions states that the vector of portfolio weights
+is proportional to the inverse of the covariance matrix
+multiplied by the vector of expected excess returns.
+The coefficient of proportionality,
+lambda, depends on the level of the expected excess return
+target, m.
+For the tangency portfolio, the weights on risky assets
+must add up to 1.
+Recall that this portfolio does not
+include the risk-free asset.
+Imposing this constraint, we solve
+for the proportionality coefficient lambda
+and find the explicit expression for the tangency portfolio
+weights.
+To illustrate our general result,
+consider the following example.
+We are solving an asset allocation problem
+among three assets--
+the risk-free asset, T-bills, and two risky assets,
+the stock market index and the hedge fund index.
+We assume that returns on the stock market index, which
+we abbreviate as SMI, and the hedge fund index, or HFI,
+are uncorrelated.
+We want to know what fraction of the tangency portfolio
+should be invested in the hedge fund index.
+We also want to compare the Sharpe ratios of the stock
+market index and the hedge fund index on a standalone basis
+to the Sharpe ratio of the tangency portfolio.
+This would allow us to quantify the economic benefit
+of combining these investments.
+We are given the following data.
+The risk-free rate is 3%.
+The expected return on the stock market index is 9%.
+And the standard deviation of the stock market index is 20%.
+The hedge fund index has the expected return
+of 5%, which is much lower than that for the stock market.
+And the standard deviation is 10%,
+which is also lower than the standard deviation of the stock
+market.
+We apply our general solution.
+The weights in the tangency portfolio
+are proportional to the inverse of the covariance matrix
+of returns times the vector of expected excess returns.
+Note that in this case because returns on the two risky assets
+are uncorrelated with each other,
+the covariance matrix of returns is diagonal.
+And we can invert it by simply taking the inverse
+of each diagonal element.
+As a result, the ratio of the weights
+on the stock market index versus the hedge fund index is 1.5 to 2.
+We conclude that the tangency portfolio allocates
+43% of its weight to the stock market
+index and 57%, which is more than a half,
+to the hedge fund index.
+Does this mean that the hedge fund index
+is a better investment than the stock market
+index on the standalone basis?
+The answer is negative.
+Recall that the Sharpe ratio of an asset
+is the ratio of its expected excess return
+to its standard deviation.
+The Sharpe ratio of the stock market index is 30%.
+For the hedge fund index, it is lower, 20%.
+Why is it that the hedge fund index has a lower Sharpe ratio
+but receives such a high allocation
+in the tangency portfolio?
+Hedge fund index is a great diversifier to the stock market
+portfolio because we assume that the two are uncorrelated.
+This makes the hedge fund index an appealing investment,
+even though its Sharpe ratio is relatively low.
+Also, know that the magnitude of portfolio weights
+is difficult to interpret.
+The more intuitive quantity would
+be the quantity of risk or variance
+that each position contributes to the tangency portfolio.
+The hedge fund index has a much lower standard deviation.
+So despite of its higher weight, it contributes less than half
+of the risk of the tangency portfolio.
+This is consistent with the hedge fund index
+being a less appealing investment with a lower Sharpe
+ratio.
+To conclude, we compute the Sharpe ratio
+of the tangency portfolio.
+It is the weighted average of expected excess returns
+on the stock market index and the hedge fund index,
+which are 6% and 2%, respectively,
+using their weights in the tangency portfolio.
+43% and 57% divided by the standard deviation
+of the tangency portfolio.
+We find the Sharpe ratio of the tangency portfolio to be 36%.
+This is a sizable improvement over the stock market
+index, which has the Sharpe ratio of 30%.
+Although the hedge fund index earns
+relatively low excess returns, because of its low volatility,
+it has a Sharpe ratio close to that of the stock market index.
+Combined with zero correlation between these two investments,
+this allows us to diversify risk between the two investments
+and raise the Sharpe ratio relative to each of them
+individually.
+As a thought experiment, if the hedge fund index
+earns zero risk premium, then the tangency portfolio
+would allocate 100% to the stock market index.
+This highlights the fact that to raise the Sharpe
+ratio be diversification, low correlation is not sufficient.
+We need to be able to earn risk premia by taking
+on uncorrelated risks.
+
+We now introduce investor preferences
+to the portfolio choice problem.
+We've established that all mean variance investors choose
+the same portfolio of risky assets, the tangency portfolio.
+Individual risk aversion determines what fraction
+of the portfolio an investor allocates to the safe asset
+and what fraction goes to the risky assets,
+the tangency portfolio.
+The problem of finding the optimal portfolio
+is, therefore, decoupled into two independent steps.
+We first compute the tangency portfolio independently
+of the investor's preferences.
+Then we decide what fraction of the portfolio
+to allocate to the tangency portfolio,
+depending on the risk aversion of the investor.
+Our two panels illustrate the solution of the problem.
+The only difference between these panels
+is investor's risk aversion.
+The distribution of returns from financial assets
+is exactly the same.
+Take a look at the panel on the left.
+We first compute the tangency portfolio
+and construct the capital market line.
+We then show the investor's level curves
+in the space of expected return and standard deviation.
+Recall that the level of the investor's objective
+is the same along each level curve and increases
+as we move towards the top left corner of the plot.
+
+This investor wants to find the portfolio on the capital market
+line that achieves the highest value of her objective.
+This means that the optimal portfolio
+is located at the point where the capital market line touches
+the highest possible level curve.
+The panel on the left represents an investor
+with a relatively high risk aversion.
+This investor combines the tangency portfolio
+with the long position in the risk-free asset
+to create the optimal portfolio.
+The panel on the right shows indifference curves for a less
+risk averse investor.
+This investor forms the optimal portfolio in the same manner
+as we just discussed, but because of the lower risk
+aversion, the optimal portfolio includes a short position
+in the safe asset.
+This investor levers up the tangency portfolio
+by borrowing.
+The optimal portfolio then ends up on the capital market line
+to the right of the tangency portfolio.

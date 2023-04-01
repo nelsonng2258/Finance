@@ -1,0 +1,98 @@
+
+PROFESSOR: In this lecture, we introduce an important class
+of derivative securities-- forwards, futures, and swaps.
+We'll go over the main properties of these securities
+and discuss how they can be priced.
+Our approach to valuation is based
+on the principle of no arbitrage,
+or the law of one price.
+In each case, we aim to replicate the cash
+flows of a derivative security by trading in other assets.
+This allows us to establish a unique arbitrage-free price
+for the derivative.
+In this manner, we connect forward
+interest rates to the spot rates,
+futures prices, or financial futures to the current price
+of the underlying asset, and the terms of an interest rate swap
+contract with the current yield curve, among other results.
+Financial contracts-- with many features
+found in modern derivatives, such as forward, futures,
+and options, date back to the early periods of human history.
+In ancient Mesopotamia, over 3,000 years ago,
+farmers and merchants entered into financial contracts,
+making arrangements for future delivery
+of grain or other commodities.
+The contract would describe both the details of future delivery,
+such as quantity of the goods and the price.
+These contracts are what we now know as forward contracts.
+Let us begin with the formal definition
+of the forward contract.
+A forward contract is a commitment
+to buy or sell a given quantity of a commodity or an asset
+at a future date at the price specified today.
+The key feature of the contract is
+that the price is fixed today, while the transaction itself
+takes place in the future.
+This contractual price is called the forward price.
+At the settlement date of the contract,
+the buyer pays the forward price and collects the underlying
+asset--
+a financial asset or a commodity.
+The buyer thus obtains a long position
+in the asset or commodity.
+As an example, consider a forward contract on soybeans.
+Suppose that the tofu manufacturer
+needs 100,000 bushels of soybeans in 3 months.
+The current price of soybeans in the market,
+which we call the spot price, is $12.50 per bushel.
+Going forward, this price may rise or fall.
+Our producer of tofu wants to make
+sure that 100,000 bushels will be available 3 month from now.
+To remove any uncertainty about the price,
+the producer enters into a 3-month forward contract
+for 100,000 bushels of soybeans at $13.50 per bushel.
+In this forward transaction, the long side buys 100,000 bushels
+from the short side at $13.50 per bushel in 3 month
+at the settlement date.
+Forward contracts have several important features.
+First, forwards are typically traded over the counter.
+This means that buyers and sellers transact
+with each other directly, as opposed to trading
+on centralized exchanges.
+Second, forward contracts can be easily customized.
+The two parties-- the buyer and the seller--
+can agree on various terms of the contract as they desire.
+These contracts do not need to be standardized.
+Third, no money changes hands until contact maturity,
+or the settlement date.
+The properties of the forward contracts
+create some advantages and some limitations.
+One of the advantages of forwards
+is that, because these contracts are highly customizable,
+they can be adapted to individual needs,
+making them effective for risk management and speculation.
+In addition, because no money changes hands
+until the settlement date, counterparties
+in the forward contract do not need to come up
+with funds until that date.
+This is convenient, for example, for a farmer trying
+to fix the sale price of his harvest
+in advance through a forward contract.
+One of the disadvantages of forwards
+is that the over-the-counter customized
+nature of these contracts makes them relatively illiquid.
+It is costly for one of the counterparties in the forward
+to get out of the contract prior to its settlement.
+Moreover, the fact that money does not change hands
+during the life of the contract means that all gains and losses
+are realized at the settlement date, which
+creates counterparty risk.
+The risk is that the losing side of the contract
+may not fulfill their obligations at the settlement
+date.
+To prevent this, participants in the forward contract
+need to post collateral, which they
+would lose in the event of failing to honor
+the terms of the contract.
+This collateral requirement makes
+it harder to enter into a forward contract.

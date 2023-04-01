@@ -1,0 +1,82 @@
+
+PROFESSOR: In this video, we will
+learn how to construct portfolios
+with target level of expected return or target level of risk.
+Suppose there are two stocks, A and C,
+with the following properties.
+The expected return on stock A is 5%.
+And the expected return on stock C is 20%.
+The standard deviation of returns in stock A is 10%.
+And the standard deviation of returns in stock C is 40%.
+The returns on stocks A and C are not correlated.
+First, we will build a portfolio with expected return of 10%.
+Next, we will assume that the maximum level
+of risk that an investor can afford to take is 20%.
+We will build a portfolio that achieves
+this target level of risk.
+And we will find the expected return of that portfolio.
+Finally, we will assume that there is an investor
+with low tolerance for risk.
+We will construct a minimum variance portfolio
+for this investor.
+And we will find the expected return of this portfolio.
+Let's first build a portfolio with the target
+expected return of 10%.
+Suppose that we invest x in stock A and the remaining
+amount, 1 minus x, into stock C. Then,
+the expected return would be x times the expected return
+of stock A plus 1 minus x, the expected return on stock C.
+And that should equal to 10%, which is our target.
+Plugging in the numbers for expected return on A,
+which is 5%, and the expected return on C, which is 20%,
+we get this equation.
+So this is just the equation with one unknown.
+Solving this equation, we get x that equals to 2/3.
+This means that to achieve this target level of expected
+return, we need to invest 2/3 of our wealth into stock A
+and the remaining 1/3 of our wealth into stock C. Next,
+let's build a portfolio with a target
+level of volatility of 20%.
+This 20% is a standard deviation.
+Suppose that we invest x into A and 1 minus x into C. Then,
+portfolio variance would be x squared
+multiplied by the variance of stock A, which
+is 0.1 squared, plus 1 minus x squared--
+this is the weight that we put into stock C squared--
+times the variance of stock C. And that
+should equal to the target variance
+that we are trying to achieve, which is 20% squared.
+Rearranging terms in this equation,
+we get the following quadratic equation.
+Solving this equation, we get two roots--
+x equals to 1.365 and x equals to 0.517.
+This implies that we have two portfolio candidates.
+In the first portfolio, we invest 136.5% into stock A
+and negative 36.5% into stock C. This
+means that we are effectively shorting stock C
+and putting the dollar proceeds from this short sale
+into stock A.
+And the second candidate is where we invest 51.7% into A
+and 48.3% into stock C. Both of these portfolios
+achieve the target level of volatility of 20%,
+but which one is better?
+Let's compute the expected return
+and see which of these portfolios
+gives us a higher return.
+The expected return of the first portfolio is negative 0.48%.
+And the expected return of the second portfolio is 12.25%.
+So clearly, the second portfolio gives higher risk
+return tradeoff, and therefore this
+is the optimal portfolio for the target level of risk
+that we are trying to achieve.
+Finally, let's find the minimum variance portfolio.
+Let's, again, suppose that we invest x into A and 1
+minus x into C. To find the minimum variance portfolio,
+we need to minimize this variance with respect to x.
+Solving this minimization problem,
+we'd get that x equals to 94.12%.
+Therefore, to construct the minimum variance portfolio,
+we invest 94.12% into stock A and 5.88%
+into stock C. This portfolio achieves
+the standard deviation of 9.7% and the expected
+return of 5.88%.

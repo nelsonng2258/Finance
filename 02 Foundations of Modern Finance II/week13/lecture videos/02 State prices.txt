@@ -1,0 +1,39 @@
+INSTRUCTOR: The concept of risk-neutral probabilities
+is closely related to the concept of state prices.
+Consider a primitive state contingent claim.
+It's basically a digital option.
+It pays off $1.00 only in a given future state and nothing
+otherwise.
+For example, a digital option that pays $1.00 at time 2 only
+if the price of the stock goes up in both periods defines
+a state contingent claim on the highest node of the tree
+at time 2.
+Denote the price of our digital option by phi.
+This is the state price of the highest
+state on the tree at time 2 or the Arrow-Debreu state price.
+We can define state prices for all other states
+in a similar manner.
+Each state price is simply the market price of a financial
+claim paying $1.00 only in a particular future state
+and nothing otherwise.
+
+Using the risk-neutral probabilities,
+we know how to compute the market prices of such state
+contingent claims.
+Their prices are given by the expectation of the payoff
+and the q probabilities discounted
+at the risk-free interest rate.
+Note that the payoff of a primitive state contingent
+claim is concentrated in a single state.
+Then the risk-neutral expected value of the payoff
+is equal to the q probability of the corresponding state.
+We have derived a relation between state price
+and the risk-neutral probability.
+State prices are proportional to the risk-neutral probabilities.
+In addition to the later, they also
+reflect the time value of money, or the risk-free rate.
+Once we know the state prices, we
+can value any state contingent payoff
+as a portfolio of state contingent claims.
+This is mathematical equivalent to the risk-neutral valuation
+formula.

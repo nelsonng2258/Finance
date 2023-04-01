@@ -1,0 +1,328 @@
+0
+00:00:00,000 --> 00:00:00,540
+
+
+1
+00:00:00,540 --> 00:00:04,320
+PROFESSOR: So far, we have been focused on model free results.
+
+2
+00:00:04,320 --> 00:00:07,110
+These are restrictions on option prices
+
+3
+00:00:07,110 --> 00:00:09,690
+that must hold, regardless of the properties
+
+4
+00:00:09,690 --> 00:00:13,120
+of the underlying asset.
+
+5
+00:00:13,120 --> 00:00:15,460
+We now want to refine these results
+
+6
+00:00:15,460 --> 00:00:19,980
+to make more precise statements about option prices.
+
+7
+00:00:19,980 --> 00:00:23,160
+To do that, we need to introduce an explicit model
+
+8
+00:00:23,160 --> 00:00:26,830
+of the underlying price process.
+
+9
+00:00:26,830 --> 00:00:30,250
+The model we introduce is the binomial model.
+
+10
+00:00:30,250 --> 00:00:33,090
+This is an important model in option pricing.
+
+11
+00:00:33,090 --> 00:00:35,400
+This model is highly tractable, so it
+
+12
+00:00:35,400 --> 00:00:38,890
+helps us understand the logic of option valuation.
+
+13
+00:00:38,890 --> 00:00:41,800
+It is also very versatile, and is commonly
+
+14
+00:00:41,800 --> 00:00:46,690
+used for computing option prices numerically.
+
+15
+00:00:46,690 --> 00:00:50,180
+We start with a single period version of the model.
+
+16
+00:00:50,180 --> 00:00:54,980
+Current time is zero, and the option matures at time one.
+
+17
+00:00:54,980 --> 00:00:59,360
+We can only trade today at time zero.
+
+18
+00:00:59,360 --> 00:01:04,220
+As we will show, option price depends on the current price
+
+19
+00:01:04,220 --> 00:01:10,470
+of the underlying stock, the strike price, time to maturity,
+
+20
+00:01:10,470 --> 00:01:14,280
+the risk-free interest rate, and return volatility
+
+21
+00:01:14,280 --> 00:01:16,240
+of the underlying asset.
+
+22
+00:01:16,240 --> 00:01:19,320
+We want to highlight that option prices are highly
+
+23
+00:01:19,320 --> 00:01:22,080
+sensitive to stock return volatility, which
+
+24
+00:01:22,080 --> 00:01:24,690
+is one of the key inputs into the model.
+
+25
+00:01:24,690 --> 00:01:27,180
+Consider a specific example--
+
+26
+00:01:27,180 --> 00:01:30,630
+a European call option on a stock.
+
+27
+00:01:30,630 --> 00:01:34,030
+The current price of the stock is $50.
+
+28
+00:01:34,030 --> 00:01:37,060
+There is a single period to maturity.
+
+29
+00:01:37,060 --> 00:01:39,790
+Over the next period, the price of the stock
+
+30
+00:01:39,790 --> 00:01:45,770
+will either go up to $75, or down to $25.
+
+31
+00:01:45,770 --> 00:01:47,870
+There are no dividends.
+
+32
+00:01:47,870 --> 00:01:51,650
+The strike price of the option is $50.
+
+33
+00:01:51,650 --> 00:01:55,630
+We assume that the one period interest rate is 10%.
+
+34
+00:01:55,630 --> 00:01:58,810
+One can borrow or lend without constraints
+
+35
+00:01:58,810 --> 00:02:00,980
+at this risk-free rate.
+
+36
+00:02:00,980 --> 00:02:03,230
+We represent the stock price process
+
+37
+00:02:03,230 --> 00:02:06,700
+on the left as a binomial tree.
+
+38
+00:02:06,700 --> 00:02:10,030
+The initial price here is $50, rising to $75,
+
+39
+00:02:10,030 --> 00:02:13,820
+or falling to $25 next period.
+
+40
+00:02:13,820 --> 00:02:18,140
+We express all other prices in relation to this tree.
+
+41
+00:02:18,140 --> 00:02:21,620
+For the bond price on the right, the value at time one
+
+42
+00:02:21,620 --> 00:02:25,340
+is the same in the up and down nodes.
+
+43
+00:02:25,340 --> 00:02:28,370
+Finally, the value of the option at time one
+
+44
+00:02:28,370 --> 00:02:31,580
+is a function of the stock price at the corresponding nodes
+
+45
+00:02:31,580 --> 00:02:33,550
+of the tree.
+
+46
+00:02:33,550 --> 00:02:37,420
+In the up node, the stock price is $75
+
+47
+00:02:37,420 --> 00:02:43,030
+and the payoff of a call with the $50 strike is $25.
+
+48
+00:02:43,030 --> 00:02:47,430
+In the down node, the payoff of the co-option is zero.
+
+49
+00:02:47,430 --> 00:02:50,070
+Our objective is to figure out the price
+
+50
+00:02:50,070 --> 00:02:52,950
+of the option at time zero.
+
+51
+00:02:52,950 --> 00:02:57,060
+Our approach is to form a portfolio of stock and bond
+
+52
+00:02:57,060 --> 00:03:01,060
+that replicates the payoff of the call option at time one.
+
+53
+00:03:01,060 --> 00:03:05,680
+Then with the low front price, the initial price of the option
+
+54
+00:03:05,680 --> 00:03:11,000
+must be equal to the cost of this replicating portfolio.
+
+55
+00:03:11,000 --> 00:03:15,560
+Suppose our portfolio includes a shares of the stock,
+
+56
+00:03:15,560 --> 00:03:18,470
+and b units of the riskless bond.
+
+57
+00:03:18,470 --> 00:03:22,350
+Recall that each unit is $1.
+
+58
+00:03:22,350 --> 00:03:25,170
+To make sure that the value of the portfolio in the up
+
+59
+00:03:25,170 --> 00:03:27,600
+and down nodes at time one matches
+
+60
+00:03:27,600 --> 00:03:31,360
+the value of the option, we impose two conditions.
+
+61
+00:03:31,360 --> 00:03:35,190
+First, the value of the portfolio in the up node
+
+62
+00:03:35,190 --> 00:03:38,670
+is $75 times a, which is the stock
+
+63
+00:03:38,670 --> 00:03:43,260
+price times the number of shares, plus 1.1 times b,
+
+64
+00:03:43,260 --> 00:03:46,020
+which is the value of the bond times the number of bond
+
+65
+00:03:46,020 --> 00:03:48,560
+units in the portfolio.
+
+66
+00:03:48,560 --> 00:03:54,340
+This must equal the value of the bond in the node, which is $25.
+
+67
+00:03:54,340 --> 00:03:59,090
+Second, $25 times a, which is the price
+
+68
+00:03:59,090 --> 00:04:02,420
+of the stock in the down node, times the number of shares
+
+69
+00:04:02,420 --> 00:04:07,430
+plus 1.1 times b, must equal the value of the call option
+
+70
+00:04:07,430 --> 00:04:11,390
+in the down node, which is zero.
+
+71
+00:04:11,390 --> 00:04:13,610
+We find a unique solution.
+
+72
+00:04:13,610 --> 00:04:16,760
+Our replicating portfolio must include
+
+73
+00:04:16,760 --> 00:04:23,800
+half a share of the stock, and minus 11.36 units of the bond.
+
+74
+00:04:23,800 --> 00:04:30,030
+In other words, to replicate the option, we must borrow $11.36,
+
+75
+00:04:30,030 --> 00:04:33,820
+and buy half a share of the stock.
+
+76
+00:04:33,820 --> 00:04:35,740
+The market value of the call must
+
+77
+00:04:35,740 --> 00:04:39,220
+equal the current cost of this replicating portfolio, which
+
+78
+00:04:39,220 --> 00:04:42,620
+is $13.64.
+
+79
+00:04:42,620 --> 00:04:45,440
+The number of shares in the replicating portfolio
+
+80
+00:04:45,440 --> 00:04:49,640
+is called the options delta, or the hedge ratio.
+
+81
+00:04:49,640 --> 00:04:54,190
+In this example, the delta of the option is 0.5.
+

@@ -1,0 +1,524 @@
+0
+00:00:00,000 --> 00:00:00,555
+
+
+1
+00:00:00,555 --> 00:00:02,430
+PROFESSOR: In this question, I will teach you
+
+2
+00:00:02,430 --> 00:00:06,270
+how to draw payoff diagrams and understand
+
+3
+00:00:06,270 --> 00:00:10,240
+the payoffs of a portfolio of different options.
+
+4
+00:00:10,240 --> 00:00:12,073
+This is a very useful application.
+
+5
+00:00:12,073 --> 00:00:13,740
+So let's consider the following example.
+
+6
+00:00:13,740 --> 00:00:15,810
+We have a stock, ABC.
+
+7
+00:00:15,810 --> 00:00:18,420
+Its current price is $90.
+
+8
+00:00:18,420 --> 00:00:21,990
+And then we have four one-year options.
+
+9
+00:00:21,990 --> 00:00:24,232
+Two of them are put options, and the remaining two
+
+10
+00:00:24,232 --> 00:00:26,190
+are call options.
+
+11
+00:00:26,190 --> 00:00:29,010
+The two put options have strikes $90 and $110.
+
+12
+00:00:29,010 --> 00:00:33,930
+And two call options have the same strikes, $90 and $110.
+
+13
+00:00:33,930 --> 00:00:36,270
+The first question asks us to draw
+
+14
+00:00:36,270 --> 00:00:41,490
+a payoff diagram for two puts and one bond
+
+15
+00:00:41,490 --> 00:00:43,360
+with a face value of $20.
+
+16
+00:00:43,360 --> 00:00:45,570
+So think of-- see yourself as an investor who
+
+17
+00:00:45,570 --> 00:00:50,340
+buys these two puts with a strike of $90 and one bond
+
+18
+00:00:50,340 --> 00:00:52,140
+with a face value of $20.
+
+19
+00:00:52,140 --> 00:00:54,270
+Now what your payoff diagram would
+
+20
+00:00:54,270 --> 00:00:58,860
+look like in one year from now when these two puts expire?
+
+21
+00:00:58,860 --> 00:01:02,220
+Now let's first start with understanding
+
+22
+00:01:02,220 --> 00:01:06,150
+how the payoff from buying two put options with a strike
+
+23
+00:01:06,150 --> 00:01:08,550
+price of $90 would look like.
+
+24
+00:01:08,550 --> 00:01:11,970
+Recall that the payoff diagram from buying just one
+
+25
+00:01:11,970 --> 00:01:14,310
+put option with a strike price of $90
+
+26
+00:01:14,310 --> 00:01:15,850
+is going to look like this.
+
+27
+00:01:15,850 --> 00:01:18,360
+So we have a positive line that goes
+
+28
+00:01:18,360 --> 00:01:23,130
+at a negative 45-degree angle from 90 to 90,
+
+29
+00:01:23,130 --> 00:01:25,160
+and the payoff function looks like this.
+
+30
+00:01:25,160 --> 00:01:26,730
+So it's 90 minus s1.
+
+31
+00:01:26,730 --> 00:01:29,880
+s1 is the price of the underlying asset--
+
+32
+00:01:29,880 --> 00:01:31,350
+in this case, it's a stock--
+
+33
+00:01:31,350 --> 00:01:35,710
+at the expiry date, which is one year from now.
+
+34
+00:01:35,710 --> 00:01:38,620
+So, therefore, I denote it by just s1.
+
+35
+00:01:38,620 --> 00:01:41,010
+Recall that the current price of the stock
+
+36
+00:01:41,010 --> 00:01:42,870
+has nothing to do with this payoff diagram.
+
+37
+00:01:42,870 --> 00:01:45,203
+It's relevant, of course, for the pricing of the option,
+
+38
+00:01:45,203 --> 00:01:47,460
+but it's irrelevant for what would
+
+39
+00:01:47,460 --> 00:01:50,340
+be our payoff from buying this one put
+
+40
+00:01:50,340 --> 00:01:54,700
+and holding onto it for one year.
+
+41
+00:01:54,700 --> 00:01:57,880
+So this is just one put option.
+
+42
+00:01:57,880 --> 00:02:00,030
+Now what's going to be-- if we're
+
+43
+00:02:00,030 --> 00:02:01,680
+going to be buying two put options,
+
+44
+00:02:01,680 --> 00:02:04,470
+what would our payoff diagram look like?
+
+45
+00:02:04,470 --> 00:02:08,910
+Well, one way to figure this out is just
+
+46
+00:02:08,910 --> 00:02:11,880
+to mathematically multiply this payoff
+
+47
+00:02:11,880 --> 00:02:15,330
+that we get from one put option by 2
+
+48
+00:02:15,330 --> 00:02:18,240
+because, if we are buying two put options, therefore,
+
+49
+00:02:18,240 --> 00:02:21,070
+we would get twice the payoff.
+
+50
+00:02:21,070 --> 00:02:25,330
+So multiplying this by 2 would give us the following.
+
+51
+00:02:25,330 --> 00:02:29,220
+So the first part would be just 90 minus s1 multiplied by 2.
+
+52
+00:02:29,220 --> 00:02:35,100
+So it'll be 180 minus 2 s1--
+
+53
+00:02:35,100 --> 00:02:39,030
+and this is for the case when the share price ends up
+
+54
+00:02:39,030 --> 00:02:44,730
+being below 90, and, therefore, exercise becomes optimal--
+
+55
+00:02:44,730 --> 00:02:49,890
+or 0 otherwise if the share price ends up being higher
+
+56
+00:02:49,890 --> 00:02:53,020
+than the strike price.
+
+57
+00:02:53,020 --> 00:02:55,380
+Now, this is how, mathematically,
+
+58
+00:02:55,380 --> 00:02:58,740
+the payoff from buying two put options would look like.
+
+59
+00:02:58,740 --> 00:03:01,260
+And, graphically, if we were to graph this,
+
+60
+00:03:01,260 --> 00:03:05,190
+it would be just the line that starts, if s1 is 0,
+
+61
+00:03:05,190 --> 00:03:07,630
+this would be-- this function would be 180.
+
+62
+00:03:07,630 --> 00:03:09,510
+So it's the line that starts at 180.
+
+63
+00:03:09,510 --> 00:03:14,130
+It has a negative 2 slope, and it goes all the way down to 0.
+
+64
+00:03:14,130 --> 00:03:17,050
+So, if s1 equals to 90, this expression is 0.
+
+65
+00:03:17,050 --> 00:03:20,140
+So, 180 and 90 here, that's a straight line.
+
+66
+00:03:20,140 --> 00:03:23,790
+And then it goes at 0 if the share price ends up
+
+67
+00:03:23,790 --> 00:03:26,230
+being above $90.
+
+68
+00:03:26,230 --> 00:03:28,980
+So this raise here is 2, as opposed to,
+
+69
+00:03:28,980 --> 00:03:32,310
+when we have one put option here, it is just 1.
+
+70
+00:03:32,310 --> 00:03:35,450
+Now we can extend this and just generalize.
+
+71
+00:03:35,450 --> 00:03:39,935
+So, if we had three put options, we would get 270,
+
+72
+00:03:39,935 --> 00:03:41,310
+and this line would start at 270.
+
+73
+00:03:41,310 --> 00:03:45,540
+And it's going to go to 90 and then continue
+
+74
+00:03:45,540 --> 00:03:47,580
+being just a flat line at 0.
+
+75
+00:03:47,580 --> 00:03:50,155
+And any other number of put options
+
+76
+00:03:50,155 --> 00:03:51,780
+would just go all the way up, and we're
+
+77
+00:03:51,780 --> 00:03:52,950
+going to start at that.
+
+78
+00:03:52,950 --> 00:03:55,740
+For example, 10 put options is going to start at 900.
+
+79
+00:03:55,740 --> 00:03:57,840
+It's going to go down to 90.
+
+80
+00:03:57,840 --> 00:04:00,540
+And then it's going to be a zero line.
+
+81
+00:04:00,540 --> 00:04:02,400
+Once we figured out how the payoff
+
+82
+00:04:02,400 --> 00:04:05,640
+diagram from buying two puts looks like,
+
+83
+00:04:05,640 --> 00:04:08,100
+let's bring the bond back in.
+
+84
+00:04:08,100 --> 00:04:12,820
+So now this is the payoff that we get from buying a bond.
+
+85
+00:04:12,820 --> 00:04:15,180
+If we buy a bond that has a face value of $20,
+
+86
+00:04:15,180 --> 00:04:19,800
+it means that it pays off $20 to us at the end of year one.
+
+87
+00:04:19,800 --> 00:04:24,120
+We'll assume that it has one year to maturity, no coupon
+
+88
+00:04:24,120 --> 00:04:25,710
+payments.
+
+89
+00:04:25,710 --> 00:04:29,500
+So it's a zero coupon, $20 face-value bond.
+
+90
+00:04:29,500 --> 00:04:33,390
+So it pays $20 at the end of year one,
+
+91
+00:04:33,390 --> 00:04:38,670
+and it gives us this $20, irrespective of the price
+
+92
+00:04:38,670 --> 00:04:41,490
+of stock ABC in year one.
+
+93
+00:04:41,490 --> 00:04:44,110
+So, for any s1, this is just going to be 20.
+
+94
+00:04:44,110 --> 00:04:46,990
+So it's a flat line at 20.
+
+95
+00:04:46,990 --> 00:04:49,590
+So now we're constructing this portfolio
+
+96
+00:04:49,590 --> 00:04:52,480
+by buying these two puts and this one bond.
+
+97
+00:04:52,480 --> 00:04:58,470
+So, therefore, we need to add up this diagram with this diagram.
+
+98
+00:04:58,470 --> 00:05:03,430
+The easiest way to do that is to, first, start
+
+99
+00:05:03,430 --> 00:05:06,130
+mathematically, just looking at the mathematical expressions
+
+100
+00:05:06,130 --> 00:05:09,190
+for the payoff for the bond and payoff for the two
+
+101
+00:05:09,190 --> 00:05:11,570
+puts, and add them up.
+
+102
+00:05:11,570 --> 00:05:13,340
+So this is the payoff for the bond.
+
+103
+00:05:13,340 --> 00:05:15,130
+This is payoff for the two puts.
+
+104
+00:05:15,130 --> 00:05:17,950
+If we add them up, we are adding 20
+
+105
+00:05:17,950 --> 00:05:23,470
+and plus 180 minus 2 s1 if s1 is less than 90.
+
+106
+00:05:23,470 --> 00:05:28,900
+So this is going to be 200 minus 2 s1 for s1
+
+107
+00:05:28,900 --> 00:05:30,580
+less or equal than 90.
+
+108
+00:05:30,580 --> 00:05:35,140
+And, if s1 is above 90, it's going to be 20 plus 0.
+
+109
+00:05:35,140 --> 00:05:36,830
+So is going to be 20.
+
+110
+00:05:36,830 --> 00:05:39,490
+So, therefore, the combined payoff
+
+111
+00:05:39,490 --> 00:05:41,980
+from buying two puts and this bond
+
+112
+00:05:41,980 --> 00:05:44,830
+is going to be 200 minus 2 s1, if s1
+
+113
+00:05:44,830 --> 00:05:51,430
+is less than or equal to 90, and 20 if s1 is above 90.
+
+114
+00:05:51,430 --> 00:05:53,620
+Now so this is a mathematical expression.
+
+115
+00:05:53,620 --> 00:05:56,560
+All we have to do right now is to plot it.
+
+116
+00:05:56,560 --> 00:06:01,240
+Well, we can simply plot it just kind of piecewise
+
+117
+00:06:01,240 --> 00:06:05,020
+by starting at, for example, if s1 equals to 0,
+
+118
+00:06:05,020 --> 00:06:08,820
+then this payoff is going to be 200.
+
+119
+00:06:08,820 --> 00:06:12,320
+And, if s1 goes all the way to 90,
+
+120
+00:06:12,320 --> 00:06:15,890
+it means this payoff is going to be 200 minus 2 times 90.
+
+121
+00:06:15,890 --> 00:06:17,370
+This is 180.
+
+122
+00:06:17,370 --> 00:06:22,170
+So this will be just $20, somewhere here,
+
+123
+00:06:22,170 --> 00:06:25,610
+so at 20 and 90.
+
+124
+00:06:25,610 --> 00:06:30,270
+And then, all the way, if s1 ends up being above $90,
+
+125
+00:06:30,270 --> 00:06:32,670
+so this payoff is going to be $20 as well.
+
+126
+00:06:32,670 --> 00:06:39,840
+So it's $20 from here, from 90 and above, and starts at 200
+
+127
+00:06:39,840 --> 00:06:43,650
+and goes down to 90.
+
+128
+00:06:43,650 --> 00:06:47,490
+So this is the payoff diagram from buying two puts
+
+129
+00:06:47,490 --> 00:06:50,250
+with a strike price of $90 and buying one bond with a face
+
+130
+00:06:50,250 --> 00:06:52,640
+value of $20.
+

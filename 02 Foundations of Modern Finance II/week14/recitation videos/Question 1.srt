@@ -1,0 +1,524 @@
+0
+00:00:00,000 --> 00:00:00,317
+
+
+1
+00:00:00,317 --> 00:00:02,400
+PROFESSOR: In this video, we will cover the basics
+
+2
+00:00:02,400 --> 00:00:05,010
+of portfolio risk and return.
+
+3
+00:00:05,010 --> 00:00:08,100
+Suppose there are three stocks in the market, A, B, and C,
+
+4
+00:00:08,100 --> 00:00:10,020
+with the following properties.
+
+5
+00:00:10,020 --> 00:00:13,350
+The expected return on stock A is 5%.
+
+6
+00:00:13,350 --> 00:00:17,970
+The expected return on stocks B and C is 20%.
+
+7
+00:00:17,970 --> 00:00:21,420
+The standard deviation of returns of stock A is 10%,
+
+8
+00:00:21,420 --> 00:00:24,750
+and the standard deviation of returns on stocks B and C
+
+9
+00:00:24,750 --> 00:00:26,640
+is 40%.
+
+10
+00:00:26,640 --> 00:00:29,610
+The return on stock C is not correlated with A and B,
+
+11
+00:00:29,610 --> 00:00:32,280
+and the correlation of returns between A and B
+
+12
+00:00:32,280 --> 00:00:35,940
+is negative 0.5.
+
+13
+00:00:35,940 --> 00:00:38,610
+We will answer the following three questions.
+
+14
+00:00:38,610 --> 00:00:42,060
+In part a, we will assume that an investor allocates
+
+15
+00:00:42,060 --> 00:00:46,650
+40% of her wealth to stock A, 60% to stock C,
+
+16
+00:00:46,650 --> 00:00:50,410
+and nothing to stock B. What is the standard deviation
+
+17
+00:00:50,410 --> 00:00:53,570
+and expected return of her portfolio?
+
+18
+00:00:53,570 --> 00:00:56,780
+In part b, we will assume that an investor allocates
+
+19
+00:00:56,780 --> 00:01:00,890
+40% of her wealth to stock A, 60% of stock B,
+
+20
+00:01:00,890 --> 00:01:03,830
+and nothing to stock C. We will answer
+
+21
+00:01:03,830 --> 00:01:05,000
+exactly the same question.
+
+22
+00:01:05,000 --> 00:01:06,500
+So we'll find the standard deviation
+
+23
+00:01:06,500 --> 00:01:09,770
+and the expected return on her portfolio.
+
+24
+00:01:09,770 --> 00:01:12,050
+And finally, in part c, we will assume
+
+25
+00:01:12,050 --> 00:01:15,370
+that an investor constructs an equally weighted portfolio out
+
+26
+00:01:15,370 --> 00:01:17,990
+of these three stocks, A, B, and C,
+
+27
+00:01:17,990 --> 00:01:21,140
+and we will compute the standard deviation and expected return
+
+28
+00:01:21,140 --> 00:01:22,730
+of her portfolio.
+
+29
+00:01:22,730 --> 00:01:25,520
+Let's denote by Ws portfolio weight.
+
+30
+00:01:25,520 --> 00:01:28,040
+In part a, we have the following portfolio.
+
+31
+00:01:28,040 --> 00:01:32,720
+40% invested into stock A, nothing in stock B, and 60%
+
+32
+00:01:32,720 --> 00:01:36,770
+into stock C. By definition, the expected return
+
+33
+00:01:36,770 --> 00:01:39,260
+is the weighted average of expected returns
+
+34
+00:01:39,260 --> 00:01:41,960
+on individual stocks where weights
+
+35
+00:01:41,960 --> 00:01:44,100
+are the portfolio weights.
+
+36
+00:01:44,100 --> 00:01:46,760
+So, therefore, in our case, it is simply
+
+37
+00:01:46,760 --> 00:01:48,410
+40%, which is the weight on stock
+
+38
+00:01:48,410 --> 00:01:52,130
+A in this portfolio, multiplied by 5%, which is the expected
+
+39
+00:01:52,130 --> 00:01:57,910
+return on stock A, plus 60% weight on stock
+
+40
+00:01:57,910 --> 00:02:01,250
+C in our portfolio multiplied by 20%
+
+41
+00:02:01,250 --> 00:02:04,610
+expect the return on stock C. The middle term,
+
+42
+00:02:04,610 --> 00:02:11,150
+WB times R bar B is absent from this equation because WB is 0.
+
+43
+00:02:11,150 --> 00:02:16,300
+So this gives us 14% expected return on this portfolio.
+
+44
+00:02:16,300 --> 00:02:19,710
+Next, let's compute portfolio variance.
+
+45
+00:02:19,710 --> 00:02:22,125
+When we have three stocks, portfolio variance
+
+46
+00:02:22,125 --> 00:02:24,360
+is given by the following expression.
+
+47
+00:02:24,360 --> 00:02:27,450
+The first three terms are portfolio weight squared
+
+48
+00:02:27,450 --> 00:02:31,110
+multiplied by individual variances of stocks,
+
+49
+00:02:31,110 --> 00:02:34,470
+and the remaining three terms are pairwise covariances
+
+50
+00:02:34,470 --> 00:02:37,950
+multiplied by the weights of corresponding stocks.
+
+51
+00:02:37,950 --> 00:02:41,190
+Recall that in our case, returns on stocks A and C
+
+52
+00:02:41,190 --> 00:02:42,960
+and B and C are not correlated.
+
+53
+00:02:42,960 --> 00:02:45,210
+Therefore, covariance terms are 0.
+
+54
+00:02:45,210 --> 00:02:48,810
+Also recall that A and B are correlated.
+
+55
+00:02:48,810 --> 00:02:50,880
+We're given the correlation coefficient.
+
+56
+00:02:50,880 --> 00:02:54,180
+Recall that the covariance equals correlation
+
+57
+00:02:54,180 --> 00:02:55,680
+multiplied by the standard deviation
+
+58
+00:02:55,680 --> 00:02:57,760
+of corresponding stocks.
+
+59
+00:02:57,760 --> 00:02:59,320
+Putting all these facts together,
+
+60
+00:02:59,320 --> 00:03:01,060
+we'll get the following.
+
+61
+00:03:01,060 --> 00:03:04,060
+Because WB is 0 and because the covariance of returns
+
+62
+00:03:04,060 --> 00:03:07,120
+on A and C is 0 as well, portfolio
+
+63
+00:03:07,120 --> 00:03:10,510
+variance in this case is effectively just this--
+
+64
+00:03:10,510 --> 00:03:13,780
+weight on A squared times the variance of returns
+
+65
+00:03:13,780 --> 00:03:17,920
+on A plus weight on C squared times the variance of returns
+
+66
+00:03:17,920 --> 00:03:21,070
+on C. Plugging in the numbers, we
+
+67
+00:03:21,070 --> 00:03:24,040
+obtain the following variants of this portfolio.
+
+68
+00:03:24,040 --> 00:03:26,560
+Taking the square root of this number,
+
+69
+00:03:26,560 --> 00:03:29,530
+we obtain portfolio standard deviation, which in this case
+
+70
+00:03:29,530 --> 00:03:31,420
+is 24.33%.
+
+71
+00:03:31,420 --> 00:03:36,920
+Now let's do the same for portfolio in part b.
+
+72
+00:03:36,920 --> 00:03:41,210
+Record that this portfolio invests 40% in A, 60% in B,
+
+73
+00:03:41,210 --> 00:03:45,080
+and nothing in C. The expected return in this case
+
+74
+00:03:45,080 --> 00:03:47,300
+would equal to weight on A times the expected
+
+75
+00:03:47,300 --> 00:03:52,040
+return on A plus weight on B times the expected return on B.
+
+76
+00:03:52,040 --> 00:03:56,270
+The term C would not be there because weight is 0.
+
+77
+00:03:56,270 --> 00:04:00,890
+So we get the following, 40% times 5%, 60% times 20%,
+
+78
+00:04:00,890 --> 00:04:03,290
+this gives us the expected return
+
+79
+00:04:03,290 --> 00:04:05,840
+on this portfolio of 14%.
+
+80
+00:04:05,840 --> 00:04:09,260
+Recall that the expected return on portfolio in part a
+
+81
+00:04:09,260 --> 00:04:11,780
+was also 14%.
+
+82
+00:04:11,780 --> 00:04:16,519
+The reason is that the expected returns on stocks B and C
+
+83
+00:04:16,519 --> 00:04:20,029
+are the same 20%, and the only difference between these two
+
+84
+00:04:20,029 --> 00:04:23,270
+portfolios is that, in part a, we put 60% on C,
+
+85
+00:04:23,270 --> 00:04:28,708
+and, in part b, we put 60% on B.
+
+86
+00:04:28,708 --> 00:04:32,000
+Because returns on stocks A and B are correlated,
+
+87
+00:04:32,000 --> 00:04:34,250
+portfolio variance will have the term
+
+88
+00:04:34,250 --> 00:04:36,410
+that captures this correlation.
+
+89
+00:04:36,410 --> 00:04:39,150
+I highlighted it here in red.
+
+90
+00:04:39,150 --> 00:04:42,500
+So it's 2 times the weight on stock A
+
+91
+00:04:42,500 --> 00:04:44,390
+in this portfolio times the weight on stock
+
+92
+00:04:44,390 --> 00:04:47,060
+B times the standard deviation of returns on A,
+
+93
+00:04:47,060 --> 00:04:50,420
+which is 10%, times the standard deviation of returns
+
+94
+00:04:50,420 --> 00:04:54,110
+on B, which is 40%, times the correlation, which
+
+95
+00:04:54,110 --> 00:04:55,910
+is negative 0.5.
+
+96
+00:04:55,910 --> 00:04:59,660
+This gives us the variance of 0.0496.
+
+97
+00:04:59,660 --> 00:05:01,790
+Taking the square root of this, we
+
+98
+00:05:01,790 --> 00:05:05,810
+obtain portfolio standard deviation of 22.27%.
+
+99
+00:05:05,810 --> 00:05:10,100
+Finally, let's compute the expected return and standard
+
+100
+00:05:10,100 --> 00:05:12,650
+deviation of the portfolio in part c.
+
+101
+00:05:12,650 --> 00:05:15,500
+Recall that it's an equally weighted portfolio, which
+
+102
+00:05:15,500 --> 00:05:21,080
+means we put one third of our wealth into these three stocks.
+
+103
+00:05:21,080 --> 00:05:23,720
+The expected return on this portfolio is 15%.
+
+104
+00:05:23,720 --> 00:05:26,910
+
+
+105
+00:05:26,910 --> 00:05:30,460
+The variance of this portfolio is given by this expression.
+
+106
+00:05:30,460 --> 00:05:32,940
+The first three terms are the weights multiplied
+
+107
+00:05:32,940 --> 00:05:35,580
+by the variance of corresponding stocks,
+
+108
+00:05:35,580 --> 00:05:40,140
+and the remaining term is 2 times the weights on stocks A
+
+109
+00:05:40,140 --> 00:05:43,620
+and B multiplied by the standard deviations of these stocks
+
+110
+00:05:43,620 --> 00:05:48,515
+multiplied by the correlation of returns on A and B. Recall
+
+111
+00:05:48,515 --> 00:05:52,320
+that because returns on A and C and B and C
+
+112
+00:05:52,320 --> 00:05:55,290
+are not correlated, therefore, there are no additional two
+
+113
+00:05:55,290 --> 00:05:57,720
+terms in this expression.
+
+114
+00:05:57,720 --> 00:06:00,810
+This gives us the variance of 0.0322,
+
+115
+00:06:00,810 --> 00:06:04,140
+and the standard deviation of 17.95%.
+
+116
+00:06:04,140 --> 00:06:08,240
+Let's summarize the results.
+
+117
+00:06:08,240 --> 00:06:14,330
+The expected return on portfolio a was 14%, b was 14% as well,
+
+118
+00:06:14,330 --> 00:06:17,120
+and on portfolio c it was 15%.
+
+119
+00:06:17,120 --> 00:06:21,620
+The standard deviations were 24.33 for portfolio a,
+
+120
+00:06:21,620 --> 00:06:28,700
+22.27 for portfolio b, and 17.95 for portfolio c.
+
+121
+00:06:28,700 --> 00:06:33,170
+Portfolio a has the same expected return as portfolio b.
+
+122
+00:06:33,170 --> 00:06:37,310
+However, because correlation between stocks A and B
+
+123
+00:06:37,310 --> 00:06:41,030
+is lower than between stocks A and C,
+
+124
+00:06:41,030 --> 00:06:44,960
+portfolio b has lower volatility.
+
+125
+00:06:44,960 --> 00:06:48,860
+Equally weighted portfolio c has high expected return
+
+126
+00:06:48,860 --> 00:06:51,890
+and lower volatility than portfolios
+
+127
+00:06:51,890 --> 00:06:56,210
+a and b because it takes fuller advantage of low correlation
+
+128
+00:06:56,210 --> 00:06:58,550
+between the three stocks, and as a result,
+
+129
+00:06:58,550 --> 00:07:02,500
+achieves a better risk-return trade off.
+
+130
+00:07:02,500 --> 00:07:03,000
+
+

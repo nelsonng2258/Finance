@@ -1,0 +1,504 @@
+0
+00:00:00,000 --> 00:00:00,595
+
+
+1
+00:00:00,595 --> 00:00:02,720
+PROFESSOR: In this question, we will review forward
+
+2
+00:00:02,720 --> 00:00:04,940
+interest rates, and we will consider
+
+3
+00:00:04,940 --> 00:00:09,620
+an example of arbitrage in the interest rate market.
+
+4
+00:00:09,620 --> 00:00:12,380
+The following table shows current interest rates.
+
+5
+00:00:12,380 --> 00:00:17,090
+The one-year spot rate is 1%, the two-year spot rate is 3%,
+
+6
+00:00:17,090 --> 00:00:21,470
+and the one-year forward rate in year 1 is 4%.
+
+7
+00:00:21,470 --> 00:00:25,550
+Construct the following three arbitrage strategies.
+
+8
+00:00:25,550 --> 00:00:29,810
+Strategy 1 pays $100 today and nothing in the future.
+
+9
+00:00:29,810 --> 00:00:34,580
+Strategy 2 pays $100 in year 1 and nothing otherwise.
+
+10
+00:00:34,580 --> 00:00:41,000
+And strategy 3 pays $100 in year 2 and nothing otherwise.
+
+11
+00:00:41,000 --> 00:00:42,920
+We will show you a generic approach
+
+12
+00:00:42,920 --> 00:00:46,970
+on how to tackle this type of questions, similar to the bond
+
+13
+00:00:46,970 --> 00:00:51,500
+arbitrage that we taught you in the first part of this course.
+
+14
+00:00:51,500 --> 00:00:54,650
+Suppose that you invest x dollars at one-year spot
+
+15
+00:00:54,650 --> 00:00:57,830
+rate, which we'll denote as r1.
+
+16
+00:00:57,830 --> 00:01:00,830
+Suppose that you invest y dollars at a two-year spot
+
+17
+00:01:00,830 --> 00:01:03,830
+rate, which we'll denote by r2.
+
+18
+00:01:03,830 --> 00:01:06,200
+And suppose that you will invest z dollars
+
+19
+00:01:06,200 --> 00:01:08,270
+at the one-year forward rate in year 1, which
+
+20
+00:01:08,270 --> 00:01:11,450
+we'll denote as f1.
+
+21
+00:01:11,450 --> 00:01:14,120
+Let's start by constructing the first arbitrage
+
+22
+00:01:14,120 --> 00:01:17,750
+strategy that generates $100 in year 0
+
+23
+00:01:17,750 --> 00:01:21,290
+and nothing in years 1 and 2.
+
+24
+00:01:21,290 --> 00:01:24,920
+We have the following system of three equations, each of which
+
+25
+00:01:24,920 --> 00:01:29,190
+shows our cash flows in years 0, 1, and 2.
+
+26
+00:01:29,190 --> 00:01:33,020
+Recall that we're investing x dollars at one-year spot rate
+
+27
+00:01:33,020 --> 00:01:35,610
+and y dollars at two-year spot rate.
+
+28
+00:01:35,610 --> 00:01:38,120
+So therefore, in year 0, our cash flows
+
+29
+00:01:38,120 --> 00:01:43,190
+are negative x and negative y, and that should equal to $100
+
+30
+00:01:43,190 --> 00:01:47,090
+that we would like to generate as part of our arbitrage
+
+31
+00:01:47,090 --> 00:01:49,120
+trading strategy.
+
+32
+00:01:49,120 --> 00:01:53,370
+The second equation shows our cash flows in year 1.
+
+33
+00:01:53,370 --> 00:02:00,030
+We get 1 plus r1 times x from our investment in year 0 at r1,
+
+34
+00:02:00,030 --> 00:02:02,610
+and at the same time we're spending z dollars
+
+35
+00:02:02,610 --> 00:02:07,740
+by investing at a one-year forward rate f1.
+
+36
+00:02:07,740 --> 00:02:10,810
+And that equals to 0 dollars because this is, again,
+
+37
+00:02:10,810 --> 00:02:13,320
+what we're trying to construct.
+
+38
+00:02:13,320 --> 00:02:17,040
+The third equation shows our cash flows in year 2.
+
+39
+00:02:17,040 --> 00:02:20,730
+We're getting 1 plus r2 squared times y.
+
+40
+00:02:20,730 --> 00:02:24,600
+This is the payoff from our initial investment of y dollars
+
+41
+00:02:24,600 --> 00:02:26,670
+at r2 for two years.
+
+42
+00:02:26,670 --> 00:02:28,830
+And we're getting 1 plus f1 times z.
+
+43
+00:02:28,830 --> 00:02:32,100
+This is the cash inflow from our investment of z
+
+44
+00:02:32,100 --> 00:02:34,200
+at f1 in year 1.
+
+45
+00:02:34,200 --> 00:02:36,480
+The total cash flow in year 2 equals
+
+46
+00:02:36,480 --> 00:02:39,210
+to 0 dollars as well, because this is
+
+47
+00:02:39,210 --> 00:02:41,650
+what we're trying to achieve.
+
+48
+00:02:41,650 --> 00:02:45,540
+Now let's solve this system of equations using Excel.
+
+49
+00:02:45,540 --> 00:02:47,850
+In this spreadsheet, we have coefficients
+
+50
+00:02:47,850 --> 00:02:52,980
+on x, y, and z in our system here in the matrix.
+
+51
+00:02:52,980 --> 00:02:57,810
+This coefficient is 1 times 1 plus r1.
+
+52
+00:02:57,810 --> 00:03:03,060
+This coefficient is 1 plus r2 raised to the power of 2.
+
+53
+00:03:03,060 --> 00:03:06,000
+And this is 1 plus f1.
+
+54
+00:03:06,000 --> 00:03:07,530
+So what we have to do right now is
+
+55
+00:03:07,530 --> 00:03:08,988
+that we have to invert this matrix,
+
+56
+00:03:08,988 --> 00:03:11,665
+and then we have to multiply it by this.
+
+57
+00:03:11,665 --> 00:03:13,290
+So what I will do here is that again, I
+
+58
+00:03:13,290 --> 00:03:15,210
+will highlight the cells.
+
+59
+00:03:15,210 --> 00:03:19,290
+I will say m inverse.
+
+60
+00:03:19,290 --> 00:03:24,960
+I will take this array, and I will hit Shift-Control-Enter,
+
+61
+00:03:24,960 --> 00:03:27,240
+because I'm on the Windows system,
+
+62
+00:03:27,240 --> 00:03:30,610
+to get the inverted matrix right here.
+
+63
+00:03:30,610 --> 00:03:32,070
+And then all I have to do is that I
+
+64
+00:03:32,070 --> 00:03:38,400
+will have to multiply this inverted matrix right here
+
+65
+00:03:38,400 --> 00:03:40,530
+by this desired outcome vector of the cash flows
+
+66
+00:03:40,530 --> 00:03:43,020
+that we were trying to achieve.
+
+67
+00:03:43,020 --> 00:03:49,940
+And this gives me positions on our bonds that we have to take.
+
+68
+00:03:49,940 --> 00:03:52,190
+In this vector that we just computed,
+
+69
+00:03:52,190 --> 00:03:57,170
+negative numbers imply short positions and positive numbers
+
+70
+00:03:57,170 --> 00:03:59,570
+imply long positions.
+
+71
+00:03:59,570 --> 00:04:04,400
+So that effectively means is that we are investing at r2
+
+72
+00:04:04,400 --> 00:04:07,520
+and we're borrowing at r1, and we're borrowing in the year 1
+
+73
+00:04:07,520 --> 00:04:09,990
+at f1 as well.
+
+74
+00:04:09,990 --> 00:04:15,620
+So you could see that in year 0, this strategy indeed produces
+
+75
+00:04:15,620 --> 00:04:22,130
+$100, because we're borrowing $10,103.81 at r1
+
+76
+00:04:22,130 --> 00:04:26,840
+and we're investing only $10,003.81 at r2,
+
+77
+00:04:26,840 --> 00:04:31,400
+therefore leaving ourselves $100.
+
+78
+00:04:31,400 --> 00:04:34,250
+Now let's see what our cash inflows and cash outflows
+
+79
+00:04:34,250 --> 00:04:36,410
+in years 1 and 2.
+
+80
+00:04:36,410 --> 00:04:40,910
+In year 1, our cash inflow would come from the fact
+
+81
+00:04:40,910 --> 00:04:47,420
+that we are borrowing this amount at f1 forward rate.
+
+82
+00:04:47,420 --> 00:04:49,310
+What would be our cash outflow?
+
+83
+00:04:49,310 --> 00:04:54,300
+Recall that we borrowed this amount in year 0 at r1,
+
+84
+00:04:54,300 --> 00:05:00,320
+and so therefore we have to repay this amount multiplied
+
+85
+00:05:00,320 --> 00:05:04,850
+by 1 plus interest rate r1.
+
+86
+00:05:04,850 --> 00:05:07,040
+And you could see that this is exactly
+
+87
+00:05:07,040 --> 00:05:09,230
+the same amount as our cash inflow,
+
+88
+00:05:09,230 --> 00:05:12,920
+and so therefore net, which is the sum of inflow and outflow
+
+89
+00:05:12,920 --> 00:05:14,600
+in this table that I constructed,
+
+90
+00:05:14,600 --> 00:05:17,390
+would equal to exactly 0.
+
+91
+00:05:17,390 --> 00:05:21,830
+In year 2, our cash flows would come from our investment at r2
+
+92
+00:05:21,830 --> 00:05:24,230
+in year 0, the amount of which would
+
+93
+00:05:24,230 --> 00:05:32,420
+be this multiplied by 1 plus r2 raised to the power of 2.
+
+94
+00:05:32,420 --> 00:05:35,180
+And our outflow will come from the fact
+
+95
+00:05:35,180 --> 00:05:38,120
+that we borrowed this amount at f1,
+
+96
+00:05:38,120 --> 00:05:40,580
+so therefore our cash outflow would
+
+97
+00:05:40,580 --> 00:05:46,310
+be this position multiplied by 1 plus the forward rate.
+
+98
+00:05:46,310 --> 00:05:49,400
+And again, you could see that the two
+
+99
+00:05:49,400 --> 00:05:50,610
+amounts are exactly the same.
+
+100
+00:05:50,610 --> 00:05:55,190
+So therefore, on net, we're getting 0 dollars in year 2.
+
+101
+00:05:55,190 --> 00:05:57,410
+So therefore, we achieved exactly the outcome
+
+102
+00:05:57,410 --> 00:05:58,040
+that we wanted.
+
+103
+00:05:58,040 --> 00:06:04,800
+We get $100 in year 0 and we get nothing in years 1 and 2.
+
+104
+00:06:04,800 --> 00:06:07,740
+Let me conclude by explaining economic intuition-- why,
+
+105
+00:06:07,740 --> 00:06:10,260
+in this arbitrage trading strategy,
+
+106
+00:06:10,260 --> 00:06:15,450
+we are going long the r2 rate and short r1 and f1.
+
+107
+00:06:15,450 --> 00:06:17,340
+Let's consider two scenarios.
+
+108
+00:06:17,340 --> 00:06:20,520
+In scenario 1, we're investing $100 for three years
+
+109
+00:06:20,520 --> 00:06:24,900
+at r2, and in scenario 2, investing $100
+
+110
+00:06:24,900 --> 00:06:31,680
+first for one year at r1, and then for another year at f1.
+
+111
+00:06:31,680 --> 00:06:34,200
+So let's see what would be the payoff of scenario 1
+
+112
+00:06:34,200 --> 00:06:37,470
+and scenario 2 at the end of year 2.
+
+113
+00:06:37,470 --> 00:06:42,870
+So scenario 1 gives us $100 times
+
+114
+00:06:42,870 --> 00:06:48,180
+1 plus r2, raised to the power of 2.
+
+115
+00:06:48,180 --> 00:06:55,350
+And scenario 2 gives us $100 multiplied by 1 plus r1
+
+116
+00:06:55,350 --> 00:06:59,070
+multiplied by 1 plus f1.
+
+117
+00:06:59,070 --> 00:07:02,280
+And that gives us $105.04.
+
+118
+00:07:02,280 --> 00:07:05,790
+So clearly, we can see that scenario 1 gives us
+
+119
+00:07:05,790 --> 00:07:09,180
+a higher payoff at the end of year 2 than scenario 2,
+
+120
+00:07:09,180 --> 00:07:12,330
+so therefore, relative to r1 and f1,
+
+121
+00:07:12,330 --> 00:07:16,050
+r2 is a good interest rate to invest at.
+
+122
+00:07:16,050 --> 00:07:18,630
+And therefore, our arbitrage trading strategy
+
+123
+00:07:18,630 --> 00:07:22,800
+that yields $100 today and nothing in years 1 and 2
+
+124
+00:07:22,800 --> 00:07:27,860
+goes long r2 and short r1 and f1.
+
+125
+00:07:27,860 --> 00:07:29,000
+
+

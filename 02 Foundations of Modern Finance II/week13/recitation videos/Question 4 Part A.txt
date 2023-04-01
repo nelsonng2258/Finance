@@ -1,0 +1,95 @@
+
+PROFESSOR: In this video we will learn
+how to use Black-Scholes-Merton formula to price options.
+We will assume that all assumptions that
+underlie Black-Scholes-Merton formula hold.
+Suppose that there is a stock, XYZ,
+with the current price of $50.
+We will assume that it has annual volatility of 35%.
+The annualized continuously-compounded
+risk-free rate is 1.25%.
+The first question asks, what is the price
+of the call option with a strike price of $55
+and six months to maturity?
+The second question asks us to price the put option
+of the same strike price, $55, and same time
+to maturity, six months.
+The Black-Scholes-Merton pricing formula
+for a European call option is given
+by the following expression.
+Here S naught is the current share price,
+N is the cumulative distribution function
+of a standard normal distribution.
+K is the strike price of the option,
+R is the continuously compounded risk-free interest rate.
+Sigma is the annualized volatility of the stock price,
+and T is time to maturity expressed in years.
+Recall that in our case option has six months to maturity,
+therefore capital T is 0.5.
+Let's use Excel to implement the pricing of this option.
+Here I have put all of the inputs
+into the problem, the current share price, volatility,
+risk-free interest rate, strike price, and maturity.
+Let's start by computing X. Recall that X is given
+by the following expression.
+Therefore, to compute X, we need to carefully input
+all of the option parameters into the corresponding formula,
+which I have done here.
+
+Next, I will compute N of X. Recall
+that N is the cumulative distribution
+function of a standard normal distribution.
+Excel has a corresponding function,
+which is called NORM.S.DIST.
+And it has two input parameters.
+First is X and second can take values either 1 or 0.
+1 is for the cumulative distribution function,
+and 0 is the probability density function.
+So we need the first one, so therefore the second parameter
+is 1.
+And that gives me N of X.
+Next, I will compute the second expression, which
+is N of X minus sigma multiplied by the square root
+of capital T. So NORM.S.DIST, X minus sigma
+multiplied by the square root of capital T. Recall
+that we want cumulative distribution function,
+therefore our second parameter is 1.
+Now we can compute the option price.
+According to the Black-Scholes-Merton formula
+it equals the current share price
+multiplied by N of X minus the present value of the strike
+price.
+Recall that the strike price is $55.
+We're finding the present value of this strike price
+by multiplying it by the exponent raised
+to the power negative risk-free rate multiplied by capital T.
+And then we're multiplying it by N
+of X minus sigma multiplied by square root of T,
+which is this expression.
+The price of this European call option
+according to the Black-Scholes-Merton formula
+is $3.15.
+We can extend our analysis and use
+the Black-Scholes-Merton formula to see
+how the option price changes with respect to underlying
+parameters.
+Let's see how the option price changes with respect
+to the stock price.
+Recall that our original stock price was $50.
+Here I have created an array from $20 to $100 in $0.50
+increments.
+And what I will do is that for each of these stock prices,
+I will compute the option price according to the Black-Scholes
+formula.
+Now we can plot option price as a function of stock price.
+We can confirm that the option price
+increases with stock price.
+The slope of this line, which is the delta of this option,
+starts at 0 and gets closer to 1 as stock price rises.
+You can also see that this function is convex, which
+means that the gamma of the call option,
+defined as the second derivative of the option price
+with respect to the stock price, is positive.
+You can try building similar plots for time
+to maturity and volatility, which
+will help you to visualize theta and vega of the call option.

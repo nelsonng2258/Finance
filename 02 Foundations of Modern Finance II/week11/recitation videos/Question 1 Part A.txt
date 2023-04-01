@@ -1,0 +1,125 @@
+
+PROFESSOR: In this question, we will review forward
+interest rates, and we will consider
+an example of arbitrage in the interest rate market.
+The following table shows current interest rates.
+The one-year spot rate is 1%, the two-year spot rate is 3%,
+and the one-year forward rate in year 1 is 4%.
+Construct the following three arbitrage strategies.
+Strategy 1 pays $100 today and nothing in the future.
+Strategy 2 pays $100 in year 1 and nothing otherwise.
+And strategy 3 pays $100 in year 2 and nothing otherwise.
+We will show you a generic approach
+on how to tackle this type of questions, similar to the bond
+arbitrage that we taught you in the first part of this course.
+Suppose that you invest x dollars at one-year spot
+rate, which we'll denote as r1.
+Suppose that you invest y dollars at a two-year spot
+rate, which we'll denote by r2.
+And suppose that you will invest z dollars
+at the one-year forward rate in year 1, which
+we'll denote as f1.
+Let's start by constructing the first arbitrage
+strategy that generates $100 in year 0
+and nothing in years 1 and 2.
+We have the following system of three equations, each of which
+shows our cash flows in years 0, 1, and 2.
+Recall that we're investing x dollars at one-year spot rate
+and y dollars at two-year spot rate.
+So therefore, in year 0, our cash flows
+are negative x and negative y, and that should equal to $100
+that we would like to generate as part of our arbitrage
+trading strategy.
+The second equation shows our cash flows in year 1.
+We get 1 plus r1 times x from our investment in year 0 at r1,
+and at the same time we're spending z dollars
+by investing at a one-year forward rate f1.
+And that equals to 0 dollars because this is, again,
+what we're trying to construct.
+The third equation shows our cash flows in year 2.
+We're getting 1 plus r2 squared times y.
+This is the payoff from our initial investment of y dollars
+at r2 for two years.
+And we're getting 1 plus f1 times z.
+This is the cash inflow from our investment of z
+at f1 in year 1.
+The total cash flow in year 2 equals
+to 0 dollars as well, because this is
+what we're trying to achieve.
+Now let's solve this system of equations using Excel.
+In this spreadsheet, we have coefficients
+on x, y, and z in our system here in the matrix.
+This coefficient is 1 times 1 plus r1.
+This coefficient is 1 plus r2 raised to the power of 2.
+And this is 1 plus f1.
+So what we have to do right now is
+that we have to invert this matrix,
+and then we have to multiply it by this.
+So what I will do here is that again, I
+will highlight the cells.
+I will say m inverse.
+I will take this array, and I will hit Shift-Control-Enter,
+because I'm on the Windows system,
+to get the inverted matrix right here.
+And then all I have to do is that I
+will have to multiply this inverted matrix right here
+by this desired outcome vector of the cash flows
+that we were trying to achieve.
+And this gives me positions on our bonds that we have to take.
+In this vector that we just computed,
+negative numbers imply short positions and positive numbers
+imply long positions.
+So that effectively means is that we are investing at r2
+and we're borrowing at r1, and we're borrowing in the year 1
+at f1 as well.
+So you could see that in year 0, this strategy indeed produces
+$100, because we're borrowing $10,103.81 at r1
+and we're investing only $10,003.81 at r2,
+therefore leaving ourselves $100.
+Now let's see what our cash inflows and cash outflows
+in years 1 and 2.
+In year 1, our cash inflow would come from the fact
+that we are borrowing this amount at f1 forward rate.
+What would be our cash outflow?
+Recall that we borrowed this amount in year 0 at r1,
+and so therefore we have to repay this amount multiplied
+by 1 plus interest rate r1.
+And you could see that this is exactly
+the same amount as our cash inflow,
+and so therefore net, which is the sum of inflow and outflow
+in this table that I constructed,
+would equal to exactly 0.
+In year 2, our cash flows would come from our investment at r2
+in year 0, the amount of which would
+be this multiplied by 1 plus r2 raised to the power of 2.
+And our outflow will come from the fact
+that we borrowed this amount at f1,
+so therefore our cash outflow would
+be this position multiplied by 1 plus the forward rate.
+And again, you could see that the two
+amounts are exactly the same.
+So therefore, on net, we're getting 0 dollars in year 2.
+So therefore, we achieved exactly the outcome
+that we wanted.
+We get $100 in year 0 and we get nothing in years 1 and 2.
+Let me conclude by explaining economic intuition-- why,
+in this arbitrage trading strategy,
+we are going long the r2 rate and short r1 and f1.
+Let's consider two scenarios.
+In scenario 1, we're investing $100 for three years
+at r2, and in scenario 2, investing $100
+first for one year at r1, and then for another year at f1.
+So let's see what would be the payoff of scenario 1
+and scenario 2 at the end of year 2.
+So scenario 1 gives us $100 times
+1 plus r2, raised to the power of 2.
+And scenario 2 gives us $100 multiplied by 1 plus r1
+multiplied by 1 plus f1.
+And that gives us $105.04.
+So clearly, we can see that scenario 1 gives us
+a higher payoff at the end of year 2 than scenario 2,
+so therefore, relative to r1 and f1,
+r2 is a good interest rate to invest at.
+And therefore, our arbitrage trading strategy
+that yields $100 today and nothing in years 1 and 2
+goes long r2 and short r1 and f1.

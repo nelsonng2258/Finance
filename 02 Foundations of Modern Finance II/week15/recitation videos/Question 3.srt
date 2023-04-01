@@ -1,0 +1,480 @@
+0
+00:00:00,000 --> 00:00:00,480
+
+
+1
+00:00:00,480 --> 00:00:02,730
+PROFESSOR: Suppose that an endowment fund is currently
+
+2
+00:00:02,730 --> 00:00:06,210
+investing 20% of its portfolio in the risk-free asset,
+
+3
+00:00:06,210 --> 00:00:09,150
+and the remaining 80% is invested in the private equity
+
+4
+00:00:09,150 --> 00:00:11,400
+fund called Eternal Growth.
+
+5
+00:00:11,400 --> 00:00:14,160
+The endowment fund analyzed holdings of Eternal Growth's
+
+6
+00:00:14,160 --> 00:00:16,920
+portfolio and found that its expected returns
+
+7
+00:00:16,920 --> 00:00:19,890
+over the next year will be 10%, and standard deviation
+
+8
+00:00:19,890 --> 00:00:22,440
+will be 25%.
+
+9
+00:00:22,440 --> 00:00:24,300
+Research conducted by the endowment fund
+
+10
+00:00:24,300 --> 00:00:26,610
+indicates that the market portfolio
+
+11
+00:00:26,610 --> 00:00:31,200
+will have expected return of 10% and standard deviation of 20%
+
+12
+00:00:31,200 --> 00:00:32,765
+during the next year.
+
+13
+00:00:32,765 --> 00:00:34,890
+The correlation of returns between Eternal Growth's
+
+14
+00:00:34,890 --> 00:00:39,270
+portfolio and the market portfolio is 0.8.
+
+15
+00:00:39,270 --> 00:00:41,170
+Suppose the risk-free asset will yield
+
+16
+00:00:41,170 --> 00:00:44,040
+5% return over the next year.
+
+17
+00:00:44,040 --> 00:00:46,410
+We will answer the following questions.
+
+18
+00:00:46,410 --> 00:00:50,160
+Compute CAPM beta of Eternal Growth's portfolio.
+
+19
+00:00:50,160 --> 00:00:54,330
+Compute CAPM beta and alpha of the endowment fund's portfolio.
+
+20
+00:00:54,330 --> 00:00:56,250
+Suppose that you were retained as an advisor
+
+21
+00:00:56,250 --> 00:00:57,930
+to the endowment fund.
+
+22
+00:00:57,930 --> 00:00:59,370
+Would you recommend divesting part
+
+23
+00:00:59,370 --> 00:01:01,320
+of the holdings in Eternal Growth
+
+24
+00:01:01,320 --> 00:01:05,480
+and reallocating them to the market portfolio?
+
+25
+00:01:05,480 --> 00:01:07,940
+Let's start with the first question.
+
+26
+00:01:07,940 --> 00:01:10,610
+Recall that CAPM beta for portfolio P
+
+27
+00:01:10,610 --> 00:01:13,550
+is the correlation of returns on this portfolio with the market
+
+28
+00:01:13,550 --> 00:01:16,880
+multiplied by the standard deviation of this portfolio
+
+29
+00:01:16,880 --> 00:01:20,180
+returns divided by the standard deviation of the returns
+
+30
+00:01:20,180 --> 00:01:22,190
+on the market portfolio.
+
+31
+00:01:22,190 --> 00:01:25,610
+In our case, the correlation of returns between Eternal Growth
+
+32
+00:01:25,610 --> 00:01:27,620
+and the market is 0.8.
+
+33
+00:01:27,620 --> 00:01:30,590
+The standard deviation of returns of Eternal Growth
+
+34
+00:01:30,590 --> 00:01:32,510
+portfolio is 25%.
+
+35
+00:01:32,510 --> 00:01:35,510
+And the standard deviation of returns of the market portfolio
+
+36
+00:01:35,510 --> 00:01:36,950
+is 20%.
+
+37
+00:01:36,950 --> 00:01:39,530
+Putting this all together, the CAPM beta of Eternal Growth
+
+38
+00:01:39,530 --> 00:01:41,690
+portfolio is 1.
+
+39
+00:01:41,690 --> 00:01:46,070
+Next, let's find CAPM beta and alpha of the endowment fund.
+
+40
+00:01:46,070 --> 00:01:47,900
+Let's start with beta.
+
+41
+00:01:47,900 --> 00:01:49,820
+Recall that the endowment fund is invested
+
+42
+00:01:49,820 --> 00:01:53,330
+20% into the risk-free asset and 80%
+
+43
+00:01:53,330 --> 00:01:55,340
+into the Eternal Growth fund.
+
+44
+00:01:55,340 --> 00:01:58,370
+Therefore, CAPM beta of the endowment fund
+
+45
+00:01:58,370 --> 00:02:00,140
+would be the weighted average of CAPM
+
+46
+00:02:00,140 --> 00:02:03,470
+betas of the risk-free asset and of the Eternal Growth.
+
+47
+00:02:03,470 --> 00:02:05,510
+The beta of the risk-free asset is 0,
+
+48
+00:02:05,510 --> 00:02:07,250
+and the beta of the Eternal Growth fund,
+
+49
+00:02:07,250 --> 00:02:09,250
+which we found in the previous question, is 1.
+
+50
+00:02:09,250 --> 00:02:14,480
+Therefore, the beta of the endowment fund is 0.8.
+
+51
+00:02:14,480 --> 00:02:17,120
+In order to find CAPM alpha, let's first compute
+
+52
+00:02:17,120 --> 00:02:20,180
+the expected return on this endowment fund given
+
+53
+00:02:20,180 --> 00:02:22,460
+its portfolio allocation.
+
+54
+00:02:22,460 --> 00:02:26,180
+Recall that it's 20% risk-free asset and 80% the Eternal
+
+55
+00:02:26,180 --> 00:02:27,350
+Growth fund.
+
+56
+00:02:27,350 --> 00:02:30,710
+Therefore, the expected return on the endowment fund
+
+57
+00:02:30,710 --> 00:02:33,950
+is 20% times the return on the risk-free asset
+
+58
+00:02:33,950 --> 00:02:37,310
+plus 80% times the expected return on the Eternal Growth
+
+59
+00:02:37,310 --> 00:02:38,060
+fund.
+
+60
+00:02:38,060 --> 00:02:42,860
+This is 20% times 5% plus 80% times 10%.
+
+61
+00:02:42,860 --> 00:02:45,730
+This gives us 9%.
+
+62
+00:02:45,730 --> 00:02:49,210
+We can compute CAPM alpha as the difference between the expected
+
+63
+00:02:49,210 --> 00:02:52,660
+return that the endowment fund expects to generate,
+
+64
+00:02:52,660 --> 00:02:54,910
+which we just computed-- it is 9%--
+
+65
+00:02:54,910 --> 00:02:58,720
+and the expected return under the capital asset pricing model
+
+66
+00:02:58,720 --> 00:03:01,720
+given its systematic risk exposure.
+
+67
+00:03:01,720 --> 00:03:04,510
+Given the beta of 0.8, the expected return
+
+68
+00:03:04,510 --> 00:03:07,720
+on the endowment fund under the capital asset pricing model
+
+69
+00:03:07,720 --> 00:03:11,650
+is the risk-free rate plus beta multiplied by the market risk
+
+70
+00:03:11,650 --> 00:03:13,460
+premium.
+
+71
+00:03:13,460 --> 00:03:15,740
+Recall that the risk-free rate is 5%,
+
+72
+00:03:15,740 --> 00:03:19,020
+and the expected return on the market portfolio is 10%.
+
+73
+00:03:19,020 --> 00:03:21,440
+Therefore, under the CAPM, the expected return
+
+74
+00:03:21,440 --> 00:03:25,180
+on the endowment fund should be 9%.
+
+75
+00:03:25,180 --> 00:03:26,860
+Putting this all together, we get
+
+76
+00:03:26,860 --> 00:03:29,200
+that the CAPM alpha of this endowment fund is 0%.
+
+77
+00:03:29,200 --> 00:03:31,990
+
+
+78
+00:03:31,990 --> 00:03:35,050
+Finally, let's answer the last question.
+
+79
+00:03:35,050 --> 00:03:37,390
+You are an advisor to this endowment fund.
+
+80
+00:03:37,390 --> 00:03:39,490
+Do you recommend to partially reallocate assets
+
+81
+00:03:39,490 --> 00:03:44,250
+from Eternal Growth fund to the market portfolio?
+
+82
+00:03:44,250 --> 00:03:47,937
+The answer is yes, you should recommend such reallocation.
+
+83
+00:03:47,937 --> 00:03:50,270
+The easiest way to see it is to compare the Sharpe ratio
+
+84
+00:03:50,270 --> 00:03:53,040
+on the endowment fund with the Sharpe ratio
+
+85
+00:03:53,040 --> 00:03:54,878
+on the market portfolio.
+
+86
+00:03:54,878 --> 00:03:57,170
+You can see that the Sharpe ratio of the endowment fund
+
+87
+00:03:57,170 --> 00:03:58,670
+is 0.2.
+
+88
+00:03:58,670 --> 00:04:01,460
+It is computed as the expected return on the endowment fund,
+
+89
+00:04:01,460 --> 00:04:04,490
+9%, minus the risk-free rate, 5%,
+
+90
+00:04:04,490 --> 00:04:07,340
+divided by the standard deviation of this endowment
+
+91
+00:04:07,340 --> 00:04:09,043
+fund, 20%.
+
+92
+00:04:09,043 --> 00:04:10,460
+The standard deviation is computed
+
+93
+00:04:10,460 --> 00:04:14,390
+by multiplying 80%, which is the allocation to the Eternal
+
+94
+00:04:14,390 --> 00:04:17,930
+Growth fund, multiplied by the standard deviation
+
+95
+00:04:17,930 --> 00:04:20,920
+of the Eternal Growth fund, which is 25%.
+
+96
+00:04:20,920 --> 00:04:25,490
+And the Sharpe ratio of the market portfolio is 0.25.
+
+97
+00:04:25,490 --> 00:04:28,270
+This means that the portfolio of the endowment fund
+
+98
+00:04:28,270 --> 00:04:31,150
+is not efficient, and its risk-return trade-off
+
+99
+00:04:31,150 --> 00:04:34,420
+can be improved by reallocating assets from the Eternal Growth
+
+100
+00:04:34,420 --> 00:04:37,550
+fund to the market portfolio.
+
+101
+00:04:37,550 --> 00:04:40,880
+It is also useful to represent the situation graphically.
+
+102
+00:04:40,880 --> 00:04:44,600
+On this chart, I've plotted the capital market line.
+
+103
+00:04:44,600 --> 00:04:46,400
+I've plotted the market portfolio.
+
+104
+00:04:46,400 --> 00:04:47,690
+This is the red dot.
+
+105
+00:04:47,690 --> 00:04:50,360
+It has expected return of 10% and the standard deviation
+
+106
+00:04:50,360 --> 00:04:51,860
+of 20%.
+
+107
+00:04:51,860 --> 00:04:53,930
+I've plotted the Eternal Growth fund,
+
+108
+00:04:53,930 --> 00:04:57,380
+which has the standard deviation of 25% and expected
+
+109
+00:04:57,380 --> 00:04:59,300
+return of 10%.
+
+110
+00:04:59,300 --> 00:05:02,300
+And I also plotted the endowment fund portfolio.
+
+111
+00:05:02,300 --> 00:05:03,770
+That's the yellow dot.
+
+112
+00:05:03,770 --> 00:05:08,330
+It has 9% expected return and 20% standard deviation.
+
+113
+00:05:08,330 --> 00:05:10,790
+You can see that the Sharpe ratio, which
+
+114
+00:05:10,790 --> 00:05:13,310
+is the slope of the line that connects
+
+115
+00:05:13,310 --> 00:05:15,710
+the risk-free rate and the endowment fund and the Eternal
+
+116
+00:05:15,710 --> 00:05:18,230
+Growth fund, is lower than the slope
+
+117
+00:05:18,230 --> 00:05:22,340
+of the solid blue line, which is the capital market line.
+
+118
+00:05:22,340 --> 00:05:25,340
+Therefore, this graph confirms the inefficiency
+
+119
+00:05:25,340 --> 00:05:28,360
+of the endowment fund's portfolio.
+

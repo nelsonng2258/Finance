@@ -1,0 +1,204 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:02,430
+PROFESSOR: Next, we consider portfolio choice
+
+2
+00:00:02,430 --> 00:00:04,980
+with multiple risky assets.
+
+3
+00:00:04,980 --> 00:00:08,800
+We allow for unlimited short sales.
+
+4
+00:00:08,800 --> 00:00:11,650
+Later, we will derive an explicit analytical solution
+
+5
+00:00:11,650 --> 00:00:13,320
+of this problem.
+
+6
+00:00:13,320 --> 00:00:17,330
+For now, let's consider a plot of the solution.
+
+7
+00:00:17,330 --> 00:00:19,970
+We are plotting the set of portfolios
+
+8
+00:00:19,970 --> 00:00:22,910
+with the lowest possible risk for any given
+
+9
+00:00:22,910 --> 00:00:25,690
+level of expected return.
+
+10
+00:00:25,690 --> 00:00:30,290
+These are called the mean variance optimal portfolios.
+
+11
+00:00:30,290 --> 00:00:33,860
+The curve representing the set of optimal portfolios
+
+12
+00:00:33,860 --> 00:00:36,650
+in the mean standard deviation space
+
+13
+00:00:36,650 --> 00:00:39,710
+is called the portfolio frontier.
+
+14
+00:00:39,710 --> 00:00:42,410
+The upper part of the portfolio frontier
+
+15
+00:00:42,410 --> 00:00:45,180
+is called the efficient frontier.
+
+16
+00:00:45,180 --> 00:00:47,670
+Investors with mean various preferences
+
+17
+00:00:47,670 --> 00:00:51,910
+should only consider investing in efficient portfolios.
+
+18
+00:00:51,910 --> 00:00:54,960
+Any other portfolio is dominated.
+
+19
+00:00:54,960 --> 00:00:58,080
+One can find another portfolio with the same level
+
+20
+00:00:58,080 --> 00:01:00,810
+of expected return and lower risk,
+
+21
+00:01:00,810 --> 00:01:04,200
+or in case of the inefficient portfolio on the portfolio
+
+22
+00:01:04,200 --> 00:01:07,590
+frontier, one can achieve the same level of risk
+
+23
+00:01:07,590 --> 00:01:10,320
+with a higher level of expected return.
+
+24
+00:01:10,320 --> 00:01:13,080
+The concept of the efficient portfolio frontier
+
+25
+00:01:13,080 --> 00:01:16,830
+greatly simplifies the portfolio choice problem.
+
+26
+00:01:16,830 --> 00:01:20,160
+We can reduce the set of all possible portfolios
+
+27
+00:01:20,160 --> 00:01:23,880
+to a much smaller subset, the efficient frontier,
+
+28
+00:01:23,880 --> 00:01:28,520
+without knowing the precise preferences of the investor.
+
+29
+00:01:28,520 --> 00:01:30,740
+We can then draw general conclusions
+
+30
+00:01:30,740 --> 00:01:35,030
+about optimal portfolios chosen by many different investors,
+
+31
+00:01:35,030 --> 00:01:37,640
+all mean various optimizers, but possibly
+
+32
+00:01:37,640 --> 00:01:41,970
+with very different attitudes towards risk.
+
+33
+00:01:41,970 --> 00:01:45,350
+Next, note that none of the five ETFs
+
+34
+00:01:45,350 --> 00:01:48,370
+end up on the portfolio frontier.
+
+35
+00:01:48,370 --> 00:01:52,250
+This is in contrast to the case of two risky assets.
+
+36
+00:01:52,250 --> 00:01:55,460
+With multiple assets, frontier portfolios
+
+37
+00:01:55,460 --> 00:02:00,600
+typically strictly dominate each of the individual assets.
+
+38
+00:02:00,600 --> 00:02:04,920
+Our next plot compares two portfolio frontiers.
+
+39
+00:02:04,920 --> 00:02:08,310
+The solid blue line shows the frontier constructed
+
+40
+00:02:08,310 --> 00:02:11,660
+using all five of our ETFs.
+
+41
+00:02:11,660 --> 00:02:14,310
+The dashed red line shows the frontier
+
+42
+00:02:14,310 --> 00:02:19,730
+constructed using a subset with three tiers, the AGG, SPY,
+
+43
+00:02:19,730 --> 00:02:22,600
+and IAU.
+
+44
+00:02:22,600 --> 00:02:24,400
+Note that the three asset frontier
+
+45
+00:02:24,400 --> 00:02:27,440
+is to the right from the five asset one.
+
+46
+00:02:27,440 --> 00:02:29,060
+That is intuitive.
+
+47
+00:02:29,060 --> 00:02:32,630
+One can always do at least as well with extra assets,
+
+48
+00:02:32,630 --> 00:02:34,400
+because the option of not investing
+
+49
+00:02:34,400 --> 00:02:37,240
+in them is one of the choices.
+
+50
+00:02:37,240 --> 00:02:38,000
+
+

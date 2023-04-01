@@ -1,0 +1,68 @@
+
+PROFESSOR: We now consider a currency forward
+and connect currency forward prices to exchange rates
+and interest rates.
+A currency forward is a forward contract
+to exchange a unit of one currency
+for a specified number of units of another currency.
+For example, one may enter into a contract to exchange one
+Swiss franc for a specified number of US dollars,
+say $1.10 three years from now.
+This number is the forward exchange rate,
+and it depends on contract maturity.
+For contracts with shorter or longer maturities,
+forward rates differ.
+We can use our previous results on pricing
+of financial forwards to determine how forward exchange
+rates are related to the spot exchange rates
+and risk-free interest rates in the two currencies.
+Suppose the forward price is F sub T US dollars for one
+Swiss Franc, where the forward contract
+matures at time T. Let X sub T denote the spot exchange rate.
+This is the current price of one Swiss Franc in US dollars.
+Consider the two risk-free rates rUSD and rCHF.
+These are continuously compounded spot interest rates
+for investments between now and time, capital T,
+in US dollars and Swiss francs, respectively.
+Consider a position with Swiss francs invested
+at the Swiss risk-free rate.
+The number of Swiss francs in the position
+grows exponentially between now and time T
+at the Swiss risk-free rate.
+We conclude that for the purposes
+of pricing a forward contract, the Swiss franc position
+is equivalent to a financial asset with a dividend
+yield equal to the Swiss interest rate.
+We conclude that the forward exchange rate
+is given by the relation we have established
+above for financial forwards.
+The forward exchange rate is a product of the spot exchange
+rate, X at time 0, and the exponential
+of the time to maturity of the contract multiplied
+by the difference between the two risk-free rates, the US
+dollar rate minus the Swiss franc rate.
+This relation between the forward exchange rate, the spot
+exchange rate, and the two interest rates
+is called the covered interest rate parity.
+This is a no arbitrage relation.
+To replicate the payoff of the currency forward,
+we again refer to our general results for financial forwards.
+At time 0, we performed the following transactions.
+First, we borrow a dollar amount equal to the forward exchange
+rate, scaled by an exponential function of time to maturity,
+multiplied by the negative of the US interest rate.
+Note that given the expression for the forward rate,
+this dollar amount is equal to the spot exchange rate
+X, scaled by an exponential function of time to maturity,
+multiplied by the negative of the Swiss interest rate.
+Second, we convert the borrowed amount
+into Swiss francs at the spot exchange rate today.
+Third, we invest the proceeds at the Swiss risk-free interest
+rate until time T. By the maturity date of the forward,
+the long position in Swiss francs
+grows in value to one Swiss franc.
+At the same time, the borrowed dollar amount results
+in the cash flow equal to the negative of the forward price.
+The bottom line, we have replicated the payoff
+of the forward contract using transactions
+in the spot markets.

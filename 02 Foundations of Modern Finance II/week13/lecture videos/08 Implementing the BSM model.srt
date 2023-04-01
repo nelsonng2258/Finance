@@ -1,0 +1,384 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:03,790
+PROFESSOR: To implement the Black-Scholes-Merton formula,
+
+2
+00:00:03,790 --> 00:00:09,150
+we need to estimate volatility of stock returns, or sigma.
+
+3
+00:00:09,150 --> 00:00:11,460
+All the other inputs entered in the formula
+
+4
+00:00:11,460 --> 00:00:13,200
+are known precisely--
+
+5
+00:00:13,200 --> 00:00:15,480
+the current stock price, the strike
+
+6
+00:00:15,480 --> 00:00:19,400
+of the option, time to maturity, and the interest rate.
+
+7
+00:00:19,400 --> 00:00:21,770
+Stock return volatility is the only input
+
+8
+00:00:21,770 --> 00:00:24,720
+that needs to be estimated.
+
+9
+00:00:24,720 --> 00:00:28,440
+There are two ways to estimate the volatility parameter.
+
+10
+00:00:28,440 --> 00:00:32,750
+One approach is to use historical return volatility.
+
+11
+00:00:32,750 --> 00:00:36,620
+For that, we develop statistical estimates of volatility
+
+12
+00:00:36,620 --> 00:00:40,190
+using past returns on the underlying asset.
+
+13
+00:00:40,190 --> 00:00:43,220
+For example, one simple approach is
+
+14
+00:00:43,220 --> 00:00:46,610
+to use daily returns over a given period
+
+15
+00:00:46,610 --> 00:00:49,580
+to estimate daily volatility as the sample standard
+
+16
+00:00:49,580 --> 00:00:52,590
+deviation of stock returns.
+
+17
+00:00:52,590 --> 00:00:57,540
+We then analyze our estimate by multiplying daily volatility
+
+18
+00:00:57,540 --> 00:01:01,260
+by the square root of 252, which is the number of trading
+
+19
+00:01:01,260 --> 00:01:04,330
+days in a year.
+
+20
+00:01:04,330 --> 00:01:08,630
+Another approach is to use what is called implied volatility.
+
+21
+00:01:08,630 --> 00:01:14,410
+Under this approach, we price options relative to each other.
+
+22
+00:01:14,410 --> 00:01:19,260
+Let's say that we observe market prices of some other options.
+
+23
+00:01:19,260 --> 00:01:21,600
+We assume that these prices satisfy
+
+24
+00:01:21,600 --> 00:01:26,190
+the Black-Scholes-Merton formula and solve for the volatility
+
+25
+00:01:26,190 --> 00:01:30,300
+parameter to find the implied volatility.
+
+26
+00:01:30,300 --> 00:01:34,680
+As an example, suppose we need to price a call on a stock
+
+27
+00:01:34,680 --> 00:01:40,780
+with a strike price of $110 and time to maturity of one year.
+
+28
+00:01:40,780 --> 00:01:44,380
+Suppose that the current stock price is $100,
+
+29
+00:01:44,380 --> 00:01:49,300
+and the one-year interest rate is 6.18%.
+
+30
+00:01:49,300 --> 00:01:51,910
+Suppose we observe another call option with a strike
+
+31
+00:01:51,910 --> 00:01:58,450
+price of $120 trading at $3.16.
+
+32
+00:01:58,450 --> 00:02:01,220
+The implied volatility of that other option,
+
+33
+00:02:01,220 --> 00:02:03,730
+which reconciles its market price
+
+34
+00:02:03,730 --> 00:02:06,520
+with the Black-Scholes-Merton model, is 19%.
+
+35
+00:02:06,520 --> 00:02:09,110
+
+
+36
+00:02:09,110 --> 00:02:13,490
+We then use 19% in the Black-Scholes-Merton formula
+
+37
+00:02:13,490 --> 00:02:18,020
+to price the call with a strike of $110.
+
+38
+00:02:18,020 --> 00:02:21,230
+One problem with this approach is that, in the data,
+
+39
+00:02:21,230 --> 00:02:23,960
+implied volatility may be different for options
+
+40
+00:02:23,960 --> 00:02:27,000
+with different strikes and maturities.
+
+41
+00:02:27,000 --> 00:02:30,660
+These empirical patterns of how implied volatility changes
+
+42
+00:02:30,660 --> 00:02:33,120
+across strikes and across maturities
+
+43
+00:02:33,120 --> 00:02:38,210
+are called volatility smiles and smirks because of their shape.
+
+44
+00:02:38,210 --> 00:02:41,060
+As we can see from the Bloomberg screenshot,
+
+45
+00:02:41,060 --> 00:02:43,760
+implied volatilities of options on IBM
+
+46
+00:02:43,760 --> 00:02:48,470
+are not equal across strikes and maturities.
+
+47
+00:02:48,470 --> 00:02:51,110
+The implied volatility column shows
+
+48
+00:02:51,110 --> 00:02:55,390
+that the implied volatility declines with the strike.
+
+49
+00:02:55,390 --> 00:02:58,210
+We observe this pattern for each of the three option
+
+50
+00:02:58,210 --> 00:03:01,570
+maturities shown here.
+
+51
+00:03:01,570 --> 00:03:04,350
+We also observe that the implied volatilities are not
+
+52
+00:03:04,350 --> 00:03:07,440
+flat across option maturities.
+
+53
+00:03:07,440 --> 00:03:09,750
+Here, we don't see a clear pattern.
+
+54
+00:03:09,750 --> 00:03:12,630
+But know that, for example, for the options with the strike
+
+55
+00:03:12,630 --> 00:03:15,360
+price of $130, implied volatility
+
+56
+00:03:15,360 --> 00:03:20,460
+is the lowest for the shorter maturity contracts.
+
+57
+00:03:20,460 --> 00:03:22,440
+The fact that implied volatilities
+
+58
+00:03:22,440 --> 00:03:25,020
+depend on the strike price of the option
+
+59
+00:03:25,020 --> 00:03:29,950
+is clearly at odds with the Black-Scholes-Merton model.
+
+60
+00:03:29,950 --> 00:03:32,620
+Under that model, the implied volatility
+
+61
+00:03:32,620 --> 00:03:36,020
+is equal to the physical volatility of stock returns,
+
+62
+00:03:36,020 --> 00:03:38,490
+which is a constant.
+
+63
+00:03:38,490 --> 00:03:41,220
+In practice, it is common to extend
+
+64
+00:03:41,220 --> 00:03:44,100
+the Black-Scholes-Merton model by adding features
+
+65
+00:03:44,100 --> 00:03:47,550
+like stochastic return volatility or discontinuous
+
+66
+00:03:47,550 --> 00:03:50,610
+return changes in order to better reconcile
+
+67
+00:03:50,610 --> 00:03:53,240
+the model with the data.
+
+68
+00:03:53,240 --> 00:03:58,310
+In the marketplace, the original Black-Scholes-Merton model
+
+69
+00:03:58,310 --> 00:04:01,550
+is used to compute implied volatilities, which
+
+70
+00:04:01,550 --> 00:04:05,090
+are commonly used to quote prices of options.
+
+71
+00:04:05,090 --> 00:04:09,050
+For that, the model itself does not need to be valid.
+
+72
+00:04:09,050 --> 00:04:13,270
+The implied volatility is always well-defined.
+
+73
+00:04:13,270 --> 00:04:16,300
+The next plot shows a historical series
+
+74
+00:04:16,300 --> 00:04:19,480
+for a popular summary of option-implied volatilities,
+
+75
+00:04:19,480 --> 00:04:21,690
+VIX.
+
+76
+00:04:21,690 --> 00:04:24,570
+VIX aggregates implied volatilities
+
+77
+00:04:24,570 --> 00:04:27,960
+across call and put options with different strikes
+
+78
+00:04:27,960 --> 00:04:31,880
+with a horizon close to 30 days.
+
+79
+00:04:31,880 --> 00:04:35,930
+VIX is widely used as an indicator of short-term market
+
+80
+00:04:35,930 --> 00:04:40,600
+volatility as derived from the options markets.
+
+81
+00:04:40,600 --> 00:04:44,170
+We should note that just like the forward interest rate
+
+82
+00:04:44,170 --> 00:04:47,590
+is a biased predictor of the future spot rates,
+
+83
+00:04:47,590 --> 00:04:52,740
+VIX is a biased predictor of the future stock return volatility.
+
+84
+00:04:52,740 --> 00:04:56,250
+This is because in addition to volatility expectations,
+
+85
+00:04:56,250 --> 00:05:01,730
+the current level of VIX also reflects a risk premium.
+
+86
+00:05:01,730 --> 00:05:04,400
+As we see from the plot, VIX tends
+
+87
+00:05:04,400 --> 00:05:08,600
+to fluctuate in the range of 10% to 20% most of the time,
+
+88
+00:05:08,600 --> 00:05:11,450
+with occasional spikes during periods of increased
+
+89
+00:05:11,450 --> 00:05:13,630
+economic uncertainty.
+
+90
+00:05:13,630 --> 00:05:16,060
+We see, for example, a large spike
+
+91
+00:05:16,060 --> 00:05:18,740
+during the global financial crisis
+
+92
+00:05:18,740 --> 00:05:22,470
+and during the COVID-19 pandemic.
+
+93
+00:05:22,470 --> 00:05:25,080
+Relative to other measures of uncertainty,
+
+94
+00:05:25,080 --> 00:05:29,310
+VIX provides a current market-based, forward-looking
+
+95
+00:05:29,310 --> 00:05:32,330
+measure of market volatility.
+

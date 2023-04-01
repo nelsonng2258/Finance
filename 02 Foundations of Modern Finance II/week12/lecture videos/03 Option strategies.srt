@@ -1,0 +1,184 @@
+0
+00:00:00,000 --> 00:00:00,660
+
+
+1
+00:00:00,660 --> 00:00:02,400
+PROFESSOR: We now use payoff diagrams
+
+2
+00:00:02,400 --> 00:00:05,460
+to visualize properties of the several common options
+
+3
+00:00:05,460 --> 00:00:07,380
+strategies.
+
+4
+00:00:07,380 --> 00:00:09,540
+Keep in mind that what we are looking at
+
+5
+00:00:09,540 --> 00:00:12,780
+are the payoffs, not the net payoffs.
+
+6
+00:00:12,780 --> 00:00:15,360
+In other words, we are not taking into account
+
+7
+00:00:15,360 --> 00:00:19,590
+the initial cost of setting up these positions.
+
+8
+00:00:19,590 --> 00:00:23,570
+The first strategy we consider is the protective put.
+
+9
+00:00:23,570 --> 00:00:27,320
+This trade consists of two positions, a long position
+
+10
+00:00:27,320 --> 00:00:31,130
+in the underlying stock, and a long position in the put
+
+11
+00:00:31,130 --> 00:00:33,040
+option.
+
+12
+00:00:33,040 --> 00:00:37,150
+The combined payoff is shown in the bottom panel.
+
+13
+00:00:37,150 --> 00:00:41,030
+The strategy offers the buyer participation in the upside.
+
+14
+00:00:41,030 --> 00:00:45,680
+This position appreciates in value as the stock price rises.
+
+15
+00:00:45,680 --> 00:00:49,460
+At the same time, the put option limits potential losses,
+
+16
+00:00:49,460 --> 00:00:53,150
+creating a floor in the payoff.
+
+17
+00:00:53,150 --> 00:00:56,940
+The second strategy we consider is the bull spread.
+
+18
+00:00:56,940 --> 00:01:01,260
+This trade involves two call options of the same maturity.
+
+19
+00:01:01,260 --> 00:01:07,770
+In this example, the two options have strikes of $40 and $55.
+
+20
+00:01:07,770 --> 00:01:11,910
+We buy the call with the lowest strike, $40,
+
+21
+00:01:11,910 --> 00:01:16,570
+and sell the call with the highest strike, $55.
+
+22
+00:01:16,570 --> 00:01:20,140
+The resulting position, shown in the lower panel,
+
+23
+00:01:20,140 --> 00:01:25,880
+offers some upside exposure, which is kept above $55.
+
+24
+00:01:25,880 --> 00:01:29,940
+Compare this to the straight call with the $40 strike.
+
+25
+00:01:29,940 --> 00:01:33,780
+This position sacrifices participation in further upside
+
+26
+00:01:33,780 --> 00:01:38,760
+above $55 in exchange for the lower initial cost.
+
+27
+00:01:38,760 --> 00:01:42,050
+The next rate we consider is the straddle.
+
+28
+00:01:42,050 --> 00:01:46,700
+The straddle involves buying two options, a call and the put,
+
+29
+00:01:46,700 --> 00:01:50,920
+with the same strike price and the same maturity date.
+
+30
+00:01:50,920 --> 00:01:53,710
+The payoff for this position is relatively high
+
+31
+00:01:53,710 --> 00:01:56,920
+when the stock price is far away from the strike price,
+
+32
+00:01:56,920 --> 00:01:59,250
+on either side.
+
+33
+00:01:59,250 --> 00:02:03,210
+We can see this from the payoff diagram in the bottom panel.
+
+34
+00:02:03,210 --> 00:02:07,050
+Straddles can be used to bet on large moves in the stock price,
+
+35
+00:02:07,050 --> 00:02:09,699
+regardless of their direction.
+
+36
+00:02:09,699 --> 00:02:14,130
+In other words, these are bets on higher future volatility
+
+37
+00:02:14,130 --> 00:02:17,290
+of the underlying price.
+
+38
+00:02:17,290 --> 00:02:20,500
+Note that buying a straddle is not a free lunch.
+
+39
+00:02:20,500 --> 00:02:23,410
+It is not right to say that the holder of the straddle
+
+40
+00:02:23,410 --> 00:02:27,220
+makes money no matter which way the underlying price moves.
+
+41
+00:02:27,220 --> 00:02:30,160
+Our plots shows strategy payoffs.
+
+42
+00:02:30,160 --> 00:02:33,140
+They ignore the initial cost.
+
+43
+00:02:33,140 --> 00:02:36,270
+The buyer of the straddle loses money at maturity
+
+44
+00:02:36,270 --> 00:02:39,230
+if the underlying price fails to move far enough
+
+45
+00:02:39,230 --> 00:02:41,740
+away from the strike price.
+

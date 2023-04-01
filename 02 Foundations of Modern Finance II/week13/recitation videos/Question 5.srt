@@ -1,0 +1,460 @@
+0
+00:00:00,000 --> 00:00:01,530
+
+
+1
+00:00:01,530 --> 00:00:03,030
+PROFESSOR: In this video, we will
+
+2
+00:00:03,030 --> 00:00:06,660
+cover option price sensitivity as a function of the underlying
+
+3
+00:00:06,660 --> 00:00:08,220
+stock price.
+
+4
+00:00:08,220 --> 00:00:10,980
+Suppose that all assumptions of the Black-Scholes-Merton model
+
+5
+00:00:10,980 --> 00:00:12,750
+hold.
+
+6
+00:00:12,750 --> 00:00:17,640
+There is a stock, XYZ, with the current share price of $50.
+
+7
+00:00:17,640 --> 00:00:21,570
+Suppose that it has annual volatility of 35%.
+
+8
+00:00:21,570 --> 00:00:24,510
+The annualized continuously compounded risk-free rate
+
+9
+00:00:24,510 --> 00:00:27,441
+is 1.25%.
+
+10
+00:00:27,441 --> 00:00:30,720
+Consider a put option with the strike price of $55
+
+11
+00:00:30,720 --> 00:00:34,230
+and six months to maturity.
+
+12
+00:00:34,230 --> 00:00:36,480
+First, we will construct a replicating portfolio
+
+13
+00:00:36,480 --> 00:00:38,550
+for this put option.
+
+14
+00:00:38,550 --> 00:00:43,620
+Second, we will assume that the stock price decreases to $47.
+
+15
+00:00:43,620 --> 00:00:46,380
+We will compute the change in the option price
+
+16
+00:00:46,380 --> 00:00:50,520
+and the change in the value of the replicating portfolio.
+
+17
+00:00:50,520 --> 00:00:53,430
+And finally, we will assume that the stock price increases
+
+18
+00:00:53,430 --> 00:00:58,480
+to $53, and we will also compute the change in the option price,
+
+19
+00:00:58,480 --> 00:00:59,940
+as well as the change in the value
+
+20
+00:00:59,940 --> 00:01:02,570
+of the replicating portfolio.
+
+21
+00:01:02,570 --> 00:01:05,150
+Let us start by building a replicating portfolio
+
+22
+00:01:05,150 --> 00:01:07,280
+for this put option.
+
+23
+00:01:07,280 --> 00:01:10,280
+First, recall that replicating portfolio
+
+24
+00:01:10,280 --> 00:01:12,590
+for the call option in the context
+
+25
+00:01:12,590 --> 00:01:16,230
+of the Black-Scholes-Merton model is as follows.
+
+26
+00:01:16,230 --> 00:01:18,560
+We are buying N of X shares of the stock,
+
+27
+00:01:18,560 --> 00:01:21,470
+and we are borrowing the following amount dollars
+
+28
+00:01:21,470 --> 00:01:23,250
+at the risk-free rate.
+
+29
+00:01:23,250 --> 00:01:27,340
+Now, what is the replicating portfolio for the put option?
+
+30
+00:01:27,340 --> 00:01:30,070
+First, recall that we can price the put option
+
+31
+00:01:30,070 --> 00:01:32,590
+by using the put call parity.
+
+32
+00:01:32,590 --> 00:01:35,590
+So let's plug the Black-Scholes-Merton formula
+
+33
+00:01:35,590 --> 00:01:38,800
+for the value of the call option into the put call parity
+
+34
+00:01:38,800 --> 00:01:41,090
+equation.
+
+35
+00:01:41,090 --> 00:01:42,980
+We get the following equation.
+
+36
+00:01:42,980 --> 00:01:46,520
+And after rearranging terms, we can express the price
+
+37
+00:01:46,520 --> 00:01:49,170
+of the put option as follows.
+
+38
+00:01:49,170 --> 00:01:52,040
+Recall that N is the cumulative distribution
+
+39
+00:01:52,040 --> 00:01:55,190
+function of the standard normal distribution, which
+
+40
+00:01:55,190 --> 00:01:58,490
+means that N of x is always less than 1,
+
+41
+00:01:58,490 --> 00:02:02,510
+which in turn means that the terms highlighted
+
+42
+00:02:02,510 --> 00:02:04,800
+on the slide in red in parentheses,
+
+43
+00:02:04,800 --> 00:02:08,539
+1 minus N of X and 1 minus N of X minus sigma
+
+44
+00:02:08,539 --> 00:02:12,800
+multiplied by square root of T are positive.
+
+45
+00:02:12,800 --> 00:02:16,520
+Therefore, to replicate the put option, we need to short 1
+
+46
+00:02:16,520 --> 00:02:18,550
+minus N of X shares of the stock,
+
+47
+00:02:18,550 --> 00:02:21,190
+and we need to invest the following amount of dollars
+
+48
+00:02:21,190 --> 00:02:22,900
+at the risk-free rate.
+
+49
+00:02:22,900 --> 00:02:26,620
+Let's construct replicating portfolio for our option.
+
+50
+00:02:26,620 --> 00:02:29,080
+Recall that we already priced it in the previous video,
+
+51
+00:02:29,080 --> 00:02:33,490
+and its price was $7.81.
+
+52
+00:02:33,490 --> 00:02:35,770
+To replicate this option, we need
+
+53
+00:02:35,770 --> 00:02:39,460
+to short the following amount of the underlying stock,
+
+54
+00:02:39,460 --> 00:02:44,500
+and we need to invest $37.48 at the risk-free rate.
+
+55
+00:02:44,500 --> 00:02:48,190
+I computed both of these values based on the option parameters
+
+56
+00:02:48,190 --> 00:02:50,140
+that are given to us.
+
+57
+00:02:50,140 --> 00:02:53,530
+By construction, the value of this replicating portfolio
+
+58
+00:02:53,530 --> 00:02:56,710
+matches the value of the option.
+
+59
+00:02:56,710 --> 00:02:59,110
+Let's see what happens to the value of the option
+
+60
+00:02:59,110 --> 00:03:01,720
+and the value of the replicating portfolio
+
+61
+00:03:01,720 --> 00:03:04,420
+when we change the stock price.
+
+62
+00:03:04,420 --> 00:03:06,850
+I have copied the original price of the put option
+
+63
+00:03:06,850 --> 00:03:10,360
+here, so that it doesn't change when I change the stock price.
+
+64
+00:03:10,360 --> 00:03:12,850
+And I created a new field here for the new price
+
+65
+00:03:12,850 --> 00:03:15,860
+which will change when I change the stock price.
+
+66
+00:03:15,860 --> 00:03:19,270
+So when the stock price drops from $50 to $47,
+
+67
+00:03:19,270 --> 00:03:21,680
+the original price, of course, stays the same.
+
+68
+00:03:21,680 --> 00:03:25,780
+The new price increases to $9.73.
+
+69
+00:03:25,780 --> 00:03:30,310
+Therefore, the price change is $1.92,
+
+70
+00:03:30,310 --> 00:03:32,650
+which is the difference between the new price
+
+71
+00:03:32,650 --> 00:03:36,080
+and the original price.
+
+72
+00:03:36,080 --> 00:03:38,290
+Now, let's see what happens to the value
+
+73
+00:03:38,290 --> 00:03:40,450
+of the replicating portfolio.
+
+74
+00:03:40,450 --> 00:03:44,200
+So first, notice that I changed these two cells
+
+75
+00:03:44,200 --> 00:03:46,370
+into the values and not the formula,
+
+76
+00:03:46,370 --> 00:03:48,880
+so that the replicating portfolio that we constructed
+
+77
+00:03:48,880 --> 00:03:53,590
+before does not change when I change the share price.
+
+78
+00:03:53,590 --> 00:03:55,870
+But the value of the portfolio will
+
+79
+00:03:55,870 --> 00:03:58,090
+change, because it depends on these parameters
+
+80
+00:03:58,090 --> 00:04:02,020
+of the portfolio, but it will take into account the new share
+
+81
+00:04:02,020 --> 00:04:02,660
+price.
+
+82
+00:04:02,660 --> 00:04:05,920
+So when the share price drops to $47,
+
+83
+00:04:05,920 --> 00:04:11,440
+the value of the replicating portfolio increases to $9.59
+
+84
+00:04:11,440 --> 00:04:14,290
+from the original value of $7.81.
+
+85
+00:04:14,290 --> 00:04:17,110
+So therefore, the value of the portfolio
+
+86
+00:04:17,110 --> 00:04:21,700
+increases by $1.78, which, again, is just
+
+87
+00:04:21,700 --> 00:04:24,190
+the difference between the new value of the portfolio
+
+88
+00:04:24,190 --> 00:04:26,860
+minus the original value.
+
+89
+00:04:26,860 --> 00:04:29,920
+We can make one important conclusion so far.
+
+90
+00:04:29,920 --> 00:04:33,890
+When the share price drops from $50 to $47,
+
+91
+00:04:33,890 --> 00:04:38,590
+the value of the put option increases more than the value
+
+92
+00:04:38,590 --> 00:04:45,420
+of the replicating portfolio, so $1.92 versus $1.78.
+
+93
+00:04:45,420 --> 00:04:50,070
+Let's see what happens when the share price increases to $53.
+
+94
+00:04:50,070 --> 00:04:55,830
+In this case, the option price decreases by $1.64,
+
+95
+00:04:55,830 --> 00:05:02,440
+and the value of the replicating portfolio decreases by $1.78.
+
+96
+00:05:02,440 --> 00:05:04,200
+Let's summarize our results.
+
+97
+00:05:04,200 --> 00:05:06,730
+They're highlighted here in yellow.
+
+98
+00:05:06,730 --> 00:05:09,820
+We see that the value of the replicating portfolio
+
+99
+00:05:09,820 --> 00:05:12,940
+does not increase as much as the option value
+
+100
+00:05:12,940 --> 00:05:15,490
+when the stock price declines.
+
+101
+00:05:15,490 --> 00:05:18,700
+On the other hand, the value of replicating portfolio
+
+102
+00:05:18,700 --> 00:05:21,820
+decreases more than the value of the option
+
+103
+00:05:21,820 --> 00:05:24,440
+when the stock price increases.
+
+104
+00:05:24,440 --> 00:05:26,500
+The reason behind this result is that the value
+
+105
+00:05:26,500 --> 00:05:29,110
+of the put option, as shown on this graph,
+
+106
+00:05:29,110 --> 00:05:32,090
+is a convex function of the stock price.
+
+107
+00:05:32,090 --> 00:05:34,570
+In other words, it has a positive gamma,
+
+108
+00:05:34,570 --> 00:05:36,940
+similar to the call option, which we illustrated
+
+109
+00:05:36,940 --> 00:05:38,830
+in the previous video.
+
+110
+00:05:38,830 --> 00:05:42,070
+On the other hand, the value of our replicating portfolio
+
+111
+00:05:42,070 --> 00:05:46,220
+is a simple linear function of the underlying stock price.
+
+112
+00:05:46,220 --> 00:05:49,060
+Therefore, when the stock price increases,
+
+113
+00:05:49,060 --> 00:05:52,240
+the value of replicating portfolio overshoots.
+
+114
+00:05:52,240 --> 00:05:56,340
+And when the stock price decreases, it undershoots.
+

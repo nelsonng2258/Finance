@@ -1,0 +1,23 @@
+
+PROFESSOR: In this video, let's use the same approach,
+but instead of constructing an arbitrage strategy that
+generates $100 right now, we will construct an arbitrage
+strategy that generates $100 in year 1 and 0 in years 0 and 2.
+In our system of equations, the only thing that changes
+is the desired payoff.
+Right now, instead of $100 in the first equation in year 0,
+we have $100 in the second equation, or in year 1.
+Now let's go back to Excel and solve this system.
+Let's change our desired outcome vector
+by putting 0 dollars in the first cell in year 0
+and $100 in the second cell, or in year 1.
+And since everything is soft-coded in my spreadsheet,
+everything automatically changes.
+So you could see that our positions are recalculated,
+and you could see that the net payoff--
+now I have 0 in year 0 and 100 in year 1, exactly what I want.
+Let's look at the positions.
+We are going short r1, short f1, and we're going long r2.
+And although the numbers change, the logic does not change.
+We're still going long r2, just because r2 is a higher
+rate relative to r1 and f1.

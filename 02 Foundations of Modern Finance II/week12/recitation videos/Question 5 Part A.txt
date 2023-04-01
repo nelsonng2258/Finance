@@ -1,0 +1,99 @@
+
+PROFESSOR: In this question, we will review binomial option
+pricing model.
+Suppose that there is a stock with a current share
+price of $100.
+The graph on the slide shows the evolution of the share
+price over the next two years.
+It can become either $125 or $75 a year from now.
+If it was $125, it can grow to $150 in year two
+or can go down to $60.
+If it was $75, it can grow to $125, or it can go down to $20.
+Now suppose that the risk-free rate is 3.5%.
+We will assume that this is an effective annual rate.
+We will also assume that there is no arbitrage
+and that investors can borrow and lend
+at this risk-free rate of 3.5%.
+We are asked to compute the current price
+of a European call option that expires two years from now
+and has a strike price of $120 per share.
+Let's start by creating a tree that
+shows the payoffs from this option at the end of year two.
+If the share price is $150 and since this is a call option
+and has a strike price of $120, our payoff,
+as the holder of this option, would be $30.
+In the up-down state, when the share price is $60,
+this option expires out of the money.
+And, therefore, our payoff is $0.
+In the down-up state, the share price is $125,
+and, therefore, our payoff is $5.
+And, in the down-down state, the share price is $20.
+Therefore, again, this option expires out of the money.
+And, therefore, our payoff is $0.
+Let's start by pricing the option
+in year one in the up state.
+We will create the replicating portfolio
+that has a shares of the stock and b dollars
+of the riskless bond that replicates the payoff
+from this option in year two.
+So, therefore, we have the following two equations--
+150, which is the price of a share in the up-up state,
+times the number of shares, a, plus 1
+plus the risk-free rate of 3.5%, which gives us 1.035,
+multiplied by b dollars that we originally
+invested in the riskless bond.
+That should be equal to $30, which is our option
+payoff in the up-up state.
+The second equation equates the payoff
+from the replicating portfolio and the payoff
+from the option in the up-down state.
+In the up-down state, the share price is $60,
+and we have a units of the share.
+Therefore, our total payoff is 60 times a plus, again,
+1 plus the risk-free rate of 3.5% times
+b, which is the initial amount of dollars
+that we invested in the riskless bond.
+And that should equal to 0 because 0 is the payoff
+that we get from the option in the up-down state.
+Solving this system gives us the following values for a and b.
+Notice that the value of a is positive, and the value of b
+is negative.
+This means that, to replicate the option, we
+need to buy one third of a share and borrow
+$19.32 at the risk-free rate.
+The value of this call option in year one in the up state
+would equal to the value of this replicating portfolio.
+Recall that the share price in this up state is $125.
+Therefore, the total value of this replicating portfolio
+is $22.34.
+Next, we follow exactly the same steps
+to find the price of the option in the down state in year one.
+The following system of equations
+gives us the replicating portfolio of a shares
+and b dollars of riskless bond.
+Solving this system of equations gives us the following values.
+And, therefore, the option price in the down state is $2.65.
+The final step is to price this option in year zero.
+This tree shows you the prices of this option
+in the up state in year one and the down state in year one
+as well.
+Again, we're constructing a replicating portfolio
+that consists of a shares of the stock
+and b dollars of the riskless bond that
+replicates the payoffs of this option in year one.
+Solving this system for a and b, we can price this option
+and find that its price in year zero is $13.41.
+This tree summarizes the evolution of this option price.
+Its current price is $13.41.
+If the share price goes up, the option price
+increases to $22.34.
+If the share price goes up again,
+this option expires in the money and pays off $30.
+If the share price goes down, this option
+expires out of the money and pays off $0.
+If the share price in year one goes down,
+the option price goes down to $2.65.
+And, if the share price goes up, this option
+expires in the money and pays off $5.
+And, if the share price goes down,
+this option expires out of the money and pays off $0.

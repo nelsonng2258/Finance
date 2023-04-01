@@ -1,0 +1,108 @@
+0
+00:00:00,000 --> 00:00:01,500
+INSTRUCTOR: In this video, we will
+
+1
+00:00:01,500 --> 00:00:03,690
+compute the price of the put option, which
+
+2
+00:00:03,690 --> 00:00:05,640
+has the same parameters as the option we
+
+3
+00:00:05,640 --> 00:00:07,960
+studied in the previous video.
+
+4
+00:00:07,960 --> 00:00:11,550
+The strike price of this option is $55, and time to maturity
+
+5
+00:00:11,550 --> 00:00:13,080
+is six months.
+
+6
+00:00:13,080 --> 00:00:15,030
+To compute the price of this put option,
+
+7
+00:00:15,030 --> 00:00:17,550
+we will use put-call parity.
+
+8
+00:00:17,550 --> 00:00:19,620
+Recall that the price of the call
+
+9
+00:00:19,620 --> 00:00:22,920
+option plus the present value of the strike K
+
+10
+00:00:22,920 --> 00:00:25,950
+should equal to the stock price plus the price
+
+11
+00:00:25,950 --> 00:00:28,770
+of the put option, to avoid arbitrage.
+
+12
+00:00:28,770 --> 00:00:31,020
+Let's apply this to our case.
+
+13
+00:00:31,020 --> 00:00:32,759
+The price of the put option will equal
+
+14
+00:00:32,759 --> 00:00:34,530
+the price of the call option, which
+
+15
+00:00:34,530 --> 00:00:38,250
+we computed in the previous video (it's $3.15),
+
+16
+00:00:38,250 --> 00:00:40,500
+plus the present value of the strike
+
+17
+00:00:40,500 --> 00:00:45,600
+price of this option, which is $55, minus the current share
+
+18
+00:00:45,600 --> 00:00:47,700
+price, which is $50.
+
+19
+00:00:47,700 --> 00:00:52,790
+This gives us the price of this option, which is $7.81.
+
+20
+00:00:52,790 --> 00:00:54,830
+As a more general note, to compute
+
+21
+00:00:54,830 --> 00:00:57,080
+the price of a European put option using
+
+22
+00:00:57,080 --> 00:00:58,850
+the Black-Scholes-Merton approach,
+
+23
+00:00:58,850 --> 00:01:01,610
+we first need to compute the price of the corresponding call
+
+24
+00:01:01,610 --> 00:01:04,190
+option with the same strike and same time
+
+25
+00:01:04,190 --> 00:01:07,610
+to maturity by using the Black-Scholes-Merton formula,
+
+26
+00:01:07,610 --> 00:01:12,580
+and then use the put-call parity to get the price of the put.
+

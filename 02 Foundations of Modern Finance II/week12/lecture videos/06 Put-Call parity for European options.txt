@@ -1,0 +1,20 @@
+
+We now establish an important result,
+known as the Put-call parity for European options.
+This result is based on the straightforward arbitrage
+argument and is a highly robust relation between option prices
+in the data.
+We maintain the assumption that the underlying asset,
+the stock, does not pay dividends.
+Consider two portfolios.
+Portfolio 1 includes a call and the bond with a par value
+equal to the strike.
+Portfolio 2 includes a put option
+with the same strike as the call and one share of the stock.
+Compare the payoffs of the two portfolios at maturity.
+These are identical.
+The Law of One Price implies that the initial value
+of the two portfolios must be the same.
+This relation is known as the put-call parity.
+It connects prices of the European put
+and call options with the same strike price.

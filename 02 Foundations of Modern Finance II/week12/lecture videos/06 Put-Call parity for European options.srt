@@ -1,0 +1,80 @@
+0
+00:00:00,000 --> 00:00:00,600
+
+
+1
+00:00:00,600 --> 00:00:02,970
+We now establish an important result,
+
+2
+00:00:02,970 --> 00:00:07,020
+known as the Put-call parity for European options.
+
+3
+00:00:07,020 --> 00:00:09,630
+This result is based on the straightforward arbitrage
+
+4
+00:00:09,630 --> 00:00:13,740
+argument and is a highly robust relation between option prices
+
+5
+00:00:13,740 --> 00:00:16,100
+in the data.
+
+6
+00:00:16,100 --> 00:00:18,980
+We maintain the assumption that the underlying asset,
+
+7
+00:00:18,980 --> 00:00:22,260
+the stock, does not pay dividends.
+
+8
+00:00:22,260 --> 00:00:24,740
+Consider two portfolios.
+
+9
+00:00:24,740 --> 00:00:29,840
+Portfolio 1 includes a call and the bond with a par value
+
+10
+00:00:29,840 --> 00:00:32,460
+equal to the strike.
+
+11
+00:00:32,460 --> 00:00:35,460
+Portfolio 2 includes a put option
+
+12
+00:00:35,460 --> 00:00:41,810
+with the same strike as the call and one share of the stock.
+
+13
+00:00:41,810 --> 00:00:45,940
+Compare the payoffs of the two portfolios at maturity.
+
+14
+00:00:45,940 --> 00:00:48,630
+These are identical.
+
+15
+00:00:48,630 --> 00:00:51,780
+The Law of One Price implies that the initial value
+
+16
+00:00:51,780 --> 00:00:55,270
+of the two portfolios must be the same.
+
+17
+00:00:55,270 --> 00:00:58,530
+This relation is known as the put-call parity.
+
+18
+00:00:58,530 --> 00:01:00,870
+It connects prices of the European put
+
+19
+00:01:00,870 --> 00:01:04,580
+and call options with the same strike price.
+

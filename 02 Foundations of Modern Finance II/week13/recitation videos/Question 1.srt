@@ -1,0 +1,468 @@
+0
+00:00:00,000 --> 00:00:00,210
+
+
+1
+00:00:00,210 --> 00:00:01,770
+PROFESSOR: In this video, I will show
+
+2
+00:00:01,770 --> 00:00:04,950
+an example of risk-neutral pricing approach applied
+
+3
+00:00:04,950 --> 00:00:07,200
+to exotic options.
+
+4
+00:00:07,200 --> 00:00:10,780
+Suppose that there is a stock with a current price of $100.
+
+5
+00:00:10,780 --> 00:00:12,780
+The graph below shows the evolution of the share
+
+6
+00:00:12,780 --> 00:00:14,790
+price over the next two years.
+
+7
+00:00:14,790 --> 00:00:16,680
+In year 1, the share price can grow
+
+8
+00:00:16,680 --> 00:00:22,350
+to $125, after which it can grow to $156.25
+
+9
+00:00:22,350 --> 00:00:25,620
+or can go down back to $100.
+
+10
+00:00:25,620 --> 00:00:27,870
+Alternatively, in year 1, the stock price
+
+11
+00:00:27,870 --> 00:00:31,890
+can go down to $80, after which it can grow to $100
+
+12
+00:00:31,890 --> 00:00:34,890
+or go down to $64.
+
+13
+00:00:34,890 --> 00:00:38,370
+We will assume that the stock does not pay dividends.
+
+14
+00:00:38,370 --> 00:00:43,173
+The risk-free rate, quoted as an effective annual rate, is 5%.
+
+15
+00:00:43,173 --> 00:00:45,090
+We will also assume that there is no arbitrage
+
+16
+00:00:45,090 --> 00:00:46,980
+and that investors can borrow and lend
+
+17
+00:00:46,980 --> 00:00:48,870
+at this risk-free rate.
+
+18
+00:00:48,870 --> 00:00:51,870
+Consider an exotic option called a European lookback
+
+19
+00:00:51,870 --> 00:00:56,010
+option, which allows you to buy a stock two years from now
+
+20
+00:00:56,010 --> 00:00:57,690
+for the lowest price of the stock
+
+21
+00:00:57,690 --> 00:01:00,120
+during the coming two years.
+
+22
+00:01:00,120 --> 00:01:02,340
+Effectively, this option allows you
+
+23
+00:01:02,340 --> 00:01:05,880
+to time the market perfectly and get the stock at the best
+
+24
+00:01:05,880 --> 00:01:07,110
+price.
+
+25
+00:01:07,110 --> 00:01:09,810
+In a controversial practice, many firms
+
+26
+00:01:09,810 --> 00:01:13,660
+used to grant the executive officers lookback options.
+
+27
+00:01:13,660 --> 00:01:16,380
+This is an example of an article from the Wall Street Journal
+
+28
+00:01:16,380 --> 00:01:18,790
+that discusses this practice.
+
+29
+00:01:18,790 --> 00:01:21,810
+We will price this European lookback option
+
+30
+00:01:21,810 --> 00:01:24,570
+by using the risk-neutral pricing approach.
+
+31
+00:01:24,570 --> 00:01:27,300
+Let us start by creating a tree with the option
+
+32
+00:01:27,300 --> 00:01:29,520
+payoffs in different states.
+
+33
+00:01:29,520 --> 00:01:35,490
+Recall that in the up-up state, the share price is $156.25.
+
+34
+00:01:35,490 --> 00:01:39,480
+The lookback option allows you to buy this share at the lowest
+
+35
+00:01:39,480 --> 00:01:45,090
+price during the last two years, which was $100 in year 0.
+
+36
+00:01:45,090 --> 00:01:50,640
+Therefore, your payoff from this lookback option is $56.25.
+
+37
+00:01:50,640 --> 00:01:54,270
+In the up-down state, denoted here as ud,
+
+38
+00:01:54,270 --> 00:01:55,860
+the share price is $100.
+
+39
+00:01:55,860 --> 00:02:00,240
+And therefore, the payoff from the lookback option is $0.
+
+40
+00:02:00,240 --> 00:02:04,500
+In the down-up node, the option payoff is $20.
+
+41
+00:02:04,500 --> 00:02:07,620
+Recall that the share price in this node is $100.
+
+42
+00:02:07,620 --> 00:02:11,190
+But the share price in the down node in year 1 was $80.
+
+43
+00:02:11,190 --> 00:02:13,200
+And therefore, this option allows
+
+44
+00:02:13,200 --> 00:02:16,050
+you to buy a share of the stock for $80.
+
+45
+00:02:16,050 --> 00:02:18,870
+Hence, your payoff is $20.
+
+46
+00:02:18,870 --> 00:02:22,560
+Finally, in the down-down node, the share price is $64.
+
+47
+00:02:22,560 --> 00:02:25,500
+The option allows you to buy the share at $64.
+
+48
+00:02:25,500 --> 00:02:27,300
+Your payoff is $0.
+
+49
+00:02:27,300 --> 00:02:30,960
+Notice that the value of this option is path-dependent.
+
+50
+00:02:30,960 --> 00:02:35,400
+Even though in nodes ud and du the share price is $100,
+
+51
+00:02:35,400 --> 00:02:39,000
+the payoff and the value of the option in the node ud is $0.
+
+52
+00:02:39,000 --> 00:02:41,920
+But in the node du, it is $20.
+
+53
+00:02:41,920 --> 00:02:44,580
+This is the summary of the optimal exercise.
+
+54
+00:02:44,580 --> 00:02:49,560
+In nodes uu and du, the lookback option gets exercised.
+
+55
+00:02:49,560 --> 00:02:53,790
+And in the nodes ud and dd, the lookback option
+
+56
+00:02:53,790 --> 00:02:55,500
+does not get exercised.
+
+57
+00:02:55,500 --> 00:02:58,410
+Now that we know option payoffs, the next step
+
+58
+00:02:58,410 --> 00:03:00,540
+is to find risk-neutral probabilities
+
+59
+00:03:00,540 --> 00:03:02,490
+of the up and down moves.
+
+60
+00:03:02,490 --> 00:03:04,710
+First, let's find multiples u and d
+
+61
+00:03:04,710 --> 00:03:08,610
+by which the price either goes up or down each year.
+
+62
+00:03:08,610 --> 00:03:11,400
+The multiple u will be 1.25, which
+
+63
+00:03:11,400 --> 00:03:15,870
+is the share price in year 1, $125, divided by $100.
+
+64
+00:03:15,870 --> 00:03:20,460
+And the down multiple, d, would be 0.8.
+
+65
+00:03:20,460 --> 00:03:24,570
+Again, we get it by dividing sd by S0.
+
+66
+00:03:24,570 --> 00:03:27,210
+We can verify that stock prices in year 2
+
+67
+00:03:27,210 --> 00:03:29,570
+are consistent with these multiples u and d.
+
+68
+00:03:29,570 --> 00:03:32,150
+
+
+69
+00:03:32,150 --> 00:03:36,170
+By definition, the risk-neutral probability of the up move
+
+70
+00:03:36,170 --> 00:03:40,100
+will be 1 plus r, which is the risk-free rate, minus d divided
+
+71
+00:03:40,100 --> 00:03:44,780
+by u minus d, which gives us 0.556.
+
+72
+00:03:44,780 --> 00:03:47,900
+Similarly, the risk-neutral probability of the down move
+
+73
+00:03:47,900 --> 00:03:55,440
+is u minus 1 plus r divided by u minus d, which gives us 0.44.
+
+74
+00:03:55,440 --> 00:03:58,850
+Notice that by definition, risk-neutral probabilities
+
+75
+00:03:58,850 --> 00:04:02,030
+of the up and down moves add up to 1.
+
+76
+00:04:02,030 --> 00:04:03,710
+Knowing risk-neutral probabilities,
+
+77
+00:04:03,710 --> 00:04:06,000
+we can proceed with pricing this option.
+
+78
+00:04:06,000 --> 00:04:09,980
+I will start pricing it in year 1 in the up node.
+
+79
+00:04:09,980 --> 00:04:12,170
+Price equals the risk-neutral probability
+
+80
+00:04:12,170 --> 00:04:16,640
+of the up move multiplied by the option payoff in the state uu
+
+81
+00:04:16,640 --> 00:04:19,220
+plus the risk-neutral probability of the down move
+
+82
+00:04:19,220 --> 00:04:23,240
+multiplied by the option payoff in the state ud divided
+
+83
+00:04:23,240 --> 00:04:25,940
+by 1 plus risk-free rate r.
+
+84
+00:04:25,940 --> 00:04:29,270
+Plugging in the numbers, we get option price in the state
+
+85
+00:04:29,270 --> 00:04:34,860
+u in year 1 equal to $29.76.
+
+86
+00:04:34,860 --> 00:04:38,340
+We can repeat the process and find the option price in year 1
+
+87
+00:04:38,340 --> 00:04:43,890
+in the down state, which would equal to $10.58.
+
+88
+00:04:43,890 --> 00:04:47,280
+Finally, we can find the option price in year 0.
+
+89
+00:04:47,280 --> 00:04:49,800
+It was equal to qu multiplied by cu,
+
+90
+00:04:49,800 --> 00:04:52,830
+which is the price of the option in year 1 in the up
+
+91
+00:04:52,830 --> 00:04:56,580
+node, plus qd multiplied by cd, which is the option
+
+92
+00:04:56,580 --> 00:05:00,330
+price in year 1 in the down node, divided by 1
+
+93
+00:05:00,330 --> 00:05:02,730
+plus r, which is the risk-free rate.
+
+94
+00:05:02,730 --> 00:05:07,940
+Plugging in the numbers, we'll get $20.23.
+
+95
+00:05:07,940 --> 00:05:10,410
+Importantly, the risk-neutral pricing approach
+
+96
+00:05:10,410 --> 00:05:12,920
+allows us to price this option in year 0
+
+97
+00:05:12,920 --> 00:05:16,040
+directly from payoffs in year 2.
+
+98
+00:05:16,040 --> 00:05:17,570
+The price of the option in year 0
+
+99
+00:05:17,570 --> 00:05:20,960
+equals qu squared, which is the probability of getting
+
+100
+00:05:20,960 --> 00:05:24,170
+to state uu multiplied by the payoff
+
+101
+00:05:24,170 --> 00:05:28,040
+from the option in that state, plus the probability
+
+102
+00:05:28,040 --> 00:05:32,690
+of getting to state ud, which is qu times qd multiplied
+
+103
+00:05:32,690 --> 00:05:35,270
+by the corresponding option payoff,
+
+104
+00:05:35,270 --> 00:05:37,700
+plus the probability of getting to state
+
+105
+00:05:37,700 --> 00:05:42,650
+du, which is qd times qu multiplied, again,
+
+106
+00:05:42,650 --> 00:05:45,470
+by the payoff from the option in that state,
+
+107
+00:05:45,470 --> 00:05:50,420
+plus qd squared multiplied by the option payoff in the state
+
+108
+00:05:50,420 --> 00:05:51,680
+dd.
+
+109
+00:05:51,680 --> 00:05:55,280
+The numerator in this expression is the expected payoff
+
+110
+00:05:55,280 --> 00:05:58,610
+from this option in year 2 under the risk-neutral probabilities
+
+111
+00:05:58,610 --> 00:05:59,340
+q.
+
+112
+00:05:59,340 --> 00:06:01,760
+To find the present value of this expected payoff,
+
+113
+00:06:01,760 --> 00:06:04,790
+we're discounting it to present at the risk-free rate, r.
+
+114
+00:06:04,790 --> 00:06:07,400
+Plugging in the numbers, we see that the price of this option
+
+115
+00:06:07,400 --> 00:06:11,500
+in year 0 is equal to $20.23.
+
+116
+00:06:11,500 --> 00:06:12,000
+
+

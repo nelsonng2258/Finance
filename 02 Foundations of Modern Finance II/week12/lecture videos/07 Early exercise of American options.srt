@@ -1,0 +1,200 @@
+0
+00:00:00,000 --> 00:00:00,730
+
+
+1
+00:00:00,730 --> 00:00:04,270
+PROFESSOR: We now turn our attention to American options.
+
+2
+00:00:04,270 --> 00:00:06,610
+And the American option allows the buyer
+
+3
+00:00:06,610 --> 00:00:11,740
+to exercise the option at any time prior to maturity.
+
+4
+00:00:11,740 --> 00:00:15,220
+Here we establish an important model-free relation
+
+5
+00:00:15,220 --> 00:00:19,690
+between prices of American and European options.
+
+6
+00:00:19,690 --> 00:00:22,660
+We know that in general, American options cannot be
+
+7
+00:00:22,660 --> 00:00:26,470
+worth less than their European counterparts since the holder
+
+8
+00:00:26,470 --> 00:00:29,860
+of the option can always choose not to exercise the option
+
+9
+00:00:29,860 --> 00:00:32,590
+until maturity.
+
+10
+00:00:32,590 --> 00:00:34,930
+We now show that without dividends
+
+11
+00:00:34,930 --> 00:00:37,180
+and with positive interest rates,
+
+12
+00:00:37,180 --> 00:00:42,820
+it is never optimal to exercise an American call option early.
+
+13
+00:00:42,820 --> 00:00:46,210
+Suppose we exercise an American call early.
+
+14
+00:00:46,210 --> 00:00:51,190
+In that case, the payoff of the option at the point of exercise
+
+15
+00:00:51,190 --> 00:00:53,830
+is equal to the difference between the stock
+
+16
+00:00:53,830 --> 00:00:55,180
+price and the strike.
+
+17
+00:00:55,180 --> 00:00:57,900
+
+
+18
+00:00:57,900 --> 00:01:00,270
+The payoff from immediate exercise
+
+19
+00:01:00,270 --> 00:01:04,000
+is no more than the market price of the option.
+
+20
+00:01:04,000 --> 00:01:06,460
+In other words, one would be better off
+
+21
+00:01:06,460 --> 00:01:09,340
+selling the option than exercising it.
+
+22
+00:01:09,340 --> 00:01:11,980
+To see why this is the case, note
+
+23
+00:01:11,980 --> 00:01:14,560
+that the market value of the American call
+
+24
+00:01:14,560 --> 00:01:16,720
+is at least as high as the market
+
+25
+00:01:16,720 --> 00:01:19,870
+value of the European call, with the same strike
+
+26
+00:01:19,870 --> 00:01:22,840
+and the same time to maturity.
+
+27
+00:01:22,840 --> 00:01:26,560
+We also know from our prior analysis of arbitrage pricing
+
+28
+00:01:26,560 --> 00:01:29,950
+bonds, that the value of a European call
+
+29
+00:01:29,950 --> 00:01:34,030
+is no less than the difference between the stock price
+
+30
+00:01:34,030 --> 00:01:37,920
+and the present value of the strike.
+
+31
+00:01:37,920 --> 00:01:41,310
+Under positive interest rates, this is at least as high
+
+32
+00:01:41,310 --> 00:01:44,460
+as the difference between the stock price and the strike
+
+33
+00:01:44,460 --> 00:01:48,270
+price, which is the payoff from immediate exercise
+
+34
+00:01:48,270 --> 00:01:49,190
+of the American call.
+
+35
+00:01:49,190 --> 00:01:51,900
+
+
+36
+00:01:51,900 --> 00:01:54,570
+If it is not optimal to exercise an American call
+
+37
+00:01:54,570 --> 00:01:57,720
+before maturity, then its market value
+
+38
+00:01:57,720 --> 00:02:01,140
+must be the same as the value of the corresponding European
+
+39
+00:02:01,140 --> 00:02:02,160
+call.
+
+40
+00:02:02,160 --> 00:02:04,320
+In contrast to the American calls,
+
+41
+00:02:04,320 --> 00:02:08,580
+it may be optimal to exercise an American put even if the stock
+
+42
+00:02:08,580 --> 00:02:11,060
+does not pay dividends.
+
+43
+00:02:11,060 --> 00:02:15,620
+Suppose we have a put option with a strike of $10.
+
+44
+00:02:15,620 --> 00:02:19,360
+Suppose the current stock price is 0.
+
+45
+00:02:19,360 --> 00:02:24,210
+If we exercise the option immediately, we collect $10.
+
+46
+00:02:24,210 --> 00:02:29,010
+If we wait and exercise later, we receive no more than $10,
+
+47
+00:02:29,010 --> 00:02:32,190
+and at a later date.
+
+48
+00:02:32,190 --> 00:02:36,600
+We conclude that in this case, under positive interest rates,
+
+49
+00:02:36,600 --> 00:02:41,030
+it is optimal to exercise the option immediately.
+

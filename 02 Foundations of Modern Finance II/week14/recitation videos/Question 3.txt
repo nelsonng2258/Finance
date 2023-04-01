@@ -1,0 +1,190 @@
+
+PROFESSOR: In this video, we will
+learn how to construct optimal portfolios that
+achieve highest Sharpe ratios.
+We will work with the same two stocks, A and C,
+that we worked with in the previous question.
+In addition to these two stocks, we will add a riskless asset
+with a guaranteed return of 3%.
+Suppose that there are two investors, X and Z, who
+maximize risk-return tradeoff and have
+mean-variance preferences.
+Investor X can only invest in stocks A and C.
+But investor Z, in addition to being
+able to invest in stocks A and C,
+can also invest in the riskless bond.
+Investor X targets standard deviation of 20%,
+and investor Z targets standard deviation of 12%.
+We will answer the following questions.
+A, what is the maximum Sharpe ratio investor X can achieve?
+B, what is the maximum Sharpe ratio investor Z can achieve?
+C, describe the portfolio of investor Z.
+What is the expected return of this portfolio?
+And D, if investor X had access to the risk-free asset,
+could her return have been improved?
+If yes, compute the expected return for the 20% target
+level of risk.
+Let's start with part a and compute the Sharpe ratio
+of investor X's portfolio.
+Recall that in the previous video,
+we have already found the maximum expected return
+that the investor X can achieve on the portfolio
+with the target level of risk of 20%.
+The answer was 12.25%.
+By definition, Sharpe ratio is the difference
+between the expected return on the portfolio
+minus the risk-free rate divided by the standard deviation
+of the portfolio.
+Notice that for this investor, this is the maximum Sharpe
+ratio, because 12.25% return is the maximum achievable return
+for the level of risk of 20%.
+Therefore, this investor can achieve
+the Sharpe ratio of 0.462.
+Next, let's find the maximum Sharpe ratio
+that investor Z can achieve.
+To do this, let's find a portfolio
+of risky assets, A and C, which has the highest Sharpe ratio.
+Suppose that in this portfolio, x is invested into stock A
+and 1 minus x is invested into stock C.
+To find the maximum Sharpe ratio,
+we need to solve the following optimization problem.
+In the numerator, we have expected return
+minus the risk-free rate.
+And in the denominator, we have the standard deviation
+of this portfolio.
+Notice that since covariance of returns on stocks A and C is 0,
+the additional covariance term is
+absent from this expression in the denominator.
+Before we formally solve this optimization problem,
+let's first see how Sharpe ratio visually looks like.
+In this spreadsheet, I constructed various portfolios
+that consist of stocks A and C from 0%
+to 100% in 1% increments.
+What I will do right now is I will compute Sharpe ratio
+for each of these portfolios.
+I have already computed expected return
+on each of these individual portfolios.
+And I have also computed the standard deviation
+on these portfolios as well.
+So now Sharpe ratio, by definition,
+is the difference between expected return
+minus the risk-free rate divided by the standard deviation
+of the portfolio.
+And so for this first portfolio, the Sharpe ratio is 0.425.
+Now, we can extend this array and compute Sharpe ratios
+for the remaining portfolios.
+And now let's plot them and see how it looks like.
+So this is the graph that depicts the Sharpe ratio.
+So we can see that it starts low.
+It's slowly increasing.
+It achieves the maximum somewhere.
+And then it starts declining.
+So the goal right now is to find,
+analytically, the maximum Sharpe ratio.
+I will use Excel to solve this optimization problem.
+You're welcome to use other tools or other software.
+Here, in this cell, I have put weight
+that I will allocate to stock A. For now, we'll
+just put 0 in here.
+And in my optimization routine, I will optimize over this cell.
+In the cell next to it, I put the complementary weight
+that I will put on stock C. This is
+just 1 minus whatever the weight I put on stock A. In this cell,
+I have computed the Sharpe ratio for this portfolio
+with this weight, given our parameters
+for the expected return for stocks A and C
+and their standard deviations and the risk-free rate.
+Now what I will do is that I will
+use Solver to maximize this cell, N8, by changing
+the weight that I'm putting on stock A. And when I hit Solve--
+Solver-- this is a very simple optimization problem--
+it'll optimize and find the optimal allocation that
+gives the highest Sharpe ratio.
+In this case, the allocation will
+be 65.31% invested into stock A and 34.69% invested
+into stock C.
+The portfolio that we just found,
+by maximizing the Sharpe ratio, is the tangency portfolio.
+The expected return, in this case, on the tangency portfolio
+is 10.2%, and the standard deviation is 15.34%.
+Now, let's go back to our investor Z.
+Recall that she's trying to construct
+a portfolio with the target volatility of 12%.
+The portfolio that we just constructed,
+the tangency portfolio, has the highest Sharpe ratio,
+but it has a volatility of 15.34%.
+Therefore, this investor cannot just invest in the tangency
+portfolio to achieve this target volatility.
+The solution is to mix the tangency portfolio
+and the risk-free asset.
+Suppose that she invests x into the tangency portfolio
+and 1 minus x into the risk-free asset.
+The variance of this portfolio will
+be x squared multiplied by the variance
+of the tangency portfolio plus 1 minus x squared multiplied
+by the variance of the risk-free asset.
+Notice that the covariance term here is missing,
+because the covariance between anything that is risky
+and the risk-free asset is 0.
+The variance of the risk-free asset, of course, is 0 as well.
+So therefore, this equation just becomes
+x times sigma T equals to 0.12, which is our target standard
+deviation.
+Solving this equation gives us 78.24%.
+This means that to achieve the target standard
+deviation of 12% and the maximum possible return,
+Z needs to invest 78.24% into the tangency portfolio
+and 21.76% into the risk-free asset.
+Recall, the tangency portfolio is 65.31% A
+and 34.69% C. This means that investor Z's portfolio is
+as follows.
+21.76% invested into the risk-free asset.
+51.10% invested into stock A, which we computed
+by multiplying the weight of investor Z in the tangency
+portfolio, 78.24%, by the weight of stock A in the tangency
+portfolio, 65.31%.
+And finally, 27.14% in investor Z's portfolio
+is allocated to stock C, which again,
+is computed by multiplying 78.24% by 34.69%.
+Finally, we can compute the expected return
+on investor Z's portfolio, which is 8.64%.
+Taking it altogether, if investor Z targets
+the standard deviation of 12%, the optimal portfolio
+yields 8.64% expected return.
+In the final part of this question,
+we were asked whether investor X can achieve a higher risk
+return tradeoff if she could have invested
+in the risk-free asset as well.
+Let's find the mix of the tangency portfolio
+and the risk-free asset that achieves this target
+level of standard deviation.
+We can use the same equation as we've written for investor Z.
+In this case, I'll use equation for x, which gives us 130.40%.
+This means that investor X needs to invest 130.40%
+into the tangency portfolio and negative 30.40%
+into the risk-free asset, effectively shorting it
+and investing these proceeds from the short sale
+into the tangency portfolio.
+Given the weights of stocks A and C
+in the tangency portfolio, we can
+compute the weights of stocks A and C
+in investor X's portfolio.
+So investor X's portfolio looks like this--
+30.40% short position in the risk-free asset,
+85.16% long position in stock A, and the 45.24% long position
+in the stock C.
+Now we can compute the expected return of investor X's
+portfolio, which is 12.39%.
+Recall that without access to the risk-free rate,
+investor X could have only obtained a return of 12.25%.
+Now, with access to risk-free asset,
+she's able to achieve additional 0.14% return without increasing
+the risk of her portfolio.
+The reason for this high return is
+that when investor X has access to the risk-free asset,
+she's able to achieve risk return combinations
+on the capital market line, which is denoted
+on this graph in red line.
+Without access to the risk-free asset,
+the only achievable portfolios for her
+are the ones on the blue line.

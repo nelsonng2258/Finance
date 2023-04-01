@@ -1,0 +1,81 @@
+
+PROFESSOR: In this video, we will demonstrate
+that, if the put-call parity for European options does not hold,
+this will create arbitrage opportunities in the market.
+Suppose that you observe the following prices
+of financial instruments in the market.
+There is a stock, XYZ, that currently
+trades at $20 a share.
+There is a European put option on XYZ with one-year maturity
+and a strike price of $18, and it sells for $3.33.
+There is also a European call option on the same stock, XYZ.
+It also has a maturity of one year and a strike price of $18.
+And it sells for $7.
+Suppose that the continuously compounded risk-free rate
+is 8%.
+The question asks if there is an arbitrage
+opportunity in this market.
+If there is, it asks to describe a trading strategy designed
+to profit from this opportunity.
+Let's examine whether the put-call parity holds.
+The price of the call option plus the present value
+of strike K equals to $23.62.
+Recall that 8% is continuously compounded.
+Therefore, to compute the present value of $18,
+we're multiplying it by exponent raised
+to the power of negative 8%.
+Capital T here equals to 1 because both of these options
+mature in one year.
+Second, the price of the put plus the price of the stock
+equals to $23.33.
+We can see that the put-call parity does not
+hold because the price of the call plus the present value
+of K is greater than the price of the put
+plus the price of the stock.
+What can we do to exploit this mispricing?
+As always, when it comes to arbitrage,
+we should buy what is cheap and sell what is expensive.
+Therefore, we should buy the put at $3.33.
+We should buy the stock at $20.
+We should sell the call at $7, and we
+should borrow the amount highlighted here in red--
+this is just the present value of $18--
+at the risk-free rate, 8%.
+Therefore, a year from now, we need to pay back $18.
+These transactions generate the immediate profit of $0.29.
+Now let's see what happens a year from now.
+Suppose that the share price one year from now is above $18.
+We will denote this share price by S cap
+T. This means that call expires in the money,
+and put expires out of the money.
+Therefore, you need to deliver S cap T minus 18
+to the counterparty to whom you sold the call,
+and you also need to repay the loan of $18.
+To do this, you will do the following.
+You will first sell this share at S cap T. Second,
+you will pay S cap T minus 18 to the holder of the call option.
+And, third, you will repay the loan of $18.
+You can see that, regardless of the value of S_T,
+you have just enough to pay to the holder of the option
+and to repay the loan.
+Therefore, your position a year from now is covered.
+Now let's see what happens a year from now if the share
+price ends up being below $18.
+This means that the put expires in the money,
+and the call expires out of the money,
+and it doesn't get exercised, which
+means that your only obligation a year from now
+is to repay the loan of $18.
+To do this, you will do the following.
+First, you will sell the share and get S cap T. Second,
+you will exercise the put option and collect 18 minus cap S_T.
+You can see that the total proceeds
+from the sale of the share and from exercise of the put option
+equal exactly $18, regardless of what the future share price is.
+And this gives you exactly enough
+to repay your $18 loan, which means
+that your position a year from now is covered.
+To summarize, we have demonstrated
+that if the put-call parity does not hold,
+this creates an arbitrage opportunity
+with immediate profits and no future risks.

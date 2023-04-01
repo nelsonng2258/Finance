@@ -1,0 +1,348 @@
+0
+00:00:00,000 --> 00:00:00,755
+
+
+1
+00:00:00,755 --> 00:00:02,630
+PROFESSOR: We'll now discuss some limitations
+
+2
+00:00:02,630 --> 00:00:05,720
+of the mean variance framework for portfolio choice
+
+3
+00:00:05,720 --> 00:00:09,310
+and consider some extensions.
+
+4
+00:00:09,310 --> 00:00:14,810
+One important limitation is that our formulation is static.
+
+5
+00:00:14,810 --> 00:00:17,840
+We construct the portfolio at time zero
+
+6
+00:00:17,840 --> 00:00:21,280
+and evaluate the outcome next period.
+
+7
+00:00:21,280 --> 00:00:24,950
+We do not rebalance the portfolio over time.
+
+8
+00:00:24,950 --> 00:00:29,680
+And we do not evaluate the time path of the portfolio value.
+
+9
+00:00:29,680 --> 00:00:34,250
+In practice, portfolio choice problems are often dynamic.
+
+10
+00:00:34,250 --> 00:00:37,360
+For example, consider a problem faced
+
+11
+00:00:37,360 --> 00:00:40,120
+by a household with multiple consumption objectives
+
+12
+00:00:40,120 --> 00:00:42,790
+over the life cycle.
+
+13
+00:00:42,790 --> 00:00:44,890
+This household would need to think
+
+14
+00:00:44,890 --> 00:00:47,680
+about intertemporal trade-offs and would
+
+15
+00:00:47,680 --> 00:00:51,610
+have to rebalance its investments multiple times.
+
+16
+00:00:51,610 --> 00:00:53,950
+To solve this problem, one would need
+
+17
+00:00:53,950 --> 00:00:56,950
+to learn how to construct dynamic plans.
+
+18
+00:00:56,950 --> 00:01:01,020
+This is one direction for extending our results.
+
+19
+00:01:01,020 --> 00:01:03,540
+The technical tools needed for this problem
+
+20
+00:01:03,540 --> 00:01:08,070
+come from dynamic programming, an area of optimization dealing
+
+21
+00:01:08,070 --> 00:01:11,070
+with multi-period decision problems.
+
+22
+00:01:11,070 --> 00:01:15,150
+Even in static problems, the objective of the investor
+
+23
+00:01:15,150 --> 00:01:17,550
+may not be fully described by the first two
+
+24
+00:01:17,550 --> 00:01:20,820
+moments of portfolio returns.
+
+25
+00:01:20,820 --> 00:01:24,000
+For example, suppose an investor wants
+
+26
+00:01:24,000 --> 00:01:29,440
+to maximize expected portfolio return subject to a penalty,
+
+27
+00:01:29,440 --> 00:01:33,090
+which is applied whenever the value of the portfolio
+
+28
+00:01:33,090 --> 00:01:36,490
+falls below a given threshold.
+
+29
+00:01:36,490 --> 00:01:40,060
+We can capture this and various other objectives
+
+30
+00:01:40,060 --> 00:01:43,830
+using the expected utility framework.
+
+31
+00:01:43,830 --> 00:01:46,290
+For our example in particular, one
+
+32
+00:01:46,290 --> 00:01:51,000
+may formulate a utility function to be equal to portfolio value
+
+33
+00:01:51,000 --> 00:01:54,090
+whenever this value is above the threshold
+
+34
+00:01:54,090 --> 00:01:57,330
+and, otherwise, linear with a slope higher
+
+35
+00:01:57,330 --> 00:01:59,700
+than one if the value of the portfolio
+
+36
+00:01:59,700 --> 00:02:02,810
+is below the threshold.
+
+37
+00:02:02,810 --> 00:02:07,040
+By construction, this objective penalizes outcomes
+
+38
+00:02:07,040 --> 00:02:10,210
+that fall below the threshold.
+
+39
+00:02:10,210 --> 00:02:12,190
+The strength of the penalty is controlled
+
+40
+00:02:12,190 --> 00:02:14,620
+by the parameter a, which describes
+
+41
+00:02:14,620 --> 00:02:17,680
+the difference in the slope of the utility curve
+
+42
+00:02:17,680 --> 00:02:20,800
+below and above the threshold.
+
+43
+00:02:20,800 --> 00:02:24,220
+We now consider the marginal contribution of an asset
+
+44
+00:02:24,220 --> 00:02:27,110
+to the expected utility objective.
+
+45
+00:02:27,110 --> 00:02:30,400
+And compare this to our results for the mean variance
+
+46
+00:02:30,400 --> 00:02:32,790
+objective.
+
+47
+00:02:32,790 --> 00:02:35,660
+Consider the expected utility.
+
+48
+00:02:35,660 --> 00:02:39,920
+We assume that the portfolio value starts at one.
+
+49
+00:02:39,920 --> 00:02:42,710
+And then the utility is defined over the end
+
+50
+00:02:42,710 --> 00:02:45,095
+of period portfolio value, which is
+
+51
+00:02:45,095 --> 00:02:49,180
+one plus the portfolio return.
+
+52
+00:02:49,180 --> 00:02:51,820
+The first order optimality condition
+
+53
+00:02:51,820 --> 00:02:55,750
+states that the derivative of the expected utility
+
+54
+00:02:55,750 --> 00:03:00,380
+with respect to each portfolio weight should be zero.
+
+55
+00:03:00,380 --> 00:03:03,320
+For asset I, this condition requires
+
+56
+00:03:03,320 --> 00:03:06,950
+that the expected value of the excess return on asset
+
+57
+00:03:06,950 --> 00:03:11,300
+I scaled by the marginal utility at the end of the period
+
+58
+00:03:11,300 --> 00:03:14,230
+is equal to zero.
+
+59
+00:03:14,230 --> 00:03:18,280
+We can rewrite this condition as the sum of two terms being
+
+60
+00:03:18,280 --> 00:03:20,300
+equal to zero.
+
+61
+00:03:20,300 --> 00:03:25,460
+The first term is a product of the risk premium on asset I
+
+62
+00:03:25,460 --> 00:03:29,300
+and the expected marginal utility of terminal portfolio
+
+63
+00:03:29,300 --> 00:03:31,330
+value.
+
+64
+00:03:31,330 --> 00:03:33,910
+The second term is the covariance
+
+65
+00:03:33,910 --> 00:03:38,730
+of the return on asset I with the marginal utility.
+
+66
+00:03:38,730 --> 00:03:41,310
+We observe that in this formulation
+
+67
+00:03:41,310 --> 00:03:44,760
+the marginal contribution of the asset to portfolio risk
+
+68
+00:03:44,760 --> 00:03:48,360
+is measured by the covariance of the return
+
+69
+00:03:48,360 --> 00:03:52,350
+and the marginal utility of portfolio value.
+
+70
+00:03:52,350 --> 00:03:55,830
+Because marginal utility is generally non-linear,
+
+71
+00:03:55,830 --> 00:03:58,380
+this measure emphasizes non-linear measures
+
+72
+00:03:58,380 --> 00:04:02,850
+of dependence between individual asset returns and portfolio
+
+73
+00:04:02,850 --> 00:04:04,810
+returns.
+
+74
+00:04:04,810 --> 00:04:07,440
+For example, the marginal contribution
+
+75
+00:04:07,440 --> 00:04:10,680
+of asset I to portfolio risk may now
+
+76
+00:04:10,680 --> 00:04:13,440
+depend on the covariance of its return
+
+77
+00:04:13,440 --> 00:04:18,130
+with the squared portfolio return called coskewness.
+
+78
+00:04:18,130 --> 00:04:21,459
+This stands in contrast to the mean varianace results,
+
+79
+00:04:21,459 --> 00:04:25,030
+where the marginal contribution of an asset to portfolio risk
+
+80
+00:04:25,030 --> 00:04:28,790
+was fully captured by a linear measure of dependence,
+
+81
+00:04:28,790 --> 00:04:31,470
+return covariance.
+
+82
+00:04:31,470 --> 00:04:33,930
+Another important implication of our analysis
+
+83
+00:04:33,930 --> 00:04:37,800
+here is that, under the expected utility objective,
+
+84
+00:04:37,800 --> 00:04:43,040
+different investors no longer hold the same risky portfolio.
+
+85
+00:04:43,040 --> 00:04:45,650
+The shape of the individual utility function
+
+86
+00:04:45,650 --> 00:04:49,570
+affects the optimal portfolio composition.
+

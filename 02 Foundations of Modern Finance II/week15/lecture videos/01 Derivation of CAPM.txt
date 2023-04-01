@@ -1,0 +1,234 @@
+
+PROFESSOR: This week, we introduce
+one of the fundamental models in finance.
+The capital asset pricing model, or in short, CAPM.
+CAPM connects expected returns on various assets
+to their risk.
+CAPM tells us that the right measure of risk
+is the covariance of asset return
+with the so-called market portfolio.
+We start with the derivation of the CAPM,
+and then discuss its intuition.
+Unlike the arbitrage pricing theory, which also delays
+expected returns to risk, CAPM is an equilibrium model,
+which emphasizes the balance between supply and demand
+for financial assets.
+The logic of CAPM is fundamental and far reaching,
+and this model is one of the leading examples of equilibrium
+thinking in finance.
+We then discuss practical aspects
+of applying the CAPM model, relevant empirical evidence,
+and limitations of the model.
+To derive the CAPM, we need to model investors' demand
+for financial assets.
+To do that, we built on the mean variance portfolio theory.
+Under the mean various preferences,
+investors diversify non systematic risk,
+and end up holding only the risk free asset
+and the specific portfolio of stocks--
+the tangency portfolio.
+We now ask, what does the combined demand
+of all investors look like?
+And how does this demand determine
+the relation between risk and return on financial assets?
+Before we dive into the derivation of the CAPM,
+we need to introduce the notion of the market portfolio.
+The market portfolio is a portfolio of all risky assets
+traded in the market.
+We will need some notation.
+Suppose that there is a total of n risky assets traded
+in the market.
+We call these assets stocks.
+Market capitalization, or in short,
+market cap of each stock, is equal to its price
+per share times the number of outstanding shares.
+The total market cap of all stocks
+is the sum of all the individual market caps.
+This is the value, or the price, of the market portfolio.
+Portfolio weights in the market portfolio
+are then, given by the ratio of the market cap of each stock,
+to the total value of the market portfolio.
+We denote the vector of market portfolio weights by w sub m.
+CAPM relies on a set of important assumptions
+about the financial market and investors.
+We begin by assuming that all investors invest
+over a single period, t0 to t1.
+They buy a portfolio of financial assets at time 0
+and liquidate that portfolio at time one.
+We also assume that the only source of wealth investors
+have is their portfolio of financial assets.
+They have no other sources of income.
+This means that investors' preferences are defined
+over the return on their portfolios between times 0
+and time 1.
+We assume that our investors have correct expectations,
+meaning that they know the true distribution of asset returns.
+This is also an important assumption.
+It means that investors in the model
+do not disagree with each other.
+We assume that all investors have mean variance preferences.
+They may have different levels of risk aversion,
+but it is important that they only
+care about the first two moments of returns on their portfolios.
+Next, we assume that there exists a risk free asset
+in the market.
+We further assume that this asset is in 0 net supply.
+This means that some investors may lend, others may borrow,
+but their combined position in the risk free asset is 0.
+For every dollar an investor borrows,
+there must be another investor who is lending that dollar.
+This assumption is not critical and could be relaxed.
+For example, if we instead assume that the risk free asset
+is in positive net supply, all we have to do
+is include the risk free asset into the market portfolio.
+As an aside, we may want to allow
+for the net position in the risk free asset
+to be positive, in order to model the fact that investors
+can hold treasuries.
+Note, however, that in the case of treasuries,
+each dollar investors lend is $1 borrowed by the government.
+If the government repays these loans from the revenue
+it raises from taxes on the same investors,
+and if you consider the tax liability
+as a part of each investor's portfolio,
+it is no longer obvious that there
+is a positive net supply of the risk free asset in the market.
+This line of reasoning quickly gets
+into some fairly deep issues related to fiscal policy.
+In the context of CAPM, we sidestep such issues,
+and simply assume that the net supply of the risk free asset
+is 0.
+In this model, investors are not limited by constraints,
+and can trade with no transaction costs.
+In other words, the financial market is frictionless.
+Finally, we state the market clearing condition.
+Total demand for financial assets
+must be equal to their total supply.
+This means that each outstanding stock
+share is held by some investor.
+CAPM is what is called an equilibrium model.
+Equilibrium models have two important elements--
+first, they make assumptions about investors' behavior,
+as we do here.
+We assume mean variance preferences.
+Second, these models impose the market clearing condition.
+In equilibrium, prices must be such that supply equals demand.
+As we combine the two elements, we
+can begin to understand how individual investor
+behavior affects prices in the financial markets.
+CAPM is an important example of using equilibrium analysis
+for pricing financial assets.
+Note as a related observation that our analysis
+of relative pricing, using the no arbitrage principle,
+follows from equilibrium analysis.
+As long as investors prefer more to less,
+and are not constrained, arbitrage opportunities cannot
+exist in equilibrium.
+That means that in equilibrium, all the results derived
+by pure arbitrage arguments must also hold.
+Recall that under the assumptions
+of mean various preferences and no constraints,
+every investor puts their money into two pots--
+the riskless asset, and a particular portfolio
+of risky assets, which we call the tangency portfolio.
+Note that here, we are also using the assumption
+that investors know the true distribution of asset returns.
+Because all investors hold the same risky portfolio,
+or the tangency portfolio, they must hold stocks
+in the same proportions.
+Let's aggregate all the stock positions across the investors.
+Collectively, they hold stocks in the same proportions
+as in the tangency portfolio.
+We will now impose the market clearing condition.
+The total supply of all stocks in the market
+is the market portfolio.
+Investors demand the tangency portfolio.
+Market clearing then implies that the tangency portfolio
+and the market portfolio must be the same.
+In other words, we conclude that the market portfolio must
+be on the capital market line.
+It is mean variance efficient.
+We now illustrate the critical step in our argument.
+The total asset holdings of all investors
+must equal the total supply of these assets.
+Consider a market with three stocks, a, b, and c.
+Suppose that the composition of the tangency portfolio
+is the following--
+25% in stock a, 50% in stock b, and 25% in stock c.
+There are only three investors in this economy.
+We will label them as one, two, and three.
+The total wealth of these investors
+is $500, $1,000, and $1,500, respectively.
+We summarize asset holdings of each investor
+in the following table.
+We can see how much they invest in the risk free asset,
+and in each of the stocks.
+For example investor one splits her investments
+between the risk free asset and the tangency portfolio.
+She holds $100 in the safe asset and $400
+in the tangency portfolio.
+Which means $100 in stock a, $200 in stock b,
+and $100 in stock c.
+Investor three borrows at the risk free rate.
+So the risk free position of this investor is negative.
+The risky position is also the tangency portfolio,
+with a total of $1,800 invested into the stocks.
+Know that this investor starts with $1,500 in total wealth,
+and borrows $300 more at the risk free rate, which
+brings the total value invested in stocks to $1,800.
+Collectively, investors do not hold the safe asset.
+We can see that their individual holdings in the risk free asset
+sum up to zero.
+Their combined holdings of the stocks
+are $750 in stock a, $1,500 in stock b, And $750 in stock c.
+In equilibrium, the total dollar holding of each asset
+must equal its market value, because all
+the outstanding shares of stocks are held by the investors.
+We then conclude that the market cap of stock a is $750,
+it is $1,500 for stock b, and $750 for stock c.
+The total market cap of the market portfolio
+is 3,000, which is the sum of the market caps of stocks
+a, b, and c.
+We then compute the weights of the three stocks
+in the market portfolio, and confirm
+that they are the same as the weights
+in the tangency portfolio.
+Namely, 0.25 for a, 0.5 for b, and 0.25 for c.
+We are now ready to establish the CAPM formula.
+We have done all the heavy lifting
+in the context of mean variance portfolio choice.
+Now we apply our prior results.
+Recall that the marginal contribution
+of an asset to the expected excess return of the market
+portfolio is given by its own expected excess return.
+The marginal contribution of an asset to the risk of the market
+portfolio is given by the covariance of the asset
+with the market, divided by the standard deviation of market
+returns.
+Because the market portfolio is the tangency portfolio,
+the marginal return to risk ratio for each asset
+must be the same, and equal to the Sharpe ratio of the market
+portfolio.
+This is the CAPM result. We now rewrite the CAPM result
+with the risk premium on the left hand side.
+The risk premium of a stock is equal to the market risk
+premium times the beta of the stock,
+with respect to the market portfolio.
+The market beta is the ratio of the covariance of assets return
+with the market portfolio, normalized by the market return
+variance.
+Stock's beta summarizes its systematic risk.
+It's the exposure of the stock to the market return.
+CAPM tells us that the beta of the stock,
+with respect to the market, is the right measure
+of systematic risk.
+Mathematically, the market beta is
+equivalent to a factor loading in the ABT framework,
+where the only risk factor is the market return.
+The market risk premium is the price of systematic risk.
+It's the amount of compensation a stock
+delivers to the investors per unit of systematic risk.
+The risk premium of any stock is a product
+of the quantity of systematic risk, or its market
+data, and the price of risk, which
+is the market risk premium.

@@ -1,0 +1,99 @@
+
+PROFESSOR: Now, next, let's construct a payoff diagram
+from the following portfolio.
+We're going to short two puts with a strike price of $90.
+And we're going to long one call with a strike price of $110.
+So what I've written here are the payoffs
+to shorting two puts.
+So, if we short two puts, we get the negative
+of what we would have gotten if we actually are long these two
+puts.
+So we get negative 180 plus 2 s1 if s1 ends up being 90.
+And we get 0 because the options--
+these two options would expire out of the money
+if s1 is above 90.
+And, the payoff from the call option, one call option,
+is simply s1 minus 110, which is the strike price of this one
+call, if s1 ends up being above 110 and 0
+if the stock price is below 110.
+So now we will add up these two payoff functions,
+and we'll get the payoff of our portfolio.
+So let me make a remark that what we're doing here
+is just a very universal approach where
+you can find the payoff of a portfolio of any types
+and however many different kinds of options you actually have.
+So, if you have discipline of writing down
+the payoffs for individual options
+and then add them up piecewise, you
+will always get the right answer.
+The more you practice with this, the more clear it will be.
+For example, at some point, it's going
+to be very clear to you, without writing
+these mathematical expressions, how the payoff
+diagram for this portfolio would look like,
+but this would come only with practice.
+And a good practice is to have the discipline
+of writing down the payoffs and actually adding them up.
+Now so we have this payoff.
+We have this payoff.
+Let's add them up.
+So, if the stock price is below-- so let's
+always start with sort of the lower part.
+So, if the stock price ends up being somewhere below 90,
+then we get this much from these two puts.
+And we get nothing from the call.
+So we get negative 180 plus 2 s1 if s1 is less or equal than 90.
+Then, if s1 is above 90, but below 110, we
+get 0 payoff from the two puts, and we also get,
+actually, 0 payoff from call.
+So we get 0 if s1 is above 90 and below 110.
+And then, once we're crossing 110, so if s1 is above 110,
+we get nothing from the two puts, and we get s1 minus 110
+from the call.
+So, in this part, we get s1 minus 110 if s1 is above 110.
+Let me also make another minor remark
+that where exactly I put the equality
+signs in these expressions does not matter because,
+all of these functions, they are continuous in the sense
+that there are no breaks.
+So, therefore, if I put, for example, equality, instead
+of here, here, the end result would not
+change because, again, you have continuity in all of these--
+in all of these breakpoints.
+Now the final step is to draw this mathematical expression
+in the form of a diagram.
+I'm going to start from the left-hand side.
+So, if s1 is 0, then we get negative $180, the payoff.
+So I'm going to start from here, negative 180.
+And then, if s1 equals to 90, then we're
+going to get 0 payoff because it's going to be negative 180
+plus 2 times 90.
+That's going to be 0.
+And we could also see that we have 0 here.
+So, if s1 equals to 90, we get 0 here as well.
+So we're getting-- so this is 90.
+We're getting this point.
+And so this is the line that goes straight line
+from negative 180 to 90.
+The slope of this line, you could see that it's also--
+so this part is 2 because we have two of these puts.
+And then we get--
+then our payoff is 0 from 90 to 110.
+And, from this point onwards, from 110 and above, our payoff
+is s1 minus 110.
+So this is the line that will look like this.
+
+And so the slope of this line is 45 degrees.
+So this raise is 1.
+And so this is how our combined payoff from the strategy
+is going to look like.
+And, in fact, so, if you look at this,
+you realize that this is really just a combination,
+a simple combination, of two short puts here at the bottom.
+And then you have one long call option
+with a strike price of 110.
+So, therefore, you're staring at negative 180 all the way to 0
+when s1 equals to 90.
+Then it's 0.
+Then it's in the positive domain when s1 goes above $110.
+So this is the payoff diagram for this question.

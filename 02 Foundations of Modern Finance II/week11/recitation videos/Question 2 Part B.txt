@@ -1,0 +1,41 @@
+
+PROFESSOR: In the previous video,
+we built an arbitrage trading strategy
+to exploit a situation when the forward was overpriced.
+Now, consider the converse situation, when
+the forward is underpriced.
+Let's assume that the price of this two-year
+forward is $1,015.
+How do we exploit this?
+Consider the following trading strategy.
+Since the forward is underpriced,
+we will engage in one long forward contract.
+Next, we will short-sell the following number of shares,
+e to the power of negative yT.
+We will invest the proceeds from the short sale
+of the stock, which will be e to the power
+of negative yT times S-naught dollars at the risk-free rate.
+Notice that the initial cost of setting up this portfolio
+is zero.
+Let's see what happens two years from now.
+First, let's figure out how many shares of stock
+we need to return.
+The answer is one share.
+Recall that we borrowed e to the power of negative yT shares,
+but the share pays continuous dividend y,
+and therefore we need to return both dividends
+and the original amount of shares to the owner.
+If the dividends are continuously reinvested,
+the original borrowed amount would grow to one share.
+Second, our initial investment at the risk-free rate
+is now worth $1,020.20.
+Next, you take $1,015 out of this
+$1,020.20 that you have in your bank account,
+and you pay the seller of the forward contract, who
+in turn delivers one share of stock to you.
+You use this share of stock to cover your short position.
+As a result, this trading strategy generates $5.20
+in profits per one forward contract bought.
+The reason for this arbitrage profits
+is, again, the fact that the forward contract
+was initially underpriced.

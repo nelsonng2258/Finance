@@ -1,0 +1,376 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:03,510
+PROFESSOR: We now apply the risk-neutral valuation method
+
+2
+00:00:03,510 --> 00:00:05,940
+to exotic options.
+
+3
+00:00:05,940 --> 00:00:09,580
+The payoff of exotic options is typically path dependent.
+
+4
+00:00:09,580 --> 00:00:14,310
+For example, consider an up-and-out put option.
+
+5
+00:00:14,310 --> 00:00:17,690
+This option pays off as a regular European put
+
+6
+00:00:17,690 --> 00:00:20,900
+unless, at some point during the life of the option,
+
+7
+00:00:20,900 --> 00:00:24,800
+the price of the stock exceeds a barrier specified by the option
+
+8
+00:00:24,800 --> 00:00:26,590
+contract.
+
+9
+00:00:26,590 --> 00:00:29,830
+The payoff of an up-and-out put depends
+
+10
+00:00:29,830 --> 00:00:31,930
+on the maximum stock price observed
+
+11
+00:00:31,930 --> 00:00:35,060
+over the life of the option contract.
+
+12
+00:00:35,060 --> 00:00:38,540
+As a result, the payoff of the option at maturity
+
+13
+00:00:38,540 --> 00:00:41,780
+depends not only on the stock price at that date,
+
+14
+00:00:41,780 --> 00:00:46,250
+but on all preceding values of the stock price.
+
+15
+00:00:46,250 --> 00:00:49,990
+In other words, the payoff depends on the entire path
+
+16
+00:00:49,990 --> 00:00:51,130
+of the stock price.
+
+17
+00:00:51,130 --> 00:00:53,970
+It is path dependent.
+
+18
+00:00:53,970 --> 00:00:56,310
+When it comes to path-dependent options,
+
+19
+00:00:56,310 --> 00:00:59,400
+our original approach to pricing by replication
+
+20
+00:00:59,400 --> 00:01:01,200
+is not practical.
+
+21
+00:01:01,200 --> 00:01:04,530
+The challenge is that the number of nodes on the binomial tree
+
+22
+00:01:04,530 --> 00:01:08,730
+grows exponentially with the number of time periods.
+
+23
+00:01:08,730 --> 00:01:10,920
+Know that without path dependence,
+
+24
+00:01:10,920 --> 00:01:13,140
+the three recombines.
+
+25
+00:01:13,140 --> 00:01:18,450
+The ud node is the same as the du node, and so on.
+
+26
+00:01:18,450 --> 00:01:20,280
+This drastically reduces the number
+
+27
+00:01:20,280 --> 00:01:24,090
+of steps we need to take along the tree.
+
+28
+00:01:24,090 --> 00:01:26,220
+The risk-neutral approach to valuation
+
+29
+00:01:26,220 --> 00:01:30,900
+can be used effectively for pricing of exotic options.
+
+30
+00:01:30,900 --> 00:01:34,640
+The key difference is that under the risk-neutral approach,
+
+31
+00:01:34,640 --> 00:01:38,990
+we can estimate the option price by Monte Carlo simulation.
+
+32
+00:01:38,990 --> 00:01:42,950
+Specifically, we sample from the set of terminal nodes
+
+33
+00:01:42,950 --> 00:01:45,830
+according to their risk-neutral probabilities
+
+34
+00:01:45,830 --> 00:01:48,260
+and use their relatively small sample
+
+35
+00:01:48,260 --> 00:01:52,640
+to estimate the true expected value of the option payoff.
+
+36
+00:01:52,640 --> 00:01:56,720
+We do not need to visit all terminal nodes.
+
+37
+00:01:56,720 --> 00:02:00,620
+Monte Carlo simulation has many applications in finance.
+
+38
+00:02:00,620 --> 00:02:03,420
+It is based on the law of large numbers,
+
+39
+00:02:03,420 --> 00:02:04,970
+the same mathematical relation that
+
+40
+00:02:04,970 --> 00:02:09,470
+allows us to estimate unknown population moments from finance
+
+41
+00:02:09,470 --> 00:02:11,480
+historical samples.
+
+42
+00:02:11,480 --> 00:02:14,270
+Once we estimate the price of the option using
+
+43
+00:02:14,270 --> 00:02:16,370
+the risk-neutral formulation, we can
+
+44
+00:02:16,370 --> 00:02:19,160
+compute the composition of the replicating portfolio
+
+45
+00:02:19,160 --> 00:02:21,740
+at any node.
+
+46
+00:02:21,740 --> 00:02:23,600
+The simplification is that we need
+
+47
+00:02:23,600 --> 00:02:26,105
+to compute the replicating portfolio only
+
+48
+00:02:26,105 --> 00:02:30,160
+at the nodes of the three visited by the stock price.
+
+49
+00:02:30,160 --> 00:02:32,650
+We can do this in real time.
+
+50
+00:02:32,650 --> 00:02:35,590
+We do not need to compute the replicating portfolio
+
+51
+00:02:35,590 --> 00:02:38,140
+at every single node, which is what
+
+52
+00:02:38,140 --> 00:02:40,270
+creates the computational bottleneck
+
+53
+00:02:40,270 --> 00:02:43,870
+for the original replication approach.
+
+54
+00:02:43,870 --> 00:02:48,690
+As an example, consider the so-called Asian option.
+
+55
+00:02:48,690 --> 00:02:51,600
+This is a path-dependent exotic option
+
+56
+00:02:51,600 --> 00:02:55,260
+for which the payoff is based on the average realized stock
+
+57
+00:02:55,260 --> 00:02:58,870
+price over the life of the option.
+
+58
+00:02:58,870 --> 00:03:03,220
+Specifically, assume that there are two periods in the model.
+
+59
+00:03:03,220 --> 00:03:05,690
+Cap T is equal to 2.
+
+60
+00:03:05,690 --> 00:03:10,440
+Consider the Asian call option with a strike price of $40.
+
+61
+00:03:10,440 --> 00:03:15,270
+Its payoff is equal to the maximum of 0
+
+62
+00:03:15,270 --> 00:03:17,250
+and the difference between the average stock
+
+63
+00:03:17,250 --> 00:03:23,500
+price between 0 and 2 and the strike price of $40.
+
+64
+00:03:23,500 --> 00:03:25,330
+We represent the payoff of the option
+
+65
+00:03:25,330 --> 00:03:29,330
+at expiration of the binomial tree on the right.
+
+66
+00:03:29,330 --> 00:03:32,060
+Note that the payoff at the ud node
+
+67
+00:03:32,060 --> 00:03:35,630
+is not the same as at the du node.
+
+68
+00:03:35,630 --> 00:03:40,670
+This reflects the path-dependent nature of the Asian option.
+
+69
+00:03:40,670 --> 00:03:42,770
+We compute the price of the call using
+
+70
+00:03:42,770 --> 00:03:45,490
+the risk-neutral valuation formula.
+
+71
+00:03:45,490 --> 00:03:48,550
+We average the payoff of the option over the terminal
+
+72
+00:03:48,550 --> 00:03:51,610
+nodes of the tree using the risk-neutral probabilities
+
+73
+00:03:51,610 --> 00:03:53,370
+as weights.
+
+74
+00:03:53,370 --> 00:03:58,160
+Then, we discount the result at time 0 at the risk-free rate.
+
+75
+00:03:58,160 --> 00:04:03,560
+The time 0 price of the option is $14.46.
+
+76
+00:04:03,560 --> 00:04:05,570
+Next, we illustrate how to compute
+
+77
+00:04:05,570 --> 00:04:08,180
+the replicating portfolio.
+
+78
+00:04:08,180 --> 00:04:09,920
+Note that we can follow this approach
+
+79
+00:04:09,920 --> 00:04:12,380
+to compute the replicating portfolio as needed
+
+80
+00:04:12,380 --> 00:04:14,330
+for any visited node.
+
+81
+00:04:14,330 --> 00:04:17,300
+For example, to compute the replicating portfolio
+
+82
+00:04:17,300 --> 00:04:22,370
+at the node u at time 1, we need to know the price of the option
+
+83
+00:04:22,370 --> 00:04:28,490
+only in the current node and in the nodes uu and ud, which
+
+84
+00:04:28,490 --> 00:04:32,810
+follow the current time 1 node u.
+
+85
+00:04:32,810 --> 00:04:37,100
+To replicate the option, we buy delta shares of the stock
+
+86
+00:04:37,100 --> 00:04:42,290
+and invest b dollars at the risk-free rate.
+
+87
+00:04:42,290 --> 00:04:45,440
+The delta of the option is equal to the difference
+
+88
+00:04:45,440 --> 00:04:50,720
+between the option prices in nodes uu and ud
+
+89
+00:04:50,720 --> 00:04:55,750
+divided by the corresponding difference in stock prices.
+
+90
+00:04:55,750 --> 00:04:58,390
+The size of the bond position in the portfolio
+
+91
+00:04:58,390 --> 00:05:02,170
+is equal to the difference between the option price
+
+92
+00:05:02,170 --> 00:05:04,960
+and the value of the stock position, which
+
+93
+00:05:04,960 --> 00:05:10,410
+is delta times the stock price at node u at time 1.
+

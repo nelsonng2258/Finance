@@ -1,0 +1,106 @@
+
+PROFESSOR: In this video, we will
+work with the same multi-asset example.
+We will find the tangency portfolio,
+then we will compute its Sharpe ratio,
+and we will compute return to risk ratio
+for each individual asset for the tangency portfolio.
+Record that the tangency portfolio
+is given by the following expression written
+in the matrix form.
+To find tangency portfolio, we first
+need to invert the covariance matrix.
+I will use an inverse function to do this.
+
+Next, let's compute lambda.
+Recall that lambda is the following scalar.
+It's 1 divided by the transposed vector of excess returns, which
+I put here, multiplied by the inverse covariance
+matrix, which we just computed here,
+multiplied by the vector of ones, which I put here.
+Now let's do this calculation step by step.
+So first I will transpose the vector of excess returns.
+Now I will multiply this vector by the inverse covariance
+matrix, and now I will multiply this product
+by the vector of ones.
+
+Now we need to invert this number to obtain lambda.
+So I'll take 1, and I'll divide it by this product.
+Now we can find tangency portfolio.
+To do this, I'll multiply lambda by the matrix product
+of the inverse covariance matrix and the vector
+of excess returns, and this would give me portfolio weights
+in the tangency portfolio.
+Notice that in the tangency portfolio,
+the weight of each stock increases from stock 1
+through stock 10.
+In fact, we're shorting the first three stocks,
+and we're allocating a significant fraction
+of our wealth to the last three stocks.
+Let's compute the expected return, variance,
+standard deviation, and the Sharpe ratio
+of the tangency portfolio.
+Let's start with the expected return.
+I will transpose the vector weights
+in the tangency portfolio, and I will
+multiply this vector of weights by the expected
+return on individual stocks.
+
+This gives me the expected return
+on the tangency portfolio of 9.3%.
+Recall that the expected return on the equally
+weighted portfolio was 5.5%.
+So we can already see that the tangency portfolio yields
+much higher expected return.
+To compute the variance, I will again
+transpose the vector weights of the tangency portfolio.
+I will multiply these vector weights
+by the covariance matrix, and then
+I'll multiply this result again by the vector weights,
+and this will give me the variance of this portfolio.
+The standard deviation is just the square root
+of the variance, and the standard deviation
+of this portfolio is 20.8%.
+So it is higher than the standard deviation
+of the equally weighted portfolio, which was 14.84%.
+Finally, now we can compare the Sharpe ratio, which
+is the difference between the expected return
+minus the risk-free rate divided by the standard deviation
+of this portfolio, and the Sharpe ratio of this portfolio
+is 0.41.
+Recall that the Sharpe ratio of the equally weighted portfolio
+was 0.32.
+Therefore, we can see that the tangency portfolio exhibits
+a much better risk return trade off compared to the equally
+weighted portfolio.
+Finally, let's compute return to risk ratio
+for our individual stocks and the tangency portfolio.
+First, let me compute covariances
+between individual stocks and the tangency portfolio.
+To do this, I will multiply each row of the covariace matrix
+by the vector weights of the tangency portfolio, which
+I have right here.
+So this first number gives me the covariance
+of returns on stock 1 with the returns
+on the tangency portfolio.
+Now we can extend the cell and compute this covariance
+for the remaining nine stocks.
+Before we do that, I will fix the array
+where we have the weights of the tangency portfolio
+so that it doesn't move when I extend this cell.
+Now that we have our covariances computed,
+we can compute the return to risk ratio for each stock.
+To do this, let's take the return on each stock,
+subtract the risk-free rate, and divide this
+by the ratio of this covariance divided
+by the standard deviation of the tangency portfolio,
+and this would be the return to risk ratio for the first stock.
+Now I can extend this array and compute return
+to risk ratio for the remaining nine stocks.
+Perhaps not surprisingly, return to risk ratio
+is the same for each of the 10 stocks.
+Moreover, this return to risk ratio for individual assets
+is the same as the Sharpe ratio for the tangency portfolio.
+This result implies optimality of the tangency portfolio.
+We cannot perturb the weights of individual assets in this
+portfolio to further increase its risk return trade off.

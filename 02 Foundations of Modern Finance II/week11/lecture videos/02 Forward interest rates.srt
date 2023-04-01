@@ -1,0 +1,564 @@
+0
+00:00:00,000 --> 00:00:00,770
+
+
+1
+00:00:00,770 --> 00:00:03,530
+PROFESSOR: The risk-free rate of return between now
+
+2
+00:00:03,530 --> 00:00:07,130
+and the future date, t, is given by the corresponding spot
+
+3
+00:00:07,130 --> 00:00:10,560
+interest rate, r sub t.
+
+4
+00:00:10,560 --> 00:00:14,070
+In addition to the spot rates, we now introduce forward
+
+5
+00:00:14,070 --> 00:00:15,090
+interest rates.
+
+6
+00:00:15,090 --> 00:00:17,670
+Forward interest rates apply to transactions
+
+7
+00:00:17,670 --> 00:00:19,650
+between two future dates.
+
+8
+00:00:19,650 --> 00:00:23,880
+For instance, t equal to one, and t equal to two.
+
+9
+00:00:23,880 --> 00:00:26,370
+The forward trade between these two dates
+
+10
+00:00:26,370 --> 00:00:29,160
+is specified by a forward transaction
+
+11
+00:00:29,160 --> 00:00:32,790
+to borrow money for one period at a future date at t
+
+12
+00:00:32,790 --> 00:00:34,700
+equal to 1.
+
+13
+00:00:34,700 --> 00:00:36,500
+The terms of the forward transaction
+
+14
+00:00:36,500 --> 00:00:40,590
+are fixed today at t equals 0.
+
+15
+00:00:40,590 --> 00:00:43,500
+The loan is received at date one.
+
+16
+00:00:43,500 --> 00:00:46,980
+The loan is repaid at date two.
+
+17
+00:00:46,980 --> 00:00:50,190
+It is important to distinguish forward interest rates
+
+18
+00:00:50,190 --> 00:00:52,710
+from the future spot rates.
+
+19
+00:00:52,710 --> 00:00:55,260
+Future spot rates are random and are
+
+20
+00:00:55,260 --> 00:00:59,630
+generally different from the current forward rates.
+
+21
+00:00:59,630 --> 00:01:02,030
+Consider the following example.
+
+22
+00:01:02,030 --> 00:01:05,480
+As the CFO of a US multinational company,
+
+23
+00:01:05,480 --> 00:01:07,610
+you expect to repatriate 10 million dollars
+
+24
+00:01:07,610 --> 00:01:11,820
+from a foreign subsidiary in one year.
+
+25
+00:01:11,820 --> 00:01:16,200
+These funds will be used to pay dividends a year later.
+
+26
+00:01:16,200 --> 00:01:18,510
+You do not know what the spot interest rates
+
+27
+00:01:18,510 --> 00:01:21,170
+will be in one year from now.
+
+28
+00:01:21,170 --> 00:01:23,180
+To avoid randomness, you would like
+
+29
+00:01:23,180 --> 00:01:27,320
+to fix your lending rate for a period of one year starting
+
+30
+00:01:27,320 --> 00:01:29,600
+one year from now.
+
+31
+00:01:29,600 --> 00:01:32,880
+The current interest rates are as follows--
+
+32
+00:01:32,880 --> 00:01:35,510
+The one-year spot rate is 5%.
+
+33
+00:01:35,510 --> 00:01:38,840
+And the two-year spot rate is 7%.
+
+34
+00:01:38,840 --> 00:01:40,730
+What should you do?
+
+35
+00:01:40,730 --> 00:01:43,290
+Consider the following strategy.
+
+36
+00:01:43,290 --> 00:01:50,880
+Let's borrow $9,524,000 today for a period of one year
+
+37
+00:01:50,880 --> 00:01:54,330
+at the spot rate of 5%.
+
+38
+00:01:54,330 --> 00:02:00,150
+At the same time, we invest the same amount 9.524 million
+
+39
+00:02:00,150 --> 00:02:05,250
+for two years, at the two-year spot rate of 7%.
+
+40
+00:02:05,250 --> 00:02:09,570
+The resulting cash flows are shown in the following table--
+
+41
+00:02:09,570 --> 00:02:12,860
+The net cash flow at time 0 is 0.
+
+42
+00:02:12,860 --> 00:02:16,080
+We borrow and lend the same amount.
+
+43
+00:02:16,080 --> 00:02:18,660
+At time 1, we repatriate $10 million
+
+44
+00:02:18,660 --> 00:02:25,260
+and use it to repay the one year loan we took out at time, 0.
+
+45
+00:02:25,260 --> 00:02:28,710
+At time 2, our two-year investment matures.
+
+46
+00:02:28,710 --> 00:02:34,660
+And we collect $10,904,000.
+
+47
+00:02:34,660 --> 00:02:38,170
+As you can see, we were able to transform the 10 million
+
+48
+00:02:38,170 --> 00:02:43,420
+cash flow at time 1, into a cash flow of 10.904 million
+
+49
+00:02:43,420 --> 00:02:45,070
+at time 2.
+
+50
+00:02:45,070 --> 00:02:49,390
+In other words, we managed to lock in a one year lending
+
+51
+00:02:49,390 --> 00:02:54,990
+rate of 9.04%, starting one year from now.
+
+52
+00:02:54,990 --> 00:02:58,080
+We conclude that to avoid arbitrage,
+
+53
+00:02:58,080 --> 00:03:00,390
+the one-year forward interest rates starting
+
+54
+00:03:00,390 --> 00:03:04,440
+one year from now, must be equal to 9.04%.
+
+55
+00:03:04,440 --> 00:03:09,310
+The previous example shows that forward rates
+
+56
+00:03:09,310 --> 00:03:14,010
+are related to the spot rates by an arbitrage argument.
+
+57
+00:03:14,010 --> 00:03:15,840
+Let's use this logic to establish
+
+58
+00:03:15,840 --> 00:03:19,440
+a general relation between the spot and forward interest
+
+59
+00:03:19,440 --> 00:03:20,610
+rates.
+
+60
+00:03:20,610 --> 00:03:23,850
+Specifically, consider two alternative investment
+
+61
+00:03:23,850 --> 00:03:27,710
+strategies between now and time t.
+
+62
+00:03:27,710 --> 00:03:31,460
+The first strategy is to invest at the current spot interest
+
+63
+00:03:31,460 --> 00:03:35,000
+rate between now and time t.
+
+64
+00:03:35,000 --> 00:03:39,680
+In this case $1 invested today compounds for t periods
+
+65
+00:03:39,680 --> 00:03:43,130
+at the current spot rate, resulting in the time,
+
+66
+00:03:43,130 --> 00:03:45,650
+t value equal to the left hand side
+
+67
+00:03:45,650 --> 00:03:48,470
+of the highlighted formula.
+
+68
+00:03:48,470 --> 00:03:52,280
+Under the second strategy, we invest at the spot interest
+
+69
+00:03:52,280 --> 00:03:55,580
+rate for t minus 1 periods, and then
+
+70
+00:03:55,580 --> 00:03:59,490
+reinvest the proceeds at the one-period forward rate,
+
+71
+00:03:59,490 --> 00:04:01,950
+which is known today.
+
+72
+00:04:01,950 --> 00:04:05,250
+$1 invested today compounds for t
+
+73
+00:04:05,250 --> 00:04:09,480
+minus 1 period at the current spot rate for that tenor,
+
+74
+00:04:09,480 --> 00:04:13,230
+and then the growth for one more period at the forward rate,
+
+75
+00:04:13,230 --> 00:04:16,829
+resulting in the time, t value equal to the right-hand side
+
+76
+00:04:16,829 --> 00:04:19,490
+of the highlighted formula.
+
+77
+00:04:19,490 --> 00:04:22,700
+Because both strategies start with a dollar
+
+78
+00:04:22,700 --> 00:04:26,330
+and generate a risk-free cash flow at time t,
+
+79
+00:04:26,330 --> 00:04:31,390
+to avoid arbitrage, they must produce the same amount.
+
+80
+00:04:31,390 --> 00:04:34,050
+This argument allows us to relate
+
+81
+00:04:34,050 --> 00:04:37,590
+the one-period forward rate between time t minus 1
+
+82
+00:04:37,590 --> 00:04:41,770
+and t to the corresponding spot rates.
+
+83
+00:04:41,770 --> 00:04:44,920
+There is a one-to-one relation between the yield curve
+
+84
+00:04:44,920 --> 00:04:48,040
+or the term structure of the spot interest rates
+
+85
+00:04:48,040 --> 00:04:51,260
+and the term structure of the forward rates.
+
+86
+00:04:51,260 --> 00:04:53,570
+The following example illustrates
+
+87
+00:04:53,570 --> 00:04:56,480
+how we can apply the forward rate formula
+
+88
+00:04:56,480 --> 00:05:00,230
+and how to replicate forward contracts using transactions
+
+89
+00:05:00,230 --> 00:05:03,110
+in the spot market.
+
+90
+00:05:03,110 --> 00:05:05,990
+The current term structure of the spot rates
+
+91
+00:05:05,990 --> 00:05:09,170
+and the corresponding prices of discount bonds
+
+92
+00:05:09,170 --> 00:05:12,530
+are given in the table.
+
+93
+00:05:12,530 --> 00:05:16,850
+A customer of your bank wants to enter into a forward contract
+
+94
+00:05:16,850 --> 00:05:19,700
+to borrow $20 million for one year,
+
+95
+00:05:19,700 --> 00:05:22,210
+starting three years from now.
+
+96
+00:05:22,210 --> 00:05:25,250
+Can you quote a rate?
+
+97
+00:05:25,250 --> 00:05:27,560
+Using the formula for the forward rate,
+
+98
+00:05:27,560 --> 00:05:30,170
+with the spot rates for years three and four
+
+99
+00:05:30,170 --> 00:05:35,090
+equal to 6.5% and 7% respectively,
+
+100
+00:05:35,090 --> 00:05:38,120
+the one-year forward rate between year three and four
+
+101
+00:05:38,120 --> 00:05:40,940
+is 8.51%.
+
+102
+00:05:40,940 --> 00:05:43,710
+To lock in these cash flows today,
+
+103
+00:05:43,710 --> 00:05:45,720
+we execute the following transactions
+
+104
+00:05:45,720 --> 00:05:48,430
+in the spot market.
+
+105
+00:05:48,430 --> 00:05:51,100
+We buy three-year discount bonds,
+
+106
+00:05:51,100 --> 00:05:52,990
+with a face value of $20 million.
+
+107
+00:05:52,990 --> 00:06:01,080
+This costs $16,556,000 today.
+
+108
+00:06:01,080 --> 00:06:04,110
+We finance this purchase by selling four-year discount
+
+109
+00:06:04,110 --> 00:06:05,510
+bonds.
+
+110
+00:06:05,510 --> 00:06:12,080
+These have the face value of $21,701,000.
+
+111
+00:06:12,080 --> 00:06:19,180
+This generates the same amount, $16,556,000.
+
+112
+00:06:19,180 --> 00:06:23,290
+The net cash flow at time, 0 is 0 dollars.
+
+113
+00:06:23,290 --> 00:06:25,090
+And we are left with the liability
+
+114
+00:06:25,090 --> 00:06:31,970
+in the amount of 21,701,000 due in four years.
+
+115
+00:06:31,970 --> 00:06:35,900
+Our strategy results in two non-zero cash flows.
+
+116
+00:06:35,900 --> 00:06:41,800
+At time 3, our three-year bond pays off 20 million.
+
+117
+00:06:41,800 --> 00:06:45,640
+At time 4, our position in four-year bonds
+
+118
+00:06:45,640 --> 00:06:51,850
+matures, and we must repay 21,701,000.
+
+119
+00:06:51,850 --> 00:06:56,050
+The above cash flows correspond to a forward transaction, where
+
+120
+00:06:56,050 --> 00:06:59,380
+one borrows for one year, starting in year three,
+
+121
+00:06:59,380 --> 00:07:02,050
+at the forward rate of 8.51%.
+
+122
+00:07:02,050 --> 00:07:05,860
+We now return to the expectations hypothesis
+
+123
+00:07:05,860 --> 00:07:11,780
+and restate it as a relation between spot and forward rates.
+
+124
+00:07:11,780 --> 00:07:14,150
+Under the expectations hypothesis,
+
+125
+00:07:14,150 --> 00:07:18,300
+expected returns on all bonds are the same.
+
+126
+00:07:18,300 --> 00:07:21,510
+Take the current day to be time 0.
+
+127
+00:07:21,510 --> 00:07:24,420
+Using the definition of the forward rate,
+
+128
+00:07:24,420 --> 00:07:26,340
+the expectations hypothesis states
+
+129
+00:07:26,340 --> 00:07:31,560
+that as of now, the expected value of the one year spot rate
+
+130
+00:07:31,560 --> 00:07:36,780
+between time t and t plus 1 is equal to the current value
+
+131
+00:07:36,780 --> 00:07:43,280
+of the one year forward rate between time t and t plus 1.
+
+132
+00:07:43,280 --> 00:07:47,240
+In other words, under the expectations hypothesis,
+
+133
+00:07:47,240 --> 00:07:50,540
+current forward rates are unbiased predictors
+
+134
+00:07:50,540 --> 00:07:53,620
+of the future spot rates.
+
+135
+00:07:53,620 --> 00:07:57,190
+Empirically forward rates are biased predictors
+
+136
+00:07:57,190 --> 00:07:58,930
+of the future support rates.
+
+137
+00:07:58,930 --> 00:08:02,500
+They over-predict future spot rates on average.
+
+138
+00:08:02,500 --> 00:08:05,140
+The reason is that the forward rate
+
+139
+00:08:05,140 --> 00:08:07,720
+reflects a risk premium in addition
+
+140
+00:08:07,720 --> 00:08:11,250
+to the expectations of the future spot rates.
+

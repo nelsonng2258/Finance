@@ -1,0 +1,80 @@
+
+PROFESSOR: In this video we will learn
+how to use state prices to price options.
+We will work with the same European lookback option
+that we covered in the previous videos.
+This option allows you to buy a stock two years from now
+for the lowest price of the stock during the coming two
+years.
+We will assume that the stock price follows the same price
+pattern.
+The stock does not pay dividends.
+We will assume that the risk-free rate is 5%, quoted
+as an effective annual rate.
+And we will also assume that there is no arbitrage
+and that investors can borrow and lend
+at this risk-free rate.
+First, let's compute state prices.
+The price of the up state in year one
+equals to the risk-neutral probability
+of the up state, qu divided by 1 plus r, where r
+is the risk-free interest rate.
+The price of the down state in year one
+equals to the risk-neutral probability of the down state,
+qd divided by 1 plus r.
+Similarly, the price of uu state in year two
+equals to the risk-neutral probability
+of moving up squared divided by 1 plus r squared.
+The state prices of states ud and du
+would be the same in year two and they would
+equal to qu multiplied by qd.
+These are the risk-neutral probabilities
+of up and down moves respectively,
+divided by 1 plus r squared.
+And finally, the state price of dd state
+is qd squared divided by 1 plus r squared.
+On this graph we summarize state prices in this economy.
+Now that we know state prices, we
+can price any security in this economy,
+including our lookback option.
+Let's first price this option in year one in the up state.
+Its price equals phi u, which is the one year price of the up
+state multiplied by the option payoff
+in the up up state, plus phi d, which is the one year
+price of the down state multiplied by the option
+payoff in the up down state.
+Note that we're using state prices one year ahead
+because this option pays off in year two
+and we're pricing it in year one.
+Similarly, we can price this option in year one
+in the down state.
+Note that prices of this option in year
+one in the up and down state, $29.76 and $10.58,
+match exactly what we had when we
+were pricing this option using risk-neutral pricing approach.
+Finally, to find the current price
+of this option we are using year zero
+state prices of all four possible states in year two.
+So the option price equals phi uu multiplied by the option
+payoff in the up up state, which is $56.25, plus phi
+ud multiplied by the payoff from the option in the up
+down state, which is 0, plus phi du multiplied by the option
+payoff in the down up state, which
+is $20, plus phi dd multiplied by the option payoff
+in the down down state, which is 0.
+We see that the current price of this option
+is equal $20.23, which again matches
+what we had when we priced this option using
+risk-neutral pricing approach.
+Finally, for illustrative purposes,
+we can also price the stock using state prices.
+Conceptually, we have used future expected stock prices
+to compute state prices.
+Therefore, if we didn't make a mistake,
+we should get that the current stock price is equal to $100.
+I will use stock prices in year two
+and year zero state prices of all four states in year two
+to compute the current stock price.
+We see that the price of the stock is indeed $100.
+This again illustrates that once we know state prices,
+we can easily price any financial instrument.

@@ -1,0 +1,260 @@
+0
+00:00:00,000 --> 00:00:01,650
+PROFESSOR: In this video, we will
+
+1
+00:00:01,650 --> 00:00:05,310
+show how to construct arbitrage trading strategies using
+
+2
+00:00:05,310 --> 00:00:07,110
+forward contracts.
+
+3
+00:00:07,110 --> 00:00:09,277
+Consider the following example.
+
+4
+00:00:09,277 --> 00:00:11,610
+Suppose of the current price of a dividend paying stocks
+
+5
+00:00:11,610 --> 00:00:14,130
+equals $1,000.
+
+6
+00:00:14,130 --> 00:00:16,200
+Suppose the risk free rate equals 3%
+
+7
+00:00:16,200 --> 00:00:19,350
+and the dividend yield is 2%, both
+
+8
+00:00:19,350 --> 00:00:22,020
+are continuously compounded.
+
+9
+00:00:22,020 --> 00:00:23,880
+You notice that a forward price for delivery
+
+10
+00:00:23,880 --> 00:00:28,770
+of this stock in two years is $1,025.
+
+11
+00:00:28,770 --> 00:00:32,600
+Is there an arbitrage opportunity here?
+
+12
+00:00:32,600 --> 00:00:36,620
+Let's use the model of payout to compute the forward price
+
+13
+00:00:36,620 --> 00:00:39,560
+given the current stock price, which is given
+
+14
+00:00:39,560 --> 00:00:42,320
+by the following expression.
+
+15
+00:00:42,320 --> 00:00:47,390
+Applied to our case, the forward price for delivery of stock
+
+16
+00:00:47,390 --> 00:00:50,960
+two years from now should equal $1,020.20.
+
+17
+00:00:50,960 --> 00:00:59,600
+Given that the forward price that is quoted to us is $1,025,
+
+18
+00:00:59,600 --> 00:01:02,630
+this forward is overpriced.
+
+19
+00:01:02,630 --> 00:01:06,060
+How should we exploit this overpricing?
+
+20
+00:01:06,060 --> 00:01:08,640
+Consider the following trading strategy.
+
+21
+00:01:08,640 --> 00:01:12,880
+First, we engage in one short forward contract.
+
+22
+00:01:12,880 --> 00:01:15,766
+Second, we borrow the following amount of dollars,
+
+23
+00:01:15,766 --> 00:01:20,190
+e to the power negative y times cap T, times S0 which
+
+24
+00:01:20,190 --> 00:01:21,600
+is the current share price.
+
+25
+00:01:21,600 --> 00:01:25,320
+And we borrow this amount at the risk-free rate.
+
+26
+00:01:25,320 --> 00:01:29,680
+Third, we buy e to the power of negative y times
+
+27
+00:01:29,680 --> 00:01:31,680
+T shares of stock.
+
+28
+00:01:31,680 --> 00:01:34,230
+And fourth, during the next two years
+
+29
+00:01:34,230 --> 00:01:36,120
+that we are holding this stock, we
+
+30
+00:01:36,120 --> 00:01:38,550
+will reinvest continuous stream of dividends
+
+31
+00:01:38,550 --> 00:01:41,880
+by buying additional units of the stock.
+
+32
+00:01:41,880 --> 00:01:44,520
+Notice that the initial cost of setting up this portfolio
+
+33
+00:01:44,520 --> 00:01:46,520
+is zero.
+
+34
+00:01:46,520 --> 00:01:49,640
+Now let's see what happens two years from now.
+
+35
+00:01:49,640 --> 00:01:52,400
+First, let's figure out how many shares of stock
+
+36
+00:01:52,400 --> 00:01:55,580
+we will have at the end of year 2.
+
+37
+00:01:55,580 --> 00:01:59,120
+Well, because we're continuously reinvesting dividends,
+
+38
+00:01:59,120 --> 00:02:02,190
+our future value of the number of shares that we have,
+
+39
+00:02:02,190 --> 00:02:05,300
+which I denote here as the number of shares at cap T,
+
+40
+00:02:05,300 --> 00:02:09,350
+would equal to the exponent raised to the power yT, which
+
+41
+00:02:09,350 --> 00:02:12,350
+gives us the future value of the initial amount of the number
+
+42
+00:02:12,350 --> 00:02:15,230
+of shares that we purchased from the very beginning, which
+
+43
+00:02:15,230 --> 00:02:20,490
+is e raised to the power negative y cap T.
+
+44
+00:02:20,490 --> 00:02:22,620
+This gives us 1.
+
+45
+00:02:22,620 --> 00:02:24,850
+So therefore, at the end of year 2,
+
+46
+00:02:24,850 --> 00:02:29,370
+we will have 1 share of stock.
+
+47
+00:02:29,370 --> 00:02:31,110
+Second, what we will do is that we
+
+48
+00:02:31,110 --> 00:02:35,490
+will deliver this one share to the counterparty to whom we
+
+49
+00:02:35,490 --> 00:02:41,950
+sold our forward contract, and collect $1,025.
+
+50
+00:02:41,950 --> 00:02:45,010
+Third, we will need to repay the loan.
+
+51
+00:02:45,010 --> 00:02:47,980
+The future value of this loan is given
+
+52
+00:02:47,980 --> 00:02:49,600
+by the following expression.
+
+53
+00:02:49,600 --> 00:02:51,520
+Because we borrowed at the risk-free rate,
+
+54
+00:02:51,520 --> 00:02:53,230
+and the initial borrowed amount was
+
+55
+00:02:53,230 --> 00:02:57,370
+e to the power negative yT times S0,
+
+56
+00:02:57,370 --> 00:03:02,470
+this value grew to e to the power r times T times
+
+57
+00:03:02,470 --> 00:03:05,410
+the initial amount, which altogether gives us
+
+58
+00:03:05,410 --> 00:03:10,960
+S0 times e raised to the power r minus y multiplied by cap T.
+
+59
+00:03:10,960 --> 00:03:16,230
+And this gives us $1,020.20.
+
+60
+00:03:16,230 --> 00:03:20,370
+Altogether, this trading strategy generates a profit
+
+61
+00:03:20,370 --> 00:03:26,220
+of $4.80 per one forward contract that we short.
+
+62
+00:03:26,220 --> 00:03:30,330
+These arbitrage profits are possible because this forward
+
+63
+00:03:30,330 --> 00:03:33,930
+was overpriced relative to the model of payout
+
+64
+00:03:33,930 --> 00:03:35,990
+that we covered in class.
+

@@ -1,0 +1,109 @@
+PROFESSOR: In this segment, we discuss how well the CAPM
+model works in the data.
+We'll look at the most common empirical tests of the CAPM.
+Our goal is to establish how well market betas of firms
+explain differences in their average stock returns.
+In the first test, we form portfolios of firms
+with different market betas.
+There are two reasons for grouping firms into portfolios.
+First, firm-level betas may change over time.
+Sorting firms into portfolios based on their estimated betas
+allows us to construct assets or portfolios
+with relatively stable betas, which simplifies the test.
+Second, firm-level betas are estimated with noise.
+Grouping stocks into portfolios reduces
+the effect of noise in a simple and intuitive manner.
+Let's look closely at the test design.
+We follow the well-known 1972 paper
+by Black, Jensen, and Scholes.
+Each month, we compute the excess return
+on each stock as the difference between its return
+from the start to the end of the month
+and the risk-free interest rate, which we measure
+as the one-month T-Bill rate.
+Then, for each security, we use the most recent 60 months
+of returns to estimate its market beta.
+For that, we run the OLS regression of excess returns
+on the stock on the excess market returns.
+Finally, at the start of each year,
+we sort firms into portfolios based
+on their recent beta estimates as of the end of December
+of the previous year.
+
+For each portfolio, we compute its excess return each month.
+We use valuated portfolio returns.
+Note that we construct portfolio returns only
+after the portfolio formation.
+For example, if we are creating portfolios
+by sorting on beta estimates at the end of year 2005,
+we then compute monthly portfolio returns
+during year 2006 and so on.
+Once we have constructed the time series of portfolio excess
+returns, we compute the market betas
+for each portfolio using a full-sample regression
+of portfolio excess returns on the market excess returns.
+We also compute the time-series average
+of excess monthly returns on each of the 10 portfolios.
+To visualize the risk-return tradeoff across the 10
+portfolios, we plot their average returns
+against their market betas.
+As we see from the graph, over 1931 to 2019 period,
+there is a positive relation between the market beta
+and expected excess returns, which
+is consistent with the CAPM prediction.
+However, this positive relation is not as strong
+as the CAPM predicts.
+The slope of the security market line is approximately 3.5%.
+According to the CAPM, the slope should
+be equal to the market risk premium
+during this period, which is roughly twice as large.
+If we limit our analysis to the later part
+of the sample starting in 1963, the security market line
+is even more flat.
+This plot also implies that the expected excess return
+on the assets with zero market betas is much higher than 0,
+as the CAPM would imply.
+It is roughly 6% per year.
+Other examples of CAPM violations
+can be constructed by sorting stocks on certain firm
+characteristics, such as firm size or the market
+to book ratio of its equity.
+In the well-known 1992 paper, Fama and French show that small
+stocks and stocks with high market to book ratios called
+value stocks tend to outperform, and their relatively high
+average returns cannot be properly explained by the CAPM.
+There are two main competing interpretations
+of the empirical evidence on the failures of CAPM.
+One possible conclusion is that small stocks,
+high book to market stocks, low beta stocks, and so forth
+are mispriced by the market, and our analysis
+reveals the true alpha--
+abnormal risk-adjusted returns.
+One should be careful and not jump to this conclusion
+too soon.
+If true, this type of mispricing is quite easy to find.
+It is then puzzling that it does not get arbitraged away
+by the professional asset managers, who collectively
+struggle to outperform passive investment benchmarks,
+such as the valuated stock market index or S&P 500.
+Perhaps it is difficult to take advantage of such mispricing
+because of market frictions, such as, for instance,
+relatively low liquidity of small stocks.
+
+Another interpretation is that CAPM is not complete
+and it misses important risk factors.
+Such missing factors would then manifest themselves
+as CAPM alphas.
+
+Which interpretation is right is still
+an open question and the subject of an extensive and growing
+literature.
+It is difficult to argue that CAPM alphas can
+be fully explained by the missing risk factors.
+It is likely that market frictions also play a role.
+However, existing evidence strongly
+suggests that the stock market return is not
+the only risk factor compensated with the risk premium.
+This means that multifactor extensions
+may offer an improvement over the single-factor CAPM model.
+Such extensions can be developed under the APT framework.

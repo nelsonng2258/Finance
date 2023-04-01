@@ -1,0 +1,396 @@
+0
+00:00:00,000 --> 00:00:00,240
+
+
+1
+00:00:00,240 --> 00:00:02,040
+PROFESSOR: In this segment, we consider
+
+2
+00:00:02,040 --> 00:00:06,290
+payoffs of the most common types of European options.
+
+3
+00:00:06,290 --> 00:00:08,780
+Visualizing option payoffs is often
+
+4
+00:00:08,780 --> 00:00:12,230
+useful for building intuition about the various properties
+
+5
+00:00:12,230 --> 00:00:14,240
+of these securities.
+
+6
+00:00:14,240 --> 00:00:17,600
+To start, consider a European call option.
+
+7
+00:00:17,600 --> 00:00:21,810
+As an example, let it be an option on the stock of IBM.
+
+8
+00:00:21,810 --> 00:00:25,730
+The exercise price at maturity is $100.
+
+9
+00:00:25,730 --> 00:00:29,340
+We often call the exercise price of the option the strike price.
+
+10
+00:00:29,340 --> 00:00:33,030
+This option gives the owner of the option, the buyer,
+
+11
+00:00:33,030 --> 00:00:35,160
+the right to buy one share of IBM
+
+12
+00:00:35,160 --> 00:00:39,280
+at $100 on the expiration date.
+
+13
+00:00:39,280 --> 00:00:43,950
+Note that this is their right and not their obligation.
+
+14
+00:00:43,950 --> 00:00:47,610
+The buyer may choose not to exercise the option, if doing
+
+15
+00:00:47,610 --> 00:00:49,840
+so would lead to a loss.
+
+16
+00:00:49,840 --> 00:00:53,830
+As a result, the pay for this option at maturity cannot be
+
+17
+00:00:53,830 --> 00:00:55,430
+negative.
+
+18
+00:00:55,430 --> 00:00:57,080
+In this sense, the call option is
+
+19
+00:00:57,080 --> 00:00:59,520
+clearly different from a forward agreement,
+
+20
+00:00:59,520 --> 00:01:04,330
+which is a binding obligation to buy the underlying at maturity.
+
+21
+00:01:04,330 --> 00:01:10,500
+The payoff of the forward may be positive or negative.
+
+22
+00:01:10,500 --> 00:01:13,500
+The payoff of the call option of IBM at maturity
+
+23
+00:01:13,500 --> 00:01:16,890
+depends on the price of IBM at that time.
+
+24
+00:01:16,890 --> 00:01:19,530
+Let's describe this dependence explicitly.
+
+25
+00:01:19,530 --> 00:01:23,680
+If the market price of IBM is below the strike price,
+
+26
+00:01:23,680 --> 00:01:27,780
+the buyer is better off letting the option expire unexercised.
+
+27
+00:01:27,780 --> 00:01:31,350
+The option to buy IBM at $100 is useless
+
+28
+00:01:31,350 --> 00:01:37,050
+when the market price of IBM shares is below 100, say $80.
+
+29
+00:01:37,050 --> 00:01:41,070
+In this situation, the payoff for the option is 0.
+
+30
+00:01:41,070 --> 00:01:45,040
+If the market price of IBM is above the strike price,
+
+31
+00:01:45,040 --> 00:01:47,310
+then the buyer would exercise the option
+
+32
+00:01:47,310 --> 00:01:49,380
+and capture the positive difference
+
+33
+00:01:49,380 --> 00:01:53,750
+between the market price of IBM and the strike price.
+
+34
+00:01:53,750 --> 00:01:58,480
+For example, if the price of IBM is $120,
+
+35
+00:01:58,480 --> 00:02:01,960
+exercising the option to buy it at $100
+
+36
+00:02:01,960 --> 00:02:06,140
+generates a gain of $20.
+
+37
+00:02:06,140 --> 00:02:10,020
+In summary, the payoff of an option is never negative.
+
+38
+00:02:10,020 --> 00:02:12,830
+And sometimes that is positive.
+
+39
+00:02:12,830 --> 00:02:16,950
+The actual payoff depends on the price of the underlying asset,
+
+40
+00:02:16,950 --> 00:02:19,710
+in this case, the stock of IBM.
+
+41
+00:02:19,710 --> 00:02:23,910
+The payoff of the call is the maximum of 0
+
+42
+00:02:23,910 --> 00:02:27,900
+and the difference between the underlying price of maturity
+
+43
+00:02:27,900 --> 00:02:30,340
+and the strike price.
+
+44
+00:02:30,340 --> 00:02:33,850
+We now represent option payoffs graphically.
+
+45
+00:02:33,850 --> 00:02:36,280
+The top left panel shows the payoff
+
+46
+00:02:36,280 --> 00:02:38,560
+of a long position in the call option,
+
+47
+00:02:38,560 --> 00:02:41,860
+with a strike price of $100.
+
+48
+00:02:41,860 --> 00:02:44,260
+This payoff is 0 when the underlying
+
+49
+00:02:44,260 --> 00:02:46,600
+price is below the strike.
+
+50
+00:02:46,600 --> 00:02:49,420
+And it is increasing linearly in the underlying
+
+51
+00:02:49,420 --> 00:02:50,640
+price for higher values.
+
+52
+00:02:50,640 --> 00:02:53,210
+
+
+53
+00:02:53,210 --> 00:02:56,570
+For the put option, which is the top right panel,
+
+54
+00:02:56,570 --> 00:02:58,460
+the payoff is 0 when the underlying
+
+55
+00:02:58,460 --> 00:03:00,860
+price is above the strike.
+
+56
+00:03:00,860 --> 00:03:03,440
+Recall that the put option gives the owner the right
+
+57
+00:03:03,440 --> 00:03:07,280
+to sell the underlying at the strike price.
+
+58
+00:03:07,280 --> 00:03:09,700
+The payoff of the put is declining in the value
+
+59
+00:03:09,700 --> 00:03:11,710
+of the underlying asset.
+
+60
+00:03:11,710 --> 00:03:15,240
+And it is the highest when the underlying price is 0.
+
+61
+00:03:15,240 --> 00:03:17,950
+
+
+62
+00:03:17,950 --> 00:03:21,310
+The bottom panels show payoffs of the short positions,
+
+63
+00:03:21,310 --> 00:03:25,290
+in the call on the left and the put on the right.
+
+64
+00:03:25,290 --> 00:03:27,990
+The payoff of a short position is the negative
+
+65
+00:03:27,990 --> 00:03:30,490
+of the long position payoff.
+
+66
+00:03:30,490 --> 00:03:34,120
+The plots are then the mirror images of the long position
+
+67
+00:03:34,120 --> 00:03:36,670
+payoff plots.
+
+68
+00:03:36,670 --> 00:03:39,670
+Going forward, we will often combine options
+
+69
+00:03:39,670 --> 00:03:43,810
+with the underlying asset positions and bonds.
+
+70
+00:03:43,810 --> 00:03:46,000
+Their payoffs are shown here.
+
+71
+00:03:46,000 --> 00:03:48,820
+On the left, the plot the payoff of the underlying
+
+72
+00:03:48,820 --> 00:03:51,400
+asset as a function of itself.
+
+73
+00:03:51,400 --> 00:03:54,510
+This is, of course, a 45-degree line.
+
+74
+00:03:54,510 --> 00:03:58,480
+On the right, we show the payoff of the risk-free bond,
+
+75
+00:03:58,480 --> 00:04:03,060
+which is a constant independent of the underlying price.
+
+76
+00:04:03,060 --> 00:04:06,150
+It is important to distinguish the payoff of the option, which
+
+77
+00:04:06,150 --> 00:04:09,540
+is never negative, from its net payoff.
+
+78
+00:04:09,540 --> 00:04:13,170
+The net payoff of the option includes its cost.
+
+79
+00:04:13,170 --> 00:04:15,840
+If the option expires unexercised,
+
+80
+00:04:15,840 --> 00:04:18,519
+its net payoff is negative.
+
+81
+00:04:18,519 --> 00:04:22,930
+Consider again our example of a European call option on IBM.
+
+82
+00:04:22,930 --> 00:04:26,050
+The strike price is $100, and the option
+
+83
+00:04:26,050 --> 00:04:28,870
+has three months to maturity.
+
+84
+00:04:28,870 --> 00:04:33,940
+Suppose this call is currently trading at $5.
+
+85
+00:04:33,940 --> 00:04:38,940
+The three-month interest rate, not annualized, is 1%.
+
+86
+00:04:38,940 --> 00:04:41,490
+At maturity, the call's net payoff
+
+87
+00:04:41,490 --> 00:04:45,300
+is equal to its payoff minus the future value of the option
+
+88
+00:04:45,300 --> 00:04:51,120
+price, which is $5.05.
+
+89
+00:04:51,120 --> 00:04:54,240
+As we see on the graph, the net payoff of the option
+
+90
+00:04:54,240 --> 00:04:57,630
+is negative for the values of the underlying below the strike
+
+91
+00:04:57,630 --> 00:05:02,070
+price, and for some values above the strike price.
+
+92
+00:05:02,070 --> 00:05:04,640
+The break-even point is that value
+
+93
+00:05:04,640 --> 00:05:08,450
+of the underlying that exceeds the strike by the future value
+
+94
+00:05:08,450 --> 00:05:10,160
+of the option price.
+
+95
+00:05:10,160 --> 00:05:16,100
+In this case, the break even is $105.05.
+
+96
+00:05:16,100 --> 00:05:20,200
+The price of IBM must be above this threshold,
+
+97
+00:05:20,200 --> 00:05:24,820
+above $105.05, in order for the holder of the option
+
+98
+00:05:24,820 --> 00:05:26,790
+to make a profit.
+

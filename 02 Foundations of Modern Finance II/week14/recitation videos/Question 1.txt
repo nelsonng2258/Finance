@@ -1,0 +1,130 @@
+
+PROFESSOR: In this video, we will cover the basics
+of portfolio risk and return.
+Suppose there are three stocks in the market, A, B, and C,
+with the following properties.
+The expected return on stock A is 5%.
+The expected return on stocks B and C is 20%.
+The standard deviation of returns of stock A is 10%,
+and the standard deviation of returns on stocks B and C
+is 40%.
+The return on stock C is not correlated with A and B,
+and the correlation of returns between A and B
+is negative 0.5.
+We will answer the following three questions.
+In part a, we will assume that an investor allocates
+40% of her wealth to stock A, 60% to stock C,
+and nothing to stock B. What is the standard deviation
+and expected return of her portfolio?
+In part b, we will assume that an investor allocates
+40% of her wealth to stock A, 60% of stock B,
+and nothing to stock C. We will answer
+exactly the same question.
+So we'll find the standard deviation
+and the expected return on her portfolio.
+And finally, in part c, we will assume
+that an investor constructs an equally weighted portfolio out
+of these three stocks, A, B, and C,
+and we will compute the standard deviation and expected return
+of her portfolio.
+Let's denote by Ws portfolio weight.
+In part a, we have the following portfolio.
+40% invested into stock A, nothing in stock B, and 60%
+into stock C. By definition, the expected return
+is the weighted average of expected returns
+on individual stocks where weights
+are the portfolio weights.
+So, therefore, in our case, it is simply
+40%, which is the weight on stock
+A in this portfolio, multiplied by 5%, which is the expected
+return on stock A, plus 60% weight on stock
+C in our portfolio multiplied by 20%
+expect the return on stock C. The middle term,
+WB times R bar B is absent from this equation because WB is 0.
+So this gives us 14% expected return on this portfolio.
+Next, let's compute portfolio variance.
+When we have three stocks, portfolio variance
+is given by the following expression.
+The first three terms are portfolio weight squared
+multiplied by individual variances of stocks,
+and the remaining three terms are pairwise covariances
+multiplied by the weights of corresponding stocks.
+Recall that in our case, returns on stocks A and C
+and B and C are not correlated.
+Therefore, covariance terms are 0.
+Also recall that A and B are correlated.
+We're given the correlation coefficient.
+Recall that the covariance equals correlation
+multiplied by the standard deviation
+of corresponding stocks.
+Putting all these facts together,
+we'll get the following.
+Because WB is 0 and because the covariance of returns
+on A and C is 0 as well, portfolio
+variance in this case is effectively just this--
+weight on A squared times the variance of returns
+on A plus weight on C squared times the variance of returns
+on C. Plugging in the numbers, we
+obtain the following variants of this portfolio.
+Taking the square root of this number,
+we obtain portfolio standard deviation, which in this case
+is 24.33%.
+Now let's do the same for portfolio in part b.
+Record that this portfolio invests 40% in A, 60% in B,
+and nothing in C. The expected return in this case
+would equal to weight on A times the expected
+return on A plus weight on B times the expected return on B.
+The term C would not be there because weight is 0.
+So we get the following, 40% times 5%, 60% times 20%,
+this gives us the expected return
+on this portfolio of 14%.
+Recall that the expected return on portfolio in part a
+was also 14%.
+The reason is that the expected returns on stocks B and C
+are the same 20%, and the only difference between these two
+portfolios is that, in part a, we put 60% on C,
+and, in part b, we put 60% on B.
+Because returns on stocks A and B are correlated,
+portfolio variance will have the term
+that captures this correlation.
+I highlighted it here in red.
+So it's 2 times the weight on stock A
+in this portfolio times the weight on stock
+B times the standard deviation of returns on A,
+which is 10%, times the standard deviation of returns
+on B, which is 40%, times the correlation, which
+is negative 0.5.
+This gives us the variance of 0.0496.
+Taking the square root of this, we
+obtain portfolio standard deviation of 22.27%.
+Finally, let's compute the expected return and standard
+deviation of the portfolio in part c.
+Recall that it's an equally weighted portfolio, which
+means we put one third of our wealth into these three stocks.
+The expected return on this portfolio is 15%.
+
+The variance of this portfolio is given by this expression.
+The first three terms are the weights multiplied
+by the variance of corresponding stocks,
+and the remaining term is 2 times the weights on stocks A
+and B multiplied by the standard deviations of these stocks
+multiplied by the correlation of returns on A and B. Recall
+that because returns on A and C and B and C
+are not correlated, therefore, there are no additional two
+terms in this expression.
+This gives us the variance of 0.0322,
+and the standard deviation of 17.95%.
+Let's summarize the results.
+The expected return on portfolio a was 14%, b was 14% as well,
+and on portfolio c it was 15%.
+The standard deviations were 24.33 for portfolio a,
+22.27 for portfolio b, and 17.95 for portfolio c.
+Portfolio a has the same expected return as portfolio b.
+However, because correlation between stocks A and B
+is lower than between stocks A and C,
+portfolio b has lower volatility.
+Equally weighted portfolio c has high expected return
+and lower volatility than portfolios
+a and b because it takes fuller advantage of low correlation
+between the three stocks, and as a result,
+achieves a better risk-return trade off.

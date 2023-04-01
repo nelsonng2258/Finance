@@ -1,0 +1,396 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:03,150
+PROFESSOR: In this question, we will review binomial option
+
+2
+00:00:03,150 --> 00:00:04,750
+pricing model.
+
+3
+00:00:04,750 --> 00:00:07,200
+Suppose that there is a stock with a current share
+
+4
+00:00:07,200 --> 00:00:09,780
+price of $100.
+
+5
+00:00:09,780 --> 00:00:12,180
+The graph on the slide shows the evolution of the share
+
+6
+00:00:12,180 --> 00:00:14,550
+price over the next two years.
+
+7
+00:00:14,550 --> 00:00:19,090
+It can become either $125 or $75 a year from now.
+
+8
+00:00:19,090 --> 00:00:23,310
+If it was $125, it can grow to $150 in year two
+
+9
+00:00:23,310 --> 00:00:25,920
+or can go down to $60.
+
+10
+00:00:25,920 --> 00:00:32,400
+If it was $75, it can grow to $125, or it can go down to $20.
+
+11
+00:00:32,400 --> 00:00:35,760
+Now suppose that the risk-free rate is 3.5%.
+
+12
+00:00:35,760 --> 00:00:38,883
+We will assume that this is an effective annual rate.
+
+13
+00:00:38,883 --> 00:00:40,800
+We will also assume that there is no arbitrage
+
+14
+00:00:40,800 --> 00:00:42,383
+and that investors can borrow and lend
+
+15
+00:00:42,383 --> 00:00:45,570
+at this risk-free rate of 3.5%.
+
+16
+00:00:45,570 --> 00:00:48,060
+We are asked to compute the current price
+
+17
+00:00:48,060 --> 00:00:52,320
+of a European call option that expires two years from now
+
+18
+00:00:52,320 --> 00:00:56,480
+and has a strike price of $120 per share.
+
+19
+00:00:56,480 --> 00:00:58,330
+Let's start by creating a tree that
+
+20
+00:00:58,330 --> 00:01:02,140
+shows the payoffs from this option at the end of year two.
+
+21
+00:01:02,140 --> 00:01:06,430
+If the share price is $150 and since this is a call option
+
+22
+00:01:06,430 --> 00:01:09,880
+and has a strike price of $120, our payoff,
+
+23
+00:01:09,880 --> 00:01:14,150
+as the holder of this option, would be $30.
+
+24
+00:01:14,150 --> 00:01:18,970
+In the up-down state, when the share price is $60,
+
+25
+00:01:18,970 --> 00:01:21,730
+this option expires out of the money.
+
+26
+00:01:21,730 --> 00:01:24,910
+And, therefore, our payoff is $0.
+
+27
+00:01:24,910 --> 00:01:28,540
+In the down-up state, the share price is $125,
+
+28
+00:01:28,540 --> 00:01:31,900
+and, therefore, our payoff is $5.
+
+29
+00:01:31,900 --> 00:01:36,010
+And, in the down-down state, the share price is $20.
+
+30
+00:01:36,010 --> 00:01:39,340
+Therefore, again, this option expires out of the money.
+
+31
+00:01:39,340 --> 00:01:43,320
+And, therefore, our payoff is $0.
+
+32
+00:01:43,320 --> 00:01:45,420
+Let's start by pricing the option
+
+33
+00:01:45,420 --> 00:01:47,970
+in year one in the up state.
+
+34
+00:01:47,970 --> 00:01:50,070
+We will create the replicating portfolio
+
+35
+00:01:50,070 --> 00:01:53,280
+that has a shares of the stock and b dollars
+
+36
+00:01:53,280 --> 00:01:56,670
+of the riskless bond that replicates the payoff
+
+37
+00:01:56,670 --> 00:01:58,770
+from this option in year two.
+
+38
+00:01:58,770 --> 00:02:01,620
+So, therefore, we have the following two equations--
+
+39
+00:02:01,620 --> 00:02:05,730
+150, which is the price of a share in the up-up state,
+
+40
+00:02:05,730 --> 00:02:09,509
+times the number of shares, a, plus 1
+
+41
+00:02:09,509 --> 00:02:14,520
+plus the risk-free rate of 3.5%, which gives us 1.035,
+
+42
+00:02:14,520 --> 00:02:17,760
+multiplied by b dollars that we originally
+
+43
+00:02:17,760 --> 00:02:20,100
+invested in the riskless bond.
+
+44
+00:02:20,100 --> 00:02:23,370
+That should be equal to $30, which is our option
+
+45
+00:02:23,370 --> 00:02:26,040
+payoff in the up-up state.
+
+46
+00:02:26,040 --> 00:02:28,560
+The second equation equates the payoff
+
+47
+00:02:28,560 --> 00:02:31,260
+from the replicating portfolio and the payoff
+
+48
+00:02:31,260 --> 00:02:34,440
+from the option in the up-down state.
+
+49
+00:02:34,440 --> 00:02:36,330
+In the up-down state, the share price is $60,
+
+50
+00:02:36,330 --> 00:02:39,840
+and we have a units of the share.
+
+51
+00:02:39,840 --> 00:02:43,540
+Therefore, our total payoff is 60 times a plus, again,
+
+52
+00:02:43,540 --> 00:02:45,660
+1 plus the risk-free rate of 3.5% times
+
+53
+00:02:45,660 --> 00:02:48,330
+b, which is the initial amount of dollars
+
+54
+00:02:48,330 --> 00:02:50,130
+that we invested in the riskless bond.
+
+55
+00:02:50,130 --> 00:02:52,920
+And that should equal to 0 because 0 is the payoff
+
+56
+00:02:52,920 --> 00:02:56,470
+that we get from the option in the up-down state.
+
+57
+00:02:56,470 --> 00:03:00,490
+Solving this system gives us the following values for a and b.
+
+58
+00:03:00,490 --> 00:03:03,910
+Notice that the value of a is positive, and the value of b
+
+59
+00:03:03,910 --> 00:03:05,150
+is negative.
+
+60
+00:03:05,150 --> 00:03:07,300
+This means that, to replicate the option, we
+
+61
+00:03:07,300 --> 00:03:12,250
+need to buy one third of a share and borrow
+
+62
+00:03:12,250 --> 00:03:16,360
+$19.32 at the risk-free rate.
+
+63
+00:03:16,360 --> 00:03:19,600
+The value of this call option in year one in the up state
+
+64
+00:03:19,600 --> 00:03:22,840
+would equal to the value of this replicating portfolio.
+
+65
+00:03:22,840 --> 00:03:26,710
+Recall that the share price in this up state is $125.
+
+66
+00:03:26,710 --> 00:03:29,980
+Therefore, the total value of this replicating portfolio
+
+67
+00:03:29,980 --> 00:03:33,290
+is $22.34.
+
+68
+00:03:33,290 --> 00:03:36,710
+Next, we follow exactly the same steps
+
+69
+00:03:36,710 --> 00:03:41,365
+to find the price of the option in the down state in year one.
+
+70
+00:03:41,365 --> 00:03:42,740
+The following system of equations
+
+71
+00:03:42,740 --> 00:03:47,060
+gives us the replicating portfolio of a shares
+
+72
+00:03:47,060 --> 00:03:49,790
+and b dollars of riskless bond.
+
+73
+00:03:49,790 --> 00:03:52,970
+Solving this system of equations gives us the following values.
+
+74
+00:03:52,970 --> 00:03:58,970
+And, therefore, the option price in the down state is $2.65.
+
+75
+00:03:58,970 --> 00:04:02,310
+The final step is to price this option in year zero.
+
+76
+00:04:02,310 --> 00:04:04,970
+This tree shows you the prices of this option
+
+77
+00:04:04,970 --> 00:04:07,730
+in the up state in year one and the down state in year one
+
+78
+00:04:07,730 --> 00:04:08,530
+as well.
+
+79
+00:04:08,530 --> 00:04:10,610
+Again, we're constructing a replicating portfolio
+
+80
+00:04:10,610 --> 00:04:12,380
+that consists of a shares of the stock
+
+81
+00:04:12,380 --> 00:04:14,600
+and b dollars of the riskless bond that
+
+82
+00:04:14,600 --> 00:04:19,190
+replicates the payoffs of this option in year one.
+
+83
+00:04:19,190 --> 00:04:21,829
+Solving this system for a and b, we can price this option
+
+84
+00:04:21,829 --> 00:04:26,510
+and find that its price in year zero is $13.41.
+
+85
+00:04:26,510 --> 00:04:29,570
+This tree summarizes the evolution of this option price.
+
+86
+00:04:29,570 --> 00:04:31,670
+Its current price is $13.41.
+
+87
+00:04:31,670 --> 00:04:33,950
+If the share price goes up, the option price
+
+88
+00:04:33,950 --> 00:04:36,260
+increases to $22.34.
+
+89
+00:04:36,260 --> 00:04:38,060
+If the share price goes up again,
+
+90
+00:04:38,060 --> 00:04:41,270
+this option expires in the money and pays off $30.
+
+91
+00:04:41,270 --> 00:04:43,460
+If the share price goes down, this option
+
+92
+00:04:43,460 --> 00:04:46,130
+expires out of the money and pays off $0.
+
+93
+00:04:46,130 --> 00:04:48,500
+If the share price in year one goes down,
+
+94
+00:04:48,500 --> 00:04:51,050
+the option price goes down to $2.65.
+
+95
+00:04:51,050 --> 00:04:53,720
+And, if the share price goes up, this option
+
+96
+00:04:53,720 --> 00:04:56,600
+expires in the money and pays off $5.
+
+97
+00:04:56,600 --> 00:04:58,400
+And, if the share price goes down,
+
+98
+00:04:58,400 --> 00:05:03,340
+this option expires out of the money and pays off $0.
+

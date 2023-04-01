@@ -1,0 +1,344 @@
+0
+00:00:00,000 --> 00:00:00,360
+
+
+1
+00:00:00,360 --> 00:00:02,730
+PROFESSOR: We start with the simplest case of portfolio
+
+2
+00:00:02,730 --> 00:00:06,470
+choice with two risky assets.
+
+3
+00:00:06,470 --> 00:00:09,530
+Recall that the expected return on the portfolio
+
+4
+00:00:09,530 --> 00:00:12,140
+is a weighted average of expected returns
+
+5
+00:00:12,140 --> 00:00:14,970
+on the portfolio assets.
+
+6
+00:00:14,970 --> 00:00:18,480
+The variance of portfolio return is a quadratic function
+
+7
+00:00:18,480 --> 00:00:22,330
+of portfolio weights and depends on the individual return
+
+8
+00:00:22,330 --> 00:00:28,620
+variances and the covariance of returns among the two assets.
+
+9
+00:00:28,620 --> 00:00:34,070
+As an example, consider two ETFs, SPY and AGG.
+
+10
+00:00:34,070 --> 00:00:40,070
+SPY is an Equity ETF represented in the S&P 500 index.
+
+11
+00:00:40,070 --> 00:00:45,650
+AGG represents the aggregate investment grade bond index.
+
+12
+00:00:45,650 --> 00:00:50,180
+In our analysis here, we use the sample moments of asset returns
+
+13
+00:00:50,180 --> 00:00:53,400
+as the true population moments.
+
+14
+00:00:53,400 --> 00:00:55,680
+With only two assets in the portfolio,
+
+15
+00:00:55,680 --> 00:00:57,840
+there is only one possible combination
+
+16
+00:00:57,840 --> 00:01:01,020
+of portfolio weights for each level of the expected
+
+17
+00:01:01,020 --> 00:01:03,680
+return on the portfolio.
+
+18
+00:01:03,680 --> 00:01:05,930
+In the following table, we summarize
+
+19
+00:01:05,930 --> 00:01:08,630
+the relation between the portfolio weights
+
+20
+00:01:08,630 --> 00:01:11,950
+and the moments of portfolio returns.
+
+21
+00:01:11,950 --> 00:01:16,600
+This table tells us what level of portfolio risk corresponds
+
+22
+00:01:16,600 --> 00:01:20,630
+to each given level of portfolio expected return.
+
+23
+00:01:20,630 --> 00:01:24,350
+Here we represent the set of portfolios of SPY and AGG
+
+24
+00:01:24,350 --> 00:01:26,180
+graphically.
+
+25
+00:01:26,180 --> 00:01:30,870
+The curve is in the space of standard deviation and expected
+
+26
+00:01:30,870 --> 00:01:32,420
+return.
+
+27
+00:01:32,420 --> 00:01:34,520
+This curve represents the trade off
+
+28
+00:01:34,520 --> 00:01:37,940
+between the expected return on the portfolio and the level
+
+29
+00:01:37,940 --> 00:01:40,990
+of portfolio risk.
+
+30
+00:01:40,990 --> 00:01:45,550
+Note that we did not consider negative portfolio weights.
+
+31
+00:01:45,550 --> 00:01:49,300
+The curve here represents long-only portfolios.
+
+32
+00:01:49,300 --> 00:01:54,430
+As a result, the two assets AGG and SPY are located at the two
+
+33
+00:01:54,430 --> 00:01:57,890
+ends of the portfolio set.
+
+34
+00:01:57,890 --> 00:02:01,100
+If we allow for short sales, portfolio weights
+
+35
+00:02:01,100 --> 00:02:02,940
+may be negative.
+
+36
+00:02:02,940 --> 00:02:06,300
+We extend our table to allow for negative weights
+
+37
+00:02:06,300 --> 00:02:08,699
+on each of the two assets.
+
+38
+00:02:08,699 --> 00:02:10,560
+We show the corresponding relation
+
+39
+00:02:10,560 --> 00:02:13,380
+between the expected return and portfolio
+
+40
+00:02:13,380 --> 00:02:16,680
+risk on the following graph.
+
+41
+00:02:16,680 --> 00:02:20,520
+Because we allow short sales, the two assets no longer
+
+42
+00:02:20,520 --> 00:02:23,260
+define the end points of the curve.
+
+43
+00:02:23,260 --> 00:02:25,890
+In fact, there are no end points.
+
+44
+00:02:25,890 --> 00:02:29,850
+The curve extends indefinitely, spanning all possible levels
+
+45
+00:02:29,850 --> 00:02:32,770
+of expected return.
+
+46
+00:02:32,770 --> 00:02:36,340
+The level of portfolio risk is bounded from below.
+
+47
+00:02:36,340 --> 00:02:38,800
+There is a single portfolio achieving
+
+48
+00:02:38,800 --> 00:02:42,430
+the lowest possible level of standard deviation.
+
+49
+00:02:42,430 --> 00:02:47,170
+This portfolio is known as the minimum variance portfolio.
+
+50
+00:02:47,170 --> 00:02:49,540
+Although the portfolio choice with two assets
+
+51
+00:02:49,540 --> 00:02:51,970
+is extremely simple, we can already
+
+52
+00:02:51,970 --> 00:02:55,226
+say something non-trivial about the optimal choice.
+
+53
+00:02:55,226 --> 00:02:57,680
+No mean variance investor would want
+
+54
+00:02:57,680 --> 00:03:02,970
+to hold the portfolio below the minimum variance portfolio.
+
+55
+00:03:02,970 --> 00:03:06,980
+The reason is that, for any portfolio on the bottom portion
+
+56
+00:03:06,980 --> 00:03:10,130
+of the curve, we can find another portfolio
+
+57
+00:03:10,130 --> 00:03:13,820
+on the top portion with the same level of risk
+
+58
+00:03:13,820 --> 00:03:16,940
+and a higher level of expected return.
+
+59
+00:03:16,940 --> 00:03:20,060
+We say that the bottom portion of the portfolio set
+
+60
+00:03:20,060 --> 00:03:21,800
+is inefficient.
+
+61
+00:03:21,800 --> 00:03:25,430
+Each of these portfolios is dominated by another feasible
+
+62
+00:03:25,430 --> 00:03:29,210
+portfolio and would not be chosen by any optimizing
+
+63
+00:03:29,210 --> 00:03:30,650
+investor.
+
+64
+00:03:30,650 --> 00:03:33,650
+Next we consider an important special case
+
+65
+00:03:33,650 --> 00:03:37,310
+where the second asset is risk free.
+
+66
+00:03:37,310 --> 00:03:40,220
+Then the standard deviation of the portfolio
+
+67
+00:03:40,220 --> 00:03:42,380
+is a linear function of the portfolio
+
+68
+00:03:42,380 --> 00:03:45,840
+weight of the first asset.
+
+69
+00:03:45,840 --> 00:03:48,660
+So is the portfolio's expected return.
+
+70
+00:03:48,660 --> 00:03:52,050
+As a result, the set of efficient portfolios
+
+71
+00:03:52,050 --> 00:03:56,640
+forms a straight line in the risk expected return space,
+
+72
+00:03:56,640 --> 00:04:00,150
+connecting the point on the vertical axis representing
+
+73
+00:04:00,150 --> 00:04:04,770
+the risk-free asset with the risky asset.
+
+74
+00:04:04,770 --> 00:04:08,970
+The lowest possible level of portfolio risk is zero.
+
+75
+00:04:08,970 --> 00:04:12,060
+It is achieved by the risk-free asset.
+
+76
+00:04:12,060 --> 00:04:14,970
+All portfolios with expected return
+
+77
+00:04:14,970 --> 00:04:19,260
+lower than the risk-free rate of return are inefficient.
+
+78
+00:04:19,260 --> 00:04:21,390
+And we show them here with a dashed line.
+
+79
+00:04:21,390 --> 00:04:24,050
+
+
+80
+00:04:24,050 --> 00:04:26,750
+Although the case of two assets with one of them
+
+81
+00:04:26,750 --> 00:04:30,110
+risk-free appears to be extremely special,
+
+82
+00:04:30,110 --> 00:04:32,210
+we will see that this is an important part
+
+83
+00:04:32,210 --> 00:04:35,690
+of a general solution to the portfolio choice problem
+
+84
+00:04:35,690 --> 00:04:38,500
+with multiple risky assets.
+
+85
+00:04:38,500 --> 00:04:39,000
+
+

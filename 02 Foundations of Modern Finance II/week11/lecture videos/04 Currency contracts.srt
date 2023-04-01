@@ -1,0 +1,272 @@
+0
+00:00:00,000 --> 00:00:01,150
+
+
+1
+00:00:01,150 --> 00:00:04,030
+PROFESSOR: We now consider a currency forward
+
+2
+00:00:04,030 --> 00:00:07,870
+and connect currency forward prices to exchange rates
+
+3
+00:00:07,870 --> 00:00:10,490
+and interest rates.
+
+4
+00:00:10,490 --> 00:00:13,190
+A currency forward is a forward contract
+
+5
+00:00:13,190 --> 00:00:15,860
+to exchange a unit of one currency
+
+6
+00:00:15,860 --> 00:00:19,830
+for a specified number of units of another currency.
+
+7
+00:00:19,830 --> 00:00:24,240
+For example, one may enter into a contract to exchange one
+
+8
+00:00:24,240 --> 00:00:28,410
+Swiss franc for a specified number of US dollars,
+
+9
+00:00:28,410 --> 00:00:32,729
+say $1.10 three years from now.
+
+10
+00:00:32,729 --> 00:00:35,430
+This number is the forward exchange rate,
+
+11
+00:00:35,430 --> 00:00:38,860
+and it depends on contract maturity.
+
+12
+00:00:38,860 --> 00:00:42,580
+For contracts with shorter or longer maturities,
+
+13
+00:00:42,580 --> 00:00:45,450
+forward rates differ.
+
+14
+00:00:45,450 --> 00:00:47,940
+We can use our previous results on pricing
+
+15
+00:00:47,940 --> 00:00:52,140
+of financial forwards to determine how forward exchange
+
+16
+00:00:52,140 --> 00:00:55,020
+rates are related to the spot exchange rates
+
+17
+00:00:55,020 --> 00:00:59,410
+and risk-free interest rates in the two currencies.
+
+18
+00:00:59,410 --> 00:01:04,120
+Suppose the forward price is F sub T US dollars for one
+
+19
+00:01:04,120 --> 00:01:06,700
+Swiss Franc, where the forward contract
+
+20
+00:01:06,700 --> 00:01:13,760
+matures at time T. Let X sub T denote the spot exchange rate.
+
+21
+00:01:13,760 --> 00:01:19,030
+This is the current price of one Swiss Franc in US dollars.
+
+22
+00:01:19,030 --> 00:01:26,570
+Consider the two risk-free rates rUSD and rCHF.
+
+23
+00:01:26,570 --> 00:01:30,740
+These are continuously compounded spot interest rates
+
+24
+00:01:30,740 --> 00:01:33,680
+for investments between now and time, capital T,
+
+25
+00:01:33,680 --> 00:01:38,600
+in US dollars and Swiss francs, respectively.
+
+26
+00:01:38,600 --> 00:01:41,870
+Consider a position with Swiss francs invested
+
+27
+00:01:41,870 --> 00:01:44,890
+at the Swiss risk-free rate.
+
+28
+00:01:44,890 --> 00:01:47,560
+The number of Swiss francs in the position
+
+29
+00:01:47,560 --> 00:01:51,340
+grows exponentially between now and time T
+
+30
+00:01:51,340 --> 00:01:54,790
+at the Swiss risk-free rate.
+
+31
+00:01:54,790 --> 00:01:56,680
+We conclude that for the purposes
+
+32
+00:01:56,680 --> 00:02:00,700
+of pricing a forward contract, the Swiss franc position
+
+33
+00:02:00,700 --> 00:02:04,270
+is equivalent to a financial asset with a dividend
+
+34
+00:02:04,270 --> 00:02:08,669
+yield equal to the Swiss interest rate.
+
+35
+00:02:08,669 --> 00:02:11,220
+We conclude that the forward exchange rate
+
+36
+00:02:11,220 --> 00:02:13,950
+is given by the relation we have established
+
+37
+00:02:13,950 --> 00:02:16,880
+above for financial forwards.
+
+38
+00:02:16,880 --> 00:02:20,180
+The forward exchange rate is a product of the spot exchange
+
+39
+00:02:20,180 --> 00:02:24,530
+rate, X at time 0, and the exponential
+
+40
+00:02:24,530 --> 00:02:27,740
+of the time to maturity of the contract multiplied
+
+41
+00:02:27,740 --> 00:02:31,610
+by the difference between the two risk-free rates, the US
+
+42
+00:02:31,610 --> 00:02:36,290
+dollar rate minus the Swiss franc rate.
+
+43
+00:02:36,290 --> 00:02:40,100
+This relation between the forward exchange rate, the spot
+
+44
+00:02:40,100 --> 00:02:43,190
+exchange rate, and the two interest rates
+
+45
+00:02:43,190 --> 00:02:46,530
+is called the covered interest rate parity.
+
+46
+00:02:46,530 --> 00:02:49,580
+This is a no arbitrage relation.
+
+47
+00:02:49,580 --> 00:02:52,220
+To replicate the payoff of the currency forward,
+
+48
+00:02:52,220 --> 00:02:57,620
+we again refer to our general results for financial forwards.
+
+49
+00:02:57,620 --> 00:03:01,580
+At time 0, we performed the following transactions.
+
+50
+00:03:01,580 --> 00:03:06,560
+First, we borrow a dollar amount equal to the forward exchange
+
+51
+00:03:06,560 --> 00:03:10,970
+rate, scaled by an exponential function of time to maturity,
+
+52
+00:03:10,970 --> 00:03:15,020
+multiplied by the negative of the US interest rate.
+
+53
+00:03:15,020 --> 00:03:19,010
+Note that given the expression for the forward rate,
+
+54
+00:03:19,010 --> 00:03:22,220
+this dollar amount is equal to the spot exchange rate
+
+55
+00:03:22,220 --> 00:03:26,690
+X, scaled by an exponential function of time to maturity,
+
+56
+00:03:26,690 --> 00:03:31,440
+multiplied by the negative of the Swiss interest rate.
+
+57
+00:03:31,440 --> 00:03:34,440
+Second, we convert the borrowed amount
+
+58
+00:03:34,440 --> 00:03:39,350
+into Swiss francs at the spot exchange rate today.
+
+59
+00:03:39,350 --> 00:03:43,550
+Third, we invest the proceeds at the Swiss risk-free interest
+
+60
+00:03:43,550 --> 00:03:48,740
+rate until time T. By the maturity date of the forward,
+
+61
+00:03:48,740 --> 00:03:50,990
+the long position in Swiss francs
+
+62
+00:03:50,990 --> 00:03:54,430
+grows in value to one Swiss franc.
+
+63
+00:03:54,430 --> 00:03:58,060
+At the same time, the borrowed dollar amount results
+
+64
+00:03:58,060 --> 00:04:02,480
+in the cash flow equal to the negative of the forward price.
+
+65
+00:04:02,480 --> 00:04:05,390
+The bottom line, we have replicated the payoff
+
+66
+00:04:05,390 --> 00:04:08,090
+of the forward contract using transactions
+
+67
+00:04:08,090 --> 00:04:09,970
+in the spot markets.
+

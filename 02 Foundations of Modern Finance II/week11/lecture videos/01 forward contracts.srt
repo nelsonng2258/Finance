@@ -1,0 +1,392 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:03,030
+PROFESSOR: In this lecture, we introduce an important class
+
+2
+00:00:03,030 --> 00:00:07,680
+of derivative securities-- forwards, futures, and swaps.
+
+3
+00:00:07,680 --> 00:00:10,650
+We'll go over the main properties of these securities
+
+4
+00:00:10,650 --> 00:00:13,570
+and discuss how they can be priced.
+
+5
+00:00:13,570 --> 00:00:15,850
+Our approach to valuation is based
+
+6
+00:00:15,850 --> 00:00:18,040
+on the principle of no arbitrage,
+
+7
+00:00:18,040 --> 00:00:20,260
+or the law of one price.
+
+8
+00:00:20,260 --> 00:00:22,960
+In each case, we aim to replicate the cash
+
+9
+00:00:22,960 --> 00:00:27,430
+flows of a derivative security by trading in other assets.
+
+10
+00:00:27,430 --> 00:00:30,940
+This allows us to establish a unique arbitrage-free price
+
+11
+00:00:30,940 --> 00:00:32,960
+for the derivative.
+
+12
+00:00:32,960 --> 00:00:35,000
+In this manner, we connect forward
+
+13
+00:00:35,000 --> 00:00:37,670
+interest rates to the spot rates,
+
+14
+00:00:37,670 --> 00:00:41,570
+futures prices, or financial futures to the current price
+
+15
+00:00:41,570 --> 00:00:46,040
+of the underlying asset, and the terms of an interest rate swap
+
+16
+00:00:46,040 --> 00:00:50,810
+contract with the current yield curve, among other results.
+
+17
+00:00:50,810 --> 00:00:53,450
+Financial contracts-- with many features
+
+18
+00:00:53,450 --> 00:00:56,840
+found in modern derivatives, such as forward, futures,
+
+19
+00:00:56,840 --> 00:01:01,400
+and options, date back to the early periods of human history.
+
+20
+00:01:01,400 --> 00:01:05,160
+In ancient Mesopotamia, over 3,000 years ago,
+
+21
+00:01:05,160 --> 00:01:08,480
+farmers and merchants entered into financial contracts,
+
+22
+00:01:08,480 --> 00:01:10,610
+making arrangements for future delivery
+
+23
+00:01:10,610 --> 00:01:13,880
+of grain or other commodities.
+
+24
+00:01:13,880 --> 00:01:17,910
+The contract would describe both the details of future delivery,
+
+25
+00:01:17,910 --> 00:01:21,680
+such as quantity of the goods and the price.
+
+26
+00:01:21,680 --> 00:01:27,020
+These contracts are what we now know as forward contracts.
+
+27
+00:01:27,020 --> 00:01:28,970
+Let us begin with the formal definition
+
+28
+00:01:28,970 --> 00:01:31,260
+of the forward contract.
+
+29
+00:01:31,260 --> 00:01:33,360
+A forward contract is a commitment
+
+30
+00:01:33,360 --> 00:01:38,280
+to buy or sell a given quantity of a commodity or an asset
+
+31
+00:01:38,280 --> 00:01:42,910
+at a future date at the price specified today.
+
+32
+00:01:42,910 --> 00:01:45,100
+The key feature of the contract is
+
+33
+00:01:45,100 --> 00:01:49,120
+that the price is fixed today, while the transaction itself
+
+34
+00:01:49,120 --> 00:01:51,820
+takes place in the future.
+
+35
+00:01:51,820 --> 00:01:56,080
+This contractual price is called the forward price.
+
+36
+00:01:56,080 --> 00:01:58,420
+At the settlement date of the contract,
+
+37
+00:01:58,420 --> 00:02:02,140
+the buyer pays the forward price and collects the underlying
+
+38
+00:02:02,140 --> 00:02:03,160
+asset--
+
+39
+00:02:03,160 --> 00:02:06,270
+a financial asset or a commodity.
+
+40
+00:02:06,270 --> 00:02:08,580
+The buyer thus obtains a long position
+
+41
+00:02:08,580 --> 00:02:10,860
+in the asset or commodity.
+
+42
+00:02:10,860 --> 00:02:15,300
+As an example, consider a forward contract on soybeans.
+
+43
+00:02:15,300 --> 00:02:17,430
+Suppose that the tofu manufacturer
+
+44
+00:02:17,430 --> 00:02:22,180
+needs 100,000 bushels of soybeans in 3 months.
+
+45
+00:02:22,180 --> 00:02:24,800
+The current price of soybeans in the market,
+
+46
+00:02:24,800 --> 00:02:30,550
+which we call the spot price, is $12.50 per bushel.
+
+47
+00:02:30,550 --> 00:02:34,360
+Going forward, this price may rise or fall.
+
+48
+00:02:34,360 --> 00:02:36,340
+Our producer of tofu wants to make
+
+49
+00:02:36,340 --> 00:02:41,640
+sure that 100,000 bushels will be available 3 month from now.
+
+50
+00:02:41,640 --> 00:02:44,160
+To remove any uncertainty about the price,
+
+51
+00:02:44,160 --> 00:02:47,550
+the producer enters into a 3-month forward contract
+
+52
+00:02:47,550 --> 00:02:53,780
+for 100,000 bushels of soybeans at $13.50 per bushel.
+
+53
+00:02:53,780 --> 00:02:58,430
+In this forward transaction, the long side buys 100,000 bushels
+
+54
+00:02:58,430 --> 00:03:02,870
+from the short side at $13.50 per bushel in 3 month
+
+55
+00:03:02,870 --> 00:03:05,230
+at the settlement date.
+
+56
+00:03:05,230 --> 00:03:09,020
+Forward contracts have several important features.
+
+57
+00:03:09,020 --> 00:03:13,340
+First, forwards are typically traded over the counter.
+
+58
+00:03:13,340 --> 00:03:16,430
+This means that buyers and sellers transact
+
+59
+00:03:16,430 --> 00:03:19,310
+with each other directly, as opposed to trading
+
+60
+00:03:19,310 --> 00:03:21,990
+on centralized exchanges.
+
+61
+00:03:21,990 --> 00:03:26,160
+Second, forward contracts can be easily customized.
+
+62
+00:03:26,160 --> 00:03:28,860
+The two parties-- the buyer and the seller--
+
+63
+00:03:28,860 --> 00:03:33,340
+can agree on various terms of the contract as they desire.
+
+64
+00:03:33,340 --> 00:03:36,910
+These contracts do not need to be standardized.
+
+65
+00:03:36,910 --> 00:03:40,990
+Third, no money changes hands until contact maturity,
+
+66
+00:03:40,990 --> 00:03:44,570
+or the settlement date.
+
+67
+00:03:44,570 --> 00:03:46,850
+The properties of the forward contracts
+
+68
+00:03:46,850 --> 00:03:50,780
+create some advantages and some limitations.
+
+69
+00:03:50,780 --> 00:03:52,630
+One of the advantages of forwards
+
+70
+00:03:52,630 --> 00:03:56,080
+is that, because these contracts are highly customizable,
+
+71
+00:03:56,080 --> 00:03:58,850
+they can be adapted to individual needs,
+
+72
+00:03:58,850 --> 00:04:03,790
+making them effective for risk management and speculation.
+
+73
+00:04:03,790 --> 00:04:06,700
+In addition, because no money changes hands
+
+74
+00:04:06,700 --> 00:04:09,550
+until the settlement date, counterparties
+
+75
+00:04:09,550 --> 00:04:12,190
+in the forward contract do not need to come up
+
+76
+00:04:12,190 --> 00:04:14,840
+with funds until that date.
+
+77
+00:04:14,840 --> 00:04:17,839
+This is convenient, for example, for a farmer trying
+
+78
+00:04:17,839 --> 00:04:19,970
+to fix the sale price of his harvest
+
+79
+00:04:19,970 --> 00:04:23,380
+in advance through a forward contract.
+
+80
+00:04:23,380 --> 00:04:25,780
+One of the disadvantages of forwards
+
+81
+00:04:25,780 --> 00:04:27,880
+is that the over-the-counter customized
+
+82
+00:04:27,880 --> 00:04:32,150
+nature of these contracts makes them relatively illiquid.
+
+83
+00:04:32,150 --> 00:04:35,360
+It is costly for one of the counterparties in the forward
+
+84
+00:04:35,360 --> 00:04:39,260
+to get out of the contract prior to its settlement.
+
+85
+00:04:39,260 --> 00:04:42,140
+Moreover, the fact that money does not change hands
+
+86
+00:04:42,140 --> 00:04:46,010
+during the life of the contract means that all gains and losses
+
+87
+00:04:46,010 --> 00:04:48,350
+are realized at the settlement date, which
+
+88
+00:04:48,350 --> 00:04:50,920
+creates counterparty risk.
+
+89
+00:04:50,920 --> 00:04:54,120
+The risk is that the losing side of the contract
+
+90
+00:04:54,120 --> 00:04:56,880
+may not fulfill their obligations at the settlement
+
+91
+00:04:56,880 --> 00:04:58,040
+date.
+
+92
+00:04:58,040 --> 00:05:01,340
+To prevent this, participants in the forward contract
+
+93
+00:05:01,340 --> 00:05:03,590
+need to post collateral, which they
+
+94
+00:05:03,590 --> 00:05:06,020
+would lose in the event of failing to honor
+
+95
+00:05:06,020 --> 00:05:08,240
+the terms of the contract.
+
+96
+00:05:08,240 --> 00:05:10,330
+This collateral requirement makes
+
+97
+00:05:10,330 --> 00:05:13,650
+it harder to enter into a forward contract.
+

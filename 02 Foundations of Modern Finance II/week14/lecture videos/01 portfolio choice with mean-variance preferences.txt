@@ -1,0 +1,75 @@
+
+INSTRUCTOR: This week, we introduced the fundamentals
+of portfolio theory.
+Our focus is on portfolio choice under mean variance
+preferences.
+We solved for optimal portfolio with and without the risk
+free asset and characterized the main properties
+of the optimal portfolios.
+We also point out the limitations
+of the mean variance framework and introduce
+a more general formulation using the expected utility theory.
+Portfolio choice is an example of decision
+making under uncertainty.
+Among all possible distributions of portfolio value
+next period, we choose the one that
+is optimal for a particular investor.
+We rank the distributions of portfolio value
+using expected utility.
+As a result, the objective of portfolio choice
+is to find the composition of the portfolio that
+maximizes the expected utility of the investor.
+
+An important special case of this problem
+is the case of mean variance preferences.
+This is the subject of what is called the modern portfolio
+theory, and from now, we will assume that investors maximize
+a mean variance objective.
+The objective for the investor includes
+the mean and the variance of portfolio return.
+With these preferences, the investor
+seeks to minimize portfolio risk for a given level of portfolio
+expected return.
+For a given level of portfolio risk,
+investors maximize expected return.
+We can visualize the investors objective
+on the following graph.
+The horizontal axis represents portfolio risk.
+The vertical axis represents the expected return
+on the portfolio.
+The solid curves represent the combinations
+of risk and expected return corresponding
+to a given level of investor's objective.
+An investor is indifferent among all the points on a given
+curve.
+These are the level curves.
+Because the investor prefers low risk and high expected return,
+the objective of the investor increases
+as we move across the level curves
+towards the upper left corner of the plot.
+We can represent the portfolio choice problem
+as the following problem.
+Among all the portfolios with the target
+level of expected return, find the one
+with the lowest variance.
+Formally, we need to solve the following optimization problem.
+Minimize the variance of the portfolio return, which
+is given by the sum across all pairs of assets,
+of their return co-variance scaled
+by the product of the corresponding portfolio
+weights.
+We impose two constraints.
+First, portfolio weights must add up to one.
+Second, the expected return on the portfolio,
+which is a weighted average of individual asset
+expected returns must equal the target level of portfolio
+expected return.
+As we discuss the portfolio choice problem,
+we will use several examples, based on historical asset
+returns.
+In our examples, we use ETFs as risky assets.
+Economically, each ETF on our list
+represents an exposure to a distinct asset class.
+Equities, high grade bonds, high yield bonds, gold,
+and real estate.
+All of these ETFs are US focused.

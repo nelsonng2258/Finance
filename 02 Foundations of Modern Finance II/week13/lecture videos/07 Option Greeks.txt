@@ -1,0 +1,133 @@
+
+PROFESSOR: We now introduce what is known as the option Greeks.
+Option Greeks are measures of sensitivity of option prices
+to small changes in various inputs.
+These have been traditionally denoted by Greek letters, hence
+their name.
+We have encountered one commonly used option Greek already,
+the delta.
+Options delta is the partial derivative
+of the option price with respect to the underlying price.
+It measures sensitivity of the option price
+to small changes in the underlying price.
+Related to delta is the omega, which
+measures the elasticity of the option price
+to the underlying price.
+Options omega can be seen as a measure of leverage
+embedded in the option.
+Omega measures the percentage change in the option price
+relative to the percentage change in the underlying price.
+Another important measure is the options gamma.
+Gamma is the second derivative of the options
+price with respect to the underlying price.
+It measures convexity of the option price function.
+The higher the gamma, the more the option holder
+benefits from future volatility of the underlying price.
+Also, because gamma is the derivative of the delta,
+options with high gamma are in some sense harder
+to replicate in practice, as the number
+of shares in the replicating portfolio
+is more sensitive to the underlying price.
+
+In addition to measuring option price sensitivity
+to the underlying price, it is also
+common to compute price sensitivity
+to model parameters.
+Theta measures how quickly the price of the option
+changes with time to maturity.
+While higher future return volatility
+raises the value of call and put options,
+their value tends to decline as options approach maturity.
+Theta measures the speed of this decline.
+The last Greek we want to highlight here is vega.
+Vega is the sensitivity of the option price to stock return
+volatility.
+Stock return volatility is constant
+under the Black-Scholes-Merton model,
+yet it is useful to know how sensitive option prices are
+to the volatility parameter because the assumption
+of constant return volatility is only an approximation.
+Options vega provides us with an indication
+of how option prices may change as stock return
+volatility rises or falls.
+This is a shortcut.
+A more comprehensive and internally consistent
+analysis of this question would require
+that we incorporate time-varying return volatility
+into the option pricing model.
+As an empirical illustration of the properties of options,
+consider the behavior of several call
+and put options on the S&P 500 index
+during the first few days of August of 2011.
+This has been a highly volatile period in the market
+because of the unfolding US debt ceiling crisis.
+According to the US Treasury, it was
+going to run out of cash by mid-August
+unless the US Congress agreed to raise the debt ceiling.
+Following a tense debate in the Congress,
+the debt ceiling was eventually raised
+on the 31st of July, which enabled US government
+to issue more debt.
+On the 5th of August, Standard and Poor's credit rating agency
+downgraded the long-term credit rating of the US government
+from AAA to AA+ for the first time in history.
+Because of the increased economic and political
+uncertainty, the stock market fell sharply
+during the first few days of August.
+Prices of call options on the S&P 500
+fell, and prices of put options rose.
+For example, the call with a strike of $1,100
+was in the money and traded at $184 on August 1.
+Its price fell to $67.40 by August 10.
+The call with the strike of $1,300 was out of the money
+and traded at $25.80 on the 1st of August.
+Its price fell to $1.20 by the 10th of August.
+We observe that the out-of-the-money call
+experienced a smaller dollar decline but a much larger
+percentage decline than in-the-money call.
+
+We observe a similar relation for the puts.
+Prices of out-of-the-money puts rose more in percentage terms
+than prices of the in-the-money puts.
+This observation can be expressed as a statement
+about the options Greeks.
+Between the 1st and the 10th of August,
+the value of the underlying fell by $156.20.
+Relative to that, the value of the $1,100 strike call fell
+by $116.60.
+The ratio of these two numbers approximates
+the delta of the option, 0.75.
+This is less than the delta of the underlying asset itself,
+which is 1.
+This means that for $1 change of the underlying asset,
+the price of the call option changes by less than $1.
+In this case, for the $1,100 strike call,
+it changes by $0.75.
+For the $1,300 strike call, we approximate the delta
+to be 0.16.
+Prices of out-of-the-money calls are relatively less sensitive
+to changes in the underlying price.
+In contrast, the omega, which measures the elasticity
+of the option price with respect to the underlying price,
+meaning that it compares percentage changes,
+is much higher for the $1,300 strike option.
+It is 7.8.
+This is compared to 5.2 for the $1,100 call.
+The lesson here is that out-of-the-money options have
+a high degree of embedded leverage relative
+to the underlying asset, for which omega is equal to 1
+by definition.
+The figure on this slide illustrates the relation
+between the option prices and the underlying price.
+This is a scatterplot which shows
+prices of two options, a call and a put,
+both with the strike of $1,250 and maturity
+in September of 2011.
+These are plotted against the price of the underlying index.
+We see that the price of the call option
+is increasing in the underlying price.
+The slope, which is the options delta,
+is higher for higher index values, which is where the call
+option is in-the-money.
+This illustrates the higher delta of the in-the-money call
+options.

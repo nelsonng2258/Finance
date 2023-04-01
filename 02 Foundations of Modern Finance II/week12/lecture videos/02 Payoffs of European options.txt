@@ -1,0 +1,99 @@
+
+PROFESSOR: In this segment, we consider
+payoffs of the most common types of European options.
+Visualizing option payoffs is often
+useful for building intuition about the various properties
+of these securities.
+To start, consider a European call option.
+As an example, let it be an option on the stock of IBM.
+The exercise price at maturity is $100.
+We often call the exercise price of the option the strike price.
+This option gives the owner of the option, the buyer,
+the right to buy one share of IBM
+at $100 on the expiration date.
+Note that this is their right and not their obligation.
+The buyer may choose not to exercise the option, if doing
+so would lead to a loss.
+As a result, the pay for this option at maturity cannot be
+negative.
+In this sense, the call option is
+clearly different from a forward agreement,
+which is a binding obligation to buy the underlying at maturity.
+The payoff of the forward may be positive or negative.
+The payoff of the call option of IBM at maturity
+depends on the price of IBM at that time.
+Let's describe this dependence explicitly.
+If the market price of IBM is below the strike price,
+the buyer is better off letting the option expire unexercised.
+The option to buy IBM at $100 is useless
+when the market price of IBM shares is below 100, say $80.
+In this situation, the payoff for the option is 0.
+If the market price of IBM is above the strike price,
+then the buyer would exercise the option
+and capture the positive difference
+between the market price of IBM and the strike price.
+For example, if the price of IBM is $120,
+exercising the option to buy it at $100
+generates a gain of $20.
+In summary, the payoff of an option is never negative.
+And sometimes that is positive.
+The actual payoff depends on the price of the underlying asset,
+in this case, the stock of IBM.
+The payoff of the call is the maximum of 0
+and the difference between the underlying price of maturity
+and the strike price.
+We now represent option payoffs graphically.
+The top left panel shows the payoff
+of a long position in the call option,
+with a strike price of $100.
+This payoff is 0 when the underlying
+price is below the strike.
+And it is increasing linearly in the underlying
+price for higher values.
+
+For the put option, which is the top right panel,
+the payoff is 0 when the underlying
+price is above the strike.
+Recall that the put option gives the owner the right
+to sell the underlying at the strike price.
+The payoff of the put is declining in the value
+of the underlying asset.
+And it is the highest when the underlying price is 0.
+
+The bottom panels show payoffs of the short positions,
+in the call on the left and the put on the right.
+The payoff of a short position is the negative
+of the long position payoff.
+The plots are then the mirror images of the long position
+payoff plots.
+Going forward, we will often combine options
+with the underlying asset positions and bonds.
+Their payoffs are shown here.
+On the left, the plot the payoff of the underlying
+asset as a function of itself.
+This is, of course, a 45-degree line.
+On the right, we show the payoff of the risk-free bond,
+which is a constant independent of the underlying price.
+It is important to distinguish the payoff of the option, which
+is never negative, from its net payoff.
+The net payoff of the option includes its cost.
+If the option expires unexercised,
+its net payoff is negative.
+Consider again our example of a European call option on IBM.
+The strike price is $100, and the option
+has three months to maturity.
+Suppose this call is currently trading at $5.
+The three-month interest rate, not annualized, is 1%.
+At maturity, the call's net payoff
+is equal to its payoff minus the future value of the option
+price, which is $5.05.
+As we see on the graph, the net payoff of the option
+is negative for the values of the underlying below the strike
+price, and for some values above the strike price.
+The break-even point is that value
+of the underlying that exceeds the strike by the future value
+of the option price.
+In this case, the break even is $105.05.
+The price of IBM must be above this threshold,
+above $105.05, in order for the holder of the option
+to make a profit.

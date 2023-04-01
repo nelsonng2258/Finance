@@ -1,0 +1,50 @@
+
+PROFESSOR: We now turn our attention to American options.
+And the American option allows the buyer
+to exercise the option at any time prior to maturity.
+Here we establish an important model-free relation
+between prices of American and European options.
+We know that in general, American options cannot be
+worth less than their European counterparts since the holder
+of the option can always choose not to exercise the option
+until maturity.
+We now show that without dividends
+and with positive interest rates,
+it is never optimal to exercise an American call option early.
+Suppose we exercise an American call early.
+In that case, the payoff of the option at the point of exercise
+is equal to the difference between the stock
+price and the strike.
+
+The payoff from immediate exercise
+is no more than the market price of the option.
+In other words, one would be better off
+selling the option than exercising it.
+To see why this is the case, note
+that the market value of the American call
+is at least as high as the market
+value of the European call, with the same strike
+and the same time to maturity.
+We also know from our prior analysis of arbitrage pricing
+bonds, that the value of a European call
+is no less than the difference between the stock price
+and the present value of the strike.
+Under positive interest rates, this is at least as high
+as the difference between the stock price and the strike
+price, which is the payoff from immediate exercise
+of the American call.
+
+If it is not optimal to exercise an American call
+before maturity, then its market value
+must be the same as the value of the corresponding European
+call.
+In contrast to the American calls,
+it may be optimal to exercise an American put even if the stock
+does not pay dividends.
+Suppose we have a put option with a strike of $10.
+Suppose the current stock price is 0.
+If we exercise the option immediately, we collect $10.
+If we wait and exercise later, we receive no more than $10,
+and at a later date.
+We conclude that in this case, under positive interest rates,
+it is optimal to exercise the option immediately.

@@ -1,0 +1,276 @@
+0
+00:00:00,000 --> 00:00:00,233
+
+
+1
+00:00:00,233 --> 00:00:02,400
+PROFESSOR: We're given the following payoff function
+
+2
+00:00:02,400 --> 00:00:05,830
+as the function of s, which is the stock price.
+
+3
+00:00:05,830 --> 00:00:07,800
+So these are the different payoffs,
+
+4
+00:00:07,800 --> 00:00:10,180
+depending on the realization of the stock price,
+
+5
+00:00:10,180 --> 00:00:15,300
+S. So this question asks us to draw the payoff diagram
+
+6
+00:00:15,300 --> 00:00:21,480
+and to represent this payoff as a portfolio of European put
+
+7
+00:00:21,480 --> 00:00:22,860
+and call options.
+
+8
+00:00:22,860 --> 00:00:27,270
+Now let's first draw this diagram and see how many
+
+9
+00:00:27,270 --> 00:00:31,800
+and of what kind of options we need to construct this payoff.
+
+10
+00:00:31,800 --> 00:00:35,280
+I'm going to start on the right-hand side here,
+
+11
+00:00:35,280 --> 00:00:40,445
+and we'll put 40 as the stock price here.
+
+12
+00:00:40,445 --> 00:00:41,820
+And the reason I'm starting there
+
+13
+00:00:41,820 --> 00:00:46,740
+because this payoff at the bottom here looks familiar.
+
+14
+00:00:46,740 --> 00:00:49,500
+So it's 2s minus 80.
+
+15
+00:00:49,500 --> 00:00:54,520
+So you can think of it as just simply two call options
+
+16
+00:00:54,520 --> 00:00:58,080
+with a strike price of 40 because each call option
+
+17
+00:00:58,080 --> 00:01:00,720
+with the strike price of 40 would give you
+
+18
+00:01:00,720 --> 00:01:04,180
+a payoff of s minus 40.
+
+19
+00:01:04,180 --> 00:01:07,980
+So two of them is going to be 2s minus 80.
+
+20
+00:01:07,980 --> 00:01:13,980
+So this is the function right here, so 2s minus 80,
+
+21
+00:01:13,980 --> 00:01:15,730
+and this is my first starting point.
+
+22
+00:01:15,730 --> 00:01:24,640
+So I need two calls with a strike price of $40 each.
+
+23
+00:01:24,640 --> 00:01:32,340
+Then it gets flat line or zero payoff between 30 and 40.
+
+24
+00:01:32,340 --> 00:01:37,200
+And, between 20 and 30, it gets 90 minus 3s.
+
+25
+00:01:37,200 --> 00:01:40,270
+So, first of all, since I have minus 3s,
+
+26
+00:01:40,270 --> 00:01:44,850
+it means that I need three options and three put options
+
+27
+00:01:44,850 --> 00:01:47,230
+because this is a negative slope.
+
+28
+00:01:47,230 --> 00:01:51,300
+So, if I get three put options with the strike price of 30,
+
+29
+00:01:51,300 --> 00:01:56,010
+the payoff from this is going to be 90 minus 3s because again--
+
+30
+00:01:56,010 --> 00:01:59,910
+so, if I get one put option with a strike price of 30,
+
+31
+00:01:59,910 --> 00:02:03,000
+the payoff from that option will be 30 minus s.
+
+32
+00:02:03,000 --> 00:02:06,990
+So 3 times that would be 90 minus 3s.
+
+33
+00:02:06,990 --> 00:02:12,980
+So, therefore, this is the function that I will get here.
+
+34
+00:02:12,980 --> 00:02:19,880
+So I need three puts with the strike price of 30.
+
+35
+00:02:19,880 --> 00:02:25,390
+Now, next, notice that, this breakpoint of $20, the slope
+
+36
+00:02:25,390 --> 00:02:26,510
+becomes less steep.
+
+37
+00:02:26,510 --> 00:02:30,760
+So we get from negative 3s to negative 2s.
+
+38
+00:02:30,760 --> 00:02:37,360
+So what it effectively means is that here, when we reach 20,
+
+39
+00:02:37,360 --> 00:02:45,220
+we need to short or sell one put option so that our slope goes
+
+40
+00:02:45,220 --> 00:02:47,650
+from 3s to 2s.
+
+41
+00:02:47,650 --> 00:02:54,910
+So I'll say that we are buying, or we are long this first set
+
+42
+00:02:54,910 --> 00:02:56,890
+of options so far.
+
+43
+00:02:56,890 --> 00:03:06,230
+At this point, we are short one put with a strike price of $20.
+
+44
+00:03:06,230 --> 00:03:12,070
+So this gives us a little bit steeper slope right here.
+
+45
+00:03:12,070 --> 00:03:15,150
+So here we have the slope of 3.
+
+46
+00:03:15,150 --> 00:03:18,930
+Here we have the slope of 2, so two options, three options.
+
+47
+00:03:18,930 --> 00:03:25,400
+And here the slope will be 2.
+
+48
+00:03:25,400 --> 00:03:31,350
+Now, finally, when we reach 10 right here,
+
+49
+00:03:31,350 --> 00:03:35,360
+so this break point, the slope goes from negative 2
+
+50
+00:03:35,360 --> 00:03:36,680
+to negative 6.
+
+51
+00:03:36,680 --> 00:03:41,750
+So it means that we need to long another four
+
+52
+00:03:41,750 --> 00:03:54,170
+options with the strike price of 10, so long four puts
+
+53
+00:03:54,170 --> 00:03:55,640
+with the strike price of 10.
+
+54
+00:03:55,640 --> 00:04:01,230
+And so this is going to make this line very, very steep.
+
+55
+00:04:01,230 --> 00:04:07,450
+And so the slope of this line is 6.
+
+56
+00:04:07,450 --> 00:04:11,440
+Now what we need to verify is that this line actually
+
+57
+00:04:11,440 --> 00:04:14,740
+intersects the y-axis at 110 because you
+
+58
+00:04:14,740 --> 00:04:20,019
+can see that, when s equals to 0, this has to be equal to 110.
+
+59
+00:04:20,019 --> 00:04:22,012
+So what I will do next is that I will
+
+60
+00:04:22,012 --> 00:04:23,470
+take the portfolio of these options
+
+61
+00:04:23,470 --> 00:04:27,070
+that we constructed right now and taken
+
+62
+00:04:27,070 --> 00:04:30,860
+to construct this graph, and I will write the payoff
+
+63
+00:04:30,860 --> 00:04:32,050
+for each of them.
+
+64
+00:04:32,050 --> 00:04:34,120
+And I will add them all up just to make sure
+
+65
+00:04:34,120 --> 00:04:36,580
+that we get 110 as the intersection point
+
+66
+00:04:36,580 --> 00:04:39,040
+and, therefore, the correct representation,
+
+67
+00:04:39,040 --> 00:04:41,950
+the correct graph, that represents this payoff
+
+68
+00:04:41,950 --> 00:04:43,500
+function.
+

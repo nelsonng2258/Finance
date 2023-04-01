@@ -1,0 +1,64 @@
+
+PROFESSOR: In this video I will show you
+how to construct replicating portfolios
+from known option prices.
+Recall that last week we did the opposite.
+Namely, we priced options by using replicating portfolios.
+In practice however, pricing by replication
+is impractical and often infeasible.
+But many practitioners often need
+to construct replicating portfolios
+for hedging or speculating reasons.
+And that's what we will cover now.
+We will work with the lookback option
+that we covered in question one.
+And we will construct the following replicating
+portfolios: a portfolio at time 0, which
+replicates the payoff from the option of time 1,
+a portfolio at time 1 in the up node, which replicates
+the payoff from this option at time 2,
+and a portfolio at time 1 in the down node
+that replicates the payoff from this option at time 2.
+We will assume that the stock price evolution
+is the same as in question one.
+Suppose that the replicating portfolio has
+delta shares of the stock and b dollars
+invested in the riskless bond.
+Recall the following expressions for delta and b
+and let's apply them to our case.
+Let's start in year 0.
+I will denote replicating portfolio in year 0
+by delta naught and b naught.
+Using numbers from question one, we
+obtain the following values for delta and b.
+This implies that to replicate these options payoff in
+year one, we need to buy 0.4262 shares of the stock
+and borrow 22.396 dollars at the risk-free rate.
+Note that the price of this replicating portfolio
+equals $20.23, which matches exactly the price of the option
+that we found in question one.
+Now, let's repeat the same steps and find replicating portfolio
+in year one in the up node.
+I will denote delta and b of this portfolio's delta 1u
+and b1u.
+One stands for year one, u stands for up node.
+The delta would equal to 1 and the b
+would equal to negative 95.238.
+We can also verify that the price
+of this replicating portfolio in year one in the up node
+matches exactly the option price that we
+found using risk neutral pricing approach
+in the previous question.
+Finally, we can find replicating portfolio
+in year one in the down node.
+Delta of this portfolio equals to 0.556
+and b equals to negative 33.862.
+We can also verify that the price
+of this replicating portfolio in year one in the down node
+matches the option price in this node found in question one.
+This is a summary of replicating portfolios that we constructed.
+First is the replicating portfolio in year zero.
+Second is the replicating portfolio
+in year one in the up node.
+And third is the replicating portfolio
+in year one in the down node.

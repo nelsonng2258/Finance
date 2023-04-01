@@ -1,0 +1,380 @@
+0
+00:00:00,000 --> 00:00:00,270
+
+
+1
+00:00:00,270 --> 00:00:02,070
+PROFESSOR: In this video we will learn
+
+2
+00:00:02,070 --> 00:00:06,043
+how to use Black-Scholes-Merton formula to price options.
+
+3
+00:00:06,043 --> 00:00:07,710
+We will assume that all assumptions that
+
+4
+00:00:07,710 --> 00:00:11,640
+underlie Black-Scholes-Merton formula hold.
+
+5
+00:00:11,640 --> 00:00:13,530
+Suppose that there is a stock, XYZ,
+
+6
+00:00:13,530 --> 00:00:16,600
+with the current price of $50.
+
+7
+00:00:16,600 --> 00:00:21,120
+We will assume that it has annual volatility of 35%.
+
+8
+00:00:21,120 --> 00:00:22,890
+The annualized continuously-compounded
+
+9
+00:00:22,890 --> 00:00:27,060
+risk-free rate is 1.25%.
+
+10
+00:00:27,060 --> 00:00:28,890
+The first question asks, what is the price
+
+11
+00:00:28,890 --> 00:00:31,160
+of the call option with a strike price of $55
+
+12
+00:00:31,160 --> 00:00:34,240
+and six months to maturity?
+
+13
+00:00:34,240 --> 00:00:37,460
+The second question asks us to price the put option
+
+14
+00:00:37,460 --> 00:00:40,180
+of the same strike price, $55, and same time
+
+15
+00:00:40,180 --> 00:00:42,590
+to maturity, six months.
+
+16
+00:00:42,590 --> 00:00:44,570
+The Black-Scholes-Merton pricing formula
+
+17
+00:00:44,570 --> 00:00:46,910
+for a European call option is given
+
+18
+00:00:46,910 --> 00:00:48,650
+by the following expression.
+
+19
+00:00:48,650 --> 00:00:51,620
+Here S naught is the current share price,
+
+20
+00:00:51,620 --> 00:00:54,170
+N is the cumulative distribution function
+
+21
+00:00:54,170 --> 00:00:57,280
+of a standard normal distribution.
+
+22
+00:00:57,280 --> 00:01:00,730
+K is the strike price of the option,
+
+23
+00:01:00,730 --> 00:01:04,989
+R is the continuously compounded risk-free interest rate.
+
+24
+00:01:04,989 --> 00:01:09,220
+Sigma is the annualized volatility of the stock price,
+
+25
+00:01:09,220 --> 00:01:14,110
+and T is time to maturity expressed in years.
+
+26
+00:01:14,110 --> 00:01:17,590
+Recall that in our case option has six months to maturity,
+
+27
+00:01:17,590 --> 00:01:21,490
+therefore capital T is 0.5.
+
+28
+00:01:21,490 --> 00:01:24,490
+Let's use Excel to implement the pricing of this option.
+
+29
+00:01:24,490 --> 00:01:26,650
+Here I have put all of the inputs
+
+30
+00:01:26,650 --> 00:01:29,800
+into the problem, the current share price, volatility,
+
+31
+00:01:29,800 --> 00:01:34,260
+risk-free interest rate, strike price, and maturity.
+
+32
+00:01:34,260 --> 00:01:37,800
+Let's start by computing X. Recall that X is given
+
+33
+00:01:37,800 --> 00:01:40,480
+by the following expression.
+
+34
+00:01:40,480 --> 00:01:44,670
+Therefore, to compute X, we need to carefully input
+
+35
+00:01:44,670 --> 00:01:47,830
+all of the option parameters into the corresponding formula,
+
+36
+00:01:47,830 --> 00:01:49,140
+which I have done here.
+
+37
+00:01:49,140 --> 00:01:51,950
+
+
+38
+00:01:51,950 --> 00:01:54,875
+Next, I will compute N of X. Recall
+
+39
+00:01:54,875 --> 00:01:57,110
+that N is the cumulative distribution
+
+40
+00:01:57,110 --> 00:02:00,350
+function of a standard normal distribution.
+
+41
+00:02:00,350 --> 00:02:02,780
+Excel has a corresponding function,
+
+42
+00:02:02,780 --> 00:02:06,680
+which is called NORM.S.DIST.
+
+43
+00:02:06,680 --> 00:02:09,150
+And it has two input parameters.
+
+44
+00:02:09,150 --> 00:02:14,720
+First is X and second can take values either 1 or 0.
+
+45
+00:02:14,720 --> 00:02:17,510
+1 is for the cumulative distribution function,
+
+46
+00:02:17,510 --> 00:02:19,852
+and 0 is the probability density function.
+
+47
+00:02:19,852 --> 00:02:22,310
+So we need the first one, so therefore the second parameter
+
+48
+00:02:22,310 --> 00:02:23,540
+is 1.
+
+49
+00:02:23,540 --> 00:02:27,430
+And that gives me N of X.
+
+50
+00:02:27,430 --> 00:02:29,650
+Next, I will compute the second expression, which
+
+51
+00:02:29,650 --> 00:02:33,430
+is N of X minus sigma multiplied by the square root
+
+52
+00:02:33,430 --> 00:02:42,910
+of capital T. So NORM.S.DIST, X minus sigma
+
+53
+00:02:42,910 --> 00:02:47,173
+multiplied by the square root of capital T. Recall
+
+54
+00:02:47,173 --> 00:02:49,090
+that we want cumulative distribution function,
+
+55
+00:02:49,090 --> 00:02:52,480
+therefore our second parameter is 1.
+
+56
+00:02:52,480 --> 00:02:54,580
+Now we can compute the option price.
+
+57
+00:02:54,580 --> 00:02:57,130
+According to the Black-Scholes-Merton formula
+
+58
+00:02:57,130 --> 00:02:59,920
+it equals the current share price
+
+59
+00:02:59,920 --> 00:03:04,570
+multiplied by N of X minus the present value of the strike
+
+60
+00:03:04,570 --> 00:03:05,110
+price.
+
+61
+00:03:05,110 --> 00:03:09,350
+Recall that the strike price is $55.
+
+62
+00:03:09,350 --> 00:03:12,610
+We're finding the present value of this strike price
+
+63
+00:03:12,610 --> 00:03:14,560
+by multiplying it by the exponent raised
+
+64
+00:03:14,560 --> 00:03:19,120
+to the power negative risk-free rate multiplied by capital T.
+
+65
+00:03:19,120 --> 00:03:21,340
+And then we're multiplying it by N
+
+66
+00:03:21,340 --> 00:03:25,040
+of X minus sigma multiplied by square root of T,
+
+67
+00:03:25,040 --> 00:03:27,810
+which is this expression.
+
+68
+00:03:27,810 --> 00:03:29,550
+The price of this European call option
+
+69
+00:03:29,550 --> 00:03:31,920
+according to the Black-Scholes-Merton formula
+
+70
+00:03:31,920 --> 00:03:34,880
+is $3.15.
+
+71
+00:03:34,880 --> 00:03:36,980
+We can extend our analysis and use
+
+72
+00:03:36,980 --> 00:03:39,080
+the Black-Scholes-Merton formula to see
+
+73
+00:03:39,080 --> 00:03:42,290
+how the option price changes with respect to underlying
+
+74
+00:03:42,290 --> 00:03:43,890
+parameters.
+
+75
+00:03:43,890 --> 00:03:46,400
+Let's see how the option price changes with respect
+
+76
+00:03:46,400 --> 00:03:47,800
+to the stock price.
+
+77
+00:03:47,800 --> 00:03:51,380
+Recall that our original stock price was $50.
+
+78
+00:03:51,380 --> 00:03:58,460
+Here I have created an array from $20 to $100 in $0.50
+
+79
+00:03:58,460 --> 00:03:59,390
+increments.
+
+80
+00:03:59,390 --> 00:04:03,000
+And what I will do is that for each of these stock prices,
+
+81
+00:04:03,000 --> 00:04:06,620
+I will compute the option price according to the Black-Scholes
+
+82
+00:04:06,620 --> 00:04:08,740
+formula.
+
+83
+00:04:08,740 --> 00:04:13,120
+Now we can plot option price as a function of stock price.
+
+84
+00:04:13,120 --> 00:04:14,910
+We can confirm that the option price
+
+85
+00:04:14,910 --> 00:04:17,779
+increases with stock price.
+
+86
+00:04:17,779 --> 00:04:20,570
+The slope of this line, which is the delta of this option,
+
+87
+00:04:20,570 --> 00:04:25,970
+starts at 0 and gets closer to 1 as stock price rises.
+
+88
+00:04:25,970 --> 00:04:29,420
+You can also see that this function is convex, which
+
+89
+00:04:29,420 --> 00:04:31,980
+means that the gamma of the call option,
+
+90
+00:04:31,980 --> 00:04:34,530
+defined as the second derivative of the option price
+
+91
+00:04:34,530 --> 00:04:38,040
+with respect to the stock price, is positive.
+
+92
+00:04:38,040 --> 00:04:40,110
+You can try building similar plots for time
+
+93
+00:04:40,110 --> 00:04:42,900
+to maturity and volatility, which
+
+94
+00:04:42,900 --> 00:04:48,470
+will help you to visualize theta and vega of the call option.
+

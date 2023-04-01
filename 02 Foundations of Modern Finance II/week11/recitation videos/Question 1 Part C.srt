@@ -1,0 +1,68 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:03,990
+INSTRUCTOR: Finally, let us construct an arbitrage trading
+
+2
+00:00:03,990 --> 00:00:07,440
+strategy that generates $100 in year 2 and nothing
+
+3
+00:00:07,440 --> 00:00:10,840
+in years 0 and 1.
+
+4
+00:00:10,840 --> 00:00:12,300
+Again, the only thing that changes
+
+5
+00:00:12,300 --> 00:00:17,430
+is the right-hand side of the equation 3
+
+6
+00:00:17,430 --> 00:00:20,550
+where instead of 0, we have $100 right now.
+
+7
+00:00:20,550 --> 00:00:26,820
+So we're getting $0 in years 0 and 1 and $100 in year 2.
+
+8
+00:00:26,820 --> 00:00:31,000
+Let's go back to Excel and solve the system.
+
+9
+00:00:31,000 --> 00:00:33,480
+Recall that in my spreadsheet, everything is soft coded.
+
+10
+00:00:33,480 --> 00:00:37,980
+So all I have to do right now is I have to put 0 in year 1
+
+11
+00:00:37,980 --> 00:00:41,880
+and I have to put 100, my desired outcome, in year 2.
+
+12
+00:00:41,880 --> 00:00:44,160
+And therefore, this Excel spreadsheet
+
+13
+00:00:44,160 --> 00:00:46,770
+will recompute the positions that I have to take in order
+
+14
+00:00:46,770 --> 00:00:48,850
+to achieve this outcome.
+
+15
+00:00:48,850 --> 00:00:52,680
+So I have to go short R1 in this exact amount,
+
+16
+00:00:52,680 --> 00:00:58,340
+short F1 in this amount, and go long in this amount in R2.
+

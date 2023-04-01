@@ -1,0 +1,372 @@
+0
+00:00:00,000 --> 00:00:00,690
+
+
+1
+00:00:00,690 --> 00:00:03,000
+PROFESSOR: In this video, we're given a portfolio
+
+2
+00:00:03,000 --> 00:00:05,250
+with a known expected return.
+
+3
+00:00:05,250 --> 00:00:07,800
+We will assume that it is priced by the capital asset pricing
+
+4
+00:00:07,800 --> 00:00:08,490
+model.
+
+5
+00:00:08,490 --> 00:00:11,700
+And we will learn how to find its beta, standard deviation,
+
+6
+00:00:11,700 --> 00:00:14,614
+and its correlation with the market portfolio.
+
+7
+00:00:14,614 --> 00:00:18,450
+Suppose that the expected return on the market portfolio is 14%,
+
+8
+00:00:18,450 --> 00:00:22,230
+and the standard deviation of its returns is 25%.
+
+9
+00:00:22,230 --> 00:00:24,720
+The risk-free rate is 6%.
+
+10
+00:00:24,720 --> 00:00:28,410
+Consider a portfolio with expected return of 16%,
+
+11
+00:00:28,410 --> 00:00:31,780
+and assume that it is located on the capital market line.
+
+12
+00:00:31,780 --> 00:00:34,770
+In other words, assume that it is priced by the capital asset
+
+13
+00:00:34,770 --> 00:00:36,720
+pricing model.
+
+14
+00:00:36,720 --> 00:00:39,120
+What is the beta of this portfolio?
+
+15
+00:00:39,120 --> 00:00:41,040
+What is the standard deviation?
+
+16
+00:00:41,040 --> 00:00:45,310
+And what is the correlation of this portfolio with the market?
+
+17
+00:00:45,310 --> 00:00:47,640
+Let's start with the first question.
+
+18
+00:00:47,640 --> 00:00:51,060
+The CAPM model says that the expected return on a portfolio
+
+19
+00:00:51,060 --> 00:00:55,620
+P equals to the risk-free rate plus beta of this portfolio
+
+20
+00:00:55,620 --> 00:00:58,500
+multiplied by the expected return on the market portfolio
+
+21
+00:00:58,500 --> 00:01:00,660
+minus the risk-free rate.
+
+22
+00:01:00,660 --> 00:01:04,769
+We're given the expected return on our portfolio P. It is 16%.
+
+23
+00:01:04,769 --> 00:01:07,440
+We're given the risk-free rate, which is 6%.
+
+24
+00:01:07,440 --> 00:01:09,120
+And we're given the expected return
+
+25
+00:01:09,120 --> 00:01:12,010
+on the market portfolio, which is 14%.
+
+26
+00:01:12,010 --> 00:01:13,950
+So we can solve this equation for beta
+
+27
+00:01:13,950 --> 00:01:18,780
+and find that the beta of this portfolio is 1.25.
+
+28
+00:01:18,780 --> 00:01:21,210
+To find the standard deviation of this portfolio, let's
+
+29
+00:01:21,210 --> 00:01:23,160
+replicate it with the market portfolio
+
+30
+00:01:23,160 --> 00:01:25,560
+and the risk-free asset.
+
+31
+00:01:25,560 --> 00:01:27,540
+Since this portfolio, which we will call P,
+
+32
+00:01:27,540 --> 00:01:30,570
+is efficient because it is on the capital market line,
+
+33
+00:01:30,570 --> 00:01:32,640
+the expected return and the standard deviation
+
+34
+00:01:32,640 --> 00:01:36,090
+of this portfolio should be the same as the expected return
+
+35
+00:01:36,090 --> 00:01:38,790
+and standard deviation of the replicating portfolio, which
+
+36
+00:01:38,790 --> 00:01:42,720
+we'll call R. And, since we know the standard deviation of both
+
+37
+00:01:42,720 --> 00:01:45,030
+the market portfolio, which is 25%,
+
+38
+00:01:45,030 --> 00:01:47,488
+and the risk-free asset, which is 0%,
+
+39
+00:01:47,488 --> 00:01:49,530
+we will be able to compute the standard deviation
+
+40
+00:01:49,530 --> 00:01:51,780
+of this replicating portfolio.
+
+41
+00:01:51,780 --> 00:01:55,410
+Let's invest w in the risk-free asset and 1 minus w
+
+42
+00:01:55,410 --> 00:01:57,173
+in the market portfolio.
+
+43
+00:01:57,173 --> 00:01:58,590
+We want this replicating portfolio
+
+44
+00:01:58,590 --> 00:02:01,590
+to have the expected return of 16%.
+
+45
+00:02:01,590 --> 00:02:03,780
+Therefore, we have the following equation--
+
+46
+00:02:03,780 --> 00:02:06,990
+16% equals to w multiplied by 6%, which
+
+47
+00:02:06,990 --> 00:02:10,560
+is the return of the risk-free asset, plus 1 minus w
+
+48
+00:02:10,560 --> 00:02:12,990
+multiplied by the 14%, which is the expected
+
+49
+00:02:12,990 --> 00:02:15,060
+return on the market.
+
+50
+00:02:15,060 --> 00:02:19,300
+Solving this equation for w gives us negative 0.25.
+
+51
+00:02:19,300 --> 00:02:21,450
+This means that the replicating portfolio
+
+52
+00:02:21,450 --> 00:02:26,370
+is 25% short the risk-free asset and 125% long the market
+
+53
+00:02:26,370 --> 00:02:27,840
+portfolio.
+
+54
+00:02:27,840 --> 00:02:30,900
+Since the risk-free asset has zero variance by definition
+
+55
+00:02:30,900 --> 00:02:32,760
+and the return on the risk-free asset
+
+56
+00:02:32,760 --> 00:02:35,760
+is not correlated with any other asset, including the market
+
+57
+00:02:35,760 --> 00:02:38,700
+portfolio, the variance of the replicating portfolio
+
+58
+00:02:38,700 --> 00:02:41,430
+equals to 1 minus w squared times
+
+59
+00:02:41,430 --> 00:02:43,410
+the variance of the market portfolio.
+
+60
+00:02:43,410 --> 00:02:44,910
+Therefore, the standard deviation
+
+61
+00:02:44,910 --> 00:02:49,320
+of this replicating portfolio R equals to 1 minus w multiplied
+
+62
+00:02:49,320 --> 00:02:52,050
+by the standard deviation of the market portfolio.
+
+63
+00:02:52,050 --> 00:02:54,570
+We know that w is negative 0.25.
+
+64
+00:02:54,570 --> 00:02:57,383
+Therefore, 1 minus w is 1.25.
+
+65
+00:02:57,383 --> 00:02:59,300
+The standard deviation of the market portfolio
+
+66
+00:02:59,300 --> 00:03:02,910
+is 25%, which gives us 31.25%.
+
+67
+00:03:02,910 --> 00:03:04,620
+Therefore, the standard deviation
+
+68
+00:03:04,620 --> 00:03:11,052
+of the portfolio with 16% expected return is 31.25%.
+
+69
+00:03:11,052 --> 00:03:12,510
+Finally, let's find the correlation
+
+70
+00:03:12,510 --> 00:03:14,880
+of this portfolio with the market.
+
+71
+00:03:14,880 --> 00:03:17,430
+Recall that beta of portfolio P is
+
+72
+00:03:17,430 --> 00:03:20,250
+the ratio of the covariance of returns of this portfolio
+
+73
+00:03:20,250 --> 00:03:22,320
+P with the market portfolio divided
+
+74
+00:03:22,320 --> 00:03:25,170
+by the variance of the market portfolio, which equals
+
+75
+00:03:25,170 --> 00:03:28,320
+to the correlation between portfolio P and M
+
+76
+00:03:28,320 --> 00:03:30,690
+multiplied by the standard deviation of returns
+
+77
+00:03:30,690 --> 00:03:33,390
+on portfolio P divided by the standard deviation
+
+78
+00:03:33,390 --> 00:03:35,250
+of the market portfolio.
+
+79
+00:03:35,250 --> 00:03:37,200
+We already know the beta of this portfolio
+
+80
+00:03:37,200 --> 00:03:39,870
+P, which we computed in the first part of this question.
+
+81
+00:03:39,870 --> 00:03:41,513
+It is 1.25.
+
+82
+00:03:41,513 --> 00:03:42,930
+And we know the standard deviation
+
+83
+00:03:42,930 --> 00:03:45,432
+of this portfolio, which we computed in the second part
+
+84
+00:03:45,432 --> 00:03:46,140
+of this question.
+
+85
+00:03:46,140 --> 00:03:48,290
+It is 31.25%.
+
+86
+00:03:48,290 --> 00:03:50,160
+So putting this all together gives us
+
+87
+00:03:50,160 --> 00:03:51,450
+the following equation.
+
+88
+00:03:51,450 --> 00:03:54,600
+Solving this equation for rho gives us 1.
+
+89
+00:03:54,600 --> 00:03:57,090
+Therefore, the correlation between the returns
+
+90
+00:03:57,090 --> 00:04:00,120
+on this portfolio P and the returns on the market portfolio
+
+91
+00:04:00,120 --> 00:04:02,500
+M is equal to 1.
+
+92
+00:04:02,500 --> 00:04:03,000
+
+

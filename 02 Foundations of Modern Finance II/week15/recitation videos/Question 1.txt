@@ -1,0 +1,92 @@
+
+PROFESSOR: In this video, we're given a portfolio
+with a known expected return.
+We will assume that it is priced by the capital asset pricing
+model.
+And we will learn how to find its beta, standard deviation,
+and its correlation with the market portfolio.
+Suppose that the expected return on the market portfolio is 14%,
+and the standard deviation of its returns is 25%.
+The risk-free rate is 6%.
+Consider a portfolio with expected return of 16%,
+and assume that it is located on the capital market line.
+In other words, assume that it is priced by the capital asset
+pricing model.
+What is the beta of this portfolio?
+What is the standard deviation?
+And what is the correlation of this portfolio with the market?
+Let's start with the first question.
+The CAPM model says that the expected return on a portfolio
+P equals to the risk-free rate plus beta of this portfolio
+multiplied by the expected return on the market portfolio
+minus the risk-free rate.
+We're given the expected return on our portfolio P. It is 16%.
+We're given the risk-free rate, which is 6%.
+And we're given the expected return
+on the market portfolio, which is 14%.
+So we can solve this equation for beta
+and find that the beta of this portfolio is 1.25.
+To find the standard deviation of this portfolio, let's
+replicate it with the market portfolio
+and the risk-free asset.
+Since this portfolio, which we will call P,
+is efficient because it is on the capital market line,
+the expected return and the standard deviation
+of this portfolio should be the same as the expected return
+and standard deviation of the replicating portfolio, which
+we'll call R. And, since we know the standard deviation of both
+the market portfolio, which is 25%,
+and the risk-free asset, which is 0%,
+we will be able to compute the standard deviation
+of this replicating portfolio.
+Let's invest w in the risk-free asset and 1 minus w
+in the market portfolio.
+We want this replicating portfolio
+to have the expected return of 16%.
+Therefore, we have the following equation--
+16% equals to w multiplied by 6%, which
+is the return of the risk-free asset, plus 1 minus w
+multiplied by the 14%, which is the expected
+return on the market.
+Solving this equation for w gives us negative 0.25.
+This means that the replicating portfolio
+is 25% short the risk-free asset and 125% long the market
+portfolio.
+Since the risk-free asset has zero variance by definition
+and the return on the risk-free asset
+is not correlated with any other asset, including the market
+portfolio, the variance of the replicating portfolio
+equals to 1 minus w squared times
+the variance of the market portfolio.
+Therefore, the standard deviation
+of this replicating portfolio R equals to 1 minus w multiplied
+by the standard deviation of the market portfolio.
+We know that w is negative 0.25.
+Therefore, 1 minus w is 1.25.
+The standard deviation of the market portfolio
+is 25%, which gives us 31.25%.
+Therefore, the standard deviation
+of the portfolio with 16% expected return is 31.25%.
+Finally, let's find the correlation
+of this portfolio with the market.
+Recall that beta of portfolio P is
+the ratio of the covariance of returns of this portfolio
+P with the market portfolio divided
+by the variance of the market portfolio, which equals
+to the correlation between portfolio P and M
+multiplied by the standard deviation of returns
+on portfolio P divided by the standard deviation
+of the market portfolio.
+We already know the beta of this portfolio
+P, which we computed in the first part of this question.
+It is 1.25.
+And we know the standard deviation
+of this portfolio, which we computed in the second part
+of this question.
+It is 31.25%.
+So putting this all together gives us
+the following equation.
+Solving this equation for rho gives us 1.
+Therefore, the correlation between the returns
+on this portfolio P and the returns on the market portfolio
+M is equal to 1.

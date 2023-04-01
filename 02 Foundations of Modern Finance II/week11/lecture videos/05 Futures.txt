@@ -1,0 +1,150 @@
+
+PROFESSOR: We now introduce futures contracts.
+A futures contract is an exchange
+traded standardized financial contract
+similar to the forward.
+The main distinction from the forwards
+is that futures contracts are marked to market daily.
+We will discuss the details of the mark
+to market process in a minute.
+Unlike the forwards, futures contracts are standardized.
+Terms of futures contracts include the description
+of the underlying commodity or asset, the quantity
+of the underlying to be delivered,
+and the settlement or maturity date.
+Futures contracts also specify the type of settlement.
+Some contracts involve physical delivery
+of the underlying asset.
+For other contracts, physical delivery
+is not desirable or not possible.
+Such contracts are settled in cash.
+For instance, consider a futures contract
+on the stock market index.
+Physical delivery would involve delivering all the stocks
+in the index.
+Instead, such contracts can be settled in cash,
+based on the value of the index at contract maturity.
+Futures contracts trade on a number
+of centralized exchanges.
+Some of the largest exchanges are the CME group,
+the National Stock Exchange of India,
+the Intercontinental Exchange, the CBOE, and Eurex.
+Trading in futures involves little counterparty risk
+because all trades on exchanges go through the clearinghouse.
+While we think of a futures contract
+as a financial transaction between the buyer
+and the seller, in reality each transaction
+is broken into two major transactions.
+The clearinghouse acts as the counter party
+to both the buyer and the seller.
+This significantly reduces the risk
+of counterparty default faced by the market participants.
+Gains and losses on futures positions
+are recognized, or marked to market, daily.
+Daily gains and losses are settled
+using the margin accounts.
+To make sure that this process functions properly,
+buyers and sellers of futures are
+required to maintain a certain level of collateral
+in their margin accounts.
+As an example, consider a futures contract
+on crude oil traded on NYMEX.
+This contract specifies the delivery date and the futures
+price.
+Each contract is for 1,000 barrels of oil.
+In this example, the initial margin is $3,960.
+To enter into the futures contract,
+both the buyer and the seller must deposit this amount
+into their margin accounts.
+Note that this amount represents a small fraction
+of the value of oil covered by a single contract.
+This allows futures traders to achieve
+large economic exposures with limited capital.
+In other words, futures contracts
+allow for a significant degree of leverage.
+The maintenance margin is $3,600.
+This is a trigger.
+Once the balance in the margin account
+falls below the maintenance margin,
+traders are required to restore the margin balance to the level
+of the initial margin.
+Alternatively, their position may be reduced or liquidated.
+When traders enter into this contract,
+no cash changes hands.
+The total market value of the contract is zero.
+We say that the buyer holds a long position.
+The long positions gains if the futures price rises.
+The seller holds a short position and benefits
+from price declines.
+Next, let's take a closer look at the mark to market process,
+and the cash flows it generates.
+We will compare a futures contract to a forward.
+We start with the forward.
+This is a contract on 1,000 ounces of gold.
+Suppose the current date is December 12,
+and the buyer and the seller enter
+into the forward contract maturing
+on the 15th of December.
+The two counterparties entered into the contract
+with the forward price of $500 per ounce.
+No money changes hands until the settlement date, December 15.
+On the 15th, the buyer pays the seller
+$500 per ounce for 1,000 ounces of gold
+and the seller delivers gold to the buyer.
+Next, consider the futures contract.
+The parameters are the same.
+The buyer and the seller enter into the contract
+on December 12 with the futures price of $500 per ounce.
+Later that day, the futures contract closes at $495
+per ounce.
+That is the settlement price for that day.
+This represents a gain of $5 per ounce for the seller
+and the corresponding loss for the buyer.
+The next day, on December 13, the buyer
+will see $5 per ounce deducted from her margin account,
+and the seller will have $5 per ounce
+credited to the margin account.
+
+Suppose that on the 13th, the futures contract
+settles at $491 per ounce.
+This is a $4 per ounce gain for the seller
+and the loss for the buyer.
+The next day $4 per ounce is deducted from the buyer's
+margin account, and the same amount
+is credited to the seller's account.
+The above process of daily settlement
+continues until the maturity date of the contract.
+On December 16, two things happen.
+First, the buyer gains $1 per ounce,
+and the seller loses the same amount
+due to the most recent price change
+relative to the previous day close.
+This is the last mark-to-market transaction on this contract.
+Second, the seller transfers 1,000 ounces of gold
+to the buyer, and the buyer pays the settlement price
+on the previous day, which is $498 per ounce.
+Note that the cumulative gain or loss on the futures contract
+is the same as on the forward.
+It is $2 per ounce, based on the difference
+between the initial futures price of $500
+and the closing price of $498 on December 15.
+The difference between forwards and futures is in timing.
+Under the forward contract, the total gain or loss
+are realized at contract maturity.
+Under the futures contract, gains and losses
+are realized incrementally, with daily mark-to-market
+throughout the life of the contract.
+Both forwards and futures prices are
+linked to the spot price of the underlying asset.
+The difference between the two contracts
+is in the timing of cash flows due
+to the mark-to-market process for futures.
+In this class, we ignore the effect
+of mark-to-market on pricing.
+We assume that the futures price, which
+would denote by H sub T is approximately
+equal to the forward price.
+Know that futures and forward prices
+may not be the same under stochastic interest rates,
+in which case one needs to develop separate pricing
+results for the futures contracts.

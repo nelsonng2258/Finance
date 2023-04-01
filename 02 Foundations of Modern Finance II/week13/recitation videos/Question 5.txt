@@ -1,0 +1,115 @@
+
+PROFESSOR: In this video, we will
+cover option price sensitivity as a function of the underlying
+stock price.
+Suppose that all assumptions of the Black-Scholes-Merton model
+hold.
+There is a stock, XYZ, with the current share price of $50.
+Suppose that it has annual volatility of 35%.
+The annualized continuously compounded risk-free rate
+is 1.25%.
+Consider a put option with the strike price of $55
+and six months to maturity.
+First, we will construct a replicating portfolio
+for this put option.
+Second, we will assume that the stock price decreases to $47.
+We will compute the change in the option price
+and the change in the value of the replicating portfolio.
+And finally, we will assume that the stock price increases
+to $53, and we will also compute the change in the option price,
+as well as the change in the value
+of the replicating portfolio.
+Let us start by building a replicating portfolio
+for this put option.
+First, recall that replicating portfolio
+for the call option in the context
+of the Black-Scholes-Merton model is as follows.
+We are buying N of X shares of the stock,
+and we are borrowing the following amount dollars
+at the risk-free rate.
+Now, what is the replicating portfolio for the put option?
+First, recall that we can price the put option
+by using the put call parity.
+So let's plug the Black-Scholes-Merton formula
+for the value of the call option into the put call parity
+equation.
+We get the following equation.
+And after rearranging terms, we can express the price
+of the put option as follows.
+Recall that N is the cumulative distribution
+function of the standard normal distribution, which
+means that N of x is always less than 1,
+which in turn means that the terms highlighted
+on the slide in red in parentheses,
+1 minus N of X and 1 minus N of X minus sigma
+multiplied by square root of T are positive.
+Therefore, to replicate the put option, we need to short 1
+minus N of X shares of the stock,
+and we need to invest the following amount of dollars
+at the risk-free rate.
+Let's construct replicating portfolio for our option.
+Recall that we already priced it in the previous video,
+and its price was $7.81.
+To replicate this option, we need
+to short the following amount of the underlying stock,
+and we need to invest $37.48 at the risk-free rate.
+I computed both of these values based on the option parameters
+that are given to us.
+By construction, the value of this replicating portfolio
+matches the value of the option.
+Let's see what happens to the value of the option
+and the value of the replicating portfolio
+when we change the stock price.
+I have copied the original price of the put option
+here, so that it doesn't change when I change the stock price.
+And I created a new field here for the new price
+which will change when I change the stock price.
+So when the stock price drops from $50 to $47,
+the original price, of course, stays the same.
+The new price increases to $9.73.
+Therefore, the price change is $1.92,
+which is the difference between the new price
+and the original price.
+Now, let's see what happens to the value
+of the replicating portfolio.
+So first, notice that I changed these two cells
+into the values and not the formula,
+so that the replicating portfolio that we constructed
+before does not change when I change the share price.
+But the value of the portfolio will
+change, because it depends on these parameters
+of the portfolio, but it will take into account the new share
+price.
+So when the share price drops to $47,
+the value of the replicating portfolio increases to $9.59
+from the original value of $7.81.
+So therefore, the value of the portfolio
+increases by $1.78, which, again, is just
+the difference between the new value of the portfolio
+minus the original value.
+We can make one important conclusion so far.
+When the share price drops from $50 to $47,
+the value of the put option increases more than the value
+of the replicating portfolio, so $1.92 versus $1.78.
+Let's see what happens when the share price increases to $53.
+In this case, the option price decreases by $1.64,
+and the value of the replicating portfolio decreases by $1.78.
+Let's summarize our results.
+They're highlighted here in yellow.
+We see that the value of the replicating portfolio
+does not increase as much as the option value
+when the stock price declines.
+On the other hand, the value of replicating portfolio
+decreases more than the value of the option
+when the stock price increases.
+The reason behind this result is that the value
+of the put option, as shown on this graph,
+is a convex function of the stock price.
+In other words, it has a positive gamma,
+similar to the call option, which we illustrated
+in the previous video.
+On the other hand, the value of our replicating portfolio
+is a simple linear function of the underlying stock price.
+Therefore, when the stock price increases,
+the value of replicating portfolio overshoots.
+And when the stock price decreases, it undershoots.

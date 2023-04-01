@@ -1,0 +1,94 @@
+
+PROFESSOR: We now add a risk-free asset to the mix.
+We still have multiple risky assets.
+With the risk-free asset in the portfolio,
+we can express each portfolio as a combination of two positions.
+One is the risk-free asset.
+And the other is a portfolio consisting only
+of the risky assets.
+As an example, consider a portfolio
+with $40 invested in the risk-free asset and $60 split
+evenly between the equity index and a long-term bond index.
+This portfolio has 40% invested in the risk-free asset.
+And the weights of equities and long-term bonds are 30% each.
+We can alternatively view this portfolio
+as a combination of two positions, 40% invested
+in the risk-free asset and 60% invested in a portfolio of only
+risky assets, which has 50% in equities
+and 50% in long-term bonds.
+More generally, consider a portfolio p with a fraction
+x invested in a risky portfolio q
+and fraction 1 minus x invested in the risk-free asset.
+The expected return on portfolio p
+is a weighted average of the risk-free rate of return
+and the expected return on portfolio q
+with the weights 1 minus x and x, respectively.
+The return variance on portfolio p
+equals the return variance of portfolio q times the square
+of the weight on q.
+Next consider the optimal portfolio choice
+with the risk-free asset.
+Prior to deriving the analytical solution to this problem,
+we can gain some intuition from its graphical representation.
+Start with the portfolio frontier
+of risky assets, which is the red curve.
+Select an arbitrary portfolio, either on the frontier,
+represented by the blue circle, or strictly
+to the right of the frontier, represented
+by the green circle.
+We combine each of these two portfolios
+with the risk-free asset.
+As a result, we are able to create any of the portfolios
+on the blue and green dashed lines.
+Know that all of these portfolios are inefficient.
+They are dominated by the portfolios
+on the solid black line, which combines a particular frontier
+portfolio with the risk-free asset.
+This frontier portfolio is the so-called tangency portfolio.
+Its position on the portfolio frontier
+is at a point where, if connected
+to the risk-free asset, the resulting line
+is tangent to the frontier.
+The efficient frontier obtained by combining
+the tangency portfolio with the risk-free asset
+has the highest possible slope.
+That is another way to define the tangency point.
+It is clear that the resulting set of portfolios
+dominates any other combination of the risk-free asset
+with the portfolio on or to the right of the red curve, which
+is the portfolio frontier of risky assets.
+The black line is called the capital market line.
+It represents the efficient frontier
+in the presence of the risk-free asset.
+The tangency portfolio plays a very important role
+in our analysis.
+In particular, as our discussion shows,
+all mean variance investors should
+hold the combination of the same portfolio
+of risky assets, the tangency portfolio,
+and the risk-free asset.
+This is a striking result. All mean
+variance investors optimally choose
+to hold the same index of stocks.
+We now introduce an important measure
+of the risk return trade off of a portfolio called the Sharpe
+ratio.
+This ratio was introduced by William Sharpe,
+one of the creators of the capital asset pricing model.
+The Sharpe ratio is equal to the expected excess return
+of the portfolio divided by its standard deviation.
+If we think of standard deviation
+as the quantitative measure of risk,
+the Sharpe ratio tells us how much compensation
+in the form of the risk premium a given portfolio
+provides per unit of risk.
+On our graph, the Sharpe ratio is the slope
+of the line connecting a portfolio
+with the risk-free asset.
+The tangency portfolio has the highest Sharpe ratio
+among all possible portfolios.
+In other words, all mean variance investors
+choose the risky portfolio with the highest Sharpe ratio.
+All other portfolios on the capital market line,
+which includes the tangency portfolio,
+have the same Sharpe ratio.

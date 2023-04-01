@@ -1,0 +1,85 @@
+
+PROFESSOR: We start with the simplest case of portfolio
+choice with two risky assets.
+Recall that the expected return on the portfolio
+is a weighted average of expected returns
+on the portfolio assets.
+The variance of portfolio return is a quadratic function
+of portfolio weights and depends on the individual return
+variances and the covariance of returns among the two assets.
+As an example, consider two ETFs, SPY and AGG.
+SPY is an Equity ETF represented in the S&P 500 index.
+AGG represents the aggregate investment grade bond index.
+In our analysis here, we use the sample moments of asset returns
+as the true population moments.
+With only two assets in the portfolio,
+there is only one possible combination
+of portfolio weights for each level of the expected
+return on the portfolio.
+In the following table, we summarize
+the relation between the portfolio weights
+and the moments of portfolio returns.
+This table tells us what level of portfolio risk corresponds
+to each given level of portfolio expected return.
+Here we represent the set of portfolios of SPY and AGG
+graphically.
+The curve is in the space of standard deviation and expected
+return.
+This curve represents the trade off
+between the expected return on the portfolio and the level
+of portfolio risk.
+Note that we did not consider negative portfolio weights.
+The curve here represents long-only portfolios.
+As a result, the two assets AGG and SPY are located at the two
+ends of the portfolio set.
+If we allow for short sales, portfolio weights
+may be negative.
+We extend our table to allow for negative weights
+on each of the two assets.
+We show the corresponding relation
+between the expected return and portfolio
+risk on the following graph.
+Because we allow short sales, the two assets no longer
+define the end points of the curve.
+In fact, there are no end points.
+The curve extends indefinitely, spanning all possible levels
+of expected return.
+The level of portfolio risk is bounded from below.
+There is a single portfolio achieving
+the lowest possible level of standard deviation.
+This portfolio is known as the minimum variance portfolio.
+Although the portfolio choice with two assets
+is extremely simple, we can already
+say something non-trivial about the optimal choice.
+No mean variance investor would want
+to hold the portfolio below the minimum variance portfolio.
+The reason is that, for any portfolio on the bottom portion
+of the curve, we can find another portfolio
+on the top portion with the same level of risk
+and a higher level of expected return.
+We say that the bottom portion of the portfolio set
+is inefficient.
+Each of these portfolios is dominated by another feasible
+portfolio and would not be chosen by any optimizing
+investor.
+Next we consider an important special case
+where the second asset is risk free.
+Then the standard deviation of the portfolio
+is a linear function of the portfolio
+weight of the first asset.
+So is the portfolio's expected return.
+As a result, the set of efficient portfolios
+forms a straight line in the risk expected return space,
+connecting the point on the vertical axis representing
+the risk-free asset with the risky asset.
+The lowest possible level of portfolio risk is zero.
+It is achieved by the risk-free asset.
+All portfolios with expected return
+lower than the risk-free rate of return are inefficient.
+And we show them here with a dashed line.
+
+Although the case of two assets with one of them
+risk-free appears to be extremely special,
+we will see that this is an important part
+of a general solution to the portfolio choice problem
+with multiple risky assets.

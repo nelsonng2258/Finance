@@ -1,0 +1,304 @@
+0
+00:00:00,000 --> 00:00:00,132
+
+
+1
+00:00:00,132 --> 00:00:02,340
+INSTRUCTOR: This week, we introduced the fundamentals
+
+2
+00:00:02,340 --> 00:00:04,560
+of portfolio theory.
+
+3
+00:00:04,560 --> 00:00:07,860
+Our focus is on portfolio choice under mean variance
+
+4
+00:00:07,860 --> 00:00:09,795
+preferences.
+
+5
+00:00:09,795 --> 00:00:13,360
+We solved for optimal portfolio with and without the risk
+
+6
+00:00:13,360 --> 00:00:16,149
+free asset and characterized the main properties
+
+7
+00:00:16,149 --> 00:00:19,080
+of the optimal portfolios.
+
+8
+00:00:19,080 --> 00:00:21,150
+We also point out the limitations
+
+9
+00:00:21,150 --> 00:00:23,970
+of the mean variance framework and introduce
+
+10
+00:00:23,970 --> 00:00:28,890
+a more general formulation using the expected utility theory.
+
+11
+00:00:28,890 --> 00:00:31,560
+Portfolio choice is an example of decision
+
+12
+00:00:31,560 --> 00:00:34,130
+making under uncertainty.
+
+13
+00:00:34,130 --> 00:00:37,280
+Among all possible distributions of portfolio value
+
+14
+00:00:37,280 --> 00:00:39,710
+next period, we choose the one that
+
+15
+00:00:39,710 --> 00:00:43,350
+is optimal for a particular investor.
+
+16
+00:00:43,350 --> 00:00:46,440
+We rank the distributions of portfolio value
+
+17
+00:00:46,440 --> 00:00:49,620
+using expected utility.
+
+18
+00:00:49,620 --> 00:00:53,100
+As a result, the objective of portfolio choice
+
+19
+00:00:53,100 --> 00:00:55,890
+is to find the composition of the portfolio that
+
+20
+00:00:55,890 --> 00:00:58,425
+maximizes the expected utility of the investor.
+
+21
+00:00:58,425 --> 00:01:01,680
+
+
+22
+00:01:01,680 --> 00:01:04,410
+An important special case of this problem
+
+23
+00:01:04,410 --> 00:01:07,710
+is the case of mean variance preferences.
+
+24
+00:01:07,710 --> 00:01:10,530
+This is the subject of what is called the modern portfolio
+
+25
+00:01:10,530 --> 00:01:14,880
+theory, and from now, we will assume that investors maximize
+
+26
+00:01:14,880 --> 00:01:17,670
+a mean variance objective.
+
+27
+00:01:17,670 --> 00:01:20,040
+The objective for the investor includes
+
+28
+00:01:20,040 --> 00:01:24,000
+the mean and the variance of portfolio return.
+
+29
+00:01:24,000 --> 00:01:26,550
+With these preferences, the investor
+
+30
+00:01:26,550 --> 00:01:31,050
+seeks to minimize portfolio risk for a given level of portfolio
+
+31
+00:01:31,050 --> 00:01:33,980
+expected return.
+
+32
+00:01:33,980 --> 00:01:36,920
+For a given level of portfolio risk,
+
+33
+00:01:36,920 --> 00:01:40,640
+investors maximize expected return.
+
+34
+00:01:40,640 --> 00:01:42,680
+We can visualize the investors objective
+
+35
+00:01:42,680 --> 00:01:44,960
+on the following graph.
+
+36
+00:01:44,960 --> 00:01:48,710
+The horizontal axis represents portfolio risk.
+
+37
+00:01:48,710 --> 00:01:51,320
+The vertical axis represents the expected return
+
+38
+00:01:51,320 --> 00:01:53,640
+on the portfolio.
+
+39
+00:01:53,640 --> 00:01:56,730
+The solid curves represent the combinations
+
+40
+00:01:56,730 --> 00:02:00,030
+of risk and expected return corresponding
+
+41
+00:02:00,030 --> 00:02:03,450
+to a given level of investor's objective.
+
+42
+00:02:03,450 --> 00:02:07,730
+An investor is indifferent among all the points on a given
+
+43
+00:02:07,730 --> 00:02:08,780
+curve.
+
+44
+00:02:08,780 --> 00:02:11,690
+These are the level curves.
+
+45
+00:02:11,690 --> 00:02:16,910
+Because the investor prefers low risk and high expected return,
+
+46
+00:02:16,910 --> 00:02:19,550
+the objective of the investor increases
+
+47
+00:02:19,550 --> 00:02:22,580
+as we move across the level curves
+
+48
+00:02:22,580 --> 00:02:25,770
+towards the upper left corner of the plot.
+
+49
+00:02:25,770 --> 00:02:28,320
+We can represent the portfolio choice problem
+
+50
+00:02:28,320 --> 00:02:30,350
+as the following problem.
+
+51
+00:02:30,350 --> 00:02:32,870
+Among all the portfolios with the target
+
+52
+00:02:32,870 --> 00:02:35,750
+level of expected return, find the one
+
+53
+00:02:35,750 --> 00:02:38,210
+with the lowest variance.
+
+54
+00:02:38,210 --> 00:02:42,680
+Formally, we need to solve the following optimization problem.
+
+55
+00:02:42,680 --> 00:02:46,310
+Minimize the variance of the portfolio return, which
+
+56
+00:02:46,310 --> 00:02:50,210
+is given by the sum across all pairs of assets,
+
+57
+00:02:50,210 --> 00:02:52,700
+of their return co-variance scaled
+
+58
+00:02:52,700 --> 00:02:54,920
+by the product of the corresponding portfolio
+
+59
+00:02:54,920 --> 00:02:56,740
+weights.
+
+60
+00:02:56,740 --> 00:02:59,160
+We impose two constraints.
+
+61
+00:02:59,160 --> 00:03:03,730
+First, portfolio weights must add up to one.
+
+62
+00:03:03,730 --> 00:03:07,190
+Second, the expected return on the portfolio,
+
+63
+00:03:07,190 --> 00:03:09,550
+which is a weighted average of individual asset
+
+64
+00:03:09,550 --> 00:03:14,290
+expected returns must equal the target level of portfolio
+
+65
+00:03:14,290 --> 00:03:16,540
+expected return.
+
+66
+00:03:16,540 --> 00:03:19,490
+As we discuss the portfolio choice problem,
+
+67
+00:03:19,490 --> 00:03:23,120
+we will use several examples, based on historical asset
+
+68
+00:03:23,120 --> 00:03:24,710
+returns.
+
+69
+00:03:24,710 --> 00:03:29,880
+In our examples, we use ETFs as risky assets.
+
+70
+00:03:29,880 --> 00:03:32,730
+Economically, each ETF on our list
+
+71
+00:03:32,730 --> 00:03:36,720
+represents an exposure to a distinct asset class.
+
+72
+00:03:36,720 --> 00:03:42,330
+Equities, high grade bonds, high yield bonds, gold,
+
+73
+00:03:42,330 --> 00:03:44,650
+and real estate.
+
+74
+00:03:44,650 --> 00:03:48,330
+All of these ETFs are US focused.
+
+75
+00:03:48,330 --> 00:03:49,000
+
+

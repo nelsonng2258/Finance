@@ -1,0 +1,82 @@
+
+PROFESSOR: In this video, we will
+use an example to demonstrate valuation of interest rate
+swaps.
+ABC Corporation has borrowed $3 million
+for the next three years at a variable interest rate.
+Under the terms of the loan, ABC will pay interest
+at the end of years one, two, and three.
+The interest rate that ABC will need
+to pay at the end of year one is based on the one-year spot
+interest rate in year zero.
+The interest rate to be paid at the end of year two
+will be based on the one-year spot rate in year one.
+And the interest rate to be paid at the end of year three
+will be based on the one-year spot rate in year two.
+Typically, corporate bank loans are tied to benchmark interest
+rates such as LIBOR.
+These benchmark rates vary over time.
+And therefore, interest rate and interest expense
+that corporations pay on their bank loans vary over time.
+Suppose that the current one year, two year,
+and three-year spot rates are 3.5%, 4%, and 4.2%
+respectively.
+These spot rates will be used to calculate present values.
+Now, given this term structure of interest rates,
+we know that the interest rate for the first year of the loan
+is 3.5%.
+However, we do not know what the interest rate will
+be during the second year of the loan
+because it will be whatever the one-year spot interest
+rate is at the beginning of the second year.
+Based on spot interest rates today, we
+can calculate the implied one-year spot
+rate that will be in effect during the second year.
+In other words, we can compute the one-year forward rate
+in year one.
+Please check that this rate is 4.502%.
+However, under this loan, the interest rate
+for the second year could be higher or lower than 4.502%
+depending on the interest rates in year one.
+Same logic applies to year three.
+ABC Corporation is not comfortable
+with the uncertainty of year two and year three interest rates.
+So it wants to enter into an interest rate swap that
+will fix the interest rates for the three
+years of the term of this loan.
+Let's characterize this interest rate swap.
+It has a three-year term.
+It has annual settlements with settlement dates
+at the end of years one, two, and three.
+And ABC Corporation will pay fixed rate
+which I'll denote as rs during the three years of the loan.
+The counterparty on the swap will pay the floating rate.
+To price this swap, we need to find the fixed rate rs.
+This interest rate should be fair to both parties
+in the sense that the present value of interest expense
+at variable rate should equal to the present value of interest
+expense at the fixed rate.
+We will use this equation to find rate rs.
+To use this pricing equation, let's first
+find our interest expense at the variable rates.
+In year one, our interest expense
+will be the principal amount, the $3 million,
+multiplied by spot rate r1, which is
+3.5% which gives us $105,000.
+In year two, our interest expense
+will be the face value of the loan, which is again $3 million
+multiplied by one-year forward rate
+in year one, which is 4.502%.
+This gives us the interest expense of $135,072.46.
+Finally, in year three, the interest expense
+will be face value, $3 million, multiplied
+by one-year forward rate in year two.
+You can verify that this rate is 4.601%.
+And therefore, the total interest expense in year three
+is $138,034.64.
+At the fixed interest rate rs, our annual interest expense
+will be $3 million face value multiplied by the rate rs.
+Putting this all together, this is our swap pricing equation.
+The only unknown in this equation is the fixed rate rs.
+Solving this equation for this rate
+gives us the fixed rate of 4.185%.

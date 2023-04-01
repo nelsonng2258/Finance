@@ -1,0 +1,106 @@
+
+PROFESSOR: We now consider futures on commodities.
+We can price commodity futures using
+the same type of arbitrage argument
+as for financial futures.
+In contrast to the financial futures,
+the net payout of commodity futures
+must reflect storage costs and any effective benefit
+from holding the physical commodity.
+This benefit is called convenience yield.
+We assume that storage costs accumulate continuously
+with the flow rate proportional to the market
+value of the commodity.
+Then, our original valuation formula
+for financial forwards and futures
+applies here, with the dividend yield
+replaced by the net convenience yield
+from holding the commodity.
+The net convenience yield captures
+the benefits of storing the commodity, net
+of storage costs.
+As an example, consider a futures contract on gold.
+Gold is often held for long-term investments rather than
+industrial production.
+We assume that storing gold produces no convenience yield.
+Gold is also relatively easy to store.
+Therefore, we assume that storage costs are negligible.
+Under these assumptions, net convenience yield on gold
+is equal to 0.
+We conclude that the futures price of gold,
+which is approximately the same as the forward price,
+is equal to the current spot price, multiplied
+by the exponential function of the risk-free rate,
+times the time remaining until contract maturity.
+To illustrate how well our pricing
+formula for gold futures works in the data,
+consider the gold futures contract
+on the 1st of July of 2019.
+The spot price of gold at the time was $1,387.45 per ounce.
+The futures price for the contracts maturing
+in October of the same year, traded on the CME,
+was $1,397.80 per ounce.
+Based on our pricing formula for gold futures,
+the relation between the futures price and the spot price
+implies that the continuously compounded interest
+rate is 2.23%.
+This is very close to the rate on the three month T-bill,
+which at the time was 2.05%.
+Next, consider oil futures.
+In contrast to gold, inventories of oil
+are typically held for future use
+and not for long-term investment.
+Oil is also relatively costly to store.
+This means that storage of oil incurs both benefits
+and physical costs.
+Our valuation equation reflects this
+through the term representing the net convenience
+yield on storing oil.
+As an example, on the 19th of July of 2019,
+the spot price of crude oil was $55.68 per barrel.
+The futures price for the NYMEX contracts
+for delivery in October of the same year
+was $55.83 per barrel.
+The three-month continuously compounded interest rate
+at that time was 2.3%.
+
+With the futures contracts being 3 and 1/2 month expiration,
+our valuation formula implies the annualized net convenience
+yield of 1.4%.
+This is what market prices tell us
+about the marginal costs and benefits of storing oil
+at that time.
+Based on our examples, we see that the futures prices
+of commodity contracts may be above or below the current spot
+price.
+Whether futures prices increase or decline with maturity
+depends on the economics of storing the underlying
+commodity and the current state of the market and inventories.
+When futures prices increase with maturity,
+it is said that the forward curve is in contango.
+Otherwise, it is in backwardation.
+Under this definition, backwardation
+occurs when the net convenience yield exceeds the interest
+rate.
+Note that sometimes definitions of contango and backwardation
+adjust for the time value of money.
+The following plot illustrates various shapes
+of the forward curves one may observe in the market.
+The forward curve for gold is practically flat,
+which is consistent with the low level of the risk-free rate.
+The curve for oil is in contango,
+which means that the net convenience yield on storing
+oil is relatively low.
+In contrast, for iron ore, net convenience yield
+is relatively high.
+And this curve is in backwardation.
+Finally, the forward curve for natural gas
+shows fluctuations in relation to seasonal demand patterns.
+Natural gas is relatively difficult to store.
+Therefore, our pricing model is not
+very useful for explaining prices
+of longer-dated natural gas contracts.
+Storage-based models are also more suitable
+for short-dated agricultural contracts,
+such as sweet futures than for longer dated contracts,
+which are affected by supply from future harvests.

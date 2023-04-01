@@ -1,0 +1,100 @@
+
+PROFESSOR: If we reduce the time length of the binomial step
+towards 0 holding the maturity date of the option fixed,
+our pricing formula for the European call
+converges in the limit to the highlighted expression.
+This pricing formula is the famous Black-Scholes-Merton
+formula for the prices of European call options.
+This formula uses our standard notation
+with the addition of one new element,
+the function N here denotes the cumulative distribution
+function of the standard normal random variable.
+Note that just like for the binomial model,
+the option price depends on the strike
+price of the option and its time to maturity, the initial stock
+price, the risk-free rate, and the standard deviation of stock
+returns.
+Option price does not depend on the expected stock return which
+corresponds to the probability of the up or down move
+in the binomial model.
+
+As we discussed, in the limit of the timestep
+of the binomial tree converging to 0,
+the distribution of stock returns
+converges to a log normal distribution.
+This type of process for the stock price
+is known as the geometric Brownian motion.
+The original derivation of the Black-Scholes-Merton model
+does not start with the binomial model.
+Instead, it begins with the assumption
+that the stock price follows the geometric Brownian
+motion so that stock returns are log normally distributed.
+Then, the replication argument can
+be used to derive the expression for the option price.
+This requires advanced mathematical methods
+for dealing with continuous time-price processes
+and portfolio rebalancing.
+These methods are known as stochastic calculus.
+In contrast, our derivation here uses the binomial model
+and does not require such advanced mathematics.
+Let's take a closer look at the Black-Scholes-Merton formula.
+We know that the value of the option
+is equal to the value of its replicating portfolio.
+The replicating portfolio for a call
+is a levered long position in the stock.
+The first term in the formula corresponds to the dollar
+amount invested in the stock.
+It's a product of the stock price
+and the number of shares of the stock
+in the replicating portfolio.
+The second term in the formula reflects
+the dollar amount borrowed.
+As we just pointed out, the term N of x
+is the number of shares of the stock
+in the replicating portfolio, or the options delta.
+It is the limit of the binomial formula
+as the timestep converges to 0 and single-period stock price
+movements become infinitesimal.
+We can see that in the limit, the binomial expression
+for the options delta converges to the partial derivative
+of the option price with respect to the stock price, which
+is equal to N of x.
+We are now in a position to investigate
+how stock return volatility affects option prices.
+We do this in the context of the Black-Scholes-Merton model,
+which is the limit of the binomial model.
+This model imposes two important assumptions.
+The stock price follows the geometric Brownian motion,
+which means that stock returns are log normal
+and independently and identically distributed
+across non-overlapping periods.
+The interest rate is constant.
+Under the Black-Scholes-Merton model, prices of European
+calls and puts increase with stock return volatility.
+To see why option values increase
+with the volatility of the underlying
+asset under the Black-Scholes-Merton model,
+consider a simple binomial example.
+We have two firms, A and B, with the same current price of $100.
+There are two states next period, good and bad.
+B has higher volatility of future prices.
+Its value is lower in the bad state
+and higher in the good state compared to A.
+Consider a call options written on A and B
+with the same exercise price of $100.
+The call on B pays off more than the call on A in the good state
+and the same amount in the bad state.
+It is clear that the call on stock B
+should be more valuable.
+Higher volatility of stock returns
+means that at expiration, we are more likely to see
+very high and very low returns.
+This raises the value of the call option.
+The call option benefits from high underlying price
+at maturity, while the payoff of the option for low underlying
+prices is capped at 0.
+The option provides upside participation,
+but limited downside.
+It benefits from higher volatility.
+Similar logic applies to the put options,
+which are connected to the calls by the put-call parity.

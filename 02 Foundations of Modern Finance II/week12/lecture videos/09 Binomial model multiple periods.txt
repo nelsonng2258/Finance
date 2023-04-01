@@ -1,0 +1,105 @@
+
+PROFESSOR: We now extend our binomial model
+to multiple periods.
+Suppose that the stock price starts at 50, as before,
+and rises or falls by 50% each period for two periods.
+The option is a European call with the strike of $50.
+At maturity, which is time 2, the option pays 62.5
+in the highest node, where the stock price is $112.50,
+and nothing in other nodes, where the stock price is below
+the strike.
+We denote the price of the option in the up node at time 1
+by C sub u.
+In the down node, it is C sub d.
+We first compute the price of the option
+in each of the time 1 nodes and then proceed back to time 0.
+We start in period 1 in the up node.
+The stock price is 75.
+As we did for the one period binomial model,
+we construct the replicating portfolio.
+In this case, the portfolio includes
+0.833 shares of the stock and minus 28.4 units
+of the risk-free bond.
+The cost of this replicating portfolio is $34.075.
+This must be the value of the call
+option in the up node at time 1 by the law of one price.
+In the down node, we are solving the same one-period problem.
+The solution in this case is trivial
+because the option pays 0 in both of the nodes next period.
+The value of the option at time 1 in the down node
+is therefore 0.
+We move back to time 0.
+Again, we are dealing with a single period binomial pricing
+model.
+The payoff at the end of the period
+is given by the option values we have computed for time 1.
+These are $34.075 in the up node and $0 in the down node.
+We construct the replicating portfolio at time 0
+and determine the price of the option
+as the cost of this replicating portfolio.
+The replicating portfolio at time 0
+includes 0.6815 shares of the stock
+and minus 15.48 units of the bond.
+The cost of the replicating portfolio is $18.60.
+This is the value of the option at time 0.
+We now combine our results to show how option replication
+works over multiple periods.
+We start at time 0 with $18.60, which is the value
+of the option at time 0.
+We borrow $15.48 at a 10% interest rate
+to buy 0.6815 shares of the stock.
+Note that 0.6815 is the delta of the option at time 0.
+
+At time 1, consider the up node first.
+In this node, our replicating portfolio
+is worth $34.075, which is equal to the value
+of the option at that node.
+We rebalance our portfolio.
+In addition to $34.075, we borrow
+$28.4 at 10% interest rate to buy 0.833 shares of the stock.
+One period later, at time 2, the pay for this portfolio
+exactly matches the payoff of the call option.
+In the down node at time 1, the option is worth 0,
+and we have no stocks or bonds in the replicating portfolio.
+The bottom line is that no matter what
+happens to the stock price between time 0
+and option maturity, our replication strategy
+generates the same terminal value as the option.
+By the law of one price, the initial cost
+of the replicating portfolio must equal
+the market price of the option.
+To compute the value of the option,
+we used the following inputs--
+the current price of the stock, the magnitude of stock returns,
+up or down--
+this is a measure of stock return volatility--
+the risk-free interest rate, the strike price of the option,
+and its time to maturity.
+It is important that we did not use
+the probabilities of the up and down nodes in the stock price.
+And we did not use any information about investor's
+risk tolerance.
+We did not need this information because our pricing argument
+relies on option replication.
+We replicate the option state by state,
+no matter what happens to the stock price.
+As a result, we do not need to know
+how likely one state is over the other
+or how investors feel about gains and losses.
+
+The binomial model is clearly restrictive
+and raises several questions.
+As we apply the model, what should be
+the length of each time step?
+In the data, prices can clearly take more than two
+possible values each period.
+How can we reconcile this with the binomial model?
+The binomial model has discrete time steps,
+while in reality, trading takes place almost continuously.
+Is the binomial model a good description of stock returns?
+All of these concerns can be addressed by shortening
+the time step in the model.
+We will explore this in the second part of the lecture.
+As we reduce the time step in the binomial model,
+we will derive the celebrated Black-Scholes-Merton option
+pricing model.

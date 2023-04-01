@@ -1,0 +1,215 @@
+
+PROFESSOR: In this segment, we discuss
+the relation between risk and return under the CAPM model.
+Under CAPM, the risk premium of any stock
+is proportional to its market beta.
+This is a linear relationship between risk and return.
+And we can represent that graphically.
+On the graph, we show the market beta on the horizontal axis.
+On the vertical axis, we show the expected return of a stock.
+The risk-free asset, for example,
+is on the vertical axis because its market beta is zero.
+We represent the linear CAPM relation
+between systematic risk and expected return
+as a straight line, which is called the security market
+line or, in short, SML.
+We should not confuse this with the capital market line, which
+represents the lowest possible standard deviation of portfolio
+return for a given level of expected return.
+In addition to the risk-free asset,
+the security market line passes through a point representing
+the market portfolio.
+For this point, the market beta is equal to 1.
+And the expected return is the market expected return.
+We see that the slope of the security market line
+is equal to the market risk premium.
+For any other asset, we can determine its expected return
+in relation to its market beta according
+to the linear relation plotted here.
+As an example, suppose that CAPM holds.
+The expected market return is 8%.
+And the risk-free rate is 2%.
+In this market, any asset with zero market beta
+earns the same expected return as the risk-free rate.
+Note that this is true even if this asset is highly volatile.
+Under CAPM, such an asset has only idiosyncratic risk.
+And such risk is not compensated by the market.
+Any asset with the market beta of 1
+has the expected return equal to the market expected return,
+which is 8%.
+Again, an asset could be much more volatile
+than the market portfolio.
+Yet, it earns the same expected return.
+The reason is that total return volatility is not
+the right measure of risk.
+The market beta is.
+Investors in this framework do not hold a single asset.
+They hold the market portfolio, which
+benefits from diversification.
+As a result, from the perspective
+of these diversified investors, an asset
+contributes to their portfolio risk in proportion
+to its market beta.
+Market beta is the right measure of stocks systematic risk
+not its total volatility or variance.
+Next, consider an asset with the market beta of 0.5.
+Systematic risk of this asset is lower than that of the market
+portfolio by a factor of 2.
+According to CAPM, the risk premium of this asset
+is also lower by the same factor.
+We conclude that the expected return on such an asset
+should be the risk-free rate or 2%
+plus its beta, 0.5, scaled by the market risk premium, which
+is 6%.
+The result is 5%.
+Finally, suppose we have an asset with the market
+beta of minus 0.6.
+For this asset, using the CAPM formula,
+we find the expected return of minus 1.6%.
+It is negative.
+Why would investors be willing to hold
+an asset with a negative expected return.
+The reason is that having an asset
+like that in the portfolio helps lower the overall portfolio
+risk.
+This asset effectively provides insurance
+against market declines.
+Such insurance is costly.
+And this cost amounts to losing 1.6% in expectation
+on each dollar invested in the asset.
+We now consider the risk return trade-off
+under CAPM from a slightly different angle.
+For any asset we can decompose its excess return
+by regressing it on the market excess return using the OLS
+regression.
+As a result, the excess return is equal to the intercept
+or alpha plus the excess return on the market
+scaled by the slope coefficient, which is equal to the asset's
+market beta.
+Plus the residual, which is 0 in expectation and is
+uncorrelated with the market return.
+Note that this decomposition has nothing to do with the CAPM.
+We can always decompose asset returns in such manner.
+What we have here is a mathematical identity.
+CAPM tells us something more.
+Under CAPM, the intercept, the alpha of the asset,
+must be equal to 0.
+In empirical analysis, it is very common
+to express the implication of the CAPM
+as we have here as a restriction on the intercept in the OLS
+regression of the stock's excess return
+on the market excess return.
+If CAPM holds, alphas of all assets should be 0.
+Alpha is, therefore, a measure of violation
+of the CAPM formula.
+A non-zero alpha implies that an asset earns expected return
+above and beyond what is justified
+by its systematic risk, or its market beta.
+What should we think if we encounter an asset
+with a positive or negative alpha?
+Is this evidence of mispricing or an attractive investment
+opportunity?
+First, we need to worry about estimation errors.
+True values of the coefficients in our regression
+are not known.
+Our empirical estimates based on the past return data are noisy.
+Our estimates may also be biased if the distribution of returns
+is not stable across time.
+This is the case of past returns not
+predicting future performance.
+It is a lot easier to find alpha in past data
+than to realize it in actual investments going forward.
+We should also keep in mind that if CAPM fails,
+alpha may not represent a free lunch.
+It may reflect markets compensation
+for other sources of systematic risk, which
+are distinct from the market return,
+yet, important to investors.
+There may be many other reasons for the failure
+of CAPM in the data.
+CAPM is a theoretical model based on strong assumptions
+about the market and investors.
+Various trading frictions, including
+transaction costs, constraints on positions,
+as well as taxes and capital gains and dividends,
+may lead to deviations from the CAPM relation.
+Yet, these deviations may not be easy to exploit,
+in part because of the frictions that give rise to them.
+We now consider how exactly an investor could take
+advantage of CAPM violations.
+Suppose that the alpha in our return
+decomposition is non-zero.
+Consider a mean variance optimizing investor.
+We want to know how this investor should deviate
+from holding the market portfolio in order to exploit
+a CAPM violation or mispricing.
+We will show that if CAPM is violated,
+an investor can achieve a higher Sharpe
+ratio than what is offered by the market portfolio.
+And we will compute the highest possible Sharpe ratio
+explicitly.
+To simplify our analysis, let's first
+construct a particular portfolio.
+Call it portfolio P. Portfolio P includes three positions.
+A $1 long position in stock i, which is our mispriced asset.
+A position in the market portfolio,
+which equals in size the negative of the market
+beta of stock i.
+So if our stock has a positive market beta,
+this will be a short position in the market portfolio.
+Finally, the third position is beta dollars
+invested at the risk-free rate.
+The total investment in portfolio P is $1.
+The portfolio return is described
+by the following equation.
+It is a weighted average of returns on the three portfolio
+positions.
+This is the return on asset i minus its beta
+times the excess return on the market portfolio.
+Using the above decomposition of the return on asset i,
+we find that the return on portfolio P
+equals the risk-free rate plus the alpha
+of asset i plus its idiosyncratic return,
+epsilon i.
+Know that, by construction, the return on portfolio P
+is uncorrelated with the market return.
+Moreover, the Sharpe ratio of this portfolio
+is equal to the ratio of the alpha of asset i
+to the standard deviation of its idiosyncratic return,
+epsilon i.
+
+Note that instead of deciding how
+to invest in a combination of the market portfolio and asset
+i, we can equivalently solve for the mean variance optimal
+combination of the market portfolio
+and portfolio P. In other words, we
+want to find the tangency portfolio using two assets--
+portfolio P and the market portfolio.
+Using the general solution for the tangency portfolio, which
+in this case is particularly simple because the two assets--
+the market portfolio and portfolio P--
+are uncorrelated, we find that the weight on the market
+is proportional to the ratio of the market risk premium
+to the market return variance.
+The weight on portfolio P in the tangency portfolio
+is proportional to the ratio of its risk premium,
+which is alpha i, to its return variance, which
+is the variance of epsilon i.
+After a little algebra, we find that the Sharpe
+ratio of the tangency portfolio is
+the square root of the sum of squares of the Sharpe
+ratios of the market portfolio and portfolio P. This
+is a useful formula to keep in mind in general
+as it applies to portfolios with uncorrelated assets.
+In summary, we see that whenever CAPM is violated
+investors have an opportunity to improve their Sharpe
+ratio by deviating from the market portfolio.
+Failure of the CAPM means that the market portfolio
+is not on the efficient frontier and does not
+have the highest possible Sharpe ratio.
+The magnitude of the violation of the CAPM
+can be summarized by the possible improvement
+in the Sharpe ratio, which in turn is
+a function of the Sharpe ratio of portfolio P.
+It's the ratio of the alpha of the mispriced asset
+to its idiosyncratic volatility.

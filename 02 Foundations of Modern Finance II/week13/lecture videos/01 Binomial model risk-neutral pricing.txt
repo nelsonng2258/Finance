@@ -1,0 +1,154 @@
+PROFESSOR: This week, we continue our exploration
+of option pricing.
+We developed the risk-neutral pricing method,
+which is a powerful and widely used
+approach to option valuation.
+We applied this framework to pricing of exotic options.
+We also derived the Black-Scholes-Merton option
+pricing model and discussed its empirical implementation.
+In this section, we introduced the risk-neutral approach
+to option pricing.
+Risk-neutral valuation method was introduced in the 1970s
+by John Cox and Stephen Ross.
+We start with the binomial model in its general form.
+Stock price follows a binomial process rising by multiple of u
+or falling by a multiple of d over the next period.
+The risk-free interest rate is equal to r.
+To avoid arbitrage, we assume that the stock
+return and the bond return do not dominate each other.
+In the up node, the stock performs better than the bond.
+And in the down node, the bond outperforms the stock.
+Formally, we impose the restriction
+that u exceeds 1 plus r, which is greater than d.
+Consider an option on the stock.
+To be specific, let it be a call option with a strike
+price of k.
+Its payoff is a function of the stock price at expiration.
+It's the maximum of 0 and the difference between the stock
+price and the strike.
+As we did in our numerical example,
+we priced the option by replication.
+We form a replicating portfolio with delta shares
+of the stock and B dollars in the riskless bond.
+We require that the value of the replicating portfolio
+matches the value of the option at each node next period.
+This imposes two restrictions on delta and B.
+We find a unique solution for the composition
+of the replicating portfolio.
+We then expressed the option price at time 0
+as the initial value of the replicating portfolio.
+Recall that this follows from the law of one price.
+The option and its replicating portfolio
+have the same payoff next period in each state.
+Therefore, they must trade at the same current price.
+Next, we rewrite the expression for the option price
+to reveal the risk-neutral pricing formula.
+First, define two numbers, q sub u and q sub d,
+in relation to stock returns in the up and down nodes
+and the risk-free rate.
+Note that according to our definition,
+these two numbers are positive and sum up to 1.
+Because of that, we can interpret these numbers
+as probabilities for the up and down states
+on the binomial tree.
+From here on, we will use q to denote the probability
+corresponding to the up node, and then 1 minus q corresponds
+to the down node.
+We now return to our general expression for the option price
+and rewrite it using the q probabilities.
+We find that the option price at time 0
+is equal to the expected value of the options payoff
+using q probabilities discounted at the risk-free rate.
+q probabilities are called the risk-neutral probabilities.
+The reason for this name is that we are discounting the expected
+payoff on the q probabilities at the risk-free rate.
+This is how the discounted cash flow formula would look
+if investors were risk neutral.
+Keep in mind that q probabilities are
+a convenient mathematical construct,
+and our interpretation of these numbers in relation
+to risk neutrality is an intuitive analogy,
+but we do not impose any restrictions
+on investors' preferences.
+We do not know how risk averse investors are,
+and we do not need to know that.
+Our pricing results are based entirely
+on arbitrage arguments.
+Risk-neutral pricing may seem like a bit
+of mathematical magic.
+We derive the option pricing formula
+using the law of one price and the dynamic replication
+argument.
+Then, at the very end, we rewrite the valuation formula
+using risk-neutral probabilities.
+Why is this possible?
+To gain some intuition, let's start with the knowledge
+that the payoff of any option can be replicated by trading
+in the stock and the bond.
+We will not use the exact option pricing formula, only
+the notion that replication is possible.
+Change the probabilities of the up/down stock price
+changes so that the expected return of the stock
+becomes equal to the risk-free rate at each node.
+We call these new probabilities q probabilities.
+Then, expected return on the replicating portfolio
+under these q probabilities equals the risk-free rate.
+This is because the return on the portfolio
+is a weighted average of returns on its positions,
+and both the stock and the bond have the same expected return
+under the q probabilities, the risk-free rate.
+Next, we apply the discounted cash flow formula
+to determine the value of the replicating portfolio, which
+is the same as the payoff of the option.
+The discount rate and the discounted cash flow relation
+is the expected return on the replicating portfolio, computed
+under the q probabilities.
+Based on our construction, this discount rate
+is the risk-free rate.
+We reach the conclusion that the price of the option at time 0
+is equal to its expected payoff evaluated
+under the q probabilities discounted
+at the risk-free interest rate.
+
+Notice that we are able to derive
+the risk-neutral valuation formula using
+only the result that dynamic replication is possible.
+We did not use the exact expression
+for the replicating portfolio or the option price.
+Also, note that the q probabilities we introduce here
+must be given by our formula for the risk-neutral probabilities.
+There is only one way to assign the probability
+to the up node on the tree to make expected stock
+return equal to the risk-free rate.
+We can price all assets in the model using
+the risk-neutral probabilities.
+For example, the initial price of the stock
+is equal to the expected value of the terminal stock
+price computed under the risk-neutral probabilities
+discounted at the risk-free rate.
+In our numerical example, with u equal to 1.5 and d
+equal to 0.5, the q probability of the up move is 0.6.
+Then, we confirm that the initial stock price of $50
+is indeed equal to the expected terminal price discounted
+at the 10% interest rate.
+For the bond, the risk-neutral valuation formula
+clearly holds.
+And the option price at time 0 computed
+using the risk-neutral formula is
+the same as the price we have derived
+using dynamic replication.
+This has to be the case, of course, based
+on our general definition of the risk-neutral valuation formula.
+In summary, the risk-neutral price simulation
+applies to the basic assets, the stock, and the bond,
+and to all options on the stock.
+In a multi-period model, we use the same approach.
+All we need is to compute the probabilities
+of the various nodes in the tree using
+the risk-neutral transition probabilities between nodes
+each period.
+We then discount expected payoffs
+at the risk-free rate over multiple periods.
+The numerical examples here illustrate
+how to compute the prices of the European call
+and put options in a two-period binomial model.

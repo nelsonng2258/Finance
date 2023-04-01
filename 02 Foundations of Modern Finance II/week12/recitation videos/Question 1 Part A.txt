@@ -1,0 +1,131 @@
+
+PROFESSOR: In this question, I will teach you
+how to draw payoff diagrams and understand
+the payoffs of a portfolio of different options.
+This is a very useful application.
+So let's consider the following example.
+We have a stock, ABC.
+Its current price is $90.
+And then we have four one-year options.
+Two of them are put options, and the remaining two
+are call options.
+The two put options have strikes $90 and $110.
+And two call options have the same strikes, $90 and $110.
+The first question asks us to draw
+a payoff diagram for two puts and one bond
+with a face value of $20.
+So think of-- see yourself as an investor who
+buys these two puts with a strike of $90 and one bond
+with a face value of $20.
+Now what your payoff diagram would
+look like in one year from now when these two puts expire?
+Now let's first start with understanding
+how the payoff from buying two put options with a strike
+price of $90 would look like.
+Recall that the payoff diagram from buying just one
+put option with a strike price of $90
+is going to look like this.
+So we have a positive line that goes
+at a negative 45-degree angle from 90 to 90,
+and the payoff function looks like this.
+So it's 90 minus s1.
+s1 is the price of the underlying asset--
+in this case, it's a stock--
+at the expiry date, which is one year from now.
+So, therefore, I denote it by just s1.
+Recall that the current price of the stock
+has nothing to do with this payoff diagram.
+It's relevant, of course, for the pricing of the option,
+but it's irrelevant for what would
+be our payoff from buying this one put
+and holding onto it for one year.
+So this is just one put option.
+Now what's going to be-- if we're
+going to be buying two put options,
+what would our payoff diagram look like?
+Well, one way to figure this out is just
+to mathematically multiply this payoff
+that we get from one put option by 2
+because, if we are buying two put options, therefore,
+we would get twice the payoff.
+So multiplying this by 2 would give us the following.
+So the first part would be just 90 minus s1 multiplied by 2.
+So it'll be 180 minus 2 s1--
+and this is for the case when the share price ends up
+being below 90, and, therefore, exercise becomes optimal--
+or 0 otherwise if the share price ends up being higher
+than the strike price.
+Now, this is how, mathematically,
+the payoff from buying two put options would look like.
+And, graphically, if we were to graph this,
+it would be just the line that starts, if s1 is 0,
+this would be-- this function would be 180.
+So it's the line that starts at 180.
+It has a negative 2 slope, and it goes all the way down to 0.
+So, if s1 equals to 90, this expression is 0.
+So, 180 and 90 here, that's a straight line.
+And then it goes at 0 if the share price ends up
+being above $90.
+So this raise here is 2, as opposed to,
+when we have one put option here, it is just 1.
+Now we can extend this and just generalize.
+So, if we had three put options, we would get 270,
+and this line would start at 270.
+And it's going to go to 90 and then continue
+being just a flat line at 0.
+And any other number of put options
+would just go all the way up, and we're
+going to start at that.
+For example, 10 put options is going to start at 900.
+It's going to go down to 90.
+And then it's going to be a zero line.
+Once we figured out how the payoff
+diagram from buying two puts looks like,
+let's bring the bond back in.
+So now this is the payoff that we get from buying a bond.
+If we buy a bond that has a face value of $20,
+it means that it pays off $20 to us at the end of year one.
+We'll assume that it has one year to maturity, no coupon
+payments.
+So it's a zero coupon, $20 face-value bond.
+So it pays $20 at the end of year one,
+and it gives us this $20, irrespective of the price
+of stock ABC in year one.
+So, for any s1, this is just going to be 20.
+So it's a flat line at 20.
+So now we're constructing this portfolio
+by buying these two puts and this one bond.
+So, therefore, we need to add up this diagram with this diagram.
+The easiest way to do that is to, first, start
+mathematically, just looking at the mathematical expressions
+for the payoff for the bond and payoff for the two
+puts, and add them up.
+So this is the payoff for the bond.
+This is payoff for the two puts.
+If we add them up, we are adding 20
+and plus 180 minus 2 s1 if s1 is less than 90.
+So this is going to be 200 minus 2 s1 for s1
+less or equal than 90.
+And, if s1 is above 90, it's going to be 20 plus 0.
+So is going to be 20.
+So, therefore, the combined payoff
+from buying two puts and this bond
+is going to be 200 minus 2 s1, if s1
+is less than or equal to 90, and 20 if s1 is above 90.
+Now so this is a mathematical expression.
+All we have to do right now is to plot it.
+Well, we can simply plot it just kind of piecewise
+by starting at, for example, if s1 equals to 0,
+then this payoff is going to be 200.
+And, if s1 goes all the way to 90,
+it means this payoff is going to be 200 minus 2 times 90.
+This is 180.
+So this will be just $20, somewhere here,
+so at 20 and 90.
+And then, all the way, if s1 ends up being above $90,
+so this payoff is going to be $20 as well.
+So it's $20 from here, from 90 and above, and starts at 200
+and goes down to 90.
+So this is the payoff diagram from buying two puts
+with a strike price of $90 and buying one bond with a face
+value of $20.

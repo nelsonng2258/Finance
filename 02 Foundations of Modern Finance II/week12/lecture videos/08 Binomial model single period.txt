@@ -1,0 +1,82 @@
+
+PROFESSOR: So far, we have been focused on model free results.
+These are restrictions on option prices
+that must hold, regardless of the properties
+of the underlying asset.
+We now want to refine these results
+to make more precise statements about option prices.
+To do that, we need to introduce an explicit model
+of the underlying price process.
+The model we introduce is the binomial model.
+This is an important model in option pricing.
+This model is highly tractable, so it
+helps us understand the logic of option valuation.
+It is also very versatile, and is commonly
+used for computing option prices numerically.
+We start with a single period version of the model.
+Current time is zero, and the option matures at time one.
+We can only trade today at time zero.
+As we will show, option price depends on the current price
+of the underlying stock, the strike price, time to maturity,
+the risk-free interest rate, and return volatility
+of the underlying asset.
+We want to highlight that option prices are highly
+sensitive to stock return volatility, which
+is one of the key inputs into the model.
+Consider a specific example--
+a European call option on a stock.
+The current price of the stock is $50.
+There is a single period to maturity.
+Over the next period, the price of the stock
+will either go up to $75, or down to $25.
+There are no dividends.
+The strike price of the option is $50.
+We assume that the one period interest rate is 10%.
+One can borrow or lend without constraints
+at this risk-free rate.
+We represent the stock price process
+on the left as a binomial tree.
+The initial price here is $50, rising to $75,
+or falling to $25 next period.
+We express all other prices in relation to this tree.
+For the bond price on the right, the value at time one
+is the same in the up and down nodes.
+Finally, the value of the option at time one
+is a function of the stock price at the corresponding nodes
+of the tree.
+In the up node, the stock price is $75
+and the payoff of a call with the $50 strike is $25.
+In the down node, the payoff of the co-option is zero.
+Our objective is to figure out the price
+of the option at time zero.
+Our approach is to form a portfolio of stock and bond
+that replicates the payoff of the call option at time one.
+Then with the low front price, the initial price of the option
+must be equal to the cost of this replicating portfolio.
+Suppose our portfolio includes a shares of the stock,
+and b units of the riskless bond.
+Recall that each unit is $1.
+To make sure that the value of the portfolio in the up
+and down nodes at time one matches
+the value of the option, we impose two conditions.
+First, the value of the portfolio in the up node
+is $75 times a, which is the stock
+price times the number of shares, plus 1.1 times b,
+which is the value of the bond times the number of bond
+units in the portfolio.
+This must equal the value of the bond in the node, which is $25.
+Second, $25 times a, which is the price
+of the stock in the down node, times the number of shares
+plus 1.1 times b, must equal the value of the call option
+in the down node, which is zero.
+We find a unique solution.
+Our replicating portfolio must include
+half a share of the stock, and minus 11.36 units of the bond.
+In other words, to replicate the option, we must borrow $11.36,
+and buy half a share of the stock.
+The market value of the call must
+equal the current cost of this replicating portfolio, which
+is $13.64.
+The number of shares in the replicating portfolio
+is called the options delta, or the hedge ratio.
+In this example, the delta of the option is 0.5.

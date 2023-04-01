@@ -1,0 +1,164 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:02,230
+PROFESSOR: In the previous video,
+
+2
+00:00:02,230 --> 00:00:05,040
+we built an arbitrage trading strategy
+
+3
+00:00:05,040 --> 00:00:09,840
+to exploit a situation when the forward was overpriced.
+
+4
+00:00:09,840 --> 00:00:12,060
+Now, consider the converse situation, when
+
+5
+00:00:12,060 --> 00:00:13,950
+the forward is underpriced.
+
+6
+00:00:13,950 --> 00:00:16,560
+Let's assume that the price of this two-year
+
+7
+00:00:16,560 --> 00:00:19,210
+forward is $1,015.
+
+8
+00:00:19,210 --> 00:00:21,450
+How do we exploit this?
+
+9
+00:00:21,450 --> 00:00:24,540
+Consider the following trading strategy.
+
+10
+00:00:24,540 --> 00:00:27,060
+Since the forward is underpriced,
+
+11
+00:00:27,060 --> 00:00:30,870
+we will engage in one long forward contract.
+
+12
+00:00:30,870 --> 00:00:35,070
+Next, we will short-sell the following number of shares,
+
+13
+00:00:35,070 --> 00:00:38,850
+e to the power of negative yT.
+
+14
+00:00:38,850 --> 00:00:41,580
+We will invest the proceeds from the short sale
+
+15
+00:00:41,580 --> 00:00:45,150
+of the stock, which will be e to the power
+
+16
+00:00:45,150 --> 00:00:49,780
+of negative yT times S-naught dollars at the risk-free rate.
+
+17
+00:00:49,780 --> 00:00:53,250
+Notice that the initial cost of setting up this portfolio
+
+18
+00:00:53,250 --> 00:00:55,440
+is zero.
+
+19
+00:00:55,440 --> 00:00:57,990
+Let's see what happens two years from now.
+
+20
+00:00:57,990 --> 00:01:00,600
+First, let's figure out how many shares of stock
+
+21
+00:01:00,600 --> 00:01:02,550
+we need to return.
+
+22
+00:01:02,550 --> 00:01:05,610
+The answer is one share.
+
+23
+00:01:05,610 --> 00:01:09,660
+Recall that we borrowed e to the power of negative yT shares,
+
+24
+00:01:09,660 --> 00:01:12,450
+but the share pays continuous dividend y,
+
+25
+00:01:12,450 --> 00:01:14,760
+and therefore we need to return both dividends
+
+26
+00:01:14,760 --> 00:01:18,270
+and the original amount of shares to the owner.
+
+27
+00:01:18,270 --> 00:01:20,640
+If the dividends are continuously reinvested,
+
+28
+00:01:20,640 --> 00:01:25,160
+the original borrowed amount would grow to one share.
+
+29
+00:01:25,160 --> 00:01:28,970
+Second, our initial investment at the risk-free rate
+
+30
+00:01:28,970 --> 00:01:31,850
+is now worth $1,020.20.
+
+31
+00:01:31,850 --> 00:01:36,500
+Next, you take $1,015 out of this
+
+32
+00:01:36,500 --> 00:01:39,920
+$1,020.20 that you have in your bank account,
+
+33
+00:01:39,920 --> 00:01:42,650
+and you pay the seller of the forward contract, who
+
+34
+00:01:42,650 --> 00:01:46,020
+in turn delivers one share of stock to you.
+
+35
+00:01:46,020 --> 00:01:50,180
+You use this share of stock to cover your short position.
+
+36
+00:01:50,180 --> 00:01:55,270
+As a result, this trading strategy generates $5.20
+
+37
+00:01:55,270 --> 00:02:00,290
+in profits per one forward contract bought.
+
+38
+00:02:00,290 --> 00:02:02,240
+The reason for this arbitrage profits
+
+39
+00:02:02,240 --> 00:02:05,870
+is, again, the fact that the forward contract
+
+40
+00:02:05,870 --> 00:02:08,950
+was initially underpriced.
+

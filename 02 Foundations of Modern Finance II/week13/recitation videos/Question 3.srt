@@ -1,0 +1,320 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:02,570
+PROFESSOR: In this video we will learn
+
+2
+00:00:02,570 --> 00:00:06,250
+how to use state prices to price options.
+
+3
+00:00:06,250 --> 00:00:09,010
+We will work with the same European lookback option
+
+4
+00:00:09,010 --> 00:00:11,770
+that we covered in the previous videos.
+
+5
+00:00:11,770 --> 00:00:15,190
+This option allows you to buy a stock two years from now
+
+6
+00:00:15,190 --> 00:00:17,560
+for the lowest price of the stock during the coming two
+
+7
+00:00:17,560 --> 00:00:19,060
+years.
+
+8
+00:00:19,060 --> 00:00:22,450
+We will assume that the stock price follows the same price
+
+9
+00:00:22,450 --> 00:00:23,950
+pattern.
+
+10
+00:00:23,950 --> 00:00:26,050
+The stock does not pay dividends.
+
+11
+00:00:26,050 --> 00:00:29,260
+We will assume that the risk-free rate is 5%, quoted
+
+12
+00:00:29,260 --> 00:00:30,880
+as an effective annual rate.
+
+13
+00:00:30,880 --> 00:00:33,010
+And we will also assume that there is no arbitrage
+
+14
+00:00:33,010 --> 00:00:34,870
+and that investors can borrow and lend
+
+15
+00:00:34,870 --> 00:00:37,490
+at this risk-free rate.
+
+16
+00:00:37,490 --> 00:00:40,580
+First, let's compute state prices.
+
+17
+00:00:40,580 --> 00:00:42,890
+The price of the up state in year one
+
+18
+00:00:42,890 --> 00:00:45,260
+equals to the risk-neutral probability
+
+19
+00:00:45,260 --> 00:00:49,460
+of the up state, qu divided by 1 plus r, where r
+
+20
+00:00:49,460 --> 00:00:51,590
+is the risk-free interest rate.
+
+21
+00:00:51,590 --> 00:00:53,870
+The price of the down state in year one
+
+22
+00:00:53,870 --> 00:00:57,410
+equals to the risk-neutral probability of the down state,
+
+23
+00:00:57,410 --> 00:01:00,470
+qd divided by 1 plus r.
+
+24
+00:01:00,470 --> 00:01:04,590
+Similarly, the price of uu state in year two
+
+25
+00:01:04,590 --> 00:01:07,010
+equals to the risk-neutral probability
+
+26
+00:01:07,010 --> 00:01:12,980
+of moving up squared divided by 1 plus r squared.
+
+27
+00:01:12,980 --> 00:01:15,770
+The state prices of states ud and du
+
+28
+00:01:15,770 --> 00:01:18,080
+would be the same in year two and they would
+
+29
+00:01:18,080 --> 00:01:21,603
+equal to qu multiplied by qd.
+
+30
+00:01:21,603 --> 00:01:23,270
+These are the risk-neutral probabilities
+
+31
+00:01:23,270 --> 00:01:26,480
+of up and down moves respectively,
+
+32
+00:01:26,480 --> 00:01:29,030
+divided by 1 plus r squared.
+
+33
+00:01:29,030 --> 00:01:32,510
+And finally, the state price of dd state
+
+34
+00:01:32,510 --> 00:01:38,000
+is qd squared divided by 1 plus r squared.
+
+35
+00:01:38,000 --> 00:01:43,580
+On this graph we summarize state prices in this economy.
+
+36
+00:01:43,580 --> 00:01:45,320
+Now that we know state prices, we
+
+37
+00:01:45,320 --> 00:01:47,700
+can price any security in this economy,
+
+38
+00:01:47,700 --> 00:01:50,090
+including our lookback option.
+
+39
+00:01:50,090 --> 00:01:53,720
+Let's first price this option in year one in the up state.
+
+40
+00:01:53,720 --> 00:01:57,980
+Its price equals phi u, which is the one year price of the up
+
+41
+00:01:57,980 --> 00:02:01,190
+state multiplied by the option payoff
+
+42
+00:02:01,190 --> 00:02:05,000
+in the up up state, plus phi d, which is the one year
+
+43
+00:02:05,000 --> 00:02:08,240
+price of the down state multiplied by the option
+
+44
+00:02:08,240 --> 00:02:11,270
+payoff in the up down state.
+
+45
+00:02:11,270 --> 00:02:14,060
+Note that we're using state prices one year ahead
+
+46
+00:02:14,060 --> 00:02:17,190
+because this option pays off in year two
+
+47
+00:02:17,190 --> 00:02:19,520
+and we're pricing it in year one.
+
+48
+00:02:19,520 --> 00:02:22,070
+Similarly, we can price this option in year one
+
+49
+00:02:22,070 --> 00:02:23,830
+in the down state.
+
+50
+00:02:23,830 --> 00:02:25,600
+Note that prices of this option in year
+
+51
+00:02:25,600 --> 00:02:31,060
+one in the up and down state, $29.76 and $10.58,
+
+52
+00:02:31,060 --> 00:02:33,010
+match exactly what we had when we
+
+53
+00:02:33,010 --> 00:02:37,930
+were pricing this option using risk-neutral pricing approach.
+
+54
+00:02:37,930 --> 00:02:39,480
+Finally, to find the current price
+
+55
+00:02:39,480 --> 00:02:42,000
+of this option we are using year zero
+
+56
+00:02:42,000 --> 00:02:46,260
+state prices of all four possible states in year two.
+
+57
+00:02:46,260 --> 00:02:50,700
+So the option price equals phi uu multiplied by the option
+
+58
+00:02:50,700 --> 00:02:58,290
+payoff in the up up state, which is $56.25, plus phi
+
+59
+00:02:58,290 --> 00:03:01,830
+ud multiplied by the payoff from the option in the up
+
+60
+00:03:01,830 --> 00:03:06,920
+down state, which is 0, plus phi du multiplied by the option
+
+61
+00:03:06,920 --> 00:03:09,390
+payoff in the down up state, which
+
+62
+00:03:09,390 --> 00:03:14,250
+is $20, plus phi dd multiplied by the option payoff
+
+63
+00:03:14,250 --> 00:03:17,190
+in the down down state, which is 0.
+
+64
+00:03:17,190 --> 00:03:19,320
+We see that the current price of this option
+
+65
+00:03:19,320 --> 00:03:22,980
+is equal $20.23, which again matches
+
+66
+00:03:22,980 --> 00:03:25,540
+what we had when we priced this option using
+
+67
+00:03:25,540 --> 00:03:28,230
+risk-neutral pricing approach.
+
+68
+00:03:28,230 --> 00:03:30,590
+Finally, for illustrative purposes,
+
+69
+00:03:30,590 --> 00:03:33,920
+we can also price the stock using state prices.
+
+70
+00:03:33,920 --> 00:03:37,580
+Conceptually, we have used future expected stock prices
+
+71
+00:03:37,580 --> 00:03:39,470
+to compute state prices.
+
+72
+00:03:39,470 --> 00:03:41,970
+Therefore, if we didn't make a mistake,
+
+73
+00:03:41,970 --> 00:03:46,820
+we should get that the current stock price is equal to $100.
+
+74
+00:03:46,820 --> 00:03:49,130
+I will use stock prices in year two
+
+75
+00:03:49,130 --> 00:03:53,630
+and year zero state prices of all four states in year two
+
+76
+00:03:53,630 --> 00:03:57,030
+to compute the current stock price.
+
+77
+00:03:57,030 --> 00:04:01,100
+We see that the price of the stock is indeed $100.
+
+78
+00:04:01,100 --> 00:04:04,430
+This again illustrates that once we know state prices,
+
+79
+00:04:04,430 --> 00:04:08,440
+we can easily price any financial instrument.
+

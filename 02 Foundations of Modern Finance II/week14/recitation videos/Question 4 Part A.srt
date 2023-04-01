@@ -1,0 +1,656 @@
+0
+00:00:00,000 --> 00:00:00,315
+
+
+1
+00:00:00,315 --> 00:00:01,690
+PROFESSOR: In this video, we will
+
+2
+00:00:01,690 --> 00:00:05,140
+consider a comprehensive multi-asset example in which we
+
+3
+00:00:05,140 --> 00:00:08,290
+will build an optimal tangency portfolio,
+
+4
+00:00:08,290 --> 00:00:10,410
+compute its Sharpe ratio, and compute
+
+5
+00:00:10,410 --> 00:00:14,140
+the return-to-risk ratios of individual assets.
+
+6
+00:00:14,140 --> 00:00:17,440
+Suppose that there are 10 stocks in the market, the expected
+
+7
+00:00:17,440 --> 00:00:21,230
+returns on which follow the following two-factor model.
+
+8
+00:00:21,230 --> 00:00:23,720
+In this model, parameters are as follows.
+
+9
+00:00:23,720 --> 00:00:27,640
+b1 equals to 10 for each of the 10 stocks.
+
+10
+00:00:27,640 --> 00:00:31,750
+b2 equals i, which means that for stock 1,
+
+11
+00:00:31,750 --> 00:00:33,190
+this parameter equals to 1.
+
+12
+00:00:33,190 --> 00:00:36,220
+And for stock 10, this parameter equals to 10.
+
+13
+00:00:36,220 --> 00:00:40,810
+F1 has zero mean and standard deviation of 1%.
+
+14
+00:00:40,810 --> 00:00:45,550
+Factor 2, F2, has a mean of 1% and a standard deviation of 1%
+
+15
+00:00:45,550 --> 00:00:46,720
+as well.
+
+16
+00:00:46,720 --> 00:00:48,820
+And the idiosyncratic shock epsilon
+
+17
+00:00:48,820 --> 00:00:52,900
+has zero mean and a standard deviation of 30%.
+
+18
+00:00:52,900 --> 00:00:56,240
+We will assume that factors F1 and F2 and the idiosyncratic
+
+19
+00:00:56,240 --> 00:01:00,105
+component epsilon are independent of each other.
+
+20
+00:01:00,105 --> 00:01:01,480
+We will also assume that there is
+
+21
+00:01:01,480 --> 00:01:04,150
+a risk-free asset in this market with a guaranteed
+
+22
+00:01:04,150 --> 00:01:07,540
+return of 0.75%.
+
+23
+00:01:07,540 --> 00:01:10,840
+We will first consider an equally weighted portfolio.
+
+24
+00:01:10,840 --> 00:01:13,000
+We will compute its Sharpe ratio.
+
+25
+00:01:13,000 --> 00:01:16,000
+And then we will compute return-to-risk ratio
+
+26
+00:01:16,000 --> 00:01:19,580
+for each individual asset for this portfolio.
+
+27
+00:01:19,580 --> 00:01:22,450
+Next we'll find the tangency portfolio.
+
+28
+00:01:22,450 --> 00:01:24,320
+We'll compute its Sharpe ratio.
+
+29
+00:01:24,320 --> 00:01:27,580
+We will compare the Sharpe ratio of this tangency portfolio
+
+30
+00:01:27,580 --> 00:01:30,070
+to an equally-weighted portfolio.
+
+31
+00:01:30,070 --> 00:01:32,320
+Then we will compute the return-to-risk ratio
+
+32
+00:01:32,320 --> 00:01:36,220
+for each individual asset for this tangency portfolio.
+
+33
+00:01:36,220 --> 00:01:38,380
+Let's start by computing expected returns,
+
+34
+00:01:38,380 --> 00:01:41,860
+variances, and covariances for our assets.
+
+35
+00:01:41,860 --> 00:01:44,500
+The expected return on stock i is given
+
+36
+00:01:44,500 --> 00:01:46,770
+by the following expression.
+
+37
+00:01:46,770 --> 00:01:49,510
+Recall that the mean of Factor 1 is zero
+
+38
+00:01:49,510 --> 00:01:51,865
+and the mean of Factor 2 is 1.
+
+39
+00:01:51,865 --> 00:01:55,850
+The mean of the idiosyncratic shock is 0 as well.
+
+40
+00:01:55,850 --> 00:01:58,870
+Therefore, the expected return on stock i
+
+41
+00:01:58,870 --> 00:02:04,240
+would simply be b2i coefficient multiplied by 1%,
+
+42
+00:02:04,240 --> 00:02:08,830
+Recall that b2i, for each asset i, simply equals to i.
+
+43
+00:02:08,830 --> 00:02:11,230
+This means that for the first stock,
+
+44
+00:02:11,230 --> 00:02:13,180
+the expected return is 1%.
+
+45
+00:02:13,180 --> 00:02:14,980
+For the second stock, the expected return
+
+46
+00:02:14,980 --> 00:02:16,690
+is 2%, et cetera.
+
+47
+00:02:16,690 --> 00:02:21,310
+And for the 10th stock, the expected return is 10%.
+
+48
+00:02:21,310 --> 00:02:23,290
+The variance of returns on stock i
+
+49
+00:02:23,290 --> 00:02:27,940
+equals to the sum of variances of b1F1 b2iF2
+
+50
+00:02:27,940 --> 00:02:31,060
+and the idiosyncratic component epsilon.
+
+51
+00:02:31,060 --> 00:02:34,420
+This is due to the fact that F1, F2, and epsilon
+
+52
+00:02:34,420 --> 00:02:36,950
+are independent of each other.
+
+53
+00:02:36,950 --> 00:02:39,480
+This gives us the following expression.
+
+54
+00:02:39,480 --> 00:02:43,450
+Recall that standard deviation of F1 and F2 is 1%
+
+55
+00:02:43,450 --> 00:02:46,840
+and the standard deviation of epsilon is 30%.
+
+56
+00:02:46,840 --> 00:02:49,420
+Therefore, the variance of returns on stock i
+
+57
+00:02:49,420 --> 00:02:52,790
+is given by the following expression at the bottom.
+
+58
+00:02:52,790 --> 00:02:55,060
+Next, let's compute the covariance of returns
+
+59
+00:02:55,060 --> 00:02:57,760
+between stocks i and j.
+
+60
+00:02:57,760 --> 00:03:00,400
+The covariance is given by the following expression.
+
+61
+00:03:00,400 --> 00:03:03,310
+Recall that, again, Fs are independent of each other
+
+62
+00:03:03,310 --> 00:03:04,750
+and of epsilon.
+
+63
+00:03:04,750 --> 00:03:10,360
+Therefore, this covariance will simply be the variance of b1F1,
+
+64
+00:03:10,360 --> 00:03:15,850
+and the covariance between b2iF2 and b2jF2.
+
+65
+00:03:15,850 --> 00:03:18,880
+This, in turn, equals to the following expression.
+
+66
+00:03:18,880 --> 00:03:21,823
+And plugging in variances for F1 and F2
+
+67
+00:03:21,823 --> 00:03:23,740
+will get that the covariance between the stock
+
+68
+00:03:23,740 --> 00:03:27,880
+returns on i and j is given by the expression at the bottom.
+
+69
+00:03:27,880 --> 00:03:31,180
+For this question, we will do all our calculations in Excel,
+
+70
+00:03:31,180 --> 00:03:33,340
+using matrix notation.
+
+71
+00:03:33,340 --> 00:03:36,730
+Before we do that, let me remind you of notation.
+
+72
+00:03:36,730 --> 00:03:39,610
+w is the vector of portfolio weights.
+
+73
+00:03:39,610 --> 00:03:42,610
+r bar is the vector of expected returns.
+
+74
+00:03:42,610 --> 00:03:46,120
+x bar is the vector of expected excess returns.
+
+75
+00:03:46,120 --> 00:03:48,970
+And sigma is the covariance matrix.
+
+76
+00:03:48,970 --> 00:03:51,160
+Given this notation, the expected return
+
+77
+00:03:51,160 --> 00:03:53,230
+on the portfolio w can be computed
+
+78
+00:03:53,230 --> 00:03:56,650
+by transposing the vector of weights, w,
+
+79
+00:03:56,650 --> 00:03:58,990
+multiplying by the vector of expected returns.
+
+80
+00:03:58,990 --> 00:04:00,430
+And the variance of the portfolio
+
+81
+00:04:00,430 --> 00:04:03,370
+can be computed by transposed vector of weights,
+
+82
+00:04:03,370 --> 00:04:06,640
+w, multiplied by covariance matrix sigma, multiplied
+
+83
+00:04:06,640 --> 00:04:09,190
+by the vector of weights, w.
+
+84
+00:04:09,190 --> 00:04:11,800
+Based on the results that we derived for expected returns,
+
+85
+00:04:11,800 --> 00:04:14,590
+variances and covariances, I have created the spreadsheet
+
+86
+00:04:14,590 --> 00:04:17,380
+that contains expected returns on all 10
+
+87
+00:04:17,380 --> 00:04:19,450
+stocks in this vector.
+
+88
+00:04:19,450 --> 00:04:23,265
+And this is the covariance matrix sigma.
+
+89
+00:04:23,265 --> 00:04:24,640
+So recall that the first question
+
+90
+00:04:24,640 --> 00:04:27,130
+is asking us to compute the expected return
+
+91
+00:04:27,130 --> 00:04:28,630
+variance and, eventually, the Sharpe
+
+92
+00:04:28,630 --> 00:04:31,240
+ratio of the equally-weighted portfolio.
+
+93
+00:04:31,240 --> 00:04:33,790
+Because we have 10 stocks, the equally-weighted portfolio
+
+94
+00:04:33,790 --> 00:04:38,050
+would invest 10% into each of these 10 stocks.
+
+95
+00:04:38,050 --> 00:04:41,050
+Let's first compute the expected return.
+
+96
+00:04:41,050 --> 00:04:46,180
+To do this, I will first transpose the matrix
+
+97
+00:04:46,180 --> 00:04:49,990
+of weights, or the vector.
+
+98
+00:04:49,990 --> 00:04:56,320
+And then, I will multiply this transposed vector
+
+99
+00:04:56,320 --> 00:05:00,790
+by the vector of expected returns.
+
+100
+00:05:00,790 --> 00:05:04,870
+And this would be the expected return on this portfolio, which
+
+101
+00:05:04,870 --> 00:05:05,680
+equals to 5.5%.
+
+102
+00:05:05,680 --> 00:05:08,470
+
+
+103
+00:05:08,470 --> 00:05:10,330
+Next, we can compute the variance.
+
+104
+00:05:10,330 --> 00:05:15,580
+Remember that the variance is the transposed matrix
+
+105
+00:05:15,580 --> 00:05:16,150
+of weights.
+
+106
+00:05:16,150 --> 00:05:18,700
+
+
+107
+00:05:18,700 --> 00:05:29,690
+This matrix is multiplied by the covariance matrix here
+
+108
+00:05:29,690 --> 00:05:36,010
+which, in turn, is multiplied again by the weights vector.
+
+109
+00:05:36,010 --> 00:05:40,130
+
+
+110
+00:05:40,130 --> 00:05:43,730
+And this would give us the variance of this portfolio.
+
+111
+00:05:43,730 --> 00:05:46,640
+The standard deviation is just simply the squared root
+
+112
+00:05:46,640 --> 00:05:49,730
+of this variance.
+
+113
+00:05:49,730 --> 00:05:52,790
+And then the Sharpe ratio, by definition,
+
+114
+00:05:52,790 --> 00:05:55,190
+is the expected return on this portfolio
+
+115
+00:05:55,190 --> 00:06:00,125
+minus the risk-free rate divided by standard deviation.
+
+116
+00:06:00,125 --> 00:06:02,375
+So the Sharpe ratio of this equally-weighted portfolio
+
+117
+00:06:02,375 --> 00:06:04,850
+is 0.32.
+
+118
+00:06:04,850 --> 00:06:07,040
+Next, we will compute the return-to-risk ratio
+
+119
+00:06:07,040 --> 00:06:10,280
+for our stocks and our equally-weighted portfolio.
+
+120
+00:06:10,280 --> 00:06:13,070
+Let me remind you that the return-to-risk ratio is given
+
+121
+00:06:13,070 --> 00:06:16,380
+by the ratio of the excess return
+
+122
+00:06:16,380 --> 00:06:19,250
+on stock i divided by the covariance of returns
+
+123
+00:06:19,250 --> 00:06:22,010
+on the stock i in portfolio p, divided
+
+124
+00:06:22,010 --> 00:06:25,387
+by the standard deviation of portfolio p.
+
+125
+00:06:25,387 --> 00:06:27,720
+Let me also remind you that the covariance between stock
+
+126
+00:06:27,720 --> 00:06:29,730
+i and portfolio p can be computed
+
+127
+00:06:29,730 --> 00:06:33,600
+as the sum of pairwise covariances of stock i
+
+128
+00:06:33,600 --> 00:06:37,680
+and stocks j in the portfolio, where the weights are
+
+129
+00:06:37,680 --> 00:06:39,750
+the portfolio weights.
+
+130
+00:06:39,750 --> 00:06:41,550
+For an equally-weighted portfolio,
+
+131
+00:06:41,550 --> 00:06:44,430
+this is just the sum of all covariances
+
+132
+00:06:44,430 --> 00:06:48,480
+divided by the number of stocks in the portfolio.
+
+133
+00:06:48,480 --> 00:06:50,160
+Let's compute the return-to-risk ratio
+
+134
+00:06:50,160 --> 00:06:53,280
+for our 10 stocks in our equally-weighted portfolio.
+
+135
+00:06:53,280 --> 00:06:56,310
+First, I'm computing covariance, which
+
+136
+00:06:56,310 --> 00:07:00,210
+is just the weighted average of individual covariances.
+
+137
+00:07:00,210 --> 00:07:02,070
+And based on this, I'm using our expression
+
+138
+00:07:02,070 --> 00:07:04,680
+for return-to-risk ratio.
+
+139
+00:07:04,680 --> 00:07:07,650
+And I'm computing this return-to-risk ratio
+
+140
+00:07:07,650 --> 00:07:10,950
+based on this covariance that we just obtained.
+
+141
+00:07:10,950 --> 00:07:16,270
+And I'm doing this for all 10 stocks.
+
+142
+00:07:16,270 --> 00:07:19,870
+The results show us that stock 1 contributes
+
+143
+00:07:19,870 --> 00:07:22,780
+the least to the portfolio in terms of risk return trade off.
+
+144
+00:07:22,780 --> 00:07:25,250
+And stock 10 contributes the most.
+
+145
+00:07:25,250 --> 00:07:28,070
+And you can see that this contribution pattern is linear,
+
+146
+00:07:28,070 --> 00:07:31,990
+meaning that the stocks 10, 9, 8,
+
+147
+00:07:31,990 --> 00:07:36,700
+and so forth contribute more compared to stocks 1, 2, 3.
+
+148
+00:07:36,700 --> 00:07:40,120
+This means that we can increase the Sharpe ratio
+
+149
+00:07:40,120 --> 00:07:43,660
+by increasing the weights of these later stocks
+
+150
+00:07:43,660 --> 00:07:44,420
+in the portfolio.
+
+151
+00:07:44,420 --> 00:07:46,780
+So for example, if we increase the weight of stock 10
+
+152
+00:07:46,780 --> 00:07:48,520
+and decrease the weight of stock 1,
+
+153
+00:07:48,520 --> 00:07:52,540
+the Sharpe ratio of the portfolio should increase.
+
+154
+00:07:52,540 --> 00:07:53,590
+Let's see.
+
+155
+00:07:53,590 --> 00:07:57,070
+So our original Sharpe ratio was 0.32.
+
+156
+00:07:57,070 --> 00:08:01,990
+If I decrease the weight on the stock 1 to 5%,
+
+157
+00:08:01,990 --> 00:08:06,220
+and increase the weight of the stock 10 to 15%, what we get
+
+158
+00:08:06,220 --> 00:08:10,570
+is that the Sharpe ratio increases to 0.34.
+
+159
+00:08:10,570 --> 00:08:13,570
+Overall, the fact that the return-to-risk ratio
+
+160
+00:08:13,570 --> 00:08:17,590
+varies across different assets means that this portfolio
+
+161
+00:08:17,590 --> 00:08:19,240
+is not efficient.
+
+162
+00:08:19,240 --> 00:08:22,900
+In the next video, we will construct tangency portfolio
+
+163
+00:08:22,900 --> 00:08:25,380
+and demonstrate its efficiency.
+

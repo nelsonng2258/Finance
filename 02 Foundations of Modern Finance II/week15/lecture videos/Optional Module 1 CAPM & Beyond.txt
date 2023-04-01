@@ -1,0 +1,1338 @@
+
+PROFESSOR: Hi, everyone.
+Welcome to our webinar.
+I wanted to use this opportunity to discuss
+some of the issues related to CAPM, and some of the ideas
+that maybe go a little beyond the scope of the course,
+and also to respond to some of your questions.
+I had a few things in mind when we started playing the webinar.
+But then we got a bunch of very good questions.
+So at the end, we decided to go through the questions
+other than some of the prepared material.
+Although, that's still coming at the end of this hour.
+And what I did is I basically copied some of the questions
+and merged them with some light editing.
+Because a few of you were asking about similar things.
+So what you're going to see is not
+literally copy/paste, but an edited version
+of the questions.
+So with that said, let me get started.
+We'll jump right into it.
+
+OK, so let's begin with the issues of CAPM implementation.
+So the first set of questions was about the choice
+of the benchmark.
+What are the implications of the benchmark
+used as the market portfolio to implement CAPM?
+For example, a multi-asset benchmark,
+or is the geographic focus in the benchmark?
+So this is a very good question.
+Logically speaking, when we think
+about what the market portfolio is,
+that's the portfolio held by the investors.
+And there is no reason to limit it to just equities.
+Equities are a part of the portfolio.
+But that's not the whole.
+And it's not even the largest part.
+There are other asset classes there.
+We have obviously fixed income securities, bonds.
+We have real estate.
+Some people would argue even human capital.
+And when you add all of that up, it's
+a lot larger than the stock market.
+Now, there has been some academic work exploring
+these alternative benchmarks.
+And there does seem to be some additional information coming
+from other asset classes.
+But at the end of the day, there are some practical issues
+that we have to contend with, which
+is that data coming from equity markets
+is available at high frequency.
+It's precisely measured.
+Prices are precisely measured.
+And so we can estimate betas.
+It's very important to have the right alignment of timing
+when you estimate betas.
+So for that reason, the equity markets, of course,
+are very convenient to use.
+And they do capture a lot of information
+about what happens in the investor's portfolio more
+broadly, even though it may be a small fraction in terms
+of the dollar value.
+But then in other asset classes, if you
+think about corporate bonds, or real estate, or even
+human capital, the less liquid they are,
+the harder they are to use.
+And in particular, when you want to estimate betas,
+it's actually pretty tricky when your portfolio
+includes illiquid securities.
+Because you don't measure the value very well.
+You certainly cannot measure precisely at high frequency.
+So for that reason, these efforts,
+they couldn't gain a lot of traction.
+And so now in practice people use equity portfolios.
+But I would say that with the advent of ETFs,
+we have more and more information
+about market valuation of those less liquid assets.
+And so there may be some updates to that,
+so that going forward you may see
+more acceptance of using other asset classes
+as a part of the benchmark.
+Now, the second set of questions is
+about estimation of parameters.
+So how do we estimate the parameters?
+What do we do about various issues,
+for example, risk-free rate?
+Do we use historical rates, or spot rates?
+What do we do about maturities?
+What about the market risk premiums, same thing,
+use historical or implicit market risk premium?
+And then there was a question about possible approaches
+to increase the accuracy of the market risk premium.
+Basically, you have a lot of volatility going back,
+including volatile interest rates.
+So they use historical returns that are backward looking.
+What do you do?
+So now, let's unpack that.
+Interest rates, obviously, vary across maturities.
+Short rate and long rates are different.
+So which ones do we use?
+What do we do about it, historical or spot?
+Let's think about the underlying principles.
+CAPM is supposed to give us a relation
+between expected returns going forward
+and some measures of risk.
+So inputs, like interest rates or a market risk premium,
+ideally we want forward looking inputs.
+We want to have a number that represents the interest
+rate going forward or the expected market
+return going forward.
+Now, in case of interest rates, we actually
+have market information we can use.
+So that's pretty convenient.
+So we can use spot rates.
+So there I would say the answer is
+as you are estimating the cost of capital, for example,
+you plug in the current interest rates, the spot rates.
+Historical rates are useful as a part of estimation
+of the market risk premium.
+When you go back and look at the historical data,
+you compare market returns to the spot rates
+in the past that are matched with the market
+returns in time.
+And you'll take the difference.
+That's your excess return.
+And you estimate the average excess return.
+So that could be your estimate of the risk premium.
+But when you apply the CAPM, when
+you use it to project expected returns going forward,
+you use the spot rate.
+Now, what about maturities?
+That gets kind of interesting.
+It depends on the context, depends on the application.
+CAPM is a static model.
+It's describing the market over a single period.
+The market that we operate in is not static.
+It's dynamic.
+It has multiple periods.
+So that's one of the limitations of CAPM.
+We're going to come back to that.
+What do we do about it?
+Well, essentially, it's a handicap of the model.
+It's a static model.
+And you have to somehow apply it.
+So you need some additional maybe ad hoc steps.
+You need some additional decisions.
+And they, of course, are context specific.
+So for example, if you're using CAPM
+to evaluate portfolio managers.
+You're trying to understand, are they able to beat the market?
+Are they generating an alpha?
+Or if you are using a CAPM for short horizon event studies,
+where you are talking about events
+that unravel on a scale of days or weeks,
+then it makes a lot of sense to use a short term interest rate.
+And that's going to correspond to the horizon over which
+you're evaluating various investment strategies or market
+events.
+When you're using CAPM for capital budgeting,
+that's different.
+Because very often, these real investment projects
+have longer horizons.
+It could be that the half life of these cash flows
+is five or 10 years.
+So in that case, it's very common
+to use long term interest rates as the risk free rate.
+It's as if when you're applying CAPM
+you're saying that my time period, CAPM, is
+silent about what that is physically.
+But let's say my time period is five years.
+It's not one month.
+It's five years.
+So then you're going to plug in say a five-year interest rate,
+spot rate.
+All right, what about the market risk premium?
+Well, that turns out to be also kind of tricky, right?
+We can, of course, measure the historical risk premium.
+But is that a good estimate of the expected excess market
+return going forward?
+Well, there are reasons to believe that it might not
+be, it may be biased.
+We have lived through an unusual period of history.
+And one could argue that the US economy was kind of lucky
+and had a very good run, and that going forward,
+average returns may be lower, the risk premium may be lower.
+Perhaps there is that argument.
+Also, the environment has changed.
+It is much easier to diversify now than it used to be.
+Transaction costs are lower.
+So all of these frictions are now lower.
+And that also affects the measured risk premium
+in the market.
+So for that reason, there are good arguments
+for using the implied risk premium, the implicit market
+risk premium.
+We have seen in Fin one how to do that, right?
+You have to start with some kind of pricing model,
+like the Gordon Growth Model.
+And then you plug in estimates of growth rates of cash flows
+and dividends.
+And you back out the implied value
+of the market expected return.
+You compare it to interest rates.
+You could get a risk premium.
+So that is a possibility.
+And if you look at the actual applications of CAPM,
+people use both.
+It's good to have a few different angles of attack
+and compare the results.
+So using implied risk premium makes a lot of sense.
+And I would certainly try that myself.
+Because just looking at the realized average
+historical return is not the best way
+to estimate expected returns going forward.
+It's very much one path of history.
+It's not the expected return.
+It's the realized average return.
+Now, to increase the accuracy of the market risk premium,
+we talked about this just now, basically,
+using implied numbers is going to help.
+Essentially you want to extend your data sample
+as much as possible.
+But there are limits to that.
+You could go further back.
+But then it's further back.
+It's a different period of history.
+You can look cross-sectional to see
+if the numbers from other markets kind of line up
+and support your estimates.
+But essentially, there is limited ability
+to increase precision of that estimate.
+Because it's ultimately based on one part of history.
+But I would say that using implied numbers in addition
+to historical averages definitely
+is a useful strategy.
+
+Now, let's talk about the limitations of CAPM.
+So CAPM is widely used in practice.
+Many firms apply it.
+The majority of firms, particularly large firms,
+use CAPM in capital budgeting, for example.
+It's used a lot in performance evaluation as well.
+So what are the practical limitations?
+There are many.
+Obviously, it's a model, a stylized model.
+One limitation we already brought up.
+CAPM is a static model.
+And you have to take some additional somewhat
+ad hoc steps to apply it, so a dynamic setting.
+Other limitations are that the premise is based
+on pretty strong assumptions.
+It's about frictionless markets.
+And in the actual markets, you may have frictions.
+You may have market segmentation.
+Not all investors are invested in all markets or securities.
+You could have transaction costs or limited liquidity of assets,
+meaning that when you trade them, actually
+you move prices by trading.
+So that trading itself is costly.
+It doesn't have enough impact on prices.
+And CAPM assumes all of that away.
+So that's something to be aware of.
+So CAPM is expected to work better
+for securities that are liquid and that are broadly held.
+And it's not going to work just on first principles
+for securities that are illiquid and where participation
+is limited.
+
+Now, how can you apply CAPM to firms at an early stage?
+Well, if you recall, it depends, of course,
+on the context from this question is unclear.
+Are we talking about basically thinking
+about equity of these firms or capital budgeting?
+
+So I just see a question.
+So when we talk about liquidity, we're not talking about cash.
+We're talking about ease of trading, ability
+to trade securities without moving their prices.
+So for example, large stocks, you
+can buy them in large quantities without moving prices.
+But small stocks, like GameStop, something
+like that, you could move prices by trading somewhat easily.
+So it's that kind of trading liquidity.
+So now, if you are thinking about the context of, say,
+estimating alphas of equity, then it
+doesn't matter if the firm is young or not.
+It's just that you want to have enough historical data
+to estimate betas, that kind of stock.
+But if you're thinking about capital budgeting,
+then keep in mind that when we evaluate projects,
+we evaluate projects.
+It doesn't matter if the firm is young or old.
+You want to evaluate the project itself.
+And you want to look at the comparables.
+So that's one caveat.
+So in that sense, it may be a somewhat traditional kind
+of common situation.
+It doesn't matter that the firm is early stage.
+However, having said that, early stage firms
+are somewhat different, because of the high level
+of idiosyncratic risk and the high probability of failure
+relative to large, established firms.
+And so what that means is that it's not so much about CAPM
+per se.
+It's about the overall approach to capital budgeting,
+that maybe you want to take that kind of risk into account.
+And that means that when you project cash flows,
+you have to think about default risk,
+that some of these cash flows may not be materialized.
+Essentially you have these types of non-linearities
+that arise due to the volatile nature and the high default
+risk of the firm, that it may just go out of business
+and not be able to implement the project to the end.
+So the keyword here is real options.
+You want to think about evaluating projects
+with this kind of option-like structure in mind.
+And we're not going to go deeper into that.
+But this is forthcoming.
+You're going to see a lecture on real options in this course.
+And then you'll learn more about it.
+So just kind of file that away.
+But when you're thinking about these sort
+of very non-linear situations, early stage
+firms, or multi-stage projects, and whatnot, then
+you have this important first order
+effect coming from optionality.
+And then, of course, it's not really about
+how you compute the discount rate.
+It's about how do you use discount rate in that kind
+of non-linear setting?
+OK, now the question is, does CAPM
+work for financial markets outside of the US?
+And what are the features of such markets,
+where CAPM breaks down?
+So here, evidence is somewhat mixed.
+In the developed markets that are similar to the US market,
+CAPM works better.
+So if you think about UK, or some large European markets,
+or Australia, then CAPM is a better approximation
+in other places.
+Although, it's not great.
+Even in the US, it's not great.
+But when you move to emerging markets, for example,
+their evidence is much more problematic.
+And it looks like CAPM doesn't work very well.
+And then they say, what are the features there?
+Why is it breaking down more for these types
+of emerging markets other than established developed markets?
+And that has to do a lot with market constraints
+and frictions.
+I will mention just a couple.
+One is liquidity.
+In emerging markets, very often assets have limited liquidity.
+It means that they're hard to trade.
+And that becomes a first order feature.
+And the other issue is limited market participation.
+There is market segmentation, essentially.
+That world markets are not perfectly integrated.
+And so when you're thinking about how
+CAPM would apply in the local market,
+it's kind of a delicate issue.
+Because some of the investors are local.
+And they may or may not be limited to the local market.
+Some of them may have access to the global market.
+Some of the investors are coming from abroad.
+So if you ask, is there a reason why local market would
+be mean very insufficient?
+Not really, right?
+Because the arguments of CAPM break down.
+You don't have a population of these mean various optimizers
+all holding the same portfolio.
+So it has to be the local market.
+You have different types of investors, local, domestic,
+or foreign holding different portfolios.
+So the bottom line is that the assumptions of CAPM
+don't hold very well.
+There are frictions.
+There are constraints on who is able to participate in what
+securities.
+And because of that, theoretically, you
+wouldn't expect CAPM to hold in that environment.
+And empirically, it looks like it doesn't.
+So what people find is evidence that there
+are other factors that are useful in addition
+to the market factor, however you define that.
+And so if you look at some super versions of the APT model
+in the context of emerging markets,
+there are additional factors that seem to be priced.
+And these would be things like small stock factor
+or some proxy for market liquidity.
+That one is particularly important.
+So you could use, for example, a world portfolio.
+There's like a world CAPM using a global portfolio of stocks.
+But in addition to that, if you use a liquidity factor,
+that liquidity factor seems to pick up
+a variation in average returns that just exposure to the world
+markets doesn't fully describe.
+
+So the next question is, what additions one
+should consider to apply CAPM or APT in developing countries?
+So it's again, as I said, I would look at the exposure
+to liquidity shocks.
+But ultimately, it's not the whole story, right?
+Because when you have an environment
+with limited ability to trade securities, imperfect markets,
+our framework starts breaking down, this frictions framework.
+And even idiosyncratic risk of securities
+may matter if the investors in these companies
+are not well diversified.
+So I would essentially look at all of these possibilities.
+I would look at the pricing of idiosyncratic risk.
+Is there evidence that that matters?
+I would definitely look at the additional APT style
+factors, that proxy for liquidity conditions,
+and not just exposure to the broad market.
+So I don't have a simple answer to this question.
+Because it's not a simple question.
+There is academic work in this area.
+But it's very much ongoing.
+So we don't have well-established answers
+to these questions.
+But we have some tools we could use to make progress.
+It's just that this is not finished strand of work.
+It's in progress.
+
+The last question on this page is the following.
+So my understanding is that CAPM is widely
+adopted because of its effectiveness
+and easy implementation.
+But finance is becoming more and more data driven.
+Will there be other models that could compete with the CAPM
+the near future?
+And what are the latest developments in this area?
+So it's certainly true that there
+is a lot of movement, a lot of progress,
+in bringing in new types of data, big data, AI,
+machine learning into finance.
+So I would say that these are the most active new lines
+of work in terms of new developments.
+Would these things displace CAPM and similar models?
+It depends on the context.
+Again, for the purposes of capital budgeting,
+it's not clear that the result of change.
+But in the context of capital markets,
+when you're think about forecasting expected returns,
+then yes, there absolutely.
+We are learning a lot, particularly at short horizons.
+These models, of course, they have their limitations.
+And these limitations get exposed with richer data
+that is now being used.
+And so people use unstructured data,
+like text, which they can now process automatically.
+They use spatial images to quantify economic activity.
+They go to Twitter and look at the sentiment indicators there.
+So there's a lot of stuff like that going on.
+And it does improve our ability to forecast cash flows
+in the short run, to identify certain kinds of market
+inefficiency that may have existed before.
+Of course, once you identify them using these techniques,
+they quickly can get arbitraged away.
+But I would say that that's where a lot of action is.
+And what that means is that when you're
+thinking about using a model to evaluate investment strategies,
+then there is a lot more you could
+bring to the table in addition to this kind of exposure
+to the common risk factors.
+You could use various kinds of signals, from characteristics,
+and other less structured signals from the news
+flow to predict returns.
+So that's where a lot of development is taking place.
+Again, it's in the context of investment management, trading.
+But in capital budgeting, I don't
+think there is a lot of change so far.
+But we'll see what we're going to learn
+over the next decade or two.
+But in the short run, it seems like long horizons.
+We have our traditional tools.
+There isn't much new that we're getting from this kind of data
+intensive approach.
+
+CAPM versus APT.
+I would like to hear more detail about CAPM versus APT
+and how it fits in today's financial firms.
+
+Basically, another question I'm facing yet again,
+how is CAPM applied to firms at an early stage?
+So essentially, these are all connected.
+There are many contexts where CAPM is not sufficient
+and it makes sense to introduce other factors.
+And so an early stage firm, which
+may be exposed to shocks to financing constraints, which
+doesn't have easy access to financial markets
+like a large established firm would,
+it makes sense to think about additional factors, not just
+liquidity factor, ease of trading that we already
+mentioned, but also perhaps, credit conditions, sort
+of general proxies for ease of funding.
+So CAPM versus APT, I mean, we talked about it
+during the lecture.
+Essentially, CAPM is a good framework
+for thinking about systematic versus idiosyncratic risk.
+As we have seen, in terms of its raw performance,
+there are limitations.
+So in some contexts, like when you evaluate performance
+of trading strategies, it makes a lot of sense
+to use multifactor versions.
+So there APT brings to the table more precise descriptions
+of systematic risk.
+Let's see.
+Let's say measuring performance of portfolio managers,
+you would want to use factors in addition to the market,
+maybe to capture the exposure to a particular style,
+different kinds of risks they may be picking up.
+But in the context of capital budgeting,
+people have been kind of careful introducing other factors.
+Because as you do that, you're kind of mixing noise
+with the signal.
+And if exposure to these other factors is not very stable,
+then they're not very reliable for making long term forecasts
+of discount rates for projects.
+So in that context, CAPM actually is pretty widely used.
+And it's just a practical consideration.
+If we could come up with a reliable, robust, better model,
+it would get adopted.
+We haven't seen that yet.
+But APT is a strong contender.
+Because it does bring additional elements to the table
+that simple CAPM, which is based on very strong assumptions,
+may be missing.
+Does CAPM work for financial markets outside of the US?
+We already discussed that.
+It does work better in the developed markets.
+And it is not as successful, it doesn't work as well
+in developing economies.
+And basically, the features of the markets
+are essentially how close they seem
+to be to our idealized assumptions.
+Do they look like they're more or less frictionless?
+Is that a good assumption?
+Is investor participation unconstrained?
+Do radical changes in money supply
+have implications for CAPM?
+Or is it othogonal because the entire market
+is exposed to any effects?
+So that's asked and answered to some degree.
+Shocks to money supply are going to affect the broad market.
+And under CAPM assumptions, that doesn't create a second factor.
+That just gets priced through the market.
+So in the CAPM framework, you would have that taking place.
+We don't explicitly acknowledge essentially
+what moves the market, right?
+We are agnostic.
+But monetary supply shocks would be among the shocks.
+And they're priced through the exposure to the market.
+In reality, if you think that CAPM is an approximation,
+would it be that shocks to money supply
+create departures from CAPM.
+You may want to have an additional risk factor
+capture in that.
+I would say as a hypothesis, this
+is a perfectly reasonable hypothesis to entertain.
+I don't have an empirical answer to that.
+You have to analyze it.
+But my hunch is that at least in some segments of the market,
+monetary policy shocks are going to be priced directly,
+not just through the market.
+So there's going to be a second factor.
+And the reason for that is that ultimately, money supply does
+affect liquidity in the market.
+It's not the market kind of liquidity,
+like transaction costs.
+But it's more like funding liquidity,
+ease of obtaining funding, and gaining leverage, and whatnot.
+All of that is going to be affected by monetary policy
+shocks.
+And for securities where their investors
+are relying on ability to lever up, that's going to matter.
+So that's my --
+call it educated guess.
+But I would guess that monetary policy
+shocks would be priced, in addition to the market
+exposure.
+But it's a conjecture.
+And you can dig through the literature and see.
+Someone must have looked into it already.
+But there is more content too.
+The trouble with doing this, the challenge,
+is that we don't have a huge historical sample.
+Essentially, monetary policy is evolving over time as a policy.
+And that, of course, affects how these shocks are priced
+in the financial markets.
+We don't have a huge amount of data.
+But nonetheless, for first principles,
+it would seem like it will be priced.
+On the theme of CAPM versus APT, someone suggested a video,
+this is a lecture by Andrew Lo talking about derivation
+of CAPM from a single factor APT based on Steve Ross's paper.
+If you're curious, I encourage you to take a look.
+This was the memorial lecture for Steve Ross
+that we held here at MIT.
+It covers several interesting topics.
+And I thought the presentations were very good.
+So you could see kind of the broad cross-section of topics
+related to Steve's work, both in asset
+pricing and corporate finance.
+So then based on that observation, here's
+the question.
+In this derivation, there are not assumptions
+that we have made in the derivation of CAPM.
+It's purely based on the arbitrage argument.
+Then why do we say that CAPM is an equilibrium model
+and not that it's a special case of multifactor APT?
+Well, let me remind you that we actually
+made the same observation in Fin II, right?
+When we derived the CAPM, we did notice
+that it looks exactly like one factor APT.
+So that's the observation that Andrew is making.
+It's identical.
+Essentially, this doesn't establish the CAPM.
+Because it simply points out that if you have a one factor
+structure in the APT framework, you're
+going to end up with the same pricing equation
+as you obtain if you follow CAPM assumptions.
+If you don't have a one factor structure in the APT framework,
+then you don't.
+By the way, in the one factor APT structure,
+you have to do some work, actually,
+some additional stuff to convince yourself
+that factor and the market portfolio are the same thing.
+That may not necessarily follow.
+So there is a lot of kind of slippage there.
+But nonetheless-- so mathematically, one factor APT
+and CAPM look the same.
+But of course, they're based on different assumptions.
+There is nothing in the APT framework
+that says that you have to have a single factor.
+The whole reason why Steve introduced this model
+is to allow for multiple risk factors.
+And the empirical evidence is that there are multiple risk
+factors.
+So why do we say that CAPM is an equilibrium model?
+Well, it is based on certain assumptions
+about investor behavior.
+So we're basically saying that if investors
+are mean variance optimizers, then
+using equilibrium arguments, we can show
+that the CAPM formula holds.
+Can we achieve the same result using arbitrage arguments?
+Starting from the same assumptions, no.
+You cannot start with the mean variance assumptions,
+use arbitrage arguments, and derive the CAPM formula.
+So APT argument, arbitrage argument,
+starts from strong statistical assumptions, single factor
+structure, and then derives the same formula.
+So it's basically different initial assumptions,
+different arguments, same result in one special case.
+In that sense, CAPM is very different from APT.
+Do equilibrium and arbitrage conditions
+coincide in this case?
+So the conditions themselves, of course, don't coincide.
+They have very different meaning.
+Equilibrium simply says that supply equals demand.
+For every share bought, someone must have sold it.
+So that's sort of just a feature of reality.
+Arbitrage conditions tell you that there is no free lunch.
+And that's a very different property of the market.
+In this particular case, you end up
+with the same pricing formula.
+But in other respects, these economies, of course,
+are very different.
+So in general, CAPM and APT are not the same.
+You add the second factor.
+And they basically are going to generally look different.
+CAPM doesn't need to hold in the APT framework.
+All right, this brings us the following question.
+Given that this is MIT, why was Intertemporal Capital Asset
+Pricing Model, ICAPM, of Robert Merton not discussed?
+Should a person of finance delve deeper into CAPM extensions?
+Or is the base theory fundamentally sufficient?
+It's a very good question.
+As it happens, I teach three different courses at MIT.
+And I discuss Bob Martin's ICAPM in two of them,
+two out of three.
+And the one where we don't cover it is the foundations course.
+Because ICAPM is a somewhat advanced model.
+Should one go deeper into extensions of CAPM?
+Yeah, if you want to learn more about finance, of course.
+Again, this is an introductory course.
+I wouldn't tell you that what we cover here is sufficient.
+The reality is that it's an open field, right?
+It's a very complex subject in a sense
+that once you go to the boundary of our knowledge,
+there's a lot more stuff still to be uncovered.
+So nothing is sufficient.
+Should ICAPM be a part of the toolbox
+if you want to be a finance professional?
+Yes.
+Should it be in the introductory course?
+Typically, it's not because of the overhead required.
+Having said that, let me tell you a few things about ICAPM.
+So ICAPM is mathematical, equivalent to APT,
+if you look at the formula.
+It basically says that if you look
+at the risk premium of any security,
+you could express it as the following.
+It's going to be beta of the security on the market
+times the market risk premium plus
+some additional components, which
+look like betas on some other factors
+different from the market, times their risk premium.
+So these R bar K, they are expected returns
+on the factor-mimicking portfolios.
+
+Now, mathematically it looks the same.
+Should we say that ICAPM is redundant,
+is just a special case of APT?
+Well, it's kind of the same thing as with CAPM, right?
+The formula looks the same.
+But assumptions are different.
+And the meaning of the formula is not exactly the same.
+So the mimicking portfolios, what factors do they mimic?
+That's kind of the key question.
+APT is silent about that.
+It will tell you that whatever factors show up
+in the factor structure of returns,
+that's what's going to drive the risk premium.
+But it doesn't tell you which factors
+are supposed to drive the perception of returns
+in that factor model ratio.
+ICAPM is actually specific about the nature of these factors.
+ICAPM says that these are portfolios that mimic shocks
+to investment opportunities.
+What are investment opportunities?
+They are essentially things like interest rates,
+expected returns, volatility.
+It's kind of anything that describes the distribution
+of returns on the totality of assets
+in the market going forward.
+
+So that's different from APT, right?
+So now you think about, well, what
+about these macro shocks, shocks to output, oil price, this
+and that?
+Well, they are going to be a part of ICAPM
+only if these shocks correspond to changes
+in investment opportunities in the financial markets.
+So the content of the factors is not the same.
+Now, let's talk a bit more about the intuition of ICAPM.
+Why is this the case?
+Why are we saying that these additional price
+factors have to be shocks to investment opportunities?
+Now, to derive it rigorously, we need a couple
+of advanced mathematical tools.
+The original derivation used dynamic programming.
+This is optimization method for multivariate problems
+and use stochastic calculus.
+Stochastic calculus is also, of course,
+the basis for option pricing in continuous time.
+So it has these two ingredients.
+And we don't have space in the introductory class
+to cover both of them.
+Because they take quite a bit of time to develop.
+So we are going to barge into it without the mathematical tools
+and just talk about the intuition.
+I think that we can gain a lot of insight
+without deriving it formally.
+Let's consider the following motivating example, instead of
+the mathematical derivation.
+Alice is an investor.
+Let's say she is highly risk averse, make it real simple.
+And she's facing a market with two securities only.
+They are two bonds, risk-free bonds, default free bonds.
+One bond has a horizon of one year.
+And the other one has a horizon of 20 years.
+And they are both discount bonds.
+So the way it's going to go is that at time zero
+she has these two bonds available, one and 20 years.
+And then a year later, the 20 year bond
+is going to have 19 years left to maturity.
+And then 18 years is going to kind
+of shrink, approach maturity.
+And the one year bond, of course,
+is going to mature after the first year.
+Then you can roll over.
+Each year you have a new one year treasury bond available.
+OK, so that's the market.
+Now, let's consider two hypotheticals.
+Suppose that Alice has a one year horizon.
+How will she invest?
+Well, I would say that because she is so highly risk averse,
+she is going to invest 100% of her portfolio
+in a one year bond.
+Why is that?
+Because over a one year horizon, a 20 year bond is risky.
+We don't know at what price you'll
+be able to sell it a year from now,
+when the bond has 19 years left to go.
+So that's interest rate risk that we talked about in Fin I,
+right?
+Long duration bond has interest rate risk.
+One year bond, risk-free.
+You know exactly what you're going to get one year from now.
+A risk-free investment is what a highly risk averse
+investor is going to pick.
+Fine, so that's simple enough.
+Now, what if Alice has a 20 year horizon?
+How will she invest then?
+Well, at the 20 year horizon, things flip.
+Now, a 20 year bond is risk-free.
+Because you know exactly what the bond
+is going to pay 20 years from now.
+What about the one year bond?
+Well, if you buy a one year bond at time zero,
+and then you roll over the next year, and then roll over again,
+you don't know the future spot interest rates.
+So you're going to keep rolling over.
+And your ultimate portfolio value would be random.
+It will depend on the path of interest rates.
+So with a 20 year horizon, the notion of a safe asset
+changed, right?
+Now, a 20 year bond is safe.
+And this kind of strategy of buying one year bond is risky.
+So as an aside, this brings up a very important notion
+that what constitutes a safe asset differs across investors.
+In this particular example, it differs in relation
+to the investment horizon.
+But there could be other dimensions of differences.
+So that is very important.
+Because sometimes it's how would people think about safe asset?
+They think a Treasury bond.
+But that's very narrow.
+That's only for a particular class of investors.
+OK, so we concluded that this risk averse investor
+is going to hold 100% of her portfolio in the 20 year bond.
+Because that asset gives a safe payoff 20 years later.
+
+What about the short term volatility
+of the 20 year bond, right?
+She is highly risk averse.
+Why is she taking on this kind of volatility?
+Well, here is the thing.
+With a long investment horizon, this kind of short term
+mean and volatility of returns is not the whole story.
+Think about from Alice's point of view.
+If the 20 year bond drops over the next year,
+is that a big problem?
+Well, if she had to liquidate at that time,
+it would be a problem.
+But she's going to hold that bond to maturity.
+So if the bond price falls after the first year, what that means
+is that the rate of returns from that point until maturity
+is going to be higher.
+
+And things kind of cancel out.
+So when the bond price declines, future returns are better.
+What this highlights is a particular special case
+of the general notion that changes
+in investment opportunities matter, in addition to shocks
+to the portfolio value.
+So if I have a long horizon as an investor,
+I don't just care about the mean and the variance
+of my portfolio return over the short horizon.
+I also care about, how will I be able to reinvest my money
+after the first period?
+I care about the investment opportunities
+I will be facing at the end of the first period.
+More than that, I care about the joint distribution
+of my portfolio return and my investment opportunities.
+In this case, this 20 year bond has the property
+that bond returns are perfectly correlated with changes
+in investment opportunities negatively.
+The bond price falls, gives you a low or negative return.
+In the state of the world where future interest
+rates are higher, investment opportunities are better.
+And vise versa, the bond price rises in value
+when future interest rates are lower.
+So this illustrates the notion that for a long horizon
+investor, the short term mean variance objective is not
+right.
+There are going to be other considerations
+in their objective.
+And here we have to essentially take it
+on faith it's coming from dynamic programming.
+These other considerations have to do
+with the value of investment opportunities
+together will develop the portfolio.
+So when it's all said and done, we
+end up with the I-CAPM calculation
+that tells you that the risk premium on every security
+is based on the market data and the market risk premium.
+And on top of that, it's exposure to the shocks
+to investment opportunities times the risk
+premium of these shocks.
+And so these mimicking portfolios,
+they're called hedging portfolios.
+These are portfolios of traded securities that
+best approximate or hedge shocks to investment opportunities.
+In case of long term interest rates, this would be bonds.
+In case of other dimensions of investment opportunities,
+it's other securities or portfolios of securities.
+So that's ICAPM.
+So at the end of the day, if you're going to ICAPM,
+it's going to look almost indistinguishable
+from using APT, except ICAPM requires more discipline
+in the choice of factors.
+You have to use factors that respond to shocks to investment
+opportunities.
+
+Now, let me go back to the following result, which
+we had in the course.
+This is the failure of CAPM.
+This is actually one of the more problematic failures of CAPM.
+The security market line is pretty flat, right?
+So this is not a new result. It was first
+observed by Mike Jensen, Fischer Black, and Myron Schultz.
+In 1972, they did some empirical analysis.
+They published a paper about a very well known paper
+that documented this kind of failure of CAPM.
+And then recently, there was a resurgence
+of interest in this result. People reestablished it again.
+And this made it into the space of quant trading strategists.
+Now if you're interested in things like smart beta
+strategies, people talk about betting against beta
+or low risk strategies.
+This is going to be based on this idea
+that it appears that low beta stocks earn pretty high returns
+compared to the market risk.
+And their average returns are not
+very different from high beta stocks.
+So if you buy a low beta stocks and you lever up
+and you short high beta stocks, you get rid of market risk.
+You have an alpha left.
+So this looks like a problem for the CAPM.
+If you take these results at face value,
+then it's definitely an issue.
+Now, Fischer Black made the following observation.
+So this is his picture here.
+This is not my observation.
+This is his.
+And of course, he is Fischer Black
+from the Black, Schultz, Merton fame.
+And he was one of the most influential thinkers
+in finance.
+And of course, on our faculty at MIT.
+So he basically said that if you look at these results
+and you see that CAPM fails, that actually is even more
+interesting than if it worked.
+So it doesn't mean that beta is useless.
+It actually makes very useful.
+And think about the following possibility.
+Suppose that you are a firm which
+has pretty unrestricted access to the bond market,
+to financial markets.
+You can raise money.
+You could lever up if you want.
+Well, what you can do then is invest
+in low risk projects, which have these high discount rates.
+So they are basically cheap, low price, high discount rate.
+And then you lever up and then sell equity to the market.
+So what happens?
+
+You are able to generate money by levering up by doing that,
+right?
+Because as you lever up, your required rate of return
+doesn't seem to rise much, right?
+So you take a project that has a beta of 0.5.
+And then you use that to finance half of it
+and finance half of it with equity, right?
+And then you sell the whole thing to the market.
+Now your beta is not 0.5.
+Now that you used debt to finance, your beta of equity
+is one, right?
+If half of it is debt, half of it is equities,
+you sell equity to the market.
+Beta is one.
+Normal would say, well, then you risk
+premium is going to go up by a factor of two.
+So there is an arbitrage there, right?
+But in this case, if you believe this relation,
+that's not going to happen.
+Your risk premium doesn't go up.
+So there is arbitrage.
+You can basically make money, increase the value of the firm,
+by using leverage.
+Now, you're going to learn about M&M proposition, Modigliani
+and Miller, another product of MIT finance group.
+This was Franco Modigliani's contribution,
+one of his contributions.
+And that's going to tell you the exact opposite, that it's
+impossible to increase the value of the enterprise using
+leverage.
+Because there is no free lunch.
+If you replace some of the equity
+financing with debt financing, yeah,
+that has lower discount rates.
+But you're going to make your equity more risky.
+And then the cost of capital and equity is going to go up.
+And so when you look at the weighted average, which
+is the discount rate for the whole firm,
+that does not change.
+It cannot change.
+You're just kind of splitting cash flows between debt
+and equity.
+But the properties of the whole don't change.
+So if you take this graph at its face value,
+then it violates the M&M proposition.
+And there is arbitrage in the market.
+So basically, what Fischer Black was
+saying that either these firms that can lever up
+would be able to take advantage of that.
+And they can invest in low risk projects
+and use a lot of leverage to make money out of it.
+Or maybe this relation actually doesn't quite apply.
+Or firms don't have access to easy funding in the bond
+market.
+But essentially, this is either some kind
+of market failure in terms of constraints
+in the financial market.
+Or it's an opportunity for firms.
+But in either case, if the firms were able to lever up, then
+even though this is how equity is priced,
+when the firms look at projects, they would use CAPM.
+Because they understand that low risk project
+it actually is not cheap.
+It's going to give them positive NTV.
+They can figure out the true value
+of using the CAPM formula.
+Because that's going to take into
+account their ability to lever up and sell equity
+to the market.
+So that's kind of the observation.
+Now what is the flaw in that argument?
+Well, of course, Fisher was very aware of that.
+He's essentially playing devil's advocate here,
+saying that if you take this relation
+as a stable structural relation, then
+you're going to have those types of interesting effects.
+But the flaw in this argument is that just because empirical
+and some high beta stocks and low beta stocks
+tend to have similar average returns,
+doesn't mean that if you take a lower beta project
+and you lever it up, your discount rate is not
+going to rise.
+Because this is not of structural relation.
+It's like this is about calculations.
+And when you start levering up and you
+expect to move along this blue line on average,
+then you think it's a causal relation.
+That doesn't follow.
+OK?
+So it could be that when you simply apply leverage, then
+your CAPM relation holds very well.
+Because otherwise, there is arbitrage.
+If you just apply leverage, then you double your risk,
+you double your expected excess return.
+But when you look across firms, what happens
+is that there are these firms on the right with high beta.
+They are different from firms on the left,
+not just in terms of the market beta.
+But something else is different about it.
+So if you live in the multifactor world,
+then what you're seeing is differences in market betas.
+But you don't see differences in other factors.
+And that could potentially explain why the security market
+line is flat.
+Because you are missing other factors.
+That's an explanation potentially.
+So let's look at that.
+Again, to recap, people came up with arguments
+trying to explain this kind of relation of the data.
+And the arguments rely on things like constraints.
+They basically said that if investors are constrained
+in terms of leverage, they are going to essentially undervalue
+these low beta stocks.
+Because they cannot get sufficiently high levels
+of return from them.
+They would like high beta stocks.
+Because it's a substitute for leverage.
+But firms that have access to leverage,
+they can take advantage of that.
+And they use a lot of leverage together with low risk
+investments to make money.
+So that's kind of the argument on the supply side.
+That firms can arbitrage this way.
+But what I want to pursue now is the alternative line,
+which is that we have missing factors at play potentially
+and that this is just a partial picture of risk.
+So I will walk you quickly through an exercise.
+This is based on my own paper with my former student,
+Dimitris Papanikolaou.
+
+He's now on faculty at Yale.
+So he's a colleague more than a student now.
+But we looked at the following issue in relation
+to the flat security market line and other effects.
+So the issue is the following.
+If you look at the differences in average accounts
+across firms, you could see that they're not fully captured
+by the CAPM beta.
+There are other dimensions.
+And in particular, firm characteristics
+can predict returns.
+And also, you could come up with these long short portfolios,
+kind of like with Fama and French
+did, sold stocks on market to bulk or on size,
+and create additional factors.
+And these factors are priced.
+And they're not spent by the market portfolio.
+So that's a general observation.
+And let me show you a few motivating results.
+So here, we're going to replicate a few of these
+examples of the failure of CAPM.
+So here is one, market beta.
+This is a representation as a table of the picture.
+It says that let's sort stocks on their market beta
+from low beta to high beta.
+And let's look at their average excess returns
+and see how CAPM is able to explain them.
+So what you see is historical.
+This is for a period from 1965 to 2008.
+The low beta firms compared to high beta firms
+have pretty similar returns.
+They may be slightly higher.
+But that's statistical and not distinguishable.
+And essentially, it's a flat security market line.
+Of course, betas are very different.
+For the low beta firms, beta is .7 on average.
+The high beta firms it's almost 1.5.
+So the expected returns are similar.
+Betas are very different.
+And that means that CAPM doesn't describe these average returns.
+There is a violation.
+There is a CAPM alpha.
+So if you look at the high beta firms versus low beta firms,
+and you create a long short portfolio, where
+you go along high beta firms and your short dollar for dollar
+low beta firms, what you find is a negative CAPM alpha, right?
+And if you take this long short portfolio
+and you ask, what kind of systematic risk is in it,
+well, this portfolio is very well diversified.
+It has lots of securities, basically
+20% of the market, so hundreds of securities.
+It has some kind of market risk, of course.
+If you are aggressive on the market, there is an r-squared.
+Why?
+Because you're going long on high beta stocks
+and short low beta stocks.
+So your long short portfolio has a positive market beta of 0.75.
+But at the end of the day, the market
+explains only a quarter of the variance.
+So what is going on?
+Idiosyncratic variance should have been diversified away.
+But it didn't somehow.
+Well, actually, idiosyncratic variance did.
+What is left here is some kind of systematic risk factor.
+There are other systematic risk factors
+that don't get diversified when they go long short.
+It's exactly the argument that we applied
+when we talked about APT.
+So there are other factors here.
+We don't know what they are.
+But there is evidence that they are there.
+Because the r-squared on the market is closer to 0 than to 1
+in a well diversified portfolio.
+And so then we do the same exercise
+for other kinds of sorts.
+So here is the sort on the so-called
+Tobin's Q. Think of it as an enterprise level
+market to book ratio.
+It's kind of analogous to the Fama and French market
+to book or for equity.
+And here again, you see the value
+of stocks versus growth stocks have
+very different average returns.
+Value stocks have high average returns.
+Growth stocks have low historical average returns.
+The market beta doesn't align with expected returns.
+It kind of goes in the wrong direction.
+So there is a strong pattern of alphas there.
+And again, a long short portfolio, the market
+doesn't explain much.
+The portfolio itself is pretty volatile, right?
+So there's a lot of residual systematic risk,
+just not market risk, other kinds of systematic risk.
+We do the same for other things.
+We sort firms on their past investment.
+Very similar, firms that invested a lot versus--
+yeah, sorry.
+This is firms that invested a little on the left versus firms
+that invest a lot on the right have different average returns.
+CAPM doesn't explain it.
+If you go long short, you have a large CAPM alpha.
+Again, a well diversified portfolio
+with a lot of residual risk not captured by the market.
+You sort on the enterprise level earnings
+to price ratio, similar results.
+And even on idiosyncratic stock return volatility.
+This is stock specific return volatility not captured
+by the common factors.
+And again, you see that the long shot
+portfolio is highly volatile, not captured by the market.
+And CAPM fails to describe it.
+So all of these facts they point to the limitations of CAPM.
+They also point to the existence of additional risk factors.
+Otherwise, our long short portfolio
+would have very low volatility.
+And these outflows would look like arbitrage.
+But they don't.
+It looks like you have a strategy that
+has some kind of average rate of return,
+but also has a lot of residual risk.
+So then we do the following.
+We take all of these five cross-sections of portfolios,
+sort it on the market beta on market
+to book on past investment, idiosyncratic volatility.
+Take all these different cross-sections.
+If you look at the composition of these long short portfolios,
+high versus low, they all look pretty different.
+You don't have a lot of overlapping membership
+in these portfolios.
+But when they extract the common component of returns
+in these cross-sections, this is done
+using so-called principal component analysis, when
+extract the common source of variation in each of these five
+cross-sections, they seem to be strongly related
+to each other statistically.
+So it looks like each of these cross-sections
+has an important common factor.
+And these common factors are highly related
+across the cross-sections.
+So the pairwise correlation is pretty high.
+And there is a common factor across all of these five
+cross-sections that seem to apply to each of them,
+even though mechanically if you look
+at the membership in these portfolios,
+you don't see such a strong pattern.
+So there is a strong statistical relation between them,
+a common source of variation.
+That starts to sound very much like APT.
+Well, so then what we did is we created a second factor, which
+is based on the common source of movement
+in these 50 portfolios, five sections, 10 portfolios each.
+This factor is uncorrelated with the market by construction.
+So it's a common source of variation other
+than the market.
+And it shows up here in the last row.
+And what you see is that each of these cross-sections.
+It loads strongly on this second component in addition
+to the market.
+And now when you look at the alphas in this two factor
+model, which is the two factor APT model,
+alphas shrunk towards zero.
+And the key statistics basically show that now they
+are no longer significant.
+Let me show you the same result graphically.
+I'm going to skip this table.
+It's a different way of presenting the data.
+So here is a graphical illustration of the end.
+What's going on?
+If you look at the panel on the left,
+on the horizontal axis it shows the expected return according
+to CAPM-- this is the fitted expected return--
+this is the forecast of what expected return should
+be if CAPM is the right model.
+On the vertical axis, you looked at
+the average historical return, realized return.
+They are supposed to fall in the 45 degree line subject
+to some statistical noise.
+But they should align on the 45 degree line.
+They don't.
+You see that realized return essentially
+has almost no relation to the theoretical expected return.
+If anything, the relation seems to be almost negative.
+Now, if you just see that, you never learned anything else,
+you're going to say, well, that looks like a horrible model.
+Why would you even bother?
+But obviously, these cross-sections
+the reason why we're looking at them
+is because we learned that they're problematic.
+If you do other types of sorts, the CAPM
+is going to fare better.
+But we found these things that are problematic for CAPM.
+They're also related to each other based on some underlying
+economics.
+So it's not completely random.
+So now, when you look at the panel on the right,
+here this plots the expected returns, or return forecasts,
+using a two factor model.
+This is an APT extension.
+You have your market component.
+And then you have the second factor,
+which is our principal component, common source
+of variation in these 50 portfolios
+other than the market.
+That's our factor.
+So we estimate the beta of each portfolio
+on that factor and use that to predict returns.
+And now, it aligns a lot better with the 45 degree line.
+There is one portfolio that sticks out.
+The rest of them actually align pretty well.
+This portfolio that sticks out is the portfolio
+of the stocks with the highest level
+of idiosyncratic volatility.
+And these stocks just have negative returns
+on average in sample.
+And they're not explained even by this two factor model.
+These stocks basically, there are good reasons
+to think that they will be mispriced.
+Because they are subject to short selling constraints.
+So the trading on these stocks is not unconstrained.
+They can be easily overpriced, but lower returns.
+So what's the bottom line?
+There does appear to be a second common factor, at least.
+So it's not an accident that the security market was flat, OK?
+And this second common component,
+it does connect together these different cross-sections
+that are based on very different kinds of sorts.
+Idiosyncratic volatility sort versus sorting market
+to book versus sorting market beta looks all very distinct.
+But at the end of the day, they're related.
+There is a common underlying source of risk.
+OK, so I'm going to stop here.
+This is one example of how you go from CAPM to APT,
+and how you could make some sense
+of these types of relations.
+But going back to Fischer Black's observation,
+as you invest in the low risk projects and then you lever up,
+you're going to end up with something
+that looks different from the high beta firms.
+And they're going to be different in terms
+of the exposure to those additional factors.
+
+This is all I wanted to cover today in terms of my materials.
+The handout will be posted.
+So you could have it for your reference.
+If you have any additional questions,
+maybe reach out through the forum.
+Otherwise, thank you for your time and keep on going.
+There is a lot of exciting stuff to cover in the course.

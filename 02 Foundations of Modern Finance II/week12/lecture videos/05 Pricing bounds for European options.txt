@@ -1,0 +1,74 @@
+
+PROFESSOR: We now use arbitrage arguments to develop
+pricing bonds on options.
+These bonds are model free.
+We do not need to impose any restrictions
+on the price process of the underlying asset.
+These bonds are important not only because
+of their practical implications, but also
+because they help us better understand how to use arbitrage
+logic to value options.
+This is a stepping stone on the way
+towards option-pricing models.
+We now introduce some notation, which
+we will use for the rest of the lecture.
+For convenience, we refer to the underlying asset as the stock.
+Of course, the underlying could also
+be a bond, foreign currency, or some other asset.
+S is the price of the stock now.
+S sub t is the price of the stock at time, t.
+B is the price of the discount bond, paying $1 at maturity
+at time, t.
+We maintain the assumption that interest rates are positive.
+So the price of the bond is less than 1.
+C denotes the price of a European call,
+with the strike price, K and maturity,
+T. P is the price of a European put,
+with the strike price, K and maturity,
+T. For now we consider only European options, which can
+be exercised only at maturity.
+We also assume that the underlying asset does not
+pay dividends.
+Consider the payoff for the option
+when the option is exercised.
+The resulting cash flow is called the exercise value
+of the option.
+For a call option, the exercise value
+is the difference between the stock price and the strike
+price.
+For a put, the exercise value is the difference
+between the strike and the stock price.
+There is some terminology related to this.
+We say that the option is in the money
+if its exercised its value is positive.
+An option is at the money if its exercise value is 0.
+And the option is out of the money
+if its exercise value is negative.
+We now establish pricing bonds for European call options.
+First, the payoff of a call can never be negative.
+Therefore the price of the option is at least a zero.
+Second, the payoff for the option
+is bounded from above by the value
+of the stock at expiration.
+Therefore, the price of the option cannot be higher than
+the current price of the stock.
+
+Next, we establish another lower bound on the option price.
+Option price is no less than the price of the stock,
+minus the present value of the strike price, K.
+To establish this result, consider two strategies.
+First, buy a call.
+Second, buy a share of the stock and borrow the present value
+of the strike.
+The payoff of the first strategy is at least
+as high at maturity of the option as the payoff
+of the second strategy.
+We conclude that the price of the call
+has to be at least as high as the price of the stock,
+minus the present value of the strike,
+or K times B. If we combine all of the pricing
+bounds we have derived, we establish an upper and a lower
+bound on the call price.
+The call price is bounded above by the stock price.
+And it is bounded from below by the maximum of 0
+and the stock price minus the present value of the strike.

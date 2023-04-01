@@ -1,0 +1,424 @@
+0
+00:00:00,000 --> 00:00:00,680
+
+
+1
+00:00:00,680 --> 00:00:04,260
+PROFESSOR: We now consider futures on commodities.
+
+2
+00:00:04,260 --> 00:00:06,930
+We can price commodity futures using
+
+3
+00:00:06,930 --> 00:00:08,880
+the same type of arbitrage argument
+
+4
+00:00:08,880 --> 00:00:12,020
+as for financial futures.
+
+5
+00:00:12,020 --> 00:00:14,540
+In contrast to the financial futures,
+
+6
+00:00:14,540 --> 00:00:17,240
+the net payout of commodity futures
+
+7
+00:00:17,240 --> 00:00:20,780
+must reflect storage costs and any effective benefit
+
+8
+00:00:20,780 --> 00:00:23,730
+from holding the physical commodity.
+
+9
+00:00:23,730 --> 00:00:27,330
+This benefit is called convenience yield.
+
+10
+00:00:27,330 --> 00:00:30,810
+We assume that storage costs accumulate continuously
+
+11
+00:00:30,810 --> 00:00:32,880
+with the flow rate proportional to the market
+
+12
+00:00:32,880 --> 00:00:35,770
+value of the commodity.
+
+13
+00:00:35,770 --> 00:00:38,500
+Then, our original valuation formula
+
+14
+00:00:38,500 --> 00:00:40,360
+for financial forwards and futures
+
+15
+00:00:40,360 --> 00:00:42,760
+applies here, with the dividend yield
+
+16
+00:00:42,760 --> 00:00:44,740
+replaced by the net convenience yield
+
+17
+00:00:44,740 --> 00:00:47,480
+from holding the commodity.
+
+18
+00:00:47,480 --> 00:00:49,630
+The net convenience yield captures
+
+19
+00:00:49,630 --> 00:00:52,030
+the benefits of storing the commodity, net
+
+20
+00:00:52,030 --> 00:00:54,590
+of storage costs.
+
+21
+00:00:54,590 --> 00:00:59,600
+As an example, consider a futures contract on gold.
+
+22
+00:00:59,600 --> 00:01:02,680
+Gold is often held for long-term investments rather than
+
+23
+00:01:02,680 --> 00:01:04,720
+industrial production.
+
+24
+00:01:04,720 --> 00:01:09,580
+We assume that storing gold produces no convenience yield.
+
+25
+00:01:09,580 --> 00:01:12,700
+Gold is also relatively easy to store.
+
+26
+00:01:12,700 --> 00:01:17,730
+Therefore, we assume that storage costs are negligible.
+
+27
+00:01:17,730 --> 00:01:21,510
+Under these assumptions, net convenience yield on gold
+
+28
+00:01:21,510 --> 00:01:23,920
+is equal to 0.
+
+29
+00:01:23,920 --> 00:01:27,110
+We conclude that the futures price of gold,
+
+30
+00:01:27,110 --> 00:01:30,310
+which is approximately the same as the forward price,
+
+31
+00:01:30,310 --> 00:01:33,520
+is equal to the current spot price, multiplied
+
+32
+00:01:33,520 --> 00:01:36,880
+by the exponential function of the risk-free rate,
+
+33
+00:01:36,880 --> 00:01:40,610
+times the time remaining until contract maturity.
+
+34
+00:01:40,610 --> 00:01:42,470
+To illustrate how well our pricing
+
+35
+00:01:42,470 --> 00:01:45,140
+formula for gold futures works in the data,
+
+36
+00:01:45,140 --> 00:01:46,940
+consider the gold futures contract
+
+37
+00:01:46,940 --> 00:01:51,270
+on the 1st of July of 2019.
+
+38
+00:01:51,270 --> 00:02:00,160
+The spot price of gold at the time was $1,387.45 per ounce.
+
+39
+00:02:00,160 --> 00:02:02,740
+The futures price for the contracts maturing
+
+40
+00:02:02,740 --> 00:02:06,640
+in October of the same year, traded on the CME,
+
+41
+00:02:06,640 --> 00:02:12,700
+was $1,397.80 per ounce.
+
+42
+00:02:12,700 --> 00:02:15,940
+Based on our pricing formula for gold futures,
+
+43
+00:02:15,940 --> 00:02:19,360
+the relation between the futures price and the spot price
+
+44
+00:02:19,360 --> 00:02:21,940
+implies that the continuously compounded interest
+
+45
+00:02:21,940 --> 00:02:23,530
+rate is 2.23%.
+
+46
+00:02:23,530 --> 00:02:28,330
+This is very close to the rate on the three month T-bill,
+
+47
+00:02:28,330 --> 00:02:30,760
+which at the time was 2.05%.
+
+48
+00:02:30,760 --> 00:02:36,760
+Next, consider oil futures.
+
+49
+00:02:36,760 --> 00:02:39,700
+In contrast to gold, inventories of oil
+
+50
+00:02:39,700 --> 00:02:41,920
+are typically held for future use
+
+51
+00:02:41,920 --> 00:02:44,800
+and not for long-term investment.
+
+52
+00:02:44,800 --> 00:02:48,350
+Oil is also relatively costly to store.
+
+53
+00:02:48,350 --> 00:02:51,310
+This means that storage of oil incurs both benefits
+
+54
+00:02:51,310 --> 00:02:53,860
+and physical costs.
+
+55
+00:02:53,860 --> 00:02:56,590
+Our valuation equation reflects this
+
+56
+00:02:56,590 --> 00:02:58,900
+through the term representing the net convenience
+
+57
+00:02:58,900 --> 00:03:01,730
+yield on storing oil.
+
+58
+00:03:01,730 --> 00:03:06,350
+As an example, on the 19th of July of 2019,
+
+59
+00:03:06,350 --> 00:03:13,170
+the spot price of crude oil was $55.68 per barrel.
+
+60
+00:03:13,170 --> 00:03:15,800
+The futures price for the NYMEX contracts
+
+61
+00:03:15,800 --> 00:03:18,230
+for delivery in October of the same year
+
+62
+00:03:18,230 --> 00:03:22,830
+was $55.83 per barrel.
+
+63
+00:03:22,830 --> 00:03:25,520
+The three-month continuously compounded interest rate
+
+64
+00:03:25,520 --> 00:03:27,210
+at that time was 2.3%.
+
+65
+00:03:27,210 --> 00:03:29,860
+
+
+66
+00:03:29,860 --> 00:03:33,700
+With the futures contracts being 3 and 1/2 month expiration,
+
+67
+00:03:33,700 --> 00:03:37,480
+our valuation formula implies the annualized net convenience
+
+68
+00:03:37,480 --> 00:03:41,310
+yield of 1.4%.
+
+69
+00:03:41,310 --> 00:03:44,010
+This is what market prices tell us
+
+70
+00:03:44,010 --> 00:03:47,250
+about the marginal costs and benefits of storing oil
+
+71
+00:03:47,250 --> 00:03:48,510
+at that time.
+
+72
+00:03:48,510 --> 00:03:52,140
+Based on our examples, we see that the futures prices
+
+73
+00:03:52,140 --> 00:03:56,070
+of commodity contracts may be above or below the current spot
+
+74
+00:03:56,070 --> 00:03:57,820
+price.
+
+75
+00:03:57,820 --> 00:04:01,840
+Whether futures prices increase or decline with maturity
+
+76
+00:04:01,840 --> 00:04:04,270
+depends on the economics of storing the underlying
+
+77
+00:04:04,270 --> 00:04:09,770
+commodity and the current state of the market and inventories.
+
+78
+00:04:09,770 --> 00:04:12,800
+When futures prices increase with maturity,
+
+79
+00:04:12,800 --> 00:04:16,730
+it is said that the forward curve is in contango.
+
+80
+00:04:16,730 --> 00:04:19,670
+Otherwise, it is in backwardation.
+
+81
+00:04:19,670 --> 00:04:22,370
+Under this definition, backwardation
+
+82
+00:04:22,370 --> 00:04:26,570
+occurs when the net convenience yield exceeds the interest
+
+83
+00:04:26,570 --> 00:04:28,690
+rate.
+
+84
+00:04:28,690 --> 00:04:32,220
+Note that sometimes definitions of contango and backwardation
+
+85
+00:04:32,220 --> 00:04:34,800
+adjust for the time value of money.
+
+86
+00:04:34,800 --> 00:04:37,320
+The following plot illustrates various shapes
+
+87
+00:04:37,320 --> 00:04:41,450
+of the forward curves one may observe in the market.
+
+88
+00:04:41,450 --> 00:04:44,700
+The forward curve for gold is practically flat,
+
+89
+00:04:44,700 --> 00:04:49,650
+which is consistent with the low level of the risk-free rate.
+
+90
+00:04:49,650 --> 00:04:52,530
+The curve for oil is in contango,
+
+91
+00:04:52,530 --> 00:04:55,200
+which means that the net convenience yield on storing
+
+92
+00:04:55,200 --> 00:04:58,430
+oil is relatively low.
+
+93
+00:04:58,430 --> 00:05:02,240
+In contrast, for iron ore, net convenience yield
+
+94
+00:05:02,240 --> 00:05:03,710
+is relatively high.
+
+95
+00:05:03,710 --> 00:05:07,640
+And this curve is in backwardation.
+
+96
+00:05:07,640 --> 00:05:10,940
+Finally, the forward curve for natural gas
+
+97
+00:05:10,940 --> 00:05:15,540
+shows fluctuations in relation to seasonal demand patterns.
+
+98
+00:05:15,540 --> 00:05:18,630
+Natural gas is relatively difficult to store.
+
+99
+00:05:18,630 --> 00:05:20,610
+Therefore, our pricing model is not
+
+100
+00:05:20,610 --> 00:05:22,860
+very useful for explaining prices
+
+101
+00:05:22,860 --> 00:05:25,800
+of longer-dated natural gas contracts.
+
+102
+00:05:25,800 --> 00:05:28,950
+Storage-based models are also more suitable
+
+103
+00:05:28,950 --> 00:05:31,410
+for short-dated agricultural contracts,
+
+104
+00:05:31,410 --> 00:05:35,490
+such as sweet futures than for longer dated contracts,
+
+105
+00:05:35,490 --> 00:05:39,620
+which are affected by supply from future harvests.
+

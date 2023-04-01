@@ -1,0 +1,496 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:02,970
+PROFESSOR: Swaps are important and commonly-used
+
+2
+00:00:02,970 --> 00:00:05,370
+derivative contracts, closely related
+
+3
+00:00:05,370 --> 00:00:07,840
+to forwards and futures.
+
+4
+00:00:07,840 --> 00:00:12,220
+A swap is a contract in which two counterparties agree
+
+5
+00:00:12,220 --> 00:00:16,450
+to exchange specified amounts of assets, such as cash,
+
+6
+00:00:16,450 --> 00:00:22,510
+financial assets, or commodities at a set of given future dates.
+
+7
+00:00:22,510 --> 00:00:25,390
+The figure below offers a stylized representation
+
+8
+00:00:25,390 --> 00:00:30,200
+of a swap between two counterparties, A and B.
+
+9
+00:00:30,200 --> 00:00:32,750
+The upward-pointing arrows represent
+
+10
+00:00:32,750 --> 00:00:37,880
+cash flows collected by investor A. The downward-pointing arrows
+
+11
+00:00:37,880 --> 00:00:41,380
+are the cash flows collected by investor B.
+
+12
+00:00:41,380 --> 00:00:44,230
+Note that the times series profile of these cash flows
+
+13
+00:00:44,230 --> 00:00:45,640
+differs.
+
+14
+00:00:45,640 --> 00:00:48,940
+In the case of investor A, fixed payments
+
+15
+00:00:48,940 --> 00:00:52,840
+are received each period, while payments of investor B
+
+16
+00:00:52,840 --> 00:00:54,880
+fluctuate randomly.
+
+17
+00:00:54,880 --> 00:00:57,930
+Consider an interest rate swap.
+
+18
+00:00:57,930 --> 00:01:00,960
+Under this contract, a fixed rate of interest
+
+19
+00:01:00,960 --> 00:01:05,330
+is exchanged for a reference floating rate.
+
+20
+00:01:05,330 --> 00:01:07,670
+A popular choice for the reference rate
+
+21
+00:01:07,670 --> 00:01:11,690
+for interest rate swaps is LIBOR, the London InterBank
+
+22
+00:01:11,690 --> 00:01:13,870
+Offered Rate.
+
+23
+00:01:13,870 --> 00:01:16,150
+Under the swap contract, payments
+
+24
+00:01:16,150 --> 00:01:18,010
+are made periodically, for instance,
+
+25
+00:01:18,010 --> 00:01:21,820
+at the end of each six-month sub-period.
+
+26
+00:01:21,820 --> 00:01:24,990
+Consider an example of a LIBOR swap.
+
+27
+00:01:24,990 --> 00:01:30,120
+Assume the current one-month LIBOR is 0.5%.
+
+28
+00:01:30,120 --> 00:01:35,100
+You enter into a five-year fixed for floating swap with a fixed
+
+29
+00:01:35,100 --> 00:01:38,570
+rate of 0.7%.
+
+30
+00:01:38,570 --> 00:01:41,190
+If LIBOR rises in the future, you
+
+31
+00:01:41,190 --> 00:01:44,300
+receive higher payments on the floating leg
+
+32
+00:01:44,300 --> 00:01:46,640
+and continue making fixed payments
+
+33
+00:01:46,640 --> 00:01:49,320
+on the fixed leg of the swap.
+
+34
+00:01:49,320 --> 00:01:53,640
+As a result, the swap represents a bet on higher future values
+
+35
+00:01:53,640 --> 00:01:55,210
+of LIBOR.
+
+36
+00:01:55,210 --> 00:01:59,270
+We now analyze the valuation of interest rate swaps.
+
+37
+00:01:59,270 --> 00:02:02,360
+Suppose that at the end of each period, t,
+
+38
+00:02:02,360 --> 00:02:05,810
+the floating leg of the swap pays the spot
+
+39
+00:02:05,810 --> 00:02:12,070
+risk-free rate over that period, which is r of t minus 1.
+
+40
+00:02:12,070 --> 00:02:18,780
+The fixed leg of the swap pays a fixed interest rate, r sub s.
+
+41
+00:02:18,780 --> 00:02:22,560
+The fixed rate is chosen so that the swap contract has
+
+42
+00:02:22,560 --> 00:02:25,050
+zero market value initially.
+
+43
+00:02:25,050 --> 00:02:29,600
+This means that no money changes hands at time 0.
+
+44
+00:02:29,600 --> 00:02:32,630
+The swap covers t periods, with payments
+
+45
+00:02:32,630 --> 00:02:34,910
+made at the end of each period.
+
+46
+00:02:34,910 --> 00:02:37,730
+We want to use arbitrage arguments to determine
+
+47
+00:02:37,730 --> 00:02:40,720
+the fixed rate r sub s.
+
+48
+00:02:40,720 --> 00:02:44,410
+To do that, we first establish a useful relation
+
+49
+00:02:44,410 --> 00:02:48,160
+between the forward rates and the future spot rates.
+
+50
+00:02:48,160 --> 00:02:50,680
+Consider two investment strategies.
+
+51
+00:02:50,680 --> 00:02:55,680
+Both start with $1 invested at time 0.
+
+52
+00:02:55,680 --> 00:03:00,180
+Under strategy 1, we initially invest $1 at the spot
+
+53
+00:03:00,180 --> 00:03:03,660
+risk-free rate until time, t.
+
+54
+00:03:03,660 --> 00:03:07,440
+Then we reinvest the proceeds for one more period
+
+55
+00:03:07,440 --> 00:03:12,690
+at the prevailing one-period spot rate at time, t.
+
+56
+00:03:12,690 --> 00:03:16,830
+Under strategy two, we also start with $1
+
+57
+00:03:16,830 --> 00:03:21,360
+and invest it at the spot risk-free rate until time, t.
+
+58
+00:03:21,360 --> 00:03:24,210
+Then we reinvest the proceeds for one more
+
+59
+00:03:24,210 --> 00:03:29,810
+period at the forward rate, which we'll lock in at time 0.
+
+60
+00:03:29,810 --> 00:03:33,050
+The two strategies produce different payoffs.
+
+61
+00:03:33,050 --> 00:03:35,690
+The payoff of the first strategy is random
+
+62
+00:03:35,690 --> 00:03:39,520
+and depends on the future spot rate at time, t.
+
+63
+00:03:39,520 --> 00:03:43,360
+The payoff for the second strategy is non-random.
+
+64
+00:03:43,360 --> 00:03:45,250
+Both of these payoffs are generated
+
+65
+00:03:45,250 --> 00:03:48,020
+with $1 initial investment.
+
+66
+00:03:48,020 --> 00:03:51,490
+So the time 0 present value of the payoff for both strategies
+
+67
+00:03:51,490 --> 00:03:53,170
+is $1.
+
+68
+00:03:53,170 --> 00:03:56,770
+Compare the payoffs of the two strategies.
+
+69
+00:03:56,770 --> 00:04:00,310
+We conclude that the time 0 present value of the cash
+
+70
+00:04:00,310 --> 00:04:04,660
+flow equal to the one-period spot trade between t and t
+
+71
+00:04:04,660 --> 00:04:07,930
+plus 1, paid at the end of that period,
+
+72
+00:04:07,930 --> 00:04:10,420
+is equal to the time 0 present value of the cash
+
+73
+00:04:10,420 --> 00:04:13,360
+flow equal to the one period forward rate
+
+74
+00:04:13,360 --> 00:04:16,060
+between t and t plus 1, also paid
+
+75
+00:04:16,060 --> 00:04:19,760
+at the end of the same period.
+
+76
+00:04:19,760 --> 00:04:22,820
+Recall that in contrast to the present value relation
+
+77
+00:04:22,820 --> 00:04:25,480
+that we just established, the expected value
+
+78
+00:04:25,480 --> 00:04:29,530
+of the future spot rate is not equal to the forward rate.
+
+79
+00:04:29,530 --> 00:04:33,130
+The reason for the difference is that the forward rate reflects
+
+80
+00:04:33,130 --> 00:04:36,160
+a risk premium in addition to the expectations
+
+81
+00:04:36,160 --> 00:04:38,320
+of the future spot rate.
+
+82
+00:04:38,320 --> 00:04:41,440
+We are now in a position to calculate the rate on the fixed
+
+83
+00:04:41,440 --> 00:04:45,020
+leg of an interest rate swap.
+
+84
+00:04:45,020 --> 00:04:48,070
+The present value of the fixed leg of the swap
+
+85
+00:04:48,070 --> 00:04:51,730
+is equal to the value of an annuity paying the fixed
+
+86
+00:04:51,730 --> 00:04:55,800
+rate for t periods, which is simply the fixed
+
+87
+00:04:55,800 --> 00:04:59,400
+rate multiplied by the sum of discount bond prices
+
+88
+00:04:59,400 --> 00:05:01,560
+with maturities from 1 to capital
+
+89
+00:05:01,560 --> 00:05:07,070
+T. The present value of the cash flows generated by the floating
+
+90
+00:05:07,070 --> 00:05:10,970
+leg of the swap is equal to the sum of present values
+
+91
+00:05:10,970 --> 00:05:13,880
+of individual payments, each of which
+
+92
+00:05:13,880 --> 00:05:16,730
+is equal to the current one-period spot interest
+
+93
+00:05:16,730 --> 00:05:21,770
+rate paid at the end of the corresponding period.
+
+94
+00:05:21,770 --> 00:05:25,310
+We impose that no money should change hands initially.
+
+95
+00:05:25,310 --> 00:05:27,560
+And therefore the time 0 present value
+
+96
+00:05:27,560 --> 00:05:31,460
+of the payments on the two legs of the swap must be the same.
+
+97
+00:05:31,460 --> 00:05:33,970
+
+
+98
+00:05:33,970 --> 00:05:36,670
+As we compare the two present values,
+
+99
+00:05:36,670 --> 00:05:39,730
+we use the result we just established.
+
+100
+00:05:39,730 --> 00:05:42,940
+The present value of the future spot rate
+
+101
+00:05:42,940 --> 00:05:47,460
+is equal to the present value of the corresponding forward rate.
+
+102
+00:05:47,460 --> 00:05:51,540
+We conclude that the rate on the fixed leg of the swap
+
+103
+00:05:51,540 --> 00:05:54,750
+is equal to a weighted average of the forward rates
+
+104
+00:05:54,750 --> 00:05:59,160
+from period 1 to capital T, with the weights proportional
+
+105
+00:05:59,160 --> 00:06:03,760
+to the market prices of the corresponding discount bonds.
+
+106
+00:06:03,760 --> 00:06:05,680
+We now reinterpret our expressions
+
+107
+00:06:05,680 --> 00:06:08,480
+for the fixed swap rate.
+
+108
+00:06:08,480 --> 00:06:12,050
+We start with the weighted average of forward rates,
+
+109
+00:06:12,050 --> 00:06:16,280
+and use the relation between the forward rate and spot interest
+
+110
+00:06:16,280 --> 00:06:21,660
+rates, or equivalently, discount bond prices.
+
+111
+00:06:21,660 --> 00:06:25,680
+Simplifying the expression, we find that the fixed rate
+
+112
+00:06:25,680 --> 00:06:28,540
+is a ratio of two terms.
+
+113
+00:06:28,540 --> 00:06:31,960
+In the numerator, we have the difference between 1
+
+114
+00:06:31,960 --> 00:06:35,770
+and the price of the discount bond maturing at the same time
+
+115
+00:06:35,770 --> 00:06:39,720
+as the swap at time capital T.
+
+116
+00:06:39,720 --> 00:06:44,190
+In the denominator we have the sum of discount bond prices,
+
+117
+00:06:44,190 --> 00:06:48,190
+maturity from one to capital T. We
+
+118
+00:06:48,190 --> 00:06:51,280
+should note that the derived expression for the swap rate
+
+119
+00:06:51,280 --> 00:06:54,850
+is equivalent to the coupon rate on the coupon bond
+
+120
+00:06:54,850 --> 00:06:59,420
+maturing at time, t and trading at par today.
+
+121
+00:06:59,420 --> 00:07:02,480
+This equivalence follows from the highlighted equation
+
+122
+00:07:02,480 --> 00:07:04,790
+for the bond price, which imposes
+
+123
+00:07:04,790 --> 00:07:08,950
+the condition that the bond trades at par today.
+

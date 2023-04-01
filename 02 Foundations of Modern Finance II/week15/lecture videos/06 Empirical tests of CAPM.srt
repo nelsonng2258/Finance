@@ -1,0 +1,436 @@
+0
+00:00:00,000 --> 00:00:03,270
+PROFESSOR: In this segment, we discuss how well the CAPM
+
+1
+00:00:03,270 --> 00:00:06,310
+model works in the data.
+
+2
+00:00:06,310 --> 00:00:11,230
+We'll look at the most common empirical tests of the CAPM.
+
+3
+00:00:11,230 --> 00:00:15,520
+Our goal is to establish how well market betas of firms
+
+4
+00:00:15,520 --> 00:00:19,790
+explain differences in their average stock returns.
+
+5
+00:00:19,790 --> 00:00:23,060
+In the first test, we form portfolios of firms
+
+6
+00:00:23,060 --> 00:00:25,700
+with different market betas.
+
+7
+00:00:25,700 --> 00:00:29,300
+There are two reasons for grouping firms into portfolios.
+
+8
+00:00:29,300 --> 00:00:33,930
+First, firm-level betas may change over time.
+
+9
+00:00:33,930 --> 00:00:38,550
+Sorting firms into portfolios based on their estimated betas
+
+10
+00:00:38,550 --> 00:00:42,240
+allows us to construct assets or portfolios
+
+11
+00:00:42,240 --> 00:00:47,090
+with relatively stable betas, which simplifies the test.
+
+12
+00:00:47,090 --> 00:00:51,680
+Second, firm-level betas are estimated with noise.
+
+13
+00:00:51,680 --> 00:00:54,740
+Grouping stocks into portfolios reduces
+
+14
+00:00:54,740 --> 00:00:58,660
+the effect of noise in a simple and intuitive manner.
+
+15
+00:00:58,660 --> 00:01:01,620
+Let's look closely at the test design.
+
+16
+00:01:01,620 --> 00:01:04,800
+We follow the well-known 1972 paper
+
+17
+00:01:04,800 --> 00:01:08,350
+by Black, Jensen, and Scholes.
+
+18
+00:01:08,350 --> 00:01:11,470
+Each month, we compute the excess return
+
+19
+00:01:11,470 --> 00:01:15,010
+on each stock as the difference between its return
+
+20
+00:01:15,010 --> 00:01:17,650
+from the start to the end of the month
+
+21
+00:01:17,650 --> 00:01:20,860
+and the risk-free interest rate, which we measure
+
+22
+00:01:20,860 --> 00:01:23,620
+as the one-month T-Bill rate.
+
+23
+00:01:23,620 --> 00:01:28,420
+Then, for each security, we use the most recent 60 months
+
+24
+00:01:28,420 --> 00:01:32,550
+of returns to estimate its market beta.
+
+25
+00:01:32,550 --> 00:01:36,810
+For that, we run the OLS regression of excess returns
+
+26
+00:01:36,810 --> 00:01:41,660
+on the stock on the excess market returns.
+
+27
+00:01:41,660 --> 00:01:44,720
+Finally, at the start of each year,
+
+28
+00:01:44,720 --> 00:01:47,810
+we sort firms into portfolios based
+
+29
+00:01:47,810 --> 00:01:51,950
+on their recent beta estimates as of the end of December
+
+30
+00:01:51,950 --> 00:01:53,090
+of the previous year.
+
+31
+00:01:53,090 --> 00:01:56,070
+
+
+32
+00:01:56,070 --> 00:02:01,420
+For each portfolio, we compute its excess return each month.
+
+33
+00:02:01,420 --> 00:02:05,150
+We use valuated portfolio returns.
+
+34
+00:02:05,150 --> 00:02:07,750
+Note that we construct portfolio returns only
+
+35
+00:02:07,750 --> 00:02:10,389
+after the portfolio formation.
+
+36
+00:02:10,389 --> 00:02:13,870
+For example, if we are creating portfolios
+
+37
+00:02:13,870 --> 00:02:18,250
+by sorting on beta estimates at the end of year 2005,
+
+38
+00:02:18,250 --> 00:02:21,430
+we then compute monthly portfolio returns
+
+39
+00:02:21,430 --> 00:02:25,740
+during year 2006 and so on.
+
+40
+00:02:25,740 --> 00:02:28,880
+Once we have constructed the time series of portfolio excess
+
+41
+00:02:28,880 --> 00:02:31,550
+returns, we compute the market betas
+
+42
+00:02:31,550 --> 00:02:35,090
+for each portfolio using a full-sample regression
+
+43
+00:02:35,090 --> 00:02:40,710
+of portfolio excess returns on the market excess returns.
+
+44
+00:02:40,710 --> 00:02:43,380
+We also compute the time-series average
+
+45
+00:02:43,380 --> 00:02:49,590
+of excess monthly returns on each of the 10 portfolios.
+
+46
+00:02:49,590 --> 00:02:53,260
+To visualize the risk-return tradeoff across the 10
+
+47
+00:02:53,260 --> 00:02:56,430
+portfolios, we plot their average returns
+
+48
+00:02:56,430 --> 00:02:59,830
+against their market betas.
+
+49
+00:02:59,830 --> 00:03:05,800
+As we see from the graph, over 1931 to 2019 period,
+
+50
+00:03:05,800 --> 00:03:09,340
+there is a positive relation between the market beta
+
+51
+00:03:09,340 --> 00:03:12,400
+and expected excess returns, which
+
+52
+00:03:12,400 --> 00:03:15,720
+is consistent with the CAPM prediction.
+
+53
+00:03:15,720 --> 00:03:19,500
+However, this positive relation is not as strong
+
+54
+00:03:19,500 --> 00:03:21,660
+as the CAPM predicts.
+
+55
+00:03:21,660 --> 00:03:27,650
+The slope of the security market line is approximately 3.5%.
+
+56
+00:03:27,650 --> 00:03:30,410
+According to the CAPM, the slope should
+
+57
+00:03:30,410 --> 00:03:32,450
+be equal to the market risk premium
+
+58
+00:03:32,450 --> 00:03:36,770
+during this period, which is roughly twice as large.
+
+59
+00:03:36,770 --> 00:03:39,140
+If we limit our analysis to the later part
+
+60
+00:03:39,140 --> 00:03:44,300
+of the sample starting in 1963, the security market line
+
+61
+00:03:44,300 --> 00:03:46,880
+is even more flat.
+
+62
+00:03:46,880 --> 00:03:51,230
+This plot also implies that the expected excess return
+
+63
+00:03:51,230 --> 00:03:56,180
+on the assets with zero market betas is much higher than 0,
+
+64
+00:03:56,180 --> 00:03:58,010
+as the CAPM would imply.
+
+65
+00:03:58,010 --> 00:04:00,980
+It is roughly 6% per year.
+
+66
+00:04:00,980 --> 00:04:03,170
+Other examples of CAPM violations
+
+67
+00:04:03,170 --> 00:04:06,320
+can be constructed by sorting stocks on certain firm
+
+68
+00:04:06,320 --> 00:04:10,520
+characteristics, such as firm size or the market
+
+69
+00:04:10,520 --> 00:04:13,520
+to book ratio of its equity.
+
+70
+00:04:13,520 --> 00:04:18,230
+In the well-known 1992 paper, Fama and French show that small
+
+71
+00:04:18,230 --> 00:04:22,490
+stocks and stocks with high market to book ratios called
+
+72
+00:04:22,490 --> 00:04:27,320
+value stocks tend to outperform, and their relatively high
+
+73
+00:04:27,320 --> 00:04:32,240
+average returns cannot be properly explained by the CAPM.
+
+74
+00:04:32,240 --> 00:04:34,610
+There are two main competing interpretations
+
+75
+00:04:34,610 --> 00:04:38,730
+of the empirical evidence on the failures of CAPM.
+
+76
+00:04:38,730 --> 00:04:42,570
+One possible conclusion is that small stocks,
+
+77
+00:04:42,570 --> 00:04:46,680
+high book to market stocks, low beta stocks, and so forth
+
+78
+00:04:46,680 --> 00:04:50,410
+are mispriced by the market, and our analysis
+
+79
+00:04:50,410 --> 00:04:52,330
+reveals the true alpha--
+
+80
+00:04:52,330 --> 00:04:56,250
+abnormal risk-adjusted returns.
+
+81
+00:04:56,250 --> 00:04:58,920
+One should be careful and not jump to this conclusion
+
+82
+00:04:58,920 --> 00:05:00,330
+too soon.
+
+83
+00:05:00,330 --> 00:05:05,540
+If true, this type of mispricing is quite easy to find.
+
+84
+00:05:05,540 --> 00:05:09,260
+It is then puzzling that it does not get arbitraged away
+
+85
+00:05:09,260 --> 00:05:12,950
+by the professional asset managers, who collectively
+
+86
+00:05:12,950 --> 00:05:16,670
+struggle to outperform passive investment benchmarks,
+
+87
+00:05:16,670 --> 00:05:22,720
+such as the valuated stock market index or S&P 500.
+
+88
+00:05:22,720 --> 00:05:26,320
+Perhaps it is difficult to take advantage of such mispricing
+
+89
+00:05:26,320 --> 00:05:30,100
+because of market frictions, such as, for instance,
+
+90
+00:05:30,100 --> 00:05:32,455
+relatively low liquidity of small stocks.
+
+91
+00:05:32,455 --> 00:05:34,990
+
+
+92
+00:05:34,990 --> 00:05:39,580
+Another interpretation is that CAPM is not complete
+
+93
+00:05:39,580 --> 00:05:43,510
+and it misses important risk factors.
+
+94
+00:05:43,510 --> 00:05:46,885
+Such missing factors would then manifest themselves
+
+95
+00:05:46,885 --> 00:05:47,680
+as CAPM alphas.
+
+96
+00:05:47,680 --> 00:05:50,460
+
+
+97
+00:05:50,460 --> 00:05:53,010
+Which interpretation is right is still
+
+98
+00:05:53,010 --> 00:05:56,850
+an open question and the subject of an extensive and growing
+
+99
+00:05:56,850 --> 00:05:57,990
+literature.
+
+100
+00:05:57,990 --> 00:06:00,930
+It is difficult to argue that CAPM alphas can
+
+101
+00:06:00,930 --> 00:06:04,650
+be fully explained by the missing risk factors.
+
+102
+00:06:04,650 --> 00:06:08,180
+It is likely that market frictions also play a role.
+
+103
+00:06:08,180 --> 00:06:11,150
+However, existing evidence strongly
+
+104
+00:06:11,150 --> 00:06:14,450
+suggests that the stock market return is not
+
+105
+00:06:14,450 --> 00:06:19,190
+the only risk factor compensated with the risk premium.
+
+106
+00:06:19,190 --> 00:06:21,640
+This means that multifactor extensions
+
+107
+00:06:21,640 --> 00:06:26,380
+may offer an improvement over the single-factor CAPM model.
+
+108
+00:06:26,380 --> 00:06:31,170
+Such extensions can be developed under the APT framework.
+

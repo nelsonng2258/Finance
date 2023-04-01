@@ -1,0 +1,65 @@
+PROFESSOR: In this video, we will
+show how to construct arbitrage trading strategies using
+forward contracts.
+Consider the following example.
+Suppose of the current price of a dividend paying stocks
+equals $1,000.
+Suppose the risk free rate equals 3%
+and the dividend yield is 2%, both
+are continuously compounded.
+You notice that a forward price for delivery
+of this stock in two years is $1,025.
+Is there an arbitrage opportunity here?
+Let's use the model of payout to compute the forward price
+given the current stock price, which is given
+by the following expression.
+Applied to our case, the forward price for delivery of stock
+two years from now should equal $1,020.20.
+Given that the forward price that is quoted to us is $1,025,
+this forward is overpriced.
+How should we exploit this overpricing?
+Consider the following trading strategy.
+First, we engage in one short forward contract.
+Second, we borrow the following amount of dollars,
+e to the power negative y times cap T, times S0 which
+is the current share price.
+And we borrow this amount at the risk-free rate.
+Third, we buy e to the power of negative y times
+T shares of stock.
+And fourth, during the next two years
+that we are holding this stock, we
+will reinvest continuous stream of dividends
+by buying additional units of the stock.
+Notice that the initial cost of setting up this portfolio
+is zero.
+Now let's see what happens two years from now.
+First, let's figure out how many shares of stock
+we will have at the end of year 2.
+Well, because we're continuously reinvesting dividends,
+our future value of the number of shares that we have,
+which I denote here as the number of shares at cap T,
+would equal to the exponent raised to the power yT, which
+gives us the future value of the initial amount of the number
+of shares that we purchased from the very beginning, which
+is e raised to the power negative y cap T.
+This gives us 1.
+So therefore, at the end of year 2,
+we will have 1 share of stock.
+Second, what we will do is that we
+will deliver this one share to the counterparty to whom we
+sold our forward contract, and collect $1,025.
+Third, we will need to repay the loan.
+The future value of this loan is given
+by the following expression.
+Because we borrowed at the risk-free rate,
+and the initial borrowed amount was
+e to the power negative yT times S0,
+this value grew to e to the power r times T times
+the initial amount, which altogether gives us
+S0 times e raised to the power r minus y multiplied by cap T.
+And this gives us $1,020.20.
+Altogether, this trading strategy generates a profit
+of $4.80 per one forward contract that we short.
+These arbitrage profits are possible because this forward
+was overpriced relative to the model of payout
+that we covered in class.

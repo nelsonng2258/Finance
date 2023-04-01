@@ -1,0 +1,116 @@
+
+PROFESSOR: In this video, I will show
+an example of risk-neutral pricing approach applied
+to exotic options.
+Suppose that there is a stock with a current price of $100.
+The graph below shows the evolution of the share
+price over the next two years.
+In year 1, the share price can grow
+to $125, after which it can grow to $156.25
+or can go down back to $100.
+Alternatively, in year 1, the stock price
+can go down to $80, after which it can grow to $100
+or go down to $64.
+We will assume that the stock does not pay dividends.
+The risk-free rate, quoted as an effective annual rate, is 5%.
+We will also assume that there is no arbitrage
+and that investors can borrow and lend
+at this risk-free rate.
+Consider an exotic option called a European lookback
+option, which allows you to buy a stock two years from now
+for the lowest price of the stock
+during the coming two years.
+Effectively, this option allows you
+to time the market perfectly and get the stock at the best
+price.
+In a controversial practice, many firms
+used to grant the executive officers lookback options.
+This is an example of an article from the Wall Street Journal
+that discusses this practice.
+We will price this European lookback option
+by using the risk-neutral pricing approach.
+Let us start by creating a tree with the option
+payoffs in different states.
+Recall that in the up-up state, the share price is $156.25.
+The lookback option allows you to buy this share at the lowest
+price during the last two years, which was $100 in year 0.
+Therefore, your payoff from this lookback option is $56.25.
+In the up-down state, denoted here as ud,
+the share price is $100.
+And therefore, the payoff from the lookback option is $0.
+In the down-up node, the option payoff is $20.
+Recall that the share price in this node is $100.
+But the share price in the down node in year 1 was $80.
+And therefore, this option allows
+you to buy a share of the stock for $80.
+Hence, your payoff is $20.
+Finally, in the down-down node, the share price is $64.
+The option allows you to buy the share at $64.
+Your payoff is $0.
+Notice that the value of this option is path-dependent.
+Even though in nodes ud and du the share price is $100,
+the payoff and the value of the option in the node ud is $0.
+But in the node du, it is $20.
+This is the summary of the optimal exercise.
+In nodes uu and du, the lookback option gets exercised.
+And in the nodes ud and dd, the lookback option
+does not get exercised.
+Now that we know option payoffs, the next step
+is to find risk-neutral probabilities
+of the up and down moves.
+First, let's find multiples u and d
+by which the price either goes up or down each year.
+The multiple u will be 1.25, which
+is the share price in year 1, $125, divided by $100.
+And the down multiple, d, would be 0.8.
+Again, we get it by dividing sd by S0.
+We can verify that stock prices in year 2
+are consistent with these multiples u and d.
+
+By definition, the risk-neutral probability of the up move
+will be 1 plus r, which is the risk-free rate, minus d divided
+by u minus d, which gives us 0.556.
+Similarly, the risk-neutral probability of the down move
+is u minus 1 plus r divided by u minus d, which gives us 0.44.
+Notice that by definition, risk-neutral probabilities
+of the up and down moves add up to 1.
+Knowing risk-neutral probabilities,
+we can proceed with pricing this option.
+I will start pricing it in year 1 in the up node.
+Price equals the risk-neutral probability
+of the up move multiplied by the option payoff in the state uu
+plus the risk-neutral probability of the down move
+multiplied by the option payoff in the state ud divided
+by 1 plus risk-free rate r.
+Plugging in the numbers, we get option price in the state
+u in year 1 equal to $29.76.
+We can repeat the process and find the option price in year 1
+in the down state, which would equal to $10.58.
+Finally, we can find the option price in year 0.
+It was equal to qu multiplied by cu,
+which is the price of the option in year 1 in the up
+node, plus qd multiplied by cd, which is the option
+price in year 1 in the down node, divided by 1
+plus r, which is the risk-free rate.
+Plugging in the numbers, we'll get $20.23.
+Importantly, the risk-neutral pricing approach
+allows us to price this option in year 0
+directly from payoffs in year 2.
+The price of the option in year 0
+equals qu squared, which is the probability of getting
+to state uu multiplied by the payoff
+from the option in that state, plus the probability
+of getting to state ud, which is qu times qd multiplied
+by the corresponding option payoff,
+plus the probability of getting to state
+du, which is qd times qu multiplied, again,
+by the payoff from the option in that state,
+plus qd squared multiplied by the option payoff in the state
+dd.
+The numerator in this expression is the expected payoff
+from this option in year 2 under the risk-neutral probabilities
+q.
+To find the present value of this expected payoff,
+we're discounting it to present at the risk-free rate, r.
+Plugging in the numbers, we see that the price of this option
+in year 0 is equal to $20.23.

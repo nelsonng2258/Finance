@@ -1,0 +1,98 @@
+
+PROFESSOR: In this section, we discuss the typical sequence
+of steps needed to implement the CAPM model in practice.
+We also point out the advantages of using
+CAPM or a similar model relative to the direct estimation
+of expected returns.
+Suppose we want to estimate the expected returns on two stocks.
+We will call them IBM and Dell, but the numbers we use
+are hypothetical.
+First, we need to decide how to measure returns
+on the market portfolio.
+For this purpose, it is common to approximate the market
+as a diversified value-weighted portfolio of stocks,
+for instance, an S&P 500 index or evaluate
+the portfolio of all public firms traded on major stock
+exchanges.
+Second, we run a linear regression
+of individual stock returns on the market return
+in order to estimate stock betas.
+Suppose we find that the market beta for IBM is 0.8,
+and for Dell, it is higher--
+1.3.
+Third, we estimate the market risk premium.
+For instance, we may compute the historical average
+of excess returns on the market portfolio.
+Suppose we find that the market risk premium is 6%.
+We'll look up the current risk free rate.
+Suppose it is 2%.
+Finally, we apply the CAPM formula.
+In case of IBM, the risk free rate
+of 2% plus the beta of 0.8 times the market premium of 6%
+gives us the expected return of 6.8%.
+For Dell, which has a higher market beta,
+we obtain a higher estimate of expected return--
+9.8%.
+
+What are the advantages of using models like CAPM and APT
+to estimate expected returns on stocks?
+Why don't we simply use average historical returns
+to estimate expected return?
+Assuming that the true distribution of stock returns
+is stable over time, which means that past data is
+informative about the future distribution,
+there is nothing fundamentally wrong with using
+historical average returns.
+However, historical samples of returns on individual assets
+may be too short to estimate the expected returns
+with necessary precision.
+It is also quite possible that as companies
+change their properties over time, the risk
+and expected returns change.
+In this case, even if a long series
+of past returns of a stock is available,
+we may not be able to use it to forecast future returns.
+That is because the same firm many years ago may have
+had very different properties.
+How do models like CAPM and APT help
+us deal with such challenges?
+First, from the point of view of statistical inference,
+we can often estimate return betas
+with much more precision than expected returns.
+And importantly, we can do so using relatively short samples
+with frequent observations.
+For example, one may be able to obtain a high precision
+estimate of the market beta of a stock using
+only six months of daily data, while it
+may take decades of data to obtain a comparably accurate
+estimate of expected returns.
+
+Of course, both CAPM and APT require
+us to estimate the market price of systematic risk.
+For example, in case of CAPM, we need to know the risk premium
+on the market portfolio.
+For that, we may have to use the average historical return
+or explore other alternatives, for instance, backing out
+the discount rate on the market from a forward-looking stock
+valuation model, like the Gordon model.
+Here, it's important to note that even if we
+do use the historical average returns to estimate the market
+risk premium, this is a more tractable problem
+than estimating expected returns on the individual stocks.
+First, the market portfolio is less volatile.
+It has no idiosyncratic risk.
+This helps with precision.
+Second, we have access to a relatively long
+historical return series for the market,
+certainly much longer than for the majority of stocks.
+This, again, helps with precision.
+Finally, although the distribution
+of returns on the market portfolio
+may not be constant over time, it
+is arguably more stable than for individual stocks.
+In summary, the key advantage of using risk-based models
+like CAPM and APT to estimate the expected returns
+is that we can derive expected return estimates
+from the estimates of systematic risk.
+We do not need to rely on the average past returns
+in order to estimate the expected future returns.

@@ -1,0 +1,94 @@
+
+PROFESSOR: We now apply the risk-neutral valuation method
+to exotic options.
+The payoff of exotic options is typically path dependent.
+For example, consider an up-and-out put option.
+This option pays off as a regular European put
+unless, at some point during the life of the option,
+the price of the stock exceeds a barrier specified by the option
+contract.
+The payoff of an up-and-out put depends
+on the maximum stock price observed
+over the life of the option contract.
+As a result, the payoff of the option at maturity
+depends not only on the stock price at that date,
+but on all preceding values of the stock price.
+In other words, the payoff depends on the entire path
+of the stock price.
+It is path dependent.
+When it comes to path-dependent options,
+our original approach to pricing by replication
+is not practical.
+The challenge is that the number of nodes on the binomial tree
+grows exponentially with the number of time periods.
+Know that without path dependence,
+the three recombines.
+The ud node is the same as the du node, and so on.
+This drastically reduces the number
+of steps we need to take along the tree.
+The risk-neutral approach to valuation
+can be used effectively for pricing of exotic options.
+The key difference is that under the risk-neutral approach,
+we can estimate the option price by Monte Carlo simulation.
+Specifically, we sample from the set of terminal nodes
+according to their risk-neutral probabilities
+and use their relatively small sample
+to estimate the true expected value of the option payoff.
+We do not need to visit all terminal nodes.
+Monte Carlo simulation has many applications in finance.
+It is based on the law of large numbers,
+the same mathematical relation that
+allows us to estimate unknown population moments from finance
+historical samples.
+Once we estimate the price of the option using
+the risk-neutral formulation, we can
+compute the composition of the replicating portfolio
+at any node.
+The simplification is that we need
+to compute the replicating portfolio only
+at the nodes of the three visited by the stock price.
+We can do this in real time.
+We do not need to compute the replicating portfolio
+at every single node, which is what
+creates the computational bottleneck
+for the original replication approach.
+As an example, consider the so-called Asian option.
+This is a path-dependent exotic option
+for which the payoff is based on the average realized stock
+price over the life of the option.
+Specifically, assume that there are two periods in the model.
+Cap T is equal to 2.
+Consider the Asian call option with a strike price of $40.
+Its payoff is equal to the maximum of 0
+and the difference between the average stock
+price between 0 and 2 and the strike price of $40.
+We represent the payoff of the option
+at expiration of the binomial tree on the right.
+Note that the payoff at the ud node
+is not the same as at the du node.
+This reflects the path-dependent nature of the Asian option.
+We compute the price of the call using
+the risk-neutral valuation formula.
+We average the payoff of the option over the terminal
+nodes of the tree using the risk-neutral probabilities
+as weights.
+Then, we discount the result at time 0 at the risk-free rate.
+The time 0 price of the option is $14.46.
+Next, we illustrate how to compute
+the replicating portfolio.
+Note that we can follow this approach
+to compute the replicating portfolio as needed
+for any visited node.
+For example, to compute the replicating portfolio
+at the node u at time 1, we need to know the price of the option
+only in the current node and in the nodes uu and ud, which
+follow the current time 1 node u.
+To replicate the option, we buy delta shares of the stock
+and invest b dollars at the risk-free rate.
+The delta of the option is equal to the difference
+between the option prices in nodes uu and ud
+divided by the corresponding difference in stock prices.
+The size of the bond position in the portfolio
+is equal to the difference between the option price
+and the value of the stock position, which
+is delta times the stock price at node u at time 1.

@@ -1,0 +1,276 @@
+0
+00:00:00,000 --> 00:00:00,150
+
+
+1
+00:00:00,150 --> 00:00:01,733
+PROFESSOR: In this video, we will find
+
+2
+00:00:01,733 --> 00:00:04,320
+the market value of ABC's debt.
+
+3
+00:00:04,320 --> 00:00:07,170
+Recall that, next year, in year one,
+
+4
+00:00:07,170 --> 00:00:10,950
+ABC's debt value will either be $5 million in the bad state
+
+5
+00:00:10,950 --> 00:00:14,190
+or $20 million in the good state.
+
+6
+00:00:14,190 --> 00:00:16,770
+Let's contrast these payoffs with the payoffs
+
+7
+00:00:16,770 --> 00:00:18,330
+to the risk-free debt.
+
+8
+00:00:18,330 --> 00:00:22,935
+If ABC's debt was risk free, it would have paid $20 million
+
+9
+00:00:22,935 --> 00:00:25,620
+in both good and bad states.
+
+10
+00:00:25,620 --> 00:00:28,730
+Let me introduce a default put option.
+
+11
+00:00:28,730 --> 00:00:31,690
+This option compensates the holder of risky debt
+
+12
+00:00:31,690 --> 00:00:36,340
+for the value lost in the event of default. In our case,
+
+13
+00:00:36,340 --> 00:00:41,360
+this default put option will pay $15 million in the bad state
+
+14
+00:00:41,360 --> 00:00:45,730
+so that the value of assets plus the payoff from this option
+
+15
+00:00:45,730 --> 00:00:50,056
+would equal to the face value of the loan, which is $20 million.
+
+16
+00:00:50,056 --> 00:00:53,230
+Based on this, we can derive the key insight.
+
+17
+00:00:53,230 --> 00:00:57,100
+The current value of ABC's debt should equal the current value
+
+18
+00:00:57,100 --> 00:01:02,110
+of $20 million, face-value, risk-free debt, minus the value
+
+19
+00:01:02,110 --> 00:01:04,540
+of what we called the default put option,
+
+20
+00:01:04,540 --> 00:01:08,290
+an option that pays $15 million in the bad state
+
+21
+00:01:08,290 --> 00:01:10,660
+and $0 in the good state.
+
+22
+00:01:10,660 --> 00:01:13,570
+Now we need to price the default put option.
+
+23
+00:01:13,570 --> 00:01:15,850
+To do this, we will compare the payoffs
+
+24
+00:01:15,850 --> 00:01:19,060
+that we get from this default put option with the payoffs
+
+25
+00:01:19,060 --> 00:01:22,480
+that we get from the put option written on the stock.
+
+26
+00:01:22,480 --> 00:01:24,190
+Recall that we had an option traded
+
+27
+00:01:24,190 --> 00:01:27,470
+in the market with a strike price of $7.
+
+28
+00:01:27,470 --> 00:01:30,970
+Remember that, in the bad state, the share price will be $0,
+
+29
+00:01:30,970 --> 00:01:33,460
+and, in the good state, it will be $10.
+
+30
+00:01:33,460 --> 00:01:36,070
+Therefore, this put option written on the stock
+
+31
+00:01:36,070 --> 00:01:38,575
+will pay $0 in the good state, and it
+
+32
+00:01:38,575 --> 00:01:41,500
+will pay $7 in the bad state.
+
+33
+00:01:41,500 --> 00:01:45,590
+Similar to the way we priced equity in the previous video,
+
+34
+00:01:45,590 --> 00:01:49,360
+let's contrast the payoffs of the default put option
+
+35
+00:01:49,360 --> 00:01:51,460
+and the put option written on the stock.
+
+36
+00:01:51,460 --> 00:01:54,835
+In the bad state, the default put option pays $15 million,
+
+37
+00:01:54,835 --> 00:01:58,090
+and the put option on the stock pays $7.
+
+38
+00:01:58,090 --> 00:02:01,600
+In the good state, both of them pay $0.
+
+39
+00:02:01,600 --> 00:02:05,110
+Based on this, we can derive the key insight.
+
+40
+00:02:05,110 --> 00:02:08,979
+The value of the default put option should equal 15 million
+
+41
+00:02:08,979 --> 00:02:13,810
+divided by 7 times the value of the $7 strike put
+
+42
+00:02:13,810 --> 00:02:15,700
+option on the stock.
+
+43
+00:02:15,700 --> 00:02:19,060
+Recall that the value of this $7 strike put option written
+
+44
+00:02:19,060 --> 00:02:22,450
+on the stock was $2.52.
+
+45
+00:02:22,450 --> 00:02:25,270
+Therefore, the value of the default put option
+
+46
+00:02:25,270 --> 00:02:28,825
+is $5.4 million.
+
+47
+00:02:28,825 --> 00:02:31,430
+Putting it all together, we can find the value
+
+48
+00:02:31,430 --> 00:02:33,015
+of ABC's debt right now.
+
+49
+00:02:33,015 --> 00:02:35,390
+It's going to be the present value of the risk-free debt,
+
+50
+00:02:35,390 --> 00:02:37,800
+which is $20 million--
+
+51
+00:02:37,800 --> 00:02:40,550
+this is because the risk-free rate is 0%--
+
+52
+00:02:40,550 --> 00:02:42,410
+minus the value of the default put
+
+53
+00:02:42,410 --> 00:02:45,440
+option, which is $5.4 million.
+
+54
+00:02:45,440 --> 00:02:47,480
+This gives us the value of ABC's debt.
+
+55
+00:02:47,480 --> 00:02:51,910
+That equals $14.6 million.
+
+56
+00:02:51,910 --> 00:02:53,992
+Notice something very interesting.
+
+57
+00:02:53,992 --> 00:02:55,700
+The yield to maturity on this bond, which
+
+58
+00:02:55,700 --> 00:02:58,550
+we can compute by taking the face value of this loan,
+
+59
+00:02:58,550 --> 00:03:01,890
+$20 million, divided by its current market value,
+
+60
+00:03:01,890 --> 00:03:06,620
+which is 14.6 minus 1, will be 37%.
+
+61
+00:03:06,620 --> 00:03:09,830
+Even though the risk-free rate in this economy is 0%,
+
+62
+00:03:09,830 --> 00:03:13,340
+the yield to maturity on this bond is 37%.
+
+63
+00:03:13,340 --> 00:03:15,800
+This high yield to maturity is explained by the fact
+
+64
+00:03:15,800 --> 00:03:18,950
+that, in the event of default, the holder of this loan
+
+65
+00:03:18,950 --> 00:03:23,120
+loses $15 million out of $20 million face value.
+
+66
+00:03:23,120 --> 00:03:28,070
+And, therefore, the high YTM captures the risk of this loss.
+
+67
+00:03:28,070 --> 00:03:30,080
+We will further explore this topic
+
+68
+00:03:30,080 --> 00:03:32,950
+in the second part of this course.
+

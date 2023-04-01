@@ -1,0 +1,396 @@
+0
+00:00:00,000 --> 00:00:03,990
+
+
+1
+00:00:03,990 --> 00:00:07,260
+PROFESSOR: Now, next, let's construct a payoff diagram
+
+2
+00:00:07,260 --> 00:00:08,850
+from the following portfolio.
+
+3
+00:00:08,850 --> 00:00:13,020
+We're going to short two puts with a strike price of $90.
+
+4
+00:00:13,020 --> 00:00:17,880
+And we're going to long one call with a strike price of $110.
+
+5
+00:00:17,880 --> 00:00:20,610
+So what I've written here are the payoffs
+
+6
+00:00:20,610 --> 00:00:23,310
+to shorting two puts.
+
+7
+00:00:23,310 --> 00:00:25,527
+So, if we short two puts, we get the negative
+
+8
+00:00:25,527 --> 00:00:28,110
+of what we would have gotten if we actually are long these two
+
+9
+00:00:28,110 --> 00:00:28,610
+puts.
+
+10
+00:00:28,610 --> 00:00:34,620
+So we get negative 180 plus 2 s1 if s1 ends up being 90.
+
+11
+00:00:34,620 --> 00:00:37,620
+And we get 0 because the options--
+
+12
+00:00:37,620 --> 00:00:40,500
+these two options would expire out of the money
+
+13
+00:00:40,500 --> 00:00:42,390
+if s1 is above 90.
+
+14
+00:00:42,390 --> 00:00:45,480
+And, the payoff from the call option, one call option,
+
+15
+00:00:45,480 --> 00:00:49,230
+is simply s1 minus 110, which is the strike price of this one
+
+16
+00:00:49,230 --> 00:00:53,850
+call, if s1 ends up being above 110 and 0
+
+17
+00:00:53,850 --> 00:00:57,570
+if the stock price is below 110.
+
+18
+00:00:57,570 --> 00:01:02,640
+So now we will add up these two payoff functions,
+
+19
+00:01:02,640 --> 00:01:06,040
+and we'll get the payoff of our portfolio.
+
+20
+00:01:06,040 --> 00:01:09,240
+So let me make a remark that what we're doing here
+
+21
+00:01:09,240 --> 00:01:11,580
+is just a very universal approach where
+
+22
+00:01:11,580 --> 00:01:16,110
+you can find the payoff of a portfolio of any types
+
+23
+00:01:16,110 --> 00:01:20,580
+and however many different kinds of options you actually have.
+
+24
+00:01:20,580 --> 00:01:22,470
+So, if you have discipline of writing down
+
+25
+00:01:22,470 --> 00:01:24,150
+the payoffs for individual options
+
+26
+00:01:24,150 --> 00:01:26,700
+and then add them up piecewise, you
+
+27
+00:01:26,700 --> 00:01:30,310
+will always get the right answer.
+
+28
+00:01:30,310 --> 00:01:33,970
+The more you practice with this, the more clear it will be.
+
+29
+00:01:33,970 --> 00:01:35,593
+For example, at some point, it's going
+
+30
+00:01:35,593 --> 00:01:37,260
+to be very clear to you, without writing
+
+31
+00:01:37,260 --> 00:01:39,960
+these mathematical expressions, how the payoff
+
+32
+00:01:39,960 --> 00:01:42,160
+diagram for this portfolio would look like,
+
+33
+00:01:42,160 --> 00:01:44,115
+but this would come only with practice.
+
+34
+00:01:44,115 --> 00:01:45,990
+And a good practice is to have the discipline
+
+35
+00:01:45,990 --> 00:01:49,800
+of writing down the payoffs and actually adding them up.
+
+36
+00:01:49,800 --> 00:01:51,390
+Now so we have this payoff.
+
+37
+00:01:51,390 --> 00:01:52,260
+We have this payoff.
+
+38
+00:01:52,260 --> 00:01:54,310
+Let's add them up.
+
+39
+00:01:54,310 --> 00:01:58,910
+So, if the stock price is below-- so let's
+
+40
+00:01:58,910 --> 00:02:01,850
+always start with sort of the lower part.
+
+41
+00:02:01,850 --> 00:02:05,570
+So, if the stock price ends up being somewhere below 90,
+
+42
+00:02:05,570 --> 00:02:08,780
+then we get this much from these two puts.
+
+43
+00:02:08,780 --> 00:02:11,120
+And we get nothing from the call.
+
+44
+00:02:11,120 --> 00:02:22,860
+So we get negative 180 plus 2 s1 if s1 is less or equal than 90.
+
+45
+00:02:22,860 --> 00:02:29,170
+Then, if s1 is above 90, but below 110, we
+
+46
+00:02:29,170 --> 00:02:31,690
+get 0 payoff from the two puts, and we also get,
+
+47
+00:02:31,690 --> 00:02:33,060
+actually, 0 payoff from call.
+
+48
+00:02:33,060 --> 00:02:46,470
+So we get 0 if s1 is above 90 and below 110.
+
+49
+00:02:46,470 --> 00:02:51,150
+And then, once we're crossing 110, so if s1 is above 110,
+
+50
+00:02:51,150 --> 00:02:57,210
+we get nothing from the two puts, and we get s1 minus 110
+
+51
+00:02:57,210 --> 00:02:58,040
+from the call.
+
+52
+00:02:58,040 --> 00:03:10,490
+So, in this part, we get s1 minus 110 if s1 is above 110.
+
+53
+00:03:10,490 --> 00:03:13,010
+Let me also make another minor remark
+
+54
+00:03:13,010 --> 00:03:15,620
+that where exactly I put the equality
+
+55
+00:03:15,620 --> 00:03:18,260
+signs in these expressions does not matter because,
+
+56
+00:03:18,260 --> 00:03:21,620
+all of these functions, they are continuous in the sense
+
+57
+00:03:21,620 --> 00:03:23,240
+that there are no breaks.
+
+58
+00:03:23,240 --> 00:03:26,960
+So, therefore, if I put, for example, equality, instead
+
+59
+00:03:26,960 --> 00:03:30,320
+of here, here, the end result would not
+
+60
+00:03:30,320 --> 00:03:33,140
+change because, again, you have continuity in all of these--
+
+61
+00:03:33,140 --> 00:03:34,880
+in all of these breakpoints.
+
+62
+00:03:34,880 --> 00:03:40,790
+Now the final step is to draw this mathematical expression
+
+63
+00:03:40,790 --> 00:03:42,680
+in the form of a diagram.
+
+64
+00:03:42,680 --> 00:03:44,490
+I'm going to start from the left-hand side.
+
+65
+00:03:44,490 --> 00:03:52,250
+So, if s1 is 0, then we get negative $180, the payoff.
+
+66
+00:03:52,250 --> 00:03:55,490
+So I'm going to start from here, negative 180.
+
+67
+00:03:55,490 --> 00:04:00,680
+And then, if s1 equals to 90, then we're
+
+68
+00:04:00,680 --> 00:04:04,880
+going to get 0 payoff because it's going to be negative 180
+
+69
+00:04:04,880 --> 00:04:06,290
+plus 2 times 90.
+
+70
+00:04:06,290 --> 00:04:07,430
+That's going to be 0.
+
+71
+00:04:07,430 --> 00:04:09,630
+And we could also see that we have 0 here.
+
+72
+00:04:09,630 --> 00:04:12,700
+So, if s1 equals to 90, we get 0 here as well.
+
+73
+00:04:12,700 --> 00:04:18,558
+So we're getting-- so this is 90.
+
+74
+00:04:18,558 --> 00:04:19,600
+We're getting this point.
+
+75
+00:04:19,600 --> 00:04:22,470
+And so this is the line that goes straight line
+
+76
+00:04:22,470 --> 00:04:25,380
+from negative 180 to 90.
+
+77
+00:04:25,380 --> 00:04:27,630
+The slope of this line, you could see that it's also--
+
+78
+00:04:27,630 --> 00:04:34,550
+so this part is 2 because we have two of these puts.
+
+79
+00:04:34,550 --> 00:04:35,990
+And then we get--
+
+80
+00:04:35,990 --> 00:04:44,550
+then our payoff is 0 from 90 to 110.
+
+81
+00:04:44,550 --> 00:04:49,880
+And, from this point onwards, from 110 and above, our payoff
+
+82
+00:04:49,880 --> 00:04:52,140
+is s1 minus 110.
+
+83
+00:04:52,140 --> 00:04:56,060
+So this is the line that will look like this.
+
+84
+00:04:56,060 --> 00:04:58,600
+
+
+85
+00:04:58,600 --> 00:05:01,330
+And so the slope of this line is 45 degrees.
+
+86
+00:05:01,330 --> 00:05:03,570
+So this raise is 1.
+
+87
+00:05:03,570 --> 00:05:06,420
+And so this is how our combined payoff from the strategy
+
+88
+00:05:06,420 --> 00:05:07,530
+is going to look like.
+
+89
+00:05:07,530 --> 00:05:09,870
+And, in fact, so, if you look at this,
+
+90
+00:05:09,870 --> 00:05:12,420
+you realize that this is really just a combination,
+
+91
+00:05:12,420 --> 00:05:17,640
+a simple combination, of two short puts here at the bottom.
+
+92
+00:05:17,640 --> 00:05:19,920
+And then you have one long call option
+
+93
+00:05:19,920 --> 00:05:22,410
+with a strike price of 110.
+
+94
+00:05:22,410 --> 00:05:27,300
+So, therefore, you're staring at negative 180 all the way to 0
+
+95
+00:05:27,300 --> 00:05:28,950
+when s1 equals to 90.
+
+96
+00:05:28,950 --> 00:05:30,090
+Then it's 0.
+
+97
+00:05:30,090 --> 00:05:34,620
+Then it's in the positive domain when s1 goes above $110.
+
+98
+00:05:34,620 --> 00:05:38,240
+So this is the payoff diagram for this question.
+

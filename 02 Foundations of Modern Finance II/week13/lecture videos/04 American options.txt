@@ -1,0 +1,83 @@
+
+PROFESSOR: We now consider valuation of American options.
+Recall that the holder of an American option
+may decide to exercise at any point before maturity.
+Because of the possibility of early exercise,
+pricing an American option is more challenging than pricing
+its European counterpart.
+The payoff of the option depends on the exercise policy.
+The optimal exercise decision, in turn,
+depends on the prices of the option along the tree.
+In other words, the price of the option and the optimal exercise
+strategy are closely linked and must
+be computed simultaneously.
+The risk neutral relation connects option prices
+across periods.
+At any node at time t, the option price, P sub t,
+is equal to the maximum of the option
+payoff, if exercised immediately,
+and the continuation value.
+The continuation value is equal to the value of the option
+if it is allowed to continue unexercised for one more period
+and after that follows the optimal exercise strategy.
+In other words, the continuation value
+is equal to the discounted value of the option next period.
+Consider a numerical example.
+This is an American put option on the stock
+with a strike price of $100.
+The price of the stock starts at $100 and rises or falls by 20%
+each period.
+The interest rate is 10% per period.
+We compute the risk neutral probabilities first.
+q is equal to 0.75.
+Consider the up node at time 1 first.
+In this case, the continuation value is equal to 0.91.
+This is the risk neutral expectation of the option value
+next period, which is $1, discounted
+at the 10% rate over one period.
+If one were to exercise the option at that node,
+the payoff would be negative, since the stock
+price is above the strike.
+We conclude that the immediate exercise is not optimal,
+and the price of the option at node u
+is equal to the continuation value.
+Next, consider node d at time 1.
+Here, the continuation value is $10.91.
+The payoff from immediate exercise is $20.
+The strike price is $100.
+And the current price of the stock is $80.
+We conclude that it is optimal to exercise the option
+immediately at this node.
+As a result, the price of the option
+is equal to the payoff from its exercise, or $20.
+We proceed back to time 0 and perform the same computation.
+The continuation value at time 0 is
+equal to the discounted value of the option price
+at time 1, which is 0.91 in the up
+node and 20 in the down node.
+This gives us $5.17.
+The payoff from immediate exercise is 0,
+and we conclude that the initial price of this American put
+is $5.17.
+We now illustrate how to replicate the American option
+by dynamic trading.
+The overall approach is the same as for the European options.
+We compute the option's delta from option prices and stock
+prices.
+For example, consider the time 0 node.
+To compute the delta of the option here,
+we need to know option prices in the up and down nodes
+next period.
+These are 0.91 and 20, respectively.
+We take the difference between these two prices of the option
+and divide by the difference between the corresponding stock
+prices--
+$120 minus $80.
+We find that the delta is minus 0.48.
+This means that, under the replication strategy,
+we should short sell 0.48 shares of the stock at time 0.
+Combine the proceeds with the $5.17 initial option price,
+and invest the proceeds for one period at the risk-free rate.
+
+Next period, we rebalance the replicating portfolio using
+the same sequence of steps.

@@ -1,0 +1,69 @@
+
+PROFESSOR: We're given the following payoff function
+as the function of s, which is the stock price.
+So these are the different payoffs,
+depending on the realization of the stock price,
+S. So this question asks us to draw the payoff diagram
+and to represent this payoff as a portfolio of European put
+and call options.
+Now let's first draw this diagram and see how many
+and of what kind of options we need to construct this payoff.
+I'm going to start on the right-hand side here,
+and we'll put 40 as the stock price here.
+And the reason I'm starting there
+because this payoff at the bottom here looks familiar.
+So it's 2s minus 80.
+So you can think of it as just simply two call options
+with a strike price of 40 because each call option
+with the strike price of 40 would give you
+a payoff of s minus 40.
+So two of them is going to be 2s minus 80.
+So this is the function right here, so 2s minus 80,
+and this is my first starting point.
+So I need two calls with a strike price of $40 each.
+Then it gets flat line or zero payoff between 30 and 40.
+And, between 20 and 30, it gets 90 minus 3s.
+So, first of all, since I have minus 3s,
+it means that I need three options and three put options
+because this is a negative slope.
+So, if I get three put options with the strike price of 30,
+the payoff from this is going to be 90 minus 3s because again--
+so, if I get one put option with a strike price of 30,
+the payoff from that option will be 30 minus s.
+So 3 times that would be 90 minus 3s.
+So, therefore, this is the function that I will get here.
+So I need three puts with the strike price of 30.
+Now, next, notice that, this breakpoint of $20, the slope
+becomes less steep.
+So we get from negative 3s to negative 2s.
+So what it effectively means is that here, when we reach 20,
+we need to short or sell one put option so that our slope goes
+from 3s to 2s.
+So I'll say that we are buying, or we are long this first set
+of options so far.
+At this point, we are short one put with a strike price of $20.
+So this gives us a little bit steeper slope right here.
+So here we have the slope of 3.
+Here we have the slope of 2, so two options, three options.
+And here the slope will be 2.
+Now, finally, when we reach 10 right here,
+so this break point, the slope goes from negative 2
+to negative 6.
+So it means that we need to long another four
+options with the strike price of 10, so long four puts
+with the strike price of 10.
+And so this is going to make this line very, very steep.
+And so the slope of this line is 6.
+Now what we need to verify is that this line actually
+intersects the y-axis at 110 because you
+can see that, when s equals to 0, this has to be equal to 110.
+So what I will do next is that I will
+take the portfolio of these options
+that we constructed right now and taken
+to construct this graph, and I will write the payoff
+for each of them.
+And I will add them all up just to make sure
+that we get 110 as the intersection point
+and, therefore, the correct representation,
+the correct graph, that represents this payoff
+function.

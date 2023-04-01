@@ -1,0 +1,69 @@
+
+PROFESSOR: In this video, we will find
+the market value of ABC's debt.
+Recall that, next year, in year one,
+ABC's debt value will either be $5 million in the bad state
+or $20 million in the good state.
+Let's contrast these payoffs with the payoffs
+to the risk-free debt.
+If ABC's debt was risk free, it would have paid $20 million
+in both good and bad states.
+Let me introduce a default put option.
+This option compensates the holder of risky debt
+for the value lost in the event of default. In our case,
+this default put option will pay $15 million in the bad state
+so that the value of assets plus the payoff from this option
+would equal to the face value of the loan, which is $20 million.
+Based on this, we can derive the key insight.
+The current value of ABC's debt should equal the current value
+of $20 million, face-value, risk-free debt, minus the value
+of what we called the default put option,
+an option that pays $15 million in the bad state
+and $0 in the good state.
+Now we need to price the default put option.
+To do this, we will compare the payoffs
+that we get from this default put option with the payoffs
+that we get from the put option written on the stock.
+Recall that we had an option traded
+in the market with a strike price of $7.
+Remember that, in the bad state, the share price will be $0,
+and, in the good state, it will be $10.
+Therefore, this put option written on the stock
+will pay $0 in the good state, and it
+will pay $7 in the bad state.
+Similar to the way we priced equity in the previous video,
+let's contrast the payoffs of the default put option
+and the put option written on the stock.
+In the bad state, the default put option pays $15 million,
+and the put option on the stock pays $7.
+In the good state, both of them pay $0.
+Based on this, we can derive the key insight.
+The value of the default put option should equal 15 million
+divided by 7 times the value of the $7 strike put
+option on the stock.
+Recall that the value of this $7 strike put option written
+on the stock was $2.52.
+Therefore, the value of the default put option
+is $5.4 million.
+Putting it all together, we can find the value
+of ABC's debt right now.
+It's going to be the present value of the risk-free debt,
+which is $20 million--
+this is because the risk-free rate is 0%--
+minus the value of the default put
+option, which is $5.4 million.
+This gives us the value of ABC's debt.
+That equals $14.6 million.
+Notice something very interesting.
+The yield to maturity on this bond, which
+we can compute by taking the face value of this loan,
+$20 million, divided by its current market value,
+which is 14.6 minus 1, will be 37%.
+Even though the risk-free rate in this economy is 0%,
+the yield to maturity on this bond is 37%.
+This high yield to maturity is explained by the fact
+that, in the event of default, the holder of this loan
+loses $15 million out of $20 million face value.
+And, therefore, the high YTM captures the risk of this loss.
+We will further explore this topic
+in the second part of this course.

@@ -1,0 +1,452 @@
+0
+00:00:00,000 --> 00:00:00,245
+
+
+1
+00:00:00,245 --> 00:00:01,620
+PROFESSOR: In this video, we will
+
+2
+00:00:01,620 --> 00:00:05,050
+learn how to empirically estimate CAPM betas.
+
+3
+00:00:05,050 --> 00:00:08,340
+We will work with eight firms: four gold mining firms,
+
+4
+00:00:08,340 --> 00:00:10,780
+and four technology firms.
+
+5
+00:00:10,780 --> 00:00:13,650
+These are the same firms we used to estimate two-factor APT
+
+6
+00:00:13,650 --> 00:00:16,260
+model in the first part of this course.
+
+7
+00:00:16,260 --> 00:00:19,680
+The table on your screen shows you firm names and location
+
+8
+00:00:19,680 --> 00:00:21,530
+of their headquarters.
+
+9
+00:00:21,530 --> 00:00:24,920
+Our data set contains monthly return observations
+
+10
+00:00:24,920 --> 00:00:30,710
+for each firm from January 2005, until December 2019.
+
+11
+00:00:30,710 --> 00:00:35,750
+Therefore, for each firm we have 180 monthly return
+
+12
+00:00:35,750 --> 00:00:37,430
+observations.
+
+13
+00:00:37,430 --> 00:00:40,640
+Returns are given in column C. We're also
+
+14
+00:00:40,640 --> 00:00:42,710
+given the risk free rate in column D.
+
+15
+00:00:42,710 --> 00:00:46,340
+And we're given market return in column E.
+
+16
+00:00:46,340 --> 00:00:48,320
+To estimate the CAPM model, we need
+
+17
+00:00:48,320 --> 00:00:51,290
+to run the regression of excess return
+
+18
+00:00:51,290 --> 00:00:56,300
+on a stock on a constant, and on the excess market return.
+
+19
+00:00:56,300 --> 00:00:58,160
+Therefore, the first step for us is
+
+20
+00:00:58,160 --> 00:01:01,100
+to compute the excess return for each of our stocks
+
+21
+00:01:01,100 --> 00:01:03,470
+and to compute excess market return.
+
+22
+00:01:03,470 --> 00:01:06,980
+To compute excess return, I'm taking the return on the stock
+
+23
+00:01:06,980 --> 00:01:09,170
+and I'm subtracting the risk free rate.
+
+24
+00:01:09,170 --> 00:01:10,970
+And to compute excess market return,
+
+25
+00:01:10,970 --> 00:01:13,640
+I'm taking the market return and I'm
+
+26
+00:01:13,640 --> 00:01:16,160
+subtracting the risk free rate.
+
+27
+00:01:16,160 --> 00:01:20,210
+Let's start by estimating the CAPM model for the first stock.
+
+28
+00:01:20,210 --> 00:01:23,990
+There are multiple ways to run a linear regression in Excel,
+
+29
+00:01:23,990 --> 00:01:26,900
+I will use LINEST function, the same function
+
+30
+00:01:26,900 --> 00:01:28,700
+I used in the first part of the course
+
+31
+00:01:28,700 --> 00:01:31,310
+when we estimated the APT model.
+
+32
+00:01:31,310 --> 00:01:33,810
+It requires four inputs.
+
+33
+00:01:33,810 --> 00:01:36,210
+The first input is the left hand side variable,
+
+34
+00:01:36,210 --> 00:01:40,470
+which in our case is the excess return on the stock.
+
+35
+00:01:40,470 --> 00:01:44,790
+The second input is the vector of known axis,
+
+36
+00:01:44,790 --> 00:01:49,190
+which in our case is the excess market return, just one vector.
+
+37
+00:01:49,190 --> 00:01:52,730
+The third input to this function is whether the regression
+
+38
+00:01:52,730 --> 00:01:54,680
+is run with a constant or not.
+
+39
+00:01:54,680 --> 00:01:56,372
+We want to have a constant.
+
+40
+00:01:56,372 --> 00:01:58,580
+And the fourth parameter is for additional regression
+
+41
+00:01:58,580 --> 00:02:01,500
+statistics, which we don't need in this case.
+
+42
+00:02:01,500 --> 00:02:03,560
+So this is an array function.
+
+43
+00:02:03,560 --> 00:02:07,140
+We need to hit Shift Control Enter at the same time
+
+44
+00:02:07,140 --> 00:02:13,140
+so that we estimate both beta and alpha in the CAPM equation.
+
+45
+00:02:13,140 --> 00:02:16,220
+We see that the CAPM beta for the Kinross Gold Corporation
+
+46
+00:02:16,220 --> 00:02:24,140
+is 0.54 and CAPM alpha for this stock is 0.45%
+
+47
+00:02:24,140 --> 00:02:28,460
+Next let's estimate the CAPM regression for Apple stock.
+
+48
+00:02:28,460 --> 00:02:32,870
+We have Apple data further the down in this array.
+
+49
+00:02:32,870 --> 00:02:39,020
+And I will select excess returns as my y variable, excess market
+
+50
+00:02:39,020 --> 00:02:41,750
+returns as my x variable.
+
+51
+00:02:41,750 --> 00:02:45,260
+And I'll put the other two parameters as one and zero.
+
+52
+00:02:45,260 --> 00:02:50,210
+So this gives us the CAPM beta for Apple of 1.07
+
+53
+00:02:50,210 --> 00:02:53,000
+and the CAPM alpha for the stock, 2.05%.
+
+54
+00:02:53,000 --> 00:02:56,000
+I have estimated the CAPM regression
+
+55
+00:02:56,000 --> 00:02:59,690
+for the remaining six stocks and here are the results.
+
+56
+00:02:59,690 --> 00:03:06,110
+CAPM betas for gold mining stocks vary from 0.32 to 0.54.
+
+57
+00:03:06,110 --> 00:03:12,920
+And CAPM betas for technology stocks vary from 0.89 to 1.07.
+
+58
+00:03:12,920 --> 00:03:16,280
+These results show that gold mining stocks
+
+59
+00:03:16,280 --> 00:03:18,800
+have much lower return sensitivity
+
+60
+00:03:18,800 --> 00:03:24,380
+with respect to the market when compared to technology stocks.
+
+61
+00:03:24,380 --> 00:03:28,430
+Now we can use estimated betas to find future expected returns
+
+62
+00:03:28,430 --> 00:03:31,380
+using the capital asset pricing model.
+
+63
+00:03:31,380 --> 00:03:35,420
+Let's assume that future monthly expected return on the market
+
+64
+00:03:35,420 --> 00:03:37,370
+is 0.8%.
+
+65
+00:03:37,370 --> 00:03:41,700
+This is roughly 10% effective annual rate.
+
+66
+00:03:41,700 --> 00:03:44,220
+According to the capital asset pricing model,
+
+67
+00:03:44,220 --> 00:03:47,730
+the expected excess return on the stock
+
+68
+00:03:47,730 --> 00:03:51,960
+is given by beta times the expected excess return
+
+69
+00:03:51,960 --> 00:03:53,340
+on the market.
+
+70
+00:03:53,340 --> 00:03:57,060
+Now we can use this equation to find expected excess returns
+
+71
+00:03:57,060 --> 00:03:58,650
+on our stocks.
+
+72
+00:03:58,650 --> 00:04:00,690
+For Kinross Gold Corporation, it's
+
+73
+00:04:00,690 --> 00:04:03,720
+going to be beta of the stock multiplied
+
+74
+00:04:03,720 --> 00:04:08,350
+by the expected excess return on the market portfolio.
+
+75
+00:04:08,350 --> 00:04:11,220
+So the answer is going forward, the stock
+
+76
+00:04:11,220 --> 00:04:14,130
+is expected to return 0.43%.
+
+77
+00:04:14,130 --> 00:04:18,029
+We can extend this array and compute expected excess returns
+
+78
+00:04:18,029 --> 00:04:23,010
+for the remaining gold stocks and also for the technology
+
+79
+00:04:23,010 --> 00:04:24,850
+stocks.
+
+80
+00:04:24,850 --> 00:04:26,650
+For comparison, let's also compute
+
+81
+00:04:26,650 --> 00:04:28,630
+historical average excess returns
+
+82
+00:04:28,630 --> 00:04:33,490
+during our sample period, 2005 to 2019.
+
+83
+00:04:33,490 --> 00:04:36,280
+To do this, I'm using the average function
+
+84
+00:04:36,280 --> 00:04:39,070
+and our excess returns on each individual stock
+
+85
+00:04:39,070 --> 00:04:41,515
+to compute these averages.
+
+86
+00:04:41,515 --> 00:04:43,390
+We can see that the average historical return
+
+87
+00:04:43,390 --> 00:04:50,110
+for gold mining stocks ranges from 0.64 to 0.84%
+
+88
+00:04:50,110 --> 00:04:54,250
+and for technology stock, it ranges from 1% for Intel
+
+89
+00:04:54,250 --> 00:04:57,710
+to 2.84% for Apple.
+
+90
+00:04:57,710 --> 00:05:00,310
+Notice that for all eight of our stocks
+
+91
+00:05:00,310 --> 00:05:03,340
+the expected returns computed using the capital asset pricing
+
+92
+00:05:03,340 --> 00:05:08,160
+model are lower than the historical average returns.
+
+93
+00:05:08,160 --> 00:05:11,050
+Recall that the reason why we prefer to rely on asset pricing
+
+94
+00:05:11,050 --> 00:05:15,340
+models, such as the CAPM or the APT
+
+95
+00:05:15,340 --> 00:05:17,830
+to compute expected returns instead of using
+
+96
+00:05:17,830 --> 00:05:20,950
+historical averages is that it is extremely difficult
+
+97
+00:05:20,950 --> 00:05:24,580
+to infer average returns from historical data.
+
+98
+00:05:24,580 --> 00:05:26,470
+To demonstrate this, let's compute
+
+99
+00:05:26,470 --> 00:05:31,210
+95% confidence intervals for our estimates of average returns.
+
+100
+00:05:31,210 --> 00:05:32,875
+For each of our eight stocks, I compute
+
+101
+00:05:32,875 --> 00:05:35,080
+a historical standard deviation, which
+
+102
+00:05:35,080 --> 00:05:38,800
+I used to compute 95% confidence interval.
+
+103
+00:05:38,800 --> 00:05:40,790
+And in the last two columns.
+
+104
+00:05:40,790 --> 00:05:45,250
+I computed the lower and the upper bounds of this 95%
+
+105
+00:05:45,250 --> 00:05:46,750
+confidence interval.
+
+106
+00:05:46,750 --> 00:05:49,780
+We can see that for each stock the range is very wide.
+
+107
+00:05:49,780 --> 00:05:52,990
+For example, for the first stock the estimate
+
+108
+00:05:52,990 --> 00:05:58,180
+of average monthly return falls from negative 1.36% to positive
+
+109
+00:05:58,180 --> 00:06:02,320
+3.04% with a 95% probability.
+
+110
+00:06:02,320 --> 00:06:05,200
+This imprecision is exactly why in finance we
+
+111
+00:06:05,200 --> 00:06:09,750
+use asset pricing models to forecast future returns.
+
+112
+00:06:09,750 --> 00:06:10,287
+
+

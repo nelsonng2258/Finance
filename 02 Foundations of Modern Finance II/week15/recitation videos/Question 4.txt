@@ -1,0 +1,112 @@
+
+PROFESSOR: In this video, we will
+learn how to empirically estimate CAPM betas.
+We will work with eight firms: four gold mining firms,
+and four technology firms.
+These are the same firms we used to estimate two-factor APT
+model in the first part of this course.
+The table on your screen shows you firm names and location
+of their headquarters.
+Our data set contains monthly return observations
+for each firm from January 2005, until December 2019.
+Therefore, for each firm we have 180 monthly return
+observations.
+Returns are given in column C. We're also
+given the risk free rate in column D.
+And we're given market return in column E.
+To estimate the CAPM model, we need
+to run the regression of excess return
+on a stock on a constant, and on the excess market return.
+Therefore, the first step for us is
+to compute the excess return for each of our stocks
+and to compute excess market return.
+To compute excess return, I'm taking the return on the stock
+and I'm subtracting the risk free rate.
+And to compute excess market return,
+I'm taking the market return and I'm
+subtracting the risk free rate.
+Let's start by estimating the CAPM model for the first stock.
+There are multiple ways to run a linear regression in Excel,
+I will use LINEST function, the same function
+I used in the first part of the course
+when we estimated the APT model.
+It requires four inputs.
+The first input is the left hand side variable,
+which in our case is the excess return on the stock.
+The second input is the vector of known axis,
+which in our case is the excess market return, just one vector.
+The third input to this function is whether the regression
+is run with a constant or not.
+We want to have a constant.
+And the fourth parameter is for additional regression
+statistics, which we don't need in this case.
+So this is an array function.
+We need to hit Shift Control Enter at the same time
+so that we estimate both beta and alpha in the CAPM equation.
+We see that the CAPM beta for the Kinross Gold Corporation
+is 0.54 and CAPM alpha for this stock is 0.45%
+Next let's estimate the CAPM regression for Apple stock.
+We have Apple data further the down in this array.
+And I will select excess returns as my y variable, excess market
+returns as my x variable.
+And I'll put the other two parameters as one and zero.
+So this gives us the CAPM beta for Apple of 1.07
+and the CAPM alpha for the stock, 2.05%.
+I have estimated the CAPM regression
+for the remaining six stocks and here are the results.
+CAPM betas for gold mining stocks vary from 0.32 to 0.54.
+And CAPM betas for technology stocks vary from 0.89 to 1.07.
+These results show that gold mining stocks
+have much lower return sensitivity
+with respect to the market when compared to technology stocks.
+Now we can use estimated betas to find future expected returns
+using the capital asset pricing model.
+Let's assume that future monthly expected return on the market
+is 0.8%.
+This is roughly 10% effective annual rate.
+According to the capital asset pricing model,
+the expected excess return on the stock
+is given by beta times the expected excess return
+on the market.
+Now we can use this equation to find expected excess returns
+on our stocks.
+For Kinross Gold Corporation, it's
+going to be beta of the stock multiplied
+by the expected excess return on the market portfolio.
+So the answer is going forward, the stock
+is expected to return 0.43%.
+We can extend this array and compute expected excess returns
+for the remaining gold stocks and also for the technology
+stocks.
+For comparison, let's also compute
+historical average excess returns
+during our sample period, 2005 to 2019.
+To do this, I'm using the average function
+and our excess returns on each individual stock
+to compute these averages.
+We can see that the average historical return
+for gold mining stocks ranges from 0.64 to 0.84%
+and for technology stock, it ranges from 1% for Intel
+to 2.84% for Apple.
+Notice that for all eight of our stocks
+the expected returns computed using the capital asset pricing
+model are lower than the historical average returns.
+Recall that the reason why we prefer to rely on asset pricing
+models, such as the CAPM or the APT
+to compute expected returns instead of using
+historical averages is that it is extremely difficult
+to infer average returns from historical data.
+To demonstrate this, let's compute
+95% confidence intervals for our estimates of average returns.
+For each of our eight stocks, I compute
+a historical standard deviation, which
+I used to compute 95% confidence interval.
+And in the last two columns.
+I computed the lower and the upper bounds of this 95%
+confidence interval.
+We can see that for each stock the range is very wide.
+For example, for the first stock the estimate
+of average monthly return falls from negative 1.36% to positive
+3.04% with a 95% probability.
+This imprecision is exactly why in finance we
+use asset pricing models to forecast future returns.

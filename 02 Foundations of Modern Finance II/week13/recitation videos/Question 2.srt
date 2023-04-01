@@ -1,0 +1,260 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:02,330
+PROFESSOR: In this video I will show you
+
+2
+00:00:02,330 --> 00:00:04,760
+how to construct replicating portfolios
+
+3
+00:00:04,760 --> 00:00:07,220
+from known option prices.
+
+4
+00:00:07,220 --> 00:00:09,770
+Recall that last week we did the opposite.
+
+5
+00:00:09,770 --> 00:00:14,420
+Namely, we priced options by using replicating portfolios.
+
+6
+00:00:14,420 --> 00:00:17,330
+In practice however, pricing by replication
+
+7
+00:00:17,330 --> 00:00:20,960
+is impractical and often infeasible.
+
+8
+00:00:20,960 --> 00:00:22,910
+But many practitioners often need
+
+9
+00:00:22,910 --> 00:00:25,010
+to construct replicating portfolios
+
+10
+00:00:25,010 --> 00:00:27,680
+for hedging or speculating reasons.
+
+11
+00:00:27,680 --> 00:00:30,140
+And that's what we will cover now.
+
+12
+00:00:30,140 --> 00:00:32,210
+We will work with the lookback option
+
+13
+00:00:32,210 --> 00:00:34,692
+that we covered in question one.
+
+14
+00:00:34,692 --> 00:00:36,650
+And we will construct the following replicating
+
+15
+00:00:36,650 --> 00:00:40,520
+portfolios: a portfolio at time 0, which
+
+16
+00:00:40,520 --> 00:00:44,090
+replicates the payoff from the option of time 1,
+
+17
+00:00:44,090 --> 00:00:47,270
+a portfolio at time 1 in the up node, which replicates
+
+18
+00:00:47,270 --> 00:00:49,940
+the payoff from this option at time 2,
+
+19
+00:00:49,940 --> 00:00:52,880
+and a portfolio at time 1 in the down node
+
+20
+00:00:52,880 --> 00:00:56,225
+that replicates the payoff from this option at time 2.
+
+21
+00:00:56,225 --> 00:00:58,100
+We will assume that the stock price evolution
+
+22
+00:00:58,100 --> 00:01:00,680
+is the same as in question one.
+
+23
+00:01:00,680 --> 00:01:02,960
+Suppose that the replicating portfolio has
+
+24
+00:01:02,960 --> 00:01:05,660
+delta shares of the stock and b dollars
+
+25
+00:01:05,660 --> 00:01:08,420
+invested in the riskless bond.
+
+26
+00:01:08,420 --> 00:01:12,230
+Recall the following expressions for delta and b
+
+27
+00:01:12,230 --> 00:01:15,330
+and let's apply them to our case.
+
+28
+00:01:15,330 --> 00:01:17,240
+Let's start in year 0.
+
+29
+00:01:17,240 --> 00:01:19,670
+I will denote replicating portfolio in year 0
+
+30
+00:01:19,670 --> 00:01:22,700
+by delta naught and b naught.
+
+31
+00:01:22,700 --> 00:01:24,860
+Using numbers from question one, we
+
+32
+00:01:24,860 --> 00:01:27,920
+obtain the following values for delta and b.
+
+33
+00:01:27,920 --> 00:01:30,710
+This implies that to replicate these options payoff in
+
+34
+00:01:30,710 --> 00:01:36,710
+year one, we need to buy 0.4262 shares of the stock
+
+35
+00:01:36,710 --> 00:01:42,270
+and borrow 22.396 dollars at the risk-free rate.
+
+36
+00:01:42,270 --> 00:01:45,230
+Note that the price of this replicating portfolio
+
+37
+00:01:45,230 --> 00:01:50,270
+equals $20.23, which matches exactly the price of the option
+
+38
+00:01:50,270 --> 00:01:52,490
+that we found in question one.
+
+39
+00:01:52,490 --> 00:01:56,780
+Now, let's repeat the same steps and find replicating portfolio
+
+40
+00:01:56,780 --> 00:01:59,300
+in year one in the up node.
+
+41
+00:01:59,300 --> 00:02:03,710
+I will denote delta and b of this portfolio's delta 1u
+
+42
+00:02:03,710 --> 00:02:05,660
+and b1u.
+
+43
+00:02:05,660 --> 00:02:10,009
+One stands for year one, u stands for up node.
+
+44
+00:02:10,009 --> 00:02:12,590
+The delta would equal to 1 and the b
+
+45
+00:02:12,590 --> 00:02:15,980
+would equal to negative 95.238.
+
+46
+00:02:15,980 --> 00:02:18,740
+We can also verify that the price
+
+47
+00:02:18,740 --> 00:02:21,950
+of this replicating portfolio in year one in the up node
+
+48
+00:02:21,950 --> 00:02:24,620
+matches exactly the option price that we
+
+49
+00:02:24,620 --> 00:02:26,960
+found using risk neutral pricing approach
+
+50
+00:02:26,960 --> 00:02:29,770
+in the previous question.
+
+51
+00:02:29,770 --> 00:02:32,650
+Finally, we can find replicating portfolio
+
+52
+00:02:32,650 --> 00:02:35,050
+in year one in the down node.
+
+53
+00:02:35,050 --> 00:02:38,440
+Delta of this portfolio equals to 0.556
+
+54
+00:02:38,440 --> 00:02:43,490
+and b equals to negative 33.862.
+
+55
+00:02:43,490 --> 00:02:45,710
+We can also verify that the price
+
+56
+00:02:45,710 --> 00:02:49,790
+of this replicating portfolio in year one in the down node
+
+57
+00:02:49,790 --> 00:02:53,720
+matches the option price in this node found in question one.
+
+58
+00:02:53,720 --> 00:02:57,290
+This is a summary of replicating portfolios that we constructed.
+
+59
+00:02:57,290 --> 00:03:00,140
+First is the replicating portfolio in year zero.
+
+60
+00:03:00,140 --> 00:03:01,790
+Second is the replicating portfolio
+
+61
+00:03:01,790 --> 00:03:03,900
+in year one in the up node.
+
+62
+00:03:03,900 --> 00:03:06,050
+And third is the replicating portfolio
+
+63
+00:03:06,050 --> 00:03:08,500
+in year one in the down node.
+
+64
+00:03:08,500 --> 00:03:09,000
+
+

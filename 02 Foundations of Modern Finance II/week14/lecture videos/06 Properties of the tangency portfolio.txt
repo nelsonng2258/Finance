@@ -1,0 +1,135 @@
+
+PROFESSOR: In this segment, we establish an important property
+of the tangency portfolio.
+It's an optimality condition, which
+relates expected returns on all assets,
+and their co-variances with the tangency portfolio.
+First, we describe the contribution of each asset
+to a portfolio.
+Portfolio return is a weighted average
+of individual asset returns.
+If we let w denote the weights on the risky assets
+and isolate the risk free asset in the expression,
+we find that the return on the portfolio
+is equal to the risk free rate of return
+plus the weighted average of excess returns
+on the risky assets.
+Each asset contributes to the properties
+of the portfolio in two ways.
+It contributes to the portfolio expected return,
+and it contributes to portfolio risk
+measured by the standard deviation of portfolio return.
+We consider these two dimensions separately.
+The expected return on the portfolio
+is the risk free rate plus the weighted average
+of expected excess returns on individual assets.
+We want to describe the marginal contribution of each asset
+to the portfolio properties.
+The term marginal contribution refers
+to the change in portfolio properties
+due to a very small incremental change
+in the weight of an asset.
+Mathematically, marginal contribution
+is described by a partial derivative.
+Holding everything else fixed, we
+want to know how portfolio properties change
+as we vary the weight of each asset slightly.
+Taking a partial derivative of the portfolio expected return
+with respect to the portfolio weight on asset I,
+we find that the marginal contribution of risky asset
+I to the expected return on the portfolio
+is equal to its own risk premium.
+Next, we consider how individual assets contribute
+to portfolio variance.
+The variance of portfolio return is given by a sum
+across all pairs of assets of their covariance scaled
+by the product of corresponding portfolio weights.
+The marginal contribution of asset
+I is the partial derivative of portfolio variance with respect
+to the weight on asset I. As the following expression
+shows, this partial derivative is
+equal to twice the covariance of return
+on asset I with the portfolio return.
+This is an important result.
+At the portfolio level, the relevant measure of risk
+is not the individual variance of the asset,
+but rather its contribution to the total portfolio variance.
+On the margin, this contribution is
+captured by the covariance of the asset with the portfolio
+return.
+Using the chain rule for differentiation,
+we find that the marginal contribution
+of an asset to the standard deviation of the portfolio
+is equal to its covariance with the portfolio divided
+by the portfolio standard deviation.
+Next, we summarize the marginal contribution
+of each asset of the portfolio by its marginal return
+to risk ratio.
+This is the ratio of the marginal contribution
+of the asset to the expected return on the portfolio divided
+by its marginal contribution to portfolio
+risk or standard deviation.
+Using our previous results, we find
+that the marginal return to risk ratio
+is the risk premium of the asset normalized
+by the ratio of its covariance with the portfolio
+to the portfolio standard deviation.
+We now observe that optimality of the tangency portfolio
+implies that for all assets, the marginal return
+to risk ratio with respect to the tangency portfolio
+is the same.
+And in fact, this is equal to the Sharpe ratio
+of the tangency portfolio.
+We could derive this result by rearranging the expression
+for the composition of the tangency portfolio.
+It is more instructive to visualize the logic
+behind this result graphically.
+As we change the weight on the particular asset,
+we are changing both the expected return
+and the risk of the portfolio.
+Let's perturb the weight of asset I
+in the tangency portfolio.
+The resulting change in the expected return and risk
+will move the tangency portfolio on our plot
+along the dashed red line.
+The slope of the line by definition
+is the marginal return to risk ratio of asset
+I with respect to the tangency portfolio.
+Note that in order for the tangency portfolio to be
+optimal, the dashed line cannot cross the capital market line.
+If it did, we would be able to improve the Sharpe
+ratio of the tangency portfolio, which
+is impossible due to its optimality.
+Therefore, the dashed line must have the same slope
+as the capital market line, which
+is the Sharpe ratio of the tangency portfolio.
+It is important to keep in mind that the result, we
+just derived, is a mathematical identity.
+It does not tell us anything about the properties
+of expected returns of various assets.
+This result is a statement about the tangency portfolio itself.
+The composition of this portfolio
+must be such that for all assets,
+the marginal return to risk ratio
+relative to the tangency portfolio is the same.
+We now offer an equivalent characterization
+of the tangency portfolio, which is very
+useful in empirical analysis.
+Consider a linear relation, a regression
+of excess return of asset I on the excess return
+on the tangency portfolio.
+Keep in mind that we have here a relation
+between random variables rather than a finite sample result.
+In this linear relation, the slope of the beta
+is equal to the covariance of asset I
+and the tangency portfolio divided
+by the variance of the tangency portfolio.
+According to our optimality result,
+the intercept in this regression or the alpha
+must be equal to zero.
+We can, therefore, test for mean variance
+optimality of portfolios in the data using regression methods.
+If we regress historical returns of an asset on the portfolio
+return, we can test for portfolio optimality
+by testing the null hypothesis that the intercept coefficient
+in this regression is zero.

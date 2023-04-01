@@ -1,0 +1,296 @@
+0
+00:00:00,000 --> 00:00:00,660
+
+
+1
+00:00:00,660 --> 00:00:03,420
+PROFESSOR: We now use arbitrage arguments to develop
+
+2
+00:00:03,420 --> 00:00:06,590
+pricing bonds on options.
+
+3
+00:00:06,590 --> 00:00:08,630
+These bonds are model free.
+
+4
+00:00:08,630 --> 00:00:11,030
+We do not need to impose any restrictions
+
+5
+00:00:11,030 --> 00:00:14,480
+on the price process of the underlying asset.
+
+6
+00:00:14,480 --> 00:00:17,000
+These bonds are important not only because
+
+7
+00:00:17,000 --> 00:00:19,790
+of their practical implications, but also
+
+8
+00:00:19,790 --> 00:00:23,600
+because they help us better understand how to use arbitrage
+
+9
+00:00:23,600 --> 00:00:26,300
+logic to value options.
+
+10
+00:00:26,300 --> 00:00:28,420
+This is a stepping stone on the way
+
+11
+00:00:28,420 --> 00:00:31,740
+towards option-pricing models.
+
+12
+00:00:31,740 --> 00:00:33,990
+We now introduce some notation, which
+
+13
+00:00:33,990 --> 00:00:36,760
+we will use for the rest of the lecture.
+
+14
+00:00:36,760 --> 00:00:41,240
+For convenience, we refer to the underlying asset as the stock.
+
+15
+00:00:41,240 --> 00:00:42,910
+Of course, the underlying could also
+
+16
+00:00:42,910 --> 00:00:46,660
+be a bond, foreign currency, or some other asset.
+
+17
+00:00:46,660 --> 00:00:50,690
+S is the price of the stock now.
+
+18
+00:00:50,690 --> 00:00:55,400
+S sub t is the price of the stock at time, t.
+
+19
+00:00:55,400 --> 00:00:59,960
+B is the price of the discount bond, paying $1 at maturity
+
+20
+00:00:59,960 --> 00:01:02,220
+at time, t.
+
+21
+00:01:02,220 --> 00:01:05,650
+We maintain the assumption that interest rates are positive.
+
+22
+00:01:05,650 --> 00:01:10,030
+So the price of the bond is less than 1.
+
+23
+00:01:10,030 --> 00:01:12,910
+C denotes the price of a European call,
+
+24
+00:01:12,910 --> 00:01:15,170
+with the strike price, K and maturity,
+
+25
+00:01:15,170 --> 00:01:20,150
+T. P is the price of a European put,
+
+26
+00:01:20,150 --> 00:01:22,070
+with the strike price, K and maturity,
+
+27
+00:01:22,070 --> 00:01:26,300
+T. For now we consider only European options, which can
+
+28
+00:01:26,300 --> 00:01:29,070
+be exercised only at maturity.
+
+29
+00:01:29,070 --> 00:01:32,370
+We also assume that the underlying asset does not
+
+30
+00:01:32,370 --> 00:01:34,530
+pay dividends.
+
+31
+00:01:34,530 --> 00:01:36,270
+Consider the payoff for the option
+
+32
+00:01:36,270 --> 00:01:38,900
+when the option is exercised.
+
+33
+00:01:38,900 --> 00:01:42,260
+The resulting cash flow is called the exercise value
+
+34
+00:01:42,260 --> 00:01:44,500
+of the option.
+
+35
+00:01:44,500 --> 00:01:46,960
+For a call option, the exercise value
+
+36
+00:01:46,960 --> 00:01:50,290
+is the difference between the stock price and the strike
+
+37
+00:01:50,290 --> 00:01:51,710
+price.
+
+38
+00:01:51,710 --> 00:01:54,410
+For a put, the exercise value is the difference
+
+39
+00:01:54,410 --> 00:01:57,770
+between the strike and the stock price.
+
+40
+00:01:57,770 --> 00:02:00,620
+There is some terminology related to this.
+
+41
+00:02:00,620 --> 00:02:03,350
+We say that the option is in the money
+
+42
+00:02:03,350 --> 00:02:06,450
+if its exercised its value is positive.
+
+43
+00:02:06,450 --> 00:02:10,919
+An option is at the money if its exercise value is 0.
+
+44
+00:02:10,919 --> 00:02:13,170
+And the option is out of the money
+
+45
+00:02:13,170 --> 00:02:16,440
+if its exercise value is negative.
+
+46
+00:02:16,440 --> 00:02:21,580
+We now establish pricing bonds for European call options.
+
+47
+00:02:21,580 --> 00:02:25,550
+First, the payoff of a call can never be negative.
+
+48
+00:02:25,550 --> 00:02:29,760
+Therefore the price of the option is at least a zero.
+
+49
+00:02:29,760 --> 00:02:31,830
+Second, the payoff for the option
+
+50
+00:02:31,830 --> 00:02:34,410
+is bounded from above by the value
+
+51
+00:02:34,410 --> 00:02:36,870
+of the stock at expiration.
+
+52
+00:02:36,870 --> 00:02:40,050
+Therefore, the price of the option cannot be higher than
+
+53
+00:02:40,050 --> 00:02:41,580
+the current price of the stock.
+
+54
+00:02:41,580 --> 00:02:44,660
+
+
+55
+00:02:44,660 --> 00:02:49,400
+Next, we establish another lower bound on the option price.
+
+56
+00:02:49,400 --> 00:02:53,480
+Option price is no less than the price of the stock,
+
+57
+00:02:53,480 --> 00:02:58,190
+minus the present value of the strike price, K.
+
+58
+00:02:58,190 --> 00:03:02,410
+To establish this result, consider two strategies.
+
+59
+00:03:02,410 --> 00:03:05,520
+First, buy a call.
+
+60
+00:03:05,520 --> 00:03:09,690
+Second, buy a share of the stock and borrow the present value
+
+61
+00:03:09,690 --> 00:03:12,050
+of the strike.
+
+62
+00:03:12,050 --> 00:03:14,570
+The payoff of the first strategy is at least
+
+63
+00:03:14,570 --> 00:03:18,050
+as high at maturity of the option as the payoff
+
+64
+00:03:18,050 --> 00:03:20,520
+of the second strategy.
+
+65
+00:03:20,520 --> 00:03:23,100
+We conclude that the price of the call
+
+66
+00:03:23,100 --> 00:03:26,550
+has to be at least as high as the price of the stock,
+
+67
+00:03:26,550 --> 00:03:28,950
+minus the present value of the strike,
+
+68
+00:03:28,950 --> 00:03:33,940
+or K times B. If we combine all of the pricing
+
+69
+00:03:33,940 --> 00:03:37,780
+bounds we have derived, we establish an upper and a lower
+
+70
+00:03:37,780 --> 00:03:40,770
+bound on the call price.
+
+71
+00:03:40,770 --> 00:03:45,130
+The call price is bounded above by the stock price.
+
+72
+00:03:45,130 --> 00:03:48,940
+And it is bounded from below by the maximum of 0
+
+73
+00:03:48,940 --> 00:03:53,040
+and the stock price minus the present value of the strike.
+

@@ -1,0 +1,184 @@
+0
+00:00:00,000 --> 00:00:00,305
+
+
+1
+00:00:00,305 --> 00:00:02,430
+PROFESSOR: To approximate a continuous distribution
+
+2
+00:00:02,430 --> 00:00:05,370
+of asset returns using a binomial model--
+
+3
+00:00:05,370 --> 00:00:08,340
+we need to increase the number of binomial steps
+
+4
+00:00:08,340 --> 00:00:12,390
+relative to the physical length of the time period.
+
+5
+00:00:12,390 --> 00:00:15,480
+As we reduce the length of each time step,
+
+6
+00:00:15,480 --> 00:00:18,450
+we hold the maturity of the option fixed.
+
+7
+00:00:18,450 --> 00:00:21,840
+As a result, we can make sure that the binomial distribution
+
+8
+00:00:21,840 --> 00:00:26,950
+of log returns converges to a normal distribution.
+
+9
+00:00:26,950 --> 00:00:31,040
+The key model parameters are u and d.
+
+10
+00:00:31,040 --> 00:00:34,280
+These parameters control the magnitude of price changes
+
+11
+00:00:34,280 --> 00:00:37,610
+with each step of the binomial tree.
+
+12
+00:00:37,610 --> 00:00:42,970
+We choose u and d to reflect the distribution of stock returns.
+
+13
+00:00:42,970 --> 00:00:46,280
+One possible choice is as follows.
+
+14
+00:00:46,280 --> 00:00:50,710
+U is the exponential of the return volatility
+
+15
+00:00:50,710 --> 00:00:55,030
+times the square root of the timestep of the tree.
+
+16
+00:00:55,030 --> 00:00:59,285
+d is inversely related to u.
+
+17
+00:00:59,285 --> 00:01:02,250
+The probability of the up move of the tree
+
+18
+00:01:02,250 --> 00:01:04,739
+does not affect option prices.
+
+19
+00:01:04,739 --> 00:01:07,080
+We specify it here for completeness.
+
+20
+00:01:07,080 --> 00:01:10,110
+For some computations, we might want to compute objects
+
+21
+00:01:10,110 --> 00:01:12,720
+like expected returns, which require
+
+22
+00:01:12,720 --> 00:01:17,070
+modeling the physical distribution of stock returns.
+
+23
+00:01:17,070 --> 00:01:19,380
+We said the probability of the up move
+
+24
+00:01:19,380 --> 00:01:24,810
+to be equal to 1/2 plus 1/2 of the ratio of mu
+
+25
+00:01:24,810 --> 00:01:29,290
+to sigma times the square root of the timestep.
+
+26
+00:01:29,290 --> 00:01:33,700
+Here, mu is the expected stock return continuously compounded,
+
+27
+00:01:33,700 --> 00:01:38,430
+and sigma is the standard deviation of log returns.
+
+28
+00:01:38,430 --> 00:01:41,550
+We refer to sigma as the volatility of stock returns
+
+29
+00:01:41,550 --> 00:01:45,560
+or, in short, stocks' volatility.
+
+30
+00:01:45,560 --> 00:01:49,100
+Our construction here illustrates how a binomial tree
+
+31
+00:01:49,100 --> 00:01:51,950
+could be used to approximate a continuous distribution
+
+32
+00:01:51,950 --> 00:01:57,080
+of stock returns, the so-called log normal distribution.
+
+33
+00:01:57,080 --> 00:02:00,230
+We should note that the parameterization we show here
+
+34
+00:02:00,230 --> 00:02:01,970
+is not unique.
+
+35
+00:02:01,970 --> 00:02:04,880
+We could parameterize the binomial tree differently
+
+36
+00:02:04,880 --> 00:02:08,960
+to converge to the same limiting distribution.
+
+37
+00:02:08,960 --> 00:02:11,780
+We could also define the parameters of the tree
+
+38
+00:02:11,780 --> 00:02:15,260
+so that result in distribution is not log normal.
+
+39
+00:02:15,260 --> 00:02:19,130
+For example, if we allowed the magnitude of the price change
+
+40
+00:02:19,130 --> 00:02:22,790
+to vary across the tree, we can approximate stock return
+
+41
+00:02:22,790 --> 00:02:27,480
+processes with time-varying conditional variance.
+
+42
+00:02:27,480 --> 00:02:32,070
+The binomial tree is a highly flexible and versatile model,
+
+43
+00:02:32,070 --> 00:02:35,660
+which can be used to approximate empirically realistic processes
+
+44
+00:02:35,660 --> 00:02:37,500
+for stock returns.
+
+45
+00:02:37,500 --> 00:02:38,000
+
+

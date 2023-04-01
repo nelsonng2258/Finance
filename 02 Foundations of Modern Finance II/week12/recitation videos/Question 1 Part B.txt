@@ -1,0 +1,101 @@
+
+PROFESSOR: Now let's draw the payoff diagram that
+corresponds to this payoff.
+So let's start with when s1 equals to 0.
+So, when s1 equals to 0, we get our payoff is $200.
+Now, if s1 ends up being $90, our payoff,
+according to this expression, is going to be 200 minus 2
+times 90, which is 180.
+So 200 minus 180 would be $20.
+So, therefore, we're getting $20 if the stock price ends up
+being $90.
+So, therefore, this would be the first part of this diagram
+where we get this line.
+So, because we have minus 2 s1 here, so the raise here
+and, therefore, the slope of this line is 2.
+Now so this is the first part.
+Now, if s1 is above 90 but below 110--
+let's put 110 here--
+then our payoff is going to be 110 minus s1.
+So, if s1 is just exactly 90, so this function is still--
+would equal to 20.
+So, therefore, we don't have any breaks here.
+So we're going to start exactly at this point.
+And then, if s1 goes all the way to 110,
+then this payoff, this function, is going to be equal to 0.
+So, therefore, the second part here
+is just the straight line that connects these two points.
+
+And then, of course, if the stock price
+ends up being above 110, we get zero payoff here.
+And so here, because we get 110 minus s1,
+the slope of this line is negative 45 degrees.
+And so there is here just 1.
+So, therefore, this is how the total payoff
+from this portfolio would look like.
+So we get a steep line that starts at 200.
+It goes down to 20 when s1 equals to 90.
+Then it becomes less steep, and it goes to 110.
+And then it becomes 0.
+And, intuitively, of course, so the steepness here
+comes from the fact that both of these options
+expire in the money.
+And, therefore, this is the payoff that we get.
+So, once we cross the $90 threshold,
+the first option expires out of the money,
+and, therefore, we get nothing from it.
+And we still get the payoff from the second option,
+and this is its payoff.
+And, when s1 goes above 110, we get zero payoff
+from these two put options.
+So, therefore, this is how the diagram
+for this particular portfolio would look like.
+Now let's consider the following.
+So let's assume that you're an investor,
+and you're buying one put option with a strike price of $90
+and one put option with a strike price of $110.
+What would be your payoff in this case?
+Let's follow the same approach as we've done
+in part a of this question.
+I will write down the mathematical expressions
+for the payoffs from these two put options,
+and then I will mathematically add them up.
+And then I will draw the diagram that corresponds
+to this particular portfolio.
+So let's start with the first put option.
+So this put option has strike price of $90.
+So, therefore, it pays off 90 minus s1 if s1 is below 90.
+If s1 ends up being above 90, this option
+expires out of the money, and it pays off 0.
+Similar, for the second put option,
+we get 110 minus s1 if s1 ends up
+being below 110, which is the strike price, and 0 otherwise.
+So what I will do right now is that I will mathematically
+add up these two expressions.
+So what we will end up having is that let's
+first kind of mentally break down the domain of s1
+into three pieces.
+So it's above 110, between 90 and 110, and below 90.
+So what happens if the stock price ends up being above $110?
+Well, then, in this case, both of these options
+expire out of the money, and our aggregate payoff
+from both of these options is just 0.
+So we get 0 if s1 is above $110.
+Now what happens if s1 ends up being between 90 and 110?
+Well, in this case, the first option still expires out
+of the money, and exercising it becomes not optimal,
+but the second option actually expires in the money.
+And, therefore, we're exercising it,
+and we're getting 110 minus s1 as the payoff from this option.
+So, therefore, we get 0 plus 110 minus s1 or 110 minus s1
+if s1 one ends up being above 90, but below 110.
+And now, if the stock price ends up being below 90,
+then, in this case, both of these options
+expire in the money.
+And our payoff becomes 90 minus s1 plus 110 minus s1.
+So, adding these two up, we get 200 minus 2 s1
+if s1 ends up being below 90.
+So this is the combined payoff from holding these two options.
+So we get 200 minus 2 s1 if the stock price is below 90.
+We get 110 minus s1 if the stock price is between 90 and 110.
+And we get 0 if the stock price is above 110.

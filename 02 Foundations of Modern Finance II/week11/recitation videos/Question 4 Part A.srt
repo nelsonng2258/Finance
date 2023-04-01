@@ -1,0 +1,332 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:02,009
+PROFESSOR: In this video, we will
+
+2
+00:00:02,009 --> 00:00:04,980
+use an example to demonstrate valuation of interest rate
+
+3
+00:00:04,980 --> 00:00:06,750
+swaps.
+
+4
+00:00:06,750 --> 00:00:08,730
+ABC Corporation has borrowed $3 million
+
+5
+00:00:08,730 --> 00:00:12,420
+for the next three years at a variable interest rate.
+
+6
+00:00:12,420 --> 00:00:15,750
+Under the terms of the loan, ABC will pay interest
+
+7
+00:00:15,750 --> 00:00:19,770
+at the end of years one, two, and three.
+
+8
+00:00:19,770 --> 00:00:21,630
+The interest rate that ABC will need
+
+9
+00:00:21,630 --> 00:00:25,350
+to pay at the end of year one is based on the one-year spot
+
+10
+00:00:25,350 --> 00:00:28,290
+interest rate in year zero.
+
+11
+00:00:28,290 --> 00:00:30,780
+The interest rate to be paid at the end of year two
+
+12
+00:00:30,780 --> 00:00:35,220
+will be based on the one-year spot rate in year one.
+
+13
+00:00:35,220 --> 00:00:37,800
+And the interest rate to be paid at the end of year three
+
+14
+00:00:37,800 --> 00:00:41,700
+will be based on the one-year spot rate in year two.
+
+15
+00:00:41,700 --> 00:00:45,450
+Typically, corporate bank loans are tied to benchmark interest
+
+16
+00:00:45,450 --> 00:00:47,610
+rates such as LIBOR.
+
+17
+00:00:47,610 --> 00:00:50,250
+These benchmark rates vary over time.
+
+18
+00:00:50,250 --> 00:00:53,370
+And therefore, interest rate and interest expense
+
+19
+00:00:53,370 --> 00:00:58,930
+that corporations pay on their bank loans vary over time.
+
+20
+00:00:58,930 --> 00:01:01,560
+Suppose that the current one year, two year,
+
+21
+00:01:01,560 --> 00:01:06,150
+and three-year spot rates are 3.5%, 4%, and 4.2%
+
+22
+00:01:06,150 --> 00:01:07,720
+respectively.
+
+23
+00:01:07,720 --> 00:01:11,900
+These spot rates will be used to calculate present values.
+
+24
+00:01:11,900 --> 00:01:14,810
+Now, given this term structure of interest rates,
+
+25
+00:01:14,810 --> 00:01:18,080
+we know that the interest rate for the first year of the loan
+
+26
+00:01:18,080 --> 00:01:20,840
+is 3.5%.
+
+27
+00:01:20,840 --> 00:01:23,660
+However, we do not know what the interest rate will
+
+28
+00:01:23,660 --> 00:01:26,030
+be during the second year of the loan
+
+29
+00:01:26,030 --> 00:01:29,240
+because it will be whatever the one-year spot interest
+
+30
+00:01:29,240 --> 00:01:32,120
+rate is at the beginning of the second year.
+
+31
+00:01:32,120 --> 00:01:34,610
+Based on spot interest rates today, we
+
+32
+00:01:34,610 --> 00:01:37,310
+can calculate the implied one-year spot
+
+33
+00:01:37,310 --> 00:01:40,610
+rate that will be in effect during the second year.
+
+34
+00:01:40,610 --> 00:01:43,850
+In other words, we can compute the one-year forward rate
+
+35
+00:01:43,850 --> 00:01:45,650
+in year one.
+
+36
+00:01:45,650 --> 00:01:50,302
+Please check that this rate is 4.502%.
+
+37
+00:01:50,302 --> 00:01:53,160
+However, under this loan, the interest rate
+
+38
+00:01:53,160 --> 00:01:58,350
+for the second year could be higher or lower than 4.502%
+
+39
+00:01:58,350 --> 00:02:01,440
+depending on the interest rates in year one.
+
+40
+00:02:01,440 --> 00:02:04,620
+Same logic applies to year three.
+
+41
+00:02:04,620 --> 00:02:06,360
+ABC Corporation is not comfortable
+
+42
+00:02:06,360 --> 00:02:10,389
+with the uncertainty of year two and year three interest rates.
+
+43
+00:02:10,389 --> 00:02:14,070
+So it wants to enter into an interest rate swap that
+
+44
+00:02:14,070 --> 00:02:18,030
+will fix the interest rates for the three
+
+45
+00:02:18,030 --> 00:02:21,490
+years of the term of this loan.
+
+46
+00:02:21,490 --> 00:02:24,910
+Let's characterize this interest rate swap.
+
+47
+00:02:24,910 --> 00:02:27,400
+It has a three-year term.
+
+48
+00:02:27,400 --> 00:02:30,370
+It has annual settlements with settlement dates
+
+49
+00:02:30,370 --> 00:02:34,150
+at the end of years one, two, and three.
+
+50
+00:02:34,150 --> 00:02:37,480
+And ABC Corporation will pay fixed rate
+
+51
+00:02:37,480 --> 00:02:41,920
+which I'll denote as rs during the three years of the loan.
+
+52
+00:02:41,920 --> 00:02:46,530
+The counterparty on the swap will pay the floating rate.
+
+53
+00:02:46,530 --> 00:02:51,390
+To price this swap, we need to find the fixed rate rs.
+
+54
+00:02:51,390 --> 00:02:54,210
+This interest rate should be fair to both parties
+
+55
+00:02:54,210 --> 00:02:57,600
+in the sense that the present value of interest expense
+
+56
+00:02:57,600 --> 00:03:00,330
+at variable rate should equal to the present value of interest
+
+57
+00:03:00,330 --> 00:03:02,880
+expense at the fixed rate.
+
+58
+00:03:02,880 --> 00:03:06,840
+We will use this equation to find rate rs.
+
+59
+00:03:06,840 --> 00:03:09,120
+To use this pricing equation, let's first
+
+60
+00:03:09,120 --> 00:03:13,710
+find our interest expense at the variable rates.
+
+61
+00:03:13,710 --> 00:03:15,240
+In year one, our interest expense
+
+62
+00:03:15,240 --> 00:03:18,000
+will be the principal amount, the $3 million,
+
+63
+00:03:18,000 --> 00:03:21,210
+multiplied by spot rate r1, which is
+
+64
+00:03:21,210 --> 00:03:26,160
+3.5% which gives us $105,000.
+
+65
+00:03:26,160 --> 00:03:29,100
+In year two, our interest expense
+
+66
+00:03:29,100 --> 00:03:32,800
+will be the face value of the loan, which is again $3 million
+
+67
+00:03:32,800 --> 00:03:35,560
+multiplied by one-year forward rate
+
+68
+00:03:35,560 --> 00:03:40,350
+in year one, which is 4.502%.
+
+69
+00:03:40,350 --> 00:03:46,300
+This gives us the interest expense of $135,072.46.
+
+70
+00:03:46,300 --> 00:03:48,760
+Finally, in year three, the interest expense
+
+71
+00:03:48,760 --> 00:03:52,620
+will be face value, $3 million, multiplied
+
+72
+00:03:52,620 --> 00:03:56,340
+by one-year forward rate in year two.
+
+73
+00:03:56,340 --> 00:04:00,010
+You can verify that this rate is 4.601%.
+
+74
+00:04:00,010 --> 00:04:03,570
+And therefore, the total interest expense in year three
+
+75
+00:04:03,570 --> 00:04:08,370
+is $138,034.64.
+
+76
+00:04:08,370 --> 00:04:12,360
+At the fixed interest rate rs, our annual interest expense
+
+77
+00:04:12,360 --> 00:04:17,360
+will be $3 million face value multiplied by the rate rs.
+
+78
+00:04:17,360 --> 00:04:21,740
+Putting this all together, this is our swap pricing equation.
+
+79
+00:04:21,740 --> 00:04:26,400
+The only unknown in this equation is the fixed rate rs.
+
+80
+00:04:26,400 --> 00:04:28,470
+Solving this equation for this rate
+
+81
+00:04:28,470 --> 00:04:32,500
+gives us the fixed rate of 4.185%.
+
+82
+00:04:32,500 --> 00:04:33,000
+
+

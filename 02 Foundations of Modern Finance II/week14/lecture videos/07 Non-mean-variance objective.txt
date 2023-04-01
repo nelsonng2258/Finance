@@ -1,0 +1,87 @@
+
+PROFESSOR: We'll now discuss some limitations
+of the mean variance framework for portfolio choice
+and consider some extensions.
+One important limitation is that our formulation is static.
+We construct the portfolio at time zero
+and evaluate the outcome next period.
+We do not rebalance the portfolio over time.
+And we do not evaluate the time path of the portfolio value.
+In practice, portfolio choice problems are often dynamic.
+For example, consider a problem faced
+by a household with multiple consumption objectives
+over the life cycle.
+This household would need to think
+about intertemporal trade-offs and would
+have to rebalance its investments multiple times.
+To solve this problem, one would need
+to learn how to construct dynamic plans.
+This is one direction for extending our results.
+The technical tools needed for this problem
+come from dynamic programming, an area of optimization dealing
+with multi-period decision problems.
+Even in static problems, the objective of the investor
+may not be fully described by the first two
+moments of portfolio returns.
+For example, suppose an investor wants
+to maximize expected portfolio return subject to a penalty,
+which is applied whenever the value of the portfolio
+falls below a given threshold.
+We can capture this and various other objectives
+using the expected utility framework.
+For our example in particular, one
+may formulate a utility function to be equal to portfolio value
+whenever this value is above the threshold
+and, otherwise, linear with a slope higher
+than one if the value of the portfolio
+is below the threshold.
+By construction, this objective penalizes outcomes
+that fall below the threshold.
+The strength of the penalty is controlled
+by the parameter a, which describes
+the difference in the slope of the utility curve
+below and above the threshold.
+We now consider the marginal contribution of an asset
+to the expected utility objective.
+And compare this to our results for the mean variance
+objective.
+Consider the expected utility.
+We assume that the portfolio value starts at one.
+And then the utility is defined over the end
+of period portfolio value, which is
+one plus the portfolio return.
+The first order optimality condition
+states that the derivative of the expected utility
+with respect to each portfolio weight should be zero.
+For asset I, this condition requires
+that the expected value of the excess return on asset
+I scaled by the marginal utility at the end of the period
+is equal to zero.
+We can rewrite this condition as the sum of two terms being
+equal to zero.
+The first term is a product of the risk premium on asset I
+and the expected marginal utility of terminal portfolio
+value.
+The second term is the covariance
+of the return on asset I with the marginal utility.
+We observe that in this formulation
+the marginal contribution of the asset to portfolio risk
+is measured by the covariance of the return
+and the marginal utility of portfolio value.
+Because marginal utility is generally non-linear,
+this measure emphasizes non-linear measures
+of dependence between individual asset returns and portfolio
+returns.
+For example, the marginal contribution
+of asset I to portfolio risk may now
+depend on the covariance of its return
+with the squared portfolio return called coskewness.
+This stands in contrast to the mean varianace results,
+where the marginal contribution of an asset to portfolio risk
+was fully captured by a linear measure of dependence,
+return covariance.
+Another important implication of our analysis
+here is that, under the expected utility objective,
+different investors no longer hold the same risky portfolio.
+The shape of the individual utility function
+affects the optimal portfolio composition.

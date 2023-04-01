@@ -1,0 +1,616 @@
+0
+00:00:00,000 --> 00:00:02,700
+PROFESSOR: This week, we continue our exploration
+
+1
+00:00:02,700 --> 00:00:04,620
+of option pricing.
+
+2
+00:00:04,620 --> 00:00:06,910
+We developed the risk-neutral pricing method,
+
+3
+00:00:06,910 --> 00:00:09,120
+which is a powerful and widely used
+
+4
+00:00:09,120 --> 00:00:11,460
+approach to option valuation.
+
+5
+00:00:11,460 --> 00:00:15,480
+We applied this framework to pricing of exotic options.
+
+6
+00:00:15,480 --> 00:00:18,000
+We also derived the Black-Scholes-Merton option
+
+7
+00:00:18,000 --> 00:00:22,690
+pricing model and discussed its empirical implementation.
+
+8
+00:00:22,690 --> 00:00:25,990
+In this section, we introduced the risk-neutral approach
+
+9
+00:00:25,990 --> 00:00:28,150
+to option pricing.
+
+10
+00:00:28,150 --> 00:00:32,020
+Risk-neutral valuation method was introduced in the 1970s
+
+11
+00:00:32,020 --> 00:00:35,260
+by John Cox and Stephen Ross.
+
+12
+00:00:35,260 --> 00:00:38,890
+We start with the binomial model in its general form.
+
+13
+00:00:38,890 --> 00:00:44,530
+Stock price follows a binomial process rising by multiple of u
+
+14
+00:00:44,530 --> 00:00:48,870
+or falling by a multiple of d over the next period.
+
+15
+00:00:48,870 --> 00:00:52,308
+The risk-free interest rate is equal to r.
+
+16
+00:00:52,308 --> 00:00:55,140
+To avoid arbitrage, we assume that the stock
+
+17
+00:00:55,140 --> 00:00:59,070
+return and the bond return do not dominate each other.
+
+18
+00:00:59,070 --> 00:01:03,580
+In the up node, the stock performs better than the bond.
+
+19
+00:01:03,580 --> 00:01:07,680
+And in the down node, the bond outperforms the stock.
+
+20
+00:01:07,680 --> 00:01:10,020
+Formally, we impose the restriction
+
+21
+00:01:10,020 --> 00:01:15,160
+that u exceeds 1 plus r, which is greater than d.
+
+22
+00:01:15,160 --> 00:01:17,620
+Consider an option on the stock.
+
+23
+00:01:17,620 --> 00:01:20,680
+To be specific, let it be a call option with a strike
+
+24
+00:01:20,680 --> 00:01:22,800
+price of k.
+
+25
+00:01:22,800 --> 00:01:27,390
+Its payoff is a function of the stock price at expiration.
+
+26
+00:01:27,390 --> 00:01:30,960
+It's the maximum of 0 and the difference between the stock
+
+27
+00:01:30,960 --> 00:01:34,120
+price and the strike.
+
+28
+00:01:34,120 --> 00:01:36,700
+As we did in our numerical example,
+
+29
+00:01:36,700 --> 00:01:40,710
+we priced the option by replication.
+
+30
+00:01:40,710 --> 00:01:44,220
+We form a replicating portfolio with delta shares
+
+31
+00:01:44,220 --> 00:01:49,320
+of the stock and B dollars in the riskless bond.
+
+32
+00:01:49,320 --> 00:01:52,410
+We require that the value of the replicating portfolio
+
+33
+00:01:52,410 --> 00:01:57,680
+matches the value of the option at each node next period.
+
+34
+00:01:57,680 --> 00:02:02,380
+This imposes two restrictions on delta and B.
+
+35
+00:02:02,380 --> 00:02:05,260
+We find a unique solution for the composition
+
+36
+00:02:05,260 --> 00:02:08,229
+of the replicating portfolio.
+
+37
+00:02:08,229 --> 00:02:11,380
+We then expressed the option price at time 0
+
+38
+00:02:11,380 --> 00:02:15,230
+as the initial value of the replicating portfolio.
+
+39
+00:02:15,230 --> 00:02:18,530
+Recall that this follows from the law of one price.
+
+40
+00:02:18,530 --> 00:02:21,830
+The option and its replicating portfolio
+
+41
+00:02:21,830 --> 00:02:25,560
+have the same payoff next period in each state.
+
+42
+00:02:25,560 --> 00:02:29,820
+Therefore, they must trade at the same current price.
+
+43
+00:02:29,820 --> 00:02:33,480
+Next, we rewrite the expression for the option price
+
+44
+00:02:33,480 --> 00:02:37,130
+to reveal the risk-neutral pricing formula.
+
+45
+00:02:37,130 --> 00:02:42,080
+First, define two numbers, q sub u and q sub d,
+
+46
+00:02:42,080 --> 00:02:45,530
+in relation to stock returns in the up and down nodes
+
+47
+00:02:45,530 --> 00:02:48,770
+and the risk-free rate.
+
+48
+00:02:48,770 --> 00:02:51,190
+Note that according to our definition,
+
+49
+00:02:51,190 --> 00:02:55,720
+these two numbers are positive and sum up to 1.
+
+50
+00:02:55,720 --> 00:02:58,360
+Because of that, we can interpret these numbers
+
+51
+00:02:58,360 --> 00:03:01,930
+as probabilities for the up and down states
+
+52
+00:03:01,930 --> 00:03:04,150
+on the binomial tree.
+
+53
+00:03:04,150 --> 00:03:07,720
+From here on, we will use q to denote the probability
+
+54
+00:03:07,720 --> 00:03:12,520
+corresponding to the up node, and then 1 minus q corresponds
+
+55
+00:03:12,520 --> 00:03:15,590
+to the down node.
+
+56
+00:03:15,590 --> 00:03:19,670
+We now return to our general expression for the option price
+
+57
+00:03:19,670 --> 00:03:23,520
+and rewrite it using the q probabilities.
+
+58
+00:03:23,520 --> 00:03:26,490
+We find that the option price at time 0
+
+59
+00:03:26,490 --> 00:03:30,690
+is equal to the expected value of the options payoff
+
+60
+00:03:30,690 --> 00:03:36,290
+using q probabilities discounted at the risk-free rate.
+
+61
+00:03:36,290 --> 00:03:40,570
+q probabilities are called the risk-neutral probabilities.
+
+62
+00:03:40,570 --> 00:03:44,530
+The reason for this name is that we are discounting the expected
+
+63
+00:03:44,530 --> 00:03:49,050
+payoff on the q probabilities at the risk-free rate.
+
+64
+00:03:49,050 --> 00:03:52,310
+This is how the discounted cash flow formula would look
+
+65
+00:03:52,310 --> 00:03:55,960
+if investors were risk neutral.
+
+66
+00:03:55,960 --> 00:03:58,300
+Keep in mind that q probabilities are
+
+67
+00:03:58,300 --> 00:04:00,580
+a convenient mathematical construct,
+
+68
+00:04:00,580 --> 00:04:03,220
+and our interpretation of these numbers in relation
+
+69
+00:04:03,220 --> 00:04:06,550
+to risk neutrality is an intuitive analogy,
+
+70
+00:04:06,550 --> 00:04:08,680
+but we do not impose any restrictions
+
+71
+00:04:08,680 --> 00:04:11,490
+on investors' preferences.
+
+72
+00:04:11,490 --> 00:04:14,490
+We do not know how risk averse investors are,
+
+73
+00:04:14,490 --> 00:04:16,920
+and we do not need to know that.
+
+74
+00:04:16,920 --> 00:04:19,769
+Our pricing results are based entirely
+
+75
+00:04:19,769 --> 00:04:22,640
+on arbitrage arguments.
+
+76
+00:04:22,640 --> 00:04:25,160
+Risk-neutral pricing may seem like a bit
+
+77
+00:04:25,160 --> 00:04:26,870
+of mathematical magic.
+
+78
+00:04:26,870 --> 00:04:28,760
+We derive the option pricing formula
+
+79
+00:04:28,760 --> 00:04:32,330
+using the law of one price and the dynamic replication
+
+80
+00:04:32,330 --> 00:04:33,560
+argument.
+
+81
+00:04:33,560 --> 00:04:37,310
+Then, at the very end, we rewrite the valuation formula
+
+82
+00:04:37,310 --> 00:04:39,800
+using risk-neutral probabilities.
+
+83
+00:04:39,800 --> 00:04:42,140
+Why is this possible?
+
+84
+00:04:42,140 --> 00:04:45,350
+To gain some intuition, let's start with the knowledge
+
+85
+00:04:45,350 --> 00:04:48,890
+that the payoff of any option can be replicated by trading
+
+86
+00:04:48,890 --> 00:04:51,380
+in the stock and the bond.
+
+87
+00:04:51,380 --> 00:04:54,830
+We will not use the exact option pricing formula, only
+
+88
+00:04:54,830 --> 00:04:58,370
+the notion that replication is possible.
+
+89
+00:04:58,370 --> 00:05:01,550
+Change the probabilities of the up/down stock price
+
+90
+00:05:01,550 --> 00:05:05,930
+changes so that the expected return of the stock
+
+91
+00:05:05,930 --> 00:05:09,750
+becomes equal to the risk-free rate at each node.
+
+92
+00:05:09,750 --> 00:05:14,100
+We call these new probabilities q probabilities.
+
+93
+00:05:14,100 --> 00:05:18,090
+Then, expected return on the replicating portfolio
+
+94
+00:05:18,090 --> 00:05:23,170
+under these q probabilities equals the risk-free rate.
+
+95
+00:05:23,170 --> 00:05:26,190
+This is because the return on the portfolio
+
+96
+00:05:26,190 --> 00:05:29,640
+is a weighted average of returns on its positions,
+
+97
+00:05:29,640 --> 00:05:33,960
+and both the stock and the bond have the same expected return
+
+98
+00:05:33,960 --> 00:05:38,980
+under the q probabilities, the risk-free rate.
+
+99
+00:05:38,980 --> 00:05:41,920
+Next, we apply the discounted cash flow formula
+
+100
+00:05:41,920 --> 00:05:45,340
+to determine the value of the replicating portfolio, which
+
+101
+00:05:45,340 --> 00:05:48,550
+is the same as the payoff of the option.
+
+102
+00:05:48,550 --> 00:05:52,000
+The discount rate and the discounted cash flow relation
+
+103
+00:05:52,000 --> 00:05:56,290
+is the expected return on the replicating portfolio, computed
+
+104
+00:05:56,290 --> 00:05:58,870
+under the q probabilities.
+
+105
+00:05:58,870 --> 00:06:01,780
+Based on our construction, this discount rate
+
+106
+00:06:01,780 --> 00:06:04,670
+is the risk-free rate.
+
+107
+00:06:04,670 --> 00:06:08,900
+We reach the conclusion that the price of the option at time 0
+
+108
+00:06:08,900 --> 00:06:11,990
+is equal to its expected payoff evaluated
+
+109
+00:06:11,990 --> 00:06:14,720
+under the q probabilities discounted
+
+110
+00:06:14,720 --> 00:06:16,340
+at the risk-free interest rate.
+
+111
+00:06:16,340 --> 00:06:18,910
+
+
+112
+00:06:18,910 --> 00:06:20,580
+Notice that we are able to derive
+
+113
+00:06:20,580 --> 00:06:23,010
+the risk-neutral valuation formula using
+
+114
+00:06:23,010 --> 00:06:26,980
+only the result that dynamic replication is possible.
+
+115
+00:06:26,980 --> 00:06:28,980
+We did not use the exact expression
+
+116
+00:06:28,980 --> 00:06:33,120
+for the replicating portfolio or the option price.
+
+117
+00:06:33,120 --> 00:06:36,930
+Also, note that the q probabilities we introduce here
+
+118
+00:06:36,930 --> 00:06:41,470
+must be given by our formula for the risk-neutral probabilities.
+
+119
+00:06:41,470 --> 00:06:43,695
+There is only one way to assign the probability
+
+120
+00:06:43,695 --> 00:06:47,530
+to the up node on the tree to make expected stock
+
+121
+00:06:47,530 --> 00:06:49,990
+return equal to the risk-free rate.
+
+122
+00:06:49,990 --> 00:06:53,080
+We can price all assets in the model using
+
+123
+00:06:53,080 --> 00:06:55,290
+the risk-neutral probabilities.
+
+124
+00:06:55,290 --> 00:06:58,570
+For example, the initial price of the stock
+
+125
+00:06:58,570 --> 00:07:01,360
+is equal to the expected value of the terminal stock
+
+126
+00:07:01,360 --> 00:07:04,840
+price computed under the risk-neutral probabilities
+
+127
+00:07:04,840 --> 00:07:08,000
+discounted at the risk-free rate.
+
+128
+00:07:08,000 --> 00:07:12,470
+In our numerical example, with u equal to 1.5 and d
+
+129
+00:07:12,470 --> 00:07:18,910
+equal to 0.5, the q probability of the up move is 0.6.
+
+130
+00:07:18,910 --> 00:07:22,990
+Then, we confirm that the initial stock price of $50
+
+131
+00:07:22,990 --> 00:07:27,220
+is indeed equal to the expected terminal price discounted
+
+132
+00:07:27,220 --> 00:07:30,500
+at the 10% interest rate.
+
+133
+00:07:30,500 --> 00:07:33,050
+For the bond, the risk-neutral valuation formula
+
+134
+00:07:33,050 --> 00:07:35,380
+clearly holds.
+
+135
+00:07:35,380 --> 00:07:38,890
+And the option price at time 0 computed
+
+136
+00:07:38,890 --> 00:07:41,020
+using the risk-neutral formula is
+
+137
+00:07:41,020 --> 00:07:43,000
+the same as the price we have derived
+
+138
+00:07:43,000 --> 00:07:45,130
+using dynamic replication.
+
+139
+00:07:45,130 --> 00:07:47,410
+This has to be the case, of course, based
+
+140
+00:07:47,410 --> 00:07:53,090
+on our general definition of the risk-neutral valuation formula.
+
+141
+00:07:53,090 --> 00:07:56,180
+In summary, the risk-neutral price simulation
+
+142
+00:07:56,180 --> 00:07:59,690
+applies to the basic assets, the stock, and the bond,
+
+143
+00:07:59,690 --> 00:08:02,940
+and to all options on the stock.
+
+144
+00:08:02,940 --> 00:08:07,730
+In a multi-period model, we use the same approach.
+
+145
+00:08:07,730 --> 00:08:10,340
+All we need is to compute the probabilities
+
+146
+00:08:10,340 --> 00:08:12,860
+of the various nodes in the tree using
+
+147
+00:08:12,860 --> 00:08:15,920
+the risk-neutral transition probabilities between nodes
+
+148
+00:08:15,920 --> 00:08:18,000
+each period.
+
+149
+00:08:18,000 --> 00:08:20,300
+We then discount expected payoffs
+
+150
+00:08:20,300 --> 00:08:24,130
+at the risk-free rate over multiple periods.
+
+151
+00:08:24,130 --> 00:08:26,290
+The numerical examples here illustrate
+
+152
+00:08:26,290 --> 00:08:29,050
+how to compute the prices of the European call
+
+153
+00:08:29,050 --> 00:08:33,120
+and put options in a two-period binomial model.
+

@@ -1,0 +1,332 @@
+0
+00:00:00,000 --> 00:00:00,880
+
+
+1
+00:00:00,880 --> 00:00:04,880
+PROFESSOR: We now consider valuation of American options.
+
+2
+00:00:04,880 --> 00:00:07,640
+Recall that the holder of an American option
+
+3
+00:00:07,640 --> 00:00:12,580
+may decide to exercise at any point before maturity.
+
+4
+00:00:12,580 --> 00:00:15,610
+Because of the possibility of early exercise,
+
+5
+00:00:15,610 --> 00:00:19,030
+pricing an American option is more challenging than pricing
+
+6
+00:00:19,030 --> 00:00:21,800
+its European counterpart.
+
+7
+00:00:21,800 --> 00:00:26,170
+The payoff of the option depends on the exercise policy.
+
+8
+00:00:26,170 --> 00:00:28,990
+The optimal exercise decision, in turn,
+
+9
+00:00:28,990 --> 00:00:32,790
+depends on the prices of the option along the tree.
+
+10
+00:00:32,790 --> 00:00:37,260
+In other words, the price of the option and the optimal exercise
+
+11
+00:00:37,260 --> 00:00:39,690
+strategy are closely linked and must
+
+12
+00:00:39,690 --> 00:00:42,790
+be computed simultaneously.
+
+13
+00:00:42,790 --> 00:00:45,280
+The risk neutral relation connects option prices
+
+14
+00:00:45,280 --> 00:00:47,290
+across periods.
+
+15
+00:00:47,290 --> 00:00:52,420
+At any node at time t, the option price, P sub t,
+
+16
+00:00:52,420 --> 00:00:54,460
+is equal to the maximum of the option
+
+17
+00:00:54,460 --> 00:00:57,460
+payoff, if exercised immediately,
+
+18
+00:00:57,460 --> 00:01:00,560
+and the continuation value.
+
+19
+00:01:00,560 --> 00:01:04,190
+The continuation value is equal to the value of the option
+
+20
+00:01:04,190 --> 00:01:08,510
+if it is allowed to continue unexercised for one more period
+
+21
+00:01:08,510 --> 00:01:13,270
+and after that follows the optimal exercise strategy.
+
+22
+00:01:13,270 --> 00:01:15,940
+In other words, the continuation value
+
+23
+00:01:15,940 --> 00:01:21,530
+is equal to the discounted value of the option next period.
+
+24
+00:01:21,530 --> 00:01:24,260
+Consider a numerical example.
+
+25
+00:01:24,260 --> 00:01:27,170
+This is an American put option on the stock
+
+26
+00:01:27,170 --> 00:01:30,710
+with a strike price of $100.
+
+27
+00:01:30,710 --> 00:01:36,050
+The price of the stock starts at $100 and rises or falls by 20%
+
+28
+00:01:36,050 --> 00:01:38,050
+each period.
+
+29
+00:01:38,050 --> 00:01:42,060
+The interest rate is 10% per period.
+
+30
+00:01:42,060 --> 00:01:45,420
+We compute the risk neutral probabilities first.
+
+31
+00:01:45,420 --> 00:01:49,450
+q is equal to 0.75.
+
+32
+00:01:49,450 --> 00:01:53,870
+Consider the up node at time 1 first.
+
+33
+00:01:53,870 --> 00:01:59,990
+In this case, the continuation value is equal to 0.91.
+
+34
+00:01:59,990 --> 00:02:03,050
+This is the risk neutral expectation of the option value
+
+35
+00:02:03,050 --> 00:02:06,800
+next period, which is $1, discounted
+
+36
+00:02:06,800 --> 00:02:10,669
+at the 10% rate over one period.
+
+37
+00:02:10,669 --> 00:02:13,640
+If one were to exercise the option at that node,
+
+38
+00:02:13,640 --> 00:02:16,070
+the payoff would be negative, since the stock
+
+39
+00:02:16,070 --> 00:02:18,260
+price is above the strike.
+
+40
+00:02:18,260 --> 00:02:22,320
+We conclude that the immediate exercise is not optimal,
+
+41
+00:02:22,320 --> 00:02:24,530
+and the price of the option at node u
+
+42
+00:02:24,530 --> 00:02:28,690
+is equal to the continuation value.
+
+43
+00:02:28,690 --> 00:02:32,780
+Next, consider node d at time 1.
+
+44
+00:02:32,780 --> 00:02:38,010
+Here, the continuation value is $10.91.
+
+45
+00:02:38,010 --> 00:02:42,400
+The payoff from immediate exercise is $20.
+
+46
+00:02:42,400 --> 00:02:45,010
+The strike price is $100.
+
+47
+00:02:45,010 --> 00:02:48,680
+And the current price of the stock is $80.
+
+48
+00:02:48,680 --> 00:02:51,920
+We conclude that it is optimal to exercise the option
+
+49
+00:02:51,920 --> 00:02:54,310
+immediately at this node.
+
+50
+00:02:54,310 --> 00:02:56,650
+As a result, the price of the option
+
+51
+00:02:56,650 --> 00:03:02,460
+is equal to the payoff from its exercise, or $20.
+
+52
+00:03:02,460 --> 00:03:07,610
+We proceed back to time 0 and perform the same computation.
+
+53
+00:03:07,610 --> 00:03:09,980
+The continuation value at time 0 is
+
+54
+00:03:09,980 --> 00:03:12,470
+equal to the discounted value of the option price
+
+55
+00:03:12,470 --> 00:03:17,220
+at time 1, which is 0.91 in the up
+
+56
+00:03:17,220 --> 00:03:21,300
+node and 20 in the down node.
+
+57
+00:03:21,300 --> 00:03:25,580
+This gives us $5.17.
+
+58
+00:03:25,580 --> 00:03:29,210
+The payoff from immediate exercise is 0,
+
+59
+00:03:29,210 --> 00:03:33,050
+and we conclude that the initial price of this American put
+
+60
+00:03:33,050 --> 00:03:36,170
+is $5.17.
+
+61
+00:03:36,170 --> 00:03:39,560
+We now illustrate how to replicate the American option
+
+62
+00:03:39,560 --> 00:03:42,240
+by dynamic trading.
+
+63
+00:03:42,240 --> 00:03:46,620
+The overall approach is the same as for the European options.
+
+64
+00:03:46,620 --> 00:03:50,520
+We compute the option's delta from option prices and stock
+
+65
+00:03:50,520 --> 00:03:52,080
+prices.
+
+66
+00:03:52,080 --> 00:03:55,930
+For example, consider the time 0 node.
+
+67
+00:03:55,930 --> 00:03:58,390
+To compute the delta of the option here,
+
+68
+00:03:58,390 --> 00:04:01,840
+we need to know option prices in the up and down nodes
+
+69
+00:04:01,840 --> 00:04:04,270
+next period.
+
+70
+00:04:04,270 --> 00:04:10,430
+These are 0.91 and 20, respectively.
+
+71
+00:04:10,430 --> 00:04:14,150
+We take the difference between these two prices of the option
+
+72
+00:04:14,150 --> 00:04:17,600
+and divide by the difference between the corresponding stock
+
+73
+00:04:17,600 --> 00:04:18,680
+prices--
+
+74
+00:04:18,680 --> 00:04:21,550
+$120 minus $80.
+
+75
+00:04:21,550 --> 00:04:26,680
+We find that the delta is minus 0.48.
+
+76
+00:04:26,680 --> 00:04:30,040
+This means that, under the replication strategy,
+
+77
+00:04:30,040 --> 00:04:35,490
+we should short sell 0.48 shares of the stock at time 0.
+
+78
+00:04:35,490 --> 00:04:41,910
+Combine the proceeds with the $5.17 initial option price,
+
+79
+00:04:41,910 --> 00:04:45,480
+and invest the proceeds for one period at the risk-free rate.
+
+80
+00:04:45,480 --> 00:04:48,120
+
+
+81
+00:04:48,120 --> 00:04:51,900
+Next period, we rebalance the replicating portfolio using
+
+82
+00:04:51,900 --> 00:04:54,470
+the same sequence of steps.
+

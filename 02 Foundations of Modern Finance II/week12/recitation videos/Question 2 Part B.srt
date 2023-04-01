@@ -1,0 +1,480 @@
+0
+00:00:00,000 --> 00:00:00,600
+
+
+1
+00:00:00,600 --> 00:00:04,170
+PROFESSOR: All right, so this is our portfolio of the options
+
+2
+00:00:04,170 --> 00:00:08,460
+that we think should represent this payoff.
+
+3
+00:00:08,460 --> 00:00:10,240
+Let's verify that.
+
+4
+00:00:10,240 --> 00:00:14,520
+So, for each of these options, I've written down the payoff.
+
+5
+00:00:14,520 --> 00:00:17,370
+So I'm starting from the bottom, so long four
+
+6
+00:00:17,370 --> 00:00:19,920
+puts with a strike price of 10.
+
+7
+00:00:19,920 --> 00:00:20,880
+This is their payoffs.
+
+8
+00:00:20,880 --> 00:00:23,700
+So, four of these options, each of them,
+
+9
+00:00:23,700 --> 00:00:27,150
+the payoff is 10 minus s because this is a put option,
+
+10
+00:00:27,150 --> 00:00:28,410
+and we'll long it.
+
+11
+00:00:28,410 --> 00:00:30,210
+And so this happens when the stock price
+
+12
+00:00:30,210 --> 00:00:32,490
+is between 0 and 10.
+
+13
+00:00:32,490 --> 00:00:35,760
+And, if the stock price is above 10, the payoff from these puts
+
+14
+00:00:35,760 --> 00:00:37,320
+would be 0.
+
+15
+00:00:37,320 --> 00:00:41,640
+Now then we are short one put with a strike price of 20.
+
+16
+00:00:41,640 --> 00:00:45,240
+So, therefore, it's negative 20 minus s.
+
+17
+00:00:45,240 --> 00:00:49,050
+So this is just the payoff from being short one put.
+
+18
+00:00:49,050 --> 00:00:52,230
+And we get this, if the share price is between 0 and 20,
+
+19
+00:00:52,230 --> 00:00:54,690
+and 0 otherwise.
+
+20
+00:00:54,690 --> 00:00:59,710
+Then, next, we'll long three puts with a strike price of 30.
+
+21
+00:00:59,710 --> 00:01:02,240
+So the payoff is 3 times 30 minus
+
+22
+00:01:02,240 --> 00:01:07,860
+s if the share price ends up being between 0 and 30, and 0
+
+23
+00:01:07,860 --> 00:01:08,970
+otherwise.
+
+24
+00:01:08,970 --> 00:01:14,610
+And, finally, we have two long call options.
+
+25
+00:01:14,610 --> 00:01:18,400
+And we get 0 if the share price is between 0 and 40.
+
+26
+00:01:18,400 --> 00:01:20,430
+So these calls have strike of 40.
+
+27
+00:01:20,430 --> 00:01:23,940
+And we get 2 times s minus 40. s minus 40
+
+28
+00:01:23,940 --> 00:01:28,085
+is the payoff from each individual call option.
+
+29
+00:01:28,085 --> 00:01:29,210
+And so we have two of them.
+
+30
+00:01:29,210 --> 00:01:32,280
+So it's 2 times s minus 40 if the share price ends up
+
+31
+00:01:32,280 --> 00:01:35,890
+being above the strike price of $40.
+
+32
+00:01:35,890 --> 00:01:38,850
+So all we need to do is that we need to add up these, again,
+
+33
+00:01:38,850 --> 00:01:42,780
+piecewise functions and make sure that what we have here
+
+34
+00:01:42,780 --> 00:01:46,050
+is exactly what we have here in the green color.
+
+35
+00:01:46,050 --> 00:01:47,770
+So let's do that.
+
+36
+00:01:47,770 --> 00:01:50,670
+I will start to add up these four functions
+
+37
+00:01:50,670 --> 00:01:53,880
+by assuming that s is above 40, and then I
+
+38
+00:01:53,880 --> 00:01:55,950
+will go into these domains--
+
+39
+00:01:55,950 --> 00:01:59,910
+30 to 40, 20 to 30, 10 to 20, and 0 to 10.
+
+40
+00:01:59,910 --> 00:02:07,330
+So, if the stock price is above 40, we only get 2 times
+
+41
+00:02:07,330 --> 00:02:12,850
+s minus 40 right here, and we get 0 from the other three
+
+42
+00:02:12,850 --> 00:02:14,420
+types of options.
+
+43
+00:02:14,420 --> 00:02:17,170
+So, for this particular case, if s is above 40,
+
+44
+00:02:17,170 --> 00:02:22,473
+we get 2s minus 80 as our payoff.
+
+45
+00:02:22,473 --> 00:02:24,390
+And you can see that we're off to a good start
+
+46
+00:02:24,390 --> 00:02:25,932
+because this actually matches to what
+
+47
+00:02:25,932 --> 00:02:29,710
+was given to us in this problem in the very beginning.
+
+48
+00:02:29,710 --> 00:02:32,610
+Now what is our payoff if the stock
+
+49
+00:02:32,610 --> 00:02:36,540
+price is between 30 and 40?
+
+50
+00:02:36,540 --> 00:02:39,920
+
+
+51
+00:02:39,920 --> 00:02:42,440
+So you could see that the option at the bottom
+
+52
+00:02:42,440 --> 00:02:46,150
+pays nothing because, if it's 30 to 40, we get 0 here.
+
+53
+00:02:46,150 --> 00:02:48,040
+And all of these other options, if s
+
+54
+00:02:48,040 --> 00:02:52,690
+is above 30, 20, and 10, so they also give us $0.
+
+55
+00:02:52,690 --> 00:02:57,070
+So, in this part of the share price domain, so 30 to 40,
+
+56
+00:02:57,070 --> 00:03:01,060
+we get $0 payoff.
+
+57
+00:03:01,060 --> 00:03:02,830
+And, again, it matches to what we were
+
+58
+00:03:02,830 --> 00:03:06,050
+given in the very beginning.
+
+59
+00:03:06,050 --> 00:03:12,600
+Now, if the share price is between 20 and 30,
+
+60
+00:03:12,600 --> 00:03:17,180
+we get nothing from the bottom option,
+
+61
+00:03:17,180 --> 00:03:22,087
+but we do get something from this third type of options.
+
+62
+00:03:22,087 --> 00:03:23,670
+And we get nothing from the other two.
+
+63
+00:03:23,670 --> 00:03:25,087
+So, if the share price is above 20
+
+64
+00:03:25,087 --> 00:03:28,000
+and above 10 and, in our domain, 20 to 30,
+
+65
+00:03:28,000 --> 00:03:29,240
+so these options give us 0.
+
+66
+00:03:29,240 --> 00:03:31,790
+This option gives us 0 as well, but this gives us something.
+
+67
+00:03:31,790 --> 00:03:35,780
+So it gives us 3 times 30 minus s.
+
+68
+00:03:35,780 --> 00:03:42,560
+And so, together, we get-- so this is 90 minus 3s.
+
+69
+00:03:42,560 --> 00:03:44,870
+And, again, so this matches to what
+
+70
+00:03:44,870 --> 00:03:47,790
+we were given here as well.
+
+71
+00:03:47,790 --> 00:03:52,290
+Now what about in the 10 to 20 range?
+
+72
+00:03:52,290 --> 00:03:57,710
+So the share price is between 10 and 20.
+
+73
+00:03:57,710 --> 00:04:01,610
+We get the payoff from this second type of options
+
+74
+00:04:01,610 --> 00:04:05,130
+and, actually, the third and the second one as well.
+
+75
+00:04:05,130 --> 00:04:07,490
+So we get negative 20 minus s.
+
+76
+00:04:07,490 --> 00:04:11,180
+Plus we get 3 times 30 minus s.
+
+77
+00:04:11,180 --> 00:04:14,600
+So let's put this together-- so negative
+
+78
+00:04:14,600 --> 00:04:21,320
+20 minus s plus 3 times 30 minus s.
+
+79
+00:04:21,320 --> 00:04:26,250
+So, if I were to add this up, I get so minus 20 plus 90.
+
+80
+00:04:26,250 --> 00:04:30,020
+So this is 70.
+
+81
+00:04:30,020 --> 00:04:33,230
+And then I get minus 3s plus s.
+
+82
+00:04:33,230 --> 00:04:37,140
+So this is minus 2s.
+
+83
+00:04:37,140 --> 00:04:41,247
+And so then, in this domain, because this type of options
+
+84
+00:04:41,247 --> 00:04:43,080
+pays off something, and this type of options
+
+85
+00:04:43,080 --> 00:04:46,590
+pays something off as well, so, in this range of 10 to 20,
+
+86
+00:04:46,590 --> 00:04:49,950
+we get 70 minus 2s.
+
+87
+00:04:49,950 --> 00:04:53,070
+Now, if we compare this to what we're given in this question,
+
+88
+00:04:53,070 --> 00:04:56,280
+it's going to, again, match precisely what we're given.
+
+89
+00:04:56,280 --> 00:04:59,940
+So here, from this collection of options
+
+90
+00:04:59,940 --> 00:05:04,260
+in this particular range, we get exactly the same payoff
+
+91
+00:05:04,260 --> 00:05:07,350
+as the function that we were given in the very beginning.
+
+92
+00:05:07,350 --> 00:05:11,140
+Finally-- and I will continue writing here.
+
+93
+00:05:11,140 --> 00:05:12,870
+So in this domain of--
+
+94
+00:05:12,870 --> 00:05:19,370
+so, when s is between 0 and 10, what we get
+
+95
+00:05:19,370 --> 00:05:21,640
+is that the first three type of options.
+
+96
+00:05:21,640 --> 00:05:24,068
+So you can see that we get some payoff from the first one,
+
+97
+00:05:24,068 --> 00:05:25,610
+we get something from the second one,
+
+98
+00:05:25,610 --> 00:05:27,610
+and we get something from the third one as well.
+
+99
+00:05:27,610 --> 00:05:30,470
+So we have to add up this, this, and that.
+
+100
+00:05:30,470 --> 00:05:33,670
+And this would be our payoff in this particular domain.
+
+101
+00:05:33,670 --> 00:05:44,560
+So we get 40 minus 4s, 4s.
+
+102
+00:05:44,560 --> 00:05:49,170
+Then we get negative minus 20 plus s.
+
+103
+00:05:49,170 --> 00:05:55,200
+And then we get 90 minus 3s.
+
+104
+00:05:55,200 --> 00:05:57,990
+And so we're going to-- if we're going to add this up, so 40
+
+105
+00:05:57,990 --> 00:06:03,400
+minus 20 plus 90, this is 110.
+
+106
+00:06:03,400 --> 00:06:07,110
+And we get negative 4s plus s minus 3s.
+
+107
+00:06:07,110 --> 00:06:11,060
+So this is minus 6s.
+
+108
+00:06:11,060 --> 00:06:12,910
+And so this will match, again, exactly what
+
+109
+00:06:12,910 --> 00:06:14,035
+we're given in the problem.
+
+110
+00:06:14,035 --> 00:06:18,490
+So, in this range, when s is between 0 and 10,
+
+111
+00:06:18,490 --> 00:06:23,650
+this collection of options give us 110 minus 6s.
+
+112
+00:06:23,650 --> 00:06:25,420
+So, therefore, what we've just proven here
+
+113
+00:06:25,420 --> 00:06:28,010
+by doing this exercise, we've proven
+
+114
+00:06:28,010 --> 00:06:29,998
+that the collection-- the portfolio
+
+115
+00:06:29,998 --> 00:06:32,290
+of these options and these positions and these options,
+
+116
+00:06:32,290 --> 00:06:37,990
+so long two calls at $40, long three puts at $30,
+
+117
+00:06:37,990 --> 00:06:41,560
+short one put at $20 strike price, and long four puts
+
+118
+00:06:41,560 --> 00:06:44,380
+at $10, so this portfolio of options
+
+119
+00:06:44,380 --> 00:06:48,300
+gave us exactly this payoff.
+

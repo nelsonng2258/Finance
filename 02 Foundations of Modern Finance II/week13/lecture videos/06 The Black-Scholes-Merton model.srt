@@ -1,0 +1,400 @@
+0
+00:00:00,000 --> 00:00:00,180
+
+
+1
+00:00:00,180 --> 00:00:02,850
+PROFESSOR: If we reduce the time length of the binomial step
+
+2
+00:00:02,850 --> 00:00:06,900
+towards 0 holding the maturity date of the option fixed,
+
+3
+00:00:06,900 --> 00:00:09,480
+our pricing formula for the European call
+
+4
+00:00:09,480 --> 00:00:14,600
+converges in the limit to the highlighted expression.
+
+5
+00:00:14,600 --> 00:00:17,880
+This pricing formula is the famous Black-Scholes-Merton
+
+6
+00:00:17,880 --> 00:00:23,100
+formula for the prices of European call options.
+
+7
+00:00:23,100 --> 00:00:26,010
+This formula uses our standard notation
+
+8
+00:00:26,010 --> 00:00:28,930
+with the addition of one new element,
+
+9
+00:00:28,930 --> 00:00:32,490
+the function N here denotes the cumulative distribution
+
+10
+00:00:32,490 --> 00:00:37,740
+function of the standard normal random variable.
+
+11
+00:00:37,740 --> 00:00:40,980
+Note that just like for the binomial model,
+
+12
+00:00:40,980 --> 00:00:43,050
+the option price depends on the strike
+
+13
+00:00:43,050 --> 00:00:48,180
+price of the option and its time to maturity, the initial stock
+
+14
+00:00:48,180 --> 00:00:52,470
+price, the risk-free rate, and the standard deviation of stock
+
+15
+00:00:52,470 --> 00:00:54,760
+returns.
+
+16
+00:00:54,760 --> 00:00:58,690
+Option price does not depend on the expected stock return which
+
+17
+00:00:58,690 --> 00:01:01,600
+corresponds to the probability of the up or down move
+
+18
+00:01:01,600 --> 00:01:02,700
+in the binomial model.
+
+19
+00:01:02,700 --> 00:01:05,489
+
+
+20
+00:01:05,489 --> 00:01:08,580
+As we discussed, in the limit of the timestep
+
+21
+00:01:08,580 --> 00:01:11,220
+of the binomial tree converging to 0,
+
+22
+00:01:11,220 --> 00:01:13,320
+the distribution of stock returns
+
+23
+00:01:13,320 --> 00:01:17,190
+converges to a log normal distribution.
+
+24
+00:01:17,190 --> 00:01:19,710
+This type of process for the stock price
+
+25
+00:01:19,710 --> 00:01:23,830
+is known as the geometric Brownian motion.
+
+26
+00:01:23,830 --> 00:01:27,250
+The original derivation of the Black-Scholes-Merton model
+
+27
+00:01:27,250 --> 00:01:29,830
+does not start with the binomial model.
+
+28
+00:01:29,830 --> 00:01:32,260
+Instead, it begins with the assumption
+
+29
+00:01:32,260 --> 00:01:35,020
+that the stock price follows the geometric Brownian
+
+30
+00:01:35,020 --> 00:01:40,420
+motion so that stock returns are log normally distributed.
+
+31
+00:01:40,420 --> 00:01:42,870
+Then, the replication argument can
+
+32
+00:01:42,870 --> 00:01:46,970
+be used to derive the expression for the option price.
+
+33
+00:01:46,970 --> 00:01:49,910
+This requires advanced mathematical methods
+
+34
+00:01:49,910 --> 00:01:52,730
+for dealing with continuous time-price processes
+
+35
+00:01:52,730 --> 00:01:55,550
+and portfolio rebalancing.
+
+36
+00:01:55,550 --> 00:01:59,440
+These methods are known as stochastic calculus.
+
+37
+00:01:59,440 --> 00:02:04,270
+In contrast, our derivation here uses the binomial model
+
+38
+00:02:04,270 --> 00:02:07,880
+and does not require such advanced mathematics.
+
+39
+00:02:07,880 --> 00:02:13,130
+Let's take a closer look at the Black-Scholes-Merton formula.
+
+40
+00:02:13,130 --> 00:02:14,770
+We know that the value of the option
+
+41
+00:02:14,770 --> 00:02:19,120
+is equal to the value of its replicating portfolio.
+
+42
+00:02:19,120 --> 00:02:21,550
+The replicating portfolio for a call
+
+43
+00:02:21,550 --> 00:02:25,590
+is a levered long position in the stock.
+
+44
+00:02:25,590 --> 00:02:28,620
+The first term in the formula corresponds to the dollar
+
+45
+00:02:28,620 --> 00:02:31,170
+amount invested in the stock.
+
+46
+00:02:31,170 --> 00:02:33,720
+It's a product of the stock price
+
+47
+00:02:33,720 --> 00:02:35,940
+and the number of shares of the stock
+
+48
+00:02:35,940 --> 00:02:39,280
+in the replicating portfolio.
+
+49
+00:02:39,280 --> 00:02:41,800
+The second term in the formula reflects
+
+50
+00:02:41,800 --> 00:02:43,900
+the dollar amount borrowed.
+
+51
+00:02:43,900 --> 00:02:47,680
+As we just pointed out, the term N of x
+
+52
+00:02:47,680 --> 00:02:49,600
+is the number of shares of the stock
+
+53
+00:02:49,600 --> 00:02:54,360
+in the replicating portfolio, or the options delta.
+
+54
+00:02:54,360 --> 00:02:56,940
+It is the limit of the binomial formula
+
+55
+00:02:56,940 --> 00:03:01,200
+as the timestep converges to 0 and single-period stock price
+
+56
+00:03:01,200 --> 00:03:04,990
+movements become infinitesimal.
+
+57
+00:03:04,990 --> 00:03:08,200
+We can see that in the limit, the binomial expression
+
+58
+00:03:08,200 --> 00:03:11,860
+for the options delta converges to the partial derivative
+
+59
+00:03:11,860 --> 00:03:15,970
+of the option price with respect to the stock price, which
+
+60
+00:03:15,970 --> 00:03:18,600
+is equal to N of x.
+
+61
+00:03:18,600 --> 00:03:20,640
+We are now in a position to investigate
+
+62
+00:03:20,640 --> 00:03:25,200
+how stock return volatility affects option prices.
+
+63
+00:03:25,200 --> 00:03:28,600
+We do this in the context of the Black-Scholes-Merton model,
+
+64
+00:03:28,600 --> 00:03:31,500
+which is the limit of the binomial model.
+
+65
+00:03:31,500 --> 00:03:35,070
+This model imposes two important assumptions.
+
+66
+00:03:35,070 --> 00:03:38,440
+The stock price follows the geometric Brownian motion,
+
+67
+00:03:38,440 --> 00:03:41,310
+which means that stock returns are log normal
+
+68
+00:03:41,310 --> 00:03:44,730
+and independently and identically distributed
+
+69
+00:03:44,730 --> 00:03:48,050
+across non-overlapping periods.
+
+70
+00:03:48,050 --> 00:03:51,430
+The interest rate is constant.
+
+71
+00:03:51,430 --> 00:03:54,790
+Under the Black-Scholes-Merton model, prices of European
+
+72
+00:03:54,790 --> 00:04:00,420
+calls and puts increase with stock return volatility.
+
+73
+00:04:00,420 --> 00:04:02,610
+To see why option values increase
+
+74
+00:04:02,610 --> 00:04:04,200
+with the volatility of the underlying
+
+75
+00:04:04,200 --> 00:04:07,230
+asset under the Black-Scholes-Merton model,
+
+76
+00:04:07,230 --> 00:04:10,760
+consider a simple binomial example.
+
+77
+00:04:10,760 --> 00:04:17,670
+We have two firms, A and B, with the same current price of $100.
+
+78
+00:04:17,670 --> 00:04:22,070
+There are two states next period, good and bad.
+
+79
+00:04:22,070 --> 00:04:25,930
+B has higher volatility of future prices.
+
+80
+00:04:25,930 --> 00:04:28,840
+Its value is lower in the bad state
+
+81
+00:04:28,840 --> 00:04:33,130
+and higher in the good state compared to A.
+
+82
+00:04:33,130 --> 00:04:36,550
+Consider a call options written on A and B
+
+83
+00:04:36,550 --> 00:04:41,320
+with the same exercise price of $100.
+
+84
+00:04:41,320 --> 00:04:46,510
+The call on B pays off more than the call on A in the good state
+
+85
+00:04:46,510 --> 00:04:49,910
+and the same amount in the bad state.
+
+86
+00:04:49,910 --> 00:04:52,760
+It is clear that the call on stock B
+
+87
+00:04:52,760 --> 00:04:55,890
+should be more valuable.
+
+88
+00:04:55,890 --> 00:04:58,230
+Higher volatility of stock returns
+
+89
+00:04:58,230 --> 00:05:02,250
+means that at expiration, we are more likely to see
+
+90
+00:05:02,250 --> 00:05:06,340
+very high and very low returns.
+
+91
+00:05:06,340 --> 00:05:09,340
+This raises the value of the call option.
+
+92
+00:05:09,340 --> 00:05:12,100
+The call option benefits from high underlying price
+
+93
+00:05:12,100 --> 00:05:16,360
+at maturity, while the payoff of the option for low underlying
+
+94
+00:05:16,360 --> 00:05:20,060
+prices is capped at 0.
+
+95
+00:05:20,060 --> 00:05:22,730
+The option provides upside participation,
+
+96
+00:05:22,730 --> 00:05:24,500
+but limited downside.
+
+97
+00:05:24,500 --> 00:05:27,950
+It benefits from higher volatility.
+
+98
+00:05:27,950 --> 00:05:30,740
+Similar logic applies to the put options,
+
+99
+00:05:30,740 --> 00:05:34,750
+which are connected to the calls by the put-call parity.
+

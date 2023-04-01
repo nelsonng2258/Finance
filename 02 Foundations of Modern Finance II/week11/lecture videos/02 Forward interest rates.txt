@@ -1,0 +1,141 @@
+
+PROFESSOR: The risk-free rate of return between now
+and the future date, t, is given by the corresponding spot
+interest rate, r sub t.
+In addition to the spot rates, we now introduce forward
+interest rates.
+Forward interest rates apply to transactions
+between two future dates.
+For instance, t equal to one, and t equal to two.
+The forward trade between these two dates
+is specified by a forward transaction
+to borrow money for one period at a future date at t
+equal to 1.
+The terms of the forward transaction
+are fixed today at t equals 0.
+The loan is received at date one.
+The loan is repaid at date two.
+It is important to distinguish forward interest rates
+from the future spot rates.
+Future spot rates are random and are
+generally different from the current forward rates.
+Consider the following example.
+As the CFO of a US multinational company,
+you expect to repatriate 10 million dollars
+from a foreign subsidiary in one year.
+These funds will be used to pay dividends a year later.
+You do not know what the spot interest rates
+will be in one year from now.
+To avoid randomness, you would like
+to fix your lending rate for a period of one year starting
+one year from now.
+The current interest rates are as follows--
+The one-year spot rate is 5%.
+And the two-year spot rate is 7%.
+What should you do?
+Consider the following strategy.
+Let's borrow $9,524,000 today for a period of one year
+at the spot rate of 5%.
+At the same time, we invest the same amount 9.524 million
+for two years, at the two-year spot rate of 7%.
+The resulting cash flows are shown in the following table--
+The net cash flow at time 0 is 0.
+We borrow and lend the same amount.
+At time 1, we repatriate $10 million
+and use it to repay the one year loan we took out at time, 0.
+At time 2, our two-year investment matures.
+And we collect $10,904,000.
+As you can see, we were able to transform the 10 million
+cash flow at time 1, into a cash flow of 10.904 million
+at time 2.
+In other words, we managed to lock in a one year lending
+rate of 9.04%, starting one year from now.
+We conclude that to avoid arbitrage,
+the one-year forward interest rates starting
+one year from now, must be equal to 9.04%.
+The previous example shows that forward rates
+are related to the spot rates by an arbitrage argument.
+Let's use this logic to establish
+a general relation between the spot and forward interest
+rates.
+Specifically, consider two alternative investment
+strategies between now and time t.
+The first strategy is to invest at the current spot interest
+rate between now and time t.
+In this case $1 invested today compounds for t periods
+at the current spot rate, resulting in the time,
+t value equal to the left hand side
+of the highlighted formula.
+Under the second strategy, we invest at the spot interest
+rate for t minus 1 periods, and then
+reinvest the proceeds at the one-period forward rate,
+which is known today.
+$1 invested today compounds for t
+minus 1 period at the current spot rate for that tenor,
+and then the growth for one more period at the forward rate,
+resulting in the time, t value equal to the right-hand side
+of the highlighted formula.
+Because both strategies start with a dollar
+and generate a risk-free cash flow at time t,
+to avoid arbitrage, they must produce the same amount.
+This argument allows us to relate
+the one-period forward rate between time t minus 1
+and t to the corresponding spot rates.
+There is a one-to-one relation between the yield curve
+or the term structure of the spot interest rates
+and the term structure of the forward rates.
+The following example illustrates
+how we can apply the forward rate formula
+and how to replicate forward contracts using transactions
+in the spot market.
+The current term structure of the spot rates
+and the corresponding prices of discount bonds
+are given in the table.
+A customer of your bank wants to enter into a forward contract
+to borrow $20 million for one year,
+starting three years from now.
+Can you quote a rate?
+Using the formula for the forward rate,
+with the spot rates for years three and four
+equal to 6.5% and 7% respectively,
+the one-year forward rate between year three and four
+is 8.51%.
+To lock in these cash flows today,
+we execute the following transactions
+in the spot market.
+We buy three-year discount bonds,
+with a face value of $20 million.
+This costs $16,556,000 today.
+We finance this purchase by selling four-year discount
+bonds.
+These have the face value of $21,701,000.
+This generates the same amount, $16,556,000.
+The net cash flow at time, 0 is 0 dollars.
+And we are left with the liability
+in the amount of 21,701,000 due in four years.
+Our strategy results in two non-zero cash flows.
+At time 3, our three-year bond pays off 20 million.
+At time 4, our position in four-year bonds
+matures, and we must repay 21,701,000.
+The above cash flows correspond to a forward transaction, where
+one borrows for one year, starting in year three,
+at the forward rate of 8.51%.
+We now return to the expectations hypothesis
+and restate it as a relation between spot and forward rates.
+Under the expectations hypothesis,
+expected returns on all bonds are the same.
+Take the current day to be time 0.
+Using the definition of the forward rate,
+the expectations hypothesis states
+that as of now, the expected value of the one year spot rate
+between time t and t plus 1 is equal to the current value
+of the one year forward rate between time t and t plus 1.
+In other words, under the expectations hypothesis,
+current forward rates are unbiased predictors
+of the future spot rates.
+Empirically forward rates are biased predictors
+of the future support rates.
+They over-predict future spot rates on average.
+The reason is that the forward rate
+reflects a risk premium in addition
+to the expectations of the future spot rates.

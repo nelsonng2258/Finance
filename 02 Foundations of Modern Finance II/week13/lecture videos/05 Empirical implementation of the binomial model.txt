@@ -1,0 +1,45 @@
+
+PROFESSOR: To approximate a continuous distribution
+of asset returns using a binomial model--
+we need to increase the number of binomial steps
+relative to the physical length of the time period.
+As we reduce the length of each time step,
+we hold the maturity of the option fixed.
+As a result, we can make sure that the binomial distribution
+of log returns converges to a normal distribution.
+The key model parameters are u and d.
+These parameters control the magnitude of price changes
+with each step of the binomial tree.
+We choose u and d to reflect the distribution of stock returns.
+One possible choice is as follows.
+U is the exponential of the return volatility
+times the square root of the timestep of the tree.
+d is inversely related to u.
+The probability of the up move of the tree
+does not affect option prices.
+We specify it here for completeness.
+For some computations, we might want to compute objects
+like expected returns, which require
+modeling the physical distribution of stock returns.
+We said the probability of the up move
+to be equal to 1/2 plus 1/2 of the ratio of mu
+to sigma times the square root of the timestep.
+Here, mu is the expected stock return continuously compounded,
+and sigma is the standard deviation of log returns.
+We refer to sigma as the volatility of stock returns
+or, in short, stocks' volatility.
+Our construction here illustrates how a binomial tree
+could be used to approximate a continuous distribution
+of stock returns, the so-called log normal distribution.
+We should note that the parameterization we show here
+is not unique.
+We could parameterize the binomial tree differently
+to converge to the same limiting distribution.
+We could also define the parameters of the tree
+so that result in distribution is not log normal.
+For example, if we allowed the magnitude of the price change
+to vary across the tree, we can approximate stock return
+processes with time-varying conditional variance.
+The binomial tree is a highly flexible and versatile model,
+which can be used to approximate empirically realistic processes
+for stock returns.

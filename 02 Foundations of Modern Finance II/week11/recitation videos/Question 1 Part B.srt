@@ -1,0 +1,92 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:03,340
+PROFESSOR: In this video, let's use the same approach,
+
+2
+00:00:03,340 --> 00:00:06,450
+but instead of constructing an arbitrage strategy that
+
+3
+00:00:06,450 --> 00:00:10,440
+generates $100 right now, we will construct an arbitrage
+
+4
+00:00:10,440 --> 00:00:17,520
+strategy that generates $100 in year 1 and 0 in years 0 and 2.
+
+5
+00:00:17,520 --> 00:00:20,310
+In our system of equations, the only thing that changes
+
+6
+00:00:20,310 --> 00:00:21,850
+is the desired payoff.
+
+7
+00:00:21,850 --> 00:00:25,170
+Right now, instead of $100 in the first equation in year 0,
+
+8
+00:00:25,170 --> 00:00:29,070
+we have $100 in the second equation, or in year 1.
+
+9
+00:00:29,070 --> 00:00:32,500
+Now let's go back to Excel and solve this system.
+
+10
+00:00:32,500 --> 00:00:34,920
+Let's change our desired outcome vector
+
+11
+00:00:34,920 --> 00:00:38,730
+by putting 0 dollars in the first cell in year 0
+
+12
+00:00:38,730 --> 00:00:42,480
+and $100 in the second cell, or in year 1.
+
+13
+00:00:42,480 --> 00:00:47,115
+And since everything is soft-coded in my spreadsheet,
+
+14
+00:00:47,115 --> 00:00:48,490
+everything automatically changes.
+
+15
+00:00:48,490 --> 00:00:51,390
+So you could see that our positions are recalculated,
+
+16
+00:00:51,390 --> 00:00:53,710
+and you could see that the net payoff--
+
+17
+00:00:53,710 --> 00:01:00,320
+now I have 0 in year 0 and 100 in year 1, exactly what I want.
+
+18
+00:01:00,320 --> 00:01:02,020
+Let's look at the positions.
+
+19
+00:01:02,020 --> 00:01:09,340
+We are going short r1, short f1, and we're going long r2.
+
+20
+00:01:09,340 --> 00:01:12,840
+And although the numbers change, the logic does not change.
+
+21
+00:01:12,840 --> 00:01:18,310
+We're still going long r2, just because r2 is a higher
+
+22
+00:01:18,310 --> 00:01:21,440
+rate relative to r1 and f1.
+

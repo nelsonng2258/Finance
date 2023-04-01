@@ -1,0 +1,140 @@
+
+PROFESSOR: In this segment, we use arbitrage arguments
+to price forward contracts on financial assets.
+Forward contracts exist for a broad range
+of underlying assets.
+A few examples include stock index forwards,
+such as forwards on the S&P 500 index or on Nikkei.
+For these contracts, the underlying asset
+is a basket of stocks.
+For forwards on fixed income assets,
+the underlying asset is a fixed income instrument,
+for instance a treasury bond.
+The interest rate forward contracts
+were considered above fall into this category,
+since they are equivalent to forwards on risk-free bonds.
+Another important example is a currency forward,
+where the underlying asset is a currency.
+We start with some notation.
+We take the current day to be time, 0.
+The current spot price of the underlying asset is S sub-zero.
+We denote the spot price of the underlying at the settlement
+date of the forward, also called the maturity date,
+by tilde S sub capital T. The tilde in this expression
+reminds us that the spot price at time capital T,
+is a random variable, not known at time 0.
+The forward price is F sub T. This value is known today.
+The forward price is fixed today so
+that the current market value of the forward contract
+equals to 0.
+We assume that the risk-free rate is constant.
+We denote the continuously compounded interest rate by r.
+Next, we introduce the payoff diagram
+of the forward contract.
+Forward contracts are derivative securities.
+The payoff of a forward at the maturity date
+is tied to the price of the underlying asset.
+The payoff of the forward is a linear function
+of the underlying price at maturity.
+For the long position and the forward,
+that's the perspective of the buyer,
+the payoff equals the difference between the spot
+price and the forward price.
+For the short position, the payoff
+is the negative of the payoff off for the long position.
+
+We now show how to price forward contracts on financial assets.
+We'll link forward prices to the spot prices.
+Note that there are two ways to buy the underlying
+asset for date, t delivery.
+We can enter into a forward contract
+with the settlement date, t.
+Alternatively, we can buy the underlying asset now
+and hold it until date, t.
+These two strategies result in the same outcome at time, t.
+We can use this observation to establish
+a relation between the forward price
+and the current spot price of the underlying asset.
+To do that, we need to model the payout of the underlying asset.
+Consider a financial asset paying dividends,
+or in case of fixed income assets, coupons.
+We assume that the asset pays a continuous flow of dividends,
+with the flow rate proportional to the asset price.
+In other words, the dividend yield on the asset,
+which we'll call y, is constant.
+We assume that as soon as dividends are paid,
+they are immediately reinvested into the same asset.
+As a result, the size of the position,
+measured by the number of units of the asset,
+grows exponentially at the rate of the dividend yield, y.
+Suppose we start with one share of the asset
+and reinvest the dividends continuously.
+Then by time, t, we end up holding the exponential
+of y times t shares.
+Therefore to accumulate one share by time,
+t, we need to start with exponential of minus y times
+t shares.
+We conclude that the present value of S sub T, which
+is the price of one share at time, t,
+is equal to the current value of the exponential of minus y
+times T shares, or exponential of minus y times T
+times the current spot price.
+We are now ready to determine the arbitrage free forward
+price.
+Consider the payoff of the forward contract at maturity.
+We take the perspective of the buyer.
+The payoff is the difference between the spot
+price of the underlying asset at maturity and the forward price.
+The forward price is set so that the market
+value of the forward contract today is 0.
+This means that the present value of the payoff
+of the forward contract is 0.
+We have derived the present value of the time, t spot price
+above.
+The present value of the forward price
+is simply an adjustment for the time value of money.
+We conclude that the forward price
+is a product of the current spot price
+and the exponential function of the difference
+between the risk-free interest rate
+and the yield on the underlying asset times t,
+which is time to maturity.
+Based on our derivation of the forward price,
+we can see how to replicate the payoff of the forward contract.
+Again, consider the long position in the forward.
+We replicate two components of the forward's payoff.
+To obtain the payoff at maturity equal to the spot
+price of the underlying asset, we
+buy the exponential of minus y times
+T units of the underlying asset today and reinvest
+the dividends back into the asset continuously
+until maturity.
+To obtain the payoff at maturity equal to the negative
+of the forward price, we borrow the present value
+of the forward price.
+This result in trading strategy has zero initial value
+and produces a payoff equal to the payoff
+of the forward contract at maturity.
+As an application of our results,
+consider an example of a forward contract on the stock index.
+The underlying asset is a basket of stocks,
+which pays dividends.
+Our task is to learn about the future dividend yield
+from current market prices.
+We're given the following data.
+These numbers are for illustration purposes.
+Suppose it is currently the end of June
+and the S&P 500 index just closed at 3,000.
+There exists a forward contract on the S&P 500
+index with the settlement date at the end of September.
+This is three months from now.
+The most recent forward price is 2,995.
+The three-month continuously the compounded interest rate
+is 1.5%.
+
+We start with the relation between the forward price
+and the current spot price, which
+includes, among other variables, the dividend
+yield on the underlying asset.
+Inverting the formula, we find that the implied dividend
+yield is 2.17%.

@@ -1,0 +1,96 @@
+
+PROFESSOR: To implement the Black-Scholes-Merton formula,
+we need to estimate volatility of stock returns, or sigma.
+All the other inputs entered in the formula
+are known precisely--
+the current stock price, the strike
+of the option, time to maturity, and the interest rate.
+Stock return volatility is the only input
+that needs to be estimated.
+There are two ways to estimate the volatility parameter.
+One approach is to use historical return volatility.
+For that, we develop statistical estimates of volatility
+using past returns on the underlying asset.
+For example, one simple approach is
+to use daily returns over a given period
+to estimate daily volatility as the sample standard
+deviation of stock returns.
+We then analyze our estimate by multiplying daily volatility
+by the square root of 252, which is the number of trading
+days in a year.
+Another approach is to use what is called implied volatility.
+Under this approach, we price options relative to each other.
+Let's say that we observe market prices of some other options.
+We assume that these prices satisfy
+the Black-Scholes-Merton formula and solve for the volatility
+parameter to find the implied volatility.
+As an example, suppose we need to price a call on a stock
+with a strike price of $110 and time to maturity of one year.
+Suppose that the current stock price is $100,
+and the one-year interest rate is 6.18%.
+Suppose we observe another call option with a strike
+price of $120 trading at $3.16.
+The implied volatility of that other option,
+which reconciles its market price
+with the Black-Scholes-Merton model, is 19%.
+
+We then use 19% in the Black-Scholes-Merton formula
+to price the call with a strike of $110.
+One problem with this approach is that, in the data,
+implied volatility may be different for options
+with different strikes and maturities.
+These empirical patterns of how implied volatility changes
+across strikes and across maturities
+are called volatility smiles and smirks because of their shape.
+As we can see from the Bloomberg screenshot,
+implied volatilities of options on IBM
+are not equal across strikes and maturities.
+The implied volatility column shows
+that the implied volatility declines with the strike.
+We observe this pattern for each of the three option
+maturities shown here.
+We also observe that the implied volatilities are not
+flat across option maturities.
+Here, we don't see a clear pattern.
+But know that, for example, for the options with the strike
+price of $130, implied volatility
+is the lowest for the shorter maturity contracts.
+The fact that implied volatilities
+depend on the strike price of the option
+is clearly at odds with the Black-Scholes-Merton model.
+Under that model, the implied volatility
+is equal to the physical volatility of stock returns,
+which is a constant.
+In practice, it is common to extend
+the Black-Scholes-Merton model by adding features
+like stochastic return volatility or discontinuous
+return changes in order to better reconcile
+the model with the data.
+In the marketplace, the original Black-Scholes-Merton model
+is used to compute implied volatilities, which
+are commonly used to quote prices of options.
+For that, the model itself does not need to be valid.
+The implied volatility is always well-defined.
+The next plot shows a historical series
+for a popular summary of option-implied volatilities,
+VIX.
+VIX aggregates implied volatilities
+across call and put options with different strikes
+with a horizon close to 30 days.
+VIX is widely used as an indicator of short-term market
+volatility as derived from the options markets.
+We should note that just like the forward interest rate
+is a biased predictor of the future spot rates,
+VIX is a biased predictor of the future stock return volatility.
+This is because in addition to volatility expectations,
+the current level of VIX also reflects a risk premium.
+As we see from the plot, VIX tends
+to fluctuate in the range of 10% to 20% most of the time,
+with occasional spikes during periods of increased
+economic uncertainty.
+We see, for example, a large spike
+during the global financial crisis
+and during the COVID-19 pandemic.
+Relative to other measures of uncertainty,
+VIX provides a current market-based, forward-looking
+measure of market volatility.

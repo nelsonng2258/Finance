@@ -1,0 +1,46 @@
+
+PROFESSOR: We now use payoff diagrams
+to visualize properties of the several common options
+strategies.
+Keep in mind that what we are looking at
+are the payoffs, not the net payoffs.
+In other words, we are not taking into account
+the initial cost of setting up these positions.
+The first strategy we consider is the protective put.
+This trade consists of two positions, a long position
+in the underlying stock, and a long position in the put
+option.
+The combined payoff is shown in the bottom panel.
+The strategy offers the buyer participation in the upside.
+This position appreciates in value as the stock price rises.
+At the same time, the put option limits potential losses,
+creating a floor in the payoff.
+The second strategy we consider is the bull spread.
+This trade involves two call options of the same maturity.
+In this example, the two options have strikes of $40 and $55.
+We buy the call with the lowest strike, $40,
+and sell the call with the highest strike, $55.
+The resulting position, shown in the lower panel,
+offers some upside exposure, which is kept above $55.
+Compare this to the straight call with the $40 strike.
+This position sacrifices participation in further upside
+above $55 in exchange for the lower initial cost.
+The next rate we consider is the straddle.
+The straddle involves buying two options, a call and the put,
+with the same strike price and the same maturity date.
+The payoff for this position is relatively high
+when the stock price is far away from the strike price,
+on either side.
+We can see this from the payoff diagram in the bottom panel.
+Straddles can be used to bet on large moves in the stock price,
+regardless of their direction.
+In other words, these are bets on higher future volatility
+of the underlying price.
+Note that buying a straddle is not a free lunch.
+It is not right to say that the holder of the straddle
+makes money no matter which way the underlying price moves.
+Our plots shows strategy payoffs.
+They ignore the initial cost.
+The buyer of the straddle loses money at maturity
+if the underlying price fails to move far enough
+away from the strike price.

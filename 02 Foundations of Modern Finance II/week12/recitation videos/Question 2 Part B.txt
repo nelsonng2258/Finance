@@ -1,0 +1,120 @@
+
+PROFESSOR: All right, so this is our portfolio of the options
+that we think should represent this payoff.
+Let's verify that.
+So, for each of these options, I've written down the payoff.
+So I'm starting from the bottom, so long four
+puts with a strike price of 10.
+This is their payoffs.
+So, four of these options, each of them,
+the payoff is 10 minus s because this is a put option,
+and we'll long it.
+And so this happens when the stock price
+is between 0 and 10.
+And, if the stock price is above 10, the payoff from these puts
+would be 0.
+Now then we are short one put with a strike price of 20.
+So, therefore, it's negative 20 minus s.
+So this is just the payoff from being short one put.
+And we get this, if the share price is between 0 and 20,
+and 0 otherwise.
+Then, next, we'll long three puts with a strike price of 30.
+So the payoff is 3 times 30 minus
+s if the share price ends up being between 0 and 30, and 0
+otherwise.
+And, finally, we have two long call options.
+And we get 0 if the share price is between 0 and 40.
+So these calls have strike of 40.
+And we get 2 times s minus 40. s minus 40
+is the payoff from each individual call option.
+And so we have two of them.
+So it's 2 times s minus 40 if the share price ends up
+being above the strike price of $40.
+So all we need to do is that we need to add up these, again,
+piecewise functions and make sure that what we have here
+is exactly what we have here in the green color.
+So let's do that.
+I will start to add up these four functions
+by assuming that s is above 40, and then I
+will go into these domains--
+30 to 40, 20 to 30, 10 to 20, and 0 to 10.
+So, if the stock price is above 40, we only get 2 times
+s minus 40 right here, and we get 0 from the other three
+types of options.
+So, for this particular case, if s is above 40,
+we get 2s minus 80 as our payoff.
+And you can see that we're off to a good start
+because this actually matches to what
+was given to us in this problem in the very beginning.
+Now what is our payoff if the stock
+price is between 30 and 40?
+
+So you could see that the option at the bottom
+pays nothing because, if it's 30 to 40, we get 0 here.
+And all of these other options, if s
+is above 30, 20, and 10, so they also give us $0.
+So, in this part of the share price domain, so 30 to 40,
+we get $0 payoff.
+And, again, it matches to what we were
+given in the very beginning.
+Now, if the share price is between 20 and 30,
+we get nothing from the bottom option,
+but we do get something from this third type of options.
+And we get nothing from the other two.
+So, if the share price is above 20
+and above 10 and, in our domain, 20 to 30,
+so these options give us 0.
+This option gives us 0 as well, but this gives us something.
+So it gives us 3 times 30 minus s.
+And so, together, we get-- so this is 90 minus 3s.
+And, again, so this matches to what
+we were given here as well.
+Now what about in the 10 to 20 range?
+So the share price is between 10 and 20.
+We get the payoff from this second type of options
+and, actually, the third and the second one as well.
+So we get negative 20 minus s.
+Plus we get 3 times 30 minus s.
+So let's put this together-- so negative
+20 minus s plus 3 times 30 minus s.
+So, if I were to add this up, I get so minus 20 plus 90.
+So this is 70.
+And then I get minus 3s plus s.
+So this is minus 2s.
+And so then, in this domain, because this type of options
+pays off something, and this type of options
+pays something off as well, so, in this range of 10 to 20,
+we get 70 minus 2s.
+Now, if we compare this to what we're given in this question,
+it's going to, again, match precisely what we're given.
+So here, from this collection of options
+in this particular range, we get exactly the same payoff
+as the function that we were given in the very beginning.
+Finally-- and I will continue writing here.
+So in this domain of--
+so, when s is between 0 and 10, what we get
+is that the first three type of options.
+So you can see that we get some payoff from the first one,
+we get something from the second one,
+and we get something from the third one as well.
+So we have to add up this, this, and that.
+And this would be our payoff in this particular domain.
+So we get 40 minus 4s, 4s.
+Then we get negative minus 20 plus s.
+And then we get 90 minus 3s.
+And so we're going to-- if we're going to add this up, so 40
+minus 20 plus 90, this is 110.
+And we get negative 4s plus s minus 3s.
+So this is minus 6s.
+And so this will match, again, exactly what
+we're given in the problem.
+So, in this range, when s is between 0 and 10,
+this collection of options give us 110 minus 6s.
+So, therefore, what we've just proven here
+by doing this exercise, we've proven
+that the collection-- the portfolio
+of these options and these positions and these options,
+so long two calls at $40, long three puts at $30,
+short one put at $20 strike price, and long four puts
+at $10, so this portfolio of options
+gave us exactly this payoff.

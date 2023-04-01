@@ -1,0 +1,564 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:03,090
+PROFESSOR: In this segment, we use arbitrage arguments
+
+2
+00:00:03,090 --> 00:00:07,190
+to price forward contracts on financial assets.
+
+3
+00:00:07,190 --> 00:00:09,620
+Forward contracts exist for a broad range
+
+4
+00:00:09,620 --> 00:00:11,450
+of underlying assets.
+
+5
+00:00:11,450 --> 00:00:14,960
+A few examples include stock index forwards,
+
+6
+00:00:14,960 --> 00:00:19,370
+such as forwards on the S&P 500 index or on Nikkei.
+
+7
+00:00:19,370 --> 00:00:21,590
+For these contracts, the underlying asset
+
+8
+00:00:21,590 --> 00:00:24,290
+is a basket of stocks.
+
+9
+00:00:24,290 --> 00:00:26,780
+For forwards on fixed income assets,
+
+10
+00:00:26,780 --> 00:00:29,990
+the underlying asset is a fixed income instrument,
+
+11
+00:00:29,990 --> 00:00:33,240
+for instance a treasury bond.
+
+12
+00:00:33,240 --> 00:00:35,040
+The interest rate forward contracts
+
+13
+00:00:35,040 --> 00:00:38,220
+were considered above fall into this category,
+
+14
+00:00:38,220 --> 00:00:42,520
+since they are equivalent to forwards on risk-free bonds.
+
+15
+00:00:42,520 --> 00:00:46,120
+Another important example is a currency forward,
+
+16
+00:00:46,120 --> 00:00:49,420
+where the underlying asset is a currency.
+
+17
+00:00:49,420 --> 00:00:51,900
+We start with some notation.
+
+18
+00:00:51,900 --> 00:00:55,430
+We take the current day to be time, 0.
+
+19
+00:00:55,430 --> 00:01:01,070
+The current spot price of the underlying asset is S sub-zero.
+
+20
+00:01:01,070 --> 00:01:04,819
+We denote the spot price of the underlying at the settlement
+
+21
+00:01:04,819 --> 00:01:08,120
+date of the forward, also called the maturity date,
+
+22
+00:01:08,120 --> 00:01:13,390
+by tilde S sub capital T. The tilde in this expression
+
+23
+00:01:13,390 --> 00:01:16,630
+reminds us that the spot price at time capital T,
+
+24
+00:01:16,630 --> 00:01:21,280
+is a random variable, not known at time 0.
+
+25
+00:01:21,280 --> 00:01:26,455
+The forward price is F sub T. This value is known today.
+
+26
+00:01:26,455 --> 00:01:29,200
+The forward price is fixed today so
+
+27
+00:01:29,200 --> 00:01:31,990
+that the current market value of the forward contract
+
+28
+00:01:31,990 --> 00:01:34,450
+equals to 0.
+
+29
+00:01:34,450 --> 00:01:37,730
+We assume that the risk-free rate is constant.
+
+30
+00:01:37,730 --> 00:01:42,010
+We denote the continuously compounded interest rate by r.
+
+31
+00:01:42,010 --> 00:01:44,620
+Next, we introduce the payoff diagram
+
+32
+00:01:44,620 --> 00:01:47,510
+of the forward contract.
+
+33
+00:01:47,510 --> 00:01:51,050
+Forward contracts are derivative securities.
+
+34
+00:01:51,050 --> 00:01:53,810
+The payoff of a forward at the maturity date
+
+35
+00:01:53,810 --> 00:01:57,970
+is tied to the price of the underlying asset.
+
+36
+00:01:57,970 --> 00:02:00,850
+The payoff of the forward is a linear function
+
+37
+00:02:00,850 --> 00:02:04,900
+of the underlying price at maturity.
+
+38
+00:02:04,900 --> 00:02:07,150
+For the long position and the forward,
+
+39
+00:02:07,150 --> 00:02:09,160
+that's the perspective of the buyer,
+
+40
+00:02:09,160 --> 00:02:12,250
+the payoff equals the difference between the spot
+
+41
+00:02:12,250 --> 00:02:16,830
+price and the forward price.
+
+42
+00:02:16,830 --> 00:02:18,990
+For the short position, the payoff
+
+43
+00:02:18,990 --> 00:02:21,630
+is the negative of the payoff off for the long position.
+
+44
+00:02:21,630 --> 00:02:24,830
+
+
+45
+00:02:24,830 --> 00:02:29,810
+We now show how to price forward contracts on financial assets.
+
+46
+00:02:29,810 --> 00:02:33,670
+We'll link forward prices to the spot prices.
+
+47
+00:02:33,670 --> 00:02:35,800
+Note that there are two ways to buy the underlying
+
+48
+00:02:35,800 --> 00:02:38,470
+asset for date, t delivery.
+
+49
+00:02:38,470 --> 00:02:40,810
+We can enter into a forward contract
+
+50
+00:02:40,810 --> 00:02:43,400
+with the settlement date, t.
+
+51
+00:02:43,400 --> 00:02:47,060
+Alternatively, we can buy the underlying asset now
+
+52
+00:02:47,060 --> 00:02:50,630
+and hold it until date, t.
+
+53
+00:02:50,630 --> 00:02:55,070
+These two strategies result in the same outcome at time, t.
+
+54
+00:02:55,070 --> 00:02:57,110
+We can use this observation to establish
+
+55
+00:02:57,110 --> 00:03:00,140
+a relation between the forward price
+
+56
+00:03:00,140 --> 00:03:03,940
+and the current spot price of the underlying asset.
+
+57
+00:03:03,940 --> 00:03:09,090
+To do that, we need to model the payout of the underlying asset.
+
+58
+00:03:09,090 --> 00:03:12,210
+Consider a financial asset paying dividends,
+
+59
+00:03:12,210 --> 00:03:16,200
+or in case of fixed income assets, coupons.
+
+60
+00:03:16,200 --> 00:03:20,160
+We assume that the asset pays a continuous flow of dividends,
+
+61
+00:03:20,160 --> 00:03:24,510
+with the flow rate proportional to the asset price.
+
+62
+00:03:24,510 --> 00:03:28,280
+In other words, the dividend yield on the asset,
+
+63
+00:03:28,280 --> 00:03:32,010
+which we'll call y, is constant.
+
+64
+00:03:32,010 --> 00:03:34,920
+We assume that as soon as dividends are paid,
+
+65
+00:03:34,920 --> 00:03:39,240
+they are immediately reinvested into the same asset.
+
+66
+00:03:39,240 --> 00:03:42,480
+As a result, the size of the position,
+
+67
+00:03:42,480 --> 00:03:45,180
+measured by the number of units of the asset,
+
+68
+00:03:45,180 --> 00:03:50,620
+grows exponentially at the rate of the dividend yield, y.
+
+69
+00:03:50,620 --> 00:03:53,350
+Suppose we start with one share of the asset
+
+70
+00:03:53,350 --> 00:03:56,230
+and reinvest the dividends continuously.
+
+71
+00:03:56,230 --> 00:04:00,040
+Then by time, t, we end up holding the exponential
+
+72
+00:04:00,040 --> 00:04:02,960
+of y times t shares.
+
+73
+00:04:02,960 --> 00:04:05,590
+Therefore to accumulate one share by time,
+
+74
+00:04:05,590 --> 00:04:10,060
+t, we need to start with exponential of minus y times
+
+75
+00:04:10,060 --> 00:04:11,410
+t shares.
+
+76
+00:04:11,410 --> 00:04:15,100
+We conclude that the present value of S sub T, which
+
+77
+00:04:15,100 --> 00:04:18,160
+is the price of one share at time, t,
+
+78
+00:04:18,160 --> 00:04:22,720
+is equal to the current value of the exponential of minus y
+
+79
+00:04:22,720 --> 00:04:28,390
+times T shares, or exponential of minus y times T
+
+80
+00:04:28,390 --> 00:04:30,580
+times the current spot price.
+
+81
+00:04:30,580 --> 00:04:33,460
+We are now ready to determine the arbitrage free forward
+
+82
+00:04:33,460 --> 00:04:35,120
+price.
+
+83
+00:04:35,120 --> 00:04:39,040
+Consider the payoff of the forward contract at maturity.
+
+84
+00:04:39,040 --> 00:04:41,860
+We take the perspective of the buyer.
+
+85
+00:04:41,860 --> 00:04:44,530
+The payoff is the difference between the spot
+
+86
+00:04:44,530 --> 00:04:50,060
+price of the underlying asset at maturity and the forward price.
+
+87
+00:04:50,060 --> 00:04:53,510
+The forward price is set so that the market
+
+88
+00:04:53,510 --> 00:04:57,910
+value of the forward contract today is 0.
+
+89
+00:04:57,910 --> 00:05:00,280
+This means that the present value of the payoff
+
+90
+00:05:00,280 --> 00:05:04,080
+of the forward contract is 0.
+
+91
+00:05:04,080 --> 00:05:07,290
+We have derived the present value of the time, t spot price
+
+92
+00:05:07,290 --> 00:05:08,700
+above.
+
+93
+00:05:08,700 --> 00:05:11,220
+The present value of the forward price
+
+94
+00:05:11,220 --> 00:05:15,420
+is simply an adjustment for the time value of money.
+
+95
+00:05:15,420 --> 00:05:18,020
+We conclude that the forward price
+
+96
+00:05:18,020 --> 00:05:21,260
+is a product of the current spot price
+
+97
+00:05:21,260 --> 00:05:24,680
+and the exponential function of the difference
+
+98
+00:05:24,680 --> 00:05:26,760
+between the risk-free interest rate
+
+99
+00:05:26,760 --> 00:05:29,990
+and the yield on the underlying asset times t,
+
+100
+00:05:29,990 --> 00:05:31,910
+which is time to maturity.
+
+101
+00:05:31,910 --> 00:05:34,790
+Based on our derivation of the forward price,
+
+102
+00:05:34,790 --> 00:05:38,570
+we can see how to replicate the payoff of the forward contract.
+
+103
+00:05:38,570 --> 00:05:42,370
+Again, consider the long position in the forward.
+
+104
+00:05:42,370 --> 00:05:45,970
+We replicate two components of the forward's payoff.
+
+105
+00:05:45,970 --> 00:05:49,090
+To obtain the payoff at maturity equal to the spot
+
+106
+00:05:49,090 --> 00:05:51,490
+price of the underlying asset, we
+
+107
+00:05:51,490 --> 00:05:54,100
+buy the exponential of minus y times
+
+108
+00:05:54,100 --> 00:05:58,780
+T units of the underlying asset today and reinvest
+
+109
+00:05:58,780 --> 00:06:01,690
+the dividends back into the asset continuously
+
+110
+00:06:01,690 --> 00:06:04,510
+until maturity.
+
+111
+00:06:04,510 --> 00:06:07,780
+To obtain the payoff at maturity equal to the negative
+
+112
+00:06:07,780 --> 00:06:11,410
+of the forward price, we borrow the present value
+
+113
+00:06:11,410 --> 00:06:13,930
+of the forward price.
+
+114
+00:06:13,930 --> 00:06:17,740
+This result in trading strategy has zero initial value
+
+115
+00:06:17,740 --> 00:06:20,590
+and produces a payoff equal to the payoff
+
+116
+00:06:20,590 --> 00:06:23,610
+of the forward contract at maturity.
+
+117
+00:06:23,610 --> 00:06:26,070
+As an application of our results,
+
+118
+00:06:26,070 --> 00:06:31,340
+consider an example of a forward contract on the stock index.
+
+119
+00:06:31,340 --> 00:06:34,550
+The underlying asset is a basket of stocks,
+
+120
+00:06:34,550 --> 00:06:36,750
+which pays dividends.
+
+121
+00:06:36,750 --> 00:06:40,350
+Our task is to learn about the future dividend yield
+
+122
+00:06:40,350 --> 00:06:43,540
+from current market prices.
+
+123
+00:06:43,540 --> 00:06:46,130
+We're given the following data.
+
+124
+00:06:46,130 --> 00:06:49,370
+These numbers are for illustration purposes.
+
+125
+00:06:49,370 --> 00:06:52,340
+Suppose it is currently the end of June
+
+126
+00:06:52,340 --> 00:06:58,000
+and the S&P 500 index just closed at 3,000.
+
+127
+00:06:58,000 --> 00:07:00,940
+There exists a forward contract on the S&P 500
+
+128
+00:07:00,940 --> 00:07:05,260
+index with the settlement date at the end of September.
+
+129
+00:07:05,260 --> 00:07:08,240
+This is three months from now.
+
+130
+00:07:08,240 --> 00:07:15,320
+The most recent forward price is 2,995.
+
+131
+00:07:15,320 --> 00:07:18,380
+The three-month continuously the compounded interest rate
+
+132
+00:07:18,380 --> 00:07:19,300
+is 1.5%.
+
+133
+00:07:19,300 --> 00:07:22,480
+
+
+134
+00:07:22,480 --> 00:07:25,810
+We start with the relation between the forward price
+
+135
+00:07:25,810 --> 00:07:28,060
+and the current spot price, which
+
+136
+00:07:28,060 --> 00:07:30,580
+includes, among other variables, the dividend
+
+137
+00:07:30,580 --> 00:07:33,660
+yield on the underlying asset.
+
+138
+00:07:33,660 --> 00:07:37,260
+Inverting the formula, we find that the implied dividend
+
+139
+00:07:37,260 --> 00:07:39,500
+yield is 2.17%.
+
+140
+00:07:39,500 --> 00:07:40,000
+
+

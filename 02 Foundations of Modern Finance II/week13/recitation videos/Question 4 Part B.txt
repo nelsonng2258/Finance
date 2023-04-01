@@ -1,0 +1,27 @@
+INSTRUCTOR: In this video, we will
+compute the price of the put option, which
+has the same parameters as the option we
+studied in the previous video.
+The strike price of this option is $55, and time to maturity
+is six months.
+To compute the price of this put option,
+we will use put-call parity.
+Recall that the price of the call
+option plus the present value of the strike K
+should equal to the stock price plus the price
+of the put option, to avoid arbitrage.
+Let's apply this to our case.
+The price of the put option will equal
+the price of the call option, which
+we computed in the previous video (it's $3.15),
+plus the present value of the strike
+price of this option, which is $55, minus the current share
+price, which is $50.
+This gives us the price of this option, which is $7.81.
+As a more general note, to compute
+the price of a European put option using
+the Black-Scholes-Merton approach,
+we first need to compute the price of the corresponding call
+option with the same strike and same time
+to maturity by using the Black-Scholes-Merton formula,
+and then use the put-call parity to get the price of the put.

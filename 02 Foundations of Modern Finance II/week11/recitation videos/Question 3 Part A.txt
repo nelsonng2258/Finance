@@ -1,0 +1,120 @@
+PROFESSOR: In this question, I will teach you
+how to construct arbitrage trading strategies
+in foreign exchange markets.
+Suppose that, currently, the currency pay rate United States
+dollar to Japanese yen--
+USD, JPY-- trades at 105.
+This means that for one United States dollar,
+you get 105 Japanese yen.
+Now also, suppose that USD-JPY currency pair,
+one-year forward on that currency pair
+currently trades at 106.
+Now we will also assume that the current US one-year risk-free
+interest rate is 1%, and the current Japanese one-year
+risk-free interest rate is 3%.
+So the goal is to construct an arbitrage trading
+strategy that pays $100 right now and nothing in the future.
+Let me mention that all of these interest rates
+and the current pricing of this currency pair's exchange rates
+are hypothetical and may not reflect the current reality.
+Let's start solving this question
+by assuming that we borrow x United States dollars today.
+We will keep $100 to ourselves and consume it
+because this is what we want.
+We want to construct a strategy that gives us $100 right now.
+So out of this x borrowed amount,
+we keep $100 to ourselves.
+And then the rest, x minus 100, what
+we will do with this is we will exchange it
+right now to Japanese yen at the current spot exchange rate,
+and then we will invest this amount of Japanese yen
+into the one-year risk-free Japanese bond that pays us
+3% interest rate.
+Now the question is, how much will we get in one year?
+Well, let's see.
+This is how much USD we have today, x minus 100.
+We're exchanging this into Japanese yen,
+and the current exchange rate is 105,
+so this is how much Japanese yen we have after we exchanged
+this USD amount.
+And then we're earning 3% interest rate on this amount
+in Japanese yen, and the interest rate is 3%,
+so this is multiplied by 1 plus 3%.
+So this is how much in Japanese yen
+we will get in one year from this investment strategy.
+Now, what are our liabilities?
+Well, we borrowed x United States dollars,
+and we borrowed it at the risk-free rate of 1%.
+So therefore, in year one, we owe
+the bank or whoever we borrowed this from x times 1 plus 1%.
+And so our liabilities are in the United States dollars.
+Now, because our income is in Japanese yen,
+we can convert these liabilities in the Japanese yen
+as well so that that way we can match our income
+and our liabilities in the same currency.
+So now if this is our liabilities in the United
+States in year one, what would be
+these liabilities in Japanese yen one year from now?
+Well, we can know this for sure if we
+lock into the current one-year forward exchange rate that
+currently trades at 106.
+So if we do that, then our liabilities one year
+from now in Japanese yen would be x times 1 plus 1% times 106.
+Now since we expressed both our income and our liabilities
+in Japanese yen, all we have to do
+is to make sure that our liabilities-- or we have
+enough income to satisfy our liabilities in one year.
+So all we have to do is we have to equate
+our income to our liabilities, and this is the equation
+that we have.
+This is a very simple equation with just one unknown.
+We're solving it for x.
+And x here would equal to $9,922 United States dollars.
+So therefore, to construct, given this information,
+to construct an arbitrage trading strategy that
+pays $100 today, we need to borrow $9,922 United States
+dollars and do the following steps.
+So we can keep $100 to ourselves if we convert the remaining
+amount, which is $9,922, into Japanese yen,
+invest our income--
+and if we lock into this forward rate as well--
+our income in one year is exactly
+enough to pay our liabilities that we
+owe our bank from whom we borrowed this x dollar amount.
+Now, what makes this arbitrage possible
+in this particular example is the fact that this forward
+is mispriced.
+In other words, you get too high of an income in Japanese yen
+relative to the United States dollars
+so that at the current forward exchange rate,
+you're getting a good deal, and you're
+able to do this so-called carry trade,
+borrow in the low yielding currency,
+convert this amount of low yielding currency
+into high yielding currency, invest there, and earn profit
+by doing that.
+Now, in fact, this is how we price forwards,
+by assuming that such profitable trading strategy is not
+possible.
+So therefore, the foreign exchange rate
+here has to be such that when you're
+trying to construct this particular trading strategy,
+you get exactly 0 at the end.
+So the fact that this is possible here
+is just indicative of the fact that this forward
+is currently mispriced.
+Now, let me make one remark.
+Recall that when we started this construction of this arbitrage
+trading strategy, we started by assuming
+that we borrow x in USD.
+What if, by solving this, we would
+have gotten a negative number at the very end?
+In this case, what it would have implied
+is that we borrowed in the wrong currency, in other words,
+in more expensive currency.
+In that case, if we get the negative number here
+at the end, what we need to do is
+that we need just to reverse the chain of arguments
+and actually borrow a certain amount in Japanese yen
+and repeat the process by converting it into USD
+and investing in the United States risk-free securities.

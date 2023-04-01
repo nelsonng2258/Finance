@@ -1,0 +1,164 @@
+
+PROFESSOR: In this video, we will
+consider a comprehensive multi-asset example in which we
+will build an optimal tangency portfolio,
+compute its Sharpe ratio, and compute
+the return-to-risk ratios of individual assets.
+Suppose that there are 10 stocks in the market, the expected
+returns on which follow the following two-factor model.
+In this model, parameters are as follows.
+b1 equals to 10 for each of the 10 stocks.
+b2 equals i, which means that for stock 1,
+this parameter equals to 1.
+And for stock 10, this parameter equals to 10.
+F1 has zero mean and standard deviation of 1%.
+Factor 2, F2, has a mean of 1% and a standard deviation of 1%
+as well.
+And the idiosyncratic shock epsilon
+has zero mean and a standard deviation of 30%.
+We will assume that factors F1 and F2 and the idiosyncratic
+component epsilon are independent of each other.
+We will also assume that there is
+a risk-free asset in this market with a guaranteed
+return of 0.75%.
+We will first consider an equally weighted portfolio.
+We will compute its Sharpe ratio.
+And then we will compute return-to-risk ratio
+for each individual asset for this portfolio.
+Next we'll find the tangency portfolio.
+We'll compute its Sharpe ratio.
+We will compare the Sharpe ratio of this tangency portfolio
+to an equally-weighted portfolio.
+Then we will compute the return-to-risk ratio
+for each individual asset for this tangency portfolio.
+Let's start by computing expected returns,
+variances, and covariances for our assets.
+The expected return on stock i is given
+by the following expression.
+Recall that the mean of Factor 1 is zero
+and the mean of Factor 2 is 1.
+The mean of the idiosyncratic shock is 0 as well.
+Therefore, the expected return on stock i
+would simply be b2i coefficient multiplied by 1%,
+Recall that b2i, for each asset i, simply equals to i.
+This means that for the first stock,
+the expected return is 1%.
+For the second stock, the expected return
+is 2%, et cetera.
+And for the 10th stock, the expected return is 10%.
+The variance of returns on stock i
+equals to the sum of variances of b1F1 b2iF2
+and the idiosyncratic component epsilon.
+This is due to the fact that F1, F2, and epsilon
+are independent of each other.
+This gives us the following expression.
+Recall that standard deviation of F1 and F2 is 1%
+and the standard deviation of epsilon is 30%.
+Therefore, the variance of returns on stock i
+is given by the following expression at the bottom.
+Next, let's compute the covariance of returns
+between stocks i and j.
+The covariance is given by the following expression.
+Recall that, again, Fs are independent of each other
+and of epsilon.
+Therefore, this covariance will simply be the variance of b1F1,
+and the covariance between b2iF2 and b2jF2.
+This, in turn, equals to the following expression.
+And plugging in variances for F1 and F2
+will get that the covariance between the stock
+returns on i and j is given by the expression at the bottom.
+For this question, we will do all our calculations in Excel,
+using matrix notation.
+Before we do that, let me remind you of notation.
+w is the vector of portfolio weights.
+r bar is the vector of expected returns.
+x bar is the vector of expected excess returns.
+And sigma is the covariance matrix.
+Given this notation, the expected return
+on the portfolio w can be computed
+by transposing the vector of weights, w,
+multiplying by the vector of expected returns.
+And the variance of the portfolio
+can be computed by transposed vector of weights,
+w, multiplied by covariance matrix sigma, multiplied
+by the vector of weights, w.
+Based on the results that we derived for expected returns,
+variances and covariances, I have created the spreadsheet
+that contains expected returns on all 10
+stocks in this vector.
+And this is the covariance matrix sigma.
+So recall that the first question
+is asking us to compute the expected return
+variance and, eventually, the Sharpe
+ratio of the equally-weighted portfolio.
+Because we have 10 stocks, the equally-weighted portfolio
+would invest 10% into each of these 10 stocks.
+Let's first compute the expected return.
+To do this, I will first transpose the matrix
+of weights, or the vector.
+And then, I will multiply this transposed vector
+by the vector of expected returns.
+And this would be the expected return on this portfolio, which
+equals to 5.5%.
+
+Next, we can compute the variance.
+Remember that the variance is the transposed matrix
+of weights.
+
+This matrix is multiplied by the covariance matrix here
+which, in turn, is multiplied again by the weights vector.
+
+And this would give us the variance of this portfolio.
+The standard deviation is just simply the squared root
+of this variance.
+And then the Sharpe ratio, by definition,
+is the expected return on this portfolio
+minus the risk-free rate divided by standard deviation.
+So the Sharpe ratio of this equally-weighted portfolio
+is 0.32.
+Next, we will compute the return-to-risk ratio
+for our stocks and our equally-weighted portfolio.
+Let me remind you that the return-to-risk ratio is given
+by the ratio of the excess return
+on stock i divided by the covariance of returns
+on the stock i in portfolio p, divided
+by the standard deviation of portfolio p.
+Let me also remind you that the covariance between stock
+i and portfolio p can be computed
+as the sum of pairwise covariances of stock i
+and stocks j in the portfolio, where the weights are
+the portfolio weights.
+For an equally-weighted portfolio,
+this is just the sum of all covariances
+divided by the number of stocks in the portfolio.
+Let's compute the return-to-risk ratio
+for our 10 stocks in our equally-weighted portfolio.
+First, I'm computing covariance, which
+is just the weighted average of individual covariances.
+And based on this, I'm using our expression
+for return-to-risk ratio.
+And I'm computing this return-to-risk ratio
+based on this covariance that we just obtained.
+And I'm doing this for all 10 stocks.
+The results show us that stock 1 contributes
+the least to the portfolio in terms of risk return trade off.
+And stock 10 contributes the most.
+And you can see that this contribution pattern is linear,
+meaning that the stocks 10, 9, 8,
+and so forth contribute more compared to stocks 1, 2, 3.
+This means that we can increase the Sharpe ratio
+by increasing the weights of these later stocks
+in the portfolio.
+So for example, if we increase the weight of stock 10
+and decrease the weight of stock 1,
+the Sharpe ratio of the portfolio should increase.
+Let's see.
+So our original Sharpe ratio was 0.32.
+If I decrease the weight on the stock 1 to 5%,
+and increase the weight of the stock 10 to 15%, what we get
+is that the Sharpe ratio increases to 0.34.
+Overall, the fact that the return-to-risk ratio
+varies across different assets means that this portfolio
+is not efficient.
+In the next video, we will construct tangency portfolio
+and demonstrate its efficiency.

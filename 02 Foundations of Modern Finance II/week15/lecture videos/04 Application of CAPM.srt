@@ -1,0 +1,396 @@
+0
+00:00:00,000 --> 00:00:00,120
+
+
+1
+00:00:00,120 --> 00:00:02,940
+PROFESSOR: In this section, we discuss the typical sequence
+
+2
+00:00:02,940 --> 00:00:08,280
+of steps needed to implement the CAPM model in practice.
+
+3
+00:00:08,280 --> 00:00:10,670
+We also point out the advantages of using
+
+4
+00:00:10,670 --> 00:00:15,020
+CAPM or a similar model relative to the direct estimation
+
+5
+00:00:15,020 --> 00:00:17,720
+of expected returns.
+
+6
+00:00:17,720 --> 00:00:21,560
+Suppose we want to estimate the expected returns on two stocks.
+
+7
+00:00:21,560 --> 00:00:24,710
+We will call them IBM and Dell, but the numbers we use
+
+8
+00:00:24,710 --> 00:00:26,580
+are hypothetical.
+
+9
+00:00:26,580 --> 00:00:30,720
+First, we need to decide how to measure returns
+
+10
+00:00:30,720 --> 00:00:33,060
+on the market portfolio.
+
+11
+00:00:33,060 --> 00:00:35,910
+For this purpose, it is common to approximate the market
+
+12
+00:00:35,910 --> 00:00:39,840
+as a diversified value-weighted portfolio of stocks,
+
+13
+00:00:39,840 --> 00:00:44,010
+for instance, an S&P 500 index or evaluate
+
+14
+00:00:44,010 --> 00:00:47,700
+the portfolio of all public firms traded on major stock
+
+15
+00:00:47,700 --> 00:00:49,590
+exchanges.
+
+16
+00:00:49,590 --> 00:00:52,350
+Second, we run a linear regression
+
+17
+00:00:52,350 --> 00:00:55,830
+of individual stock returns on the market return
+
+18
+00:00:55,830 --> 00:00:58,940
+in order to estimate stock betas.
+
+19
+00:00:58,940 --> 00:01:03,440
+Suppose we find that the market beta for IBM is 0.8,
+
+20
+00:01:03,440 --> 00:01:05,390
+and for Dell, it is higher--
+
+21
+00:01:05,390 --> 00:01:08,020
+1.3.
+
+22
+00:01:08,020 --> 00:01:11,890
+Third, we estimate the market risk premium.
+
+23
+00:01:11,890 --> 00:01:15,880
+For instance, we may compute the historical average
+
+24
+00:01:15,880 --> 00:01:19,100
+of excess returns on the market portfolio.
+
+25
+00:01:19,100 --> 00:01:24,250
+Suppose we find that the market risk premium is 6%.
+
+26
+00:01:24,250 --> 00:01:26,800
+We'll look up the current risk free rate.
+
+27
+00:01:26,800 --> 00:01:29,030
+Suppose it is 2%.
+
+28
+00:01:29,030 --> 00:01:32,710
+Finally, we apply the CAPM formula.
+
+29
+00:01:32,710 --> 00:01:35,590
+In case of IBM, the risk free rate
+
+30
+00:01:35,590 --> 00:01:42,820
+of 2% plus the beta of 0.8 times the market premium of 6%
+
+31
+00:01:42,820 --> 00:01:47,920
+gives us the expected return of 6.8%.
+
+32
+00:01:47,920 --> 00:01:51,190
+For Dell, which has a higher market beta,
+
+33
+00:01:51,190 --> 00:01:54,110
+we obtain a higher estimate of expected return--
+
+34
+00:01:54,110 --> 00:01:54,610
+9.8%.
+
+35
+00:01:54,610 --> 00:01:57,420
+
+
+36
+00:01:57,420 --> 00:02:01,860
+What are the advantages of using models like CAPM and APT
+
+37
+00:02:01,860 --> 00:02:05,320
+to estimate expected returns on stocks?
+
+38
+00:02:05,320 --> 00:02:08,639
+Why don't we simply use average historical returns
+
+39
+00:02:08,639 --> 00:02:12,450
+to estimate expected return?
+
+40
+00:02:12,450 --> 00:02:15,030
+Assuming that the true distribution of stock returns
+
+41
+00:02:15,030 --> 00:02:19,350
+is stable over time, which means that past data is
+
+42
+00:02:19,350 --> 00:02:22,170
+informative about the future distribution,
+
+43
+00:02:22,170 --> 00:02:24,360
+there is nothing fundamentally wrong with using
+
+44
+00:02:24,360 --> 00:02:27,030
+historical average returns.
+
+45
+00:02:27,030 --> 00:02:31,680
+However, historical samples of returns on individual assets
+
+46
+00:02:31,680 --> 00:02:35,220
+may be too short to estimate the expected returns
+
+47
+00:02:35,220 --> 00:02:39,080
+with necessary precision.
+
+48
+00:02:39,080 --> 00:02:42,710
+It is also quite possible that as companies
+
+49
+00:02:42,710 --> 00:02:46,040
+change their properties over time, the risk
+
+50
+00:02:46,040 --> 00:02:49,130
+and expected returns change.
+
+51
+00:02:49,130 --> 00:02:52,040
+In this case, even if a long series
+
+52
+00:02:52,040 --> 00:02:54,950
+of past returns of a stock is available,
+
+53
+00:02:54,950 --> 00:02:59,570
+we may not be able to use it to forecast future returns.
+
+54
+00:02:59,570 --> 00:03:03,410
+That is because the same firm many years ago may have
+
+55
+00:03:03,410 --> 00:03:06,100
+had very different properties.
+
+56
+00:03:06,100 --> 00:03:08,980
+How do models like CAPM and APT help
+
+57
+00:03:08,980 --> 00:03:11,660
+us deal with such challenges?
+
+58
+00:03:11,660 --> 00:03:15,740
+First, from the point of view of statistical inference,
+
+59
+00:03:15,740 --> 00:03:18,290
+we can often estimate return betas
+
+60
+00:03:18,290 --> 00:03:22,980
+with much more precision than expected returns.
+
+61
+00:03:22,980 --> 00:03:27,960
+And importantly, we can do so using relatively short samples
+
+62
+00:03:27,960 --> 00:03:30,460
+with frequent observations.
+
+63
+00:03:30,460 --> 00:03:34,080
+For example, one may be able to obtain a high precision
+
+64
+00:03:34,080 --> 00:03:37,290
+estimate of the market beta of a stock using
+
+65
+00:03:37,290 --> 00:03:40,850
+only six months of daily data, while it
+
+66
+00:03:40,850 --> 00:03:44,630
+may take decades of data to obtain a comparably accurate
+
+67
+00:03:44,630 --> 00:03:46,085
+estimate of expected returns.
+
+68
+00:03:46,085 --> 00:03:49,000
+
+
+69
+00:03:49,000 --> 00:03:52,510
+Of course, both CAPM and APT require
+
+70
+00:03:52,510 --> 00:03:56,620
+us to estimate the market price of systematic risk.
+
+71
+00:03:56,620 --> 00:04:01,000
+For example, in case of CAPM, we need to know the risk premium
+
+72
+00:04:01,000 --> 00:04:04,050
+on the market portfolio.
+
+73
+00:04:04,050 --> 00:04:08,400
+For that, we may have to use the average historical return
+
+74
+00:04:08,400 --> 00:04:12,510
+or explore other alternatives, for instance, backing out
+
+75
+00:04:12,510 --> 00:04:16,019
+the discount rate on the market from a forward-looking stock
+
+76
+00:04:16,019 --> 00:04:20,560
+valuation model, like the Gordon model.
+
+77
+00:04:20,560 --> 00:04:23,620
+Here, it's important to note that even if we
+
+78
+00:04:23,620 --> 00:04:27,850
+do use the historical average returns to estimate the market
+
+79
+00:04:27,850 --> 00:04:31,330
+risk premium, this is a more tractable problem
+
+80
+00:04:31,330 --> 00:04:36,740
+than estimating expected returns on the individual stocks.
+
+81
+00:04:36,740 --> 00:04:40,070
+First, the market portfolio is less volatile.
+
+82
+00:04:40,070 --> 00:04:42,440
+It has no idiosyncratic risk.
+
+83
+00:04:42,440 --> 00:04:44,890
+This helps with precision.
+
+84
+00:04:44,890 --> 00:04:47,890
+Second, we have access to a relatively long
+
+85
+00:04:47,890 --> 00:04:50,710
+historical return series for the market,
+
+86
+00:04:50,710 --> 00:04:54,190
+certainly much longer than for the majority of stocks.
+
+87
+00:04:54,190 --> 00:04:57,760
+This, again, helps with precision.
+
+88
+00:04:57,760 --> 00:05:00,160
+Finally, although the distribution
+
+89
+00:05:00,160 --> 00:05:01,900
+of returns on the market portfolio
+
+90
+00:05:01,900 --> 00:05:04,450
+may not be constant over time, it
+
+91
+00:05:04,450 --> 00:05:08,850
+is arguably more stable than for individual stocks.
+
+92
+00:05:08,850 --> 00:05:13,110
+In summary, the key advantage of using risk-based models
+
+93
+00:05:13,110 --> 00:05:17,460
+like CAPM and APT to estimate the expected returns
+
+94
+00:05:17,460 --> 00:05:20,640
+is that we can derive expected return estimates
+
+95
+00:05:20,640 --> 00:05:23,930
+from the estimates of systematic risk.
+
+96
+00:05:23,930 --> 00:05:27,770
+We do not need to rely on the average past returns
+
+97
+00:05:27,770 --> 00:05:31,500
+in order to estimate the expected future returns.
+
+98
+00:05:31,500 --> 00:05:32,000
+
+

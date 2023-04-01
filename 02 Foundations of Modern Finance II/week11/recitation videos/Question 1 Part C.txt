@@ -1,0 +1,17 @@
+
+INSTRUCTOR: Finally, let us construct an arbitrage trading
+strategy that generates $100 in year 2 and nothing
+in years 0 and 1.
+Again, the only thing that changes
+is the right-hand side of the equation 3
+where instead of 0, we have $100 right now.
+So we're getting $0 in years 0 and 1 and $100 in year 2.
+Let's go back to Excel and solve the system.
+Recall that in my spreadsheet, everything is soft coded.
+So all I have to do right now is I have to put 0 in year 1
+and I have to put 100, my desired outcome, in year 2.
+And therefore, this Excel spreadsheet
+will recompute the positions that I have to take in order
+to achieve this outcome.
+So I have to go short R1 in this exact amount,
+short F1 in this amount, and go long in this amount in R2.

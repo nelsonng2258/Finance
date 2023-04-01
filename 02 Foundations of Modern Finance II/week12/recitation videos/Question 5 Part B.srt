@@ -1,0 +1,388 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:03,120
+PROFESSOR: In this video, we will use a binomial tree
+
+2
+00:00:03,120 --> 00:00:05,700
+to price a European put option.
+
+3
+00:00:05,700 --> 00:00:07,770
+This put option is similar to the call option
+
+4
+00:00:07,770 --> 00:00:09,630
+that we priced in the previous video.
+
+5
+00:00:09,630 --> 00:00:12,990
+It has the same strike price of $120,
+
+6
+00:00:12,990 --> 00:00:15,420
+and it expires two years from now.
+
+7
+00:00:15,420 --> 00:00:18,930
+First, let's draw a tree that captures the payoffs
+
+8
+00:00:18,930 --> 00:00:20,460
+from this put option.
+
+9
+00:00:20,460 --> 00:00:24,690
+Recall that in the up-up state, the share price is $150.
+
+10
+00:00:24,690 --> 00:00:28,050
+Therefore, this put option expires out of the money,
+
+11
+00:00:28,050 --> 00:00:31,320
+and pay off from this option is $0.
+
+12
+00:00:31,320 --> 00:00:35,400
+In the up-down state and when the share price is $60,
+
+13
+00:00:35,400 --> 00:00:37,980
+this put option expires in the money,
+
+14
+00:00:37,980 --> 00:00:41,610
+and therefore, our payoff is $60.
+
+15
+00:00:41,610 --> 00:00:45,430
+In the down-up state, the share price is $125.
+
+16
+00:00:45,430 --> 00:00:48,630
+Therefore, this put option expires out of the money.
+
+17
+00:00:48,630 --> 00:00:52,440
+And in the down-down state, the share price is $20.
+
+18
+00:00:52,440 --> 00:00:54,900
+The strike price of this put option is $120.
+
+19
+00:00:54,900 --> 00:00:58,890
+Therefore, our pay off is $100.
+
+20
+00:00:58,890 --> 00:01:00,930
+Let's first find prices of this put option
+
+21
+00:01:00,930 --> 00:01:03,810
+in the up and down states in year one,
+
+22
+00:01:03,810 --> 00:01:07,000
+which we'll denote as Pu and Pd, respectively.
+
+23
+00:01:07,000 --> 00:01:10,090
+And then we will find the price of this put option today,
+
+24
+00:01:10,090 --> 00:01:11,370
+which we'll denote as P0.
+
+25
+00:01:11,370 --> 00:01:14,190
+We will use the same portfolio replication approach
+
+26
+00:01:14,190 --> 00:01:16,770
+as we used to price the call option.
+
+27
+00:01:16,770 --> 00:01:20,850
+In year 1, in the up state, replicating portfolio approach
+
+28
+00:01:20,850 --> 00:01:23,820
+gives us the following two equations.
+
+29
+00:01:23,820 --> 00:01:25,710
+Solving these two equations, we obtain
+
+30
+00:01:25,710 --> 00:01:30,120
+the value of a as negative 0.667 and the value
+
+31
+00:01:30,120 --> 00:01:33,750
+of b, positive $96.62.
+
+32
+00:01:33,750 --> 00:01:36,390
+Let me highlight an important result here.
+
+33
+00:01:36,390 --> 00:01:39,300
+Notice that the value of a is negative and the value of b
+
+34
+00:01:39,300 --> 00:01:40,930
+is positive.
+
+35
+00:01:40,930 --> 00:01:44,670
+Recall that when we were pricing a call option, the value of a
+
+36
+00:01:44,670 --> 00:01:48,570
+was always positive, and the value of b was negative.
+
+37
+00:01:48,570 --> 00:01:51,360
+What does this mean economically?
+
+38
+00:01:51,360 --> 00:01:54,750
+It means that to replicate a put option,
+
+39
+00:01:54,750 --> 00:02:01,350
+we need to short 0.667 units of the underlying stock,
+
+40
+00:02:01,350 --> 00:02:07,680
+and we need to lend $96.62 at the risk-free rate.
+
+41
+00:02:07,680 --> 00:02:10,440
+In contrast, to replicate a call option,
+
+42
+00:02:10,440 --> 00:02:13,650
+we had to buy the underlying stock
+
+43
+00:02:13,650 --> 00:02:15,840
+and borrow at the risk-free rate.
+
+44
+00:02:15,840 --> 00:02:17,880
+The price of the put option must equal
+
+45
+00:02:17,880 --> 00:02:20,520
+to the value of the replicating portfolio in the year 1
+
+46
+00:02:20,520 --> 00:02:25,230
+in the up state, which equals to $13.29.
+
+47
+00:02:25,230 --> 00:02:27,930
+Repeating these steps, we can obtain the price
+
+48
+00:02:27,930 --> 00:02:30,660
+of the put option in year 1 in the down state,
+
+49
+00:02:30,660 --> 00:02:34,860
+which equals to $43.59.
+
+50
+00:02:34,860 --> 00:02:38,040
+Having priced this put option in the up and down states
+
+51
+00:02:38,040 --> 00:02:40,950
+in the year 1, we can finally turn to pricing
+
+52
+00:02:40,950 --> 00:02:43,560
+this option in year 0.
+
+53
+00:02:43,560 --> 00:02:46,290
+We obtain the following system of equations
+
+54
+00:02:46,290 --> 00:02:50,080
+from our replicating portfolio approach, and solving it,
+
+55
+00:02:50,080 --> 00:02:54,840
+we obtain the following values for a and b.
+
+56
+00:02:54,840 --> 00:02:57,840
+Putting this all together, we get the following price
+
+57
+00:02:57,840 --> 00:03:03,840
+of the put option in the year 0, which equals to $25.43.
+
+58
+00:03:03,840 --> 00:03:08,010
+Let's summarize by drawing a tree that captures the price
+
+59
+00:03:08,010 --> 00:03:10,200
+evolution of this put option.
+
+60
+00:03:10,200 --> 00:03:13,440
+Its current price is $25.43.
+
+61
+00:03:13,440 --> 00:03:16,090
+Next year, if the share price goes up,
+
+62
+00:03:16,090 --> 00:03:19,500
+the price of this put option drops to $13.29.
+
+63
+00:03:19,500 --> 00:03:21,810
+Then, if the share price goes up again,
+
+64
+00:03:21,810 --> 00:03:26,760
+this put expires out of the money and pays off $0.
+
+65
+00:03:26,760 --> 00:03:30,300
+If the share price goes down, this put expires in the money
+
+66
+00:03:30,300 --> 00:03:33,300
+and pays off $60.
+
+67
+00:03:33,300 --> 00:03:36,840
+If, on the other hand, the first year the share price goes down,
+
+68
+00:03:36,840 --> 00:03:41,220
+the price of this put option increases to $43.59.
+
+69
+00:03:41,220 --> 00:03:43,470
+If, after that, the share price goes up,
+
+70
+00:03:43,470 --> 00:03:47,850
+this option expires out of the money and pays off $0.
+
+71
+00:03:47,850 --> 00:03:50,700
+If, on the other hand, the share price goes down again,
+
+72
+00:03:50,700 --> 00:03:55,800
+this put expires in the money and pays off $100.
+
+73
+00:03:55,800 --> 00:03:59,040
+Some of you might have thought of an alternative
+
+74
+00:03:59,040 --> 00:04:03,190
+and much faster approach to solving this problem.
+
+75
+00:04:03,190 --> 00:04:05,760
+We have already priced the call option.
+
+76
+00:04:05,760 --> 00:04:09,720
+And therefore, we can use the put-call parity
+
+77
+00:04:09,720 --> 00:04:11,830
+to price this put option.
+
+78
+00:04:11,830 --> 00:04:14,490
+Notice that, since we're given the effective annual rate
+
+79
+00:04:14,490 --> 00:04:17,459
+and not the continuously compounded APR,
+
+80
+00:04:17,459 --> 00:04:20,910
+I'm writing down the put-call parity in the following form
+
+81
+00:04:20,910 --> 00:04:24,780
+where the present value of strike K at the risk-free rate
+
+82
+00:04:24,780 --> 00:04:28,480
+is just K divided by 1 plus r raised to of power of T.
+
+83
+00:04:28,480 --> 00:04:31,380
+So let's use this equation to find the put price.
+
+84
+00:04:31,380 --> 00:04:33,900
+It will equal to 120, which is the strike price divided
+
+85
+00:04:33,900 --> 00:04:36,840
+by 1 plus 3.5%, which is the risk-free rate raised
+
+86
+00:04:36,840 --> 00:04:41,940
+to power of 2 because our option expires two years from now.
+
+87
+00:04:41,940 --> 00:04:44,160
+The price of the corresponding call option
+
+88
+00:04:44,160 --> 00:04:47,820
+is 13.41, which we found using the binomial tree
+
+89
+00:04:47,820 --> 00:04:52,350
+approach, minus $100, which is the current share price.
+
+90
+00:04:52,350 --> 00:04:57,570
+This gives us the price of this put option of $25.43, which
+
+91
+00:04:57,570 --> 00:05:01,710
+equals exactly what we obtained using the binomial tree pricing
+
+92
+00:05:01,710 --> 00:05:02,940
+approach.
+
+93
+00:05:02,940 --> 00:05:06,510
+Overall, the put-call parity demonstrates
+
+94
+00:05:06,510 --> 00:05:09,600
+that the prices of the call and the put options that we
+
+95
+00:05:09,600 --> 00:05:12,210
+obtained using the binomial pricing approach
+
+96
+00:05:12,210 --> 00:05:13,700
+are consistent.
+
