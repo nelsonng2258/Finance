@@ -1,0 +1,162 @@
+
+So what we're going to do in the remainder of this segment here
+is talk about how we would go about capitalizing these
+off balance sheet items.
+
+All right.
+So we got these cash flows that are off balance sheet.
+Moody's, which is a big credit rating agency.
+And so there's Moody's and Standard and Poor's.
+They rate people's ability to pay.
+OK.
+So if you got an A-plus rating from Standard & Poor,
+that means you have a high ability to pay.
+If you've got a C-rating from Standard & Poor's
+or Moody's, that means you have a low ability to pay.
+So Moody's and Standard and Poor's are major credit rating
+agencies.
+They're looking at these off balance sheet items,
+and at least they claim that they're already
+assessing the risk of these OBS, off balance sheet risk,
+as part of their credit analysis already.
+And it has a big impact on the issuer's credit rating
+depending on the size and the nature of the exposure.
+And this, as they say, is important
+because as we just said a minute ago,
+companies attempt to minimize the perception of risk
+by trying to put various obligations off balance sheet.
+So what we're going to do now is just
+sort of talk about computing these off balance sheet amounts
+and then putting them on, on balance sheet.
+And when you do that--
+well, it depends on your objective.
+So if you're just trying to take a quick peek
+at the financial statements, then you're
+clearly not going to do this.
+But if you're a financial analyst following the airline
+industry, you want to be able to compare, again,
+Delta with United Airlines on an apples to apples basis.
+And then in case you want to do this yourself,
+we're going to now go through some simple techniques
+for valuing these off balance sheet items
+and putting them on the balance sheet.
+So we've got this information about
+the contractual obligations, about the
+off balance sheet items.
+So how would we use that to estimate the liability?
+So the liability conceptually is just
+the discounted present value of the off balance sheet item.
+So we know what the off balance sheet items are.
+So what we really need is off balance sheet items after
+the fifth year-- remember there's that big thereafter
+thing that happens--
+and we also need a discount, right?
+So when we do this, we're going to tell you
+what discount rate to use.
+So in this example, we're going to assume
+the discount rate is 4%.
+If we ask you to capitalize an off balance sheet item,
+we'll tell you what the discount rate is.
+Now, in the real world how would you estimate the discount rate?
+So if you remember from our discussions last time,
+Delta probably has publicly traded debt outstanding.
+So we could look at the yield or the rates
+on that publicly traded debt.
+Also, as we saw earlier, Delta sort of shows you
+what the cash flows from their leases
+are and then comes up with a present value of those leases.
+So you could reverse engineer that calculation
+and figure out what implied rate Delta or a firm
+is using on their leases.
+And then in the real world, there
+are various rules of thumb.
+So always use a 5% discount rate, always multiply the cash
+flows by 10.
+So there are various rules of thumb
+that people that know the industry very well.
+Maybe the rule of thumb in the airline industry
+is 6 times the next year's cash flow.
+All right.
+So just in summary.
+So I just picked these numbers up from the slide we just
+looked at a moment ago.
+So these are the ones that are off balance sheet,
+and then I put a total in for each year for the next five
+years.
+And then notice that we have that big thereafter amount
+of about $12 billion, and the total is about $35 billion.
+Then if we just take the total amounts for each year,
+all I'm doing is transposing them
+to make it a little bit easier to do the calculation.
+So again, we see the next five years,
+and we see that thereafter amount.
+So one trick in doing this is, we have to think to ourselves,
+what years does that thereafter amount correspond to?
+So clearly, part of it's 2024, but how
+does that tail of cash flows--
+how does that manifest itself starting in 2024?
+So the rule of thumb we're going to use
+is we're just going to look at the thereafter amount,
+look at the year before.
+So notice the thereafter is 11,594.
+We're going to divide by the year before,
+and then that gives us 3 and 1/2 years of cash flows
+at the same rate as 2023.
+We're going to round that down to three years
+and then divide the 11,594 divided by 3
+to give us annual cash flow starting in 2024 of 3,865.
+So I'll just plug those in here.
+So all we've just done is assume the thereafter is going
+to be 3 equal cash flows 2024, 2025, 2026
+and each of those cash flows is equal to 3,865.
+So clearly, you can make other assumptions than this,
+but this is a reasonable way to sort of say the thereafter
+doesn't all happen in 2024.
+Some of it happens in 2025 and 2026.
+And then once we've got the cash flow as a rate like this,
+we just pop these into our Excel spreadsheet,
+take the present value-- so if our present value at 4%--
+so the 2019 cash flow, we're going
+to discount it 4% one time.
+2020 is discounted at 4% two times, et cetera, et cetera.
+That gives the present value of each of the cash flows,
+and then we add all those up.
+And then we get the present value, the $35 billion
+nominal cash flows has a present value of about $30 billion.
+Now, this looks a little intimidating.
+So to bring this on our balance sheet,
+we're going to add $30 billion to both assets and liabilities
+as we did with operating leases earlier.
+Now, as I started to say a minute ago,
+this looks intimidating, but notice on examinations,
+we're going to make it easier for you.
+So here's a pretend company we're
+asking you to capitalize its operating
+lease in years before operating leases were on balance sheet.
+And then notice that we tell you,
+assume that this company makes equal lease payments
+over a nine-year period.
+So if you look at 2016, there's $600,000 there.
+Thereafter is $2.4 million.
+If you divide 600,000 into 2.4 million,
+you get four payments of $600,000.
+So the whole thing is basically nine payments of $600,000,
+and that's easy for us to value using an annuity table.
+So this is easier on the exam.
+In the real world, you'll have to do
+a little bit of calculations like this
+and stick it into an Excel spreadsheet.
+So having done that, we came up with $30 billion extra.
+Does this matter in the case of Delta?
+So their assets to equity ratio--
+so their leverage ratio--
+total assets divided by stockholders' equity--
+is 4 and 1/2 with what they've got on balance sheet.
+If we add this $30 billion to both assets and liabilities,
+their leverage ratio goes to 6 and 1/2.
+So their leverage ratio goes up by about 50%,
+and that's quite meaningful.
+And again, we're going to compare
+that to, say, like United Airlines or other carriers
+in the same industry to see how that comparison actually
+works out.

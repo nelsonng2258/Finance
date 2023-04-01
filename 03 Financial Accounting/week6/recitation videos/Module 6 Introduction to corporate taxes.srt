@@ -1,0 +1,260 @@
+0
+00:00:00,000 --> 00:00:00,350
+
+
+1
+00:00:00,350 --> 00:00:01,350
+PROFESSOR: Hi, everyone.
+
+2
+00:00:01,350 --> 00:00:05,940
+Welcome to recitation 6 of the Financial Accounting course.
+
+3
+00:00:05,940 --> 00:00:09,360
+In this recitation, we'll cover income taxes.
+
+4
+00:00:09,360 --> 00:00:13,960
+In particular, we will cover temporary tax differences,
+
+5
+00:00:13,960 --> 00:00:18,660
+such as deferred tax assets and deferred tax liabilities, how
+
+6
+00:00:18,660 --> 00:00:23,120
+to account for these income taxes, and effective tax rates.
+
+7
+00:00:23,120 --> 00:00:24,950
+Before we get into the specifics,
+
+8
+00:00:24,950 --> 00:00:28,550
+it is important to cover some basic distinctions related
+
+9
+00:00:28,550 --> 00:00:30,230
+to income taxes.
+
+10
+00:00:30,230 --> 00:00:32,540
+First, pre-tax income is generated
+
+11
+00:00:32,540 --> 00:00:35,570
+under accrual based revenue recognition principle-- i.e.
+
+12
+00:00:35,570 --> 00:00:36,830
+GAAP.
+
+13
+00:00:36,830 --> 00:00:40,520
+This is what we have seen for a regular revenue recognition
+
+14
+00:00:40,520 --> 00:00:44,330
+process, which we have covered in previous classes.
+
+15
+00:00:44,330 --> 00:00:47,210
+Taxable income is income before taxes generated
+
+16
+00:00:47,210 --> 00:00:49,760
+using the tax code this is typically
+
+17
+00:00:49,760 --> 00:00:51,740
+different from accrual accounting income,
+
+18
+00:00:51,740 --> 00:00:54,470
+and it's more similar to cash accounting.
+
+19
+00:00:54,470 --> 00:00:57,680
+Cash taxes are taxes paid to the IRS,
+
+20
+00:00:57,680 --> 00:00:59,900
+as determined by the tax code.
+
+21
+00:00:59,900 --> 00:01:02,760
+This is tax from the taxable income.
+
+22
+00:01:02,760 --> 00:01:05,720
+Finally, tax provision is tax expense
+
+23
+00:01:05,720 --> 00:01:08,090
+recorded in the financial statements, which
+
+24
+00:01:08,090 --> 00:01:10,690
+is based upon GAAP income.
+
+25
+00:01:10,690 --> 00:01:13,750
+It is important to understand that taxable income does not
+
+26
+00:01:13,750 --> 00:01:16,180
+equal pre-tax or book income.
+
+27
+00:01:16,180 --> 00:01:19,810
+As briefly mentioned, book income uses accrual methods,
+
+28
+00:01:19,810 --> 00:01:23,980
+and tax income uses methods more similar to cash accounting.
+
+29
+00:01:23,980 --> 00:01:27,040
+The difference risen from the different methods
+
+30
+00:01:27,040 --> 00:01:29,470
+may be permanent or temporary.
+
+31
+00:01:29,470 --> 00:01:32,410
+Permanent differences include penalties and fines,
+
+32
+00:01:32,410 --> 00:01:35,950
+municipal bond treatments, and stock compensation.
+
+33
+00:01:35,950 --> 00:01:37,930
+Temporary items involve differences
+
+34
+00:01:37,930 --> 00:01:42,130
+in depreciation calculations, deferred revenue, and so on.
+
+35
+00:01:42,130 --> 00:01:47,030
+In this recitation, we'll focus on the temporary differences.
+
+36
+00:01:47,030 --> 00:01:50,480
+Temporary book tax differences will eventually be made equal.
+
+37
+00:01:50,480 --> 00:01:52,400
+However, business cycles may make
+
+38
+00:01:52,400 --> 00:01:55,230
+this process take a long time.
+
+39
+00:01:55,230 --> 00:01:57,240
+US GAAP has a different set of rules
+
+40
+00:01:57,240 --> 00:02:00,180
+for recognizing revenue and expenses, which
+
+41
+00:02:00,180 --> 00:02:04,290
+is accrual based, than the tax code, which is cash based.
+
+42
+00:02:04,290 --> 00:02:07,530
+As we have seen before, much of a difference between accrual
+
+43
+00:02:07,530 --> 00:02:09,870
+based system and a cash based system
+
+44
+00:02:09,870 --> 00:02:13,800
+is in the timing of recognizing revenues and expenses.
+
+45
+00:02:13,800 --> 00:02:17,010
+Temporary book tax differences arise primarily
+
+46
+00:02:17,010 --> 00:02:20,170
+as a result of these timing differences.
+
+47
+00:02:20,170 --> 00:02:24,330
+For example, under US GAAP, when a firm purchases PPE,
+
+48
+00:02:24,330 --> 00:02:27,900
+it depreciates the asset gradually over time,
+
+49
+00:02:27,900 --> 00:02:31,410
+whereas the tax code that allows for immediate and accelerated
+
+50
+00:02:31,410 --> 00:02:32,880
+depreciation.
+
+51
+00:02:32,880 --> 00:02:38,500
+We will go over this in more detail in the following slides.
+
+52
+00:02:38,500 --> 00:02:41,980
+Temporary tax differences can cause the tax provision
+
+53
+00:02:41,980 --> 00:02:44,860
+which, is the expense reported on the income statement,
+
+54
+00:02:44,860 --> 00:02:48,280
+to vary from actual cash taxes paid.
+
+55
+00:02:48,280 --> 00:02:50,230
+Accrual based accounting requires
+
+56
+00:02:50,230 --> 00:02:53,410
+companies to report these differences, using accounts
+
+57
+00:02:53,410 --> 00:02:57,820
+that we refer to as deferred tax assets, or DTAs,
+
+58
+00:02:57,820 --> 00:03:01,210
+and deferred tax liabilities, DTLs.
+
+59
+00:03:01,210 --> 00:03:04,720
+We can think of a DTA as prepaid taxes.
+
+60
+00:03:04,720 --> 00:03:07,120
+DTAs are recorded when cash taxes
+
+61
+00:03:07,120 --> 00:03:11,040
+paid are higher than the tax expense.
+
+62
+00:03:11,040 --> 00:03:15,330
+We can think of a DTL as unpaired taxes.
+
+63
+00:03:15,330 --> 00:03:17,940
+DTLs are recorded when cash taxes paid
+
+64
+00:03:17,940 --> 00:03:20,690
+are lower than the tax expense.
+

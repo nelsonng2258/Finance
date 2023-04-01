@@ -1,0 +1,109 @@
+
+PROFESSOR: In this class, we're going
+to talk about bonds and long term debt.
+We're going to start by reviewing some present value
+concepts.
+
+So long term debt is one of the firm's key sources
+of financing.
+You either sell debt.
+Or you can maybe finance your firm through selling stock.
+What we're going to talk about today
+are bonds, which are a major type of long term debt.
+They're similar to a loan from a bank.
+But they have certain differences
+that we'll go through now.
+To be able to talk about bonds and to value bonds,
+we need to use two present value concepts.
+First is the present value of a single future payment.
+Second is the present value of an annuity
+or a number of future payments.
+For some of you, competing present
+values already second nature.
+But for others of you, it's not.
+I'm going to go and review these concepts.
+But those of you who know them already,
+please go ahead and jump ahead.
+So we're going to start with the present value
+of a future payment.
+So future value, here's the formula,
+is related to present value by a function of the interest rate.
+Let's do some examples.
+If we invested $1 today, how much
+would it be worth in a year if interest rates are 8%?
+Well, a year from now, if we put that money in a savings bank,
+we get our dollar back.
+We get 8% interest.
+Another way to think about that is we've
+got 1 plus 8% interest compounded for one year,
+or $1.8.
+Now stretching that just a little bit,
+what's the future value of a dollar
+invested today for three years, again,
+if interest rates are 8%?
+So in the first year, we'll get 1 plus our 8% interest.
+In the second, that will compound.
+And in the third year, it'll compound again.
+So what we'll end up getting is 1.08, plus the interest rate
+compounded for three years, which equals 1.26.
+So that's a couple of examples of the formula in red above.
+Now we're just going to invert that formula
+and talk about the present value.
+For the present value formula, the present value
+is the future payment divided by 1
+plus the interest rate raised to the number of periods
+over which you're computing it.
+So again, if we're going to get $1 in a year,
+how much is that worth for us today?
+So clearly, it's worth less than $1
+because we have to wait for a year to get that dollar.
+And then formally, that's going to be
+worth $1 divided by 1 plus the interest rate
+raised to the 1 power.
+So that's 0.925 and change.
+Similarly, if we receive $1 in three years, that
+will be worth $1 divided by 1.08%,
+the interest rate raised to the third power or 0.793.
+And then to see this in a picture,
+suppose now that we were to get $100 three years from now
+and interest rates are still 8%.
+So we have to wait one year, we have to wait a second year,
+and in the third year, we're going to get our $100.
+Now again, clearly, this is worth less than $100
+because we could put the money in the bank at 8%
+and have something more than $100
+if we had invested in at 8%.
+So using our present value formula from above,
+this amount is going to be worth $100 divided
+by 1 plus our interest rate cubed or 79.38.
+Now you can find this factor by googling present value table.
+Obviously, you can stick the formula into your calculator.
+And there's also functions on Excel to compute this formula.
+So that's a present value of a single future payment.
+Now we're going to combine those by doing the present value
+of an annuity.
+So all a three year annuity is, pictured here,
+is in a year from now we got $100, two years from now, we
+get to another $100, and then three years from now
+we'll get a further $100.
+So one way to compute this is just sequentially
+compute the present value of $100, which we just did,
+which is $93, compute the present value of $100 two years
+from now, which is $85, compute the present value of $100 three
+years from now, which is $79.
+Add all those up.
+It's about $258.
+Now that requires a little bit of calculation.
+It's not that hard to do in an Excel spreadsheet.
+And this is an ordinary annuity three payments in a rear at 8%.
+They're also annuity tables that you can Google.
+So if you Google PVOA, which is present value of an annuity,
+you can see this table.
+Also if you use the Excel at NPV function,
+it will also calculate a present value of an annuity.
+So those are two building blocks, a single lump
+sum paid in the future.
+What's the present value of that?
+And then what's the present value of payments in an annuity
+form where you get the same amount of money every year
+for some number of years?

@@ -1,0 +1,484 @@
+0
+00:00:00,000 --> 00:00:00,590
+
+
+1
+00:00:00,590 --> 00:00:02,780
+PROFESSOR: Let's first look at bonds at a discount.
+
+2
+00:00:02,780 --> 00:00:06,330
+Here, coupon rate is lower than the market rate.
+
+3
+00:00:06,330 --> 00:00:10,430
+Suppose the face value of the discount bond is $10,000.
+
+4
+00:00:10,430 --> 00:00:15,050
+Coupon rate is 6%, and market rate is 8%.
+
+5
+00:00:15,050 --> 00:00:17,840
+Maturity is 3 years.
+
+6
+00:00:17,840 --> 00:00:20,450
+Looking at the actual cash flow at the present value
+
+7
+00:00:20,450 --> 00:00:23,570
+of each cash flow, in years 1 and 2,
+
+8
+00:00:23,570 --> 00:00:27,470
+the cash outflow is $600, reflecting the coupon rate.
+
+9
+00:00:27,470 --> 00:00:31,910
+And in year 3, cash outflow is $10,600,
+
+10
+00:00:31,910 --> 00:00:34,820
+because the firm needs to pay back the principal.
+
+11
+00:00:34,820 --> 00:00:38,000
+It's the sum of year 3's interest payment
+
+12
+00:00:38,000 --> 00:00:41,690
+and the principal amount due at maturity.
+
+13
+00:00:41,690 --> 00:00:44,330
+In order to account for the schedule of payments,
+
+14
+00:00:44,330 --> 00:00:47,810
+we need to first calculate the present value of the bonds
+
+15
+00:00:47,810 --> 00:00:49,070
+each year.
+
+16
+00:00:49,070 --> 00:00:51,800
+To calculate the present value, the cash flows
+
+17
+00:00:51,800 --> 00:00:56,390
+can be seen as $600 annually for three years at 8% market
+
+18
+00:00:56,390 --> 00:01:00,830
+rate for the coupon payments and $10,000 single sum in three
+
+19
+00:01:00,830 --> 00:01:05,450
+years at a market rate, for the principal repayment.
+
+20
+00:01:05,450 --> 00:01:07,070
+To calculate the present value, we
+
+21
+00:01:07,070 --> 00:01:09,320
+can refer to the present value tables.
+
+22
+00:01:09,320 --> 00:01:11,600
+For the coupon payments, or the annuity,
+
+23
+00:01:11,600 --> 00:01:17,270
+we multiply $600 by 2.577, which is the present value
+
+24
+00:01:17,270 --> 00:01:21,950
+multiplier for 8% interest with a maturity of 3 years,
+
+25
+00:01:21,950 --> 00:01:26,720
+and obtain a present value of $1,546.
+
+26
+00:01:26,720 --> 00:01:32,930
+For the lump sum payment at year 3, we multiply 0.794 by $10,000
+
+27
+00:01:32,930 --> 00:01:37,960
+and obtain a present value of $7,938.
+
+28
+00:01:37,960 --> 00:01:42,160
+Adding these to, annuity and single sum, the total NPV
+
+29
+00:01:42,160 --> 00:01:46,670
+of cash flows is $9,484.
+
+30
+00:01:46,670 --> 00:01:48,620
+Now on to the balance sheet equation.
+
+31
+00:01:48,620 --> 00:01:51,410
+First, at the time of issuance, the present value
+
+32
+00:01:51,410 --> 00:01:56,570
+of the bond, $9,484, is added as cash.
+
+33
+00:01:56,570 --> 00:01:59,180
+Bond payable increases by $10,000, which
+
+34
+00:01:59,180 --> 00:02:01,640
+is the phase value of the bond.
+
+35
+00:02:01,640 --> 00:02:04,760
+Simultaneously, to balance the equation out,
+
+36
+00:02:04,760 --> 00:02:08,990
+a cash liability account, which is called a bond discount,
+
+37
+00:02:08,990 --> 00:02:11,850
+decreases by $516.
+
+38
+00:02:11,850 --> 00:02:14,690
+So the net bond payable at this point
+
+39
+00:02:14,690 --> 00:02:18,650
+is the present value of the bond, $9,484,
+
+40
+00:02:18,650 --> 00:02:22,860
+and the discount balance is $516.
+
+41
+00:02:22,860 --> 00:02:25,440
+In year one cash decreases by $600
+
+42
+00:02:25,440 --> 00:02:28,810
+because interest is paid by the coupon rate.
+
+43
+00:02:28,810 --> 00:02:31,680
+But one thing that's tricky here is that the interest expense
+
+44
+00:02:31,680 --> 00:02:33,990
+is not simply $600.
+
+45
+00:02:33,990 --> 00:02:36,900
+Rather, it is the previous year's bond payable
+
+46
+00:02:36,900 --> 00:02:38,910
+times the market rate.
+
+47
+00:02:38,910 --> 00:02:41,730
+In this case, interest expense is the net bond
+
+48
+00:02:41,730 --> 00:02:49,410
+payable for year 0, $9,484, times 8%, which equals $759.
+
+49
+00:02:49,410 --> 00:02:53,580
+Therefore, retained earnings decreased by $759.
+
+50
+00:02:53,580 --> 00:02:56,220
+To balance the equation out, bond discount
+
+51
+00:02:56,220 --> 00:03:00,270
+decreases by the remaining amount, $159.
+
+52
+00:03:00,270 --> 00:03:04,170
+Now the net bond payable is last year's net bond payable
+
+53
+00:03:04,170 --> 00:03:07,260
+plus the decrease bond discount amount, which
+
+54
+00:03:07,260 --> 00:03:15,030
+is $9,484 plus $159, $9,643.
+
+55
+00:03:15,030 --> 00:03:17,010
+Interest payments four years two and three
+
+56
+00:03:17,010 --> 00:03:19,770
+proceed using the same method.
+
+57
+00:03:19,770 --> 00:03:27,990
+In year two, interest expense is $9,643 times 8%, so $771.
+
+58
+00:03:27,990 --> 00:03:32,610
+In year three, interest expense is $786.
+
+59
+00:03:32,610 --> 00:03:35,730
+At maturity date, three years after the bond issuance,
+
+60
+00:03:35,730 --> 00:03:38,610
+the net bond payable, should be $10,000.
+
+61
+00:03:38,610 --> 00:03:41,520
+Finally, accounting for the principal repayment at maturity
+
+62
+00:03:41,520 --> 00:03:42,570
+a simple.
+
+63
+00:03:42,570 --> 00:03:46,320
+Cash decreases by $10,000, the face value,
+
+64
+00:03:46,320 --> 00:03:49,380
+and bond payable decreases by $10,000.
+
+65
+00:03:49,380 --> 00:03:51,810
+Now let's take a look at bonds at premium.
+
+66
+00:03:51,810 --> 00:03:53,790
+Again, the face value is $10,000,
+
+67
+00:03:53,790 --> 00:03:55,560
+and maturity is 3 years.
+
+68
+00:03:55,560 --> 00:03:57,780
+But this time, the coupon rate is 8%,
+
+69
+00:03:57,780 --> 00:04:00,180
+and the market rate is 6%.
+
+70
+00:04:00,180 --> 00:04:03,190
+Using the same present value calculation method,
+
+71
+00:04:03,190 --> 00:04:08,920
+the present value at the time of issuance is $10,535.
+
+72
+00:04:08,920 --> 00:04:12,310
+Accounting for premium bonds is similar to accounting
+
+73
+00:04:12,310 --> 00:04:13,660
+for discount bonds.
+
+74
+00:04:13,660 --> 00:04:16,540
+At issuance, cash increases by the present value
+
+75
+00:04:16,540 --> 00:04:20,110
+of the bond, $10,535.
+
+76
+00:04:20,110 --> 00:04:24,430
+Bond payable increases by the face value amount, $10,000.
+
+77
+00:04:24,430 --> 00:04:27,140
+Instead of bond discount, bond premium account,
+
+78
+00:04:27,140 --> 00:04:30,220
+which is liabilities, increases by the difference
+
+79
+00:04:30,220 --> 00:04:34,110
+between cash received and the face value of the bond.
+
+80
+00:04:34,110 --> 00:04:39,600
+Net bond payable is now $10,535, and the premium balance
+
+81
+00:04:39,600 --> 00:04:41,910
+is $535.
+
+82
+00:04:41,910 --> 00:04:44,550
+In year 1, cash decreases by $800,
+
+83
+00:04:44,550 --> 00:04:47,380
+due to the interest payment.
+
+84
+00:04:47,380 --> 00:04:49,210
+Again, interest expense decreases
+
+85
+00:04:49,210 --> 00:04:52,180
+by the net bond payable amount in the last year
+
+86
+00:04:52,180 --> 00:04:56,530
+times the market rate, which is $632 in this case.
+
+87
+00:04:56,530 --> 00:05:00,040
+Bond premium decreases by the difference between cash
+
+88
+00:05:00,040 --> 00:05:02,310
+and the interest expense.
+
+89
+00:05:02,310 --> 00:05:05,770
+Years 2 and 3 followed the same routine.
+
+90
+00:05:05,770 --> 00:05:10,720
+Finally, at the end of maturity, cash decreases by $10,000,
+
+91
+00:05:10,720 --> 00:05:14,680
+and bond payable also decreases by $10,000,
+
+92
+00:05:14,680 --> 00:05:18,250
+once the firm repays the principal.
+
+93
+00:05:18,250 --> 00:05:20,740
+Another possible scenario to look for
+
+94
+00:05:20,740 --> 00:05:24,160
+is when firms retire debt earlier than its maturity.
+
+95
+00:05:24,160 --> 00:05:27,190
+When firms retire debt early, the market value of debt
+
+96
+00:05:27,190 --> 00:05:29,980
+can be different from the book value, due to the firm's
+
+97
+00:05:29,980 --> 00:05:33,310
+economic conditions, which determines the credit quality,
+
+98
+00:05:33,310 --> 00:05:36,400
+and due to macroeconomic conditions, which determines
+
+99
+00:05:36,400 --> 00:05:38,350
+the market interest rates.
+
+100
+00:05:38,350 --> 00:05:41,000
+A rule of thumb to remember what is actually
+
+101
+00:05:41,000 --> 00:05:42,880
+when market value is higher than the book
+
+102
+00:05:42,880 --> 00:05:47,290
+value, early retirement results in a loss, and in a gain
+
+103
+00:05:47,290 --> 00:05:50,510
+when market value is lower than the book value.
+
+104
+00:05:50,510 --> 00:05:52,430
+Let's go over an example.
+
+105
+00:05:52,430 --> 00:05:54,250
+Suppose we have a zero coupon bond
+
+106
+00:05:54,250 --> 00:05:57,220
+on our books with the following balances,
+
+107
+00:05:57,220 --> 00:06:02,410
+bond payable of $11,500 and bond discount of $1,500.
+
+108
+00:06:02,410 --> 00:06:05,890
+So the net book value is $10,000.
+
+109
+00:06:05,890 --> 00:06:07,990
+Now let's say we repurchased the bond
+
+110
+00:06:07,990 --> 00:06:11,110
+at the market value of $8,500.
+
+111
+00:06:11,110 --> 00:06:12,440
+The market rate increased.
+
+112
+00:06:12,440 --> 00:06:15,460
+So the value of that decreased, essentially.
+
+113
+00:06:15,460 --> 00:06:18,610
+To account for this, let's first look at cash.
+
+114
+00:06:18,610 --> 00:06:22,960
+Cash decreased by $8,500, because we repurchased the bond
+
+115
+00:06:22,960 --> 00:06:24,650
+at that amount.
+
+116
+00:06:24,650 --> 00:06:27,450
+Since we retired the entire amount of debt,
+
+117
+00:06:27,450 --> 00:06:32,060
+payable decreases by $11,500, and bond discount
+
+118
+00:06:32,060 --> 00:06:35,030
+is also decreased by $1,500.
+
+119
+00:06:35,030 --> 00:06:38,780
+To balance the equation how, we record an increase of $1,500 in
+
+120
+00:06:38,780 --> 00:06:41,350
+retained earnings as a gain.
+
