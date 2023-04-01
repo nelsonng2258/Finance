@@ -1,0 +1,296 @@
+0
+00:00:00,000 --> 00:00:00,027
+
+
+1
+00:00:00,027 --> 00:00:01,610
+INSTRUCTOR: In this class, we're going
+
+2
+00:00:01,610 --> 00:00:06,110
+to talk about two major asset classes, inventories
+
+3
+00:00:06,110 --> 00:00:11,460
+and property, plant, and equipment, also known as PPE.
+
+4
+00:00:11,460 --> 00:00:15,060
+Just as a reminder of what we did last time,
+
+5
+00:00:15,060 --> 00:00:18,570
+we finished the Peters Company's financial statements.
+
+6
+00:00:18,570 --> 00:00:22,650
+That allowed us to work with a balance sheet equation.
+
+7
+00:00:22,650 --> 00:00:25,680
+We talked about revenue recognition.
+
+8
+00:00:25,680 --> 00:00:28,710
+And we talked about allowance accounting.
+
+9
+00:00:28,710 --> 00:00:30,120
+In this class, again, we're going
+
+10
+00:00:30,120 --> 00:00:34,790
+to do inventories and PPE.
+
+11
+00:00:34,790 --> 00:00:39,110
+Just to motivate inventories and property, plant, and equipment,
+
+12
+00:00:39,110 --> 00:00:43,520
+let's look at the balance sheets of Walmart and Amazon,
+
+13
+00:00:43,520 --> 00:00:46,100
+both in 2016.
+
+14
+00:00:46,100 --> 00:00:48,680
+Notice that for Walmart, inventories
+
+15
+00:00:48,680 --> 00:00:51,780
+are 22% of their total assets.
+
+16
+00:00:51,780 --> 00:00:55,340
+So that's a big proportion of total assets.
+
+17
+00:00:55,340 --> 00:00:59,780
+Amazon also has about 14% of their total assets
+
+18
+00:00:59,780 --> 00:01:01,550
+in inventories.
+
+19
+00:01:01,550 --> 00:01:08,360
+In terms of property, plant, and equipment, Walmart has 56% net.
+
+20
+00:01:08,360 --> 00:01:10,700
+That's gross property, plant, and equipment
+
+21
+00:01:10,700 --> 00:01:13,430
+minus accumulated depreciation.
+
+22
+00:01:13,430 --> 00:01:18,080
+And Amazon has 35% net PPE.
+
+23
+00:01:18,080 --> 00:01:22,070
+So both these asset amounts are big proportions
+
+24
+00:01:22,070 --> 00:01:25,780
+of their balance sheets.
+
+25
+00:01:25,780 --> 00:01:29,970
+So just to briefly motivate what we're doing,
+
+26
+00:01:29,970 --> 00:01:32,930
+why do firms have inventory?
+
+27
+00:01:32,930 --> 00:01:36,170
+Well, firms have inventory because if you're
+
+28
+00:01:36,170 --> 00:01:40,250
+like an Amazon or a Walmart, when your customer comes in,
+
+29
+00:01:40,250 --> 00:01:44,120
+you want to have goods available to sell your customers.
+
+30
+00:01:44,120 --> 00:01:46,740
+And a big question in operations research
+
+31
+00:01:46,740 --> 00:01:51,410
+is how do firms determine how much inventory to hold?
+
+32
+00:01:51,410 --> 00:01:55,220
+And firms are going to trade off the benefits of inventory
+
+33
+00:01:55,220 --> 00:01:57,590
+with the cost of inventory.
+
+34
+00:01:57,590 --> 00:02:01,290
+The benefits, we already talked about a minute ago,
+
+35
+00:02:01,290 --> 00:02:03,230
+which as you want to have lots of goods
+
+36
+00:02:03,230 --> 00:02:05,520
+available to sell to your customers
+
+37
+00:02:05,520 --> 00:02:10,680
+so you never send your customer away empty-handed.
+
+38
+00:02:10,680 --> 00:02:13,640
+The costs are the more inventory you
+
+39
+00:02:13,640 --> 00:02:16,610
+hold, the less cash you have because you have
+
+40
+00:02:16,610 --> 00:02:19,610
+to buy the inventory with cash.
+
+41
+00:02:19,610 --> 00:02:22,560
+Also, the more inventory you have,
+
+42
+00:02:22,560 --> 00:02:24,410
+the more buildings you have to rent.
+
+43
+00:02:24,410 --> 00:02:27,030
+Because inventory takes up space,
+
+44
+00:02:27,030 --> 00:02:29,330
+so you have storage costs.
+
+45
+00:02:29,330 --> 00:02:31,670
+And the other cost is that inventory
+
+46
+00:02:31,670 --> 00:02:37,290
+can go bad, like lettuce in a supermarket.
+
+47
+00:02:37,290 --> 00:02:40,670
+It can become obsolete, like a computer.
+
+48
+00:02:40,670 --> 00:02:45,210
+Or it can be stolen, if it's a valuable type of inventory.
+
+49
+00:02:45,210 --> 00:02:48,710
+So firms are going to trade off the costs and benefits
+
+50
+00:02:48,710 --> 00:02:53,320
+to figure out how much inventory they want to hold.
+
+51
+00:02:53,320 --> 00:02:58,220
+Now inventory accounting has two fundamental components,
+
+52
+00:02:58,220 --> 00:03:02,230
+the first, which we're not going to cover here, is product cost.
+
+53
+00:03:02,230 --> 00:03:04,000
+Say you're making a car.
+
+54
+00:03:04,000 --> 00:03:05,800
+You take a car body--
+
+55
+00:03:05,800 --> 00:03:07,600
+that's a raw material--
+
+56
+00:03:07,600 --> 00:03:09,460
+you put an engine in it.
+
+57
+00:03:09,460 --> 00:03:11,230
+You put some doors on it.
+
+58
+00:03:11,230 --> 00:03:13,630
+Those are all raw materials.
+
+59
+00:03:13,630 --> 00:03:18,310
+And then the workers who assemble the car are the labor.
+
+60
+00:03:18,310 --> 00:03:20,980
+They're a cost that goes into inventory.
+
+61
+00:03:20,980 --> 00:03:23,560
+And then finally, you've got a factory.
+
+62
+00:03:23,560 --> 00:03:26,080
+You've got all the machinery in the factory.
+
+63
+00:03:26,080 --> 00:03:30,050
+Those are indirect costs, like factory depreciation.
+
+64
+00:03:30,050 --> 00:03:33,010
+So we're not going to discuss this in depth.
+
+65
+00:03:33,010 --> 00:03:36,250
+We're just going to assume that the costs are in the inventory
+
+66
+00:03:36,250 --> 00:03:37,450
+account.
+
+67
+00:03:37,450 --> 00:03:39,650
+They're on the balance sheet.
+
+68
+00:03:39,650 --> 00:03:42,440
+And we're making a cost flow decision.
+
+69
+00:03:42,440 --> 00:03:46,810
+It could be LIFO, which is last in, first out,
+
+70
+00:03:46,810 --> 00:03:50,440
+or it could be FIFO, which is first in, first out.
+
+71
+00:03:50,440 --> 00:03:54,100
+So which costs are transferred from the balance sheet
+
+72
+00:03:54,100 --> 00:03:55,370
+to the income statement?
+
+73
+00:03:55,370 --> 00:03:59,610
+That's what we'll be talking about in this class.
+
