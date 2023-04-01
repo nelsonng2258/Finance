@@ -1,0 +1,155 @@
+
+PROFESSOR: We now consider another example
+in interest rate risk management in the context
+of asset liability management.
+Suppose an insurance company issues a guaranteed investment
+contract, also called GIC, which are basically zeros.
+It has a par value of $10,000, it
+has a maturity of five years, and a guaranteed interest
+rate of 8%.
+Therefore, at maturity, the insurance company
+pays the par value plus total interest,
+which is $10,000 times 1 plus 8% raised to the power of 5.
+Suppose that the insurance company
+chooses to fund this obligation by investing
+in a six-year Treasury bond with a par value of $10,000
+and coupon rate of 8%, trading at par at this point.
+This implies that the current interest rate is also 8%.
+Therefore, after issuing the GIC,
+the insurance company incurs a fixed-income liability of L0
+equals $10,000 in the form of a five-year zero.
+This liability is then funded by a six-year coupon bond
+as an asset with 8% coupon rate and a market value of A0--
+also equals $10,000.
+If interest rate stays at 8% for the next five years,
+the value of the asset will perfectly
+match the value of the liability.
+That is, A5 equals 10,000 times 1.08 to the power of 5,
+and that gives us L5.
+But what if interest rate changes?
+The value of the asset, which is a six-year coupon
+bond, and the liability, which is a five-year at zero,
+will both change where interest rate changes.
+But how much?
+We can easily compute the following.
+First, the duration of the liability is DL.
+That equals five years.
+The duration of the asset, which is DA--
+and that equals 4.9927, also in years.
+Since the asset and the liability
+have almost the same duration, the liability
+remains close to be fully funded for small interest rate
+changes.
+That is, delta A minus delta L equals minus 10,000
+times 4.9927--
+the duration for the asset--
+minus 5-- the duration for the liability--
+divide by 1.08-- the yield--
+times delta r, the change in the yield.
+And that's approximately 10,000 times 0.006759 times delta r.
+And that's approximately 0, if delta r is small.
+What about large interest rate changes?
+The table on the slide shows the changes
+in the value of asset and liability.
+The second row gives the values of asset in liability at r
+equals 8%.
+They are matched.
+The third row gives their values when
+interest rate increases to 9%.
+The match is close, but not perfect.
+Clearly, for large interest rate changes,
+the mismatch between asset and liability
+becomes more substantial.
+In this case, it is $1.79.
+This is because, as we have learned
+in the fixed-income lecture in part 1 of this course,
+we have different convexities.
+We can compute the convexity for the asset and liability,
+respectively.
+The results are as follows.
+The convexity of the liability is CXL.
+That equals 12.86.
+The convexity for the asset is CXE.
+That equals 14.02.
+Including the second-order terms in values
+of asset and liability, we have the following equation.
+Delta A minus delta L is approximately 10,000 times
+0.006759 times 1%--
+which is the change in yield--
+plus 10,000 times 14.02 minus 12.86 times 1% yield change
+squared.
+And that gives us 1.84.
+This approximately explains the mismatch
+between asset and liability in the previous table.
+This example demonstrates two points.
+First, for asset liability management,
+we can properly choose the asset to greatly reduce interest rate
+risk by matching their modified durations, especially
+for small interest rate changes.
+Second, for large interest rate movements,
+however, matching modified duration still
+leaves an interest rate risk of the second order.
+To further reduce the second-order risk,
+we may need to consider further matching convexities
+between the asset and liability.
+Interest rate risks can be easily hedged
+using interest rate forwards or futures.
+We consider, in our last example on risk management.
+Suppose that we have $1 billion invested in the portfolio
+of government bonds, and are concerned
+about volatile interest rates over the next three months.
+We have decided to use three months Treasury bonds forwards
+or futures to protect the value of this investment.
+The modified duration of the bond portfolio is 6.80.
+Forwards and futures on 10-year treasury bonds
+are actively traded, and we have the following information
+on that.
+The T-bond to be delivered has a modified duration of 9.20.
+The T-bond pays no coupons over the next three months.
+Let the current T-bond price be B10.
+Each contract delivers $100,000 of face value of T-bonds.
+The forward and futures price is F equals $93.50 for face value
+of $100.
+The forward and futures price for one contract is $93,500.
+The three-month interest rate is r
+equals 1%, which is not annualized.
+By no arbitrage, we have the following equation
+for the forward and spot prices of the bond.
+F equals 1 plus r times B10, and that equals 1.01 times B10.
+The first question is, in order to hedge the interest rate
+risk of our bond portfolio, should we
+long or short interest rate forwards and futures?
+Of course, short, given that our original position is long
+in bonds.
+The next question is, how many contracts to short?
+We need to properly match modified duration.
+Let's work this out.
+If yield curve shifts by delta y,
+the value of the bond portfolio changes by delta VP.
+That's approximately minus 6.80 times Vp times delta y.
+The current price on the 10-year T-bond changes by delta B10--
+approximately minus 9.20 times B10 times delta y.
+Forward price changes by delta F--
+approximately minus 1.01 times 9.20 times B10 times delta y.
+And that equals minus 9.20 times F times delta y.
+Gains and losses on the forward contract
+are realized in three months.
+Matching the gain/loss in present value terms,
+we have the following equation--
+minus the number of contracts times 1/1.01 times 93,500 times
+9.20 times delta y--
+the left-hand side-- equals minus $1 billion--
+that's the portfolio value--
+times 6.80-- its modified duration-- times delta y.
+That's the right-hand side.
+Therefore, the number of contracts to short
+is given by the following equation.
+The number of contracts should equal to 1.01 times 1 billion
+divided by 93,500, then times 6.80 divided by 9.20.
+That gives us 7,905.14.
+Hence, we need to short 7,905 contracts.
+One important point to note is that, in this hedging strategy,
+the hedge ratio is based on the modified
+durations of the portfolio and the hedging vehicle.
+Both of them will change over time.
+Therefore, we need to rebalance the hedge accordingly.

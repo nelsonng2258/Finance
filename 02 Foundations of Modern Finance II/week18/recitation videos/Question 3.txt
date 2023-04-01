@@ -1,0 +1,160 @@
+
+PROFESSOR: In this video, we will
+consider a corporate finance situation,
+known as Debt Overhang.
+Consider a two-period setting.
+Today's year is 0.
+Next year is year 1.
+We will assume that all investors are risk neutral,
+and that the risk-free rate is 0%.
+These assumptions are made for convenience,
+as they would allow us to simply work
+with physical probabilities and ignore time value of money.
+Next year, the economy can take one of the three states--
+Good, Okay, or Bad.
+The probability of the good state is 1/6.
+The probability of the Okay state is 1/3.
+And the probability of the bad state is 1/2.
+There is a hypothetical firm whose assets
+will be worth $100 in the Good state, $50 in the Okay state,
+and $20 in the Bad state.
+The firm has outstanding debt with face value $50 due
+in a year 1.
+Management of the firm has identified a new project,
+which requires an investment of $6 in year 0,
+and pays off $10 in year one with certainty.
+Management understands that this project has positive NPV of $4,
+and therefore, should be taken, but does not have cash
+available to finance this project.
+Therefore, it considers raising external financing
+to fund this project.
+There are three available financing options.
+Option 1 is to raise new debt junior to existing debt.
+Option 2 is to raise new equity.
+And option 3 is to raise new debt, senior to existing debt.
+You're hired as a financial advisor
+to the management of the firm.
+Determine which of these three options are feasible,
+and advise on the best financing option.
+First, let's determine the current value
+of debt and equity without the new project.
+The following table shows values of debt and equity
+in all three states in year 1.
+Recall that the face value of debt is $50.
+Therefore, in Good and Okay states,
+the value of the firm's assets is high enough
+to pay the full face value back.
+In the bad state, however, the value of assets is only $20,
+which is not enough to pay the full $50 back to debt holders.
+In this case, the value of debt is $20.
+Equity holders are worth $50 in the Good state,
+which is computed as the difference
+between the value of assets and the face value of the bond.
+In the Okay state and in the Bad state, the equity is worth 0.
+The current value of debt equals to the probability
+of the Good state, which is 1/6, multiplied by the value of debt
+in that state, which is 50, plus probability
+of the Okay state, which is 1/3, multiplied by the value of debt
+in that state, which is 50, plus probability of the Bad
+state, which is 1/2, multiplied by the value of debt
+in that state, which is 20.
+This gives us $35.
+The current value of equity equals
+to the probability of the Good state, which
+is 1/6, multiplied by the value of equity in the Good state,
+which is 50.
+The value of equity in the other two states is 0.
+Hence, the current value of equity equals to $8.33.
+Let's now consider the first financing option, junior debt.
+Let's first find the face value of this new junior debt.
+Suppose that the face value is x dollars, where x is less than
+or equal than 10.
+Recall that the project generates the value of $10.
+And hence, the total value of assets in the year 1
+will be $110 in the Good state, $60 in the Okay state,
+and $30 in the Bad state.
+The value of existing debt will be $50 in the Good state,
+$50 in the Okay state, and $30 in the Bad state.
+Therefore, the payoff to junior debt holders
+will be x in the Good and the Okay states,
+and 0 in the Bad state.
+In order to price this debt, recall that the project
+requires $6 to finance.
+Since all investors are risk neutral and the risk rate is 0,
+$6 should equal to the expected payoff from the bond in year 1.
+This gives us $12.
+Recall that we assume that x should be less than 10.
+If it's 12, the value of assets in year 1 in the Okay state
+is not high enough to repay the full face value back.
+Let's revisit this assumption and assume
+that x is greater than 10.
+Then the payoff to junior debt holders in the Good state
+will be x.
+In the Okay state, it will be 10.
+And in the Bad state, it will remain 0.
+This gives us the new pricing equation.
+Solving this, we get $16.
+Therefore, for junior debt holders,
+to agree to fund this project, the face value of the bond
+has to be $16.
+With this face value of new junior debt,
+the payoff to equity holders will be $44 in the Good state,
+and $0 in the Okay and Bad states.
+The value of equity in year 0 will be $7.33.
+Therefore, equity holders will not
+be in favor of this financing arrangement,
+because it increases their value by $1--
+from $8.33 to $7.33.
+Let's now consider the second financing option, equity.
+In this case, the value of equity in year one
+is $60 in the Good state, $10 in the Okay state,
+and $0 in the Bad state.
+The value of equity in year 0 equals
+to the negative $6 spent to finance
+the project, plus the expected payoff in year 1,
+which is 1/6 times 60 plus 1/3 times 10.
+This gives us $7.33.
+Therefore, equity holders will not
+agree to finance this project, because doing
+so decreases their value from $8.33 to $7.33,
+effectively resulting in negative NPV of $1.
+
+Finally, let's consider the last financing option, senior debt.
+Senior debt will effectively be risk free,
+because the value of assets in all three states of the world
+is high enough to not default on the promised payment.
+Therefore, senior debt will have face value of $6.
+The payoff to existing debt holders
+will be $50 in the Good state, $50 in the Okay state,
+and $24 in the Bad state.
+The pay off to equity holders will be $54 in the Good state,
+$4 in the Okay state, and $0 in the Bad state.
+The current value of equity under this financing
+arrangement will be $10.33.
+Equity holders would therefore want to finance this project,
+because it increases their value from $8.33 to $10.33.
+What about existing debt holders?
+The current value under this financing arrangement
+becomes $37.
+Therefore, existing debt holders will also
+be supportive of this plan.
+Let's summarize our findings.
+Financing this project with either junior debt or equity
+isn't feasible, because it lowers the value
+of current shareholders.
+Since they're the decision makers in the firm,
+they will decide not to take this project.
+On the other hand, if the project
+is financed with senior debt, both equity holders
+and current debt holders benefit.
+And hence, they'll be in favor of this project.
+This explains why we often observe that existing debt
+holders agree to subordinate themselves
+to new tranches of debt, because in distress situations, when
+a firm is plagued by debt overhang,
+financing new positive NPV projects benefits existing debt
+holders.
+Finally, note that the positive NPV created
+by the project, which is $4, is split
+between the equity holders and current debt
+holders, each of whom get $2.

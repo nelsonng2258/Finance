@@ -1,0 +1,107 @@
+
+PROFESSOR: We now add the debt's tax shield into the analysis.
+Now MM becomes VL, the value of the levered firm,
+equals D plus E equals VU, the value of the unlevered firm,
+plus PVTS, the Present Value of Tax Shield minus,
+PVDC, the Present Value of Default Cost,
+and that, as we know, is the APV, the Adjusted Present
+Value.
+For simplicity we ignore the cost of default
+for the rest of our discussion here,
+assuming debt is mostly risk-free.
+We can then think of the firm or the project
+with leverage in two equivalent ways, which is shown
+in the following equation.
+VL, the value of levered firm, equals E plus D,
+Debt plus Equity, which also equals
+VU, the value of the unlevered firm, plus PVTS
+and that's the APV.
+The first part of the equation expresses it
+as a portfolio of debt and equity.
+The second part of the equation views it
+as a portfolio of two assets.
+One is an asset with payoff identical to that
+of the project after tax.
+The other is an asset with payoff identical to the tax
+shield of debt.
+In order to value these two cash flows, one from the project
+or asset and the other from tax shield,
+we need to find their discount rates.
+For this we need to specify their time evolution, which
+also specifies their risks.
+We have discussed this issue when we discussed the link
+between risk and the horizon in Capital Budgeting
+II in Lecture 16.
+In order to stay tractable, we assume
+that the firm's leverage ratio remains constant over time.
+This is a strong assumption, but not
+too far off as a first-order approximation from reality,
+as we have seen from the data in Lecture 17.
+Constant leverage ratio means that the following two ratios,
+that is DT over VLT equals WD, which is the Weight of Debt,
+in the total value of the firm.
+And ET over VLT, which is WE, that's
+the relative Weight of Equity, in a total value of the firm.
+These two ratios would stay constant.
+This then implies that the required rate of return
+on the levered firm is given by rL equals DT over VLT times rD
+plus ET over VLT times rE, that is
+the weighted average of return on debt and equity,
+or written slightly differently, debt
+equals wD times rD plus wE times rE.
+Next we have 1 plus rL times VLT equals
+1 minus tau times Xt plus 1 plus tau times rD times Dt
+and plus VLt plus 1.
+
+We can also rewrite this as 1 minus tau times Xt plus 1
+plus tau times rD times Dt over VLT times VLT plus VLT plus 1.
+Here the left hand side is the gross payoff
+from the levered firm and the right hand side
+is it's three pieces, after tax cash flow, tax credit,
+and the resale value.
+We can further rewrite the above as 1 plus rL minus wD times
+tau times rD then times VLT equals 1 minus tau times Xt
+plus 1 plus VLT plus 1.
+From this equation, which is rewritten
+as the first equation on top of the slide,
+we can define WACC as rL minus wD tau times
+rD equals wD times rD plus wE times rE minus wD times tau
+times rD, which also equals wD times 1 minus tau times
+rD plus wE times rE.
+We can then rewrite the first equation on this slide as--
+left hand side--
+1 plus WACC times VLT equals 1 minus tau times Xt
+plus 1 plus VLT plus 1 or VLT equals
+1 minus tau times Xt plus VLT plus 1 divided by 1 plus WACC.
+We're writing this out.
+We have sum from s equal to 1 to infinity
+1 minus tau times Xt plus s divided by 1 plus WACC
+to the power of s.
+Therefore, Including the tax benefit from leverage,
+still ignoring the cost of default
+and assuming a constant leverage ratio,
+we can value a firm or a project in two equivalent ways.
+The first is to compute its NPV adjusted for the tax benefit
+of debt, that is the APV.
+It is given by the first equation on the slide.
+VL equals D plus E equals VU plus PVTS.
+Writing out, that gives us sum from s equal to 1
+to infinity 1 minus tau times Xs divided by 1 plus rA
+to the power of s plus PVTS and that is the APV.
+The second method is to compute its value
+by discounting its after tax cash flow using
+WACC adjusted for tax shield.
+It leads to the second valuation equation on the slide.
+VL equals the sum from s equal to 1
+to infinity 1 minus tau times Xs divided
+by 1 plus WACC raised to the power of s,
+where the WACC is adjusted for tax shield
+given by the last equation on the slide, that is WACC equals
+wD times 1 minus tau rD plus wE times rE,
+which can also be written as D over D
+plus E times 1 minus tau times rD plus D over D plus E
+times rE.
+Both methods, if implemented properly,
+will give the right answer.
+We will return to their pros and cons
+at the end of this lecture.

@@ -1,0 +1,126 @@
+
+PROFESSOR: In this video, we will
+consider an example of a firm with multiple tiers of debt
+in its capital structure and learn
+how to price debt and equity in such circumstances.
+Suppose that there are two possible states of the economy
+next year: good and bad.
+The good state occurs with probability 80%,
+and the bad state occurs with probability 20%.
+Consider a small firm whose assets in year 1
+will be worth $90 million in the good state and $40 million
+in the bad state.
+This firm has two bonds outstanding, bond 1 and bond 2.
+Both bonds pay 0% coupon and mature in year 1.
+The face value of bond 1 is $40 million,
+and the face value of bond 2 is $10 million.
+Bond 2 is junior to bond 1.
+This means that, in the event of default, holders of bond 2
+do not receive any payment until holders of bond 1
+receive their promised payment in full.
+We will assume that the one year risk-free rate is 5%
+and that corporations do not pay corporate income taxes.
+Suppose that the current market value of equity
+is $28.57 million.
+What are the current prices of bonds 1 and 2
+and their promised yields?
+What are the expected returns on both bonds and equity
+of this firm?
+Let's start by finding what the holders
+of both bonds and equity receive in each state of the economy.
+Recall that the face value of bond 1 is $40 million.
+And this bond is the most senior claim on this firm's assets.
+Since the assets are worth $90 million
+in the good state and $40 million in the bad state,
+holders of bond 1 will receive their full promised payment
+of $40 million in both states.
+Holders of bond 2, however, will not receive anything
+in the bad state because the assets of the firm
+will be worth zero after the firm makes the payment
+to holders of bond 1.
+The firm will default on its promised payments
+to the holders of bond 2.
+Equity holders are residual claimants on firm's assets.
+In the good state, they receive $40 million of the payments
+to holders of bond 1 and bond 2 are made in full.
+In the bad state, however, the value of equity
+is zero since the value of assets
+is large enough only to satisfy the claim of holders of bond 1.
+To price both of these bonds, let's start
+by finding risk-neutral probabilities
+of the up and down states.
+We don't know the current value of the firm.
+However, we know its current value of equity.
+It is $28.57 million.
+Therefore, we can use the current value of equity,
+together with the risk-free rate,
+to find risk-neutral probabilities.
+We can write down the following equation.
+The current value of equity should
+equal to the risk-neutral probability
+of the up state multiplied by the equity value
+in the up state plus the risk-neutral probability
+of the down state multiplied by the value of equity
+in the down state discounted to present at the risk-free rate.
+Note that the value of equity in the down state is zero.
+Solving this equation for qu, we get 0.75.
+This means that the risk-neutral probability of the up state
+is 75%, and the risk-neutral probability of the down state
+is 25%.
+Knowing risk-neutral probabilities,
+we can find current prices of bonds 1 and 2.
+The price of bond 1 equals to the risk-neutral probability
+of the up state, which is 0.75, times the payoff
+from the bond in the up state, which is $40 million,
+plus the risk-neutral probability of the down state,
+which is 0.25, times the payoff from the bond
+in the down state, which is also $40 million,
+discounted to present at the risk-free rate.
+Since this bond pays face value in both states,
+its price effectively equals to the face value
+discounted to present at the risk-free rate.
+It is easy to understand why.
+This bond never defaults and always pays in full.
+Therefore, it is effectively a risk-free bond.
+The price of bond 2 equals qu multiplied
+by 10 plus qd multiplied by 0 discounted to present
+at the risk-free rate.
+This gives us $7.14 million.
+The promised yield on the first bond
+is simply 5% because this bond is risk free.
+The promised yield on the second bond
+is its face value, which is $10 million,
+divided by its current price, which is $7.14 million,
+minus 1.
+This equals to 40%.
+This high yield indicates the riskiness of this bond.
+Note that, in the down state, holders of this bond
+incur a 100% loss rate.
+Finally, let's find expected returns
+on both bonds and equity of this firm.
+The expected return on bond 1 is 5% simply
+because it is risk free.
+The expected return on bond 2 equals its expected payoff,
+which is physical probability of the up
+state, 80%, times the payoff in the up state, which
+is $10 million, plus physical probability of the down state,
+20%, times the payoff in the down state, which is 0,
+divided by the current bond price minus 1.
+This gives us 12%.
+We can decompose the promised yield of the second bond, which
+is 40%, into the default premium, risk premium,
+and the risk-free rate of return.
+We see that the default premium is 28%, four times as large
+as the risk premium, which is 7%.
+Finally, the expected return on equity of this firm
+equals to the expected payoff, which is 80% times $40 million
+plus 20% times 0, divided by the current price, which
+is $28.57 million, minus 1.
+This gives us 12%.
+Note that the risk premium on equity of this firm
+and on bond 2 are the same.
+This should not be surprising because both equity and bond 2
+only pay in the up state.
+And, in the down state, they're both worthless.
+In other words, bond 2 and equity of this firm
+are effectively identical securities.

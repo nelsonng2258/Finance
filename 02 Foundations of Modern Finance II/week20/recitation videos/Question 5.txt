@@ -1,0 +1,147 @@
+
+PROFESSOR: In this video, we will
+consider an example of corporate risk hedging
+with derivative securities.
+Consider a market with two possible states a year
+from now--
+good or bad.
+In the good state, the return on the market portfolio
+will be 10%.
+And in the bad state, it will be negative 20%.
+The one-year risk-free rate is 5%.
+A biotechnology startup in Cambridge, Massachusetts
+works on a new vaccine delivery technology.
+Next year, this technology will be sold to Moderna.
+If the market is in the good state,
+the startup will generate $80 million in cash flow
+on this sale.
+If the market, however, is in the bad state,
+the cash flow will only be $20 million.
+The startup is considering borrowing $15 million
+to fund the development.
+If the startup fails to pay the loan back,
+it faces bankruptcy costs of $5 million.
+In the event of default, these costs
+will reduce the value of the remaining assets
+and therefore, the payout to debt holders.
+Suppose that the loan is issued at par
+and that the interest is due at maturity.
+You are hired as a financial advisor to the startup.
+Your goal is to advise on the best financing arrangement.
+Assume that the tax rate is 25%.
+First, let's find the value of this firm
+if it is 100% equity financed.
+The after-tax cash flow in year 1 in the good state
+is $60 million.
+And in the bad state it is $15 million.
+To find the present value after-tax cash flows,
+let's first find risk-neutral probabilities.
+The risk-neutral probability of the good state is 83.3%,
+and risk-neutral probability of the bad state is 16.7%.
+Knowing the risk-neutral probabilities,
+we can find the value of this firm
+if it is 100% equity financed.
+This value is $50 million.
+
+Now let's find the value of this firm if it borrows $15 million.
+First, let's find the promised yield on this loan.
+We can write down the following equation.
+The borrowed amount, which is $15 million,
+has to equal to the expected value of the payoff
+from this loan under the risk-neutral measure discounted
+to present at the risk-free rate.
+This equals to the risk-neutral probability
+of the good state, which is 83.3% times the total payoff
+from the loan in the good state, which
+equals to the principal of $15 million
+plus interest, which equals to the promised yield,
+plus the risk-neutral probability of the bad state,
+which is 16.7%, times the payoff from the bond in the bad state,
+which equals the total value of assets in the bad state, $15
+million, minus the losses of $5 million
+that the firm would incur in the event of default.
+Solving this equation, we get 12.67%.
+If this loan is issued at par, the interest rate on this loan
+would be 12.67%.
+And its face value would be $15 million.
+Knowing the interest rate on this loan,
+we can find the present value of interest tax shields.
+They equal to the expected value of tax shields generated
+by this loan under the risk neutral measure discounted
+to present at the risk-free rate.
+Importantly, note that this loan generates tax shields only
+in the up state, because in the down state,
+the firm defaults and does not pay interest,
+and therefore, does not get the tax shield.
+Hence, the present value of tax shields
+equals to the risk-neutral probability
+of the up state times the tax rate
+times the interest rate times the face
+value of this loan divided by 1 plus the risk-free rate.
+This gives us $0.38 million.
+Next, let's find the present value
+of financial distress costs.
+They equal to the expected value of financial distress costs
+under the risk-neutral measure discounted to present
+at the risk-free rate.
+Since the firm defaults on the loan only in the down state,
+the present value of distress costs
+is the risk-neutral probability of the down state
+times the dollar value of distress costs, which
+is $5 million.
+This gives us $0.79 million.
+Putting this all together we can find
+the value of the levered firm.
+It equals to the value of the unlevered firm
+plus the present value of tax shields,
+minus the present value of distress costs.
+We find that the value of the firm if it takes the loan
+is $49.58 million.
+We see that this value is lower than the value
+of the unlevered firm, which was $50 million.
+The reason for this is that the present value of distress costs
+outweighs the present value of interest tax shields.
+Based on this analysis, we conclude that the firm
+should not take the loan.
+
+CFO of the startup considers the possibility
+of hedging default risk in order to avoid bankruptcy costs.
+She approached the investment bank
+Lazard, which offered to sell a put option that
+pays $750,000 in the bad state of the economy
+and nothing in the good state.
+Assuming that the option will be fairly priced,
+what would you advise the biotech startup to do?
+Having additional $750,000 in the bad state effectively
+allows the startup to avoid default
+and to borrow $15 million at the risk-free rate.
+With this hedge, the startup has enough funds
+to pay both the principal, which is $15 million,
+and the interest, 5% times $15 million,
+which is $750,000 in both good and bad states.
+So let's quantify the costs and benefits of this hedging
+strategy.
+The cost of this hedging strategy
+is the price of the put option, which we have to pay to Lazard.
+Assuming that this option would be fairly priced,
+its price equals to the present value of the payoff
+under the risk control measure discounted to present
+at the risk-free rate.
+This gives us $0.12 million.
+The benefit of this hedging strategy
+is the fact that we avoid bankruptcy costs
+and generate interest tax shield in both states of the world.
+The tax shield equals to the tax rate times the risk-free rate,
+because with the hedge, as long as it is risk-free,
+ties the principal amount.
+This tax shield is risk-free and hence, we
+discount it to present at the risk-free rate.
+We find that the present value of tax shield is $0.18 million.
+We see that the benefits outweigh the costs.
+And therefore, the startup should take the loan
+and buy the put.
+By doing this, the startup avoids default,
+and its value becomes $50 million
+plus the present value of tax shields, which is $0.18 million
+minus the cost of hedging, which is $0.12 million.
+The firm value is therefore $50.06 million.

@@ -1,0 +1,888 @@
+0
+00:00:00,000 --> 00:00:01,110
+
+
+1
+00:00:01,110 --> 00:00:04,140
+PROFESSOR: From our previous discussions in part one
+
+2
+00:00:04,140 --> 00:00:07,120
+and earlier in part two of this course,
+
+3
+00:00:07,120 --> 00:00:10,230
+we have established the following results
+
+4
+00:00:10,230 --> 00:00:14,070
+about the appropriate discount rates for a project.
+
+5
+00:00:14,070 --> 00:00:18,060
+A project's discount rate or the required rate of return or cost
+
+6
+00:00:18,060 --> 00:00:21,750
+of capital is the expected rate of return
+
+7
+00:00:21,750 --> 00:00:24,930
+demanded by the financial market or investors
+
+8
+00:00:24,930 --> 00:00:27,510
+in the financial market for the project
+
+9
+00:00:27,510 --> 00:00:32,100
+or traded assets in the market with a similar timing and risk
+
+10
+00:00:32,100 --> 00:00:33,220
+characteristics.
+
+11
+00:00:33,220 --> 00:00:36,090
+Therefore, a project's discount rate
+
+12
+00:00:36,090 --> 00:00:41,280
+is tied to the timing and risk of its cash flow.
+
+13
+00:00:41,280 --> 00:00:44,340
+Consequently, the discount rate is usually
+
+14
+00:00:44,340 --> 00:00:46,740
+different for different projects.
+
+15
+00:00:46,740 --> 00:00:50,760
+Simply because the timing and the risk of their cash flows
+
+16
+00:00:50,760 --> 00:00:54,080
+can be quite different.
+
+17
+00:00:54,080 --> 00:00:57,560
+An important implication of these results
+
+18
+00:00:57,560 --> 00:01:01,160
+is that, in general, it's incorrect to use
+
+19
+00:01:01,160 --> 00:01:03,800
+a firm wide cost of capital to discount
+
+20
+00:01:03,800 --> 00:01:07,910
+cash flows from different projects the firm faces.
+
+21
+00:01:07,910 --> 00:01:11,836
+What is the discount rate of a project, then?
+
+22
+00:01:11,836 --> 00:01:15,360
+In the simplest case, a single discount rate
+
+23
+00:01:15,360 --> 00:01:20,920
+can be used for all pieces of the cash flow from the project.
+
+24
+00:01:20,920 --> 00:01:23,410
+This case corresponds to the situation
+
+25
+00:01:23,410 --> 00:01:28,340
+where the term structure of discount rates is flat.
+
+26
+00:01:28,340 --> 00:01:31,610
+Although we often use this case in our examples
+
+27
+00:01:31,610 --> 00:01:36,590
+and computations, this is true only under very restrictive
+
+28
+00:01:36,590 --> 00:01:39,130
+conditions.
+
+29
+00:01:39,130 --> 00:01:42,130
+In the general case, different discount rates
+
+30
+00:01:42,130 --> 00:01:46,900
+are needed for different pieces of the project's cash flow.
+
+31
+00:01:46,900 --> 00:01:50,840
+This arises for two reasons.
+
+32
+00:01:50,840 --> 00:01:53,890
+First, the term structure of interest rates
+
+33
+00:01:53,890 --> 00:01:56,710
+is in general not flat.
+
+34
+00:01:56,710 --> 00:02:00,040
+That is, the time value of money for the market
+
+35
+00:02:00,040 --> 00:02:04,230
+is not constant for different time horizons.
+
+36
+00:02:04,230 --> 00:02:08,250
+This implies that even for risk free cash flows,
+
+37
+00:02:08,250 --> 00:02:10,919
+the discount rate is in general different
+
+38
+00:02:10,919 --> 00:02:14,480
+depending on the timing.
+
+39
+00:02:14,480 --> 00:02:18,620
+Second, different pieces of a cash flow in general
+
+40
+00:02:18,620 --> 00:02:20,690
+have different risks.
+
+41
+00:02:20,690 --> 00:02:25,310
+Consequently, their risk premiums will be different.
+
+42
+00:02:25,310 --> 00:02:29,260
+We now consider the discount rate of a project.
+
+43
+00:02:29,260 --> 00:02:32,230
+For simplicity, let's assume a single discount
+
+44
+00:02:32,230 --> 00:02:35,330
+rate is sufficient.
+
+45
+00:02:35,330 --> 00:02:38,720
+A projects' required rate of return, or discount rate,
+
+46
+00:02:38,720 --> 00:02:42,350
+is determined by systematic risk.
+
+47
+00:02:42,350 --> 00:02:45,590
+For concreteness, let's assume that the CAPM
+
+48
+00:02:45,590 --> 00:02:49,310
+holds in determining an asset's systematic risk
+
+49
+00:02:49,310 --> 00:02:52,800
+and the corresponding risk premium.
+
+50
+00:02:52,800 --> 00:02:55,980
+Then, the project's required rate of return
+
+51
+00:02:55,980 --> 00:02:59,220
+is given by its beta.
+
+52
+00:02:59,220 --> 00:03:03,780
+That is, R bar the expected rate of return on the project,
+
+53
+00:03:03,780 --> 00:03:09,180
+it should equal to rf, which is risk free rate, plus the beta
+
+54
+00:03:09,180 --> 00:03:13,500
+of the project times the risk premium on the market
+
+55
+00:03:13,500 --> 00:03:18,780
+portfolio, that is R bar m minus rf.
+
+56
+00:03:18,780 --> 00:03:22,800
+Therefore, if we know the project's beta, not the firm's
+
+57
+00:03:22,800 --> 00:03:27,330
+beta, its discount rate can be easily determined by the CAPM.
+
+58
+00:03:27,330 --> 00:03:29,990
+
+
+59
+00:03:29,990 --> 00:03:33,010
+How do we determine the project's beta?
+
+60
+00:03:33,010 --> 00:03:37,710
+Well, we consider three scenarios or approaches.
+
+61
+00:03:37,710 --> 00:03:41,420
+The first is to find comparable pure play
+
+62
+00:03:41,420 --> 00:03:46,790
+companies traded in a market and use their betas.
+
+63
+00:03:46,790 --> 00:03:50,960
+That is, to use the market information.
+
+64
+00:03:50,960 --> 00:03:56,020
+The second scenario approach is to find comparable projects
+
+65
+00:03:56,020 --> 00:04:00,010
+and use their cash flows to estimate beta.
+
+66
+00:04:00,010 --> 00:04:05,450
+This approach uses cash flow information.
+
+67
+00:04:05,450 --> 00:04:08,250
+If we don't have any one of the above,
+
+68
+00:04:08,250 --> 00:04:10,850
+then we will need to use fundamental analysis
+
+69
+00:04:10,850 --> 00:04:15,580
+and judgment to guesstimate the project's beta.
+
+70
+00:04:15,580 --> 00:04:20,890
+And this approach uses fundamental information.
+
+71
+00:04:20,890 --> 00:04:24,280
+We will rely mostly on the first approach,
+
+72
+00:04:24,280 --> 00:04:29,510
+as it is often the most applicable and reliable.
+
+73
+00:04:29,510 --> 00:04:31,310
+We will demonstrate this approach
+
+74
+00:04:31,310 --> 00:04:35,020
+by considering an example.
+
+75
+00:04:35,020 --> 00:04:39,090
+Suppose that Berkshire Hathaway, an investment company,
+
+76
+00:04:39,090 --> 00:04:44,220
+is thinking about getting into a new business in oil and gas.
+
+77
+00:04:44,220 --> 00:04:48,060
+It needs to evaluate the NPV of the cash flow
+
+78
+00:04:48,060 --> 00:04:50,990
+from this business.
+
+79
+00:04:50,990 --> 00:04:54,400
+We assume that CAPM holds.
+
+80
+00:04:54,400 --> 00:05:01,740
+Then, Berkshire Hathaway's assets have a beta of 0.48.
+
+81
+00:05:01,740 --> 00:05:05,190
+What should it use as the cost of capital
+
+82
+00:05:05,190 --> 00:05:08,100
+for this new business?
+
+83
+00:05:08,100 --> 00:05:10,590
+First, Berkshire Hathaway should not
+
+84
+00:05:10,590 --> 00:05:13,590
+use the beta or required rate of return
+
+85
+00:05:13,590 --> 00:05:19,410
+on its assets to value the cash from an energy business.
+
+86
+00:05:19,410 --> 00:05:22,410
+As we know, Berkshire's assets represent
+
+87
+00:05:22,410 --> 00:05:26,250
+a very diverse portfolio ranging from financial firms,
+
+88
+00:05:26,250 --> 00:05:30,750
+like Bank of America, Wells Fargo, and American Express,
+
+89
+00:05:30,750 --> 00:05:35,490
+to consumer brands, like Coca-Cola and Kraft Heinz,
+
+90
+00:05:35,490 --> 00:05:38,290
+to tech companies like Apple.
+
+91
+00:05:38,290 --> 00:05:42,040
+These assets have quite different risk characteristics
+
+92
+00:05:42,040 --> 00:05:46,690
+or betas as the energy sector.
+
+93
+00:05:46,690 --> 00:05:50,740
+Berkshire should use the beta of an energy company,
+
+94
+00:05:50,740 --> 00:05:56,700
+or even better, a company concentrating on oil and gas.
+
+95
+00:05:56,700 --> 00:06:00,990
+One example is ConocoPhillips, whose business
+
+96
+00:06:00,990 --> 00:06:04,760
+is mostly in gas and oil.
+
+97
+00:06:04,760 --> 00:06:08,270
+How about Exxon, another energy company?
+
+98
+00:06:08,270 --> 00:06:12,470
+As it turns out, ExxonMobil has a more diverse business
+
+99
+00:06:12,470 --> 00:06:13,850
+portfolio.
+
+100
+00:06:13,850 --> 00:06:20,050
+It is less of a pure play in gas and oil, as we'll see later.
+
+101
+00:06:20,050 --> 00:06:24,190
+This slide shows ConocoPhillips percentage share
+
+102
+00:06:24,190 --> 00:06:31,470
+of revenue from its business portfolio at the end of 2019.
+
+103
+00:06:31,470 --> 00:06:35,280
+As we can see, oil and natural gas consist
+
+104
+00:06:35,280 --> 00:06:42,310
+of 87% of its business, including natural gas liquids
+
+105
+00:06:42,310 --> 00:06:46,260
+will increase the share to 96%.
+
+106
+00:06:46,260 --> 00:06:50,220
+That is, ConocoPhillips is mostly a pure play
+
+107
+00:06:50,220 --> 00:06:52,950
+company in oil and gas.
+
+108
+00:06:52,950 --> 00:06:55,410
+The plots at the bottom of the slide
+
+109
+00:06:55,410 --> 00:07:00,030
+also show the performance of ConocoPhillips stock
+
+110
+00:07:00,030 --> 00:07:02,960
+over the past 10 years.
+
+111
+00:07:02,960 --> 00:07:06,760
+It's been quite unimpressive to put it mildly.
+
+112
+00:07:06,760 --> 00:07:09,430
+Nonetheless, we can use the returns
+
+113
+00:07:09,430 --> 00:07:12,460
+on ConocoPhillips' stock and bond
+
+114
+00:07:12,460 --> 00:07:17,290
+to estimate the beta of its assets, which are primarily
+
+115
+00:07:17,290 --> 00:07:19,030
+oil and gas.
+
+116
+00:07:19,030 --> 00:07:24,050
+It turns out to be 0.77.
+
+117
+00:07:24,050 --> 00:07:29,780
+Using a risk free rate of 5% and a market risk premium of 6%,
+
+118
+00:07:29,780 --> 00:07:33,800
+we can obtain the required rate of return for Conoco,
+
+119
+00:07:33,800 --> 00:07:38,490
+which is the expected rate of return of the project, that's
+
+120
+00:07:38,490 --> 00:07:42,240
+equal to rF, the risk free rate, plus the beta
+
+121
+00:07:42,240 --> 00:07:47,370
+of the project, that's 0.77, times the market premium, which
+
+122
+00:07:47,370 --> 00:07:52,320
+is R bar on the market minus the risk free rate.
+
+123
+00:07:52,320 --> 00:07:56,840
+If we put in numbers, that should equal to 0.05
+
+124
+00:07:56,840 --> 00:08:04,040
+plus 0.77 times 0.06, which is the market premium.
+
+125
+00:08:04,040 --> 00:08:07,370
+Finishing that calculation, we get 9.62%
+
+126
+00:08:07,370 --> 00:08:11,270
+for the cost of capital of Conoco,
+
+127
+00:08:11,270 --> 00:08:13,310
+which should also be the cost of capital
+
+128
+00:08:13,310 --> 00:08:15,200
+for the project, which is going to be
+
+129
+00:08:15,200 --> 00:08:16,595
+in the same line of business.
+
+130
+00:08:16,595 --> 00:08:19,450
+
+
+131
+00:08:19,450 --> 00:08:23,320
+Before we settle on the number for the cost of capital,
+
+132
+00:08:23,320 --> 00:08:26,660
+a few more comments are in order.
+
+133
+00:08:26,660 --> 00:08:30,650
+First, we need to be mindful about the quality
+
+134
+00:08:30,650 --> 00:08:33,320
+of these estimates, including the estimates
+
+135
+00:08:33,320 --> 00:08:37,679
+for the beta, the risk free rate, and the market premium.
+
+136
+00:08:37,679 --> 00:08:42,070
+For example, the beta estimates may be noisy.
+
+137
+00:08:42,070 --> 00:08:47,030
+Second, estimates are only approximations to reality.
+
+138
+00:08:47,030 --> 00:08:50,680
+For example, beta estimates can be changing over time.
+
+139
+00:08:50,680 --> 00:08:53,860
+Does this reflect a time varying beta
+
+140
+00:08:53,860 --> 00:08:56,800
+instead of an estimation error?
+
+141
+00:08:56,800 --> 00:09:01,630
+If so, can we still use beta estimates from past data
+
+142
+00:09:01,630 --> 00:09:06,230
+to approximate for future data in obtaining cost of capital,
+
+143
+00:09:06,230 --> 00:09:09,910
+which is forward looking?
+
+144
+00:09:09,910 --> 00:09:14,320
+It will also be desirable to have a sense about how good
+
+145
+00:09:14,320 --> 00:09:16,980
+the approximations are.
+
+146
+00:09:16,980 --> 00:09:20,190
+For example, CAPM is a model aimed
+
+147
+00:09:20,190 --> 00:09:24,460
+at capturing systematic risks and risk premium.
+
+148
+00:09:24,460 --> 00:09:29,770
+It's at best a reasonable approximation for reality.
+
+149
+00:09:29,770 --> 00:09:32,230
+Is it a good enough approximation?
+
+150
+00:09:32,230 --> 00:09:35,140
+How much can we ignore the other possible risk factors?
+
+151
+00:09:35,140 --> 00:09:37,730
+
+
+152
+00:09:37,730 --> 00:09:42,740
+We don't have readily available fixes to fully resolve
+
+153
+00:09:42,740 --> 00:09:45,680
+the issues raised above.
+
+154
+00:09:45,680 --> 00:09:48,720
+Nonetheless, it is important to be
+
+155
+00:09:48,720 --> 00:09:52,770
+aware of the potential limitations of the estimates
+
+156
+00:09:52,770 --> 00:09:57,440
+approximations and models when applying them.
+
+157
+00:09:57,440 --> 00:10:00,020
+Understanding these limitations will also
+
+158
+00:10:00,020 --> 00:10:04,010
+help to come up with possible remedies
+
+159
+00:10:04,010 --> 00:10:07,640
+when we need to overcome these limitations.
+
+160
+00:10:07,640 --> 00:10:12,110
+Here, I would also like to bring up an important point
+
+161
+00:10:12,110 --> 00:10:16,580
+in obtaining an asset's expected rate of return, which is also
+
+162
+00:10:16,580 --> 00:10:20,070
+related to the discussion above.
+
+163
+00:10:20,070 --> 00:10:23,520
+Given that we have identified ConocoPhillips
+
+164
+00:10:23,520 --> 00:10:27,690
+as a company with similar assets as the new business
+
+165
+00:10:27,690 --> 00:10:30,300
+under consideration, why don't we
+
+166
+00:10:30,300 --> 00:10:34,740
+just use the past returns on Conoco's assets, which
+
+167
+00:10:34,740 --> 00:10:39,240
+are traded in the market in the form of its stock and bond
+
+168
+00:10:39,240 --> 00:10:43,560
+to directly estimate its expected rate of return?
+
+169
+00:10:43,560 --> 00:10:47,020
+This way, we won't need to rely on an asset pricing
+
+170
+00:10:47,020 --> 00:10:50,200
+model like the CAPM.
+
+171
+00:10:50,200 --> 00:10:54,280
+One major reason for not relying on a return estimate
+
+172
+00:10:54,280 --> 00:10:58,540
+based on past returns is that the estimate is often
+
+173
+00:10:58,540 --> 00:11:01,190
+very noisy.
+
+174
+00:11:01,190 --> 00:11:03,470
+As we have seen from the previous slide,
+
+175
+00:11:03,470 --> 00:11:07,490
+the performance of Conoco's stock over the 2010
+
+176
+00:11:07,490 --> 00:11:11,900
+to 2020 period is almost flat.
+
+177
+00:11:11,900 --> 00:11:14,495
+We probably don't believe that the expected rate
+
+178
+00:11:14,495 --> 00:11:19,640
+of return on Conoco's stock is close to zero.
+
+179
+00:11:19,640 --> 00:11:24,470
+The reason why we may not want to use an asset's past returns
+
+180
+00:11:24,470 --> 00:11:28,250
+to estimate its expected return is in part
+
+181
+00:11:28,250 --> 00:11:32,810
+because the returns are very volatile or noisy.
+
+182
+00:11:32,810 --> 00:11:37,850
+This is particularly true if we use a relatively short history,
+
+183
+00:11:37,850 --> 00:11:40,490
+although 10 years in the case of Conoco
+
+184
+00:11:40,490 --> 00:11:45,780
+above is not that short for most companies.
+
+185
+00:11:45,780 --> 00:11:51,740
+Even if we have a long history on a company or an industry,
+
+186
+00:11:51,740 --> 00:11:55,650
+its expected return may well be changing over time.
+
+187
+00:11:55,650 --> 00:11:59,810
+And the past data from the very distant history
+
+188
+00:11:59,810 --> 00:12:02,660
+may not be very relevant in estimating
+
+189
+00:12:02,660 --> 00:12:05,470
+its future expected return.
+
+190
+00:12:05,470 --> 00:12:09,280
+However, estimating beta can be more accurate.
+
+191
+00:12:09,280 --> 00:12:13,470
+For example, we can use more frequent data on returns
+
+192
+00:12:13,470 --> 00:12:16,710
+to obtain better estimates for beta.
+
+193
+00:12:16,710 --> 00:12:20,210
+In other words, in the context of certain asset pricing
+
+194
+00:12:20,210 --> 00:12:23,690
+models, like the CAPM, it is easier
+
+195
+00:12:23,690 --> 00:12:28,320
+to estimate risks than expected returns.
+
+196
+00:12:28,320 --> 00:12:32,610
+In this case, we can choose to follow the model using
+
+197
+00:12:32,610 --> 00:12:35,970
+the more accurate risk estimates to obtain
+
+198
+00:12:35,970 --> 00:12:39,300
+an estimate for the required rate of return
+
+199
+00:12:39,300 --> 00:12:42,210
+for individual assets assuming we
+
+200
+00:12:42,210 --> 00:12:46,610
+have good estimates for market risk premiums.
+
+201
+00:12:46,610 --> 00:12:49,760
+As mentioned before, to obtain the cost of capital
+
+202
+00:12:49,760 --> 00:12:52,760
+for oil and gas business, we can also
+
+203
+00:12:52,760 --> 00:12:56,450
+look at ExxonMobil, which has a large share
+
+204
+00:12:56,450 --> 00:13:00,500
+of its business in oil and gas.
+
+205
+00:13:00,500 --> 00:13:05,800
+The figure on the slide shows ExxonMobil's earnings mix.
+
+206
+00:13:05,800 --> 00:13:10,510
+As we can see, 83% of ExxonMobil's earnings
+
+207
+00:13:10,510 --> 00:13:13,960
+are from oil and other upstream products,
+
+208
+00:13:13,960 --> 00:13:16,790
+like liquid natural gas.
+
+209
+00:13:16,790 --> 00:13:22,250
+However, the remaining 17% are from the downstream products
+
+210
+00:13:22,250 --> 00:13:26,430
+like fuels, lubes, and chemicals.
+
+211
+00:13:26,430 --> 00:13:28,790
+The risk of downstream products are
+
+212
+00:13:28,790 --> 00:13:32,610
+different from that of upstream products.
+
+213
+00:13:32,610 --> 00:13:37,800
+Therefore, ExxonMobil is less of a pure play in oil and gas
+
+214
+00:13:37,800 --> 00:13:40,360
+than ConocoPhillips.
+
+215
+00:13:40,360 --> 00:13:44,330
+This is why we use ConocoPhillips.
+
+216
+00:13:44,330 --> 00:13:48,390
+What happens if we cannot find pure play companies?
+
+217
+00:13:48,390 --> 00:13:51,870
+In that case, we will try to find companies
+
+218
+00:13:51,870 --> 00:13:56,490
+with a small number of business lines in their portfolios.
+
+219
+00:13:56,490 --> 00:14:00,090
+We can first estimate the betas of the portfolios
+
+220
+00:14:00,090 --> 00:14:04,830
+and then use portfolio analytics to back out the betas of each
+
+221
+00:14:04,830 --> 00:14:06,680
+of the pieces.
+

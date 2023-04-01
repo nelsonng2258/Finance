@@ -1,0 +1,224 @@
+0
+00:00:00,000 --> 00:00:00,780
+
+
+1
+00:00:00,780 --> 00:00:02,940
+PROFESSOR: We now consider an example
+
+2
+00:00:02,940 --> 00:00:08,380
+to illustrate how the approach laid out above is implemented.
+
+3
+00:00:08,380 --> 00:00:12,850
+We are considering buying SuperSoft, a software company.
+
+4
+00:00:12,850 --> 00:00:15,700
+We have the following information.
+
+5
+00:00:15,700 --> 00:00:21,500
+SuperSoft is currently privately held and 100% equity financed.
+
+6
+00:00:21,500 --> 00:00:24,650
+Its projected annual pre-tax cash flow
+
+7
+00:00:24,650 --> 00:00:29,060
+is $1.5 million perpetually.
+
+8
+00:00:29,060 --> 00:00:34,290
+SuperSoft faces an effective tax rate of 30%.
+
+9
+00:00:34,290 --> 00:00:39,900
+Its assets can sustain a debt level of 20% of its asset value
+
+10
+00:00:39,900 --> 00:00:43,540
+without significant distress cost.
+
+11
+00:00:43,540 --> 00:00:46,080
+The risk-free interest rate is 5%,
+
+12
+00:00:46,080 --> 00:00:51,000
+which is also what SuperSoft pays on its debt.
+
+13
+00:00:51,000 --> 00:00:53,760
+In addition, there are two publicly-traded software
+
+14
+00:00:53,760 --> 00:00:56,370
+companies: 1 and 2.
+
+15
+00:00:56,370 --> 00:01:00,540
+Their financial data is given in a table on the slide.
+
+16
+00:01:00,540 --> 00:01:04,560
+For firm 1, which is described in the second row,
+
+17
+00:01:04,560 --> 00:01:06,960
+its required rate of return on equity
+
+18
+00:01:06,960 --> 00:01:12,180
+is 24.31%, given in the second column.
+
+19
+00:01:12,180 --> 00:01:14,550
+Its required rate of return on debt
+
+20
+00:01:14,550 --> 00:01:18,840
+is 6.95%, given in the third column.
+
+21
+00:01:18,840 --> 00:01:23,670
+Its debt-to-equity ratio is 0.5, given in the fourth column,
+
+22
+00:01:23,670 --> 00:01:31,950
+and its tax rate is 0.34, or 34%, given in the last column.
+
+23
+00:01:31,950 --> 00:01:35,180
+For firm 2, as given in the third row,
+
+24
+00:01:35,180 --> 00:01:39,170
+its required rate of return on equity and debt
+
+25
+00:01:39,170 --> 00:01:45,630
+are 29.07% and 9.88%, respectively.
+
+26
+00:01:45,630 --> 00:01:48,980
+It's debt-to-equity ratio is 1.2.
+
+27
+00:01:48,980 --> 00:01:53,790
+And its tax rate is 0.30.
+
+28
+00:01:53,790 --> 00:01:58,140
+Our first task is to uncover the required rate of return
+
+29
+00:01:58,140 --> 00:02:00,930
+for the assets of these two firms
+
+30
+00:02:00,930 --> 00:02:04,370
+and then use it to value SuperSoft.
+
+31
+00:02:04,370 --> 00:02:09,530
+Using MM II with taxes, we can uncover the required rate
+
+32
+00:02:09,530 --> 00:02:13,430
+of return on the asset of firm 1 and 2,
+
+33
+00:02:13,430 --> 00:02:22,700
+which are rA1 equals 18.51% and rA2 equals 18.60%.
+
+34
+00:02:22,700 --> 00:02:24,050
+Take the average.
+
+35
+00:02:24,050 --> 00:02:27,350
+We have rA equals 18.56%.
+
+36
+00:02:27,350 --> 00:02:32,630
+Using it to value SuperSoft's asset or after-tax cash flow,
+
+37
+00:02:32,630 --> 00:02:35,750
+we have its value without the leverage effect.
+
+38
+00:02:35,750 --> 00:02:39,980
+That is, VU equals 1 minus 0.3--
+
+39
+00:02:39,980 --> 00:02:42,410
+that's tax rate-- times 1.5--
+
+40
+00:02:42,410 --> 00:02:44,030
+that's the pre-tax cash flow--
+
+41
+00:02:44,030 --> 00:02:49,760
+divided by the discount rate, which is 0.1856.
+
+42
+00:02:49,760 --> 00:02:54,290
+That gives us $5.66 million.
+
+43
+00:02:54,290 --> 00:02:58,040
+Its value with leverage at 20% leverage ratio
+
+44
+00:02:58,040 --> 00:03:03,650
+is then given by VL equals VU plus PVTS,
+
+45
+00:03:03,650 --> 00:03:08,270
+and that equals 5.66 plus 0.3--
+
+46
+00:03:08,270 --> 00:03:09,410
+again, the tax rate--
+
+47
+00:03:09,410 --> 00:03:14,180
+times 0.05, the interest rate, times 0.2, the debt ratio,
+
+48
+00:03:14,180 --> 00:03:16,160
+times 5.66--
+
+49
+00:03:16,160 --> 00:03:18,560
+the asset value without leverage--
+
+50
+00:03:18,560 --> 00:03:23,290
+and then discounted by 0.1856.
+
+51
+00:03:23,290 --> 00:03:28,150
+That gives us $5.75 million.
+
+52
+00:03:28,150 --> 00:03:31,680
+Therefore, by using the debt capacity of the asset,
+
+53
+00:03:31,680 --> 00:03:34,140
+we can increase the value of the firm
+
+54
+00:03:34,140 --> 00:03:41,370
+by the PVTS, which is 5.75 minus 5.66.
+
+55
+00:03:41,370 --> 00:03:45,650
+And that is $0.09 million.
+

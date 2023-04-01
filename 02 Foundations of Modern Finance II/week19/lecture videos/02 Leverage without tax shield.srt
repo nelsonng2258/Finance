@@ -1,0 +1,224 @@
+0
+00:00:00,000 --> 00:00:00,900
+
+
+1
+00:00:00,900 --> 00:00:04,080
+PROFESSOR: As we have seen in the 415Inc.
+
+2
+00:00:04,080 --> 00:00:06,930
+example in the last lecture, in order
+
+3
+00:00:06,930 --> 00:00:09,630
+to value the effect of leverage, we
+
+4
+00:00:09,630 --> 00:00:15,210
+need to know how to value its tax benefit and distress cost.
+
+5
+00:00:15,210 --> 00:00:18,960
+This requires us to know the proper discount
+
+6
+00:00:18,960 --> 00:00:22,530
+rates for the corresponding cash flows.
+
+7
+00:00:22,530 --> 00:00:27,210
+For this purpose, we need to properly specify their risks
+
+8
+00:00:27,210 --> 00:00:30,930
+or their evolution over time.
+
+9
+00:00:30,930 --> 00:00:33,990
+We start by introducing some notation.
+
+10
+00:00:33,990 --> 00:00:38,040
+Let Xt denote the cash flow from the firm's asset
+
+11
+00:00:38,040 --> 00:00:42,730
+at time t, which is independent of leverage.
+
+12
+00:00:42,730 --> 00:00:48,610
+Vut denote the value of the firm without leverage at time t.
+
+13
+00:00:48,610 --> 00:00:54,760
+Vlt denote the value of the firm with leverage at time t.
+
+14
+00:00:54,760 --> 00:00:57,700
+Dt denote the value of its debt at t,
+
+15
+00:00:57,700 --> 00:01:01,540
+and Et denote the value of its equity at t.
+
+16
+00:01:01,540 --> 00:01:04,239
+ra denote the required rate of return
+
+17
+00:01:04,239 --> 00:01:07,480
+on the firm's asset or the unlevered firm.
+
+18
+00:01:07,480 --> 00:01:11,650
+rl denote the required rate of return on the levered firm.
+
+19
+00:01:11,650 --> 00:01:14,710
+rd denote the required rate of return also
+
+20
+00:01:14,710 --> 00:01:17,650
+the expected interest rate on the firm's debt
+
+21
+00:01:17,650 --> 00:01:19,300
+when it's levered.
+
+22
+00:01:19,300 --> 00:01:23,020
+re denote the required rate of return on equity.
+
+23
+00:01:23,020 --> 00:01:26,580
+Tau denote the firm's tax rate.
+
+24
+00:01:26,580 --> 00:01:29,460
+We will start with the situation without the tax
+
+25
+00:01:29,460 --> 00:01:31,380
+shield from debt.
+
+26
+00:01:31,380 --> 00:01:34,860
+Then MM holds in its benchmark form,
+
+27
+00:01:34,860 --> 00:01:37,360
+which implies the following.
+
+28
+00:01:37,360 --> 00:01:40,800
+First, a firm's asset can be viewed simply
+
+29
+00:01:40,800 --> 00:01:44,100
+as a portfolio of its debt and equity.
+
+30
+00:01:44,100 --> 00:01:47,880
+That is, V equals D plus E.
+
+31
+00:01:47,880 --> 00:01:51,570
+Next, asset return equals the weighted average
+
+32
+00:01:51,570 --> 00:01:56,330
+of the returns of debt and equity, which is the WACC.
+
+33
+00:01:56,330 --> 00:02:02,060
+That is given by ra equals D divided by D plus E, that's
+
+34
+00:02:02,060 --> 00:02:05,970
+the weight of debt, times rd, then plus E divided
+
+35
+00:02:05,970 --> 00:02:09,590
+by D plus E times re, and that's the WACC
+
+36
+00:02:09,590 --> 00:02:11,720
+as we have defined before.
+
+37
+00:02:11,720 --> 00:02:13,520
+The value of the firm is then given
+
+38
+00:02:13,520 --> 00:02:19,070
+by the following equation, V equals D plus E. That equals
+
+39
+00:02:19,070 --> 00:02:24,830
+the sum from x equal to 1 to infinity, 1 minus tau
+
+40
+00:02:24,830 --> 00:02:28,310
+times Xs, that's the after-tax cash flow,
+
+41
+00:02:28,310 --> 00:02:32,150
+divided by 1 plus ra, the asset discount
+
+42
+00:02:32,150 --> 00:02:36,200
+rate, raised to the power of s.
+
+43
+00:02:36,200 --> 00:02:40,400
+And this discounted sum of future cash flows
+
+44
+00:02:40,400 --> 00:02:45,740
+equals Vu, the unlevered firm, which also equals the sum from
+
+45
+00:02:45,740 --> 00:02:51,510
+s equal to 1 to infinity 1 minus tau times Xs divided
+
+46
+00:02:51,510 --> 00:02:55,310
+by 1 plus WACC raised to the power of s.
+
+47
+00:02:55,310 --> 00:03:00,100
+And as we know, that also equals the value of the levered firm.
+
+48
+00:03:00,100 --> 00:03:05,370
+We also have a MM II, the firm's cost of capital with leverage,
+
+49
+00:03:05,370 --> 00:03:11,910
+is re equals ra plus D over E, the debt to equity ratio,
+
+50
+00:03:11,910 --> 00:03:15,480
+times ra minus rd.
+
+51
+00:03:15,480 --> 00:03:20,700
+In particular, we have ra is independent of D over E,
+
+52
+00:03:20,700 --> 00:03:22,500
+or leverage.
+
+53
+00:03:22,500 --> 00:03:26,540
+It is given only by the firm's asset.
+
+54
+00:03:26,540 --> 00:03:32,570
+re increases with D over E, assuming debt is risk-free.
+
+55
+00:03:32,570 --> 00:03:38,170
+rd may also increase with D over E as debt becomes risky.
+

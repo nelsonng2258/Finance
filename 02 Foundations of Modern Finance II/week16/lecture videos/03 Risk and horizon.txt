@@ -1,0 +1,202 @@
+
+PROFESSOR: As discussed before, given an asset or its cash
+flow, discount rates over different time horizons
+are, in general, different.
+In this part of our discussion, we
+would like to better understand the underlying reasons for this
+and how to deal with it.
+The term structure of discount rates arises for two reasons.
+First, the term structure of interest rates.
+That is, the market gives different interest
+rates for different horizons.
+One year interest rate is, in general, different
+from the 10 year interest rate.
+This simply reflects the different rates of return
+the market expects for save cash flows
+at different future dates.
+In our analysis of the fixed income
+market in part one of this course,
+we also discussed the underlying factors influencing
+the interest rate curve.
+Here, for our purpose, we will take the interest rate curve
+as given.
+The second reason is that the term structure
+of risk premium for a given asset or cash flow
+is, in general, not flat either.
+This can come from two sources.
+The first is that the risk of the cash flow,
+in particular, the systematic risk,
+can be different for the different pieces of the cash
+flow at different dates.
+The second is that the corresponding risk
+premium can also differ.
+Therefore, a sufficient condition
+for flat term structure of discount rates
+is that the term structure of interest rates is flat
+and also the term structure of risk premiums is flat as well.
+In general, these two conditions are hard to satisfy.
+In what follows, we further consider under what
+conditions we may get a flat term
+structure for risk premiums.
+It heavily depends on how risks accumulate
+over time for the asset or project
+and how the price of risk varies with the time horizon.
+We do so by considering an example.
+Suppose that the CAPM holds and the risk premium on the market
+portfolio is 8%, the risk free rate
+is 4%, both constant over time and over different time
+horizons.
+Therefore, the market's time value for money and price
+of risk have a flat term structure.
+We only focus on how the risk of an asset's cash flow
+may vary over different time horizons.
+Let's suppose that we are now in year zero
+and consider a financial contract which
+pays a cash flow in two years, that is, year two.
+The cash flow CF2 is given by the ratio
+between the value of S&P 500 index in year two
+and its value in year one.
+Ignoring dividends and assume that S&P 500 index represents
+the market portfolio.
+This ratio is simply the gross rate
+of return on the market portfolio in year two.
+That is, 1 plus RM2.
+The question for us is, what should the current price
+of this cash flow be?
+Let's consider this step by step.
+First, let's try to find its price in year one.
+That is, the present value of CF2 in year one.
+The expected value of CF2 in year one
+is simply 1 plus the expectation in year one of RM2,
+which is return on the market in year two.
+Where the expectation is taken year one.
+This is also just 1 plus R bar on the market.
+That's expected gross rate of return on the market portfolio.
+Here, as usual, we assume the returns on the market portfolio
+are RID over time.
+In order to obtain its present value in year one,
+we need the right discount rate.
+Since the cash flow has the same risk as the market portfolio,
+it's required rate of return should
+be the same as the market portfolio.
+Putting the two pieces together, the present value
+of CF2 in year one is simply its expected value,
+which is 1 plus R bar M discounted at the markets
+expect of rate of return, which is also R bar M. It, then,
+will give us $1 for sure.
+In other words, the price of this cash flow in year one
+is simply $1 with no uncertainty.
+This should not be surprising.
+If we have $1 in year one for sure,
+we can easily invest it in the market portfolio for one year
+and then obtain 1 plus RM2, which is CF2.
+
+Next, we need to find the present value of this cash flow
+now, that is, in year zero.
+This should be straightforward given
+that the value of CF2 in year one is $1 with no uncertainty.
+The right discount rate should be the risk free rate,
+which is 4%.
+Writing this out, we have the first equation
+that is PV0 equals $1 discounted at 4%, which gives us
+96.15 cents.
+The second equation on the slide further
+expresses the present value at time 0
+in terms of the expected value of CF2 discounted back
+over the two periods, year one and year two.
+What we see from the second equation
+is that the discount rates for the two periods are different.
+It is RBM for the second period and RF for the first period.
+The reason for two discount rates
+is that CF2 is risky only during period two,
+not during period one.
+This example tells us that in order
+to have the same risk adjusted discount rates for both periods
+the cash flow will need to bear risks in both periods
+and in certain ways.
+We demonstrate this last point also by an example.
+We now consider another financial contract,
+which pays in two years a cash flow that
+equals the ratio between the S&P 500 index then
+and its value today.
+It's cash flow, CF2, can also be written
+as the product of the gross returns of S&P 500 index
+over year one and year two.
+That is, CF2 equals S&P year two divided by S&P in year zero
+and equals the product of the gross return
+on the market over these two years.
+Clearly, CF2 is risky.
+Its risk is related to the market risk
+in both year one and year two.
+This differs from the previous contract
+whose risk is only related to the market risk in year two.
+Let us now try to value this cash flow.
+Again, we start at year one.
+The present value of CF2 in year one
+is given by the following discounted cash flow formula.
+The numerator is the expected value of CF2 in year one.
+It is simply the gross return on the market over year one.
+That is, 1 plus RM1, which is known in year one times
+the expected gross return on the market over year two, which
+is 1 plus E1 of RM2.
+The denominator is 1 plus the appropriate discount rate.
+Since the cash flow has the same risk as the market,
+the discount rate should simply be the required rate of return
+on the market portfolio, which is
+R bar M. Therefore, the denominator becomes
+1 plus R bar M.
+Since the expected gross return on the market
+is also 1 plus R bar M, we then have PV1 of CF2
+is 1 plus RM1, which is simply the gross return
+on the market in year one.
+We didn't consider the present value of this cash flow
+in year zero.
+Since the value of this asset in year one, which is 1 plus RM1
+has the same risk as the market, its present value today
+is simply its expected value today
+discounted at the expected rate of return on the market.
+The expected value of PV1 today is the gross return
+on the market.
+We then have PV of 0 equals 1 plus E0 of RM1 divided by 1
+plus the expected value of RM1.
+Finished in the calculation, that gives us $1.
+This result is not surprising.
+If we have a dollar today and invest it in S&P 500
+for two years, the resulting cash flow
+is exactly CF2, again, ignoring dividends.
+We can rewrite the present value of CF2
+in the form of the last equation on the slide.
+PV0 of CF2 equals the expectation
+at 0 of CF2 divided by 1 plus the expected value of RM1
+times 1 plus the expected value of RM2.
+
+That equals-- again, expected value of CF2 divided by 1 plus
+R bar M squared.
+Finished in the calculation, that gives us $1.
+In this equation, we are using the same discount rate
+for both year one and year two.
+Given that we assume a flat interest rate curve,
+this also implies a constant risk premium
+for different horizons and periods.
+The reason this is the case is that, for the cash
+flow under consideration, which is CF2 here,
+its risks over the two periods are the same
+and are compounding on each other.
+Therefore, we can use the same risk-adjusted discount
+rate for both periods assuming a constant risk-free rate
+and a constant price of risk, which
+is the premium on the market portfolio.
+The above two examples show that in addition
+to assuming constant time value of money
+in price of risk for different future periods,
+a constant discount rate is justifiable
+if the risks of a cash flow is compounding
+at a constant rate over time.
+Some assets or cash flows may have their risks
+evolving in this fashion over time,
+such as the value of a stock.
+But not all assets, are like this
+such as risk-free government bonds.
+In our NPV analysis, we have to be
+mindful of the various approximations we are making,
+their limitations, and possible remedies when needed.

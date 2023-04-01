@@ -1,0 +1,200 @@
+
+PROFESSOR: Investors or debt and equity holders
+care only about after-tax cash flows.
+Taxes will influence a firm's after-tax cash flow
+to its investors and, consequently,
+its choices in investment and financing.
+In particular, different financial transactions
+and payouts are taxed differently.
+For example, interest payments are
+tax-exempt at the firm level.
+It is treated as an expense.
+Dividends and retained earnings are not.
+Under such a tax system, financing clearly
+matters, because it will affect a firm's tax
+bill and its after-tax payoffs.
+It's also worth noting that tax code varies substantially
+across countries.
+In our discussion, we follow the US tax system
+only for convenience and illustration.
+The methodology we developed, however,
+can be applied to other tax systems.
+We will start by focusing on corporate taxes
+first, assuming no personal taxes.
+This is true for many institutional investors,
+such as pension funds, charities,
+and tax-exempt foundations.
+We will return to the impact of personal taxes
+at the end of this lecture.
+When interest payments are treated
+as a firm's expense and as tax-exempt,
+then increasing debt can increase firm value
+by reducing its tax burden.
+We illustrate this point by considering an example.
+XYZ Inc generates a safe annual income of $100 million
+perpetually.
+The discount rate, which should be the risk-free rate, is 10%.
+XYZ faces a corporate tax rate of 35%.
+Let's now consider two alternative ways
+the firm can be financed.
+The first is 100% debt financing.
+XYZ then pays out all its income of $100 million as interest.
+The second way is 100% equity financing.
+The firm then pays out $100 million
+as dividends or capital gains.
+The table on the slide shows XYZ's pre and after-tax cash
+flows and their valuations.
+The second column describes the firm's cash flows
+with 100% debt financing.
+The second row gives the pre-tax cash
+flow, which is $100 million.
+This also equals the total interest payment.
+The third row gives the tax the firm has to pay.
+Since after the interest payment the firm has no income
+to report, it pays zero taxes.
+For the firm's investors-- in this case, it's debt holders--
+the after-tax income is $100 million.
+The firm's value, which is simply
+the value of its debt in this case,
+is 100 divided by 10%, the discount
+rate, which equals $1 billion.
+The third column in the table gives the firm's cash flows
+under 100% equity financing.
+The second row gives the pre-tax cash
+flow, which is $100 million, same as before.
+The third row is the tax.
+With an income of $100 million and a tax rate of 35%,
+the tax bill will be $35 million.
+For the firm's investors-- in this case, its equity holders--
+the after-tax income is 100 minus 35,
+which equals $65 million.
+The firm's value, which is the value
+of its equity in this case, is 65,
+which is the annual cash flow divided by the discount rate,
+again, 10%.
+That gives us $650 million.
+
+Comparing the two financing choices,
+it is obvious that debt financing dominates,
+because it avoids taxes and increases the after-tax cash
+flow to the firm's investors.
+In the above analysis, we assume that both debt and equity
+holders pay no personal taxes.
+It should be clear from the analysis,
+however, that personal taxes can change the results, which
+we will return to later.
+Expanding on what we have learned from the example,
+we can extend the MM framework to include corporate taxes.
+First, the starting point of MM still holds.
+That is the pie before tax remains unaffected by capital
+structure.
+It is fully determined by the firm's asset or its cash flow.
+In other words, the size of the pie before tax
+equals the present value of pre-tax cash flow.
+But the tax authority, the IRS in the US,
+takes a slice before investors.
+Financing policy affects the size of that slice.
+In particular, since interest payments are tax deductible,
+the slice of IRS can be reduced by using more debt.
+Consequently, the after-tax value of the firm
+depends on its capital structure.
+This idea can be clearly illustrated
+by the so-called Pie Theory as shown
+in the plot on this slide.
+The total size of the pie is given
+by the present value of the firm's pre-tax cash flow.
+It is fixed given the firm's asset.
+This pie will then be sliced into three pieces--
+the present value of its tax liability,
+the present value of debt, D, and the present value
+of equity, E. Conservation of cash or value
+gives the present value of pre-tax cash flow
+equals the present value of tax plus D plus E.
+The left hand side, which is the total size of the pie,
+is fixed.
+Increasing D will then decrease the tax bill
+or the present value of tax.
+And it has increased the total value
+of the firm, which is D plus E. Therefore,
+the value of the firm after tax can be increased by increasing
+debt, which reduces taxes.
+We now formally incorporate the impact
+of corporate taxes into the MM framework.
+Let's consider two firms--
+U and L-- with identical assets.
+The asset yields an expected pre-tax cash flow of X
+next year and nothing afterwards.
+The required rate of return on the asset is rA.
+Firm U is 100% equity financed.
+That is its unlevered.
+Firm L has that level D, which pays an expected interest
+rate of rD plus the principal next year.
+The corporate tax rate is tau.
+Let's ignore personal taxes at this point.
+We can now write down the after-tax cash flow
+for the two firms in year one.
+For Firm U, the after-tax cash flow
+is simply 1 minus tau times X. For Firm L,
+the after-tax cash flow is 1 minus tau times X,
+the pre-tax cash flow, minus interest payment, which is rD,
+times D plus rD times D. That gives us 1 minus tau times X
+plus tau times rD times D.
+The last term in the equation is the tax shield
+from debt, which is simply the tax rate times the interest
+payment.
+We then have the value for each firm as follows.
+The value of the unlevered firm, VU,
+equals 1 minus tau times X, the after-tax cash
+flow, divided by 1 plus the discount rate, rA.
+The value of the levered firm, VL,
+equals 1 minus tau times X divided by 1
+plus rA plus tau times rD times D,
+the tax shield, divided by 1 plus rD.
+Rewriting that, we have VL equals VU plus tau
+times rD times D divided by 1 plus rD.
+Here the discount rate for X is rA.
+And the discount rate for the tax shield,
+which is tau times rD times D, is
+rD, same as the expected interest rate on debt,
+because they have the same risk.
+We summarize the above result as MM Theorem One
+with corporate taxes.
+The value of a levered firm equals
+the value of the unlevered firm with the same asset
+plus the present value of the tax shield from debt.
+That is VL equals VU plus the present value of the tax
+shield.
+And, sometimes, we write it as VU plus PVTS, the present value
+of tax shield.
+As we have seen from the previous example,
+the tax shield of debt matters for firm value,
+potentially, substantially.
+The MM Theorem or the Pie Theory leads us
+to the right question and the right answer.
+In this case, it allows us to find out
+how financing choices can affect the IRS bite of the total pie
+and how to minimize it or maximize the remaining
+part of the pie.
+There are, however, some caveats to keep in mind.
+First, not all firms face full marginal corporate tax rate.
+Some companies pay no or very low taxes.
+For them, the value of tax shield can be limited.
+Second, personal taxes can change the results above.
+The analysis above leads to valuable implications.
+First, raising debt by itself does not create value.
+In other words, a firm cannot create value by issuing debt
+and then sitting on the cash.
+Second, using debt creates value relative to raising
+the same amount of funds using equity.
+Next, value can be created by generating a tax shield when
+either financing an asset or investment with debt
+rather than equity or undertake a recapitalisation, that is
+retire some equity with debt.
+Moreover, the tax advantage of debt can be large.
+However, when personal taxes are present,
+the tax advantage of debt is reduced
+for individual investors.
+It becomes smaller when investors are mostly
+individuals.
+Our next question is then if debt adds value,
+why don't firms simply lever up?

@@ -1,0 +1,239 @@
+
+PROFESSOR: Next, we consider another example
+in which the real option is embedded in a project's
+follow on projects.
+The setting is in 1993, MC Inc., which
+is a tech company in Cambridge, Massachusetts,
+is considering whether to enter the PC business, which
+is taking off at the time.
+At that point, we have the following information.
+The R&D department has developed a new PC model.
+Let's call that model A. If launched now, which is 1990,
+the cash flow for model A is given
+in the table on the slide, which spans from 1990 to 1995.
+The second row gives the net investments needed.
+In particular, the initial investment is $450 million,
+which is quite substantial.
+Further investments of $50 million and $100 million
+are needed in the following two years.
+In the last two years, 1994 and 1995, they turn positive.
+The after-tax operating profit is then given in the third row.
+It is $140 million in 1991, $159 million in 1992, and so on.
+The net cash flow is given in the last row
+in the table minus $450 million in 1990, plus $90 million
+in 1991, $59 million in 1992, et cetera.
+Therefore, after the initial investment,
+net cash will turn positive in the following years.
+Suppose the cost of capital for the PC business is 20%.
+The NPV of launching model A is given by its NPV, which
+equal to minus $450, the initial investment, plus $90,
+which is the profit in year 1 divided
+by 1 plus 20%, the cost of capital,
+plus $59, the profit in year 2 divided
+by 1 plus the cost of capital, 20% to the power 2, and so on.
+If we finish the calculation, we get minus $42 million.
+Clearly, model A is a loser.
+Its NPV is negative.
+However, we also have the following information.
+Launching model A in 1990 will put MC Inc.
+into the PC business and allow it
+to introduce model B in 1993.
+The expected cash flow for model B
+is similar to that of model A, but twice as large.
+Since model A is a loser, so would
+be model B. Its expected NPV would be twice as negative.
+But there are future scenarios in which model
+B yields large payoffs.
+The table on this slide lists some
+of these positive scenarios for model B,
+captured by its NPV in 1993 at the time of its launch.
+The second row gives the benchmark scenario
+in which model B's NPV will be minus $84 million, twice
+that of model A.
+However, after the launch of model A,
+MC Inc. may get better with the PC business.
+The initial investment for model B
+can be substantially lower than currently expected,
+say 30% lower.
+This will then leave the NPV of model B
+to be positive $178 million in 1993.
+Or the sales of model B can be 40% higher
+than the current forecast, due to the unexpected success
+of model A and of model B itself.
+Or, profit margin becomes 50% higher than expected,
+as MC Inc. gets more efficient with the PC
+production over model A phase.
+These are all good scenarios, reasonable
+and beyond our current expectations.
+Of course, they are many bad scenarios, too, also reasonable
+and beyond expectations.
+Averaging over all these scenarios,
+we will have the benchmark scenario, which
+is the current expectation.
+And it's negative.
+The ultimate question is still if MC Inc.
+should launch model A. In expected terms,
+model B loses $84 million, doubling the loss of model A.
+How can this change the decision on model A today?
+The plot on the slide shows the probability distribution
+of model B's NPV in 1993 across different scenarios then.
+The x-axis is model B's NPV in 1993 in billion dollars.
+It is uncertain today, in 1990, and can take different values
+in 1993.
+The y-axis gives the corresponding probability
+density for these values.
+To the right of 0 are the good scenarios in which model
+B will have positive NPVs in 1993.
+To the left of 0 are the bad scenarios.
+From the plot, we make two observations.
+First, the bad scenarios are more likely,
+since they have higher probability weights.
+Average over all scenarios, we will obtain the expected value
+of minus $84 million, which is slightly to the left of 0.
+Second, the distribution is very wide.
+With fairly high probability, the NPV
+can be higher than, say, $250 million, or $0.25 billion.
+Similarly, it can be lower than, say, minus $250 million.
+This means that there is a lot of uncertainty or volatility
+in model B's NPV, or value, going forward.
+This last observation is important.
+First, we know that the decision to stop model B is in 1993,
+not now.
+This is different for model A. Therefore,
+model B should be viewed as an option, not a commitment.
+In particular, as long as MC Inc.
+can abandon model B in 1993, only the right-hand side
+of the distribution matters.
+In other words, we only need to care
+about the good scenarios of model B, or its upside.
+The bad scenarios don't matter, since we can avoid them,
+if they turn out to be the case, by simply not doing model B.
+Therefore, model B being an option only
+has positive value, at least, not negative.
+Moreover, since the right-hand side of the NPV distribution
+is huge, it's option value can be substantial,
+even though the chance of ending up there is less than 50%.
+Let's now consider how to value model B as a real option.
+For this purpose, we need to add a few more assumptions.
+These assumptions will stay on the conservative side
+to avoid producing inflated outcomes.
+First, we'll assume that the decision on model B
+has to be made in 1993.
+MC Inc. cannot keep waiting.
+As we know, extending the lifetime of an option
+increases its value.
+Two, in order to launch model B in 1993,
+MC Inc. has to launch model A in 1990.
+In other words, launching model A later is very expensive.
+Waiting on model A also adds value.
+And we want to limit that.
+Three, MC Inc. has the option to stop model B in 1993.
+Thus, possible losses for model B is limited.
+As we have learned, this is a very critical assumption.
+As stated before, the initial investment in 1993,
+year model B, is $900 million, twice that of model A's, which
+is $450 million.
+And it's assumed to be fixed.
+The net cash flow, or profit of model B after its initial year,
+which is 1993, is twice that of Model A's.
+It is $180 million in 1994, $118 million in 1995, and so on.
+We can view model B's profits as an underlying asset.
+At 20% cost of capital, the NPV of this asset,
+that is, model B's net profits, discounted back to 1990
+is 1 over 1 plus 20% to the power 3.
+This is to discount its present value
+from 1993 to 1990 times the present value
+of its future profits in 1993.
+That is, 180 divided by 1 plus 0.2 plus 118
+divided by 1 plus 0.2 square, and so on.
+If we finish this calculation, we get PV0 to be $472 million.
+Therefore, model B is really a call option
+on an asset whose current value is $472 million
+with a strike price of $900 million,
+which is the initial investment, and a maturity of three years.
+To value this option, we need the volatility of this asset.
+That is, the volatility of its value over time.
+Since this asset is not directly traded in the financial market,
+we look for similar assets traded in the market
+and use their price volatility as an approximation.
+Dell, for example, is a pure play company in the PC business
+then whose shares are traded.
+Dell's share price has an annual volatility of 35%.
+We will use this to approximate the volatility
+of the present value of model B's net profits.
+The risk free interest rate was 9% in 1990.
+With the assumptions above, we can value the opportunity
+to launch model B in 1993 as a three year European call
+option with the following specifications.
+The strike price is $900 million,
+the initial investment.
+The underlying asset is the profit stream for model B.
+The present value of the underlying asset now,
+which is 1990, is $472 million.
+The volatility of the underlying asset is 35% per year.
+And the risk free rate is 9%.
+From the Black-Scholes formula, the value of this call
+is $54 million.
+We will return to this calculation in a second.
+
+Factoring in the option value of model B,
+we now can assess the total value of model A.
+The table on the slide summarizes the results.
+The second row gives the NPV from a naive discounted cash
+role calculation.
+Model A itself gives minus $42 million.
+And A plus B is minus 42 minus $84 million,
+discounted back three years at 20%.
+This gives us a total of minus $91 million.
+This is clearly a no go.
+However, when we realize that model B is an option,
+the picture is different.
+This is given by the second column in the table.
+The NPV on model A is still minus 42 million,
+while the model B really gives an option
+value, which has a positive amount of $54 million.
+The sum, then, is $12 million positive,
+given in the last row of the second column.
+Therefore, we conclude the following.
+Model A, by itself, is a loser.
+But it also gives MC Inc. the option, but not
+the obligation to launch model B, which has a positive value.
+Given the high uncertainty about the future value of model B
+as shown above, this option is quite valuable.
+Adding the two values together, we actually
+obtained a positive value for launching
+model A. One thing we want to add
+is that the scale of this project,
+namely launching model A, and thus getting into the PC
+business, is fairly large, hundreds
+of millions of dollars.
+Model A alone requires initial investment of $450 million.
+The resulting NPV, even including
+the option value of model B, is quite small, only $12 million.
+If we vary the assumptions a bit,
+such as cash flow forecasts and volatility estimates,
+the result can easily become negative.
+MC Inc. finally decided not to launch model A.
+Before we finish this example, let's
+take a look at the details of the option
+valuation for model B using the Black-Scholes formula.
+All value numbers are in million dollars.
+The value of the underlying asset A,
+which is the future profit of model B, is now worth $472.
+The strike price K is $900 for the call
+option on the underlying asset.
+The call is European.
+And it's maturity T is three years.
+The volatility of the underlying asset, sigma, is 35% per year.
+The interest rate, RF, is 9% per year.
+The value of x, a key input to the Black-Scholes formula,
+is given by the first equation on this slide, which
+depends on the current asset value A, strike price
+K, interest rate RF, volatility sigma, and maturity T.
+Put in the corresponding numbers,
+we have x equals minus 0.3351.
+It's close to 0, but slightly negative.
+Putting the value of x into the Black-Scholes formula,
+we have the second equation on the slide, which
+gives the value of the call option C. It is $54 million,
+as stated before.

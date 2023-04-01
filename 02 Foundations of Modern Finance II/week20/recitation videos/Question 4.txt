@@ -1,0 +1,61 @@
+PROFESSOR: In this video, we will
+show an example of how insurance companies protect themselves
+against changes in interest rates.
+This example is similar to how pension funds, endowment funds,
+and other financial institutions manage their liabilities as
+well.
+Consider a life insurance company,
+which has existing liabilities that
+obligate it to pay out $5 million per year
+for the next 10 years.
+Assume that the term structure of interest rates is flat
+and the current interest rate is 2%.
+The insurance company would like to invest in safe government
+bonds in such a way that makes it immune to fluctuations
+in interest rates.
+It considers 1-year and 10-year treasury STRIPS.
+Construct an investment portfolio
+for the insurance company that hedges the interest rate risk.
+Let's first find the current value of liabilities.
+Liabilities of this insurance company
+represent a 10 year annuity.
+We can use the present value of annuity formula
+to find its value.
+It equals to $44.91 million.
+Next, let's find the duration of liabilities.
+Using the tools we learned in the first part of this course,
+we find that the duration of liabilities is 5.34 years.
+To hedge liabilities, we want to allocate
+funds across 1-year and 10-year STRIPS in such a way
+that duration of the portfolio matches
+the duration of liabilities.
+Let's introduce some notation.
+Let's note by the V1, the value invested in 1-year STRIPS
+and by V10, the value invested in 10-year STRIPS.
+The hedging portfolio should have the following two
+properties.
+First, its value should equal to the current value
+of liabilities.
+And second, the duration of the portfolio
+should be the same as the duration of liabilities.
+This gives us the following two equations,
+V1 plus V10 equals to VL.
+And the duration of asset portfolio,
+which is the weighted average of durations
+of 1-year and 10-year STRIPS should equal
+to the duration of liabilities.
+Plugging in the numbers for the value of liabilities,
+the duration of 1-year and 10 year STRIPS
+and the duration of liabilities, we
+get the system of two equations with two unknowns.
+Solving these two equations, we find
+that V1 equals to $23.27 million and V10
+equals the $21.64 million.
+Therefore, to immunize itself against changes
+in interest rates, the insurance company
+should purchase $23.27 million worth of 1-year STRIPS
+and $21.64 million worth of 10-year STRIPS.
+Note that since we're matching only duration,
+this hedge immunizes the insurance company
+only against small parallel shifts in the yield curve.
+Therefore, this hedge is not perfect.

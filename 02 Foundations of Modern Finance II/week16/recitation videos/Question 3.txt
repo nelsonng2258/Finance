@@ -1,0 +1,143 @@
+
+In this video, we will consider an example
+that demonstrates how discount rates may
+differ over different horizons.
+We will consider an asset, whose payoff is linked
+to the price of crude oil.
+Suppose the current price of crude oil is $55 per barrel.
+Consider an asset that in year 5 pays the realized
+price of oil in year 1.
+What is the current value of this asset?
+Let's start by thinking, what should be the value
+of this asset in year 1?
+Between now and the end of year 1, the price of oil
+is uncertain.
+But starting in year 2 and until the end of year 5,
+the price of oil at the end of year 1 is known.
+Therefore, between year 1 and year 5,
+this asset is risk free.
+And hence, its value in year 1 is
+p_1 divided by 1 plus r_f raised to the power 4.
+Here by p_1, we're denoting the price of oil in year 1,
+and by r_f, we're denoting the risk-free rate.
+Now between year 0 and year 1, we
+don't know what the price of oil will be.
+Let's assume that the expected return on oil is r_o.
+For both the risk-free rate and the expected return on oil,
+we will assume that these returns
+are the same at all horizons.
+In other words, the term structure
+of these rates of return is flat.
+The value of this asset in year 0
+equals its expected value in year 1, discounted
+to present at rates r_o to reflect
+the riskiness of disaster between year 0 and year 1.
+Plugging in the value of this asset in year 1
+into this equation, we get expected value
+of p_1 divided by 1 plus r_f raised to the power of 4,
+divided by 1 plus r_o.
+Since there is no uncertainty in the risk-free rate r_f,
+we get the expected value of p_1 divided
+by 1 plus r_o multiplied by 1 plus r_f
+raised to the power of 4.
+You can see that we're discounting
+the cash flows that we get from this asset at different rates
+during this five-year time period.
+This is simply due to the fact that its riskiness changes
+during this time period.
+The final step is to figure out what is the expected
+price of oil in year 1.
+It simply is the current price multiplied by the expected rate
+of return on oil.
+We see that 1 plus r_o in the numerator and denominator
+of this equation cancels out.
+And we are simply left with the current price
+of oil divided by 1 plus r_f raised to the power of 4.
+If we assume that the risk-free rate is 2%,
+then the current value of this asset is $50.81.
+Next, let's find the value of an asset that, in year 5,
+pays the realized price of oil in year 2.
+We can repeat the steps that we did
+to find the value of the previous asset.
+First, notice that there is no uncertainty
+in what the payoff of this asset will
+be between the year 2 and the year 5.
+Therefore, we can find the value of this asset in year 2,
+by discounting the cash flow that we
+get from this asset in year 5 at the risk-free rate.
+We see that the value of this asset in year
+equals p_2 divided by 1 plus r_f raised to the power of 3.
+Between year 0 and year 2, we don't know
+what the price of oil will be.
+The value of this asset in year 0
+equals its expected value in year 2, discounted to present,
+at the rate r_o, to reflect the riskiness of this asset
+between year 0 and year 2.
+Plugging in the value of this asset in year 2
+into this equation, we get expected value
+of p_2 divided by 1 plus r_f raised
+to the power of 3, divided by 1 plus r_o raised
+to the power of 2, which gives us expected value of p_2
+divided by 1 plus r_o squared multiplied by 1
+plus r_f raised to the power of 3.
+Similar to the first asset, notice
+that we are discounting the cash flows
+that we get from this asset at different rates
+during this five-year time period.
+This is because the riskiness of this asset
+changes as we go from year 2 to year 3
+because we no longer bear uncertainty in oil prices.
+The expected price of oil in year 2
+is the current price multiplied by the expected rate of return
+over the next two years.
+We see that 1 plus r_o squared in the numerator
+and denominator cancels out, and we
+are left with p_0, which is the current price of oil,
+divided by 1 plus the risk-free rate raised to the power of 3.
+Recall that the risk-free rate is 2%.
+Hence the current value of this asset is $51.83.
+Notice that the value of this asset, which in year 5
+pays the price of oil in year 2, is
+higher than the value of the previous asset, which in year 5
+paid the price of oil in year 1.
+This is because this asset is riskier
+as we're exposed to the oil price risk for one
+additional year.
+Let's consider one more asset, that in year 5
+pays p_1 plus p_2 plus p_5 divided by 3,
+where p_1, p_2 and p_5 are the realized prices of oil in years
+1, 2, and 5 respectively.
+What is the current value of this asset?
+The current value of this asset is simply
+1/3 of the value of the asset that pays p_1 in the year 5
+plus 1/3 of the value of the asset that pays p_2 in year 5,
+plus 1/3 of the value of the asset that pays p_5 in year 5.
+We have already found the values of assets
+that pay p_1 and p_2 in year 5.
+So what's left is to find the value of the asset that
+pays p_5 in year 5.
+In this case, we varied the oil price risk all the way
+to the end of year 5.
+Therefore, the current value of the asset
+is the expected price of oil in year 5 divided by 1 plus
+r_o raised to the power of 5.
+Since the expected oil price in year 5
+is the current oil price multiplied by 1 plus r_o raised
+to the power of 5, the current value of this asset
+is simply the current oil price.
+It's quite simple to understand why.
+The market currently values oil at $55 a barrel.
+The asset that in year 5 pays the price of oil in year 5
+has to have the same value as the oil itself,
+as it has identical risk.
+Now we can combine all the results
+to find the current value of the asset that in year five
+pays p_1 plus p_2 plus p_5 divided by 3.
+It's value equals 1/3 of the current oil price divided
+by a 1 plus the risk-free rate raised to the power of 4,
+plus 1/3 of the current oil price divided by 1
+plus risk-free rate raised to the power of 3,
+plus 1/3 of the current oil price.
+Recall that the risk-free rate is 2%,
+and the current oil price is $55.
+This gives us the current value of this asset of $52.55.

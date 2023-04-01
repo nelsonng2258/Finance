@@ -1,0 +1,56 @@
+
+PROFESSOR: As we have seen in the 415Inc.
+example in the last lecture, in order
+to value the effect of leverage, we
+need to know how to value its tax benefit and distress cost.
+This requires us to know the proper discount
+rates for the corresponding cash flows.
+For this purpose, we need to properly specify their risks
+or their evolution over time.
+We start by introducing some notation.
+Let Xt denote the cash flow from the firm's asset
+at time t, which is independent of leverage.
+Vut denote the value of the firm without leverage at time t.
+Vlt denote the value of the firm with leverage at time t.
+Dt denote the value of its debt at t,
+and Et denote the value of its equity at t.
+ra denote the required rate of return
+on the firm's asset or the unlevered firm.
+rl denote the required rate of return on the levered firm.
+rd denote the required rate of return also
+the expected interest rate on the firm's debt
+when it's levered.
+re denote the required rate of return on equity.
+Tau denote the firm's tax rate.
+We will start with the situation without the tax
+shield from debt.
+Then MM holds in its benchmark form,
+which implies the following.
+First, a firm's asset can be viewed simply
+as a portfolio of its debt and equity.
+That is, V equals D plus E.
+Next, asset return equals the weighted average
+of the returns of debt and equity, which is the WACC.
+That is given by ra equals D divided by D plus E, that's
+the weight of debt, times rd, then plus E divided
+by D plus E times re, and that's the WACC
+as we have defined before.
+The value of the firm is then given
+by the following equation, V equals D plus E. That equals
+the sum from x equal to 1 to infinity, 1 minus tau
+times Xs, that's the after-tax cash flow,
+divided by 1 plus ra, the asset discount
+rate, raised to the power of s.
+And this discounted sum of future cash flows
+equals Vu, the unlevered firm, which also equals the sum from
+s equal to 1 to infinity 1 minus tau times Xs divided
+by 1 plus WACC raised to the power of s.
+And as we know, that also equals the value of the levered firm.
+We also have a MM II, the firm's cost of capital with leverage,
+is re equals ra plus D over E, the debt to equity ratio,
+times ra minus rd.
+In particular, we have ra is independent of D over E,
+or leverage.
+It is given only by the firm's asset.
+re increases with D over E, assuming debt is risk-free.
+rd may also increase with D over E as debt becomes risky.

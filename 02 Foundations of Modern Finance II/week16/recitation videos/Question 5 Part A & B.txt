@@ -1,0 +1,113 @@
+
+PROFESSOR: Kinross Gold is considering
+to acquire a gold mine in Russia.
+Estimated reserves of this mine are 1 million ounces.
+It takes one year to extract gold,
+and estimated extraction costs are $1,000 per ounce.
+The current price of gold is $1,200 per ounce.
+It will either increase to $1,600 per ounce
+or decrease to $900 per ounce next year,
+and after that it will stay at that level forever.
+The risk free rate is 2%, and the gold price risk
+is not diversifiable.
+We will answer two questions.
+First, what is the value of this mine
+if extraction starts today?
+And second, if Kinross Gold can wait for a year
+to start the extraction process, and they can also
+abandon this mine, what is its current value?
+Let's start this question by discussing
+what does the statement of "the gold price risk
+is not diversifiable" actually I mean?
+If it was fully diversifiable, or as we say,
+idiosyncratic, then we could have discounted cash flows
+at the risk-free rate.
+Since it is not diversifiable, we cannot discount them
+at the risk-free rate.
+But we are not given a discount rate in this question.
+So what should we do?
+We will use prices of traded assets to find state prices,
+and we will use the state prices to value the mine.
+This is analogous to how we valued options, where
+we used prices of the risk-free bond and the stock
+to obtain state prices and used the state
+prices to price the option.
+Let's start by drawing a tree that
+captures the evolution of future gold prices.
+The current price is $1,200, and it will either go up to $1,600
+or go down to $900.
+We will use the same notation we adopted
+when we studied options.
+How will they know the current price by s,
+and we'll use multipliers u and d for the up and down moves
+respectively.
+Based on given prices of gold, we can compute u and d.
+U equals to 1,600 divided by 1,200, which is 1.33,
+and d equals to 900 divided by 1,200, which is 0.75.
+Let's compute the risk neutral probabilities
+of the up and down moves.
+qu, which is the risk neutral probability of the up move,
+equals 1 plus the risk free rate minus d divided by u minus d.
+Recall that the risk free rate is
+2%, which gives us qu of 0.463.
+qd equals to u minus 1 plus rf, divided by u minus d,
+and this gives us 0.537.
+qd can also be simply computed as 1 minus qu,
+because the risk neutral probabilities have
+to add up to 1.
+Now we can compute state prices.
+Phi u, which is the price of the up state,
+is qu divided by 1 plus rf, which equals 0.454.
+Similarly, phi d, which is the price of the down state,
+is qd divided by 1 plus rf, which equals to 0.527.
+Equipped with state prices, we can
+find the present value of revenue
+if we start extraction today.
+Recall that it takes us one year to finish the extraction
+and sell the gold.
+The present value of next year's revenue is 1,600 times
+phi u plus 900 times phi d.
+This equals 1,200.
+Therefore, the current expected revenue per ounce of gold
+is $1,200.
+This, of course, should not surprise us.
+The expected revenue per ounce of gold
+should, of course, equal the current market
+price of gold, which we were given in the beginning.
+In fact, our state prices were computed based
+on the current price of gold.
+We could have in principle answered this question
+without computing the state prices.
+We have done this here for illustrative purposes.
+Plus we will utilize state process
+in the second part of this question.
+Given that extraction costs are $1,000 per ounce,
+our cash flow is $200 per ounce of gold.
+Since the mine contains one million ounces of gold,
+the value of this mine if we start extraction now
+is $200 million.
+Now let's figure out what will be the value of this mine
+if we could delay gold extraction for a year
+and abandon this mine if it is profitable to do so.
+Note that we will do the extraction only
+in the up state, where gold prices exceed the extraction
+costs.
+In the down state, we will simply abandon the mine.
+This means that in year one, in the down state,
+the value of this mine is 0.
+In the up state, its value can be computed as follows.
+We pay $1,000 per ounce in year one to receive $1,600 per ounce
+with certainty in year 2.
+Therefore, the value per ounce in year one in the up state
+is negative $1,000 plus $1,600 divided by 1
+plus the risk free rate, which is 2%,
+and this equals to $568.63.
+Given the above, the current value
+of this mine per ounce of gold is 568.63 times phi u plus 0
+times phi d.
+This gives us $258.03.
+Given that we can extract one million ounces,
+the total value of the mine is $258.03 million.
+The flexibility to wait and abandon
+is clearly very valuable and increases the value
+of this mine by $58.03 million.

@@ -1,0 +1,428 @@
+0
+00:00:00,000 --> 00:00:00,630
+
+
+1
+00:00:00,630 --> 00:00:04,830
+PROFESSOR: We now add the debt's tax shield into the analysis.
+
+2
+00:00:04,830 --> 00:00:09,090
+Now MM becomes VL, the value of the levered firm,
+
+3
+00:00:09,090 --> 00:00:14,880
+equals D plus E equals VU, the value of the unlevered firm,
+
+4
+00:00:14,880 --> 00:00:19,510
+plus PVTS, the Present Value of Tax Shield minus,
+
+5
+00:00:19,510 --> 00:00:23,580
+PVDC, the Present Value of Default Cost,
+
+6
+00:00:23,580 --> 00:00:27,600
+and that, as we know, is the APV, the Adjusted Present
+
+7
+00:00:27,600 --> 00:00:29,470
+Value.
+
+8
+00:00:29,470 --> 00:00:33,250
+For simplicity we ignore the cost of default
+
+9
+00:00:33,250 --> 00:00:35,710
+for the rest of our discussion here,
+
+10
+00:00:35,710 --> 00:00:39,440
+assuming debt is mostly risk-free.
+
+11
+00:00:39,440 --> 00:00:42,380
+We can then think of the firm or the project
+
+12
+00:00:42,380 --> 00:00:46,550
+with leverage in two equivalent ways, which is shown
+
+13
+00:00:46,550 --> 00:00:48,740
+in the following equation.
+
+14
+00:00:48,740 --> 00:00:54,170
+VL, the value of levered firm, equals E plus D,
+
+15
+00:00:54,170 --> 00:00:57,110
+Debt plus Equity, which also equals
+
+16
+00:00:57,110 --> 00:01:02,750
+VU, the value of the unlevered firm, plus PVTS
+
+17
+00:01:02,750 --> 00:01:05,780
+and that's the APV.
+
+18
+00:01:05,780 --> 00:01:08,990
+The first part of the equation expresses it
+
+19
+00:01:08,990 --> 00:01:12,620
+as a portfolio of debt and equity.
+
+20
+00:01:12,620 --> 00:01:14,870
+The second part of the equation views it
+
+21
+00:01:14,870 --> 00:01:18,070
+as a portfolio of two assets.
+
+22
+00:01:18,070 --> 00:01:21,880
+One is an asset with payoff identical to that
+
+23
+00:01:21,880 --> 00:01:24,790
+of the project after tax.
+
+24
+00:01:24,790 --> 00:01:28,990
+The other is an asset with payoff identical to the tax
+
+25
+00:01:28,990 --> 00:01:31,200
+shield of debt.
+
+26
+00:01:31,200 --> 00:01:35,790
+In order to value these two cash flows, one from the project
+
+27
+00:01:35,790 --> 00:01:38,910
+or asset and the other from tax shield,
+
+28
+00:01:38,910 --> 00:01:42,210
+we need to find their discount rates.
+
+29
+00:01:42,210 --> 00:01:46,410
+For this we need to specify their time evolution, which
+
+30
+00:01:46,410 --> 00:01:49,800
+also specifies their risks.
+
+31
+00:01:49,800 --> 00:01:52,980
+We have discussed this issue when we discussed the link
+
+32
+00:01:52,980 --> 00:01:55,920
+between risk and the horizon in Capital Budgeting
+
+33
+00:01:55,920 --> 00:01:58,290
+II in Lecture 16.
+
+34
+00:01:58,290 --> 00:02:01,380
+In order to stay tractable, we assume
+
+35
+00:02:01,380 --> 00:02:05,940
+that the firm's leverage ratio remains constant over time.
+
+36
+00:02:05,940 --> 00:02:08,880
+This is a strong assumption, but not
+
+37
+00:02:08,880 --> 00:02:13,260
+too far off as a first-order approximation from reality,
+
+38
+00:02:13,260 --> 00:02:18,010
+as we have seen from the data in Lecture 17.
+
+39
+00:02:18,010 --> 00:02:22,340
+Constant leverage ratio means that the following two ratios,
+
+40
+00:02:22,340 --> 00:02:28,270
+that is DT over VLT equals WD, which is the Weight of Debt,
+
+41
+00:02:28,270 --> 00:02:30,890
+in the total value of the firm.
+
+42
+00:02:30,890 --> 00:02:35,590
+And ET over VLT, which is WE, that's
+
+43
+00:02:35,590 --> 00:02:40,280
+the relative Weight of Equity, in a total value of the firm.
+
+44
+00:02:40,280 --> 00:02:43,950
+These two ratios would stay constant.
+
+45
+00:02:43,950 --> 00:02:47,460
+This then implies that the required rate of return
+
+46
+00:02:47,460 --> 00:02:55,800
+on the levered firm is given by rL equals DT over VLT times rD
+
+47
+00:02:55,800 --> 00:03:00,030
+plus ET over VLT times rE, that is
+
+48
+00:03:00,030 --> 00:03:03,990
+the weighted average of return on debt and equity,
+
+49
+00:03:03,990 --> 00:03:06,120
+or written slightly differently, debt
+
+50
+00:03:06,120 --> 00:03:13,570
+equals wD times rD plus wE times rE.
+
+51
+00:03:13,570 --> 00:03:19,750
+Next we have 1 plus rL times VLT equals
+
+52
+00:03:19,750 --> 00:03:26,500
+1 minus tau times Xt plus 1 plus tau times rD times Dt
+
+53
+00:03:26,500 --> 00:03:27,970
+and plus VLt plus 1.
+
+54
+00:03:27,970 --> 00:03:30,640
+
+
+55
+00:03:30,640 --> 00:03:35,890
+We can also rewrite this as 1 minus tau times Xt plus 1
+
+56
+00:03:35,890 --> 00:03:45,470
+plus tau times rD times Dt over VLT times VLT plus VLT plus 1.
+
+57
+00:03:45,470 --> 00:03:49,010
+Here the left hand side is the gross payoff
+
+58
+00:03:49,010 --> 00:03:52,400
+from the levered firm and the right hand side
+
+59
+00:03:52,400 --> 00:03:57,800
+is it's three pieces, after tax cash flow, tax credit,
+
+60
+00:03:57,800 --> 00:04:00,780
+and the resale value.
+
+61
+00:04:00,780 --> 00:04:08,820
+We can further rewrite the above as 1 plus rL minus wD times
+
+62
+00:04:08,820 --> 00:04:14,920
+tau times rD then times VLT equals 1 minus tau times Xt
+
+63
+00:04:14,920 --> 00:04:18,750
+plus 1 plus VLT plus 1.
+
+64
+00:04:18,750 --> 00:04:21,600
+From this equation, which is rewritten
+
+65
+00:04:21,600 --> 00:04:25,600
+as the first equation on top of the slide,
+
+66
+00:04:25,600 --> 00:04:32,040
+we can define WACC as rL minus wD tau times
+
+67
+00:04:32,040 --> 00:04:41,640
+rD equals wD times rD plus wE times rE minus wD times tau
+
+68
+00:04:41,640 --> 00:04:47,790
+times rD, which also equals wD times 1 minus tau times
+
+69
+00:04:47,790 --> 00:04:52,270
+rD plus wE times rE.
+
+70
+00:04:52,270 --> 00:04:57,280
+We can then rewrite the first equation on this slide as--
+
+71
+00:04:57,280 --> 00:04:58,360
+left hand side--
+
+72
+00:04:58,360 --> 00:05:04,266
+1 plus WACC times VLT equals 1 minus tau times Xt
+
+73
+00:05:04,266 --> 00:05:11,550
+plus 1 plus VLT plus 1 or VLT equals
+
+74
+00:05:11,550 --> 00:05:21,080
+1 minus tau times Xt plus VLT plus 1 divided by 1 plus WACC.
+
+75
+00:05:21,080 --> 00:05:22,700
+We're writing this out.
+
+76
+00:05:22,700 --> 00:05:26,270
+We have sum from s equal to 1 to infinity
+
+77
+00:05:26,270 --> 00:05:32,420
+1 minus tau times Xt plus s divided by 1 plus WACC
+
+78
+00:05:32,420 --> 00:05:35,714
+to the power of s.
+
+79
+00:05:35,714 --> 00:05:39,810
+Therefore, Including the tax benefit from leverage,
+
+80
+00:05:39,810 --> 00:05:42,390
+still ignoring the cost of default
+
+81
+00:05:42,390 --> 00:05:45,600
+and assuming a constant leverage ratio,
+
+82
+00:05:45,600 --> 00:05:51,360
+we can value a firm or a project in two equivalent ways.
+
+83
+00:05:51,360 --> 00:05:56,060
+The first is to compute its NPV adjusted for the tax benefit
+
+84
+00:05:56,060 --> 00:05:58,550
+of debt, that is the APV.
+
+85
+00:05:58,550 --> 00:06:02,090
+It is given by the first equation on the slide.
+
+86
+00:06:02,090 --> 00:06:09,290
+VL equals D plus E equals VU plus PVTS.
+
+87
+00:06:09,290 --> 00:06:13,130
+Writing out, that gives us sum from s equal to 1
+
+88
+00:06:13,130 --> 00:06:20,130
+to infinity 1 minus tau times Xs divided by 1 plus rA
+
+89
+00:06:20,130 --> 00:06:26,640
+to the power of s plus PVTS and that is the APV.
+
+90
+00:06:26,640 --> 00:06:30,150
+The second method is to compute its value
+
+91
+00:06:30,150 --> 00:06:33,540
+by discounting its after tax cash flow using
+
+92
+00:06:33,540 --> 00:06:37,320
+WACC adjusted for tax shield.
+
+93
+00:06:37,320 --> 00:06:41,830
+It leads to the second valuation equation on the slide.
+
+94
+00:06:41,830 --> 00:06:45,400
+VL equals the sum from s equal to 1
+
+95
+00:06:45,400 --> 00:06:49,960
+to infinity 1 minus tau times Xs divided
+
+96
+00:06:49,960 --> 00:06:54,370
+by 1 plus WACC raised to the power of s,
+
+97
+00:06:54,370 --> 00:06:57,730
+where the WACC is adjusted for tax shield
+
+98
+00:06:57,730 --> 00:07:03,270
+given by the last equation on the slide, that is WACC equals
+
+99
+00:07:03,270 --> 00:07:09,570
+wD times 1 minus tau rD plus wE times rE,
+
+100
+00:07:09,570 --> 00:07:13,140
+which can also be written as D over D
+
+101
+00:07:13,140 --> 00:07:18,750
+plus E times 1 minus tau times rD plus D over D plus E
+
+102
+00:07:18,750 --> 00:07:21,210
+times rE.
+
+103
+00:07:21,210 --> 00:07:24,240
+Both methods, if implemented properly,
+
+104
+00:07:24,240 --> 00:07:27,030
+will give the right answer.
+
+105
+00:07:27,030 --> 00:07:29,400
+We will return to their pros and cons
+
+106
+00:07:29,400 --> 00:07:31,850
+at the end of this lecture.
+

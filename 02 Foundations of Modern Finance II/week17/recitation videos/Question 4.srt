@@ -1,0 +1,496 @@
+0
+00:00:00,000 --> 00:00:00,390
+
+
+1
+00:00:00,390 --> 00:00:01,770
+PROFESSOR: In this video, we will
+
+2
+00:00:01,770 --> 00:00:04,500
+consider a corporate acquisition and learn
+
+3
+00:00:04,500 --> 00:00:08,880
+how to estimate the risk of equity of the merged entity.
+
+4
+00:00:08,880 --> 00:00:10,980
+Suppose that corporation Y is planning
+
+5
+00:00:10,980 --> 00:00:14,820
+to acquire corporation X. We are given the following information
+
+6
+00:00:14,820 --> 00:00:16,110
+on firm X.
+
+7
+00:00:16,110 --> 00:00:19,120
+Its market value of debt is $40 million.
+
+8
+00:00:19,120 --> 00:00:23,180
+Its market value of equity is $160 million.
+
+9
+00:00:23,180 --> 00:00:26,340
+Its cost of debt capital is 7%.
+
+10
+00:00:26,340 --> 00:00:28,980
+And its equity beta is 1.2.
+
+11
+00:00:28,980 --> 00:00:31,680
+We are also given the following information on firm
+
+12
+00:00:31,680 --> 00:00:35,830
+Y. Its market value of debt is $100 million.
+
+13
+00:00:35,830 --> 00:00:39,190
+Its market value of equity is $900 million.
+
+14
+00:00:39,190 --> 00:00:40,960
+Its debt is risk free.
+
+15
+00:00:40,960 --> 00:00:44,960
+And its asset beta is 0.76.
+
+16
+00:00:44,960 --> 00:00:47,980
+Transaction details are as follows.
+
+17
+00:00:47,980 --> 00:00:49,980
+Y will be financing the acquisition
+
+18
+00:00:49,980 --> 00:00:52,190
+with the issuance of new debt.
+
+19
+00:00:52,190 --> 00:00:55,970
+The old debt of X will be repurchased.
+
+20
+00:00:55,970 --> 00:00:59,960
+The cost of debt for the combined entity will be 8%.
+
+21
+00:00:59,960 --> 00:01:03,740
+X will get acquired at the current market value,
+
+22
+00:01:03,740 --> 00:01:08,260
+and there will be no synergies in this transaction.
+
+23
+00:01:08,260 --> 00:01:11,670
+We are also given the following additional information.
+
+24
+00:01:11,670 --> 00:01:13,940
+Risk-free rate is 5%.
+
+25
+00:01:13,940 --> 00:01:18,110
+The expected return on the market portfolio is 15%.
+
+26
+00:01:18,110 --> 00:01:20,900
+Corporations do not pay income taxes.
+
+27
+00:01:20,900 --> 00:01:24,750
+And there are no other market imperfections.
+
+28
+00:01:24,750 --> 00:01:27,570
+What is the equity beta and the expected return
+
+29
+00:01:27,570 --> 00:01:31,890
+on equity of firm Y after this acquisition is complete?
+
+30
+00:01:31,890 --> 00:01:36,030
+Let's start by thinking how to approach solving this problem.
+
+31
+00:01:36,030 --> 00:01:39,480
+First, to find equity risk of the combined entity,
+
+32
+00:01:39,480 --> 00:01:41,820
+we would need to know its capital structure
+
+33
+00:01:41,820 --> 00:01:44,152
+and its return on assets.
+
+34
+00:01:44,152 --> 00:01:45,860
+We will be able to figure out the capital
+
+35
+00:01:45,860 --> 00:01:48,680
+structure of the combined firm from the information
+
+36
+00:01:48,680 --> 00:01:51,350
+on the current capital structure of firms X and Y
+
+37
+00:01:51,350 --> 00:01:54,020
+and on how Y is planning to finance
+
+38
+00:01:54,020 --> 00:01:57,770
+the acquisition of X. The return on assets of the combined
+
+39
+00:01:57,770 --> 00:02:01,130
+entity is equal to the weighted average of returns on assets
+
+40
+00:02:01,130 --> 00:02:05,210
+of firms X and Y. Therefore, to find it,
+
+41
+00:02:05,210 --> 00:02:09,380
+we first need to find return on assets of X and Y.
+
+42
+00:02:09,380 --> 00:02:12,560
+With this in mind, we will implement the following steps
+
+43
+00:02:12,560 --> 00:02:14,330
+to solve this problem.
+
+44
+00:02:14,330 --> 00:02:17,770
+First, we will find asset beta of firm X.
+
+45
+00:02:17,770 --> 00:02:21,860
+Note that we already know asset beta of firm Y. Second,
+
+46
+00:02:21,860 --> 00:02:25,670
+we will find the asset beta of the new combined entity.
+
+47
+00:02:25,670 --> 00:02:28,680
+And, third, we will find equity beta and the return
+
+48
+00:02:28,680 --> 00:02:31,290
+on equity of the new firm.
+
+49
+00:02:31,290 --> 00:02:34,750
+Let's start with asset beta of firm X. Recall
+
+50
+00:02:34,750 --> 00:02:37,790
+that asset beta is the weighted average of debt and equity
+
+51
+00:02:37,790 --> 00:02:38,870
+betas.
+
+52
+00:02:38,870 --> 00:02:41,960
+We know the market values of debt and equity of firm x
+
+53
+00:02:41,960 --> 00:02:44,180
+as well as its equity beta.
+
+54
+00:02:44,180 --> 00:02:46,280
+Therefore, in order to find asset beta,
+
+55
+00:02:46,280 --> 00:02:48,800
+we need to find debt beta first.
+
+56
+00:02:48,800 --> 00:02:51,710
+To find debt beta, we will use the capital asset pricing
+
+57
+00:02:51,710 --> 00:02:52,980
+model.
+
+58
+00:02:52,980 --> 00:02:57,000
+Recall that the cost of debt capital of firm X is 7%.
+
+59
+00:02:57,000 --> 00:02:58,830
+The risk-free rate is 5%.
+
+60
+00:02:58,830 --> 00:03:03,000
+And the expected return on the market portfolio is 15%.
+
+61
+00:03:03,000 --> 00:03:05,040
+Solving this equation for beta, we
+
+62
+00:03:05,040 --> 00:03:09,810
+find that debt beta of firm X equals to 0.2.
+
+63
+00:03:09,810 --> 00:03:11,970
+Having found debt beta, we can now
+
+64
+00:03:11,970 --> 00:03:15,130
+find asset beta of firm X. Recall
+
+65
+00:03:15,130 --> 00:03:18,550
+that the market value of debt of firm X is $40 million.
+
+66
+00:03:18,550 --> 00:03:21,550
+The market value of its equity is $160 million.
+
+67
+00:03:21,550 --> 00:03:23,950
+And its equity beta is 1.2.
+
+68
+00:03:23,950 --> 00:03:28,180
+Therefore, asset beta of firm X equals to 1.
+
+69
+00:03:28,180 --> 00:03:31,540
+Let's now move to step two and find asset beta of the combined
+
+70
+00:03:31,540 --> 00:03:32,710
+firm.
+
+71
+00:03:32,710 --> 00:03:35,920
+Asset beta of the combined firm equals to the weighted average
+
+72
+00:03:35,920 --> 00:03:38,890
+of betas of the merging firms where the weights
+
+73
+00:03:38,890 --> 00:03:42,100
+are computed based on the market values of firms X and Y
+
+74
+00:03:42,100 --> 00:03:43,720
+in the combined firm.
+
+75
+00:03:43,720 --> 00:03:45,790
+The market value of firm X is computed
+
+76
+00:03:45,790 --> 00:03:49,790
+by adding its market value of debt, which is $40 million,
+
+77
+00:03:49,790 --> 00:03:53,830
+and its market value of equity, which is $160 million.
+
+78
+00:03:53,830 --> 00:03:58,330
+Hence, the market value of firm X is $200 million.
+
+79
+00:03:58,330 --> 00:04:01,690
+For firm Y, recall that its market value of debt
+
+80
+00:04:01,690 --> 00:04:05,770
+is $100 million, and its market value of equity
+
+81
+00:04:05,770 --> 00:04:07,570
+is now $900 million.
+
+82
+00:04:07,570 --> 00:04:11,960
+Therefore, the market value of firm Y is $1 billion.
+
+83
+00:04:11,960 --> 00:04:16,180
+Recall also that asset beta of firm X, which we just computed,
+
+84
+00:04:16,180 --> 00:04:17,170
+is 1.
+
+85
+00:04:17,170 --> 00:04:21,660
+And the asset beta of firm Y is 0.76.
+
+86
+00:04:21,660 --> 00:04:26,480
+Therefore, the asset beta of the combined firm is 0.8.
+
+87
+00:04:26,480 --> 00:04:29,860
+Now, we are ready to implement the final step, step three.
+
+88
+00:04:29,860 --> 00:04:32,980
+To find equity beta, we will use Modigliani-Miller proposition
+
+89
+00:04:32,980 --> 00:04:36,460
+2, which states that equity beta equals to the asset
+
+90
+00:04:36,460 --> 00:04:39,310
+beta plus debt-to-equity ratio multiplied
+
+91
+00:04:39,310 --> 00:04:42,520
+by the difference between asset beta and debt beta.
+
+92
+00:04:42,520 --> 00:04:43,810
+We know asset beta.
+
+93
+00:04:43,810 --> 00:04:47,500
+So what's left to find is the debt-to-equity ratio and debt
+
+94
+00:04:47,500 --> 00:04:49,810
+beta of the new firm.
+
+95
+00:04:49,810 --> 00:04:52,870
+To find debt-to-equity ratio of the new firm,
+
+96
+00:04:52,870 --> 00:04:56,330
+we need to find its value of debt and its value of equity.
+
+97
+00:04:56,330 --> 00:04:58,360
+Let's start with debt.
+
+98
+00:04:58,360 --> 00:05:00,250
+The new value of debt will be the value
+
+99
+00:05:00,250 --> 00:05:02,890
+of the old debt of the acquiring firm, which
+
+100
+00:05:02,890 --> 00:05:08,740
+is firm Y, plus the value of new debt issued to acquire firm X.
+
+101
+00:05:08,740 --> 00:05:12,370
+To acquire firm X, we need to purchase its equity, which
+
+102
+00:05:12,370 --> 00:05:16,390
+is valued at $160 million, and to purchase its existing debt,
+
+103
+00:05:16,390 --> 00:05:18,670
+which is valued at $40 million.
+
+104
+00:05:18,670 --> 00:05:22,780
+Therefore, we need to issue $200 million of new debt.
+
+105
+00:05:22,780 --> 00:05:25,900
+This implies that the total value of debt of the new firm
+
+106
+00:05:25,900 --> 00:05:28,810
+will be $300 million.
+
+107
+00:05:28,810 --> 00:05:31,660
+To find the value of equity of the combined firm,
+
+108
+00:05:31,660 --> 00:05:35,390
+we subtract the value of debt from the value of the firm,
+
+109
+00:05:35,390 --> 00:05:37,405
+which gives us $900 million.
+
+110
+00:05:37,405 --> 00:05:40,110
+
+
+111
+00:05:40,110 --> 00:05:45,900
+Therefore, debt-to-equity ratio of the new firm will be 1/3.
+
+112
+00:05:45,900 --> 00:05:50,400
+To find debt beta of the new firm, we will use the CAPM.
+
+113
+00:05:50,400 --> 00:05:54,510
+Recall that the cost of debt of the new firm will be 8%.
+
+114
+00:05:54,510 --> 00:05:57,240
+Given the risk-free rate of 5% and the return
+
+115
+00:05:57,240 --> 00:05:59,760
+on the market portfolio of 15%, we
+
+116
+00:05:59,760 --> 00:06:05,410
+find that debt beta of the new firm will be 0.3.
+
+117
+00:06:05,410 --> 00:06:08,350
+Having found debt-to-equity ratio and debt beta,
+
+118
+00:06:08,350 --> 00:06:12,180
+we can finally find equity beta of the new firm.
+
+119
+00:06:12,180 --> 00:06:17,070
+We find that it equals 0.967.
+
+120
+00:06:17,070 --> 00:06:20,100
+To find the expected return on equity of the new firm,
+
+121
+00:06:20,100 --> 00:06:22,220
+we will use the CAPM.
+
+122
+00:06:22,220 --> 00:06:27,220
+This slide shows that the expected return will be 14.67%.
+
+123
+00:06:27,220 --> 00:06:29,000
+
+

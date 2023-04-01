@@ -1,0 +1,116 @@
+
+PROFESSOR: In this video, we will
+learn how to use a binomial tree model to price risky debt.
+Consider a market with two possible states one year
+from now: good or bad.
+In the good state, the return on the market portfolio
+will be 25%.
+And in the bad state, the return on the market portfolio
+will be negative 25%.
+The probability of the good state is 70%.
+The one-year, risk-free rate is 5%.
+Consider a corporate bond.
+It has a 0% coupon rate and matures one year from now.
+The face value of the bond is $100.
+In the good state, the bond has a 2% probability of default,
+and a recovery rate of 60%.
+In the bad state, the bond has a 10% probability of default,
+and the recovery rate of 40%.
+We will answer the following questions.
+Compute the expected payoff of the bond in each of the two
+states one year from now.
+Determine the risk-neutral probabilities
+of the good and bad states.
+Compute the price of the corporate bond in year 0.
+Compute the bond's promised yield,
+expected yield, the default premium, and the risk premium.
+Suppose that the CAPM holds.
+Based on one-year returns, what is the market beta
+of the corporate bond in this question?
+Let's first compute the expected payoff of the bond one year
+from now in the good state.
+With 98% probability, the issuer of the bond will not default,
+and we will get the full promised payment of $100.
+With probability of 2%, the bond will default, in which case,
+our recovery rate is 60%.
+This means that we will receive 60% of the $100 that
+was promised to us.
+This gives us the expected payoff of $99.20.
+Similarly, we can compute the expected payoff of the bond one
+year from now in the bad state.
+With 90% probability, the bond will not default,
+and we will get $100.
+With probability 10%, the bond will default. In this case,
+we recover 40% of the $100 face value.
+This gives us the expected payoff of $94.
+
+Next, let's find the risk-neutral probabilities
+of the good and bad states.
+Recall that the market portfolio one year from now
+either goes up by 25% or goes down by 25%.
+Using our standard notation, this
+implies that multiple u is 1.25 and multiple d is 0.75.
+The risk-neutral probability of the up-move
+is 1 plus r f minus d divided by u minus d.
+Risk-free rate is 5%.
+u is 1.25, and d is 0.75, which gives us
+the risk-neutral probability of the up move of 60%.
+This implies that the risk-neutral probability
+of the down move is 40%.
+Knowing risk-neutral probabilities
+and expected payoffs from the bond
+in the good and bad states, we can price this bond today.
+Its current price equals the expected payoff one year
+from now under the risk-neutral measure
+discounted to present at the risk-free rate.
+Plugging in the numbers from parts a and b of this question,
+we find that the current price of this bond is $92.50.
+Next, let's find the promised yield
+on this bond, the expected yield, the default premium,
+and the risk premium.
+Since this bond pays no coupons and matures one year from now,
+its promised yield equals its face value divided
+by its current price minus 1.
+Plugging in the numbers, we find that the promised
+yield on this bond is 8.11%.
+To compute the expected yield on this bond,
+instead of using the face value that was promised to us,
+we're using the payoff we expect to receive from this bond.
+The expected payoff in year one is the physical probability
+of the good state, which is 70%, multiplied by the expected
+payoff in the good state, which is $99.20,
+plus the physical probability of the bad state, which is 30%,
+multiplied by the expected payoff in the bad state,
+which is $94.
+We see that the expected yield on this bond is 5.56%.
+The default premium, by definition,
+is the difference between the promised yield and the expected
+yield.
+In our case, this is 8.11% minus 5.56%, which equals to 2.55%.
+The risk premium is the difference
+between the expected yield and the risk-free rate.
+In our case, this is 5.56% minus 5%, which equals to 0.56%.
+Therefore the default premium on this bond is 2.55%,
+and the risk premium of this bond is 0.56%.
+Finally let's find CAPM beta of this bond.
+Recall by CAPM, the expected return on this bond,
+which is its expected yield, equals to the risk-free rate
+plus beta of this bond multiplied by the market risk
+premium.
+We know the expected yield.
+And we know the risk-free rate.
+We need to find the expected return on the market portfolio
+so that we can solve this equation for beta.
+The expected return on the market
+equals to the probability of the good state, which
+is 70%, times the return in the good state, which
+is 25%, plus the probability of the bad state, which is 30%,
+times the return in the bad state, which is negative 25%.
+This gives us the expected return of 10%.
+Solving the CAPM equation for beta,
+we find that the beta of this bond is 0.1124.
+Note that this beta is very close to zero,
+implying that this bond has very low systematic risk.
+Because of this, the risk premium on this bond,
+which we found in part d of this question, is low.
+Only 56 basis points.

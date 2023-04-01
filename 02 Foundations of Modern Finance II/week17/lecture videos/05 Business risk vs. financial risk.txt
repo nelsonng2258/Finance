@@ -1,0 +1,165 @@
+
+PROFESSOR: We want to further explore
+the implication of leverage on the risk of equity.
+We have learned that the required rates of return
+on a firm's asset, debt and equity,
+have the following relationship.
+That is, rA equals D divided by D plus E times rD plus E
+divided by D plus E times rE.
+That's the weighted average of rD and rE
+on the right-hand side.
+Rewriting this, we have the second MM theorem.
+The cost of equity of a levered firm
+is given by the following equation--
+rE equals rA plus D/E--
+that's the debt-to-equity ratio-- times rA minus rD.
+From this equation, we make the following observations.
+The required rate of return on asset,
+rA, is independent of D/E, the debt-to-equity ratio,
+which also measures leverage.
+rE increases with the debt-to-equity ratio
+if debt is risk-free.
+Equity becomes riskier, hence demands
+a higher expected rate of return when
+financial leverage increases.
+rD may also increase with leverage,
+as debt becomes risky.
+What we want to do next is to understand a little better how
+leverage changes a firm's risk.
+The risk associated with a firm's asset
+is referred to as its business risk,
+which arises from the firm's real business activities.
+When the firm's asset is kept constant, as we do now,
+its business risk is also fixed.
+Changes in risk only occurs for the different parts
+on the liability side--
+that is, equity and debt--
+when we change leverage.
+To see this, let's consider two firms labeled as U and L.
+In particular, the two firms have the same assets.
+Firm U is 100% equity-financed, that is, unlevered.
+Firm L is financed by both equity and debt,
+hence it's levered.
+From MM II, we have the following.
+First, Firm L's required rate of return on equity
+is different from Firm U's. The required rate of return
+of Firm U's equity compensates for its business risk,
+that is, the risk of its asset.
+However, for Firm L's equity, in addition to the firm's business
+risk, it also involves an additional financial risk,
+which arises from leverage.
+Therefore, the difference between the required rates
+of return on equity for Firm L and U
+compensates for the financial risk in Firm L's equity.
+In order to further illustrate the financial risk
+in the firm's equity.
+Let's assume that the CAPM holds.
+Furthermore, we assume that the firm's leverage level is low
+so that its debt is risk-free.
+Using the market beta as the measure of systematic risk,
+we have the following relationship--
+beta A-- that's the beta of the asset--
+equals wD, the weight of debt, times beta D plus 1 minus wD--
+that gives the weight of equity--
+times beta E. And that equals 1 minus wD times beta
+E when beta of debt is 0.
+We can also rewrite this as the beta E equals 1 over 1
+minus wD times beta A.
+From this equation, we observe the following.
+Beta A captures the risk of the firm's asset or business, which
+is independent of its financing.
+Beta E minus beta A is in general different from 0.
+This difference does depend on the firm's financing,
+reflecting its equity's financial risk.
+If D equals 0, that is, when there's no leverage,
+then beta E equals beta A, and equity has no financial risk.
+However, for D greater than 0, that is,
+when there is leverage, we have beta E greater than beta A
+when beta A is positive.
+This is also true even when beta D is not 0 but small.
+For beta D equals 0, that is, when debt is risk-free,
+we can also rewrite the following.
+Beta E equals 1 plus D/E, the debt-to-equity ratio,
+times beta A. Clearly, beta E increases with D/E.
+The discussion above tells us the following--
+firms with similar businesses can have very different equity
+betas when they have different capital structures.
+The discussion above also leads to
+other important implications, in particular in capital budgeting
+analysis.
+In absence of taxes, only the required rate
+of return on asset or project is needed in capital budgeting
+decisions.
+As we discussed above, we typically
+try to obtain this discount rate from traded assets
+in the market with similar risks,
+in particular, similar systematic risks.
+We do so as follows.
+First, we find traded firms with comparable asset or business.
+Next we use the equity returns as asset returns
+to estimate the asset's systematic risk level,
+like the beta in the CAPM, if these firms
+are 100% equity-financed.
+In this case, equity equals asset.
+However, this may not always happen.
+In particular, trade firms may not be 100% equity-financed.
+When there's leverage, we cannot naively use the return
+on equity to approximate the return on asset.
+Instead, we need to unlever the equity return
+to obtain asset return.
+We develop this procedure using an example.
+Suppose that we want to obtain the cost of capital
+for a privately held software business.
+There are two publicly traded software companies
+who have similar business risks as the one we
+are interested in.
+However, these two firms are financed differently.
+Their capital structure and related information
+are given in the table.
+Firm 1 has an equity beta of 1.42, debt beta of 0.24,
+and a debt-to-equity ratio of 0.5, which are given
+by the second row in the table.
+Firm 2 has an equity beta of 1.56, debt beta of 0.57,
+and a debt-to-equity ratio of 1.2,
+which are given by the third row in the table.
+Clearly, the equity beta is different for the two firms,
+despite the fact that they are in the same line of business
+and should have the same asset beta.
+This difference arises from the fact
+that the two firms have very different leverage levels.
+Firm 2 has a debt-to-equity ratio
+of 1.2, which is a lot higher than Firm 1's
+debt-to-equity ratio of 0.5.
+We also notice that both firms' debt are not risk-free
+and have positive betas.
+Because of higher leverage, Firm 2's debt has a higher beta than
+Firm 1's.
+What we are interested in, however,
+is the asset beta of the two firms, not the equity betas.
+Using MM II for the relationship between a firm's
+cost of equity, asset, and debt, and assuming the CAPM holds,
+we have the following equation for these two firms' betas.
+For Firm 1, we have on the left-hand side
+beta E, which is 1.42 for Firm 1 equals on the right-hand side
+beta A plus 0.5, which is Firm 1's debt-to-equity ratio,
+times beta A minus beta D, which is 0.24 for Firm 1.
+For Firm 2, we have the same equation
+but with Firm 2's numbers.
+Beta E on the left-hand side, which is 1.56 for Firm 2,
+equals on the right-hand side beta
+A plus 1.2, Firm 2's debt-to-equity ratio,
+times beta A minus 0.57, which is Firm 2's debt beta.
+Solving for beta A from the two equations,
+we have beta A1 equals 1.03 and beta A2 equals 1.02.
+The two estimates are not identical but quite close.
+This makes sense, since the two companies are
+in the same business and should have similar systematic risks
+for their assets.
+Take the average of the two estimates, and round up,
+we have the estimate beta for the asset beta
+A, which is 1.03.
+Using CAPM with the risk-free rate of 4%
+and a market premium of 8%, the cost
+of capital for the software business
+should be 4%, the risk-free rate, plus 1.03, the asset
+beta, times 8%, the market premium, which gives 12.24%.

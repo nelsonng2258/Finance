@@ -1,0 +1,452 @@
+0
+00:00:00,000 --> 00:00:00,600
+
+
+1
+00:00:00,600 --> 00:00:02,310
+PROFESSOR: Kinross Gold is considering
+
+2
+00:00:02,310 --> 00:00:04,890
+to acquire a gold mine in Russia.
+
+3
+00:00:04,890 --> 00:00:09,330
+Estimated reserves of this mine are 1 million ounces.
+
+4
+00:00:09,330 --> 00:00:11,340
+It takes one year to extract gold,
+
+5
+00:00:11,340 --> 00:00:16,790
+and estimated extraction costs are $1,000 per ounce.
+
+6
+00:00:16,790 --> 00:00:20,690
+The current price of gold is $1,200 per ounce.
+
+7
+00:00:20,690 --> 00:00:23,510
+It will either increase to $1,600 per ounce
+
+8
+00:00:23,510 --> 00:00:27,890
+or decrease to $900 per ounce next year,
+
+9
+00:00:27,890 --> 00:00:32,270
+and after that it will stay at that level forever.
+
+10
+00:00:32,270 --> 00:00:36,260
+The risk free rate is 2%, and the gold price risk
+
+11
+00:00:36,260 --> 00:00:38,890
+is not diversifiable.
+
+12
+00:00:38,890 --> 00:00:40,880
+We will answer two questions.
+
+13
+00:00:40,880 --> 00:00:43,060
+First, what is the value of this mine
+
+14
+00:00:43,060 --> 00:00:45,910
+if extraction starts today?
+
+15
+00:00:45,910 --> 00:00:49,360
+And second, if Kinross Gold can wait for a year
+
+16
+00:00:49,360 --> 00:00:52,600
+to start the extraction process, and they can also
+
+17
+00:00:52,600 --> 00:00:56,230
+abandon this mine, what is its current value?
+
+18
+00:00:56,230 --> 00:00:58,042
+Let's start this question by discussing
+
+19
+00:00:58,042 --> 00:01:00,000
+what does the statement of "the gold price risk
+
+20
+00:01:00,000 --> 00:01:02,670
+is not diversifiable" actually I mean?
+
+21
+00:01:02,670 --> 00:01:05,470
+If it was fully diversifiable, or as we say,
+
+22
+00:01:05,470 --> 00:01:09,270
+idiosyncratic, then we could have discounted cash flows
+
+23
+00:01:09,270 --> 00:01:11,560
+at the risk-free rate.
+
+24
+00:01:11,560 --> 00:01:13,990
+Since it is not diversifiable, we cannot discount them
+
+25
+00:01:13,990 --> 00:01:15,530
+at the risk-free rate.
+
+26
+00:01:15,530 --> 00:01:17,780
+But we are not given a discount rate in this question.
+
+27
+00:01:17,780 --> 00:01:19,810
+So what should we do?
+
+28
+00:01:19,810 --> 00:01:23,830
+We will use prices of traded assets to find state prices,
+
+29
+00:01:23,830 --> 00:01:27,610
+and we will use the state prices to value the mine.
+
+30
+00:01:27,610 --> 00:01:30,790
+This is analogous to how we valued options, where
+
+31
+00:01:30,790 --> 00:01:34,510
+we used prices of the risk-free bond and the stock
+
+32
+00:01:34,510 --> 00:01:37,060
+to obtain state prices and used the state
+
+33
+00:01:37,060 --> 00:01:40,390
+prices to price the option.
+
+34
+00:01:40,390 --> 00:01:42,370
+Let's start by drawing a tree that
+
+35
+00:01:42,370 --> 00:01:45,610
+captures the evolution of future gold prices.
+
+36
+00:01:45,610 --> 00:01:50,470
+The current price is $1,200, and it will either go up to $1,600
+
+37
+00:01:50,470 --> 00:01:53,170
+or go down to $900.
+
+38
+00:01:53,170 --> 00:01:55,390
+We will use the same notation we adopted
+
+39
+00:01:55,390 --> 00:01:57,370
+when we studied options.
+
+40
+00:01:57,370 --> 00:01:59,830
+How will they know the current price by s,
+
+41
+00:01:59,830 --> 00:02:04,780
+and we'll use multipliers u and d for the up and down moves
+
+42
+00:02:04,780 --> 00:02:06,570
+respectively.
+
+43
+00:02:06,570 --> 00:02:11,430
+Based on given prices of gold, we can compute u and d.
+
+44
+00:02:11,430 --> 00:02:16,170
+U equals to 1,600 divided by 1,200, which is 1.33,
+
+45
+00:02:16,170 --> 00:02:23,070
+and d equals to 900 divided by 1,200, which is 0.75.
+
+46
+00:02:23,070 --> 00:02:25,230
+Let's compute the risk neutral probabilities
+
+47
+00:02:25,230 --> 00:02:27,600
+of the up and down moves.
+
+48
+00:02:27,600 --> 00:02:30,810
+qu, which is the risk neutral probability of the up move,
+
+49
+00:02:30,810 --> 00:02:36,240
+equals 1 plus the risk free rate minus d divided by u minus d.
+
+50
+00:02:36,240 --> 00:02:37,770
+Recall that the risk free rate is
+
+51
+00:02:37,770 --> 00:02:43,230
+2%, which gives us qu of 0.463.
+
+52
+00:02:43,230 --> 00:02:47,910
+qd equals to u minus 1 plus rf, divided by u minus d,
+
+53
+00:02:47,910 --> 00:02:51,360
+and this gives us 0.537.
+
+54
+00:02:51,360 --> 00:02:54,248
+qd can also be simply computed as 1 minus qu,
+
+55
+00:02:54,248 --> 00:02:56,040
+because the risk neutral probabilities have
+
+56
+00:02:56,040 --> 00:02:57,570
+to add up to 1.
+
+57
+00:02:57,570 --> 00:02:59,700
+Now we can compute state prices.
+
+58
+00:02:59,700 --> 00:03:03,210
+Phi u, which is the price of the up state,
+
+59
+00:03:03,210 --> 00:03:10,500
+is qu divided by 1 plus rf, which equals 0.454.
+
+60
+00:03:10,500 --> 00:03:14,400
+Similarly, phi d, which is the price of the down state,
+
+61
+00:03:14,400 --> 00:03:21,420
+is qd divided by 1 plus rf, which equals to 0.527.
+
+62
+00:03:21,420 --> 00:03:23,640
+Equipped with state prices, we can
+
+63
+00:03:23,640 --> 00:03:25,020
+find the present value of revenue
+
+64
+00:03:25,020 --> 00:03:27,300
+if we start extraction today.
+
+65
+00:03:27,300 --> 00:03:30,540
+Recall that it takes us one year to finish the extraction
+
+66
+00:03:30,540 --> 00:03:32,680
+and sell the gold.
+
+67
+00:03:32,680 --> 00:03:37,110
+The present value of next year's revenue is 1,600 times
+
+68
+00:03:37,110 --> 00:03:41,070
+phi u plus 900 times phi d.
+
+69
+00:03:41,070 --> 00:03:43,140
+This equals 1,200.
+
+70
+00:03:43,140 --> 00:03:46,560
+Therefore, the current expected revenue per ounce of gold
+
+71
+00:03:46,560 --> 00:03:48,750
+is $1,200.
+
+72
+00:03:48,750 --> 00:03:51,690
+This, of course, should not surprise us.
+
+73
+00:03:51,690 --> 00:03:53,550
+The expected revenue per ounce of gold
+
+74
+00:03:53,550 --> 00:03:55,620
+should, of course, equal the current market
+
+75
+00:03:55,620 --> 00:03:59,130
+price of gold, which we were given in the beginning.
+
+76
+00:03:59,130 --> 00:04:01,470
+In fact, our state prices were computed based
+
+77
+00:04:01,470 --> 00:04:04,000
+on the current price of gold.
+
+78
+00:04:04,000 --> 00:04:06,670
+We could have in principle answered this question
+
+79
+00:04:06,670 --> 00:04:10,090
+without computing the state prices.
+
+80
+00:04:10,090 --> 00:04:12,850
+We have done this here for illustrative purposes.
+
+81
+00:04:12,850 --> 00:04:14,800
+Plus we will utilize state process
+
+82
+00:04:14,800 --> 00:04:17,740
+in the second part of this question.
+
+83
+00:04:17,740 --> 00:04:21,490
+Given that extraction costs are $1,000 per ounce,
+
+84
+00:04:21,490 --> 00:04:25,930
+our cash flow is $200 per ounce of gold.
+
+85
+00:04:25,930 --> 00:04:28,870
+Since the mine contains one million ounces of gold,
+
+86
+00:04:28,870 --> 00:04:32,140
+the value of this mine if we start extraction now
+
+87
+00:04:32,140 --> 00:04:35,260
+is $200 million.
+
+88
+00:04:35,260 --> 00:04:38,530
+Now let's figure out what will be the value of this mine
+
+89
+00:04:38,530 --> 00:04:41,020
+if we could delay gold extraction for a year
+
+90
+00:04:41,020 --> 00:04:44,710
+and abandon this mine if it is profitable to do so.
+
+91
+00:04:44,710 --> 00:04:47,110
+Note that we will do the extraction only
+
+92
+00:04:47,110 --> 00:04:50,530
+in the up state, where gold prices exceed the extraction
+
+93
+00:04:50,530 --> 00:04:51,760
+costs.
+
+94
+00:04:51,760 --> 00:04:55,320
+In the down state, we will simply abandon the mine.
+
+95
+00:04:55,320 --> 00:04:58,020
+This means that in year one, in the down state,
+
+96
+00:04:58,020 --> 00:05:00,820
+the value of this mine is 0.
+
+97
+00:05:00,820 --> 00:05:04,810
+In the up state, its value can be computed as follows.
+
+98
+00:05:04,810 --> 00:05:11,500
+We pay $1,000 per ounce in year one to receive $1,600 per ounce
+
+99
+00:05:11,500 --> 00:05:13,290
+with certainty in year 2.
+
+100
+00:05:13,290 --> 00:05:18,430
+Therefore, the value per ounce in year one in the up state
+
+101
+00:05:18,430 --> 00:05:23,050
+is negative $1,000 plus $1,600 divided by 1
+
+102
+00:05:23,050 --> 00:05:25,510
+plus the risk free rate, which is 2%,
+
+103
+00:05:25,510 --> 00:05:30,400
+and this equals to $568.63.
+
+104
+00:05:30,400 --> 00:05:32,380
+Given the above, the current value
+
+105
+00:05:32,380 --> 00:05:38,620
+of this mine per ounce of gold is 568.63 times phi u plus 0
+
+106
+00:05:38,620 --> 00:05:40,030
+times phi d.
+
+107
+00:05:40,030 --> 00:05:44,430
+This gives us $258.03.
+
+108
+00:05:44,430 --> 00:05:47,100
+Given that we can extract one million ounces,
+
+109
+00:05:47,100 --> 00:05:51,150
+the total value of the mine is $258.03 million.
+
+110
+00:05:51,150 --> 00:05:54,330
+The flexibility to wait and abandon
+
+111
+00:05:54,330 --> 00:05:58,050
+is clearly very valuable and increases the value
+
+112
+00:05:58,050 --> 00:06:02,060
+of this mine by $58.03 million.
+

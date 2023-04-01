@@ -1,0 +1,592 @@
+0
+00:00:00,000 --> 00:00:00,750
+
+
+1
+00:00:00,750 --> 00:00:02,220
+PROFESSOR: In this video, we will
+
+2
+00:00:02,220 --> 00:00:04,680
+consider an example of corporate risk hedging
+
+3
+00:00:04,680 --> 00:00:07,410
+with derivative securities.
+
+4
+00:00:07,410 --> 00:00:10,080
+Consider a market with two possible states a year
+
+5
+00:00:10,080 --> 00:00:11,040
+from now--
+
+6
+00:00:11,040 --> 00:00:12,750
+good or bad.
+
+7
+00:00:12,750 --> 00:00:15,480
+In the good state, the return on the market portfolio
+
+8
+00:00:15,480 --> 00:00:16,710
+will be 10%.
+
+9
+00:00:16,710 --> 00:00:20,010
+And in the bad state, it will be negative 20%.
+
+10
+00:00:20,010 --> 00:00:23,460
+The one-year risk-free rate is 5%.
+
+11
+00:00:23,460 --> 00:00:26,850
+A biotechnology startup in Cambridge, Massachusetts
+
+12
+00:00:26,850 --> 00:00:29,680
+works on a new vaccine delivery technology.
+
+13
+00:00:29,680 --> 00:00:33,240
+Next year, this technology will be sold to Moderna.
+
+14
+00:00:33,240 --> 00:00:35,040
+If the market is in the good state,
+
+15
+00:00:35,040 --> 00:00:38,400
+the startup will generate $80 million in cash flow
+
+16
+00:00:38,400 --> 00:00:40,110
+on this sale.
+
+17
+00:00:40,110 --> 00:00:42,510
+If the market, however, is in the bad state,
+
+18
+00:00:42,510 --> 00:00:46,590
+the cash flow will only be $20 million.
+
+19
+00:00:46,590 --> 00:00:49,320
+The startup is considering borrowing $15 million
+
+20
+00:00:49,320 --> 00:00:51,990
+to fund the development.
+
+21
+00:00:51,990 --> 00:00:54,150
+If the startup fails to pay the loan back,
+
+22
+00:00:54,150 --> 00:00:57,420
+it faces bankruptcy costs of $5 million.
+
+23
+00:00:57,420 --> 00:00:59,400
+In the event of default, these costs
+
+24
+00:00:59,400 --> 00:01:01,620
+will reduce the value of the remaining assets
+
+25
+00:01:01,620 --> 00:01:05,340
+and therefore, the payout to debt holders.
+
+26
+00:01:05,340 --> 00:01:07,740
+Suppose that the loan is issued at par
+
+27
+00:01:07,740 --> 00:01:10,860
+and that the interest is due at maturity.
+
+28
+00:01:10,860 --> 00:01:14,130
+You are hired as a financial advisor to the startup.
+
+29
+00:01:14,130 --> 00:01:17,970
+Your goal is to advise on the best financing arrangement.
+
+30
+00:01:17,970 --> 00:01:21,690
+Assume that the tax rate is 25%.
+
+31
+00:01:21,690 --> 00:01:23,970
+First, let's find the value of this firm
+
+32
+00:01:23,970 --> 00:01:27,330
+if it is 100% equity financed.
+
+33
+00:01:27,330 --> 00:01:30,330
+The after-tax cash flow in year 1 in the good state
+
+34
+00:01:30,330 --> 00:01:31,410
+is $60 million.
+
+35
+00:01:31,410 --> 00:01:36,468
+And in the bad state it is $15 million.
+
+36
+00:01:36,468 --> 00:01:39,280
+To find the present value after-tax cash flows,
+
+37
+00:01:39,280 --> 00:01:42,360
+let's first find risk-neutral probabilities.
+
+38
+00:01:42,360 --> 00:01:45,300
+The risk-neutral probability of the good state is 83.3%,
+
+39
+00:01:45,300 --> 00:01:51,840
+and risk-neutral probability of the bad state is 16.7%.
+
+40
+00:01:51,840 --> 00:01:53,723
+Knowing the risk-neutral probabilities,
+
+41
+00:01:53,723 --> 00:01:55,140
+we can find the value of this firm
+
+42
+00:01:55,140 --> 00:01:57,780
+if it is 100% equity financed.
+
+43
+00:01:57,780 --> 00:01:59,715
+This value is $50 million.
+
+44
+00:01:59,715 --> 00:02:03,510
+
+
+45
+00:02:03,510 --> 00:02:08,699
+Now let's find the value of this firm if it borrows $15 million.
+
+46
+00:02:08,699 --> 00:02:12,060
+First, let's find the promised yield on this loan.
+
+47
+00:02:12,060 --> 00:02:14,400
+We can write down the following equation.
+
+48
+00:02:14,400 --> 00:02:17,410
+The borrowed amount, which is $15 million,
+
+49
+00:02:17,410 --> 00:02:19,410
+has to equal to the expected value of the payoff
+
+50
+00:02:19,410 --> 00:02:21,960
+from this loan under the risk-neutral measure discounted
+
+51
+00:02:21,960 --> 00:02:24,460
+to present at the risk-free rate.
+
+52
+00:02:24,460 --> 00:02:26,400
+This equals to the risk-neutral probability
+
+53
+00:02:26,400 --> 00:02:31,050
+of the good state, which is 83.3% times the total payoff
+
+54
+00:02:31,050 --> 00:02:33,330
+from the loan in the good state, which
+
+55
+00:02:33,330 --> 00:02:35,730
+equals to the principal of $15 million
+
+56
+00:02:35,730 --> 00:02:39,090
+plus interest, which equals to the promised yield,
+
+57
+00:02:39,090 --> 00:02:42,000
+plus the risk-neutral probability of the bad state,
+
+58
+00:02:42,000 --> 00:02:46,800
+which is 16.7%, times the payoff from the bond in the bad state,
+
+59
+00:02:46,800 --> 00:02:50,760
+which equals the total value of assets in the bad state, $15
+
+60
+00:02:50,760 --> 00:02:54,180
+million, minus the losses of $5 million
+
+61
+00:02:54,180 --> 00:02:58,170
+that the firm would incur in the event of default.
+
+62
+00:02:58,170 --> 00:03:02,818
+Solving this equation, we get 12.67%.
+
+63
+00:03:02,818 --> 00:03:06,590
+If this loan is issued at par, the interest rate on this loan
+
+64
+00:03:06,590 --> 00:03:07,970
+would be 12.67%.
+
+65
+00:03:07,970 --> 00:03:12,680
+And its face value would be $15 million.
+
+66
+00:03:12,680 --> 00:03:14,690
+Knowing the interest rate on this loan,
+
+67
+00:03:14,690 --> 00:03:17,970
+we can find the present value of interest tax shields.
+
+68
+00:03:17,970 --> 00:03:20,840
+They equal to the expected value of tax shields generated
+
+69
+00:03:20,840 --> 00:03:23,690
+by this loan under the risk neutral measure discounted
+
+70
+00:03:23,690 --> 00:03:25,880
+to present at the risk-free rate.
+
+71
+00:03:25,880 --> 00:03:29,750
+Importantly, note that this loan generates tax shields only
+
+72
+00:03:29,750 --> 00:03:32,060
+in the up state, because in the down state,
+
+73
+00:03:32,060 --> 00:03:34,370
+the firm defaults and does not pay interest,
+
+74
+00:03:34,370 --> 00:03:37,640
+and therefore, does not get the tax shield.
+
+75
+00:03:37,640 --> 00:03:39,710
+Hence, the present value of tax shields
+
+76
+00:03:39,710 --> 00:03:42,200
+equals to the risk-neutral probability
+
+77
+00:03:42,200 --> 00:03:44,600
+of the up state times the tax rate
+
+78
+00:03:44,600 --> 00:03:46,910
+times the interest rate times the face
+
+79
+00:03:46,910 --> 00:03:51,390
+value of this loan divided by 1 plus the risk-free rate.
+
+80
+00:03:51,390 --> 00:03:55,748
+This gives us $0.38 million.
+
+81
+00:03:55,748 --> 00:03:57,620
+Next, let's find the present value
+
+82
+00:03:57,620 --> 00:04:00,080
+of financial distress costs.
+
+83
+00:04:00,080 --> 00:04:03,170
+They equal to the expected value of financial distress costs
+
+84
+00:04:03,170 --> 00:04:05,990
+under the risk-neutral measure discounted to present
+
+85
+00:04:05,990 --> 00:04:07,970
+at the risk-free rate.
+
+86
+00:04:07,970 --> 00:04:11,180
+Since the firm defaults on the loan only in the down state,
+
+87
+00:04:11,180 --> 00:04:13,190
+the present value of distress costs
+
+88
+00:04:13,190 --> 00:04:15,830
+is the risk-neutral probability of the down state
+
+89
+00:04:15,830 --> 00:04:18,709
+times the dollar value of distress costs, which
+
+90
+00:04:18,709 --> 00:04:20,720
+is $5 million.
+
+91
+00:04:20,720 --> 00:04:25,190
+This gives us $0.79 million.
+
+92
+00:04:25,190 --> 00:04:27,260
+Putting this all together we can find
+
+93
+00:04:27,260 --> 00:04:29,420
+the value of the levered firm.
+
+94
+00:04:29,420 --> 00:04:31,760
+It equals to the value of the unlevered firm
+
+95
+00:04:31,760 --> 00:04:33,890
+plus the present value of tax shields,
+
+96
+00:04:33,890 --> 00:04:37,718
+minus the present value of distress costs.
+
+97
+00:04:37,718 --> 00:04:40,010
+We find that the value of the firm if it takes the loan
+
+98
+00:04:40,010 --> 00:04:43,310
+is $49.58 million.
+
+99
+00:04:43,310 --> 00:04:45,440
+We see that this value is lower than the value
+
+100
+00:04:45,440 --> 00:04:49,460
+of the unlevered firm, which was $50 million.
+
+101
+00:04:49,460 --> 00:04:53,390
+The reason for this is that the present value of distress costs
+
+102
+00:04:53,390 --> 00:04:57,500
+outweighs the present value of interest tax shields.
+
+103
+00:04:57,500 --> 00:05:00,290
+Based on this analysis, we conclude that the firm
+
+104
+00:05:00,290 --> 00:05:01,610
+should not take the loan.
+
+105
+00:05:01,610 --> 00:05:04,170
+
+
+106
+00:05:04,170 --> 00:05:06,750
+CFO of the startup considers the possibility
+
+107
+00:05:06,750 --> 00:05:11,483
+of hedging default risk in order to avoid bankruptcy costs.
+
+108
+00:05:11,483 --> 00:05:12,900
+She approached the investment bank
+
+109
+00:05:12,900 --> 00:05:16,440
+Lazard, which offered to sell a put option that
+
+110
+00:05:16,440 --> 00:05:20,580
+pays $750,000 in the bad state of the economy
+
+111
+00:05:20,580 --> 00:05:23,010
+and nothing in the good state.
+
+112
+00:05:23,010 --> 00:05:25,380
+Assuming that the option will be fairly priced,
+
+113
+00:05:25,380 --> 00:05:29,400
+what would you advise the biotech startup to do?
+
+114
+00:05:29,400 --> 00:05:33,330
+Having additional $750,000 in the bad state effectively
+
+115
+00:05:33,330 --> 00:05:35,730
+allows the startup to avoid default
+
+116
+00:05:35,730 --> 00:05:39,330
+and to borrow $15 million at the risk-free rate.
+
+117
+00:05:39,330 --> 00:05:42,030
+With this hedge, the startup has enough funds
+
+118
+00:05:42,030 --> 00:05:44,910
+to pay both the principal, which is $15 million,
+
+119
+00:05:44,910 --> 00:05:47,860
+and the interest, 5% times $15 million,
+
+120
+00:05:47,860 --> 00:05:52,650
+which is $750,000 in both good and bad states.
+
+121
+00:05:52,650 --> 00:05:55,980
+So let's quantify the costs and benefits of this hedging
+
+122
+00:05:55,980 --> 00:05:58,140
+strategy.
+
+123
+00:05:58,140 --> 00:06:00,180
+The cost of this hedging strategy
+
+124
+00:06:00,180 --> 00:06:04,710
+is the price of the put option, which we have to pay to Lazard.
+
+125
+00:06:04,710 --> 00:06:07,470
+Assuming that this option would be fairly priced,
+
+126
+00:06:07,470 --> 00:06:10,200
+its price equals to the present value of the payoff
+
+127
+00:06:10,200 --> 00:06:12,600
+under the risk control measure discounted to present
+
+128
+00:06:12,600 --> 00:06:14,830
+at the risk-free rate.
+
+129
+00:06:14,830 --> 00:06:19,445
+This gives us $0.12 million.
+
+130
+00:06:19,445 --> 00:06:21,750
+The benefit of this hedging strategy
+
+131
+00:06:21,750 --> 00:06:24,210
+is the fact that we avoid bankruptcy costs
+
+132
+00:06:24,210 --> 00:06:29,020
+and generate interest tax shield in both states of the world.
+
+133
+00:06:29,020 --> 00:06:33,630
+The tax shield equals to the tax rate times the risk-free rate,
+
+134
+00:06:33,630 --> 00:06:36,260
+because with the hedge, as long as it is risk-free,
+
+135
+00:06:36,260 --> 00:06:39,210
+ties the principal amount.
+
+136
+00:06:39,210 --> 00:06:41,190
+This tax shield is risk-free and hence, we
+
+137
+00:06:41,190 --> 00:06:44,100
+discount it to present at the risk-free rate.
+
+138
+00:06:44,100 --> 00:06:49,680
+We find that the present value of tax shield is $0.18 million.
+
+139
+00:06:49,680 --> 00:06:52,300
+We see that the benefits outweigh the costs.
+
+140
+00:06:52,300 --> 00:06:54,720
+And therefore, the startup should take the loan
+
+141
+00:06:54,720 --> 00:06:56,580
+and buy the put.
+
+142
+00:06:56,580 --> 00:06:59,880
+By doing this, the startup avoids default,
+
+143
+00:06:59,880 --> 00:07:02,430
+and its value becomes $50 million
+
+144
+00:07:02,430 --> 00:07:07,020
+plus the present value of tax shields, which is $0.18 million
+
+145
+00:07:07,020 --> 00:07:11,340
+minus the cost of hedging, which is $0.12 million.
+
+146
+00:07:11,340 --> 00:07:16,500
+The firm value is therefore $50.06 million.
+
+147
+00:07:16,500 --> 00:07:17,000
+
+

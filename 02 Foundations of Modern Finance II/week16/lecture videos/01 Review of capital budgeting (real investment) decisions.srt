@@ -1,0 +1,324 @@
+0
+00:00:00,000 --> 00:00:00,690
+
+
+1
+00:00:00,690 --> 00:00:02,700
+PROFESSOR: We have spent a great deal of effort
+
+2
+00:00:02,700 --> 00:00:06,840
+to understand how the financial market values different assets,
+
+3
+00:00:06,840 --> 00:00:08,940
+real or financial.
+
+4
+00:00:08,940 --> 00:00:11,430
+In particular, we have learned how
+
+5
+00:00:11,430 --> 00:00:14,400
+the time value of money and the risk premium
+
+6
+00:00:14,400 --> 00:00:18,090
+are provided by the prices of a rich set of traded
+
+7
+00:00:18,090 --> 00:00:21,570
+assets in the financial market.
+
+8
+00:00:21,570 --> 00:00:25,260
+These pricing information provides the basis for us
+
+9
+00:00:25,260 --> 00:00:29,010
+to value different assets, projects, and prospects
+
+10
+00:00:29,010 --> 00:00:32,229
+in real economic activities.
+
+11
+00:00:32,229 --> 00:00:35,320
+We have also developed methods and models
+
+12
+00:00:35,320 --> 00:00:39,140
+to analyze and measure risks.
+
+13
+00:00:39,140 --> 00:00:41,530
+In particular, we have learned that there
+
+14
+00:00:41,530 --> 00:00:44,440
+are two kinds of risks, systematic risks
+
+15
+00:00:44,440 --> 00:00:46,990
+and nonsystematic risks.
+
+16
+00:00:46,990 --> 00:00:50,110
+More importantly, it is the systematic risk
+
+17
+00:00:50,110 --> 00:00:54,910
+that leads to a required risk premium by the market.
+
+18
+00:00:54,910 --> 00:00:59,800
+Using risk models like the APT and the CAPM
+
+19
+00:00:59,800 --> 00:01:03,580
+we can further pin down the systemic risk factors
+
+20
+00:01:03,580 --> 00:01:05,800
+and their risk premiums.
+
+21
+00:01:05,800 --> 00:01:09,880
+We can then determine the risk premium of an asset
+
+22
+00:01:09,880 --> 00:01:14,700
+by its exposure to the systematic risks.
+
+23
+00:01:14,700 --> 00:01:17,300
+In addition, when an asset's risk
+
+24
+00:01:17,300 --> 00:01:21,920
+is nonlinear, such as in the case of options,
+
+25
+00:01:21,920 --> 00:01:25,790
+we have further developed option valuation or state price
+
+26
+00:01:25,790 --> 00:01:30,320
+valuation tools to price them accordingly.
+
+27
+00:01:30,320 --> 00:01:33,470
+What we will return to next is to apply
+
+28
+00:01:33,470 --> 00:01:36,740
+the risk analysis and valuation tools
+
+29
+00:01:36,740 --> 00:01:39,620
+as well as various financial instruments
+
+30
+00:01:39,620 --> 00:01:42,080
+available in the financial market
+
+31
+00:01:42,080 --> 00:01:48,960
+to help us make and implement corporate financial decisions.
+
+32
+00:01:48,960 --> 00:01:52,950
+As we have discussed in part 1 of this course,
+
+33
+00:01:52,950 --> 00:01:58,120
+corporate financial decisions fall into four categories.
+
+34
+00:01:58,120 --> 00:02:00,450
+The first is about real investments,
+
+35
+00:02:00,450 --> 00:02:05,250
+or capital budgeting, namely, what projects to invest in.
+
+36
+00:02:05,250 --> 00:02:10,500
+This decision involves estimates of an investment's cash flow,
+
+37
+00:02:10,500 --> 00:02:14,100
+the appropriate discount rates in valuing the cash flow,
+
+38
+00:02:14,100 --> 00:02:19,140
+and possible optionality embedded in it.
+
+39
+00:02:19,140 --> 00:02:22,460
+The second category of decisions is financing.
+
+40
+00:02:22,460 --> 00:02:26,660
+Financing decisions is about how a firm should raise
+
+41
+00:02:26,660 --> 00:02:29,760
+funds for its investments--
+
+42
+00:02:29,760 --> 00:02:32,520
+by issuing different types of financial claims,
+
+43
+00:02:32,520 --> 00:02:37,710
+bank loans, corporate bonds, stocks, et cetera.
+
+44
+00:02:37,710 --> 00:02:39,210
+The third is payout.
+
+45
+00:02:39,210 --> 00:02:42,660
+That is, how a firm should pay its shareholders
+
+46
+00:02:42,660 --> 00:02:48,540
+in terms of dividends, stock buybacks, and so on.
+
+47
+00:02:48,540 --> 00:02:51,570
+The fourth category is risk management,
+
+48
+00:02:51,570 --> 00:02:55,140
+how a firm should deal with various types of risks
+
+49
+00:02:55,140 --> 00:02:57,300
+it faces.
+
+50
+00:02:57,300 --> 00:03:01,380
+We covered in detail the first part of capital budgeting,
+
+51
+00:03:01,380 --> 00:03:04,980
+focusing primarily in cash flow analysis.
+
+52
+00:03:04,980 --> 00:03:07,020
+In this part of the course, we will
+
+53
+00:03:07,020 --> 00:03:10,200
+consider the remaining parts of capital budgeting
+
+54
+00:03:10,200 --> 00:03:13,950
+and the other three types of corporate financial decisions.
+
+55
+00:03:13,950 --> 00:03:17,970
+Again, we will start with a firm's investment or capital
+
+56
+00:03:17,970 --> 00:03:19,950
+budgeting decisions.
+
+57
+00:03:19,950 --> 00:03:23,130
+As we discussed before, the investment decision
+
+58
+00:03:23,130 --> 00:03:28,710
+is about the valuation of the projects under consideration.
+
+59
+00:03:28,710 --> 00:03:32,960
+In particular, we should follow the NPV rule.
+
+60
+00:03:32,960 --> 00:03:35,270
+That is, for a single project, we
+
+61
+00:03:35,270 --> 00:03:39,770
+should take it only if its cash flow has a positive Net Present
+
+62
+00:03:39,770 --> 00:03:41,640
+Value.
+
+63
+00:03:41,640 --> 00:03:44,580
+For multiple independent projects,
+
+64
+00:03:44,580 --> 00:03:49,520
+we should take all the projects with positive NPVs.
+
+65
+00:03:49,520 --> 00:03:52,130
+For mutually exclusive projects, we
+
+66
+00:03:52,130 --> 00:03:54,950
+should take the one with the highest NPV,
+
+67
+00:03:54,950 --> 00:03:58,870
+assuming it's also positive.
+
+68
+00:03:58,870 --> 00:04:01,870
+Therefore, the capital budgeting decision
+
+69
+00:04:01,870 --> 00:04:07,690
+really boils down to estimating the projects' NPVs.
+
+70
+00:04:07,690 --> 00:04:11,900
+The NPV of a project depends on three factors.
+
+71
+00:04:11,900 --> 00:04:15,050
+The first is its cash flow.
+
+72
+00:04:15,050 --> 00:04:17,709
+The second is the appropriate discount rates
+
+73
+00:04:17,709 --> 00:04:19,630
+for its cash flow.
+
+74
+00:04:19,630 --> 00:04:22,810
+And the last is the potential optionality
+
+75
+00:04:22,810 --> 00:04:26,040
+embedded in the project.
+
+76
+00:04:26,040 --> 00:04:29,340
+We have examined item one in detail
+
+77
+00:04:29,340 --> 00:04:31,630
+in part 1 of this course.
+
+78
+00:04:31,630 --> 00:04:35,040
+We will now focus on item two and three
+
+79
+00:04:35,040 --> 00:04:38,160
+with the risk analysis and asset pricing tools
+
+80
+00:04:38,160 --> 00:04:40,340
+we have developed.
+

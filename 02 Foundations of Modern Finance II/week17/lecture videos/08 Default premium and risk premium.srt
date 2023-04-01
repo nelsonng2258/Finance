@@ -1,0 +1,644 @@
+0
+00:00:00,000 --> 00:00:00,960
+
+
+1
+00:00:00,960 --> 00:00:05,430
+PROFESSOR: Default risk is also reflected in bond prices.
+
+2
+00:00:05,430 --> 00:00:09,810
+We use bond prices or yields to define several measures
+
+3
+00:00:09,810 --> 00:00:12,090
+of default risk.
+
+4
+00:00:12,090 --> 00:00:15,120
+We do so by using an example.
+
+5
+00:00:15,120 --> 00:00:20,010
+For simplicity, we consider only zero coupon bonds
+
+6
+00:00:20,010 --> 00:00:23,390
+with a par value of $1,000.
+
+7
+00:00:23,390 --> 00:00:26,750
+In particular, a 10-year treasury STRIPS
+
+8
+00:00:26,750 --> 00:00:34,260
+is trading at $463.19, yielding 8%.
+
+9
+00:00:34,260 --> 00:00:38,580
+A 10-year zero coupon bond issued by XYZ, Inc.
+
+10
+00:00:38,580 --> 00:00:43,940
+is trading at $321.97.
+
+11
+00:00:43,940 --> 00:00:46,400
+Since this bond has the same promised
+
+12
+00:00:46,400 --> 00:00:51,620
+payoff at the same time as the 10-year STRIPS,
+
+13
+00:00:51,620 --> 00:00:54,800
+the fact that it's trading at a lower price
+
+14
+00:00:54,800 --> 00:01:00,660
+simply reflects that it has substantial default risk.
+
+15
+00:01:00,660 --> 00:01:03,060
+The payoff from the 10-year STRIPS
+
+16
+00:01:03,060 --> 00:01:06,630
+is simply $1,000 for sure.
+
+17
+00:01:06,630 --> 00:01:13,020
+The payoff from XYZ's 10-year zero, however, is uncertain.
+
+18
+00:01:13,020 --> 00:01:16,500
+In the best scenario, it is $1,000.
+
+19
+00:01:16,500 --> 00:01:20,240
+In the worst scenario, it will be 0.
+
+20
+00:01:20,240 --> 00:01:25,580
+Let us assume that the average across all possible scenarios,
+
+21
+00:01:25,580 --> 00:01:33,780
+the expected payoff is $762.22 on the XYZ bond.
+
+22
+00:01:33,780 --> 00:01:36,690
+We can then define two yields to maturity
+
+23
+00:01:36,690 --> 00:01:41,400
+to capture XYZ's default risk.
+
+24
+00:01:41,400 --> 00:01:45,610
+The first is the promised yield to maturity,
+
+25
+00:01:45,610 --> 00:01:48,210
+which is defined by the yield to maturity
+
+26
+00:01:48,210 --> 00:01:53,490
+using the bond's promised payoff and its current price.
+
+27
+00:01:53,490 --> 00:01:57,960
+It's given by the first equation on the slide.
+
+28
+00:01:57,960 --> 00:02:02,120
+Take the promised payoff of $1,000 divided
+
+29
+00:02:02,120 --> 00:02:07,880
+by the bond price, which gives the gross return over 10 years.
+
+30
+00:02:07,880 --> 00:02:10,850
+Taking the 10th root and minus 1,
+
+31
+00:02:10,850 --> 00:02:13,760
+we have the promised yield to maturity of 12%.
+
+32
+00:02:13,760 --> 00:02:16,310
+
+
+33
+00:02:16,310 --> 00:02:19,910
+The second is the expected yield to maturity.
+
+34
+00:02:19,910 --> 00:02:22,220
+It is defined by the yield to maturity
+
+35
+00:02:22,220 --> 00:02:27,510
+using the bond's expected payoff and its current price.
+
+36
+00:02:27,510 --> 00:02:31,980
+This is given in the second equation on the slide.
+
+37
+00:02:31,980 --> 00:02:35,820
+The expected yield to maturity equals the expected payoff
+
+38
+00:02:35,820 --> 00:02:41,850
+of $762.22 divided by the bond's current price, which
+
+39
+00:02:41,850 --> 00:02:49,470
+is $321.97, taking the 10th root and minus 1.
+
+40
+00:02:49,470 --> 00:02:52,630
+It gives 9%.
+
+41
+00:02:52,630 --> 00:02:56,530
+Clearly, these two yields differ from the yield to maturity
+
+42
+00:02:56,530 --> 00:03:01,170
+on the Treasury, which is 8%.
+
+43
+00:03:01,170 --> 00:03:04,770
+In fact, if we apply the same formulas to the Treasury
+
+44
+00:03:04,770 --> 00:03:09,210
+STRIPS, we will get 8% for both the promised yield
+
+45
+00:03:09,210 --> 00:03:12,630
+and the expected yield.
+
+46
+00:03:12,630 --> 00:03:15,250
+With the two yields defined above,
+
+47
+00:03:15,250 --> 00:03:18,840
+we can further define two premiums--
+
+48
+00:03:18,840 --> 00:03:22,710
+the default premium and the risk premium.
+
+49
+00:03:22,710 --> 00:03:25,140
+The default premium is given by the difference
+
+50
+00:03:25,140 --> 00:03:27,300
+between the promised yield to maturity
+
+51
+00:03:27,300 --> 00:03:30,040
+and expected yield to maturity.
+
+52
+00:03:30,040 --> 00:03:34,240
+For XYZ's bond, we have 12%, its promised yield,
+
+53
+00:03:34,240 --> 00:03:39,920
+minus 9%, its expected yield, which gives 3%.
+
+54
+00:03:39,920 --> 00:03:44,060
+Intuitively, this premium reflects the actual yield
+
+55
+00:03:44,060 --> 00:03:50,020
+the bond has to promise to compensate its default risk.
+
+56
+00:03:50,020 --> 00:03:52,750
+Risk premium is given by the difference
+
+57
+00:03:52,750 --> 00:03:54,790
+between expected yield to maturity
+
+58
+00:03:54,790 --> 00:03:57,760
+and the risk-free yield to maturity.
+
+59
+00:03:57,760 --> 00:04:06,120
+In the case of XYZ bond, we have 9% minus 8%, which is 1%.
+
+60
+00:04:06,120 --> 00:04:10,620
+As always, the risk premium is expected excess return
+
+61
+00:04:10,620 --> 00:04:13,230
+on the bond.
+
+62
+00:04:13,230 --> 00:04:16,380
+To summarize, we list the four variables
+
+63
+00:04:16,380 --> 00:04:20,550
+we have introduced to capture different aspects of default
+
+64
+00:04:20,550 --> 00:04:21,450
+risk.
+
+65
+00:04:21,450 --> 00:04:23,880
+Promised yield to maturity is the yield
+
+66
+00:04:23,880 --> 00:04:28,180
+if default does not occur or the promise is met.
+
+67
+00:04:28,180 --> 00:04:31,210
+Expected yield to maturity is the probability
+
+68
+00:04:31,210 --> 00:04:35,410
+weighted average of all possible yields.
+
+69
+00:04:35,410 --> 00:04:38,560
+Default premium is the difference between the promised
+
+70
+00:04:38,560 --> 00:04:41,090
+yield and expected yield.
+
+71
+00:04:41,090 --> 00:04:43,900
+Risk premium is the difference between the expected
+
+72
+00:04:43,900 --> 00:04:46,480
+yield on the risky bond and the yield
+
+73
+00:04:46,480 --> 00:04:52,200
+of a risk-free bond of similar maturity and coupon rate.
+
+74
+00:04:52,200 --> 00:04:55,740
+It's worth noting that the promised yield only
+
+75
+00:04:55,740 --> 00:04:58,050
+depends on the bond's promised cash
+
+76
+00:04:58,050 --> 00:05:00,900
+flow and its current price.
+
+77
+00:05:00,900 --> 00:05:02,840
+Therefore, similar to the yield to maturity
+
+78
+00:05:02,840 --> 00:05:07,850
+for risk-free bonds, promised yield is really a different way
+
+79
+00:05:07,850 --> 00:05:11,270
+to quote prices for risky bonds.
+
+80
+00:05:11,270 --> 00:05:16,640
+Using the numbers for the XYZ bond, the figure on the slide
+
+81
+00:05:16,640 --> 00:05:20,180
+illustrates the different yields and premiums
+
+82
+00:05:20,180 --> 00:05:22,960
+we have just introduced.
+
+83
+00:05:22,960 --> 00:05:26,800
+The bond's promised yield is 12%.
+
+84
+00:05:26,800 --> 00:05:32,290
+It can be decomposed into three components from bottom up.
+
+85
+00:05:32,290 --> 00:05:36,280
+In absence of default risk, we have the default-free yield,
+
+86
+00:05:36,280 --> 00:05:38,560
+which is 8%.
+
+87
+00:05:38,560 --> 00:05:40,840
+Given the default risk, there will
+
+88
+00:05:40,840 --> 00:05:43,960
+be a risk premium, which is 1%.
+
+89
+00:05:43,960 --> 00:05:50,120
+The sum of the two gives 9%, which is the expected yield.
+
+90
+00:05:50,120 --> 00:05:52,640
+The default premium is the actual yield
+
+91
+00:05:52,640 --> 00:05:55,850
+the bond has to promise to compensate the default
+
+92
+00:05:55,850 --> 00:05:57,140
+scenarios.
+
+93
+00:05:57,140 --> 00:06:00,330
+It is 3% in this example.
+
+94
+00:06:00,330 --> 00:06:02,810
+Adding it to the expected yield gives us
+
+95
+00:06:02,810 --> 00:06:05,740
+the promised yield of 12%.
+
+96
+00:06:05,740 --> 00:06:08,440
+This is also the highest yield we can
+
+97
+00:06:08,440 --> 00:06:11,230
+obtain when the promise is met.
+
+98
+00:06:11,230 --> 00:06:14,530
+In all other scenarios, which means default,
+
+99
+00:06:14,530 --> 00:06:16,690
+the yield will be lower.
+
+100
+00:06:16,690 --> 00:06:20,290
+The lowest yield possible is minus 100%,
+
+101
+00:06:20,290 --> 00:06:24,160
+which is when the payoff from the bond is 0.
+
+102
+00:06:24,160 --> 00:06:26,560
+What we do next is to further examine
+
+103
+00:06:26,560 --> 00:06:31,060
+the factors that are affecting the default premium or bond
+
+104
+00:06:31,060 --> 00:06:31,720
+price.
+
+105
+00:06:31,720 --> 00:06:35,050
+The first is the likelihood of default.
+
+106
+00:06:35,050 --> 00:06:37,510
+If the probability of default is 0,
+
+107
+00:06:37,510 --> 00:06:40,450
+the default premium will also be 0.
+
+108
+00:06:40,450 --> 00:06:45,250
+This factor is what the rating agencies focus on.
+
+109
+00:06:45,250 --> 00:06:49,450
+The second factor is the amount of financial loss when default
+
+110
+00:06:49,450 --> 00:06:53,530
+occurs, or more precisely, the probability distribution
+
+111
+00:06:53,530 --> 00:06:56,470
+of potential losses.
+
+112
+00:06:56,470 --> 00:07:00,130
+Let's examine these two factors and their relationship
+
+113
+00:07:00,130 --> 00:07:02,950
+to default premium in more detail.
+
+114
+00:07:02,950 --> 00:07:07,100
+We do so by using an example.
+
+115
+00:07:07,100 --> 00:07:11,560
+Suppose that a firm wants to issue a one-year bond
+
+116
+00:07:11,560 --> 00:07:15,820
+with a par value of $1,000.
+
+117
+00:07:15,820 --> 00:07:19,290
+It has a non-trivial default risk.
+
+118
+00:07:19,290 --> 00:07:24,300
+Its probability of default, denoted by p, is 6%.
+
+119
+00:07:24,300 --> 00:07:28,650
+In the case of default, the loss rate, denoted by lambda,
+
+120
+00:07:28,650 --> 00:07:29,820
+is 10%.
+
+121
+00:07:29,820 --> 00:07:34,080
+That is, only 1 minus lambda, which is 90% of the promised
+
+122
+00:07:34,080 --> 00:07:37,890
+payment, will be paid in the case of default.
+
+123
+00:07:37,890 --> 00:07:42,380
+1 minus lambda is also called the "recovery rate."
+
+124
+00:07:42,380 --> 00:07:45,770
+The expected yield by the market, denoted by y bar,
+
+125
+00:07:45,770 --> 00:07:51,350
+is 10% for bonds with similar default risks.
+
+126
+00:07:51,350 --> 00:07:54,570
+The firm wants to issue the bond at par.
+
+127
+00:07:54,570 --> 00:07:58,930
+The question is, what should be the coupon rate?
+
+128
+00:07:58,930 --> 00:08:02,470
+Since the bond is selling at par,
+
+129
+00:08:02,470 --> 00:08:06,400
+the promised yield is the promise coupon rate.
+
+130
+00:08:06,400 --> 00:08:08,350
+Let it be y.
+
+131
+00:08:08,350 --> 00:08:12,310
+We then have the first equation on the slide.
+
+132
+00:08:12,310 --> 00:08:15,760
+That is, the gross expected return or yield,
+
+133
+00:08:15,760 --> 00:08:20,020
+1 plus y bar, which is the left-hand side,
+
+134
+00:08:20,020 --> 00:08:23,290
+equals the probability of no default, which
+
+135
+00:08:23,290 --> 00:08:28,840
+is 1 minus p, times the promise gross yield, 1 plus y,
+
+136
+00:08:28,840 --> 00:08:31,870
+plus the probability of default, p,
+
+137
+00:08:31,870 --> 00:08:35,710
+times the gross yield in the case of default, which
+
+138
+00:08:35,710 --> 00:08:38,530
+is given by the recovery rate 1 minus
+
+139
+00:08:38,530 --> 00:08:43,600
+lambda, times the promised gross yield, 1 plus y.
+
+140
+00:08:43,600 --> 00:08:46,840
+Solve for y, the promised yield, we
+
+141
+00:08:46,840 --> 00:08:50,110
+obtain the second equation on the slide--
+
+142
+00:08:50,110 --> 00:08:54,940
+y equals y bar plus p times lambda divided
+
+143
+00:08:54,940 --> 00:08:58,920
+by 1 minus p times lambda.
+
+144
+00:08:58,920 --> 00:09:03,270
+Substituting numbers, we have 0.1,
+
+145
+00:09:03,270 --> 00:09:06,980
+which is y bar, plus 0.06--
+
+146
+00:09:06,980 --> 00:09:08,970
+that's the default rate--
+
+147
+00:09:08,970 --> 00:09:13,590
+times 0.1, which is the loss rate, and then
+
+148
+00:09:13,590 --> 00:09:17,730
+divide by 1 minus 0.06 times 0.1.
+
+149
+00:09:17,730 --> 00:09:22,995
+Finishing the calculation, we get 10.66%.
+
+150
+00:09:22,995 --> 00:09:25,490
+That is, the promised coupon rate
+
+151
+00:09:25,490 --> 00:09:32,710
+should be 10.66% in order to issue the bond at par.
+
+152
+00:09:32,710 --> 00:09:38,210
+In this case, the default premium is 10.66 minus 10.
+
+153
+00:09:38,210 --> 00:09:44,040
+And that's 0.66%, which is pretty small.
+
+154
+00:09:44,040 --> 00:09:47,940
+The reason is that not only the default probability is not
+
+155
+00:09:47,940 --> 00:09:49,050
+very high--
+
+156
+00:09:49,050 --> 00:09:55,560
+nearly 6% plus the recovery rate of 90%, which
+
+157
+00:09:55,560 --> 00:10:00,890
+is quite high, in the case of default. Therefore,
+
+158
+00:10:00,890 --> 00:10:03,200
+the bond's default premium is mainly
+
+159
+00:10:03,200 --> 00:10:07,550
+determined by its default probability and recovery rate
+
+160
+00:10:07,550 --> 00:10:09,700
+when defaulted.
+

@@ -1,0 +1,123 @@
+
+PROFESSOR: In this video, we will
+consider a corporate acquisition and learn
+how to estimate the risk of equity of the merged entity.
+Suppose that corporation Y is planning
+to acquire corporation X. We are given the following information
+on firm X.
+Its market value of debt is $40 million.
+Its market value of equity is $160 million.
+Its cost of debt capital is 7%.
+And its equity beta is 1.2.
+We are also given the following information on firm
+Y. Its market value of debt is $100 million.
+Its market value of equity is $900 million.
+Its debt is risk free.
+And its asset beta is 0.76.
+Transaction details are as follows.
+Y will be financing the acquisition
+with the issuance of new debt.
+The old debt of X will be repurchased.
+The cost of debt for the combined entity will be 8%.
+X will get acquired at the current market value,
+and there will be no synergies in this transaction.
+We are also given the following additional information.
+Risk-free rate is 5%.
+The expected return on the market portfolio is 15%.
+Corporations do not pay income taxes.
+And there are no other market imperfections.
+What is the equity beta and the expected return
+on equity of firm Y after this acquisition is complete?
+Let's start by thinking how to approach solving this problem.
+First, to find equity risk of the combined entity,
+we would need to know its capital structure
+and its return on assets.
+We will be able to figure out the capital
+structure of the combined firm from the information
+on the current capital structure of firms X and Y
+and on how Y is planning to finance
+the acquisition of X. The return on assets of the combined
+entity is equal to the weighted average of returns on assets
+of firms X and Y. Therefore, to find it,
+we first need to find return on assets of X and Y.
+With this in mind, we will implement the following steps
+to solve this problem.
+First, we will find asset beta of firm X.
+Note that we already know asset beta of firm Y. Second,
+we will find the asset beta of the new combined entity.
+And, third, we will find equity beta and the return
+on equity of the new firm.
+Let's start with asset beta of firm X. Recall
+that asset beta is the weighted average of debt and equity
+betas.
+We know the market values of debt and equity of firm x
+as well as its equity beta.
+Therefore, in order to find asset beta,
+we need to find debt beta first.
+To find debt beta, we will use the capital asset pricing
+model.
+Recall that the cost of debt capital of firm X is 7%.
+The risk-free rate is 5%.
+And the expected return on the market portfolio is 15%.
+Solving this equation for beta, we
+find that debt beta of firm X equals to 0.2.
+Having found debt beta, we can now
+find asset beta of firm X. Recall
+that the market value of debt of firm X is $40 million.
+The market value of its equity is $160 million.
+And its equity beta is 1.2.
+Therefore, asset beta of firm X equals to 1.
+Let's now move to step two and find asset beta of the combined
+firm.
+Asset beta of the combined firm equals to the weighted average
+of betas of the merging firms where the weights
+are computed based on the market values of firms X and Y
+in the combined firm.
+The market value of firm X is computed
+by adding its market value of debt, which is $40 million,
+and its market value of equity, which is $160 million.
+Hence, the market value of firm X is $200 million.
+For firm Y, recall that its market value of debt
+is $100 million, and its market value of equity
+is now $900 million.
+Therefore, the market value of firm Y is $1 billion.
+Recall also that asset beta of firm X, which we just computed,
+is 1.
+And the asset beta of firm Y is 0.76.
+Therefore, the asset beta of the combined firm is 0.8.
+Now, we are ready to implement the final step, step three.
+To find equity beta, we will use Modigliani-Miller proposition
+2, which states that equity beta equals to the asset
+beta plus debt-to-equity ratio multiplied
+by the difference between asset beta and debt beta.
+We know asset beta.
+So what's left to find is the debt-to-equity ratio and debt
+beta of the new firm.
+To find debt-to-equity ratio of the new firm,
+we need to find its value of debt and its value of equity.
+Let's start with debt.
+The new value of debt will be the value
+of the old debt of the acquiring firm, which
+is firm Y, plus the value of new debt issued to acquire firm X.
+To acquire firm X, we need to purchase its equity, which
+is valued at $160 million, and to purchase its existing debt,
+which is valued at $40 million.
+Therefore, we need to issue $200 million of new debt.
+This implies that the total value of debt of the new firm
+will be $300 million.
+To find the value of equity of the combined firm,
+we subtract the value of debt from the value of the firm,
+which gives us $900 million.
+
+Therefore, debt-to-equity ratio of the new firm will be 1/3.
+To find debt beta of the new firm, we will use the CAPM.
+Recall that the cost of debt of the new firm will be 8%.
+Given the risk-free rate of 5% and the return
+on the market portfolio of 15%, we
+find that debt beta of the new firm will be 0.3.
+Having found debt-to-equity ratio and debt beta,
+we can finally find equity beta of the new firm.
+We find that it equals 0.967.
+To find the expected return on equity of the new firm,
+we will use the CAPM.
+This slide shows that the expected return will be 14.67%.

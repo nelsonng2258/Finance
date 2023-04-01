@@ -1,0 +1,222 @@
+
+PROFESSOR: From our previous discussions in part one
+and earlier in part two of this course,
+we have established the following results
+about the appropriate discount rates for a project.
+A project's discount rate or the required rate of return or cost
+of capital is the expected rate of return
+demanded by the financial market or investors
+in the financial market for the project
+or traded assets in the market with a similar timing and risk
+characteristics.
+Therefore, a project's discount rate
+is tied to the timing and risk of its cash flow.
+Consequently, the discount rate is usually
+different for different projects.
+Simply because the timing and the risk of their cash flows
+can be quite different.
+An important implication of these results
+is that, in general, it's incorrect to use
+a firm wide cost of capital to discount
+cash flows from different projects the firm faces.
+What is the discount rate of a project, then?
+In the simplest case, a single discount rate
+can be used for all pieces of the cash flow from the project.
+This case corresponds to the situation
+where the term structure of discount rates is flat.
+Although we often use this case in our examples
+and computations, this is true only under very restrictive
+conditions.
+In the general case, different discount rates
+are needed for different pieces of the project's cash flow.
+This arises for two reasons.
+First, the term structure of interest rates
+is in general not flat.
+That is, the time value of money for the market
+is not constant for different time horizons.
+This implies that even for risk free cash flows,
+the discount rate is in general different
+depending on the timing.
+Second, different pieces of a cash flow in general
+have different risks.
+Consequently, their risk premiums will be different.
+We now consider the discount rate of a project.
+For simplicity, let's assume a single discount
+rate is sufficient.
+A projects' required rate of return, or discount rate,
+is determined by systematic risk.
+For concreteness, let's assume that the CAPM
+holds in determining an asset's systematic risk
+and the corresponding risk premium.
+Then, the project's required rate of return
+is given by its beta.
+That is, R bar the expected rate of return on the project,
+it should equal to rf, which is risk free rate, plus the beta
+of the project times the risk premium on the market
+portfolio, that is R bar m minus rf.
+Therefore, if we know the project's beta, not the firm's
+beta, its discount rate can be easily determined by the CAPM.
+
+How do we determine the project's beta?
+Well, we consider three scenarios or approaches.
+The first is to find comparable pure play
+companies traded in a market and use their betas.
+That is, to use the market information.
+The second scenario approach is to find comparable projects
+and use their cash flows to estimate beta.
+This approach uses cash flow information.
+If we don't have any one of the above,
+then we will need to use fundamental analysis
+and judgment to guesstimate the project's beta.
+And this approach uses fundamental information.
+We will rely mostly on the first approach,
+as it is often the most applicable and reliable.
+We will demonstrate this approach
+by considering an example.
+Suppose that Berkshire Hathaway, an investment company,
+is thinking about getting into a new business in oil and gas.
+It needs to evaluate the NPV of the cash flow
+from this business.
+We assume that CAPM holds.
+Then, Berkshire Hathaway's assets have a beta of 0.48.
+What should it use as the cost of capital
+for this new business?
+First, Berkshire Hathaway should not
+use the beta or required rate of return
+on its assets to value the cash from an energy business.
+As we know, Berkshire's assets represent
+a very diverse portfolio ranging from financial firms,
+like Bank of America, Wells Fargo, and American Express,
+to consumer brands, like Coca-Cola and Kraft Heinz,
+to tech companies like Apple.
+These assets have quite different risk characteristics
+or betas as the energy sector.
+Berkshire should use the beta of an energy company,
+or even better, a company concentrating on oil and gas.
+One example is ConocoPhillips, whose business
+is mostly in gas and oil.
+How about Exxon, another energy company?
+As it turns out, ExxonMobil has a more diverse business
+portfolio.
+It is less of a pure play in gas and oil, as we'll see later.
+This slide shows ConocoPhillips percentage share
+of revenue from its business portfolio at the end of 2019.
+As we can see, oil and natural gas consist
+of 87% of its business, including natural gas liquids
+will increase the share to 96%.
+That is, ConocoPhillips is mostly a pure play
+company in oil and gas.
+The plots at the bottom of the slide
+also show the performance of ConocoPhillips stock
+over the past 10 years.
+It's been quite unimpressive to put it mildly.
+Nonetheless, we can use the returns
+on ConocoPhillips' stock and bond
+to estimate the beta of its assets, which are primarily
+oil and gas.
+It turns out to be 0.77.
+Using a risk free rate of 5% and a market risk premium of 6%,
+we can obtain the required rate of return for Conoco,
+which is the expected rate of return of the project, that's
+equal to rF, the risk free rate, plus the beta
+of the project, that's 0.77, times the market premium, which
+is R bar on the market minus the risk free rate.
+If we put in numbers, that should equal to 0.05
+plus 0.77 times 0.06, which is the market premium.
+Finishing that calculation, we get 9.62%
+for the cost of capital of Conoco,
+which should also be the cost of capital
+for the project, which is going to be
+in the same line of business.
+
+Before we settle on the number for the cost of capital,
+a few more comments are in order.
+First, we need to be mindful about the quality
+of these estimates, including the estimates
+for the beta, the risk free rate, and the market premium.
+For example, the beta estimates may be noisy.
+Second, estimates are only approximations to reality.
+For example, beta estimates can be changing over time.
+Does this reflect a time varying beta
+instead of an estimation error?
+If so, can we still use beta estimates from past data
+to approximate for future data in obtaining cost of capital,
+which is forward looking?
+It will also be desirable to have a sense about how good
+the approximations are.
+For example, CAPM is a model aimed
+at capturing systematic risks and risk premium.
+It's at best a reasonable approximation for reality.
+Is it a good enough approximation?
+How much can we ignore the other possible risk factors?
+
+We don't have readily available fixes to fully resolve
+the issues raised above.
+Nonetheless, it is important to be
+aware of the potential limitations of the estimates
+approximations and models when applying them.
+Understanding these limitations will also
+help to come up with possible remedies
+when we need to overcome these limitations.
+Here, I would also like to bring up an important point
+in obtaining an asset's expected rate of return, which is also
+related to the discussion above.
+Given that we have identified ConocoPhillips
+as a company with similar assets as the new business
+under consideration, why don't we
+just use the past returns on Conoco's assets, which
+are traded in the market in the form of its stock and bond
+to directly estimate its expected rate of return?
+This way, we won't need to rely on an asset pricing
+model like the CAPM.
+One major reason for not relying on a return estimate
+based on past returns is that the estimate is often
+very noisy.
+As we have seen from the previous slide,
+the performance of Conoco's stock over the 2010
+to 2020 period is almost flat.
+We probably don't believe that the expected rate
+of return on Conoco's stock is close to zero.
+The reason why we may not want to use an asset's past returns
+to estimate its expected return is in part
+because the returns are very volatile or noisy.
+This is particularly true if we use a relatively short history,
+although 10 years in the case of Conoco
+above is not that short for most companies.
+Even if we have a long history on a company or an industry,
+its expected return may well be changing over time.
+And the past data from the very distant history
+may not be very relevant in estimating
+its future expected return.
+However, estimating beta can be more accurate.
+For example, we can use more frequent data on returns
+to obtain better estimates for beta.
+In other words, in the context of certain asset pricing
+models, like the CAPM, it is easier
+to estimate risks than expected returns.
+In this case, we can choose to follow the model using
+the more accurate risk estimates to obtain
+an estimate for the required rate of return
+for individual assets assuming we
+have good estimates for market risk premiums.
+As mentioned before, to obtain the cost of capital
+for oil and gas business, we can also
+look at ExxonMobil, which has a large share
+of its business in oil and gas.
+The figure on the slide shows ExxonMobil's earnings mix.
+As we can see, 83% of ExxonMobil's earnings
+are from oil and other upstream products,
+like liquid natural gas.
+However, the remaining 17% are from the downstream products
+like fuels, lubes, and chemicals.
+The risk of downstream products are
+different from that of upstream products.
+Therefore, ExxonMobil is less of a pure play in oil and gas
+than ConocoPhillips.
+This is why we use ConocoPhillips.
+What happens if we cannot find pure play companies?
+In that case, we will try to find companies
+with a small number of business lines in their portfolios.
+We can first estimate the betas of the portfolios
+and then use portfolio analytics to back out the betas of each
+of the pieces.

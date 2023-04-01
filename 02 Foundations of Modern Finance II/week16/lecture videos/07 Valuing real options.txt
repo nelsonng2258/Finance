@@ -1,0 +1,144 @@
+
+PROFESSOR: Having discussed various types
+of real options embedded in different types of investments
+or projects, we now turn our attention to the evaluation.
+In general, the evaluation of real options
+is a challenging task given the non-linear nature
+of their risks.
+However, when the underlying asset for a real option
+is traded in the financial market,
+we can then apply the option valuation techniques developed
+earlier for financial options to value real options.
+We demonstrate this method through examples.
+
+The first example we're going to consider
+assumes a StartUp Inc, which is a biotech startup company.
+Its only asset is a patent on the new vaccine
+with the following information.
+First, if the vaccine goes into production now,
+you will generate a sure profit of $1 million per year
+for the next 17 years, which is how long the patent
+protection lasts.
+Afterwards, the profit drops to zero.
+The production requires $10 million of initial investment.
+The interest rates have a flat term structure.
+It's at 8% per year now, which we assumed year zero.
+The interest rates can go up to 10%
+or down to 5% next year, which is year one.
+And it will remain constant afterwards.
+The question we want to answer is,
+what's the value of the firm or its patent?
+The NPV of starting production today
+in year zero, that is, is NPV equals 1 million,
+which is the annual profit, divide by 8%, the discount
+rate, times 1 minus 1 over 1 plus 8% to the 17th power.
+And that's the present value of future profits for the 17
+years, minus the production cost of $10 million today.
+Netted out, they'll give us minus $878,362.
+And this is a negative number.
+Given the current interest rates,
+clearly it does not make sense to produce today.
+But is the value of the company or the patent negative
+or zero, then?
+Of course not.
+The company has an option to produce the vaccine
+now or later.
+But not the obligation.
+Therefore, its value must be positive.
+What happens next year when interest rates change?
+4% to 5%, or rise to 10%?
+
+Let's think this through.
+If interest rates increase to 10% in year one,
+the NPV from production is still negative
+because the present value of future profits
+will be even smaller.
+Therefore, we will choose not to produce
+yielding zero NPV in year one.
+However, if interest rates decrease to 5% in year one,
+then the NPV of investing in the vaccine becomes positive.
+Its NPV would equal 1 million divided
+by 5%, the interest rates then, then 10 times 1 minus 1 over 1
+plus 5% to the 16th power minus 10,
+which is the production cost.
+And that gives us positive $837,770.
+Therefore, when interest rates fall in year one,
+it will make sense to produce, which creates a positive value.
+This clearly shows that the value of the firm or the patent
+should always be positive today.
+Putting things together, we have the following strategy.
+If interest rates rise, investing in production
+yields a negative NPV.
+Consequently, we will choose not to invest resulting in NPV of 0
+in that state.
+If interest rates fall, investing in production
+yields a positive NPV of $837,770.
+Of course, in this scenario, we will produce and capture
+the positive NPV.
+How do we obtain the NPV of the patent
+with these two scenarios?
+We will need to find the risk neutral probabilities or state
+prices for the two possible states.
+Interest rates going up to 10% or down to 5%.
+In order to do this, we need to look
+at the prices of traded securities
+whose prices are also tied to the interest rates.
+Let's consider a 17 year risk free annuity
+that pays $1,000 per year.
+From the present value formula for annuities,
+the price of this annuity today at an interest rate of 8%
+should be S equals 1,000 divided by 8% the interest
+rate times 1 minus 1 over 1 plus 8% to the 17th power.
+Finishing the calculation, that gives us $9,122.
+That is the price of this annuity today
+at an interest rate of 8%.
+Next year, if the interest rates go up to 10%,
+the value of this annuity becomes
+Sd, that's the price in a down state,
+equals 1,000, that's the payment then, plus the present value
+of future payments of $16,000 in total.
+If we finish this equation, we will get $8,824.
+That is also equal to d, the gross return on this asset,
+times S, its current price.
+And this gives d of 0.967.
+If the interest rates go down to 5%, the value of this annuity
+becomes Su equals 1,000 plus 1,000 over 5% times 1 minus 1
+over 1.05 raised to the 16th power.
+Finishing the calculation, we get $11,838.
+That's should equal to u, the gross return on the asset,
+in upstate times S, its current price.
+This gives u of 1.298.
+With u and d, and the risk free rate, RF,
+we can find the risk neutral probability q
+for the state in which interest rates dropped to 5%.
+Remember that the risk neutral probability
+is the probability under which the expected return on annuity
+is the same as the one year risk free rate, which is 8%.
+We then have Q equals to 1 plus RF minus d divide by u minus d.
+That's the standard formula for risk neutral probabilities.
+Plug in the numbers.
+That gives us 1.08 minus 0.967 divided by 1.298 minus 0.967.
+Finishing that calculation, that gives us q of 0.341.
+The value of the investment opportunity
+today is then given by its expected payoff
+under the risk neutral probabilities discounted
+at the risk free rate.
+This is the risk neutral pricing we
+have learned in the lecture on option pricing.
+PV zero, then, of this pattern should equal to its value
+in the upstate, which is 833,770, times the risk
+neutral probability for that state, which is 0.341 plus 0,
+which is valued in the downstate times the risk
+neutral probability.
+Then, divide that by 1 plus the risk free rate,
+this gives us $264,518.
+In this example, we see that even though the project's cash
+flow is risk free, its value can change with the interest
+rates, which creates a substantial option
+value for the firm's asset.
+This option value, which is 221,693
+comes from the firm's ability to use the patent when
+interest rates fall and the value from production
+becomes positive.
+This option can be viewed as a growth option or a timing
+option.

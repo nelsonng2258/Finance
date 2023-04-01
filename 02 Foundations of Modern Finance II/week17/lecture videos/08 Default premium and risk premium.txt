@@ -1,0 +1,161 @@
+
+PROFESSOR: Default risk is also reflected in bond prices.
+We use bond prices or yields to define several measures
+of default risk.
+We do so by using an example.
+For simplicity, we consider only zero coupon bonds
+with a par value of $1,000.
+In particular, a 10-year treasury STRIPS
+is trading at $463.19, yielding 8%.
+A 10-year zero coupon bond issued by XYZ, Inc.
+is trading at $321.97.
+Since this bond has the same promised
+payoff at the same time as the 10-year STRIPS,
+the fact that it's trading at a lower price
+simply reflects that it has substantial default risk.
+The payoff from the 10-year STRIPS
+is simply $1,000 for sure.
+The payoff from XYZ's 10-year zero, however, is uncertain.
+In the best scenario, it is $1,000.
+In the worst scenario, it will be 0.
+Let us assume that the average across all possible scenarios,
+the expected payoff is $762.22 on the XYZ bond.
+We can then define two yields to maturity
+to capture XYZ's default risk.
+The first is the promised yield to maturity,
+which is defined by the yield to maturity
+using the bond's promised payoff and its current price.
+It's given by the first equation on the slide.
+Take the promised payoff of $1,000 divided
+by the bond price, which gives the gross return over 10 years.
+Taking the 10th root and minus 1,
+we have the promised yield to maturity of 12%.
+
+The second is the expected yield to maturity.
+It is defined by the yield to maturity
+using the bond's expected payoff and its current price.
+This is given in the second equation on the slide.
+The expected yield to maturity equals the expected payoff
+of $762.22 divided by the bond's current price, which
+is $321.97, taking the 10th root and minus 1.
+It gives 9%.
+Clearly, these two yields differ from the yield to maturity
+on the Treasury, which is 8%.
+In fact, if we apply the same formulas to the Treasury
+STRIPS, we will get 8% for both the promised yield
+and the expected yield.
+With the two yields defined above,
+we can further define two premiums--
+the default premium and the risk premium.
+The default premium is given by the difference
+between the promised yield to maturity
+and expected yield to maturity.
+For XYZ's bond, we have 12%, its promised yield,
+minus 9%, its expected yield, which gives 3%.
+Intuitively, this premium reflects the actual yield
+the bond has to promise to compensate its default risk.
+Risk premium is given by the difference
+between expected yield to maturity
+and the risk-free yield to maturity.
+In the case of XYZ bond, we have 9% minus 8%, which is 1%.
+As always, the risk premium is expected excess return
+on the bond.
+To summarize, we list the four variables
+we have introduced to capture different aspects of default
+risk.
+Promised yield to maturity is the yield
+if default does not occur or the promise is met.
+Expected yield to maturity is the probability
+weighted average of all possible yields.
+Default premium is the difference between the promised
+yield and expected yield.
+Risk premium is the difference between the expected
+yield on the risky bond and the yield
+of a risk-free bond of similar maturity and coupon rate.
+It's worth noting that the promised yield only
+depends on the bond's promised cash
+flow and its current price.
+Therefore, similar to the yield to maturity
+for risk-free bonds, promised yield is really a different way
+to quote prices for risky bonds.
+Using the numbers for the XYZ bond, the figure on the slide
+illustrates the different yields and premiums
+we have just introduced.
+The bond's promised yield is 12%.
+It can be decomposed into three components from bottom up.
+In absence of default risk, we have the default-free yield,
+which is 8%.
+Given the default risk, there will
+be a risk premium, which is 1%.
+The sum of the two gives 9%, which is the expected yield.
+The default premium is the actual yield
+the bond has to promise to compensate the default
+scenarios.
+It is 3% in this example.
+Adding it to the expected yield gives us
+the promised yield of 12%.
+This is also the highest yield we can
+obtain when the promise is met.
+In all other scenarios, which means default,
+the yield will be lower.
+The lowest yield possible is minus 100%,
+which is when the payoff from the bond is 0.
+What we do next is to further examine
+the factors that are affecting the default premium or bond
+price.
+The first is the likelihood of default.
+If the probability of default is 0,
+the default premium will also be 0.
+This factor is what the rating agencies focus on.
+The second factor is the amount of financial loss when default
+occurs, or more precisely, the probability distribution
+of potential losses.
+Let's examine these two factors and their relationship
+to default premium in more detail.
+We do so by using an example.
+Suppose that a firm wants to issue a one-year bond
+with a par value of $1,000.
+It has a non-trivial default risk.
+Its probability of default, denoted by p, is 6%.
+In the case of default, the loss rate, denoted by lambda,
+is 10%.
+That is, only 1 minus lambda, which is 90% of the promised
+payment, will be paid in the case of default.
+1 minus lambda is also called the "recovery rate."
+The expected yield by the market, denoted by y bar,
+is 10% for bonds with similar default risks.
+The firm wants to issue the bond at par.
+The question is, what should be the coupon rate?
+Since the bond is selling at par,
+the promised yield is the promise coupon rate.
+Let it be y.
+We then have the first equation on the slide.
+That is, the gross expected return or yield,
+1 plus y bar, which is the left-hand side,
+equals the probability of no default, which
+is 1 minus p, times the promise gross yield, 1 plus y,
+plus the probability of default, p,
+times the gross yield in the case of default, which
+is given by the recovery rate 1 minus
+lambda, times the promised gross yield, 1 plus y.
+Solve for y, the promised yield, we
+obtain the second equation on the slide--
+y equals y bar plus p times lambda divided
+by 1 minus p times lambda.
+Substituting numbers, we have 0.1,
+which is y bar, plus 0.06--
+that's the default rate--
+times 0.1, which is the loss rate, and then
+divide by 1 minus 0.06 times 0.1.
+Finishing the calculation, we get 10.66%.
+That is, the promised coupon rate
+should be 10.66% in order to issue the bond at par.
+In this case, the default premium is 10.66 minus 10.
+And that's 0.66%, which is pretty small.
+The reason is that not only the default probability is not
+very high--
+nearly 6% plus the recovery rate of 90%, which
+is quite high, in the case of default. Therefore,
+the bond's default premium is mainly
+determined by its default probability and recovery rate
+when defaulted.

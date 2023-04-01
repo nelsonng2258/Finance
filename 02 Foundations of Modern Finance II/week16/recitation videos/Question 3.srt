@@ -1,0 +1,576 @@
+0
+00:00:00,000 --> 00:00:00,510
+
+
+1
+00:00:00,510 --> 00:00:02,850
+In this video, we will consider an example
+
+2
+00:00:02,850 --> 00:00:05,010
+that demonstrates how discount rates may
+
+3
+00:00:05,010 --> 00:00:07,380
+differ over different horizons.
+
+4
+00:00:07,380 --> 00:00:10,380
+We will consider an asset, whose payoff is linked
+
+5
+00:00:10,380 --> 00:00:12,330
+to the price of crude oil.
+
+6
+00:00:12,330 --> 00:00:16,410
+Suppose the current price of crude oil is $55 per barrel.
+
+7
+00:00:16,410 --> 00:00:20,910
+Consider an asset that in year 5 pays the realized
+
+8
+00:00:20,910 --> 00:00:23,220
+price of oil in year 1.
+
+9
+00:00:23,220 --> 00:00:25,980
+What is the current value of this asset?
+
+10
+00:00:25,980 --> 00:00:28,770
+Let's start by thinking, what should be the value
+
+11
+00:00:28,770 --> 00:00:30,810
+of this asset in year 1?
+
+12
+00:00:30,810 --> 00:00:34,560
+Between now and the end of year 1, the price of oil
+
+13
+00:00:34,560 --> 00:00:36,210
+is uncertain.
+
+14
+00:00:36,210 --> 00:00:39,360
+But starting in year 2 and until the end of year 5,
+
+15
+00:00:39,360 --> 00:00:43,220
+the price of oil at the end of year 1 is known.
+
+16
+00:00:43,220 --> 00:00:46,850
+Therefore, between year 1 and year 5,
+
+17
+00:00:46,850 --> 00:00:48,680
+this asset is risk free.
+
+18
+00:00:48,680 --> 00:00:52,340
+And hence, its value in year 1 is
+
+19
+00:00:52,340 --> 00:00:58,360
+p_1 divided by 1 plus r_f raised to the power 4.
+
+20
+00:00:58,360 --> 00:01:01,990
+Here by p_1, we're denoting the price of oil in year 1,
+
+21
+00:01:01,990 --> 00:01:05,480
+and by r_f, we're denoting the risk-free rate.
+
+22
+00:01:05,480 --> 00:01:07,780
+Now between year 0 and year 1, we
+
+23
+00:01:07,780 --> 00:01:10,010
+don't know what the price of oil will be.
+
+24
+00:01:10,010 --> 00:01:13,450
+Let's assume that the expected return on oil is r_o.
+
+25
+00:01:13,450 --> 00:01:16,910
+For both the risk-free rate and the expected return on oil,
+
+26
+00:01:16,910 --> 00:01:18,910
+we will assume that these returns
+
+27
+00:01:18,910 --> 00:01:21,220
+are the same at all horizons.
+
+28
+00:01:21,220 --> 00:01:23,020
+In other words, the term structure
+
+29
+00:01:23,020 --> 00:01:26,450
+of these rates of return is flat.
+
+30
+00:01:26,450 --> 00:01:28,520
+The value of this asset in year 0
+
+31
+00:01:28,520 --> 00:01:31,250
+equals its expected value in year 1, discounted
+
+32
+00:01:31,250 --> 00:01:33,950
+to present at rates r_o to reflect
+
+33
+00:01:33,950 --> 00:01:37,790
+the riskiness of disaster between year 0 and year 1.
+
+34
+00:01:37,790 --> 00:01:40,010
+Plugging in the value of this asset in year 1
+
+35
+00:01:40,010 --> 00:01:42,560
+into this equation, we get expected value
+
+36
+00:01:42,560 --> 00:01:46,340
+of p_1 divided by 1 plus r_f raised to the power of 4,
+
+37
+00:01:46,340 --> 00:01:49,160
+divided by 1 plus r_o.
+
+38
+00:01:49,160 --> 00:01:52,790
+Since there is no uncertainty in the risk-free rate r_f,
+
+39
+00:01:52,790 --> 00:01:55,820
+we get the expected value of p_1 divided
+
+40
+00:01:55,820 --> 00:01:58,910
+by 1 plus r_o multiplied by 1 plus r_f
+
+41
+00:01:58,910 --> 00:02:00,590
+raised to the power of 4.
+
+42
+00:02:00,590 --> 00:02:02,210
+You can see that we're discounting
+
+43
+00:02:02,210 --> 00:02:05,660
+the cash flows that we get from this asset at different rates
+
+44
+00:02:05,660 --> 00:02:08,250
+during this five-year time period.
+
+45
+00:02:08,250 --> 00:02:12,200
+This is simply due to the fact that its riskiness changes
+
+46
+00:02:12,200 --> 00:02:14,240
+during this time period.
+
+47
+00:02:14,240 --> 00:02:16,970
+The final step is to figure out what is the expected
+
+48
+00:02:16,970 --> 00:02:19,400
+price of oil in year 1.
+
+49
+00:02:19,400 --> 00:02:22,490
+It simply is the current price multiplied by the expected rate
+
+50
+00:02:22,490 --> 00:02:24,630
+of return on oil.
+
+51
+00:02:24,630 --> 00:02:28,790
+We see that 1 plus r_o in the numerator and denominator
+
+52
+00:02:28,790 --> 00:02:30,920
+of this equation cancels out.
+
+53
+00:02:30,920 --> 00:02:33,290
+And we are simply left with the current price
+
+54
+00:02:33,290 --> 00:02:38,580
+of oil divided by 1 plus r_f raised to the power of 4.
+
+55
+00:02:38,580 --> 00:02:41,010
+If we assume that the risk-free rate is 2%,
+
+56
+00:02:41,010 --> 00:02:46,950
+then the current value of this asset is $50.81.
+
+57
+00:02:46,950 --> 00:02:50,760
+Next, let's find the value of an asset that, in year 5,
+
+58
+00:02:50,760 --> 00:02:54,510
+pays the realized price of oil in year 2.
+
+59
+00:02:54,510 --> 00:02:56,160
+We can repeat the steps that we did
+
+60
+00:02:56,160 --> 00:02:58,530
+to find the value of the previous asset.
+
+61
+00:02:58,530 --> 00:03:01,530
+First, notice that there is no uncertainty
+
+62
+00:03:01,530 --> 00:03:03,750
+in what the payoff of this asset will
+
+63
+00:03:03,750 --> 00:03:06,420
+be between the year 2 and the year 5.
+
+64
+00:03:06,420 --> 00:03:10,200
+Therefore, we can find the value of this asset in year 2,
+
+65
+00:03:10,200 --> 00:03:11,910
+by discounting the cash flow that we
+
+66
+00:03:11,910 --> 00:03:15,900
+get from this asset in year 5 at the risk-free rate.
+
+67
+00:03:15,900 --> 00:03:18,150
+We see that the value of this asset in year
+
+68
+00:03:18,150 --> 00:03:24,100
+equals p_2 divided by 1 plus r_f raised to the power of 3.
+
+69
+00:03:24,100 --> 00:03:26,620
+Between year 0 and year 2, we don't know
+
+70
+00:03:26,620 --> 00:03:28,990
+what the price of oil will be.
+
+71
+00:03:28,990 --> 00:03:31,030
+The value of this asset in year 0
+
+72
+00:03:31,030 --> 00:03:34,870
+equals its expected value in year 2, discounted to present,
+
+73
+00:03:34,870 --> 00:03:37,810
+at the rate r_o, to reflect the riskiness of this asset
+
+74
+00:03:37,810 --> 00:03:40,800
+between year 0 and year 2.
+
+75
+00:03:40,800 --> 00:03:42,990
+Plugging in the value of this asset in year 2
+
+76
+00:03:42,990 --> 00:03:45,540
+into this equation, we get expected value
+
+77
+00:03:45,540 --> 00:03:47,700
+of p_2 divided by 1 plus r_f raised
+
+78
+00:03:47,700 --> 00:03:51,000
+to the power of 3, divided by 1 plus r_o raised
+
+79
+00:03:51,000 --> 00:03:54,510
+to the power of 2, which gives us expected value of p_2
+
+80
+00:03:54,510 --> 00:03:58,080
+divided by 1 plus r_o squared multiplied by 1
+
+81
+00:03:58,080 --> 00:04:00,840
+plus r_f raised to the power of 3.
+
+82
+00:04:00,840 --> 00:04:03,000
+Similar to the first asset, notice
+
+83
+00:04:03,000 --> 00:04:04,920
+that we are discounting the cash flows
+
+84
+00:04:04,920 --> 00:04:07,950
+that we get from this asset at different rates
+
+85
+00:04:07,950 --> 00:04:10,690
+during this five-year time period.
+
+86
+00:04:10,690 --> 00:04:12,630
+This is because the riskiness of this asset
+
+87
+00:04:12,630 --> 00:04:15,690
+changes as we go from year 2 to year 3
+
+88
+00:04:15,690 --> 00:04:20,010
+because we no longer bear uncertainty in oil prices.
+
+89
+00:04:20,010 --> 00:04:22,079
+The expected price of oil in year 2
+
+90
+00:04:22,079 --> 00:04:25,620
+is the current price multiplied by the expected rate of return
+
+91
+00:04:25,620 --> 00:04:27,570
+over the next two years.
+
+92
+00:04:27,570 --> 00:04:31,050
+We see that 1 plus r_o squared in the numerator
+
+93
+00:04:31,050 --> 00:04:34,020
+and denominator cancels out, and we
+
+94
+00:04:34,020 --> 00:04:37,890
+are left with p_0, which is the current price of oil,
+
+95
+00:04:37,890 --> 00:04:42,800
+divided by 1 plus the risk-free rate raised to the power of 3.
+
+96
+00:04:42,800 --> 00:04:45,230
+Recall that the risk-free rate is 2%.
+
+97
+00:04:45,230 --> 00:04:50,430
+Hence the current value of this asset is $51.83.
+
+98
+00:04:50,430 --> 00:04:53,860
+Notice that the value of this asset, which in year 5
+
+99
+00:04:53,860 --> 00:04:56,320
+pays the price of oil in year 2, is
+
+100
+00:04:56,320 --> 00:05:00,040
+higher than the value of the previous asset, which in year 5
+
+101
+00:05:00,040 --> 00:05:02,610
+paid the price of oil in year 1.
+
+102
+00:05:02,610 --> 00:05:04,980
+This is because this asset is riskier
+
+103
+00:05:04,980 --> 00:05:07,980
+as we're exposed to the oil price risk for one
+
+104
+00:05:07,980 --> 00:05:10,680
+additional year.
+
+105
+00:05:10,680 --> 00:05:13,650
+Let's consider one more asset, that in year 5
+
+106
+00:05:13,650 --> 00:05:18,780
+pays p_1 plus p_2 plus p_5 divided by 3,
+
+107
+00:05:18,780 --> 00:05:23,580
+where p_1, p_2 and p_5 are the realized prices of oil in years
+
+108
+00:05:23,580 --> 00:05:27,130
+1, 2, and 5 respectively.
+
+109
+00:05:27,130 --> 00:05:30,650
+What is the current value of this asset?
+
+110
+00:05:30,650 --> 00:05:32,810
+The current value of this asset is simply
+
+111
+00:05:32,810 --> 00:05:36,950
+1/3 of the value of the asset that pays p_1 in the year 5
+
+112
+00:05:36,950 --> 00:05:40,640
+plus 1/3 of the value of the asset that pays p_2 in year 5,
+
+113
+00:05:40,640 --> 00:05:45,800
+plus 1/3 of the value of the asset that pays p_5 in year 5.
+
+114
+00:05:45,800 --> 00:05:48,350
+We have already found the values of assets
+
+115
+00:05:48,350 --> 00:05:51,470
+that pay p_1 and p_2 in year 5.
+
+116
+00:05:51,470 --> 00:05:54,650
+So what's left is to find the value of the asset that
+
+117
+00:05:54,650 --> 00:05:57,840
+pays p_5 in year 5.
+
+118
+00:05:57,840 --> 00:06:01,290
+In this case, we varied the oil price risk all the way
+
+119
+00:06:01,290 --> 00:06:03,150
+to the end of year 5.
+
+120
+00:06:03,150 --> 00:06:05,850
+Therefore, the current value of the asset
+
+121
+00:06:05,850 --> 00:06:10,140
+is the expected price of oil in year 5 divided by 1 plus
+
+122
+00:06:10,140 --> 00:06:13,260
+r_o raised to the power of 5.
+
+123
+00:06:13,260 --> 00:06:15,810
+Since the expected oil price in year 5
+
+124
+00:06:15,810 --> 00:06:19,380
+is the current oil price multiplied by 1 plus r_o raised
+
+125
+00:06:19,380 --> 00:06:22,320
+to the power of 5, the current value of this asset
+
+126
+00:06:22,320 --> 00:06:25,560
+is simply the current oil price.
+
+127
+00:06:25,560 --> 00:06:28,150
+It's quite simple to understand why.
+
+128
+00:06:28,150 --> 00:06:32,810
+The market currently values oil at $55 a barrel.
+
+129
+00:06:32,810 --> 00:06:37,220
+The asset that in year 5 pays the price of oil in year 5
+
+130
+00:06:37,220 --> 00:06:41,210
+has to have the same value as the oil itself,
+
+131
+00:06:41,210 --> 00:06:44,510
+as it has identical risk.
+
+132
+00:06:44,510 --> 00:06:46,880
+Now we can combine all the results
+
+133
+00:06:46,880 --> 00:06:49,580
+to find the current value of the asset that in year five
+
+134
+00:06:49,580 --> 00:06:54,620
+pays p_1 plus p_2 plus p_5 divided by 3.
+
+135
+00:06:54,620 --> 00:06:58,850
+It's value equals 1/3 of the current oil price divided
+
+136
+00:06:58,850 --> 00:07:02,540
+by a 1 plus the risk-free rate raised to the power of 4,
+
+137
+00:07:02,540 --> 00:07:05,390
+plus 1/3 of the current oil price divided by 1
+
+138
+00:07:05,390 --> 00:07:08,240
+plus risk-free rate raised to the power of 3,
+
+139
+00:07:08,240 --> 00:07:11,270
+plus 1/3 of the current oil price.
+
+140
+00:07:11,270 --> 00:07:12,980
+Recall that the risk-free rate is 2%,
+
+141
+00:07:12,980 --> 00:07:15,530
+and the current oil price is $55.
+
+142
+00:07:15,530 --> 00:07:20,030
+This gives us the current value of this asset of $52.55.
+
+143
+00:07:20,030 --> 00:07:21,178
+
+

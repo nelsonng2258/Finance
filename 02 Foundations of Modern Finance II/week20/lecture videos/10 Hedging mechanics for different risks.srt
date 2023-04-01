@@ -1,0 +1,620 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:02,250
+PROFESSOR: We now consider another example
+
+2
+00:00:02,250 --> 00:00:05,370
+in interest rate risk management in the context
+
+3
+00:00:05,370 --> 00:00:08,150
+of asset liability management.
+
+4
+00:00:08,150 --> 00:00:12,170
+Suppose an insurance company issues a guaranteed investment
+
+5
+00:00:12,170 --> 00:00:17,390
+contract, also called GIC, which are basically zeros.
+
+6
+00:00:17,390 --> 00:00:20,930
+It has a par value of $10,000, it
+
+7
+00:00:20,930 --> 00:00:23,840
+has a maturity of five years, and a guaranteed interest
+
+8
+00:00:23,840 --> 00:00:25,940
+rate of 8%.
+
+9
+00:00:25,940 --> 00:00:29,000
+Therefore, at maturity, the insurance company
+
+10
+00:00:29,000 --> 00:00:32,610
+pays the par value plus total interest,
+
+11
+00:00:32,610 --> 00:00:40,340
+which is $10,000 times 1 plus 8% raised to the power of 5.
+
+12
+00:00:40,340 --> 00:00:42,470
+Suppose that the insurance company
+
+13
+00:00:42,470 --> 00:00:46,190
+chooses to fund this obligation by investing
+
+14
+00:00:46,190 --> 00:00:50,840
+in a six-year Treasury bond with a par value of $10,000
+
+15
+00:00:50,840 --> 00:00:56,270
+and coupon rate of 8%, trading at par at this point.
+
+16
+00:00:56,270 --> 00:01:02,020
+This implies that the current interest rate is also 8%.
+
+17
+00:01:02,020 --> 00:01:04,569
+Therefore, after issuing the GIC,
+
+18
+00:01:04,569 --> 00:01:09,790
+the insurance company incurs a fixed-income liability of L0
+
+19
+00:01:09,790 --> 00:01:15,590
+equals $10,000 in the form of a five-year zero.
+
+20
+00:01:15,590 --> 00:01:19,930
+This liability is then funded by a six-year coupon bond
+
+21
+00:01:19,930 --> 00:01:25,450
+as an asset with 8% coupon rate and a market value of A0--
+
+22
+00:01:25,450 --> 00:01:28,480
+also equals $10,000.
+
+23
+00:01:28,480 --> 00:01:33,470
+If interest rate stays at 8% for the next five years,
+
+24
+00:01:33,470 --> 00:01:35,770
+the value of the asset will perfectly
+
+25
+00:01:35,770 --> 00:01:38,410
+match the value of the liability.
+
+26
+00:01:38,410 --> 00:01:45,610
+That is, A5 equals 10,000 times 1.08 to the power of 5,
+
+27
+00:01:45,610 --> 00:01:49,160
+and that gives us L5.
+
+28
+00:01:49,160 --> 00:01:52,520
+But what if interest rate changes?
+
+29
+00:01:52,520 --> 00:01:55,430
+The value of the asset, which is a six-year coupon
+
+30
+00:01:55,430 --> 00:02:00,110
+bond, and the liability, which is a five-year at zero,
+
+31
+00:02:00,110 --> 00:02:03,770
+will both change where interest rate changes.
+
+32
+00:02:03,770 --> 00:02:05,960
+But how much?
+
+33
+00:02:05,960 --> 00:02:09,470
+We can easily compute the following.
+
+34
+00:02:09,470 --> 00:02:12,760
+First, the duration of the liability is DL.
+
+35
+00:02:12,760 --> 00:02:15,790
+That equals five years.
+
+36
+00:02:15,790 --> 00:02:18,730
+The duration of the asset, which is DA--
+
+37
+00:02:18,730 --> 00:02:24,560
+and that equals 4.9927, also in years.
+
+38
+00:02:24,560 --> 00:02:26,690
+Since the asset and the liability
+
+39
+00:02:26,690 --> 00:02:30,050
+have almost the same duration, the liability
+
+40
+00:02:30,050 --> 00:02:34,130
+remains close to be fully funded for small interest rate
+
+41
+00:02:34,130 --> 00:02:35,590
+changes.
+
+42
+00:02:35,590 --> 00:02:41,650
+That is, delta A minus delta L equals minus 10,000
+
+43
+00:02:41,650 --> 00:02:44,500
+times 4.9927--
+
+44
+00:02:44,500 --> 00:02:46,450
+the duration for the asset--
+
+45
+00:02:46,450 --> 00:02:49,180
+minus 5-- the duration for the liability--
+
+46
+00:02:49,180 --> 00:02:52,660
+divide by 1.08-- the yield--
+
+47
+00:02:52,660 --> 00:02:56,590
+times delta r, the change in the yield.
+
+48
+00:02:56,590 --> 00:03:05,290
+And that's approximately 10,000 times 0.006759 times delta r.
+
+49
+00:03:05,290 --> 00:03:10,090
+And that's approximately 0, if delta r is small.
+
+50
+00:03:10,090 --> 00:03:13,100
+What about large interest rate changes?
+
+51
+00:03:13,100 --> 00:03:16,040
+The table on the slide shows the changes
+
+52
+00:03:16,040 --> 00:03:19,440
+in the value of asset and liability.
+
+53
+00:03:19,440 --> 00:03:23,690
+The second row gives the values of asset in liability at r
+
+54
+00:03:23,690 --> 00:03:25,730
+equals 8%.
+
+55
+00:03:25,730 --> 00:03:27,020
+They are matched.
+
+56
+00:03:27,020 --> 00:03:29,690
+The third row gives their values when
+
+57
+00:03:29,690 --> 00:03:32,910
+interest rate increases to 9%.
+
+58
+00:03:32,910 --> 00:03:36,080
+The match is close, but not perfect.
+
+59
+00:03:36,080 --> 00:03:39,650
+Clearly, for large interest rate changes,
+
+60
+00:03:39,650 --> 00:03:42,470
+the mismatch between asset and liability
+
+61
+00:03:42,470 --> 00:03:45,080
+becomes more substantial.
+
+62
+00:03:45,080 --> 00:03:49,220
+In this case, it is $1.79.
+
+63
+00:03:49,220 --> 00:03:51,590
+This is because, as we have learned
+
+64
+00:03:51,590 --> 00:03:54,600
+in the fixed-income lecture in part 1 of this course,
+
+65
+00:03:54,600 --> 00:03:57,230
+we have different convexities.
+
+66
+00:03:57,230 --> 00:04:01,580
+We can compute the convexity for the asset and liability,
+
+67
+00:04:01,580 --> 00:04:03,260
+respectively.
+
+68
+00:04:03,260 --> 00:04:06,000
+The results are as follows.
+
+69
+00:04:06,000 --> 00:04:09,830
+The convexity of the liability is CXL.
+
+70
+00:04:09,830 --> 00:04:13,300
+That equals 12.86.
+
+71
+00:04:13,300 --> 00:04:16,495
+The convexity for the asset is CXE.
+
+72
+00:04:16,495 --> 00:04:20,339
+That equals 14.02.
+
+73
+00:04:20,339 --> 00:04:23,520
+Including the second-order terms in values
+
+74
+00:04:23,520 --> 00:04:27,840
+of asset and liability, we have the following equation.
+
+75
+00:04:27,840 --> 00:04:34,140
+Delta A minus delta L is approximately 10,000 times
+
+76
+00:04:34,140 --> 00:04:38,640
+0.006759 times 1%--
+
+77
+00:04:38,640 --> 00:04:40,350
+which is the change in yield--
+
+78
+00:04:40,350 --> 00:04:49,410
+plus 10,000 times 14.02 minus 12.86 times 1% yield change
+
+79
+00:04:49,410 --> 00:04:50,850
+squared.
+
+80
+00:04:50,850 --> 00:04:54,840
+And that gives us 1.84.
+
+81
+00:04:54,840 --> 00:04:57,450
+This approximately explains the mismatch
+
+82
+00:04:57,450 --> 00:05:02,230
+between asset and liability in the previous table.
+
+83
+00:05:02,230 --> 00:05:05,650
+This example demonstrates two points.
+
+84
+00:05:05,650 --> 00:05:09,520
+First, for asset liability management,
+
+85
+00:05:09,520 --> 00:05:14,320
+we can properly choose the asset to greatly reduce interest rate
+
+86
+00:05:14,320 --> 00:05:18,520
+risk by matching their modified durations, especially
+
+87
+00:05:18,520 --> 00:05:21,710
+for small interest rate changes.
+
+88
+00:05:21,710 --> 00:05:24,070
+Second, for large interest rate movements,
+
+89
+00:05:24,070 --> 00:05:26,950
+however, matching modified duration still
+
+90
+00:05:26,950 --> 00:05:31,090
+leaves an interest rate risk of the second order.
+
+91
+00:05:31,090 --> 00:05:34,270
+To further reduce the second-order risk,
+
+92
+00:05:34,270 --> 00:05:37,690
+we may need to consider further matching convexities
+
+93
+00:05:37,690 --> 00:05:41,170
+between the asset and liability.
+
+94
+00:05:41,170 --> 00:05:44,530
+Interest rate risks can be easily hedged
+
+95
+00:05:44,530 --> 00:05:48,530
+using interest rate forwards or futures.
+
+96
+00:05:48,530 --> 00:05:53,180
+We consider, in our last example on risk management.
+
+97
+00:05:53,180 --> 00:05:57,230
+Suppose that we have $1 billion invested in the portfolio
+
+98
+00:05:57,230 --> 00:05:59,840
+of government bonds, and are concerned
+
+99
+00:05:59,840 --> 00:06:04,430
+about volatile interest rates over the next three months.
+
+100
+00:06:04,430 --> 00:06:08,390
+We have decided to use three months Treasury bonds forwards
+
+101
+00:06:08,390 --> 00:06:13,550
+or futures to protect the value of this investment.
+
+102
+00:06:13,550 --> 00:06:18,860
+The modified duration of the bond portfolio is 6.80.
+
+103
+00:06:18,860 --> 00:06:21,880
+Forwards and futures on 10-year treasury bonds
+
+104
+00:06:21,880 --> 00:06:25,000
+are actively traded, and we have the following information
+
+105
+00:06:25,000 --> 00:06:27,060
+on that.
+
+106
+00:06:27,060 --> 00:06:33,090
+The T-bond to be delivered has a modified duration of 9.20.
+
+107
+00:06:33,090 --> 00:06:38,010
+The T-bond pays no coupons over the next three months.
+
+108
+00:06:38,010 --> 00:06:42,190
+Let the current T-bond price be B10.
+
+109
+00:06:42,190 --> 00:06:49,860
+Each contract delivers $100,000 of face value of T-bonds.
+
+110
+00:06:49,860 --> 00:06:56,850
+The forward and futures price is F equals $93.50 for face value
+
+111
+00:06:56,850 --> 00:06:59,590
+of $100.
+
+112
+00:06:59,590 --> 00:07:07,560
+The forward and futures price for one contract is $93,500.
+
+113
+00:07:07,560 --> 00:07:09,900
+The three-month interest rate is r
+
+114
+00:07:09,900 --> 00:07:14,350
+equals 1%, which is not annualized.
+
+115
+00:07:14,350 --> 00:07:17,620
+By no arbitrage, we have the following equation
+
+116
+00:07:17,620 --> 00:07:21,890
+for the forward and spot prices of the bond.
+
+117
+00:07:21,890 --> 00:07:31,180
+F equals 1 plus r times B10, and that equals 1.01 times B10.
+
+118
+00:07:31,180 --> 00:07:35,110
+The first question is, in order to hedge the interest rate
+
+119
+00:07:35,110 --> 00:07:38,020
+risk of our bond portfolio, should we
+
+120
+00:07:38,020 --> 00:07:41,930
+long or short interest rate forwards and futures?
+
+121
+00:07:41,930 --> 00:07:46,280
+Of course, short, given that our original position is long
+
+122
+00:07:46,280 --> 00:07:48,150
+in bonds.
+
+123
+00:07:48,150 --> 00:07:51,960
+The next question is, how many contracts to short?
+
+124
+00:07:51,960 --> 00:07:55,590
+We need to properly match modified duration.
+
+125
+00:07:55,590 --> 00:07:58,100
+Let's work this out.
+
+126
+00:07:58,100 --> 00:08:01,700
+If yield curve shifts by delta y,
+
+127
+00:08:01,700 --> 00:08:06,290
+the value of the bond portfolio changes by delta VP.
+
+128
+00:08:06,290 --> 00:08:13,250
+That's approximately minus 6.80 times Vp times delta y.
+
+129
+00:08:13,250 --> 00:08:18,830
+The current price on the 10-year T-bond changes by delta B10--
+
+130
+00:08:18,830 --> 00:08:26,470
+approximately minus 9.20 times B10 times delta y.
+
+131
+00:08:26,470 --> 00:08:29,410
+Forward price changes by delta F--
+
+132
+00:08:29,410 --> 00:08:37,750
+approximately minus 1.01 times 9.20 times B10 times delta y.
+
+133
+00:08:37,750 --> 00:08:45,140
+And that equals minus 9.20 times F times delta y.
+
+134
+00:08:45,140 --> 00:08:48,710
+Gains and losses on the forward contract
+
+135
+00:08:48,710 --> 00:08:51,500
+are realized in three months.
+
+136
+00:08:51,500 --> 00:08:54,800
+Matching the gain/loss in present value terms,
+
+137
+00:08:54,800 --> 00:08:57,470
+we have the following equation--
+
+138
+00:08:57,470 --> 00:09:06,500
+minus the number of contracts times 1/1.01 times 93,500 times
+
+139
+00:09:06,500 --> 00:09:09,410
+9.20 times delta y--
+
+140
+00:09:09,410 --> 00:09:13,220
+the left-hand side-- equals minus $1 billion--
+
+141
+00:09:13,220 --> 00:09:14,600
+that's the portfolio value--
+
+142
+00:09:14,600 --> 00:09:19,760
+times 6.80-- its modified duration-- times delta y.
+
+143
+00:09:19,760 --> 00:09:22,100
+That's the right-hand side.
+
+144
+00:09:22,100 --> 00:09:24,800
+Therefore, the number of contracts to short
+
+145
+00:09:24,800 --> 00:09:27,860
+is given by the following equation.
+
+146
+00:09:27,860 --> 00:09:33,110
+The number of contracts should equal to 1.01 times 1 billion
+
+147
+00:09:33,110 --> 00:09:41,570
+divided by 93,500, then times 6.80 divided by 9.20.
+
+148
+00:09:41,570 --> 00:09:47,610
+That gives us 7,905.14.
+
+149
+00:09:47,610 --> 00:09:53,580
+Hence, we need to short 7,905 contracts.
+
+150
+00:09:53,580 --> 00:09:58,290
+One important point to note is that, in this hedging strategy,
+
+151
+00:09:58,290 --> 00:10:00,630
+the hedge ratio is based on the modified
+
+152
+00:10:00,630 --> 00:10:04,740
+durations of the portfolio and the hedging vehicle.
+
+153
+00:10:04,740 --> 00:10:07,480
+Both of them will change over time.
+
+154
+00:10:07,480 --> 00:10:12,170
+Therefore, we need to rebalance the hedge accordingly.
+

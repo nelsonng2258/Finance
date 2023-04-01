@@ -1,0 +1,420 @@
+0
+00:00:00,000 --> 00:00:00,940
+
+
+1
+00:00:00,940 --> 00:00:03,450
+PROFESSOR: For the last part of our discussion on default
+
+2
+00:00:03,450 --> 00:00:06,160
+risks, let's take a look at some data
+
+3
+00:00:06,160 --> 00:00:09,820
+to get a better empirical perspective.
+
+4
+00:00:09,820 --> 00:00:12,670
+What is shown in the figure on the slide
+
+5
+00:00:12,670 --> 00:00:15,250
+is the time series of the promise
+
+6
+00:00:15,250 --> 00:00:19,270
+yields on corporate bonds with different ratings.
+
+7
+00:00:19,270 --> 00:00:26,950
+The x-axis is time from 1920 to June of 2020.
+
+8
+00:00:26,950 --> 00:00:31,210
+The y-axis gives the promised yield to maturity.
+
+9
+00:00:31,210 --> 00:00:34,900
+The blue line gives the yield for Moody's AAA
+
+10
+00:00:34,900 --> 00:00:36,040
+corporate bonds.
+
+11
+00:00:36,040 --> 00:00:42,000
+And the red line is for BAA bonds.
+
+12
+00:00:42,000 --> 00:00:48,620
+The shaded intervals are times of economic recessions.
+
+13
+00:00:48,620 --> 00:00:51,920
+The overall time trend for the two yields
+
+14
+00:00:51,920 --> 00:00:55,430
+are mostly driven by the changes in interest rates,
+
+15
+00:00:55,430 --> 00:00:59,000
+as we have seen in our fixed income discussion in part
+
+16
+00:00:59,000 --> 00:01:01,150
+one of this course.
+
+17
+00:01:01,150 --> 00:01:04,930
+Our interest is on the difference or the spread
+
+18
+00:01:04,930 --> 00:01:09,100
+between the two yields, namely the vertical distance
+
+19
+00:01:09,100 --> 00:01:11,990
+between the two curves.
+
+20
+00:01:11,990 --> 00:01:16,160
+Given that AAA bonds are almost risk-free,
+
+21
+00:01:16,160 --> 00:01:20,540
+this yield spread roughly reflects the default premium
+
+22
+00:01:20,540 --> 00:01:24,080
+of BAA bonds.
+
+23
+00:01:24,080 --> 00:01:26,330
+We make two observations.
+
+24
+00:01:26,330 --> 00:01:30,050
+First, the yield spread does change over time.
+
+25
+00:01:30,050 --> 00:01:34,190
+Sometimes it's quite small, less than one percentage point.
+
+26
+00:01:34,190 --> 00:01:36,650
+And sometimes it's quite large, more
+
+27
+00:01:36,650 --> 00:01:39,330
+than several percentage points.
+
+28
+00:01:39,330 --> 00:01:43,470
+This simply implies that the probability of default
+
+29
+00:01:43,470 --> 00:01:46,140
+and the recovery rate can both be
+
+30
+00:01:46,140 --> 00:01:51,360
+varying over time as the state of the economy evolves.
+
+31
+00:01:51,360 --> 00:01:55,260
+Second, during periods of economic recession,
+
+32
+00:01:55,260 --> 00:01:59,100
+the yield spread tends to widen, also
+
+33
+00:01:59,100 --> 00:02:04,590
+reflecting potential increases in default risk and loss ratio.
+
+34
+00:02:04,590 --> 00:02:08,220
+These results, although not unexpected,
+
+35
+00:02:08,220 --> 00:02:11,550
+do reflect how the market behaves
+
+36
+00:02:11,550 --> 00:02:14,650
+in pricing corporate bonds.
+
+37
+00:02:14,650 --> 00:02:18,880
+Next, we consider corporate bonds default probabilities.
+
+38
+00:02:18,880 --> 00:02:23,690
+For this, we use the historic data on defaults.
+
+39
+00:02:23,690 --> 00:02:26,180
+What's plotted in the figure on the slide
+
+40
+00:02:26,180 --> 00:02:31,230
+is the historic default rates for corporate bonds globally.
+
+41
+00:02:31,230 --> 00:02:37,530
+The x-axis is time from 1920 to 2017.
+
+42
+00:02:37,530 --> 00:02:44,240
+The y-axis is the percentage of bonds defaulted in each year.
+
+43
+00:02:44,240 --> 00:02:47,660
+The light blue line is for all corporate bonds.
+
+44
+00:02:47,660 --> 00:02:53,120
+And the dark blue line is for speculative grade bonds.
+
+45
+00:02:53,120 --> 00:02:56,390
+From the data, we make several observations.
+
+46
+00:02:56,390 --> 00:02:59,420
+First, bonds of speculative grade
+
+47
+00:02:59,420 --> 00:03:03,260
+tend to have higher default rates on average.
+
+48
+00:03:03,260 --> 00:03:08,180
+This also means that the ratings are informative about bonds'
+
+49
+00:03:08,180 --> 00:03:10,570
+default risks.
+
+50
+00:03:10,570 --> 00:03:13,810
+Also, the average rate of default for all bonds
+
+51
+00:03:13,810 --> 00:03:16,630
+is below 4%, while the average rate
+
+52
+00:03:16,630 --> 00:03:22,620
+of default for speculative bonds can be substantially higher.
+
+53
+00:03:22,620 --> 00:03:26,400
+Second, the default rates are not constant over time.
+
+54
+00:03:26,400 --> 00:03:28,680
+There are large time variations.
+
+55
+00:03:28,680 --> 00:03:31,410
+In the good years, the default rates
+
+56
+00:03:31,410 --> 00:03:35,600
+can be close to zero, even for junk bonds.
+
+57
+00:03:35,600 --> 00:03:39,710
+In the bad years, the default rate for speculative bonds
+
+58
+00:03:39,710 --> 00:03:46,000
+can be 6% or higher, sometimes even reaching double digits.
+
+59
+00:03:46,000 --> 00:03:48,430
+This is an important fact.
+
+60
+00:03:48,430 --> 00:03:51,550
+It suggests that default risk has
+
+61
+00:03:51,550 --> 00:03:53,920
+systematic components in it.
+
+62
+00:03:53,920 --> 00:03:58,750
+In other words, defaults are correlated across bonds.
+
+63
+00:03:58,750 --> 00:04:01,120
+This should not be surprising.
+
+64
+00:04:01,120 --> 00:04:03,700
+In good economic times, we expect the default rates
+
+65
+00:04:03,700 --> 00:04:06,550
+to be lower for all bonds.
+
+66
+00:04:06,550 --> 00:04:10,550
+In bad times, we expect the opposite.
+
+67
+00:04:10,550 --> 00:04:13,700
+If default risk was all idiosyncratic,
+
+68
+00:04:13,700 --> 00:04:15,950
+we would expect the average default rate
+
+69
+00:04:15,950 --> 00:04:19,040
+to be flat over time.
+
+70
+00:04:19,040 --> 00:04:22,520
+The plot on this site shows similar results,
+
+71
+00:04:22,520 --> 00:04:25,730
+that is, global default rates for all bonds--
+
+72
+00:04:25,730 --> 00:04:30,400
+investment grade bonds and speculative grade bonds.
+
+73
+00:04:30,400 --> 00:04:36,230
+The time span here is 1981 to 2019.
+
+74
+00:04:36,230 --> 00:04:39,230
+The dark blue line at the bottom gives the default
+
+75
+00:04:39,230 --> 00:04:43,640
+rates for investment grade bonds during this period.
+
+76
+00:04:43,640 --> 00:04:48,230
+Clearly, the default rates are generally very low.
+
+77
+00:04:48,230 --> 00:04:51,440
+The yellow line at the top shows the default rates
+
+78
+00:04:51,440 --> 00:04:54,320
+for junk grade bonds.
+
+79
+00:04:54,320 --> 00:04:58,830
+They are a lot higher than that of investment grade bonds.
+
+80
+00:04:58,830 --> 00:05:01,530
+More importantly, the default rates
+
+81
+00:05:01,530 --> 00:05:04,670
+vary substantially over time.
+
+82
+00:05:04,670 --> 00:05:09,080
+In particular, during periods of recession and stock market
+
+83
+00:05:09,080 --> 00:05:14,945
+correction, such as 1991, 2000, 2001, 2008,
+
+84
+00:05:14,945 --> 00:05:19,310
+and '09, the default rates really spike up.
+
+85
+00:05:19,310 --> 00:05:22,520
+This clearly demonstrates the systematic nature
+
+86
+00:05:22,520 --> 00:05:24,870
+of default risks.
+
+87
+00:05:24,870 --> 00:05:26,790
+The light blue line in the middle
+
+88
+00:05:26,790 --> 00:05:29,670
+gives the default rates of all bonds, which
+
+89
+00:05:29,670 --> 00:05:31,980
+is the average between investment
+
+90
+00:05:31,980 --> 00:05:35,010
+and speculative grade bonds.
+
+91
+00:05:35,010 --> 00:05:37,890
+Summarizing what the data reveals,
+
+92
+00:05:37,890 --> 00:05:40,890
+we have the following results on factors
+
+93
+00:05:40,890 --> 00:05:42,900
+affecting default risks.
+
+94
+00:05:42,900 --> 00:05:46,410
+First, most of default risks, as measured by default
+
+95
+00:05:46,410 --> 00:05:49,020
+probability, is idiosyncratic.
+
+96
+00:05:49,020 --> 00:05:54,210
+Second, a substantial part of the default risk is systematic.
+
+97
+00:05:54,210 --> 00:05:57,670
+That is correlated across bonds.
+
+98
+00:05:57,670 --> 00:06:00,220
+The systematic part of the default risk
+
+99
+00:06:00,220 --> 00:06:04,540
+is also related, at least partially to economic cycles.
+
+100
+00:06:04,540 --> 00:06:07,810
+Third, the systematic part of the default risk
+
+101
+00:06:07,810 --> 00:06:11,750
+may also exhibit fat tails.
+
+102
+00:06:11,750 --> 00:06:13,900
+How about recovery rates?
+
+103
+00:06:13,900 --> 00:06:16,790
+They seem to exhibit similar properties
+
+104
+00:06:16,790 --> 00:06:19,580
+as the default rates.
+

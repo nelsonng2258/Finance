@@ -1,0 +1,468 @@
+0
+00:00:00,000 --> 00:00:00,065
+
+
+1
+00:00:00,065 --> 00:00:01,440
+PROFESSOR: In this video, we will
+
+2
+00:00:01,440 --> 00:00:05,160
+learn how to use a binomial tree model to price risky debt.
+
+3
+00:00:05,160 --> 00:00:08,039
+Consider a market with two possible states one year
+
+4
+00:00:08,039 --> 00:00:10,590
+from now: good or bad.
+
+5
+00:00:10,590 --> 00:00:13,140
+In the good state, the return on the market portfolio
+
+6
+00:00:13,140 --> 00:00:14,580
+will be 25%.
+
+7
+00:00:14,580 --> 00:00:17,070
+And in the bad state, the return on the market portfolio
+
+8
+00:00:17,070 --> 00:00:19,200
+will be negative 25%.
+
+9
+00:00:19,200 --> 00:00:22,620
+The probability of the good state is 70%.
+
+10
+00:00:22,620 --> 00:00:25,140
+The one-year, risk-free rate is 5%.
+
+11
+00:00:25,140 --> 00:00:26,910
+Consider a corporate bond.
+
+12
+00:00:26,910 --> 00:00:31,260
+It has a 0% coupon rate and matures one year from now.
+
+13
+00:00:31,260 --> 00:00:34,740
+The face value of the bond is $100.
+
+14
+00:00:34,740 --> 00:00:38,130
+In the good state, the bond has a 2% probability of default,
+
+15
+00:00:38,130 --> 00:00:40,920
+and a recovery rate of 60%.
+
+16
+00:00:40,920 --> 00:00:44,400
+In the bad state, the bond has a 10% probability of default,
+
+17
+00:00:44,400 --> 00:00:47,370
+and the recovery rate of 40%.
+
+18
+00:00:47,370 --> 00:00:49,950
+We will answer the following questions.
+
+19
+00:00:49,950 --> 00:00:52,920
+Compute the expected payoff of the bond in each of the two
+
+20
+00:00:52,920 --> 00:00:55,483
+states one year from now.
+
+21
+00:00:55,483 --> 00:00:57,150
+Determine the risk-neutral probabilities
+
+22
+00:00:57,150 --> 00:00:59,610
+of the good and bad states.
+
+23
+00:00:59,610 --> 00:01:03,390
+Compute the price of the corporate bond in year 0.
+
+24
+00:01:03,390 --> 00:01:05,310
+Compute the bond's promised yield,
+
+25
+00:01:05,310 --> 00:01:09,600
+expected yield, the default premium, and the risk premium.
+
+26
+00:01:09,600 --> 00:01:11,700
+Suppose that the CAPM holds.
+
+27
+00:01:11,700 --> 00:01:14,910
+Based on one-year returns, what is the market beta
+
+28
+00:01:14,910 --> 00:01:18,440
+of the corporate bond in this question?
+
+29
+00:01:18,440 --> 00:01:21,920
+Let's first compute the expected payoff of the bond one year
+
+30
+00:01:21,920 --> 00:01:24,140
+from now in the good state.
+
+31
+00:01:24,140 --> 00:01:28,640
+With 98% probability, the issuer of the bond will not default,
+
+32
+00:01:28,640 --> 00:01:33,020
+and we will get the full promised payment of $100.
+
+33
+00:01:33,020 --> 00:01:37,350
+With probability of 2%, the bond will default, in which case,
+
+34
+00:01:37,350 --> 00:01:40,010
+our recovery rate is 60%.
+
+35
+00:01:40,010 --> 00:01:44,660
+This means that we will receive 60% of the $100 that
+
+36
+00:01:44,660 --> 00:01:46,910
+was promised to us.
+
+37
+00:01:46,910 --> 00:01:50,720
+This gives us the expected payoff of $99.20.
+
+38
+00:01:50,720 --> 00:01:55,130
+Similarly, we can compute the expected payoff of the bond one
+
+39
+00:01:55,130 --> 00:01:57,350
+year from now in the bad state.
+
+40
+00:01:57,350 --> 00:02:00,170
+With 90% probability, the bond will not default,
+
+41
+00:02:00,170 --> 00:02:02,780
+and we will get $100.
+
+42
+00:02:02,780 --> 00:02:06,630
+With probability 10%, the bond will default. In this case,
+
+43
+00:02:06,630 --> 00:02:11,039
+we recover 40% of the $100 face value.
+
+44
+00:02:11,039 --> 00:02:13,350
+This gives us the expected payoff of $94.
+
+45
+00:02:13,350 --> 00:02:15,930
+
+
+46
+00:02:15,930 --> 00:02:18,390
+Next, let's find the risk-neutral probabilities
+
+47
+00:02:18,390 --> 00:02:20,700
+of the good and bad states.
+
+48
+00:02:20,700 --> 00:02:23,400
+Recall that the market portfolio one year from now
+
+49
+00:02:23,400 --> 00:02:28,590
+either goes up by 25% or goes down by 25%.
+
+50
+00:02:28,590 --> 00:02:30,390
+Using our standard notation, this
+
+51
+00:02:30,390 --> 00:02:37,050
+implies that multiple u is 1.25 and multiple d is 0.75.
+
+52
+00:02:37,050 --> 00:02:39,210
+The risk-neutral probability of the up-move
+
+53
+00:02:39,210 --> 00:02:43,590
+is 1 plus r f minus d divided by u minus d.
+
+54
+00:02:43,590 --> 00:02:45,420
+Risk-free rate is 5%.
+
+55
+00:02:45,420 --> 00:02:50,430
+u is 1.25, and d is 0.75, which gives us
+
+56
+00:02:50,430 --> 00:02:53,423
+the risk-neutral probability of the up move of 60%.
+
+57
+00:02:53,423 --> 00:02:55,340
+This implies that the risk-neutral probability
+
+58
+00:02:55,340 --> 00:02:58,710
+of the down move is 40%.
+
+59
+00:02:58,710 --> 00:03:00,270
+Knowing risk-neutral probabilities
+
+60
+00:03:00,270 --> 00:03:02,160
+and expected payoffs from the bond
+
+61
+00:03:02,160 --> 00:03:06,390
+in the good and bad states, we can price this bond today.
+
+62
+00:03:06,390 --> 00:03:09,450
+Its current price equals the expected payoff one year
+
+63
+00:03:09,450 --> 00:03:11,910
+from now under the risk-neutral measure
+
+64
+00:03:11,910 --> 00:03:15,330
+discounted to present at the risk-free rate.
+
+65
+00:03:15,330 --> 00:03:18,700
+Plugging in the numbers from parts a and b of this question,
+
+66
+00:03:18,700 --> 00:03:23,550
+we find that the current price of this bond is $92.50.
+
+67
+00:03:23,550 --> 00:03:25,080
+Next, let's find the promised yield
+
+68
+00:03:25,080 --> 00:03:28,260
+on this bond, the expected yield, the default premium,
+
+69
+00:03:28,260 --> 00:03:30,180
+and the risk premium.
+
+70
+00:03:30,180 --> 00:03:34,350
+Since this bond pays no coupons and matures one year from now,
+
+71
+00:03:34,350 --> 00:03:37,530
+its promised yield equals its face value divided
+
+72
+00:03:37,530 --> 00:03:40,560
+by its current price minus 1.
+
+73
+00:03:40,560 --> 00:03:42,690
+Plugging in the numbers, we find that the promised
+
+74
+00:03:42,690 --> 00:03:45,150
+yield on this bond is 8.11%.
+
+75
+00:03:45,150 --> 00:03:48,750
+To compute the expected yield on this bond,
+
+76
+00:03:48,750 --> 00:03:51,930
+instead of using the face value that was promised to us,
+
+77
+00:03:51,930 --> 00:03:56,280
+we're using the payoff we expect to receive from this bond.
+
+78
+00:03:56,280 --> 00:03:59,640
+The expected payoff in year one is the physical probability
+
+79
+00:03:59,640 --> 00:04:03,480
+of the good state, which is 70%, multiplied by the expected
+
+80
+00:04:03,480 --> 00:04:07,680
+payoff in the good state, which is $99.20,
+
+81
+00:04:07,680 --> 00:04:11,790
+plus the physical probability of the bad state, which is 30%,
+
+82
+00:04:11,790 --> 00:04:14,640
+multiplied by the expected payoff in the bad state,
+
+83
+00:04:14,640 --> 00:04:16,950
+which is $94.
+
+84
+00:04:16,950 --> 00:04:21,120
+We see that the expected yield on this bond is 5.56%.
+
+85
+00:04:21,120 --> 00:04:24,990
+The default premium, by definition,
+
+86
+00:04:24,990 --> 00:04:27,540
+is the difference between the promised yield and the expected
+
+87
+00:04:27,540 --> 00:04:28,500
+yield.
+
+88
+00:04:28,500 --> 00:04:36,000
+In our case, this is 8.11% minus 5.56%, which equals to 2.55%.
+
+89
+00:04:36,000 --> 00:04:39,120
+The risk premium is the difference
+
+90
+00:04:39,120 --> 00:04:42,030
+between the expected yield and the risk-free rate.
+
+91
+00:04:42,030 --> 00:04:48,510
+In our case, this is 5.56% minus 5%, which equals to 0.56%.
+
+92
+00:04:48,510 --> 00:04:52,590
+Therefore the default premium on this bond is 2.55%,
+
+93
+00:04:52,590 --> 00:04:56,520
+and the risk premium of this bond is 0.56%.
+
+94
+00:04:56,520 --> 00:05:01,380
+Finally let's find CAPM beta of this bond.
+
+95
+00:05:01,380 --> 00:05:05,170
+Recall by CAPM, the expected return on this bond,
+
+96
+00:05:05,170 --> 00:05:08,610
+which is its expected yield, equals to the risk-free rate
+
+97
+00:05:08,610 --> 00:05:11,610
+plus beta of this bond multiplied by the market risk
+
+98
+00:05:11,610 --> 00:05:12,750
+premium.
+
+99
+00:05:12,750 --> 00:05:14,100
+We know the expected yield.
+
+100
+00:05:14,100 --> 00:05:16,290
+And we know the risk-free rate.
+
+101
+00:05:16,290 --> 00:05:19,480
+We need to find the expected return on the market portfolio
+
+102
+00:05:19,480 --> 00:05:22,260
+so that we can solve this equation for beta.
+
+103
+00:05:22,260 --> 00:05:23,910
+The expected return on the market
+
+104
+00:05:23,910 --> 00:05:26,130
+equals to the probability of the good state, which
+
+105
+00:05:26,130 --> 00:05:29,730
+is 70%, times the return in the good state, which
+
+106
+00:05:29,730 --> 00:05:35,010
+is 25%, plus the probability of the bad state, which is 30%,
+
+107
+00:05:35,010 --> 00:05:38,910
+times the return in the bad state, which is negative 25%.
+
+108
+00:05:38,910 --> 00:05:42,630
+This gives us the expected return of 10%.
+
+109
+00:05:42,630 --> 00:05:45,000
+Solving the CAPM equation for beta,
+
+110
+00:05:45,000 --> 00:05:49,360
+we find that the beta of this bond is 0.1124.
+
+111
+00:05:49,360 --> 00:05:52,650
+Note that this beta is very close to zero,
+
+112
+00:05:52,650 --> 00:05:56,550
+implying that this bond has very low systematic risk.
+
+113
+00:05:56,550 --> 00:05:59,470
+Because of this, the risk premium on this bond,
+
+114
+00:05:59,470 --> 00:06:02,820
+which we found in part d of this question, is low.
+
+115
+00:06:02,820 --> 00:06:05,500
+Only 56 basis points.
+
+116
+00:06:05,500 --> 00:06:06,000
+
+

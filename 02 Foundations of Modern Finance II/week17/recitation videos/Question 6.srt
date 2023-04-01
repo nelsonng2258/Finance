@@ -1,0 +1,504 @@
+0
+00:00:00,000 --> 00:00:00,125
+
+
+1
+00:00:00,125 --> 00:00:01,500
+PROFESSOR: In this video, we will
+
+2
+00:00:01,500 --> 00:00:04,560
+consider an example of a firm with multiple tiers of debt
+
+3
+00:00:04,560 --> 00:00:06,510
+in its capital structure and learn
+
+4
+00:00:06,510 --> 00:00:10,030
+how to price debt and equity in such circumstances.
+
+5
+00:00:10,030 --> 00:00:12,460
+Suppose that there are two possible states of the economy
+
+6
+00:00:12,460 --> 00:00:15,380
+next year: good and bad.
+
+7
+00:00:15,380 --> 00:00:17,770
+The good state occurs with probability 80%,
+
+8
+00:00:17,770 --> 00:00:21,390
+and the bad state occurs with probability 20%.
+
+9
+00:00:21,390 --> 00:00:24,330
+Consider a small firm whose assets in year 1
+
+10
+00:00:24,330 --> 00:00:28,110
+will be worth $90 million in the good state and $40 million
+
+11
+00:00:28,110 --> 00:00:29,400
+in the bad state.
+
+12
+00:00:29,400 --> 00:00:33,840
+This firm has two bonds outstanding, bond 1 and bond 2.
+
+13
+00:00:33,840 --> 00:00:37,830
+Both bonds pay 0% coupon and mature in year 1.
+
+14
+00:00:37,830 --> 00:00:40,035
+The face value of bond 1 is $40 million,
+
+15
+00:00:40,035 --> 00:00:43,950
+and the face value of bond 2 is $10 million.
+
+16
+00:00:43,950 --> 00:00:46,620
+Bond 2 is junior to bond 1.
+
+17
+00:00:46,620 --> 00:00:50,190
+This means that, in the event of default, holders of bond 2
+
+18
+00:00:50,190 --> 00:00:53,730
+do not receive any payment until holders of bond 1
+
+19
+00:00:53,730 --> 00:00:56,550
+receive their promised payment in full.
+
+20
+00:00:56,550 --> 00:00:59,490
+We will assume that the one year risk-free rate is 5%
+
+21
+00:00:59,490 --> 00:01:03,352
+and that corporations do not pay corporate income taxes.
+
+22
+00:01:03,352 --> 00:01:05,310
+Suppose that the current market value of equity
+
+23
+00:01:05,310 --> 00:01:08,490
+is $28.57 million.
+
+24
+00:01:08,490 --> 00:01:11,220
+What are the current prices of bonds 1 and 2
+
+25
+00:01:11,220 --> 00:01:13,610
+and their promised yields?
+
+26
+00:01:13,610 --> 00:01:16,940
+What are the expected returns on both bonds and equity
+
+27
+00:01:16,940 --> 00:01:18,840
+of this firm?
+
+28
+00:01:18,840 --> 00:01:20,690
+Let's start by finding what the holders
+
+29
+00:01:20,690 --> 00:01:25,330
+of both bonds and equity receive in each state of the economy.
+
+30
+00:01:25,330 --> 00:01:28,850
+Recall that the face value of bond 1 is $40 million.
+
+31
+00:01:28,850 --> 00:01:33,950
+And this bond is the most senior claim on this firm's assets.
+
+32
+00:01:33,950 --> 00:01:35,870
+Since the assets are worth $90 million
+
+33
+00:01:35,870 --> 00:01:39,470
+in the good state and $40 million in the bad state,
+
+34
+00:01:39,470 --> 00:01:43,190
+holders of bond 1 will receive their full promised payment
+
+35
+00:01:43,190 --> 00:01:46,880
+of $40 million in both states.
+
+36
+00:01:46,880 --> 00:01:50,000
+Holders of bond 2, however, will not receive anything
+
+37
+00:01:50,000 --> 00:01:52,910
+in the bad state because the assets of the firm
+
+38
+00:01:52,910 --> 00:01:56,570
+will be worth zero after the firm makes the payment
+
+39
+00:01:56,570 --> 00:01:58,880
+to holders of bond 1.
+
+40
+00:01:58,880 --> 00:02:01,430
+The firm will default on its promised payments
+
+41
+00:02:01,430 --> 00:02:04,140
+to the holders of bond 2.
+
+42
+00:02:04,140 --> 00:02:07,710
+Equity holders are residual claimants on firm's assets.
+
+43
+00:02:07,710 --> 00:02:11,009
+In the good state, they receive $40 million of the payments
+
+44
+00:02:11,009 --> 00:02:14,790
+to holders of bond 1 and bond 2 are made in full.
+
+45
+00:02:14,790 --> 00:02:17,040
+In the bad state, however, the value of equity
+
+46
+00:02:17,040 --> 00:02:19,290
+is zero since the value of assets
+
+47
+00:02:19,290 --> 00:02:25,240
+is large enough only to satisfy the claim of holders of bond 1.
+
+48
+00:02:25,240 --> 00:02:27,550
+To price both of these bonds, let's start
+
+49
+00:02:27,550 --> 00:02:29,350
+by finding risk-neutral probabilities
+
+50
+00:02:29,350 --> 00:02:31,630
+of the up and down states.
+
+51
+00:02:31,630 --> 00:02:33,620
+We don't know the current value of the firm.
+
+52
+00:02:33,620 --> 00:02:36,460
+However, we know its current value of equity.
+
+53
+00:02:36,460 --> 00:02:41,950
+It is $28.57 million.
+
+54
+00:02:41,950 --> 00:02:44,680
+Therefore, we can use the current value of equity,
+
+55
+00:02:44,680 --> 00:02:46,120
+together with the risk-free rate,
+
+56
+00:02:46,120 --> 00:02:49,290
+to find risk-neutral probabilities.
+
+57
+00:02:49,290 --> 00:02:51,600
+We can write down the following equation.
+
+58
+00:02:51,600 --> 00:02:53,230
+The current value of equity should
+
+59
+00:02:53,230 --> 00:02:54,990
+equal to the risk-neutral probability
+
+60
+00:02:54,990 --> 00:02:57,960
+of the up state multiplied by the equity value
+
+61
+00:02:57,960 --> 00:03:00,930
+in the up state plus the risk-neutral probability
+
+62
+00:03:00,930 --> 00:03:03,570
+of the down state multiplied by the value of equity
+
+63
+00:03:03,570 --> 00:03:07,890
+in the down state discounted to present at the risk-free rate.
+
+64
+00:03:07,890 --> 00:03:11,460
+Note that the value of equity in the down state is zero.
+
+65
+00:03:11,460 --> 00:03:15,290
+Solving this equation for qu, we get 0.75.
+
+66
+00:03:15,290 --> 00:03:17,790
+This means that the risk-neutral probability of the up state
+
+67
+00:03:17,790 --> 00:03:21,480
+is 75%, and the risk-neutral probability of the down state
+
+68
+00:03:21,480 --> 00:03:23,190
+is 25%.
+
+69
+00:03:23,190 --> 00:03:24,960
+Knowing risk-neutral probabilities,
+
+70
+00:03:24,960 --> 00:03:28,050
+we can find current prices of bonds 1 and 2.
+
+71
+00:03:28,050 --> 00:03:30,990
+The price of bond 1 equals to the risk-neutral probability
+
+72
+00:03:30,990 --> 00:03:35,310
+of the up state, which is 0.75, times the payoff
+
+73
+00:03:35,310 --> 00:03:38,890
+from the bond in the up state, which is $40 million,
+
+74
+00:03:38,890 --> 00:03:41,640
+plus the risk-neutral probability of the down state,
+
+75
+00:03:41,640 --> 00:03:44,940
+which is 0.25, times the payoff from the bond
+
+76
+00:03:44,940 --> 00:03:48,130
+in the down state, which is also $40 million,
+
+77
+00:03:48,130 --> 00:03:51,210
+discounted to present at the risk-free rate.
+
+78
+00:03:51,210 --> 00:03:54,240
+Since this bond pays face value in both states,
+
+79
+00:03:54,240 --> 00:03:57,720
+its price effectively equals to the face value
+
+80
+00:03:57,720 --> 00:04:00,600
+discounted to present at the risk-free rate.
+
+81
+00:04:00,600 --> 00:04:02,730
+It is easy to understand why.
+
+82
+00:04:02,730 --> 00:04:05,700
+This bond never defaults and always pays in full.
+
+83
+00:04:05,700 --> 00:04:09,150
+Therefore, it is effectively a risk-free bond.
+
+84
+00:04:09,150 --> 00:04:12,750
+The price of bond 2 equals qu multiplied
+
+85
+00:04:12,750 --> 00:04:17,490
+by 10 plus qd multiplied by 0 discounted to present
+
+86
+00:04:17,490 --> 00:04:19,120
+at the risk-free rate.
+
+87
+00:04:19,120 --> 00:04:22,560
+This gives us $7.14 million.
+
+88
+00:04:22,560 --> 00:04:24,570
+The promised yield on the first bond
+
+89
+00:04:24,570 --> 00:04:28,800
+is simply 5% because this bond is risk free.
+
+90
+00:04:28,800 --> 00:04:30,840
+The promised yield on the second bond
+
+91
+00:04:30,840 --> 00:04:33,210
+is its face value, which is $10 million,
+
+92
+00:04:33,210 --> 00:04:36,750
+divided by its current price, which is $7.14 million,
+
+93
+00:04:36,750 --> 00:04:38,220
+minus 1.
+
+94
+00:04:38,220 --> 00:04:40,530
+This equals to 40%.
+
+95
+00:04:40,530 --> 00:04:44,340
+This high yield indicates the riskiness of this bond.
+
+96
+00:04:44,340 --> 00:04:47,250
+Note that, in the down state, holders of this bond
+
+97
+00:04:47,250 --> 00:04:49,980
+incur a 100% loss rate.
+
+98
+00:04:49,980 --> 00:04:52,380
+Finally, let's find expected returns
+
+99
+00:04:52,380 --> 00:04:56,120
+on both bonds and equity of this firm.
+
+100
+00:04:56,120 --> 00:04:59,690
+The expected return on bond 1 is 5% simply
+
+101
+00:04:59,690 --> 00:05:02,210
+because it is risk free.
+
+102
+00:05:02,210 --> 00:05:06,380
+The expected return on bond 2 equals its expected payoff,
+
+103
+00:05:06,380 --> 00:05:08,150
+which is physical probability of the up
+
+104
+00:05:08,150 --> 00:05:12,380
+state, 80%, times the payoff in the up state, which
+
+105
+00:05:12,380 --> 00:05:16,730
+is $10 million, plus physical probability of the down state,
+
+106
+00:05:16,730 --> 00:05:20,930
+20%, times the payoff in the down state, which is 0,
+
+107
+00:05:20,930 --> 00:05:24,230
+divided by the current bond price minus 1.
+
+108
+00:05:24,230 --> 00:05:26,720
+This gives us 12%.
+
+109
+00:05:26,720 --> 00:05:30,020
+We can decompose the promised yield of the second bond, which
+
+110
+00:05:30,020 --> 00:05:33,170
+is 40%, into the default premium, risk premium,
+
+111
+00:05:33,170 --> 00:05:35,360
+and the risk-free rate of return.
+
+112
+00:05:35,360 --> 00:05:39,980
+We see that the default premium is 28%, four times as large
+
+113
+00:05:39,980 --> 00:05:43,000
+as the risk premium, which is 7%.
+
+114
+00:05:43,000 --> 00:05:46,520
+Finally, the expected return on equity of this firm
+
+115
+00:05:46,520 --> 00:05:50,810
+equals to the expected payoff, which is 80% times $40 million
+
+116
+00:05:50,810 --> 00:05:54,710
+plus 20% times 0, divided by the current price, which
+
+117
+00:05:54,710 --> 00:05:58,640
+is $28.57 million, minus 1.
+
+118
+00:05:58,640 --> 00:06:01,670
+This gives us 12%.
+
+119
+00:06:01,670 --> 00:06:04,160
+Note that the risk premium on equity of this firm
+
+120
+00:06:04,160 --> 00:06:06,920
+and on bond 2 are the same.
+
+121
+00:06:06,920 --> 00:06:10,610
+This should not be surprising because both equity and bond 2
+
+122
+00:06:10,610 --> 00:06:12,260
+only pay in the up state.
+
+123
+00:06:12,260 --> 00:06:16,040
+And, in the down state, they're both worthless.
+
+124
+00:06:16,040 --> 00:06:19,880
+In other words, bond 2 and equity of this firm
+
+125
+00:06:19,880 --> 00:06:23,620
+are effectively identical securities.
+

@@ -1,0 +1,644 @@
+0
+00:00:00,000 --> 00:00:01,035
+
+
+1
+00:00:01,035 --> 00:00:02,410
+PROFESSOR: In this video, we will
+
+2
+00:00:02,410 --> 00:00:04,990
+consider a corporate finance situation,
+
+3
+00:00:04,990 --> 00:00:07,600
+known as Debt Overhang.
+
+4
+00:00:07,600 --> 00:00:09,610
+Consider a two-period setting.
+
+5
+00:00:09,610 --> 00:00:11,050
+Today's year is 0.
+
+6
+00:00:11,050 --> 00:00:13,530
+Next year is year 1.
+
+7
+00:00:13,530 --> 00:00:16,320
+We will assume that all investors are risk neutral,
+
+8
+00:00:16,320 --> 00:00:19,260
+and that the risk-free rate is 0%.
+
+9
+00:00:19,260 --> 00:00:21,600
+These assumptions are made for convenience,
+
+10
+00:00:21,600 --> 00:00:24,210
+as they would allow us to simply work
+
+11
+00:00:24,210 --> 00:00:28,890
+with physical probabilities and ignore time value of money.
+
+12
+00:00:28,890 --> 00:00:32,530
+Next year, the economy can take one of the three states--
+
+13
+00:00:32,530 --> 00:00:35,580
+Good, Okay, or Bad.
+
+14
+00:00:35,580 --> 00:00:39,390
+The probability of the good state is 1/6.
+
+15
+00:00:39,390 --> 00:00:42,570
+The probability of the Okay state is 1/3.
+
+16
+00:00:42,570 --> 00:00:46,290
+And the probability of the bad state is 1/2.
+
+17
+00:00:46,290 --> 00:00:48,480
+There is a hypothetical firm whose assets
+
+18
+00:00:48,480 --> 00:00:53,460
+will be worth $100 in the Good state, $50 in the Okay state,
+
+19
+00:00:53,460 --> 00:00:56,460
+and $20 in the Bad state.
+
+20
+00:00:56,460 --> 00:01:00,480
+The firm has outstanding debt with face value $50 due
+
+21
+00:01:00,480 --> 00:01:01,980
+in a year 1.
+
+22
+00:01:01,980 --> 00:01:05,470
+Management of the firm has identified a new project,
+
+23
+00:01:05,470 --> 00:01:08,400
+which requires an investment of $6 in year 0,
+
+24
+00:01:08,400 --> 00:01:12,960
+and pays off $10 in year one with certainty.
+
+25
+00:01:12,960 --> 00:01:17,340
+Management understands that this project has positive NPV of $4,
+
+26
+00:01:17,340 --> 00:01:21,060
+and therefore, should be taken, but does not have cash
+
+27
+00:01:21,060 --> 00:01:23,920
+available to finance this project.
+
+28
+00:01:23,920 --> 00:01:26,910
+Therefore, it considers raising external financing
+
+29
+00:01:26,910 --> 00:01:29,470
+to fund this project.
+
+30
+00:01:29,470 --> 00:01:32,200
+There are three available financing options.
+
+31
+00:01:32,200 --> 00:01:36,420
+Option 1 is to raise new debt junior to existing debt.
+
+32
+00:01:36,420 --> 00:01:38,910
+Option 2 is to raise new equity.
+
+33
+00:01:38,910 --> 00:01:44,040
+And option 3 is to raise new debt, senior to existing debt.
+
+34
+00:01:44,040 --> 00:01:45,750
+You're hired as a financial advisor
+
+35
+00:01:45,750 --> 00:01:47,700
+to the management of the firm.
+
+36
+00:01:47,700 --> 00:01:49,890
+Determine which of these three options are feasible,
+
+37
+00:01:49,890 --> 00:01:53,340
+and advise on the best financing option.
+
+38
+00:01:53,340 --> 00:01:55,440
+First, let's determine the current value
+
+39
+00:01:55,440 --> 00:01:58,470
+of debt and equity without the new project.
+
+40
+00:01:58,470 --> 00:02:01,230
+The following table shows values of debt and equity
+
+41
+00:02:01,230 --> 00:02:03,780
+in all three states in year 1.
+
+42
+00:02:03,780 --> 00:02:06,870
+Recall that the face value of debt is $50.
+
+43
+00:02:06,870 --> 00:02:09,449
+Therefore, in Good and Okay states,
+
+44
+00:02:09,449 --> 00:02:12,330
+the value of the firm's assets is high enough
+
+45
+00:02:12,330 --> 00:02:15,210
+to pay the full face value back.
+
+46
+00:02:15,210 --> 00:02:19,020
+In the bad state, however, the value of assets is only $20,
+
+47
+00:02:19,020 --> 00:02:23,280
+which is not enough to pay the full $50 back to debt holders.
+
+48
+00:02:23,280 --> 00:02:26,730
+In this case, the value of debt is $20.
+
+49
+00:02:26,730 --> 00:02:30,432
+Equity holders are worth $50 in the Good state,
+
+50
+00:02:30,432 --> 00:02:31,890
+which is computed as the difference
+
+51
+00:02:31,890 --> 00:02:35,340
+between the value of assets and the face value of the bond.
+
+52
+00:02:35,340 --> 00:02:41,610
+In the Okay state and in the Bad state, the equity is worth 0.
+
+53
+00:02:41,610 --> 00:02:43,980
+The current value of debt equals to the probability
+
+54
+00:02:43,980 --> 00:02:47,970
+of the Good state, which is 1/6, multiplied by the value of debt
+
+55
+00:02:47,970 --> 00:02:50,670
+in that state, which is 50, plus probability
+
+56
+00:02:50,670 --> 00:02:54,510
+of the Okay state, which is 1/3, multiplied by the value of debt
+
+57
+00:02:54,510 --> 00:02:57,570
+in that state, which is 50, plus probability of the Bad
+
+58
+00:02:57,570 --> 00:03:01,200
+state, which is 1/2, multiplied by the value of debt
+
+59
+00:03:01,200 --> 00:03:03,210
+in that state, which is 20.
+
+60
+00:03:03,210 --> 00:03:05,550
+This gives us $35.
+
+61
+00:03:05,550 --> 00:03:07,058
+The current value of equity equals
+
+62
+00:03:07,058 --> 00:03:08,850
+to the probability of the Good state, which
+
+63
+00:03:08,850 --> 00:03:12,120
+is 1/6, multiplied by the value of equity in the Good state,
+
+64
+00:03:12,120 --> 00:03:14,070
+which is 50.
+
+65
+00:03:14,070 --> 00:03:17,460
+The value of equity in the other two states is 0.
+
+66
+00:03:17,460 --> 00:03:22,050
+Hence, the current value of equity equals to $8.33.
+
+67
+00:03:22,050 --> 00:03:26,670
+Let's now consider the first financing option, junior debt.
+
+68
+00:03:26,670 --> 00:03:31,020
+Let's first find the face value of this new junior debt.
+
+69
+00:03:31,020 --> 00:03:34,170
+Suppose that the face value is x dollars, where x is less than
+
+70
+00:03:34,170 --> 00:03:35,900
+or equal than 10.
+
+71
+00:03:35,900 --> 00:03:39,420
+Recall that the project generates the value of $10.
+
+72
+00:03:39,420 --> 00:03:42,660
+And hence, the total value of assets in the year 1
+
+73
+00:03:42,660 --> 00:03:46,800
+will be $110 in the Good state, $60 in the Okay state,
+
+74
+00:03:46,800 --> 00:03:49,410
+and $30 in the Bad state.
+
+75
+00:03:49,410 --> 00:03:53,610
+The value of existing debt will be $50 in the Good state,
+
+76
+00:03:53,610 --> 00:03:57,000
+$50 in the Okay state, and $30 in the Bad state.
+
+77
+00:03:57,000 --> 00:03:59,850
+Therefore, the payoff to junior debt holders
+
+78
+00:03:59,850 --> 00:04:03,000
+will be x in the Good and the Okay states,
+
+79
+00:04:03,000 --> 00:04:05,490
+and 0 in the Bad state.
+
+80
+00:04:05,490 --> 00:04:08,040
+In order to price this debt, recall that the project
+
+81
+00:04:08,040 --> 00:04:10,710
+requires $6 to finance.
+
+82
+00:04:10,710 --> 00:04:14,010
+Since all investors are risk neutral and the risk rate is 0,
+
+83
+00:04:14,010 --> 00:04:19,440
+$6 should equal to the expected payoff from the bond in year 1.
+
+84
+00:04:19,440 --> 00:04:22,290
+This gives us $12.
+
+85
+00:04:22,290 --> 00:04:25,620
+Recall that we assume that x should be less than 10.
+
+86
+00:04:25,620 --> 00:04:29,580
+If it's 12, the value of assets in year 1 in the Okay state
+
+87
+00:04:29,580 --> 00:04:33,570
+is not high enough to repay the full face value back.
+
+88
+00:04:33,570 --> 00:04:35,460
+Let's revisit this assumption and assume
+
+89
+00:04:35,460 --> 00:04:38,230
+that x is greater than 10.
+
+90
+00:04:38,230 --> 00:04:40,740
+Then the payoff to junior debt holders in the Good state
+
+91
+00:04:40,740 --> 00:04:41,940
+will be x.
+
+92
+00:04:41,940 --> 00:04:44,070
+In the Okay state, it will be 10.
+
+93
+00:04:44,070 --> 00:04:47,610
+And in the Bad state, it will remain 0.
+
+94
+00:04:47,610 --> 00:04:50,610
+This gives us the new pricing equation.
+
+95
+00:04:50,610 --> 00:04:53,670
+Solving this, we get $16.
+
+96
+00:04:53,670 --> 00:04:56,130
+Therefore, for junior debt holders,
+
+97
+00:04:56,130 --> 00:04:59,250
+to agree to fund this project, the face value of the bond
+
+98
+00:04:59,250 --> 00:05:02,130
+has to be $16.
+
+99
+00:05:02,130 --> 00:05:04,500
+With this face value of new junior debt,
+
+100
+00:05:04,500 --> 00:05:07,950
+the payoff to equity holders will be $44 in the Good state,
+
+101
+00:05:07,950 --> 00:05:11,100
+and $0 in the Okay and Bad states.
+
+102
+00:05:11,100 --> 00:05:14,130
+The value of equity in year 0 will be $7.33.
+
+103
+00:05:14,130 --> 00:05:18,300
+Therefore, equity holders will not
+
+104
+00:05:18,300 --> 00:05:20,760
+be in favor of this financing arrangement,
+
+105
+00:05:20,760 --> 00:05:23,490
+because it increases their value by $1--
+
+106
+00:05:23,490 --> 00:05:26,250
+from $8.33 to $7.33.
+
+107
+00:05:26,250 --> 00:05:33,640
+Let's now consider the second financing option, equity.
+
+108
+00:05:33,640 --> 00:05:36,070
+In this case, the value of equity in year one
+
+109
+00:05:36,070 --> 00:05:40,060
+is $60 in the Good state, $10 in the Okay state,
+
+110
+00:05:40,060 --> 00:05:43,910
+and $0 in the Bad state.
+
+111
+00:05:43,910 --> 00:05:46,130
+The value of equity in year 0 equals
+
+112
+00:05:46,130 --> 00:05:48,350
+to the negative $6 spent to finance
+
+113
+00:05:48,350 --> 00:05:51,440
+the project, plus the expected payoff in year 1,
+
+114
+00:05:51,440 --> 00:05:56,880
+which is 1/6 times 60 plus 1/3 times 10.
+
+115
+00:05:56,880 --> 00:05:58,250
+This gives us $7.33.
+
+116
+00:05:58,250 --> 00:06:02,480
+Therefore, equity holders will not
+
+117
+00:06:02,480 --> 00:06:05,150
+agree to finance this project, because doing
+
+118
+00:06:05,150 --> 00:06:09,560
+so decreases their value from $8.33 to $7.33,
+
+119
+00:06:09,560 --> 00:06:13,745
+effectively resulting in negative NPV of $1.
+
+120
+00:06:13,745 --> 00:06:16,650
+
+
+121
+00:06:16,650 --> 00:06:21,210
+Finally, let's consider the last financing option, senior debt.
+
+122
+00:06:21,210 --> 00:06:23,880
+Senior debt will effectively be risk free,
+
+123
+00:06:23,880 --> 00:06:27,210
+because the value of assets in all three states of the world
+
+124
+00:06:27,210 --> 00:06:31,050
+is high enough to not default on the promised payment.
+
+125
+00:06:31,050 --> 00:06:35,430
+Therefore, senior debt will have face value of $6.
+
+126
+00:06:35,430 --> 00:06:37,110
+The payoff to existing debt holders
+
+127
+00:06:37,110 --> 00:06:41,490
+will be $50 in the Good state, $50 in the Okay state,
+
+128
+00:06:41,490 --> 00:06:44,520
+and $24 in the Bad state.
+
+129
+00:06:44,520 --> 00:06:48,660
+The pay off to equity holders will be $54 in the Good state,
+
+130
+00:06:48,660 --> 00:06:54,330
+$4 in the Okay state, and $0 in the Bad state.
+
+131
+00:06:54,330 --> 00:06:56,850
+The current value of equity under this financing
+
+132
+00:06:56,850 --> 00:06:58,650
+arrangement will be $10.33.
+
+133
+00:06:58,650 --> 00:07:05,040
+Equity holders would therefore want to finance this project,
+
+134
+00:07:05,040 --> 00:07:09,540
+because it increases their value from $8.33 to $10.33.
+
+135
+00:07:09,540 --> 00:07:14,490
+What about existing debt holders?
+
+136
+00:07:14,490 --> 00:07:16,890
+The current value under this financing arrangement
+
+137
+00:07:16,890 --> 00:07:19,560
+becomes $37.
+
+138
+00:07:19,560 --> 00:07:22,020
+Therefore, existing debt holders will also
+
+139
+00:07:22,020 --> 00:07:25,100
+be supportive of this plan.
+
+140
+00:07:25,100 --> 00:07:27,800
+Let's summarize our findings.
+
+141
+00:07:27,800 --> 00:07:31,250
+Financing this project with either junior debt or equity
+
+142
+00:07:31,250 --> 00:07:33,530
+isn't feasible, because it lowers the value
+
+143
+00:07:33,530 --> 00:07:35,870
+of current shareholders.
+
+144
+00:07:35,870 --> 00:07:38,370
+Since they're the decision makers in the firm,
+
+145
+00:07:38,370 --> 00:07:41,340
+they will decide not to take this project.
+
+146
+00:07:41,340 --> 00:07:43,310
+On the other hand, if the project
+
+147
+00:07:43,310 --> 00:07:46,220
+is financed with senior debt, both equity holders
+
+148
+00:07:46,220 --> 00:07:48,380
+and current debt holders benefit.
+
+149
+00:07:48,380 --> 00:07:52,460
+And hence, they'll be in favor of this project.
+
+150
+00:07:52,460 --> 00:07:55,400
+This explains why we often observe that existing debt
+
+151
+00:07:55,400 --> 00:07:58,310
+holders agree to subordinate themselves
+
+152
+00:07:58,310 --> 00:08:02,240
+to new tranches of debt, because in distress situations, when
+
+153
+00:08:02,240 --> 00:08:05,000
+a firm is plagued by debt overhang,
+
+154
+00:08:05,000 --> 00:08:09,530
+financing new positive NPV projects benefits existing debt
+
+155
+00:08:09,530 --> 00:08:11,240
+holders.
+
+156
+00:08:11,240 --> 00:08:14,090
+Finally, note that the positive NPV created
+
+157
+00:08:14,090 --> 00:08:17,330
+by the project, which is $4, is split
+
+158
+00:08:17,330 --> 00:08:19,760
+between the equity holders and current debt
+
+159
+00:08:19,760 --> 00:08:23,500
+holders, each of whom get $2.
+
+160
+00:08:23,500 --> 00:08:24,000
+
+

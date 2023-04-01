@@ -1,0 +1,100 @@
+
+PROFESSOR: In this video, we will
+show an example of how an endowment
+fund can hedge an interest rate risk of its fixed income
+portfolio.
+Consider an endowment fund which owns a fixed income
+portfolio consisting of two US Treasury STRIPS.
+It has 1 million units of STRIP A and 1.5 million units
+of STRIP B. The fund would like to construct
+a hedge for the interest rate risk using Treasury STRIP C.
+The following table shows the duration of the three bonds.
+Bond A has a duration of four years.
+Bond B has a duration of eight years.
+And bond C has a duration of seven years.
+We will denote prices of the three bonds by PA, PB, and PC,
+respectively.
+All STRIPS have a principal of $100.
+We will assume that the term structure of interest rates
+is flat and that the current interest rate is 2%.
+We will answer the following questions:
+what is the modified duration of the portfolio?
+Using bond C, construct a hedge to protect
+the value of the portfolio against parallel shifts
+in interest rates.
+How many units of bond C should we go long or short?
+Is the hedge constructed in part B a perfect hedge?
+Let's start by computing the modified
+duration of the endowment fund's portfolio.
+Recall that the duration of a portfolio
+is a weighted average of durations
+of assets in the portfolio.
+Therefore, to find the duration of the portfolio,
+we first need to find the total value invested in bonds A
+and B, and then, take the weighted average of durations
+of bonds A and B.
+We are given the face value of each bond
+and we know that interest rates at all maturities are 2%.
+This allows us to compute prices of bonds A and B.
+We see that the price of bond A is $92.38
+and the price of bond B is $85.35.
+The value of the portfolio equals
+to the number of units of each bond, times their prices.
+We find that the value of the endowment fund's portfolio
+is $220.41 million.
+Now we can compute the duration of the portfolio.
+Recall the duration of bond A is four years
+and duration of bond B is eight years.
+The duration of the portfolio equals
+to the total value invested in bond A, which
+is 1 million units times the bond price
+92.38, divided by the total value of the portfolio,
+multiplied by the duration, which is 4.
+Plus the total value invested in bond B,
+which is 1.5 million units times the bond price
+85.35, divided by the total value of the portfolio,
+multiplied by the duration, which is 8.
+We find that the duration of the portfolio is 6.32 years.
+To compute modified duration of the portfolio,
+recall that the modified duration equals to the Macaulay
+duration, which we just computed,
+divided by 1 plus yield.
+Recommend you to review week four of the first part
+of the course.
+In our case, modified duration equals
+to 6.32 divided by 1 plus 2%, which equals to 6.2 years.
+
+Next, let's construct the hedge.
+Let's denote our position in bond C by nc.
+If this number is positive, we go long.
+If this number is negative, we go short.
+To hedge against parallel and small shifts in interest rates,
+we need to establish a position in bond C
+so that the duration of our portfolio is 0.
+Let's denote by H the new portfolio,
+which in addition to bonds A and B, will have bond C in it.
+Let's add the duration of portfolio H to 0.
+Solving this equation for nc, we get negative Dp, which
+is the duration of portfolio P times VP, which
+is the value of portfolio P divided
+by PC, which is the price of bond
+C times DC, which is the duration of bond C.
+Recall that the duration of portfolio P is 6.32.
+The value of portfolio P is $220.41 million.
+The price of bond C is $87.06 and its duration
+is seven years.
+This gives us negative 2.29 million units.
+Therefore, in order to construct a hedge portfolio
+with zero duration, we need to short 2.29 million units
+of bond C.
+Is this a perfect hedge?
+Duration matching allows us to hedge
+only small and parallel shifts in the yield curve.
+Due to convexity of bond prices, large changes in interest rates
+will not be perfectly hedged with just duration matching.
+We would also need to match convexity.
+Also, in practice, interest rates at different maturities
+may be affected differently by economic events.
+This would affect prices of bonds of different maturities
+differently, which would affect the quality of our hedge.
+Therefore, this is not a perfect hedge.

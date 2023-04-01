@@ -1,0 +1,404 @@
+0
+00:00:00,000 --> 00:00:00,690
+
+
+1
+00:00:00,690 --> 00:00:03,180
+PROFESSOR: Interest rate is another important market
+
+2
+00:00:03,180 --> 00:00:05,220
+risk firms face.
+
+3
+00:00:05,220 --> 00:00:07,890
+When interest rates change over time,
+
+4
+00:00:07,890 --> 00:00:11,190
+the discount rates on most assets also change,
+
+5
+00:00:11,190 --> 00:00:15,330
+which will then change the values of most assets.
+
+6
+00:00:15,330 --> 00:00:17,640
+We now develop the basic techniques
+
+7
+00:00:17,640 --> 00:00:20,460
+in managing this risk using the tools we
+
+8
+00:00:20,460 --> 00:00:22,860
+have developed in our Fixed Income lecture
+
+9
+00:00:22,860 --> 00:00:25,960
+in part 1 of this course.
+
+10
+00:00:25,960 --> 00:00:29,410
+To be simple, we will start with a fixed income position
+
+11
+00:00:29,410 --> 00:00:31,660
+as the original position.
+
+12
+00:00:31,660 --> 00:00:34,060
+This can be an actual fixed income asset
+
+13
+00:00:34,060 --> 00:00:37,990
+or a stream of safe cash flows.
+
+14
+00:00:37,990 --> 00:00:41,230
+This position will be exposed to the interest rate risk
+
+15
+00:00:41,230 --> 00:00:45,110
+as interest rates change over time.
+
+16
+00:00:45,110 --> 00:00:49,430
+To hedge this risk, we can take another fixed income position
+
+17
+00:00:49,430 --> 00:00:54,050
+to offset the interest rate risk of the original position.
+
+18
+00:00:54,050 --> 00:00:57,260
+The goal is to reduce the interest rate risk
+
+19
+00:00:57,260 --> 00:01:01,040
+of the total on that position.
+
+20
+00:01:01,040 --> 00:01:04,550
+For tractability, we will assume a flat term structure
+
+21
+00:01:04,550 --> 00:01:07,350
+for interest rates.
+
+22
+00:01:07,350 --> 00:01:09,740
+Let's consider a bond portfolio which
+
+23
+00:01:09,740 --> 00:01:16,970
+consists of nA units of Bond A and nB units of Bond B.
+
+24
+00:01:16,970 --> 00:01:20,210
+The data of Bond A and Bond B are given
+
+25
+00:01:20,210 --> 00:01:22,550
+in the table on the slide.
+
+26
+00:01:22,550 --> 00:01:25,280
+As shown by the second row in the table,
+
+27
+00:01:25,280 --> 00:01:29,630
+Bond A has a price of BA, a duration of DA,
+
+28
+00:01:29,630 --> 00:01:33,020
+and a modified duration of MDA.
+
+29
+00:01:33,020 --> 00:01:38,630
+The third row gives Bond B's price BB, duration DB,
+
+30
+00:01:38,630 --> 00:01:42,650
+and modified duration MDB, respectively.
+
+31
+00:01:42,650 --> 00:01:46,190
+As we have learned in part 1 of this course,
+
+32
+00:01:46,190 --> 00:01:50,030
+the modified duration measures the interest rate risk
+
+33
+00:01:50,030 --> 00:01:52,980
+of each bond.
+
+34
+00:01:52,980 --> 00:01:54,840
+The value of the portfolio is then
+
+35
+00:01:54,840 --> 00:02:00,610
+given by VP equals VA plus VB.
+
+36
+00:02:00,610 --> 00:02:06,860
+That equals nA times BA plus nB times BB.
+
+37
+00:02:06,860 --> 00:02:10,340
+When interest rate changes, the value of the portfolio
+
+38
+00:02:10,340 --> 00:02:12,590
+changes as follows.
+
+39
+00:02:12,590 --> 00:02:18,620
+Delta VP equals delta VA plus delta VB,
+
+40
+00:02:18,620 --> 00:02:21,590
+which reflects the changes in value of each
+
+41
+00:02:21,590 --> 00:02:24,090
+of the pieces in the portfolio.
+
+42
+00:02:24,090 --> 00:02:28,830
+That can be written as nA times delta BA
+
+43
+00:02:28,830 --> 00:02:33,690
+plus nB times delta BB.
+
+44
+00:02:33,690 --> 00:02:42,130
+That equals minus VA times MDA plus VB times MDB.
+
+45
+00:02:42,130 --> 00:02:44,440
+We then have the modified duration
+
+46
+00:02:44,440 --> 00:02:50,380
+for the portfolio, which is given by MDP equals VA divided
+
+47
+00:02:50,380 --> 00:02:55,450
+by VA plus VB times MDA plus VB divided
+
+48
+00:02:55,450 --> 00:02:59,620
+by VA plus VB times MDB.
+
+49
+00:02:59,620 --> 00:03:01,990
+It's simply the value weighted average
+
+50
+00:03:01,990 --> 00:03:04,960
+of the modified duration of the different pieces
+
+51
+00:03:04,960 --> 00:03:06,970
+in the portfolio.
+
+52
+00:03:06,970 --> 00:03:09,970
+MDP, then, gives the measure of interest rate
+
+53
+00:03:09,970 --> 00:03:12,860
+risk for the whole portfolio.
+
+54
+00:03:12,860 --> 00:03:16,190
+We can apply the above interest rate risk analytics
+
+55
+00:03:16,190 --> 00:03:21,200
+to construct hedging strategies against interest rate risks.
+
+56
+00:03:21,200 --> 00:03:25,590
+We illustrate the method using a simple example.
+
+57
+00:03:25,590 --> 00:03:28,040
+Suppose that you have a long position
+
+58
+00:03:28,040 --> 00:03:30,980
+in a four-year government bond and you
+
+59
+00:03:30,980 --> 00:03:33,980
+want to use a three-year government bond to hedge
+
+60
+00:03:33,980 --> 00:03:36,450
+the interest rate risk.
+
+61
+00:03:36,450 --> 00:03:41,550
+The data on the two bonds are given in a table on the slide.
+
+62
+00:03:41,550 --> 00:03:45,390
+Given in the second row, the three-year bond has a yield
+
+63
+00:03:45,390 --> 00:03:50,100
+to maturity of 10%, a duration of 2.75,
+
+64
+00:03:50,100 --> 00:03:53,670
+and a modified duration of 2.50.
+
+65
+00:03:53,670 --> 00:03:56,820
+Given in the third row, the four-year bond has a yield
+
+66
+00:03:56,820 --> 00:03:58,590
+to maturity of 10%--
+
+67
+00:03:58,590 --> 00:04:02,730
+same as the three-year bond since the yield curve is flat--
+
+68
+00:04:02,730 --> 00:04:09,400
+a duration of 3.52, and modified duration of 3.20.
+
+69
+00:04:09,400 --> 00:04:11,050
+In order to hedge the interest rate
+
+70
+00:04:11,050 --> 00:04:14,380
+risk of a long position in four-year bonds,
+
+71
+00:04:14,380 --> 00:04:18,040
+we need to short, or sell, three-year bonds.
+
+72
+00:04:18,040 --> 00:04:20,380
+The question is, how much?
+
+73
+00:04:20,380 --> 00:04:23,920
+For each dollar worth of the four-year bond,
+
+74
+00:04:23,920 --> 00:04:26,980
+let's short delta dollars of the three-year bond
+
+75
+00:04:26,980 --> 00:04:30,850
+such that the total portfolio has zero volatility, which
+
+76
+00:04:30,850 --> 00:04:33,640
+means modified duration here.
+
+77
+00:04:33,640 --> 00:04:37,120
+This gives us the first equation on the slide,
+
+78
+00:04:37,120 --> 00:04:43,810
+that is MD4 minus delta times MD3 equals 0.
+
+79
+00:04:43,810 --> 00:04:46,270
+Solving for the hedge ratio delta,
+
+80
+00:04:46,270 --> 00:04:51,970
+we have delta equals MD4 divided by MD3, that is,
+
+81
+00:04:51,970 --> 00:04:55,400
+3.20 divided by 2.50.
+
+82
+00:04:55,400 --> 00:04:58,910
+And that gives us 1.28.
+
+83
+00:04:58,910 --> 00:05:03,950
+This implies that for each dollar of the four-year bond
+
+84
+00:05:03,950 --> 00:05:09,890
+we need to short $1.28 of the three-year bond.
+
+85
+00:05:09,890 --> 00:05:12,620
+For the hedge portfolio, the interest rate risk
+
+86
+00:05:12,620 --> 00:05:14,810
+is close to zero.
+
+87
+00:05:14,810 --> 00:05:17,330
+The table on the slide shows what
+
+88
+00:05:17,330 --> 00:05:22,700
+happens when interest rate increases by 0.1%.
+
+89
+00:05:22,700 --> 00:05:26,000
+The first column describes the different positions,
+
+90
+00:05:26,000 --> 00:05:30,280
+and the second column gives the change in their values.
+
+91
+00:05:30,280 --> 00:05:32,820
+The second row is for a long position
+
+92
+00:05:32,820 --> 00:05:38,160
+of $1,000 in a four-year bond, our original position.
+
+93
+00:05:38,160 --> 00:05:43,110
+The change in its value is minus $3.20.
+
+94
+00:05:43,110 --> 00:05:45,810
+The third row is for the short position
+
+95
+00:05:45,810 --> 00:05:52,020
+in the three-year bond of $1,280, the hedging position.
+
+96
+00:05:52,020 --> 00:05:57,260
+The change in its value is plus $3.20.
+
+97
+00:05:57,260 --> 00:06:02,120
+The last row describes the net or the hedged position.
+
+98
+00:06:02,120 --> 00:06:08,510
+Its value changed by 0 to the first order of yield change.
+
+99
+00:06:08,510 --> 00:06:12,260
+Indeed, we have a perfect hedge to the first order
+
+100
+00:06:12,260 --> 00:06:14,650
+of interest rate changes.
+

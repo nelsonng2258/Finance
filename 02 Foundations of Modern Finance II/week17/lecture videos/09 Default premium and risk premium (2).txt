@@ -1,0 +1,106 @@
+
+PROFESSOR: In the following example,
+we explore further the underlying factors
+influencing a bond's default risk premium.
+We're looking at Cambridge International Technologies,
+or CIT, which is a company in tech services.
+CIT's asset has a market value of $10 billion
+today, which is year 0.
+And it will be $15 billion or $5 billion next year, in year 1,
+with probability 2/3 and 1/3, respectively.
+CIT has a one-year zero coupon bond
+outstanding with a par value of $6 billion.
+The current risk-free rate is 5%.
+Clearly, CIT's debt is risky.
+In the case of a down state next year,
+its asset value of $5 billion will not
+be sufficient to pay off the debt in full,
+which is $6 billion.
+We would like to answer the following questions--
+what is the payoff of CIT's bond next year?
+What is the current price of CIT's bond?
+What is the current price of CIT's stock?
+What is the promised yield on CIT's bond?
+What is the probability of default?
+And what is the loss rate when default?
+What is the expected yield on CIT's bond?
+What is the default premium on the bond?
+And what is the risk premium on the bond?
+Given the information above, we can easily
+write down the payoffs on CIT's asset,
+bond, and equity, which are given
+in the table on the slide.
+The second column gives the payoff in the good or up state,
+when asset value goes up.
+And the third column gives the payoff
+in the bad or the down state, when asset value goes down.
+The payoff of the asset is given in the third row, which
+is 15 in the up state and 5 in the down state, which leads
+to default. The payoff of the bond
+is in the fourth row, which is 6 in up state
+and 5 in a down state.
+The payoff of the stock is in the last row--
+9 in an up state and 0 in a down state.
+In order to price the bond and the stock,
+we need the state prices, phi u and phi d,
+for the up and down state respectively.
+From the price of CIT's asset in the risk-free rate,
+we have the following equations on the slide.
+The first equation is for the asset.
+The price of the asset today, which is 10,
+equals the sum of its value in the up and down state
+multiplied by the corresponding state prices.
+This gives 15 times phi u plus 5 times phi
+d on the right-hand side.
+The second equation is for the risk-free asset,
+Assuming its payoff is $1 in year 1.
+Its price, which is 1 over 1 plus 0.05
+on the left-hand side, equals the sum
+of the two state prices, which gives phi u plus phi d.
+Solving for the two equations, we obtain the two state prices.
+Phi u equals 11/21, and phi d equals 9/21.
+With the above information, we can answer
+all the questions listed above.
+The current price of the bond and stock
+is simply given by their payoffs in the two
+states times the corresponding state prices.
+The price of the bond D is given by 6,
+which is its payoff in up state, times 11/21,
+the price of the up state, plus 5 times 9/21.
+That gives 111/21, which is 5.286.
+The price of the stock E is a given by 9,
+its payoff in the up state, times 11/21 plus 0,
+its payoff in the down state, times 9/21.
+That equals 99/21, which is 4.714.
+These are all in billion dollars.
+The promised yield on the bond, that
+is, the yield when there's no default, is given by y.
+That equals 6, the payoff in the no-default state,
+divided by its price minus 1.
+And that gives 6 over 5.286 minus 1.
+And that leads to 13.5%.
+The probability of default, which
+occurs only in the down state, is simply 1/3.
+The loss rate lambda is given by 6 minus 5
+divided by 6, which is 16.7%.
+The expected yield on the bond, y bar, is given by y bar
+equals 2/3 times 6 plus 1/3 times 5.
+That's the expected payoff on the debt divided
+by its price, which is 5.286.
+And minus 1, that gives us 7.2%.
+
+The default premium of the bond is
+given by the promised yield of 13.5% minus the expected yield
+of 7.2%, which is 6.3%.
+The risk premium of the bond is given
+by its expected yield of 7.2% minus the risk-free rate
+of 5%, which is 2.2%.
+This example clearly shows how the price and different yields
+of a risky bond are determined by its payoff
+in different states, the probabilities of these states,
+and the state prices.
+Although we have used a simple binomial model
+to illustrate these underlying connections,
+as we have seen in the option pricing lecture,
+more general binomial models can be
+built to provide more precise valuations of corporate bonds.

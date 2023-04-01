@@ -1,0 +1,316 @@
+0
+00:00:00,000 --> 00:00:00,570
+
+
+1
+00:00:00,570 --> 00:00:03,690
+PROFESSOR: So far, we have only considered taxes
+
+2
+00:00:03,690 --> 00:00:08,340
+at the firm level and ignored taxes at the personal level.
+
+3
+00:00:08,340 --> 00:00:11,370
+As it turns out, personal taxes are also
+
+4
+00:00:11,370 --> 00:00:16,190
+important in effecting firms capital structure choices.
+
+5
+00:00:16,190 --> 00:00:20,660
+We now consider the effect of personal taxes.
+
+6
+00:00:20,660 --> 00:00:24,420
+Let's start with the following simple setting.
+
+7
+00:00:24,420 --> 00:00:28,230
+The firm's asset yields a pre-tax expected cash
+
+8
+00:00:28,230 --> 00:00:32,640
+flow X next year and nothing afterwards.
+
+9
+00:00:32,640 --> 00:00:39,920
+It has debt at level D. The interest rate on debt is rD.
+
+10
+00:00:39,920 --> 00:00:42,720
+Corporate tax rate is tau.
+
+11
+00:00:42,720 --> 00:00:47,880
+In addition, investors also pay personal taxes.
+
+12
+00:00:47,880 --> 00:00:51,870
+The tax rate on equity, which includes taxes on dividends
+
+13
+00:00:51,870 --> 00:00:54,670
+and capital gains is pi.
+
+14
+00:00:54,670 --> 00:00:58,860
+The tax rate on debt interest is delta.
+
+15
+00:00:58,860 --> 00:01:04,190
+Let's ignore cost of financial distress for the moment.
+
+16
+00:01:04,190 --> 00:01:07,520
+In general, tax code is a lot more complicated
+
+17
+00:01:07,520 --> 00:01:10,460
+than what is assumed here.
+
+18
+00:01:10,460 --> 00:01:13,400
+We use a simple structure merely to illustrate
+
+19
+00:01:13,400 --> 00:01:16,490
+the potential impact on personal taxes.
+
+20
+00:01:16,490 --> 00:01:19,220
+We first consider the cash flow next year
+
+21
+00:01:19,220 --> 00:01:23,010
+after corporate and personal taxes.
+
+22
+00:01:23,010 --> 00:01:28,980
+To equity holders, it is 1 minus pi times 1 minus tau times
+
+23
+00:01:28,980 --> 00:01:34,560
+x minus rD times D. x minus rD times D
+
+24
+00:01:34,560 --> 00:01:38,460
+is the asset payoff after interests.
+
+25
+00:01:38,460 --> 00:01:43,290
+Times 1 minus tau is what we have after corporate tax.
+
+26
+00:01:43,290 --> 00:01:49,200
+Then times 1 minus pi is what is left after personal tax equity
+
+27
+00:01:49,200 --> 00:01:50,490
+payoff.
+
+28
+00:01:50,490 --> 00:01:56,430
+To debt holders, it is 1 minus delta times rD times D.
+
+29
+00:01:56,430 --> 00:01:59,670
+The total after tax cash flow is the sum
+
+30
+00:01:59,670 --> 00:02:06,360
+of the two, which gives 1 minus pi times 1 minus tau times x
+
+31
+00:02:06,360 --> 00:02:11,250
+plus 1 minus delta minus 1 minus pi times 1 minus
+
+32
+00:02:11,250 --> 00:02:14,160
+tau, then times the interest payment on debt,
+
+33
+00:02:14,160 --> 00:02:17,220
+which is rD times D.
+
+34
+00:02:17,220 --> 00:02:22,000
+Here, the first term gives the after tax payoff to the firm,
+
+35
+00:02:22,000 --> 00:02:25,140
+if it's all equity financed.
+
+36
+00:02:25,140 --> 00:02:30,530
+The second term gives the tax impact of debt.
+
+37
+00:02:30,530 --> 00:02:34,160
+The present value is given by the after tax cash flow
+
+38
+00:02:34,160 --> 00:02:37,880
+discounted at the appropriate discount rates.
+
+39
+00:02:37,880 --> 00:02:41,540
+As an approximation, we can use the following.
+
+40
+00:02:41,540 --> 00:02:44,930
+For all equity financed firms, the discount rate
+
+41
+00:02:44,930 --> 00:02:52,250
+is 1 minus pi times ra, the after tax return on assets.
+
+42
+00:02:52,250 --> 00:02:54,470
+For debt income, the discount rate
+
+43
+00:02:54,470 --> 00:03:00,710
+is 1 minus delta times rD, also the after tax return on debt.
+
+44
+00:03:00,710 --> 00:03:03,560
+For our purposes, we only need to know
+
+45
+00:03:03,560 --> 00:03:05,750
+that the value of the leverage firm
+
+46
+00:03:05,750 --> 00:03:10,280
+is VL equals the present value of 1
+
+47
+00:03:10,280 --> 00:03:13,970
+minus pi times 1 minus tau times x,
+
+48
+00:03:13,970 --> 00:03:18,860
+that's the after tax cash flow for an unlevered firm,
+
+49
+00:03:18,860 --> 00:03:22,610
+plus the present value of the debt effect, which
+
+50
+00:03:22,610 --> 00:03:27,590
+is 1 minus delta minus 1 minus pi times 1 minus tau times
+
+51
+00:03:27,590 --> 00:03:30,680
+rD times D.
+
+52
+00:03:30,680 --> 00:03:34,910
+We then arrive at the extension of MM1
+
+53
+00:03:34,910 --> 00:03:38,180
+with both corporate and personal taxes.
+
+54
+00:03:38,180 --> 00:03:44,990
+The firm's value is given by VL equals VU plus 1 minus
+
+55
+00:03:44,990 --> 00:03:49,340
+delta minus 1 minus pi times 1 minus tau times
+
+56
+00:03:49,340 --> 00:03:53,225
+the present value of rD times D.
+
+57
+00:03:53,225 --> 00:03:57,000
+In order to show the impact of personal taxes,
+
+58
+00:03:57,000 --> 00:04:00,420
+we consider several special cases.
+
+59
+00:04:00,420 --> 00:04:03,570
+If equity pays large dividends and pi
+
+60
+00:04:03,570 --> 00:04:07,350
+equals delta, that is dividend is taxed
+
+61
+00:04:07,350 --> 00:04:14,590
+at the same rate as interest, then VL equals VU plus 1
+
+62
+00:04:14,590 --> 00:04:21,760
+minus delta times tau times PV of rD times D. In this case,
+
+63
+00:04:21,760 --> 00:04:28,270
+debt has a clear advantage over equity as it brings tax shield.
+
+64
+00:04:28,270 --> 00:04:33,290
+If equity can avoid dividends, it becomes more attractive.
+
+65
+00:04:33,290 --> 00:04:37,010
+In particular when pi is less than delta,
+
+66
+00:04:37,010 --> 00:04:41,030
+the tax shield of debt becomes less than 1 minus delta
+
+67
+00:04:41,030 --> 00:04:45,580
+times tau times the present value of rD times D.
+
+68
+00:04:45,580 --> 00:04:49,450
+If capital gains tax can be avoided,
+
+69
+00:04:49,450 --> 00:04:54,300
+equity might dominate debt in financing.
+
+70
+00:04:54,300 --> 00:04:59,310
+In particular, if pi is approximately 0, which
+
+71
+00:04:59,310 --> 00:05:02,820
+means that the tax on equity is practically 0,
+
+72
+00:05:02,820 --> 00:05:08,730
+we then have 1 minus delta minus 1 minus tau less than 0
+
+73
+00:05:08,730 --> 00:05:11,550
+when tau is less than delta.
+
+74
+00:05:11,550 --> 00:05:16,690
+In this case, debt has a negative overall tax shield.
+
+75
+00:05:16,690 --> 00:05:19,420
+Although our analysis is simplified,
+
+76
+00:05:19,420 --> 00:05:23,650
+it demonstrates that if equity enjoys a tax advantage
+
+77
+00:05:23,650 --> 00:05:27,850
+at the personal level, it can offset the tax advantage
+
+78
+00:05:27,850 --> 00:05:31,080
+debt enjoys at the firm level.
+

@@ -1,0 +1,612 @@
+0
+00:00:00,000 --> 00:00:04,770
+PROFESSOR: Let's consider a simple example of real options.
+
+1
+00:00:04,770 --> 00:00:09,930
+UW, Inc., a mining company, is considering buying a copper
+
+2
+00:00:09,930 --> 00:00:14,560
+mine with the following data.
+
+3
+00:00:14,560 --> 00:00:19,120
+The mine can produce 10 million kilograms of copper.
+
+4
+00:00:19,120 --> 00:00:21,850
+Copper extraction will take one year
+
+5
+00:00:21,850 --> 00:00:29,420
+at a cost of $5.4 per kilogram paid up front.
+
+6
+00:00:29,420 --> 00:00:35,290
+Copper price today is $6 per kilogram.
+
+7
+00:00:35,290 --> 00:00:39,730
+Copper price next year can either increase by 30%
+
+8
+00:00:39,730 --> 00:00:45,190
+or decrease by 20%, with equal probability.
+
+9
+00:00:45,190 --> 00:00:47,830
+The uncertainty about copper price
+
+10
+00:00:47,830 --> 00:00:50,380
+is fully resolved next year.
+
+11
+00:00:50,380 --> 00:00:56,340
+That is, copper price will stay constant afterwards.
+
+12
+00:00:56,340 --> 00:00:58,890
+We're going to further assume copper price
+
+13
+00:00:58,890 --> 00:01:03,200
+risk is purely idiosyncratic.
+
+14
+00:01:03,200 --> 00:01:07,480
+The risk-free rate in the market is 5%.
+
+15
+00:01:07,480 --> 00:01:08,980
+The question we would like to answer
+
+16
+00:01:08,980 --> 00:01:13,610
+is, what is the NPV of this mine?
+
+17
+00:01:13,610 --> 00:01:20,530
+This will be the highest price UW is willing to pay.
+
+18
+00:01:20,530 --> 00:01:24,760
+The NPV depends on what UW does with the mine
+
+19
+00:01:24,760 --> 00:01:27,990
+after acquiring it.
+
+20
+00:01:27,990 --> 00:01:31,320
+We consider two possible strategies.
+
+21
+00:01:31,320 --> 00:01:35,370
+The first is to extract the copper now.
+
+22
+00:01:35,370 --> 00:01:39,540
+And the second is to extract next year.
+
+23
+00:01:39,540 --> 00:01:43,480
+Extracting now, we have the following.
+
+24
+00:01:43,480 --> 00:01:47,950
+The expected cash flow next year per kilo of copper
+
+25
+00:01:47,950 --> 00:01:53,260
+is 1/2 times 6, which is the current copper price, times 1
+
+26
+00:01:53,260 --> 00:01:54,850
+plus 30%--
+
+27
+00:01:54,850 --> 00:01:58,150
+that will be the expected price of copper next year
+
+28
+00:01:58,150 --> 00:01:59,590
+if it goes up--
+
+29
+00:01:59,590 --> 00:02:03,940
+plus 6 times 1 minus 20%.
+
+30
+00:02:03,940 --> 00:02:06,820
+That will give us the price if the copper price goes down
+
+31
+00:02:06,820 --> 00:02:09,650
+next year.
+
+32
+00:02:09,650 --> 00:02:14,120
+Averaging the two gives us the expected copper price
+
+33
+00:02:14,120 --> 00:02:15,350
+next year.
+
+34
+00:02:15,350 --> 00:02:19,430
+And it is 1/2 times 7.8 plus 4.8.
+
+35
+00:02:19,430 --> 00:02:24,420
+And that gives us $6.3 per kilo.
+
+36
+00:02:24,420 --> 00:02:27,630
+Since the copper risk is idiosyncratic,
+
+37
+00:02:27,630 --> 00:02:32,760
+we can simply use the risk-free rate as the discount rate.
+
+38
+00:02:32,760 --> 00:02:36,540
+The NPV per kilogram of copper is then
+
+39
+00:02:36,540 --> 00:02:40,230
+NPV 0 equals minus 5.4--
+
+40
+00:02:40,230 --> 00:02:42,450
+that's the extraction cost--
+
+41
+00:02:42,450 --> 00:02:46,980
+plus 6.3-- that's the expected copper price next year--
+
+42
+00:02:46,980 --> 00:02:48,870
+discounted at 5%.
+
+43
+00:02:48,870 --> 00:02:55,220
+That gives us $0.60 per kilogram of copper.
+
+44
+00:02:55,220 --> 00:02:59,240
+What if the risk is not diversifiable?
+
+45
+00:02:59,240 --> 00:03:02,750
+Then we cannot simply use the risk-free rate to do
+
+46
+00:03:02,750 --> 00:03:04,400
+the discounting.
+
+47
+00:03:04,400 --> 00:03:07,550
+We would have to use state prices to discount
+
+48
+00:03:07,550 --> 00:03:10,020
+the future cash flows.
+
+49
+00:03:10,020 --> 00:03:14,610
+We will deal with this situation a bit later.
+
+50
+00:03:14,610 --> 00:03:19,160
+Now, let's consider the strategy of extracting next year.
+
+51
+00:03:19,160 --> 00:03:20,870
+That is year 1.
+
+52
+00:03:20,870 --> 00:03:23,270
+We have two states for year 1--
+
+53
+00:03:23,270 --> 00:03:27,950
+up and down-- representing the state in which the copper
+
+54
+00:03:27,950 --> 00:03:32,370
+price goes up or it goes down.
+
+55
+00:03:32,370 --> 00:03:35,880
+In the upper state, the project's NPV
+
+56
+00:03:35,880 --> 00:03:41,850
+in year 1 per kilogram, again, is NPV 1 in up state
+
+57
+00:03:41,850 --> 00:03:43,710
+equals minus 5.4--
+
+58
+00:03:43,710 --> 00:03:45,480
+again, that's the extraction cost--
+
+59
+00:03:45,480 --> 00:03:50,190
+plus 7.8-- that's the copper price in the up state--
+
+60
+00:03:50,190 --> 00:03:53,190
+discounted at 5%, because we are getting the copper
+
+61
+00:03:53,190 --> 00:03:55,380
+a year later.
+
+62
+00:03:55,380 --> 00:04:00,720
+Finishing the calculation, we have $2.03.
+
+63
+00:04:00,720 --> 00:04:05,140
+In the down state, the project's NPV in year 1
+
+64
+00:04:05,140 --> 00:04:07,420
+is given by the following equation.
+
+65
+00:04:07,420 --> 00:04:11,410
+That is NPV in the down state equals minus 5.4,
+
+66
+00:04:11,410 --> 00:04:14,800
+same as before, plus 4.8, the copper
+
+67
+00:04:14,800 --> 00:04:18,130
+price in the down state in one year, discounted
+
+68
+00:04:18,130 --> 00:04:21,070
+at the 5% risk-free rate.
+
+69
+00:04:21,070 --> 00:04:26,980
+That gives us minus $0.83 per kilogram.
+
+70
+00:04:26,980 --> 00:04:31,090
+These are the present values in year 1
+
+71
+00:04:31,090 --> 00:04:36,070
+in both the up and down state, respectively.
+
+72
+00:04:36,070 --> 00:04:41,080
+Discounting back to year 0, again using the risk-free rate,
+
+73
+00:04:41,080 --> 00:04:44,020
+we obtain the project's NPV today.
+
+74
+00:04:44,020 --> 00:04:46,660
+That's in year 0.
+
+75
+00:04:46,660 --> 00:04:51,520
+NPV 0 equals 1/2 times the NPV in year 1--
+
+76
+00:04:51,520 --> 00:04:52,720
+in the up state--
+
+77
+00:04:52,720 --> 00:04:57,490
+plus the NPV 1 in the down state, discounted
+
+78
+00:04:57,490 --> 00:05:00,420
+at the risk-free rate of 5%.
+
+79
+00:05:00,420 --> 00:05:01,780
+Plug in the numbers.
+
+80
+00:05:01,780 --> 00:05:07,290
+We get 1 over 1.05 times minus 5.4,
+
+81
+00:05:07,290 --> 00:05:13,630
+again, extraction cost, plus 1/2 of the expected copper price.
+
+82
+00:05:13,630 --> 00:05:18,550
+That's the average between 7.8 and 4.8.
+
+83
+00:05:18,550 --> 00:05:23,040
+We then discounted that back at the 5% risk-free rate.
+
+84
+00:05:23,040 --> 00:05:30,550
+Finishing the calculation, we are getting $0.57 per kilogram.
+
+85
+00:05:30,550 --> 00:05:36,960
+This, of course, is lower than the NPV if we extract now.
+
+86
+00:05:36,960 --> 00:05:42,730
+Therefore, waiting for a year to extract yields a lower NPV.
+
+87
+00:05:42,730 --> 00:05:45,700
+Using the naive discounted cash flow analysis,
+
+88
+00:05:45,700 --> 00:05:47,830
+we arrive at the following.
+
+89
+00:05:47,830 --> 00:05:51,340
+The mine has a positive NPV.
+
+90
+00:05:51,340 --> 00:05:55,900
+It is better to start the extraction now than wait.
+
+91
+00:05:55,900 --> 00:05:59,290
+The NPV of the mine is 10 million--
+
+92
+00:05:59,290 --> 00:06:01,060
+that's the total amount of copper--
+
+93
+00:06:01,060 --> 00:06:03,340
+times $0.60.
+
+94
+00:06:03,340 --> 00:06:06,880
+That's the NPV per kilo.
+
+95
+00:06:06,880 --> 00:06:11,560
+That gives us $6 million in total.
+
+96
+00:06:11,560 --> 00:06:14,410
+This actually will be the NPV of the mine.
+
+97
+00:06:14,410 --> 00:06:16,330
+And this will be the highest price
+
+98
+00:06:16,330 --> 00:06:20,320
+UW should be willing to pay.
+
+99
+00:06:20,320 --> 00:06:25,470
+The question is, is this the best we can do?
+
+100
+00:06:25,470 --> 00:06:28,510
+Let's think this over.
+
+101
+00:06:28,510 --> 00:06:33,130
+In the previous calculation, if we wait and the copper price
+
+102
+00:06:33,130 --> 00:06:41,200
+goes up, extraction gives an NPV in year 1 of $2.03 per kilo,
+
+103
+00:06:41,200 --> 00:06:44,500
+as computed before.
+
+104
+00:06:44,500 --> 00:06:48,130
+If, however, the copper price goes down,
+
+105
+00:06:48,130 --> 00:06:54,760
+extraction gives an NPV of minus $0.83 per kilo.
+
+106
+00:06:54,760 --> 00:06:56,060
+But wait a minute.
+
+107
+00:06:56,060 --> 00:07:00,810
+In this case, it does not make sense to extract.
+
+108
+00:07:00,810 --> 00:07:05,520
+If we have the option not to extract in the down state,
+
+109
+00:07:05,520 --> 00:07:07,920
+we should then simply abandon the mine,
+
+110
+00:07:07,920 --> 00:07:13,130
+resulting in NPV of 0, not a loss.
+
+111
+00:07:13,130 --> 00:07:15,440
+Taking this option into account, we
+
+112
+00:07:15,440 --> 00:07:18,410
+obtain the NPV of the mine in year 0
+
+113
+00:07:18,410 --> 00:07:25,925
+to be NPV 0 equals 1/2 times the NPV in year 1 for the up
+
+114
+00:07:25,925 --> 00:07:29,870
+state plus the NPV in year 1 for the down state
+
+115
+00:07:29,870 --> 00:07:33,650
+and then discounted at the risk-free rate.
+
+116
+00:07:33,650 --> 00:07:36,680
+Given that the NPV in year 1 for the down state
+
+117
+00:07:36,680 --> 00:07:40,960
+will be $0 if we abandon the mine,
+
+118
+00:07:40,960 --> 00:07:48,570
+the calculation will give us $0.97 per kilo for NPV of $0.
+
+119
+00:07:48,570 --> 00:07:53,610
+As a result, the NPV of the mine is then 10 million kilos
+
+120
+00:07:53,610 --> 00:07:59,110
+of copper in total times $0.97 per kilo,
+
+121
+00:07:59,110 --> 00:08:03,420
+which is the NPV at time 0 for each kilo of copper.
+
+122
+00:08:03,420 --> 00:08:08,580
+That gives us $9.7 million in total.
+
+123
+00:08:08,580 --> 00:08:13,350
+This is higher than the NPV of $6 million
+
+124
+00:08:13,350 --> 00:08:18,450
+if we extract right away.
+
+125
+00:08:18,450 --> 00:08:22,380
+Therefore, with the option to abandon the mine in year 1
+
+126
+00:08:22,380 --> 00:08:28,340
+if copper price goes down yields the following optimal strategy.
+
+127
+00:08:28,340 --> 00:08:29,750
+Don't extract now.
+
+128
+00:08:29,750 --> 00:08:33,690
+But wait until next year.
+
+129
+00:08:33,690 --> 00:08:37,909
+If the copper price goes up, we extract.
+
+130
+00:08:37,909 --> 00:08:40,539
+Otherwise, we don't.
+
+131
+00:08:40,539 --> 00:08:43,510
+The calculation above shows that the option
+
+132
+00:08:43,510 --> 00:08:49,240
+to wait and abandon in the bad state to avoid losses
+
+133
+00:08:49,240 --> 00:08:55,190
+can significantly change the mine's value today.
+
+134
+00:08:55,190 --> 00:08:58,190
+This example demonstrates that when
+
+135
+00:08:58,190 --> 00:09:02,240
+we can alter our decisions based on new information,
+
+136
+00:09:02,240 --> 00:09:06,170
+like learning about copper price in one year,
+
+137
+00:09:06,170 --> 00:09:10,430
+the corresponding optionality is important in the valuation
+
+138
+00:09:10,430 --> 00:09:13,290
+of a project.
+
+139
+00:09:13,290 --> 00:09:16,950
+In terms of how to value these options,
+
+140
+00:09:16,950 --> 00:09:19,790
+there are two approaches.
+
+141
+00:09:19,790 --> 00:09:23,770
+The first-- it's so-called the dynamic NPV, which takes into
+
+142
+00:09:23,770 --> 00:09:28,510
+account the optimal decisions along each node of the decision
+
+143
+00:09:28,510 --> 00:09:30,240
+tree.
+
+144
+00:09:30,240 --> 00:09:34,590
+The second approach is option pricing.
+
+145
+00:09:34,590 --> 00:09:39,270
+In the above example, the mine can be viewed as a call option
+
+146
+00:09:39,270 --> 00:09:44,130
+on copper, which can be exercised either in year 0
+
+147
+00:09:44,130 --> 00:09:46,540
+or in year 1.
+
+148
+00:09:46,540 --> 00:09:48,940
+This is an American call.
+
+149
+00:09:48,940 --> 00:09:52,570
+The strike price is simply the extraction cost.
+
+150
+00:09:52,570 --> 00:09:56,710
+Given the binomial price process for copper,
+
+151
+00:09:56,710 --> 00:10:00,640
+we can easily value this option.
+
+152
+00:10:00,640 --> 00:10:06,000
+We will discuss more of this approach later in this lecture.
+

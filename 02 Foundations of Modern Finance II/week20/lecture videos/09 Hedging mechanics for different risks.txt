@@ -1,0 +1,101 @@
+
+PROFESSOR: Interest rate is another important market
+risk firms face.
+When interest rates change over time,
+the discount rates on most assets also change,
+which will then change the values of most assets.
+We now develop the basic techniques
+in managing this risk using the tools we
+have developed in our Fixed Income lecture
+in part 1 of this course.
+To be simple, we will start with a fixed income position
+as the original position.
+This can be an actual fixed income asset
+or a stream of safe cash flows.
+This position will be exposed to the interest rate risk
+as interest rates change over time.
+To hedge this risk, we can take another fixed income position
+to offset the interest rate risk of the original position.
+The goal is to reduce the interest rate risk
+of the total on that position.
+For tractability, we will assume a flat term structure
+for interest rates.
+Let's consider a bond portfolio which
+consists of nA units of Bond A and nB units of Bond B.
+The data of Bond A and Bond B are given
+in the table on the slide.
+As shown by the second row in the table,
+Bond A has a price of BA, a duration of DA,
+and a modified duration of MDA.
+The third row gives Bond B's price BB, duration DB,
+and modified duration MDB, respectively.
+As we have learned in part 1 of this course,
+the modified duration measures the interest rate risk
+of each bond.
+The value of the portfolio is then
+given by VP equals VA plus VB.
+That equals nA times BA plus nB times BB.
+When interest rate changes, the value of the portfolio
+changes as follows.
+Delta VP equals delta VA plus delta VB,
+which reflects the changes in value of each
+of the pieces in the portfolio.
+That can be written as nA times delta BA
+plus nB times delta BB.
+That equals minus VA times MDA plus VB times MDB.
+We then have the modified duration
+for the portfolio, which is given by MDP equals VA divided
+by VA plus VB times MDA plus VB divided
+by VA plus VB times MDB.
+It's simply the value weighted average
+of the modified duration of the different pieces
+in the portfolio.
+MDP, then, gives the measure of interest rate
+risk for the whole portfolio.
+We can apply the above interest rate risk analytics
+to construct hedging strategies against interest rate risks.
+We illustrate the method using a simple example.
+Suppose that you have a long position
+in a four-year government bond and you
+want to use a three-year government bond to hedge
+the interest rate risk.
+The data on the two bonds are given in a table on the slide.
+Given in the second row, the three-year bond has a yield
+to maturity of 10%, a duration of 2.75,
+and a modified duration of 2.50.
+Given in the third row, the four-year bond has a yield
+to maturity of 10%--
+same as the three-year bond since the yield curve is flat--
+a duration of 3.52, and modified duration of 3.20.
+In order to hedge the interest rate
+risk of a long position in four-year bonds,
+we need to short, or sell, three-year bonds.
+The question is, how much?
+For each dollar worth of the four-year bond,
+let's short delta dollars of the three-year bond
+such that the total portfolio has zero volatility, which
+means modified duration here.
+This gives us the first equation on the slide,
+that is MD4 minus delta times MD3 equals 0.
+Solving for the hedge ratio delta,
+we have delta equals MD4 divided by MD3, that is,
+3.20 divided by 2.50.
+And that gives us 1.28.
+This implies that for each dollar of the four-year bond
+we need to short $1.28 of the three-year bond.
+For the hedge portfolio, the interest rate risk
+is close to zero.
+The table on the slide shows what
+happens when interest rate increases by 0.1%.
+The first column describes the different positions,
+and the second column gives the change in their values.
+The second row is for a long position
+of $1,000 in a four-year bond, our original position.
+The change in its value is minus $3.20.
+The third row is for the short position
+in the three-year bond of $1,280, the hedging position.
+The change in its value is plus $3.20.
+The last row describes the net or the hedged position.
+Its value changed by 0 to the first order of yield change.
+Indeed, we have a perfect hedge to the first order
+of interest rate changes.

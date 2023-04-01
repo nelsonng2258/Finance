@@ -1,0 +1,79 @@
+
+PROFESSOR: So far, we have only considered taxes
+at the firm level and ignored taxes at the personal level.
+As it turns out, personal taxes are also
+important in effecting firms capital structure choices.
+We now consider the effect of personal taxes.
+Let's start with the following simple setting.
+The firm's asset yields a pre-tax expected cash
+flow X next year and nothing afterwards.
+It has debt at level D. The interest rate on debt is rD.
+Corporate tax rate is tau.
+In addition, investors also pay personal taxes.
+The tax rate on equity, which includes taxes on dividends
+and capital gains is pi.
+The tax rate on debt interest is delta.
+Let's ignore cost of financial distress for the moment.
+In general, tax code is a lot more complicated
+than what is assumed here.
+We use a simple structure merely to illustrate
+the potential impact on personal taxes.
+We first consider the cash flow next year
+after corporate and personal taxes.
+To equity holders, it is 1 minus pi times 1 minus tau times
+x minus rD times D. x minus rD times D
+is the asset payoff after interests.
+Times 1 minus tau is what we have after corporate tax.
+Then times 1 minus pi is what is left after personal tax equity
+payoff.
+To debt holders, it is 1 minus delta times rD times D.
+The total after tax cash flow is the sum
+of the two, which gives 1 minus pi times 1 minus tau times x
+plus 1 minus delta minus 1 minus pi times 1 minus
+tau, then times the interest payment on debt,
+which is rD times D.
+Here, the first term gives the after tax payoff to the firm,
+if it's all equity financed.
+The second term gives the tax impact of debt.
+The present value is given by the after tax cash flow
+discounted at the appropriate discount rates.
+As an approximation, we can use the following.
+For all equity financed firms, the discount rate
+is 1 minus pi times ra, the after tax return on assets.
+For debt income, the discount rate
+is 1 minus delta times rD, also the after tax return on debt.
+For our purposes, we only need to know
+that the value of the leverage firm
+is VL equals the present value of 1
+minus pi times 1 minus tau times x,
+that's the after tax cash flow for an unlevered firm,
+plus the present value of the debt effect, which
+is 1 minus delta minus 1 minus pi times 1 minus tau times
+rD times D.
+We then arrive at the extension of MM1
+with both corporate and personal taxes.
+The firm's value is given by VL equals VU plus 1 minus
+delta minus 1 minus pi times 1 minus tau times
+the present value of rD times D.
+In order to show the impact of personal taxes,
+we consider several special cases.
+If equity pays large dividends and pi
+equals delta, that is dividend is taxed
+at the same rate as interest, then VL equals VU plus 1
+minus delta times tau times PV of rD times D. In this case,
+debt has a clear advantage over equity as it brings tax shield.
+If equity can avoid dividends, it becomes more attractive.
+In particular when pi is less than delta,
+the tax shield of debt becomes less than 1 minus delta
+times tau times the present value of rD times D.
+If capital gains tax can be avoided,
+equity might dominate debt in financing.
+In particular, if pi is approximately 0, which
+means that the tax on equity is practically 0,
+we then have 1 minus delta minus 1 minus tau less than 0
+when tau is less than delta.
+In this case, debt has a negative overall tax shield.
+Although our analysis is simplified,
+it demonstrates that if equity enjoys a tax advantage
+at the personal level, it can offset the tax advantage
+debt enjoys at the firm level.

@@ -1,0 +1,153 @@
+PROFESSOR: Let's consider a simple example of real options.
+UW, Inc., a mining company, is considering buying a copper
+mine with the following data.
+The mine can produce 10 million kilograms of copper.
+Copper extraction will take one year
+at a cost of $5.4 per kilogram paid up front.
+Copper price today is $6 per kilogram.
+Copper price next year can either increase by 30%
+or decrease by 20%, with equal probability.
+The uncertainty about copper price
+is fully resolved next year.
+That is, copper price will stay constant afterwards.
+We're going to further assume copper price
+risk is purely idiosyncratic.
+The risk-free rate in the market is 5%.
+The question we would like to answer
+is, what is the NPV of this mine?
+This will be the highest price UW is willing to pay.
+The NPV depends on what UW does with the mine
+after acquiring it.
+We consider two possible strategies.
+The first is to extract the copper now.
+And the second is to extract next year.
+Extracting now, we have the following.
+The expected cash flow next year per kilo of copper
+is 1/2 times 6, which is the current copper price, times 1
+plus 30%--
+that will be the expected price of copper next year
+if it goes up--
+plus 6 times 1 minus 20%.
+That will give us the price if the copper price goes down
+next year.
+Averaging the two gives us the expected copper price
+next year.
+And it is 1/2 times 7.8 plus 4.8.
+And that gives us $6.3 per kilo.
+Since the copper risk is idiosyncratic,
+we can simply use the risk-free rate as the discount rate.
+The NPV per kilogram of copper is then
+NPV 0 equals minus 5.4--
+that's the extraction cost--
+plus 6.3-- that's the expected copper price next year--
+discounted at 5%.
+That gives us $0.60 per kilogram of copper.
+What if the risk is not diversifiable?
+Then we cannot simply use the risk-free rate to do
+the discounting.
+We would have to use state prices to discount
+the future cash flows.
+We will deal with this situation a bit later.
+Now, let's consider the strategy of extracting next year.
+That is year 1.
+We have two states for year 1--
+up and down-- representing the state in which the copper
+price goes up or it goes down.
+In the upper state, the project's NPV
+in year 1 per kilogram, again, is NPV 1 in up state
+equals minus 5.4--
+again, that's the extraction cost--
+plus 7.8-- that's the copper price in the up state--
+discounted at 5%, because we are getting the copper
+a year later.
+Finishing the calculation, we have $2.03.
+In the down state, the project's NPV in year 1
+is given by the following equation.
+That is NPV in the down state equals minus 5.4,
+same as before, plus 4.8, the copper
+price in the down state in one year, discounted
+at the 5% risk-free rate.
+That gives us minus $0.83 per kilogram.
+These are the present values in year 1
+in both the up and down state, respectively.
+Discounting back to year 0, again using the risk-free rate,
+we obtain the project's NPV today.
+That's in year 0.
+NPV 0 equals 1/2 times the NPV in year 1--
+in the up state--
+plus the NPV 1 in the down state, discounted
+at the risk-free rate of 5%.
+Plug in the numbers.
+We get 1 over 1.05 times minus 5.4,
+again, extraction cost, plus 1/2 of the expected copper price.
+That's the average between 7.8 and 4.8.
+We then discounted that back at the 5% risk-free rate.
+Finishing the calculation, we are getting $0.57 per kilogram.
+This, of course, is lower than the NPV if we extract now.
+Therefore, waiting for a year to extract yields a lower NPV.
+Using the naive discounted cash flow analysis,
+we arrive at the following.
+The mine has a positive NPV.
+It is better to start the extraction now than wait.
+The NPV of the mine is 10 million--
+that's the total amount of copper--
+times $0.60.
+That's the NPV per kilo.
+That gives us $6 million in total.
+This actually will be the NPV of the mine.
+And this will be the highest price
+UW should be willing to pay.
+The question is, is this the best we can do?
+Let's think this over.
+In the previous calculation, if we wait and the copper price
+goes up, extraction gives an NPV in year 1 of $2.03 per kilo,
+as computed before.
+If, however, the copper price goes down,
+extraction gives an NPV of minus $0.83 per kilo.
+But wait a minute.
+In this case, it does not make sense to extract.
+If we have the option not to extract in the down state,
+we should then simply abandon the mine,
+resulting in NPV of 0, not a loss.
+Taking this option into account, we
+obtain the NPV of the mine in year 0
+to be NPV 0 equals 1/2 times the NPV in year 1 for the up
+state plus the NPV in year 1 for the down state
+and then discounted at the risk-free rate.
+Given that the NPV in year 1 for the down state
+will be $0 if we abandon the mine,
+the calculation will give us $0.97 per kilo for NPV of $0.
+As a result, the NPV of the mine is then 10 million kilos
+of copper in total times $0.97 per kilo,
+which is the NPV at time 0 for each kilo of copper.
+That gives us $9.7 million in total.
+This is higher than the NPV of $6 million
+if we extract right away.
+Therefore, with the option to abandon the mine in year 1
+if copper price goes down yields the following optimal strategy.
+Don't extract now.
+But wait until next year.
+If the copper price goes up, we extract.
+Otherwise, we don't.
+The calculation above shows that the option
+to wait and abandon in the bad state to avoid losses
+can significantly change the mine's value today.
+This example demonstrates that when
+we can alter our decisions based on new information,
+like learning about copper price in one year,
+the corresponding optionality is important in the valuation
+of a project.
+In terms of how to value these options,
+there are two approaches.
+The first-- it's so-called the dynamic NPV, which takes into
+account the optimal decisions along each node of the decision
+tree.
+The second approach is option pricing.
+In the above example, the mine can be viewed as a call option
+on copper, which can be exercised either in year 0
+or in year 1.
+This is an American call.
+The strike price is simply the extraction cost.
+Given the binomial price process for copper,
+we can easily value this option.
+We will discuss more of this approach later in this lecture.

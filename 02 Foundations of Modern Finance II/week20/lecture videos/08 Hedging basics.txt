@@ -1,0 +1,187 @@
+
+PROFESSOR: We now turn our attention
+to how to execute a risk management strategy
+if the firm chooses one.
+We will start with a discussion on the basic idea
+behind hedging and then consider a series of examples
+on its application in various situations.
+As I said earlier, a firm is exposed to different market
+or factor risks from both its asset and liability side.
+For example, an airliner's profit
+is exposed to oil price risk.
+An increase in oil price will negatively impact its profit.
+The firm can use market instruments
+to reduce these risks.
+In the above example, the airliner
+can reduce its exposure to oil price risk
+by buying oil forwards or futures.
+Such an operation in the case of the airline example
+is called hedging.
+The basic idea is to take on additional positions whose
+gains and losses can offset at least partially the gains
+and losses from the original position where
+market prices change.
+To consider this more formally, we introduce some notation.
+Let V original denote the value of the original position, which
+is unhedged, V hedging denote the value of the hedging
+instrument or hedging vehicle, V net
+denote the value of the hedged position.
+As market or factor prices change,
+the values of these positions also change.
+In particular, we have the delta v
+net, the change in value of the net position,
+equals delta v original plus hedge ratio times
+delta of v hedging.
+The hedging is perfect under two conditions.
+First, delta v original and delta v hedging
+are perfectly correlated.
+Second, hedge ratio is appropriately chosen.
+In the case of perfect hedge, the risk
+can be completely avoided or hedged away.
+Otherwise, the hedging is imperfect.
+Next, we will consider several common risks firms face
+and how to hedge them.
+Many firms face commodity price risks.
+We use an example to illustrate possible hedging
+strategies against these risks.
+Suppose that you are managing an oil exploration company
+and have just found oil.
+You expect to have one million barrels of oil in five months.
+Given the high volatility of oil prices,
+there is high uncertainty about what the oil
+price will be in five months.
+And you would like to hedge this risk.
+There are various ways you can do this.
+One is to use forwards on oil.
+Another is to use oil futures.
+Let's first consider how to use oil forwards to hedge.
+You can hedge your position by selling forward
+one million barrels of oil today.
+Let St be the spot oil price at time t in months.
+Then for each barrel of oil, we can list positions and payoffs
+in the table on the slide.
+The first column lists the positions,
+and the second column gives their payoffs in month five.
+The original position is a long position in one barrel of oil.
+Its payoff at t equals 5 is simply
+S5, the spot oil price then.
+The hedging position in this case is short one barrel of oil
+in forwards.
+Its payoff at t equal to 5 is F minus S5
+where F is the current forward price for oil
+for maturity in five months.
+The last row in the second column
+gives the net payoff of the hedged position
+or the net position.
+It is F, the current forward price, which is certain.
+In this case, the value of the original position
+is perfectly correlated with the value of the hedging
+instrument, which is an oil forward with matching maturity.
+Short the forwards with the hedge ratio of delta equal to 1
+yields a perfect hedge.
+The firm is able to lock in the value of the original position
+at the current forward price F.
+There are several drawbacks from trading forwards as we
+discussed in the lecture on forwards and futures.
+One is its lack of liquidity, and the other
+is counterparty risk.
+For example, suppose that after one month,
+you discover that there's no oil.
+Then you no longer need the forward contract.
+In fact, if you hang on to the forward contract,
+you will be exposed to the risk of a short position in oil.
+In this case, you want to unwind your position
+by buying back the contract.
+Given the lack of liquidity for forward contracts,
+this can be difficult and expensive.
+In order to avoid liquidity problems with forwards,
+you can use oil futures as the hedging instrument.
+Let us continue with the example above.
+You can sell one million barrels of oil in the futures market.
+Suppose the size of each oil futures contract
+is 1,000 barrels of oil.
+The number of contracts you want to sell
+or short is given by the following equation--
+one million barrels, which is your total exposure,
+divide by 1,000.
+That's the contract size.
+And that gives us 1,000 contracts.
+As we know, the futures contracts
+can be easily bought and sold in the market.
+If in one month you want to unwind your position,
+you can simply sell these contracts in the market.
+Futures are easy to trade and bear little counterparty risk.
+But they have their own limitations.
+First, since futures contracts are standardized by exchanges,
+they may not perfectly match the firm's hedging need.
+Often, we find the following mismatches
+between the original position and the futures
+as a hedging vehicle.
+First is mismatch in maturity.
+For example, futures contracts typically
+have short maturities in months while our exposure
+can be for much longer term, say, in years.
+The second is mismatch in size.
+Since we cannot trade in fractional contracts,
+the hedging position can only approximate our exposure with
+raw contract numbers.
+The third mismatch is in underlying assets.
+The underlying asset for the futures contract
+often is not identical to the underlying
+asset of our original exposure.
+For example, oil from Texas--
+this is the underlying asset for oil futures, NYMEX.
+It is not the same as oil from the Middle East.
+Therefore, a perfect hedge using futures
+is achievable only when first, the maturity of the futures
+matches the timing of the cash flow
+from the original position.
+Second, the contract size matches
+that of the original position.
+And third, the cash flow being hedged
+is linearly related to that of the futures.
+When there's a mismatch in any of these dimensions
+between the original position and the futures contract,
+the hedge will not be perfect.
+In the case of an imperfect hedge,
+we have to realize that although hedging partially
+reduces the risk of the original position,
+it may also pick up additional risks from the hedging
+position.
+There is another practical issue we
+want to mention when using futures to hedge.
+That is while futures are liquid to trade,
+they do carry the liquidity risk from mark-to-market.
+Let's again use the example above to illustrate.
+Suppose that we have an oil well whose market
+value is AT, which will change with oil price proportionally.
+To reduce risk, we can take on an offsetting position
+in oil futures, say, by selling oil futures.
+Suppose that the hedge is almost perfect.
+As the oil price falls, AT declines.
+But the short position in futures
+will make money, which offsets the losses
+from the original position.
+As the oil price rises, we gain value on AT
+but incur losses from the hedge.
+In terms of market value, we are breaking even
+immune to the oil price risk.
+However, marking to market our futures position
+requires an immediate cash outflow.
+The gain in the value of the well
+comes from higher cash flows in the future.
+The mismatch in the timing of these two cash flows
+gives rise to a liquidity need.
+We have to come up with funds to meet the margin requirements
+right away.
+Normally, this can be done by using the firm's cash reserves
+or borrowing against future cash flows.
+But what happens if the firm is financially constrained?
+You will then face a liquidity crunch.
+This example shows that mark-to-market for futures
+may expose the firm to an additional liquidity risk which
+is not present originally.
+The firm needs to understand and manage
+this risk well when using futures as hedging instruments.
+There have been many examples where firms were
+burned by this liquidity risk.

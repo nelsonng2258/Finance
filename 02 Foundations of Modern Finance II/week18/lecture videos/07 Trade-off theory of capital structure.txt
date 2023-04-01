@@ -1,0 +1,156 @@
+
+PROFESSOR: We want to illustrate the points
+above through an example.
+415inc is a fintech company.
+It's currently 100% equity-financed.
+The value of its asset is given by
+the following binomial process.
+Its current market value at year 0 is $100 million.
+Next year, which is year 1, the asset value can go up to 120
+or stay at 100 with equal probabilities.
+The risk-free rate is 5%.
+415inc learned from its investment banker
+that you can issue a one-year bond
+with the principal amount P equals 80
+at a reasonable promised yield y.
+When 415inc fails to pay the interest in full,
+it incurs a cost of default. The cost is given by c times yP
+minus capital Y squared, where yP is the promised interest
+payment and capital Y is the actual interest paid,
+where capital Y is no greater than yP and c equals 1/320.
+The cost is positive only when capital Y
+is less than y times P.
+Since P equals 80, and the asset value is 100 in the bad state,
+415inc will never default on the principal.
+415inc's tax rate is tau equals 30%.
+As the CEO of 415inc, you need to answer the following
+questions.
+Should you issue the bond?
+Why?
+If you decide to issue the bond, how
+should you choose y, which is the promised yield?
+How much can you increase the value of 415inc today
+by doing this?
+We consider the situation in two steps.
+First, suppose that 415inc wants to issue
+bonds that's risk-free.
+Then in a down state the asset value is 100.
+In order to guarantee both the principal and interest payment,
+we have 1 plus y times P no greater than Vd,
+the value of the asset in a down state,
+or 1 plus y times 80 no greater than 100.
+This will give y no greater than 0.25.
+That is, the promised yield cannot exceed 25%.
+Therefore, if 415inc issues the one-year bond with principal P
+equals 80 and promised yield y, the promised interest payment
+will be yP.
+That's 80 times y.
+The tax shield is tau times yP in both states in year 1.
+Its present value is then PVTS--
+that's Present Value of Tax Shield--
+equals 0.3, the tax rate, times the promised interest payment--
+that's 80 times y divided by 1 plus 5%, the discount rate.
+And that gives 22.86 times y.
+This is positive and increases with y.
+The value of 415inc now becomes VL,
+the value of the levered home equals
+VU, the value of the unlevered firm,
+plus PVTS, which is a function of the debt level D.
+That equals 100 plus 22.86 times y.
+It is maximized by setting y equals 0.25 without default,
+which gives 105.72.
+This is higher than the value of the unlevered firm, which
+is 100.
+Can we do better than this?
+Next, we consider when y goes beyond 25%.
+Increasing y will further increase the tax benefit.
+However, there will be default in the down state.
+Here, we will assume 80 times y is no greater than 40,
+or y is no greater than 0.5, so that there will not
+be default in the up state.
+Now in the up state, we will get more tax shield,
+which is tau times yP, and increases with y.
+But in a down state, the actual interest payment
+is Vd, the value of the asset in the down state,
+minus P, the principal, which equals 100 minus 80,
+and that's 20.
+It gives a tax shield of 0.3 times
+20, which is fixed and independent of y.
+The default amount in the down state is 80 times y minus 0.25.
+It leads to a default cost given by the default cost, which
+depends on y, the promised yield, that equals c times 80
+squared times y minus 0.25 squared.
+Therefore, we have the value of the firm with leverage
+to be VL equals VU plus the present value of tax shield,
+which depends on y, minus the present value of default cost,
+which also depends on y.
+That gives 100 plus the two additional terms,
+namely the present value of tax shield
+and present value of default cost.
+How do we value tax shield and default costs,
+which are now both risky?
+In order to value the risky tax shield and default cost,
+we need to find the risk-neutral probabilities for the two
+states in year 1.
+Given the binomial process for the value
+of the underlying asset, we should know how
+to do this pretty well by now.
+From the price of the asset, we have
+100 equals q, the risk-neutral probability
+for up state, times 120, the value
+of the asset in a good state, plus 1 minus q,
+the risk-neutral probability for the down state,
+times the value of the asset in a down state
+that's 100, divided by 1 plus the risk-free rate.
+Solving for this equation, we'll get q equals 1/4.
+Then the present value of tax shield is given by PVTS equals
+0.3, the tax rate, times 1/4, the risk-neutral probably
+for the up state, times 80y--
+that's the interest payment in a good state--
+plus 3/4 times 20, and then divide
+by 1 plus risk-free rate.
+Finishing the calculation, we get 6.86.
+The present value of default cost is given by PVDC.
+That equals 3/4 times 1/320, the coefficient of default cost,
+times 80 squared times y minus 0.25 squared,
+and again divided by 1 plus the risk-free rate of 5%.
+Finishing the calculation gives 0.57.
+In the above, we have also solved for the optimal y
+to be 0.45, which is less than 0.5 Indeed,
+and substituted it into PVTS and PVDC.
+At y equals 0.45, the default cost is 0.8.
+The value of the levered firm, which
+is maximized at y equals 0.45, is
+given by VL equals VU plus PVTS at y equal to 0.45 minus PVDC,
+also at 0.45.
+That gives us 100, the value of the unlevered firm,
+plus 6.86, which is the present value of tax shield,
+minus 0.57, which is the present value of the default cost.
+That gives us 106.29.
+The market value of the debt is given by D equals q,
+the risk-neutral probability for the up state,
+times 80 times 1 plus 0.45--
+that's the total payoff in the up state-- plus 1 minus
+q, the risk-neutral probability for the down state, times 100
+minus 0.8, which is default cost.
+And then divide that by 1 plus the risk-free rate of 5%,
+the calculation gives us 98.48, which is at a premium,
+because the price is higher than the par value of the debt.
+What to do with the proceeds from the bond issue then?
+Well, we can use the money to buy back shares.
+We will discuss the mechanics of share buyback in lecture 20,
+when we consider payout policies.
+The market value of equity after the share repurchase is E
+equals the value of the levered firm minus debt,
+which is 106.29 minus 99.48.
+And that gives $7.81 million.
+The above refinancing has increased the shareholder value
+by 106.29 minus 100, which is $6.29 million.
+The above example, although simple,
+has shown the following.
+First, how leverage leads to a firm's tax benefit and distress
+cost; second, how to value the tax benefit and cost
+of distress; third, how to optimize a firm's capital
+structure knowing the value of these two pieces;
+and four, how much value the optimal financing
+choice can bring.

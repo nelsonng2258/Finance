@@ -1,0 +1,576 @@
+0
+00:00:00,000 --> 00:00:00,150
+
+
+1
+00:00:00,150 --> 00:00:01,860
+PROFESSOR: Having discussed various types
+
+2
+00:00:01,860 --> 00:00:05,520
+of real options embedded in different types of investments
+
+3
+00:00:05,520 --> 00:00:10,830
+or projects, we now turn our attention to the evaluation.
+
+4
+00:00:10,830 --> 00:00:13,710
+In general, the evaluation of real options
+
+5
+00:00:13,710 --> 00:00:17,250
+is a challenging task given the non-linear nature
+
+6
+00:00:17,250 --> 00:00:19,110
+of their risks.
+
+7
+00:00:19,110 --> 00:00:22,590
+However, when the underlying asset for a real option
+
+8
+00:00:22,590 --> 00:00:25,050
+is traded in the financial market,
+
+9
+00:00:25,050 --> 00:00:29,220
+we can then apply the option valuation techniques developed
+
+10
+00:00:29,220 --> 00:00:34,630
+earlier for financial options to value real options.
+
+11
+00:00:34,630 --> 00:00:36,810
+We demonstrate this method through examples.
+
+12
+00:00:36,810 --> 00:00:39,350
+
+
+13
+00:00:39,350 --> 00:00:41,830
+The first example we're going to consider
+
+14
+00:00:41,830 --> 00:00:47,000
+assumes a StartUp Inc, which is a biotech startup company.
+
+15
+00:00:47,000 --> 00:00:51,170
+Its only asset is a patent on the new vaccine
+
+16
+00:00:51,170 --> 00:00:53,980
+with the following information.
+
+17
+00:00:53,980 --> 00:00:57,600
+First, if the vaccine goes into production now,
+
+18
+00:00:57,600 --> 00:01:01,920
+you will generate a sure profit of $1 million per year
+
+19
+00:01:01,920 --> 00:01:05,760
+for the next 17 years, which is how long the patent
+
+20
+00:01:05,760 --> 00:01:07,560
+protection lasts.
+
+21
+00:01:07,560 --> 00:01:11,490
+Afterwards, the profit drops to zero.
+
+22
+00:01:11,490 --> 00:01:15,920
+The production requires $10 million of initial investment.
+
+23
+00:01:15,920 --> 00:01:19,280
+The interest rates have a flat term structure.
+
+24
+00:01:19,280 --> 00:01:24,740
+It's at 8% per year now, which we assumed year zero.
+
+25
+00:01:24,740 --> 00:01:28,100
+The interest rates can go up to 10%
+
+26
+00:01:28,100 --> 00:01:32,990
+or down to 5% next year, which is year one.
+
+27
+00:01:32,990 --> 00:01:36,450
+And it will remain constant afterwards.
+
+28
+00:01:36,450 --> 00:01:38,310
+The question we want to answer is,
+
+29
+00:01:38,310 --> 00:01:43,060
+what's the value of the firm or its patent?
+
+30
+00:01:43,060 --> 00:01:46,750
+The NPV of starting production today
+
+31
+00:01:46,750 --> 00:01:51,530
+in year zero, that is, is NPV equals 1 million,
+
+32
+00:01:51,530 --> 00:01:55,120
+which is the annual profit, divide by 8%, the discount
+
+33
+00:01:55,120 --> 00:02:02,320
+rate, times 1 minus 1 over 1 plus 8% to the 17th power.
+
+34
+00:02:02,320 --> 00:02:05,980
+And that's the present value of future profits for the 17
+
+35
+00:02:05,980 --> 00:02:10,449
+years, minus the production cost of $10 million today.
+
+36
+00:02:10,449 --> 00:02:17,290
+Netted out, they'll give us minus $878,362.
+
+37
+00:02:17,290 --> 00:02:20,970
+And this is a negative number.
+
+38
+00:02:20,970 --> 00:02:22,560
+Given the current interest rates,
+
+39
+00:02:22,560 --> 00:02:28,210
+clearly it does not make sense to produce today.
+
+40
+00:02:28,210 --> 00:02:31,300
+But is the value of the company or the patent negative
+
+41
+00:02:31,300 --> 00:02:32,860
+or zero, then?
+
+42
+00:02:32,860 --> 00:02:34,090
+Of course not.
+
+43
+00:02:34,090 --> 00:02:37,630
+The company has an option to produce the vaccine
+
+44
+00:02:37,630 --> 00:02:39,260
+now or later.
+
+45
+00:02:39,260 --> 00:02:41,390
+But not the obligation.
+
+46
+00:02:41,390 --> 00:02:45,170
+Therefore, its value must be positive.
+
+47
+00:02:45,170 --> 00:02:48,670
+What happens next year when interest rates change?
+
+48
+00:02:48,670 --> 00:02:51,250
+4% to 5%, or rise to 10%?
+
+49
+00:02:51,250 --> 00:02:54,340
+
+
+50
+00:02:54,340 --> 00:02:56,550
+Let's think this through.
+
+51
+00:02:56,550 --> 00:03:00,410
+If interest rates increase to 10% in year one,
+
+52
+00:03:00,410 --> 00:03:03,890
+the NPV from production is still negative
+
+53
+00:03:03,890 --> 00:03:06,920
+because the present value of future profits
+
+54
+00:03:06,920 --> 00:03:09,410
+will be even smaller.
+
+55
+00:03:09,410 --> 00:03:11,860
+Therefore, we will choose not to produce
+
+56
+00:03:11,860 --> 00:03:16,340
+yielding zero NPV in year one.
+
+57
+00:03:16,340 --> 00:03:20,540
+However, if interest rates decrease to 5% in year one,
+
+58
+00:03:20,540 --> 00:03:24,890
+then the NPV of investing in the vaccine becomes positive.
+
+59
+00:03:24,890 --> 00:03:28,160
+Its NPV would equal 1 million divided
+
+60
+00:03:28,160 --> 00:03:34,100
+by 5%, the interest rates then, then 10 times 1 minus 1 over 1
+
+61
+00:03:34,100 --> 00:03:38,160
+plus 5% to the 16th power minus 10,
+
+62
+00:03:38,160 --> 00:03:40,080
+which is the production cost.
+
+63
+00:03:40,080 --> 00:03:48,240
+And that gives us positive $837,770.
+
+64
+00:03:48,240 --> 00:03:51,320
+Therefore, when interest rates fall in year one,
+
+65
+00:03:51,320 --> 00:03:56,520
+it will make sense to produce, which creates a positive value.
+
+66
+00:03:56,520 --> 00:04:01,310
+This clearly shows that the value of the firm or the patent
+
+67
+00:04:01,310 --> 00:04:05,510
+should always be positive today.
+
+68
+00:04:05,510 --> 00:04:09,280
+Putting things together, we have the following strategy.
+
+69
+00:04:09,280 --> 00:04:13,180
+If interest rates rise, investing in production
+
+70
+00:04:13,180 --> 00:04:15,250
+yields a negative NPV.
+
+71
+00:04:15,250 --> 00:04:19,810
+Consequently, we will choose not to invest resulting in NPV of 0
+
+72
+00:04:19,810 --> 00:04:21,810
+in that state.
+
+73
+00:04:21,810 --> 00:04:24,680
+If interest rates fall, investing in production
+
+74
+00:04:24,680 --> 00:04:31,730
+yields a positive NPV of $837,770.
+
+75
+00:04:31,730 --> 00:04:35,360
+Of course, in this scenario, we will produce and capture
+
+76
+00:04:35,360 --> 00:04:38,550
+the positive NPV.
+
+77
+00:04:38,550 --> 00:04:41,610
+How do we obtain the NPV of the patent
+
+78
+00:04:41,610 --> 00:04:44,340
+with these two scenarios?
+
+79
+00:04:44,340 --> 00:04:48,690
+We will need to find the risk neutral probabilities or state
+
+80
+00:04:48,690 --> 00:04:51,600
+prices for the two possible states.
+
+81
+00:04:51,600 --> 00:04:56,660
+Interest rates going up to 10% or down to 5%.
+
+82
+00:04:56,660 --> 00:04:59,600
+In order to do this, we need to look
+
+83
+00:04:59,600 --> 00:05:02,270
+at the prices of traded securities
+
+84
+00:05:02,270 --> 00:05:07,310
+whose prices are also tied to the interest rates.
+
+85
+00:05:07,310 --> 00:05:10,940
+Let's consider a 17 year risk free annuity
+
+86
+00:05:10,940 --> 00:05:15,350
+that pays $1,000 per year.
+
+87
+00:05:15,350 --> 00:05:18,780
+From the present value formula for annuities,
+
+88
+00:05:18,780 --> 00:05:23,280
+the price of this annuity today at an interest rate of 8%
+
+89
+00:05:23,280 --> 00:05:29,130
+should be S equals 1,000 divided by 8% the interest
+
+90
+00:05:29,130 --> 00:05:35,760
+rate times 1 minus 1 over 1 plus 8% to the 17th power.
+
+91
+00:05:35,760 --> 00:05:41,280
+Finishing the calculation, that gives us $9,122.
+
+92
+00:05:41,280 --> 00:05:43,830
+That is the price of this annuity today
+
+93
+00:05:43,830 --> 00:05:46,680
+at an interest rate of 8%.
+
+94
+00:05:46,680 --> 00:05:50,160
+Next year, if the interest rates go up to 10%,
+
+95
+00:05:50,160 --> 00:05:52,560
+the value of this annuity becomes
+
+96
+00:05:52,560 --> 00:05:56,010
+Sd, that's the price in a down state,
+
+97
+00:05:56,010 --> 00:06:01,230
+equals 1,000, that's the payment then, plus the present value
+
+98
+00:06:01,230 --> 00:06:06,000
+of future payments of $16,000 in total.
+
+99
+00:06:06,000 --> 00:06:12,150
+If we finish this equation, we will get $8,824.
+
+100
+00:06:12,150 --> 00:06:17,430
+That is also equal to d, the gross return on this asset,
+
+101
+00:06:17,430 --> 00:06:20,460
+times S, its current price.
+
+102
+00:06:20,460 --> 00:06:25,560
+And this gives d of 0.967.
+
+103
+00:06:25,560 --> 00:06:29,790
+If the interest rates go down to 5%, the value of this annuity
+
+104
+00:06:29,790 --> 00:06:38,940
+becomes Su equals 1,000 plus 1,000 over 5% times 1 minus 1
+
+105
+00:06:38,940 --> 00:06:43,200
+over 1.05 raised to the 16th power.
+
+106
+00:06:43,200 --> 00:06:49,170
+Finishing the calculation, we get $11,838.
+
+107
+00:06:49,170 --> 00:06:52,920
+That's should equal to u, the gross return on the asset,
+
+108
+00:06:52,920 --> 00:06:56,690
+in upstate times S, its current price.
+
+109
+00:06:56,690 --> 00:07:01,610
+This gives u of 1.298.
+
+110
+00:07:01,610 --> 00:07:06,400
+With u and d, and the risk free rate, RF,
+
+111
+00:07:06,400 --> 00:07:09,430
+we can find the risk neutral probability q
+
+112
+00:07:09,430 --> 00:07:13,390
+for the state in which interest rates dropped to 5%.
+
+113
+00:07:13,390 --> 00:07:16,450
+Remember that the risk neutral probability
+
+114
+00:07:16,450 --> 00:07:21,700
+is the probability under which the expected return on annuity
+
+115
+00:07:21,700 --> 00:07:26,940
+is the same as the one year risk free rate, which is 8%.
+
+116
+00:07:26,940 --> 00:07:34,740
+We then have Q equals to 1 plus RF minus d divide by u minus d.
+
+117
+00:07:34,740 --> 00:07:37,980
+That's the standard formula for risk neutral probabilities.
+
+118
+00:07:37,980 --> 00:07:39,150
+Plug in the numbers.
+
+119
+00:07:39,150 --> 00:07:50,910
+That gives us 1.08 minus 0.967 divided by 1.298 minus 0.967.
+
+120
+00:07:50,910 --> 00:07:57,780
+Finishing that calculation, that gives us q of 0.341.
+
+121
+00:07:57,780 --> 00:08:00,150
+The value of the investment opportunity
+
+122
+00:08:00,150 --> 00:08:04,170
+today is then given by its expected payoff
+
+123
+00:08:04,170 --> 00:08:07,470
+under the risk neutral probabilities discounted
+
+124
+00:08:07,470 --> 00:08:10,320
+at the risk free rate.
+
+125
+00:08:10,320 --> 00:08:12,350
+This is the risk neutral pricing we
+
+126
+00:08:12,350 --> 00:08:16,980
+have learned in the lecture on option pricing.
+
+127
+00:08:16,980 --> 00:08:22,570
+PV zero, then, of this pattern should equal to its value
+
+128
+00:08:22,570 --> 00:08:29,560
+in the upstate, which is 833,770, times the risk
+
+129
+00:08:29,560 --> 00:08:36,580
+neutral probability for that state, which is 0.341 plus 0,
+
+130
+00:08:36,580 --> 00:08:42,134
+which is valued in the downstate times the risk
+
+131
+00:08:42,134 --> 00:08:43,740
+neutral probability.
+
+132
+00:08:43,740 --> 00:08:46,900
+Then, divide that by 1 plus the risk free rate,
+
+133
+00:08:46,900 --> 00:08:54,920
+this gives us $264,518.
+
+134
+00:08:54,920 --> 00:08:59,330
+In this example, we see that even though the project's cash
+
+135
+00:08:59,330 --> 00:09:03,860
+flow is risk free, its value can change with the interest
+
+136
+00:09:03,860 --> 00:09:07,310
+rates, which creates a substantial option
+
+137
+00:09:07,310 --> 00:09:09,680
+value for the firm's asset.
+
+138
+00:09:09,680 --> 00:09:16,280
+This option value, which is 221,693
+
+139
+00:09:16,280 --> 00:09:20,090
+comes from the firm's ability to use the patent when
+
+140
+00:09:20,090 --> 00:09:22,850
+interest rates fall and the value from production
+
+141
+00:09:22,850 --> 00:09:25,590
+becomes positive.
+
+142
+00:09:25,590 --> 00:09:29,760
+This option can be viewed as a growth option or a timing
+
+143
+00:09:29,760 --> 00:09:31,310
+option.
+
