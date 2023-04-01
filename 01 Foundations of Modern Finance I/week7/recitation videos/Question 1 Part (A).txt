@@ -1,0 +1,111 @@
+
+PROFESSOR: In this question, we will consider
+a frame over a factor model.
+And I will teach you how to compute standard deviations
+and correlations of returns on individual assets
+or individual stocks.
+We will start with a two-factor model.
+So the volatility of the first factor,
+or the standard deviation of factor 1 is 7%.
+The volatility of the second factor is 5%.
+There are two stocks, A and B. Stock A
+has the following loadings.
+So it has a loading of 1 on factor 1 and loading of 1.5
+on factor 2.
+The idiosyncratic volatility of the stock A is 25%.
+Stock B has loading of 2, or its beta on the first factor
+equals to 2.
+And the loading on factor 2 equals to 3.
+The idiosyncratic risk of the volatility of the stock B
+is 10%.
+In the first question, we'll compute the standard deviations
+of returns of these two stocks, so stock A and stock B. Let's
+start with writing down the expression for the variance
+of returns on stock A. The returns on stock A
+are given by the following, again, factor
+model, the following expression.
+So we need to compute the variance of this.
+So this is a scalar because this is the expected
+value of random variable ri.
+So the variance of this is going to be 0.
+So then we are left with these three expressions.
+So we will have the variances of these individual terms
+plus the pairwise covariances.
+So let's start with the first term.
+So the variance of this is going to be equal to beta,
+or the first loading, beta 1 squared,
+multiplied by the variance of the first factor of 1
+plus the second beta, the second loading squared multiplied
+by this variance, plus the variance
+of these idiosyncratic components, so idiosyncratic
+risk--
+so this is the last part here-- so variance
+of epsilon A, plus pairwise correlations.
+So the first one would be the covariance between the returns
+on factor 1 and factor 2.
+So this is 2 times the betas times the covariance
+between the returns on factor 1 and the returns on factor 2.
+And plus the covariance is between f1
+and the idiosyncratic risk of stock A,
+so epsilon A, and f2 and epsilon 2.
+Now by construction, remember that this is a factor model.
+So by definition, the covariance is
+between the returns and factors and idiosyncratic risk.
+This is why it is idiosyncratic risk.
+So this covariance, it will be 0.
+Now in addition to this--
+so recall that when we discussed this in the lecture,
+we said that in theory, returns and factors, of course,
+could be correlated.
+But here we'll assume that this covariance would equal to 0.
+So that the returns on factors f1
+and f2 in this particular example would be uncorrelated.
+So I'll get rid of this term.
+Now, let's compute the variance of returns on stock A.
+Since we assume that the covariance or the correlation
+between the returns on factor 1 and 2
+is 0, so these two factors are uncorrelated,
+we are left with just these three terms.
+So to compute the variance for stock A,
+we're taking first beta or the loading on the first factor,
+squaring it, so 1 squared, multiply it
+by the variance of the first factor.
+So we're given a standard deviation, 7%.
+So we're squaring the 7%.
+Plus we have the second beta, 1.5, square it,
+multiplying it by the variance of the second factor,
+this is the standard deviation that we are given, squared.
+Plus the variance of the idiosyncratic risk of stock A,
+this is 25% squared.
+Computing this gives us 0.073%.
+So this is the variance.
+To find the standard deviation of the returns on the stock A,
+we are taking the square root of this variance, square root
+of 0.073.
+And this gives us 27%.
+So therefore, the volatility of the returns on this stock A
+is 27%.
+We can repeat this calculation for stock B.
+So it's exactly the same expression.
+So I take the first beta or the loading on the first factor,
+multiplying it with the variance of the first factor
+the loading on the second factor squared, multiplying
+by the variance of the returns of the second factor, so 5%
+squared.
+Plus idiosyncratic variance, it's 10% squared.
+Computing this gives us 0.052%.
+So this is the variance of returns on stock B.
+To find the standard deviation, we're
+taking the square root of this, which gives us 22.8%.
+So the volatility of the returns on stock B is 22.8%.
+Now notice that the volatility of returns on the first stock
+is higher than the volatility of the returns
+on the second stock, even though stock B seems
+to be risky because it has, or at least
+in terms of systematic risk, it has much higher loadings
+on systematic returns factors.
+But, of course, what makes stock A overall riskier
+than stock B is the fact that it has much higher idiosyncratic
+volatility, 25% versus 10% for stock B.
+So that directly feeds into overall higher risk for stock A
+compared to the overall risk for stock B.

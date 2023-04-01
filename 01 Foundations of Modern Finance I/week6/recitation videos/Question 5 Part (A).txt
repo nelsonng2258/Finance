@@ -1,0 +1,82 @@
+
+PROFESSOR: In this question, we will learn what is a portfolio
+and how to compute portfolio weights.
+Suppose that you're a financial advisor
+and you have the following two clients,
+client P with a portfolio P, and client Q with a portfolio Q.
+Client P has the following securities in her portfolio,
+she invests $25,000 in SPY, which
+is ETF that tracks S&P 500 Index, 35,000 into this ETF,
+this is ETF, Vanguard's ETF, that
+tracks returns on short term Treasury securities,
+and $50,000 into this ETF, this is
+iShares ETF that tracks return of emerging markets.
+Now client Q has the following portfolio, so $10,000
+invested in SPY, so same ETF, $10,000 invested
+in this short term Treasury ETF, 30,000
+is invested in this emerging markets ETF,
+and 20,000 invested into this additional ETF that
+tracks returns on mortgage backed securities.
+So notice that client P does not have
+MBB or this ETF in her portfolio but client Q does.
+So the first question that we'll answer here
+is that we'll compute portfolio weights that clients P
+and Q have on each individual securities in their portfolios.
+Let's start with client P. So first to compute
+the weights of each of these individual ETFs
+in her portfolio, first step is to compute the total value
+of her portfolio.
+So this is just weighting up the total asset
+value of each individual ETF, this gives us $75,000.
+Then to compute the weight that SPY has in her portfolio
+we're taking the value of SPY in her portfolio, so $25,000,
+and dividing it by the total value of the portfolio, which
+is $75,000.
+This gives us one third or 0.33.
+We're doing exactly the same for the second ETF,
+for the short term Treasury ETF, so the $35,000,
+this is assets on that or the value
+of this ETF in this portfolio, divided by the total value
+$75,000, this gives us 0.47.
+And finally, for the emerging markets ETF,
+15,000 divided by 75,000 gives us 0.2.
+Now these are the weights.
+So this is the answer to this question.
+So the weight of SPY is 0.33, the weight
+of short term ETF in this portfolio is 0.47,
+and the weight of IEMG is 0.2.
+Now let's verify, so this is going to be trivial
+but let's still verify that the weights in this portfolio
+add up to 1.
+Remember that this is a definition of the portfolio.
+So a portfolio is a collection of securities such
+that the weights of each individual security
+in the portfolio should add up to 1.
+If they don't, then this is not a portfolio by definition.
+So here, just to verify, so 0.33, plus 0.47, plus 0.2,
+this gives us exactly, exactly 1.
+Again, in this particular case, this is trivial,
+but this just re-emphasizes the definition
+of what portfolio actually is.
+Let's repeat the same process for client Q
+or for portfolio Q. So the total value of this portfolio
+is the sum of the value of individual ETFs,
+so this is $70,000.
+To compute the weight of SPY we are
+taking the value of SPY, 10,000, dividing it by 70,000.
+That's the total value of the portfolio,
+so that gives us 0.14.
+We're doing the same for short term Treasury ETF,
+so 10,000 divided by 70,000 also 0.14.
+The weights of the emerging market ETF
+is 30,000, its value divided by 70,000, that's 0.43.
+And finally, the weight of the mortgage
+backed securities ETF, 20,000 divided by 70,000, that's 0.29.
+So these are the weights of each of these four
+assets in the portfolio of this client Q.
+Again, just to check to make sure that all of the weights
+add up to 1, we can add them all up.
+And just to verify that they all add up to 1
+and this indeed is the portfolio so
+that we haven't made a mistake computing any of the weights
+here.

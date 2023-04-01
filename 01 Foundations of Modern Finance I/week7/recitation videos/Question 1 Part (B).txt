@@ -1,0 +1,61 @@
+
+PROFESSOR: Let's compute correlation
+between the returns on stock A and stock
+B. I will start with the covariance.
+So the covariance between returns on stock A and stock
+B will be given by this expression.
+I got this expression by taking the expression
+that we get from the factor model
+from the return structure.
+So the return on stock A is given by this equation and so
+the return for stock B.
+The first, so this expected value is not
+going to matter because this is just
+a scalar and the idiosyncratic component epsilon
+is not going to matter here as well for the covariance term
+because by definition the covariance between returns
+on stock A and B is 0 [NOTE: Professor meant covariance between idiosyncratic components of returns], is just the definition
+of idiosyncratic risk.
+And there is no correlation between factor returns
+and idiosyncratic risk for either of the two stocks.
+Again, just by the definition of what is factor return
+and what is the idiosyncratic risk.
+And so therefore, we are left with the following expressions,
+so the covariance of the returns on stock A and B
+would be given by just effectively these two
+expressions.
+So for the first stock we get beta A with respect
+to factor 1, multiplied by f1, then the second beta multiplied
+by factor 2.
+And for stock B we get beta B1 multiplied by f1 and beta B2
+multiplied by f2.
+Now this covariance in turn is going
+to equal to this simple expression for the reason
+that again we're assuming that the returns in factor f1 and f2
+are uncorrelated, so the covariance is 0.
+If it is not, then this expression,
+we will have to take into account this covariance as
+well.
+Again, assuming that this is 0, so what's left
+is just simply the variance of f1 multiplied by the factor
+loadings of stock A and B on factor 1, so beta A1,
+beta B1 multiplied by the variance of f1,
+plus the same for the second factor.
+So beta A2 times beta B2, multiplied
+by the variance of factor f2.
+Computing this, again, so we know betas,
+we know the variances of factor of f1 and f2.
+So this gives us 0.021.
+And so this is the covariance.
+The final step is take the covariance
+and compute the correlation.
+Correlation by definition equals to the covariance
+of returns on A and B divided by their standard deviations.
+We have computed standard deviations
+in the first part of this question
+so we know these numbers.
+So we're taking this covariance that we just
+computed, dividing it by the standard deviation
+that we computed in part A and this gives me 0.341.
+So therefore the correlation between the returns
+on stock A and stock B is 34%.

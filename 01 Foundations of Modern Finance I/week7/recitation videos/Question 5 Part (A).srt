@@ -1,0 +1,572 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:02,680
+PROFESSOR: In this question, we will work with data
+
+2
+00:00:02,680 --> 00:00:05,650
+and we will learn how to implement arbitrage pricing
+
+3
+00:00:05,650 --> 00:00:08,350
+theory model in practice.
+
+4
+00:00:08,350 --> 00:00:10,090
+We will consider a two factor model
+
+5
+00:00:10,090 --> 00:00:13,480
+that has the market and the price of gold as the risk
+
+6
+00:00:13,480 --> 00:00:15,310
+factors.
+
+7
+00:00:15,310 --> 00:00:18,530
+The price of gold can be a risk factor in its own.
+
+8
+00:00:18,530 --> 00:00:21,070
+Or it can correlate with other risk factors.
+
+9
+00:00:21,070 --> 00:00:23,050
+For example, inflation.
+
+10
+00:00:23,050 --> 00:00:24,850
+To proxy for these two risk factors,
+
+11
+00:00:24,850 --> 00:00:28,460
+we will use factor mimicking portfolios.
+
+12
+00:00:28,460 --> 00:00:31,480
+For the market factor, we will use the returns
+
+13
+00:00:31,480 --> 00:00:33,160
+on the market portfolio.
+
+14
+00:00:33,160 --> 00:00:36,250
+And for the price of gold, we will use the returns
+
+15
+00:00:36,250 --> 00:00:40,090
+on the Spider Gold Shares ETF.
+
+16
+00:00:40,090 --> 00:00:41,650
+On your screen, you can see a snippet
+
+17
+00:00:41,650 --> 00:00:45,130
+from the fact sheet of this ETF, which is traded
+
+18
+00:00:45,130 --> 00:00:48,400
+under the ticker symbol GLD.
+
+19
+00:00:48,400 --> 00:00:51,690
+We will implement this model by using returns on eight firms.
+
+20
+00:00:51,690 --> 00:00:54,860
+Four of these firms up from the gold mining industry.
+
+21
+00:00:54,860 --> 00:00:57,790
+And the other four are from the technology industry.
+
+22
+00:00:57,790 --> 00:01:00,610
+These firms are listed on your screen.
+
+23
+00:01:00,610 --> 00:01:03,100
+In this file, I have monthly return data
+
+24
+00:01:03,100 --> 00:01:05,470
+on each of these eight stocks.
+
+25
+00:01:05,470 --> 00:01:10,390
+So for each of them, the sample covers January 2005 all the way
+
+26
+00:01:10,390 --> 00:01:12,580
+through December 2019.
+
+27
+00:01:12,580 --> 00:01:15,940
+So for each of these stocks, we have 15 years
+
+28
+00:01:15,940 --> 00:01:18,710
+worth of monthly return data.
+
+29
+00:01:18,710 --> 00:01:22,120
+So the return for a given month on each of the stocks
+
+30
+00:01:22,120 --> 00:01:24,900
+is given in column C. The column next to it,
+
+31
+00:01:24,900 --> 00:01:27,370
+column D contains the risk free rates.
+
+32
+00:01:27,370 --> 00:01:31,150
+Column E contains the return on the market portfolio.
+
+33
+00:01:31,150 --> 00:01:36,400
+And column F contains the returns on the GLD ETF.
+
+34
+00:01:36,400 --> 00:01:38,220
+And all of this data is organized by firm.
+
+35
+00:01:38,220 --> 00:01:41,620
+So this is the first firm, then I have the second firm
+
+36
+00:01:41,620 --> 00:01:42,230
+and so forth.
+
+37
+00:01:42,230 --> 00:01:44,530
+So I have eight of these blocks corresponding
+
+38
+00:01:44,530 --> 00:01:48,700
+to each of the stocks.
+
+39
+00:01:48,700 --> 00:01:54,520
+Now, recall that, to implement the APT model
+
+40
+00:01:54,520 --> 00:01:57,910
+in our particular case where we have two risk factors--
+
+41
+00:01:57,910 --> 00:01:59,980
+the market and the price of gold--
+
+42
+00:01:59,980 --> 00:02:02,060
+we have to run the following regression.
+
+43
+00:02:02,060 --> 00:02:05,170
+So we have to regress the excess return
+
+44
+00:02:05,170 --> 00:02:09,130
+on the excess return on the market portfolio
+
+45
+00:02:09,130 --> 00:02:12,040
+and the excess return on the gold ETF.
+
+46
+00:02:12,040 --> 00:02:15,800
+And this regression has to include the constant, as well.
+
+47
+00:02:15,800 --> 00:02:18,810
+So therefore, to run this regression,
+
+48
+00:02:18,810 --> 00:02:22,480
+first I am computing excess return on each of the stocks
+
+49
+00:02:22,480 --> 00:02:27,160
+by taking the return and subtracting the risk free rate.
+
+50
+00:02:27,160 --> 00:02:29,560
+Next, I'm computing the excess market return
+
+51
+00:02:29,560 --> 00:02:32,660
+where I'm taking the return on the market portfolio.
+
+52
+00:02:32,660 --> 00:02:35,810
+And again, subtracting the risk free rate.
+
+53
+00:02:35,810 --> 00:02:38,630
+And then I'm doing the same thing for the GLD ETF.
+
+54
+00:02:38,630 --> 00:02:41,530
+So I'm computing the excess return on this ETF
+
+55
+00:02:41,530 --> 00:02:47,350
+by taking its return and subtracting the risk free rate.
+
+56
+00:02:47,350 --> 00:02:50,100
+Now, we are ready to run this regression.
+
+57
+00:02:50,100 --> 00:02:53,100
+There are several ways of running linear regression
+
+58
+00:02:53,100 --> 00:02:54,000
+in Excel.
+
+59
+00:02:54,000 --> 00:02:58,920
+I'm going to be using a function that is called LINEST.
+
+60
+00:02:58,920 --> 00:03:01,650
+So because this is a multiple regression,
+
+61
+00:03:01,650 --> 00:03:04,930
+I will be estimating three coefficients.
+
+62
+00:03:04,930 --> 00:03:07,320
+So the lowering on each of the two risk
+
+63
+00:03:07,320 --> 00:03:09,472
+factors and a constant.
+
+64
+00:03:09,472 --> 00:03:11,430
+So the way I'm going to implement this function
+
+65
+00:03:11,430 --> 00:03:12,640
+is it's an array function.
+
+66
+00:03:12,640 --> 00:03:15,878
+So I am highlighting these three cells
+
+67
+00:03:15,878 --> 00:03:17,170
+and I will write the following.
+
+68
+00:03:17,170 --> 00:03:20,640
+So I'll say LINEST.
+
+69
+00:03:20,640 --> 00:03:23,220
+And the first input into this function
+
+70
+00:03:23,220 --> 00:03:25,150
+would be the left hand side variable,
+
+71
+00:03:25,150 --> 00:03:27,250
+which is our excess return on the stock.
+
+72
+00:03:27,250 --> 00:03:30,100
+So this column.
+
+73
+00:03:30,100 --> 00:03:33,810
+And the next input will be the metrics of the right hand side
+
+74
+00:03:33,810 --> 00:03:36,120
+variables, which would be these two.
+
+75
+00:03:36,120 --> 00:03:38,890
+
+
+76
+00:03:38,890 --> 00:03:42,400
+Then for constant and for statistics, I will say yes.
+
+77
+00:03:42,400 --> 00:03:45,940
+Because I do want to have a constant estimated,
+
+78
+00:03:45,940 --> 00:03:48,820
+because this is the way to run this regression.
+
+79
+00:03:48,820 --> 00:03:51,875
+And then I will also say 1 for the loss parameter.
+
+80
+00:03:51,875 --> 00:03:53,750
+And then recall that this is a rate function.
+
+81
+00:03:53,750 --> 00:04:00,400
+So I have to hit Shift, Control, and Enter at the same time.
+
+82
+00:04:00,400 --> 00:04:02,910
+Now, notice that the way this function works is it
+
+83
+00:04:02,910 --> 00:04:06,420
+actually gives the estimate of the coefficients
+
+84
+00:04:06,420 --> 00:04:09,480
+from this regression as the lost number.
+
+85
+00:04:09,480 --> 00:04:12,570
+And the first number is actually in the reverse order of the way
+
+86
+00:04:12,570 --> 00:04:15,310
+they appear in the matrix.
+
+87
+00:04:15,310 --> 00:04:18,600
+So the first estimate is the estimate on gold.
+
+88
+00:04:18,600 --> 00:04:22,560
+And the second is the estimate on the market.
+
+89
+00:04:22,560 --> 00:04:24,240
+Now let's estimate this regression
+
+90
+00:04:24,240 --> 00:04:26,880
+for the remaining firms.
+
+91
+00:04:26,880 --> 00:04:29,050
+I'll show you how to estimate it for the next firm.
+
+92
+00:04:29,050 --> 00:04:33,300
+And then, I will let you do the rest of the exercise yourself.
+
+93
+00:04:33,300 --> 00:04:36,420
+So I'm, again, highlighting the three cells.
+
+94
+00:04:36,420 --> 00:04:39,210
+I'm writing LINEST.
+
+95
+00:04:39,210 --> 00:04:42,450
+I'm going down to the portion of the file
+
+96
+00:04:42,450 --> 00:04:45,440
+where half the returns in the corresponding stock.
+
+97
+00:04:45,440 --> 00:04:48,600
+So I'm highlighting my y's first.
+
+98
+00:04:48,600 --> 00:04:54,460
+Next, I'm highlighting my x's.
+
+99
+00:04:54,460 --> 00:04:56,110
+So it's these two columns.
+
+100
+00:04:56,110 --> 00:04:57,690
+Then I'll say 1 and 1.
+
+101
+00:04:57,690 --> 00:05:02,550
+And then I will hit Shift, Control, Enter.
+
+102
+00:05:02,550 --> 00:05:06,450
+And you will see that this process estimates
+
+103
+00:05:06,450 --> 00:05:12,850
+the coefficients again on gold market and the intercept.
+
+104
+00:05:12,850 --> 00:05:15,120
+Now I have estimated all eight regressions
+
+105
+00:05:15,120 --> 00:05:17,710
+and these are the results.
+
+106
+00:05:17,710 --> 00:05:22,600
+So these are the loadings on the gold factor for gold mining
+
+107
+00:05:22,600 --> 00:05:23,100
+companies.
+
+108
+00:05:23,100 --> 00:05:25,993
+And these are the loadings on the market factor.
+
+109
+00:05:25,993 --> 00:05:27,660
+These are the loadings of the technology
+
+110
+00:05:27,660 --> 00:05:28,960
+stocks and the gold factor.
+
+111
+00:05:28,960 --> 00:05:30,793
+And these are the loadings of the technology
+
+112
+00:05:30,793 --> 00:05:33,860
+stocks on the market factor.
+
+113
+00:05:33,860 --> 00:05:37,940
+Next, let's average the factor loadings for gold mining stocks
+
+114
+00:05:37,940 --> 00:05:39,980
+and for technology stocks.
+
+115
+00:05:39,980 --> 00:05:42,350
+What I'm doing in this highlighted table
+
+116
+00:05:42,350 --> 00:05:47,780
+is I'm averaging the loadings of the gold stocks
+
+117
+00:05:47,780 --> 00:05:49,940
+on this first gold factor.
+
+118
+00:05:49,940 --> 00:05:52,310
+And the second number here is the average
+
+119
+00:05:52,310 --> 00:05:54,740
+of the loadings on the market factor.
+
+120
+00:05:54,740 --> 00:05:58,310
+Down below, this is the average of the loadings of the tech
+
+121
+00:05:58,310 --> 00:06:00,110
+stocks on the gold factor.
+
+122
+00:06:00,110 --> 00:06:04,030
+And this is the average of their loadings on the market factor.
+
+123
+00:06:04,030 --> 00:06:07,240
+Now, let's think and interpret these results.
+
+124
+00:06:07,240 --> 00:06:10,090
+First, notice that the loading of gold mining
+
+125
+00:06:10,090 --> 00:06:15,250
+stocks on the gold risk factor is large and positive.
+
+126
+00:06:15,250 --> 00:06:18,490
+This should make economic sense because, when the price of gold
+
+127
+00:06:18,490 --> 00:06:20,890
+goes up, presumably these companies
+
+128
+00:06:20,890 --> 00:06:22,390
+can generate higher revenue.
+
+129
+00:06:22,390 --> 00:06:25,380
+And, therefore, investors reward these firms
+
+130
+00:06:25,380 --> 00:06:28,590
+with higher returns.
+
+131
+00:06:28,590 --> 00:06:31,500
+For technology stocks, this loading
+
+132
+00:06:31,500 --> 00:06:35,910
+is negative, which means that, when the prices of gold
+
+133
+00:06:35,910 --> 00:06:40,650
+go down, on average the returns on technology stocks
+
+134
+00:06:40,650 --> 00:06:43,910
+go up and vice versa.
+
+135
+00:06:43,910 --> 00:06:46,580
+The loading of the technology stocks on the market risk
+
+136
+00:06:46,580 --> 00:06:48,560
+factor is close to 1, which means
+
+137
+00:06:48,560 --> 00:06:53,540
+that, if the stock market goes up by 1%, on average
+
+138
+00:06:53,540 --> 00:06:57,350
+the technology stocks go up by 1%, as well.
+
+139
+00:06:57,350 --> 00:07:01,760
+And the loading of gold mining stocks on the market risk
+
+140
+00:07:01,760 --> 00:07:04,370
+factor is around 0.2, which means
+
+141
+00:07:04,370 --> 00:07:07,490
+that they have much lower sensitivity of their returns
+
+142
+00:07:07,490 --> 00:07:10,720
+with respect to the market risk factor.
+

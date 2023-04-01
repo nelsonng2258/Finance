@@ -1,0 +1,644 @@
+0
+00:00:00,000 --> 00:00:00,247
+
+
+1
+00:00:00,247 --> 00:00:02,830
+PROFESSOR: Having discussed the properties of individual asset
+
+2
+00:00:02,830 --> 00:00:06,100
+returns, we will now talk about the joint distribution
+
+3
+00:00:06,100 --> 00:00:07,700
+of returns.
+
+4
+00:00:07,700 --> 00:00:10,250
+How can we describe interdependence
+
+5
+00:00:10,250 --> 00:00:13,920
+of different financial assets?
+
+6
+00:00:13,920 --> 00:00:17,310
+The core concept here is correlation-- correlation
+
+7
+00:00:17,310 --> 00:00:18,720
+of returns.
+
+8
+00:00:18,720 --> 00:00:20,820
+It is a measure of dependence.
+
+9
+00:00:20,820 --> 00:00:22,650
+It's a linear measure.
+
+10
+00:00:22,650 --> 00:00:25,410
+It's not the only possible way of describing how returns
+
+11
+00:00:25,410 --> 00:00:26,790
+are related to each other.
+
+12
+00:00:26,790 --> 00:00:30,800
+But it's a leading statistic that's very commonly used.
+
+13
+00:00:30,800 --> 00:00:33,950
+We start with the covariance of returns.
+
+14
+00:00:33,950 --> 00:00:36,440
+A covariance is defined mathematically
+
+15
+00:00:36,440 --> 00:00:40,340
+as the expected value of the product of the differences
+
+16
+00:00:40,340 --> 00:00:45,290
+between returns on asset i and its mean and asset
+
+17
+00:00:45,290 --> 00:00:47,600
+j and its mean.
+
+18
+00:00:47,600 --> 00:00:49,850
+The correlation is just the covariance
+
+19
+00:00:49,850 --> 00:00:54,210
+of returns, normalized by the product of standard deviations.
+
+20
+00:00:54,210 --> 00:00:58,240
+What this statistic captures is to what degree two assets
+
+21
+00:00:58,240 --> 00:01:00,020
+co-move with each other.
+
+22
+00:01:00,020 --> 00:01:03,400
+When correlation is high, close to 1,
+
+23
+00:01:03,400 --> 00:01:07,408
+both assets tend to go up and down in unison.
+
+24
+00:01:07,408 --> 00:01:08,950
+When correlation is close to minus 1,
+
+25
+00:01:08,950 --> 00:01:11,530
+they tend to move in the opposite direction
+
+26
+00:01:11,530 --> 00:01:12,830
+from each other.
+
+27
+00:01:12,830 --> 00:01:15,940
+When correlation is zero, there is no linear relation
+
+28
+00:01:15,940 --> 00:01:18,460
+between the two assets at all.
+
+29
+00:01:18,460 --> 00:01:22,740
+A closely related concept is the beta of returns.
+
+30
+00:01:22,740 --> 00:01:26,670
+The beta is the ratio of the covariance between returns
+
+31
+00:01:26,670 --> 00:01:32,730
+on asset i and asset j and the variance of returns on asset j.
+
+32
+00:01:32,730 --> 00:01:34,900
+The concept of beta is very important.
+
+33
+00:01:34,900 --> 00:01:36,810
+We are going to come back to it.
+
+34
+00:01:36,810 --> 00:01:39,930
+But intuitively, what the beta represents
+
+35
+00:01:39,930 --> 00:01:43,760
+is the degree to which returns on asset j
+
+36
+00:01:43,760 --> 00:01:47,100
+affect statistically returns on asset i.
+
+37
+00:01:47,100 --> 00:01:51,960
+When beta is equal to 1, for each 1% movement in asset j,
+
+38
+00:01:51,960 --> 00:01:56,130
+we would see on average 1% movement in asset i.
+
+39
+00:01:56,130 --> 00:01:58,860
+When we plot returns on one asset
+
+40
+00:01:58,860 --> 00:02:01,740
+versus the other as a scatter plot,
+
+41
+00:02:01,740 --> 00:02:06,920
+beta is given by the slope of the regression line.
+
+42
+00:02:06,920 --> 00:02:10,960
+The following graph provides a visual illustration
+
+43
+00:02:10,960 --> 00:02:15,740
+of how joint distributions may look with positive, negative,
+
+44
+00:02:15,740 --> 00:02:18,110
+or zero correlation.
+
+45
+00:02:18,110 --> 00:02:20,530
+What you see in the top left corner
+
+46
+00:02:20,530 --> 00:02:23,200
+is a scatter plot of the joint distribution
+
+47
+00:02:23,200 --> 00:02:26,320
+of returns on two assets with zero correlation.
+
+48
+00:02:26,320 --> 00:02:27,850
+It looks like a ball of points.
+
+49
+00:02:27,850 --> 00:02:31,700
+There is no obvious linear relation between the two.
+
+50
+00:02:31,700 --> 00:02:34,100
+On the right, we see two examples
+
+51
+00:02:34,100 --> 00:02:37,610
+of imperfect correlation, a positive and negative.
+
+52
+00:02:37,610 --> 00:02:40,190
+At the top, correlation is positive.
+
+53
+00:02:40,190 --> 00:02:41,900
+It's equal to 0.5.
+
+54
+00:02:41,900 --> 00:02:44,690
+We see, visually, a clear positive relation between two
+
+55
+00:02:44,690 --> 00:02:47,130
+assets, which is not perfect.
+
+56
+00:02:47,130 --> 00:02:50,390
+There is a lot of deviation from the 45 degree line.
+
+57
+00:02:50,390 --> 00:02:54,050
+But nonetheless, it's clear the two assets, on average,
+
+58
+00:02:54,050 --> 00:02:57,330
+move together in a positive direction.
+
+59
+00:02:57,330 --> 00:03:00,180
+Below that is a graph corresponding
+
+60
+00:03:00,180 --> 00:03:02,820
+to the correlation of minus 0.5.
+
+61
+00:03:02,820 --> 00:03:05,850
+Now, we see that the typical relation between the two assets
+
+62
+00:03:05,850 --> 00:03:07,050
+is negative.
+
+63
+00:03:07,050 --> 00:03:11,550
+When one of them goes up, the other one tends to decline.
+
+64
+00:03:11,550 --> 00:03:14,010
+At the bottom on the left, we see an example
+
+65
+00:03:14,010 --> 00:03:16,560
+with a high degree of positive correlation.
+
+66
+00:03:16,560 --> 00:03:18,630
+Now it is 0.8.
+
+67
+00:03:18,630 --> 00:03:22,440
+We see that the points now fall very close to the 45 degree
+
+68
+00:03:22,440 --> 00:03:26,250
+line, indicating that most of the movement
+
+69
+00:03:26,250 --> 00:03:29,340
+is now highly related between the two assets.
+
+70
+00:03:29,340 --> 00:03:33,070
+There is very little individual variation.
+
+71
+00:03:33,070 --> 00:03:35,770
+Next, let's look at a couple of empirical examples
+
+72
+00:03:35,770 --> 00:03:37,540
+showing us the degree of correlation
+
+73
+00:03:37,540 --> 00:03:40,560
+between different kinds of financial assets.
+
+74
+00:03:40,560 --> 00:03:43,110
+On the left, we have a scatter plot
+
+75
+00:03:43,110 --> 00:03:44,790
+illustrating the joint distribution
+
+76
+00:03:44,790 --> 00:03:47,310
+of returns on two stocks.
+
+77
+00:03:47,310 --> 00:03:48,750
+One is Intel.
+
+78
+00:03:48,750 --> 00:03:50,640
+The other one is IBM.
+
+79
+00:03:50,640 --> 00:03:53,790
+Both of these are large technology stocks.
+
+80
+00:03:53,790 --> 00:03:57,630
+What we see from this graph is a clear sense
+
+81
+00:03:57,630 --> 00:04:00,640
+of positive relation between the two.
+
+82
+00:04:00,640 --> 00:04:03,270
+These two returns are positively correlated.
+
+83
+00:04:03,270 --> 00:04:07,020
+This is not surprising and, in fact, fairly typical.
+
+84
+00:04:07,020 --> 00:04:10,410
+Stocks that are economically related to each other
+
+85
+00:04:10,410 --> 00:04:13,970
+will tend to have positive correlation.
+
+86
+00:04:13,970 --> 00:04:16,670
+On the right, we see a scatter plot
+
+87
+00:04:16,670 --> 00:04:19,040
+of two exchange traded funds.
+
+88
+00:04:19,040 --> 00:04:20,990
+We encountered them earlier--
+
+89
+00:04:20,990 --> 00:04:25,170
+the bond fund, AGG, and the stock fund, SPY.
+
+90
+00:04:25,170 --> 00:04:26,870
+It's a different picture.
+
+91
+00:04:26,870 --> 00:04:30,530
+We now see that the distribution of points on the scatter plot
+
+92
+00:04:30,530 --> 00:04:33,550
+does not show an obvious linear relation.
+
+93
+00:04:33,550 --> 00:04:36,920
+The scatter plot looks like a random cloud of points.
+
+94
+00:04:36,920 --> 00:04:39,860
+And the regression line is relatively flat.
+
+95
+00:04:39,860 --> 00:04:42,410
+In this case, correlation between the two assets
+
+96
+00:04:42,410 --> 00:04:44,630
+is very close to zero.
+
+97
+00:04:44,630 --> 00:04:48,150
+Stocks and bonds have a low degree of correlation.
+
+98
+00:04:48,150 --> 00:04:50,600
+This is an important empirical fact
+
+99
+00:04:50,600 --> 00:04:54,110
+and forms the basis of long-term investment strategies
+
+100
+00:04:54,110 --> 00:04:56,990
+diversifying risk between stocks and bonds.
+
+101
+00:04:56,990 --> 00:04:59,420
+We will come back to the concept of diversification
+
+102
+00:04:59,420 --> 00:05:02,290
+later in this class.
+
+103
+00:05:02,290 --> 00:05:03,910
+Let's take a look at a broader pattern
+
+104
+00:05:03,910 --> 00:05:07,960
+of correlations among different types of financial assets.
+
+105
+00:05:07,960 --> 00:05:10,420
+In the table, we'll look at pair-wise correlations
+
+106
+00:05:10,420 --> 00:05:16,130
+between stocks, bonds, treasury bills, and inflation.
+
+107
+00:05:16,130 --> 00:05:18,190
+We see that closely related assets
+
+108
+00:05:18,190 --> 00:05:20,890
+tend to have high levels of correlation.
+
+109
+00:05:20,890 --> 00:05:25,360
+For instance, when we look at large cap stocks and small cap
+
+110
+00:05:25,360 --> 00:05:29,470
+stocks, we observe correlations around 80%.
+
+111
+00:05:29,470 --> 00:05:34,070
+Different types of equities tend to co-move with each other.
+
+112
+00:05:34,070 --> 00:05:35,930
+Corporate bonds and Treasury bonds
+
+113
+00:05:35,930 --> 00:05:41,060
+also show a high degree of co-movement, over 80%.
+
+114
+00:05:41,060 --> 00:05:43,130
+Stocks versus long-term Treasuries,
+
+115
+00:05:43,130 --> 00:05:46,160
+as we have seen before, don't have a lot of co-movement.
+
+116
+00:05:46,160 --> 00:05:49,900
+And their correlation with each other is close to zero.
+
+117
+00:05:49,900 --> 00:05:52,960
+Treasury bills tend to have positive correlation
+
+118
+00:05:52,960 --> 00:05:53,770
+with inflation.
+
+119
+00:05:53,770 --> 00:05:57,790
+It's not terribly high, but it's in the neighborhood of 40%.
+
+120
+00:05:57,790 --> 00:06:01,480
+The reason for that is that the nominal return
+
+121
+00:06:01,480 --> 00:06:04,530
+on Treasury bills has an inflation component.
+
+122
+00:06:04,530 --> 00:06:09,270
+And that induces a positive correlation between the two.
+
+123
+00:06:09,270 --> 00:06:11,640
+So far, we looked at the pair-wise correlations
+
+124
+00:06:11,640 --> 00:06:14,180
+between financial assets.
+
+125
+00:06:14,180 --> 00:06:16,700
+We think of these as cross-sectional correlations,
+
+126
+00:06:16,700 --> 00:06:20,790
+how returns are related to each other at a point in time.
+
+127
+00:06:20,790 --> 00:06:24,260
+Another important dimension is time-series correlation
+
+128
+00:06:24,260 --> 00:06:26,680
+or order correlation.
+
+129
+00:06:26,680 --> 00:06:30,290
+This concept applies to a single asset over time.
+
+130
+00:06:30,290 --> 00:06:32,260
+We are now looking at how returns
+
+131
+00:06:32,260 --> 00:06:36,220
+during different periods are related to each other.
+
+132
+00:06:36,220 --> 00:06:38,430
+The empirical fact in financial markets
+
+133
+00:06:38,430 --> 00:06:43,240
+is that there is not a lot of serial correlation in returns.
+
+134
+00:06:43,240 --> 00:06:45,040
+Autocorrelation, or serial correlation,
+
+135
+00:06:45,040 --> 00:06:48,910
+of returns on most assets is very close to zero.
+
+136
+00:06:48,910 --> 00:06:53,230
+This is the case for stocks and long-term bonds.
+
+137
+00:06:53,230 --> 00:06:56,470
+The reason for that has to do with the fact
+
+138
+00:06:56,470 --> 00:06:58,960
+that high degree of serial correlation
+
+139
+00:06:58,960 --> 00:07:01,810
+would imply that it is relatively easy to forecast
+
+140
+00:07:01,810 --> 00:07:05,380
+future returns by observing past returns;
+
+141
+00:07:05,380 --> 00:07:07,420
+the two are closely related.
+
+142
+00:07:07,420 --> 00:07:10,090
+Being able to predict returns in risky assets
+
+143
+00:07:10,090 --> 00:07:13,810
+would then enable one to design highly profitable trading
+
+144
+00:07:13,810 --> 00:07:15,100
+strategies.
+
+145
+00:07:15,100 --> 00:07:17,830
+These are difficult to come by.
+
+146
+00:07:17,830 --> 00:07:21,010
+As a result, the implication is that one should not
+
+147
+00:07:21,010 --> 00:07:23,710
+observe high levels of autocorrelation
+
+148
+00:07:23,710 --> 00:07:27,660
+in returns, particularly at high frequency-- daily,
+
+149
+00:07:27,660 --> 00:07:29,690
+weekly, or monthly.
+
+150
+00:07:29,690 --> 00:07:32,120
+The following figure illustrates the point.
+
+151
+00:07:32,120 --> 00:07:36,170
+We are now looking at the monthly returns on a stock.
+
+152
+00:07:36,170 --> 00:07:38,150
+It's a stock of IBM.
+
+153
+00:07:38,150 --> 00:07:39,920
+And the scatter plot shows returns
+
+154
+00:07:39,920 --> 00:07:45,120
+in any given month against returns in the previous month.
+
+155
+00:07:45,120 --> 00:07:49,290
+We see that there is no clear linear pattern on this graph.
+
+156
+00:07:49,290 --> 00:07:52,590
+And in fact, the empirical estimate of the autocorrelation
+
+157
+00:07:52,590 --> 00:07:56,310
+over this period, which starts at the beginning of '08, is
+
+158
+00:07:56,310 --> 00:07:58,560
+close to minus 6%.
+
+159
+00:07:58,560 --> 00:08:00,750
+There is not a lot of autocorrelation
+
+160
+00:08:00,750 --> 00:08:05,990
+in returns on this stock or most other risky investments.
+

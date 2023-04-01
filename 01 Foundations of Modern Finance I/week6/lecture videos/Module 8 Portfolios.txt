@@ -1,0 +1,150 @@
+
+PROFESSOR: We will now introduce basic elements
+of portfolio analytics.
+In particular, we'll introduce concepts
+of leverage and margin.
+First, let's define a portfolio.
+A portfolio is a collection of assets, risky or risk free.
+The portfolio is defined by its composition--
+how many shares of each security are held in the portfolio.
+In terms of notation, we are going
+to denote the total portfolio value by V.
+And this value is going to be equal to the sum of investments
+in each of the securities in the portfolio.
+Each of the investments is valued
+as the number of shares times the market price.
+So the total portfolio value V is equal to the sum,
+across all of the positions in the portfolio,
+of the product of the price Pi and the number of shares Ni.
+The composition of the portfolio can also
+be described by portfolio weights.
+The weight on each investment is defined
+as the ratio of the value of the position, normalized
+by the value of the portfolio.
+It's the ratio of Ni times Pi, which
+is the value of the position over V,
+the value of the portfolio.
+For this definition to make sense,
+the value of the portfolio cannot be 0.
+In fact, typically, the value is positive.
+There are, however, some portfolios for which
+the value V could be 0.
+We call these arbitrage portfolios.
+An arbitrage portfolio is special.
+It does not require a positive investment.
+For every long position in the portfolio,
+there has to be a short position so that the total investment
+into the portfolio is 0.
+For a typical portfolio, V is positive.
+Portfolio weights, in this case, are well defined.
+And by definition, they have to add up to 1.
+So the sum of W1 plus W2 and so forth
+across all of the positions in the portfolio
+is always equal to 1.
+As an example, consider a portfolio
+of three securities, A, B, and C,
+with a total investment of $100,000.
+Suppose that we buy 200 shares of assets A,
+1,000 shares of asset B, and 750 shares of asset C.
+You can see the relevant data in the table.
+You can see the number of shares in each position,
+the price per share, which is $50 for A, $60 for B,
+and $40 for C, and the total investment into each security.
+The total investment is equal to the number of shares
+times the share price.
+For example, for asset A, it's 200 shares at $50 per share.
+It's $10,000.
+It's $60,000 for asset B and $30,000 for asset C.
+So the total investment is $100,000.
+You can see, in the column on the right, portfolio weights.
+As we said before, portfolio weight
+is defined as the ratio of the value of each position
+to the total value of the portfolio.
+For A, it's going to be 10,000 divided
+by 100,000, which is 10%.
+It's 60% for B and 30% for C. By definition, these weights sum
+up to 1 or 100%.
+Now, suppose your broker informs you
+that you could, in fact, maintain the same portfolio
+with less capital.
+Let's say, you could reduce your capital investment
+to $50,000 from $100,000.
+How can you achieve that?
+You need to use margin.
+You could borrow money at the risk-free rate
+to buy risky assets in the portfolio.
+In our particular example, in order
+to buy $100,000 worth of stocks starting
+with $50,000 in capital, you would
+need to borrow $50,000 at the risk-free rate.
+This changes the portfolio composition.
+If you now look at the table, you
+see that we have a new row, which corresponds
+to the risk-free bond.
+The investment into the bond is negative,
+which means that we are borrowing $50,000.
+The investment in each of the stocks is the same as before.
+We're establishing the same portfolio.
+The portfolio weights, however, now change.
+The reason is that while the investment into each
+of the securities, A, B, and C, is the same as before,
+the total value of the portfolio in the denominator
+is now $50,000 and not $100,000, which
+doubles the weight on each of the risky assets.
+It is now 20% invested in A rather than 10%,
+120% in B rather than 60%, and 60% in C instead of 30%.
+When we sum up portfolio weights across the risky assets
+plus minus 100% invested in the risk-free bond,
+the total of the weights is again 100%.
+Another example of a portfolio that is commonly used
+can be seen in buying real estate.
+Imagine that you're buying a house.
+The value of the house is $500,000.
+You make an initial investment of $100,000, which
+is 20% of the house value.
+These ratios are typical for the US residential market.
+The remaining $400,000 need to be borrowed.
+And they could be borrowed by obtaining
+a mortgage on the home.
+As a result, a buyer of the house
+has a portfolio with two positions--
+$500,000 of real estate, which is the value of the house,
+and a negative position of $400,000, which
+represents the mortgage.
+This is the amount of money that the buyer owes to the bank.
+The total net value of the investment,
+which has developed the portfolio, V, is $100,000.
+It's the sum of the two positions.
+If we now compute portfolio weights,
+we see that the weight of the house--
+the weight of the real estate in the portfolio-- is plus 500%.
+And the weight of the mortgage, which is a loan, is minus 400%.
+The total, again, is 1, 100%.
+The ratio of the asset value to the net investment
+is what we call leverage.
+That's the leverage ratio.
+In our example of buying a house, the asset is the house.
+The net investment is $100,000, which
+is what the buyer of the home invests into this property.
+The ratio of the asset value to the net investment
+is 500 over 100, which is 5.
+That's the leverage ratio of this transaction.
+Leverage magnifies movements in the asset value.
+It scales up gains as well as losses.
+For example, suppose that the house value declines by 15%.
+A cash buyer would have seen a 15% decline
+in the total value of the portfolio.
+Someone who uses a mortgage is going
+to see a much larger decline.
+In fact, it's going to be 5 times as large, 75%.
+To see that, let's compute the decline in the asset value.
+$500,000-- that's the value of the initial investment--
+declines by $75,000, which is 15%.
+Following the decline of 15%, the value of the house
+is now $425,000.
+With the initial investment of $100,000
+and the mortgage of $400,000, this
+means that the buyer of the house
+is left with a total of $25,000.
+That is a $75,000 decline, or a 75% decline
+relative to the initial investment.

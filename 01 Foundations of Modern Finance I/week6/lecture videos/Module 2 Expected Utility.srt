@@ -1,0 +1,536 @@
+0
+00:00:00,000 --> 00:00:00,120
+
+
+1
+00:00:00,120 --> 00:00:01,495
+PROFESSOR: In this segment, we'll
+
+2
+00:00:01,495 --> 00:00:03,940
+talk about the expected utility theory.
+
+3
+00:00:03,940 --> 00:00:06,030
+So let's start with a basic decision problem
+
+4
+00:00:06,030 --> 00:00:07,560
+under uncertainty.
+
+5
+00:00:07,560 --> 00:00:10,350
+Suppose you're choosing between two gambles, gamble
+
+6
+00:00:10,350 --> 00:00:12,480
+x, gamble y.
+
+7
+00:00:12,480 --> 00:00:15,450
+Gamble x allows you to win $1,000
+
+8
+00:00:15,450 --> 00:00:18,980
+or to get nothing with 50/50 odds.
+
+9
+00:00:18,980 --> 00:00:23,990
+Gamble y gives you a 70% chance of winning $600 or 30%
+
+10
+00:00:23,990 --> 00:00:26,300
+chance of winning $200.
+
+11
+00:00:26,300 --> 00:00:30,190
+Which of these choices is preferred?
+
+12
+00:00:30,190 --> 00:00:33,670
+Now, a naive approach would be to compute expected payoffs
+
+13
+00:00:33,670 --> 00:00:35,590
+and then choose the higher one.
+
+14
+00:00:35,590 --> 00:00:36,850
+But what about randomness?
+
+15
+00:00:36,850 --> 00:00:38,840
+What about risk?
+
+16
+00:00:38,840 --> 00:00:41,650
+We know that a 50/50 gamble of winning $1,000
+
+17
+00:00:41,650 --> 00:00:46,150
+or getting nothing is not the same as getting $500 for sure.
+
+18
+00:00:46,150 --> 00:00:49,390
+Most people are averse to this kind of risk.
+
+19
+00:00:49,390 --> 00:00:51,850
+How should we quantify the trade off
+
+20
+00:00:51,850 --> 00:00:55,630
+between expected payoffs, uncertainty, variance,
+
+21
+00:00:55,630 --> 00:00:58,668
+or other properties of the payoff distributions?
+
+22
+00:00:58,668 --> 00:01:00,710
+That is the question that we are going to answer.
+
+23
+00:01:00,710 --> 00:01:03,680
+
+
+24
+00:01:03,680 --> 00:01:07,700
+There are two general approaches to building models for decision
+
+25
+00:01:07,700 --> 00:01:09,560
+making and uncertainty.
+
+26
+00:01:09,560 --> 00:01:12,530
+Let's call them rational and behavioral.
+
+27
+00:01:12,530 --> 00:01:14,090
+The rational approach, which is what
+
+28
+00:01:14,090 --> 00:01:18,390
+we are going to pursue in this class, is prescriptive.
+
+29
+00:01:18,390 --> 00:01:22,370
+It's a model of choice, which gives us consistent decisions
+
+30
+00:01:22,370 --> 00:01:23,870
+and uncertainty.
+
+31
+00:01:23,870 --> 00:01:26,700
+This internal consistency is desirable.
+
+32
+00:01:26,700 --> 00:01:30,380
+It's basically a way of avoiding costly mistakes.
+
+33
+00:01:30,380 --> 00:01:32,960
+Behavioral approach has a different objective.
+
+34
+00:01:32,960 --> 00:01:36,230
+Rather than figuring out what is the right consistent way
+
+35
+00:01:36,230 --> 00:01:39,140
+of making decisions, the behavioral approach
+
+36
+00:01:39,140 --> 00:01:42,440
+aims to describe how individuals make decisions
+
+37
+00:01:42,440 --> 00:01:44,750
+in all of their imperfections.
+
+38
+00:01:44,750 --> 00:01:47,000
+For example, if you're an investor,
+
+39
+00:01:47,000 --> 00:01:50,840
+you're trying to avoid mistakes in your portfolio choice.
+
+40
+00:01:50,840 --> 00:01:52,820
+You would want to use a rational approach
+
+41
+00:01:52,820 --> 00:01:56,310
+to make sure that your own decision making is consistent.
+
+42
+00:01:56,310 --> 00:01:58,370
+If you're a financial advisor thinking
+
+43
+00:01:58,370 --> 00:02:00,770
+about how to best advise your clients,
+
+44
+00:02:00,770 --> 00:02:03,170
+you may want to understand what behavioral biases are
+
+45
+00:02:03,170 --> 00:02:06,110
+most relevant and help the client correct them.
+
+46
+00:02:06,110 --> 00:02:09,908
+If you're a trader, thinking about what other traders are
+
+47
+00:02:09,908 --> 00:02:11,450
+doing in the market, whoever's taking
+
+48
+00:02:11,450 --> 00:02:14,960
+the other side of your trade, understanding behavioral biases
+
+49
+00:02:14,960 --> 00:02:19,300
+could be at the core of your profitability.
+
+50
+00:02:19,300 --> 00:02:21,700
+So we're going to proceed developing
+
+51
+00:02:21,700 --> 00:02:23,860
+a model of consistent decision making,
+
+52
+00:02:23,860 --> 00:02:26,980
+and we'll call it a rational model.
+
+53
+00:02:26,980 --> 00:02:30,100
+Our model is going to make a few basic assumptions.
+
+54
+00:02:30,100 --> 00:02:33,820
+We are going to think about preferences over outcomes only.
+
+55
+00:02:33,820 --> 00:02:36,560
+Outcomes in our case are cash flows.
+
+56
+00:02:36,560 --> 00:02:37,390
+This is important.
+
+57
+00:02:37,390 --> 00:02:39,640
+It's a restriction which could be relaxed.
+
+58
+00:02:39,640 --> 00:02:41,830
+But under the basic model, we are
+
+59
+00:02:41,830 --> 00:02:43,600
+going to make this assumption.
+
+60
+00:02:43,600 --> 00:02:45,820
+What this means is that we are going
+
+61
+00:02:45,820 --> 00:02:48,200
+to think about the value of the pay off--
+
+62
+00:02:48,200 --> 00:02:50,860
+$100, $1,000 payoff.
+
+63
+00:02:50,860 --> 00:02:53,590
+We're not going to think about the circumstances under which
+
+64
+00:02:53,590 --> 00:02:55,150
+the payoffs are realized.
+
+65
+00:02:55,150 --> 00:02:58,080
+That is a more general problem.
+
+66
+00:02:58,080 --> 00:03:00,210
+We will also model preferences in a way
+
+67
+00:03:00,210 --> 00:03:04,230
+that is independent of how cash flows are generated.
+
+68
+00:03:04,230 --> 00:03:06,750
+Randomness may come from many sources.
+
+69
+00:03:06,750 --> 00:03:08,730
+It could be algorithmically generated.
+
+70
+00:03:08,730 --> 00:03:11,550
+It could be a natural outcome of economic forces.
+
+71
+00:03:11,550 --> 00:03:13,560
+At the end, our preferences are going
+
+72
+00:03:13,560 --> 00:03:17,190
+to be developed to deal with the distribution of cash flows
+
+73
+00:03:17,190 --> 00:03:21,360
+and not with the mechanism for generating randomness.
+
+74
+00:03:21,360 --> 00:03:22,860
+These are the two basic assumptions
+
+75
+00:03:22,860 --> 00:03:24,330
+that we are going to start with.
+
+76
+00:03:24,330 --> 00:03:26,570
+We're going to maintain them.
+
+77
+00:03:26,570 --> 00:03:28,670
+The expected utility theory, which
+
+78
+00:03:28,670 --> 00:03:32,510
+we are going to present next, is at the core
+
+79
+00:03:32,510 --> 00:03:34,860
+of the rational approach to decision making.
+
+80
+00:03:34,860 --> 00:03:36,740
+It's the leading model for decision making
+
+81
+00:03:36,740 --> 00:03:38,900
+and uncertainty.
+
+82
+00:03:38,900 --> 00:03:41,240
+Under the expected utility theory,
+
+83
+00:03:41,240 --> 00:03:43,880
+investors do not use expected payoff
+
+84
+00:03:43,880 --> 00:03:46,800
+of a gamble to compare gambles to each other.
+
+85
+00:03:46,800 --> 00:03:49,518
+They don't think about just the mean of the return.
+
+86
+00:03:49,518 --> 00:03:51,310
+They don't think about the expected pay off
+
+87
+00:03:51,310 --> 00:03:52,540
+of an investment.
+
+88
+00:03:52,540 --> 00:03:55,370
+They think about the entire distribution.
+
+89
+00:03:55,370 --> 00:03:59,120
+Expected utility theory applies a transformation to the payoff.
+
+90
+00:03:59,120 --> 00:04:01,290
+It's a nonlinear transformation.
+
+91
+00:04:01,290 --> 00:04:04,490
+For example, $1,000 payoff is not
+
+92
+00:04:04,490 --> 00:04:08,540
+going to be perceived as twice as valuable as $500.
+
+93
+00:04:08,540 --> 00:04:11,330
+An investor, depending on his or her preferences,
+
+94
+00:04:11,330 --> 00:04:13,880
+is going to adjust the internal value
+
+95
+00:04:13,880 --> 00:04:16,370
+of each payoff, the utility of each payoff,
+
+96
+00:04:16,370 --> 00:04:20,430
+to reflect their preferences.
+
+97
+00:04:20,430 --> 00:04:23,400
+Once the payoffs are transformed nonlinearly,
+
+98
+00:04:23,400 --> 00:04:27,710
+as you can see in this graph, the probabilities of payoffs
+
+99
+00:04:27,710 --> 00:04:29,630
+are then applied as weights.
+
+100
+00:04:29,630 --> 00:04:31,970
+So under the expected utility theory,
+
+101
+00:04:31,970 --> 00:04:35,450
+an investor evaluates a particular risk investment
+
+102
+00:04:35,450 --> 00:04:39,800
+based on the expected utility, where the utility evaluated
+
+103
+00:04:39,800 --> 00:04:44,060
+as a function of outcomes is averaged using probabilities
+
+104
+00:04:44,060 --> 00:04:46,490
+of different events as weights.
+
+105
+00:04:46,490 --> 00:04:49,790
+For example, if you are faced with a binary gamble
+
+106
+00:04:49,790 --> 00:04:51,960
+and the curve presented on the graph,
+
+107
+00:04:51,960 --> 00:04:54,630
+the blue line is the utility function.
+
+108
+00:04:54,630 --> 00:04:59,390
+The gamble has only two possible payoffs, either 1.2 or 2.8,
+
+109
+00:04:59,390 --> 00:05:00,950
+both equally likely.
+
+110
+00:05:00,950 --> 00:05:05,630
+The utility of the payoff is going to be given by the dot
+
+111
+00:05:05,630 --> 00:05:08,030
+in the middle of the segment, connecting the two
+
+112
+00:05:08,030 --> 00:05:10,400
+dots on the utility curve.
+
+113
+00:05:10,400 --> 00:05:12,230
+This is a graphical representation
+
+114
+00:05:12,230 --> 00:05:16,590
+of the expected utility of this particular gamble.
+
+115
+00:05:16,590 --> 00:05:19,950
+An investor transforms payoffs using the utility function
+
+116
+00:05:19,950 --> 00:05:22,890
+and computes expected value of the utility.
+
+117
+00:05:22,890 --> 00:05:24,270
+That's the starting point.
+
+118
+00:05:24,270 --> 00:05:26,640
+That's the description of uncertainty
+
+119
+00:05:26,640 --> 00:05:31,490
+and how an investor feels about different risky outcomes.
+
+120
+00:05:31,490 --> 00:05:33,710
+Now, the consistent approach to choice
+
+121
+00:05:33,710 --> 00:05:37,070
+is to compare risky investments to each other
+
+122
+00:05:37,070 --> 00:05:40,100
+based on their expected utility.
+
+123
+00:05:40,100 --> 00:05:43,460
+When thinking about investment a versus investment b,
+
+124
+00:05:43,460 --> 00:05:47,150
+whichever yields higher expected utility is preferred.
+
+125
+00:05:47,150 --> 00:05:50,300
+That is the expected utility theory.
+
+126
+00:05:50,300 --> 00:05:53,750
+This approach is mathematicaly parsimonious.
+
+127
+00:05:53,750 --> 00:05:58,910
+It's fairly intuitive, and it helps avoid costly mistakes.
+
+128
+00:05:58,910 --> 00:06:01,580
+It respects laws of probability.
+
+129
+00:06:01,580 --> 00:06:04,190
+It leads to investment decisions with
+
+130
+00:06:04,190 --> 00:06:08,580
+some basic desirable properties, such as sensitivity.
+
+131
+00:06:08,580 --> 00:06:11,210
+For example, under the expected utility theory,
+
+132
+00:06:11,210 --> 00:06:15,110
+if an investor prefers x to y and y to z,
+
+133
+00:06:15,110 --> 00:06:19,000
+the same investor will correctly prefer x to z.
+

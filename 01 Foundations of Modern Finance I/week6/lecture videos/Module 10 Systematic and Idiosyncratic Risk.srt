@@ -1,0 +1,876 @@
+0
+00:00:00,000 --> 00:00:00,932
+
+
+1
+00:00:00,932 --> 00:00:05,150
+PROFESSOR: We will now introduce our main result, portfolio
+
+2
+00:00:05,150 --> 00:00:06,770
+diversification.
+
+3
+00:00:06,770 --> 00:00:10,100
+First, let's look at an example before we take a deeper dive
+
+4
+00:00:10,100 --> 00:00:12,870
+into the analytics.
+
+5
+00:00:12,870 --> 00:00:15,210
+Consider a portfolio of two securities.
+
+6
+00:00:15,210 --> 00:00:18,750
+This time we are going to look at two individual stocks, IBM
+
+7
+00:00:18,750 --> 00:00:20,280
+and Intel.
+
+8
+00:00:20,280 --> 00:00:24,210
+These are both large technology stocks.
+
+9
+00:00:24,210 --> 00:00:27,340
+We form a portfolio with equal investments
+
+10
+00:00:27,340 --> 00:00:29,690
+in these two securities.
+
+11
+00:00:29,690 --> 00:00:33,010
+When we compare the volatilities of individual investments
+
+12
+00:00:33,010 --> 00:00:37,130
+on IBM and Intel to that of the portfolio,
+
+13
+00:00:37,130 --> 00:00:40,370
+we see that the volatility of portfolio returns
+
+14
+00:00:40,370 --> 00:00:45,040
+is lower than either of the two volatilities.
+
+15
+00:00:45,040 --> 00:00:46,700
+By combining these two securities
+
+16
+00:00:46,700 --> 00:00:50,450
+into a single portfolio, we are able to reduce risk.
+
+17
+00:00:50,450 --> 00:00:52,520
+It is now lower than it would have
+
+18
+00:00:52,520 --> 00:00:57,110
+been for any one of these two as individual investments.
+
+19
+00:00:57,110 --> 00:00:59,240
+This is an example of all one can
+
+20
+00:00:59,240 --> 00:01:02,840
+achieve by diversifying risk.
+
+21
+00:01:02,840 --> 00:01:05,990
+It is intuitive why the risk of the portfolio
+
+22
+00:01:05,990 --> 00:01:08,330
+may be relatively low.
+
+23
+00:01:08,330 --> 00:01:12,230
+These two stocks, IBM and Intel, are different companies
+
+24
+00:01:12,230 --> 00:01:15,290
+with their own firm-specific risks.
+
+25
+00:01:15,290 --> 00:01:16,675
+They have a lot in common.
+
+26
+00:01:16,675 --> 00:01:18,800
+They are both technology stocks.
+
+27
+00:01:18,800 --> 00:01:22,100
+They're both exposed to macroeconomic news.
+
+28
+00:01:22,100 --> 00:01:24,980
+But they also have individual components.
+
+29
+00:01:24,980 --> 00:01:27,230
+By combining them into the portfolio,
+
+30
+00:01:27,230 --> 00:01:30,860
+we are able to reduce the impact of individual firm-specific
+
+31
+00:01:30,860 --> 00:01:31,850
+risk.
+
+32
+00:01:31,850 --> 00:01:35,670
+When one of these stocks is up for idiosyncratic reasons,
+
+33
+00:01:35,670 --> 00:01:37,490
+the other one may be down.
+
+34
+00:01:37,490 --> 00:01:39,200
+This kind of consolidation is what
+
+35
+00:01:39,200 --> 00:01:42,230
+enables us to reduce the portfolio risk.
+
+36
+00:01:42,230 --> 00:01:46,640
+More formally, we will see that a reduction in portfolio risk
+
+37
+00:01:46,640 --> 00:01:52,270
+is based on the covariance of returns between the two assets.
+
+38
+00:01:52,270 --> 00:01:56,370
+The following graph illustrates the concept of diversification.
+
+39
+00:01:56,370 --> 00:01:59,660
+We start with two securities with identical volatilities,
+
+40
+00:01:59,660 --> 00:02:02,900
+35% in this case.
+
+41
+00:02:02,900 --> 00:02:04,870
+We make several alternative assumptions
+
+42
+00:02:04,870 --> 00:02:08,139
+about the degree of correlation between the two assets.
+
+43
+00:02:08,139 --> 00:02:10,449
+One extreme case will be when the correlation
+
+44
+00:02:10,449 --> 00:02:13,590
+is perfect, equal to 1.
+
+45
+00:02:13,590 --> 00:02:15,840
+Most of the time correlation is imperfect,
+
+46
+00:02:15,840 --> 00:02:20,610
+so we look at a few alternative values, 0.5, 0,
+
+47
+00:02:20,610 --> 00:02:23,950
+and even a negative number, minus 0.5.
+
+48
+00:02:23,950 --> 00:02:27,130
+What we see is that as the correlation between the two
+
+49
+00:02:27,130 --> 00:02:31,450
+securities declines, the volatility of the portfolio
+
+50
+00:02:31,450 --> 00:02:33,610
+gets progressively lower.
+
+51
+00:02:33,610 --> 00:02:37,150
+This illustrates the power of diversification.
+
+52
+00:02:37,150 --> 00:02:39,970
+The case of the negative correlation of 0.5
+
+53
+00:02:39,970 --> 00:02:42,700
+leads to the largest reduction in risk
+
+54
+00:02:42,700 --> 00:02:45,310
+through diversification.
+
+55
+00:02:45,310 --> 00:02:47,230
+Now, let's step back and think a bit
+
+56
+00:02:47,230 --> 00:02:50,980
+about the limits of diversification as a tool.
+
+57
+00:02:50,980 --> 00:02:53,310
+What can we hope to achieve?
+
+58
+00:02:53,310 --> 00:02:57,360
+Some of the risks are truly security specific.
+
+59
+00:02:57,360 --> 00:02:59,980
+And by combining assets into a portfolio,
+
+60
+00:02:59,980 --> 00:03:04,360
+we can hope to reduce the impact of these risks significantly.
+
+61
+00:03:04,360 --> 00:03:07,420
+There are certain kinds of risks that are broad,
+
+62
+00:03:07,420 --> 00:03:11,230
+that affect multiple assets or perhaps the entire market.
+
+63
+00:03:11,230 --> 00:03:14,110
+These types of risks cannot be eliminated through
+
+64
+00:03:14,110 --> 00:03:16,590
+diversification.
+
+65
+00:03:16,590 --> 00:03:19,560
+As a result, there are two types of risks that we can
+
+66
+00:03:19,560 --> 00:03:22,253
+distinguish, diversifiable--
+
+67
+00:03:22,253 --> 00:03:23,670
+these are the types of shocks that
+
+68
+00:03:23,670 --> 00:03:26,940
+can be eliminated or significantly reduced
+
+69
+00:03:26,940 --> 00:03:30,600
+through diversification by forming portfolios--
+
+70
+00:03:30,600 --> 00:03:33,510
+and non-diversifiable-- these types of risks
+
+71
+00:03:33,510 --> 00:03:35,790
+survive portfolio formation.
+
+72
+00:03:35,790 --> 00:03:38,790
+They are present even in well diversified portfolios
+
+73
+00:03:38,790 --> 00:03:40,880
+with many assets.
+
+74
+00:03:40,880 --> 00:03:42,980
+There are several intuitive examples
+
+75
+00:03:42,980 --> 00:03:46,310
+of important non-diversifiable risks,
+
+76
+00:03:46,310 --> 00:03:48,710
+for example, business cycle shocks.
+
+77
+00:03:48,710 --> 00:03:52,070
+They affect multiple businesses in the same direction.
+
+78
+00:03:52,070 --> 00:03:54,590
+As a result, forming a portfolio of stocks
+
+79
+00:03:54,590 --> 00:03:57,020
+does not help eliminate exposures
+
+80
+00:03:57,020 --> 00:03:59,440
+to business cycle shocks.
+
+81
+00:03:59,440 --> 00:04:01,930
+Inflation shocks are another example.
+
+82
+00:04:01,930 --> 00:04:05,750
+They affect multiple assets in the same direction.
+
+83
+00:04:05,750 --> 00:04:08,590
+A spike in inflation is going to affect a portfolio
+
+84
+00:04:08,590 --> 00:04:12,370
+in the same way it affects individual assets.
+
+85
+00:04:12,370 --> 00:04:15,820
+Shocks to market liquidity have a similar effect.
+
+86
+00:04:15,820 --> 00:04:18,790
+Many securities decline in value when
+
+87
+00:04:18,790 --> 00:04:21,130
+market liquidity deteriorates.
+
+88
+00:04:21,130 --> 00:04:22,540
+Not all of them do.
+
+89
+00:04:22,540 --> 00:04:24,850
+As we will see in other classes, there
+
+90
+00:04:24,850 --> 00:04:26,510
+are exceptions to this rule.
+
+91
+00:04:26,510 --> 00:04:28,060
+And securities like US Treasuries
+
+92
+00:04:28,060 --> 00:04:30,440
+tend to move in the opposite direction.
+
+93
+00:04:30,440 --> 00:04:34,870
+What this tells us is that exposure to the common shocks
+
+94
+00:04:34,870 --> 00:04:38,800
+largely affects financial assets in the same way.
+
+95
+00:04:38,800 --> 00:04:41,210
+But not all of them have identical exposures.
+
+96
+00:04:41,210 --> 00:04:43,720
+It's a relatively nuanced picture.
+
+97
+00:04:43,720 --> 00:04:45,520
+Nonetheless, it is clear that shocks
+
+98
+00:04:45,520 --> 00:04:48,790
+like liquidity shocks, inflation shocks, and business cycle
+
+99
+00:04:48,790 --> 00:04:53,110
+shocks are different in nature from firm-specific risks, which
+
+100
+00:04:53,110 --> 00:04:57,830
+can be eliminated or reduced by diversification.
+
+101
+00:04:57,830 --> 00:05:02,060
+Let's take a closer look at the mechanics of diversification.
+
+102
+00:05:02,060 --> 00:05:03,560
+How does it work?
+
+103
+00:05:03,560 --> 00:05:05,240
+And what are the limits to what we could
+
+104
+00:05:05,240 --> 00:05:07,820
+achieve through this process?
+
+105
+00:05:07,820 --> 00:05:12,370
+Consider an equally-weighted portfolio of n securities.
+
+106
+00:05:12,370 --> 00:05:16,260
+The covariance matrix of returns has diagonal elements
+
+107
+00:05:16,260 --> 00:05:18,270
+denoted by sigma ii--
+
+108
+00:05:18,270 --> 00:05:21,780
+these are the individual variances of asset returns--
+
+109
+00:05:21,780 --> 00:05:24,840
+and off-diagonal elements, sigma ij,
+
+110
+00:05:24,840 --> 00:05:27,730
+which give us covariances of returns,
+
+111
+00:05:27,730 --> 00:05:31,140
+asset i versus asset j.
+
+112
+00:05:31,140 --> 00:05:34,080
+To compute the variance of the portfolio return,
+
+113
+00:05:34,080 --> 00:05:36,480
+we need to sum over all of the elements
+
+114
+00:05:36,480 --> 00:05:38,580
+in the covariance matrix multiplied
+
+115
+00:05:38,580 --> 00:05:40,920
+by the product of portfolio weights.
+
+116
+00:05:40,920 --> 00:05:43,930
+In our special case of the equally-weighted portfolio,
+
+117
+00:05:43,930 --> 00:05:45,600
+all portfolio weights are the same.
+
+118
+00:05:45,600 --> 00:05:48,680
+They're equal to 1 over n.
+
+119
+00:05:48,680 --> 00:05:51,290
+What we see as a result is that the variance
+
+120
+00:05:51,290 --> 00:05:56,730
+of portfolio returns is a sum of the diagonal terms.
+
+121
+00:05:56,730 --> 00:05:58,400
+Each of them is equal to 1 over n
+
+122
+00:05:58,400 --> 00:06:03,770
+squared times the variance of asset i's return
+
+123
+00:06:03,770 --> 00:06:06,890
+and the sum of the off-diagonal elements, which
+
+124
+00:06:06,890 --> 00:06:11,930
+is the sum of 1 over n squared times sigma ij over all values
+
+125
+00:06:11,930 --> 00:06:15,260
+of i and j that are not equal to each other.
+
+126
+00:06:15,260 --> 00:06:18,650
+The key observation here is that in a large matrix,
+
+127
+00:06:18,650 --> 00:06:20,850
+in a portfolio with many assets, there
+
+128
+00:06:20,850 --> 00:06:23,190
+are a lot more off-diagonal elements than there
+
+129
+00:06:23,190 --> 00:06:25,190
+are the diagonal elements.
+
+130
+00:06:25,190 --> 00:06:29,120
+In fact, in case of n assets in the portfolio,
+
+131
+00:06:29,120 --> 00:06:32,630
+there are n squared minus n off-diagonal elements.
+
+132
+00:06:32,630 --> 00:06:36,020
+To put it into perspective, in a portfolio of 100 assets,
+
+133
+00:06:36,020 --> 00:06:38,510
+there are only 100 diagonal elements.
+
+134
+00:06:38,510 --> 00:06:42,410
+And there are almost 10,000 off-diagonal elements--
+
+135
+00:06:42,410 --> 00:06:46,950
+9,900 to be precise.
+
+136
+00:06:46,950 --> 00:06:49,110
+When we put together all of the terms
+
+137
+00:06:49,110 --> 00:06:51,840
+in the expression for the portfolio variance,
+
+138
+00:06:51,840 --> 00:06:55,480
+we can see that the expression separates into two terms.
+
+139
+00:06:55,480 --> 00:07:00,090
+The first is 1 over n times the average variance
+
+140
+00:07:00,090 --> 00:07:02,280
+of individual returns.
+
+141
+00:07:02,280 --> 00:07:05,490
+The second term is very close to the average pair-wise
+
+142
+00:07:05,490 --> 00:07:08,210
+covariance of returns.
+
+143
+00:07:08,210 --> 00:07:11,150
+As the number of assets in the portfolio increases,
+
+144
+00:07:11,150 --> 00:07:14,480
+the first term converges towards 0.
+
+145
+00:07:14,480 --> 00:07:17,240
+The second term does not disappear.
+
+146
+00:07:17,240 --> 00:07:21,490
+In fact, it converges to the average covariance of returns.
+
+147
+00:07:21,490 --> 00:07:25,540
+What this result tells us is that in a well-diversified
+
+148
+00:07:25,540 --> 00:07:30,010
+portfolio with many assets, variance of portfolio returns
+
+149
+00:07:30,010 --> 00:07:32,650
+is determined by the average covariance
+
+150
+00:07:32,650 --> 00:07:34,840
+of individual returns rather than
+
+151
+00:07:34,840 --> 00:07:38,470
+by their own risk or their own variance.
+
+152
+00:07:38,470 --> 00:07:42,700
+This tells us where the limit of the diversification is.
+
+153
+00:07:42,700 --> 00:07:46,180
+By forming a large portfolio with many assets
+
+154
+00:07:46,180 --> 00:07:48,400
+and diversifying risk, we will be
+
+155
+00:07:48,400 --> 00:07:52,880
+able to eliminate firm-specific risk, asset-specific risk.
+
+156
+00:07:52,880 --> 00:07:56,350
+And we will be left with the average covariance, which
+
+157
+00:07:56,350 --> 00:07:59,580
+captures the contribution of systematic risks, those that
+
+158
+00:07:59,580 --> 00:08:01,135
+are common to multiple assets.
+
+159
+00:08:01,135 --> 00:08:03,700
+
+
+160
+00:08:03,700 --> 00:08:05,650
+To gain further intuition, let's plug
+
+161
+00:08:05,650 --> 00:08:09,460
+in some numbers that are typical for empirical distributions
+
+162
+00:08:09,460 --> 00:08:12,360
+of asset returns.
+
+163
+00:08:12,360 --> 00:08:15,360
+On average, a standard deviation of a stock in the US stock
+
+164
+00:08:15,360 --> 00:08:19,280
+market is close to 10% per month.
+
+165
+00:08:19,280 --> 00:08:24,510
+A typical number for pair-wise correlations is 40%.
+
+166
+00:08:24,510 --> 00:08:26,340
+Using our previous expression, we
+
+167
+00:08:26,340 --> 00:08:29,010
+can then compute the average covariance
+
+168
+00:08:29,010 --> 00:08:31,070
+of returns in the portfolio.
+
+169
+00:08:31,070 --> 00:08:35,280
+The covariance is a product of the correlation coefficient
+
+170
+00:08:35,280 --> 00:08:38,220
+and individual return volatilities.
+
+171
+00:08:38,220 --> 00:08:42,659
+In our case, this product is equal to 0.004.
+
+172
+00:08:42,659 --> 00:08:47,800
+That is the average covariance of returns in the portfolio.
+
+173
+00:08:47,800 --> 00:08:51,790
+As we have shown, the variance of a well-diversified portfolio
+
+174
+00:08:51,790 --> 00:08:56,030
+is equal to this number, the average covariance of returns,
+
+175
+00:08:56,030 --> 00:08:59,860
+which tells us that portfolio volatility is close to 6%.
+
+176
+00:08:59,860 --> 00:09:03,250
+
+
+177
+00:09:03,250 --> 00:09:07,300
+We can see that by starting with individual assets
+
+178
+00:09:07,300 --> 00:09:10,890
+with 10% return volatility and diversifying,
+
+179
+00:09:10,890 --> 00:09:13,640
+we are able to eliminate some of the risk.
+
+180
+00:09:13,640 --> 00:09:18,230
+We reduce portfolio risk to close to 6%.
+
+181
+00:09:18,230 --> 00:09:21,220
+We're not able to reduce it to 0, because some of the risk
+
+182
+00:09:21,220 --> 00:09:23,200
+is common to multiple assets.
+
+183
+00:09:23,200 --> 00:09:26,050
+But we are able to eliminate a significant fraction of risk
+
+184
+00:09:26,050 --> 00:09:28,830
+from the portfolio.
+
+185
+00:09:28,830 --> 00:09:30,900
+What if correlation was different?
+
+186
+00:09:30,900 --> 00:09:34,050
+What if it was equal to 1 or 0?
+
+187
+00:09:34,050 --> 00:09:36,270
+In this case, you would find different limits
+
+188
+00:09:36,270 --> 00:09:39,440
+to diversification.
+
+189
+00:09:39,440 --> 00:09:41,830
+As you can see from the graph, in the case
+
+190
+00:09:41,830 --> 00:09:44,350
+of perfect correlation, or equal to 1,
+
+191
+00:09:44,350 --> 00:09:47,770
+diversification does not reduce portfolio risk.
+
+192
+00:09:47,770 --> 00:09:49,480
+This is very intuitive.
+
+193
+00:09:49,480 --> 00:09:53,500
+Correlation equal to 1 means that all assets move together
+
+194
+00:09:53,500 --> 00:09:54,880
+in unison.
+
+195
+00:09:54,880 --> 00:09:58,150
+There is no benefit in combining them into a portfolio.
+
+196
+00:09:58,150 --> 00:10:00,460
+We cannot reduce the risk.
+
+197
+00:10:00,460 --> 00:10:04,660
+Correlation equal to 0 gives us more room to diversify.
+
+198
+00:10:04,660 --> 00:10:08,230
+0 correlation means that the covariance of returns
+
+199
+00:10:08,230 --> 00:10:11,020
+on any pair of assets is 0.
+
+200
+00:10:11,020 --> 00:10:13,180
+And that tells us that in a limit, when
+
+201
+00:10:13,180 --> 00:10:15,760
+the number of assets goes to infinity,
+
+202
+00:10:15,760 --> 00:10:19,060
+the variance of portfolio returns will converge to 0.
+
+203
+00:10:19,060 --> 00:10:22,570
+In this case, we can eliminate all of the risk in the limit
+
+204
+00:10:22,570 --> 00:10:26,520
+as the portfolio grows in the number of assets.
+
+205
+00:10:26,520 --> 00:10:29,880
+The curve in the middle is the case that we just explored,
+
+206
+00:10:29,880 --> 00:10:32,640
+average correlation equal to 0.4.
+
+207
+00:10:32,640 --> 00:10:36,150
+You can see that in this case, some of the portfolio risk
+
+208
+00:10:36,150 --> 00:10:38,880
+can be eliminated through diversification.
+
+209
+00:10:38,880 --> 00:10:40,650
+And some of it is left.
+
+210
+00:10:40,650 --> 00:10:44,910
+Whatever is left is what we call systematic non-diversifiable
+
+211
+00:10:44,910 --> 00:10:46,690
+risk.
+
+212
+00:10:46,690 --> 00:10:48,970
+Another lesson from this graph is
+
+213
+00:10:48,970 --> 00:10:53,320
+that it doesn't take many assets to reduce risk of the portfolio
+
+214
+00:10:53,320 --> 00:10:54,760
+significantly.
+
+215
+00:10:54,760 --> 00:10:56,860
+Starting from a single investment
+
+216
+00:10:56,860 --> 00:11:00,560
+and moving to 4 or 10 or 20 assets in the portfolio,
+
+217
+00:11:00,560 --> 00:11:04,240
+we can realize most of the benefits of diversification.
+
+218
+00:11:04,240 --> 00:11:09,450
+Going past 50 or 100 assets has little additional benefit.
+

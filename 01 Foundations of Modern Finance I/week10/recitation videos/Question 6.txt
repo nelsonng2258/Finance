@@ -1,0 +1,160 @@
+
+PROFESSOR: Rio Tinto is considering the development
+of a bauxite mine.
+Development costs are estimated to be $24 million in year zero.
+The mine will generate 4 million in cash flows
+over the next 10 years, starting in year 1
+and ending in year 10.
+After that, Rio Tinto is planning to close the mine
+and to bring the site in compliance
+with environmental laws.
+The estimated costs of closing and compliance
+are expected to be $350,000 per year starting in year 11
+and continuing in perpetuity.
+Assume that the cost of capital is 8%.
+The first question asks find the internal rate
+of return of this project.
+Should you invest in this project based on the IRR rule?
+Let's start by entering given information
+into the spreadsheet.
+In year 0 we have to spend $24 million to develop the mine.
+In years 1 through 10, the mine will generate $4 million
+per year.
+Starting in year 11 we have to spend $350,000 or 0.35 million
+per year in compliance costs.
+First, let's write down the NPV of this project as a function
+of discount rate r.
+It equals to negative 24 million,
+which is the initial investment, plus the second term, which
+captures present value of positive cash flows
+that the project generates in years 1 through 10.
+This is a simple annuity that pays 4 million
+each year for 10 years.
+The last term captures compliance costs,
+it is a perpetuity that starts in year 11.
+We can use the perpetuity formula
+to find its value in year 10, which is 0.35 divided by r
+and then we discount this value to present.
+
+Now to find the internal rate of return
+we need to set this NPV to 0 and solve this equation for r.
+Now obviously we cannot do this by hand because this is
+a linear equation of high dimension.
+We also cannot use IRR formula that we used in previous
+question because we're dealing with perpetuity and therefore
+cannot enter the entire stream of cash flows into an array.
+In other words, we just cannot enter an infinite array here
+in Excel.
+Therefore we need to utilize Goal Seek tool.
+Let's start with initial guess for IRR, say 1%.
+Given this 1% I will compute the net present value
+of this project.
+I will break down this calculation
+into three parts, the initial investment, the annuity part
+and the perpetuity part.
+The initial investment simply equals to negative 24 million.
+The annuity part equals to 4, divided
+by r, multiplied by 1 minus 1, divided by 1 plus r,
+raised to the power 10.
+
+And the perpetuity part equals to 0.35, divided by r,
+and this entire expression is divided or discounted
+to present at discount rate r.
+
+Now the NPV of the project is the sum
+of these three components.
+
+Now to find the internal rate of return,
+I go to Data, What If Analysis, Goal Seek, so I
+set the cell or the NPV to 0, remember
+that internal rate of return is the discount rate
+r that sets this NPV to 0, by changing
+the cell of our initial guess.
+
+So Excel solves this for us and gives us
+the solution that the internal rate of return for this project
+equals to 2.48%.
+Now given that the cost of capital is 8%
+and the internal rate of return is
+less than the cost of capital, the conventional internal rate
+of return rule would imply that we should not
+take this project.
+The second part of this question asks
+us to find the net present value and asks
+whether we should invest in this project based on the NPV rule.
+Well the NPV of this project is simply this expression,
+it is the same expression that we just
+used to find internal rate of return
+but here we're just using the cost of capital of 8%.
+Turns out that the net present value of this project
+is $814,000, therefore Rio Tinto should go ahead
+with this project.
+This contradicts the answer that we
+received based on the internal rate of return rule.
+So what gives?
+To understand what's going on let's
+build an NPV profile of this project.
+I have created an array of discount rates from 2% to 15%
+in quarter of a percent increments.
+For each of these discount rates let's
+compute the net present value.
+I'm using here the same formula as the one we just used.
+I will extend this array which will automatically
+compute the net present value for all discount rates
+that we have here.
+Now what we see on the graph is the NPV profile
+of this project.
+Recall that in question 5 NPV profile was a decreasing
+function of discount rates.
+What we see here is a very different picture,
+NPV profile is first increasing and then decreasing
+in discount rates.
+We visually see that when discount rate is
+8%, which is our cost of capital,
+the net present value of this project is positive
+and therefore we should take this project.
+
+To understand why IRR rule gave us the wrong investment advice
+recall the following, IRR rule can be used only
+when cash outflow occurs only in time 0,
+only one project is under consideration,
+opportunity cost of capital is the same for all periods
+and the threshold rate is set to the cost of capital.
+In our case, cash outflow occurs in year 0
+as well as from year 11 onwards.
+Therefore, we cannot use the internal rate of return rule
+to make an investment decision in this case.
+Let me make another remark, the NPV profile
+here shows that this project has two internal rates of return.
+The first one is somewhere between 2% and 3%
+and the second one is somewhere around 9%
+but when we used Goal Seek tool it gave us only one solution.
+The reason for this is the initial guess or the starting
+point.
+Our first initial starting point was
+1% and the numerical algorithm that
+solved this equation converged to the first solution here,
+which was 2.48%.
+But if we started from a different initial guess
+or initial starting point anywhere to the right
+from this hump, say at 6%, we would have
+converged to the second IRR.
+To confirm this, let's go back to the other spreadsheet
+and use Goal Seek tool with the starting point of 6%.
+So in this initial guess cell I will put 6%
+and I will go back to Goal Seek tool
+and I will ask it to set the net present value of this project
+to 0 by changing the discount rate cell.
+And if we solve this equation from a different starting
+point, we see that the algorithm here
+converged to this second internal rate of return,
+which is 9.04% in this case.
+The conclusion is that this project has two IRRs
+and we can find both of them using numerical tools in Excel.
+But what's more important is that we cannot use the internal
+rate of return rule to make the investment decision in this
+case because the conditions under which we can use the IRR
+rule are not satisfied, namely in this case,
+we have cash outflows that occur after year zero.
+In particular, the compliance costs that start in year 11
+and continue onwards.

@@ -1,0 +1,161 @@
+
+PROFESSOR: Having discussed the properties of individual asset
+returns, we will now talk about the joint distribution
+of returns.
+How can we describe interdependence
+of different financial assets?
+The core concept here is correlation-- correlation
+of returns.
+It is a measure of dependence.
+It's a linear measure.
+It's not the only possible way of describing how returns
+are related to each other.
+But it's a leading statistic that's very commonly used.
+We start with the covariance of returns.
+A covariance is defined mathematically
+as the expected value of the product of the differences
+between returns on asset i and its mean and asset
+j and its mean.
+The correlation is just the covariance
+of returns, normalized by the product of standard deviations.
+What this statistic captures is to what degree two assets
+co-move with each other.
+When correlation is high, close to 1,
+both assets tend to go up and down in unison.
+When correlation is close to minus 1,
+they tend to move in the opposite direction
+from each other.
+When correlation is zero, there is no linear relation
+between the two assets at all.
+A closely related concept is the beta of returns.
+The beta is the ratio of the covariance between returns
+on asset i and asset j and the variance of returns on asset j.
+The concept of beta is very important.
+We are going to come back to it.
+But intuitively, what the beta represents
+is the degree to which returns on asset j
+affect statistically returns on asset i.
+When beta is equal to 1, for each 1% movement in asset j,
+we would see on average 1% movement in asset i.
+When we plot returns on one asset
+versus the other as a scatter plot,
+beta is given by the slope of the regression line.
+The following graph provides a visual illustration
+of how joint distributions may look with positive, negative,
+or zero correlation.
+What you see in the top left corner
+is a scatter plot of the joint distribution
+of returns on two assets with zero correlation.
+It looks like a ball of points.
+There is no obvious linear relation between the two.
+On the right, we see two examples
+of imperfect correlation, a positive and negative.
+At the top, correlation is positive.
+It's equal to 0.5.
+We see, visually, a clear positive relation between two
+assets, which is not perfect.
+There is a lot of deviation from the 45 degree line.
+But nonetheless, it's clear the two assets, on average,
+move together in a positive direction.
+Below that is a graph corresponding
+to the correlation of minus 0.5.
+Now, we see that the typical relation between the two assets
+is negative.
+When one of them goes up, the other one tends to decline.
+At the bottom on the left, we see an example
+with a high degree of positive correlation.
+Now it is 0.8.
+We see that the points now fall very close to the 45 degree
+line, indicating that most of the movement
+is now highly related between the two assets.
+There is very little individual variation.
+Next, let's look at a couple of empirical examples
+showing us the degree of correlation
+between different kinds of financial assets.
+On the left, we have a scatter plot
+illustrating the joint distribution
+of returns on two stocks.
+One is Intel.
+The other one is IBM.
+Both of these are large technology stocks.
+What we see from this graph is a clear sense
+of positive relation between the two.
+These two returns are positively correlated.
+This is not surprising and, in fact, fairly typical.
+Stocks that are economically related to each other
+will tend to have positive correlation.
+On the right, we see a scatter plot
+of two exchange traded funds.
+We encountered them earlier--
+the bond fund, AGG, and the stock fund, SPY.
+It's a different picture.
+We now see that the distribution of points on the scatter plot
+does not show an obvious linear relation.
+The scatter plot looks like a random cloud of points.
+And the regression line is relatively flat.
+In this case, correlation between the two assets
+is very close to zero.
+Stocks and bonds have a low degree of correlation.
+This is an important empirical fact
+and forms the basis of long-term investment strategies
+diversifying risk between stocks and bonds.
+We will come back to the concept of diversification
+later in this class.
+Let's take a look at a broader pattern
+of correlations among different types of financial assets.
+In the table, we'll look at pair-wise correlations
+between stocks, bonds, treasury bills, and inflation.
+We see that closely related assets
+tend to have high levels of correlation.
+For instance, when we look at large cap stocks and small cap
+stocks, we observe correlations around 80%.
+Different types of equities tend to co-move with each other.
+Corporate bonds and Treasury bonds
+also show a high degree of co-movement, over 80%.
+Stocks versus long-term Treasuries,
+as we have seen before, don't have a lot of co-movement.
+And their correlation with each other is close to zero.
+Treasury bills tend to have positive correlation
+with inflation.
+It's not terribly high, but it's in the neighborhood of 40%.
+The reason for that is that the nominal return
+on Treasury bills has an inflation component.
+And that induces a positive correlation between the two.
+So far, we looked at the pair-wise correlations
+between financial assets.
+We think of these as cross-sectional correlations,
+how returns are related to each other at a point in time.
+Another important dimension is time-series correlation
+or order correlation.
+This concept applies to a single asset over time.
+We are now looking at how returns
+during different periods are related to each other.
+The empirical fact in financial markets
+is that there is not a lot of serial correlation in returns.
+Autocorrelation, or serial correlation,
+of returns on most assets is very close to zero.
+This is the case for stocks and long-term bonds.
+The reason for that has to do with the fact
+that high degree of serial correlation
+would imply that it is relatively easy to forecast
+future returns by observing past returns;
+the two are closely related.
+Being able to predict returns in risky assets
+would then enable one to design highly profitable trading
+strategies.
+These are difficult to come by.
+As a result, the implication is that one should not
+observe high levels of autocorrelation
+in returns, particularly at high frequency-- daily,
+weekly, or monthly.
+The following figure illustrates the point.
+We are now looking at the monthly returns on a stock.
+It's a stock of IBM.
+And the scatter plot shows returns
+in any given month against returns in the previous month.
+We see that there is no clear linear pattern on this graph.
+And in fact, the empirical estimate of the autocorrelation
+over this period, which starts at the beginning of '08, is
+close to minus 6%.
+There is not a lot of autocorrelation
+in returns on this stock or most other risky investments.

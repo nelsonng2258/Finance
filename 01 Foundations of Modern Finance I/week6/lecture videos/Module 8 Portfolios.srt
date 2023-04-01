@@ -1,0 +1,600 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:02,730
+PROFESSOR: We will now introduce basic elements
+
+2
+00:00:02,730 --> 00:00:04,590
+of portfolio analytics.
+
+3
+00:00:04,590 --> 00:00:06,720
+In particular, we'll introduce concepts
+
+4
+00:00:06,720 --> 00:00:10,170
+of leverage and margin.
+
+5
+00:00:10,170 --> 00:00:12,760
+First, let's define a portfolio.
+
+6
+00:00:12,760 --> 00:00:18,360
+A portfolio is a collection of assets, risky or risk free.
+
+7
+00:00:18,360 --> 00:00:21,120
+The portfolio is defined by its composition--
+
+8
+00:00:21,120 --> 00:00:25,860
+how many shares of each security are held in the portfolio.
+
+9
+00:00:25,860 --> 00:00:27,800
+In terms of notation, we are going
+
+10
+00:00:27,800 --> 00:00:31,130
+to denote the total portfolio value by V.
+
+11
+00:00:31,130 --> 00:00:34,820
+And this value is going to be equal to the sum of investments
+
+12
+00:00:34,820 --> 00:00:37,700
+in each of the securities in the portfolio.
+
+13
+00:00:37,700 --> 00:00:39,800
+Each of the investments is valued
+
+14
+00:00:39,800 --> 00:00:43,440
+as the number of shares times the market price.
+
+15
+00:00:43,440 --> 00:00:47,090
+So the total portfolio value V is equal to the sum,
+
+16
+00:00:47,090 --> 00:00:49,940
+across all of the positions in the portfolio,
+
+17
+00:00:49,940 --> 00:00:56,380
+of the product of the price Pi and the number of shares Ni.
+
+18
+00:00:56,380 --> 00:00:58,240
+The composition of the portfolio can also
+
+19
+00:00:58,240 --> 00:01:00,730
+be described by portfolio weights.
+
+20
+00:01:00,730 --> 00:01:03,370
+The weight on each investment is defined
+
+21
+00:01:03,370 --> 00:01:07,630
+as the ratio of the value of the position, normalized
+
+22
+00:01:07,630 --> 00:01:09,740
+by the value of the portfolio.
+
+23
+00:01:09,740 --> 00:01:12,430
+It's the ratio of Ni times Pi, which
+
+24
+00:01:12,430 --> 00:01:14,740
+is the value of the position over V,
+
+25
+00:01:14,740 --> 00:01:16,920
+the value of the portfolio.
+
+26
+00:01:16,920 --> 00:01:18,580
+For this definition to make sense,
+
+27
+00:01:18,580 --> 00:01:20,730
+the value of the portfolio cannot be 0.
+
+28
+00:01:20,730 --> 00:01:23,880
+In fact, typically, the value is positive.
+
+29
+00:01:23,880 --> 00:01:26,220
+There are, however, some portfolios for which
+
+30
+00:01:26,220 --> 00:01:28,480
+the value V could be 0.
+
+31
+00:01:28,480 --> 00:01:30,810
+We call these arbitrage portfolios.
+
+32
+00:01:30,810 --> 00:01:33,240
+An arbitrage portfolio is special.
+
+33
+00:01:33,240 --> 00:01:36,130
+It does not require a positive investment.
+
+34
+00:01:36,130 --> 00:01:38,490
+For every long position in the portfolio,
+
+35
+00:01:38,490 --> 00:01:41,520
+there has to be a short position so that the total investment
+
+36
+00:01:41,520 --> 00:01:44,370
+into the portfolio is 0.
+
+37
+00:01:44,370 --> 00:01:47,470
+For a typical portfolio, V is positive.
+
+38
+00:01:47,470 --> 00:01:50,430
+Portfolio weights, in this case, are well defined.
+
+39
+00:01:50,430 --> 00:01:53,620
+And by definition, they have to add up to 1.
+
+40
+00:01:53,620 --> 00:01:57,930
+So the sum of W1 plus W2 and so forth
+
+41
+00:01:57,930 --> 00:02:00,300
+across all of the positions in the portfolio
+
+42
+00:02:00,300 --> 00:02:03,870
+is always equal to 1.
+
+43
+00:02:03,870 --> 00:02:06,510
+As an example, consider a portfolio
+
+44
+00:02:06,510 --> 00:02:09,509
+of three securities, A, B, and C,
+
+45
+00:02:09,509 --> 00:02:12,840
+with a total investment of $100,000.
+
+46
+00:02:12,840 --> 00:02:16,280
+Suppose that we buy 200 shares of assets A,
+
+47
+00:02:16,280 --> 00:02:23,020
+1,000 shares of asset B, and 750 shares of asset C.
+
+48
+00:02:23,020 --> 00:02:26,380
+You can see the relevant data in the table.
+
+49
+00:02:26,380 --> 00:02:29,350
+You can see the number of shares in each position,
+
+50
+00:02:29,350 --> 00:02:33,250
+the price per share, which is $50 for A, $60 for B,
+
+51
+00:02:33,250 --> 00:02:38,530
+and $40 for C, and the total investment into each security.
+
+52
+00:02:38,530 --> 00:02:41,380
+The total investment is equal to the number of shares
+
+53
+00:02:41,380 --> 00:02:42,910
+times the share price.
+
+54
+00:02:42,910 --> 00:02:47,510
+For example, for asset A, it's 200 shares at $50 per share.
+
+55
+00:02:47,510 --> 00:02:49,030
+It's $10,000.
+
+56
+00:02:49,030 --> 00:02:53,080
+It's $60,000 for asset B and $30,000 for asset C.
+
+57
+00:02:53,080 --> 00:02:56,100
+So the total investment is $100,000.
+
+58
+00:02:56,100 --> 00:03:00,540
+You can see, in the column on the right, portfolio weights.
+
+59
+00:03:00,540 --> 00:03:02,160
+As we said before, portfolio weight
+
+60
+00:03:02,160 --> 00:03:05,215
+is defined as the ratio of the value of each position
+
+61
+00:03:05,215 --> 00:03:08,130
+to the total value of the portfolio.
+
+62
+00:03:08,130 --> 00:03:10,920
+For A, it's going to be 10,000 divided
+
+63
+00:03:10,920 --> 00:03:13,450
+by 100,000, which is 10%.
+
+64
+00:03:13,450 --> 00:03:18,960
+It's 60% for B and 30% for C. By definition, these weights sum
+
+65
+00:03:18,960 --> 00:03:22,520
+up to 1 or 100%.
+
+66
+00:03:22,520 --> 00:03:24,590
+Now, suppose your broker informs you
+
+67
+00:03:24,590 --> 00:03:27,620
+that you could, in fact, maintain the same portfolio
+
+68
+00:03:27,620 --> 00:03:29,550
+with less capital.
+
+69
+00:03:29,550 --> 00:03:31,890
+Let's say, you could reduce your capital investment
+
+70
+00:03:31,890 --> 00:03:34,080
+to $50,000 from $100,000.
+
+71
+00:03:34,080 --> 00:03:35,730
+How can you achieve that?
+
+72
+00:03:35,730 --> 00:03:38,570
+You need to use margin.
+
+73
+00:03:38,570 --> 00:03:41,660
+You could borrow money at the risk-free rate
+
+74
+00:03:41,660 --> 00:03:45,310
+to buy risky assets in the portfolio.
+
+75
+00:03:45,310 --> 00:03:47,080
+In our particular example, in order
+
+76
+00:03:47,080 --> 00:03:50,500
+to buy $100,000 worth of stocks starting
+
+77
+00:03:50,500 --> 00:03:52,330
+with $50,000 in capital, you would
+
+78
+00:03:52,330 --> 00:03:56,410
+need to borrow $50,000 at the risk-free rate.
+
+79
+00:03:56,410 --> 00:03:59,170
+This changes the portfolio composition.
+
+80
+00:03:59,170 --> 00:04:01,050
+If you now look at the table, you
+
+81
+00:04:01,050 --> 00:04:03,640
+see that we have a new row, which corresponds
+
+82
+00:04:03,640 --> 00:04:06,120
+to the risk-free bond.
+
+83
+00:04:06,120 --> 00:04:08,230
+The investment into the bond is negative,
+
+84
+00:04:08,230 --> 00:04:13,670
+which means that we are borrowing $50,000.
+
+85
+00:04:13,670 --> 00:04:16,829
+The investment in each of the stocks is the same as before.
+
+86
+00:04:16,829 --> 00:04:18,860
+We're establishing the same portfolio.
+
+87
+00:04:18,860 --> 00:04:21,560
+The portfolio weights, however, now change.
+
+88
+00:04:21,560 --> 00:04:24,470
+The reason is that while the investment into each
+
+89
+00:04:24,470 --> 00:04:29,060
+of the securities, A, B, and C, is the same as before,
+
+90
+00:04:29,060 --> 00:04:31,730
+the total value of the portfolio in the denominator
+
+91
+00:04:31,730 --> 00:04:34,730
+is now $50,000 and not $100,000, which
+
+92
+00:04:34,730 --> 00:04:38,390
+doubles the weight on each of the risky assets.
+
+93
+00:04:38,390 --> 00:04:41,870
+It is now 20% invested in A rather than 10%,
+
+94
+00:04:41,870 --> 00:04:48,290
+120% in B rather than 60%, and 60% in C instead of 30%.
+
+95
+00:04:48,290 --> 00:04:52,210
+When we sum up portfolio weights across the risky assets
+
+96
+00:04:52,210 --> 00:04:56,080
+plus minus 100% invested in the risk-free bond,
+
+97
+00:04:56,080 --> 00:05:00,580
+the total of the weights is again 100%.
+
+98
+00:05:00,580 --> 00:05:04,390
+Another example of a portfolio that is commonly used
+
+99
+00:05:04,390 --> 00:05:07,300
+can be seen in buying real estate.
+
+100
+00:05:07,300 --> 00:05:10,110
+Imagine that you're buying a house.
+
+101
+00:05:10,110 --> 00:05:13,140
+The value of the house is $500,000.
+
+102
+00:05:13,140 --> 00:05:15,960
+You make an initial investment of $100,000, which
+
+103
+00:05:15,960 --> 00:05:18,720
+is 20% of the house value.
+
+104
+00:05:18,720 --> 00:05:24,300
+These ratios are typical for the US residential market.
+
+105
+00:05:24,300 --> 00:05:28,200
+The remaining $400,000 need to be borrowed.
+
+106
+00:05:28,200 --> 00:05:30,720
+And they could be borrowed by obtaining
+
+107
+00:05:30,720 --> 00:05:33,210
+a mortgage on the home.
+
+108
+00:05:33,210 --> 00:05:35,580
+As a result, a buyer of the house
+
+109
+00:05:35,580 --> 00:05:38,730
+has a portfolio with two positions--
+
+110
+00:05:38,730 --> 00:05:43,380
+$500,000 of real estate, which is the value of the house,
+
+111
+00:05:43,380 --> 00:05:46,980
+and a negative position of $400,000, which
+
+112
+00:05:46,980 --> 00:05:48,480
+represents the mortgage.
+
+113
+00:05:48,480 --> 00:05:53,340
+This is the amount of money that the buyer owes to the bank.
+
+114
+00:05:53,340 --> 00:05:55,570
+The total net value of the investment,
+
+115
+00:05:55,570 --> 00:05:59,100
+which has developed the portfolio, V, is $100,000.
+
+116
+00:05:59,100 --> 00:06:01,620
+It's the sum of the two positions.
+
+117
+00:06:01,620 --> 00:06:03,870
+If we now compute portfolio weights,
+
+118
+00:06:03,870 --> 00:06:06,030
+we see that the weight of the house--
+
+119
+00:06:06,030 --> 00:06:10,860
+the weight of the real estate in the portfolio-- is plus 500%.
+
+120
+00:06:10,860 --> 00:06:16,870
+And the weight of the mortgage, which is a loan, is minus 400%.
+
+121
+00:06:16,870 --> 00:06:21,370
+The total, again, is 1, 100%.
+
+122
+00:06:21,370 --> 00:06:25,060
+The ratio of the asset value to the net investment
+
+123
+00:06:25,060 --> 00:06:26,920
+is what we call leverage.
+
+124
+00:06:26,920 --> 00:06:28,900
+That's the leverage ratio.
+
+125
+00:06:28,900 --> 00:06:32,890
+In our example of buying a house, the asset is the house.
+
+126
+00:06:32,890 --> 00:06:35,710
+The net investment is $100,000, which
+
+127
+00:06:35,710 --> 00:06:40,090
+is what the buyer of the home invests into this property.
+
+128
+00:06:40,090 --> 00:06:43,030
+The ratio of the asset value to the net investment
+
+129
+00:06:43,030 --> 00:06:46,150
+is 500 over 100, which is 5.
+
+130
+00:06:46,150 --> 00:06:49,940
+That's the leverage ratio of this transaction.
+
+131
+00:06:49,940 --> 00:06:55,170
+Leverage magnifies movements in the asset value.
+
+132
+00:06:55,170 --> 00:06:58,570
+It scales up gains as well as losses.
+
+133
+00:06:58,570 --> 00:07:04,060
+For example, suppose that the house value declines by 15%.
+
+134
+00:07:04,060 --> 00:07:07,030
+A cash buyer would have seen a 15% decline
+
+135
+00:07:07,030 --> 00:07:09,970
+in the total value of the portfolio.
+
+136
+00:07:09,970 --> 00:07:11,620
+Someone who uses a mortgage is going
+
+137
+00:07:11,620 --> 00:07:13,420
+to see a much larger decline.
+
+138
+00:07:13,420 --> 00:07:18,260
+In fact, it's going to be 5 times as large, 75%.
+
+139
+00:07:18,260 --> 00:07:22,720
+To see that, let's compute the decline in the asset value.
+
+140
+00:07:22,720 --> 00:07:26,020
+$500,000-- that's the value of the initial investment--
+
+141
+00:07:26,020 --> 00:07:30,340
+declines by $75,000, which is 15%.
+
+142
+00:07:30,340 --> 00:07:34,360
+Following the decline of 15%, the value of the house
+
+143
+00:07:34,360 --> 00:07:38,130
+is now $425,000.
+
+144
+00:07:38,130 --> 00:07:41,370
+With the initial investment of $100,000
+
+145
+00:07:41,370 --> 00:07:43,560
+and the mortgage of $400,000, this
+
+146
+00:07:43,560 --> 00:07:46,020
+means that the buyer of the house
+
+147
+00:07:46,020 --> 00:07:49,590
+is left with a total of $25,000.
+
+148
+00:07:49,590 --> 00:07:54,150
+That is a $75,000 decline, or a 75% decline
+
+149
+00:07:54,150 --> 00:07:56,360
+relative to the initial investment.
+

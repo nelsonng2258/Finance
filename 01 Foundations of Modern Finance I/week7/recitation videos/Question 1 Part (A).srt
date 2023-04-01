@@ -1,0 +1,444 @@
+0
+00:00:00,000 --> 00:00:00,772
+
+
+1
+00:00:00,772 --> 00:00:02,980
+PROFESSOR: In this question, we will consider
+
+2
+00:00:02,980 --> 00:00:05,000
+a frame over a factor model.
+
+3
+00:00:05,000 --> 00:00:07,790
+And I will teach you how to compute standard deviations
+
+4
+00:00:07,790 --> 00:00:10,490
+and correlations of returns on individual assets
+
+5
+00:00:10,490 --> 00:00:12,600
+or individual stocks.
+
+6
+00:00:12,600 --> 00:00:15,720
+We will start with a two-factor model.
+
+7
+00:00:15,720 --> 00:00:17,420
+So the volatility of the first factor,
+
+8
+00:00:17,420 --> 00:00:19,860
+or the standard deviation of factor 1 is 7%.
+
+9
+00:00:19,860 --> 00:00:23,540
+The volatility of the second factor is 5%.
+
+10
+00:00:23,540 --> 00:00:25,820
+There are two stocks, A and B. Stock A
+
+11
+00:00:25,820 --> 00:00:27,110
+has the following loadings.
+
+12
+00:00:27,110 --> 00:00:31,940
+So it has a loading of 1 on factor 1 and loading of 1.5
+
+13
+00:00:31,940 --> 00:00:33,770
+on factor 2.
+
+14
+00:00:33,770 --> 00:00:38,990
+The idiosyncratic volatility of the stock A is 25%.
+
+15
+00:00:38,990 --> 00:00:44,270
+Stock B has loading of 2, or its beta on the first factor
+
+16
+00:00:44,270 --> 00:00:45,350
+equals to 2.
+
+17
+00:00:45,350 --> 00:00:49,340
+And the loading on factor 2 equals to 3.
+
+18
+00:00:49,340 --> 00:00:53,510
+The idiosyncratic risk of the volatility of the stock B
+
+19
+00:00:53,510 --> 00:00:55,650
+is 10%.
+
+20
+00:00:55,650 --> 00:00:58,830
+In the first question, we'll compute the standard deviations
+
+21
+00:00:58,830 --> 00:01:03,870
+of returns of these two stocks, so stock A and stock B. Let's
+
+22
+00:01:03,870 --> 00:01:06,660
+start with writing down the expression for the variance
+
+23
+00:01:06,660 --> 00:01:10,540
+of returns on stock A. The returns on stock A
+
+24
+00:01:10,540 --> 00:01:12,770
+are given by the following, again, factor
+
+25
+00:01:12,770 --> 00:01:14,610
+model, the following expression.
+
+26
+00:01:14,610 --> 00:01:17,580
+So we need to compute the variance of this.
+
+27
+00:01:17,580 --> 00:01:19,580
+So this is a scalar because this is the expected
+
+28
+00:01:19,580 --> 00:01:22,160
+value of random variable ri.
+
+29
+00:01:22,160 --> 00:01:25,528
+So the variance of this is going to be 0.
+
+30
+00:01:25,528 --> 00:01:27,570
+So then we are left with these three expressions.
+
+31
+00:01:27,570 --> 00:01:31,040
+So we will have the variances of these individual terms
+
+32
+00:01:31,040 --> 00:01:32,992
+plus the pairwise covariances.
+
+33
+00:01:32,992 --> 00:01:34,450
+So let's start with the first term.
+
+34
+00:01:34,450 --> 00:01:38,240
+So the variance of this is going to be equal to beta,
+
+35
+00:01:38,240 --> 00:01:41,570
+or the first loading, beta 1 squared,
+
+36
+00:01:41,570 --> 00:01:46,580
+multiplied by the variance of the first factor of 1
+
+37
+00:01:46,580 --> 00:01:49,580
+plus the second beta, the second loading squared multiplied
+
+38
+00:01:49,580 --> 00:01:52,340
+by this variance, plus the variance
+
+39
+00:01:52,340 --> 00:01:54,530
+of these idiosyncratic components, so idiosyncratic
+
+40
+00:01:54,530 --> 00:01:55,110
+risk--
+
+41
+00:01:55,110 --> 00:01:56,902
+so this is the last part here-- so variance
+
+42
+00:01:56,902 --> 00:02:01,350
+of epsilon A, plus pairwise correlations.
+
+43
+00:02:01,350 --> 00:02:06,710
+So the first one would be the covariance between the returns
+
+44
+00:02:06,710 --> 00:02:08,509
+on factor 1 and factor 2.
+
+45
+00:02:08,509 --> 00:02:12,620
+So this is 2 times the betas times the covariance
+
+46
+00:02:12,620 --> 00:02:16,886
+between the returns on factor 1 and the returns on factor 2.
+
+47
+00:02:16,886 --> 00:02:19,520
+And plus the covariance is between f1
+
+48
+00:02:19,520 --> 00:02:23,060
+and the idiosyncratic risk of stock A,
+
+49
+00:02:23,060 --> 00:02:26,480
+so epsilon A, and f2 and epsilon 2.
+
+50
+00:02:26,480 --> 00:02:30,390
+Now by construction, remember that this is a factor model.
+
+51
+00:02:30,390 --> 00:02:32,000
+So by definition, the covariance is
+
+52
+00:02:32,000 --> 00:02:35,270
+between the returns and factors and idiosyncratic risk.
+
+53
+00:02:35,270 --> 00:02:37,350
+This is why it is idiosyncratic risk.
+
+54
+00:02:37,350 --> 00:02:39,980
+So this covariance, it will be 0.
+
+55
+00:02:39,980 --> 00:02:41,510
+Now in addition to this--
+
+56
+00:02:41,510 --> 00:02:44,280
+so recall that when we discussed this in the lecture,
+
+57
+00:02:44,280 --> 00:02:47,810
+we said that in theory, returns and factors, of course,
+
+58
+00:02:47,810 --> 00:02:49,370
+could be correlated.
+
+59
+00:02:49,370 --> 00:02:54,960
+But here we'll assume that this covariance would equal to 0.
+
+60
+00:02:54,960 --> 00:02:58,050
+So that the returns on factors f1
+
+61
+00:02:58,050 --> 00:03:02,160
+and f2 in this particular example would be uncorrelated.
+
+62
+00:03:02,160 --> 00:03:05,430
+So I'll get rid of this term.
+
+63
+00:03:05,430 --> 00:03:08,780
+Now, let's compute the variance of returns on stock A.
+
+64
+00:03:08,780 --> 00:03:11,420
+Since we assume that the covariance or the correlation
+
+65
+00:03:11,420 --> 00:03:13,050
+between the returns on factor 1 and 2
+
+66
+00:03:13,050 --> 00:03:16,080
+is 0, so these two factors are uncorrelated,
+
+67
+00:03:16,080 --> 00:03:18,405
+we are left with just these three terms.
+
+68
+00:03:18,405 --> 00:03:20,030
+So to compute the variance for stock A,
+
+69
+00:03:20,030 --> 00:03:23,420
+we're taking first beta or the loading on the first factor,
+
+70
+00:03:23,420 --> 00:03:25,820
+squaring it, so 1 squared, multiply it
+
+71
+00:03:25,820 --> 00:03:27,360
+by the variance of the first factor.
+
+72
+00:03:27,360 --> 00:03:29,940
+So we're given a standard deviation, 7%.
+
+73
+00:03:29,940 --> 00:03:31,940
+So we're squaring the 7%.
+
+74
+00:03:31,940 --> 00:03:35,250
+Plus we have the second beta, 1.5, square it,
+
+75
+00:03:35,250 --> 00:03:38,140
+multiplying it by the variance of the second factor,
+
+76
+00:03:38,140 --> 00:03:41,210
+this is the standard deviation that we are given, squared.
+
+77
+00:03:41,210 --> 00:03:45,600
+Plus the variance of the idiosyncratic risk of stock A,
+
+78
+00:03:45,600 --> 00:03:48,230
+this is 25% squared.
+
+79
+00:03:48,230 --> 00:03:50,780
+Computing this gives us 0.073%.
+
+80
+00:03:50,780 --> 00:03:52,160
+So this is the variance.
+
+81
+00:03:52,160 --> 00:03:55,470
+To find the standard deviation of the returns on the stock A,
+
+82
+00:03:55,470 --> 00:03:59,240
+we are taking the square root of this variance, square root
+
+83
+00:03:59,240 --> 00:04:00,560
+of 0.073.
+
+84
+00:04:00,560 --> 00:04:03,560
+And this gives us 27%.
+
+85
+00:04:03,560 --> 00:04:08,090
+So therefore, the volatility of the returns on this stock A
+
+86
+00:04:08,090 --> 00:04:10,850
+is 27%.
+
+87
+00:04:10,850 --> 00:04:13,640
+We can repeat this calculation for stock B.
+
+88
+00:04:13,640 --> 00:04:15,240
+So it's exactly the same expression.
+
+89
+00:04:15,240 --> 00:04:19,160
+So I take the first beta or the loading on the first factor,
+
+90
+00:04:19,160 --> 00:04:21,880
+multiplying it with the variance of the first factor
+
+91
+00:04:21,880 --> 00:04:24,950
+the loading on the second factor squared, multiplying
+
+92
+00:04:24,950 --> 00:04:29,180
+by the variance of the returns of the second factor, so 5%
+
+93
+00:04:29,180 --> 00:04:30,110
+squared.
+
+94
+00:04:30,110 --> 00:04:35,570
+Plus idiosyncratic variance, it's 10% squared.
+
+95
+00:04:35,570 --> 00:04:38,570
+Computing this gives us 0.052%.
+
+96
+00:04:38,570 --> 00:04:41,708
+So this is the variance of returns on stock B.
+
+97
+00:04:41,708 --> 00:04:43,250
+To find the standard deviation, we're
+
+98
+00:04:43,250 --> 00:04:47,870
+taking the square root of this, which gives us 22.8%.
+
+99
+00:04:47,870 --> 00:04:53,430
+So the volatility of the returns on stock B is 22.8%.
+
+100
+00:04:53,430 --> 00:04:57,087
+Now notice that the volatility of returns on the first stock
+
+101
+00:04:57,087 --> 00:04:58,920
+is higher than the volatility of the returns
+
+102
+00:04:58,920 --> 00:05:02,520
+on the second stock, even though stock B seems
+
+103
+00:05:02,520 --> 00:05:05,130
+to be risky because it has, or at least
+
+104
+00:05:05,130 --> 00:05:08,520
+in terms of systematic risk, it has much higher loadings
+
+105
+00:05:08,520 --> 00:05:11,670
+on systematic returns factors.
+
+106
+00:05:11,670 --> 00:05:15,200
+But, of course, what makes stock A overall riskier
+
+107
+00:05:15,200 --> 00:05:19,380
+than stock B is the fact that it has much higher idiosyncratic
+
+108
+00:05:19,380 --> 00:05:24,180
+volatility, 25% versus 10% for stock B.
+
+109
+00:05:24,180 --> 00:05:28,050
+So that directly feeds into overall higher risk for stock A
+
+110
+00:05:28,050 --> 00:05:32,450
+compared to the overall risk for stock B.
+

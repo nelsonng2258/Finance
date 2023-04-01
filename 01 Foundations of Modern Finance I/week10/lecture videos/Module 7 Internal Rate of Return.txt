@@ -1,0 +1,111 @@
+
+PROFESSOR: The next rule we consider
+is based on the internal rate of return, or IRR.
+A project's IRR is defined as the number
+that gives a zero if used to discount
+all the project's cash flows.
+Mathematically, it is defined by the equation on this slide.
+Clearly, IRR, if it exists, is solely
+determined by the project's cash flow.
+We don't need any other information.
+The decision rule based on IRR is as follows.
+First, a threshold rate or a hurdle rate, IRR star, is set.
+Then, for independent projects, accept
+all the projects with IRR greater
+than the hurdle rate, IRR star.
+For mutually exclusive projects, among the projects with IRRs
+greater than the hurdle rate, accept
+the one with the highest IRR.
+Let's consider an example to illustrate the use of IRR rule.
+Again, consider two projects, 1 and 2, with cash flows
+given in the table on the slide.
+These are the same two projects considered
+for the payback rule.
+We can find their IRRs through numerical solutions.
+As it turns out, project 1 has an IRR of 21%,
+and project 2 has an IRR of 7%.
+At a hurdle rate of 10%, say, only project 1
+will be accepted.
+This is the same choice as from the NPV rule as we saw earlier.
+Although IRR is widely used in practice,
+there's no guarantee that it gives the right answer.
+The IRR rule leads to the same decision as the NPV rule
+when the following conditions are met.
+First, cash outflow occurs only at time 0.
+Or more generally, cash flow changes side only once.
+Second, only one project is under consideration.
+Using IRR to rank projects is problematic,
+as we'll see in a minute.
+Third, opportunity cost of capital
+is the same for all periods.
+From the definition of IRR, It is
+used to discount cash flows for all different periods.
+As we said before, in general, cash flows at different times
+should be discounted at different rates,
+according to their timing and risk.
+Fourth, the hurdle rate is set to be the same
+as the cost of capital.
+Since IRR is determined solely by a project's cash flow,
+some people argue that it is easy to use
+because it requires no finance expertise, which
+is about discount rates.
+But this is not quite right.
+Even with IRR, the rule relies on the right hurdle rate.
+Given the popularity of IRR rule in practice,
+we want to point out some potential issues in its use.
+We start from the more technical ones,
+and then move on to the more serious ones.
+First, given the project's cash flow,
+there may not exist an IRR.
+Sometimes there may be more than one IRR.
+We show this with two examples.
+
+The table on the top left of the slide
+gives the cash flow of a project.
+The figure on the top right plots
+the discounted value of the cash flow at an arbitrary discount
+rate, r.
+An IRR is given by the point where
+the cash flow's discounted value curve crosses the x-axis.
+Clearly, in this case the curve never reaches
+the x-axis, implying no solution for the IRR.
+The table on the bottom left gives another cash flow
+and the figure on the right plots the cash flow's
+discounted value curve.
+Here, the curve crosses the x-axis at two places.
+One is between 0 and 0.05, and another between 0.1 and 0.15.
+Which one should we pick, then, in this case?
+No obvious answer.
+Obviously, in these two cases the project's cash flow
+changes side twice, violating one of the conditions needed
+for IRR to work.
+Next, we show that IRR cannot be used to rank projects when
+choosing between them.
+We show this with an example.
+The example describes two projects, 1 and 2.
+The cash flows are given in the table on the slide,
+in row 2 and 3.
+Column 3 gives their IRRs 100% and 80%, respectively.
+Suppose the hurdle rate is 10% the cost
+of capital for these projects.
+Then both projects pass the hurdle.
+If they are mutually independent, we will do both.
+However, if these two projects are mutually exclusive,
+we have to choose one between them.
+Clearly, then, project 1 wins because it has a higher IRR.
+If we compute their NPVs at the cost of capital
+of 10%, which I give it in the last column in the table, then
+project 2 should be taken because it has a higher NPV.
+What's going on here?
+Well, if we look at the two cash flows more carefully,
+we'll notice that project 2 is a bigger project with larger cash
+flows.
+Even though it has a smaller IRR,
+its larger scale leads to a larger NPV.
+Given that we want to maximize the total market value,
+project 2 clearly delivers more.
+What we learn is that IRR, being a rate itself,
+does not capture the scale of the project.
+Therefore, you will miss the scale factor
+when it's used to rank projects which
+may well have different scales.

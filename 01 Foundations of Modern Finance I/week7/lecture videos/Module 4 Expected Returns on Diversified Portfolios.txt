@@ -1,0 +1,128 @@
+
+PROFESSOR: We now develop a result
+that relates expected returns on well-diversified portfolios
+to their systematic risk.
+Let's start with an example, and use an arbitrage argument
+to establish this kind of relation.
+In our example, there are two portfolios, A and B.
+And there is a single common source of risk,
+that is a single common factor.
+We assume that the expected excess return--
+recall that excess returns are measured relative
+to the risk-free rate.
+The expected excess return on portfolio A is 5%.
+And for portfolio B it is 8%.
+The loading on the common factor is 1 for portfolio A
+and 2 for portfolio B.
+We want to argue that with this set of assumptions,
+the market contains arbitrage.
+Let's consider the following arbitrage strategy.
+We're going to borrow $1 at the risk-free rate.
+We are going to short $1 of portfolio
+B and invest $2 into portfolio A.
+By construction, this strategy doesn't require any capital.
+We borrow $1, raise another dollar by shorting,
+and invest the $2 in portfolio A.
+Let's consider the payoff of this strategy next period.
+The payoff from borrowing $1 is going to be minus 1
+plus the risk-free rate.
+The payoff from shorting portfolio B is minus 1
+plus the risk-free rate, plus the risk premium on portfolio
+B, plus the factor loading, which
+is 2, times the realization of the factor, F.
+This is multiplied by the scale of our investment, which is $1.
+The payoff from our investment in portfolio A
+is going to be 1 plus RF plus the 5% risk premium,
+plus the factor loading, which is 1,
+times the realization of the factor, F, multiplied by $2.
+When we sum up all of these payoffs across the three
+legs of our position, we find that the effect of the factor
+disappears, that exposure cancels out,
+and we're left with $0.02.
+In other words, we started with no capital
+and we constructed a portfolio with three positions in it,
+which pays $0.02 next period with no risk.
+This is arbitrage or free lunch.
+The reason why we were able to find arbitrage
+is that expected excess returns on our portfolios
+and their factor loadings were not consistent with each other.
+We will now generalize this result
+and establish a relation between factor loadings
+and expected returns, which is needed
+in order to avoid arbitrage.
+In particular, we want to show that expected excess returns
+and factor loadings have to be linearly related.
+For a single-factor model, this means
+that for any portfolio, p, the expected excess return
+has to be equal to its factor loading,
+b sub p, times a constant, lambda.
+This constant has to be common to all portfolios.
+To see why this needs to be the case,
+we're going to repeat the arbitrage
+argument similar to the one that we just discussed
+for our particular example.
+Suppose that for another portfolio, portfolio q,
+the risk premium is equal to its factor loading,
+b sub q, times a different constant, lambda prime.
+Lambda prime and lambda are not the same.
+Assume also that b sub q, the loading on the factor,
+is non-zero.
+Now, we create a three-legged arbitrage.
+We'll short $1 of portfolio p.
+We buy bp over bq dollars of portfolio q.
+And we borrow, bp over bq minus 1.
+As you can see, this portfolio, this entire trade,
+does not require any capital.
+It is self-financing.
+As we look at its payoff, we observe
+that the payoff from the first investment, $1 in portfolio p,
+plus the second investment, the investment in portfolio q,
+plus the risk-free component, when
+we sum them up, have the property
+that there is no exposure to the factor remaining,
+and the payoff is in fact a constant.
+It's equal to lambda prime minus lambda times b sub p.
+To avoid arbitrage, this constant
+has to be equal to zero.
+A zero-investment portfolio without risk cannot produce
+non-zero payoffs.
+We conclude that lambda prime and lambda
+have to be the same to avoid arbitrage.
+We have established an important result. That
+in a frictionless market with a single-factor structure
+of returns, in order to avoid arbitrage risk premium on all
+well-diversified portfolios have to be given
+by a product of the factor loading of the portfolio
+and a common constant, lambda.
+The factor loading represents the quantity
+of risk in each portfolio.
+It's a measure of systematic risk.
+Lambda tells us how much compensation a portfolio
+is going to earn per unit of systematic risk.
+We call lambda the price of risk or the market price of risk
+or the factor risk premium.
+Our pricing result can be extended
+to multi-factor models.
+The result is very similar.
+The risk premium on any well-diversified portfolio
+is based on its factor exposures.
+In particular, it is a sum across all
+of the common factors, or the factor loading
+times the corresponding factor premium or price of risk.
+These factor exposures describe systematic risk
+of the portfolio.
+Now, in contrast to the single-factor case,
+this is a vector.
+A portfolio is characterized by a vector of its risk exposures.
+We need to know how a portfolio loads on each of the factors
+to fully describe its risk.
+And each of these risk exposures carries its own risk premium.
+Different factors don't earn the same compensation
+for their risk exposures.
+The intuition of this result is that we
+could construct multiple portfolios with identical risk
+exposures.
+To avoid arbitrage, the expected returns have to be the same.
+This means that expected return or the risk premium
+on any diversified portfolio must
+be determined by its exposure to the common factors.

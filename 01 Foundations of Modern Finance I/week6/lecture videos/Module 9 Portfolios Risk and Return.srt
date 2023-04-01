@@ -1,0 +1,844 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:03,810
+PROFESSOR: We will now talk about risk and return
+
+2
+00:00:03,810 --> 00:00:05,580
+in portfolio investments.
+
+3
+00:00:05,580 --> 00:00:08,310
+In particular, we will introduce the core concept
+
+4
+00:00:08,310 --> 00:00:12,170
+of this lecture, diversification.
+
+5
+00:00:12,170 --> 00:00:14,300
+When forming your portfolio, why not
+
+6
+00:00:14,300 --> 00:00:19,810
+pick the best asset among many possible investments?
+
+7
+00:00:19,810 --> 00:00:21,520
+There are many problems with this idea.
+
+8
+00:00:21,520 --> 00:00:26,630
+One is, of course, it's hard to tell which stock is the best.
+
+9
+00:00:26,630 --> 00:00:28,520
+It is also the case that by forming
+
+10
+00:00:28,520 --> 00:00:30,710
+a portfolio of multiple investments,
+
+11
+00:00:30,710 --> 00:00:33,690
+one can achieve a better risk return trade off
+
+12
+00:00:33,690 --> 00:00:37,130
+than by picking one asset over another.
+
+13
+00:00:37,130 --> 00:00:39,145
+That is the benefit of diversification,
+
+14
+00:00:39,145 --> 00:00:40,520
+something we are going to discuss
+
+15
+00:00:40,520 --> 00:00:44,650
+in detail in this segment.
+
+16
+00:00:44,650 --> 00:00:47,680
+One can use a portfolio to enhance performance
+
+17
+00:00:47,680 --> 00:00:50,170
+by focusing one's bets.
+
+18
+00:00:50,170 --> 00:00:52,180
+This could be achieved by hedging.
+
+19
+00:00:52,180 --> 00:00:54,220
+For example, suppose that you have
+
+20
+00:00:54,220 --> 00:00:57,100
+a view on a particular company.
+
+21
+00:00:57,100 --> 00:01:00,520
+Your view is on the quality of firms management
+
+22
+00:01:00,520 --> 00:01:04,550
+or on its opportunities in the marketplace.
+
+23
+00:01:04,550 --> 00:01:06,550
+If you want to place a bet on a company,
+
+24
+00:01:06,550 --> 00:01:08,680
+you are, in fact, betting on much more
+
+25
+00:01:08,680 --> 00:01:10,830
+than your initial view.
+
+26
+00:01:10,830 --> 00:01:12,940
+You are betting on broad market moves
+
+27
+00:01:12,940 --> 00:01:15,810
+to which the stock is exposed.
+
+28
+00:01:15,810 --> 00:01:18,930
+By taking additional positions, for example,
+
+29
+00:01:18,930 --> 00:01:21,510
+by taking a short position in the market,
+
+30
+00:01:21,510 --> 00:01:23,910
+you will be able to isolate your bet.
+
+31
+00:01:23,910 --> 00:01:26,760
+So that you are betting on stock specific performance
+
+32
+00:01:26,760 --> 00:01:30,180
+rather than on that plus additional movements
+
+33
+00:01:30,180 --> 00:01:32,040
+in the market.
+
+34
+00:01:32,040 --> 00:01:34,830
+So forming portfolios could be very useful
+
+35
+00:01:34,830 --> 00:01:38,250
+in order to isolate views on particular elements
+
+36
+00:01:38,250 --> 00:01:40,580
+of the trade.
+
+37
+00:01:40,580 --> 00:01:44,610
+Portfolios can be used to customize and manage risks.
+
+38
+00:01:44,610 --> 00:01:48,760
+This is an important part of the risk management process.
+
+39
+00:01:48,760 --> 00:01:51,970
+They could be used to tailor a risk return trade off
+
+40
+00:01:51,970 --> 00:01:55,240
+to the needs of the particular investor.
+
+41
+00:01:55,240 --> 00:01:59,000
+How do we go about choosing the best portfolio?
+
+42
+00:01:59,000 --> 00:02:02,000
+Now, first of all, we have to say, what is the best mean?
+
+43
+00:02:02,000 --> 00:02:03,690
+This is subjective.
+
+44
+00:02:03,690 --> 00:02:06,650
+What we want to do is to find the portfolio that
+
+45
+00:02:06,650 --> 00:02:09,229
+is the best for a particular investor given
+
+46
+00:02:09,229 --> 00:02:11,910
+his or her preferences.
+
+47
+00:02:11,910 --> 00:02:14,840
+This process is an optimization process
+
+48
+00:02:14,840 --> 00:02:16,610
+among all possible portfolios.
+
+49
+00:02:16,610 --> 00:02:18,110
+We are going to look at the one that
+
+50
+00:02:18,110 --> 00:02:20,450
+maximizes the investor's objective,
+
+51
+00:02:20,450 --> 00:02:23,410
+such as expected utility.
+
+52
+00:02:23,410 --> 00:02:26,360
+This means that before we form a portfolio,
+
+53
+00:02:26,360 --> 00:02:30,150
+we need to agree on what the objective is.
+
+54
+00:02:30,150 --> 00:02:32,200
+What are we trying to optimize?
+
+55
+00:02:32,200 --> 00:02:35,810
+Which properties of the portfolio are important?
+
+56
+00:02:35,810 --> 00:02:37,960
+Now, in the mean variance framework,
+
+57
+00:02:37,960 --> 00:02:40,670
+there are two aspects of the portfolio that matter.
+
+58
+00:02:40,670 --> 00:02:43,180
+One is the expected return.
+
+59
+00:02:43,180 --> 00:02:46,360
+Investors prefer higher expected returns.
+
+60
+00:02:46,360 --> 00:02:48,880
+The other important dimension is risk.
+
+61
+00:02:48,880 --> 00:02:52,330
+Investors prefer lower risk, and in particular, risk
+
+62
+00:02:52,330 --> 00:02:55,660
+is measured by variance of portfolio returns.
+
+63
+00:02:55,660 --> 00:02:58,390
+Expected return on the portfolio, as well as
+
+64
+00:02:58,390 --> 00:03:00,520
+the variance of returns, are determined
+
+65
+00:03:00,520 --> 00:03:03,070
+by the composition of the portfolio, which
+
+66
+00:03:03,070 --> 00:03:06,375
+is the collection of weights on individual investments
+
+67
+00:03:06,375 --> 00:03:08,500
+and by the properties of the individual investments
+
+68
+00:03:08,500 --> 00:03:10,300
+themselves.
+
+69
+00:03:10,300 --> 00:03:13,210
+In particular, when we think about the portfolio average
+
+70
+00:03:13,210 --> 00:03:16,600
+return, portfolio mean return, it
+
+71
+00:03:16,600 --> 00:03:19,840
+is based on the average returns of individual assets
+
+72
+00:03:19,840 --> 00:03:22,510
+and portfolio weights.
+
+73
+00:03:22,510 --> 00:03:25,360
+If we have put together expected returns
+
+74
+00:03:25,360 --> 00:03:29,530
+on individual investments into a vector from one to N,
+
+75
+00:03:29,530 --> 00:03:31,540
+call each of the elements R bar, which
+
+76
+00:03:31,540 --> 00:03:33,850
+represents the expected return on each
+
+77
+00:03:33,850 --> 00:03:36,010
+of the stocks in the portfolio.
+
+78
+00:03:36,010 --> 00:03:37,840
+Then the expected return on the portfolio
+
+79
+00:03:37,840 --> 00:03:41,290
+is a sum over all of the positions of the expected
+
+80
+00:03:41,290 --> 00:03:44,830
+return on an individual asset times the portfolio
+
+81
+00:03:44,830 --> 00:03:46,760
+weight of that asset.
+
+82
+00:03:46,760 --> 00:03:49,840
+In other words, the expected return on the portfolio
+
+83
+00:03:49,840 --> 00:03:55,330
+is a weighted average of the individual expected returns.
+
+84
+00:03:55,330 --> 00:03:58,840
+For portfolio variance, it's a bit more involved.
+
+85
+00:03:58,840 --> 00:04:00,520
+First, let's summarize the information
+
+86
+00:04:00,520 --> 00:04:03,610
+about the properties of the individual investments.
+
+87
+00:04:03,610 --> 00:04:06,320
+This is no longer a vector, but a matrix.
+
+88
+00:04:06,320 --> 00:04:08,530
+It's the co-variance matrix.
+
+89
+00:04:08,530 --> 00:04:10,780
+The diagonal elements of this matrix
+
+90
+00:04:10,780 --> 00:04:13,880
+summarize riskiness of individual securities.
+
+91
+00:04:13,880 --> 00:04:17,649
+They are given by the variance of security returns.
+
+92
+00:04:17,649 --> 00:04:20,320
+The off diagonal elements, which will turn out
+
+93
+00:04:20,320 --> 00:04:24,220
+to be very important when we talk about diversification
+
+94
+00:04:24,220 --> 00:04:27,580
+capture co-movements of investments with each other.
+
+95
+00:04:27,580 --> 00:04:30,670
+They capture co-variance, pair-wise co-variance
+
+96
+00:04:30,670 --> 00:04:33,670
+of assets in the portfolio.
+
+97
+00:04:33,670 --> 00:04:38,730
+As an example, let's consider a portfolio of two assets.
+
+98
+00:04:38,730 --> 00:04:41,660
+One is a ETF SPY.
+
+99
+00:04:41,660 --> 00:04:43,040
+It's an equity ETF.
+
+100
+00:04:43,040 --> 00:04:45,170
+The other is a bond ETF.
+
+101
+00:04:45,170 --> 00:04:49,460
+We have seen these two securities before.
+
+102
+00:04:49,460 --> 00:04:52,940
+In the following two tables, you could see historical estimates
+
+103
+00:04:52,940 --> 00:04:55,280
+of average returns on the two securities,
+
+104
+00:04:55,280 --> 00:04:58,610
+as well as their variance co-variance matrix.
+
+105
+00:04:58,610 --> 00:05:01,890
+The variance co-variance matrix is not easy to read.
+
+106
+00:05:01,890 --> 00:05:04,520
+It is more intuitive to present information
+
+107
+00:05:04,520 --> 00:05:07,880
+as volatilities of individual investments,
+
+108
+00:05:07,880 --> 00:05:11,530
+as well as their relations with each other.
+
+109
+00:05:11,530 --> 00:05:14,680
+As we have seen before, investment in SPY
+
+110
+00:05:14,680 --> 00:05:19,090
+has much higher volatility than the bond ETF investment,
+
+111
+00:05:19,090 --> 00:05:21,400
+and correlation between these two securities
+
+112
+00:05:21,400 --> 00:05:22,950
+is very close to zero.
+
+113
+00:05:22,950 --> 00:05:26,140
+Now, let's take a close look at the expected return
+
+114
+00:05:26,140 --> 00:05:27,490
+on the portfolio.
+
+115
+00:05:27,490 --> 00:05:30,850
+As we said before, they expected return on the portfolio
+
+116
+00:05:30,850 --> 00:05:32,920
+is a weighted average of expected
+
+117
+00:05:32,920 --> 00:05:36,530
+returns on the securities in the portfolio.
+
+118
+00:05:36,530 --> 00:05:38,780
+Let's see why that is the case.
+
+119
+00:05:38,780 --> 00:05:41,260
+We will do that by following a simple example.
+
+120
+00:05:41,260 --> 00:05:44,410
+Again, two securities, SPY and AGG.
+
+121
+00:05:44,410 --> 00:05:50,050
+Suppose that we invest $600 into the equity ETF and $400
+
+122
+00:05:50,050 --> 00:05:52,540
+into the bond ETF.
+
+123
+00:05:52,540 --> 00:05:56,230
+It's $1,000 investment in total, and the portfolio weights
+
+124
+00:05:56,230 --> 00:06:02,430
+are 0.6 on SPY and 0.4 on AGG respectively.
+
+125
+00:06:02,430 --> 00:06:06,000
+Suppose that over the next month, the return on SPY
+
+126
+00:06:06,000 --> 00:06:12,270
+happens to be 2% and a return on the bond ETF AGG is minus 1%.
+
+127
+00:06:12,270 --> 00:06:15,000
+Keep in mind that these are realized returns
+
+128
+00:06:15,000 --> 00:06:16,710
+over a particular month.
+
+129
+00:06:16,710 --> 00:06:19,550
+These are not expected values.
+
+130
+00:06:19,550 --> 00:06:23,240
+What is the total return on the portfolio?
+
+131
+00:06:23,240 --> 00:06:27,490
+We can see that the portfolio value is going to change,
+
+132
+00:06:27,490 --> 00:06:30,190
+and the change is going to be equal to the sum of changes
+
+133
+00:06:30,190 --> 00:06:33,160
+in the values of the individual positions.
+
+134
+00:06:33,160 --> 00:06:37,510
+The investment in SPY is going to increase by 2%, which
+
+135
+00:06:37,510 --> 00:06:40,220
+is going to be equal to $12.
+
+136
+00:06:40,220 --> 00:06:42,910
+The investment in AGG is going to decline
+
+137
+00:06:42,910 --> 00:06:46,060
+by 1%, which is a $4 decline.
+
+138
+00:06:46,060 --> 00:06:49,690
+The total increase is $8 over 1,000,
+
+139
+00:06:49,690 --> 00:06:55,080
+which gives us 0.8% return on the entire portfolio.
+
+140
+00:06:55,080 --> 00:06:58,200
+What this illustrates is that the return on the portfolio
+
+141
+00:06:58,200 --> 00:07:00,870
+is equal to the weighted average of returns
+
+142
+00:07:00,870 --> 00:07:02,850
+on the individual positions.
+
+143
+00:07:02,850 --> 00:07:04,920
+Once we know how the return on the portfolio
+
+144
+00:07:04,920 --> 00:07:07,830
+is related to the returns on the individual investments,
+
+145
+00:07:07,830 --> 00:07:10,950
+we can compute the expected portfolio return
+
+146
+00:07:10,950 --> 00:07:13,970
+and the variance of the return.
+
+147
+00:07:13,970 --> 00:07:17,600
+The expected portfolio return is an expected value
+
+148
+00:07:17,600 --> 00:07:20,750
+of the weighted average of individual asset returns, which
+
+149
+00:07:20,750 --> 00:07:24,500
+ends up being the weighted average of expected returns
+
+150
+00:07:24,500 --> 00:07:27,760
+on the investments in the portfolio.
+
+151
+00:07:27,760 --> 00:07:30,340
+The unexpected component of the return
+
+152
+00:07:30,340 --> 00:07:33,580
+can be computed by subtracting the portfolio return mean
+
+153
+00:07:33,580 --> 00:07:36,610
+from the realized return.
+
+154
+00:07:36,610 --> 00:07:39,610
+Portfolio return variance is the variance
+
+155
+00:07:39,610 --> 00:07:44,290
+of the weighted average of the individual security returns.
+
+156
+00:07:44,290 --> 00:07:46,420
+Using the formula for the variance,
+
+157
+00:07:46,420 --> 00:07:49,330
+we see that this amounts to summing up
+
+158
+00:07:49,330 --> 00:07:53,170
+elements of the matrix that you see presented here,
+
+159
+00:07:53,170 --> 00:07:55,450
+where the diagonal elements of the matrix
+
+160
+00:07:55,450 --> 00:07:58,400
+are individual variances multiplied
+
+161
+00:07:58,400 --> 00:08:02,170
+by the squares of security weights in the portfolio.
+
+162
+00:08:02,170 --> 00:08:05,470
+And the off diagonal elements are co-variances
+
+163
+00:08:05,470 --> 00:08:09,010
+of asset returns multiplied by the product
+
+164
+00:08:09,010 --> 00:08:11,140
+of the corresponding weights.
+
+165
+00:08:11,140 --> 00:08:13,150
+In case of two assets in the portfolio,
+
+166
+00:08:13,150 --> 00:08:17,170
+we end up with three terms, two diagonal terms, which
+
+167
+00:08:17,170 --> 00:08:20,860
+capture the contribution of individual return variances,
+
+168
+00:08:20,860 --> 00:08:23,320
+and the off diagonal terms, which
+
+169
+00:08:23,320 --> 00:08:26,620
+are identical to each other and capture the contribution
+
+170
+00:08:26,620 --> 00:08:30,860
+of the co-movement between the two assets in the portfolio.
+
+171
+00:08:30,860 --> 00:08:34,100
+Going back to our original example of a two asset
+
+172
+00:08:34,100 --> 00:08:37,460
+portfolio of SPY and AGG, let's assume
+
+173
+00:08:37,460 --> 00:08:39,380
+that the weights on the two securities
+
+174
+00:08:39,380 --> 00:08:44,900
+are equal to each other, W1 equal to W2 equal to 1/2.
+
+175
+00:08:44,900 --> 00:08:47,880
+In this case, the expected portfolio return
+
+176
+00:08:47,880 --> 00:08:51,080
+is an arithmetic average of the expected returns on the two
+
+177
+00:08:51,080 --> 00:08:52,275
+securities.
+
+178
+00:08:52,275 --> 00:08:55,250
+A portfolio mean is always a weighted average
+
+179
+00:08:55,250 --> 00:08:58,280
+of individual return means.
+
+180
+00:08:58,280 --> 00:09:01,820
+Next, we compute the volatility of portfolio returns.
+
+181
+00:09:01,820 --> 00:09:04,310
+For our portfolio of SPY and AGG,
+
+182
+00:09:04,310 --> 00:09:07,610
+we find that the portfolio volatility is, in fact, less
+
+183
+00:09:07,610 --> 00:09:10,580
+than the weighted average of the individual volatilities
+
+184
+00:09:10,580 --> 00:09:13,140
+of returns.
+
+185
+00:09:13,140 --> 00:09:16,920
+This is an example of portfolio diversification.
+
+186
+00:09:16,920 --> 00:09:19,920
+Volatility of the portfolio is not a simple weighted average
+
+187
+00:09:19,920 --> 00:09:23,280
+of individual volatilities, and by combining securities
+
+188
+00:09:23,280 --> 00:09:27,360
+together, one can achieve a significant reduction in risk.
+
+189
+00:09:27,360 --> 00:09:30,930
+What enables us to do that is the imperfect
+
+190
+00:09:30,930 --> 00:09:34,260
+correlation between returns and the individual positions
+
+191
+00:09:34,260 --> 00:09:36,120
+in the portfolio.
+
+192
+00:09:36,120 --> 00:09:38,630
+We now extend our results to the general case,
+
+193
+00:09:38,630 --> 00:09:41,010
+a portfolio of M assets.
+
+194
+00:09:41,010 --> 00:09:44,070
+This is analogous to the two assets portfolio.
+
+195
+00:09:44,070 --> 00:09:48,480
+Except now, we have a longer sum of terms,
+
+196
+00:09:48,480 --> 00:09:51,990
+and the expressions are general.
+
+197
+00:09:51,990 --> 00:09:55,080
+The portfolio return as before is a weighted average
+
+198
+00:09:55,080 --> 00:09:57,660
+of individual asset returns.
+
+199
+00:09:57,660 --> 00:10:00,540
+The portfolio mean is a weighted average
+
+200
+00:10:00,540 --> 00:10:05,220
+of mean returns on individual assets in the portfolio,
+
+201
+00:10:05,220 --> 00:10:09,060
+and the variance of the portfolio return is a sum.
+
+202
+00:10:09,060 --> 00:10:13,180
+It's a double sum over all assets in the portfolio,
+
+203
+00:10:13,180 --> 00:10:15,450
+and each element of the sum is given
+
+204
+00:10:15,450 --> 00:10:20,930
+by the product of security weights, WI and WJ for assets I
+
+205
+00:10:20,930 --> 00:10:25,410
+and J, times the co-variance between their returns.
+
+206
+00:10:25,410 --> 00:10:28,470
+If you look closely at the portfolio variance,
+
+207
+00:10:28,470 --> 00:10:32,370
+we see that it can be decomposed into two types of terms.
+
+208
+00:10:32,370 --> 00:10:35,010
+The diagonal terms capture the contribution
+
+209
+00:10:35,010 --> 00:10:38,190
+of their own variance of each of the positions,
+
+210
+00:10:38,190 --> 00:10:42,650
+and the off diagonal terms that are driven by co-variances.
+

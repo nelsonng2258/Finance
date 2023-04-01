@@ -1,0 +1,89 @@
+
+PROFESSOR: Although we have been advocating the NPV
+rule for capital budgeting decisions, in practice,
+other rules are also used.
+We can list some of the common ones--
+the payback period, internal rate of return,
+sometimes also called IRR, profitability index,
+sometimes also called PI, and so on.
+As is often the case, for the correct answer,
+there's only one, while for the not so correct answers,
+there are many.
+We will show a more extended list of these alternative rules
+by the end of this lecture.
+Firms use these rules for various reasons.
+First, they were used historically,
+and habits die hard.
+Second, they may have worked in previous situations, often
+combined with common sense and other considerations.
+Third, under certain circumstances,
+they do give the same answer as NPV.
+But in general, they don't agree with NPV.
+Therefore, it is important to note that the NPV rule
+dominates these alternatives.
+Nonetheless, given their presence in practice,
+we will discuss some of these alternative rules,
+their validity, and limitations.
+The first rule we consider is based on the so-called payback
+period of a project.
+A project's payback period is defined as the minimum time,
+denoted by s, such that the sum of net cash
+flows from the project turns positive.
+In other words, it is the time taken
+for the sum of the projects' subsequent payoffs
+to just cover the initial investment.
+This is formally given by the equation highlighted
+on this slide.
+The capital budgeting rule based on the payback period
+first specifies a threshold payback time--
+say, t star.
+Then for independent projects, accept all those
+with payback period not exceeding the threshold.
+For mutually exclusive projects, among the projects
+with payback periods not exceeding the threshold,
+accept the one with the minimum payback period.
+Let's consider an example to illustrate this rule.
+Suppose that the payback threshold is three years,
+and we have two projects, 1 and 2.
+Their dollar cash flows are given in the table,
+in thousand dollars.
+Their payback periods are four and three years, respectively,
+as given in the last column in the table.
+This is easily seen.
+Take project one, for example.
+The initial investment is 100 in year zero.
+Positive payoff starts at 20 in year one, then 40 in year two,
+with the sum being 60; then 30 in year three,
+with the sum being 90; and then 10 in year four,
+with the sum being 100, which just
+equals the initial investment.
+Therefore, its payback period is four years.
+
+With the cutoff payback period being three,
+the firm will reject project one and accept project two.
+But looking at the two projects more carefully,
+and what the payback period does,
+it has two obvious shortcomings.
+First, the rule ignores cash flows
+after that payback period.
+For example, project one has substantial cash flows
+in year five and six which are totally
+ignored in the decision.
+Second, the rule ignores discounting.
+Both of these omissions can lead to deviations
+from the optimal decision.
+To see this, let's assume that the proper discount
+rate is 10% for both projects.
+We can then compute their NPVs.
+In particular, project one has an NPV of roughly $39,000,
+while project two has an NPV of roughly minus $7,000.
+But by the payback rule, project two
+was accepted, not project 1.
+One can think of possible fixes to overcome
+the rule's shortcomings.
+For example, incorporating proper discounting,
+one can define the discounted payback period
+as the time it takes for the sum of the discounted cash flow
+first exceeds the initial investment.
+This is better than before, but still ignores the cash flows
+after the discounted payback period.

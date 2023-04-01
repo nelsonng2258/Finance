@@ -1,0 +1,138 @@
+
+PROFESSOR: Consider a project that
+requires an investment of $30,000 in Year 0.
+This project is expected to generate
+cash flows of $4,600 over the next 10 years.
+What is the internal rate of return, or IRR,
+of this project?
+
+First, let's learn how to build an NPV profile for a given
+project.
+By definition, NPV profile is a graph
+of a project's NPV over a range of discount rates.
+In our case, if the discount rate is r,
+the net present value of this project
+is negative $30,000, which is the initial investment,
+plus $4,600 divided by r, multiplied by 1 minus 1
+divided by 1 plus r raised to the power 10.
+Here we are using the formula that
+computes the present value of an annuity that
+pays $4,600 each year for 10 years starting in Year 1.
+Now let's use Excel to compute this NPV for a range
+of discount rates, r.
+In the spreadsheet, I have built in an array of discount rates
+starting from 0.25% all the way to 15% with increments
+of a quarter of a percent.
+Now, for each of these discount rates,
+I will compute the net present value of our project.
+So starting for 0.25%, the net present value
+equals to the initial investment plus annual cash flow divided
+by this discount rate multiplied by 1 minus 1 divided by 1
+plus discount rate raised to the power 10.
+
+So in this case, if the discount rate is 0.25%,
+the net present value of our project is $15,374.
+Now, let me fix the cells, B3 and B4,
+so that I can stretch this array all the way down.
+And it'll automatically compute the net present value
+of this project for all of these discount rates.
+
+Now, recall that by definition, NPV profile
+is a graph of a project's NPV for a range of discount rates.
+So let's plot NPV against discount rates.
+I am going to select both arrays and build this graph.
+
+What we see is that for this project,
+the NPV profile is a convex downward-sloping line.
+It intersects x-axis around 8.75% mark.
+Recall that by definition, the internal rate of return,
+or IRR, is the discount rate that makes NPV of the project
+equal to 0.
+Therefore, the major benefit of building the NPV profile
+is to gauge what the internal rate of return for a given
+project is.
+In our case, internal rate of return
+is somewhere around 8.75%.
+Note that this is not the exact solution yet.
+We will learn two ways of finding
+the exact solution for the internal rate of return now.
+The first method of finding the internal rate of return
+is to use Goal Seek function in Excel.
+This function numerically solves equations.
+To use this function, we need to compute
+the net present value of project for any given discount rate.
+This initial discount rate is often referred to
+as an initial guess.
+So I will set it 0.25%.
+And let's compute the net present value
+for this initial guess.
+Net present value equals to the initial investment amount
+plus the annual cash flow divided
+by the initial guess multiplied by 1 minus 1 divided by 1
+plus the discount rate raised to the power 10.
+So if the discount rate is 0.25%,
+the NPV is $15,374, same as we had before.
+Now, let's use Goal Seek function.
+We're going to Data tab, What-If Analysis, Goal Seek.
+Goal Seek allows us to vary or to find the discount rate that
+would set the net present value to any value that we want.
+Now, since we are trying to find internal rate of return,
+we want to set this cell, D9, where the NPV is
+to 0 by changing this cell.
+So we want to find the net present value that
+would equal to 0 by changing the initial guess that we
+set for a discount rate.
+When we press OK button, Excel solves this equation
+and finds the discount rate that sets the NPV of this project
+to 0.
+In this case, the discount rate that sets NPV to 0
+is 8.64%, which, by definition, is the internal rate of return
+of this project.
+
+Goal Seek function is a useful tool that
+allows you to solve any nonlinear equation in Excel.
+The second method that we'll learn
+how to find internal rate of return
+just simply utilizes the IRR function in Excel.
+Through this function, we need to enter all cash flows
+that our project generates.
+We'll start with the Year 0 where
+we have the outflow of $30,000.
+And then for the subsequent years, from Year 1
+until Year 10, our project returns $4,600 every year.
+Now, in this area, we have all of the cash flows
+that this project generates.
+To find its internal rate of return, we use IRR function.
+So we type IRR.
+And then we simply select the entire array in which
+we have our cash flows.
+There is a second parameter that is
+required for the IRR function.
+It's an optional parameter.
+In some complicated cases, it does matter.
+In our case, it does not.
+We can put 0 here and hit Enter.
+This function tells us the internal rate
+of return of this project is 8.64%,
+the same IRR that we got from using Goal Seek function.
+
+The second part of this question asks,
+if the cost of capital for this project is 9%,
+should you take it?
+We have found that the internal rate of return of this project
+is 8.64%.
+Now, let's recall the IRR rule, which
+states we should invest only if the internal rate of return
+of a project is higher than its cost of capital.
+In our case, the internal rate of return of 8.64%
+is less than 9%, which is the cost of capital
+for this project.
+Therefore, we should not take it.
+To confirm, let us also compute the net present value
+of this project given its cost of capital.
+If the cost of capital is 9%, the NPV of this project
+is negative $479.
+NPV of this project is negative.
+Therefore, we should not take it.
+Both IRR and NPV investment decision rules in this case
+agree.

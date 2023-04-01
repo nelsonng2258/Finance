@@ -1,0 +1,59 @@
+
+PROFESSOR: Now what I will do right now,
+I will increase the number of stocks from 30 to 300.
+I will maintain the assumption that the loadings
+on the first factor for each of these 300 stocks
+right now is still one and I will maintain the same loading
+structure on the second factor but I
+will assume that for the first 100 stocks
+the second beta, beta 2 is equal to 1.
+For the next 100 stocks, so from 101 to 200, the beta is 1.6,
+and from 201 to 300, so for the last 100 stocks, beta 2 is 2.1.
+Right now I want to understand what
+happens to betas of the portfolio, the factor loadings,
+of this equally weighted portfolio on factor 1
+and factor 2.
+And so let's see, for the first factor
+we get, it's exactly the same expression
+because it's an equally weighted portfolio,
+so all that changes is just n1.
+So before it was 30, right now it's 300.
+And you can see that this expression again
+is going to be equal to 1 because we're
+adding 1 over 300.
+So this is the weight that we put in each individual stock,
+300 times.
+Before we were doing it 30 times.
+And so this sum is just equal to 1.
+And again, this should be intuitive
+that if each of the individual stocks have factor loading of 1
+on the first factor, then again, if we combine them
+into a portfolio, the portfolio loading on factor 1
+is going to be just simply equal to 1 as well.
+For equal weighted portfolio but then
+again for any other portfolio as well.
+Now let's see what happens to the factor loading
+on the second factor.
+So this is the same expression as we
+had before again, n1 right now is 300, but all we're doing
+is that we are adding the second beta for each
+of the individual stocks and so here we're doing,
+we're adding it 100 times for the first asset,
+so it's 100 times 1, then 100 times 1.6
+for the second class of stocks and then
+another 100 multiplied by 2.1.
+So this is for the last class of stocks with this beta.
+And so then all we're doing is that we're adding this up
+and we're dividing it by n1, which right now is 300.
+And you can see that this is just,
+it's a simple scaling compared to the case
+that we had before when we had 30 stocks, so we
+were multiplying by 10 and were dividing by 30, right now
+we're multiplying it by 100 and dividing it by 300.
+So this doesn't change the final answer
+that the beta, second beta the loading
+of this portfolio in the second factor is 1.57.
+So this doesn't change.
+So the result here is that as we increase
+the number of stocks in this portfolio from 30 to 300 factor
+loadings stay the same.

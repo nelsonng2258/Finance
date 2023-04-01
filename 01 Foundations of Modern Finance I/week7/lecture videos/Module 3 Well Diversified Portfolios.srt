@@ -1,0 +1,508 @@
+0
+00:00:00,000 --> 00:00:01,070
+
+
+1
+00:00:01,070 --> 00:00:02,980
+PROFESSOR: We now consider the key step
+
+2
+00:00:02,980 --> 00:00:05,260
+in the derivation of the APT--
+
+3
+00:00:05,260 --> 00:00:07,080
+diversification.
+
+4
+00:00:07,080 --> 00:00:10,080
+Consider a portfolio that includes multiple risk
+
+5
+00:00:10,080 --> 00:00:12,920
+assets, portfolio p.
+
+6
+00:00:12,920 --> 00:00:15,530
+This portfolio is described by its weights,
+
+7
+00:00:15,530 --> 00:00:18,450
+which we denote by w.
+
+8
+00:00:18,450 --> 00:00:20,940
+The return of the portfolio is a weighted average
+
+9
+00:00:20,940 --> 00:00:23,820
+of the returns on the individual assets.
+
+10
+00:00:23,820 --> 00:00:27,780
+Therefore, we can derive the moments of portfolio returns
+
+11
+00:00:27,780 --> 00:00:30,090
+from portfolio weights and the properties
+
+12
+00:00:30,090 --> 00:00:32,640
+of the individual assets returns.
+
+13
+00:00:32,640 --> 00:00:34,290
+In particular, the portfolio mean
+
+14
+00:00:34,290 --> 00:00:37,410
+is a weighted average of the average returns
+
+15
+00:00:37,410 --> 00:00:40,230
+across the assets in the portfolio.
+
+16
+00:00:40,230 --> 00:00:42,480
+The factor loadings of the portfolio
+
+17
+00:00:42,480 --> 00:00:44,700
+for each of the factors are also weighted
+
+18
+00:00:44,700 --> 00:00:48,240
+average of the individual factor loadings of the securities
+
+19
+00:00:48,240 --> 00:00:50,040
+in the portfolio.
+
+20
+00:00:50,040 --> 00:00:54,180
+And the idiosyncratic component of returns, epsilon p,
+
+21
+00:00:54,180 --> 00:00:57,660
+is a weighted average of individual epsilons.
+
+22
+00:00:57,660 --> 00:01:00,040
+It is this idiosyncratic piece that we
+
+23
+00:01:00,040 --> 00:01:02,280
+are interested in right now.
+
+24
+00:01:02,280 --> 00:01:04,410
+The variance of the idiosyncratic component
+
+25
+00:01:04,410 --> 00:01:08,100
+of portfolio return is the variance
+
+26
+00:01:08,100 --> 00:01:11,700
+of the sum of wi epsilon i, which
+
+27
+00:01:11,700 --> 00:01:15,460
+is the weighted average of individual epsilons.
+
+28
+00:01:15,460 --> 00:01:17,890
+Because idiosyncratic shocks are pairwise
+
+29
+00:01:17,890 --> 00:01:21,970
+uncorrelated across the assets, the variance of the sum
+
+30
+00:01:21,970 --> 00:01:24,250
+is equal to the sum of variances.
+
+31
+00:01:24,250 --> 00:01:28,240
+In other words, the variance of the idiosyncratic component
+
+32
+00:01:28,240 --> 00:01:31,345
+of portfolio return is a sum across all
+
+33
+00:01:31,345 --> 00:01:35,470
+of the assets of the individual idiosyncratic variances,
+
+34
+00:01:35,470 --> 00:01:40,660
+variance of epsilon i times the square of portfolio weight.
+
+35
+00:01:40,660 --> 00:01:43,060
+Now, let's specialize this result
+
+36
+00:01:43,060 --> 00:01:48,130
+to the case of an equally weighted portfolio.
+
+37
+00:01:48,130 --> 00:01:51,550
+Suppose that each of the portfolio weights, wi,
+
+38
+00:01:51,550 --> 00:01:55,000
+is equal to 1/N, where N is the number of assets
+
+39
+00:01:55,000 --> 00:01:56,870
+in the portfolio.
+
+40
+00:01:56,870 --> 00:01:59,490
+We're going to need a piece of notation.
+
+41
+00:01:59,490 --> 00:02:02,720
+We will denote the average idiosyncratic variance
+
+42
+00:02:02,720 --> 00:02:07,730
+across all of the assets by sigma i squared bar.
+
+43
+00:02:07,730 --> 00:02:10,940
+Now, as it is clear from the previous derivation,
+
+44
+00:02:10,940 --> 00:02:13,310
+the variance of the idiosyncratic component
+
+45
+00:02:13,310 --> 00:02:18,350
+of portfolio return is equal to 1/N times the average
+
+46
+00:02:18,350 --> 00:02:20,630
+idiosyncratic variance.
+
+47
+00:02:20,630 --> 00:02:23,910
+As we let the number of securities increase and N
+
+48
+00:02:23,910 --> 00:02:27,530
+rises, this number goes to 0.
+
+49
+00:02:27,530 --> 00:02:30,620
+In other words, as we enlarge the portfolio
+
+50
+00:02:30,620 --> 00:02:33,620
+by adding more and more assets equally weighted,
+
+51
+00:02:33,620 --> 00:02:38,550
+the non-systematic component of variance vanishes in the limit.
+
+52
+00:02:38,550 --> 00:02:40,550
+This result does not depend on the portfolio
+
+53
+00:02:40,550 --> 00:02:42,860
+being exactly equally weighted.
+
+54
+00:02:42,860 --> 00:02:46,040
+The same argument can be applied to any well-diversified
+
+55
+00:02:46,040 --> 00:02:49,370
+portfolio, as long as the maximum portfolio
+
+56
+00:02:49,370 --> 00:02:53,020
+weight decreases as the number of assets in the portfolio
+
+57
+00:02:53,020 --> 00:02:54,170
+rises.
+
+58
+00:02:54,170 --> 00:02:56,300
+In other words, all that we require
+
+59
+00:02:56,300 --> 00:02:59,390
+is that the portfolio weights are more or less evenly
+
+60
+00:02:59,390 --> 00:03:02,060
+distributed across the assets, but they don't need
+
+61
+00:03:02,060 --> 00:03:04,930
+to be exactly equally weighted.
+
+62
+00:03:04,930 --> 00:03:07,750
+What we determined is that in a well-diversified
+
+63
+00:03:07,750 --> 00:03:11,440
+portfolio for a specific or idiosyncratic risk
+
+64
+00:03:11,440 --> 00:03:14,950
+can be eliminated as the number of assets in the portfolio
+
+65
+00:03:14,950 --> 00:03:16,300
+increases.
+
+66
+00:03:16,300 --> 00:03:19,960
+This is an important property of well-diversified portfolios.
+
+67
+00:03:19,960 --> 00:03:23,980
+They don't have idiosyncratic risk, at least
+
+68
+00:03:23,980 --> 00:03:26,410
+in the limit of a large number of assets.
+
+69
+00:03:26,410 --> 00:03:29,890
+The only risk that affects well-diversified portfolios
+
+70
+00:03:29,890 --> 00:03:33,530
+is the factor risk or systematic risk.
+
+71
+00:03:33,530 --> 00:03:36,670
+This is the kind of risk that cannot be diversified away
+
+72
+00:03:36,670 --> 00:03:40,410
+by forming portfolios with a large number of assets.
+
+73
+00:03:40,410 --> 00:03:44,210
+To illustrate, consider the following empirical example.
+
+74
+00:03:44,210 --> 00:03:47,820
+We construct two portfolios by sorting stocks on their market
+
+75
+00:03:47,820 --> 00:03:50,760
+capitalization, or market size.
+
+76
+00:03:50,760 --> 00:03:53,850
+We start in 1926.
+
+77
+00:03:53,850 --> 00:03:59,320
+Portfolio 1 includes the largest stocks in the US stock market.
+
+78
+00:03:59,320 --> 00:04:05,170
+This portfolio is based roughly on the top 30% in terms
+
+79
+00:04:05,170 --> 00:04:09,190
+of market capitalization judging by the distribution of market
+
+80
+00:04:09,190 --> 00:04:11,830
+cap on the New York Stock Exchange.
+
+81
+00:04:11,830 --> 00:04:15,520
+In recent years, this portfolio included approximately 500
+
+82
+00:04:15,520 --> 00:04:17,060
+stocks.
+
+83
+00:04:17,060 --> 00:04:19,670
+The second portfolio includes the lower tier
+
+84
+00:04:19,670 --> 00:04:21,529
+in terms of market size.
+
+85
+00:04:21,529 --> 00:04:24,020
+This portfolio, we can call it mid cap,
+
+86
+00:04:24,020 --> 00:04:28,010
+includes roughly 1,000 stocks.
+
+87
+00:04:28,010 --> 00:04:31,070
+These two portfolios are well-diversified.
+
+88
+00:04:31,070 --> 00:04:34,420
+And by construction, they do not overlap.
+
+89
+00:04:34,420 --> 00:04:36,830
+A stock can be either in Portfolio 1
+
+90
+00:04:36,830 --> 00:04:39,440
+or Portfolio 2 or neither.
+
+91
+00:04:39,440 --> 00:04:43,410
+They have no securities in common.
+
+92
+00:04:43,410 --> 00:04:45,630
+If return distribution in the stock market
+
+93
+00:04:45,630 --> 00:04:48,420
+can be described by a single factor model, then
+
+94
+00:04:48,420 --> 00:04:51,780
+both of these portfolios, being well-diversified,
+
+95
+00:04:51,780 --> 00:04:54,450
+will have exposure to the common factor
+
+96
+00:04:54,450 --> 00:04:57,130
+and no idiosyncratic risk.
+
+97
+00:04:57,130 --> 00:04:59,100
+In other words, these two portfolios
+
+98
+00:04:59,100 --> 00:05:01,890
+should be perfectly correlated with each other.
+
+99
+00:05:01,890 --> 00:05:03,420
+The exposures to the common factor
+
+100
+00:05:03,420 --> 00:05:05,250
+may not be the same in magnitude,
+
+101
+00:05:05,250 --> 00:05:09,340
+but the returns should be perfectly correlated.
+
+102
+00:05:09,340 --> 00:05:13,270
+As we look at the scatter plot of the return distribution
+
+103
+00:05:13,270 --> 00:05:16,510
+of the mid cap portfolio on the vertical axis
+
+104
+00:05:16,510 --> 00:05:18,370
+relative to the large cap portfolio
+
+105
+00:05:18,370 --> 00:05:20,860
+on the horizontal axis, we observe
+
+106
+00:05:20,860 --> 00:05:23,710
+that, indeed, the returns on these two portfolios
+
+107
+00:05:23,710 --> 00:05:26,810
+are highly correlated with each other.
+
+108
+00:05:26,810 --> 00:05:29,330
+They're not perfectly correlated as a single factor
+
+109
+00:05:29,330 --> 00:05:33,140
+model will predict, but the correlation is very high.
+
+110
+00:05:33,140 --> 00:05:35,840
+And the R squared of a regression
+
+111
+00:05:35,840 --> 00:05:42,410
+of the mid cap return on the large cap return is over 90%.
+
+112
+00:05:42,410 --> 00:05:45,740
+Observe that the slope of the line that
+
+113
+00:05:45,740 --> 00:05:48,440
+captures the linear relation between these two portfolios
+
+114
+00:05:48,440 --> 00:05:50,360
+is higher than 1.
+
+115
+00:05:50,360 --> 00:05:53,480
+What this means is that the mid cap portfolio
+
+116
+00:05:53,480 --> 00:05:55,880
+has a higher loading on the common factor
+
+117
+00:05:55,880 --> 00:05:58,570
+than the large cap portfolio.
+
+118
+00:05:58,570 --> 00:06:02,320
+These results suggest that there is a significant common factor
+
+119
+00:06:02,320 --> 00:06:06,370
+that affects returns on large cap and mid cap stocks.
+
+120
+00:06:06,370 --> 00:06:08,120
+And even though these two portfolios
+
+121
+00:06:08,120 --> 00:06:11,380
+have no securities in common, their returns with each other
+
+122
+00:06:11,380 --> 00:06:13,540
+are highly correlated.
+
+123
+00:06:13,540 --> 00:06:16,570
+We also see that the correlation is not perfect.
+
+124
+00:06:16,570 --> 00:06:19,900
+And that suggests that perhaps there are other factors at play
+
+125
+00:06:19,900 --> 00:06:22,540
+here and a single factor model does not fully
+
+126
+00:06:22,540 --> 00:06:26,430
+describe the return distribution of these two portfolios.
+

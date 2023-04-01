@@ -1,0 +1,176 @@
+0
+00:00:00,000 --> 00:00:01,070
+
+
+1
+00:00:01,070 --> 00:00:03,500
+PROFESSOR: Now let's see what happens to the idiosyncratic
+
+2
+00:00:03,500 --> 00:00:07,610
+volatility of a portfolio as we increase the number of stocks.
+
+3
+00:00:07,610 --> 00:00:11,150
+We will increase it from 30 to 300
+
+4
+00:00:11,150 --> 00:00:14,360
+and we'll compute the idiosyncratic volatility, again
+
+5
+00:00:14,360 --> 00:00:16,370
+of this equally weighted portfolio.
+
+6
+00:00:16,370 --> 00:00:20,300
+I will maintain the assumption that the first 100 stocks have
+
+7
+00:00:20,300 --> 00:00:26,120
+idiosyncratic volatility of 5%, the next 100 stocks 6%,
+
+8
+00:00:26,120 --> 00:00:29,370
+and the remaining 100 stocks of 8%.
+
+9
+00:00:29,370 --> 00:00:31,670
+So this is a standard deviation of epsilon I
+
+10
+00:00:31,670 --> 00:00:34,530
+of these individual stocks.
+
+11
+00:00:34,530 --> 00:00:37,130
+Now let's see what changes in the expression
+
+12
+00:00:37,130 --> 00:00:39,510
+that we've had before.
+
+13
+00:00:39,510 --> 00:00:42,260
+So one thing that changes is n1, so instead of 30, it
+
+14
+00:00:42,260 --> 00:00:45,590
+becomes 300 and so I'm raising, I'm
+
+15
+00:00:45,590 --> 00:00:49,580
+squaring 300 right now instead of 30.
+
+16
+00:00:49,580 --> 00:00:52,190
+And now I'm adding up instead of adding up
+
+17
+00:00:52,190 --> 00:00:55,850
+30 idiosyncratic variances, I'm adding
+
+18
+00:00:55,850 --> 00:00:59,570
+up 300 idiosyncratic variances because I have 300 stocks.
+
+19
+00:00:59,570 --> 00:01:02,990
+And so the first 100 stocks have idiosyncratic variance
+
+20
+00:01:02,990 --> 00:01:05,519
+of 5% squared.
+
+21
+00:01:05,519 --> 00:01:09,170
+So the remaining, or the next 100 stocks 6%
+
+22
+00:01:09,170 --> 00:01:14,250
+squared, and the last 100 stocks 8% squared.
+
+23
+00:01:14,250 --> 00:01:16,618
+So adding this all up gives me this variance.
+
+24
+00:01:16,618 --> 00:01:19,160
+You can see that already this variance is quite a bit smaller
+
+25
+00:01:19,160 --> 00:01:22,320
+than this one because it has an extra 0 here.
+
+26
+00:01:22,320 --> 00:01:24,600
+And so now if I compute the volatility
+
+27
+00:01:24,600 --> 00:01:26,870
+of the standard deviation of this portfolio P,
+
+28
+00:01:26,870 --> 00:01:30,200
+by taking the square root of the variance that I just computed,
+
+29
+00:01:30,200 --> 00:01:32,390
+this gives me 0.37%.
+
+30
+00:01:32,390 --> 00:01:36,740
+So you could see that the variance dropped quite sharply
+
+31
+00:01:36,740 --> 00:01:41,690
+from 1.18% for a portfolio that had 30 stocks,
+
+32
+00:01:41,690 --> 00:01:47,990
+to 0.37% for a portfolio that has 300 stocks.
+
+33
+00:01:47,990 --> 00:01:51,740
+And so the key lesson here is that it's exactly this drop.
+
+34
+00:01:51,740 --> 00:01:54,680
+In the limit we know that idiosyncratic volatility
+
+35
+00:01:54,680 --> 00:01:57,150
+of the portfolio, of equally weighted portfolio,
+
+36
+00:01:57,150 --> 00:01:59,750
+is going to go to zero.
+
+37
+00:01:59,750 --> 00:02:03,290
+You can see here that if I increase n1 to further
+
+38
+00:02:03,290 --> 00:02:08,060
+to 3,000, again, maintaining the same assumption here,
+
+39
+00:02:08,060 --> 00:02:11,000
+the volatility of this equally weighted portfolio
+
+40
+00:02:11,000 --> 00:02:13,610
+is going to drop further to 0.12%.
+
+41
+00:02:13,610 --> 00:02:16,050
+So if we continue increasing, it's going to go down,
+
+42
+00:02:16,050 --> 00:02:18,080
+it's going to go down to 0.
+
+43
+00:02:18,080 --> 00:02:21,580
+And this is the key lesson of this example.
+

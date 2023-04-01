@@ -1,0 +1,336 @@
+0
+00:00:00,000 --> 00:00:00,980
+
+
+1
+00:00:00,980 --> 00:00:02,480
+PROFESSOR: In this question, we will
+
+2
+00:00:02,480 --> 00:00:05,170
+work with a large portfolio of stocks
+
+3
+00:00:05,170 --> 00:00:09,215
+with the goal to understand what happens to the idiosyncratic,
+
+4
+00:00:09,215 --> 00:00:12,470
+the risk of a portfolio as the number of stocks
+
+5
+00:00:12,470 --> 00:00:14,970
+in the portfolio increases.
+
+6
+00:00:14,970 --> 00:00:19,400
+We will start with a portfolio that consists of 30 stocks.
+
+7
+00:00:19,400 --> 00:00:21,890
+We will work with in the framework of a two factor
+
+8
+00:00:21,890 --> 00:00:23,210
+model.
+
+9
+00:00:23,210 --> 00:00:28,340
+And we have the following factor loadings and standard deviation
+
+10
+00:00:28,340 --> 00:00:33,170
+of idiosyncratic risk for individual assets for these 30
+
+11
+00:00:33,170 --> 00:00:34,400
+stocks.
+
+12
+00:00:34,400 --> 00:00:38,870
+So the factor loading on the first factor, beta 1,
+
+13
+00:00:38,870 --> 00:00:44,350
+for each of the assets, for each of the 30 stocks, equals to 1.
+
+14
+00:00:44,350 --> 00:00:49,210
+Now the factor loading on the second factor for these 30
+
+15
+00:00:49,210 --> 00:00:50,570
+stocks will differ.
+
+16
+00:00:50,570 --> 00:00:54,640
+So for the first 10 stocks, from i from 1 to 10,
+
+17
+00:00:54,640 --> 00:00:56,950
+the factor loading will be 1.
+
+18
+00:00:56,950 --> 00:01:01,730
+For the next 10 stocks, from i equals to 11 to 20,
+
+19
+00:01:01,730 --> 00:01:04,480
+the vector loading will be 1.6.
+
+20
+00:01:04,480 --> 00:01:07,540
+And for the remaining 10 stocks from 21 to 30,
+
+21
+00:01:07,540 --> 00:01:11,740
+the factor loading on the second factor will be 2.1.
+
+22
+00:01:11,740 --> 00:01:14,540
+This is the idiosyncratic risk of our individual stocks.
+
+23
+00:01:14,540 --> 00:01:18,610
+For the first 10 stocks, idiosyncratic standard
+
+24
+00:01:18,610 --> 00:01:21,160
+deviation is 5%.
+
+25
+00:01:21,160 --> 00:01:24,320
+For the next 10 stocks, from 11 to 20, it's 6%.
+
+26
+00:01:24,320 --> 00:01:28,450
+And for the remaining 10 stocks, it is 8%.
+
+27
+00:01:28,450 --> 00:01:30,000
+So first, what we will do here is
+
+28
+00:01:30,000 --> 00:01:34,050
+that we'll form an equally weighted portfolio out
+
+29
+00:01:34,050 --> 00:01:35,580
+of these 10 stocks.
+
+30
+00:01:35,580 --> 00:01:37,080
+And in the first question, we'll try
+
+31
+00:01:37,080 --> 00:01:38,455
+to understand what are the factor
+
+32
+00:01:38,455 --> 00:01:42,540
+loadings on factor 1 and 2, in this equally
+
+33
+00:01:42,540 --> 00:01:43,950
+weighted portfolio.
+
+34
+00:01:43,950 --> 00:01:45,990
+Let's compute factor loadings of this equally
+
+35
+00:01:45,990 --> 00:01:47,580
+weighted portfolio.
+
+36
+00:01:47,580 --> 00:01:50,250
+Let's start with the factor loading 1 or beta 1,
+
+37
+00:01:50,250 --> 00:01:51,720
+of portfolio p.
+
+38
+00:01:51,720 --> 00:01:54,900
+By definition, this is just the weighted average
+
+39
+00:01:54,900 --> 00:01:59,430
+of betas of individual assets in our portfolio.
+
+40
+00:01:59,430 --> 00:02:02,700
+The weights are the weights of each of the individual assets
+
+41
+00:02:02,700 --> 00:02:04,360
+in the portfolio.
+
+42
+00:02:04,360 --> 00:02:09,840
+So all of our w's, would just simply equal to 1 over n1,
+
+43
+00:02:09,840 --> 00:02:12,120
+where n1 is the number of stocks, 30,
+
+44
+00:02:12,120 --> 00:02:16,300
+because we're working with equally weighted portfolios.
+
+45
+00:02:16,300 --> 00:02:17,910
+And so therefore, this expression
+
+46
+00:02:17,910 --> 00:02:20,920
+becomes just the sum from 1 all the way to 30
+
+47
+00:02:20,920 --> 00:02:23,790
+to the number of stocks, 1 over n1,
+
+48
+00:02:23,790 --> 00:02:27,540
+which is the weight of each individual stock, multiplied
+
+49
+00:02:27,540 --> 00:02:31,170
+by the beta of individual stocks in this portfolio.
+
+50
+00:02:31,170 --> 00:02:35,220
+Now recall that of beta, all of the loadings,
+
+51
+00:02:35,220 --> 00:02:38,850
+so if individual stocks on factor 1,
+
+52
+00:02:38,850 --> 00:02:41,040
+is just simply equal to 1.
+
+53
+00:02:41,040 --> 00:02:43,780
+So all of this beta i1, they're equal to 1.
+
+54
+00:02:43,780 --> 00:02:46,710
+And so therefore, the sum becomes just this.
+
+55
+00:02:46,710 --> 00:02:50,670
+So we're adding up from 1 to 30, 1 over 30.
+
+56
+00:02:50,670 --> 00:02:52,605
+So this just gives us 1.
+
+57
+00:02:52,605 --> 00:02:54,480
+And you could see that this is very intuitive
+
+58
+00:02:54,480 --> 00:02:57,930
+because each individual stock is beta
+
+59
+00:02:57,930 --> 00:03:00,630
+that it goes to 1 with respect to the first factor.
+
+60
+00:03:00,630 --> 00:03:02,640
+So for equally weighted portfolio,
+
+61
+00:03:02,640 --> 00:03:05,340
+for that matter, for any portfolio that we form out
+
+62
+00:03:05,340 --> 00:03:09,720
+of these assets, the beta, 1, of this portfolio
+
+63
+00:03:09,720 --> 00:03:12,780
+will always be equal to 1, just because individual assets, all
+
+64
+00:03:12,780 --> 00:03:15,980
+of them have betas equal to 1.
+
+65
+00:03:15,980 --> 00:03:18,613
+Now for beta 2 of the portfolio is
+
+66
+00:03:18,613 --> 00:03:20,030
+going to be a little bit different
+
+67
+00:03:20,030 --> 00:03:23,420
+because individual stocks have different loadings
+
+68
+00:03:23,420 --> 00:03:25,530
+on the second factor here.
+
+69
+00:03:25,530 --> 00:03:27,200
+So let's compute it.
+
+70
+00:03:27,200 --> 00:03:30,530
+Same expression, this is just definition.
+
+71
+00:03:30,530 --> 00:03:35,600
+Equally weighted portfolio, so all of our wi's are 1 over n1.
+
+72
+00:03:35,600 --> 00:03:40,130
+And now we are adding up all of these beta, i2.
+
+73
+00:03:40,130 --> 00:03:44,710
+So we have 10 stocks for which beta i2 is 1.
+
+74
+00:03:44,710 --> 00:03:47,660
+So 10 times 1.
+
+75
+00:03:47,660 --> 00:03:50,490
+The other 10 stocks of which beta 2 is 1.6.
+
+76
+00:03:50,490 --> 00:03:55,470
+So 10 times 1.6 plus 10 times 2.1.
+
+77
+00:03:55,470 --> 00:03:59,610
+So this is the beta for the last 30 stocks in this portfolio.
+
+78
+00:03:59,610 --> 00:04:02,900
+So if we add up all this, we divided by 30.
+
+79
+00:04:02,900 --> 00:04:05,520
+Again, so this is the number of stocks.
+
+80
+00:04:05,520 --> 00:04:10,160
+So this expression would equal to 1.57.
+
+81
+00:04:10,160 --> 00:04:13,430
+So the loading on the second factor of this portfolio p,
+
+82
+00:04:13,430 --> 00:04:17,020
+equally weighted portfolio, would equal to 1.57.
+
+83
+00:04:17,020 --> 00:04:18,000
+
+

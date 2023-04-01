@@ -1,0 +1,492 @@
+0
+00:00:00,000 --> 00:00:00,660
+
+
+1
+00:00:00,660 --> 00:00:03,810
+We now examine the weak form of the Efficient Markets
+
+2
+00:00:03,810 --> 00:00:05,370
+Hypothesis.
+
+3
+00:00:05,370 --> 00:00:08,100
+Empirical tests of the weak form look
+
+4
+00:00:08,100 --> 00:00:11,800
+at various patterns in returns, patterns,
+
+5
+00:00:11,800 --> 00:00:15,720
+such as serial correlation in returns or performance
+
+6
+00:00:15,720 --> 00:00:20,880
+of filter rules or performance of technical analysis.
+
+7
+00:00:20,880 --> 00:00:23,790
+Let's begin with the serial correlation.
+
+8
+00:00:23,790 --> 00:00:27,360
+If past prices could be used to predict future returns,
+
+9
+00:00:27,360 --> 00:00:30,390
+we would be able to detect a correlation between price
+
+10
+00:00:30,390 --> 00:00:34,680
+changes and success of future returns.
+
+11
+00:00:34,680 --> 00:00:36,960
+In other words, we would be able to see
+
+12
+00:00:36,960 --> 00:00:39,360
+statistical correlation between past returns
+
+13
+00:00:39,360 --> 00:00:40,860
+and future returns.
+
+14
+00:00:40,860 --> 00:00:44,230
+This is known as serial correlation.
+
+15
+00:00:44,230 --> 00:00:46,180
+Would high degree of serial correlation
+
+16
+00:00:46,180 --> 00:00:49,540
+be inconsistent with the efficient markets hypothesis?
+
+17
+00:00:49,540 --> 00:00:53,110
+Or could it be explained by a risk model?
+
+18
+00:00:53,110 --> 00:00:56,530
+The challenge when trying to explain serial correlation
+
+19
+00:00:56,530 --> 00:00:58,630
+with the risk model is that one would
+
+20
+00:00:58,630 --> 00:01:01,870
+need to argue that the conditional risk of an asset
+
+21
+00:01:01,870 --> 00:01:07,040
+changes rapidly over time in relation to past returns.
+
+22
+00:01:07,040 --> 00:01:09,080
+Most common risk models do not have
+
+23
+00:01:09,080 --> 00:01:12,770
+that property, at least not at the high frequency,
+
+24
+00:01:12,770 --> 00:01:15,030
+such as daily.
+
+25
+00:01:15,030 --> 00:01:17,850
+In the following graph, we see an illustration.
+
+26
+00:01:17,850 --> 00:01:21,090
+We look at daily returns on two stocks.
+
+27
+00:01:21,090 --> 00:01:23,310
+One is Philips Electronics.
+
+28
+00:01:23,310 --> 00:01:25,900
+The other one is Sony.
+
+29
+00:01:25,900 --> 00:01:27,970
+These are both scatter plots.
+
+30
+00:01:27,970 --> 00:01:31,960
+On the horizontal axis, we plot daily returns on day T
+
+31
+00:01:31,960 --> 00:01:34,480
+and on the vertical axis daily returns
+
+32
+00:01:34,480 --> 00:01:38,370
+on the consecutive trading day, t plus 1.
+
+33
+00:01:38,370 --> 00:01:42,320
+Both of these scatter plots reveal no obvious pattern.
+
+34
+00:01:42,320 --> 00:01:44,480
+They look like a ball of points.
+
+35
+00:01:44,480 --> 00:01:46,460
+This is the point here.
+
+36
+00:01:46,460 --> 00:01:49,730
+There is no pattern of serial correlation
+
+37
+00:01:49,730 --> 00:01:52,970
+in the daily returns of these stocks.
+
+38
+00:01:52,970 --> 00:01:56,880
+As we estimate the serial correlation statistically,
+
+39
+00:01:56,880 --> 00:02:02,150
+we see that it is very close and indistinguishable from 0.
+
+40
+00:02:02,150 --> 00:02:05,200
+This type of pattern is typical.
+
+41
+00:02:05,200 --> 00:02:08,710
+For most individual stocks, serial correlation of returns
+
+42
+00:02:08,710 --> 00:02:11,510
+is very close to 0.
+
+43
+00:02:11,510 --> 00:02:15,030
+In a well-known study in 1965, Eugene Fama
+
+44
+00:02:15,030 --> 00:02:17,700
+analyzed patterns of serial correlation
+
+45
+00:02:17,700 --> 00:02:19,440
+across various stocks.
+
+46
+00:02:19,440 --> 00:02:22,410
+And he found that the horizons of 1, 4, 9,
+
+47
+00:02:22,410 --> 00:02:26,160
+16 days, evidence for serial correlation
+
+48
+00:02:26,160 --> 00:02:28,110
+is essentially absent.
+
+49
+00:02:28,110 --> 00:02:31,830
+On average, serial correlation among consecutive stock returns
+
+50
+00:02:31,830 --> 00:02:35,160
+is very close to 0 across stocks.
+
+51
+00:02:35,160 --> 00:02:40,500
+The same can be said about index returns, or portfolio returns.
+
+52
+00:02:40,500 --> 00:02:44,160
+The following graph illustrates lack of serial correlation
+
+53
+00:02:44,160 --> 00:02:46,650
+for the S&P 500 Index.
+
+54
+00:02:46,650 --> 00:02:49,230
+Looking at the 10-year daily sample,
+
+55
+00:02:49,230 --> 00:02:52,950
+we see that the relation between daily returns
+
+56
+00:02:52,950 --> 00:02:56,940
+on consecutive trading days reveals no obvious pattern
+
+57
+00:02:56,940 --> 00:02:59,790
+of serial correlation.
+
+58
+00:02:59,790 --> 00:03:03,660
+There are other statistical patterns that one can explore,
+
+59
+00:03:03,660 --> 00:03:08,100
+which are related to the weak form of market efficiency.
+
+60
+00:03:08,100 --> 00:03:12,360
+Two famous results are on momentum and reversal
+
+61
+00:03:12,360 --> 00:03:13,830
+in returns.
+
+62
+00:03:13,830 --> 00:03:16,860
+In a 1993 paper, Jegadeesh and Titman
+
+63
+00:03:16,860 --> 00:03:19,980
+documented presence of medium-horizon momentum
+
+64
+00:03:19,980 --> 00:03:22,500
+in asset returns.
+
+65
+00:03:22,500 --> 00:03:26,790
+What they did is they sorted stocks on their past returns
+
+66
+00:03:26,790 --> 00:03:30,270
+over, say, a 6-month interval and then
+
+67
+00:03:30,270 --> 00:03:32,730
+documented the average performance
+
+68
+00:03:32,730 --> 00:03:35,840
+over the following 6-month period.
+
+69
+00:03:35,840 --> 00:03:39,530
+They found that the past winners tend to outperform over
+
+70
+00:03:39,530 --> 00:03:41,360
+the following period.
+
+71
+00:03:41,360 --> 00:03:45,830
+The past losers tend to underperform.
+
+72
+00:03:45,830 --> 00:03:48,490
+This phenomenon is known as momentum.
+
+73
+00:03:48,490 --> 00:03:52,370
+Strong returns tend to continue, and weak returns
+
+74
+00:03:52,370 --> 00:03:57,450
+tend to continue at certain horizons of several months.
+
+75
+00:03:57,450 --> 00:03:59,970
+Hong, Lim, and Stein found that momentum
+
+76
+00:03:59,970 --> 00:04:03,810
+is particularly strong among small stocks with low analyst
+
+77
+00:04:03,810 --> 00:04:05,460
+coverage.
+
+78
+00:04:05,460 --> 00:04:08,200
+A different pattern, called long-term reversal,
+
+79
+00:04:08,200 --> 00:04:12,310
+was documented by De Bondt and Thaler in a 1985 paper.
+
+80
+00:04:12,310 --> 00:04:16,540
+They found evidence that losers over longer horizons,
+
+81
+00:04:16,540 --> 00:04:19,029
+let's say 36 months, subsequently
+
+82
+00:04:19,029 --> 00:04:23,940
+outperform over the horizon of 36 months.
+
+83
+00:04:23,940 --> 00:04:25,890
+It's the opposite for the winners.
+
+84
+00:04:25,890 --> 00:04:29,070
+Past winners tend to underperform over
+
+85
+00:04:29,070 --> 00:04:31,520
+a similar horizon.
+
+86
+00:04:31,520 --> 00:04:35,030
+The following graph shows some empirical evidence
+
+87
+00:04:35,030 --> 00:04:38,090
+for the historical performance of the past winners
+
+88
+00:04:38,090 --> 00:04:40,250
+versus past losers.
+
+89
+00:04:40,250 --> 00:04:42,320
+What we see is a clear difference
+
+90
+00:04:42,320 --> 00:04:44,960
+in the average returns.
+
+91
+00:04:44,960 --> 00:04:47,600
+The winner portfolio outperforming
+
+92
+00:04:47,600 --> 00:04:49,800
+the loser portfolio.
+
+93
+00:04:49,800 --> 00:04:52,590
+As we look at the historical performance of the momentum
+
+94
+00:04:52,590 --> 00:04:56,410
+and the reversal strategies, the question that arises
+
+95
+00:04:56,410 --> 00:04:59,560
+is, do these pose a challenge to the weak form
+
+96
+00:04:59,560 --> 00:05:02,260
+of efficient markets hypothesis?
+
+97
+00:05:02,260 --> 00:05:04,630
+Can we explain differences in performance
+
+98
+00:05:04,630 --> 00:05:08,770
+between winners and losers by differences in risk?
+
+99
+00:05:08,770 --> 00:05:12,060
+This is a subject of an ongoing debate.
+
+100
+00:05:12,060 --> 00:05:16,680
+For example, is it the case that the past winners are more
+
+101
+00:05:16,680 --> 00:05:19,990
+risky than the past losers?
+
+102
+00:05:19,990 --> 00:05:22,390
+Is it the case that the long-term losers
+
+103
+00:05:22,390 --> 00:05:28,100
+in the reversal strategy become more risky as a result?
+
+104
+00:05:28,100 --> 00:05:29,900
+When we compute abnormal returns,
+
+105
+00:05:29,900 --> 00:05:34,040
+we need to know what the normal returns are, returns
+
+106
+00:05:34,040 --> 00:05:37,150
+justified by the risk exposure.
+
+107
+00:05:37,150 --> 00:05:40,330
+Part of the challenge with the momentum strategy in particular
+
+108
+00:05:40,330 --> 00:05:45,620
+is that membership in the winner and loser portfolios changes
+
+109
+00:05:45,620 --> 00:05:47,200
+over time.
+
+110
+00:05:47,200 --> 00:05:50,710
+Past winners don't stay in the winner portfolio for long.
+
+111
+00:05:50,710 --> 00:05:53,350
+The same is true for the past losers.
+
+112
+00:05:53,350 --> 00:05:56,710
+This means that if we wanted to explain momentum
+
+113
+00:05:56,710 --> 00:05:58,750
+based on risk exposures, we would
+
+114
+00:05:58,750 --> 00:06:01,060
+have to argue that the risk of stocks
+
+115
+00:06:01,060 --> 00:06:05,490
+changes at relatively high frequency over time.
+
+116
+00:06:05,490 --> 00:06:08,930
+Momentum strategies are also fairly well known.
+
+117
+00:06:08,930 --> 00:06:12,930
+And they are commonly used by investment managers.
+
+118
+00:06:12,930 --> 00:06:14,910
+The fact that their profitability does not
+
+119
+00:06:14,910 --> 00:06:17,460
+tend to disappear over time suggests
+
+120
+00:06:17,460 --> 00:06:20,340
+that these returns may not be purely abnormal
+
+121
+00:06:20,340 --> 00:06:23,760
+and may indicate some kind of risk exposure.
+
+122
+00:06:23,760 --> 00:06:27,230
+And that is the reason why they don't get arbitraged away.
+

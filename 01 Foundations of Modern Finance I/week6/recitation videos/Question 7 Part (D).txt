@@ -1,0 +1,42 @@
+
+PROFESSOR: Now suppose that the correlation
+between returns on Stock A and Stock B
+increases from 0.2 to 0.6.
+We're going to keep the same Portfolio P that invests 60
+into A and 40 into B. And we will
+try to compute the expected return on this portfolio
+and the standard deviation.
+So first, let's answer the following question.
+Does the fact that correlation changed from 0.2 to 0.6
+affect the returns on this portfolio?
+The answer is that it doesn't.
+The expected return on the portfolio
+only depends on the weights that we
+put in the corresponding stocks and on the expected
+returns on the stocks.
+It does not depend on how returns on different assets
+could vary within that portfolio.
+So therefore, expected return in this case
+stays the same as it was before.
+In particular, it is 18%.
+Now standard deviation, on the other hand,
+for the Portfolio P, is affected because if we
+look at the formula for the variance of Portfolio P,
+we see that it obviously depends on the correlation of returns
+between A and B. And so now, to compute the standard deviation,
+what I will do is that everything else stays the same.
+So the only term that changes in this equation
+is the correlation term.
+So instead of point 0.2, what it was before,
+it is 0.6 right now.
+And so I highlighted it in pink color.
+And so if it computes the variance of this portfolio
+period now, given this new correlation,
+it gives me 0.0388.
+And so to compute the standard deviation,
+I again have to take the square root of this term.
+And so this gives me 19.7%.
+So when correlation goes up to 0.6,
+expect the return stays the same at 18%.
+But the standard deviation of the portfolio
+increases from 17.1% to 19.7%

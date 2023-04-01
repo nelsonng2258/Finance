@@ -1,0 +1,556 @@
+0
+00:00:00,000 --> 00:00:00,453
+
+
+1
+00:00:00,453 --> 00:00:01,870
+PROFESSOR: Consider a project that
+
+2
+00:00:01,870 --> 00:00:06,200
+requires an investment of $30,000 in Year 0.
+
+3
+00:00:06,200 --> 00:00:07,900
+This project is expected to generate
+
+4
+00:00:07,900 --> 00:00:13,590
+cash flows of $4,600 over the next 10 years.
+
+5
+00:00:13,590 --> 00:00:17,793
+What is the internal rate of return, or IRR,
+
+6
+00:00:17,793 --> 00:00:18,460
+of this project?
+
+7
+00:00:18,460 --> 00:00:21,520
+
+
+8
+00:00:21,520 --> 00:00:25,020
+First, let's learn how to build an NPV profile for a given
+
+9
+00:00:25,020 --> 00:00:26,280
+project.
+
+10
+00:00:26,280 --> 00:00:31,570
+By definition, NPV profile is a graph
+
+11
+00:00:31,570 --> 00:00:37,540
+of a project's NPV over a range of discount rates.
+
+12
+00:00:37,540 --> 00:00:40,828
+In our case, if the discount rate is r,
+
+13
+00:00:40,828 --> 00:00:42,370
+the net present value of this project
+
+14
+00:00:42,370 --> 00:00:48,010
+is negative $30,000, which is the initial investment,
+
+15
+00:00:48,010 --> 00:00:54,400
+plus $4,600 divided by r, multiplied by 1 minus 1
+
+16
+00:00:54,400 --> 00:00:58,480
+divided by 1 plus r raised to the power 10.
+
+17
+00:00:58,480 --> 00:01:00,580
+Here we are using the formula that
+
+18
+00:01:00,580 --> 00:01:02,920
+computes the present value of an annuity that
+
+19
+00:01:02,920 --> 00:01:10,240
+pays $4,600 each year for 10 years starting in Year 1.
+
+20
+00:01:10,240 --> 00:01:16,890
+Now let's use Excel to compute this NPV for a range
+
+21
+00:01:16,890 --> 00:01:20,660
+of discount rates, r.
+
+22
+00:01:20,660 --> 00:01:25,490
+In the spreadsheet, I have built in an array of discount rates
+
+23
+00:01:25,490 --> 00:01:32,630
+starting from 0.25% all the way to 15% with increments
+
+24
+00:01:32,630 --> 00:01:34,910
+of a quarter of a percent.
+
+25
+00:01:34,910 --> 00:01:37,200
+Now, for each of these discount rates,
+
+26
+00:01:37,200 --> 00:01:40,790
+I will compute the net present value of our project.
+
+27
+00:01:40,790 --> 00:01:44,840
+So starting for 0.25%, the net present value
+
+28
+00:01:44,840 --> 00:01:51,950
+equals to the initial investment plus annual cash flow divided
+
+29
+00:01:51,950 --> 00:01:58,220
+by this discount rate multiplied by 1 minus 1 divided by 1
+
+30
+00:01:58,220 --> 00:02:03,227
+plus discount rate raised to the power 10.
+
+31
+00:02:03,227 --> 00:02:05,970
+
+
+32
+00:02:05,970 --> 00:02:09,150
+So in this case, if the discount rate is 0.25%,
+
+33
+00:02:09,150 --> 00:02:16,510
+the net present value of our project is $15,374.
+
+34
+00:02:16,510 --> 00:02:21,130
+Now, let me fix the cells, B3 and B4,
+
+35
+00:02:21,130 --> 00:02:25,470
+so that I can stretch this array all the way down.
+
+36
+00:02:25,470 --> 00:02:28,710
+And it'll automatically compute the net present value
+
+37
+00:02:28,710 --> 00:02:30,910
+of this project for all of these discount rates.
+
+38
+00:02:30,910 --> 00:02:34,340
+
+
+39
+00:02:34,340 --> 00:02:37,820
+Now, recall that by definition, NPV profile
+
+40
+00:02:37,820 --> 00:02:42,600
+is a graph of a project's NPV for a range of discount rates.
+
+41
+00:02:42,600 --> 00:02:46,250
+So let's plot NPV against discount rates.
+
+42
+00:02:46,250 --> 00:02:51,900
+I am going to select both arrays and build this graph.
+
+43
+00:02:51,900 --> 00:03:01,380
+
+
+44
+00:03:01,380 --> 00:03:05,090
+What we see is that for this project,
+
+45
+00:03:05,090 --> 00:03:09,950
+the NPV profile is a convex downward-sloping line.
+
+46
+00:03:09,950 --> 00:03:18,720
+It intersects x-axis around 8.75% mark.
+
+47
+00:03:18,720 --> 00:03:22,140
+Recall that by definition, the internal rate of return,
+
+48
+00:03:22,140 --> 00:03:27,120
+or IRR, is the discount rate that makes NPV of the project
+
+49
+00:03:27,120 --> 00:03:29,010
+equal to 0.
+
+50
+00:03:29,010 --> 00:03:33,150
+Therefore, the major benefit of building the NPV profile
+
+51
+00:03:33,150 --> 00:03:36,870
+is to gauge what the internal rate of return for a given
+
+52
+00:03:36,870 --> 00:03:38,880
+project is.
+
+53
+00:03:38,880 --> 00:03:41,790
+In our case, internal rate of return
+
+54
+00:03:41,790 --> 00:03:43,620
+is somewhere around 8.75%.
+
+55
+00:03:43,620 --> 00:03:48,000
+Note that this is not the exact solution yet.
+
+56
+00:03:48,000 --> 00:03:50,580
+We will learn two ways of finding
+
+57
+00:03:50,580 --> 00:03:55,460
+the exact solution for the internal rate of return now.
+
+58
+00:03:55,460 --> 00:03:58,040
+The first method of finding the internal rate of return
+
+59
+00:03:58,040 --> 00:04:01,310
+is to use Goal Seek function in Excel.
+
+60
+00:04:01,310 --> 00:04:04,580
+This function numerically solves equations.
+
+61
+00:04:04,580 --> 00:04:07,400
+To use this function, we need to compute
+
+62
+00:04:07,400 --> 00:04:13,100
+the net present value of project for any given discount rate.
+
+63
+00:04:13,100 --> 00:04:16,010
+This initial discount rate is often referred to
+
+64
+00:04:16,010 --> 00:04:18,269
+as an initial guess.
+
+65
+00:04:18,269 --> 00:04:20,329
+So I will set it 0.25%.
+
+66
+00:04:20,329 --> 00:04:23,090
+And let's compute the net present value
+
+67
+00:04:23,090 --> 00:04:25,400
+for this initial guess.
+
+68
+00:04:25,400 --> 00:04:29,150
+Net present value equals to the initial investment amount
+
+69
+00:04:29,150 --> 00:04:31,850
+plus the annual cash flow divided
+
+70
+00:04:31,850 --> 00:04:37,220
+by the initial guess multiplied by 1 minus 1 divided by 1
+
+71
+00:04:37,220 --> 00:04:43,630
+plus the discount rate raised to the power 10.
+
+72
+00:04:43,630 --> 00:04:45,910
+So if the discount rate is 0.25%,
+
+73
+00:04:45,910 --> 00:04:53,000
+the NPV is $15,374, same as we had before.
+
+74
+00:04:53,000 --> 00:04:56,250
+Now, let's use Goal Seek function.
+
+75
+00:04:56,250 --> 00:05:02,340
+We're going to Data tab, What-If Analysis, Goal Seek.
+
+76
+00:05:02,340 --> 00:05:07,990
+Goal Seek allows us to vary or to find the discount rate that
+
+77
+00:05:07,990 --> 00:05:12,530
+would set the net present value to any value that we want.
+
+78
+00:05:12,530 --> 00:05:15,280
+Now, since we are trying to find internal rate of return,
+
+79
+00:05:15,280 --> 00:05:20,290
+we want to set this cell, D9, where the NPV is
+
+80
+00:05:20,290 --> 00:05:26,380
+to 0 by changing this cell.
+
+81
+00:05:26,380 --> 00:05:29,010
+So we want to find the net present value that
+
+82
+00:05:29,010 --> 00:05:33,180
+would equal to 0 by changing the initial guess that we
+
+83
+00:05:33,180 --> 00:05:35,520
+set for a discount rate.
+
+84
+00:05:35,520 --> 00:05:41,420
+When we press OK button, Excel solves this equation
+
+85
+00:05:41,420 --> 00:05:46,760
+and finds the discount rate that sets the NPV of this project
+
+86
+00:05:46,760 --> 00:05:48,410
+to 0.
+
+87
+00:05:48,410 --> 00:05:51,890
+In this case, the discount rate that sets NPV to 0
+
+88
+00:05:51,890 --> 00:05:59,893
+is 8.64%, which, by definition, is the internal rate of return
+
+89
+00:05:59,893 --> 00:06:00,560
+of this project.
+
+90
+00:06:00,560 --> 00:06:04,100
+
+
+91
+00:06:04,100 --> 00:06:06,750
+Goal Seek function is a useful tool that
+
+92
+00:06:06,750 --> 00:06:11,610
+allows you to solve any nonlinear equation in Excel.
+
+93
+00:06:11,610 --> 00:06:13,560
+The second method that we'll learn
+
+94
+00:06:13,560 --> 00:06:16,050
+how to find internal rate of return
+
+95
+00:06:16,050 --> 00:06:20,610
+just simply utilizes the IRR function in Excel.
+
+96
+00:06:20,610 --> 00:06:25,050
+Through this function, we need to enter all cash flows
+
+97
+00:06:25,050 --> 00:06:27,480
+that our project generates.
+
+98
+00:06:27,480 --> 00:06:29,280
+We'll start with the Year 0 where
+
+99
+00:06:29,280 --> 00:06:33,490
+we have the outflow of $30,000.
+
+100
+00:06:33,490 --> 00:06:36,480
+And then for the subsequent years, from Year 1
+
+101
+00:06:36,480 --> 00:06:46,790
+until Year 10, our project returns $4,600 every year.
+
+102
+00:06:46,790 --> 00:06:50,240
+Now, in this area, we have all of the cash flows
+
+103
+00:06:50,240 --> 00:06:53,170
+that this project generates.
+
+104
+00:06:53,170 --> 00:06:58,410
+To find its internal rate of return, we use IRR function.
+
+105
+00:06:58,410 --> 00:07:01,370
+So we type IRR.
+
+106
+00:07:01,370 --> 00:07:05,540
+And then we simply select the entire array in which
+
+107
+00:07:05,540 --> 00:07:07,622
+we have our cash flows.
+
+108
+00:07:07,622 --> 00:07:09,080
+There is a second parameter that is
+
+109
+00:07:09,080 --> 00:07:10,760
+required for the IRR function.
+
+110
+00:07:10,760 --> 00:07:12,110
+It's an optional parameter.
+
+111
+00:07:12,110 --> 00:07:14,420
+In some complicated cases, it does matter.
+
+112
+00:07:14,420 --> 00:07:15,920
+In our case, it does not.
+
+113
+00:07:15,920 --> 00:07:20,720
+We can put 0 here and hit Enter.
+
+114
+00:07:20,720 --> 00:07:22,690
+This function tells us the internal rate
+
+115
+00:07:22,690 --> 00:07:25,250
+of return of this project is 8.64%,
+
+116
+00:07:25,250 --> 00:07:31,760
+the same IRR that we got from using Goal Seek function.
+
+117
+00:07:31,760 --> 00:07:36,010
+
+
+118
+00:07:36,010 --> 00:07:38,520
+The second part of this question asks,
+
+119
+00:07:38,520 --> 00:07:41,670
+if the cost of capital for this project is 9%,
+
+120
+00:07:41,670 --> 00:07:43,260
+should you take it?
+
+121
+00:07:43,260 --> 00:07:46,140
+We have found that the internal rate of return of this project
+
+122
+00:07:46,140 --> 00:07:47,220
+is 8.64%.
+
+123
+00:07:47,220 --> 00:07:51,660
+Now, let's recall the IRR rule, which
+
+124
+00:07:51,660 --> 00:07:56,400
+states we should invest only if the internal rate of return
+
+125
+00:07:56,400 --> 00:08:00,630
+of a project is higher than its cost of capital.
+
+126
+00:08:00,630 --> 00:08:05,700
+In our case, the internal rate of return of 8.64%
+
+127
+00:08:05,700 --> 00:08:08,760
+is less than 9%, which is the cost of capital
+
+128
+00:08:08,760 --> 00:08:10,120
+for this project.
+
+129
+00:08:10,120 --> 00:08:14,090
+Therefore, we should not take it.
+
+130
+00:08:14,090 --> 00:08:18,290
+To confirm, let us also compute the net present value
+
+131
+00:08:18,290 --> 00:08:21,410
+of this project given its cost of capital.
+
+132
+00:08:21,410 --> 00:08:26,030
+If the cost of capital is 9%, the NPV of this project
+
+133
+00:08:26,030 --> 00:08:30,960
+is negative $479.
+
+134
+00:08:30,960 --> 00:08:32,650
+NPV of this project is negative.
+
+135
+00:08:32,650 --> 00:08:35,809
+Therefore, we should not take it.
+
+136
+00:08:35,809 --> 00:08:41,120
+Both IRR and NPV investment decision rules in this case
+
+137
+00:08:41,120 --> 00:08:42,670
+agree.
+
+138
+00:08:42,670 --> 00:08:45,000
+
+

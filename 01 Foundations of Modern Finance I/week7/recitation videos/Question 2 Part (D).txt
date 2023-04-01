@@ -1,0 +1,44 @@
+
+PROFESSOR: Now let's see what happens to the idiosyncratic
+volatility of a portfolio as we increase the number of stocks.
+We will increase it from 30 to 300
+and we'll compute the idiosyncratic volatility, again
+of this equally weighted portfolio.
+I will maintain the assumption that the first 100 stocks have
+idiosyncratic volatility of 5%, the next 100 stocks 6%,
+and the remaining 100 stocks of 8%.
+So this is a standard deviation of epsilon I
+of these individual stocks.
+Now let's see what changes in the expression
+that we've had before.
+So one thing that changes is n1, so instead of 30, it
+becomes 300 and so I'm raising, I'm
+squaring 300 right now instead of 30.
+And now I'm adding up instead of adding up
+30 idiosyncratic variances, I'm adding
+up 300 idiosyncratic variances because I have 300 stocks.
+And so the first 100 stocks have idiosyncratic variance
+of 5% squared.
+So the remaining, or the next 100 stocks 6%
+squared, and the last 100 stocks 8% squared.
+So adding this all up gives me this variance.
+You can see that already this variance is quite a bit smaller
+than this one because it has an extra 0 here.
+And so now if I compute the volatility
+of the standard deviation of this portfolio P,
+by taking the square root of the variance that I just computed,
+this gives me 0.37%.
+So you could see that the variance dropped quite sharply
+from 1.18% for a portfolio that had 30 stocks,
+to 0.37% for a portfolio that has 300 stocks.
+And so the key lesson here is that it's exactly this drop.
+In the limit we know that idiosyncratic volatility
+of the portfolio, of equally weighted portfolio,
+is going to go to zero.
+You can see here that if I increase n1 to further
+to 3,000, again, maintaining the same assumption here,
+the volatility of this equally weighted portfolio
+is going to drop further to 0.12%.
+So if we continue increasing, it's going to go down,
+it's going to go down to 0.
+And this is the key lesson of this example.

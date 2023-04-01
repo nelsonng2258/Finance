@@ -1,0 +1,236 @@
+0
+00:00:00,000 --> 00:00:01,250
+
+
+1
+00:00:01,250 --> 00:00:03,410
+PROFESSOR: Now what I will do right now,
+
+2
+00:00:03,410 --> 00:00:08,150
+I will increase the number of stocks from 30 to 300.
+
+3
+00:00:08,150 --> 00:00:10,970
+I will maintain the assumption that the loadings
+
+4
+00:00:10,970 --> 00:00:13,760
+on the first factor for each of these 300 stocks
+
+5
+00:00:13,760 --> 00:00:18,440
+right now is still one and I will maintain the same loading
+
+6
+00:00:18,440 --> 00:00:20,480
+structure on the second factor but I
+
+7
+00:00:20,480 --> 00:00:24,210
+will assume that for the first 100 stocks
+
+8
+00:00:24,210 --> 00:00:28,590
+the second beta, beta 2 is equal to 1.
+
+9
+00:00:28,590 --> 00:00:34,110
+For the next 100 stocks, so from 101 to 200, the beta is 1.6,
+
+10
+00:00:34,110 --> 00:00:40,872
+and from 201 to 300, so for the last 100 stocks, beta 2 is 2.1.
+
+11
+00:00:40,872 --> 00:00:42,330
+Right now I want to understand what
+
+12
+00:00:42,330 --> 00:00:47,070
+happens to betas of the portfolio, the factor loadings,
+
+13
+00:00:47,070 --> 00:00:50,190
+of this equally weighted portfolio on factor 1
+
+14
+00:00:50,190 --> 00:00:52,440
+and factor 2.
+
+15
+00:00:52,440 --> 00:00:57,000
+And so let's see, for the first factor
+
+16
+00:00:57,000 --> 00:00:59,130
+we get, it's exactly the same expression
+
+17
+00:00:59,130 --> 00:01:01,620
+because it's an equally weighted portfolio,
+
+18
+00:01:01,620 --> 00:01:05,010
+so all that changes is just n1.
+
+19
+00:01:05,010 --> 00:01:08,262
+So before it was 30, right now it's 300.
+
+20
+00:01:08,262 --> 00:01:10,140
+And you can see that this expression again
+
+21
+00:01:10,140 --> 00:01:12,330
+is going to be equal to 1 because we're
+
+22
+00:01:12,330 --> 00:01:14,440
+adding 1 over 300.
+
+23
+00:01:14,440 --> 00:01:17,190
+So this is the weight that we put in each individual stock,
+
+24
+00:01:17,190 --> 00:01:18,270
+300 times.
+
+25
+00:01:18,270 --> 00:01:20,220
+Before we were doing it 30 times.
+
+26
+00:01:20,220 --> 00:01:22,752
+And so this sum is just equal to 1.
+
+27
+00:01:22,752 --> 00:01:24,210
+And again, this should be intuitive
+
+28
+00:01:24,210 --> 00:01:29,070
+that if each of the individual stocks have factor loading of 1
+
+29
+00:01:29,070 --> 00:01:31,980
+on the first factor, then again, if we combine them
+
+30
+00:01:31,980 --> 00:01:35,620
+into a portfolio, the portfolio loading on factor 1
+
+31
+00:01:35,620 --> 00:01:37,788
+is going to be just simply equal to 1 as well.
+
+32
+00:01:37,788 --> 00:01:39,330
+For equal weighted portfolio but then
+
+33
+00:01:39,330 --> 00:01:42,880
+again for any other portfolio as well.
+
+34
+00:01:42,880 --> 00:01:44,880
+Now let's see what happens to the factor loading
+
+35
+00:01:44,880 --> 00:01:46,500
+on the second factor.
+
+36
+00:01:46,500 --> 00:01:48,000
+So this is the same expression as we
+
+37
+00:01:48,000 --> 00:01:52,950
+had before again, n1 right now is 300, but all we're doing
+
+38
+00:01:52,950 --> 00:01:55,830
+is that we are adding the second beta for each
+
+39
+00:01:55,830 --> 00:01:58,440
+of the individual stocks and so here we're doing,
+
+40
+00:01:58,440 --> 00:02:01,920
+we're adding it 100 times for the first asset,
+
+41
+00:02:01,920 --> 00:02:06,600
+so it's 100 times 1, then 100 times 1.6
+
+42
+00:02:06,600 --> 00:02:09,360
+for the second class of stocks and then
+
+43
+00:02:09,360 --> 00:02:12,280
+another 100 multiplied by 2.1.
+
+44
+00:02:12,280 --> 00:02:16,530
+So this is for the last class of stocks with this beta.
+
+45
+00:02:16,530 --> 00:02:19,140
+And so then all we're doing is that we're adding this up
+
+46
+00:02:19,140 --> 00:02:22,290
+and we're dividing it by n1, which right now is 300.
+
+47
+00:02:22,290 --> 00:02:24,350
+And you can see that this is just,
+
+48
+00:02:24,350 --> 00:02:26,400
+it's a simple scaling compared to the case
+
+49
+00:02:26,400 --> 00:02:29,040
+that we had before when we had 30 stocks, so we
+
+50
+00:02:29,040 --> 00:02:31,830
+were multiplying by 10 and were dividing by 30, right now
+
+51
+00:02:31,830 --> 00:02:34,930
+we're multiplying it by 100 and dividing it by 300.
+
+52
+00:02:34,930 --> 00:02:37,110
+So this doesn't change the final answer
+
+53
+00:02:37,110 --> 00:02:41,580
+that the beta, second beta the loading
+
+54
+00:02:41,580 --> 00:02:44,910
+of this portfolio in the second factor is 1.57.
+
+55
+00:02:44,910 --> 00:02:46,530
+So this doesn't change.
+
+56
+00:02:46,530 --> 00:02:48,780
+So the result here is that as we increase
+
+57
+00:02:48,780 --> 00:02:53,160
+the number of stocks in this portfolio from 30 to 300 factor
+
+58
+00:02:53,160 --> 00:02:56,120
+loadings stay the same.
+

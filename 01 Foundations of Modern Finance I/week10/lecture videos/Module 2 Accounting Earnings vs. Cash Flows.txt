@@ -1,0 +1,144 @@
+
+INSTRUCTOR: What we will do next is
+to go over a series of examples to demonstrate
+how to compute a project's cash flow from its financial data.
+Naturally, these examples are simplified compared
+to real projects, but they do provide useful illustrations
+of how to come up with cash flow estimates
+in various situations.
+For the first example is about the distinction
+between accounting earnings and actual cash flows.
+The project we're considering is as follows.
+It requires a purchase of a machine for $1 million
+with a life of 10 years.
+The machine will generate an annual revenue of $300,000
+at an operating expense of $100,000.
+The machine can be depreciated over its lifespan
+using straight-line depreciation.
+The corporate tax rate is 40%.
+
+The financial information on the project
+is summarized in the table.
+The first column gives the year.
+The second column gives the project's pre-tax accounting
+earnings.
+Starting from year 1, it is revenue
+minus expense minus depreciation,
+which equals 300, which is revenue
+minus 100, which is expense minus 100,
+which is the depreciation.
+And that gives $100,000 of pre-tax earnings.
+The third column gives the after-tax earnings,
+starting from year 1.
+That is 1 minus the tax rate times the earnings, which
+is $60,000.
+However, we should note that you would
+be incorrect to simply discount the after-tax earnings
+at the cost of capital to get the NPV.
+The reason is that the accounting earnings did not
+accurately reflect the timing of the project's cash flow.
+For example, the initial expenditure, or sometimes
+called CapEx of $1 million on the machine
+is not recorded as a cash flow in year 0.
+Instead, it shows up in the form of depreciation
+as part of the expense over the next 10 years.
+For evaluation purposes, we cannot arbitrarily shift cash
+flows over time without proper discounting.
+In order to value the cash flows,
+we have to capture the amount and timing correctly.
+The actual cash flow from the project
+is given in column 4 in the table.
+It's computed as follows.
+In year 0, the cash flow is minus 1 million,
+the CapEx amount paid at that time.
+In year 1, the after-tax cash flow
+equals the after-tax profit plus the tax credit
+from depreciation.
+The first part equals 1 minus 0.4, the tax rate,
+times the operating profit, which is 300 minus 100,
+revenue minus expense, or $200,000.
+This gives an after-tax profit of 120K.
+The second part equals 0.4, the tax rate,
+times the annual depreciation of $100,000, which gives 40K.
+The sum of the two gives the total after-tax cash
+flow of $160,000.
+We have the same after-tax cash flow for the remaining years.
+
+It is obvious that the actual after-tax cash
+flow is quite different from the after-tax accounting earnings.
+This could be substantial.
+In fact, no matter what discount rate we use,
+that this kind of value for all accounting earnings
+will always be positive.
+This is because accounting earnings
+are positive for all years, 60,000 every year.
+But if we use actual cash flows, the answer is different.
+For high enough of a cost of capital, the NPV of the project
+becomes negative.
+For example, you could try a discount rate of 10%.
+
+This example shows that accounting earnings are not
+the same as actual cash flows.
+However, if used properly, we can figure out the cash flow
+from the accounting information.
+Our next example focuses on taxes.
+The project's cash flow are given in the table,
+which are in thousand dollars.
+Assume its tax rate is 50%.
+The project spans from year 0, which is now, to year 5,
+as shown in row 1.
+It requires an initial investment of 500,
+shown in row 2.
+The operating profit given in the third row is 0 in year 1,
+100 year 2, 300 in year 3, et cetera.
+That's given in row 3.
+Let's assume that the initial capital investment of 500
+can be depreciated linearly over the five years to 0 at the end.
+This then gives a depreciation of 100
+from year 1 to year 5 in the fourth row.
+Know that depreciation does not represent the actual cash flow,
+but they can be used to reduce taxes.
+Row 5 uses the accounting income,
+which is the difference between operating profit
+and depreciation.
+We have minus 100 in year 1, 0 in year 2, 200 in year 3,
+and so on.
+As seen from the previous example,
+this is not the actual income because depreciation is not
+itself a cash flow.
+Row 6 gives the tax, which is the tax
+rate times the operating cash flow,
+minus the tax rate times depreciation, the tax credit.
+This also equals the tax rate times the accounting income.
+We then have minus 50 in year 1, 0 in year 2,
+100 in year 3, et cetera.
+The after-tax cash flow from the project, given in row 7,
+equals operating cash flow minus capital expenditure
+minus the tax.
+We then have 500 minus, for year 0, 50 for year 1,
+100 for year 2, and so on.
+
+There is one caveat here, however.
+In year 1, the operating cash flow is 0,
+and we have a tax bill of minus 50,
+which means a tax credit of 50.
+We won't be able to get the tax authority, why is this amount.
+However, if the firm has other incomes
+it needs to pay taxes on, this tax credit
+can be used to reduce the tax bill on these incomes.
+$1 saved is $1 earned.
+If we can fully utilize this tax credit to save taxes,
+it is then equivalent to generating a $50,000 cash flow.
+This is what we assume here, for simplicity.
+If this tax credit cannot be fully utilized in year 1,
+we can then carry it forward to reduce taxes in the following
+years, when there is income.
+All we have to do, then, is to properly discount
+the corresponding tax benefits.
+
+If the cost of capital for this project is 10%,
+we can then discount its cash flow after tax.
+The NPV we got is $39,000, roughly.
+And that's positive.
+This example shows how we need to treat taxes carefully
+in coming up with a project's cash flows.

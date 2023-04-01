@@ -1,0 +1,143 @@
+
+PROFESSOR: In this question, we will work with data
+and we will learn how to implement arbitrage pricing
+theory model in practice.
+We will consider a two factor model
+that has the market and the price of gold as the risk
+factors.
+The price of gold can be a risk factor in its own.
+Or it can correlate with other risk factors.
+For example, inflation.
+To proxy for these two risk factors,
+we will use factor mimicking portfolios.
+For the market factor, we will use the returns
+on the market portfolio.
+And for the price of gold, we will use the returns
+on the Spider Gold Shares ETF.
+On your screen, you can see a snippet
+from the fact sheet of this ETF, which is traded
+under the ticker symbol GLD.
+We will implement this model by using returns on eight firms.
+Four of these firms up from the gold mining industry.
+And the other four are from the technology industry.
+These firms are listed on your screen.
+In this file, I have monthly return data
+on each of these eight stocks.
+So for each of them, the sample covers January 2005 all the way
+through December 2019.
+So for each of these stocks, we have 15 years
+worth of monthly return data.
+So the return for a given month on each of the stocks
+is given in column C. The column next to it,
+column D contains the risk free rates.
+Column E contains the return on the market portfolio.
+And column F contains the returns on the GLD ETF.
+And all of this data is organized by firm.
+So this is the first firm, then I have the second firm
+and so forth.
+So I have eight of these blocks corresponding
+to each of the stocks.
+Now, recall that, to implement the APT model
+in our particular case where we have two risk factors--
+the market and the price of gold--
+we have to run the following regression.
+So we have to regress the excess return
+on the excess return on the market portfolio
+and the excess return on the gold ETF.
+And this regression has to include the constant, as well.
+So therefore, to run this regression,
+first I am computing excess return on each of the stocks
+by taking the return and subtracting the risk free rate.
+Next, I'm computing the excess market return
+where I'm taking the return on the market portfolio.
+And again, subtracting the risk free rate.
+And then I'm doing the same thing for the GLD ETF.
+So I'm computing the excess return on this ETF
+by taking its return and subtracting the risk free rate.
+Now, we are ready to run this regression.
+There are several ways of running linear regression
+in Excel.
+I'm going to be using a function that is called LINEST.
+So because this is a multiple regression,
+I will be estimating three coefficients.
+So the lowering on each of the two risk
+factors and a constant.
+So the way I'm going to implement this function
+is it's an array function.
+So I am highlighting these three cells
+and I will write the following.
+So I'll say LINEST.
+And the first input into this function
+would be the left hand side variable,
+which is our excess return on the stock.
+So this column.
+And the next input will be the metrics of the right hand side
+variables, which would be these two.
+
+Then for constant and for statistics, I will say yes.
+Because I do want to have a constant estimated,
+because this is the way to run this regression.
+And then I will also say 1 for the loss parameter.
+And then recall that this is a rate function.
+So I have to hit Shift, Control, and Enter at the same time.
+Now, notice that the way this function works is it
+actually gives the estimate of the coefficients
+from this regression as the lost number.
+And the first number is actually in the reverse order of the way
+they appear in the matrix.
+So the first estimate is the estimate on gold.
+And the second is the estimate on the market.
+Now let's estimate this regression
+for the remaining firms.
+I'll show you how to estimate it for the next firm.
+And then, I will let you do the rest of the exercise yourself.
+So I'm, again, highlighting the three cells.
+I'm writing LINEST.
+I'm going down to the portion of the file
+where half the returns in the corresponding stock.
+So I'm highlighting my y's first.
+Next, I'm highlighting my x's.
+So it's these two columns.
+Then I'll say 1 and 1.
+And then I will hit Shift, Control, Enter.
+And you will see that this process estimates
+the coefficients again on gold market and the intercept.
+Now I have estimated all eight regressions
+and these are the results.
+So these are the loadings on the gold factor for gold mining
+companies.
+And these are the loadings on the market factor.
+These are the loadings of the technology
+stocks and the gold factor.
+And these are the loadings of the technology
+stocks on the market factor.
+Next, let's average the factor loadings for gold mining stocks
+and for technology stocks.
+What I'm doing in this highlighted table
+is I'm averaging the loadings of the gold stocks
+on this first gold factor.
+And the second number here is the average
+of the loadings on the market factor.
+Down below, this is the average of the loadings of the tech
+stocks on the gold factor.
+And this is the average of their loadings on the market factor.
+Now, let's think and interpret these results.
+First, notice that the loading of gold mining
+stocks on the gold risk factor is large and positive.
+This should make economic sense because, when the price of gold
+goes up, presumably these companies
+can generate higher revenue.
+And, therefore, investors reward these firms
+with higher returns.
+For technology stocks, this loading
+is negative, which means that, when the prices of gold
+go down, on average the returns on technology stocks
+go up and vice versa.
+The loading of the technology stocks on the market risk
+factor is close to 1, which means
+that, if the stock market goes up by 1%, on average
+the technology stocks go up by 1%, as well.
+And the loading of gold mining stocks on the market risk
+factor is around 0.2, which means
+that they have much lower sensitivity of their returns
+with respect to the market risk factor.

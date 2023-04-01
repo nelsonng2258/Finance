@@ -1,0 +1,178 @@
+
+PROFESSOR: In this question, we will
+look at diversification benefits of holding
+a portfolio with many stocks.
+Let's assume that the average stock has a volatility of 35%.
+So that's a standard deviation.
+Let's also assume that the average correlation
+between pairs of stocks is 25%.
+And let's compute the following.
+Let's compute the volatility of equally weighted portfolio that
+has just one stock, 20 stocks, and 500 stocks.
+Let's first derive the variance of Portfolio P, equally
+weighted portfolio.
+So this is the sum of all possible combinations
+of covariance between stock i and j with the weights
+that we put into stock i and j.
+So if we think of this variance-covariance metrics
+where we have on the diagonal, the variance
+of individual stocks and off diagonal elements
+of the pair-wise covariances, then this
+is just simply the weighted average
+of all of these items in this matrix.
+Again with the weights that we put in each of these individual
+stocks, these w's.
+Since we have an equally weighted portfolio
+this w's are, each of them, just 1 over n.
+And so this product is just 1 over n squared.
+So this variance becomes the sum of 1
+over n squared multiplied by the pair-wise covariance
+between stock i and stock j.
+Now I'm going to break down this sum into the following two
+sums.
+One is the sum of this variance.
+So visually if you think of this term, what
+I'll try to do visually here is that I
+will separate the variance, what I have here
+on the main diagonal, from the covariances.
+So I'm taking the variance.
+And there are n of them.
+And so 1 over n squared times all
+of the sum of these variances plus 1 over n squared,
+the remaining sum of all possible covariances here.
+So notice that in this covariance term,
+I'm saying that this is the first summation from i to n
+and then the second summation from j to n.
+But I'm saying that j should not equal to i because these
+are the ones that this would be the variance terms that I
+separated into this first sum.
+So now what I'm going to do further
+is that I will factor out 1 over n first.
+And then what is going to be remaining
+here is 1 over n times the sum of the variances here
+of all stocks from 1 to n.
+And so this term right here in parentheses
+is just the average variance.
+We can think of it this way.
+And we know because this equation
+gives us what is the average volatility of stock
+so we would know what is the average variance.
+So similarly, here I will try to isolate the average covariance
+in the second term.
+So the average covariance is just
+the sum of all of the covariance divided
+by the number of the covariance terms that we have.
+What is the number of this covariance terms here?
+Well, again, so referring back to these matrix,
+you can think of it as just the number of off diagonal elements
+here.
+And so if the total number of elements in this matrix
+is just n squared, the number of diagonal elements
+is n squared minus n.
+And so therefore I'm isolating here 1
+divided by n squared minus n.
+So this is the number, again, of the covariance terms multiplied
+by the sum of all of these covariance terms.
+And that's what's remaining.
+So it's n squared that we had before.
+And I'm now multiplying here by n squared minus n
+to offset this additional division
+that I put here so that this represents
+the average covariance.
+Now so what we have is that the variance of this portfolio,
+equally weighted portfolio, equals to one over n multiplied
+by the average variance, plus this term which is
+you can see that n squared is going to cancel out.
+So it's 1 minus 1 over n.
+So there's this term.
+And then what I have in parentheses here
+is just the average covariance.
+And so therefore we have 1 over n times average variance
+plus 1 minus 1 over n times the average covariance.
+And again, we know both the average volatility here
+there is a variance and the average correlation.
+So we can compute the average covariance between the pairs
+of stocks here.
+Now once we know this expression,
+now we can plug in n equals to 1, n equals to 20,
+and n equals to 500, and to compute the variance
+of these portfolios.
+So let's work with this expression
+to compute the volatility of equally weighted portfolios
+of 1, 20 and 500 stocks.
+So first let me compute the average variance and average
+covariance from the information that we're given here.
+So the average variance would be just
+the average standard deviation that we're given, 35% squared.
+And the average covariance would be the average correlation
+which were given again, 25%, multiplied
+by two standard deviations of the average standard deviations
+of stock.
+So 0.35 times 0.35.
+And now so we know the average variance
+and we know the average covariance, so we can compute--
+we just simply can plug in n's for 1, 20 and 500
+and compute the variances and standard deviations
+of this respective portfolios.
+When n equals to 1, this is the variance.
+And the standard deviation of this portfolio would be 35%.
+And it does make sense.
+So if you look back at this equation, so if n equals to 1,
+this term equals to 0 so this is not relevant.
+And so this equals to 1.
+And so this is just the average variance.
+And so therefore, if we have just Portfolio 1 stock,
+its standard deviation is going to be
+equal to the average standard deviation of stock here, 35%.
+When we have 20 stocks, this is the variance
+that we can compute by plugging 20 in here.
+And the standard deviation of this portfolio would be 18.77%.
+When we have 500 stocks, the standard deviation
+of this portfolio would be 17.55%.
+So these are the volatilities of these three portfolios.
+Now let's look at these numbers.
+By combining as few as 20 stocks into a portfolio, equally
+weighted portfolio, we were able to reduce the volatility almost
+twice from 35% to 18.77%.
+So this is a dramatic reduction in volatility,
+and we get it by just combining as few as 20 stocks
+in our portfolio.
+Once we keep adding more stocks, we still
+get the reciprocation benefits.
+But they're not seemingly as large
+as they're here in the very beginning
+where we're combining just few stocks.
+You can look at this from when we get from 20 to 500.
+The reduction in volatility is just from 18.77% to 17.85%.
+So this is again-- so there is a reduction here but seemingly
+not as large as it is here originally.
+And so therefore, the main lesson here
+is that we get a lot of diversification benefits
+by combining just a few stocks in our portfolio given
+that the average correlation between returns
+is not that large.
+And so in this particular case, if it's 25%,
+most of this reduction is driven by the fact
+that we're combining a few stocks
+and the average correlation between these stocks
+is just 25%.
+And so, again, as we keep adding,
+we don't get as much as we get initially
+when we adding a few stocks.
+Let's see what happens when we're
+combining more and more stocks in our portfolio,
+in other words, when n goes to infinity.
+When n goes to infinity, the variance of this portfolio
+is going to become equal to average covariance.
+We could see it from this expression.
+1 over n is going to go to 0 when n goes to infinity.
+1 minus 1 over n is going to go to 1.
+And so therefore, this expression
+is just going to become average covariance.
+And therefore the standard deviation
+of the portfolio that has infinitely many stocks
+would be the square root of the average covariance, which
+would be 17.5%.
+so as we're combining infinitely many stocks,
+the absolute minimum that volatility of our portfolio
+that we can achieve in this particular economy is 17.5%.

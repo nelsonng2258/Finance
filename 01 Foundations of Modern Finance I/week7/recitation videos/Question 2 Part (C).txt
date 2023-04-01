@@ -1,0 +1,45 @@
+
+PROFESSOR: Let's find idiosyncratic volatility
+of an equally weighted portfolio.
+So we're after standard deviation of epsilon P
+and we'll start with the variance
+and then we'll take the square root of it
+to find the standard deviation.
+So let's start with the variance.
+By definition since idiosyncratic risks
+of individual assets are uncorrelated,
+the variance or idiosyncratic risk of the portfolio P
+would equal to the sum of the individual idiosyncratic
+variances of each individual stocks, multiplied
+by the squared weights that we have in the portfolio.
+And so recall that again, all Wis are just 1 over 30,
+or 1 over n1, and so therefore, each of these wi squared, which
+is equal to 1 over n1 squared.
+And now what we are left with is just
+the sum of idiosyncratic variances of individual stocks.
+And this is the structure.
+So the first 10 stocks have the standard deviation
+of 5%, idiosyncratic standard deviation of 5%.
+The next 10 stocks 6% and the remaining 10 stocks 8%.
+So if we add up all of them.
+So we get 10 times 5% squared, so this is the variance
+of these first 10 stocks.
+Then 10 times 6% squared, so this is the total variance
+of the second stocks.
+And then 10 times 8% squared, so this is the variance
+of the remaining 10 stocks.
+Again, so n1 equals t0 30, so 1 over 30 squared,
+putting this all together gives us 0.00014.
+And so this is the variance or idiosyncratic variance
+of this portfolio P.
+To find the standard deviation, we're
+just taking the square root of this number that we found here
+and we get number 1.18%.
+So the idiosyncratic volatility of this equally
+weighted portfolio P equals to 1.18%.
+Notice how much lower it is compared
+to the individual idiosyncratic variances
+of each individual assets.
+The lowest one is 5% and so this portfolio right now
+has very low variance, idiosyncratic variance
+of just 1.18%.

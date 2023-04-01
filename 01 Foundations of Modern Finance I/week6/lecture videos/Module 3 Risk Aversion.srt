@@ -1,0 +1,820 @@
+0
+00:00:00,000 --> 00:00:01,030
+
+
+1
+00:00:01,030 --> 00:00:04,630
+INSTRUCTOR: Next, we are going to develop a concept called
+
+2
+00:00:04,630 --> 00:00:07,030
+risk aversion, or to be more precise,
+
+3
+00:00:07,030 --> 00:00:08,685
+relative risk aversion.
+
+4
+00:00:08,685 --> 00:00:10,310
+This is the key property of the utility
+
+5
+00:00:10,310 --> 00:00:14,320
+function, which reflects the property of investor behavior.
+
+6
+00:00:14,320 --> 00:00:19,140
+How averse is this investor to risky outcomes?
+
+7
+00:00:19,140 --> 00:00:22,410
+We are going to start with the basic fundamental properties
+
+8
+00:00:22,410 --> 00:00:24,450
+of the utility function itself.
+
+9
+00:00:24,450 --> 00:00:26,200
+Some desirable properties.
+
+10
+00:00:26,200 --> 00:00:29,470
+For example, if we want the investor to prefer more
+
+11
+00:00:29,470 --> 00:00:33,430
+to less, which is very common, mathematically it's
+
+12
+00:00:33,430 --> 00:00:35,740
+going to imply that, when confronted
+
+13
+00:00:35,740 --> 00:00:39,400
+with a choice between gamble x or gamble
+
+14
+00:00:39,400 --> 00:00:42,360
+x plus positive epsilon, the investor
+
+15
+00:00:42,360 --> 00:00:45,370
+is going to prefer x plus epsilon.
+
+16
+00:00:45,370 --> 00:00:48,550
+What it means is that to capture preferences like these,
+
+17
+00:00:48,550 --> 00:00:50,890
+preference for more to less, an investor
+
+18
+00:00:50,890 --> 00:00:54,310
+would have to have an increasing utility function.
+
+19
+00:00:54,310 --> 00:00:55,530
+So far, so good.
+
+20
+00:00:55,530 --> 00:00:57,670
+Utility function has to be increasing.
+
+21
+00:00:57,670 --> 00:01:00,560
+What more can we say about it's shape?
+
+22
+00:01:00,560 --> 00:01:03,830
+As it happens, if an investor is averse to risk,
+
+23
+00:01:03,830 --> 00:01:06,860
+the utility function also has to be concave.
+
+24
+00:01:06,860 --> 00:01:08,420
+Now why is that?
+
+25
+00:01:08,420 --> 00:01:12,960
+Suppose an investor is presented with a risky gamble, x.
+
+26
+00:01:12,960 --> 00:01:17,700
+The choice is, take the risk, play out, gamble x,
+
+27
+00:01:17,700 --> 00:01:19,110
+collect the outcomes.
+
+28
+00:01:19,110 --> 00:01:23,340
+Or receive a sure thing, a pay off without risk
+
+29
+00:01:23,340 --> 00:01:25,680
+equal to the expected value of x.
+
+30
+00:01:25,680 --> 00:01:30,420
+Between x random, expected value of x, sure thing.
+
+31
+00:01:30,420 --> 00:01:33,180
+What would the investor choose?
+
+32
+00:01:33,180 --> 00:01:35,400
+Now most investors are averse to risk.
+
+33
+00:01:35,400 --> 00:01:37,970
+They would rather collect a sure thing,
+
+34
+00:01:37,970 --> 00:01:41,790
+a fixed payoff equal to the expected value of the gamble.
+
+35
+00:01:41,790 --> 00:01:44,640
+Mathematically, it means that the utility function
+
+36
+00:01:44,640 --> 00:01:46,910
+has to be concave.
+
+37
+00:01:46,910 --> 00:01:48,810
+If the utility function is concave,
+
+38
+00:01:48,810 --> 00:01:51,050
+then the mean of the gamble is always
+
+39
+00:01:51,050 --> 00:01:54,330
+preferred to the gamble itself.
+
+40
+00:01:54,330 --> 00:01:57,420
+To illustrate the concept of risk aversion graphically,
+
+41
+00:01:57,420 --> 00:02:01,500
+and to see how this is related to concavity of the utility
+
+42
+00:02:01,500 --> 00:02:04,180
+function, look at the graph.
+
+43
+00:02:04,180 --> 00:02:06,690
+The blue line is the utility function
+
+44
+00:02:06,690 --> 00:02:09,979
+plotted against the outcome of the gamble.
+
+45
+00:02:09,979 --> 00:02:11,690
+This function is concave.
+
+46
+00:02:11,690 --> 00:02:14,630
+Now imagine that we are playing a binary gamble, as before.
+
+47
+00:02:14,630 --> 00:02:17,900
+Two outcomes, 1.2, 2.8.
+
+48
+00:02:17,900 --> 00:02:20,670
+Both outcomes are equally likely.
+
+49
+00:02:20,670 --> 00:02:22,970
+If the investor evaluates this gamble using
+
+50
+00:02:22,970 --> 00:02:26,600
+the expected utility model, the expected utility
+
+51
+00:02:26,600 --> 00:02:30,110
+is going to be seen on the graph as the dot in the middle
+
+52
+00:02:30,110 --> 00:02:31,790
+of the red segment.
+
+53
+00:02:31,790 --> 00:02:36,230
+This is the line connecting two points, utility of 1.2,
+
+54
+00:02:36,230 --> 00:02:38,840
+utility of 2.8.
+
+55
+00:02:38,840 --> 00:02:42,355
+Now this is the expected utility of the random payoff.
+
+56
+00:02:42,355 --> 00:02:43,730
+What if instead, the investor was
+
+57
+00:02:43,730 --> 00:02:45,890
+presented with the sure thing.
+
+58
+00:02:45,890 --> 00:02:47,660
+The expected value of the gamble.
+
+59
+00:02:47,660 --> 00:02:50,950
+In this case, the expected value is 2.
+
+60
+00:02:50,950 --> 00:02:54,310
+The utility evaluated at the expected value of the gamble
+
+61
+00:02:54,310 --> 00:02:58,000
+is shown as the blue dot on the utility curve.
+
+62
+00:02:58,000 --> 00:03:01,180
+The blue dot, of course, is above the red dot.
+
+63
+00:03:01,180 --> 00:03:03,880
+It has to be, because, the utility function is concave.
+
+64
+00:03:03,880 --> 00:03:07,520
+This is the essence of what a concave function is.
+
+65
+00:03:07,520 --> 00:03:09,880
+So what we can see is that, based
+
+66
+00:03:09,880 --> 00:03:11,290
+on this graphical representation,
+
+67
+00:03:11,290 --> 00:03:14,770
+it's quite clear that concavity of the utility function
+
+68
+00:03:14,770 --> 00:03:18,470
+is equivalent to risk aversion in behavior.
+
+69
+00:03:18,470 --> 00:03:22,520
+Now we're going to develop a concept of risk premium.
+
+70
+00:03:22,520 --> 00:03:26,120
+Suppose that an investor is evaluating an investment
+
+71
+00:03:26,120 --> 00:03:29,800
+strategy with return x, which is random.
+
+72
+00:03:29,800 --> 00:03:32,990
+And an investor starts with wealth w,
+
+73
+00:03:32,990 --> 00:03:38,050
+invests, and collects a payoff equal to w times 1 plus x.
+
+74
+00:03:38,050 --> 00:03:41,100
+Let's assume that the expected return is 0.
+
+75
+00:03:41,100 --> 00:03:44,350
+And we are going to call the variance of chance sigma
+
+76
+00:03:44,350 --> 00:03:46,380
+x squared.
+
+77
+00:03:46,380 --> 00:03:47,880
+The risk averse investor, of course,
+
+78
+00:03:47,880 --> 00:03:50,970
+would prefer to receive a 0 return for sure,
+
+79
+00:03:50,970 --> 00:03:54,300
+a risk-free return of 0, rather than playing this gamble.
+
+80
+00:03:54,300 --> 00:03:57,030
+Rather than making this investment.
+
+81
+00:03:57,030 --> 00:04:00,810
+Now we are going to define the concept of risk premium
+
+82
+00:04:00,810 --> 00:04:03,780
+as a number, pi.
+
+83
+00:04:03,780 --> 00:04:06,120
+It's a fixed number, it's not a random variable.
+
+84
+00:04:06,120 --> 00:04:09,930
+Such that an investor would be indifferent between collecting
+
+85
+00:04:09,930 --> 00:04:13,480
+a return of minus pi or investing
+
+86
+00:04:13,480 --> 00:04:16,230
+into a strategy with the risk return x.
+
+87
+00:04:16,230 --> 00:04:18,779
+
+
+88
+00:04:18,779 --> 00:04:22,110
+To determine what pi is, how it reflects
+
+89
+00:04:22,110 --> 00:04:24,060
+the properties of the utility function
+
+90
+00:04:24,060 --> 00:04:26,220
+and the risk of the gamble, we need
+
+91
+00:04:26,220 --> 00:04:29,550
+to think about investors' preferences.
+
+92
+00:04:29,550 --> 00:04:33,000
+Being indifferent between investing
+
+93
+00:04:33,000 --> 00:04:34,800
+into an asset with a random return
+
+94
+00:04:34,800 --> 00:04:40,740
+x versus getting a sure risk-free return of minus pi
+
+95
+00:04:40,740 --> 00:04:43,440
+means mathematically that expected utility
+
+96
+00:04:43,440 --> 00:04:47,780
+of w times 1 plus x is equal to the utility evaluated
+
+97
+00:04:47,780 --> 00:04:54,490
+at w times 1 minus pi, which is a riskless return of minus pi.
+
+98
+00:04:54,490 --> 00:04:55,900
+To analyze this equation further,
+
+99
+00:04:55,900 --> 00:04:57,790
+we need to make some approximations.
+
+100
+00:04:57,790 --> 00:05:00,460
+We are going to use a Taylor expansion to simplify
+
+101
+00:05:00,460 --> 00:05:01,820
+the problem.
+
+102
+00:05:01,820 --> 00:05:03,970
+So to start with, let's assume that
+
+103
+00:05:03,970 --> 00:05:07,330
+the range of outcomes of this gamble--
+
+104
+00:05:07,330 --> 00:05:09,850
+the support of the return x--
+
+105
+00:05:09,850 --> 00:05:11,470
+is relatively narrow.
+
+106
+00:05:11,470 --> 00:05:14,020
+So that the range of possible outcomes of x
+
+107
+00:05:14,020 --> 00:05:16,540
+is concentrated somewhere around 0.
+
+108
+00:05:16,540 --> 00:05:18,760
+Let's say between minus and plus epsilon where
+
+109
+00:05:18,760 --> 00:05:21,510
+epsilon is a small number.
+
+110
+00:05:21,510 --> 00:05:24,160
+If that is the case, then there is premium,
+
+111
+00:05:24,160 --> 00:05:28,090
+pi, is going to be small in magnitude as well,
+
+112
+00:05:28,090 --> 00:05:30,430
+which allows us to use a Taylor expansion
+
+113
+00:05:30,430 --> 00:05:33,130
+to approximate the problem.
+
+114
+00:05:33,130 --> 00:05:34,630
+With this idea in mind, we're going
+
+115
+00:05:34,630 --> 00:05:39,000
+to expand both sides of the equation around 0.
+
+116
+00:05:39,000 --> 00:05:40,900
+Let's start with the left-hand side.
+
+117
+00:05:40,900 --> 00:05:44,560
+Expected utility of w times 1 plus x.
+
+118
+00:05:44,560 --> 00:05:47,820
+We are going to expand it around x equal to 0.
+
+119
+00:05:47,820 --> 00:05:51,960
+First, let's expand the utility function under the expectation.
+
+120
+00:05:51,960 --> 00:05:55,410
+We are going to keep three leading terms in the expansion.
+
+121
+00:05:55,410 --> 00:05:58,120
+First, utility of w.
+
+122
+00:05:58,120 --> 00:06:01,090
+Then the margin utility, u prime,
+
+123
+00:06:01,090 --> 00:06:04,840
+evaluated to w times w times x.
+
+124
+00:06:04,840 --> 00:06:07,870
+That's the linear term in the Taylor expansion.
+
+125
+00:06:07,870 --> 00:06:10,660
+Then comes the second order, a quadratic term.
+
+126
+00:06:10,660 --> 00:06:13,840
+1/2 of the second derivative of u times w
+
+127
+00:06:13,840 --> 00:06:17,420
+squared times x squared.
+
+128
+00:06:17,420 --> 00:06:19,780
+When we take the expected value of this expression,
+
+129
+00:06:19,780 --> 00:06:25,330
+we are left with utility of w u prime times w times
+
+130
+00:06:25,330 --> 00:06:29,440
+the expected value of x, which by assumption is 0, plus--
+
+131
+00:06:29,440 --> 00:06:31,240
+and here is the important term--
+
+132
+00:06:31,240 --> 00:06:34,360
+1/2 of the second derivative of u,
+
+133
+00:06:34,360 --> 00:06:38,720
+times w squared times the variance of the return,
+
+134
+00:06:38,720 --> 00:06:41,090
+which is sigma x squared.
+
+135
+00:06:41,090 --> 00:06:43,190
+This is the approximation of the left-hand side.
+
+136
+00:06:43,190 --> 00:06:45,740
+The expected utility of the risk to return.
+
+137
+00:06:45,740 --> 00:06:48,140
+On the right-hand side, we have the utility
+
+138
+00:06:48,140 --> 00:06:51,590
+of w times 1 minus pi, which we also expand.
+
+139
+00:06:51,590 --> 00:06:55,910
+Here, we only need to keep the two leading terms, 0 order
+
+140
+00:06:55,910 --> 00:06:57,580
+and the first order.
+
+141
+00:06:57,580 --> 00:07:04,660
+We end up with u of w minus u prime times w times pi.
+
+142
+00:07:04,660 --> 00:07:06,340
+We end up with inequality.
+
+143
+00:07:06,340 --> 00:07:09,400
+On the left-hand side, we have an approximate expression
+
+144
+00:07:09,400 --> 00:07:12,850
+for the expected utility of the risky investment.
+
+145
+00:07:12,850 --> 00:07:16,870
+On the right-hand side, it's the utility of w times 1 minus pi,
+
+146
+00:07:16,870 --> 00:07:21,010
+the certainty equivalent, which defines the risk premium.
+
+147
+00:07:21,010 --> 00:07:23,420
+When we solve this equation, we see that the risk premium
+
+148
+00:07:23,420 --> 00:07:29,090
+is given by minus 1/2 times the ratio of the second derivative
+
+149
+00:07:29,090 --> 00:07:34,790
+of the utility function times w divided by u prime of w
+
+150
+00:07:34,790 --> 00:07:37,760
+times sigma x squared.
+
+151
+00:07:37,760 --> 00:07:41,390
+We see that the risk premium is a product of two objects.
+
+152
+00:07:41,390 --> 00:07:44,360
+The first is what we call relative risk aversion
+
+153
+00:07:44,360 --> 00:07:45,560
+coefficient.
+
+154
+00:07:45,560 --> 00:07:49,940
+This is minus w times the second derivative
+
+155
+00:07:49,940 --> 00:07:54,280
+of the utility function divided by the first derivative.
+
+156
+00:07:54,280 --> 00:07:56,620
+This object captures what we know
+
+157
+00:07:56,620 --> 00:07:59,050
+is the curvature of the utility function.
+
+158
+00:07:59,050 --> 00:08:01,670
+If the utility function were to be a straight line,
+
+159
+00:08:01,670 --> 00:08:03,610
+the second derivative would be 0.
+
+160
+00:08:03,610 --> 00:08:05,990
+Relative risk aversion would be 0.
+
+161
+00:08:05,990 --> 00:08:08,200
+For a properly concave utility function,
+
+162
+00:08:08,200 --> 00:08:10,850
+this number is positive.
+
+163
+00:08:10,850 --> 00:08:14,630
+The second piece, the second term, in the risk premium
+
+164
+00:08:14,630 --> 00:08:17,180
+is the measure of return risk.
+
+165
+00:08:17,180 --> 00:08:20,510
+In this case, we see that its return variance.
+
+166
+00:08:20,510 --> 00:08:22,880
+The conclusion is that the risk premium
+
+167
+00:08:22,880 --> 00:08:27,680
+that investor demands, based on the riskiness of the gamble
+
+168
+00:08:27,680 --> 00:08:29,780
+of the investment strategy, and based
+
+169
+00:08:29,780 --> 00:08:33,710
+on his or her own preferences, is comprised of two terms.
+
+170
+00:08:33,710 --> 00:08:35,750
+Investor's relative risk aversion,
+
+171
+00:08:35,750 --> 00:08:38,000
+which is the property of the utility function,
+
+172
+00:08:38,000 --> 00:08:42,870
+and return variance, which is the measure of return risk.
+
+173
+00:08:42,870 --> 00:08:46,260
+Let's consider a couple of examples of utility functions.
+
+174
+00:08:46,260 --> 00:08:50,530
+First, the simplest case is a linear utility.
+
+175
+00:08:50,530 --> 00:08:55,180
+In this case, u of w is an affine function of w.
+
+176
+00:08:55,180 --> 00:08:58,120
+Linear utility is special because it implies
+
+177
+00:08:58,120 --> 00:09:00,120
+0 relative risk aversion.
+
+178
+00:09:00,120 --> 00:09:04,330
+An investor with linear utility does not care about risk.
+
+179
+00:09:04,330 --> 00:09:07,090
+This kind of investor is going to evaluate each investment
+
+180
+00:09:07,090 --> 00:09:11,380
+opportunity based on the expected value of the return.
+
+181
+00:09:11,380 --> 00:09:13,330
+The second example of the utility function
+
+182
+00:09:13,330 --> 00:09:16,480
+that we want to introduce is the so-called power utility
+
+183
+00:09:16,480 --> 00:09:17,770
+function.
+
+184
+00:09:17,770 --> 00:09:20,560
+It's also called constant relative risk aversion.
+
+185
+00:09:20,560 --> 00:09:23,680
+We will see in a second why this name.
+
+186
+00:09:23,680 --> 00:09:27,710
+A power utility function is given by a power function
+
+187
+00:09:27,710 --> 00:09:29,270
+of investor's wealth.
+
+188
+00:09:29,270 --> 00:09:32,660
+And its coefficient is a positive number.
+
+189
+00:09:32,660 --> 00:09:35,870
+The case of the coefficient equal to 1 is special.
+
+190
+00:09:35,870 --> 00:09:40,620
+In this case, the utility function becomes logarithmic.
+
+191
+00:09:40,620 --> 00:09:42,880
+The key property of the power utility function,
+
+192
+00:09:42,880 --> 00:09:45,180
+and the reason why it's so commonly used,
+
+193
+00:09:45,180 --> 00:09:46,710
+is that the relative risk aversion
+
+194
+00:09:46,710 --> 00:09:50,430
+coefficient of this utility function is constant.
+
+195
+00:09:50,430 --> 00:09:52,560
+It's equal to the exponent in the power,
+
+196
+00:09:52,560 --> 00:09:55,440
+and it's independent of the level of wealth.
+
+197
+00:09:55,440 --> 00:09:59,400
+The implication of this is that an investor following a power
+
+198
+00:09:59,400 --> 00:10:02,730
+utility function is going to have the same risk
+
+199
+00:10:02,730 --> 00:10:06,610
+aversion, regardless of the level of wealth.
+
+200
+00:10:06,610 --> 00:10:08,680
+Which means that making an investment decision
+
+201
+00:10:08,680 --> 00:10:11,090
+with a million dollars or 5 or 10,
+
+202
+00:10:11,090 --> 00:10:13,450
+this investor is going to choose the same portfolio
+
+203
+00:10:13,450 --> 00:10:14,620
+of investments.
+
+204
+00:10:14,620 --> 00:10:18,750
+The level of initial wealth doesn't effect the choice.
+

@@ -1,0 +1,328 @@
+0
+00:00:00,000 --> 00:00:01,890
+
+
+1
+00:00:01,890 --> 00:00:05,310
+PROFESSOR: In this question, we will learn what is a portfolio
+
+2
+00:00:05,310 --> 00:00:08,600
+and how to compute portfolio weights.
+
+3
+00:00:08,600 --> 00:00:10,460
+Suppose that you're a financial advisor
+
+4
+00:00:10,460 --> 00:00:12,260
+and you have the following two clients,
+
+5
+00:00:12,260 --> 00:00:17,690
+client P with a portfolio P, and client Q with a portfolio Q.
+
+6
+00:00:17,690 --> 00:00:22,910
+Client P has the following securities in her portfolio,
+
+7
+00:00:22,910 --> 00:00:25,250
+she invests $25,000 in SPY, which
+
+8
+00:00:25,250 --> 00:00:31,550
+is ETF that tracks S&P 500 Index, 35,000 into this ETF,
+
+9
+00:00:31,550 --> 00:00:33,710
+this is ETF, Vanguard's ETF, that
+
+10
+00:00:33,710 --> 00:00:38,000
+tracks returns on short term Treasury securities,
+
+11
+00:00:38,000 --> 00:00:41,600
+and $50,000 into this ETF, this is
+
+12
+00:00:41,600 --> 00:00:47,510
+iShares ETF that tracks return of emerging markets.
+
+13
+00:00:47,510 --> 00:00:51,440
+Now client Q has the following portfolio, so $10,000
+
+14
+00:00:51,440 --> 00:00:55,550
+invested in SPY, so same ETF, $10,000 invested
+
+15
+00:00:55,550 --> 00:00:58,910
+in this short term Treasury ETF, 30,000
+
+16
+00:00:58,910 --> 00:01:02,270
+is invested in this emerging markets ETF,
+
+17
+00:01:02,270 --> 00:01:06,110
+and 20,000 invested into this additional ETF that
+
+18
+00:01:06,110 --> 00:01:09,930
+tracks returns on mortgage backed securities.
+
+19
+00:01:09,930 --> 00:01:12,800
+So notice that client P does not have
+
+20
+00:01:12,800 --> 00:01:17,760
+MBB or this ETF in her portfolio but client Q does.
+
+21
+00:01:17,760 --> 00:01:20,330
+So the first question that we'll answer here
+
+22
+00:01:20,330 --> 00:01:23,780
+is that we'll compute portfolio weights that clients P
+
+23
+00:01:23,780 --> 00:01:29,180
+and Q have on each individual securities in their portfolios.
+
+24
+00:01:29,180 --> 00:01:32,990
+Let's start with client P. So first to compute
+
+25
+00:01:32,990 --> 00:01:36,320
+the weights of each of these individual ETFs
+
+26
+00:01:36,320 --> 00:01:39,350
+in her portfolio, first step is to compute the total value
+
+27
+00:01:39,350 --> 00:01:40,830
+of her portfolio.
+
+28
+00:01:40,830 --> 00:01:43,580
+So this is just weighting up the total asset
+
+29
+00:01:43,580 --> 00:01:49,160
+value of each individual ETF, this gives us $75,000.
+
+30
+00:01:49,160 --> 00:01:53,270
+Then to compute the weight that SPY has in her portfolio
+
+31
+00:01:53,270 --> 00:01:58,760
+we're taking the value of SPY in her portfolio, so $25,000,
+
+32
+00:01:58,760 --> 00:02:01,610
+and dividing it by the total value of the portfolio, which
+
+33
+00:02:01,610 --> 00:02:04,050
+is $75,000.
+
+34
+00:02:04,050 --> 00:02:07,160
+This gives us one third or 0.33.
+
+35
+00:02:07,160 --> 00:02:10,160
+We're doing exactly the same for the second ETF,
+
+36
+00:02:10,160 --> 00:02:14,150
+for the short term Treasury ETF, so the $35,000,
+
+37
+00:02:14,150 --> 00:02:16,100
+this is assets on that or the value
+
+38
+00:02:16,100 --> 00:02:20,340
+of this ETF in this portfolio, divided by the total value
+
+39
+00:02:20,340 --> 00:02:24,380
+$75,000, this gives us 0.47.
+
+40
+00:02:24,380 --> 00:02:26,510
+And finally, for the emerging markets ETF,
+
+41
+00:02:26,510 --> 00:02:31,450
+15,000 divided by 75,000 gives us 0.2.
+
+42
+00:02:31,450 --> 00:02:32,650
+Now these are the weights.
+
+43
+00:02:32,650 --> 00:02:34,275
+So this is the answer to this question.
+
+44
+00:02:34,275 --> 00:02:36,420
+So the weight of SPY is 0.33, the weight
+
+45
+00:02:36,420 --> 00:02:39,810
+of short term ETF in this portfolio is 0.47,
+
+46
+00:02:39,810 --> 00:02:44,370
+and the weight of IEMG is 0.2.
+
+47
+00:02:44,370 --> 00:02:47,550
+Now let's verify, so this is going to be trivial
+
+48
+00:02:47,550 --> 00:02:52,080
+but let's still verify that the weights in this portfolio
+
+49
+00:02:52,080 --> 00:02:53,670
+add up to 1.
+
+50
+00:02:53,670 --> 00:02:56,710
+Remember that this is a definition of the portfolio.
+
+51
+00:02:56,710 --> 00:02:59,550
+So a portfolio is a collection of securities such
+
+52
+00:02:59,550 --> 00:03:02,460
+that the weights of each individual security
+
+53
+00:03:02,460 --> 00:03:05,580
+in the portfolio should add up to 1.
+
+54
+00:03:05,580 --> 00:03:09,340
+If they don't, then this is not a portfolio by definition.
+
+55
+00:03:09,340 --> 00:03:15,330
+So here, just to verify, so 0.33, plus 0.47, plus 0.2,
+
+56
+00:03:15,330 --> 00:03:17,700
+this gives us exactly, exactly 1.
+
+57
+00:03:17,700 --> 00:03:19,950
+Again, in this particular case, this is trivial,
+
+58
+00:03:19,950 --> 00:03:22,890
+but this just re-emphasizes the definition
+
+59
+00:03:22,890 --> 00:03:25,080
+of what portfolio actually is.
+
+60
+00:03:25,080 --> 00:03:27,860
+Let's repeat the same process for client Q
+
+61
+00:03:27,860 --> 00:03:31,950
+or for portfolio Q. So the total value of this portfolio
+
+62
+00:03:31,950 --> 00:03:35,010
+is the sum of the value of individual ETFs,
+
+63
+00:03:35,010 --> 00:03:37,680
+so this is $70,000.
+
+64
+00:03:37,680 --> 00:03:39,780
+To compute the weight of SPY we are
+
+65
+00:03:39,780 --> 00:03:44,610
+taking the value of SPY, 10,000, dividing it by 70,000.
+
+66
+00:03:44,610 --> 00:03:46,840
+That's the total value of the portfolio,
+
+67
+00:03:46,840 --> 00:03:49,350
+so that gives us 0.14.
+
+68
+00:03:49,350 --> 00:03:52,780
+We're doing the same for short term Treasury ETF,
+
+69
+00:03:52,780 --> 00:03:57,360
+so 10,000 divided by 70,000 also 0.14.
+
+70
+00:03:57,360 --> 00:03:59,700
+The weights of the emerging market ETF
+
+71
+00:03:59,700 --> 00:04:05,370
+is 30,000, its value divided by 70,000, that's 0.43.
+
+72
+00:04:05,370 --> 00:04:07,680
+And finally, the weight of the mortgage
+
+73
+00:04:07,680 --> 00:04:14,730
+backed securities ETF, 20,000 divided by 70,000, that's 0.29.
+
+74
+00:04:14,730 --> 00:04:17,100
+So these are the weights of each of these four
+
+75
+00:04:17,100 --> 00:04:20,399
+assets in the portfolio of this client Q.
+
+76
+00:04:20,399 --> 00:04:23,680
+Again, just to check to make sure that all of the weights
+
+77
+00:04:23,680 --> 00:04:27,280
+add up to 1, we can add them all up.
+
+78
+00:04:27,280 --> 00:04:29,280
+And just to verify that they all add up to 1
+
+79
+00:04:29,280 --> 00:04:32,520
+and this indeed is the portfolio so
+
+80
+00:04:32,520 --> 00:04:35,460
+that we haven't made a mistake computing any of the weights
+
+81
+00:04:35,460 --> 00:04:37,010
+here.
+

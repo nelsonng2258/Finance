@@ -1,0 +1,150 @@
+
+PROFESSOR: In this question, we will
+learn how to identify arbitrage opportunities.
+in the context of factor models.
+We will consider two factor models and three
+well-diversified portfolios, A, B, and C with the following
+characteristics.
+This table gives us expected returns and factor loadings
+on the first and second factor for the three portfolios.
+We'll construct an arbitrage strategy,
+such that generates $1,000 today and has
+zero payoff in the future.
+We will assume that there is a risk-free instrument.
+And the current risk-free rate is 1.5%.
+Let us start constructing our arbitrage strategy by assuming
+that we buy or go long portfolios A, B,
+and C, as well as the risk-free bonds
+in the following amounts, XA, XB, XC, and Xrf.
+This will be the dollar amount that
+was spent on these securities.
+We will allow these amounts to be negative,
+which would indicate that we are shorting these securities.
+So this table summarizes our positions.
+So in the last column, I indicate the amounts
+that we invest in each of these four securities.
+And at the bottom, I put the risk-free bond.
+And I put the expected return, which is 1.5%.
+And, of course, the factor exposures
+on both factors for the risk-free security are zeros.
+Recall that we want to construct a trading strategy that
+gives us $1,000 today.
+So therefore, we can write down the following equation.
+So the money that we spend right now
+on taking positions in these four securities
+should equal to $1,000.
+So notice the negative signs on all X's here,
+because we assumed that we are buying
+all of these four securities.
+Now, of course, we can immediately
+see that some of these X's have to be negative.
+In other words, we have to be shorting
+some of these securities.
+Otherwise, there is no possibility
+that we would earn a positive $1,000.
+Now what does arbitrage mean in this particular context?
+Number one, it means that our expected returns
+from our portfolio will be 0.
+Two, it means that we have no exposure to systematic risk.
+And three, since we are working with
+well-diversified portfolios, which by construction have
+no idiosyncratic risk, it means that we do not have exposure
+to idiosyncratic risk, because we
+are working with three well-diversified portfolios
+and with a risk-free bond.
+So as long as all of these three conditions are satisfied
+and the third one is satisfied by construction,
+so as long as the first two are satisfied,
+it means we will have arbitrage opportunity in this market.
+Let's start with the first condition, zero expected
+return.
+The equation that is written here indicates that the future
+value of our portfolio is $0.00, which means that we are earning
+0% expected return.
+The first part of this equation for example
+XA times 1 plus expected the return on portfolio A,
+this is just the future value of portfolio A. Similarly,
+XB is the dollar value that we invested in portfolio
+B, that is one plan plus expected return portfolio B,
+is the future value of this portfolio
+and so similarly for portfolio C and similarly
+for the risk-free bond.
+If we plug-in the numbers that were given in this question,
+so we know the expected returns on the three portfolios,
+and we know that the risk-free rate is 1.5%,
+this gives us this equation.
+So this is an equation with four unknowns-- so
+our X's, XA, XB, XC, and Xrf.
+Now the second arbitrage condition
+is that we have no exposure to systematic risk.
+In this particular model, we have two systematic risk
+factors, 1 and 2.
+And so this would mean that we have no exposure
+to both of these systematic risk factors.
+Technically speaking, it means that the factor loadings
+of our portfolio on both of these factors should be 0.
+And so this is the first equation.
+So the factor loadings of the portfolio P on factor 1 is 0.
+We can expand and write this down,
+because the beta of the portfolio P
+is the weighted average of the betas of the portfolios A, B,
+and C here.
+Recall that, of course, the beta of the risk-free bond is 0.
+So it is 0 here.
+With P in this equation, it's just the total value
+of the portfolio.
+And so, therefore, we have this equation.
+So weighted average of the betas of well-diversified portfolio
+A, B, and C should equal to 0.
+We can see that the total value of portfolio VP cancels out.
+So it's irrelevant here.
+And so, therefore, we are left with the following equation.
+So beta 1 of portfolio A, which is 0.95 multiplied by XA,
+plus factor loading of portfolio B on the first factor, which
+is 0.85 times XB plus the factor loading of portfolio
+C on the first factor 1.2 times XC.
+So this should equal to 0.
+Similarly, we can write down exactly the same equation
+for the second risk factor.
+So this is the equation.
+So the only thing that changes here,
+the fact that all of these betas are the factor loadings
+of portfolios A, B, and C on the second risk factor.
+And so plugging in the betas of each of these portfolios,
+we get this equation.
+
+We now can combine all of the equations into one system.
+We have a system of four equations and four unknowns.
+The first equation says that we're making $1,000 today.
+The second equation says that we have $0.00 and 0% expected
+return.
+And the third and fourth equation
+says that we have no systematic exposure
+to the first and second risk factor.
+Now, we already learned how to solve
+a system of linear equations in Excel, for example.
+Refer to recitation number four question 2.
+So repeating the same steps, we can solve this
+and get the following answer.
+So XA is going to be equal to negative $235,480.
+XB would equal to $24,360.
+XC equals the $169,167.
+And Xrf equals to $40,953.
+This means that we are going short portfolio A.
+And we are buying portfolios B and C
+and also buying the risk-free bond.
+So this effectively means that portfolio A
+had too low of an expected return
+given its systematic risk.
+And so, therefore, we're shorting that portfolio.
+And we're buying portfolios B and C. Importantly,
+this illustrates the fact that to avoid arbitrage
+opportunities in the market, expected returns
+on well-diversified portfolios, and their exposure
+to systematic risk should be consistent with one another.
+Otherwise, as it's illustrated here,
+there will be an arbitrage opportunity.
+And this condition that guarantees
+no arbitrage in this market is what
+gives us the APT pricing equation, which
+is a very important result.

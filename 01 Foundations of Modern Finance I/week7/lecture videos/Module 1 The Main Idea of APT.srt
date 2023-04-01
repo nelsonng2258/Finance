@@ -1,0 +1,392 @@
+0
+00:00:00,000 --> 00:00:00,920
+
+
+1
+00:00:00,920 --> 00:00:03,590
+PROFESSOR: In this lecture, we develop the arbitrage pricing
+
+2
+00:00:03,590 --> 00:00:05,750
+theory, or APT.
+
+3
+00:00:05,750 --> 00:00:08,130
+APT is an important theoretical model,
+
+4
+00:00:08,130 --> 00:00:12,170
+which relates expected returns on various risky assets
+
+5
+00:00:12,170 --> 00:00:14,840
+to their systematic risk.
+
+6
+00:00:14,840 --> 00:00:17,300
+In particular, APT tells us how exactly
+
+7
+00:00:17,300 --> 00:00:19,580
+to quantify or measure systematic risk
+
+8
+00:00:19,580 --> 00:00:21,950
+of various assets.
+
+9
+00:00:21,950 --> 00:00:25,070
+The main idea of the APT is to start with the factor
+
+10
+00:00:25,070 --> 00:00:27,290
+model of returns.
+
+11
+00:00:27,290 --> 00:00:32,090
+Stock returns have common factors, or systematic factors
+
+12
+00:00:32,090 --> 00:00:34,490
+that affect the variety of assets,
+
+13
+00:00:34,490 --> 00:00:37,700
+and the non-systematic or firm-specific idiosyncratic
+
+14
+00:00:37,700 --> 00:00:42,680
+factors that affect individual assets or individual stocks.
+
+15
+00:00:42,680 --> 00:00:47,520
+Diversification can be used to eliminate non-systematic risk,
+
+16
+00:00:47,520 --> 00:00:49,940
+which means that diversified portfolios are only
+
+17
+00:00:49,940 --> 00:00:55,170
+exposed to the common sources of risk, or factor risk.
+
+18
+00:00:55,170 --> 00:01:00,240
+This implies that risk premia or expected excess returns
+
+19
+00:01:00,240 --> 00:01:04,080
+on diversified portfolios depend on their exposure
+
+20
+00:01:04,080 --> 00:01:06,120
+to systematic risk factors.
+
+21
+00:01:06,120 --> 00:01:08,370
+This is the main result we are going to establish.
+
+22
+00:01:08,370 --> 00:01:10,950
+
+
+23
+00:01:10,950 --> 00:01:14,670
+Because portfolios consist of individual assets performing
+
+24
+00:01:14,670 --> 00:01:16,630
+a variety of diversified portfolios,
+
+25
+00:01:16,630 --> 00:01:19,680
+we can show that for almost all risky assets,
+
+26
+00:01:19,680 --> 00:01:22,530
+expected returns also depend on their exposure
+
+27
+00:01:22,530 --> 00:01:24,740
+to systematic factors.
+
+28
+00:01:24,740 --> 00:01:27,150
+And that is the main result of APT,
+
+29
+00:01:27,150 --> 00:01:31,620
+that expected excess returns or risk premia on various assets
+
+30
+00:01:31,620 --> 00:01:33,780
+are determined by their exposures
+
+31
+00:01:33,780 --> 00:01:39,860
+to systematic sources of risk, or the common return factors.
+
+32
+00:01:39,860 --> 00:01:43,400
+Let's start by developing a factor model.
+
+33
+00:01:43,400 --> 00:01:45,780
+Under the factor model, stock returns
+
+34
+00:01:45,780 --> 00:01:49,870
+are exposed to two kinds of shocks, two kinds of risk--
+
+35
+00:01:49,870 --> 00:01:53,030
+common shocks or common factors, and
+
+36
+00:01:53,030 --> 00:01:56,840
+asset-specific or firm-specific shocks.
+
+37
+00:01:56,840 --> 00:01:59,110
+Let's think about common factors.
+
+38
+00:01:59,110 --> 00:02:02,340
+These factors proxy for shocks to economic conditions
+
+39
+00:02:02,340 --> 00:02:04,530
+which affect the variety of firms
+
+40
+00:02:04,530 --> 00:02:07,260
+and which are important to investors.
+
+41
+00:02:07,260 --> 00:02:10,380
+Such shock could include shocks to economic growth,
+
+42
+00:02:10,380 --> 00:02:13,320
+shocks to monetary policy or interest rates,
+
+43
+00:02:13,320 --> 00:02:17,560
+shocks to oil price, government policy shocks, and so forth.
+
+44
+00:02:17,560 --> 00:02:19,590
+These are common macroeconomic shocks
+
+45
+00:02:19,590 --> 00:02:21,270
+that affect various firms.
+
+46
+00:02:21,270 --> 00:02:24,240
+Not necessarily in the same way, but they
+
+47
+00:02:24,240 --> 00:02:28,040
+are broadly important in the economy.
+
+48
+00:02:28,040 --> 00:02:31,520
+As an example, consider an asset the price of which
+
+49
+00:02:31,520 --> 00:02:36,110
+rises when inflation unexpectedly accelerates.
+
+50
+00:02:36,110 --> 00:02:40,130
+This kind of asset can be used to hedge inflation risk.
+
+51
+00:02:40,130 --> 00:02:42,470
+An investor who buys this asset is
+
+52
+00:02:42,470 --> 00:02:45,710
+going to gain some protection against inflation.
+
+53
+00:02:45,710 --> 00:02:48,950
+As a result, we would expect that assets like these
+
+54
+00:02:48,950 --> 00:02:52,400
+are going to earn relatively low-risk premia because they're
+
+55
+00:02:52,400 --> 00:02:56,180
+going to be in high demand by investors.
+
+56
+00:02:56,180 --> 00:03:00,920
+The bottom line is that factors represent systematic or common
+
+57
+00:03:00,920 --> 00:03:04,400
+sources of risk which cannot be diversified away by forming
+
+58
+00:03:04,400 --> 00:03:06,670
+portfolios.
+
+59
+00:03:06,670 --> 00:03:09,430
+Firm-specific events give rise to
+
+60
+00:03:09,430 --> 00:03:12,400
+idiosyncratic or firm-specific risks.
+
+61
+00:03:12,400 --> 00:03:16,030
+These include events like new product innovations,
+
+62
+00:03:16,030 --> 00:03:21,230
+lawsuits, changes in management, labor strikes, and so forth.
+
+63
+00:03:21,230 --> 00:03:24,630
+As an example, consider a two-factor model.
+
+64
+00:03:24,630 --> 00:03:26,720
+In this model, the two factors are
+
+65
+00:03:26,720 --> 00:03:29,990
+represented by shocks to economic growth
+
+66
+00:03:29,990 --> 00:03:32,300
+and to energy prices.
+
+67
+00:03:32,300 --> 00:03:34,580
+In particular, the shock to growth
+
+68
+00:03:34,580 --> 00:03:37,590
+is the unanticipated change in economic growth.
+
+69
+00:03:37,590 --> 00:03:39,830
+So it's expected value is zero.
+
+70
+00:03:39,830 --> 00:03:43,630
+And the same is true of the shock to energy prices.
+
+71
+00:03:43,630 --> 00:03:46,540
+Under this model, the return on any asset
+
+72
+00:03:46,540 --> 00:03:50,680
+is represented by its average value, Ri bar,
+
+73
+00:03:50,680 --> 00:03:54,520
+plus the sum of two systematic terms, which
+
+74
+00:03:54,520 --> 00:03:58,390
+are the shock to the economic growth times the loading
+
+75
+00:03:58,390 --> 00:04:02,800
+on that shock, b, plus the shock to energy prices,
+
+76
+00:04:02,800 --> 00:04:06,770
+times the loading on that shock, plus the idiosyncratic piece,
+
+77
+00:04:06,770 --> 00:04:10,960
+of epsilon i, which represents firm-specific idiosyncratic
+
+78
+00:04:10,960 --> 00:04:13,030
+shocks.
+
+79
+00:04:13,030 --> 00:04:16,390
+Consider further two hypothetical firms.
+
+80
+00:04:16,390 --> 00:04:20,690
+The first of these is the solar panel installer.
+
+81
+00:04:20,690 --> 00:04:23,090
+This company has moderate exposure
+
+82
+00:04:23,090 --> 00:04:26,390
+to the overall economic growth, so its loading
+
+83
+00:04:26,390 --> 00:04:30,590
+on the growth shock is going to be positive but perhaps
+
+84
+00:04:30,590 --> 00:04:32,060
+not very large.
+
+85
+00:04:32,060 --> 00:04:36,860
+This company also benefits from an increase in energy costs.
+
+86
+00:04:36,860 --> 00:04:39,320
+So its loading on energy prices is
+
+87
+00:04:39,320 --> 00:04:43,080
+likely to be positive and perhaps large.
+
+88
+00:04:43,080 --> 00:04:46,760
+The second company is a long-distance trucking firm.
+
+89
+00:04:46,760 --> 00:04:48,770
+This company is very cyclical.
+
+90
+00:04:48,770 --> 00:04:52,380
+Its cash flows are highly sensitive to economic activity.
+
+91
+00:04:52,380 --> 00:04:55,730
+And as a result, its loading on the economic growth shocks
+
+92
+00:04:55,730 --> 00:04:58,380
+is positive and large.
+
+93
+00:04:58,380 --> 00:05:02,270
+This company is also negatively exposed to energy costs.
+
+94
+00:05:02,270 --> 00:05:06,230
+Rising energy costs imply higher operational costs
+
+95
+00:05:06,230 --> 00:05:07,340
+for this firm.
+
+96
+00:05:07,340 --> 00:05:09,920
+And so its loading on the energy shock
+
+97
+00:05:09,920 --> 00:05:13,840
+is negative and large in absolute value.
+

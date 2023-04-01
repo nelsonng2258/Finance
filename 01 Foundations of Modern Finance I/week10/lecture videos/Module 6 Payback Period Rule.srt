@@ -1,0 +1,356 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:03,480
+PROFESSOR: Although we have been advocating the NPV
+
+2
+00:00:03,480 --> 00:00:07,680
+rule for capital budgeting decisions, in practice,
+
+3
+00:00:07,680 --> 00:00:10,350
+other rules are also used.
+
+4
+00:00:10,350 --> 00:00:13,140
+We can list some of the common ones--
+
+5
+00:00:13,140 --> 00:00:16,950
+the payback period, internal rate of return,
+
+6
+00:00:16,950 --> 00:00:21,510
+sometimes also called IRR, profitability index,
+
+7
+00:00:21,510 --> 00:00:26,000
+sometimes also called PI, and so on.
+
+8
+00:00:26,000 --> 00:00:29,280
+As is often the case, for the correct answer,
+
+9
+00:00:29,280 --> 00:00:33,390
+there's only one, while for the not so correct answers,
+
+10
+00:00:33,390 --> 00:00:34,980
+there are many.
+
+11
+00:00:34,980 --> 00:00:39,340
+We will show a more extended list of these alternative rules
+
+12
+00:00:39,340 --> 00:00:42,750
+by the end of this lecture.
+
+13
+00:00:42,750 --> 00:00:46,470
+Firms use these rules for various reasons.
+
+14
+00:00:46,470 --> 00:00:48,900
+First, they were used historically,
+
+15
+00:00:48,900 --> 00:00:51,700
+and habits die hard.
+
+16
+00:00:51,700 --> 00:00:55,840
+Second, they may have worked in previous situations, often
+
+17
+00:00:55,840 --> 00:01:00,990
+combined with common sense and other considerations.
+
+18
+00:01:00,990 --> 00:01:04,260
+Third, under certain circumstances,
+
+19
+00:01:04,260 --> 00:01:09,020
+they do give the same answer as NPV.
+
+20
+00:01:09,020 --> 00:01:12,650
+But in general, they don't agree with NPV.
+
+21
+00:01:12,650 --> 00:01:16,850
+Therefore, it is important to note that the NPV rule
+
+22
+00:01:16,850 --> 00:01:19,970
+dominates these alternatives.
+
+23
+00:01:19,970 --> 00:01:23,660
+Nonetheless, given their presence in practice,
+
+24
+00:01:23,660 --> 00:01:27,560
+we will discuss some of these alternative rules,
+
+25
+00:01:27,560 --> 00:01:32,140
+their validity, and limitations.
+
+26
+00:01:32,140 --> 00:01:36,630
+The first rule we consider is based on the so-called payback
+
+27
+00:01:36,630 --> 00:01:39,530
+period of a project.
+
+28
+00:01:39,530 --> 00:01:44,290
+A project's payback period is defined as the minimum time,
+
+29
+00:01:44,290 --> 00:01:47,960
+denoted by s, such that the sum of net cash
+
+30
+00:01:47,960 --> 00:01:53,160
+flows from the project turns positive.
+
+31
+00:01:53,160 --> 00:01:55,580
+In other words, it is the time taken
+
+32
+00:01:55,580 --> 00:01:58,910
+for the sum of the projects' subsequent payoffs
+
+33
+00:01:58,910 --> 00:02:02,330
+to just cover the initial investment.
+
+34
+00:02:02,330 --> 00:02:05,870
+This is formally given by the equation highlighted
+
+35
+00:02:05,870 --> 00:02:09,150
+on this slide.
+
+36
+00:02:09,150 --> 00:02:12,720
+The capital budgeting rule based on the payback period
+
+37
+00:02:12,720 --> 00:02:16,140
+first specifies a threshold payback time--
+
+38
+00:02:16,140 --> 00:02:17,890
+say, t star.
+
+39
+00:02:17,890 --> 00:02:22,200
+Then for independent projects, accept all those
+
+40
+00:02:22,200 --> 00:02:26,630
+with payback period not exceeding the threshold.
+
+41
+00:02:26,630 --> 00:02:30,020
+For mutually exclusive projects, among the projects
+
+42
+00:02:30,020 --> 00:02:33,320
+with payback periods not exceeding the threshold,
+
+43
+00:02:33,320 --> 00:02:37,760
+accept the one with the minimum payback period.
+
+44
+00:02:37,760 --> 00:02:42,200
+Let's consider an example to illustrate this rule.
+
+45
+00:02:42,200 --> 00:02:46,460
+Suppose that the payback threshold is three years,
+
+46
+00:02:46,460 --> 00:02:49,870
+and we have two projects, 1 and 2.
+
+47
+00:02:49,870 --> 00:02:52,880
+Their dollar cash flows are given in the table,
+
+48
+00:02:52,880 --> 00:02:55,650
+in thousand dollars.
+
+49
+00:02:55,650 --> 00:02:59,970
+Their payback periods are four and three years, respectively,
+
+50
+00:02:59,970 --> 00:03:03,610
+as given in the last column in the table.
+
+51
+00:03:03,610 --> 00:03:06,720
+This is easily seen.
+
+52
+00:03:06,720 --> 00:03:09,490
+Take project one, for example.
+
+53
+00:03:09,490 --> 00:03:13,670
+The initial investment is 100 in year zero.
+
+54
+00:03:13,670 --> 00:03:19,580
+Positive payoff starts at 20 in year one, then 40 in year two,
+
+55
+00:03:19,580 --> 00:03:23,960
+with the sum being 60; then 30 in year three,
+
+56
+00:03:23,960 --> 00:03:28,280
+with the sum being 90; and then 10 in year four,
+
+57
+00:03:28,280 --> 00:03:31,370
+with the sum being 100, which just
+
+58
+00:03:31,370 --> 00:03:33,800
+equals the initial investment.
+
+59
+00:03:33,800 --> 00:03:37,220
+Therefore, its payback period is four years.
+
+60
+00:03:37,220 --> 00:03:39,910
+
+
+61
+00:03:39,910 --> 00:03:42,550
+With the cutoff payback period being three,
+
+62
+00:03:42,550 --> 00:03:48,780
+the firm will reject project one and accept project two.
+
+63
+00:03:48,780 --> 00:03:52,080
+But looking at the two projects more carefully,
+
+64
+00:03:52,080 --> 00:03:55,410
+and what the payback period does,
+
+65
+00:03:55,410 --> 00:03:58,690
+it has two obvious shortcomings.
+
+66
+00:03:58,690 --> 00:04:01,420
+First, the rule ignores cash flows
+
+67
+00:04:01,420 --> 00:04:03,250
+after that payback period.
+
+68
+00:04:03,250 --> 00:04:07,480
+For example, project one has substantial cash flows
+
+69
+00:04:07,480 --> 00:04:10,270
+in year five and six which are totally
+
+70
+00:04:10,270 --> 00:04:13,150
+ignored in the decision.
+
+71
+00:04:13,150 --> 00:04:17,570
+Second, the rule ignores discounting.
+
+72
+00:04:17,570 --> 00:04:21,620
+Both of these omissions can lead to deviations
+
+73
+00:04:21,620 --> 00:04:24,550
+from the optimal decision.
+
+74
+00:04:24,550 --> 00:04:28,210
+To see this, let's assume that the proper discount
+
+75
+00:04:28,210 --> 00:04:32,210
+rate is 10% for both projects.
+
+76
+00:04:32,210 --> 00:04:35,030
+We can then compute their NPVs.
+
+77
+00:04:35,030 --> 00:04:41,270
+In particular, project one has an NPV of roughly $39,000,
+
+78
+00:04:41,270 --> 00:04:47,610
+while project two has an NPV of roughly minus $7,000.
+
+79
+00:04:47,610 --> 00:04:50,730
+But by the payback rule, project two
+
+80
+00:04:50,730 --> 00:04:54,730
+was accepted, not project 1.
+
+81
+00:04:54,730 --> 00:04:58,000
+One can think of possible fixes to overcome
+
+82
+00:04:58,000 --> 00:05:00,190
+the rule's shortcomings.
+
+83
+00:05:00,190 --> 00:05:03,700
+For example, incorporating proper discounting,
+
+84
+00:05:03,700 --> 00:05:06,940
+one can define the discounted payback period
+
+85
+00:05:06,940 --> 00:05:12,190
+as the time it takes for the sum of the discounted cash flow
+
+86
+00:05:12,190 --> 00:05:15,040
+first exceeds the initial investment.
+
+87
+00:05:15,040 --> 00:05:19,450
+This is better than before, but still ignores the cash flows
+
+88
+00:05:19,450 --> 00:05:23,190
+after the discounted payback period.
+

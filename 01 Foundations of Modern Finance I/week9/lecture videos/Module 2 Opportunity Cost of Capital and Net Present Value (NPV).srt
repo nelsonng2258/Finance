@@ -1,0 +1,336 @@
+0
+00:00:00,000 --> 00:00:00,672
+
+
+1
+00:00:00,672 --> 00:00:04,100
+PROFESSOR: We now consider a firm's real investment
+
+2
+00:00:04,100 --> 00:00:06,740
+or capital budgeting decision.
+
+3
+00:00:06,740 --> 00:00:09,980
+The decision really boils down to the valuation
+
+4
+00:00:09,980 --> 00:00:14,540
+of the investment, or the project under consideration.
+
+5
+00:00:14,540 --> 00:00:18,110
+For simplicity, let's assume that the project
+
+6
+00:00:18,110 --> 00:00:23,230
+requires an initial investment of $1 million.
+
+7
+00:00:23,230 --> 00:00:25,750
+And it then yields an expected return,
+
+8
+00:00:25,750 --> 00:00:29,930
+say, x, over the coming year.
+
+9
+00:00:29,930 --> 00:00:34,030
+How can we tell if this is a good project?
+
+10
+00:00:34,030 --> 00:00:37,240
+First, we know that the manager can always
+
+11
+00:00:37,240 --> 00:00:40,510
+return the cash to the firm's shareholders
+
+12
+00:00:40,510 --> 00:00:43,340
+in the form of a dividend, for example.
+
+13
+00:00:43,340 --> 00:00:46,730
+Second, shareholders can easily invest the money
+
+14
+00:00:46,730 --> 00:00:48,740
+in the financial market.
+
+15
+00:00:48,740 --> 00:00:51,080
+Suppose that investment opportunities
+
+16
+00:00:51,080 --> 00:00:54,130
+in the market with similar timing and risk
+
+17
+00:00:54,130 --> 00:00:57,140
+characteristics as the project offer
+
+18
+00:00:57,140 --> 00:01:00,440
+an expected rate of return, r.
+
+19
+00:01:00,440 --> 00:01:04,819
+This then gives us a benchmark to judge the project.
+
+20
+00:01:04,819 --> 00:01:09,140
+We should take the project only if its expected rate of return,
+
+21
+00:01:09,140 --> 00:01:11,690
+x, exceeds r.
+
+22
+00:01:11,690 --> 00:01:15,020
+Otherwise, the shareholders can just take the money
+
+23
+00:01:15,020 --> 00:01:16,730
+and invest in the market.
+
+24
+00:01:16,730 --> 00:01:23,790
+Bearing the same risk, they can earn r with no cost and effort.
+
+25
+00:01:23,790 --> 00:01:26,850
+We have first introduced this idea in the introduction.
+
+26
+00:01:26,850 --> 00:01:30,460
+We now provide a more formal treatment.
+
+27
+00:01:30,460 --> 00:01:34,780
+Given an asset or project under evaluation,
+
+28
+00:01:34,780 --> 00:01:38,440
+we define its opportunity cost of capital
+
+29
+00:01:38,440 --> 00:01:41,140
+as the expected rate of return offered
+
+30
+00:01:41,140 --> 00:01:45,370
+by equivalent investments in the financial market,
+
+31
+00:01:45,370 --> 00:01:49,060
+where equivalent refers to their timing and risk
+
+32
+00:01:49,060 --> 00:01:51,800
+characteristics.
+
+33
+00:01:51,800 --> 00:01:55,020
+The reason for this notion is straightforward.
+
+34
+00:01:55,020 --> 00:01:58,220
+If we are going to invest in the project,
+
+35
+00:01:58,220 --> 00:02:00,980
+we will forego the return offered
+
+36
+00:02:00,980 --> 00:02:04,580
+by the similar assets traded in a market, which
+
+37
+00:02:04,580 --> 00:02:08,220
+is easily available.
+
+38
+00:02:08,220 --> 00:02:12,330
+It is important to know that the cost of capital
+
+39
+00:02:12,330 --> 00:02:16,590
+is always associated with an asset or project
+
+40
+00:02:16,590 --> 00:02:21,150
+under consideration, reflecting the market's expectation
+
+41
+00:02:21,150 --> 00:02:23,930
+of the return on the asset.
+
+42
+00:02:23,930 --> 00:02:27,410
+It is not related to factors like the firm's
+
+43
+00:02:27,410 --> 00:02:30,560
+cost of financing by borrowing or other means.
+
+44
+00:02:30,560 --> 00:02:33,480
+
+
+45
+00:02:33,480 --> 00:02:37,980
+Given the opportunity Cost Of Capital, sometimes labeled COC,
+
+46
+00:02:37,980 --> 00:02:40,800
+of a project, the investment decision
+
+47
+00:02:40,800 --> 00:02:43,120
+becomes straightforward.
+
+48
+00:02:43,120 --> 00:02:46,020
+If the project yields a return higher than its cost
+
+49
+00:02:46,020 --> 00:02:48,570
+of capital, we should take it.
+
+50
+00:02:48,570 --> 00:02:51,910
+Otherwise, we should reject it.
+
+51
+00:02:51,910 --> 00:02:57,040
+In this case, shareholders will be better off not taking it.
+
+52
+00:02:57,040 --> 00:02:59,440
+If they are interested in investing assets
+
+53
+00:02:59,440 --> 00:03:02,170
+with a similar timing and risk characteristics,
+
+54
+00:03:02,170 --> 00:03:04,660
+they can easily do so in the market
+
+55
+00:03:04,660 --> 00:03:07,670
+and earn a higher return.
+
+56
+00:03:07,670 --> 00:03:11,070
+We now formalize this idea a little bit more.
+
+57
+00:03:11,070 --> 00:03:15,950
+Suppose that the project has the following cash flow.
+
+58
+00:03:15,950 --> 00:03:21,000
+It requires an initial investment of I today.
+
+59
+00:03:21,000 --> 00:03:26,610
+It yields a future cash flow, CF1 in one year.
+
+60
+00:03:26,610 --> 00:03:31,170
+The opportunity cost of capital for the project is r.
+
+61
+00:03:31,170 --> 00:03:35,070
+What is the value created or destroyed
+
+62
+00:03:35,070 --> 00:03:38,580
+by taking on this project?
+
+63
+00:03:38,580 --> 00:03:42,990
+This is given by the net present value, or NPV,
+
+64
+00:03:42,990 --> 00:03:47,460
+of the project, which is given by the following formula.
+
+65
+00:03:47,460 --> 00:03:51,900
+The NPV should equal to the initial investment, which
+
+66
+00:03:51,900 --> 00:03:58,590
+is minus I, plus the expected cash flow, CF1, discounted
+
+67
+00:03:58,590 --> 00:04:02,520
+at the cost of capital, r.
+
+68
+00:04:02,520 --> 00:04:05,850
+The decision then becomes straightforward.
+
+69
+00:04:05,850 --> 00:04:10,470
+Take the project only if its NPV is positive.
+
+70
+00:04:10,470 --> 00:04:12,630
+The firm's current market value should then
+
+71
+00:04:12,630 --> 00:04:17,160
+increase by the project's NPV when it is taken or known
+
+72
+00:04:17,160 --> 00:04:19,019
+to be taken.
+
+73
+00:04:19,019 --> 00:04:23,190
+For now, we will assume that the project's cost of capital
+
+74
+00:04:23,190 --> 00:04:24,930
+is given to us.
+
+75
+00:04:24,930 --> 00:04:27,750
+But from the risk and pricing analysis
+
+76
+00:04:27,750 --> 00:04:30,430
+we have just developed, we can find
+
+77
+00:04:30,430 --> 00:04:35,290
+a project's cost of capital or expected rate of return easily.
+
+78
+00:04:35,290 --> 00:04:39,610
+All we need to do is to find the risk loadings of the project's
+
+79
+00:04:39,610 --> 00:04:41,560
+return or cash flow.
+
+80
+00:04:41,560 --> 00:04:45,130
+Then by the arbitrage pricing theory, or APT,
+
+81
+00:04:45,130 --> 00:04:48,370
+we can determine the project's required rate of return
+
+82
+00:04:48,370 --> 00:04:50,290
+by the market.
+
+83
+00:04:50,290 --> 00:04:53,220
+We will return to this part later.
+

@@ -1,0 +1,127 @@
+
+PROFESSOR: We now consider the key step
+in the derivation of the APT--
+diversification.
+Consider a portfolio that includes multiple risk
+assets, portfolio p.
+This portfolio is described by its weights,
+which we denote by w.
+The return of the portfolio is a weighted average
+of the returns on the individual assets.
+Therefore, we can derive the moments of portfolio returns
+from portfolio weights and the properties
+of the individual assets returns.
+In particular, the portfolio mean
+is a weighted average of the average returns
+across the assets in the portfolio.
+The factor loadings of the portfolio
+for each of the factors are also weighted
+average of the individual factor loadings of the securities
+in the portfolio.
+And the idiosyncratic component of returns, epsilon p,
+is a weighted average of individual epsilons.
+It is this idiosyncratic piece that we
+are interested in right now.
+The variance of the idiosyncratic component
+of portfolio return is the variance
+of the sum of wi epsilon i, which
+is the weighted average of individual epsilons.
+Because idiosyncratic shocks are pairwise
+uncorrelated across the assets, the variance of the sum
+is equal to the sum of variances.
+In other words, the variance of the idiosyncratic component
+of portfolio return is a sum across all
+of the assets of the individual idiosyncratic variances,
+variance of epsilon i times the square of portfolio weight.
+Now, let's specialize this result
+to the case of an equally weighted portfolio.
+Suppose that each of the portfolio weights, wi,
+is equal to 1/N, where N is the number of assets
+in the portfolio.
+We're going to need a piece of notation.
+We will denote the average idiosyncratic variance
+across all of the assets by sigma i squared bar.
+Now, as it is clear from the previous derivation,
+the variance of the idiosyncratic component
+of portfolio return is equal to 1/N times the average
+idiosyncratic variance.
+As we let the number of securities increase and N
+rises, this number goes to 0.
+In other words, as we enlarge the portfolio
+by adding more and more assets equally weighted,
+the non-systematic component of variance vanishes in the limit.
+This result does not depend on the portfolio
+being exactly equally weighted.
+The same argument can be applied to any well-diversified
+portfolio, as long as the maximum portfolio
+weight decreases as the number of assets in the portfolio
+rises.
+In other words, all that we require
+is that the portfolio weights are more or less evenly
+distributed across the assets, but they don't need
+to be exactly equally weighted.
+What we determined is that in a well-diversified
+portfolio for a specific or idiosyncratic risk
+can be eliminated as the number of assets in the portfolio
+increases.
+This is an important property of well-diversified portfolios.
+They don't have idiosyncratic risk, at least
+in the limit of a large number of assets.
+The only risk that affects well-diversified portfolios
+is the factor risk or systematic risk.
+This is the kind of risk that cannot be diversified away
+by forming portfolios with a large number of assets.
+To illustrate, consider the following empirical example.
+We construct two portfolios by sorting stocks on their market
+capitalization, or market size.
+We start in 1926.
+Portfolio 1 includes the largest stocks in the US stock market.
+This portfolio is based roughly on the top 30% in terms
+of market capitalization judging by the distribution of market
+cap on the New York Stock Exchange.
+In recent years, this portfolio included approximately 500
+stocks.
+The second portfolio includes the lower tier
+in terms of market size.
+This portfolio, we can call it mid cap,
+includes roughly 1,000 stocks.
+These two portfolios are well-diversified.
+And by construction, they do not overlap.
+A stock can be either in Portfolio 1
+or Portfolio 2 or neither.
+They have no securities in common.
+If return distribution in the stock market
+can be described by a single factor model, then
+both of these portfolios, being well-diversified,
+will have exposure to the common factor
+and no idiosyncratic risk.
+In other words, these two portfolios
+should be perfectly correlated with each other.
+The exposures to the common factor
+may not be the same in magnitude,
+but the returns should be perfectly correlated.
+As we look at the scatter plot of the return distribution
+of the mid cap portfolio on the vertical axis
+relative to the large cap portfolio
+on the horizontal axis, we observe
+that, indeed, the returns on these two portfolios
+are highly correlated with each other.
+They're not perfectly correlated as a single factor
+model will predict, but the correlation is very high.
+And the R squared of a regression
+of the mid cap return on the large cap return is over 90%.
+Observe that the slope of the line that
+captures the linear relation between these two portfolios
+is higher than 1.
+What this means is that the mid cap portfolio
+has a higher loading on the common factor
+than the large cap portfolio.
+These results suggest that there is a significant common factor
+that affects returns on large cap and mid cap stocks.
+And even though these two portfolios
+have no securities in common, their returns with each other
+are highly correlated.
+We also see that the correlation is not perfect.
+And that suggests that perhaps there are other factors at play
+here and a single factor model does not fully
+describe the return distribution of these two portfolios.

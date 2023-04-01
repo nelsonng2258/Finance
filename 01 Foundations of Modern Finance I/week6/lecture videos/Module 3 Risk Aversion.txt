@@ -1,0 +1,205 @@
+
+INSTRUCTOR: Next, we are going to develop a concept called
+risk aversion, or to be more precise,
+relative risk aversion.
+This is the key property of the utility
+function, which reflects the property of investor behavior.
+How averse is this investor to risky outcomes?
+We are going to start with the basic fundamental properties
+of the utility function itself.
+Some desirable properties.
+For example, if we want the investor to prefer more
+to less, which is very common, mathematically it's
+going to imply that, when confronted
+with a choice between gamble x or gamble
+x plus positive epsilon, the investor
+is going to prefer x plus epsilon.
+What it means is that to capture preferences like these,
+preference for more to less, an investor
+would have to have an increasing utility function.
+So far, so good.
+Utility function has to be increasing.
+What more can we say about it's shape?
+As it happens, if an investor is averse to risk,
+the utility function also has to be concave.
+Now why is that?
+Suppose an investor is presented with a risky gamble, x.
+The choice is, take the risk, play out, gamble x,
+collect the outcomes.
+Or receive a sure thing, a pay off without risk
+equal to the expected value of x.
+Between x random, expected value of x, sure thing.
+What would the investor choose?
+Now most investors are averse to risk.
+They would rather collect a sure thing,
+a fixed payoff equal to the expected value of the gamble.
+Mathematically, it means that the utility function
+has to be concave.
+If the utility function is concave,
+then the mean of the gamble is always
+preferred to the gamble itself.
+To illustrate the concept of risk aversion graphically,
+and to see how this is related to concavity of the utility
+function, look at the graph.
+The blue line is the utility function
+plotted against the outcome of the gamble.
+This function is concave.
+Now imagine that we are playing a binary gamble, as before.
+Two outcomes, 1.2, 2.8.
+Both outcomes are equally likely.
+If the investor evaluates this gamble using
+the expected utility model, the expected utility
+is going to be seen on the graph as the dot in the middle
+of the red segment.
+This is the line connecting two points, utility of 1.2,
+utility of 2.8.
+Now this is the expected utility of the random payoff.
+What if instead, the investor was
+presented with the sure thing.
+The expected value of the gamble.
+In this case, the expected value is 2.
+The utility evaluated at the expected value of the gamble
+is shown as the blue dot on the utility curve.
+The blue dot, of course, is above the red dot.
+It has to be, because, the utility function is concave.
+This is the essence of what a concave function is.
+So what we can see is that, based
+on this graphical representation,
+it's quite clear that concavity of the utility function
+is equivalent to risk aversion in behavior.
+Now we're going to develop a concept of risk premium.
+Suppose that an investor is evaluating an investment
+strategy with return x, which is random.
+And an investor starts with wealth w,
+invests, and collects a payoff equal to w times 1 plus x.
+Let's assume that the expected return is 0.
+And we are going to call the variance of chance sigma
+x squared.
+The risk averse investor, of course,
+would prefer to receive a 0 return for sure,
+a risk-free return of 0, rather than playing this gamble.
+Rather than making this investment.
+Now we are going to define the concept of risk premium
+as a number, pi.
+It's a fixed number, it's not a random variable.
+Such that an investor would be indifferent between collecting
+a return of minus pi or investing
+into a strategy with the risk return x.
+
+To determine what pi is, how it reflects
+the properties of the utility function
+and the risk of the gamble, we need
+to think about investors' preferences.
+Being indifferent between investing
+into an asset with a random return
+x versus getting a sure risk-free return of minus pi
+means mathematically that expected utility
+of w times 1 plus x is equal to the utility evaluated
+at w times 1 minus pi, which is a riskless return of minus pi.
+To analyze this equation further,
+we need to make some approximations.
+We are going to use a Taylor expansion to simplify
+the problem.
+So to start with, let's assume that
+the range of outcomes of this gamble--
+the support of the return x--
+is relatively narrow.
+So that the range of possible outcomes of x
+is concentrated somewhere around 0.
+Let's say between minus and plus epsilon where
+epsilon is a small number.
+If that is the case, then there is premium,
+pi, is going to be small in magnitude as well,
+which allows us to use a Taylor expansion
+to approximate the problem.
+With this idea in mind, we're going
+to expand both sides of the equation around 0.
+Let's start with the left-hand side.
+Expected utility of w times 1 plus x.
+We are going to expand it around x equal to 0.
+First, let's expand the utility function under the expectation.
+We are going to keep three leading terms in the expansion.
+First, utility of w.
+Then the margin utility, u prime,
+evaluated to w times w times x.
+That's the linear term in the Taylor expansion.
+Then comes the second order, a quadratic term.
+1/2 of the second derivative of u times w
+squared times x squared.
+When we take the expected value of this expression,
+we are left with utility of w u prime times w times
+the expected value of x, which by assumption is 0, plus--
+and here is the important term--
+1/2 of the second derivative of u,
+times w squared times the variance of the return,
+which is sigma x squared.
+This is the approximation of the left-hand side.
+The expected utility of the risk to return.
+On the right-hand side, we have the utility
+of w times 1 minus pi, which we also expand.
+Here, we only need to keep the two leading terms, 0 order
+and the first order.
+We end up with u of w minus u prime times w times pi.
+We end up with inequality.
+On the left-hand side, we have an approximate expression
+for the expected utility of the risky investment.
+On the right-hand side, it's the utility of w times 1 minus pi,
+the certainty equivalent, which defines the risk premium.
+When we solve this equation, we see that the risk premium
+is given by minus 1/2 times the ratio of the second derivative
+of the utility function times w divided by u prime of w
+times sigma x squared.
+We see that the risk premium is a product of two objects.
+The first is what we call relative risk aversion
+coefficient.
+This is minus w times the second derivative
+of the utility function divided by the first derivative.
+This object captures what we know
+is the curvature of the utility function.
+If the utility function were to be a straight line,
+the second derivative would be 0.
+Relative risk aversion would be 0.
+For a properly concave utility function,
+this number is positive.
+The second piece, the second term, in the risk premium
+is the measure of return risk.
+In this case, we see that its return variance.
+The conclusion is that the risk premium
+that investor demands, based on the riskiness of the gamble
+of the investment strategy, and based
+on his or her own preferences, is comprised of two terms.
+Investor's relative risk aversion,
+which is the property of the utility function,
+and return variance, which is the measure of return risk.
+Let's consider a couple of examples of utility functions.
+First, the simplest case is a linear utility.
+In this case, u of w is an affine function of w.
+Linear utility is special because it implies
+0 relative risk aversion.
+An investor with linear utility does not care about risk.
+This kind of investor is going to evaluate each investment
+opportunity based on the expected value of the return.
+The second example of the utility function
+that we want to introduce is the so-called power utility
+function.
+It's also called constant relative risk aversion.
+We will see in a second why this name.
+A power utility function is given by a power function
+of investor's wealth.
+And its coefficient is a positive number.
+The case of the coefficient equal to 1 is special.
+In this case, the utility function becomes logarithmic.
+The key property of the power utility function,
+and the reason why it's so commonly used,
+is that the relative risk aversion
+coefficient of this utility function is constant.
+It's equal to the exponent in the power,
+and it's independent of the level of wealth.
+The implication of this is that an investor following a power
+utility function is going to have the same risk
+aversion, regardless of the level of wealth.
+Which means that making an investment decision
+with a million dollars or 5 or 10,
+this investor is going to choose the same portfolio
+of investments.
+The level of initial wealth doesn't effect the choice.

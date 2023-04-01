@@ -1,0 +1,512 @@
+0
+00:00:00,000 --> 00:00:00,783
+
+
+1
+00:00:00,783 --> 00:00:02,200
+PROFESSOR: We now develop a result
+
+2
+00:00:02,200 --> 00:00:05,900
+that relates expected returns on well-diversified portfolios
+
+3
+00:00:05,900 --> 00:00:08,750
+to their systematic risk.
+
+4
+00:00:08,750 --> 00:00:12,950
+Let's start with an example, and use an arbitrage argument
+
+5
+00:00:12,950 --> 00:00:15,790
+to establish this kind of relation.
+
+6
+00:00:15,790 --> 00:00:20,290
+In our example, there are two portfolios, A and B.
+
+7
+00:00:20,290 --> 00:00:23,470
+And there is a single common source of risk,
+
+8
+00:00:23,470 --> 00:00:25,770
+that is a single common factor.
+
+9
+00:00:25,770 --> 00:00:29,470
+We assume that the expected excess return--
+
+10
+00:00:29,470 --> 00:00:31,900
+recall that excess returns are measured relative
+
+11
+00:00:31,900 --> 00:00:33,350
+to the risk-free rate.
+
+12
+00:00:33,350 --> 00:00:36,880
+The expected excess return on portfolio A is 5%.
+
+13
+00:00:36,880 --> 00:00:39,730
+And for portfolio B it is 8%.
+
+14
+00:00:39,730 --> 00:00:42,760
+The loading on the common factor is 1 for portfolio A
+
+15
+00:00:42,760 --> 00:00:46,410
+and 2 for portfolio B.
+
+16
+00:00:46,410 --> 00:00:49,200
+We want to argue that with this set of assumptions,
+
+17
+00:00:49,200 --> 00:00:51,840
+the market contains arbitrage.
+
+18
+00:00:51,840 --> 00:00:54,810
+Let's consider the following arbitrage strategy.
+
+19
+00:00:54,810 --> 00:00:59,310
+We're going to borrow $1 at the risk-free rate.
+
+20
+00:00:59,310 --> 00:01:01,860
+We are going to short $1 of portfolio
+
+21
+00:01:01,860 --> 00:01:07,450
+B and invest $2 into portfolio A.
+
+22
+00:01:07,450 --> 00:01:11,640
+By construction, this strategy doesn't require any capital.
+
+23
+00:01:11,640 --> 00:01:15,360
+We borrow $1, raise another dollar by shorting,
+
+24
+00:01:15,360 --> 00:01:19,510
+and invest the $2 in portfolio A.
+
+25
+00:01:19,510 --> 00:01:24,150
+Let's consider the payoff of this strategy next period.
+
+26
+00:01:24,150 --> 00:01:27,390
+The payoff from borrowing $1 is going to be minus 1
+
+27
+00:01:27,390 --> 00:01:29,910
+plus the risk-free rate.
+
+28
+00:01:29,910 --> 00:01:34,260
+The payoff from shorting portfolio B is minus 1
+
+29
+00:01:34,260 --> 00:01:38,370
+plus the risk-free rate, plus the risk premium on portfolio
+
+30
+00:01:38,370 --> 00:01:41,700
+B, plus the factor loading, which
+
+31
+00:01:41,700 --> 00:01:45,780
+is 2, times the realization of the factor, F.
+
+32
+00:01:45,780 --> 00:01:51,090
+This is multiplied by the scale of our investment, which is $1.
+
+33
+00:01:51,090 --> 00:01:54,180
+The payoff from our investment in portfolio A
+
+34
+00:01:54,180 --> 00:02:00,870
+is going to be 1 plus RF plus the 5% risk premium,
+
+35
+00:02:00,870 --> 00:02:03,420
+plus the factor loading, which is 1,
+
+36
+00:02:03,420 --> 00:02:09,410
+times the realization of the factor, F, multiplied by $2.
+
+37
+00:02:09,410 --> 00:02:11,960
+When we sum up all of these payoffs across the three
+
+38
+00:02:11,960 --> 00:02:15,650
+legs of our position, we find that the effect of the factor
+
+39
+00:02:15,650 --> 00:02:18,830
+disappears, that exposure cancels out,
+
+40
+00:02:18,830 --> 00:02:21,200
+and we're left with $0.02.
+
+41
+00:02:21,200 --> 00:02:24,170
+In other words, we started with no capital
+
+42
+00:02:24,170 --> 00:02:28,290
+and we constructed a portfolio with three positions in it,
+
+43
+00:02:28,290 --> 00:02:31,970
+which pays $0.02 next period with no risk.
+
+44
+00:02:31,970 --> 00:02:34,910
+This is arbitrage or free lunch.
+
+45
+00:02:34,910 --> 00:02:37,820
+The reason why we were able to find arbitrage
+
+46
+00:02:37,820 --> 00:02:41,690
+is that expected excess returns on our portfolios
+
+47
+00:02:41,690 --> 00:02:46,330
+and their factor loadings were not consistent with each other.
+
+48
+00:02:46,330 --> 00:02:48,190
+We will now generalize this result
+
+49
+00:02:48,190 --> 00:02:51,970
+and establish a relation between factor loadings
+
+50
+00:02:51,970 --> 00:02:54,250
+and expected returns, which is needed
+
+51
+00:02:54,250 --> 00:02:56,830
+in order to avoid arbitrage.
+
+52
+00:02:56,830 --> 00:03:01,420
+In particular, we want to show that expected excess returns
+
+53
+00:03:01,420 --> 00:03:05,740
+and factor loadings have to be linearly related.
+
+54
+00:03:05,740 --> 00:03:08,080
+For a single-factor model, this means
+
+55
+00:03:08,080 --> 00:03:12,910
+that for any portfolio, p, the expected excess return
+
+56
+00:03:12,910 --> 00:03:15,410
+has to be equal to its factor loading,
+
+57
+00:03:15,410 --> 00:03:19,180
+b sub p, times a constant, lambda.
+
+58
+00:03:19,180 --> 00:03:22,880
+This constant has to be common to all portfolios.
+
+59
+00:03:22,880 --> 00:03:24,680
+To see why this needs to be the case,
+
+60
+00:03:24,680 --> 00:03:26,290
+we're going to repeat the arbitrage
+
+61
+00:03:26,290 --> 00:03:29,710
+argument similar to the one that we just discussed
+
+62
+00:03:29,710 --> 00:03:32,030
+for our particular example.
+
+63
+00:03:32,030 --> 00:03:35,890
+Suppose that for another portfolio, portfolio q,
+
+64
+00:03:35,890 --> 00:03:39,550
+the risk premium is equal to its factor loading,
+
+65
+00:03:39,550 --> 00:03:43,300
+b sub q, times a different constant, lambda prime.
+
+66
+00:03:43,300 --> 00:03:47,190
+Lambda prime and lambda are not the same.
+
+67
+00:03:47,190 --> 00:03:50,550
+Assume also that b sub q, the loading on the factor,
+
+68
+00:03:50,550 --> 00:03:52,370
+is non-zero.
+
+69
+00:03:52,370 --> 00:03:55,660
+Now, we create a three-legged arbitrage.
+
+70
+00:03:55,660 --> 00:03:58,772
+We'll short $1 of portfolio p.
+
+71
+00:03:58,772 --> 00:04:05,094
+We buy bp over bq dollars of portfolio q.
+
+72
+00:04:05,094 --> 00:04:11,190
+And we borrow, bp over bq minus 1.
+
+73
+00:04:11,190 --> 00:04:14,730
+As you can see, this portfolio, this entire trade,
+
+74
+00:04:14,730 --> 00:04:16,920
+does not require any capital.
+
+75
+00:04:16,920 --> 00:04:19,290
+It is self-financing.
+
+76
+00:04:19,290 --> 00:04:21,480
+As we look at its payoff, we observe
+
+77
+00:04:21,480 --> 00:04:25,680
+that the payoff from the first investment, $1 in portfolio p,
+
+78
+00:04:25,680 --> 00:04:30,090
+plus the second investment, the investment in portfolio q,
+
+79
+00:04:30,090 --> 00:04:31,770
+plus the risk-free component, when
+
+80
+00:04:31,770 --> 00:04:35,160
+we sum them up, have the property
+
+81
+00:04:35,160 --> 00:04:39,150
+that there is no exposure to the factor remaining,
+
+82
+00:04:39,150 --> 00:04:41,790
+and the payoff is in fact a constant.
+
+83
+00:04:41,790 --> 00:04:49,500
+It's equal to lambda prime minus lambda times b sub p.
+
+84
+00:04:49,500 --> 00:04:51,190
+To avoid arbitrage, this constant
+
+85
+00:04:51,190 --> 00:04:53,120
+has to be equal to zero.
+
+86
+00:04:53,120 --> 00:04:57,210
+A zero-investment portfolio without risk cannot produce
+
+87
+00:04:57,210 --> 00:04:59,260
+non-zero payoffs.
+
+88
+00:04:59,260 --> 00:05:01,950
+We conclude that lambda prime and lambda
+
+89
+00:05:01,950 --> 00:05:04,350
+have to be the same to avoid arbitrage.
+
+90
+00:05:04,350 --> 00:05:07,230
+We have established an important result. That
+
+91
+00:05:07,230 --> 00:05:10,800
+in a frictionless market with a single-factor structure
+
+92
+00:05:10,800 --> 00:05:15,270
+of returns, in order to avoid arbitrage risk premium on all
+
+93
+00:05:15,270 --> 00:05:19,020
+well-diversified portfolios have to be given
+
+94
+00:05:19,020 --> 00:05:23,220
+by a product of the factor loading of the portfolio
+
+95
+00:05:23,220 --> 00:05:26,350
+and a common constant, lambda.
+
+96
+00:05:26,350 --> 00:05:28,900
+The factor loading represents the quantity
+
+97
+00:05:28,900 --> 00:05:31,150
+of risk in each portfolio.
+
+98
+00:05:31,150 --> 00:05:33,750
+It's a measure of systematic risk.
+
+99
+00:05:33,750 --> 00:05:37,270
+Lambda tells us how much compensation a portfolio
+
+100
+00:05:37,270 --> 00:05:40,540
+is going to earn per unit of systematic risk.
+
+101
+00:05:40,540 --> 00:05:45,250
+We call lambda the price of risk or the market price of risk
+
+102
+00:05:45,250 --> 00:05:47,860
+or the factor risk premium.
+
+103
+00:05:47,860 --> 00:05:49,900
+Our pricing result can be extended
+
+104
+00:05:49,900 --> 00:05:51,910
+to multi-factor models.
+
+105
+00:05:51,910 --> 00:05:53,890
+The result is very similar.
+
+106
+00:05:53,890 --> 00:05:57,340
+The risk premium on any well-diversified portfolio
+
+107
+00:05:57,340 --> 00:06:00,490
+is based on its factor exposures.
+
+108
+00:06:00,490 --> 00:06:02,920
+In particular, it is a sum across all
+
+109
+00:06:02,920 --> 00:06:06,100
+of the common factors, or the factor loading
+
+110
+00:06:06,100 --> 00:06:11,640
+times the corresponding factor premium or price of risk.
+
+111
+00:06:11,640 --> 00:06:14,850
+These factor exposures describe systematic risk
+
+112
+00:06:14,850 --> 00:06:17,020
+of the portfolio.
+
+113
+00:06:17,020 --> 00:06:20,030
+Now, in contrast to the single-factor case,
+
+114
+00:06:20,030 --> 00:06:20,860
+this is a vector.
+
+115
+00:06:20,860 --> 00:06:25,480
+A portfolio is characterized by a vector of its risk exposures.
+
+116
+00:06:25,480 --> 00:06:29,740
+We need to know how a portfolio loads on each of the factors
+
+117
+00:06:29,740 --> 00:06:32,170
+to fully describe its risk.
+
+118
+00:06:32,170 --> 00:06:37,860
+And each of these risk exposures carries its own risk premium.
+
+119
+00:06:37,860 --> 00:06:41,340
+Different factors don't earn the same compensation
+
+120
+00:06:41,340 --> 00:06:43,560
+for their risk exposures.
+
+121
+00:06:43,560 --> 00:06:46,320
+The intuition of this result is that we
+
+122
+00:06:46,320 --> 00:06:49,920
+could construct multiple portfolios with identical risk
+
+123
+00:06:49,920 --> 00:06:51,120
+exposures.
+
+124
+00:06:51,120 --> 00:06:55,480
+To avoid arbitrage, the expected returns have to be the same.
+
+125
+00:06:55,480 --> 00:06:59,460
+This means that expected return or the risk premium
+
+126
+00:06:59,460 --> 00:07:01,890
+on any diversified portfolio must
+
+127
+00:07:01,890 --> 00:07:06,080
+be determined by its exposure to the common factors.
+

@@ -1,0 +1,134 @@
+
+PROFESSOR: In this segment, we'll
+talk about the expected utility theory.
+So let's start with a basic decision problem
+under uncertainty.
+Suppose you're choosing between two gambles, gamble
+x, gamble y.
+Gamble x allows you to win $1,000
+or to get nothing with 50/50 odds.
+Gamble y gives you a 70% chance of winning $600 or 30%
+chance of winning $200.
+Which of these choices is preferred?
+Now, a naive approach would be to compute expected payoffs
+and then choose the higher one.
+But what about randomness?
+What about risk?
+We know that a 50/50 gamble of winning $1,000
+or getting nothing is not the same as getting $500 for sure.
+Most people are averse to this kind of risk.
+How should we quantify the trade off
+between expected payoffs, uncertainty, variance,
+or other properties of the payoff distributions?
+That is the question that we are going to answer.
+
+There are two general approaches to building models for decision
+making and uncertainty.
+Let's call them rational and behavioral.
+The rational approach, which is what
+we are going to pursue in this class, is prescriptive.
+It's a model of choice, which gives us consistent decisions
+and uncertainty.
+This internal consistency is desirable.
+It's basically a way of avoiding costly mistakes.
+Behavioral approach has a different objective.
+Rather than figuring out what is the right consistent way
+of making decisions, the behavioral approach
+aims to describe how individuals make decisions
+in all of their imperfections.
+For example, if you're an investor,
+you're trying to avoid mistakes in your portfolio choice.
+You would want to use a rational approach
+to make sure that your own decision making is consistent.
+If you're a financial advisor thinking
+about how to best advise your clients,
+you may want to understand what behavioral biases are
+most relevant and help the client correct them.
+If you're a trader, thinking about what other traders are
+doing in the market, whoever's taking
+the other side of your trade, understanding behavioral biases
+could be at the core of your profitability.
+So we're going to proceed developing
+a model of consistent decision making,
+and we'll call it a rational model.
+Our model is going to make a few basic assumptions.
+We are going to think about preferences over outcomes only.
+Outcomes in our case are cash flows.
+This is important.
+It's a restriction which could be relaxed.
+But under the basic model, we are
+going to make this assumption.
+What this means is that we are going
+to think about the value of the pay off--
+$100, $1,000 payoff.
+We're not going to think about the circumstances under which
+the payoffs are realized.
+That is a more general problem.
+We will also model preferences in a way
+that is independent of how cash flows are generated.
+Randomness may come from many sources.
+It could be algorithmically generated.
+It could be a natural outcome of economic forces.
+At the end, our preferences are going
+to be developed to deal with the distribution of cash flows
+and not with the mechanism for generating randomness.
+These are the two basic assumptions
+that we are going to start with.
+We're going to maintain them.
+The expected utility theory, which
+we are going to present next, is at the core
+of the rational approach to decision making.
+It's the leading model for decision making
+and uncertainty.
+Under the expected utility theory,
+investors do not use expected payoff
+of a gamble to compare gambles to each other.
+They don't think about just the mean of the return.
+They don't think about the expected pay off
+of an investment.
+They think about the entire distribution.
+Expected utility theory applies a transformation to the payoff.
+It's a nonlinear transformation.
+For example, $1,000 payoff is not
+going to be perceived as twice as valuable as $500.
+An investor, depending on his or her preferences,
+is going to adjust the internal value
+of each payoff, the utility of each payoff,
+to reflect their preferences.
+Once the payoffs are transformed nonlinearly,
+as you can see in this graph, the probabilities of payoffs
+are then applied as weights.
+So under the expected utility theory,
+an investor evaluates a particular risk investment
+based on the expected utility, where the utility evaluated
+as a function of outcomes is averaged using probabilities
+of different events as weights.
+For example, if you are faced with a binary gamble
+and the curve presented on the graph,
+the blue line is the utility function.
+The gamble has only two possible payoffs, either 1.2 or 2.8,
+both equally likely.
+The utility of the payoff is going to be given by the dot
+in the middle of the segment, connecting the two
+dots on the utility curve.
+This is a graphical representation
+of the expected utility of this particular gamble.
+An investor transforms payoffs using the utility function
+and computes expected value of the utility.
+That's the starting point.
+That's the description of uncertainty
+and how an investor feels about different risky outcomes.
+Now, the consistent approach to choice
+is to compare risky investments to each other
+based on their expected utility.
+When thinking about investment a versus investment b,
+whichever yields higher expected utility is preferred.
+That is the expected utility theory.
+This approach is mathematicaly parsimonious.
+It's fairly intuitive, and it helps avoid costly mistakes.
+It respects laws of probability.
+It leads to investment decisions with
+some basic desirable properties, such as sensitivity.
+For example, under the expected utility theory,
+if an investor prefers x to y and y to z,
+the same investor will correctly prefer x to z.

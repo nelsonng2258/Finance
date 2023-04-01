@@ -1,0 +1,560 @@
+0
+00:00:00,000 --> 00:00:01,400
+
+
+1
+00:00:01,400 --> 00:00:04,960
+We will now discuss the basic properties of asset returns.
+
+2
+00:00:04,960 --> 00:00:06,860
+We will look at some empirical data
+
+3
+00:00:06,860 --> 00:00:10,880
+to get a sense of the level of risk and return
+
+4
+00:00:10,880 --> 00:00:14,580
+in different asset classes, how they're related to each other.
+
+5
+00:00:14,580 --> 00:00:17,350
+Let's begin with some notation.
+
+6
+00:00:17,350 --> 00:00:21,880
+For any investment, the initial price, P0, is known.
+
+7
+00:00:21,880 --> 00:00:25,510
+The terminal price, P1, at the end of the period, is random.
+
+8
+00:00:25,510 --> 00:00:26,770
+It's unknown.
+
+9
+00:00:26,770 --> 00:00:30,040
+A period could be a month, a quarter, a year,
+
+10
+00:00:30,040 --> 00:00:34,290
+whatever is relevant for a given context.
+
+11
+00:00:34,290 --> 00:00:37,410
+At the end of the period, there are additional cash flows
+
+12
+00:00:37,410 --> 00:00:38,640
+that investment produces.
+
+13
+00:00:38,640 --> 00:00:40,450
+Let's call them dividends.
+
+14
+00:00:40,450 --> 00:00:42,410
+They're also random.
+
+15
+00:00:42,410 --> 00:00:45,980
+As a result, the total return on the investment
+
+16
+00:00:45,980 --> 00:00:48,620
+during the period, we call it R1,
+
+17
+00:00:48,620 --> 00:00:53,690
+is given by the dividend plus the capital gains, which
+
+18
+00:00:53,690 --> 00:00:57,560
+is P1 minus P0, divided by the initial value
+
+19
+00:00:57,560 --> 00:00:59,550
+of the investment.
+
+20
+00:00:59,550 --> 00:01:02,990
+So the total return comes from capital gains
+
+21
+00:01:02,990 --> 00:01:04,879
+and the dividends.
+
+22
+00:01:04,879 --> 00:01:07,080
+Or more precisely the dividend yield,
+
+23
+00:01:07,080 --> 00:01:10,430
+which is the ratio of D1 to P0.
+
+24
+00:01:10,430 --> 00:01:14,330
+The expected return is just the expected value of the return.
+
+25
+00:01:14,330 --> 00:01:17,420
+It's equal to the expected dividend plus expected terminal
+
+26
+00:01:17,420 --> 00:01:22,476
+price divided by the initial price minus 1.
+
+27
+00:01:22,476 --> 00:01:26,860
+It is common to use the concept of excess returns.
+
+28
+00:01:26,860 --> 00:01:29,500
+Excess returns are typically measured in relation
+
+29
+00:01:29,500 --> 00:01:30,760
+to the risk-free rate.
+
+30
+00:01:30,760 --> 00:01:33,220
+As the name suggests, excess return
+
+31
+00:01:33,220 --> 00:01:36,350
+is the return in excess of the risk-free rate.
+
+32
+00:01:36,350 --> 00:01:38,110
+So for each investment return, we
+
+33
+00:01:38,110 --> 00:01:41,260
+can subtract the risk-free rate, and we obtain
+
+34
+00:01:41,260 --> 00:01:44,030
+a measure of excess returns.
+
+35
+00:01:44,030 --> 00:01:47,180
+We will now introduce several basic statistics
+
+36
+00:01:47,180 --> 00:01:48,830
+that are commonly used to describe
+
+37
+00:01:48,830 --> 00:01:51,050
+the properties of returns.
+
+38
+00:01:51,050 --> 00:01:53,820
+Under the framework of mean variance preferences,
+
+39
+00:01:53,820 --> 00:01:56,930
+these are also the building blocks
+
+40
+00:01:56,930 --> 00:01:59,930
+of how we describe preferences over different investment
+
+41
+00:01:59,930 --> 00:02:01,220
+strategies.
+
+42
+00:02:01,220 --> 00:02:06,350
+They capture the average returns and return risk, or variance.
+
+43
+00:02:06,350 --> 00:02:12,300
+In particular, we'll talk about investment return mean, r bar,
+
+44
+00:02:12,300 --> 00:02:15,960
+the variance, sigma squared, and the standard deviation,
+
+45
+00:02:15,960 --> 00:02:17,000
+which is sigma.
+
+46
+00:02:17,000 --> 00:02:21,450
+Standard deviation is commonly called volatility of returns.
+
+47
+00:02:21,450 --> 00:02:25,560
+These moments, which form the basis of preferences
+
+48
+00:02:25,560 --> 00:02:27,270
+under the mean variance framework,
+
+49
+00:02:27,270 --> 00:02:28,710
+are not known in practice.
+
+50
+00:02:28,710 --> 00:02:30,540
+They need to be estimated.
+
+51
+00:02:30,540 --> 00:02:33,690
+They can be estimated using statistical techniques
+
+52
+00:02:33,690 --> 00:02:35,970
+based on historical data.
+
+53
+00:02:35,970 --> 00:02:39,760
+The most common estimators-- the most basic estimators--
+
+54
+00:02:39,760 --> 00:02:42,330
+corresponding to these population moments
+
+55
+00:02:42,330 --> 00:02:45,690
+are the sample mean, which corresponds to the population
+
+56
+00:02:45,690 --> 00:02:47,552
+mean or average return.
+
+57
+00:02:47,552 --> 00:02:52,730
+The sample variance, which is 1 divided by the sample
+
+58
+00:02:52,730 --> 00:02:57,770
+size minus 1 times the sum of squared deviations of returns
+
+59
+00:02:57,770 --> 00:02:59,720
+from their sample mean.
+
+60
+00:02:59,720 --> 00:03:02,060
+And the square root of the sample variance
+
+61
+00:03:02,060 --> 00:03:04,550
+is the sample standard deviation.
+
+62
+00:03:04,550 --> 00:03:06,410
+These are the most commonly used statistics
+
+63
+00:03:06,410 --> 00:03:08,720
+that we are going to employ now to describe
+
+64
+00:03:08,720 --> 00:03:11,390
+the properties of financial returns in the data.
+
+65
+00:03:11,390 --> 00:03:14,170
+
+
+66
+00:03:14,170 --> 00:03:17,680
+Let's look at a few examples of the major asset classes
+
+67
+00:03:17,680 --> 00:03:20,080
+and their properties, their average returns,
+
+68
+00:03:20,080 --> 00:03:22,180
+and their standard deviations.
+
+69
+00:03:22,180 --> 00:03:25,660
+In particular, we are going to look at the history of returns
+
+70
+00:03:25,660 --> 00:03:28,000
+starting in 1926.
+
+71
+00:03:28,000 --> 00:03:34,120
+We will use annual data, and we'll be using nominal returns.
+
+72
+00:03:34,120 --> 00:03:39,480
+The least risky investment in our table are the T-bills.
+
+73
+00:03:39,480 --> 00:03:44,610
+This is as close as it comes to the risk-free rate in practice.
+
+74
+00:03:44,610 --> 00:03:49,200
+And the T-bills have low volatility and low returns.
+
+75
+00:03:49,200 --> 00:03:51,420
+The reason why they have any volatility at all
+
+76
+00:03:51,420 --> 00:03:54,240
+is because the risk-free rate changes over time.
+
+77
+00:03:54,240 --> 00:03:57,660
+It is not constant year to year.
+
+78
+00:03:57,660 --> 00:04:01,360
+Next in terms of the level of risk come bonds.
+
+79
+00:04:01,360 --> 00:04:04,220
+Treasury bonds and corporate bonds.
+
+80
+00:04:04,220 --> 00:04:07,610
+Their average returns are roughly twice as high
+
+81
+00:04:07,610 --> 00:04:11,810
+as for T-bills, and their level of volatility is quite a bit
+
+82
+00:04:11,810 --> 00:04:16,149
+higher, in the 8% to 10% range.
+
+83
+00:04:16,149 --> 00:04:20,230
+Stocks are even more volatile than bonds.
+
+84
+00:04:20,230 --> 00:04:25,780
+Volatility of stocks is in a 20% to 30% range.
+
+85
+00:04:25,780 --> 00:04:28,760
+And it's important to understand what we mean by that.
+
+86
+00:04:28,760 --> 00:04:31,480
+We are thinking about portfolios of stocks,
+
+87
+00:04:31,480 --> 00:04:33,700
+either large cap stocks.
+
+88
+00:04:33,700 --> 00:04:36,190
+This is a portfolio of companies with large market
+
+89
+00:04:36,190 --> 00:04:37,420
+capitalization.
+
+90
+00:04:37,420 --> 00:04:41,650
+Or small caps, portfolio of stocks with a low market
+
+91
+00:04:41,650 --> 00:04:43,420
+capitalization.
+
+92
+00:04:43,420 --> 00:04:47,200
+These portfolios are the most volatile in our table.
+
+93
+00:04:47,200 --> 00:04:50,650
+They have the highest volatility, 20%, 30%,
+
+94
+00:04:50,650 --> 00:04:52,270
+and perhaps higher.
+
+95
+00:04:52,270 --> 00:04:58,320
+And their average returns in sample are 12% to 17%.
+
+96
+00:04:58,320 --> 00:05:01,740
+What we can see from this table is a pattern
+
+97
+00:05:01,740 --> 00:05:04,020
+that suggests that when we compare different asset
+
+98
+00:05:04,020 --> 00:05:08,100
+classes to each other, higher returns come
+
+99
+00:05:08,100 --> 00:05:10,890
+with higher levels of risk.
+
+100
+00:05:10,890 --> 00:05:12,160
+This is a casual observation.
+
+101
+00:05:12,160 --> 00:05:14,730
+We need to learn how to better model
+
+102
+00:05:14,730 --> 00:05:16,770
+the relation between risk and return,
+
+103
+00:05:16,770 --> 00:05:18,120
+but this is the starting point.
+
+104
+00:05:18,120 --> 00:05:19,620
+There is no free lunch.
+
+105
+00:05:19,620 --> 00:05:22,350
+In order to achieve high levels of returns,
+
+106
+00:05:22,350 --> 00:05:26,850
+investors have to accept high levels of risk.
+
+107
+00:05:26,850 --> 00:05:30,500
+Now, the graph here represents visually
+
+108
+00:05:30,500 --> 00:05:34,280
+how quickly different investments allow one
+
+109
+00:05:34,280 --> 00:05:36,110
+to accumulate wealth.
+
+110
+00:05:36,110 --> 00:05:38,190
+There are several lines here.
+
+111
+00:05:38,190 --> 00:05:43,490
+Imagine you start with $100 at the end of the year in 1925.
+
+112
+00:05:43,490 --> 00:05:49,550
+You invest in a particular asset, T-bills, bonds, stocks.
+
+113
+00:05:49,550 --> 00:05:51,800
+And you keep rolling over your investment over time.
+
+114
+00:05:51,800 --> 00:05:54,580
+How quickly would your wealth accumulate?
+
+115
+00:05:54,580 --> 00:05:57,010
+As we can see from this graph, there
+
+116
+00:05:57,010 --> 00:06:00,220
+is in an order of magnitude difference between outcomes
+
+117
+00:06:00,220 --> 00:06:04,320
+at the end of this exercise, roughly a century later.
+
+118
+00:06:04,320 --> 00:06:07,590
+Investments in bonds, long-term treasury bonds
+
+119
+00:06:07,590 --> 00:06:11,100
+or corporate bonds, produced significantly higher levels
+
+120
+00:06:11,100 --> 00:06:13,900
+of wealth compared to T-bills.
+
+121
+00:06:13,900 --> 00:06:18,070
+Large cap stocks do even better, an order of magnitude higher
+
+122
+00:06:18,070 --> 00:06:19,690
+level of wealth.
+
+123
+00:06:19,690 --> 00:06:22,060
+Small cap stocks as an investment strategy
+
+124
+00:06:22,060 --> 00:06:24,150
+do even better than that.
+
+125
+00:06:24,150 --> 00:06:25,710
+This raises a question.
+
+126
+00:06:25,710 --> 00:06:27,570
+Why would any investor want to invest
+
+127
+00:06:27,570 --> 00:06:32,670
+in bonds when, in the long run, stocks perform so much better?
+
+128
+00:06:32,670 --> 00:06:36,060
+The answer lies in the risk return trade off.
+
+129
+00:06:36,060 --> 00:06:40,640
+Investing in stocks, in order to achieve high levels of returns,
+
+130
+00:06:40,640 --> 00:06:43,530
+comes with a much higher level of risk.
+
+131
+00:06:43,530 --> 00:06:45,250
+It is because of this risk return
+
+132
+00:06:45,250 --> 00:06:49,410
+trade off that all of these investments can coexist.
+
+133
+00:06:49,410 --> 00:06:53,580
+For some investors, stocks are more appealing.
+
+134
+00:06:53,580 --> 00:06:56,940
+Those investors have higher tolerance towards risk.
+
+135
+00:06:56,940 --> 00:06:59,310
+They are able to achieve higher levels of reward, higher
+
+136
+00:06:59,310 --> 00:07:02,280
+levels of expected returns.
+
+137
+00:07:02,280 --> 00:07:04,950
+For more conservative investors with lower levels
+
+138
+00:07:04,950 --> 00:07:07,650
+of risk tolerance, investing in bonds,
+
+139
+00:07:07,650 --> 00:07:10,820
+which are safer investments, is more appealing.
+

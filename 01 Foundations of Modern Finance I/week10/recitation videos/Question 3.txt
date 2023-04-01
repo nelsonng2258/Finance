@@ -1,0 +1,83 @@
+
+PROFESSOR: Let's reconsider the restaurant project
+we studied in question one.
+Suppose that to run the restaurant
+you need $190,000 each year in net working capital.
+This working capital consists of food and beverage stock
+and the associated supply chain needed
+to produce and serve meals.
+You're required to make this investment in the year zero.
+In the year 10, you expect to close
+the restaurant, at which point the net working capital will
+go down to $0.
+Does this change your decision on
+whether you should open this restaurant or not?
+Let's set net working capital requirements to the restaurant
+project we considered in question one.
+To run this restaurant, we're required
+to have $190,000 in net working capital each year,
+starting in the year zero and ending in year nine.
+In year zero, we will close the restaurant,
+and the working capital will go down to zero.
+Let's start by adding these requirements to line six
+in the spreadsheet.
+In year zero, we're required to have $190,000
+in net working capital.
+These requirements are the same all the way through year nine,
+and in the year 10, since we're closing down the restaurant,
+the working capital goes down to $0.
+Next, we compute the year-over-year changes
+in net working capital.
+So in year zero-- we'll assume that before year zero
+we had nothing in net working capital,
+so therefore, since the requirements in year zero
+are $190,000, our increase is $190,000 in year zero.
+In subsequent years, we're computing the increases
+by taking the difference between this year
+and the previous year, so for example, in year one,
+the increase in net working capital
+is $0 because the net working capital
+requirements are the same in the year zero and the year one.
+
+So the increase will be $0 all the way through year nine,
+and in the year 10, the working capital
+is going to decrease by $190,000 because the net working capital
+requirements in the year 10 are $0.
+And in the year nine, they were $190,000,
+so therefore the net working capital
+decreased by $190,000 between the year nine and 10.
+Now in line eight, I will use the definition
+of after-tax cash flow to compute after-tax cash flows
+every year.
+By definition, it is 1 minus tax rate--
+recall that the tax rate is 21%--
+multiplied by operating profit minus capital expenditures
+plus depreciation tax shield, which is computed by tax rate
+multiplied by depreciation expense minus increase
+in net working capital.
+And so in year zero, the cash flows are negative $840,000.
+In all of the subsequent years, these
+are the after-tax cash flows.
+Note that in years one through year nine
+the after-tax cash flows are exactly the same
+as we had in question one.
+In the year 10, however, the after-tax cash flow
+is higher by $190,000, so this is
+the amount of the decrease in net working capital.
+As the final step, I will compute the net present value
+of this restaurant project, and we'll use the NPV function.
+I used the cost of capital, cash flows from year one
+through year 10, and I'm adding up the after-tax cash
+flow in year zero.
+And the net present value is negative $3,284.
+Turns out, net working capital requirements
+make the NPV of this project negative,
+and therefore we should not open this restaurant.
+Conceptually, it is the timing of cash flows associated
+with the working capital that makes
+such a significant difference in this case.
+We're required to spend additional $190,000
+in year zero, which we only get back in year 10.
+Given the discount rate of 10%, the time value of $190,000
+is significant enough to turn the NPV of this project
+negative.

@@ -1,0 +1,172 @@
+0
+00:00:00,000 --> 00:00:01,275
+
+
+1
+00:00:01,275 --> 00:00:04,160
+PROFESSOR: Now suppose that the correlation
+
+2
+00:00:04,160 --> 00:00:07,010
+between returns on Stock A and Stock B
+
+3
+00:00:07,010 --> 00:00:10,560
+increases from 0.2 to 0.6.
+
+4
+00:00:10,560 --> 00:00:13,320
+We're going to keep the same Portfolio P that invests 60
+
+5
+00:00:13,320 --> 00:00:16,440
+into A and 40 into B. And we will
+
+6
+00:00:16,440 --> 00:00:19,740
+try to compute the expected return on this portfolio
+
+7
+00:00:19,740 --> 00:00:22,480
+and the standard deviation.
+
+8
+00:00:22,480 --> 00:00:24,750
+So first, let's answer the following question.
+
+9
+00:00:24,750 --> 00:00:28,470
+Does the fact that correlation changed from 0.2 to 0.6
+
+10
+00:00:28,470 --> 00:00:32,790
+affect the returns on this portfolio?
+
+11
+00:00:32,790 --> 00:00:35,000
+The answer is that it doesn't.
+
+12
+00:00:35,000 --> 00:00:36,660
+The expected return on the portfolio
+
+13
+00:00:36,660 --> 00:00:39,030
+only depends on the weights that we
+
+14
+00:00:39,030 --> 00:00:41,400
+put in the corresponding stocks and on the expected
+
+15
+00:00:41,400 --> 00:00:43,200
+returns on the stocks.
+
+16
+00:00:43,200 --> 00:00:47,480
+It does not depend on how returns on different assets
+
+17
+00:00:47,480 --> 00:00:50,590
+could vary within that portfolio.
+
+18
+00:00:50,590 --> 00:00:53,430
+So therefore, expected return in this case
+
+19
+00:00:53,430 --> 00:00:56,010
+stays the same as it was before.
+
+20
+00:00:56,010 --> 00:00:59,380
+In particular, it is 18%.
+
+21
+00:00:59,380 --> 00:01:01,580
+Now standard deviation, on the other hand,
+
+22
+00:01:01,580 --> 00:01:05,560
+for the Portfolio P, is affected because if we
+
+23
+00:01:05,560 --> 00:01:09,970
+look at the formula for the variance of Portfolio P,
+
+24
+00:01:09,970 --> 00:01:13,450
+we see that it obviously depends on the correlation of returns
+
+25
+00:01:13,450 --> 00:01:18,010
+between A and B. And so now, to compute the standard deviation,
+
+26
+00:01:18,010 --> 00:01:21,230
+what I will do is that everything else stays the same.
+
+27
+00:01:21,230 --> 00:01:24,550
+So the only term that changes in this equation
+
+28
+00:01:24,550 --> 00:01:25,740
+is the correlation term.
+
+29
+00:01:25,740 --> 00:01:29,520
+So instead of point 0.2, what it was before,
+
+30
+00:01:29,520 --> 00:01:30,860
+it is 0.6 right now.
+
+31
+00:01:30,860 --> 00:01:34,120
+And so I highlighted it in pink color.
+
+32
+00:01:34,120 --> 00:01:36,330
+And so if it computes the variance of this portfolio
+
+33
+00:01:36,330 --> 00:01:38,870
+period now, given this new correlation,
+
+34
+00:01:38,870 --> 00:01:41,872
+it gives me 0.0388.
+
+35
+00:01:41,872 --> 00:01:43,580
+And so to compute the standard deviation,
+
+36
+00:01:43,580 --> 00:01:46,350
+I again have to take the square root of this term.
+
+37
+00:01:46,350 --> 00:01:50,280
+And so this gives me 19.7%.
+
+38
+00:01:50,280 --> 00:01:52,730
+So when correlation goes up to 0.6,
+
+39
+00:01:52,730 --> 00:01:55,680
+expect the return stays the same at 18%.
+
+40
+00:01:55,680 --> 00:01:57,530
+But the standard deviation of the portfolio
+
+41
+00:01:57,530 --> 00:02:01,990
+increases from 17.1% to 19.7%
+
+42
+00:02:01,990 --> 00:02:03,000
+
+

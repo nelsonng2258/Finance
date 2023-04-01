@@ -1,0 +1,356 @@
+0
+00:00:00,000 --> 00:00:00,390
+
+
+1
+00:00:00,390 --> 00:00:02,850
+PROFESSOR: In this example, we will conduct an event study
+
+2
+00:00:02,850 --> 00:00:05,070
+for dividend announcements.
+
+3
+00:00:05,070 --> 00:00:07,980
+Consider the following for stocks.
+
+4
+00:00:07,980 --> 00:00:13,050
+The first stock on December 13, 1996 declared a dividend
+
+5
+00:00:13,050 --> 00:00:14,950
+of $0.10 per share.
+
+6
+00:00:14,950 --> 00:00:18,720
+Notice that the previous dividend they omitted.
+
+7
+00:00:18,720 --> 00:00:23,160
+The second stock on November 4, 2003
+
+8
+00:00:23,160 --> 00:00:27,300
+declared an increase in dividend from $0.06 per share
+
+9
+00:00:27,300 --> 00:00:30,750
+the quarter before to $0.12 per share.
+
+10
+00:00:30,750 --> 00:00:36,000
+The third company on December 18, 2013
+
+11
+00:00:36,000 --> 00:00:39,810
+declared a special dividend of $0.41 per share.
+
+12
+00:00:39,810 --> 00:00:45,360
+And finally, the last company on February 19, 2015
+
+13
+00:00:45,360 --> 00:00:49,870
+initiated a dividend of $0.05 per share.
+
+14
+00:00:49,870 --> 00:00:53,050
+Here we have the other returns on these four stocks
+
+15
+00:00:53,050 --> 00:00:57,340
+around the time they made these dividends announcements.
+
+16
+00:00:57,340 --> 00:01:00,310
+For each of the stocks, I highlighted the dates
+
+17
+00:01:00,310 --> 00:01:03,120
+when they made the corresponding announcement
+
+18
+00:01:03,120 --> 00:01:04,220
+in this orange color.
+
+19
+00:01:04,220 --> 00:01:06,730
+So this is first stock, for second stock, for third stock.
+
+20
+00:01:06,730 --> 00:01:09,730
+This is for the fourth stock.
+
+21
+00:01:09,730 --> 00:01:13,100
+We have returns on the stocks in column I.
+
+22
+00:01:13,100 --> 00:01:16,510
+We also have the returns on the markets
+
+23
+00:01:16,510 --> 00:01:20,830
+on the same dates in column J.
+
+24
+00:01:20,830 --> 00:01:24,100
+First, let me compute the abnormal return, which
+
+25
+00:01:24,100 --> 00:01:29,230
+I will define as the difference between the return on the stock
+
+26
+00:01:29,230 --> 00:01:32,280
+minus the market return.
+
+27
+00:01:32,280 --> 00:01:34,240
+And I will call this column AR, which
+
+28
+00:01:34,240 --> 00:01:36,800
+stands for the abnormal return.
+
+29
+00:01:36,800 --> 00:01:40,360
+So this is the return on the stock in excess of the market.
+
+30
+00:01:40,360 --> 00:01:42,990
+
+
+31
+00:01:42,990 --> 00:01:47,250
+Next, let us compute the average abnormal return
+
+32
+00:01:47,250 --> 00:01:51,030
+across these four stocks on the announcement date.
+
+33
+00:01:51,030 --> 00:01:56,460
+So what I will do is I will say average
+
+34
+00:01:56,460 --> 00:01:59,830
+of the abnormal returns for each of the stocks
+
+35
+00:01:59,830 --> 00:02:01,020
+on the announcement date.
+
+36
+00:02:01,020 --> 00:02:05,640
+So these two numbers, this is on the third stock.
+
+37
+00:02:05,640 --> 00:02:08,940
+And this is on the fourth stock.
+
+38
+00:02:08,940 --> 00:02:11,180
+And so let's see what we get.
+
+39
+00:02:11,180 --> 00:02:15,460
+So on average, the announcement at the return was 3.5%.
+
+40
+00:02:15,460 --> 00:02:18,220
+So clearly, the market interprets
+
+41
+00:02:18,220 --> 00:02:22,480
+this at the initiations or special
+
+42
+00:02:22,480 --> 00:02:27,040
+or increases in dividends as positive news.
+
+43
+00:02:27,040 --> 00:02:28,750
+Now, what I want to do next is I will
+
+44
+00:02:28,750 --> 00:02:34,030
+compute the same average abnormal returns on the days
+
+45
+00:02:34,030 --> 00:02:36,010
+around this announcement.
+
+46
+00:02:36,010 --> 00:02:38,030
+And let's see what we get.
+
+47
+00:02:38,030 --> 00:02:43,850
+So I will go 10 days before the announcement.
+
+48
+00:02:43,850 --> 00:02:46,610
+
+
+49
+00:02:46,610 --> 00:02:53,720
+And I will also go down to 10 days after the announcement.
+
+50
+00:02:53,720 --> 00:03:00,412
+And I will extend just this number up and down.
+
+51
+00:03:00,412 --> 00:03:02,620
+And because everything here is symmetric in the file,
+
+52
+00:03:02,620 --> 00:03:05,200
+it's going to compute the average of the returns,
+
+53
+00:03:05,200 --> 00:03:05,830
+for example.
+
+54
+00:03:05,830 --> 00:03:08,650
+This would be the average of the returns on the day
+
+55
+00:03:08,650 --> 00:03:13,510
+before the announcement for these four stocks.
+
+56
+00:03:13,510 --> 00:03:17,050
+From this table, we could see that the return
+
+57
+00:03:17,050 --> 00:03:22,290
+on the announcement date itself is the highest.
+
+58
+00:03:22,290 --> 00:03:24,270
+Let us accumulate these returns and then
+
+59
+00:03:24,270 --> 00:03:28,260
+plot them to visually see how the market processes
+
+60
+00:03:28,260 --> 00:03:30,000
+this information.
+
+61
+00:03:30,000 --> 00:03:32,160
+So in this next column, I will compute
+
+62
+00:03:32,160 --> 00:03:36,840
+cumulative average of normal returns by doing the following.
+
+63
+00:03:36,840 --> 00:03:39,870
+For each day, we will add up returns
+
+64
+00:03:39,870 --> 00:03:44,110
+from day minus 10 all the way to this day, for example.
+
+65
+00:03:44,110 --> 00:03:50,690
+For day minus 8, we will add up the returns from minus 10
+
+66
+00:03:50,690 --> 00:03:53,990
+all the way to minus 8.
+
+67
+00:03:53,990 --> 00:03:56,300
+And so for us to effectively do it,
+
+68
+00:03:56,300 --> 00:04:01,400
+let's fix the top of this array so that we can simply
+
+69
+00:04:01,400 --> 00:04:02,930
+stretch this.
+
+70
+00:04:02,930 --> 00:04:04,580
+And then this would automatically
+
+71
+00:04:04,580 --> 00:04:12,710
+compute all of the returns all the way to the plus 10.
+
+72
+00:04:12,710 --> 00:04:15,460
+Now, I have plotted the cumulative average abnormal
+
+73
+00:04:15,460 --> 00:04:16,360
+return.
+
+74
+00:04:16,360 --> 00:04:19,040
+And this is how the chart looks like.
+
+75
+00:04:19,040 --> 00:04:22,600
+So we can clearly see that on the announcement date, day 0,
+
+76
+00:04:22,600 --> 00:04:26,620
+there is a strong positive return, again,
+
+77
+00:04:26,620 --> 00:04:28,370
+which is probably consistent with the fact
+
+78
+00:04:28,370 --> 00:04:30,590
+that this announcement of dividend increases
+
+79
+00:04:30,590 --> 00:04:34,040
+or special dividends on average interpreted as good news
+
+80
+00:04:34,040 --> 00:04:36,710
+for the future of these firms.
+
+81
+00:04:36,710 --> 00:04:40,370
+Importantly, we also do not see price drift
+
+82
+00:04:40,370 --> 00:04:43,760
+is tied in the positive or negative direction following
+
+83
+00:04:43,760 --> 00:04:45,350
+the announcement.
+
+84
+00:04:45,350 --> 00:04:47,420
+Therefore, this evidence is consistent
+
+85
+00:04:47,420 --> 00:04:52,580
+with semi-strong form market efficiency hypothesis, which
+
+86
+00:04:52,580 --> 00:04:56,300
+says that the prices react to information immediately,
+
+87
+00:04:56,300 --> 00:04:59,390
+and there is no way for us to earn abnormal trading profits
+
+88
+00:04:59,390 --> 00:05:01,600
+following the announcement.
+

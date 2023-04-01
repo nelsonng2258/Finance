@@ -1,0 +1,748 @@
+0
+00:00:00,000 --> 00:00:00,990
+
+
+1
+00:00:00,990 --> 00:00:03,750
+PROFESSOR: Our second example is a famous model
+
+2
+00:00:03,750 --> 00:00:06,180
+developed by Fama and French.
+
+3
+00:00:06,180 --> 00:00:10,380
+We're going to use a couple of papers from 1993 and '96
+
+4
+00:00:10,380 --> 00:00:14,350
+to describe their construction.
+
+5
+00:00:14,350 --> 00:00:17,440
+In, this model, factors are not driven
+
+6
+00:00:17,440 --> 00:00:19,450
+by macroeconomic variables.
+
+7
+00:00:19,450 --> 00:00:21,520
+Or rather, they're not explicitly defined
+
+8
+00:00:21,520 --> 00:00:23,710
+in terms of macroeconomic variables.
+
+9
+00:00:23,710 --> 00:00:26,440
+But instead, factors are constructed
+
+10
+00:00:26,440 --> 00:00:28,870
+as portfolios of stocks.
+
+11
+00:00:28,870 --> 00:00:31,430
+In other words, in this analysis,
+
+12
+00:00:31,430 --> 00:00:34,420
+we directly build factor-mimicking portfolios
+
+13
+00:00:34,420 --> 00:00:37,735
+rather than starting with the economically motivated factors.
+
+14
+00:00:37,735 --> 00:00:40,390
+
+
+15
+00:00:40,390 --> 00:00:44,540
+Fama and French design their factor-mimicking portfolios
+
+16
+00:00:44,540 --> 00:00:47,630
+by sorting firms on two characteristics--
+
+17
+00:00:47,630 --> 00:00:50,620
+size and the book-to-market ratio.
+
+18
+00:00:50,620 --> 00:00:53,750
+Size in this case corresponds to the market capitalization
+
+19
+00:00:53,750 --> 00:00:54,890
+of the stock.
+
+20
+00:00:54,890 --> 00:00:57,810
+And the book-to-market ratio is the ratio of the book value
+
+21
+00:00:57,810 --> 00:01:01,450
+of equity to its market value.
+
+22
+00:01:01,450 --> 00:01:04,900
+The idea, the premise behind this construction,
+
+23
+00:01:04,900 --> 00:01:08,290
+is that firms with different characteristics-- small firms
+
+24
+00:01:08,290 --> 00:01:11,230
+versus large firms, high book-to-market firms
+
+25
+00:01:11,230 --> 00:01:14,800
+versus low book-to-market firms have different exposures
+
+26
+00:01:14,800 --> 00:01:17,540
+to important macroeconomic factors.
+
+27
+00:01:17,540 --> 00:01:20,350
+And therefore, by sorting these characteristics
+
+28
+00:01:20,350 --> 00:01:22,630
+and by building portfolios, we can
+
+29
+00:01:22,630 --> 00:01:25,990
+construct mimicking portfolios for the underlying macro
+
+30
+00:01:25,990 --> 00:01:27,190
+factors.
+
+31
+00:01:27,190 --> 00:01:29,980
+Of course, we don't quite know what these factors are,
+
+32
+00:01:29,980 --> 00:01:33,280
+but we can nonetheless use the mimicking portfolios
+
+33
+00:01:33,280 --> 00:01:37,120
+in a statistical manner to build factor models.
+
+34
+00:01:37,120 --> 00:01:39,730
+We end up with a three-factor model.
+
+35
+00:01:39,730 --> 00:01:44,020
+The first factor is the value-weighted market return
+
+36
+00:01:44,020 --> 00:01:46,370
+minus the return on the T-Bill.
+
+37
+00:01:46,370 --> 00:01:49,360
+We call it RM minus Rf.
+
+38
+00:01:49,360 --> 00:01:53,650
+The second factor, which is called SMB, small minus big,
+
+39
+00:01:53,650 --> 00:01:58,600
+is a long-short portfolio, which has long small-cap stocks
+
+40
+00:01:58,600 --> 00:02:01,940
+and short large-cap stocks.
+
+41
+00:02:01,940 --> 00:02:06,280
+The third portfolio, HML, or high minus low,
+
+42
+00:02:06,280 --> 00:02:10,600
+is a portfolio which has long high book-to-market firms
+
+43
+00:02:10,600 --> 00:02:14,150
+and short low book-to-market firms.
+
+44
+00:02:14,150 --> 00:02:18,080
+High book-to-market firms are what is called value firms.
+
+45
+00:02:18,080 --> 00:02:21,660
+And the low book-to-market firms are called growth firms.
+
+46
+00:02:21,660 --> 00:02:26,400
+So this is a value minus growth portfolio.
+
+47
+00:02:26,400 --> 00:02:30,450
+These portfolios-- the market minus the risk-free rate,
+
+48
+00:02:30,450 --> 00:02:35,230
+small minus big, and high minus low--
+
+49
+00:02:35,230 --> 00:02:39,640
+seem to earn significant risk premia.
+
+50
+00:02:39,640 --> 00:02:42,130
+Over the sample period considered in the paper,
+
+51
+00:02:42,130 --> 00:02:46,000
+the risk premium on the market is 0.43%,
+
+52
+00:02:46,000 --> 00:02:49,180
+the premium on the SMB portfolio is 0.27%,
+
+53
+00:02:49,180 --> 00:02:54,610
+and the premium on HML, the value factor is 0.4%.
+
+54
+00:02:54,610 --> 00:02:57,220
+All of these monthly numbers.
+
+55
+00:02:57,220 --> 00:03:00,130
+We can see that these premia are economically large
+
+56
+00:03:00,130 --> 00:03:03,380
+and they are also statistically significant.
+
+57
+00:03:03,380 --> 00:03:07,300
+We now consider an application of the three-factor Fama-French
+
+58
+00:03:07,300 --> 00:03:08,290
+model.
+
+59
+00:03:08,290 --> 00:03:10,300
+In their construction, they use stocks
+
+60
+00:03:10,300 --> 00:03:16,760
+from NYSE, AMEX, and NASDAQ from a period from 1963 to '91.
+
+61
+00:03:16,760 --> 00:03:19,820
+And they built 25 portfolios.
+
+62
+00:03:19,820 --> 00:03:24,455
+These portfolios are sorted on size and book-to-market ratios.
+
+63
+00:03:24,455 --> 00:03:26,980
+
+
+64
+00:03:26,980 --> 00:03:29,980
+For each of these 25 portfolios, they're
+
+65
+00:03:29,980 --> 00:03:34,090
+on the regression of the excess portfolio return, that's
+
+66
+00:03:34,090 --> 00:03:36,970
+the portfolio return minus the risk-free rate,
+
+67
+00:03:36,970 --> 00:03:41,740
+on the three common factors, the market factor, the SMB,
+
+68
+00:03:41,740 --> 00:03:44,260
+small minus big portfolio factor,
+
+69
+00:03:44,260 --> 00:03:47,920
+and HML, the value factor.
+
+70
+00:03:47,920 --> 00:03:49,880
+After earning these regressions, we
+
+71
+00:03:49,880 --> 00:03:54,650
+can evaluate the loadings on the factors to see to what extent
+
+72
+00:03:54,650 --> 00:03:57,260
+various portfolios have different loadings
+
+73
+00:03:57,260 --> 00:04:01,970
+on the common factors, and the intercepts or the alphas.
+
+74
+00:04:01,970 --> 00:04:06,890
+If the APT model describes risk premia on these 25 portfolios
+
+75
+00:04:06,890 --> 00:04:11,560
+accurately, these alphas should be close to zero.
+
+76
+00:04:11,560 --> 00:04:13,690
+In the first table which would take
+
+77
+00:04:13,690 --> 00:04:16,899
+from the Fama-French paper, we see the distribution
+
+78
+00:04:16,899 --> 00:04:20,800
+of average returns across the 25 portfolios sorted
+
+79
+00:04:20,800 --> 00:04:23,380
+on size and book-to-market.
+
+80
+00:04:23,380 --> 00:04:28,210
+What we see is that as we go from low to high values
+
+81
+00:04:28,210 --> 00:04:32,520
+of the market cap, portfolio returns decline.
+
+82
+00:04:32,520 --> 00:04:34,800
+In other words, small stocks tend
+
+83
+00:04:34,800 --> 00:04:37,260
+to earn relatively higher returns
+
+84
+00:04:37,260 --> 00:04:40,780
+compared to the large stocks.
+
+85
+00:04:40,780 --> 00:04:42,760
+Value stocks, which are the companies
+
+86
+00:04:42,760 --> 00:04:45,790
+with the high book-to-market ratio,
+
+87
+00:04:45,790 --> 00:04:47,890
+tend to earn relatively high returns
+
+88
+00:04:47,890 --> 00:04:49,990
+compared to the growth stocks.
+
+89
+00:04:49,990 --> 00:04:52,180
+In other words, there is a significant degree
+
+90
+00:04:52,180 --> 00:04:56,080
+of heterogeneity in average returns across these 25
+
+91
+00:04:56,080 --> 00:04:57,890
+portfolios.
+
+92
+00:04:57,890 --> 00:05:01,000
+This is what the APT model, the three-factor model,
+
+93
+00:05:01,000 --> 00:05:04,690
+is going to try to explain.
+
+94
+00:05:04,690 --> 00:05:06,910
+We observed that there is a significant amount
+
+95
+00:05:06,910 --> 00:05:10,640
+of heterogeneity in the factor loadings across the 25
+
+96
+00:05:10,640 --> 00:05:12,450
+portfolios.
+
+97
+00:05:12,450 --> 00:05:15,330
+While the loadings on the market appear
+
+98
+00:05:15,330 --> 00:05:18,000
+to be relatively similar, the loadings
+
+99
+00:05:18,000 --> 00:05:22,840
+on the SMB and the HML factor are quite different.
+
+100
+00:05:22,840 --> 00:05:24,690
+This is not surprising.
+
+101
+00:05:24,690 --> 00:05:27,750
+The SMB factor is a long-short portfolio
+
+102
+00:05:27,750 --> 00:05:30,810
+of small versus large firms.
+
+103
+00:05:30,810 --> 00:05:34,320
+Small stocks tend to have a positive exposure
+
+104
+00:05:34,320 --> 00:05:37,050
+to this portfolio return, and large stocks
+
+105
+00:05:37,050 --> 00:05:39,570
+tend to have a negative exposure.
+
+106
+00:05:39,570 --> 00:05:45,110
+Similar logic applies to the HML portfolio and their exposures
+
+107
+00:05:45,110 --> 00:05:47,730
+along the dimensions of high versus
+
+108
+00:05:47,730 --> 00:05:49,010
+low market-to-book ratios.
+
+109
+00:05:49,010 --> 00:05:52,180
+
+
+110
+00:05:52,180 --> 00:05:54,040
+The important numbers for us here
+
+111
+00:05:54,040 --> 00:05:57,040
+are the R-squared in the regression of portfolio
+
+112
+00:05:57,040 --> 00:06:01,180
+returns for these 25 size and book-to-market portfolios
+
+113
+00:06:01,180 --> 00:06:03,140
+on the common factors.
+
+114
+00:06:03,140 --> 00:06:06,070
+These R-squared numbers are quite high.
+
+115
+00:06:06,070 --> 00:06:09,460
+They are often in excess of 90%.
+
+116
+00:06:09,460 --> 00:06:12,730
+What this is telling us is that the three factors--
+
+117
+00:06:12,730 --> 00:06:15,790
+the market, SMB, and HML--
+
+118
+00:06:15,790 --> 00:06:18,880
+are doing a very good job at capturing return
+
+119
+00:06:18,880 --> 00:06:22,690
+variation of these 25 portfolios, which is something
+
+120
+00:06:22,690 --> 00:06:25,810
+we would expect in a three-factor APT world
+
+121
+00:06:25,810 --> 00:06:29,650
+because each of these 25 portfolios is well-diversified.
+
+122
+00:06:29,650 --> 00:06:32,140
+And therefore, their returns should be well explained
+
+123
+00:06:32,140 --> 00:06:35,020
+by the common factors.
+
+124
+00:06:35,020 --> 00:06:38,710
+In this final table, we'll look at the intercepts in the time
+
+125
+00:06:38,710 --> 00:06:43,990
+series regression of the returns on each of these 25 portfolios
+
+126
+00:06:43,990 --> 00:06:45,790
+on the three common factors--
+
+127
+00:06:45,790 --> 00:06:49,490
+the market, SMB and HML.
+
+128
+00:06:49,490 --> 00:06:52,554
+If you compare this to the analysis of the Chen, Roll,
+
+129
+00:06:52,554 --> 00:06:56,030
+and Ross model, this is a different technique.
+
+130
+00:06:56,030 --> 00:07:00,440
+Instead of regressing asset returns cross-sectionally
+
+131
+00:07:00,440 --> 00:07:03,440
+on the factor loadings, we are running a time series
+
+132
+00:07:03,440 --> 00:07:06,530
+regression where we're regressing each portfolio
+
+133
+00:07:06,530 --> 00:07:09,630
+return on the common factors.
+
+134
+00:07:09,630 --> 00:07:12,270
+Under the APT model, the intercept
+
+135
+00:07:12,270 --> 00:07:16,680
+of this regression or the alpha should be equal to zero.
+
+136
+00:07:16,680 --> 00:07:19,230
+Of course, in any statistical exercise,
+
+137
+00:07:19,230 --> 00:07:21,120
+we have estimation errors.
+
+138
+00:07:21,120 --> 00:07:23,220
+And so the intercept in this regression
+
+139
+00:07:23,220 --> 00:07:25,920
+is not going to be literally equal to zero.
+
+140
+00:07:25,920 --> 00:07:30,090
+But we can think about statistical tests of how
+
+141
+00:07:30,090 --> 00:07:32,160
+different these are from zero.
+
+142
+00:07:32,160 --> 00:07:34,500
+We can also think economically how
+
+143
+00:07:34,500 --> 00:07:38,470
+significant these deviations from zero may be.
+
+144
+00:07:38,470 --> 00:07:42,220
+What we find is that for most of the 25 portfolios,
+
+145
+00:07:42,220 --> 00:07:46,330
+the intercept, the alpha, is in fact quite close to zero.
+
+146
+00:07:46,330 --> 00:07:50,860
+Economically and statistically indistinguishable from zero.
+
+147
+00:07:50,860 --> 00:07:53,860
+There are a couple of exceptions that we observe, particularly
+
+148
+00:07:53,860 --> 00:07:56,710
+for small stock portfolios.
+
+149
+00:07:56,710 --> 00:08:00,100
+So what this is telling us is that by and large,
+
+150
+00:08:00,100 --> 00:08:04,600
+the cross-sectional differences in returns on the 25 portfolios
+
+151
+00:08:04,600 --> 00:08:07,960
+can be well described by a three-factor model.
+
+152
+00:08:07,960 --> 00:08:09,460
+There are some violations that we're
+
+153
+00:08:09,460 --> 00:08:11,230
+observing for small stocks.
+
+154
+00:08:11,230 --> 00:08:15,130
+So perhaps, a three-factor model is not a perfect description
+
+155
+00:08:15,130 --> 00:08:17,020
+of expected returns here.
+
+156
+00:08:17,020 --> 00:08:20,470
+Nonetheless, it does capture to a significant degree
+
+157
+00:08:20,470 --> 00:08:23,350
+the amount of cross-sectional variation in the returns
+
+158
+00:08:23,350 --> 00:08:25,710
+across these portfolios.
+
+159
+00:08:25,710 --> 00:08:27,510
+We have looked at a couple of examples
+
+160
+00:08:27,510 --> 00:08:30,090
+of how the APT framework can be applied
+
+161
+00:08:30,090 --> 00:08:35,110
+to determine expected excess returns on various assets.
+
+162
+00:08:35,110 --> 00:08:38,559
+We didn't go into the technical details of how exactly
+
+163
+00:08:38,559 --> 00:08:41,440
+regressions are set up an estimated.
+
+164
+00:08:41,440 --> 00:08:44,830
+What we wanted to illustrate is the concept.
+
+165
+00:08:44,830 --> 00:08:47,620
+That risk premier of various common factors
+
+166
+00:08:47,620 --> 00:08:52,390
+can be inferred from the history of returns on financial assets.
+
+167
+00:08:52,390 --> 00:08:55,030
+There are multiple techniques that could be used for that--
+
+168
+00:08:55,030 --> 00:08:59,090
+cross-sectional regressions, time series regressions.
+
+169
+00:08:59,090 --> 00:09:01,370
+One of the bottlenecks of the APT
+
+170
+00:09:01,370 --> 00:09:03,110
+is that the theory doesn't tell us
+
+171
+00:09:03,110 --> 00:09:05,090
+where the factors are coming from
+
+172
+00:09:05,090 --> 00:09:07,560
+or how many factors we need.
+
+173
+00:09:07,560 --> 00:09:10,820
+Making those choices requires some understanding
+
+174
+00:09:10,820 --> 00:09:13,190
+of the economics of the problem and
+
+175
+00:09:13,190 --> 00:09:15,800
+further statistical analysis.
+
+176
+00:09:15,800 --> 00:09:19,610
+At the end of the day, APT is a framework
+
+177
+00:09:19,610 --> 00:09:22,010
+which is rather flexible and can be used
+
+178
+00:09:22,010 --> 00:09:24,500
+in a variety of circumstances.
+
+179
+00:09:24,500 --> 00:09:29,150
+It enforces the notion that absence of arbitrage
+
+180
+00:09:29,150 --> 00:09:33,500
+imposes a strong restriction of how expected excess returns are
+
+181
+00:09:33,500 --> 00:09:36,120
+related to risk exposures.
+
+182
+00:09:36,120 --> 00:09:39,050
+This logic is quite robust, and it shows up
+
+183
+00:09:39,050 --> 00:09:42,510
+across a variety of asset pricing models.
+
+184
+00:09:42,510 --> 00:09:46,710
+In this way, the APT framework provides a general template
+
+185
+00:09:46,710 --> 00:09:50,400
+of how risk premia or expected returns can
+
+186
+00:09:50,400 --> 00:09:53,210
+be related to measures of risk.
+

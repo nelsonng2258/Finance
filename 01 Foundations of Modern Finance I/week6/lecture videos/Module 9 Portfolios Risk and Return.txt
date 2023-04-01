@@ -1,0 +1,211 @@
+
+PROFESSOR: We will now talk about risk and return
+in portfolio investments.
+In particular, we will introduce the core concept
+of this lecture, diversification.
+When forming your portfolio, why not
+pick the best asset among many possible investments?
+There are many problems with this idea.
+One is, of course, it's hard to tell which stock is the best.
+It is also the case that by forming
+a portfolio of multiple investments,
+one can achieve a better risk return trade off
+than by picking one asset over another.
+That is the benefit of diversification,
+something we are going to discuss
+in detail in this segment.
+One can use a portfolio to enhance performance
+by focusing one's bets.
+This could be achieved by hedging.
+For example, suppose that you have
+a view on a particular company.
+Your view is on the quality of firms management
+or on its opportunities in the marketplace.
+If you want to place a bet on a company,
+you are, in fact, betting on much more
+than your initial view.
+You are betting on broad market moves
+to which the stock is exposed.
+By taking additional positions, for example,
+by taking a short position in the market,
+you will be able to isolate your bet.
+So that you are betting on stock specific performance
+rather than on that plus additional movements
+in the market.
+So forming portfolios could be very useful
+in order to isolate views on particular elements
+of the trade.
+Portfolios can be used to customize and manage risks.
+This is an important part of the risk management process.
+They could be used to tailor a risk return trade off
+to the needs of the particular investor.
+How do we go about choosing the best portfolio?
+Now, first of all, we have to say, what is the best mean?
+This is subjective.
+What we want to do is to find the portfolio that
+is the best for a particular investor given
+his or her preferences.
+This process is an optimization process
+among all possible portfolios.
+We are going to look at the one that
+maximizes the investor's objective,
+such as expected utility.
+This means that before we form a portfolio,
+we need to agree on what the objective is.
+What are we trying to optimize?
+Which properties of the portfolio are important?
+Now, in the mean variance framework,
+there are two aspects of the portfolio that matter.
+One is the expected return.
+Investors prefer higher expected returns.
+The other important dimension is risk.
+Investors prefer lower risk, and in particular, risk
+is measured by variance of portfolio returns.
+Expected return on the portfolio, as well as
+the variance of returns, are determined
+by the composition of the portfolio, which
+is the collection of weights on individual investments
+and by the properties of the individual investments
+themselves.
+In particular, when we think about the portfolio average
+return, portfolio mean return, it
+is based on the average returns of individual assets
+and portfolio weights.
+If we have put together expected returns
+on individual investments into a vector from one to N,
+call each of the elements R bar, which
+represents the expected return on each
+of the stocks in the portfolio.
+Then the expected return on the portfolio
+is a sum over all of the positions of the expected
+return on an individual asset times the portfolio
+weight of that asset.
+In other words, the expected return on the portfolio
+is a weighted average of the individual expected returns.
+For portfolio variance, it's a bit more involved.
+First, let's summarize the information
+about the properties of the individual investments.
+This is no longer a vector, but a matrix.
+It's the co-variance matrix.
+The diagonal elements of this matrix
+summarize riskiness of individual securities.
+They are given by the variance of security returns.
+The off diagonal elements, which will turn out
+to be very important when we talk about diversification
+capture co-movements of investments with each other.
+They capture co-variance, pair-wise co-variance
+of assets in the portfolio.
+As an example, let's consider a portfolio of two assets.
+One is a ETF SPY.
+It's an equity ETF.
+The other is a bond ETF.
+We have seen these two securities before.
+In the following two tables, you could see historical estimates
+of average returns on the two securities,
+as well as their variance co-variance matrix.
+The variance co-variance matrix is not easy to read.
+It is more intuitive to present information
+as volatilities of individual investments,
+as well as their relations with each other.
+As we have seen before, investment in SPY
+has much higher volatility than the bond ETF investment,
+and correlation between these two securities
+is very close to zero.
+Now, let's take a close look at the expected return
+on the portfolio.
+As we said before, they expected return on the portfolio
+is a weighted average of expected
+returns on the securities in the portfolio.
+Let's see why that is the case.
+We will do that by following a simple example.
+Again, two securities, SPY and AGG.
+Suppose that we invest $600 into the equity ETF and $400
+into the bond ETF.
+It's $1,000 investment in total, and the portfolio weights
+are 0.6 on SPY and 0.4 on AGG respectively.
+Suppose that over the next month, the return on SPY
+happens to be 2% and a return on the bond ETF AGG is minus 1%.
+Keep in mind that these are realized returns
+over a particular month.
+These are not expected values.
+What is the total return on the portfolio?
+We can see that the portfolio value is going to change,
+and the change is going to be equal to the sum of changes
+in the values of the individual positions.
+The investment in SPY is going to increase by 2%, which
+is going to be equal to $12.
+The investment in AGG is going to decline
+by 1%, which is a $4 decline.
+The total increase is $8 over 1,000,
+which gives us 0.8% return on the entire portfolio.
+What this illustrates is that the return on the portfolio
+is equal to the weighted average of returns
+on the individual positions.
+Once we know how the return on the portfolio
+is related to the returns on the individual investments,
+we can compute the expected portfolio return
+and the variance of the return.
+The expected portfolio return is an expected value
+of the weighted average of individual asset returns, which
+ends up being the weighted average of expected returns
+on the investments in the portfolio.
+The unexpected component of the return
+can be computed by subtracting the portfolio return mean
+from the realized return.
+Portfolio return variance is the variance
+of the weighted average of the individual security returns.
+Using the formula for the variance,
+we see that this amounts to summing up
+elements of the matrix that you see presented here,
+where the diagonal elements of the matrix
+are individual variances multiplied
+by the squares of security weights in the portfolio.
+And the off diagonal elements are co-variances
+of asset returns multiplied by the product
+of the corresponding weights.
+In case of two assets in the portfolio,
+we end up with three terms, two diagonal terms, which
+capture the contribution of individual return variances,
+and the off diagonal terms, which
+are identical to each other and capture the contribution
+of the co-movement between the two assets in the portfolio.
+Going back to our original example of a two asset
+portfolio of SPY and AGG, let's assume
+that the weights on the two securities
+are equal to each other, W1 equal to W2 equal to 1/2.
+In this case, the expected portfolio return
+is an arithmetic average of the expected returns on the two
+securities.
+A portfolio mean is always a weighted average
+of individual return means.
+Next, we compute the volatility of portfolio returns.
+For our portfolio of SPY and AGG,
+we find that the portfolio volatility is, in fact, less
+than the weighted average of the individual volatilities
+of returns.
+This is an example of portfolio diversification.
+Volatility of the portfolio is not a simple weighted average
+of individual volatilities, and by combining securities
+together, one can achieve a significant reduction in risk.
+What enables us to do that is the imperfect
+correlation between returns and the individual positions
+in the portfolio.
+We now extend our results to the general case,
+a portfolio of M assets.
+This is analogous to the two assets portfolio.
+Except now, we have a longer sum of terms,
+and the expressions are general.
+The portfolio return as before is a weighted average
+of individual asset returns.
+The portfolio mean is a weighted average
+of mean returns on individual assets in the portfolio,
+and the variance of the portfolio return is a sum.
+It's a double sum over all assets in the portfolio,
+and each element of the sum is given
+by the product of security weights, WI and WJ for assets I
+and J, times the co-variance between their returns.
+If you look closely at the portfolio variance,
+we see that it can be decomposed into two types of terms.
+The diagonal terms capture the contribution
+of their own variance of each of the positions,
+and the off diagonal terms that are driven by co-variances.

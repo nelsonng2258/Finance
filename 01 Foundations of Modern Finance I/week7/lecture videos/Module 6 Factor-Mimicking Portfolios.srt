@@ -1,0 +1,468 @@
+0
+00:00:00,000 --> 00:00:00,910
+
+
+1
+00:00:00,910 --> 00:00:03,300
+PROFESSOR: We next introduce an important concept,
+
+2
+00:00:03,300 --> 00:00:05,780
+a factor-mimicking portfolio.
+
+3
+00:00:05,780 --> 00:00:07,880
+So far, our common factors didn't
+
+4
+00:00:07,880 --> 00:00:09,820
+need to be traded assets.
+
+5
+00:00:09,820 --> 00:00:12,550
+They could be macroeconomic shocks.
+
+6
+00:00:12,550 --> 00:00:16,120
+They could also be returns on financial assets.
+
+7
+00:00:16,120 --> 00:00:20,320
+It turns out that we can replace any common shock
+
+8
+00:00:20,320 --> 00:00:23,830
+with a corresponding return on the financial portfolio.
+
+9
+00:00:23,830 --> 00:00:27,400
+This portfolio is called the factor-mimicking portfolio.
+
+10
+00:00:27,400 --> 00:00:30,020
+Let's see how it can be done.
+
+11
+00:00:30,020 --> 00:00:33,050
+Consider a case of a single-factor model.
+
+12
+00:00:33,050 --> 00:00:37,230
+We can visualize the APT relation graphically.
+
+13
+00:00:37,230 --> 00:00:39,960
+On the graph, on the horizontal axis,
+
+14
+00:00:39,960 --> 00:00:44,160
+we plot the factor exposure, b sub p.
+
+15
+00:00:44,160 --> 00:00:47,790
+On the vertical axis, we plot the expected returns
+
+16
+00:00:47,790 --> 00:00:51,350
+on the portfolios, r bar p.
+
+17
+00:00:51,350 --> 00:00:54,320
+The relation between expected portfolio returns
+
+18
+00:00:54,320 --> 00:00:57,730
+and the factor loading is linear.
+
+19
+00:00:57,730 --> 00:01:00,280
+For the portfolio with zero-factor loading,
+
+20
+00:01:00,280 --> 00:01:02,900
+the return is equal to the risk-free rate.
+
+21
+00:01:02,900 --> 00:01:05,590
+This is the point on the vertical axis.
+
+22
+00:01:05,590 --> 00:01:08,800
+And for the portfolios with positive factor loadings,
+
+23
+00:01:08,800 --> 00:01:13,360
+average returns are positive and increasing with the magnitude
+
+24
+00:01:13,360 --> 00:01:16,720
+of the factor risk exposure.
+
+25
+00:01:16,720 --> 00:01:19,570
+Consider one of these portfolios with a factor
+
+26
+00:01:19,570 --> 00:01:21,850
+loading equal to one.
+
+27
+00:01:21,850 --> 00:01:25,990
+Under the APT relation, the risk premium on this portfolio
+
+28
+00:01:25,990 --> 00:01:30,100
+has to be equal to the risk premium of the factor,
+
+29
+00:01:30,100 --> 00:01:32,410
+or lambda.
+
+30
+00:01:32,410 --> 00:01:35,080
+We can therefore see that the portfolio
+
+31
+00:01:35,080 --> 00:01:39,130
+with the factor loading equal to one or with the unit factor
+
+32
+00:01:39,130 --> 00:01:43,520
+beta can be used as a factor-mimicking portfolio.
+
+33
+00:01:43,520 --> 00:01:45,430
+The risk premium on this portfolio
+
+34
+00:01:45,430 --> 00:01:50,260
+is equal to the price of risk of the factor.
+
+35
+00:01:50,260 --> 00:01:52,990
+Moreover, because this portfolio is perfectly
+
+36
+00:01:52,990 --> 00:01:55,990
+correlated with the factor, we can use it
+
+37
+00:01:55,990 --> 00:02:00,500
+instead of the factor in the APT relation itself.
+
+38
+00:02:00,500 --> 00:02:03,340
+In other words, we can replace the factor
+
+39
+00:02:03,340 --> 00:02:08,740
+by its mimicking portfolio in our factor model.
+
+40
+00:02:08,740 --> 00:02:11,110
+Next, we generalize the argument of the case
+
+41
+00:02:11,110 --> 00:02:14,090
+of a multi-factor model.
+
+42
+00:02:14,090 --> 00:02:17,750
+We start with the model with the K factors.
+
+43
+00:02:17,750 --> 00:02:20,540
+And we consider K portfolios--
+
+44
+00:02:20,540 --> 00:02:22,700
+P1, P2, and so forth--
+
+45
+00:02:22,700 --> 00:02:26,490
+which are linearly independent.
+
+46
+00:02:26,490 --> 00:02:29,700
+Our objective is to construct mimicking portfolios
+
+47
+00:02:29,700 --> 00:02:32,310
+for each of the common factors.
+
+48
+00:02:32,310 --> 00:02:35,370
+Once we do that, the expected excess returns
+
+49
+00:02:35,370 --> 00:02:39,540
+on these portfolios are going to tell us the risk premia
+
+50
+00:02:39,540 --> 00:02:42,760
+for the associated factors.
+
+51
+00:02:42,760 --> 00:02:46,420
+To construct a mimicking portfolio for factor j,
+
+52
+00:02:46,420 --> 00:02:49,420
+we need to build a portfolio with the property
+
+53
+00:02:49,420 --> 00:02:53,680
+that its loading on factor j is equal to one.
+
+54
+00:02:53,680 --> 00:02:56,460
+And its loadings on all the other factors
+
+55
+00:02:56,460 --> 00:02:59,100
+are equal to zero.
+
+56
+00:02:59,100 --> 00:03:00,930
+This can be expressed algebraically
+
+57
+00:03:00,930 --> 00:03:03,580
+as a system of equations.
+
+58
+00:03:03,580 --> 00:03:05,890
+The factor loading of the portfolio
+
+59
+00:03:05,890 --> 00:03:08,920
+is equal to the weighted average of the factor
+
+60
+00:03:08,920 --> 00:03:12,610
+loadings of the individual assets or the portfolio
+
+61
+00:03:12,610 --> 00:03:13,600
+components.
+
+62
+00:03:13,600 --> 00:03:21,110
+In our case, these assets are portfolios P1, P2, through PK.
+
+63
+00:03:21,110 --> 00:03:24,820
+So consider the exposure to factor one.
+
+64
+00:03:24,820 --> 00:03:29,410
+We have the weight of the first portfolio multiplied
+
+65
+00:03:29,410 --> 00:03:32,330
+by its loading on the first factor,
+
+66
+00:03:32,330 --> 00:03:35,650
+plus the weight of the second portfolio multiplied
+
+67
+00:03:35,650 --> 00:03:39,990
+by its loading on the first factor, and so forth.
+
+68
+00:03:39,990 --> 00:03:43,530
+The equation tells us that the loading
+
+69
+00:03:43,530 --> 00:03:48,170
+of the portfolio on the first factor is equal to zero.
+
+70
+00:03:48,170 --> 00:03:51,110
+We do the same for each of the factors.
+
+71
+00:03:51,110 --> 00:03:53,080
+Factor j is special.
+
+72
+00:03:53,080 --> 00:03:55,560
+The loading on that factor is equal to one.
+
+73
+00:03:55,560 --> 00:03:59,070
+The loadings on all the other factors are zero.
+
+74
+00:03:59,070 --> 00:04:03,330
+We have a system of equations with K unknowns and K
+
+75
+00:04:03,330 --> 00:04:04,830
+equations.
+
+76
+00:04:04,830 --> 00:04:07,240
+We can find a unique solution.
+
+77
+00:04:07,240 --> 00:04:12,430
+This allows us to construct factor-mimicking portfolios.
+
+78
+00:04:12,430 --> 00:04:14,470
+To see how a procedure would work,
+
+79
+00:04:14,470 --> 00:04:18,089
+let's apply it to our previous example.
+
+80
+00:04:18,089 --> 00:04:22,140
+We have two portfolios, A and B. And two common factors,
+
+81
+00:04:22,140 --> 00:04:24,890
+a growth shock and an energy shock.
+
+82
+00:04:24,890 --> 00:04:28,990
+Portfolio A has a loading of 1 and 1.25
+
+83
+00:04:28,990 --> 00:04:31,220
+are the two factors, respectively.
+
+84
+00:04:31,220 --> 00:04:35,982
+Portfolio B has the loadings of 2 and minus 0.5.
+
+85
+00:04:35,982 --> 00:04:38,410
+We want to build a factor-mimicking portfolio
+
+86
+00:04:38,410 --> 00:04:40,570
+for the energy shock.
+
+87
+00:04:40,570 --> 00:04:45,910
+This portfolio has a weight of wA on portfolio A and wB
+
+88
+00:04:45,910 --> 00:04:48,550
+on portfolio B.
+
+89
+00:04:48,550 --> 00:04:51,790
+It must have zero exposure to the growth shock,
+
+90
+00:04:51,790 --> 00:04:55,490
+and the unit exposure to the energy shock.
+
+91
+00:04:55,490 --> 00:04:58,810
+These two conditions can be expressed as two equations.
+
+92
+00:04:58,810 --> 00:05:01,130
+For the growth shock we have the weight
+
+93
+00:05:01,130 --> 00:05:06,320
+on portfolio A multiplied by the beta of that portfolio, which
+
+94
+00:05:06,320 --> 00:05:09,500
+is one, plus the weight on portfolio B,
+
+95
+00:05:09,500 --> 00:05:12,860
+multiplied by the beta of that portfolio, which is two.
+
+96
+00:05:12,860 --> 00:05:17,240
+And the sum of these exposures has to be equal to zero.
+
+97
+00:05:17,240 --> 00:05:19,880
+For the energy shock, we have similar logic.
+
+98
+00:05:19,880 --> 00:05:24,560
+1.25, which is the loading of portfolio A multiplied
+
+99
+00:05:24,560 --> 00:05:29,320
+by the weight of A in the portfolio minus 0.5
+
+100
+00:05:29,320 --> 00:05:33,000
+times the weight of B is equal to one.
+
+101
+00:05:33,000 --> 00:05:35,720
+We solve the system equations to find
+
+102
+00:05:35,720 --> 00:05:40,580
+that the weight on portfolio A is 2/3, 0.67.
+
+103
+00:05:40,580 --> 00:05:45,040
+And the weight of portfolio B is minus 0.33.
+
+104
+00:05:45,040 --> 00:05:48,190
+Notice that these weights do not sum up to one,
+
+105
+00:05:48,190 --> 00:05:50,440
+and that is because in our construction
+
+106
+00:05:50,440 --> 00:05:54,370
+we are implicitly using a risk-free asset.
+
+107
+00:05:54,370 --> 00:05:57,870
+So as we add up the weights, the residual,
+
+108
+00:05:57,870 --> 00:06:00,930
+the difference between one and the sum of these weights
+
+109
+00:06:00,930 --> 00:06:04,930
+has to be invested in the risk-free asset.
+
+110
+00:06:04,930 --> 00:06:09,340
+In this particular example, we find a mimicking portfolio
+
+111
+00:06:09,340 --> 00:06:14,545
+for the energy factor which has weights of 2/3 on portfolio A
+
+112
+00:06:14,545 --> 00:06:17,500
+and minus 1/3 on portfolio B. And that
+
+113
+00:06:17,500 --> 00:06:21,190
+implies that the risk premium on the energy factor
+
+114
+00:06:21,190 --> 00:06:25,870
+is equal to 4%, which is exactly the same result that we
+
+115
+00:06:25,870 --> 00:06:30,250
+followed previously by computing the risk premia implied
+
+116
+00:06:30,250 --> 00:06:34,590
+by the expected returns on portfolios A and B.
+

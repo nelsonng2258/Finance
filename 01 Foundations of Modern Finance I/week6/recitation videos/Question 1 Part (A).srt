@@ -1,0 +1,260 @@
+0
+00:00:00,000 --> 00:00:00,385
+
+
+1
+00:00:00,385 --> 00:00:02,760
+PROFESSOR: In this question, we will practice the concept
+
+2
+00:00:02,760 --> 00:00:05,730
+of expected utility.
+
+3
+00:00:05,730 --> 00:00:08,470
+Let's start with a very simple example.
+
+4
+00:00:08,470 --> 00:00:12,240
+We have the following investor with utility function
+
+5
+00:00:12,240 --> 00:00:14,120
+square root of x.
+
+6
+00:00:14,120 --> 00:00:17,880
+And this investor is offered the following two choices,
+
+7
+00:00:17,880 --> 00:00:22,830
+receive $1,000 with probability 1,
+
+8
+00:00:22,830 --> 00:00:26,010
+or participate in the following lottery,
+
+9
+00:00:26,010 --> 00:00:32,910
+lottery A, which with probability 1/2 pays $1,100,
+
+10
+00:00:32,910 --> 00:00:38,700
+and with the remaining probability, 1/2, pays $900.
+
+11
+00:00:38,700 --> 00:00:40,680
+So the question is, this investor,
+
+12
+00:00:40,680 --> 00:00:43,650
+with this utility function, which of the following two
+
+13
+00:00:43,650 --> 00:00:47,070
+choices she prefers.
+
+14
+00:00:47,070 --> 00:00:49,500
+What I have done here is, I've written
+
+15
+00:00:49,500 --> 00:00:54,350
+expected utility of this investor for this lottery
+
+16
+00:00:54,350 --> 00:00:56,190
+and for this sure payoff.
+
+17
+00:00:56,190 --> 00:00:58,470
+Let's start with the lottery.
+
+18
+00:00:58,470 --> 00:01:00,510
+The expected utility of this investor
+
+19
+00:01:00,510 --> 00:01:06,910
+equals to 1/2 the utility of the payment in the first outcome,
+
+20
+00:01:06,910 --> 00:01:13,290
+which is $1,100, plus another 1/2 times the utility of $900.
+
+21
+00:01:13,290 --> 00:01:15,060
+This is the second outcome.
+
+22
+00:01:15,060 --> 00:01:18,420
+So this is the utility from these payoffs weighted
+
+23
+00:01:18,420 --> 00:01:22,150
+by the probability of these two outcomes.
+
+24
+00:01:22,150 --> 00:01:25,090
+So our utility function is just the square root function.
+
+25
+00:01:25,090 --> 00:01:29,040
+So this first part becomes 1/2 multiplied
+
+26
+00:01:29,040 --> 00:01:31,380
+by square root of $1,100.
+
+27
+00:01:31,380 --> 00:01:34,110
+The second part becomes 1/2 multiplied
+
+28
+00:01:34,110 --> 00:01:37,210
+by the square root of $900.
+
+29
+00:01:37,210 --> 00:01:41,830
+So if we compute this, I get $31.58.
+
+30
+00:01:41,830 --> 00:01:46,740
+Now, in this first choice, which is the short payoff of $1,000,
+
+31
+00:01:46,740 --> 00:01:50,080
+the expected utility is just the utility of this $1,000,
+
+32
+00:01:50,080 --> 00:01:52,800
+because this is a certain outcome.
+
+33
+00:01:52,800 --> 00:01:55,350
+Which equals to-- again, given our utility function,
+
+34
+00:01:55,350 --> 00:01:58,860
+this equals to the square root of $1,000.
+
+35
+00:01:58,860 --> 00:02:02,670
+And this equals to $31.62.
+
+36
+00:02:02,670 --> 00:02:06,840
+Now, which of the two these investor picks?
+
+37
+00:02:06,840 --> 00:02:09,479
+Well let's figure out which of the two options
+
+38
+00:02:09,479 --> 00:02:12,630
+gives us higher expected utility.
+
+39
+00:02:12,630 --> 00:02:16,200
+The expected utility of the first option is $31.62.
+
+40
+00:02:16,200 --> 00:02:20,160
+The expected utility of the second option is $31.58.
+
+41
+00:02:20,160 --> 00:02:24,240
+Since $31.62 is greater than $31.58,
+
+42
+00:02:24,240 --> 00:02:27,690
+this investor should go for this first choice,
+
+43
+00:02:27,690 --> 00:02:30,270
+which is the certain outcome.
+
+44
+00:02:30,270 --> 00:02:32,130
+Now, the reason for this choice here
+
+45
+00:02:32,130 --> 00:02:36,500
+is that we're dealing with a risk averse investor.
+
+46
+00:02:36,500 --> 00:02:38,270
+If we compare the expected payoff
+
+47
+00:02:38,270 --> 00:02:40,450
+of the first option and the second option,
+
+48
+00:02:40,450 --> 00:02:41,353
+they are the same.
+
+49
+00:02:41,353 --> 00:02:43,020
+The expected payoff for the first option
+
+50
+00:02:43,020 --> 00:02:45,720
+is just literally $1,000.
+
+51
+00:02:45,720 --> 00:02:49,950
+The expected payoff of the second option is also $1,000.
+
+52
+00:02:49,950 --> 00:02:55,390
+It's 1/2 times the first pay of $1,100 plus the other 1/2 times
+
+53
+00:02:55,390 --> 00:02:56,040
+$900.
+
+54
+00:02:56,040 --> 00:03:00,490
+This is the payoff in the second state of the world.
+
+55
+00:03:00,490 --> 00:03:04,140
+So the average of the two is just $1,000.
+
+56
+00:03:04,140 --> 00:03:05,850
+So the expected pay of the first option
+
+57
+00:03:05,850 --> 00:03:07,380
+is exactly the same as the expected
+
+58
+00:03:07,380 --> 00:03:11,760
+pay of the second option but there is more uncertainty
+
+59
+00:03:11,760 --> 00:03:12,973
+of the second option.
+
+60
+00:03:12,973 --> 00:03:15,390
+And since we're dealing with the risk-averse investor, who
+
+61
+00:03:15,390 --> 00:03:19,320
+has a concave utility function, this investor
+
+62
+00:03:19,320 --> 00:03:22,620
+goes for a certain outcome with exactly
+
+63
+00:03:22,620 --> 00:03:26,640
+the same expected payoff as less certain outcomes
+
+64
+00:03:26,640 --> 00:03:29,120
+with the same expected payoff.
+

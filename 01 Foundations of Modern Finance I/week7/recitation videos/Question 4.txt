@@ -1,0 +1,70 @@
+
+PROFESSOR: In this question, we will
+learn how to find factor risk premia or factor risk prices.
+Let's consider the following three factor model.
+We are given four well-diversified portfolios--
+A, B, C, and D--
+with the following characteristics.
+So we are given the expected returns and factor loadings
+on all three factors.
+So now, given this information, in particular the returns
+and factor loadings, the goal is to find factor risk
+premia for all three factors.
+
+We can start with APT pricing equation that tells us
+that the expected excess return on a portfolio p
+should equal to the factor risk premia multiplied
+by their factor loadings.
+So for example, in our case, when we have three factor
+model, it's the price of the first factor
+lambda 1 multiplied by the loading on this first factor
+of portfolio p, so beta p1.
+Plus the price of the second risk factor
+multiplied by the loading of this portfolio
+p on the second risk factor, plus the price
+of the third risk factor times the loading.
+So we can write this down specifically for portfolio A.
+So in this case, it's going to be expected return portfolio
+A minus the risk-free rate, equals to, again,
+the prices of the factors multiplied
+by the risk exposure of this portfolio A to these factors.
+So more specifically, we can plug in the numbers
+that we are given in this question.
+So for portfolio A, the expected return was 21.65%.
+And the factor loadings were 0.95 from the first factor,
+1.2 on the second, and 0.85 on the third.
+And now, what we can do, we can write down
+the same exact equations for the remaining three portfolios.
+So here, we have four equations written
+for each of the portfolios.
+And so these are the APT pricing equations.
+And so if we look at this carefully,
+we will see that we have four equations and four unknowns.
+Therefore, we can write down the following system of equations.
+We can write down the system of equations
+in the following matrix form.
+And now, all we have to do is we have
+to solve this equation for the three lambdas, which, again,
+the prices of the three corresponding risk factors
+and the risk-free rate.
+So solving this equation gives us the following numbers.
+So the price of the first risk factor is 6.5%.
+The price of the second risk factor is 10%.
+The price of the third risk factor is 3.5%.
+And the risk-free rate here is 0.5%.
+And this is how you find factor risk
+premia from known expected returns and factor loadings.
+Notice that, in this case, we have a three factor model,
+and we don't know risk-free rate.
+So therefore, we need expected the returns and factor loadings
+on at least four well-diversified portfolios
+to find all the risk premia and the risk-free rate.
+If we were already given the risk-free rate,
+we only needed three well-diversified portfolios
+to find factor risk premia.
+Now, finally, once we know the factor risk
+premia and the risk-free rate in this economy,
+we can price all the other well-diversified portfolios
+as long as we know their factor loadings.
+And knowing the factor loadings and the factor risk premia,
+we should be able to find their expected returns.

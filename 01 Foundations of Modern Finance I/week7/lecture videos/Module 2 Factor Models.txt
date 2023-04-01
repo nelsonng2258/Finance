@@ -1,0 +1,79 @@
+
+PROFESSOR: We now take a closer look
+at the technical details of factor models.
+Let's start with the single-factor model.
+We have a large number of individual assets indexed by i.
+One, two, three, and so forth.
+Returns on these assets are denoted by ri tilde
+to remind us that these are random.
+And the expect returns are denoted by ri bar.
+These returns are driven by a set
+of common or systematic factors and by idiosyncratic shocks.
+We denote systematic factors by capital F.
+These are, for example, shocks to economic growth or shocks
+to the value of the market portfolio and so forth.
+Little f represents the news component of the common factor.
+By definition, little f is equal to the factor value, F,
+minus its expected value, F bar.
+In other words, little f is the demeaned value of the factor.
+Idiosyncratic shock of each asset, epsilon i, by definition
+has zero mean.
+The key assumption that we make for the factor model
+is that idiosyncratic shocks are truly asset-specific,
+which means that they are pairwise uncorrelated
+across all the assets.
+In other words, the covariance of epsilon i
+and epsilon j for two different assets i and j
+has to be equal to zero.
+We now describe a return on any asset
+as a sum of its expected value, ri bar,
+plus the factor, F, times the loading on this factor,
+which is asset-specific, that's b sub i, plus the idiosyncratic
+shock, epsilon i.
+Under this model, the variance of returns on assets i
+consists of two terms.
+The first term reflects the amount of systematic risk
+to which this asset is exposed.
+This component of the variance is
+equal to the square of the factor
+loading times the variance of the factor.
+That's bi squared times sigma F squared.
+The second term in the variance of the asset
+is the idiosyncratic piece.
+This reflects the variance of firm-specific shocks.
+The covariance of returns between two assets, i and j,
+is captured fully by their loadings on the common factor.
+And this is because covariance of idiosyncratic components
+of returns is zero.
+So what we find is that the covariance of returns in assets
+i and j is given by the variance of the factor,
+sigma F squared, times the product of the two factor
+loadings, b sub i and b sub j.
+What we see is that under the factor structure,
+factor exposures determine how much asset returns can
+move with each other.
+And that is because factors describe
+fully the common sources of variation across the assets.
+On top of that, idiosyncratic risk of each asset
+contributes to its own return variance.
+Now, we can generalize our construction
+to the case of multiple factors.
+This is indirect analogy to the single-factor case.
+Again, each asset return is given by its expected value
+plus the systematic component, which is now
+a sum of contributions across multiple common factors
+from one to k, and the idiosyncratic component,
+epsilon i.
+These common factors are going to affect multiple assets.
+Each asset has its own loadings on all of these factors, which
+we call factor betas or factor sensitivities or factor
+loadings.
+And we allow factors to be correlated with each other,
+so we don't make any assumptions about their joint distribution.
+As in the case of a single-factor model,
+we maintain the assumption that idiosyncratic shocks are truly
+asset-specific and their pairwise covariance
+across the assets is zero.
+On top of that, we maintain the assumption
+that our factors are demeaned, so that the expected value
+of each of these factors is zero.

@@ -1,0 +1,117 @@
+
+PROFESSOR: Given a project's cash flow forecasts,
+all we need are the corresponding discount
+rates to compute the NPV.
+For the discount rates, we have learned the following.
+First, the project's discount rate,
+which is also called the required rate of return
+or the cost of capital, is the expected rate
+of return demanded by investors in the market for the project
+and for similar traded assets.
+Second, discount rate depends on the timing and risk
+of the cash flow.
+Thus, in general, it can be different for different pieces
+of a cash flow.
+Third, discount rate is in general different for different
+projects.
+Fourth, it is in general incorrect to use
+a company-wide cost of capital to discount
+cash flows of all projects.
+The cost of capital is project-specific
+and can vary substantially across different projects
+with different risks.
+
+What is the discount rate of a project?
+In the simple case, a single discount rate
+can be used for all cash flows of a project.
+This is mostly an approximation.
+In the general case, we need to use different discount
+rates for different cash flows depending
+on their timing and risk.
+For example, even with safe cash flows, $1 in different years
+should be discounted at different interest rates
+if the term structure of interest rates
+is not flat, as we have learned from the fixed income market.
+We will return to the determination of discount rates
+later by applying the risk analysis and asset pricing
+tools we have been developing.
+But in this lecture, we will use a single discount rate mainly
+for simplicity.
+Often, we face multiple projects.
+As a firm, there are almost unlimited number
+of projects it can take.
+The key is to find the good ones--
+namely, those with positive NPVs.
+For mutually independent projects,
+we can simply apply the NPV rule to each project.
+This implies that we would take up all the projects
+with positive NPVs.
+For projects dependent of each other--
+in particular, mutually exclusive--
+we then have to compare the NPVs and pick the highest one,
+assuming it is positive.
+To illustrate this point, let's consider a simple example.
+
+You have just developed a new product.
+The decision now is when to bring it to the market--
+say, in year one, two, three, or four.
+If we view each choice as the project itself,
+then the timing decision is between a set
+of mutually exclusive projects.
+
+We can launch the project only once.
+
+Several factors can influence the cash flow forecasts
+and the timing decision.
+For example, the demand for the product may increase over time.
+In addition, launching it early will also
+cause your competitors to catch up sooner.
+Let's assume the opportunity cost of capital for the project
+is 10%.
+We can compute the NPV for each launching date
+at the time of launch.
+We denote this by FPV, the project's future present value.
+The numbers are reported in the table.
+If launched in year one, the NPV then is $100 million.
+If instead launched in year two, three, and four,
+the FPV will be $120, $138, and $149 million
+respectively as shown by row two to five in the table.
+Clearly, by waiting, the FPV increases.
+But how long should we wait?
+There are two ways to resolve this.
+First, we can consider the rate of return by waiting.
+If we wait until year two, the value appreciates by 20%
+as shown in the third column of the table.
+If we wait longer, the return will be 15% and 8%
+respectively.
+Are these good returns?
+Well, keep in mind that by waiting,
+we are holding the project as an asset with its risks.
+We also know the cost of capital is
+10%, which is the return on similar assets in the market.
+Therefore, waiting is desirable only
+if it yields a return higher than the cost of capital.
+Column three shows that the return from waiting
+is higher than 10% until year three,
+while waiting from year three to year four is only 8%
+lower than the cost of capital.
+This gives us the optimal time to launch the project, which
+is year three.
+
+Second, we can also compare by discounting
+the FPV of different options back
+to year zero at the cost of capital of 10%.
+That is, to compare the NPV now.
+Column four gives the numbers.
+Clearly, launching in year three gives the highest NPV today.
+Other than being mutually exclusive,
+projects can be dependent in other ways, such as sequential.
+That is, project B is contingent on project A.
+For example, selling advertisement
+through a social network is contingent on building
+the network first.
+Such a dependence is what we called strategic options
+earlier.
+We will return to this topic later in part two
+after developing a better understanding
+on options and effective tools to value them.

@@ -1,0 +1,468 @@
+0
+00:00:00,000 --> 00:00:00,960
+
+
+1
+00:00:00,960 --> 00:00:04,080
+PROFESSOR: Given a project's cash flow forecasts,
+
+2
+00:00:04,080 --> 00:00:06,960
+all we need are the corresponding discount
+
+3
+00:00:06,960 --> 00:00:10,750
+rates to compute the NPV.
+
+4
+00:00:10,750 --> 00:00:14,480
+For the discount rates, we have learned the following.
+
+5
+00:00:14,480 --> 00:00:17,120
+First, the project's discount rate,
+
+6
+00:00:17,120 --> 00:00:19,660
+which is also called the required rate of return
+
+7
+00:00:19,660 --> 00:00:23,290
+or the cost of capital, is the expected rate
+
+8
+00:00:23,290 --> 00:00:28,480
+of return demanded by investors in the market for the project
+
+9
+00:00:28,480 --> 00:00:32,330
+and for similar traded assets.
+
+10
+00:00:32,330 --> 00:00:36,470
+Second, discount rate depends on the timing and risk
+
+11
+00:00:36,470 --> 00:00:38,060
+of the cash flow.
+
+12
+00:00:38,060 --> 00:00:41,750
+Thus, in general, it can be different for different pieces
+
+13
+00:00:41,750 --> 00:00:44,080
+of a cash flow.
+
+14
+00:00:44,080 --> 00:00:48,130
+Third, discount rate is in general different for different
+
+15
+00:00:48,130 --> 00:00:49,960
+projects.
+
+16
+00:00:49,960 --> 00:00:53,700
+Fourth, it is in general incorrect to use
+
+17
+00:00:53,700 --> 00:00:56,640
+a company-wide cost of capital to discount
+
+18
+00:00:56,640 --> 00:00:59,850
+cash flows of all projects.
+
+19
+00:00:59,850 --> 00:01:03,180
+The cost of capital is project-specific
+
+20
+00:01:03,180 --> 00:01:07,015
+and can vary substantially across different projects
+
+21
+00:01:07,015 --> 00:01:07,890
+with different risks.
+
+22
+00:01:07,890 --> 00:01:11,630
+
+
+23
+00:01:11,630 --> 00:01:15,180
+What is the discount rate of a project?
+
+24
+00:01:15,180 --> 00:01:18,120
+In the simple case, a single discount rate
+
+25
+00:01:18,120 --> 00:01:22,240
+can be used for all cash flows of a project.
+
+26
+00:01:22,240 --> 00:01:25,700
+This is mostly an approximation.
+
+27
+00:01:25,700 --> 00:01:28,790
+In the general case, we need to use different discount
+
+28
+00:01:28,790 --> 00:01:32,000
+rates for different cash flows depending
+
+29
+00:01:32,000 --> 00:01:35,210
+on their timing and risk.
+
+30
+00:01:35,210 --> 00:01:41,120
+For example, even with safe cash flows, $1 in different years
+
+31
+00:01:41,120 --> 00:01:44,090
+should be discounted at different interest rates
+
+32
+00:01:44,090 --> 00:01:46,400
+if the term structure of interest rates
+
+33
+00:01:46,400 --> 00:01:51,480
+is not flat, as we have learned from the fixed income market.
+
+34
+00:01:51,480 --> 00:01:55,170
+We will return to the determination of discount rates
+
+35
+00:01:55,170 --> 00:01:59,670
+later by applying the risk analysis and asset pricing
+
+36
+00:01:59,670 --> 00:02:02,490
+tools we have been developing.
+
+37
+00:02:02,490 --> 00:02:06,660
+But in this lecture, we will use a single discount rate mainly
+
+38
+00:02:06,660 --> 00:02:09,910
+for simplicity.
+
+39
+00:02:09,910 --> 00:02:13,750
+Often, we face multiple projects.
+
+40
+00:02:13,750 --> 00:02:16,810
+As a firm, there are almost unlimited number
+
+41
+00:02:16,810 --> 00:02:19,150
+of projects it can take.
+
+42
+00:02:19,150 --> 00:02:22,000
+The key is to find the good ones--
+
+43
+00:02:22,000 --> 00:02:26,170
+namely, those with positive NPVs.
+
+44
+00:02:26,170 --> 00:02:28,720
+For mutually independent projects,
+
+45
+00:02:28,720 --> 00:02:33,690
+we can simply apply the NPV rule to each project.
+
+46
+00:02:33,690 --> 00:02:37,350
+This implies that we would take up all the projects
+
+47
+00:02:37,350 --> 00:02:41,060
+with positive NPVs.
+
+48
+00:02:41,060 --> 00:02:44,600
+For projects dependent of each other--
+
+49
+00:02:44,600 --> 00:02:47,570
+in particular, mutually exclusive--
+
+50
+00:02:47,570 --> 00:02:52,100
+we then have to compare the NPVs and pick the highest one,
+
+51
+00:02:52,100 --> 00:02:55,590
+assuming it is positive.
+
+52
+00:02:55,590 --> 00:02:59,550
+To illustrate this point, let's consider a simple example.
+
+53
+00:02:59,550 --> 00:03:02,060
+
+
+54
+00:03:02,060 --> 00:03:04,720
+You have just developed a new product.
+
+55
+00:03:04,720 --> 00:03:09,130
+The decision now is when to bring it to the market--
+
+56
+00:03:09,130 --> 00:03:14,890
+say, in year one, two, three, or four.
+
+57
+00:03:14,890 --> 00:03:19,390
+If we view each choice as the project itself,
+
+58
+00:03:19,390 --> 00:03:23,380
+then the timing decision is between a set
+
+59
+00:03:23,380 --> 00:03:25,180
+of mutually exclusive projects.
+
+60
+00:03:25,180 --> 00:03:27,990
+
+
+61
+00:03:27,990 --> 00:03:29,930
+We can launch the project only once.
+
+62
+00:03:29,930 --> 00:03:33,130
+
+
+63
+00:03:33,130 --> 00:03:37,420
+Several factors can influence the cash flow forecasts
+
+64
+00:03:37,420 --> 00:03:39,580
+and the timing decision.
+
+65
+00:03:39,580 --> 00:03:45,360
+For example, the demand for the product may increase over time.
+
+66
+00:03:45,360 --> 00:03:48,080
+In addition, launching it early will also
+
+67
+00:03:48,080 --> 00:03:53,510
+cause your competitors to catch up sooner.
+
+68
+00:03:53,510 --> 00:03:57,110
+Let's assume the opportunity cost of capital for the project
+
+69
+00:03:57,110 --> 00:03:59,420
+is 10%.
+
+70
+00:03:59,420 --> 00:04:03,740
+We can compute the NPV for each launching date
+
+71
+00:04:03,740 --> 00:04:05,570
+at the time of launch.
+
+72
+00:04:05,570 --> 00:04:12,610
+We denote this by FPV, the project's future present value.
+
+73
+00:04:12,610 --> 00:04:17,360
+The numbers are reported in the table.
+
+74
+00:04:17,360 --> 00:04:21,890
+If launched in year one, the NPV then is $100 million.
+
+75
+00:04:21,890 --> 00:04:27,350
+If instead launched in year two, three, and four,
+
+76
+00:04:27,350 --> 00:04:34,760
+the FPV will be $120, $138, and $149 million
+
+77
+00:04:34,760 --> 00:04:41,190
+respectively as shown by row two to five in the table.
+
+78
+00:04:41,190 --> 00:04:46,050
+Clearly, by waiting, the FPV increases.
+
+79
+00:04:46,050 --> 00:04:48,760
+But how long should we wait?
+
+80
+00:04:48,760 --> 00:04:53,070
+There are two ways to resolve this.
+
+81
+00:04:53,070 --> 00:04:58,180
+First, we can consider the rate of return by waiting.
+
+82
+00:04:58,180 --> 00:05:02,800
+If we wait until year two, the value appreciates by 20%
+
+83
+00:05:02,800 --> 00:05:06,550
+as shown in the third column of the table.
+
+84
+00:05:06,550 --> 00:05:12,010
+If we wait longer, the return will be 15% and 8%
+
+85
+00:05:12,010 --> 00:05:14,300
+respectively.
+
+86
+00:05:14,300 --> 00:05:16,800
+Are these good returns?
+
+87
+00:05:16,800 --> 00:05:19,650
+Well, keep in mind that by waiting,
+
+88
+00:05:19,650 --> 00:05:25,080
+we are holding the project as an asset with its risks.
+
+89
+00:05:25,080 --> 00:05:26,990
+We also know the cost of capital is
+
+90
+00:05:26,990 --> 00:05:34,080
+10%, which is the return on similar assets in the market.
+
+91
+00:05:34,080 --> 00:05:36,710
+Therefore, waiting is desirable only
+
+92
+00:05:36,710 --> 00:05:41,510
+if it yields a return higher than the cost of capital.
+
+93
+00:05:41,510 --> 00:05:44,990
+Column three shows that the return from waiting
+
+94
+00:05:44,990 --> 00:05:48,790
+is higher than 10% until year three,
+
+95
+00:05:48,790 --> 00:05:53,090
+while waiting from year three to year four is only 8%
+
+96
+00:05:53,090 --> 00:05:56,280
+lower than the cost of capital.
+
+97
+00:05:56,280 --> 00:06:01,040
+This gives us the optimal time to launch the project, which
+
+98
+00:06:01,040 --> 00:06:01,760
+is year three.
+
+99
+00:06:01,760 --> 00:06:04,680
+
+
+100
+00:06:04,680 --> 00:06:07,950
+Second, we can also compare by discounting
+
+101
+00:06:07,950 --> 00:06:10,860
+the FPV of different options back
+
+102
+00:06:10,860 --> 00:06:14,760
+to year zero at the cost of capital of 10%.
+
+103
+00:06:14,760 --> 00:06:19,170
+That is, to compare the NPV now.
+
+104
+00:06:19,170 --> 00:06:22,140
+Column four gives the numbers.
+
+105
+00:06:22,140 --> 00:06:28,520
+Clearly, launching in year three gives the highest NPV today.
+
+106
+00:06:28,520 --> 00:06:30,590
+Other than being mutually exclusive,
+
+107
+00:06:30,590 --> 00:06:36,350
+projects can be dependent in other ways, such as sequential.
+
+108
+00:06:36,350 --> 00:06:41,750
+That is, project B is contingent on project A.
+
+109
+00:06:41,750 --> 00:06:44,330
+For example, selling advertisement
+
+110
+00:06:44,330 --> 00:06:47,960
+through a social network is contingent on building
+
+111
+00:06:47,960 --> 00:06:50,300
+the network first.
+
+112
+00:06:50,300 --> 00:06:54,390
+Such a dependence is what we called strategic options
+
+113
+00:06:54,390 --> 00:06:55,550
+earlier.
+
+114
+00:06:55,550 --> 00:06:59,330
+We will return to this topic later in part two
+
+115
+00:06:59,330 --> 00:07:01,550
+after developing a better understanding
+
+116
+00:07:01,550 --> 00:07:06,040
+on options and effective tools to value them.
+

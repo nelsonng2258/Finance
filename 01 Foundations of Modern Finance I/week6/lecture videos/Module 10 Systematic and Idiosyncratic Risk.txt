@@ -1,0 +1,219 @@
+
+PROFESSOR: We will now introduce our main result, portfolio
+diversification.
+First, let's look at an example before we take a deeper dive
+into the analytics.
+Consider a portfolio of two securities.
+This time we are going to look at two individual stocks, IBM
+and Intel.
+These are both large technology stocks.
+We form a portfolio with equal investments
+in these two securities.
+When we compare the volatilities of individual investments
+on IBM and Intel to that of the portfolio,
+we see that the volatility of portfolio returns
+is lower than either of the two volatilities.
+By combining these two securities
+into a single portfolio, we are able to reduce risk.
+It is now lower than it would have
+been for any one of these two as individual investments.
+This is an example of all one can
+achieve by diversifying risk.
+It is intuitive why the risk of the portfolio
+may be relatively low.
+These two stocks, IBM and Intel, are different companies
+with their own firm-specific risks.
+They have a lot in common.
+They are both technology stocks.
+They're both exposed to macroeconomic news.
+But they also have individual components.
+By combining them into the portfolio,
+we are able to reduce the impact of individual firm-specific
+risk.
+When one of these stocks is up for idiosyncratic reasons,
+the other one may be down.
+This kind of consolidation is what
+enables us to reduce the portfolio risk.
+More formally, we will see that a reduction in portfolio risk
+is based on the covariance of returns between the two assets.
+The following graph illustrates the concept of diversification.
+We start with two securities with identical volatilities,
+35% in this case.
+We make several alternative assumptions
+about the degree of correlation between the two assets.
+One extreme case will be when the correlation
+is perfect, equal to 1.
+Most of the time correlation is imperfect,
+so we look at a few alternative values, 0.5, 0,
+and even a negative number, minus 0.5.
+What we see is that as the correlation between the two
+securities declines, the volatility of the portfolio
+gets progressively lower.
+This illustrates the power of diversification.
+The case of the negative correlation of 0.5
+leads to the largest reduction in risk
+through diversification.
+Now, let's step back and think a bit
+about the limits of diversification as a tool.
+What can we hope to achieve?
+Some of the risks are truly security specific.
+And by combining assets into a portfolio,
+we can hope to reduce the impact of these risks significantly.
+There are certain kinds of risks that are broad,
+that affect multiple assets or perhaps the entire market.
+These types of risks cannot be eliminated through
+diversification.
+As a result, there are two types of risks that we can
+distinguish, diversifiable--
+these are the types of shocks that
+can be eliminated or significantly reduced
+through diversification by forming portfolios--
+and non-diversifiable-- these types of risks
+survive portfolio formation.
+They are present even in well diversified portfolios
+with many assets.
+There are several intuitive examples
+of important non-diversifiable risks,
+for example, business cycle shocks.
+They affect multiple businesses in the same direction.
+As a result, forming a portfolio of stocks
+does not help eliminate exposures
+to business cycle shocks.
+Inflation shocks are another example.
+They affect multiple assets in the same direction.
+A spike in inflation is going to affect a portfolio
+in the same way it affects individual assets.
+Shocks to market liquidity have a similar effect.
+Many securities decline in value when
+market liquidity deteriorates.
+Not all of them do.
+As we will see in other classes, there
+are exceptions to this rule.
+And securities like US Treasuries
+tend to move in the opposite direction.
+What this tells us is that exposure to the common shocks
+largely affects financial assets in the same way.
+But not all of them have identical exposures.
+It's a relatively nuanced picture.
+Nonetheless, it is clear that shocks
+like liquidity shocks, inflation shocks, and business cycle
+shocks are different in nature from firm-specific risks, which
+can be eliminated or reduced by diversification.
+Let's take a closer look at the mechanics of diversification.
+How does it work?
+And what are the limits to what we could
+achieve through this process?
+Consider an equally-weighted portfolio of n securities.
+The covariance matrix of returns has diagonal elements
+denoted by sigma ii--
+these are the individual variances of asset returns--
+and off-diagonal elements, sigma ij,
+which give us covariances of returns,
+asset i versus asset j.
+To compute the variance of the portfolio return,
+we need to sum over all of the elements
+in the covariance matrix multiplied
+by the product of portfolio weights.
+In our special case of the equally-weighted portfolio,
+all portfolio weights are the same.
+They're equal to 1 over n.
+What we see as a result is that the variance
+of portfolio returns is a sum of the diagonal terms.
+Each of them is equal to 1 over n
+squared times the variance of asset i's return
+and the sum of the off-diagonal elements, which
+is the sum of 1 over n squared times sigma ij over all values
+of i and j that are not equal to each other.
+The key observation here is that in a large matrix,
+in a portfolio with many assets, there
+are a lot more off-diagonal elements than there
+are the diagonal elements.
+In fact, in case of n assets in the portfolio,
+there are n squared minus n off-diagonal elements.
+To put it into perspective, in a portfolio of 100 assets,
+there are only 100 diagonal elements.
+And there are almost 10,000 off-diagonal elements--
+9,900 to be precise.
+When we put together all of the terms
+in the expression for the portfolio variance,
+we can see that the expression separates into two terms.
+The first is 1 over n times the average variance
+of individual returns.
+The second term is very close to the average pair-wise
+covariance of returns.
+As the number of assets in the portfolio increases,
+the first term converges towards 0.
+The second term does not disappear.
+In fact, it converges to the average covariance of returns.
+What this result tells us is that in a well-diversified
+portfolio with many assets, variance of portfolio returns
+is determined by the average covariance
+of individual returns rather than
+by their own risk or their own variance.
+This tells us where the limit of the diversification is.
+By forming a large portfolio with many assets
+and diversifying risk, we will be
+able to eliminate firm-specific risk, asset-specific risk.
+And we will be left with the average covariance, which
+captures the contribution of systematic risks, those that
+are common to multiple assets.
+
+To gain further intuition, let's plug
+in some numbers that are typical for empirical distributions
+of asset returns.
+On average, a standard deviation of a stock in the US stock
+market is close to 10% per month.
+A typical number for pair-wise correlations is 40%.
+Using our previous expression, we
+can then compute the average covariance
+of returns in the portfolio.
+The covariance is a product of the correlation coefficient
+and individual return volatilities.
+In our case, this product is equal to 0.004.
+That is the average covariance of returns in the portfolio.
+As we have shown, the variance of a well-diversified portfolio
+is equal to this number, the average covariance of returns,
+which tells us that portfolio volatility is close to 6%.
+
+We can see that by starting with individual assets
+with 10% return volatility and diversifying,
+we are able to eliminate some of the risk.
+We reduce portfolio risk to close to 6%.
+We're not able to reduce it to 0, because some of the risk
+is common to multiple assets.
+But we are able to eliminate a significant fraction of risk
+from the portfolio.
+What if correlation was different?
+What if it was equal to 1 or 0?
+In this case, you would find different limits
+to diversification.
+As you can see from the graph, in the case
+of perfect correlation, or equal to 1,
+diversification does not reduce portfolio risk.
+This is very intuitive.
+Correlation equal to 1 means that all assets move together
+in unison.
+There is no benefit in combining them into a portfolio.
+We cannot reduce the risk.
+Correlation equal to 0 gives us more room to diversify.
+0 correlation means that the covariance of returns
+on any pair of assets is 0.
+And that tells us that in a limit, when
+the number of assets goes to infinity,
+the variance of portfolio returns will converge to 0.
+In this case, we can eliminate all of the risk in the limit
+as the portfolio grows in the number of assets.
+The curve in the middle is the case that we just explored,
+average correlation equal to 0.4.
+You can see that in this case, some of the portfolio risk
+can be eliminated through diversification.
+And some of it is left.
+Whatever is left is what we call systematic non-diversifiable
+risk.
+Another lesson from this graph is
+that it doesn't take many assets to reduce risk of the portfolio
+significantly.
+Starting from a single investment
+and moving to 4 or 10 or 20 assets in the portfolio,
+we can realize most of the benefits of diversification.
+Going past 50 or 100 assets has little additional benefit.

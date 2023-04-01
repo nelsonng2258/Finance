@@ -1,0 +1,556 @@
+0
+00:00:00,000 --> 00:00:00,850
+
+
+1
+00:00:00,850 --> 00:00:03,520
+PROFESSOR: We will now discuss the empirical implementation
+
+2
+00:00:03,520 --> 00:00:08,250
+of APT and consider a couple of important examples.
+
+3
+00:00:08,250 --> 00:00:13,330
+As we implement APT empirically, we need to take three steps.
+
+4
+00:00:13,330 --> 00:00:18,240
+First, we need to choose or identify the common factors.
+
+5
+00:00:18,240 --> 00:00:21,900
+Common factors are the economic variables, or the mimicking
+
+6
+00:00:21,900 --> 00:00:25,960
+portfolios that we think affect a broad cross-section of asset
+
+7
+00:00:25,960 --> 00:00:27,790
+returns.
+
+8
+00:00:27,790 --> 00:00:30,020
+At that point, we need to make a choice.
+
+9
+00:00:30,020 --> 00:00:34,630
+How many factors to use and which factors are important.
+
+10
+00:00:34,630 --> 00:00:37,330
+There is no clear recipe for this choice.
+
+11
+00:00:37,330 --> 00:00:39,720
+There are several techniques that could be used.
+
+12
+00:00:39,720 --> 00:00:44,410
+You could use prior information about common economic shocks,
+
+13
+00:00:44,410 --> 00:00:46,660
+macro-factors that may be relevant.
+
+14
+00:00:46,660 --> 00:00:48,280
+You could use statistical techniques
+
+15
+00:00:48,280 --> 00:00:51,310
+to help us choose which common factors are
+
+16
+00:00:51,310 --> 00:00:54,220
+important for describing the cross-section of returns
+
+17
+00:00:54,220 --> 00:00:57,300
+and how many of them to use.
+
+18
+00:00:57,300 --> 00:01:00,270
+The choice of the number and the nature of factors
+
+19
+00:01:00,270 --> 00:01:03,640
+is outside of the APT framework itself.
+
+20
+00:01:03,640 --> 00:01:05,850
+So we need to use other considerations
+
+21
+00:01:05,850 --> 00:01:07,840
+to choose the factors.
+
+22
+00:01:07,840 --> 00:01:11,970
+The second step is estimation of factor loadings.
+
+23
+00:01:11,970 --> 00:01:14,430
+We need to use statistical techniques
+
+24
+00:01:14,430 --> 00:01:19,050
+to figure out how various assets load on the common factors.
+
+25
+00:01:19,050 --> 00:01:20,610
+Typically, this is done by running
+
+26
+00:01:20,610 --> 00:01:25,080
+a time-series regression of portfolio returns
+
+27
+00:01:25,080 --> 00:01:27,360
+on the factors.
+
+28
+00:01:27,360 --> 00:01:31,130
+The third step is to estimate risk premia.
+
+29
+00:01:31,130 --> 00:01:35,300
+We do this usually by regressing returns
+
+30
+00:01:35,300 --> 00:01:38,750
+on various assets on the factor loadings.
+
+31
+00:01:38,750 --> 00:01:40,880
+This kind of cross-sectional regression
+
+32
+00:01:40,880 --> 00:01:43,940
+reveals the compensation for exposure
+
+33
+00:01:43,940 --> 00:01:46,360
+to each individual factor.
+
+34
+00:01:46,360 --> 00:01:49,420
+At the end, we end up with an assessment of which factors
+
+35
+00:01:49,420 --> 00:01:53,230
+are important for describing the cross-section of returns
+
+36
+00:01:53,230 --> 00:01:59,270
+and how much compensation is earned by various risk factors.
+
+37
+00:01:59,270 --> 00:02:02,720
+As the first example of the implementation of APT,
+
+38
+00:02:02,720 --> 00:02:05,660
+consider a macro-factor model.
+
+39
+00:02:05,660 --> 00:02:08,750
+This was the model developed by Chen, Roll, and Ross
+
+40
+00:02:08,750 --> 00:02:12,270
+in the 1986 article.
+
+41
+00:02:12,270 --> 00:02:15,990
+In this model, they have several common factors.
+
+42
+00:02:15,990 --> 00:02:17,850
+In addition to the market factor,
+
+43
+00:02:17,850 --> 00:02:21,180
+they consider a number of macroeconomic factors
+
+44
+00:02:21,180 --> 00:02:24,600
+such as shocks in industrial production,
+
+45
+00:02:24,600 --> 00:02:28,680
+changes in expected and unexpected inflation,
+
+46
+00:02:28,680 --> 00:02:31,860
+as well as changes in the risk premium, which they
+
+47
+00:02:31,860 --> 00:02:36,150
+proxy by the difference in returns between bonds rated
+
+48
+00:02:36,150 --> 00:02:38,820
+Baa and lower and long-term government
+
+49
+00:02:38,820 --> 00:02:43,880
+bonds and unexpected changes in the term premium which
+
+50
+00:02:43,880 --> 00:02:47,120
+are the differences in returns between long-term government
+
+51
+00:02:47,120 --> 00:02:49,670
+bonds and T-bills.
+
+52
+00:02:49,670 --> 00:02:55,740
+The data sample covers the period from 1953 to 1984.
+
+53
+00:02:55,740 --> 00:02:59,820
+The next step in the analysis is to estimate betas
+
+54
+00:02:59,820 --> 00:03:03,000
+on the asset of diversifiable portfolios.
+
+55
+00:03:03,000 --> 00:03:06,840
+The portfolios they choose are equity portfolios
+
+56
+00:03:06,840 --> 00:03:10,950
+sorted on the market capitalization of the stocks.
+
+57
+00:03:10,950 --> 00:03:13,590
+They construct 20 portfolios, starting
+
+58
+00:03:13,590 --> 00:03:16,130
+from the 5% of the smallest firms
+
+59
+00:03:16,130 --> 00:03:20,930
+and going all the way up to the 5% of the largest firms.
+
+60
+00:03:20,930 --> 00:03:23,530
+They run a time series regression
+
+61
+00:03:23,530 --> 00:03:26,860
+of returns on each of these portfolios
+
+62
+00:03:26,860 --> 00:03:29,720
+on the corresponding factors.
+
+63
+00:03:29,720 --> 00:03:33,410
+In this regression, they use five years of monthly data
+
+64
+00:03:33,410 --> 00:03:37,640
+to estimate the current value of de facto loadings for each
+
+65
+00:03:37,640 --> 00:03:39,970
+of these portfolios.
+
+66
+00:03:39,970 --> 00:03:42,250
+As a result of this analysis, they
+
+67
+00:03:42,250 --> 00:03:47,500
+obtain estimates of factor betas for each of the factors,
+
+68
+00:03:47,500 --> 00:03:51,440
+for each of the portfolios in the data set each month.
+
+69
+00:03:51,440 --> 00:03:55,460
+Next, the paper estimates factor risk premia.
+
+70
+00:03:55,460 --> 00:03:58,410
+We have 20 diversified portfolios based
+
+71
+00:03:58,410 --> 00:04:01,470
+on the market cap of the firms.
+
+72
+00:04:01,470 --> 00:04:03,030
+For each of these portfolios we have
+
+73
+00:04:03,030 --> 00:04:07,540
+estimates of the factor loadings for each of the factors.
+
+74
+00:04:07,540 --> 00:04:11,190
+So each month we run the cross-sectional regression
+
+75
+00:04:11,190 --> 00:04:14,880
+of portfolio returns on the corresponding factor loadings.
+
+76
+00:04:14,880 --> 00:04:17,399
+
+
+77
+00:04:17,399 --> 00:04:21,810
+The slope, coefficients in this regression, the lambdas
+
+78
+00:04:21,810 --> 00:04:25,080
+estimate the factor risk premia.
+
+79
+00:04:25,080 --> 00:04:27,690
+After running this regression each month,
+
+80
+00:04:27,690 --> 00:04:30,180
+we average the results across time
+
+81
+00:04:30,180 --> 00:04:33,870
+to find an estimate of the average risk premium associated
+
+82
+00:04:33,870 --> 00:04:37,450
+with each of the factors.
+
+83
+00:04:37,450 --> 00:04:40,420
+The result of this analysis is that all
+
+84
+00:04:40,420 --> 00:04:44,740
+of the economic factors used in the model appear to be priced.
+
+85
+00:04:44,740 --> 00:04:47,470
+There is a compensation attached to exposures
+
+86
+00:04:47,470 --> 00:04:50,780
+to all of these factors.
+
+87
+00:04:50,780 --> 00:04:55,550
+We also see that various factors have different prices of risk.
+
+88
+00:04:55,550 --> 00:04:57,340
+And in fact, they are different inside.
+
+89
+00:04:57,340 --> 00:04:58,870
+Some of them are positive.
+
+90
+00:04:58,870 --> 00:05:01,150
+Others are negative.
+
+91
+00:05:01,150 --> 00:05:05,380
+The APT model itself does not tell us how and why these risk
+
+92
+00:05:05,380 --> 00:05:07,120
+premia are determined.
+
+93
+00:05:07,120 --> 00:05:08,920
+Why is it that one of the factors
+
+94
+00:05:08,920 --> 00:05:11,110
+has a large positive risk premium?
+
+95
+00:05:11,110 --> 00:05:13,680
+And the other has a negative risk premium?
+
+96
+00:05:13,680 --> 00:05:16,540
+To understand where these risk premia are coming from,
+
+97
+00:05:16,540 --> 00:05:19,990
+we need to think about the economics of risk exposures
+
+98
+00:05:19,990 --> 00:05:22,630
+and how they're compensated in the market.
+
+99
+00:05:22,630 --> 00:05:25,690
+Again, the APT as a pricing model
+
+100
+00:05:25,690 --> 00:05:28,690
+is not concerned with the sources of risk premia.
+
+101
+00:05:28,690 --> 00:05:32,470
+It simply tells us that expected excess returns
+
+102
+00:05:32,470 --> 00:05:35,230
+on various portfolios of various assets
+
+103
+00:05:35,230 --> 00:05:37,430
+have to be consistent with each other.
+
+104
+00:05:37,430 --> 00:05:40,420
+They have to be consistent with the factor risk premia.
+
+105
+00:05:40,420 --> 00:05:44,410
+Where these premia are coming from is outside of the model.
+
+106
+00:05:44,410 --> 00:05:48,250
+Having said that, we can make some sense of the magnitude,
+
+107
+00:05:48,250 --> 00:05:51,160
+and in particular the sign of the risk premia
+
+108
+00:05:51,160 --> 00:05:53,930
+associated with different factors.
+
+109
+00:05:53,930 --> 00:05:57,310
+For example, if we look at the Industrial production, that's
+
+110
+00:05:57,310 --> 00:05:59,680
+the MP factor in the model, we see
+
+111
+00:05:59,680 --> 00:06:03,400
+that the risk premium for this factor is positive.
+
+112
+00:06:03,400 --> 00:06:06,460
+What this means is that the securities that
+
+113
+00:06:06,460 --> 00:06:09,400
+tend to fall in value at a time when there
+
+114
+00:06:09,400 --> 00:06:11,980
+is a negative shock to industrial production
+
+115
+00:06:11,980 --> 00:06:15,080
+tend to earn relatively higher returns.
+
+116
+00:06:15,080 --> 00:06:17,030
+This is fairly intuitive.
+
+117
+00:06:17,030 --> 00:06:19,940
+The times when industrial production declines
+
+118
+00:06:19,940 --> 00:06:23,390
+are usually the times of economic downturns.
+
+119
+00:06:23,390 --> 00:06:25,700
+And assets that lose value precisely
+
+120
+00:06:25,700 --> 00:06:29,290
+at the same time when the entire economy is not doing well
+
+121
+00:06:29,290 --> 00:06:30,980
+are less desirable.
+
+122
+00:06:30,980 --> 00:06:34,700
+They have to earn a relatively high average rate of return
+
+123
+00:06:34,700 --> 00:06:39,520
+to compensate their investors for holding that kind of risk.
+
+124
+00:06:39,520 --> 00:06:42,910
+We can think in a similar way about exposures
+
+125
+00:06:42,910 --> 00:06:45,460
+to other kinds of risk factors and why
+
+126
+00:06:45,460 --> 00:06:48,820
+they're compensated positively or negatively with their risk
+
+127
+00:06:48,820 --> 00:06:51,570
+premia.
+
+128
+00:06:51,570 --> 00:06:53,820
+We observe another important result here
+
+129
+00:06:53,820 --> 00:06:56,490
+that the market factor, the first factor
+
+130
+00:06:56,490 --> 00:07:00,300
+in the table, that's the value weighted portfolio of stocks,
+
+131
+00:07:00,300 --> 00:07:03,120
+doesn't seem to be priced after we control
+
+132
+00:07:03,120 --> 00:07:06,680
+for the other economic factors.
+
+133
+00:07:06,680 --> 00:07:11,060
+What this means is that whatever economic shocks are driving
+
+134
+00:07:11,060 --> 00:07:13,040
+the market portfolio, it seems to be
+
+135
+00:07:13,040 --> 00:07:16,500
+captured by the other factors in the model.
+
+136
+00:07:16,500 --> 00:07:19,760
+And after controlling for the exposure to the other factors,
+
+137
+00:07:19,760 --> 00:07:22,190
+exposure to the market is not compensated
+
+138
+00:07:22,190 --> 00:07:24,760
+with an additional risk premium.
+

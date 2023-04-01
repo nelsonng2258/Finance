@@ -1,0 +1,56 @@
+
+PROFESSOR: Next, we discuss estimation
+of factor risk premia.
+How can we learn about prices of risk
+associated with the various systematic factors.
+APT relation tells us that the risk premia
+on various diversified portfolios
+are based on their effect to exposures and their associated
+prices of risk.
+We can therefore use market returns,
+market prices to recover the implied risk
+premia which are attached to all of these systematic factors.
+To see how this can be done, consider the following example.
+Suppose we have two common factors.
+As before, it's a shock to economic growth
+and a shock to energy prices.
+We start with the APT relation, that the risk premium
+is a linear combination of factor loadings weighted
+by prices of risk.
+Now, suppose we observe two well-diversified portfolios,
+A and B. The expected returns on these portfolios
+are 12% and 10%, respectively.
+And the risk-free interest rate is 2%.
+The factor loadings for portfolio A
+are 1 on the growth shock and 1.25 on the energy shock.
+And for portfolio B, it's 2 on the growth shock and minus 0.5
+the energy shock.
+We want to use this data to recover
+factor risk premia for the growth shock and the energy
+shock.
+The APT relation tells us that the expected excess return
+on asset A, which is 12% minus 2%
+is equal to its loading on the growth shock, which
+is 1, times the price of risk of the shock, which is unknown,
+that's lambda of the growth shock,
+plus 1.25, which is the loading on the energy shock,
+times the price of risk of that shock.
+That gives us one equation that relates risk premia on the two
+factors to the expected excess return of portfolio A.
+We do the same for portfolio B and obtain a second relation.
+We have a system of two equations
+on the two unknown prices of risk that you can solve.
+And we find the unique solution.
+The risk premium associated with the energy shock is 4%.
+And the risk premium on the growth shock is 5%.
+To avoid arbitrage, all other portfolios
+must have expected returns consistent with these factor
+risk premia.
+For example, if we have a third portfolio, portfolio C,
+with a growth loading of one and the energy shock
+loading of 0.5, then the risk premium on this portfolio
+has to be equal to 1 times the premium on the growth shock,
+plus 0.5 times the premium on the energy shock, or 7%.
+What we see is that the risk premia associated
+with the various risk factors can
+be recovered from risk premia on well-diversified portfolios.

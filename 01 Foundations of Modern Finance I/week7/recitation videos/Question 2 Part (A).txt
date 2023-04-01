@@ -1,0 +1,83 @@
+
+PROFESSOR: In this question, we will
+work with a large portfolio of stocks
+with the goal to understand what happens to the idiosyncratic,
+the risk of a portfolio as the number of stocks
+in the portfolio increases.
+We will start with a portfolio that consists of 30 stocks.
+We will work with in the framework of a two factor
+model.
+And we have the following factor loadings and standard deviation
+of idiosyncratic risk for individual assets for these 30
+stocks.
+So the factor loading on the first factor, beta 1,
+for each of the assets, for each of the 30 stocks, equals to 1.
+Now the factor loading on the second factor for these 30
+stocks will differ.
+So for the first 10 stocks, from i from 1 to 10,
+the factor loading will be 1.
+For the next 10 stocks, from i equals to 11 to 20,
+the vector loading will be 1.6.
+And for the remaining 10 stocks from 21 to 30,
+the factor loading on the second factor will be 2.1.
+This is the idiosyncratic risk of our individual stocks.
+For the first 10 stocks, idiosyncratic standard
+deviation is 5%.
+For the next 10 stocks, from 11 to 20, it's 6%.
+And for the remaining 10 stocks, it is 8%.
+So first, what we will do here is
+that we'll form an equally weighted portfolio out
+of these 10 stocks.
+And in the first question, we'll try
+to understand what are the factor
+loadings on factor 1 and 2, in this equally
+weighted portfolio.
+Let's compute factor loadings of this equally
+weighted portfolio.
+Let's start with the factor loading 1 or beta 1,
+of portfolio p.
+By definition, this is just the weighted average
+of betas of individual assets in our portfolio.
+The weights are the weights of each of the individual assets
+in the portfolio.
+So all of our w's, would just simply equal to 1 over n1,
+where n1 is the number of stocks, 30,
+because we're working with equally weighted portfolios.
+And so therefore, this expression
+becomes just the sum from 1 all the way to 30
+to the number of stocks, 1 over n1,
+which is the weight of each individual stock, multiplied
+by the beta of individual stocks in this portfolio.
+Now recall that of beta, all of the loadings,
+so if individual stocks on factor 1,
+is just simply equal to 1.
+So all of this beta i1, they're equal to 1.
+And so therefore, the sum becomes just this.
+So we're adding up from 1 to 30, 1 over 30.
+So this just gives us 1.
+And you could see that this is very intuitive
+because each individual stock is beta
+that it goes to 1 with respect to the first factor.
+So for equally weighted portfolio,
+for that matter, for any portfolio that we form out
+of these assets, the beta, 1, of this portfolio
+will always be equal to 1, just because individual assets, all
+of them have betas equal to 1.
+Now for beta 2 of the portfolio is
+going to be a little bit different
+because individual stocks have different loadings
+on the second factor here.
+So let's compute it.
+Same expression, this is just definition.
+Equally weighted portfolio, so all of our wi's are 1 over n1.
+And now we are adding up all of these beta, i2.
+So we have 10 stocks for which beta i2 is 1.
+So 10 times 1.
+The other 10 stocks of which beta 2 is 1.6.
+So 10 times 1.6 plus 10 times 2.1.
+So this is the beta for the last 30 stocks in this portfolio.
+So if we add up all this, we divided by 30.
+Again, so this is the number of stocks.
+So this expression would equal to 1.57.
+So the loading on the second factor of this portfolio p,
+equally weighted portfolio, would equal to 1.57.

@@ -1,0 +1,180 @@
+0
+00:00:00,000 --> 00:00:00,830
+
+
+1
+00:00:00,830 --> 00:00:03,500
+PROFESSOR: Let's find idiosyncratic volatility
+
+2
+00:00:03,500 --> 00:00:06,260
+of an equally weighted portfolio.
+
+3
+00:00:06,260 --> 00:00:09,190
+So we're after standard deviation of epsilon P
+
+4
+00:00:09,190 --> 00:00:10,722
+and we'll start with the variance
+
+5
+00:00:10,722 --> 00:00:12,430
+and then we'll take the square root of it
+
+6
+00:00:12,430 --> 00:00:14,600
+to find the standard deviation.
+
+7
+00:00:14,600 --> 00:00:16,990
+So let's start with the variance.
+
+8
+00:00:16,990 --> 00:00:19,810
+By definition since idiosyncratic risks
+
+9
+00:00:19,810 --> 00:00:23,890
+of individual assets are uncorrelated,
+
+10
+00:00:23,890 --> 00:00:28,600
+the variance or idiosyncratic risk of the portfolio P
+
+11
+00:00:28,600 --> 00:00:31,960
+would equal to the sum of the individual idiosyncratic
+
+12
+00:00:31,960 --> 00:00:36,640
+variances of each individual stocks, multiplied
+
+13
+00:00:36,640 --> 00:00:40,360
+by the squared weights that we have in the portfolio.
+
+14
+00:00:40,360 --> 00:00:44,760
+And so recall that again, all Wis are just 1 over 30,
+
+15
+00:00:44,760 --> 00:00:51,390
+or 1 over n1, and so therefore, each of these wi squared, which
+
+16
+00:00:51,390 --> 00:00:54,610
+is equal to 1 over n1 squared.
+
+17
+00:00:54,610 --> 00:00:57,450
+And now what we are left with is just
+
+18
+00:00:57,450 --> 00:01:02,137
+the sum of idiosyncratic variances of individual stocks.
+
+19
+00:01:02,137 --> 00:01:03,220
+And this is the structure.
+
+20
+00:01:03,220 --> 00:01:05,303
+So the first 10 stocks have the standard deviation
+
+21
+00:01:05,303 --> 00:01:08,620
+of 5%, idiosyncratic standard deviation of 5%.
+
+22
+00:01:08,620 --> 00:01:13,300
+The next 10 stocks 6% and the remaining 10 stocks 8%.
+
+23
+00:01:13,300 --> 00:01:15,700
+So if we add up all of them.
+
+24
+00:01:15,700 --> 00:01:19,350
+So we get 10 times 5% squared, so this is the variance
+
+25
+00:01:19,350 --> 00:01:21,570
+of these first 10 stocks.
+
+26
+00:01:21,570 --> 00:01:24,660
+Then 10 times 6% squared, so this is the total variance
+
+27
+00:01:24,660 --> 00:01:26,820
+of the second stocks.
+
+28
+00:01:26,820 --> 00:01:30,810
+And then 10 times 8% squared, so this is the variance
+
+29
+00:01:30,810 --> 00:01:33,480
+of the remaining 10 stocks.
+
+30
+00:01:33,480 --> 00:01:37,800
+Again, so n1 equals t0 30, so 1 over 30 squared,
+
+31
+00:01:37,800 --> 00:01:42,610
+putting this all together gives us 0.00014.
+
+32
+00:01:42,610 --> 00:01:45,600
+And so this is the variance or idiosyncratic variance
+
+33
+00:01:45,600 --> 00:01:47,850
+of this portfolio P.
+
+34
+00:01:47,850 --> 00:01:49,870
+To find the standard deviation, we're
+
+35
+00:01:49,870 --> 00:01:53,190
+just taking the square root of this number that we found here
+
+36
+00:01:53,190 --> 00:01:55,500
+and we get number 1.18%.
+
+37
+00:01:55,500 --> 00:01:59,370
+So the idiosyncratic volatility of this equally
+
+38
+00:01:59,370 --> 00:02:02,610
+weighted portfolio P equals to 1.18%.
+
+39
+00:02:02,610 --> 00:02:06,270
+Notice how much lower it is compared
+
+40
+00:02:06,270 --> 00:02:09,330
+to the individual idiosyncratic variances
+
+41
+00:02:09,330 --> 00:02:10,860
+of each individual assets.
+
+42
+00:02:10,860 --> 00:02:13,950
+The lowest one is 5% and so this portfolio right now
+
+43
+00:02:13,950 --> 00:02:17,040
+has very low variance, idiosyncratic variance
+
+44
+00:02:17,040 --> 00:02:19,190
+of just 1.18%.
+

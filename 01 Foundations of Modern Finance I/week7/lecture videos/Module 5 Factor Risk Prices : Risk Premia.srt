@@ -1,0 +1,224 @@
+0
+00:00:00,000 --> 00:00:00,930
+
+
+1
+00:00:00,930 --> 00:00:03,120
+PROFESSOR: Next, we discuss estimation
+
+2
+00:00:03,120 --> 00:00:05,370
+of factor risk premia.
+
+3
+00:00:05,370 --> 00:00:08,160
+How can we learn about prices of risk
+
+4
+00:00:08,160 --> 00:00:12,850
+associated with the various systematic factors.
+
+5
+00:00:12,850 --> 00:00:15,550
+APT relation tells us that the risk premia
+
+6
+00:00:15,550 --> 00:00:17,980
+on various diversified portfolios
+
+7
+00:00:17,980 --> 00:00:21,970
+are based on their effect to exposures and their associated
+
+8
+00:00:21,970 --> 00:00:24,250
+prices of risk.
+
+9
+00:00:24,250 --> 00:00:27,160
+We can therefore use market returns,
+
+10
+00:00:27,160 --> 00:00:30,520
+market prices to recover the implied risk
+
+11
+00:00:30,520 --> 00:00:35,500
+premia which are attached to all of these systematic factors.
+
+12
+00:00:35,500 --> 00:00:39,370
+To see how this can be done, consider the following example.
+
+13
+00:00:39,370 --> 00:00:42,250
+Suppose we have two common factors.
+
+14
+00:00:42,250 --> 00:00:44,770
+As before, it's a shock to economic growth
+
+15
+00:00:44,770 --> 00:00:47,870
+and a shock to energy prices.
+
+16
+00:00:47,870 --> 00:00:51,260
+We start with the APT relation, that the risk premium
+
+17
+00:00:51,260 --> 00:00:54,740
+is a linear combination of factor loadings weighted
+
+18
+00:00:54,740 --> 00:00:57,590
+by prices of risk.
+
+19
+00:00:57,590 --> 00:01:00,730
+Now, suppose we observe two well-diversified portfolios,
+
+20
+00:01:00,730 --> 00:01:05,550
+A and B. The expected returns on these portfolios
+
+21
+00:01:05,550 --> 00:01:08,940
+are 12% and 10%, respectively.
+
+22
+00:01:08,940 --> 00:01:13,850
+And the risk-free interest rate is 2%.
+
+23
+00:01:13,850 --> 00:01:16,260
+The factor loadings for portfolio A
+
+24
+00:01:16,260 --> 00:01:22,650
+are 1 on the growth shock and 1.25 on the energy shock.
+
+25
+00:01:22,650 --> 00:01:28,350
+And for portfolio B, it's 2 on the growth shock and minus 0.5
+
+26
+00:01:28,350 --> 00:01:30,680
+the energy shock.
+
+27
+00:01:30,680 --> 00:01:33,150
+We want to use this data to recover
+
+28
+00:01:33,150 --> 00:01:36,830
+factor risk premia for the growth shock and the energy
+
+29
+00:01:36,830 --> 00:01:38,730
+shock.
+
+30
+00:01:38,730 --> 00:01:43,500
+The APT relation tells us that the expected excess return
+
+31
+00:01:43,500 --> 00:01:47,250
+on asset A, which is 12% minus 2%
+
+32
+00:01:47,250 --> 00:01:50,940
+is equal to its loading on the growth shock, which
+
+33
+00:01:50,940 --> 00:01:55,500
+is 1, times the price of risk of the shock, which is unknown,
+
+34
+00:01:55,500 --> 00:01:58,200
+that's lambda of the growth shock,
+
+35
+00:01:58,200 --> 00:02:02,610
+plus 1.25, which is the loading on the energy shock,
+
+36
+00:02:02,610 --> 00:02:05,420
+times the price of risk of that shock.
+
+37
+00:02:05,420 --> 00:02:10,820
+That gives us one equation that relates risk premia on the two
+
+38
+00:02:10,820 --> 00:02:15,450
+factors to the expected excess return of portfolio A.
+
+39
+00:02:15,450 --> 00:02:19,620
+We do the same for portfolio B and obtain a second relation.
+
+40
+00:02:19,620 --> 00:02:21,780
+We have a system of two equations
+
+41
+00:02:21,780 --> 00:02:25,680
+on the two unknown prices of risk that you can solve.
+
+42
+00:02:25,680 --> 00:02:27,780
+And we find the unique solution.
+
+43
+00:02:27,780 --> 00:02:32,370
+The risk premium associated with the energy shock is 4%.
+
+44
+00:02:32,370 --> 00:02:36,890
+And the risk premium on the growth shock is 5%.
+
+45
+00:02:36,890 --> 00:02:40,130
+To avoid arbitrage, all other portfolios
+
+46
+00:02:40,130 --> 00:02:43,010
+must have expected returns consistent with these factor
+
+47
+00:02:43,010 --> 00:02:44,510
+risk premia.
+
+48
+00:02:44,510 --> 00:02:48,730
+For example, if we have a third portfolio, portfolio C,
+
+49
+00:02:48,730 --> 00:02:52,040
+with a growth loading of one and the energy shock
+
+50
+00:02:52,040 --> 00:02:55,940
+loading of 0.5, then the risk premium on this portfolio
+
+51
+00:02:55,940 --> 00:03:00,950
+has to be equal to 1 times the premium on the growth shock,
+
+52
+00:03:00,950 --> 00:03:08,220
+plus 0.5 times the premium on the energy shock, or 7%.
+
+53
+00:03:08,220 --> 00:03:11,310
+What we see is that the risk premia associated
+
+54
+00:03:11,310 --> 00:03:13,470
+with the various risk factors can
+
+55
+00:03:13,470 --> 00:03:19,160
+be recovered from risk premia on well-diversified portfolios.
+

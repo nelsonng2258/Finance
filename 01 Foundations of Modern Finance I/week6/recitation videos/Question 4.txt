@@ -1,0 +1,308 @@
+
+PROFESSOR: In this question, we will
+work with historical returns, and we will learn how
+to compute measure statistics--
+means, standard deviations, and correlations.
+We will work with the following three exchange-traded funds--
+Vanguard Total Stock Market ETF, iShares 20+ Year Treasury Bond
+ETF, and Vanguard FTSE Emerging Markets ETF.
+Our sample will consist of monthly returns
+and will cover the last decade, January 2010
+through December 2019.
+Before we go ahead and compute statistics,
+let me first tell you a few interesting facts
+about these exchange-traded funds.
+
+This is an example of a fact sheet for Vanguard Total Stock
+Market ETF.
+It shows a few interesting statistics.
+First, it shows the number of stocks currently traded
+on the US exchanges.
+This number is 3,535 stocks.
+An interesting fact is that the number of publicly traded firms
+in the United States has been declining over the past decade.
+Second, we can see sector breakdown of the US economy.
+Technology comprises a quarter of all publicly traded stocks
+in the US.
+Financial is in the second place,
+health care in the third.
+And, finally, here we can see the largest stocks
+in the United States.
+As of March 31, 2020, Microsoft was first, Apple second.
+Amazon, Alphabet, and Facebook are the third, fourth,
+and fifth.
+Second ETF is a 20-plus year treasury bond ETF.
+This ETF invests in long treasury bonds.
+You can see that all of the top holdings
+consist of treasury bond.
+These are the bonds that at the time of issuance
+have 30 years until maturity.
+If you look at the current portfolio of holdings
+as of July 9, 2020, these are the different maturities
+on these long bonds that comprise
+the portfolio of this ETF.
+And, indeed, you can see that all of them
+have more than 20 years to maturity.
+Finally, the last ETF is the emerging markets ETF.
+Here some of the interesting statistics
+come from composition of countries in this ETF.
+So you can see that China has almost 50%
+of the entire holdings of this ETF,
+followed by Taiwan, India, Brazil, South Africa, Russia,
+and so forth.
+You can see that sectoral breakdown in emerging markets
+is a little different compared to the United States.
+The first sector that has more than quarter of all holdings
+is financials, followed by technology, consumer services,
+industrials, and consumer goods.
+Now that we have some color on these ETFs,
+let's start working with data and compute basic statistics.
+This is the data file that gives us monthly returns,
+so it starts from January 2010 and goes all the way
+to December 2019.
+The numbers in this file are percentage returns.
+For example, in January 2010, VTI had a negative 3.5% return.
+And so all of these numbers that are given here
+are just percentages.
+Let's start with sample mean.
+Here I provide formulas so that we can easily
+see what is it that we're trying to compute.
+I will try to use directly the formulas and compute by hand
+these statistics, and then I will show you
+shortcuts and some of the formulas in Excel
+that allow to compute some of these basic statistics
+but more easily.
+So let's start with the sample mean.
+Sample mean, by definition, is just
+the sum of all returns divided by the number of these returns.
+So I'll first compute it by hand.
+So I will say sample mean here, and I will first
+add up all of the returns, for example, for VTI.
+So this is the sum of all the returns.
+And then I will divide it by the number of observations
+that we have here.
+So the number of observations we have is we
+have 10 years and monthly returns, so it's 120.
+So if we divide this by 120, this
+will be the mean return that we had on VTI during the sample
+period.
+Now, another way to compute sample mean
+is just to use average function in Excel.
+So if we do this, we'd get exactly the same answer.
+So we can see that the return is exactly the same.
+So from now on, I will just use the average function
+to compute returns.
+So I'll say average here, and I will extend this
+to the other two ETFs.
+
+So here we can see the following.
+The average monthly return on the US entire stock
+market on this ETF is 1.12% per month during this time period.
+The long bond, the TLT ETF, the average return
+was 0.65%, which is perhaps higher
+than you would have thought because this
+is a fixed-income instrument issued by the government.
+And, finally, emerging markets produced 0.4% monthly return,
+which is, during this sample period,
+significantly below the monthly return that was produced
+by the US stock market.
+
+Now, next, let's compute sample variance and then
+standard deviation.
+So, first, this is just a reminder
+of the formula for the sample variance.
+And I will compute it first by just using this formula
+directly just to show you how to do this by hand in Excel.
+So you can see that we first have
+to take the difference between the returns
+and the sample mean, square it for every month,
+then add it all up, and then divide it by t minus 1.
+So what I will do here--
+I'll just create another column for now.
+And what I will do is that I will compute this difference
+and square them.
+So I'll take this, minus the sample
+mean that I just computed, and I will square it.
+
+I will extend this array.
+Now I will add up these numbers that I just computed,
+the squared differences.
+And then I will divide this number by 119
+because, remember, we have 120 observations here.
+So 120 minus 1 is 119.
+119, by the way.
+So we are subtracting 1 because we already
+estimated one statistic, which is the sample mean,
+so we are losing one degree of freedom.
+And so this would be the sample variance of returns here.
+If I wanted to take the standard deviation,
+I will take the square root of this.
+So I will say square root of this number.
+And this will be the sample standard deviation of returns.
+Now, of course, there is a simpler way
+of doing this in Excel.
+So there is a function that does it for us.
+So it's called STDEV, that's standard deviation,
+dot S. So this is the sample one that
+actually divides by t minus 1.
+So if I do this and if I take all of the returns here,
+next let's compute sample variance.
+I will create some workspace for me here.
+And the first thing that I would like to do
+is I would like to use directly the formula
+to compute the sample variance.
+So I'll take the differences between monthly returns
+and the estimated sample mean.
+I will square them.
+I will add them up, and then I will divide it by t minus 1.
+So I will do it here.
+So I'll take the difference between a return
+in the given month minus the estimated sample mean.
+
+And I will square this difference.
+
+Now I will add up and sum up all of the squared differences.
+
+And then I will divide this number by t minus 1.
+So t in our case is 120.
+Minus 1 is 119.
+We are, by the way, dividing it by t minus 1
+because we already used this data to estimate sample mean.
+So we're losing one degree of freedom
+when we're estimating the second moment of the variance here.
+And so this number right now, so 13.873,
+this is sample variance.
+For us to get sample standard deviation,
+I'm just taking the square root of this variance.
+And this is the number right now.
+Now, there is, of course, much easier way in Excel
+to do the same calculation.
+So all I have to do is that I can use STDEV.S function.
+So this is the function that computes sample standard
+deviation.
+So if I do this and I just simply take
+the old area of returns, I hit Enter,
+I get exactly the same number.
+So the standard deviation of returns on VTI is 3.725%.
+And so now I'll just delete this here.
+I showed you how to compute this.
+Now we can just directly use this function
+for the rest of the ETFs.
+So I will say this is sample standard deviation.
+
+And since we computed this for VTI,
+we can extend this to compute it for the other two ETFs.
+So, very interestingly, you can see that the sample standard
+deviation for the long bond ETF is
+almost the same as for the stock market in the United States.
+So the returns on long bond are quite volatile.
+And, again, you can also see that the standard deviation
+on the returns on the emerging market
+is actually quite a bit higher than the standard deviation
+of returns in the United States.
+Now, finally, let's compute covariance.
+I'll first compute, again, covariance by hand
+and then correlation by using the formulas here,
+and I will do it for VTI and TLT.
+So, first, I'll compute the differences
+between monthly returns and estimated means on the two
+ETFs.
+I will multiply them, and then I will add them up.
+So I will create just a little bit more,
+again, workspace for me here.
+So the first thing I will compute is these differences
+and then multiply them.
+So this is monthly return minus the estimated mean multiplied
+by the same for the second ETF.
+
+So this is computing the same product for every month.
+
+Now I will add up this sum, so I will sum them all up.
+
+And then I'll also divide it by t minus 1
+or by 119 in our case.
+And so now this number here is the covariance, or the sample
+covariance between the total stock market in the US
+and the returns in the long bond ETF.
+You can see that this number is negative,
+which means that there is negative covariance
+and, hence, will be negative correlation
+between the returns on these two financial instruments.
+Now that we know the covariance, let us compute correlation.
+So correlation will be just the covariance,
+which we'll have to divide by the two standard deviations,
+which were already computed.
+So we will take this number, and we will divide it
+by the standard deviation of the first ETF and by the second--
+by the standard deviation of the second ETF.
+And, also, this is the correlation.
+So you could see that correlation
+is almost negative 50%.
+Now, of course, there has to be another way of computing
+this correlation, and we can simply
+just use the CORREL function in Excel,
+which does this job for us.
+So if we do this first array--
+so it requires two inputs, so the first array
+and the second array.
+So this is the first one, and now this is the second.
+And when we hit Enter, we're going
+to get exactly the same number.
+The point of this exercise is to show you
+that we can compute all of these statistics
+by hand because we understand what the statistics are.
+But then we can use built-in functions
+to compute these correlations more automatically.
+So this is the correlation between VTI
+and TLT. I will delete this column for now because we don't
+need it anymore, and I'll just use this function
+to compute these correlations.
+So this is the correlation between VTI and TLT.
+The other correlation here-- we'll
+compute the correlation between TLT and the emerging market
+ETF, so this one.
+
+And this is the secondary.
+So this would be the correlation between TLT and VWO.
+
+And the third correlation here would
+be the correlation between VTI, so between the US stock market,
+and the emerging stock market.
+So CORREL and then I'm putting the first array
+in and then the second array.
+And this is the result.
+So it paints us a very interesting picture.
+So first is that there is very negative
+and strong correlation, at least historical correlation,
+between the returns on the total stock market in the US
+and on the long bond.
+Second, there is also low correlation, although a little
+less between the returns on the bond ETF and the emerging
+markets.
+And the third fact and perhaps very interesting fact,
+because you would have thought that maybe the returns
+on the US stock market and emerging markets
+are not very well correlated, what these numbers shows here
+is that the correlation between the two is almost 75%,
+which is a very significant correlation.
+Means that US stock market, at least historical, again,
+and emerging stock markets correlates very highly
+with one another.
+If you are a US investor and you're
+looking to diversify your current portfolio,
+let's imagine that you 100% invested in the US stock
+market, and you would like to diversify your portfolio.
+You might think that investing in the emerging stock market
+is a good idea because it provides large diversification
+benefits.
+And it does because correlation is not exactly one.
+However, there is still a high degree
+of correlation between the US stock market and the emerging
+stock markets.
+Again, it was so, at least historically.
+And if you really want to diversify,
+you're much better off investing in the long-term bonds
+or long-term ETFs, as indicated by these numbers
+here in this TLT ETF, because of this low negative correlation
+between the returns on the US stock market and on the US
+long-term bonds.

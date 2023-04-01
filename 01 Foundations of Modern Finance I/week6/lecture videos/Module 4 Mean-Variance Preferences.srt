@@ -1,0 +1,272 @@
+0
+00:00:00,000 --> 00:00:00,680
+
+
+1
+00:00:00,680 --> 00:00:02,430
+PROFESSOR: Next, we are going to introduce
+
+2
+00:00:02,430 --> 00:00:04,650
+a special class of preferences called
+
+3
+00:00:04,650 --> 00:00:06,990
+the mean-variance preferences.
+
+4
+00:00:06,990 --> 00:00:08,830
+These preferences are very important.
+
+5
+00:00:08,830 --> 00:00:11,820
+They are at the core of the modern portfolio theory.
+
+6
+00:00:11,820 --> 00:00:13,660
+They're highly tractable.
+
+7
+00:00:13,660 --> 00:00:16,320
+And we are going to base a large part
+
+8
+00:00:16,320 --> 00:00:18,090
+of our discussion of portfolio choice
+
+9
+00:00:18,090 --> 00:00:20,560
+on this model of preferences.
+
+10
+00:00:20,560 --> 00:00:23,380
+Let's assume that returns on all investments
+
+11
+00:00:23,380 --> 00:00:25,480
+are normally distributed.
+
+12
+00:00:25,480 --> 00:00:27,520
+This means that for any investment
+
+13
+00:00:27,520 --> 00:00:30,190
+we are willing to consider, the distribution of the returns
+
+14
+00:00:30,190 --> 00:00:33,550
+is Gaussian with the investment-specific mean
+
+15
+00:00:33,550 --> 00:00:34,960
+and variance.
+
+16
+00:00:34,960 --> 00:00:37,720
+Let's call them r bar and sigma squared
+
+17
+00:00:37,720 --> 00:00:41,390
+for a particular investment under consideration.
+
+18
+00:00:41,390 --> 00:00:44,960
+An investor, following the expected utility model,
+
+19
+00:00:44,960 --> 00:00:46,790
+is going to rank investments based
+
+20
+00:00:46,790 --> 00:00:48,950
+on their expected utility.
+
+21
+00:00:48,950 --> 00:00:52,640
+Let's compute expected utility of a normally distributed
+
+22
+00:00:52,640 --> 00:00:54,500
+return.
+
+23
+00:00:54,500 --> 00:00:57,830
+It's going to be a function of the two moments--
+
+24
+00:00:57,830 --> 00:01:00,850
+the mean and the variance.
+
+25
+00:01:00,850 --> 00:01:03,010
+As a result, this investor is going
+
+26
+00:01:03,010 --> 00:01:07,540
+to evaluate each investment using only these two moments--
+
+27
+00:01:07,540 --> 00:01:11,320
+the average return, the mean of the investment return,
+
+28
+00:01:11,320 --> 00:01:14,740
+and the second moment, the variance of the return.
+
+29
+00:01:14,740 --> 00:01:17,770
+Hence, the name mean-variance preferences.
+
+30
+00:01:17,770 --> 00:01:20,570
+Variance of returns, or standard deviation,
+
+31
+00:01:20,570 --> 00:01:22,720
+which is the square root, is the only measure
+
+32
+00:01:22,720 --> 00:01:24,685
+of risk under this model.
+
+33
+00:01:24,685 --> 00:01:27,310
+And an investor compares all investments
+
+34
+00:01:27,310 --> 00:01:29,740
+based on their two key properties, the first two
+
+35
+00:01:29,740 --> 00:01:31,070
+moments.
+
+36
+00:01:31,070 --> 00:01:34,930
+We should note that this model of preferences is special.
+
+37
+00:01:34,930 --> 00:01:37,120
+It applies to many situations.
+
+38
+00:01:37,120 --> 00:01:41,050
+It produces useful results, but it's not the complete story.
+
+39
+00:01:41,050 --> 00:01:43,970
+It is, however, an important starting point.
+
+40
+00:01:43,970 --> 00:01:45,700
+And it is very widely used.
+
+41
+00:01:45,700 --> 00:01:48,430
+Now, the graph that you see helps
+
+42
+00:01:48,430 --> 00:01:51,700
+us visualize investor preferences
+
+43
+00:01:51,700 --> 00:01:56,860
+by plotting the indifference curves in the space of risk
+
+44
+00:01:56,860 --> 00:01:58,870
+and expected return.
+
+45
+00:01:58,870 --> 00:02:01,420
+In this case, we will think of risk
+
+46
+00:02:01,420 --> 00:02:04,150
+as the standard deviation of returns, which is
+
+47
+00:02:04,150 --> 00:02:06,140
+plotted on the horizontal axis.
+
+48
+00:02:06,140 --> 00:02:10,449
+And expected returns are on the vertical axis.
+
+49
+00:02:10,449 --> 00:02:13,390
+The curves that you see, the blues curves,
+
+50
+00:02:13,390 --> 00:02:15,820
+represent indifference curves corresponding
+
+51
+00:02:15,820 --> 00:02:18,880
+to a particular set of mean-variance preferences.
+
+52
+00:02:18,880 --> 00:02:21,340
+What this means is that the investor that you're
+
+53
+00:02:21,340 --> 00:02:24,190
+thinking about is indifferent between any two
+
+54
+00:02:24,190 --> 00:02:26,700
+points on the same curve.
+
+55
+00:02:26,700 --> 00:02:30,700
+Moving in the vertical direction means
+
+56
+00:02:30,700 --> 00:02:33,370
+increasing the expected return.
+
+57
+00:02:33,370 --> 00:02:35,980
+Moves us from one indifference curve to the next
+
+58
+00:02:35,980 --> 00:02:37,210
+and to the next.
+
+59
+00:02:37,210 --> 00:02:39,190
+So moving up is going to lead to higher
+
+60
+00:02:39,190 --> 00:02:41,890
+levels of expected utility.
+
+61
+00:02:41,890 --> 00:02:45,670
+Moving to the left means reducing risk.
+
+62
+00:02:45,670 --> 00:02:50,340
+This, again, leads to higher levels of expected utility.
+
+63
+00:02:50,340 --> 00:02:52,560
+When evaluating investment decisions,
+
+64
+00:02:52,560 --> 00:02:55,040
+an investor with mean-variance preferences
+
+65
+00:02:55,040 --> 00:02:58,590
+will prefer investments that are represented
+
+66
+00:02:58,590 --> 00:03:04,020
+by points as far as possible in the Northwest direction based
+
+67
+00:03:04,020 --> 00:03:06,890
+on the shape of the indifference curves.
+

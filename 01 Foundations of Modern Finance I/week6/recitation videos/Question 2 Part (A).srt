@@ -1,0 +1,272 @@
+0
+00:00:00,000 --> 00:00:01,206
+
+
+1
+00:00:01,206 --> 00:00:03,140
+PROFESSOR: In this question, we will
+
+2
+00:00:03,140 --> 00:00:05,990
+learn how to find certainty equivalent
+
+3
+00:00:05,990 --> 00:00:08,990
+for an investor with a given utility function,
+
+4
+00:00:08,990 --> 00:00:14,260
+and for a given lottery or for a given investment opportunity.
+
+5
+00:00:14,260 --> 00:00:16,100
+You are given the following lottery.
+
+6
+00:00:16,100 --> 00:00:20,420
+With probably 0.1, the payoff is $80,000.
+
+7
+00:00:20,420 --> 00:00:24,230
+With probability 0.3, the payoff is $20,000.
+
+8
+00:00:24,230 --> 00:00:30,870
+And with probably 0.6, the payoff is $5,000.
+
+9
+00:00:30,870 --> 00:00:35,290
+If the investor has utility function u of x equal to x,
+
+10
+00:00:35,290 --> 00:00:37,330
+what is the riskless payoff that would
+
+11
+00:00:37,330 --> 00:00:39,880
+make her different between choosing
+
+12
+00:00:39,880 --> 00:00:44,200
+this particular lottery and the riskless payoff?
+
+13
+00:00:44,200 --> 00:00:46,420
+Then part b of this question gives you
+
+14
+00:00:46,420 --> 00:00:48,970
+an investor with a different utility function, which
+
+15
+00:00:48,970 --> 00:00:52,480
+is u of x equals x raised to the power of 1 over 2,
+
+16
+00:00:52,480 --> 00:00:54,670
+and asks you the same question.
+
+17
+00:00:54,670 --> 00:00:57,430
+And part c of this question gives you yet another investor
+
+18
+00:00:57,430 --> 00:01:00,310
+with utility function u of x equals to x raised
+
+19
+00:01:00,310 --> 00:01:02,800
+to the power of 1 over 3.
+
+20
+00:01:02,800 --> 00:01:05,860
+In this question, we ask to find what in economics we referred
+
+21
+00:01:05,860 --> 00:01:09,010
+to as a certainty equivalent.
+
+22
+00:01:09,010 --> 00:01:11,170
+Let me define what it is.
+
+23
+00:01:11,170 --> 00:01:14,950
+Certainty equivalent is the smallest riskless payoff amount
+
+24
+00:01:14,950 --> 00:01:18,220
+that makes an investor indifferent between taking
+
+25
+00:01:18,220 --> 00:01:23,060
+a risky lottery or accepting this certain amount.
+
+26
+00:01:23,060 --> 00:01:26,690
+Mathematically, our utility from certainty equivalent
+
+27
+00:01:26,690 --> 00:01:30,440
+or from this guaranteed riskless payoff
+
+28
+00:01:30,440 --> 00:01:32,780
+should equal to the expected utility
+
+29
+00:01:32,780 --> 00:01:36,710
+that we'll get from engaging into this risky lottery
+
+30
+00:01:36,710 --> 00:01:39,480
+or risky investment.
+
+31
+00:01:39,480 --> 00:01:42,780
+To find certainty equivalent for an investor
+
+32
+00:01:42,780 --> 00:01:46,380
+with a given utility function in a given lottery,
+
+33
+00:01:46,380 --> 00:01:49,360
+we need to do the following two steps.
+
+34
+00:01:49,360 --> 00:01:53,070
+Step number 1, find expected utility of investor
+
+35
+00:01:53,070 --> 00:01:55,910
+from this given lottery.
+
+36
+00:01:55,910 --> 00:01:59,640
+And step 2, find certainty equivalent
+
+37
+00:01:59,640 --> 00:02:02,610
+by inverting the utility function.
+
+38
+00:02:02,610 --> 00:02:05,190
+Let's find certainty equivalent for investor
+
+39
+00:02:05,190 --> 00:02:11,390
+in part a, investor with a linear utility function.
+
+40
+00:02:11,390 --> 00:02:15,500
+So step 1 is to find expected utility that this investor will
+
+41
+00:02:15,500 --> 00:02:18,260
+get from this lottery.
+
+42
+00:02:18,260 --> 00:02:22,250
+We have already learned how to do this in question number 1
+
+43
+00:02:22,250 --> 00:02:24,340
+of this recitation.
+
+44
+00:02:24,340 --> 00:02:27,830
+So the expected utility of this investor equals to 0.1 times
+
+45
+00:02:27,830 --> 00:02:30,410
+the utility of the first payoff, which
+
+46
+00:02:30,410 --> 00:02:34,880
+was $80,000, plus the probability of the second state
+
+47
+00:02:34,880 --> 00:02:39,130
+times the utility that we get of the payoff in the second state,
+
+48
+00:02:39,130 --> 00:02:43,240
+that's $20,000, plus the third probability or the probability
+
+49
+00:02:43,240 --> 00:02:46,820
+of the third state, multiplied by the utility of the payoff
+
+50
+00:02:46,820 --> 00:02:50,030
+that we get in this third state.
+
+51
+00:02:50,030 --> 00:02:52,430
+Since the utility function is linear,
+
+52
+00:02:52,430 --> 00:02:55,280
+this just becomes 0.1 multiplied by 80,000
+
+53
+00:02:55,280 --> 00:03:01,630
+plus 0.3 multiplied by 20,000, plus 0.6 multiplied by 5,000.
+
+54
+00:03:01,630 --> 00:03:07,250
+Computing this gives us the expected utility of 17,000.
+
+55
+00:03:07,250 --> 00:03:10,700
+So this is the expected utility of this investor
+
+56
+00:03:10,700 --> 00:03:13,600
+from this given lottery.
+
+57
+00:03:13,600 --> 00:03:18,980
+Now in step 2, we can find certainty equivalent.
+
+58
+00:03:18,980 --> 00:03:20,620
+The utility of the certainty equivalent
+
+59
+00:03:20,620 --> 00:03:24,470
+would equal to $17,000.
+
+60
+00:03:24,470 --> 00:03:27,440
+In the case of this investor, she
+
+61
+00:03:27,440 --> 00:03:29,630
+has a linear utility function.
+
+62
+00:03:29,630 --> 00:03:34,130
+So u of CE, which is equal to CE.
+
+63
+00:03:34,130 --> 00:03:37,660
+And so therefore, certainty equivalent for this investor
+
+64
+00:03:37,660 --> 00:03:40,520
+is just 17,000.
+
+65
+00:03:40,520 --> 00:03:44,000
+So therefore, this investor is indifferent between just
+
+66
+00:03:44,000 --> 00:03:49,070
+taking guaranteed $17,000, this is our certainty equivalent,
+
+67
+00:03:49,070 --> 00:03:52,000
+or playing this lottery.
+

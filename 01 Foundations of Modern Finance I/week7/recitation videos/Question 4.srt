@@ -1,0 +1,280 @@
+0
+00:00:00,000 --> 00:00:01,360
+
+
+1
+00:00:01,360 --> 00:00:02,980
+PROFESSOR: In this question, we will
+
+2
+00:00:02,980 --> 00:00:09,550
+learn how to find factor risk premia or factor risk prices.
+
+3
+00:00:09,550 --> 00:00:14,440
+Let's consider the following three factor model.
+
+4
+00:00:14,440 --> 00:00:17,600
+We are given four well-diversified portfolios--
+
+5
+00:00:17,600 --> 00:00:19,370
+A, B, C, and D--
+
+6
+00:00:19,370 --> 00:00:21,300
+with the following characteristics.
+
+7
+00:00:21,300 --> 00:00:24,980
+So we are given the expected returns and factor loadings
+
+8
+00:00:24,980 --> 00:00:27,850
+on all three factors.
+
+9
+00:00:27,850 --> 00:00:31,530
+So now, given this information, in particular the returns
+
+10
+00:00:31,530 --> 00:00:34,920
+and factor loadings, the goal is to find factor risk
+
+11
+00:00:34,920 --> 00:00:37,185
+premia for all three factors.
+
+12
+00:00:37,185 --> 00:00:40,230
+
+
+13
+00:00:40,230 --> 00:00:43,500
+We can start with APT pricing equation that tells us
+
+14
+00:00:43,500 --> 00:00:48,450
+that the expected excess return on a portfolio p
+
+15
+00:00:48,450 --> 00:00:53,350
+should equal to the factor risk premia multiplied
+
+16
+00:00:53,350 --> 00:00:55,390
+by their factor loadings.
+
+17
+00:00:55,390 --> 00:00:58,270
+So for example, in our case, when we have three factor
+
+18
+00:00:58,270 --> 00:01:02,320
+model, it's the price of the first factor
+
+19
+00:01:02,320 --> 00:01:06,220
+lambda 1 multiplied by the loading on this first factor
+
+20
+00:01:06,220 --> 00:01:09,070
+of portfolio p, so beta p1.
+
+21
+00:01:09,070 --> 00:01:12,220
+Plus the price of the second risk factor
+
+22
+00:01:12,220 --> 00:01:14,500
+multiplied by the loading of this portfolio
+
+23
+00:01:14,500 --> 00:01:17,110
+p on the second risk factor, plus the price
+
+24
+00:01:17,110 --> 00:01:20,860
+of the third risk factor times the loading.
+
+25
+00:01:20,860 --> 00:01:23,922
+So we can write this down specifically for portfolio A.
+
+26
+00:01:23,922 --> 00:01:26,380
+So in this case, it's going to be expected return portfolio
+
+27
+00:01:26,380 --> 00:01:30,580
+A minus the risk-free rate, equals to, again,
+
+28
+00:01:30,580 --> 00:01:32,590
+the prices of the factors multiplied
+
+29
+00:01:32,590 --> 00:01:38,990
+by the risk exposure of this portfolio A to these factors.
+
+30
+00:01:38,990 --> 00:01:41,170
+So more specifically, we can plug in the numbers
+
+31
+00:01:41,170 --> 00:01:42,628
+that we are given in this question.
+
+32
+00:01:42,628 --> 00:01:46,510
+So for portfolio A, the expected return was 21.65%.
+
+33
+00:01:46,510 --> 00:01:52,750
+And the factor loadings were 0.95 from the first factor,
+
+34
+00:01:52,750 --> 00:01:58,160
+1.2 on the second, and 0.85 on the third.
+
+35
+00:01:58,160 --> 00:02:00,140
+And now, what we can do, we can write down
+
+36
+00:02:00,140 --> 00:02:05,120
+the same exact equations for the remaining three portfolios.
+
+37
+00:02:05,120 --> 00:02:08,930
+So here, we have four equations written
+
+38
+00:02:08,930 --> 00:02:10,770
+for each of the portfolios.
+
+39
+00:02:10,770 --> 00:02:14,810
+And so these are the APT pricing equations.
+
+40
+00:02:14,810 --> 00:02:16,950
+And so if we look at this carefully,
+
+41
+00:02:16,950 --> 00:02:22,970
+we will see that we have four equations and four unknowns.
+
+42
+00:02:22,970 --> 00:02:27,560
+Therefore, we can write down the following system of equations.
+
+43
+00:02:27,560 --> 00:02:29,690
+We can write down the system of equations
+
+44
+00:02:29,690 --> 00:02:33,300
+in the following matrix form.
+
+45
+00:02:33,300 --> 00:02:35,070
+And now, all we have to do is we have
+
+46
+00:02:35,070 --> 00:02:39,120
+to solve this equation for the three lambdas, which, again,
+
+47
+00:02:39,120 --> 00:02:42,930
+the prices of the three corresponding risk factors
+
+48
+00:02:42,930 --> 00:02:45,430
+and the risk-free rate.
+
+49
+00:02:45,430 --> 00:02:49,830
+So solving this equation gives us the following numbers.
+
+50
+00:02:49,830 --> 00:02:53,850
+So the price of the first risk factor is 6.5%.
+
+51
+00:02:53,850 --> 00:02:57,420
+The price of the second risk factor is 10%.
+
+52
+00:02:57,420 --> 00:03:01,200
+The price of the third risk factor is 3.5%.
+
+53
+00:03:01,200 --> 00:03:05,460
+And the risk-free rate here is 0.5%.
+
+54
+00:03:05,460 --> 00:03:07,500
+And this is how you find factor risk
+
+55
+00:03:07,500 --> 00:03:14,670
+premia from known expected returns and factor loadings.
+
+56
+00:03:14,670 --> 00:03:19,280
+Notice that, in this case, we have a three factor model,
+
+57
+00:03:19,280 --> 00:03:21,850
+and we don't know risk-free rate.
+
+58
+00:03:21,850 --> 00:03:25,920
+So therefore, we need expected the returns and factor loadings
+
+59
+00:03:25,920 --> 00:03:29,640
+on at least four well-diversified portfolios
+
+60
+00:03:29,640 --> 00:03:34,840
+to find all the risk premia and the risk-free rate.
+
+61
+00:03:34,840 --> 00:03:37,740
+If we were already given the risk-free rate,
+
+62
+00:03:37,740 --> 00:03:41,640
+we only needed three well-diversified portfolios
+
+63
+00:03:41,640 --> 00:03:45,200
+to find factor risk premia.
+
+64
+00:03:45,200 --> 00:03:47,200
+Now, finally, once we know the factor risk
+
+65
+00:03:47,200 --> 00:03:50,030
+premia and the risk-free rate in this economy,
+
+66
+00:03:50,030 --> 00:03:54,700
+we can price all the other well-diversified portfolios
+
+67
+00:03:54,700 --> 00:03:58,930
+as long as we know their factor loadings.
+
+68
+00:03:58,930 --> 00:04:02,020
+And knowing the factor loadings and the factor risk premia,
+
+69
+00:04:02,020 --> 00:04:05,470
+we should be able to find their expected returns.
+

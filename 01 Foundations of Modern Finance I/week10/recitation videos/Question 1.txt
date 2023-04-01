@@ -1,0 +1,152 @@
+
+PROFESSOR: Now is year zero.
+You're considering opening a new concept restaurant.
+Last year, you have hired a consulting company
+to help you evaluate your business idea.
+The consulting company charged you $125,000,
+and turned in the following operating projections
+for the next 10 years.
+Annual revenue is expected to be $270,000,
+and will start in year one.
+Annual expenses will also start in year one,
+and are expected to be $130,000.
+In year zero, you will make capital investments,
+which primarily include restaurant equipment,
+totaling $650,000.
+This equipment will be depreciated
+using straight line depreciation method over the next 10 years.
+The appropriate cost of capital is 10%.
+And the current tax rate is 21%.
+Your goal is to determine whether you should
+open this restaurant or not.
+Let's solve this question.
+We are asked to evaluate whether we
+should open the new restaurant.
+To make this decision, we should use the net present value
+rule, which states that we should
+invest if the net present value is positive.
+The net present value is defined as the sum of project's cash
+flows discounted to present using appropriate discount
+rates.
+Therefore, to compute the net present value,
+we first should compute project's cash flows.
+Cash flows are defined as 1 minus tax rate times operating
+profit minus capital expenditures plus tax rate
+times depreciation minus change in working capital.
+Tax rate times depreciation is known as the depreciation tax
+shield, which arises due to the fact
+that depreciation is a tax deductible expense.
+Notice that in this question we are not
+given any information regarding working capital requirements
+of running the restaurant.
+Therefore, we will assume that changes in the working capital
+are zero.
+In this case, cash flows can be computed
+as 1 minus tax rate times operating profit minus capital
+expenditures plus depreciation tax shield.
+Let's record all of the given information
+into the spreadsheet and use it to compute
+the net present value of this project.
+Consulting fees of $125,000.
+Annual revenue is $270,000.
+Expenses are $130,000.
+And capital expenditures, which I abbreviate here as CapEx,
+are $650,000.
+Tax rate is 21%.
+Cost of capital is 10%.
+The question tells us that the restaurant will start
+generating revenue in year one.
+And this revenue will continue every year from year one
+until year 10.
+
+Expenses also start in year one.
+And similar to revenue, they continue all the way
+through year 10.
+Now, knowing revenue and expenses,
+we can compute operating profit, which
+equals to the difference between revenue and expenses.
+So therefore, every year from year one
+through year 10 operating profit equals to $140,000.
+Now, next, we need to compute annual depreciation expense.
+The question tells us that capital assets
+will be depreciated using straight line depreciation
+method over the next 10 years.
+So therefore, to compute the annual depreciation expense,
+we're taking capital expenditure,
+and we're dividing it by 10.
+So therefore, every year, depreciation expense
+would equal to $65,000.
+Capital expenditures occur only in year zero.
+That's when we buy restaurant equipment.
+Now, knowing operating profit, depreciation capital
+expenditure, we can compute after tax cash flow.
+Recall that by definition of the tax cash flow equal to 1
+minus tax rate, which is 21% in this case, multiplied
+by operating profits minus capital
+expenditure plus depreciation tax shield,
+which equals to the tax rate multiplied by depreciation
+expense.
+
+And so in year zero, after tax cash flow
+equals to negative $650,000.
+In all the subsequent years, in year one through year 10,
+after tax cash flow equals to $124,250.
+Now, the final step to compute the net present value,
+we need to discount all of these cash flows to present.
+To discount these cash flows to present,
+we're taking the cash flow, and we're dividing it
+by 1 plus cost of capital raised to the power which
+equals to the year when this cash flow occurs.
+
+So these are the discounted cash flows.
+And the net present value simply equals to the sum
+of the discounted cash flows.
+
+So the net present value here equals to $113,462.
+Now, what about consulting fees?
+Since we paid these fees last year, they are sunk.
+And we should not take them into account
+when making our decision whether to open the restaurant or not.
+Since the net present value is positive $113,462,
+we should go ahead and open the restaurant.
+Now, let me also teach you how to use
+the NPV function in Excel to directly compute
+the net present value.
+The function NPV takes the first argument
+as the discount rate, which in our case
+is the cost of capital.
+And the values are all of the cash flows
+that start from year one onwards.
+So remember, because we're using NPV function,
+we're just taking the cash flows that are not discounted.
+So the function will discount these cash flows for us.
+If we also subtract the initial investment of $650,000,
+this calculation should equal to the net present value, which
+we computed by just summing up the cash flows
+that we discounted ourselves.
+So the two results are identical.
+You might have thought of a more compact way
+of solving this problem.
+Since every year, starting in year one
+and ending in year 10, revenue, expenses, and depreciation
+expense are constant, after-tax cash flows
+have to be constant as well.
+They equal to 1 minus tax rate, which
+is 21%, times operating profit, which
+is $140,000, plus depreciation tax shield, which altogether
+equals to $124,250.
+We can compute the present value of these cash flows
+from year one through year 10 using the annuity formula
+as follows.
+$124,250 divided by 10%, which is our cost of capital,
+multiplied by 1 minus 1 divided by 1 plus 10%,
+again, our cost of capital, raised to the power of 10,
+which equals the number of periods.
+This equals to $763,462.
+Given the initial investment of $650,000,
+the net present value equals to $113,462, exactly the number
+that we obtained before.
+Notice how much faster we were able to solve this
+question by utilizing the annuity formula.
+Keep this in mind and use this approach whenever possible,
+especially on the exam.

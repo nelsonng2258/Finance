@@ -1,0 +1,117 @@
+
+PROFESSOR: We now focus on a firm's capital budgeting
+decisions.
+The objective is to increase the firm's current market value.
+The decision depends on the valuation of each project
+under consideration.
+Consider a project with cash flow from now to year t.
+Let's cf0 be the initial cash flow and cf1 to cft
+be its expected future cash flows.
+Let the discount rate be r1 to rt for the corresponding cash
+flows.
+The NPV of the project is then given
+by the following discounted cash flow formula.
+It is simply the sum of the present values of all
+the pieces in the cash flow.
+This gives the increase in the firm's current market
+value if the project is taken.
+
+With the NPV of each project available to the firm,
+we can easily write down the decision rule on investments
+or capital budgeting.
+For a single project, take it only if its NPV is positive.
+For multiple independent projects,
+take all those with positive NPVs.
+Here, independent means the projects
+are unrelated to each other.
+An example of independent projects
+is to develop condos in far apart cities.
+For mutually exclusive projects, take the one
+with positive and the highest MPV.
+Here, mutually exclusive means we can only do one.
+An example of mutually exclusive projects
+is when to build the same condo--
+right now, next year, or later.
+Now, all we need to do is to compute the project's NPV.
+This requires three inputs.
+First, its cash flow--
+more precisely, its expected cash flow.
+Second, the right discount rates for the cash flow.
+Third, strategic options embedded in the project
+beyond the basic casual forecasts.
+We will focus merely on one here and return to two and three
+later in part two of the course.
+Before we get into the details of figuring out
+the cash flow of the project, several general points
+are worth mentioning.
+First, for valuation purposes, we
+need to use actual cash flows, not accounting earnings.
+Although we often rely on accounting information
+to learn about a project's cash flow,
+we have to do so carefully.
+Earnings reported in accounting statements
+follow certain accounting rules which
+may not adhere to the actual timing of the cash flow.
+As we already know, timing is a key element in valuation
+and needs to be captured accurately.
+We will see examples on this point soon.
+Second, use after tax cash flows.
+We have already made this point when we first discussed
+the present value calculation.
+Shareholders or investors only care
+about the cash flow they actually receive after taxes.
+In the corporate finance context,
+firms do have to pay corporate taxes.
+
+Third, it is important that we only
+include cash flows attributable to the project.
+This will then give us the net gain
+from the project in firm value.
+This leads to various implications
+when computing a project's cash flows.
+Here, we list a few.
+One, use incremental cash flows.
+There's no need to include unrelated cash flows
+since we only care about the net value added by the project.
+Two, ignore sunk costs.
+These are cash flows associated with previous decisions,
+not the current decision, which is
+about the current and future cash flows.
+Let the bygones be bygones, as people say.
+Third, include investments in working capital.
+Fourth, include opportunity cost of using existing facility,
+losing existing cells, and so on.
+We can go on, but instead of talking about these points
+in abstract, we will illustrate them through a set of examples.
+Before doing so, we want to give a formal definition
+of a project's cash flow, which is given
+by the equation on this slide.
+The net cash flow equals cash inflow minus cash outflow.
+The project's cash inflow is simply its operating revenue.
+The outflow, however, consists of three pieces.
+First, operating expenses without depreciation.
+Second, taxes.
+And last, capital expenditures.
+This is summarized in the second equation.
+We can also rewrite a project's cash flow
+in a slightly different way.
+First, we define the project's operating profit
+as its operating revenue net of operating expenses
+without depreciation again.
+Next, we consider taxes.
+Let the project's effective tax rate be tau.
+Then the projects income tax will
+be the tax rate tau times the operating profit then
+minus the tax rate times the depreciation.
+This second term comes from the tax credit
+the firm can claim from its capital investments.
+Here, we note that accounting depreciation
+itself is not a cash flow, but it does affect the project's
+after tax cash flow because it can be used
+to reduce the firm's tax bill.
+
+Putting things together, we have the following.
+The net cash flow of the project equals 1 minus tau
+times the operating profit, which
+is the after tax profit, minus capital expenditure
+plus the tax credit from depreciation.

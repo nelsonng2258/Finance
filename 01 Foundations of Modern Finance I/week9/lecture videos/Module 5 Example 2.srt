@@ -1,0 +1,440 @@
+0
+00:00:00,000 --> 00:00:01,530
+
+
+1
+00:00:01,530 --> 00:00:04,470
+PROFESSOR: Let's consider one more example.
+
+2
+00:00:04,470 --> 00:00:09,600
+Tang Associates is a mining company which owns a gold mine,
+
+3
+00:00:09,600 --> 00:00:11,256
+King Solomon's.
+
+4
+00:00:11,256 --> 00:00:15,800
+It is considering whether to reopen the mine.
+
+5
+00:00:15,800 --> 00:00:19,050
+We have the following data on the mine.
+
+6
+00:00:19,050 --> 00:00:26,290
+The mine has a total deposit of 0.11 million ounces of gold.
+
+7
+00:00:26,290 --> 00:00:30,030
+Extracting the gold takes one year.
+
+8
+00:00:30,030 --> 00:00:35,550
+It requires initial investment of $86 million.
+
+9
+00:00:35,550 --> 00:00:41,280
+Gold is currently traded at $800 per ounce,
+
+10
+00:00:41,280 --> 00:00:45,900
+and the cost of capital for a gold mine is 10%.
+
+11
+00:00:45,900 --> 00:00:49,300
+Here the cost of capital is given to us,
+
+12
+00:00:49,300 --> 00:00:53,560
+but can you think of a way to find this number yourself
+
+13
+00:00:53,560 --> 00:00:56,500
+using the valuation methods we developed
+
+14
+00:00:56,500 --> 00:00:59,740
+in lectures on risk, and factor models,
+
+15
+00:00:59,740 --> 00:01:02,890
+and arbitrage pricing theory?
+
+16
+00:01:02,890 --> 00:01:05,650
+In addition, the current shareholders
+
+17
+00:01:05,650 --> 00:01:08,790
+are evenly split into two groups--
+
+18
+00:01:08,790 --> 00:01:12,360
+optimists, who are bullish on gold prices;
+
+19
+00:01:12,360 --> 00:01:15,840
+and pessimists, who are bearish.
+
+20
+00:01:15,840 --> 00:01:19,320
+In particular, optimists expect the gold price
+
+21
+00:01:19,320 --> 00:01:22,720
+to increase 20% next year.
+
+22
+00:01:22,720 --> 00:01:27,380
+Pessimists expect the gold price to increase only 5%.
+
+23
+00:01:27,380 --> 00:01:29,870
+Given the difference in their views,
+
+24
+00:01:29,870 --> 00:01:32,240
+the two groups of shareholders may not
+
+25
+00:01:32,240 --> 00:01:35,300
+agree on what the firm should do.
+
+26
+00:01:35,300 --> 00:01:40,730
+For optimists, $1 million, the NPV for reopening the mine,
+
+27
+00:01:40,730 --> 00:01:45,140
+is minus 86, the production cost,
+
+28
+00:01:45,140 --> 00:01:49,460
+plus the present value of future gold sales, which
+
+29
+00:01:49,460 --> 00:01:54,530
+equals 0.11 million ounces of gold, times the gold price now,
+
+30
+00:01:54,530 --> 00:01:58,520
+which is $800, then times 1 plus the growth
+
+31
+00:01:58,520 --> 00:02:01,850
+rate of 20%, as they expected.
+
+32
+00:02:01,850 --> 00:02:05,300
+Finishing the calculation, we have
+
+33
+00:02:05,300 --> 00:02:09,560
+an NPV of $10 million plus.
+
+34
+00:02:09,560 --> 00:02:12,380
+By this number, Tang should reopen the mine.
+
+35
+00:02:12,380 --> 00:02:15,060
+
+
+36
+00:02:15,060 --> 00:02:19,140
+For pessimists, the NPV is computed similarly,
+
+37
+00:02:19,140 --> 00:02:25,360
+except the growth rate for gold price is expected to be 5%.
+
+38
+00:02:25,360 --> 00:02:28,230
+So the NPV will be minus 86--
+
+39
+00:02:28,230 --> 00:02:32,850
+again, production cost, plus the expected future sales
+
+40
+00:02:32,850 --> 00:02:37,390
+from gold, discounted at the 10% of cost of capital.
+
+41
+00:02:37,390 --> 00:02:41,240
+If we finish the calculation, we get minus $2 million,
+
+42
+00:02:41,240 --> 00:02:46,970
+which clearly goes against reopening the mine.
+
+43
+00:02:46,970 --> 00:02:51,370
+What should the firm or the CFO do?
+
+44
+00:02:51,370 --> 00:02:56,120
+Some might suggest taking an average over the two numbers.
+
+45
+00:02:56,120 --> 00:02:58,640
+Why would any of the shareholders agree to this?
+
+46
+00:02:58,640 --> 00:03:02,300
+Each side believes they are right.
+
+47
+00:03:02,300 --> 00:03:06,350
+How about I get the optimists to buy out the pessimists?
+
+48
+00:03:06,350 --> 00:03:09,840
+Interesting idea, but at what price?
+
+49
+00:03:09,840 --> 00:03:11,490
+Maybe you have more creative ideas
+
+50
+00:03:11,490 --> 00:03:13,524
+to resolve this disagreement.
+
+51
+00:03:13,524 --> 00:03:16,190
+
+
+52
+00:03:16,190 --> 00:03:19,610
+Instead of going down further on these paths,
+
+53
+00:03:19,610 --> 00:03:23,510
+let's take a step back and think it over.
+
+54
+00:03:23,510 --> 00:03:27,740
+The key issue here is how to value one ounce of gold
+
+55
+00:03:27,740 --> 00:03:29,480
+next year.
+
+56
+00:03:29,480 --> 00:03:31,730
+Different shareholders have different views.
+
+57
+00:03:31,730 --> 00:03:32,930
+Don't blame them.
+
+58
+00:03:32,930 --> 00:03:38,510
+If the same question was put to us, most likely we won't agree.
+
+59
+00:03:38,510 --> 00:03:40,160
+But wait a minute.
+
+60
+00:03:40,160 --> 00:03:44,840
+All we need to know is not about the price of gold next year,
+
+61
+00:03:44,840 --> 00:03:47,600
+but the present value of one ounce
+
+62
+00:03:47,600 --> 00:03:52,480
+of gold in one year but today.
+
+63
+00:03:52,480 --> 00:03:55,840
+A little poking around about the gold market--
+
+64
+00:03:55,840 --> 00:03:57,760
+a very active market.
+
+65
+00:03:57,760 --> 00:03:59,590
+We learned the following--
+
+66
+00:03:59,590 --> 00:04:02,530
+gold, at least those traded in the market,
+
+67
+00:04:02,530 --> 00:04:06,490
+such as gold bullions and coins, is mostly
+
+68
+00:04:06,490 --> 00:04:11,920
+held as a long-term investment with no interim payoffs.
+
+69
+00:04:11,920 --> 00:04:14,800
+It is often viewed as a storage value
+
+70
+00:04:14,800 --> 00:04:18,519
+or hedge against inflation.
+
+71
+00:04:18,519 --> 00:04:23,920
+If so, for these gold investors, one ounce of gold of next year
+
+72
+00:04:23,920 --> 00:04:27,340
+is the same as one ounce of gold today.
+
+73
+00:04:27,340 --> 00:04:30,700
+If they buy one ounce of gold today, most likely
+
+74
+00:04:30,700 --> 00:04:37,060
+they will hold it until next year anyway, or even longer.
+
+75
+00:04:37,060 --> 00:04:41,780
+In the interim, there's no payoff from the gold.
+
+76
+00:04:41,780 --> 00:04:45,130
+This is different from holding a bond or stock, which
+
+77
+00:04:45,130 --> 00:04:49,000
+may pay coupons or dividends during the year.
+
+78
+00:04:49,000 --> 00:04:52,870
+Holding gold incurs little cost either.
+
+79
+00:04:52,870 --> 00:04:57,040
+Physical gold is mostly stored at gold depositories
+
+80
+00:04:57,040 --> 00:04:59,470
+with very low cost.
+
+81
+00:04:59,470 --> 00:05:02,920
+It is the claims on them that change hands when
+
+82
+00:05:02,920 --> 00:05:05,460
+investors buy and sell them.
+
+83
+00:05:05,460 --> 00:05:08,890
+We will return to this market later in Part 2,
+
+84
+00:05:08,890 --> 00:05:14,260
+when we study derivative securities on commodities.
+
+85
+00:05:14,260 --> 00:05:16,210
+From the above observation, we then
+
+86
+00:05:16,210 --> 00:05:19,330
+conclude that one ounce of gold in one year
+
+87
+00:05:19,330 --> 00:05:24,260
+is worth the same amount as one ounce of gold today.
+
+88
+00:05:24,260 --> 00:05:29,030
+Given that one ounce of gold is trading at $800 now,
+
+89
+00:05:29,030 --> 00:05:32,480
+the present value of one ounce of gold in one year
+
+90
+00:05:32,480 --> 00:05:37,130
+is also $800 today.
+
+91
+00:05:37,130 --> 00:05:41,900
+Immediately, we can conclude that the NPV of reopening
+
+92
+00:05:41,900 --> 00:05:45,070
+the mine is simply minus 86--
+
+93
+00:05:45,070 --> 00:05:46,610
+again, the production cost--
+
+94
+00:05:46,610 --> 00:05:52,310
+plus 0.11 million ounces of gold times the present value
+
+95
+00:05:52,310 --> 00:05:55,990
+of one ounce of gold in one year, and that's $800.
+
+96
+00:05:55,990 --> 00:06:01,250
+Finishing that calculation, we get plus $2 million,
+
+97
+00:06:01,250 --> 00:06:03,080
+which is positive.
+
+98
+00:06:03,080 --> 00:06:08,600
+This value is the value we can achieve today in the market--
+
+99
+00:06:08,600 --> 00:06:12,110
+the current price for selling one ounce of gold
+
+100
+00:06:12,110 --> 00:06:16,560
+delivered next year is $800.
+
+101
+00:06:16,560 --> 00:06:19,440
+Therefore, by reopening the mine,
+
+102
+00:06:19,440 --> 00:06:23,610
+the value of Tang Associates will increase immediately
+
+103
+00:06:23,610 --> 00:06:29,530
+by $2 million, which will make all shareholders richer.
+
+104
+00:06:29,530 --> 00:06:31,570
+As for the shareholders themselves,
+
+105
+00:06:31,570 --> 00:06:34,720
+with their own views on future gold prices,
+
+106
+00:06:34,720 --> 00:06:39,640
+they can use the market to speculate on their forecasts.
+
+107
+00:06:39,640 --> 00:06:42,730
+For example, for their pessimistic shareholders,
+
+108
+00:06:42,730 --> 00:06:46,810
+they can sell the shares at a high price now.
+
+109
+00:06:46,810 --> 00:06:51,690
+If that is not enough, they can even short gold in the market.
+

@@ -1,0 +1,512 @@
+0
+00:00:00,000 --> 00:00:00,840
+
+
+1
+00:00:00,840 --> 00:00:03,020
+PROFESSOR: We now consider the semi-strong form
+
+2
+00:00:03,020 --> 00:00:04,910
+of market efficiency.
+
+3
+00:00:04,910 --> 00:00:07,880
+Under the semi-strong form of efficiency,
+
+4
+00:00:07,880 --> 00:00:11,390
+all public information should be fully reflected in prices,
+
+5
+00:00:11,390 --> 00:00:13,370
+and it should be impossible to achieve
+
+6
+00:00:13,370 --> 00:00:16,640
+abnormal risk adjusted returns by trading
+
+7
+00:00:16,640 --> 00:00:19,450
+on public information.
+
+8
+00:00:19,450 --> 00:00:23,410
+This implies in particular that fundamental analysis should not
+
+9
+00:00:23,410 --> 00:00:28,790
+be useful for achieving abnormal investment performance.
+
+10
+00:00:28,790 --> 00:00:31,240
+Now, the purpose of fundamental analysis
+
+11
+00:00:31,240 --> 00:00:35,410
+is to exploit opportunities when some public information
+
+12
+00:00:35,410 --> 00:00:39,430
+about firms is not reflected in prices immediately.
+
+13
+00:00:39,430 --> 00:00:42,220
+If markets are semi-strong-form efficient,
+
+14
+00:00:42,220 --> 00:00:46,240
+fundamental analysis is not going to achieve that goal.
+
+15
+00:00:46,240 --> 00:00:51,100
+Information included under the semi-strong form of market
+
+16
+00:00:51,100 --> 00:00:54,700
+efficiency is going to contain things like firm
+
+17
+00:00:54,700 --> 00:00:59,140
+financial statements, any types of corporate announcements,
+
+18
+00:00:59,140 --> 00:01:03,010
+such as news about earnings, dividends, share repurchases,
+
+19
+00:01:03,010 --> 00:01:06,050
+debt issue, stock splits, and so forth,
+
+20
+00:01:06,050 --> 00:01:10,880
+as well as mergers, acquisitions, and takeovers.
+
+21
+00:01:10,880 --> 00:01:13,910
+None of these types of announcements,
+
+22
+00:01:13,910 --> 00:01:16,520
+none of these sources of public information,
+
+23
+00:01:16,520 --> 00:01:19,550
+should be useful for generating abnormal investment
+
+24
+00:01:19,550 --> 00:01:21,260
+performance.
+
+25
+00:01:21,260 --> 00:01:25,210
+Let's examine how prices should respond to information
+
+26
+00:01:25,210 --> 00:01:29,080
+under the semi-strong form of market efficiency.
+
+27
+00:01:29,080 --> 00:01:34,460
+When the news arrives, there are three possible patterns.
+
+28
+00:01:34,460 --> 00:01:37,310
+The price may react to the news immediately
+
+29
+00:01:37,310 --> 00:01:39,420
+with no further adjustment.
+
+30
+00:01:39,420 --> 00:01:42,050
+This is the blue line on the graph.
+
+31
+00:01:42,050 --> 00:01:46,620
+We may see delayed reaction, which is the dotted line, so
+
+32
+00:01:46,620 --> 00:01:49,560
+that information gets priced in eventually,
+
+33
+00:01:49,560 --> 00:01:51,390
+but not immediately.
+
+34
+00:01:51,390 --> 00:01:55,170
+Or we may see overreaction, where the price moves
+
+35
+00:01:55,170 --> 00:01:58,650
+too much in response to an information release,
+
+36
+00:01:58,650 --> 00:02:02,960
+and then it recovers back to the appropriate level.
+
+37
+00:02:02,960 --> 00:02:06,420
+Under the semi-strong form of market efficiency,
+
+38
+00:02:06,420 --> 00:02:10,139
+price action to news should be immediate.
+
+39
+00:02:10,139 --> 00:02:14,490
+And we should not see any underreaction or overreaction.
+
+40
+00:02:14,490 --> 00:02:16,860
+There should be no predictability in returns
+
+41
+00:02:16,860 --> 00:02:19,040
+following the announcement.
+
+42
+00:02:19,040 --> 00:02:21,800
+In other words, the blue line in the graph
+
+43
+00:02:21,800 --> 00:02:26,990
+represents the average pattern of price response to the news.
+
+44
+00:02:26,990 --> 00:02:29,090
+As we examine empirical evidence,
+
+45
+00:02:29,090 --> 00:02:31,340
+we are going to look for evidence in favor
+
+46
+00:02:31,340 --> 00:02:35,960
+or against this type of price response to information.
+
+47
+00:02:35,960 --> 00:02:38,870
+An important tool used to analyze
+
+48
+00:02:38,870 --> 00:02:43,470
+semi-strong form of market efficiency is event studies.
+
+49
+00:02:43,470 --> 00:02:45,960
+The objective of event studies is
+
+50
+00:02:45,960 --> 00:02:51,210
+to examine if for specific information is incorporated
+
+51
+00:02:51,210 --> 00:02:57,350
+into the price in a single jump once information is released.
+
+52
+00:02:57,350 --> 00:02:59,470
+Let's discuss the design of the event
+
+53
+00:02:59,470 --> 00:03:03,770
+studies, which is a commonly used statistical setting.
+
+54
+00:03:03,770 --> 00:03:06,560
+And it's applied broadly, not just
+
+55
+00:03:06,560 --> 00:03:10,480
+for the purposes of analyzing market efficiency.
+
+56
+00:03:10,480 --> 00:03:14,320
+The idea is to pull together various observations
+
+57
+00:03:14,320 --> 00:03:18,970
+and to connect them in time, so that day zero
+
+58
+00:03:18,970 --> 00:03:23,380
+corresponds to the date at which information is released.
+
+59
+00:03:23,380 --> 00:03:25,180
+The actual events, of course, are
+
+60
+00:03:25,180 --> 00:03:28,060
+going to occur to various firms at different points
+
+61
+00:03:28,060 --> 00:03:30,820
+in physical time.
+
+62
+00:03:30,820 --> 00:03:34,290
+We then calculate daily returns during a window,
+
+63
+00:03:34,290 --> 00:03:38,340
+let's say a 30-days window, around the announcement date,
+
+64
+00:03:38,340 --> 00:03:41,340
+around day zero.
+
+65
+00:03:41,340 --> 00:03:44,730
+We'll look 30 days prior to the announcement and 30 days
+
+66
+00:03:44,730 --> 00:03:48,320
+following the announcement.
+
+67
+00:03:48,320 --> 00:03:52,300
+We then define the comparison group.
+
+68
+00:03:52,300 --> 00:03:55,690
+For example, we could look at the market portfolio
+
+69
+00:03:55,690 --> 00:03:59,500
+or the industry portfolio or a portfolio of similar firms
+
+70
+00:03:59,500 --> 00:04:01,690
+as a comparison group.
+
+71
+00:04:01,690 --> 00:04:04,700
+And we compute returns on the comparison group
+
+72
+00:04:04,700 --> 00:04:06,400
+on the same days.
+
+73
+00:04:06,400 --> 00:04:09,280
+We denote the return on the market
+
+74
+00:04:09,280 --> 00:04:11,800
+or a different kind of comparison group
+
+75
+00:04:11,800 --> 00:04:15,980
+as Rm sub t for each day t.
+
+76
+00:04:15,980 --> 00:04:18,649
+Next, we define the abnormal return.
+
+77
+00:04:18,649 --> 00:04:21,110
+The abnormal return is the difference
+
+78
+00:04:21,110 --> 00:04:24,260
+between the return on the stock on day t
+
+79
+00:04:24,260 --> 00:04:26,730
+and the return on its comparison group,
+
+80
+00:04:26,730 --> 00:04:30,020
+which is supposed to have the same risk profile.
+
+81
+00:04:30,020 --> 00:04:34,300
+The abnormal return AR on stock i at day t
+
+82
+00:04:34,300 --> 00:04:39,260
+is the difference R sub it minus Rmt.
+
+83
+00:04:39,260 --> 00:04:41,170
+In other words, it's the return of the stock
+
+84
+00:04:41,170 --> 00:04:46,970
+minus the benchmark or the comparison group return.
+
+85
+00:04:46,970 --> 00:04:50,750
+Once we define the abnormal daily returns on the stock,
+
+86
+00:04:50,750 --> 00:04:53,630
+we calculate the average abnormal return
+
+87
+00:04:53,630 --> 00:04:56,030
+over all of the events.
+
+88
+00:04:56,030 --> 00:04:59,960
+This is defined for each day in our window, 30 days prior
+
+89
+00:04:59,960 --> 00:05:04,160
+to the announcement to 30 days following the announcement.
+
+90
+00:05:04,160 --> 00:05:07,520
+Finally, we define the cumulative abnormal return,
+
+91
+00:05:07,520 --> 00:05:11,030
+starting from 30 days prior to the announcement and all
+
+92
+00:05:11,030 --> 00:05:14,780
+the way to the end of the window, 30 days afterwards.
+
+93
+00:05:14,780 --> 00:05:17,060
+And the cumulative abnormal return
+
+94
+00:05:17,060 --> 00:05:21,470
+is computed by simply adding up abnormal returns
+
+95
+00:05:21,470 --> 00:05:24,940
+on consecutive days.
+
+96
+00:05:24,940 --> 00:05:29,920
+This cumulative abnormal return is our object of analysis.
+
+97
+00:05:29,920 --> 00:05:32,740
+Under the semi-strong form of market efficiency,
+
+98
+00:05:32,740 --> 00:05:37,310
+we should not see on average a positive cumulative abnormal
+
+99
+00:05:37,310 --> 00:05:37,810
+return.
+
+100
+00:05:37,810 --> 00:05:40,400
+
+
+101
+00:05:40,400 --> 00:05:42,500
+If you look at the following graph,
+
+102
+00:05:42,500 --> 00:05:45,560
+we see, again, an illustration of how
+
+103
+00:05:45,560 --> 00:05:47,960
+the cumulative average abnormal return should
+
+104
+00:05:47,960 --> 00:05:49,740
+look under the efficient reaction
+
+105
+00:05:49,740 --> 00:05:54,680
+to information, on the underreaction and overreaction.
+
+106
+00:05:54,680 --> 00:05:57,170
+Following the efficient reaction to information,
+
+107
+00:05:57,170 --> 00:06:01,400
+we should see an immediate jump on announcement, on day zero,
+
+108
+00:06:01,400 --> 00:06:06,520
+with no clear pattern up or down following the announcement.
+
+109
+00:06:06,520 --> 00:06:09,680
+If on the other hand, the market underreacts to information,
+
+110
+00:06:09,680 --> 00:06:13,150
+we should see that the immediate response is relatively muted,
+
+111
+00:06:13,150 --> 00:06:15,600
+and there is a pattern of predictability
+
+112
+00:06:15,600 --> 00:06:20,480
+with the upward drift in prices following the announcement.
+
+113
+00:06:20,480 --> 00:06:22,700
+If the market overreacts, we are going
+
+114
+00:06:22,700 --> 00:06:25,250
+to see a very large immediate response
+
+115
+00:06:25,250 --> 00:06:29,830
+and then mean reversion afterwards.
+
+116
+00:06:29,830 --> 00:06:32,150
+It is clear that under the efficient reaction
+
+117
+00:06:32,150 --> 00:06:35,050
+to information, we will not be able to generate
+
+118
+00:06:35,050 --> 00:06:38,380
+abnormal profits by trading on public information
+
+119
+00:06:38,380 --> 00:06:40,370
+after the announcement.
+
+120
+00:06:40,370 --> 00:06:43,580
+If the market under or over reacts to information,
+
+121
+00:06:43,580 --> 00:06:46,160
+then such strategies will be possible.
+
+122
+00:06:46,160 --> 00:06:48,440
+If the market underreacts, buying
+
+123
+00:06:48,440 --> 00:06:49,820
+following the announcement should
+
+124
+00:06:49,820 --> 00:06:52,100
+lead to abnormal profits.
+
+125
+00:06:52,100 --> 00:06:54,020
+If the market overreacts, we want
+
+126
+00:06:54,020 --> 00:06:55,730
+to sell following the announcement.
+
+127
+00:06:55,730 --> 00:06:59,470
+And that, again, would lead to abnormal profits.
+

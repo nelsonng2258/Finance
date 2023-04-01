@@ -1,0 +1,332 @@
+0
+00:00:00,000 --> 00:00:01,820
+
+
+1
+00:00:01,820 --> 00:00:05,840
+Let's find a risk premium for these investors.
+
+2
+00:00:05,840 --> 00:00:10,520
+By definition, the risk premium pi is the fraction of wealth
+
+3
+00:00:10,520 --> 00:00:13,220
+that an investor is willing to lose
+
+4
+00:00:13,220 --> 00:00:16,940
+that makes her indifferent between a risky zero
+
+5
+00:00:16,940 --> 00:00:22,870
+expected return investment x and the sure loss pi.
+
+6
+00:00:22,870 --> 00:00:26,710
+Mathematically, we can write it as follows.
+
+7
+00:00:26,710 --> 00:00:29,110
+Recall that the investment opportunity that we have
+
+8
+00:00:29,110 --> 00:00:31,170
+in this question is as follows.
+
+9
+00:00:31,170 --> 00:00:34,060
+So it said the positive 25% or negative 25%
+
+10
+00:00:34,060 --> 00:00:37,870
+would equal probabilities 1/2.
+
+11
+00:00:37,870 --> 00:00:41,680
+So notice that this investment opportunity's zero
+
+12
+00:00:41,680 --> 00:00:43,765
+expected return investment.
+
+13
+00:00:43,765 --> 00:00:47,020
+
+
+14
+00:00:47,020 --> 00:00:49,870
+Let's first compute the expected utility
+
+15
+00:00:49,870 --> 00:00:55,760
+from investing into this project investment opportunity.
+
+16
+00:00:55,760 --> 00:00:59,410
+So by definition it's 1/2 times utility in the upstate.
+
+17
+00:00:59,410 --> 00:01:04,390
+So this is $1 multiplied by positive 25% return
+
+18
+00:01:04,390 --> 00:01:08,350
+plus another 1/2 multiplied by the utility of $1
+
+19
+00:01:08,350 --> 00:01:10,720
+and multiplied by 1 minus 25%.
+
+20
+00:01:10,720 --> 00:01:12,145
+So this is our loss state.
+
+21
+00:01:12,145 --> 00:01:14,880
+
+
+22
+00:01:14,880 --> 00:01:20,820
+Given that the first investor has cube root utility function,
+
+23
+00:01:20,820 --> 00:01:25,200
+for her this expected utility becomes as such.
+
+24
+00:01:25,200 --> 00:01:30,450
+1/2 multiplied by 1.25 raised to the power of 1 over 3
+
+25
+00:01:30,450 --> 00:01:34,740
+plus 1/2 multiplied by 0.75 raised the same power
+
+26
+00:01:34,740 --> 00:01:36,180
+of 1 over 3.
+
+27
+00:01:36,180 --> 00:01:41,880
+And so this gives us 0.993.
+
+28
+00:01:41,880 --> 00:01:46,170
+Now knowing this expected utility,
+
+29
+00:01:46,170 --> 00:01:48,270
+we can compute the risk premium for this investor
+
+30
+00:01:48,270 --> 00:01:50,770
+from this equation.
+
+31
+00:01:50,770 --> 00:01:55,710
+So again, the utility function is cube root and the wealth
+
+32
+00:01:55,710 --> 00:01:58,590
+of this investor W is $1.
+
+33
+00:01:58,590 --> 00:02:00,850
+So this gives us this equation.
+
+34
+00:02:00,850 --> 00:02:04,650
+0.993 equals to 1 minus pi raised
+
+35
+00:02:04,650 --> 00:02:06,990
+to the power of 1 over 3.
+
+36
+00:02:06,990 --> 00:02:10,410
+All we need to do is to solve this equation for pi.
+
+37
+00:02:10,410 --> 00:02:15,490
+And this gives us 2.12%.
+
+38
+00:02:15,490 --> 00:02:20,610
+So therefore the risk premium required by this investor
+
+39
+00:02:20,610 --> 00:02:26,070
+for this investment opportunity is 2.12%.
+
+40
+00:02:26,070 --> 00:02:31,500
+In other words, this investor is indifferent between losing
+
+41
+00:02:31,500 --> 00:02:37,500
+for sure 2.12% of her initial wealth of $1
+
+42
+00:02:37,500 --> 00:02:44,430
+and engaging in this 0% expected return investment
+
+43
+00:02:44,430 --> 00:02:48,220
+opportunity that has a certain level of risk.
+
+44
+00:02:48,220 --> 00:02:50,610
+Now let's compute risk premium for investor
+
+45
+00:02:50,610 --> 00:02:55,637
+B. We started with the same exact equation.
+
+46
+00:02:55,637 --> 00:02:57,470
+The only difference right now is, of course,
+
+47
+00:02:57,470 --> 00:02:59,230
+the utility function.
+
+48
+00:02:59,230 --> 00:03:03,580
+So for this investor, the expected utility
+
+49
+00:03:03,580 --> 00:03:08,860
+from this investment opportunity is 1/2 multiplied by 1 minus e
+
+50
+00:03:08,860 --> 00:03:12,790
+raised to the power negative 1.25 divided
+
+51
+00:03:12,790 --> 00:03:16,510
+by 3 plus 1/2 multiplied by 1 minus e
+
+52
+00:03:16,510 --> 00:03:21,870
+raised to the power of negative 0.75 divided by 3.
+
+53
+00:03:21,870 --> 00:03:27,310
+So this equals to 0.281.
+
+54
+00:03:27,310 --> 00:03:31,750
+Now again, knowing this expected utility,
+
+55
+00:03:31,750 --> 00:03:35,993
+we can find the risk premium for this investor.
+
+56
+00:03:35,993 --> 00:03:38,410
+Again, we know the utility function and the initial wealth
+
+57
+00:03:38,410 --> 00:03:42,050
+is $1.
+
+58
+00:03:42,050 --> 00:03:45,270
+So therefore this gives us the following expression.
+
+59
+00:03:45,270 --> 00:03:50,870
+All we need to do is to solve this expression for pi.
+
+60
+00:03:50,870 --> 00:03:56,550
+Doing this gives us 1.04%.
+
+61
+00:03:56,550 --> 00:03:59,190
+So therefore, this is the risk premium
+
+62
+00:03:59,190 --> 00:04:02,520
+required by this investor for this given lottery.
+
+63
+00:04:02,520 --> 00:04:04,830
+So in other words, this investor is
+
+64
+00:04:04,830 --> 00:04:09,450
+willing to lose for sure 1.04% of the initial wealth
+
+65
+00:04:09,450 --> 00:04:14,980
+$1, indifferent between that and engaging
+
+66
+00:04:14,980 --> 00:04:21,470
+in this 0% expected return risky investment opportunity.
+
+67
+00:04:21,470 --> 00:04:24,380
+Let's summarize.
+
+68
+00:04:24,380 --> 00:04:29,190
+When both investors A and B have initial wealth of $1,
+
+69
+00:04:29,190 --> 00:04:31,380
+investor A has a higher coefficient
+
+70
+00:04:31,380 --> 00:04:35,980
+of relative risk aversion compared to investor B.
+
+71
+00:04:35,980 --> 00:04:39,310
+Risk premium required by investor A
+
+72
+00:04:39,310 --> 00:04:43,390
+to invest into this lottery is also higher
+
+73
+00:04:43,390 --> 00:04:46,680
+compared to that of investor B.
+
+74
+00:04:46,680 --> 00:04:50,070
+So therefore, both relative risk aversion coefficient
+
+75
+00:04:50,070 --> 00:04:52,710
+and the risk premium line up in such a way
+
+76
+00:04:52,710 --> 00:04:56,430
+that if the coefficient of the relative risk aversion for one
+
+77
+00:04:56,430 --> 00:05:00,330
+investor is higher than that for another one,
+
+78
+00:05:00,330 --> 00:05:03,000
+the risk premium required for investing into this given
+
+79
+00:05:03,000 --> 00:05:05,850
+investment opportunity would also be higher
+
+80
+00:05:05,850 --> 00:05:08,370
+for the investor, would be higher coefficient
+
+81
+00:05:08,370 --> 00:05:10,500
+of relative risk aversion.
+
+82
+00:05:10,500 --> 00:05:11,000
+
+

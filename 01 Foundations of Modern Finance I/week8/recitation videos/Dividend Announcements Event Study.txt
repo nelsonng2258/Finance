@@ -1,0 +1,89 @@
+
+PROFESSOR: In this example, we will conduct an event study
+for dividend announcements.
+Consider the following for stocks.
+The first stock on December 13, 1996 declared a dividend
+of $0.10 per share.
+Notice that the previous dividend they omitted.
+The second stock on November 4, 2003
+declared an increase in dividend from $0.06 per share
+the quarter before to $0.12 per share.
+The third company on December 18, 2013
+declared a special dividend of $0.41 per share.
+And finally, the last company on February 19, 2015
+initiated a dividend of $0.05 per share.
+Here we have the other returns on these four stocks
+around the time they made these dividends announcements.
+For each of the stocks, I highlighted the dates
+when they made the corresponding announcement
+in this orange color.
+So this is first stock, for second stock, for third stock.
+This is for the fourth stock.
+We have returns on the stocks in column I.
+We also have the returns on the markets
+on the same dates in column J.
+First, let me compute the abnormal return, which
+I will define as the difference between the return on the stock
+minus the market return.
+And I will call this column AR, which
+stands for the abnormal return.
+So this is the return on the stock in excess of the market.
+
+Next, let us compute the average abnormal return
+across these four stocks on the announcement date.
+So what I will do is I will say average
+of the abnormal returns for each of the stocks
+on the announcement date.
+So these two numbers, this is on the third stock.
+And this is on the fourth stock.
+And so let's see what we get.
+So on average, the announcement at the return was 3.5%.
+So clearly, the market interprets
+this at the initiations or special
+or increases in dividends as positive news.
+Now, what I want to do next is I will
+compute the same average abnormal returns on the days
+around this announcement.
+And let's see what we get.
+So I will go 10 days before the announcement.
+
+And I will also go down to 10 days after the announcement.
+And I will extend just this number up and down.
+And because everything here is symmetric in the file,
+it's going to compute the average of the returns,
+for example.
+This would be the average of the returns on the day
+before the announcement for these four stocks.
+From this table, we could see that the return
+on the announcement date itself is the highest.
+Let us accumulate these returns and then
+plot them to visually see how the market processes
+this information.
+So in this next column, I will compute
+cumulative average of normal returns by doing the following.
+For each day, we will add up returns
+from day minus 10 all the way to this day, for example.
+For day minus 8, we will add up the returns from minus 10
+all the way to minus 8.
+And so for us to effectively do it,
+let's fix the top of this array so that we can simply
+stretch this.
+And then this would automatically
+compute all of the returns all the way to the plus 10.
+Now, I have plotted the cumulative average abnormal
+return.
+And this is how the chart looks like.
+So we can clearly see that on the announcement date, day 0,
+there is a strong positive return, again,
+which is probably consistent with the fact
+that this announcement of dividend increases
+or special dividends on average interpreted as good news
+for the future of these firms.
+Importantly, we also do not see price drift
+is tied in the positive or negative direction following
+the announcement.
+Therefore, this evidence is consistent
+with semi-strong form market efficiency hypothesis, which
+says that the prices react to information immediately,
+and there is no way for us to earn abnormal trading profits
+following the announcement.

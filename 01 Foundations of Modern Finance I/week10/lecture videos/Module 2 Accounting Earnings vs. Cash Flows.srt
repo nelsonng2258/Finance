@@ -1,0 +1,576 @@
+0
+00:00:00,000 --> 00:00:01,230
+
+
+1
+00:00:01,230 --> 00:00:02,730
+INSTRUCTOR: What we will do next is
+
+2
+00:00:02,730 --> 00:00:06,630
+to go over a series of examples to demonstrate
+
+3
+00:00:06,630 --> 00:00:12,210
+how to compute a project's cash flow from its financial data.
+
+4
+00:00:12,210 --> 00:00:16,320
+Naturally, these examples are simplified compared
+
+5
+00:00:16,320 --> 00:00:21,700
+to real projects, but they do provide useful illustrations
+
+6
+00:00:21,700 --> 00:00:24,990
+of how to come up with cash flow estimates
+
+7
+00:00:24,990 --> 00:00:28,620
+in various situations.
+
+8
+00:00:28,620 --> 00:00:31,200
+For the first example is about the distinction
+
+9
+00:00:31,200 --> 00:00:35,250
+between accounting earnings and actual cash flows.
+
+10
+00:00:35,250 --> 00:00:39,280
+The project we're considering is as follows.
+
+11
+00:00:39,280 --> 00:00:42,450
+It requires a purchase of a machine for $1 million
+
+12
+00:00:42,450 --> 00:00:46,010
+with a life of 10 years.
+
+13
+00:00:46,010 --> 00:00:50,690
+The machine will generate an annual revenue of $300,000
+
+14
+00:00:50,690 --> 00:00:54,970
+at an operating expense of $100,000.
+
+15
+00:00:54,970 --> 00:00:58,270
+The machine can be depreciated over its lifespan
+
+16
+00:00:58,270 --> 00:01:01,210
+using straight-line depreciation.
+
+17
+00:01:01,210 --> 00:01:03,280
+The corporate tax rate is 40%.
+
+18
+00:01:03,280 --> 00:01:06,500
+
+
+19
+00:01:06,500 --> 00:01:08,690
+The financial information on the project
+
+20
+00:01:08,690 --> 00:01:11,420
+is summarized in the table.
+
+21
+00:01:11,420 --> 00:01:13,610
+The first column gives the year.
+
+22
+00:01:13,610 --> 00:01:16,910
+The second column gives the project's pre-tax accounting
+
+23
+00:01:16,910 --> 00:01:18,050
+earnings.
+
+24
+00:01:18,050 --> 00:01:21,800
+Starting from year 1, it is revenue
+
+25
+00:01:21,800 --> 00:01:24,590
+minus expense minus depreciation,
+
+26
+00:01:24,590 --> 00:01:28,110
+which equals 300, which is revenue
+
+27
+00:01:28,110 --> 00:01:31,480
+minus 100, which is expense minus 100,
+
+28
+00:01:31,480 --> 00:01:32,910
+which is the depreciation.
+
+29
+00:01:32,910 --> 00:01:39,100
+And that gives $100,000 of pre-tax earnings.
+
+30
+00:01:39,100 --> 00:01:41,950
+The third column gives the after-tax earnings,
+
+31
+00:01:41,950 --> 00:01:44,080
+starting from year 1.
+
+32
+00:01:44,080 --> 00:01:47,710
+That is 1 minus the tax rate times the earnings, which
+
+33
+00:01:47,710 --> 00:01:51,810
+is $60,000.
+
+34
+00:01:51,810 --> 00:01:54,030
+However, we should note that you would
+
+35
+00:01:54,030 --> 00:01:58,110
+be incorrect to simply discount the after-tax earnings
+
+36
+00:01:58,110 --> 00:02:01,480
+at the cost of capital to get the NPV.
+
+37
+00:02:01,480 --> 00:02:04,680
+The reason is that the accounting earnings did not
+
+38
+00:02:04,680 --> 00:02:09,030
+accurately reflect the timing of the project's cash flow.
+
+39
+00:02:09,030 --> 00:02:12,840
+For example, the initial expenditure, or sometimes
+
+40
+00:02:12,840 --> 00:02:16,410
+called CapEx of $1 million on the machine
+
+41
+00:02:16,410 --> 00:02:20,400
+is not recorded as a cash flow in year 0.
+
+42
+00:02:20,400 --> 00:02:24,510
+Instead, it shows up in the form of depreciation
+
+43
+00:02:24,510 --> 00:02:28,680
+as part of the expense over the next 10 years.
+
+44
+00:02:28,680 --> 00:02:32,340
+For evaluation purposes, we cannot arbitrarily shift cash
+
+45
+00:02:32,340 --> 00:02:36,840
+flows over time without proper discounting.
+
+46
+00:02:36,840 --> 00:02:39,120
+In order to value the cash flows,
+
+47
+00:02:39,120 --> 00:02:42,930
+we have to capture the amount and timing correctly.
+
+48
+00:02:42,930 --> 00:02:45,240
+The actual cash flow from the project
+
+49
+00:02:45,240 --> 00:02:48,860
+is given in column 4 in the table.
+
+50
+00:02:48,860 --> 00:02:51,300
+It's computed as follows.
+
+51
+00:02:51,300 --> 00:02:55,230
+In year 0, the cash flow is minus 1 million,
+
+52
+00:02:55,230 --> 00:02:59,240
+the CapEx amount paid at that time.
+
+53
+00:02:59,240 --> 00:03:01,970
+In year 1, the after-tax cash flow
+
+54
+00:03:01,970 --> 00:03:05,660
+equals the after-tax profit plus the tax credit
+
+55
+00:03:05,660 --> 00:03:07,520
+from depreciation.
+
+56
+00:03:07,520 --> 00:03:11,600
+The first part equals 1 minus 0.4, the tax rate,
+
+57
+00:03:11,600 --> 00:03:16,310
+times the operating profit, which is 300 minus 100,
+
+58
+00:03:16,310 --> 00:03:20,480
+revenue minus expense, or $200,000.
+
+59
+00:03:20,480 --> 00:03:25,640
+This gives an after-tax profit of 120K.
+
+60
+00:03:25,640 --> 00:03:28,910
+The second part equals 0.4, the tax rate,
+
+61
+00:03:28,910 --> 00:03:36,050
+times the annual depreciation of $100,000, which gives 40K.
+
+62
+00:03:36,050 --> 00:03:39,070
+The sum of the two gives the total after-tax cash
+
+63
+00:03:39,070 --> 00:03:43,120
+flow of $160,000.
+
+64
+00:03:43,120 --> 00:03:46,750
+We have the same after-tax cash flow for the remaining years.
+
+65
+00:03:46,750 --> 00:03:49,730
+
+
+66
+00:03:49,730 --> 00:03:52,640
+It is obvious that the actual after-tax cash
+
+67
+00:03:52,640 --> 00:03:57,770
+flow is quite different from the after-tax accounting earnings.
+
+68
+00:03:57,770 --> 00:04:00,200
+This could be substantial.
+
+69
+00:04:00,200 --> 00:04:03,800
+In fact, no matter what discount rate we use,
+
+70
+00:04:03,800 --> 00:04:07,100
+that this kind of value for all accounting earnings
+
+71
+00:04:07,100 --> 00:04:08,940
+will always be positive.
+
+72
+00:04:08,940 --> 00:04:11,240
+This is because accounting earnings
+
+73
+00:04:11,240 --> 00:04:17,980
+are positive for all years, 60,000 every year.
+
+74
+00:04:17,980 --> 00:04:23,100
+But if we use actual cash flows, the answer is different.
+
+75
+00:04:23,100 --> 00:04:27,540
+For high enough of a cost of capital, the NPV of the project
+
+76
+00:04:27,540 --> 00:04:29,590
+becomes negative.
+
+77
+00:04:29,590 --> 00:04:32,370
+For example, you could try a discount rate of 10%.
+
+78
+00:04:32,370 --> 00:04:35,550
+
+
+79
+00:04:35,550 --> 00:04:39,000
+This example shows that accounting earnings are not
+
+80
+00:04:39,000 --> 00:04:41,400
+the same as actual cash flows.
+
+81
+00:04:41,400 --> 00:04:45,870
+However, if used properly, we can figure out the cash flow
+
+82
+00:04:45,870 --> 00:04:49,410
+from the accounting information.
+
+83
+00:04:49,410 --> 00:04:53,820
+Our next example focuses on taxes.
+
+84
+00:04:53,820 --> 00:04:57,260
+The project's cash flow are given in the table,
+
+85
+00:04:57,260 --> 00:04:59,840
+which are in thousand dollars.
+
+86
+00:04:59,840 --> 00:05:03,930
+Assume its tax rate is 50%.
+
+87
+00:05:03,930 --> 00:05:08,070
+The project spans from year 0, which is now, to year 5,
+
+88
+00:05:08,070 --> 00:05:10,830
+as shown in row 1.
+
+89
+00:05:10,830 --> 00:05:14,070
+It requires an initial investment of 500,
+
+90
+00:05:14,070 --> 00:05:16,630
+shown in row 2.
+
+91
+00:05:16,630 --> 00:05:21,280
+The operating profit given in the third row is 0 in year 1,
+
+92
+00:05:21,280 --> 00:05:26,310
+100 year 2, 300 in year 3, et cetera.
+
+93
+00:05:26,310 --> 00:05:29,910
+That's given in row 3.
+
+94
+00:05:29,910 --> 00:05:34,380
+Let's assume that the initial capital investment of 500
+
+95
+00:05:34,380 --> 00:05:39,960
+can be depreciated linearly over the five years to 0 at the end.
+
+96
+00:05:39,960 --> 00:05:42,540
+This then gives a depreciation of 100
+
+97
+00:05:42,540 --> 00:05:46,710
+from year 1 to year 5 in the fourth row.
+
+98
+00:05:46,710 --> 00:05:51,150
+Know that depreciation does not represent the actual cash flow,
+
+99
+00:05:51,150 --> 00:05:55,960
+but they can be used to reduce taxes.
+
+100
+00:05:55,960 --> 00:05:58,870
+Row 5 uses the accounting income,
+
+101
+00:05:58,870 --> 00:06:01,440
+which is the difference between operating profit
+
+102
+00:06:01,440 --> 00:06:03,180
+and depreciation.
+
+103
+00:06:03,180 --> 00:06:08,310
+We have minus 100 in year 1, 0 in year 2, 200 in year 3,
+
+104
+00:06:08,310 --> 00:06:09,810
+and so on.
+
+105
+00:06:09,810 --> 00:06:11,670
+As seen from the previous example,
+
+106
+00:06:11,670 --> 00:06:15,510
+this is not the actual income because depreciation is not
+
+107
+00:06:15,510 --> 00:06:18,390
+itself a cash flow.
+
+108
+00:06:18,390 --> 00:06:21,780
+Row 6 gives the tax, which is the tax
+
+109
+00:06:21,780 --> 00:06:24,270
+rate times the operating cash flow,
+
+110
+00:06:24,270 --> 00:06:28,980
+minus the tax rate times depreciation, the tax credit.
+
+111
+00:06:28,980 --> 00:06:33,690
+This also equals the tax rate times the accounting income.
+
+112
+00:06:33,690 --> 00:06:38,320
+We then have minus 50 in year 1, 0 in year 2,
+
+113
+00:06:38,320 --> 00:06:42,690
+100 in year 3, et cetera.
+
+114
+00:06:42,690 --> 00:06:47,370
+The after-tax cash flow from the project, given in row 7,
+
+115
+00:06:47,370 --> 00:06:51,750
+equals operating cash flow minus capital expenditure
+
+116
+00:06:51,750 --> 00:06:53,940
+minus the tax.
+
+117
+00:06:53,940 --> 00:06:59,580
+We then have 500 minus, for year 0, 50 for year 1,
+
+118
+00:06:59,580 --> 00:07:01,960
+100 for year 2, and so on.
+
+119
+00:07:01,960 --> 00:07:04,830
+
+
+120
+00:07:04,830 --> 00:07:08,190
+There is one caveat here, however.
+
+121
+00:07:08,190 --> 00:07:11,370
+In year 1, the operating cash flow is 0,
+
+122
+00:07:11,370 --> 00:07:14,410
+and we have a tax bill of minus 50,
+
+123
+00:07:14,410 --> 00:07:17,700
+which means a tax credit of 50.
+
+124
+00:07:17,700 --> 00:07:22,420
+We won't be able to get the tax authority, why is this amount.
+
+125
+00:07:22,420 --> 00:07:25,230
+However, if the firm has other incomes
+
+126
+00:07:25,230 --> 00:07:28,290
+it needs to pay taxes on, this tax credit
+
+127
+00:07:28,290 --> 00:07:32,100
+can be used to reduce the tax bill on these incomes.
+
+128
+00:07:32,100 --> 00:07:35,210
+$1 saved is $1 earned.
+
+129
+00:07:35,210 --> 00:07:39,020
+If we can fully utilize this tax credit to save taxes,
+
+130
+00:07:39,020 --> 00:07:44,620
+it is then equivalent to generating a $50,000 cash flow.
+
+131
+00:07:44,620 --> 00:07:48,190
+This is what we assume here, for simplicity.
+
+132
+00:07:48,190 --> 00:07:52,540
+If this tax credit cannot be fully utilized in year 1,
+
+133
+00:07:52,540 --> 00:07:56,560
+we can then carry it forward to reduce taxes in the following
+
+134
+00:07:56,560 --> 00:07:59,470
+years, when there is income.
+
+135
+00:07:59,470 --> 00:08:02,560
+All we have to do, then, is to properly discount
+
+136
+00:08:02,560 --> 00:08:04,180
+the corresponding tax benefits.
+
+137
+00:08:04,180 --> 00:08:06,710
+
+
+138
+00:08:06,710 --> 00:08:10,430
+If the cost of capital for this project is 10%,
+
+139
+00:08:10,430 --> 00:08:14,270
+we can then discount its cash flow after tax.
+
+140
+00:08:14,270 --> 00:08:19,670
+The NPV we got is $39,000, roughly.
+
+141
+00:08:19,670 --> 00:08:21,440
+And that's positive.
+
+142
+00:08:21,440 --> 00:08:26,330
+This example shows how we need to treat taxes carefully
+
+143
+00:08:26,330 --> 00:08:29,850
+in coming up with a project's cash flows.
+

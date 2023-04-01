@@ -1,0 +1,444 @@
+0
+00:00:00,000 --> 00:00:00,910
+
+
+1
+00:00:00,910 --> 00:00:02,650
+PROFESSOR: The next rule we consider
+
+2
+00:00:02,650 --> 00:00:07,495
+is based on the internal rate of return, or IRR.
+
+3
+00:00:07,495 --> 00:00:11,560
+A project's IRR is defined as the number
+
+4
+00:00:11,560 --> 00:00:15,610
+that gives a zero if used to discount
+
+5
+00:00:15,610 --> 00:00:17,680
+all the project's cash flows.
+
+6
+00:00:17,680 --> 00:00:22,650
+Mathematically, it is defined by the equation on this slide.
+
+7
+00:00:22,650 --> 00:00:26,490
+Clearly, IRR, if it exists, is solely
+
+8
+00:00:26,490 --> 00:00:29,460
+determined by the project's cash flow.
+
+9
+00:00:29,460 --> 00:00:33,000
+We don't need any other information.
+
+10
+00:00:33,000 --> 00:00:37,750
+The decision rule based on IRR is as follows.
+
+11
+00:00:37,750 --> 00:00:44,020
+First, a threshold rate or a hurdle rate, IRR star, is set.
+
+12
+00:00:44,020 --> 00:00:47,350
+Then, for independent projects, accept
+
+13
+00:00:47,350 --> 00:00:50,650
+all the projects with IRR greater
+
+14
+00:00:50,650 --> 00:00:53,610
+than the hurdle rate, IRR star.
+
+15
+00:00:53,610 --> 00:00:58,240
+For mutually exclusive projects, among the projects with IRRs
+
+16
+00:00:58,240 --> 00:01:00,550
+greater than the hurdle rate, accept
+
+17
+00:01:00,550 --> 00:01:04,459
+the one with the highest IRR.
+
+18
+00:01:04,459 --> 00:01:10,340
+Let's consider an example to illustrate the use of IRR rule.
+
+19
+00:01:10,340 --> 00:01:14,450
+Again, consider two projects, 1 and 2, with cash flows
+
+20
+00:01:14,450 --> 00:01:17,360
+given in the table on the slide.
+
+21
+00:01:17,360 --> 00:01:20,000
+These are the same two projects considered
+
+22
+00:01:20,000 --> 00:01:22,770
+for the payback rule.
+
+23
+00:01:22,770 --> 00:01:27,700
+We can find their IRRs through numerical solutions.
+
+24
+00:01:27,700 --> 00:01:31,780
+As it turns out, project 1 has an IRR of 21%,
+
+25
+00:01:31,780 --> 00:01:36,410
+and project 2 has an IRR of 7%.
+
+26
+00:01:36,410 --> 00:01:40,120
+At a hurdle rate of 10%, say, only project 1
+
+27
+00:01:40,120 --> 00:01:41,620
+will be accepted.
+
+28
+00:01:41,620 --> 00:01:48,960
+This is the same choice as from the NPV rule as we saw earlier.
+
+29
+00:01:48,960 --> 00:01:53,160
+Although IRR is widely used in practice,
+
+30
+00:01:53,160 --> 00:01:56,800
+there's no guarantee that it gives the right answer.
+
+31
+00:01:56,800 --> 00:02:01,640
+The IRR rule leads to the same decision as the NPV rule
+
+32
+00:02:01,640 --> 00:02:04,500
+when the following conditions are met.
+
+33
+00:02:04,500 --> 00:02:09,380
+First, cash outflow occurs only at time 0.
+
+34
+00:02:09,380 --> 00:02:14,510
+Or more generally, cash flow changes side only once.
+
+35
+00:02:14,510 --> 00:02:18,230
+Second, only one project is under consideration.
+
+36
+00:02:18,230 --> 00:02:22,160
+Using IRR to rank projects is problematic,
+
+37
+00:02:22,160 --> 00:02:24,680
+as we'll see in a minute.
+
+38
+00:02:24,680 --> 00:02:27,080
+Third, opportunity cost of capital
+
+39
+00:02:27,080 --> 00:02:30,060
+is the same for all periods.
+
+40
+00:02:30,060 --> 00:02:32,700
+From the definition of IRR, It is
+
+41
+00:02:32,700 --> 00:02:37,230
+used to discount cash flows for all different periods.
+
+42
+00:02:37,230 --> 00:02:41,610
+As we said before, in general, cash flows at different times
+
+43
+00:02:41,610 --> 00:02:43,800
+should be discounted at different rates,
+
+44
+00:02:43,800 --> 00:02:47,630
+according to their timing and risk.
+
+45
+00:02:47,630 --> 00:02:50,960
+Fourth, the hurdle rate is set to be the same
+
+46
+00:02:50,960 --> 00:02:54,970
+as the cost of capital.
+
+47
+00:02:54,970 --> 00:03:00,190
+Since IRR is determined solely by a project's cash flow,
+
+48
+00:03:00,190 --> 00:03:03,160
+some people argue that it is easy to use
+
+49
+00:03:03,160 --> 00:03:07,330
+because it requires no finance expertise, which
+
+50
+00:03:07,330 --> 00:03:09,640
+is about discount rates.
+
+51
+00:03:09,640 --> 00:03:12,100
+But this is not quite right.
+
+52
+00:03:12,100 --> 00:03:18,210
+Even with IRR, the rule relies on the right hurdle rate.
+
+53
+00:03:18,210 --> 00:03:22,620
+Given the popularity of IRR rule in practice,
+
+54
+00:03:22,620 --> 00:03:27,070
+we want to point out some potential issues in its use.
+
+55
+00:03:27,070 --> 00:03:29,490
+We start from the more technical ones,
+
+56
+00:03:29,490 --> 00:03:32,790
+and then move on to the more serious ones.
+
+57
+00:03:32,790 --> 00:03:35,490
+First, given the project's cash flow,
+
+58
+00:03:35,490 --> 00:03:38,550
+there may not exist an IRR.
+
+59
+00:03:38,550 --> 00:03:41,940
+Sometimes there may be more than one IRR.
+
+60
+00:03:41,940 --> 00:03:43,920
+We show this with two examples.
+
+61
+00:03:43,920 --> 00:03:46,480
+
+
+62
+00:03:46,480 --> 00:03:48,910
+The table on the top left of the slide
+
+63
+00:03:48,910 --> 00:03:51,610
+gives the cash flow of a project.
+
+64
+00:03:51,610 --> 00:03:54,010
+The figure on the top right plots
+
+65
+00:03:54,010 --> 00:03:57,970
+the discounted value of the cash flow at an arbitrary discount
+
+66
+00:03:57,970 --> 00:04:00,180
+rate, r.
+
+67
+00:04:00,180 --> 00:04:03,550
+An IRR is given by the point where
+
+68
+00:04:03,550 --> 00:04:09,050
+the cash flow's discounted value curve crosses the x-axis.
+
+69
+00:04:09,050 --> 00:04:11,900
+Clearly, in this case the curve never reaches
+
+70
+00:04:11,900 --> 00:04:17,550
+the x-axis, implying no solution for the IRR.
+
+71
+00:04:17,550 --> 00:04:21,660
+The table on the bottom left gives another cash flow
+
+72
+00:04:21,660 --> 00:04:24,330
+and the figure on the right plots the cash flow's
+
+73
+00:04:24,330 --> 00:04:26,220
+discounted value curve.
+
+74
+00:04:26,220 --> 00:04:30,760
+Here, the curve crosses the x-axis at two places.
+
+75
+00:04:30,760 --> 00:04:38,670
+One is between 0 and 0.05, and another between 0.1 and 0.15.
+
+76
+00:04:38,670 --> 00:04:41,130
+Which one should we pick, then, in this case?
+
+77
+00:04:41,130 --> 00:04:43,020
+No obvious answer.
+
+78
+00:04:43,020 --> 00:04:47,100
+Obviously, in these two cases the project's cash flow
+
+79
+00:04:47,100 --> 00:04:51,870
+changes side twice, violating one of the conditions needed
+
+80
+00:04:51,870 --> 00:04:54,780
+for IRR to work.
+
+81
+00:04:54,780 --> 00:04:59,780
+Next, we show that IRR cannot be used to rank projects when
+
+82
+00:04:59,780 --> 00:05:01,250
+choosing between them.
+
+83
+00:05:01,250 --> 00:05:03,920
+We show this with an example.
+
+84
+00:05:03,920 --> 00:05:07,830
+The example describes two projects, 1 and 2.
+
+85
+00:05:07,830 --> 00:05:11,600
+The cash flows are given in the table on the slide,
+
+86
+00:05:11,600 --> 00:05:13,850
+in row 2 and 3.
+
+87
+00:05:13,850 --> 00:05:21,050
+Column 3 gives their IRRs 100% and 80%, respectively.
+
+88
+00:05:21,050 --> 00:05:24,470
+Suppose the hurdle rate is 10% the cost
+
+89
+00:05:24,470 --> 00:05:27,170
+of capital for these projects.
+
+90
+00:05:27,170 --> 00:05:30,860
+Then both projects pass the hurdle.
+
+91
+00:05:30,860 --> 00:05:34,700
+If they are mutually independent, we will do both.
+
+92
+00:05:34,700 --> 00:05:39,120
+However, if these two projects are mutually exclusive,
+
+93
+00:05:39,120 --> 00:05:41,450
+we have to choose one between them.
+
+94
+00:05:41,450 --> 00:05:48,330
+Clearly, then, project 1 wins because it has a higher IRR.
+
+95
+00:05:48,330 --> 00:05:51,840
+If we compute their NPVs at the cost of capital
+
+96
+00:05:51,840 --> 00:05:56,970
+of 10%, which I give it in the last column in the table, then
+
+97
+00:05:56,970 --> 00:06:03,230
+project 2 should be taken because it has a higher NPV.
+
+98
+00:06:03,230 --> 00:06:04,740
+What's going on here?
+
+99
+00:06:04,740 --> 00:06:08,740
+Well, if we look at the two cash flows more carefully,
+
+100
+00:06:08,740 --> 00:06:13,565
+we'll notice that project 2 is a bigger project with larger cash
+
+101
+00:06:13,565 --> 00:06:14,840
+flows.
+
+102
+00:06:14,840 --> 00:06:17,720
+Even though it has a smaller IRR,
+
+103
+00:06:17,720 --> 00:06:21,830
+its larger scale leads to a larger NPV.
+
+104
+00:06:21,830 --> 00:06:25,760
+Given that we want to maximize the total market value,
+
+105
+00:06:25,760 --> 00:06:29,020
+project 2 clearly delivers more.
+
+106
+00:06:29,020 --> 00:06:33,310
+What we learn is that IRR, being a rate itself,
+
+107
+00:06:33,310 --> 00:06:36,560
+does not capture the scale of the project.
+
+108
+00:06:36,560 --> 00:06:39,370
+Therefore, you will miss the scale factor
+
+109
+00:06:39,370 --> 00:06:41,830
+when it's used to rank projects which
+
+110
+00:06:41,830 --> 00:06:44,760
+may well have different scales.
+

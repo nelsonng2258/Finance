@@ -1,0 +1,644 @@
+0
+00:00:00,000 --> 00:00:01,560
+
+
+1
+00:00:01,560 --> 00:00:03,750
+PROFESSOR: Rio Tinto is considering the development
+
+2
+00:00:03,750 --> 00:00:05,610
+of a bauxite mine.
+
+3
+00:00:05,610 --> 00:00:11,430
+Development costs are estimated to be $24 million in year zero.
+
+4
+00:00:11,430 --> 00:00:15,390
+The mine will generate 4 million in cash flows
+
+5
+00:00:15,390 --> 00:00:18,840
+over the next 10 years, starting in year 1
+
+6
+00:00:18,840 --> 00:00:21,000
+and ending in year 10.
+
+7
+00:00:21,000 --> 00:00:24,570
+After that, Rio Tinto is planning to close the mine
+
+8
+00:00:24,570 --> 00:00:26,370
+and to bring the site in compliance
+
+9
+00:00:26,370 --> 00:00:29,310
+with environmental laws.
+
+10
+00:00:29,310 --> 00:00:31,890
+The estimated costs of closing and compliance
+
+11
+00:00:31,890 --> 00:00:37,770
+are expected to be $350,000 per year starting in year 11
+
+12
+00:00:37,770 --> 00:00:40,720
+and continuing in perpetuity.
+
+13
+00:00:40,720 --> 00:00:44,940
+Assume that the cost of capital is 8%.
+
+14
+00:00:44,940 --> 00:00:48,410
+The first question asks find the internal rate
+
+15
+00:00:48,410 --> 00:00:50,870
+of return of this project.
+
+16
+00:00:50,870 --> 00:00:55,560
+Should you invest in this project based on the IRR rule?
+
+17
+00:00:55,560 --> 00:00:57,840
+Let's start by entering given information
+
+18
+00:00:57,840 --> 00:01:00,030
+into the spreadsheet.
+
+19
+00:01:00,030 --> 00:01:08,280
+In year 0 we have to spend $24 million to develop the mine.
+
+20
+00:01:08,280 --> 00:01:12,810
+In years 1 through 10, the mine will generate $4 million
+
+21
+00:01:12,810 --> 00:01:15,570
+per year.
+
+22
+00:01:15,570 --> 00:01:23,010
+Starting in year 11 we have to spend $350,000 or 0.35 million
+
+23
+00:01:23,010 --> 00:01:27,100
+per year in compliance costs.
+
+24
+00:01:27,100 --> 00:01:34,050
+First, let's write down the NPV of this project as a function
+
+25
+00:01:34,050 --> 00:01:36,510
+of discount rate r.
+
+26
+00:01:36,510 --> 00:01:39,340
+It equals to negative 24 million,
+
+27
+00:01:39,340 --> 00:01:45,180
+which is the initial investment, plus the second term, which
+
+28
+00:01:45,180 --> 00:01:48,750
+captures present value of positive cash flows
+
+29
+00:01:48,750 --> 00:01:53,220
+that the project generates in years 1 through 10.
+
+30
+00:01:53,220 --> 00:01:55,920
+This is a simple annuity that pays 4 million
+
+31
+00:01:55,920 --> 00:01:59,820
+each year for 10 years.
+
+32
+00:01:59,820 --> 00:02:03,860
+The last term captures compliance costs,
+
+33
+00:02:03,860 --> 00:02:07,550
+it is a perpetuity that starts in year 11.
+
+34
+00:02:07,550 --> 00:02:09,919
+We can use the perpetuity formula
+
+35
+00:02:09,919 --> 00:02:16,370
+to find its value in year 10, which is 0.35 divided by r
+
+36
+00:02:16,370 --> 00:02:19,415
+and then we discount this value to present.
+
+37
+00:02:19,415 --> 00:02:21,920
+
+
+38
+00:02:21,920 --> 00:02:25,430
+Now to find the internal rate of return
+
+39
+00:02:25,430 --> 00:02:30,600
+we need to set this NPV to 0 and solve this equation for r.
+
+40
+00:02:30,600 --> 00:02:35,510
+Now obviously we cannot do this by hand because this is
+
+41
+00:02:35,510 --> 00:02:39,540
+a linear equation of high dimension.
+
+42
+00:02:39,540 --> 00:02:43,670
+We also cannot use IRR formula that we used in previous
+
+43
+00:02:43,670 --> 00:02:47,810
+question because we're dealing with perpetuity and therefore
+
+44
+00:02:47,810 --> 00:02:52,550
+cannot enter the entire stream of cash flows into an array.
+
+45
+00:02:52,550 --> 00:02:56,870
+In other words, we just cannot enter an infinite array here
+
+46
+00:02:56,870 --> 00:02:58,670
+in Excel.
+
+47
+00:02:58,670 --> 00:03:03,890
+Therefore we need to utilize Goal Seek tool.
+
+48
+00:03:03,890 --> 00:03:09,950
+Let's start with initial guess for IRR, say 1%.
+
+49
+00:03:09,950 --> 00:03:14,210
+Given this 1% I will compute the net present value
+
+50
+00:03:14,210 --> 00:03:15,710
+of this project.
+
+51
+00:03:15,710 --> 00:03:17,630
+I will break down this calculation
+
+52
+00:03:17,630 --> 00:03:22,160
+into three parts, the initial investment, the annuity part
+
+53
+00:03:22,160 --> 00:03:24,430
+and the perpetuity part.
+
+54
+00:03:24,430 --> 00:03:31,280
+The initial investment simply equals to negative 24 million.
+
+55
+00:03:31,280 --> 00:03:37,180
+The annuity part equals to 4, divided
+
+56
+00:03:37,180 --> 00:03:47,930
+by r, multiplied by 1 minus 1, divided by 1 plus r,
+
+57
+00:03:47,930 --> 00:03:49,120
+raised to the power 10.
+
+58
+00:03:49,120 --> 00:03:52,020
+
+
+59
+00:03:52,020 --> 00:04:04,700
+And the perpetuity part equals to 0.35, divided by r,
+
+60
+00:04:04,700 --> 00:04:11,010
+and this entire expression is divided or discounted
+
+61
+00:04:11,010 --> 00:04:14,390
+to present at discount rate r.
+
+62
+00:04:14,390 --> 00:04:18,339
+
+
+63
+00:04:18,339 --> 00:04:24,220
+Now the NPV of the project is the sum
+
+64
+00:04:24,220 --> 00:04:25,390
+of these three components.
+
+65
+00:04:25,390 --> 00:04:32,510
+
+
+66
+00:04:32,510 --> 00:04:36,410
+Now to find the internal rate of return,
+
+67
+00:04:36,410 --> 00:04:43,270
+I go to Data, What If Analysis, Goal Seek, so I
+
+68
+00:04:43,270 --> 00:04:46,480
+set the cell or the NPV to 0, remember
+
+69
+00:04:46,480 --> 00:04:49,785
+that internal rate of return is the discount rate
+
+70
+00:04:49,785 --> 00:04:54,790
+r that sets this NPV to 0, by changing
+
+71
+00:04:54,790 --> 00:04:56,560
+the cell of our initial guess.
+
+72
+00:04:56,560 --> 00:05:00,760
+
+
+73
+00:05:00,760 --> 00:05:04,160
+So Excel solves this for us and gives us
+
+74
+00:05:04,160 --> 00:05:07,820
+the solution that the internal rate of return for this project
+
+75
+00:05:07,820 --> 00:05:10,850
+equals to 2.48%.
+
+76
+00:05:10,850 --> 00:05:17,460
+Now given that the cost of capital is 8%
+
+77
+00:05:17,460 --> 00:05:19,020
+and the internal rate of return is
+
+78
+00:05:19,020 --> 00:05:23,310
+less than the cost of capital, the conventional internal rate
+
+79
+00:05:23,310 --> 00:05:26,190
+of return rule would imply that we should not
+
+80
+00:05:26,190 --> 00:05:28,860
+take this project.
+
+81
+00:05:28,860 --> 00:05:30,440
+The second part of this question asks
+
+82
+00:05:30,440 --> 00:05:33,350
+us to find the net present value and asks
+
+83
+00:05:33,350 --> 00:05:38,690
+whether we should invest in this project based on the NPV rule.
+
+84
+00:05:38,690 --> 00:05:42,810
+Well the NPV of this project is simply this expression,
+
+85
+00:05:42,810 --> 00:05:44,930
+it is the same expression that we just
+
+86
+00:05:44,930 --> 00:05:47,720
+used to find internal rate of return
+
+87
+00:05:47,720 --> 00:05:52,580
+but here we're just using the cost of capital of 8%.
+
+88
+00:05:52,580 --> 00:05:56,480
+Turns out that the net present value of this project
+
+89
+00:05:56,480 --> 00:06:02,270
+is $814,000, therefore Rio Tinto should go ahead
+
+90
+00:06:02,270 --> 00:06:04,850
+with this project.
+
+91
+00:06:04,850 --> 00:06:06,920
+This contradicts the answer that we
+
+92
+00:06:06,920 --> 00:06:10,080
+received based on the internal rate of return rule.
+
+93
+00:06:10,080 --> 00:06:13,170
+So what gives?
+
+94
+00:06:13,170 --> 00:06:14,910
+To understand what's going on let's
+
+95
+00:06:14,910 --> 00:06:18,030
+build an NPV profile of this project.
+
+96
+00:06:18,030 --> 00:06:25,720
+I have created an array of discount rates from 2% to 15%
+
+97
+00:06:25,720 --> 00:06:29,470
+in quarter of a percent increments.
+
+98
+00:06:29,470 --> 00:06:31,510
+For each of these discount rates let's
+
+99
+00:06:31,510 --> 00:06:34,780
+compute the net present value.
+
+100
+00:06:34,780 --> 00:06:40,150
+I'm using here the same formula as the one we just used.
+
+101
+00:06:40,150 --> 00:06:44,800
+I will extend this array which will automatically
+
+102
+00:06:44,800 --> 00:06:48,940
+compute the net present value for all discount rates
+
+103
+00:06:48,940 --> 00:06:51,550
+that we have here.
+
+104
+00:06:51,550 --> 00:06:56,500
+Now what we see on the graph is the NPV profile
+
+105
+00:06:56,500 --> 00:06:58,810
+of this project.
+
+106
+00:06:58,810 --> 00:07:03,190
+Recall that in question 5 NPV profile was a decreasing
+
+107
+00:07:03,190 --> 00:07:05,890
+function of discount rates.
+
+108
+00:07:05,890 --> 00:07:09,520
+What we see here is a very different picture,
+
+109
+00:07:09,520 --> 00:07:15,940
+NPV profile is first increasing and then decreasing
+
+110
+00:07:15,940 --> 00:07:18,730
+in discount rates.
+
+111
+00:07:18,730 --> 00:07:22,700
+We visually see that when discount rate is
+
+112
+00:07:22,700 --> 00:07:26,060
+8%, which is our cost of capital,
+
+113
+00:07:26,060 --> 00:07:30,380
+the net present value of this project is positive
+
+114
+00:07:30,380 --> 00:07:32,990
+and therefore we should take this project.
+
+115
+00:07:32,990 --> 00:07:35,820
+
+
+116
+00:07:35,820 --> 00:07:39,660
+To understand why IRR rule gave us the wrong investment advice
+
+117
+00:07:39,660 --> 00:07:43,980
+recall the following, IRR rule can be used only
+
+118
+00:07:43,980 --> 00:07:49,440
+when cash outflow occurs only in time 0,
+
+119
+00:07:49,440 --> 00:07:52,440
+only one project is under consideration,
+
+120
+00:07:52,440 --> 00:07:56,520
+opportunity cost of capital is the same for all periods
+
+121
+00:07:56,520 --> 00:08:00,900
+and the threshold rate is set to the cost of capital.
+
+122
+00:08:00,900 --> 00:08:05,940
+In our case, cash outflow occurs in year 0
+
+123
+00:08:05,940 --> 00:08:09,390
+as well as from year 11 onwards.
+
+124
+00:08:09,390 --> 00:08:13,830
+Therefore, we cannot use the internal rate of return rule
+
+125
+00:08:13,830 --> 00:08:18,130
+to make an investment decision in this case.
+
+126
+00:08:18,130 --> 00:08:22,670
+Let me make another remark, the NPV profile
+
+127
+00:08:22,670 --> 00:08:28,700
+here shows that this project has two internal rates of return.
+
+128
+00:08:28,700 --> 00:08:32,950
+The first one is somewhere between 2% and 3%
+
+129
+00:08:32,950 --> 00:08:37,640
+and the second one is somewhere around 9%
+
+130
+00:08:37,640 --> 00:08:43,789
+but when we used Goal Seek tool it gave us only one solution.
+
+131
+00:08:43,789 --> 00:08:47,350
+The reason for this is the initial guess or the starting
+
+132
+00:08:47,350 --> 00:08:49,120
+point.
+
+133
+00:08:49,120 --> 00:08:51,370
+Our first initial starting point was
+
+134
+00:08:51,370 --> 00:08:55,780
+1% and the numerical algorithm that
+
+135
+00:08:55,780 --> 00:09:00,080
+solved this equation converged to the first solution here,
+
+136
+00:09:00,080 --> 00:09:03,250
+which was 2.48%.
+
+137
+00:09:03,250 --> 00:09:08,050
+But if we started from a different initial guess
+
+138
+00:09:08,050 --> 00:09:11,410
+or initial starting point anywhere to the right
+
+139
+00:09:11,410 --> 00:09:15,670
+from this hump, say at 6%, we would have
+
+140
+00:09:15,670 --> 00:09:19,750
+converged to the second IRR.
+
+141
+00:09:19,750 --> 00:09:24,010
+To confirm this, let's go back to the other spreadsheet
+
+142
+00:09:24,010 --> 00:09:28,940
+and use Goal Seek tool with the starting point of 6%.
+
+143
+00:09:28,940 --> 00:09:36,040
+So in this initial guess cell I will put 6%
+
+144
+00:09:36,040 --> 00:09:41,590
+and I will go back to Goal Seek tool
+
+145
+00:09:41,590 --> 00:09:45,520
+and I will ask it to set the net present value of this project
+
+146
+00:09:45,520 --> 00:09:52,390
+to 0 by changing the discount rate cell.
+
+147
+00:09:52,390 --> 00:09:57,940
+And if we solve this equation from a different starting
+
+148
+00:09:57,940 --> 00:10:01,210
+point, we see that the algorithm here
+
+149
+00:10:01,210 --> 00:10:05,360
+converged to this second internal rate of return,
+
+150
+00:10:05,360 --> 00:10:10,270
+which is 9.04% in this case.
+
+151
+00:10:10,270 --> 00:10:14,610
+The conclusion is that this project has two IRRs
+
+152
+00:10:14,610 --> 00:10:19,620
+and we can find both of them using numerical tools in Excel.
+
+153
+00:10:19,620 --> 00:10:23,760
+But what's more important is that we cannot use the internal
+
+154
+00:10:23,760 --> 00:10:26,430
+rate of return rule to make the investment decision in this
+
+155
+00:10:26,430 --> 00:10:32,040
+case because the conditions under which we can use the IRR
+
+156
+00:10:32,040 --> 00:10:36,940
+rule are not satisfied, namely in this case,
+
+157
+00:10:36,940 --> 00:10:42,000
+we have cash outflows that occur after year zero.
+
+158
+00:10:42,000 --> 00:10:46,470
+In particular, the compliance costs that start in year 11
+
+159
+00:10:46,470 --> 00:10:49,250
+and continue onwards.
+
+160
+00:10:49,250 --> 00:10:50,000
+
+
