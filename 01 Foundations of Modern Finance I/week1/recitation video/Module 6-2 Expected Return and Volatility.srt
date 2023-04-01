@@ -1,0 +1,300 @@
+0
+00:00:00,000 --> 00:00:01,604
+
+
+1
+00:00:01,604 --> 00:00:05,910
+PROFESSOR: In this video, we will define what is variance
+
+2
+00:00:05,910 --> 00:00:09,440
+and standard deviation of the returned distribution.
+
+3
+00:00:09,440 --> 00:00:14,190
+We will continue working with our example of Nikola stock.
+
+4
+00:00:14,190 --> 00:00:18,240
+Let's first define, what is variance?
+
+5
+00:00:18,240 --> 00:00:22,920
+Variance of return R is the expected squared deviation
+
+6
+00:00:22,920 --> 00:00:33,870
+from the mean, meaning that it is expected squared deviation,
+
+7
+00:00:33,870 --> 00:00:36,080
+which is this from the mean.
+
+8
+00:00:36,080 --> 00:00:42,710
+And we know that this ER is the mean or the expected return.
+
+9
+00:00:42,710 --> 00:00:46,930
+
+
+10
+00:00:46,930 --> 00:00:50,370
+So you could see that, if the return never
+
+11
+00:00:50,370 --> 00:00:55,560
+deviates from its mean, the variance will be zero.
+
+12
+00:00:55,560 --> 00:00:59,460
+Otherwise, the variance will be increasing with the magnitude
+
+13
+00:00:59,460 --> 00:01:02,400
+of the deviation from the mean.
+
+14
+00:01:02,400 --> 00:01:04,650
+Therefore, the variance is a measure
+
+15
+00:01:04,650 --> 00:01:08,970
+of how spread out the distribution of return is,
+
+16
+00:01:08,970 --> 00:01:16,080
+so let us compute this variance right now for Nikola stock.
+
+17
+00:01:16,080 --> 00:01:19,110
+But first, let's write down this expression that
+
+18
+00:01:19,110 --> 00:01:22,860
+is written in expected value terms
+
+19
+00:01:22,860 --> 00:01:26,050
+as applied to our case of this Greek distribution.
+
+20
+00:01:26,050 --> 00:01:32,240
+So it's going to be sum of probabilities, PIs, multiplied
+
+21
+00:01:32,240 --> 00:01:40,270
+by return RI that we'd get in a given state minus the expected
+
+22
+00:01:40,270 --> 00:01:42,910
+return, and this will be squared.
+
+23
+00:01:42,910 --> 00:01:45,100
+So this is for all I's from one to N,
+
+24
+00:01:45,100 --> 00:01:48,100
+however many states we have.
+
+25
+00:01:48,100 --> 00:01:50,530
+Now, let's continue writing down this expression
+
+26
+00:01:50,530 --> 00:01:52,670
+and just applying it to our case.
+
+27
+00:01:52,670 --> 00:01:59,670
+It's going to be P1 multiplied by R1 minus expected
+
+28
+00:01:59,670 --> 00:02:07,500
+return plus P2 times R2 minus the expected return
+
+29
+00:02:07,500 --> 00:02:14,620
+plus B3 times R3 minus the expected return,
+
+30
+00:02:14,620 --> 00:02:17,470
+and we have to square all of these differences.
+
+31
+00:02:17,470 --> 00:02:20,500
+So that we get the correct expression,
+
+32
+00:02:20,500 --> 00:02:25,660
+and this is because we have only three states in this example.
+
+33
+00:02:25,660 --> 00:02:29,700
+Now, recall that returns in individual states were this.
+
+34
+00:02:29,700 --> 00:02:35,370
+So in this upstate or in the very positive scenario,
+
+35
+00:02:35,370 --> 00:02:41,440
+the return was 368.75%.
+
+36
+00:02:41,440 --> 00:02:46,780
+In the second scenario, the return was negative 37.5%.
+
+37
+00:02:46,780 --> 00:02:54,580
+In the most adverse scenario, the return was negative 93.75%.
+
+38
+00:02:54,580 --> 00:02:58,360
+The expected return was negative 13.75%.
+
+39
+00:02:58,360 --> 00:03:01,390
+So now, we can plug-in all of these numbers
+
+40
+00:03:01,390 --> 00:03:04,460
+into the expression for the variance of the return.
+
+41
+00:03:04,460 --> 00:03:12,400
+So it's 10% multiplied by 368.75% minus,
+
+42
+00:03:12,400 --> 00:03:14,150
+and we're subtracting the negative number.
+
+43
+00:03:14,150 --> 00:03:24,190
+So minus negative 13.75% squared plus 60% multiplied
+
+44
+00:03:24,190 --> 00:03:28,878
+by negative 37.5% minus--
+
+45
+00:03:28,878 --> 00:03:30,670
+again, we're subtracting a negative number.
+
+46
+00:03:30,670 --> 00:03:33,650
+So we would effectively be adding them up,
+
+47
+00:03:33,650 --> 00:03:43,950
+so 23.75% squared as well plus 30% multiplied
+
+48
+00:03:43,950 --> 00:03:56,330
+by negative 93.75% minus negative 13.75%
+
+49
+00:03:56,330 --> 00:03:59,360
+squared as well.
+
+50
+00:03:59,360 --> 00:04:05,440
+The value of this expression equals to 1.69.
+
+51
+00:04:05,440 --> 00:04:08,650
+Now, finally, let me compute the standard deviation
+
+52
+00:04:08,650 --> 00:04:10,570
+of the return on the stock, which
+
+53
+00:04:10,570 --> 00:04:15,700
+by definition is the squared root of the variance.
+
+54
+00:04:15,700 --> 00:04:17,950
+And therefore, in our case, it is the squared root
+
+55
+00:04:17,950 --> 00:04:26,170
+of 1.69, which is 1.3.
+
+56
+00:04:26,170 --> 00:04:28,130
+Now, standard deviation of returns,
+
+57
+00:04:28,130 --> 00:04:32,110
+which is often referred to as volatility,
+
+58
+00:04:32,110 --> 00:04:34,715
+is often expressed in percentages.
+
+59
+00:04:34,715 --> 00:04:36,340
+So in this case, the standard deviation
+
+60
+00:04:36,340 --> 00:04:43,170
+of returns on this stock would be 130%.
+
+61
+00:04:43,170 --> 00:04:45,630
+Let me make one important remark.
+
+62
+00:04:45,630 --> 00:04:48,480
+Notice that I expressed standard deviation or the volatility
+
+63
+00:04:48,480 --> 00:04:50,630
+of returns in percentages.
+
+64
+00:04:50,630 --> 00:04:52,680
+So same units in which we measure
+
+65
+00:04:52,680 --> 00:04:58,060
+returns and expect that the returns as well.
+
+66
+00:04:58,060 --> 00:05:01,630
+But I haven't done that for the variance of returns,
+
+67
+00:05:01,630 --> 00:05:06,270
+and the reason for that is that variance returns is measured
+
+68
+00:05:06,270 --> 00:05:07,620
+in percentages squared.
+
+69
+00:05:07,620 --> 00:05:09,180
+And we could see it right here.
+
+70
+00:05:09,180 --> 00:05:13,110
+Because when we are taking the deviations from the mean,
+
+71
+00:05:13,110 --> 00:05:17,400
+we are raising them to power of two.
+
+72
+00:05:17,400 --> 00:05:19,020
+Therefore, when it comes to variance,
+
+73
+00:05:19,020 --> 00:05:22,410
+we typically just express it as a number and not
+
+74
+00:05:22,410 --> 00:05:23,870
+as a percentage.
+

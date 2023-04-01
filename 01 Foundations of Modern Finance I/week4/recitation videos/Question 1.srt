@@ -1,0 +1,716 @@
+0
+00:00:00,000 --> 00:00:01,875
+PROFESSOR: In this question, I will teach you
+
+1
+00:00:01,875 --> 00:00:06,430
+how to find spot interest rates from given bond prices.
+
+2
+00:00:06,430 --> 00:00:08,430
+In this question we're given three bonds--
+
+3
+00:00:08,430 --> 00:00:13,320
+Bond A, Bond B, and Bond C. Bond A has 0% coupon
+
+4
+00:00:13,320 --> 00:00:16,680
+and has one year until it matures.
+
+5
+00:00:16,680 --> 00:00:22,530
+Bond B has a 3% coupon rate and has two years until it matures.
+
+6
+00:00:22,530 --> 00:00:26,130
+And bond C has a 3.5% coupon rate
+
+7
+00:00:26,130 --> 00:00:30,090
+and has three years until maturity.
+
+8
+00:00:30,090 --> 00:00:31,620
+Bond prices are given as such.
+
+9
+00:00:31,620 --> 00:00:35,280
+So Bond A costs $97.60 right now.
+
+10
+00:00:35,280 --> 00:00:37,470
+Bond B costs $96.
+
+11
+00:00:37,470 --> 00:00:41,130
+And Bond C costs $98.
+
+12
+00:00:41,130 --> 00:00:43,500
+So the goal is to take this information
+
+13
+00:00:43,500 --> 00:00:48,420
+about the bonds in green here and find spot interest
+
+14
+00:00:48,420 --> 00:00:52,000
+rates for Years 1, 2, and 3.
+
+15
+00:00:52,000 --> 00:00:54,030
+So this is the question.
+
+16
+00:00:54,030 --> 00:00:55,980
+The first step that we'll do here
+
+17
+00:00:55,980 --> 00:01:00,030
+is that we will write the prices of these bonds
+
+18
+00:01:00,030 --> 00:01:01,930
+as the function of interest rates.
+
+19
+00:01:01,930 --> 00:01:03,850
+So let's start with bond A.
+
+20
+00:01:03,850 --> 00:01:10,350
+So the price of Bond A, PA would equal to $1 face value
+
+21
+00:01:10,350 --> 00:01:13,410
+that this bond pays at the end of Year 1 divided
+
+22
+00:01:13,410 --> 00:01:16,620
+by 1 plus interest rate r1.
+
+23
+00:01:16,620 --> 00:01:20,730
+So this is the one-year spot interest rate.
+
+24
+00:01:20,730 --> 00:01:23,010
+One thing to know here is that all of the bonds
+
+25
+00:01:23,010 --> 00:01:27,090
+have $100 face value.
+
+26
+00:01:27,090 --> 00:01:29,820
+And all of these bonds are risk free.
+
+27
+00:01:29,820 --> 00:01:34,020
+So we are talking about spot interest rates, risk-free spot
+
+28
+00:01:34,020 --> 00:01:36,010
+interest rates.
+
+29
+00:01:36,010 --> 00:01:38,420
+So this is for bond A.
+
+30
+00:01:38,420 --> 00:01:41,610
+The next step is to write the price
+
+31
+00:01:41,610 --> 00:01:45,240
+as the function of the coupon and interest rates for bond B.
+
+32
+00:01:45,240 --> 00:01:51,210
+So Bond B has two years until maturity and pays 3% coupon.
+
+33
+00:01:51,210 --> 00:01:54,150
+This means that if we are the holder of this bond
+
+34
+00:01:54,150 --> 00:01:58,950
+we will get $3 at the end of year one, which
+
+35
+00:01:58,950 --> 00:02:00,480
+is our first coupon.
+
+36
+00:02:00,480 --> 00:02:03,540
+We'll get $3 at the end of year two, which
+
+37
+00:02:03,540 --> 00:02:04,950
+is our second coupon.
+
+38
+00:02:04,950 --> 00:02:07,920
+And then we will get the face value of $100 paid
+
+39
+00:02:07,920 --> 00:02:10,650
+to us at the end of year two.
+
+40
+00:02:10,650 --> 00:02:14,310
+So now what we do is we're discounting these coupon
+
+41
+00:02:14,310 --> 00:02:18,510
+payments and the face value to present using
+
+42
+00:02:18,510 --> 00:02:21,220
+the appropriate discount rates.
+
+43
+00:02:21,220 --> 00:02:24,690
+So the first $3 we get at the end of Year 1.
+
+44
+00:02:24,690 --> 00:02:28,830
+So therefore we're discounting it by discount rate r1.
+
+45
+00:02:28,830 --> 00:02:32,080
+And the second payment, the last coupon in the face value,
+
+46
+00:02:32,080 --> 00:02:34,050
+we're getting at the end of Year 2.
+
+47
+00:02:34,050 --> 00:02:36,720
+And therefore, we're discounting it to present.
+
+48
+00:02:36,720 --> 00:02:39,680
+We're using r2 as the discount rate.
+
+49
+00:02:39,680 --> 00:02:41,430
+Hence power of 2 here because this payment
+
+50
+00:02:41,430 --> 00:02:44,460
+comes at the end of Year 2.
+
+51
+00:02:44,460 --> 00:02:48,190
+The final step is to do the same thing for Bond C.
+
+52
+00:02:48,190 --> 00:02:51,280
+So the price of Bond C, this bond has three years
+
+53
+00:02:51,280 --> 00:02:57,430
+until maturity, base coupon 3.5%, so 3.5 dollars
+
+54
+00:02:57,430 --> 00:02:59,660
+discounted by 1 plus r1.
+
+55
+00:02:59,660 --> 00:03:01,620
+So this is our first payment.
+
+56
+00:03:01,620 --> 00:03:06,060
+Our second payment is the next coupon $3.50 discounted
+
+57
+00:03:06,060 --> 00:03:09,790
+to present at discount rate r2 raised to the power of 2
+
+58
+00:03:09,790 --> 00:03:12,760
+because this payment occurs in Year 2.
+
+59
+00:03:12,760 --> 00:03:14,680
+And finally we get our last coupon
+
+60
+00:03:14,680 --> 00:03:16,560
+at the end of year three.
+
+61
+00:03:16,560 --> 00:03:20,082
+We get face value of this bond as well at the end Year 3.
+
+62
+00:03:20,082 --> 00:03:21,540
+And we're discounting it to present
+
+63
+00:03:21,540 --> 00:03:23,932
+using r3 as a discount rate.
+
+64
+00:03:23,932 --> 00:03:25,390
+And we're raising it the power of 3
+
+65
+00:03:25,390 --> 00:03:28,630
+because this payment occurs at the end of Year 3.
+
+66
+00:03:28,630 --> 00:03:34,840
+Now the goal is to find spot interest rates r1, r2, and r3.
+
+67
+00:03:34,840 --> 00:03:37,350
+I've written down the prices of these bonds right here.
+
+68
+00:03:37,350 --> 00:03:39,430
+So they are given to us.
+
+69
+00:03:39,430 --> 00:03:41,830
+So what we effectively have here is
+
+70
+00:03:41,830 --> 00:03:45,910
+that we have a system of three equations with three unknowns.
+
+71
+00:03:45,910 --> 00:03:48,730
+And notice that this is an easy system to solve in the sense
+
+72
+00:03:48,730 --> 00:03:52,540
+that the first equation has only one unknown, r1.
+
+73
+00:03:52,540 --> 00:03:56,320
+So we can solve this equation, plug this r1
+
+74
+00:03:56,320 --> 00:03:59,560
+into the second equation, at which point
+
+75
+00:03:59,560 --> 00:04:01,570
+this ratio will become known.
+
+76
+00:04:01,570 --> 00:04:05,290
+And this will just become an equation with one unknown, r2.
+
+77
+00:04:05,290 --> 00:04:09,460
+At which point we can solve this equation for r2,
+
+78
+00:04:09,460 --> 00:04:13,540
+plug our known r1 and r2 into the last equation,
+
+79
+00:04:13,540 --> 00:04:15,950
+and solve this last equation for r3.
+
+80
+00:04:15,950 --> 00:04:17,950
+And so this is exactly what I'm going to do now.
+
+81
+00:04:17,950 --> 00:04:22,270
+So I'm going to start solving the first equation for r1.
+
+82
+00:04:22,270 --> 00:04:33,440
+So r1 is going to be equal to $100 divided by $97.50 minus 1.
+
+83
+00:04:33,440 --> 00:04:37,630
+So this would give me the first spot interest rate, r1.
+
+84
+00:04:37,630 --> 00:04:40,630
+So I solved this first equation for the first spot interest
+
+85
+00:04:40,630 --> 00:04:41,980
+rate, r1.
+
+86
+00:04:41,980 --> 00:04:46,210
+And the answer is r1 equals to 2.56%.
+
+87
+00:04:46,210 --> 00:04:51,640
+Now the next step is to take this known r1
+
+88
+00:04:51,640 --> 00:04:53,670
+and put it into the second equation.
+
+89
+00:04:53,670 --> 00:04:56,230
+I've erased the third equation here right now so that I
+
+90
+00:04:56,230 --> 00:04:58,750
+have more space to work here.
+
+91
+00:04:58,750 --> 00:05:02,760
+So what I will do here is that I will plug this
+
+92
+00:05:02,760 --> 00:05:04,612
+into this equation.
+
+93
+00:05:04,612 --> 00:05:05,820
+And I will get the following.
+
+94
+00:05:05,820 --> 00:05:12,770
+So I'll get 96 equals to $3 divided by 1
+
+95
+00:05:12,770 --> 00:05:27,430
+plus 2.56% plus 103 divided by 1 plus r2 raised to power of 2.
+
+96
+00:05:27,430 --> 00:05:31,060
+This is a known number that we can compute.
+
+97
+00:05:31,060 --> 00:05:32,770
+And so this just becomes an equation
+
+98
+00:05:32,770 --> 00:05:37,020
+with one unknown, which I can solve for r2.
+
+99
+00:05:37,020 --> 00:05:40,480
+
+
+100
+00:05:40,480 --> 00:05:42,550
+I just solved this equation for r2.
+
+101
+00:05:42,550 --> 00:05:45,490
+So r2 equals to 5.2%.
+
+102
+00:05:45,490 --> 00:05:48,220
+Now the last step is to find r3.
+
+103
+00:05:48,220 --> 00:05:50,440
+So I've written down back the bond pricing
+
+104
+00:05:50,440 --> 00:05:54,183
+equation that we had before for Bond C.
+
+105
+00:05:54,183 --> 00:05:55,600
+And so right now what I will do is
+
+106
+00:05:55,600 --> 00:05:58,690
+that I will take again r1 that we computed before
+
+107
+00:05:58,690 --> 00:06:02,710
+and I will put it down here.
+
+108
+00:06:02,710 --> 00:06:06,880
+And I will also do the new r2 that we found.
+
+109
+00:06:06,880 --> 00:06:09,340
+And I'll put it into this last equation
+
+110
+00:06:09,340 --> 00:06:12,640
+as well, at which point again this will become just one
+
+111
+00:06:12,640 --> 00:06:14,480
+equation with one unknown.
+
+112
+00:06:14,480 --> 00:06:15,610
+So let's do it.
+
+113
+00:06:15,610 --> 00:06:31,570
+So $98 equals to 3 and 1/2, 1 plus 2.56% plus another 3.5,
+
+114
+00:06:31,570 --> 00:06:38,290
+that's our second coupon, divided by 1 plus 5.2%
+
+115
+00:06:38,290 --> 00:06:52,220
+squared plus 103.5 Divided by 1 plus r3 raised to power of 3.
+
+116
+00:06:52,220 --> 00:06:53,360
+So this we can compute.
+
+117
+00:06:53,360 --> 00:06:54,320
+This we can compute.
+
+118
+00:06:54,320 --> 00:06:58,610
+And again, this just becomes one equation with one unknown.
+
+119
+00:06:58,610 --> 00:07:03,920
+So the goal right now is to solve this equation for r3.
+
+120
+00:07:03,920 --> 00:07:06,380
+So I just solved this equation for r3
+
+121
+00:07:06,380 --> 00:07:10,700
+and I found that r3 equals to 4.22%.
+
+122
+00:07:10,700 --> 00:07:13,910
+And that's how we find spot interest rates.
+
+123
+00:07:13,910 --> 00:07:16,700
+So r1 equals to 2.56%.
+
+124
+00:07:16,700 --> 00:07:18,410
+r2 equals to 5.2%.
+
+125
+00:07:18,410 --> 00:07:21,560
+And r3 equals to 4.22%.
+
+126
+00:07:21,560 --> 00:07:23,880
+This is the answer to this question.
+
+127
+00:07:23,880 --> 00:07:26,630
+So this is how we find from given bond prices.
+
+128
+00:07:26,630 --> 00:07:28,760
+This is how we find spot interest rates.
+
+129
+00:07:28,760 --> 00:07:33,110
+When we start with finding the closest or the shortest
+
+130
+00:07:33,110 --> 00:07:35,660
+interest rate from the first given bond and then
+
+131
+00:07:35,660 --> 00:07:39,723
+we continue working and finding the second
+
+132
+00:07:39,723 --> 00:07:40,890
+and the third interest rate.
+
+133
+00:07:40,890 --> 00:07:44,240
+So if we're given a fourth bond and we were given four periods,
+
+134
+00:07:44,240 --> 00:07:46,880
+we would continue doing that, and just solving this equation
+
+135
+00:07:46,880 --> 00:07:50,720
+and stripping these spot interest rates.
+
+136
+00:07:50,720 --> 00:07:52,280
+Now the last step what I will show
+
+137
+00:07:52,280 --> 00:07:56,000
+is that I want to actually use this discount rate
+
+138
+00:07:56,000 --> 00:07:59,540
+and make sure that I solve this question correctly in the sense
+
+139
+00:07:59,540 --> 00:08:03,380
+that if I were to price those bonds using this term
+
+140
+00:08:03,380 --> 00:08:06,830
+structure spot interest rates, that I would actually get
+
+141
+00:08:06,830 --> 00:08:09,200
+the prices that we were given.
+
+142
+00:08:09,200 --> 00:08:12,560
+And I will show this to you right now.
+
+143
+00:08:12,560 --> 00:08:15,680
+So let's compute the prices given the interest
+
+144
+00:08:15,680 --> 00:08:17,010
+rate that we just found.
+
+145
+00:08:17,010 --> 00:08:19,680
+So the price of Bond A would equal to,
+
+146
+00:08:19,680 --> 00:08:23,320
+again, it's a zero-coupon bond, one year to maturity.
+
+147
+00:08:23,320 --> 00:08:26,150
+So it's $100 divided by 1 plus r1.
+
+148
+00:08:26,150 --> 00:08:29,750
+So r1 right now equals to 2.56%.
+
+149
+00:08:29,750 --> 00:08:32,640
+So if we compute this price of this Bond A,
+
+150
+00:08:32,640 --> 00:08:38,450
+what we will find is that it equals to $97.50.
+
+151
+00:08:38,450 --> 00:08:41,360
+The price of Bond B would equal to the first coupon,
+
+152
+00:08:41,360 --> 00:08:44,150
+so $3 divided by 1 plus r1 which is
+
+153
+00:08:44,150 --> 00:08:49,370
+2.56% plus the last coupon plus the face value
+
+154
+00:08:49,370 --> 00:08:53,690
+divided by r2 which is 5.2% raised to the power of two
+
+155
+00:08:53,690 --> 00:08:57,680
+because this cash flow occurs at the end of Year 2.
+
+156
+00:08:57,680 --> 00:08:59,560
+So if we compute this price right now
+
+157
+00:08:59,560 --> 00:09:01,310
+with this interest rate, what we will find
+
+158
+00:09:01,310 --> 00:09:04,970
+is that the price of this bond is indeed
+
+159
+00:09:04,970 --> 00:09:10,200
+$96, the number that was given to us in this question.
+
+160
+00:09:10,200 --> 00:09:14,360
+Finally, the bond price C equals to the first coupon payment
+
+161
+00:09:14,360 --> 00:09:19,610
+3.5 dollars because this bond, again, has 3.5% coupon rate,
+
+162
+00:09:19,610 --> 00:09:22,000
+divided by 1 plus 2.56%.
+
+163
+00:09:22,000 --> 00:09:23,540
+This is our r1.
+
+164
+00:09:23,540 --> 00:09:28,670
+Second coupon, $3.50 divided by 1 plus the second discount
+
+165
+00:09:28,670 --> 00:09:32,420
+rate, r2, Plus the last coupon payment,
+
+166
+00:09:32,420 --> 00:09:36,810
+3.5 plus the face value received at the end of Year 3
+
+167
+00:09:36,810 --> 00:09:40,860
+it's counted by 1 plus r3.
+
+168
+00:09:40,860 --> 00:09:43,140
+That's 4.22% raised to the power of 3
+
+169
+00:09:43,140 --> 00:09:46,990
+again because this cash flow occurs at the end of Year 3.
+
+170
+00:09:46,990 --> 00:09:48,960
+So if we compute this price, we will find
+
+171
+00:09:48,960 --> 00:09:54,580
+that it also equals to $98.
+
+172
+00:09:54,580 --> 00:09:56,830
+So what we've done, we've confirmed
+
+173
+00:09:56,830 --> 00:10:01,360
+that the discount rates that we've found from given bond
+
+174
+00:10:01,360 --> 00:10:04,250
+prices, if we plug them back in and try
+
+175
+00:10:04,250 --> 00:10:07,300
+to price those bonds with these discount rates,
+
+176
+00:10:07,300 --> 00:10:10,930
+it will, indeed, find the numbers or the bond prices that
+
+177
+00:10:10,930 --> 00:10:14,050
+were given in this question, which means that we have solved
+
+178
+00:10:14,050 --> 00:10:16,530
+this question correctly.
+

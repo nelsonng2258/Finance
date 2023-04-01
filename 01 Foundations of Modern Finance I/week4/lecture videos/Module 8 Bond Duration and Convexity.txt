@@ -1,0 +1,144 @@
+
+PROFESSOR: Bond duration can be used as a measure of bond risk.
+Now, let's take a closer look at how well
+bond duration approximates the risk of the bond.
+Consider the following example.
+We have a four-year treasury note with a face value of 100
+and a 7% coupon, which is paid semiannually.
+So every six month, this bond pays $3.50 in coupons.
+In the following table, you can see the cash flows of the bond.
+It's 3.50 every six month.
+And the payment of $103.5 at the maturity date.
+Now, for this bond we can compute the Macaulay duration
+as a weighted average of the payment tenors.
+And that happens to be equal to 7.13 periods.
+Each period is half a year.
+So this is a little less than four years.
+And the modified duration, which is Macaulay duration divided
+by bond plus the yield on the bond, 1 plus 3%,
+is equal to 6.92 periods.
+So it's a little bit shorter than three and 1/2 years.
+Based on this number, based on the modified duration,
+our infinitesimal formula can be used to approximate risk
+exposure of the bond.
+The formula tells us that when the semiannual yield moves
+by 0.1%, the bond price should decrease by roughly 0.692%.
+The approximate change in the bond in percentage terms
+should be equal to the modified duration
+times the change in the yield.
+Now, this approximation is based on the infinitesimal analysis.
+It's based on the Taylor approximation, Taylor expansion
+of changes in the bond price.
+What happens if yields move by a larger amount?
+Is this formula going to remain accurate?
+Let's do an experiment.
+We're going to change yields by large amounts,
+and see how the bond price responds.
+In the following table, you could
+see the price of our bond exactly computed
+as a function of several different values of the bond
+yield.
+In the middle of the table, we see
+that when the bond yield in semiannual terms is 3%,
+the price of the bond is 103.5.
+Now, we can compute bond price for different yield levels
+exactly, or we can compute it approximately based
+on the modified duration number.
+What we see here is that when yields change by 10 basis
+points from 3% to 3.1, the exact bond price
+moves from 103.5 to $102.79.
+And the duration based formula is producing a highly accurate
+approximation.
+It's giving us basically the same number.
+So the difference shows up in higher order digits
+past the decimal point.
+Now, let's assume that the yield changes by a large amount.
+It goes from 3% to 4%.
+Now, the price of the bond drops to $96.63.
+That's the exact bond price.
+And the approximation based on modified duration
+is giving us $96.35.
+Now, we can see that there is a difference.
+The duration-based formula is under-predicting the bond
+price.
+The exact price is higher than what we get
+based on the duration formula.
+This is not surprising.
+The modified duration is a first order approximation
+the price changes of the bond.
+But the exact relation within the bond price and the yield
+is nonlinear.
+Therefore, when changes in the bond price are large,
+we need to think of higher order approximations.
+We can see this annotation clearly in the following graph.
+The red line here corresponds to the exact price of the bond
+as a function of the yield.
+The blue line is a linear approximation.
+It's giving us a very accurate description of the bond price
+if changes in the yield are small.
+But it kind of falls short when changes in the yield are large.
+This blue line corresponds to the duration-based
+approximation.
+Our duration number is given as the slope
+in the relation between the bond price and the yield.
+If we want to account for the nonlinearity,
+if you want to capture the most important nonlinear
+term, the curvature of this curve,
+we need to introduce higher order charts.
+So curvature or convexity of this curve
+need to be captured by an additional term.
+And that term is called the convexity term.
+Algebraically, what we can do is expand the bond price
+in a Taylor series as a function of changes in the bond yield.
+The leading term, which is a derivative
+of the bond with respect to the yield times the change
+in the yield, the first order term,
+is captured by the modified duration.
+Modified duration is the negative of this derivative
+of the bond price with respect to the yield.
+The second order term in the Taylor expansion,
+the quadratic term, is what we call bond convexity.
+So from the Taylor expansion, we can
+see that the natural definition for bond convexity
+is one half of the second derivative of the bond price
+with respect to the yield divided by the bond price
+itself.
+The second order term is going to give us
+an additional degree of approximation that
+goes beyond the leading term, the duration-based term.
+Let's see how much the convexity term
+helps when the approximate bond price changes
+under large movements in the yield curve.
+Suppose we are looking at a 10-year bond with a 10% coupon
+and a 10% flat yield curve.
+The modified duration of this 10-year bond is 6.23 years.
+Now, if you look at the column in the center of the table,
+this corresponds to the initial position of the bond.
+The yield change is zero.
+There is no movement in the price.
+We're now going to consider different changes in the yield.
+For example, what if the yield on the bond
+moves up by 100 basis points, or by 1%?
+The total change in the bond price is going to be minus $6.
+The bond price falls by $6.
+The duration-based approximation will tell us
+that the bond price falls by $6.2.
+There is an approximation error of $0.20.
+The convexity term is going to correct that to some degree.
+It's going to give us plus $0.30.
+At the end of the day when we sum up all of these terms,
+we see that the approximation is quite accurate.
+The error is less than 10 basis points.
+If the yield change is larger than that, for example,
+300 basis points, 3%, the total decline in the bond price is
+going to be $16.50.
+The duration-based approximation is going
+to be relatively inaccurate.
+It will give us $18.70 decline.
+The convexity correction is going to be $2.40.
+And the overall error is going to be quite modest,
+about $0.20.
+What we see from this illustration
+is that the convexity approximation, the convexity
+term, provides a useful degree of correction
+when we are concerned with large movements in the yield curve.

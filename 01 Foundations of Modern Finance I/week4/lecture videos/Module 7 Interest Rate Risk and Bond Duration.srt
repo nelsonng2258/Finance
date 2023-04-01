@@ -1,0 +1,548 @@
+0
+00:00:00,000 --> 00:00:00,740
+
+
+1
+00:00:00,740 --> 00:00:04,500
+PROFESSOR: Next, we consider the concept of interest rate risk.
+
+2
+00:00:04,500 --> 00:00:06,780
+And in particular, we will introduce the concept
+
+3
+00:00:06,780 --> 00:00:10,710
+of bond duration, which is a quantitative measure of risk
+
+4
+00:00:10,710 --> 00:00:13,110
+exposure of bonds.
+
+5
+00:00:13,110 --> 00:00:15,160
+Now, bonds are fixed-income securities,
+
+6
+00:00:15,160 --> 00:00:17,450
+but they're not risk free.
+
+7
+00:00:17,450 --> 00:00:21,420
+If you invest in a long-term bond and interest rates change,
+
+8
+00:00:21,420 --> 00:00:24,700
+the value of the bond will change accordingly.
+
+9
+00:00:24,700 --> 00:00:26,640
+Movements in interest rates are uncertain.
+
+10
+00:00:26,640 --> 00:00:27,610
+They're random.
+
+11
+00:00:27,610 --> 00:00:31,000
+And therefore, changes in bond prices or bonds returns
+
+12
+00:00:31,000 --> 00:00:32,259
+are also random.
+
+13
+00:00:32,259 --> 00:00:33,930
+They're risky.
+
+14
+00:00:33,930 --> 00:00:35,410
+Now, if you look at the graph here,
+
+15
+00:00:35,410 --> 00:00:38,340
+you could see how the bond price depends
+
+16
+00:00:38,340 --> 00:00:40,590
+on the yield of the bond.
+
+17
+00:00:40,590 --> 00:00:42,690
+The relation is negative.
+
+18
+00:00:42,690 --> 00:00:47,330
+As the yield on the bonds rises, the bond price falls.
+
+19
+00:00:47,330 --> 00:00:49,910
+This negative relation is going to tell us
+
+20
+00:00:49,910 --> 00:00:53,720
+how sensitive bond prices are to changes in yields
+
+21
+00:00:53,720 --> 00:00:56,300
+or in interest rates.
+
+22
+00:00:56,300 --> 00:00:59,675
+As an example, suppose that the term structure is flat.
+
+23
+00:00:59,675 --> 00:01:02,750
+All spot interest rates are equal to y.
+
+24
+00:01:02,750 --> 00:01:05,690
+Let's say that at the yield of 5%,
+
+25
+00:01:05,690 --> 00:01:08,990
+the price of a particular bond is $90.
+
+26
+00:01:08,990 --> 00:01:13,370
+If yields suddenly move to 4%, the bond price rises.
+
+27
+00:01:13,370 --> 00:01:16,820
+Let's say, it rises to $91.80.
+
+28
+00:01:16,820 --> 00:01:22,190
+The relative price change of the bond is 91.8 minus 90 over 90--
+
+29
+00:01:22,190 --> 00:01:23,660
+that's the bond's return--
+
+30
+00:01:23,660 --> 00:01:25,780
+equal to 2%.
+
+31
+00:01:25,780 --> 00:01:28,030
+If we normalize the return of the bond
+
+32
+00:01:28,030 --> 00:01:30,790
+by the change in the yield, the ratio
+
+33
+00:01:30,790 --> 00:01:36,580
+of 2% bond return to 1% change in the yield is 2.
+
+34
+00:01:36,580 --> 00:01:38,380
+In this case, we can think of this number
+
+35
+00:01:38,380 --> 00:01:40,630
+as a quantitative measure of risk.
+
+36
+00:01:40,630 --> 00:01:42,820
+It's a measure of sensitivity of the bond
+
+37
+00:01:42,820 --> 00:01:45,870
+price to changes in the yield.
+
+38
+00:01:45,870 --> 00:01:48,240
+Notice that we've changed the sign here.
+
+39
+00:01:48,240 --> 00:01:51,550
+The yield change is in fact minus 1%.
+
+40
+00:01:51,550 --> 00:01:52,860
+This is a common convention.
+
+41
+00:01:52,860 --> 00:01:55,120
+We want our risk measure to be positive,
+
+42
+00:01:55,120 --> 00:01:58,960
+so we're going to change the sign to achieve that.
+
+43
+00:01:58,960 --> 00:02:02,460
+Now more generally, we're going to measure risk of the bond
+
+44
+00:02:02,460 --> 00:02:06,150
+by looking at the infinitesimal changes in the yield
+
+45
+00:02:06,150 --> 00:02:09,780
+and how bond prices respond to said changes.
+
+46
+00:02:09,780 --> 00:02:13,590
+This is going to define a measure of bond risk.
+
+47
+00:02:13,590 --> 00:02:17,250
+Mathematically, we are going to measure bond risk using what
+
+48
+00:02:17,250 --> 00:02:19,500
+is called modified duration, which
+
+49
+00:02:19,500 --> 00:02:24,060
+is defined as the negative of the derivative of the bond
+
+50
+00:02:24,060 --> 00:02:26,820
+price with respect to the yield change,
+
+51
+00:02:26,820 --> 00:02:29,680
+normalized by the bond price itself.
+
+52
+00:02:29,680 --> 00:02:33,270
+In other words, this is the infinitesimal change
+
+53
+00:02:33,270 --> 00:02:36,120
+in the bond price in percentage terms divided
+
+54
+00:02:36,120 --> 00:02:39,120
+by the infinitesimal change in the level of interest
+
+55
+00:02:39,120 --> 00:02:41,810
+rates in the yields.
+
+56
+00:02:41,810 --> 00:02:45,710
+Now, consider as a special case a pure discount bond.
+
+57
+00:02:45,710 --> 00:02:50,220
+This is a t period bond, which trades at the price Bt.
+
+58
+00:02:50,220 --> 00:02:53,030
+That price is equal to 1 plus the yield raised
+
+59
+00:02:53,030 --> 00:02:55,370
+to power minus t.
+
+60
+00:02:55,370 --> 00:02:59,360
+If we substitute this bond price into the definition of modified
+
+61
+00:02:59,360 --> 00:03:03,200
+duration, we find that for the pure discount bond,
+
+62
+00:03:03,200 --> 00:03:07,670
+modified duration is equal to t, the maturity of the bond--
+
+63
+00:03:07,670 --> 00:03:08,990
+time to maturity--
+
+64
+00:03:08,990 --> 00:03:12,080
+divided by 1 plus the yield.
+
+65
+00:03:12,080 --> 00:03:14,180
+In other words, modified duration
+
+66
+00:03:14,180 --> 00:03:19,190
+of the bond and its time to maturity are closely linked.
+
+67
+00:03:19,190 --> 00:03:22,010
+For a pure discount bond, modified duration
+
+68
+00:03:22,010 --> 00:03:26,420
+times 1 plus the yield is equal to time to maturity.
+
+69
+00:03:26,420 --> 00:03:28,490
+This relation suggests that there
+
+70
+00:03:28,490 --> 00:03:31,130
+is a physical, intuitive interpretation
+
+71
+00:03:31,130 --> 00:03:33,140
+of bond duration.
+
+72
+00:03:33,140 --> 00:03:36,050
+It has a lot to do with the maturity structure of the cash
+
+73
+00:03:36,050 --> 00:03:39,360
+flows of the bond.
+
+74
+00:03:39,360 --> 00:03:41,930
+Next, we introduce a closely related concept,
+
+75
+00:03:41,930 --> 00:03:45,510
+Macauley duration, which makes it even more clear
+
+76
+00:03:45,510 --> 00:03:49,380
+that bond duration and maturity structure of its cash flows
+
+77
+00:03:49,380 --> 00:03:51,640
+are directly connected.
+
+78
+00:03:51,640 --> 00:03:54,240
+So consider a general stream of cash flows--
+
+79
+00:03:54,240 --> 00:03:55,980
+risk-free cash flows.
+
+80
+00:03:55,980 --> 00:04:00,300
+Call them CFt for period t.
+
+81
+00:04:00,300 --> 00:04:03,300
+We define Macauley duration as follows.
+
+82
+00:04:03,300 --> 00:04:06,990
+For each tenor t, we compute the present value
+
+83
+00:04:06,990 --> 00:04:09,310
+of the corresponding cash flow.
+
+84
+00:04:09,310 --> 00:04:14,580
+We normalize it by the total value of the cash flow, B.
+
+85
+00:04:14,580 --> 00:04:17,670
+And we use this as a weight.
+
+86
+00:04:17,670 --> 00:04:21,240
+And using these weights, we average the tenors from 1
+
+87
+00:04:21,240 --> 00:04:23,390
+to capital T.
+
+88
+00:04:23,390 --> 00:04:26,980
+According to this definition, each tenor t
+
+89
+00:04:26,980 --> 00:04:30,010
+contributes something to Macauley duration.
+
+90
+00:04:30,010 --> 00:04:33,220
+And it contributes more if the corresponding cash
+
+91
+00:04:33,220 --> 00:04:35,350
+flow is larger, if it accounts for a larger
+
+92
+00:04:35,350 --> 00:04:38,482
+fraction of the total price of the security.
+
+93
+00:04:38,482 --> 00:04:39,940
+Physically, you could think of this
+
+94
+00:04:39,940 --> 00:04:44,350
+as a definition of the center of gravity of the payment tenors.
+
+95
+00:04:44,350 --> 00:04:46,960
+As it turns out, Macauley duration
+
+96
+00:04:46,960 --> 00:04:49,370
+and the modified duration that we just defined
+
+97
+00:04:49,370 --> 00:04:51,500
+are directly related to each other.
+
+98
+00:04:51,500 --> 00:04:54,580
+And in fact, modified duration is Macauley duration
+
+99
+00:04:54,580 --> 00:04:58,260
+normalized by 1 plus the yield.
+
+100
+00:04:58,260 --> 00:05:00,200
+So what we see is that modified duration
+
+101
+00:05:00,200 --> 00:05:04,600
+is proportional to the weighted average of the payment tenors
+
+102
+00:05:04,600 --> 00:05:06,380
+where the weights are proportional
+
+103
+00:05:06,380 --> 00:05:10,030
+to the present value of the corresponding cash flows.
+
+104
+00:05:10,030 --> 00:05:13,390
+Indeed, the duration of the bond is directly
+
+105
+00:05:13,390 --> 00:05:16,480
+based on the term structure of its payments.
+
+106
+00:05:16,480 --> 00:05:19,300
+Next, consider an empirical example.
+
+107
+00:05:19,300 --> 00:05:21,730
+Instead of computing bond duration
+
+108
+00:05:21,730 --> 00:05:24,400
+based on the term structure of its payments,
+
+109
+00:05:24,400 --> 00:05:27,520
+we can estimate its duration by running
+
+110
+00:05:27,520 --> 00:05:31,390
+a regression of bond returns on changes in yields,
+
+111
+00:05:31,390 --> 00:05:34,000
+or changes in interest rates.
+
+112
+00:05:34,000 --> 00:05:35,690
+We'll look at several examples.
+
+113
+00:05:35,690 --> 00:05:38,770
+We'll look at 5-year Treasuries, 10-year Treasuries,
+
+114
+00:05:38,770 --> 00:05:42,040
+and 30-year Treasuries.
+
+115
+00:05:42,040 --> 00:05:44,110
+As you can see from the first graph,
+
+116
+00:05:44,110 --> 00:05:47,860
+changes in the price of a 5-year Treasury bond returns
+
+117
+00:05:47,860 --> 00:05:50,448
+are closely linked to movements in interest rates.
+
+118
+00:05:50,448 --> 00:05:52,240
+There is a very strong statistical relation
+
+119
+00:05:52,240 --> 00:05:53,500
+between them.
+
+120
+00:05:53,500 --> 00:05:57,370
+And the slope coefficient is less than 5.
+
+121
+00:05:57,370 --> 00:05:59,200
+What this is telling us is that the factor
+
+122
+00:05:59,200 --> 00:06:03,340
+of duration of a 5-year treasury is less than 5.
+
+123
+00:06:03,340 --> 00:06:06,100
+And that is because these bonds pay coupons.
+
+124
+00:06:06,100 --> 00:06:08,860
+And as a result, the center of gravity of their payments
+
+125
+00:06:08,860 --> 00:06:11,380
+is somewhere between 0 and 5 years.
+
+126
+00:06:11,380 --> 00:06:14,410
+It's close to 5 years, because the bulk of the payments
+
+127
+00:06:14,410 --> 00:06:17,320
+comes at the maturity date of the bond.
+
+128
+00:06:17,320 --> 00:06:19,810
+We observe a similar picture for the 10-year
+
+129
+00:06:19,810 --> 00:06:21,880
+and the 30-year bond.
+
+130
+00:06:21,880 --> 00:06:25,210
+Again, bond returns are explained very well
+
+131
+00:06:25,210 --> 00:06:27,820
+by changes in the level of interest rates.
+
+132
+00:06:27,820 --> 00:06:31,630
+And the slope coefficient in these regressions
+
+133
+00:06:31,630 --> 00:06:34,390
+is closely related to the maturity structure of the bond
+
+134
+00:06:34,390 --> 00:06:35,470
+payment.
+
+135
+00:06:35,470 --> 00:06:38,440
+It is under 10 years for a 10-year bond.
+
+136
+00:06:38,440 --> 00:06:43,110
+And it's somewhere between 0 and 30 years for a 30-year bond.
+

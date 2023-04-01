@@ -1,0 +1,556 @@
+0
+00:00:00,000 --> 00:00:01,300
+
+
+1
+00:00:01,300 --> 00:00:03,730
+PROFESSOR: The key input in asset valuation
+
+2
+00:00:03,730 --> 00:00:06,250
+is the discount rate, or the rate of return
+
+3
+00:00:06,250 --> 00:00:09,160
+as expected by the market.
+
+4
+00:00:09,160 --> 00:00:13,690
+It depends on the timing and risk of an asset's payoff.
+
+5
+00:00:13,690 --> 00:00:18,190
+We will devote more time later on this relationship.
+
+6
+00:00:18,190 --> 00:00:21,010
+For now, we would like to get a rough idea
+
+7
+00:00:21,010 --> 00:00:24,370
+about the rates of return on a set of broad asset
+
+8
+00:00:24,370 --> 00:00:29,070
+classes traded in the market, with a range of timing and risk
+
+9
+00:00:29,070 --> 00:00:30,840
+characteristics.
+
+10
+00:00:30,840 --> 00:00:33,180
+They will give us an empirical sense
+
+11
+00:00:33,180 --> 00:00:35,850
+on the magnitudes of discount rates
+
+12
+00:00:35,850 --> 00:00:40,770
+and their dependence on timing and risk.
+
+13
+00:00:40,770 --> 00:00:45,210
+We will start with some notation and definitions.
+
+14
+00:00:45,210 --> 00:00:49,080
+We'll use P0 to denote the price of an asset
+
+15
+00:00:49,080 --> 00:00:51,360
+at the beginning of a period.
+
+16
+00:00:51,360 --> 00:00:54,660
+P1 will be its price at the end of the period, which
+
+17
+00:00:54,660 --> 00:00:59,110
+is generally uncertain, at least at the beginning of the period.
+
+18
+00:00:59,110 --> 00:01:02,820
+D1 gives the dividend at the end of the period, which
+
+19
+00:01:02,820 --> 00:01:04,830
+is also uncertain.
+
+20
+00:01:04,830 --> 00:01:08,400
+We can then define the return or the rate of return
+
+21
+00:01:08,400 --> 00:01:12,300
+from the asset over this given period.
+
+22
+00:01:12,300 --> 00:01:14,090
+r denotes notes the return, which is
+
+23
+00:01:14,090 --> 00:01:18,620
+given by D1 plus P1 minus P0.
+
+24
+00:01:18,620 --> 00:01:21,020
+That gives the net payoff at the end
+
+25
+00:01:21,020 --> 00:01:23,840
+of the period, divided by P0 which
+
+26
+00:01:23,840 --> 00:01:26,080
+is the initial investment.
+
+27
+00:01:26,080 --> 00:01:29,080
+
+
+28
+00:01:29,080 --> 00:01:33,250
+The rate of return, of course, is in general uncertain given
+
+29
+00:01:33,250 --> 00:01:37,590
+that D1 and P1 are uncertain.
+
+30
+00:01:37,590 --> 00:01:40,260
+However, we can still compute the expected rate
+
+31
+00:01:40,260 --> 00:01:45,750
+of return, which is the expected value of the realized return.
+
+32
+00:01:45,750 --> 00:01:49,440
+We denote that by r bar.
+
+33
+00:01:49,440 --> 00:01:52,950
+If an asset is riskless, its return
+
+34
+00:01:52,950 --> 00:01:56,370
+which we'll then note by rF, is sometimes
+
+35
+00:01:56,370 --> 00:01:59,460
+called the risk-free rate, which reflects
+
+36
+00:01:59,460 --> 00:02:01,030
+the time value of money.
+
+37
+00:02:01,030 --> 00:02:04,180
+There is no risk here.
+
+38
+00:02:04,180 --> 00:02:08,979
+For a risky asset, its return net of the risk-free rate
+
+39
+00:02:08,979 --> 00:02:13,040
+is often called the excess return.
+
+40
+00:02:13,040 --> 00:02:17,400
+This is the return in excess of the risk-free return,
+
+41
+00:02:17,400 --> 00:02:22,290
+and typically this reflects the compensation for the risk
+
+42
+00:02:22,290 --> 00:02:26,600
+that we are bearing by investing in this asset.
+
+43
+00:02:26,600 --> 00:02:30,000
+The expected value of the excess return,
+
+44
+00:02:30,000 --> 00:02:33,200
+which is given by r bar minus rF,
+
+45
+00:02:33,200 --> 00:02:36,530
+is also called the risk premium on the asset,
+
+46
+00:02:36,530 --> 00:02:38,240
+or the price of risk.
+
+47
+00:02:38,240 --> 00:02:41,300
+It gives us the expected compensation
+
+48
+00:02:41,300 --> 00:02:45,720
+for bearing the risk of investing in this asset.
+
+49
+00:02:45,720 --> 00:02:49,740
+We now consider the returns on the major asset classes
+
+50
+00:02:49,740 --> 00:02:53,970
+traded in the US market over a fairly long period,
+
+51
+00:02:53,970 --> 00:02:59,470
+from 1926 to 2018.
+
+52
+00:02:59,470 --> 00:03:02,220
+It will give us a sense about the returns
+
+53
+00:03:02,220 --> 00:03:05,480
+and risks of these assets.
+
+54
+00:03:05,480 --> 00:03:07,790
+Going from shorter horizon and lower risk
+
+55
+00:03:07,790 --> 00:03:10,280
+to longer horizon and higher risk,
+
+56
+00:03:10,280 --> 00:03:14,000
+we consider five asset classes.
+
+57
+00:03:14,000 --> 00:03:17,080
+The first is the short-term government bonds, also called
+
+58
+00:03:17,080 --> 00:03:18,760
+treasury bills.
+
+59
+00:03:18,760 --> 00:03:21,340
+They have cash rules typically over a horizon
+
+60
+00:03:21,340 --> 00:03:25,550
+of no more than a year, and they are fairly safe.
+
+61
+00:03:25,550 --> 00:03:29,470
+The next asset class will be long-term government bonds,
+
+62
+00:03:29,470 --> 00:03:33,090
+and they have payoffs over a time horizon
+
+63
+00:03:33,090 --> 00:03:36,090
+typically more than a year, and they probably
+
+64
+00:03:36,090 --> 00:03:40,410
+are riskier than the short-term government bonds.
+
+65
+00:03:40,410 --> 00:03:42,520
+The next asset class will be corporate bonds.
+
+66
+00:03:42,520 --> 00:03:45,840
+These are bonds issued by corporations,
+
+67
+00:03:45,840 --> 00:03:49,500
+and they are typically riskier than long-term government
+
+68
+00:03:49,500 --> 00:03:50,370
+bonds.
+
+69
+00:03:50,370 --> 00:03:53,400
+It is not shown in the figure, because it
+
+70
+00:03:53,400 --> 00:03:58,270
+will be too close to the plot for government bonds.
+
+71
+00:03:58,270 --> 00:04:02,270
+Then the next asset class is large-sized stocks.
+
+72
+00:04:02,270 --> 00:04:06,240
+These are stocks issued by large companies.
+
+73
+00:04:06,240 --> 00:04:09,060
+And the last asset class will be small-sized stocks.
+
+74
+00:04:09,060 --> 00:04:12,760
+These are stocks issued by small companies.
+
+75
+00:04:12,760 --> 00:04:16,200
+In addition, we also include the inflation index,
+
+76
+00:04:16,200 --> 00:04:21,440
+which reflects the price appreciation of real goods.
+
+77
+00:04:21,440 --> 00:04:26,870
+Presumably assets in each one of these asset classes
+
+78
+00:04:26,870 --> 00:04:29,510
+have risk levels that is sort of comparable,
+
+79
+00:04:29,510 --> 00:04:32,150
+while across different asset classes
+
+80
+00:04:32,150 --> 00:04:37,490
+the risk levels could be quite different.
+
+81
+00:04:37,490 --> 00:04:43,220
+What is shown in the plot is the cumulative returns
+
+82
+00:04:43,220 --> 00:04:47,890
+on $1 invested in any one of these asset classes
+
+83
+00:04:47,890 --> 00:04:57,540
+at the end of 1925 to the end of 2018, over a total of 93 years.
+
+84
+00:04:57,540 --> 00:05:03,170
+What we can look at is actually these five asset classes,
+
+85
+00:05:03,170 --> 00:05:06,890
+starting from the ones with lower risks.
+
+86
+00:05:06,890 --> 00:05:08,850
+We'll first start with inflation,
+
+87
+00:05:08,850 --> 00:05:11,870
+which is given by the blue dashed line
+
+88
+00:05:11,870 --> 00:05:14,250
+at the bottom of the plot.
+
+89
+00:05:14,250 --> 00:05:21,770
+For $1 invested at the end of 1925 by the end of 2018,
+
+90
+00:05:21,770 --> 00:05:25,910
+it will be worth $14.02.
+
+91
+00:05:25,910 --> 00:05:29,120
+The next line up, the red dashed line,
+
+92
+00:05:29,120 --> 00:05:34,400
+is the cumulative return from $1 invested over this period
+
+93
+00:05:34,400 --> 00:05:37,080
+in short-term government bonds.
+
+94
+00:05:37,080 --> 00:05:46,920
+So that $1 at the end of 1925 would have turned into $21.17.
+
+95
+00:05:46,920 --> 00:05:52,270
+As we can see from the return of short-term government bonds,
+
+96
+00:05:52,270 --> 00:05:57,830
+the returns are not very high, but it's very smooth.
+
+97
+00:05:57,830 --> 00:06:04,990
+It reflects a fairly safe and low return over time.
+
+98
+00:06:04,990 --> 00:06:10,470
+The third line is the blue line, and that
+
+99
+00:06:10,470 --> 00:06:14,420
+reflects the cumulative return from investing
+
+100
+00:06:14,420 --> 00:06:18,350
+in a $1 in long-term government bonds.
+
+101
+00:06:18,350 --> 00:06:27,290
+That $1 at the end of 1925 would have turned into $142.
+
+102
+00:06:27,290 --> 00:06:29,600
+This is quite bit higher than what
+
+103
+00:06:29,600 --> 00:06:33,770
+we would have got by investing in short-term government bonds.
+
+104
+00:06:33,770 --> 00:06:35,990
+However, nothing is free.
+
+105
+00:06:35,990 --> 00:06:40,640
+If we look at the cumulative return line, it is more wiggly.
+
+106
+00:06:40,640 --> 00:06:42,650
+It can go up and down.
+
+107
+00:06:42,650 --> 00:06:46,330
+That reflects the risk from investing
+
+108
+00:06:46,330 --> 00:06:50,360
+in long-term government bonds.
+
+109
+00:06:50,360 --> 00:06:54,070
+Then the next line up is the lighter red line
+
+110
+00:06:54,070 --> 00:06:57,880
+that reflects the cumulative return from investing
+
+111
+00:06:57,880 --> 00:07:01,430
+in large-sized stocks.
+
+112
+00:07:01,430 --> 00:07:10,520
+So $1 at the end of 1925 would turn into $7,030
+
+113
+00:07:10,520 --> 00:07:12,680
+by the end of 2018.
+
+114
+00:07:12,680 --> 00:07:16,550
+That's a lot higher than the $142
+
+115
+00:07:16,550 --> 00:07:21,090
+we would have got by investing in long-term government bonds.
+
+116
+00:07:21,090 --> 00:07:25,740
+Now of course, this high return is not free either.
+
+117
+00:07:25,740 --> 00:07:28,890
+If you look at the line itself, it
+
+118
+00:07:28,890 --> 00:07:34,450
+wiggles a lot more largely than the blue line,
+
+119
+00:07:34,450 --> 00:07:36,820
+which is the investment in long-term government bonds.
+
+120
+00:07:36,820 --> 00:07:41,250
+And clearly this reflects a much higher level of risk
+
+121
+00:07:41,250 --> 00:07:43,190
+from stocks.
+
+122
+00:07:43,190 --> 00:07:47,060
+Then the very top line gives the cumulative return
+
+123
+00:07:47,060 --> 00:07:50,300
+from investing in small-sized stocks.
+
+124
+00:07:50,300 --> 00:07:59,630
+So $1 at the end of 1925 would have turned into $32,645.
+
+125
+00:07:59,630 --> 00:08:04,450
+That's quite a bit higher than the total return
+
+126
+00:08:04,450 --> 00:08:06,370
+from investing in large stocks.
+
+127
+00:08:06,370 --> 00:08:09,240
+
+
+128
+00:08:09,240 --> 00:08:13,050
+From this chart, we can clearly see as we go from the bottom
+
+129
+00:08:13,050 --> 00:08:16,260
+to the top, we are looking at asset classes
+
+130
+00:08:16,260 --> 00:08:19,710
+with increasing levels of risk, but also we're
+
+131
+00:08:19,710 --> 00:08:23,430
+getting over this period of time, a higher return.
+
+132
+00:08:23,430 --> 00:08:26,550
+
+
+133
+00:08:26,550 --> 00:08:30,980
+This indicates a connection, a positive connection,
+
+134
+00:08:30,980 --> 00:08:34,880
+between the level of risk and the return
+
+135
+00:08:34,880 --> 00:08:38,940
+we will get from that asset traded in a market.
+
+136
+00:08:38,940 --> 00:08:41,059
+In this relationship is going to be
+
+137
+00:08:41,059 --> 00:08:45,650
+the focus of our future analysis of different asset
+
+138
+00:08:45,650 --> 00:08:49,210
+pricing models and risk analysis.
+

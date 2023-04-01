@@ -1,0 +1,175 @@
+
+PROFESSOR: We now consider a more general bond valuation
+problem.
+Previously, we started with prices of pure discount bonds.
+And we figured out how to value a coupon bond.
+Now, we are looking at the generic situation
+where we start with prices of different types of bonds.
+Some are discount bonds.
+Some are coupon paying bonds.
+And we want to answer two questions.
+One is what are the implied interest rates?
+What are the prices of discount bonds?
+And the second question is if you observe
+an instance of mispricing--
+if some of the prices are inconsistent with each other--
+how can you take advantage of it?
+How can you build an arbitrage trading strategy?
+So to be specific, we have three bonds
+to start with, A, B, and C. A is a one-year discount bond
+paying $100 at time 1.
+B is a two-year coupon bond paying a 5% annual coupon.
+And C is a three-year coupon bond
+paying a 10% annual coupon.
+And the prices of these bonds are given in the table.
+A trades at $96 at time 0.
+B trades at $99.30.
+And bond C trades at $108.80.
+We are also given bond D, which is a three-year discount
+bond with a face value of $100.
+And D trades at $84.
+The question is, is this bond fairly priced?
+And if it is not, how can we take advantage of mispricing?
+So to start with, we are going to collect
+given information in a matrix.
+It's a matrix of bond payoffs.
+And you could see that each of the rows
+corresponds to one of the bonds, A, B, and C.
+And for each of the bonds, we are tabulating their cash
+flows.
+Bond A pays $100 at time 1 and 0 afterwards.
+Bond B pays $5 at time 1, $105 at time 2, and 0 afterwards.
+And bond C pays $10, $10, and $110 at time 3.
+Now, we are trying to find prices of discount bonds
+of maturities 1, 2, and 3 years.
+Let's call them P1, P2, and P3.
+Each of these bonds has a face value of $1.
+Let's relate prices of these bonds to the given bonds.
+For example, focus on bond B. This bond
+is equivalent to a portfolio of discount bonds--
+five units of a one-year bond and 105 units
+of a two-year discount bond.
+So we obtain a pricing equation.
+5 times P1 plus 105 times P2 plus 0 times P3 is equal
+to $99.30.
+We can obtain a similar pricing equation for bonds A and C.
+As a result, we have a system of equations,
+three equations, each one corresponding
+to a price of a single bond.
+And we have three unknowns, each one corresponding
+to a price of a discount bond, 1, 2, and 3.
+This system of equations has a unique solution,
+which you can compute.
+And what we find is that P1, the price of a one-year discount
+bond, is $0.96 cents.
+P2 is $0.90.
+And P3 is $0.82.
+What we have done is we recovered
+prices of discount bonds.
+Or in other words, we recovered the spot interest rates
+from the collection of prices of various fixed income
+securities, different types of bonds--
+coupon bonds and discount bonds.
+Now, looking at our solution, we can
+see that the price of the bond D is not
+consistent with the prices of A, B, and C. D trades at $84,
+but the implied price for a three-year discount bond
+is $82.
+So D is not fairly priced relative to A, B, and C.
+How can we take advantage of this situation?
+We are going to build an arbitrage strategy.
+Let's recall that an arbitrage strategy is
+supposed to be self-financing.
+It does not require any infusion of capital.
+It's supposed to be risk free.
+There is no risk of losing money.
+And it's supposed to be profitable.
+There should be a positive probability of generating
+a positive cash flow.
+So we're going to construct a portfolio of bonds A,
+B, C, and D to generate arbitrage profits.
+Let's call our positions xA, xB, xC, and xD respectively.
+And x refers to the number of shares
+of each of these securities in our portfolio.
+Our objective is going to be to generate
+a cash flow of $1 at time 0 and nothing in periods 1, 2, and 3.
+Of course, this is arbitrage.
+There is no risk of a loss.
+And we get $1 for free at time 0.
+That's the free lunch arbitrage.
+Now, this requirement can be expressed
+as a system of four equations.
+Each equation corresponds to the cash flow
+coming out of the portfolio in a given period.
+The first row corresponds to time 0; second, time 1;
+2; and 3 respectively.
+So now, for the first period, we want
+to generate a cash flow of $1.
+The cash flow that the portfolio produces
+can be computed as a function of the portfolio positions, xA,
+xB, xC, and xD.
+In particular, when you buy a security-- let's say,
+you're buying bond A--
+you are generating a negative cash flow
+for each share you buy.
+The negative cash flow is equal to the negative of the price
+of the bond at time 0.
+At time 1, you generate a positive cash flow, $100,
+which corresponds to the payoff of the bond.
+And then because the bond expires at time 1,
+it pays nothing in periods 2 and 3.
+So looking at time 0, the cash flow of the portfolio
+is going to be minus $96 times xA--
+that's the contribution of bond A--
+minus $99.3, which is the price of bond B,
+times xB, and so forth.
+So we're summing, across all four bonds,
+the size of the position times the negative of the bond price.
+The combined cash flow at time 0 is supposed to be $1.
+That's the requirement for our arbitrage strategy.
+At time 1, we want the strategy to pay off 0.
+So the cash flow of bond A times the number of shares,
+which is 100 times xA, plus the cash flow of bond B,
+which is 5 times the number of shares-- times xB--
+plus 10 times xC-- that's contribution of bond C--
+plus 0 times xD, because bond D does not
+pay anything at time 1.
+That sum has to be equal to 0.
+And so we obtain the same kind of equation
+for time 2 and time 3.
+We have four equations and four unknowns.
+The unknowns are the positions in the portfolio for bonds A,
+B, C, and D. The system of equations
+has a unique solution, which we find.
+What we see is that we can indeed
+generate arbitrage profits.
+We knew that because prices were internally inconsistent.
+And to do that, we have to take a short position in bond A
+and in bond B. The size of the position
+is minus 0.0433 shares.
+We take a long position in bond C. The size is 0.4545 shares.
+And we short half a share of bond D. The strategy
+has no risk of a loss and generates a single dollar
+of profit at time 0.
+In conclusion, what this example illustrates
+is that when you observe a rich set of fixed-income securities,
+you can infer prices of various other assets.
+You can price securities relative to each other.
+There are strong arbitrage-based restrictions
+on the relative prices of assets in fixed-income markets.
+In particular, prices of coupon bonds
+can be used to infer prices of discount bonds,
+or in other words, spot interest rates.
+We can therefore recover the yield curve
+from the prices of coupon bonds.
+So far, we looked at arbitrage restrictions
+in a static framework.
+Our trading strategy was one short trade at time 0.
+We generated arbitrage profits.
+These arbitrage-based methods are more general than that.
+And they can be used in a dynamic setting that
+can be applied over time.
+To do that, we need to build models
+which are dynamic, that incorporate trading
+over multiple periods.
+And this is a subject for future lectures.

@@ -1,0 +1,244 @@
+0
+00:00:00,000 --> 00:00:00,750
+
+
+1
+00:00:00,750 --> 00:00:04,420
+PROFESSOR: In part b, we are given a perpetual bond.
+
+2
+00:00:04,420 --> 00:00:09,720
+So this bond pays 5% coupon, and it has $100 face value.
+
+3
+00:00:09,720 --> 00:00:12,440
+Coupons are paid annually.
+
+4
+00:00:12,440 --> 00:00:15,380
+If you were to measure the stream of cash flows
+
+5
+00:00:15,380 --> 00:00:20,480
+that you get from this bond, it is $5 paid annually
+
+6
+00:00:20,480 --> 00:00:24,220
+and it's in perpetuity.
+
+7
+00:00:24,220 --> 00:00:29,590
+So we will start this question by deriving modified duration.
+
+8
+00:00:29,590 --> 00:00:33,022
+And then, we'll come back to Macaulay duration.
+
+9
+00:00:33,022 --> 00:00:34,980
+You will see, because this would be the easiest
+
+10
+00:00:34,980 --> 00:00:38,250
+to actually derive the modified duration first, and then
+
+11
+00:00:38,250 --> 00:00:41,190
+go back to Macaulay duration.
+
+12
+00:00:41,190 --> 00:00:43,530
+So by definition, modified duration
+
+13
+00:00:43,530 --> 00:00:49,320
+is negative 1 over P multiplied by the derivative of the bond
+
+14
+00:00:49,320 --> 00:00:53,430
+price with respect to yield to maturity, y.
+
+15
+00:00:53,430 --> 00:00:56,180
+
+
+16
+00:00:56,180 --> 00:00:59,870
+The price of perpetual bond that pays coupon C
+
+17
+00:00:59,870 --> 00:01:04,890
+annually is given by this because, again, this is just
+
+18
+00:01:04,890 --> 00:01:09,240
+a simple perpetuity with a discount rate of y
+
+19
+00:01:09,240 --> 00:01:13,810
+that pays C, which is the annual coupon payment, every year.
+
+20
+00:01:13,810 --> 00:01:17,130
+And as we've learned in lecture three,
+
+21
+00:01:17,130 --> 00:01:18,630
+the present value of this perpetuity
+
+22
+00:01:18,630 --> 00:01:22,820
+is simply C divided by y.
+
+23
+00:01:22,820 --> 00:01:25,850
+Now, what we will do is we will first
+
+24
+00:01:25,850 --> 00:01:30,800
+find the derivative of the price of the bond with respect to y.
+
+25
+00:01:30,800 --> 00:01:34,580
+And this is very simply just negative C divided by y
+
+26
+00:01:34,580 --> 00:01:35,780
+squared.
+
+27
+00:01:35,780 --> 00:01:39,920
+Because, again, the price of the bond was just C divided by y.
+
+28
+00:01:39,920 --> 00:01:43,760
+And now, we can plug this back into the modified duration
+
+29
+00:01:43,760 --> 00:01:44,980
+equation.
+
+30
+00:01:44,980 --> 00:01:46,640
+And this is going to give us minus 1
+
+31
+00:01:46,640 --> 00:01:52,330
+over P multiplied by minus C divided by y squared.
+
+32
+00:01:52,330 --> 00:01:54,730
+And so you could see that C cancels out.
+
+33
+00:01:54,730 --> 00:01:57,490
+y in the numerator and denominator-- one of them
+
+34
+00:01:57,490 --> 00:02:02,950
+cancels out, and so what is left is just 1 over y.
+
+35
+00:02:02,950 --> 00:02:07,870
+So therefore, the modified duration for a perpetual bond
+
+36
+00:02:07,870 --> 00:02:11,980
+is simply just 1 divided by y.
+
+37
+00:02:11,980 --> 00:02:17,230
+In our case, yield to maturities are 2% this bond.
+
+38
+00:02:17,230 --> 00:02:19,510
+And so therefore, the modified duration
+
+39
+00:02:19,510 --> 00:02:22,660
+of this perpetual bond that is given in this question
+
+40
+00:02:22,660 --> 00:02:24,600
+is just 50.
+
+41
+00:02:24,600 --> 00:02:27,920
+Notice that it doesn't matter what
+
+42
+00:02:27,920 --> 00:02:32,050
+coupon rate the perpetual bond actually pays.
+
+43
+00:02:32,050 --> 00:02:34,630
+So the only thing that modified duration depends on
+
+44
+00:02:34,630 --> 00:02:36,520
+is just the yield to maturity of the bond.
+
+45
+00:02:36,520 --> 00:02:39,480
+
+
+46
+00:02:39,480 --> 00:02:42,200
+Now, the Macaulay duration, we can
+
+47
+00:02:42,200 --> 00:02:45,980
+compute based on the modified duration that we just computed.
+
+48
+00:02:45,980 --> 00:02:50,540
+Remember that duration of the Macaulay duration
+
+49
+00:02:50,540 --> 00:02:53,900
+is just modified duration multiplied by 1 plus y.
+
+50
+00:02:53,900 --> 00:02:56,450
+And we know that the modified duration is 1 over y.
+
+51
+00:02:56,450 --> 00:02:58,820
+So therefore, the Macaulay duration is just 1
+
+52
+00:02:58,820 --> 00:03:02,660
+plus y divided by y.
+
+53
+00:03:02,660 --> 00:03:06,560
+And so therefore, in our case, given that y is 2%,
+
+54
+00:03:06,560 --> 00:03:10,290
+the Macaulay duration will be just 1 plus 2% divided by 2%.
+
+55
+00:03:10,290 --> 00:03:13,570
+And that's going to be 51.
+
+56
+00:03:13,570 --> 00:03:15,880
+So therefore, to summarize this question
+
+57
+00:03:15,880 --> 00:03:18,550
+is that for this perpetual bond, given
+
+58
+00:03:18,550 --> 00:03:22,660
+that yield to maturity in this bond is 2%,
+
+59
+00:03:22,660 --> 00:03:25,090
+its Macaulay duration is 51.
+
+60
+00:03:25,090 --> 00:03:28,530
+And it's modified duration is 50.
+

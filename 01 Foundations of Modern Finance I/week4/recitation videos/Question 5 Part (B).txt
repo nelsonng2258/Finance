@@ -1,0 +1,61 @@
+
+PROFESSOR: In part b, we are given a perpetual bond.
+So this bond pays 5% coupon, and it has $100 face value.
+Coupons are paid annually.
+If you were to measure the stream of cash flows
+that you get from this bond, it is $5 paid annually
+and it's in perpetuity.
+So we will start this question by deriving modified duration.
+And then, we'll come back to Macaulay duration.
+You will see, because this would be the easiest
+to actually derive the modified duration first, and then
+go back to Macaulay duration.
+So by definition, modified duration
+is negative 1 over P multiplied by the derivative of the bond
+price with respect to yield to maturity, y.
+
+The price of perpetual bond that pays coupon C
+annually is given by this because, again, this is just
+a simple perpetuity with a discount rate of y
+that pays C, which is the annual coupon payment, every year.
+And as we've learned in lecture three,
+the present value of this perpetuity
+is simply C divided by y.
+Now, what we will do is we will first
+find the derivative of the price of the bond with respect to y.
+And this is very simply just negative C divided by y
+squared.
+Because, again, the price of the bond was just C divided by y.
+And now, we can plug this back into the modified duration
+equation.
+And this is going to give us minus 1
+over P multiplied by minus C divided by y squared.
+And so you could see that C cancels out.
+y in the numerator and denominator-- one of them
+cancels out, and so what is left is just 1 over y.
+So therefore, the modified duration for a perpetual bond
+is simply just 1 divided by y.
+In our case, yield to maturities are 2% this bond.
+And so therefore, the modified duration
+of this perpetual bond that is given in this question
+is just 50.
+Notice that it doesn't matter what
+coupon rate the perpetual bond actually pays.
+So the only thing that modified duration depends on
+is just the yield to maturity of the bond.
+
+Now, the Macaulay duration, we can
+compute based on the modified duration that we just computed.
+Remember that duration of the Macaulay duration
+is just modified duration multiplied by 1 plus y.
+And we know that the modified duration is 1 over y.
+So therefore, the Macaulay duration is just 1
+plus y divided by y.
+And so therefore, in our case, given that y is 2%,
+the Macaulay duration will be just 1 plus 2% divided by 2%.
+And that's going to be 51.
+So therefore, to summarize this question
+is that for this perpetual bond, given
+that yield to maturity in this bond is 2%,
+its Macaulay duration is 51.
+And it's modified duration is 50.

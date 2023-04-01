@@ -1,0 +1,140 @@
+
+PROFESSOR: In this question, we will consider a constant growth
+model.
+Let's take a firm, ABC.
+This firm is expected to produce earnings per share
+in Year 1 that equals to $20.
+ABC's return on investment or ROI is 20%.
+And this ROI is expected to remain constant at this level
+forever.
+Notice the difference between this question
+and question 4 where ROI was not constant.
+So for this particular firm ROI is currently 20%
+and it is expected to be constant.
+ABC's current payout ratio is 55%
+and it is also expected to remain at that level forever.
+The appropriate discount rate is 12%.
+We will answer two questions.
+First, we will derive the share price of the stock
+and then we will derive its present value
+of growth opportunities.
+Let's follow the approach we have established in Question 4.
+I have put EPS that we expect to get from this firm in Year
+1, $20 earnings per share.
+Now I will put plowback ratio.
+Recorded plowback ratio is 1 minus the payout ratio.
+So that means that we are plowing back 45% of EPS
+in the Year 1.
+And this plowback ratio remains constant forever.
+ROI equals to 20%.
+And again, this rate will remain constant forever.
+Now let's compute the investment as EPS times the plowback
+ratio.
+The dividends is simply the EPS multiplied
+by 1 minus the plowback rate or the payout rate.
+
+And then EPS in the Year 2 will be
+the prior year's EPS plus ROI multiplied by the investment.
+
+And so we can just trace these arrays all the way forward
+and get these numbers.
+So we'll get investments and we'll get dividends.
+Now let's look at the dividend stream.
+Unlike the previous question, Question 4,
+where we've stopped plowing back and we've
+started paying out all earnings per share
+as dividends at some point, So here we
+continue plowing back at a constant rate.
+So in this case, dividends always seem to grow.
+And they don't stop.
+So this is the difference between this question
+and the question that we had before.
+Now let's compute dividend growth rate
+and see at what rate dividends grow in this model.
+So I'll compute the growth rate between the year 2 and 1.
+So I'll take dividend in Year 2 minus the dividend in the Year
+1.
+And I'll divide it by the dividend in the Year 1.
+And so this seems to be 9%.
+And I can just extend this array to see
+what is the dividend growth rate for the subsequent years.
+
+And what we see here, very interestingly,
+that the dividend growth rate seems to be constant and be
+at the rate of 9%.
+And I'm doing it only for the first 10 years.
+But if we were to extend this all the way to Year 100,
+we will actually find out that the dividend growth
+rate remains at 9%.
+And so this is a very interesting fact of this model
+that constant-- there is constant growth
+rate in dividends here.
+Now let's see if we can analytically
+derive the dividend growth rate in this model.
+Let b be the plowback ratio.
+And so then the dividends in year t
+is 1 minus the plowback ratio, again the payout ratio,
+at times earnings per share in that year t.
+Similarly, next period's dividend is this.
+So I colored b here in color red just
+to denote that this b, the plowback ratio,
+is not going to change.
+It's going to be constant.
+So this b here is the same in period t plus 1
+and in period t.
+
+Now recall that earnings per share in year t plus 1
+equals to the prior period's earnings per share plus ROI
+times investment.
+So again, here ROI is constant.
+So I deleted the subscript t from ROI.
+And then investment, of course, is just
+EPS times the plowback ratio.
+And again, this plowback ratio is constant.
+
+Then we can write down the EPS in the year
+t plus 1 as EPS in year t multiplied by
+1 plus ROI times b.
+And now we can plug this in to our dividend equation
+for year t plus 1 which would be 1 minus the plowback
+ratio times EPS in year t multiplied by 1 plus ROI times
+b.
+And now we can actually compute the dividend growth
+rate, which is dt plus 1 minus dt divided by dt.
+And I will express that as Dt plus 1 divided by dt minus 1.
+And now into this equation, I will plug in our expressions
+for dt plus 1 and dt.
+So we just derived what was the Dt plus 1.
+So it's 1 minus b multiplied by EPS in year t multiplied
+by 1 plus ROI times b.
+And dt is just 1 minus b times EPS in year t.
+So you could see that 1 minus b and EPS cancels out.
+Then what we have is just 1 plus ROI times b minus 1,
+which is just ROI times b.
+So in this model as long as the firm
+maintains constant plowback ratio and has constant ROI,
+the dividend growth rate will be time independent.
+So it will be constant.
+And it will be the product of the return
+on investment this firm has and the plowback ratio.
+And that's a very important equation that we just derived.
+Now going back to our spreadsheet,
+it should not surprise us right now
+that the dividend growth rate here is 9% and it is constant.
+Indeed, if I were to compute it just given
+the payout ratio and ROI is just simply
+the plowback ratio which is 1 minus the payout
+ratio multiplied by ROI.
+And so indeed is just 9%.
+And this growth rate will remain constant,
+as we just analytically showed.
+And so then just to find the current share price,
+realizing the dividends here grow at a constant rate, 9%,
+and this will be a perpetual constant growth rate as long
+as, again, the plowback ratio and ROI stay constant,
+so all we need to do to find the current share
+price because it's the growing perpetuity so we're taking
+the dividend that we get in year one
+and we're dividing it by r which is our discount rate 12 percent
+minus the dividend growth rate of 9%.
+And so the current share price of the stock is $366.67.

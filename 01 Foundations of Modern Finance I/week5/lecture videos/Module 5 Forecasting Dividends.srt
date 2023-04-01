@@ -1,0 +1,508 @@
+0
+00:00:00,000 --> 00:00:01,390
+
+
+1
+00:00:01,390 --> 00:00:04,150
+PROFESSOR: We now know how to price equities in relation
+
+2
+00:00:04,150 --> 00:00:07,940
+to their future dividends and discount rates.
+
+3
+00:00:07,940 --> 00:00:11,150
+Expected future dividends are an important input
+
+4
+00:00:11,150 --> 00:00:12,980
+into equity pricing.
+
+5
+00:00:12,980 --> 00:00:15,830
+Forecasting dividends is a complex problem.
+
+6
+00:00:15,830 --> 00:00:19,490
+Our approach here is to relate dividends of the firm
+
+7
+00:00:19,490 --> 00:00:21,320
+to other fundamentals.
+
+8
+00:00:21,320 --> 00:00:23,960
+In particular, we are going to relate firm's dividends
+
+9
+00:00:23,960 --> 00:00:25,750
+to its profits.
+
+10
+00:00:25,750 --> 00:00:27,910
+For simplicity, we assume that the firm
+
+11
+00:00:27,910 --> 00:00:29,860
+is all equity financed.
+
+12
+00:00:29,860 --> 00:00:34,040
+It does not have debt and makes no interest payments.
+
+13
+00:00:34,040 --> 00:00:37,770
+We start with firm's profits, its earnings per share,
+
+14
+00:00:37,770 --> 00:00:41,760
+which we define net of depreciation and taxes.
+
+15
+00:00:41,760 --> 00:00:45,510
+Dividends are related to earnings by the payout ratio.
+
+16
+00:00:45,510 --> 00:00:49,480
+The payout ratio is simply a ratio of dividends per share
+
+17
+00:00:49,480 --> 00:00:51,270
+to earnings per share.
+
+18
+00:00:51,270 --> 00:00:54,240
+This ratio tells us what fraction of firm's earnings
+
+19
+00:00:54,240 --> 00:00:56,360
+is paid out to its investors.
+
+20
+00:00:56,360 --> 00:01:00,150
+The remaining profits are reinvested into the firm.
+
+21
+00:01:00,150 --> 00:01:02,240
+Algebraically, dividends per share
+
+22
+00:01:02,240 --> 00:01:08,310
+are equal to earnings per share times the payout ratio.
+
+23
+00:01:08,310 --> 00:01:12,150
+Next, we think about how to forecast earnings.
+
+24
+00:01:12,150 --> 00:01:16,360
+The key input into the forecast is retained earnings.
+
+25
+00:01:16,360 --> 00:01:19,920
+Retained earnings are equal to the difference between earnings
+
+26
+00:01:19,920 --> 00:01:23,310
+and dividends and represent the portion of the firm's cash
+
+27
+00:01:23,310 --> 00:01:27,300
+flows reinvested into the business.
+
+28
+00:01:27,300 --> 00:01:30,190
+The fraction of the earnings retained by the firm
+
+29
+00:01:30,190 --> 00:01:32,770
+is called the plowback ratio.
+
+30
+00:01:32,770 --> 00:01:36,220
+It is the ratio of retained to total earnings
+
+31
+00:01:36,220 --> 00:01:39,790
+and is equal to 1 minus the payout ratio.
+
+32
+00:01:39,790 --> 00:01:44,230
+For example, if a firm generates $2.00 per share in earnings
+
+33
+00:01:44,230 --> 00:01:47,110
+and pays out $0.80 to its investors,
+
+34
+00:01:47,110 --> 00:01:52,210
+then the payout ratio is 40% and the plowback ratio is 60%,
+
+35
+00:01:52,210 --> 00:01:56,710
+with $1.20 reinvested into the firm.
+
+36
+00:01:56,710 --> 00:01:59,680
+We should note, as an aside, that by accumulating
+
+37
+00:01:59,680 --> 00:02:01,780
+retained earnings over time, we can
+
+38
+00:02:01,780 --> 00:02:05,170
+keep track of the firm's book value of equity, which
+
+39
+00:02:05,170 --> 00:02:07,990
+is an accounting measure of firm value.
+
+40
+00:02:07,990 --> 00:02:10,340
+Unlike the market value of equity,
+
+41
+00:02:10,340 --> 00:02:12,970
+which is a forward looking measure of firm value,
+
+42
+00:02:12,970 --> 00:02:15,250
+the book value is backward looking
+
+43
+00:02:15,250 --> 00:02:20,250
+and is simply a summary of the history of firm's investments.
+
+44
+00:02:20,250 --> 00:02:23,400
+Firms' investments generate incremental cash flows
+
+45
+00:02:23,400 --> 00:02:25,000
+in the future.
+
+46
+00:02:25,000 --> 00:02:28,540
+We assume, for simplicity, that an investment at time t
+
+47
+00:02:28,540 --> 00:02:32,410
+generates a constant, perpetual stream of additional cash flows
+
+48
+00:02:32,410 --> 00:02:35,682
+starting from the next period, t plus 1.
+
+49
+00:02:35,682 --> 00:02:39,170
+We will also assume that, without additional investments,
+
+50
+00:02:39,170 --> 00:02:43,420
+firms expect that future earnings remain constant.
+
+51
+00:02:43,420 --> 00:02:46,140
+We make both of these assumptions for simplicity
+
+52
+00:02:46,140 --> 00:02:48,670
+in order to focus on the conceptual elements
+
+53
+00:02:48,670 --> 00:02:50,320
+of this analysis.
+
+54
+00:02:50,320 --> 00:02:51,880
+One can replace these assumptions
+
+55
+00:02:51,880 --> 00:02:55,390
+with a more realistic and complex model of how investment
+
+56
+00:02:55,390 --> 00:02:56,875
+generates incremental earnings.
+
+57
+00:02:56,875 --> 00:03:00,260
+
+
+58
+00:03:00,260 --> 00:03:02,590
+Consider the following example.
+
+59
+00:03:02,590 --> 00:03:07,790
+A company, Texas Western, or TW, is expected to earn $1.00 per
+
+60
+00:03:07,790 --> 00:03:10,420
+share next year.
+
+61
+00:03:10,420 --> 00:03:13,210
+The firm plans an expansion to increase its earnings
+
+62
+00:03:13,210 --> 00:03:16,220
+by 8% per year.
+
+63
+00:03:16,220 --> 00:03:19,180
+Without these additional investments, earnings of TW
+
+64
+00:03:19,180 --> 00:03:22,560
+are expected to remain constant forever.
+
+65
+00:03:22,560 --> 00:03:25,680
+Each additional dollar of investment generates
+
+66
+00:03:25,680 --> 00:03:29,160
+incremental perpetual cash flow of $0.10 starting
+
+67
+00:03:29,160 --> 00:03:31,700
+in the following period.
+
+68
+00:03:31,700 --> 00:03:34,990
+We assume that all new investment is
+
+69
+00:03:34,990 --> 00:03:38,810
+financed by retained earnings.
+
+70
+00:03:38,810 --> 00:03:41,110
+The discount rate is 10%.
+
+71
+00:03:41,110 --> 00:03:43,940
+We assume that this discount rate applies to all future cash
+
+72
+00:03:43,940 --> 00:03:46,210
+flows of the firm.
+
+73
+00:03:46,210 --> 00:03:50,800
+Our task is to determine the price of TW shares and the two
+
+74
+00:03:50,800 --> 00:03:53,350
+alternative growth strategies.
+
+75
+00:03:53,350 --> 00:03:56,890
+In the first case, TW pays out all of its earnings
+
+76
+00:03:56,890 --> 00:03:59,320
+forever and does not invest.
+
+77
+00:03:59,320 --> 00:04:03,910
+In the second case, TW expands and grows its earnings forever
+
+78
+00:04:03,910 --> 00:04:05,410
+at 8% per year.
+
+79
+00:04:05,410 --> 00:04:07,960
+
+
+80
+00:04:07,960 --> 00:04:10,780
+We start with the case of no investment.
+
+81
+00:04:10,780 --> 00:04:15,640
+In this case, the firm pays out 100% of its earnings.
+
+82
+00:04:15,640 --> 00:04:19,899
+Without investment, earnings of TW remain at the same expected
+
+83
+00:04:19,899 --> 00:04:23,290
+level of $1.00 per share forever.
+
+84
+00:04:23,290 --> 00:04:26,140
+Because the payout ratio is 100%,
+
+85
+00:04:26,140 --> 00:04:31,120
+dividends per share are also expected to be $1.00 forever.
+
+86
+00:04:31,120 --> 00:04:35,410
+Applying the 10% discount rate to future dividends, we find,
+
+87
+00:04:35,410 --> 00:04:38,470
+using the perpetuity formula, that the initial price
+
+88
+00:04:38,470 --> 00:04:42,900
+of the stock is $10.00 per share.
+
+89
+00:04:42,900 --> 00:04:46,690
+Next consider the case of perpetual growth.
+
+90
+00:04:46,690 --> 00:04:51,800
+TW aims to grow its earnings at the rate of 8% per year.
+
+91
+00:04:51,800 --> 00:04:54,940
+The first question we must answer is, at what rate
+
+92
+00:04:54,940 --> 00:04:57,790
+should TW reinvest its earnings to achieve
+
+93
+00:04:57,790 --> 00:05:00,200
+the 8% rate of growth?
+
+94
+00:05:00,200 --> 00:05:03,200
+In other words, we want to determine the required plowback
+
+95
+00:05:03,200 --> 00:05:04,840
+ratio.
+
+96
+00:05:04,840 --> 00:05:08,350
+Suppose that, at time t, TW invests fraction
+
+97
+00:05:08,350 --> 00:05:10,890
+b of its earnings.
+
+98
+00:05:10,890 --> 00:05:13,770
+This investment raises all future earnings
+
+99
+00:05:13,770 --> 00:05:16,900
+by 10% of the total amount invested,
+
+100
+00:05:16,900 --> 00:05:21,670
+which is the plowback ratio times its earnings in period t.
+
+101
+00:05:21,670 --> 00:05:25,020
+As a result, earnings per share at time t plus 1
+
+102
+00:05:25,020 --> 00:05:29,890
+are equal to the EPS in the previous period times 1
+
+103
+00:05:29,890 --> 00:05:34,020
+plus 0.1 times the plowback ratio.
+
+104
+00:05:34,020 --> 00:05:37,830
+We conclude that to achieve an 8% growth rate,
+
+105
+00:05:37,830 --> 00:05:42,540
+the firm must use the plowback ratio of 80%.
+
+106
+00:05:42,540 --> 00:05:47,320
+The payout rate must then equal 20%.
+
+107
+00:05:47,320 --> 00:05:50,950
+Under the permanent expansion at the 8% rate,
+
+108
+00:05:50,950 --> 00:05:55,300
+dividends per share in the first year are expected to be $0.20,
+
+109
+00:05:55,300 --> 00:05:59,290
+which is 20% of the expected earnings.
+
+110
+00:05:59,290 --> 00:06:02,320
+Using the constant growth model, the initial price
+
+111
+00:06:02,320 --> 00:06:06,130
+of the stock of TW is equal to the expected dividend,
+
+112
+00:06:06,130 --> 00:06:09,430
+next period, divided by the difference between the discount
+
+113
+00:06:09,430 --> 00:06:12,940
+rate and the expected dividend growth rate.
+
+114
+00:06:12,940 --> 00:06:17,360
+The initial stock price is then $10.00 per share.
+
+115
+00:06:17,360 --> 00:06:20,320
+The price of the stock is the same as in the no growth
+
+116
+00:06:20,320 --> 00:06:21,700
+scenario.
+
+117
+00:06:21,700 --> 00:06:24,530
+Why are the two values the same?
+
+118
+00:06:24,530 --> 00:06:27,610
+The reason is firm's future investments
+
+119
+00:06:27,610 --> 00:06:30,520
+do not add anything to the firm value.
+
+120
+00:06:30,520 --> 00:06:35,140
+Each time TW invests $1.00, it generates a perpetual cash flow
+
+121
+00:06:35,140 --> 00:06:39,040
+stream of $0.10, starting a period later.
+
+122
+00:06:39,040 --> 00:06:44,850
+The NPV of this investment with the discount rate of 10% is 0.
+
+123
+00:06:44,850 --> 00:06:47,100
+As we will learn in the following section,
+
+124
+00:06:47,100 --> 00:06:51,400
+this means that TW has no growth opportunities.
+
+125
+00:06:51,400 --> 00:06:54,370
+Because our assumptions imply that all new investments are
+
+126
+00:06:54,370 --> 00:06:59,970
+0 NPV, the value of TW does not depend on its growth strategy.
+

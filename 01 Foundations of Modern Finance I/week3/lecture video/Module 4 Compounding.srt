@@ -1,0 +1,612 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:03,480
+PROFESSOR: In previous examples, we effectively assume
+
+2
+00:00:03,480 --> 00:00:08,590
+that cash flows and discount rates are over the same period.
+
+3
+00:00:08,590 --> 00:00:10,870
+For convenience in the exposition,
+
+4
+00:00:10,870 --> 00:00:14,440
+we often set the period to be one year.
+
+5
+00:00:14,440 --> 00:00:17,420
+But in practice, this may not be the case.
+
+6
+00:00:17,420 --> 00:00:19,510
+For example, cash flows may occur
+
+7
+00:00:19,510 --> 00:00:22,150
+more frequently than annually.
+
+8
+00:00:22,150 --> 00:00:25,480
+And rates of return may be quoted or realized
+
+9
+00:00:25,480 --> 00:00:28,540
+more frequently than annually.
+
+10
+00:00:28,540 --> 00:00:33,700
+Under these circumstances, we need to treat the time period
+
+11
+00:00:33,700 --> 00:00:35,830
+in a consistent manner.
+
+12
+00:00:35,830 --> 00:00:39,110
+In particular, interest or rate of return,
+
+13
+00:00:39,110 --> 00:00:43,750
+may be credited or charged more often than annually.
+
+14
+00:00:43,750 --> 00:00:47,890
+For example, for bank accounts and credit cards,
+
+15
+00:00:47,890 --> 00:00:51,340
+interest is charged daily.
+
+16
+00:00:51,340 --> 00:00:53,830
+For loans and leases, the interest
+
+17
+00:00:53,830 --> 00:00:57,400
+is often computed on a monthly basis.
+
+18
+00:00:57,400 --> 00:01:01,180
+For bonds the interest is paid semi-annually.
+
+19
+00:01:01,180 --> 00:01:04,220
+
+
+20
+00:01:04,220 --> 00:01:06,470
+For the same quoted interest rate,
+
+21
+00:01:06,470 --> 00:01:09,320
+the effective annual rate may differ,
+
+22
+00:01:09,320 --> 00:01:15,760
+depending on how frequent interests are received or paid.
+
+23
+00:01:15,760 --> 00:01:19,000
+In the market interest rates are typically
+
+24
+00:01:19,000 --> 00:01:23,500
+quoted in the form of annual percentage rate, or APR,
+
+25
+00:01:23,500 --> 00:01:27,820
+with k periods of compounding within a year.
+
+26
+00:01:27,820 --> 00:01:32,260
+What this means is that the actual interest paid per period
+
+27
+00:01:32,260 --> 00:01:36,640
+is APR divided by k, the number of compounding periods,
+
+28
+00:01:36,640 --> 00:01:40,460
+and then compounded over the whole year.
+
+29
+00:01:40,460 --> 00:01:43,430
+In this case, the actual annual rate
+
+30
+00:01:43,430 --> 00:01:46,160
+could be quite different from APR,
+
+31
+00:01:46,160 --> 00:01:49,790
+depending on the number of compounding periods.
+
+32
+00:01:49,790 --> 00:01:53,150
+In order to see the effect of compounding,
+
+33
+00:01:53,150 --> 00:01:55,830
+let's consider the following example.
+
+34
+00:01:55,830 --> 00:02:02,760
+Suppose that the bank quotes us in interest of 10% APR.
+
+35
+00:02:02,760 --> 00:02:06,510
+Depending on how the interest is compounded,
+
+36
+00:02:06,510 --> 00:02:10,970
+we'll arrive at quite different outcomes.
+
+37
+00:02:10,970 --> 00:02:14,850
+Let's suppose that we deposit $1,000.
+
+38
+00:02:14,850 --> 00:02:18,377
+If the compounding is annual, then
+
+39
+00:02:18,377 --> 00:02:20,460
+what we're going to be getting will be an interest
+
+40
+00:02:20,460 --> 00:02:23,070
+of 10% on the principle.
+
+41
+00:02:23,070 --> 00:02:29,560
+That is $100 at the end of the year, and that would be $1,100.
+
+42
+00:02:29,560 --> 00:02:34,030
+And that's given by the second column in the table.
+
+43
+00:02:34,030 --> 00:02:37,740
+But what if the compound is semiannual?
+
+44
+00:02:37,740 --> 00:02:40,470
+In that case, the interest would be
+
+45
+00:02:40,470 --> 00:02:45,780
+half of the 10% APR paid over every 6 months.
+
+46
+00:02:45,780 --> 00:02:48,960
+The outcome is given by the third column.
+
+47
+00:02:48,960 --> 00:02:51,300
+We start with a balance of $1,000.
+
+48
+00:02:51,300 --> 00:02:56,550
+In 6 months that turned into $1,050.
+
+49
+00:02:56,550 --> 00:03:01,510
+That's $1,000 plus 5% of 6 months' interest.
+
+50
+00:03:01,510 --> 00:03:03,490
+And therefore the next 6 months, we're
+
+51
+00:03:03,490 --> 00:03:06,280
+going to be getting another 5% of interest
+
+52
+00:03:06,280 --> 00:03:09,790
+on the starting balance of $1,050.
+
+53
+00:03:09,790 --> 00:03:15,310
+So by the end of the year, we'll be getting $1,103.
+
+54
+00:03:15,310 --> 00:03:19,860
+Clearly, that's different from the previous case
+
+55
+00:03:19,860 --> 00:03:24,790
+when the 10% APR is compounded annually.
+
+56
+00:03:24,790 --> 00:03:27,670
+The fourth column gives the situation
+
+57
+00:03:27,670 --> 00:03:32,710
+when the 10% APR is compounded quarterly.
+
+58
+00:03:32,710 --> 00:03:36,400
+Here for every quarter, we're getting 2 and 1/2%
+
+59
+00:03:36,400 --> 00:03:37,960
+of the interest.
+
+60
+00:03:37,960 --> 00:03:42,850
+But that accumulates over three quarters.
+
+61
+00:03:42,850 --> 00:03:45,610
+The last column gives the outcome
+
+62
+00:03:45,610 --> 00:03:49,940
+if the interest is compounded monthly.
+
+63
+00:03:49,940 --> 00:03:53,240
+And by the end of the year, the $1,000
+
+64
+00:03:53,240 --> 00:03:59,000
+of principal at the beginning of year would turn into $1,105.
+
+65
+00:03:59,000 --> 00:04:05,020
+As we can see, as the compounding periods increase,
+
+66
+00:04:05,020 --> 00:04:07,600
+we're actually going to be gaining more outcome.
+
+67
+00:04:07,600 --> 00:04:10,510
+And the reason is that when interests
+
+68
+00:04:10,510 --> 00:04:13,750
+are paid more frequently, we're earning interest
+
+69
+00:04:13,750 --> 00:04:18,310
+on the interest payments paid previously.
+
+70
+00:04:18,310 --> 00:04:20,490
+Let's now look at another example
+
+71
+00:04:20,490 --> 00:04:22,170
+in slightly more detail.
+
+72
+00:04:22,170 --> 00:04:24,450
+Suppose that actually Bank of America
+
+73
+00:04:24,450 --> 00:04:27,930
+offers one-year certificates of deposits
+
+74
+00:04:27,930 --> 00:04:33,410
+at an APR of 5% with semi-annual compounding.
+
+75
+00:04:33,410 --> 00:04:37,900
+If you invest $10,000, how much money
+
+76
+00:04:37,900 --> 00:04:41,050
+do you have at the end of one year?
+
+77
+00:04:41,050 --> 00:04:44,560
+What is the actual interest rate that you earn?
+
+78
+00:04:44,560 --> 00:04:48,000
+
+
+79
+00:04:48,000 --> 00:04:53,010
+Well first, we already know the quoted APR of 5%
+
+80
+00:04:53,010 --> 00:04:56,910
+is not the actual annual rate, because the compounding is not
+
+81
+00:04:56,910 --> 00:04:58,050
+annual.
+
+82
+00:04:58,050 --> 00:05:02,580
+It's only used to compute the 6-month interest rate, which
+
+83
+00:05:02,580 --> 00:05:04,410
+will be half of the 5%.
+
+84
+00:05:04,410 --> 00:05:08,160
+That's 2 and 1/2%.
+
+85
+00:05:08,160 --> 00:05:12,340
+If we invest $10,000 at the beginning of a year,
+
+86
+00:05:12,340 --> 00:05:15,240
+then by the year end what we would have
+
+87
+00:05:15,240 --> 00:05:20,390
+would be $10,000 times 1 plus 2 and 1/2%.
+
+88
+00:05:20,390 --> 00:05:26,290
+That's for 6 months' interest, then times 1 plus 2 and 1/2%
+
+89
+00:05:26,290 --> 00:05:29,290
+again for the second 6-month period.
+
+90
+00:05:29,290 --> 00:05:39,060
+In total, the end balance would be $10,506.25.
+
+91
+00:05:39,060 --> 00:05:42,990
+In the second 6-month period you earn interest
+
+92
+00:05:42,990 --> 00:05:47,610
+on the interest paid for the first 6 months.
+
+93
+00:05:47,610 --> 00:05:50,300
+So the actual annual rate, which is also
+
+94
+00:05:50,300 --> 00:05:53,960
+called the effective annual rate, or EAR,
+
+95
+00:05:53,960 --> 00:05:59,165
+is given by this last equation on a slide.
+
+96
+00:05:59,165 --> 00:06:04,920
+The effective annual rate equals to 1 plus 2 and 1/2%
+
+97
+00:06:04,920 --> 00:06:09,850
+compounded twice, because we have two compounding periods
+
+98
+00:06:09,850 --> 00:06:11,710
+within a year, then minus 1.
+
+99
+00:06:11,710 --> 00:06:15,610
+That gives 5.0625%.
+
+100
+00:06:15,610 --> 00:06:18,490
+That is the actual annual interest
+
+101
+00:06:18,490 --> 00:06:22,530
+rate we're earning on this CD.
+
+102
+00:06:22,530 --> 00:06:27,450
+More generally, we can compute the effective annual rate
+
+103
+00:06:27,450 --> 00:06:32,820
+from the APR plus the number of compounding periods.
+
+104
+00:06:32,820 --> 00:06:37,260
+Let our APR be the APR, and k the number of compounding
+
+105
+00:06:37,260 --> 00:06:39,720
+intervals per year.
+
+106
+00:06:39,720 --> 00:06:43,380
+Then in one year, $1 invested today
+
+107
+00:06:43,380 --> 00:06:48,470
+would yield 1 plus the APR divided by k.
+
+108
+00:06:48,470 --> 00:06:53,310
+That's the actual interest rate paid for each period.
+
+109
+00:06:53,310 --> 00:06:56,160
+And then compound it k times.
+
+110
+00:06:56,160 --> 00:06:59,090
+The effective annual rate is then
+
+111
+00:06:59,090 --> 00:07:02,900
+given by the following equation, namely 1
+
+112
+00:07:02,900 --> 00:07:05,810
+plus the effective annual rate should
+
+113
+00:07:05,810 --> 00:07:11,820
+equal to 1 plus the interest per compounding period,
+
+114
+00:07:11,820 --> 00:07:14,310
+then compound it 10 times.
+
+115
+00:07:14,310 --> 00:07:18,300
+And this gives us the equation on the bottom right
+
+116
+00:07:18,300 --> 00:07:19,500
+of the slide.
+
+117
+00:07:19,500 --> 00:07:25,650
+The effective annual rate is basically the gross return
+
+118
+00:07:25,650 --> 00:07:29,360
+over the year, minus 1.
+
+119
+00:07:29,360 --> 00:07:32,690
+We can further see the relationship
+
+120
+00:07:32,690 --> 00:07:35,360
+between the effective annual rate
+
+121
+00:07:35,360 --> 00:07:37,430
+and the number of compounding periods,
+
+122
+00:07:37,430 --> 00:07:40,080
+holding constant the APR.
+
+123
+00:07:40,080 --> 00:07:43,230
+Suppose that the APR is 5%.
+
+124
+00:07:43,230 --> 00:07:45,020
+Then the effective annual rate we're
+
+125
+00:07:45,020 --> 00:07:50,190
+going to be getting as described in the table below,
+
+126
+00:07:50,190 --> 00:07:53,880
+depends on the number of compounding periods.
+
+127
+00:07:53,880 --> 00:07:57,590
+If k is 1, then that means that the compounding
+
+128
+00:07:57,590 --> 00:07:59,490
+is on an annual basis.
+
+129
+00:07:59,490 --> 00:08:03,880
+Then the effective annual rate is just 5%, same as the APR.
+
+130
+00:08:03,880 --> 00:08:09,240
+If k equals 2, that is if the compounding is semi-annual,
+
+131
+00:08:09,240 --> 00:08:14,080
+then the effective annual rate will be 5.0625%.
+
+132
+00:08:14,080 --> 00:08:17,790
+That's higher than the 5% we are getting
+
+133
+00:08:17,790 --> 00:08:20,330
+if the compounding is annual.
+
+134
+00:08:20,330 --> 00:08:25,130
+If compounding is on a monthly basis, namely k equals 12,
+
+135
+00:08:25,130 --> 00:08:29,720
+then we get the third row, the effective annual rate
+
+136
+00:08:29,720 --> 00:08:34,860
+will be 5.1162%.
+
+137
+00:08:34,860 --> 00:08:37,200
+What if k equals 365?
+
+138
+00:08:37,200 --> 00:08:40,590
+That means that the compounding is on a daily basis.
+
+139
+00:08:40,590 --> 00:08:47,110
+Then the effective annual rate will be 5.1267%.
+
+140
+00:08:47,110 --> 00:08:49,720
+How about on an hourly basis?
+
+141
+00:08:49,720 --> 00:08:54,490
+That is when k equals 8,760.
+
+142
+00:08:54,490 --> 00:08:55,920
+Nobody really does that, but here
+
+143
+00:08:55,920 --> 00:08:58,250
+is just as an illustration.
+
+144
+00:08:58,250 --> 00:09:02,410
+Then the effective annual rate will be 5.1271.
+
+145
+00:09:02,410 --> 00:09:05,450
+What if the compounding is continuous?
+
+146
+00:09:05,450 --> 00:09:08,080
+Then what we're getting as the effective annual rate will
+
+147
+00:09:08,080 --> 00:09:10,840
+be 5.1271.
+
+148
+00:09:10,840 --> 00:09:15,720
+And that's fairly close to the hourly compounding result.
+
+149
+00:09:15,720 --> 00:09:18,480
+Of course nobody really does continuous compounding.
+
+150
+00:09:18,480 --> 00:09:22,410
+But as we'll see later on, for mathematical convenience,
+
+151
+00:09:22,410 --> 00:09:24,930
+sometimes we assume the compounding
+
+152
+00:09:24,930 --> 00:09:29,870
+is continues to arrive at some simple results.
+

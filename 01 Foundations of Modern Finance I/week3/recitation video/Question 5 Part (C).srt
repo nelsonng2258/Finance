@@ -1,0 +1,280 @@
+0
+00:00:00,000 --> 00:00:00,900
+
+
+1
+00:00:00,900 --> 00:00:03,400
+PROFESSOR: Now, suppose that the expected future annual rate
+
+2
+00:00:03,400 --> 00:00:06,720
+of inflation is 2%.
+
+3
+00:00:06,720 --> 00:00:08,900
+If Jeff Bezos wants to distribute
+
+4
+00:00:08,900 --> 00:00:12,440
+an equal annual amount in today's dollars
+
+5
+00:00:12,440 --> 00:00:16,040
+to guarantee purchasing power of distributed funds,
+
+6
+00:00:16,040 --> 00:00:19,580
+how much would the annual distribution amount be?
+
+7
+00:00:19,580 --> 00:00:21,140
+Assume that the first distribution
+
+8
+00:00:21,140 --> 00:00:23,450
+happens one year from now.
+
+9
+00:00:23,450 --> 00:00:26,120
+Suppose that the annual distribution from the fund
+
+10
+00:00:26,120 --> 00:00:29,400
+equals c dollars.
+
+11
+00:00:29,400 --> 00:00:34,680
+Let's denote by i the annual rate of inflation.
+
+12
+00:00:34,680 --> 00:00:36,690
+Future distributions from the fund
+
+13
+00:00:36,690 --> 00:00:39,520
+need to grow at the same rate as the inflation
+
+14
+00:00:39,520 --> 00:00:42,480
+to guarantee their purchasing power.
+
+15
+00:00:42,480 --> 00:00:45,330
+In year one, for example, distribution
+
+16
+00:00:45,330 --> 00:00:49,510
+should equal to c times 1 plus i.
+
+17
+00:00:49,510 --> 00:00:54,340
+More generally, in the year t, distribution amount would equal
+
+18
+00:00:54,340 --> 00:00:57,790
+c times 1 plus i raised to the power of t.
+
+19
+00:00:57,790 --> 00:01:00,700
+For example, in the year two, distribution amount
+
+20
+00:01:00,700 --> 00:01:04,480
+would be c times 1 plus i raised to the power of 2.
+
+21
+00:01:04,480 --> 00:01:07,580
+
+
+22
+00:01:07,580 --> 00:01:11,720
+Let's put these distributions on the timeline.
+
+23
+00:01:11,720 --> 00:01:14,210
+For comparison, let's also draw a stream
+
+24
+00:01:14,210 --> 00:01:20,520
+of payments that represent a regular growing perpetuity.
+
+25
+00:01:20,520 --> 00:01:25,300
+Notice that the two streams look alike with one difference.
+
+26
+00:01:25,300 --> 00:01:28,390
+For regular perpetuity, the first payment in year one
+
+27
+00:01:28,390 --> 00:01:33,190
+is c and the second payment in year two is c times 1
+
+28
+00:01:33,190 --> 00:01:37,780
+plus g, where g is the growth rate.
+
+29
+00:01:37,780 --> 00:01:40,090
+In our case, however, the first payment
+
+30
+00:01:40,090 --> 00:01:43,660
+is c times 1 plus i and the second payment
+
+31
+00:01:43,660 --> 00:01:47,690
+is c times 1 plus i squared.
+
+32
+00:01:47,690 --> 00:01:51,610
+Now, mathematically, we can make our stream of payments
+
+33
+00:01:51,610 --> 00:01:55,120
+look like a regular perpetuity if we
+
+34
+00:01:55,120 --> 00:02:00,360
+factor 1 plus the rate of inflation term out.
+
+35
+00:02:00,360 --> 00:02:03,610
+To see this, let's write down the present value
+
+36
+00:02:03,610 --> 00:02:07,040
+of our stream, which is present value
+
+37
+00:02:07,040 --> 00:02:09,789
+equals to c times 1 plus i divided
+
+38
+00:02:09,789 --> 00:02:16,610
+by 1 plus r plus c multiplied by 1 plus i squared divided by 1
+
+39
+00:02:16,610 --> 00:02:20,100
+plus r squared and so forth.
+
+40
+00:02:20,100 --> 00:02:25,880
+Factoring 1 plus i out gives us the following expression--
+
+41
+00:02:25,880 --> 00:02:30,290
+present value equals to 1 plus i multiplied
+
+42
+00:02:30,290 --> 00:02:36,260
+by c divided by 1 plus r plus c multiplied by 1
+
+43
+00:02:36,260 --> 00:02:41,220
+plus i divided by 1 plus r squared, and so forth.
+
+44
+00:02:41,220 --> 00:02:43,710
+The expression inside large brackets
+
+45
+00:02:43,710 --> 00:02:46,680
+looks just like a regular perpetuity.
+
+46
+00:02:46,680 --> 00:02:50,340
+Hence, its present value is just c divided by r minus i.
+
+47
+00:02:50,340 --> 00:02:52,440
+And therefore, the present value of our stream
+
+48
+00:02:52,440 --> 00:02:57,150
+is 1 plus i multiplied by c divided by r minus i.
+
+49
+00:02:57,150 --> 00:02:59,700
+
+
+50
+00:02:59,700 --> 00:03:06,150
+All that's left here is to find c in this expression.
+
+51
+00:03:06,150 --> 00:03:09,150
+Remember that we are given the present value, which
+
+52
+00:03:09,150 --> 00:03:11,700
+is the amount that Jeff Bezos pledged
+
+53
+00:03:11,700 --> 00:03:15,480
+to the foundation, which is $10 billion.
+
+54
+00:03:15,480 --> 00:03:19,020
+Given the interest rate of 8%, we
+
+55
+00:03:19,020 --> 00:03:22,840
+can solve this equation for payment amount c.
+
+56
+00:03:22,840 --> 00:03:27,340
+$10 equals to 1 plus 2%, which is the rate of inflation,
+
+57
+00:03:27,340 --> 00:03:31,270
+multiplied by c divided by 8%, which
+
+58
+00:03:31,270 --> 00:03:36,490
+is our interest rate, minus 2%, which is the rate of inflation.
+
+59
+00:03:36,490 --> 00:03:41,920
+Rearranging, this gives us c equals to $10 times
+
+60
+00:03:41,920 --> 00:03:47,990
+8% minus 2% divided by 1 plus 2%.
+
+61
+00:03:47,990 --> 00:04:00,660
+This equals to $588,235,294 or roughly $588.2 million.
+
+62
+00:04:00,660 --> 00:04:03,770
+Note that the value of $588 million
+
+63
+00:04:03,770 --> 00:04:07,520
+that we found in this question is significantly lower
+
+64
+00:04:07,520 --> 00:04:09,500
+than the cost and distribution value
+
+65
+00:04:09,500 --> 00:04:13,790
+that we found in part a which was $800 million.
+
+66
+00:04:13,790 --> 00:04:18,060
+Intuitively, since we have to adjust for inflation,
+
+67
+00:04:18,060 --> 00:04:20,570
+we have to start paying a lower amount
+
+68
+00:04:20,570 --> 00:04:24,020
+so that we have enough funds to guarantee
+
+69
+00:04:24,020 --> 00:04:29,260
+all the future payments and adjustments for inflation.
+

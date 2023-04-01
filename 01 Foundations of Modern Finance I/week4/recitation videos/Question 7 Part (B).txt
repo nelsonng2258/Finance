@@ -1,0 +1,73 @@
+
+PROFESSOR: Let's compute convexity of this bond.
+I will start with definition.
+So convexity of the bond is given
+by 1/2 multiplied by the inverse price, multiplied
+by the second derivative of the bond price with respect to YTM.
+So what I'm going to do right now,
+I will try to expand this formula
+by taking the second derivative of the bond price
+with respect to YTM.
+So let's write down the bond price as this.
+So this is just the present value of cash flows
+that we get from the bond discount
+at the present at its YTM.
+I will take the first derivative,
+which would be given by the following expression.
+
+Now we'll take the second derivative, which would
+be given by this expression.
+I will write it down slightly differently
+by factoring out 1 over 1 plus YTM squared.
+So that under the summation sign we
+will get the following expression.
+And now I will plug in this derivative
+into the definition of the convexity.
+And so I'm going to get 1/2 multiplied
+by the inverse price, multiplied by 1 over 1 plus yield squared,
+multiplied by the following sum.
+Within this following sum, what I
+will do is that I will write down
+the ratio of cash flow received in the year t,
+divided by 1 plus YTM, raised to the power t
+as the present value of this cash flow.
+So this is why I factored out 1 plus y squared,
+so that I can actually write down
+this as the present value of this cash flow.
+And so therefore under this summation sign,
+we're going to have the present value of cash flow in the year
+t multiplied by year t multiplied by year t plus 1.
+And so this is the expression that we
+can use right now to compute the convexity of the bond
+that we have in this question.
+This is a similar spreadsheet that we
+had in part A of this question.
+So here we are given our current YTM, the face
+value of the bond, the coupon, the cash
+flows that we get from the bond.
+And we've already found the price
+of this bond, which was 106.77.
+So right now let's use this expression
+which is derived to compute the convexity of this bond.
+So first, for each year 1 through 5,
+I will compute this expression that we
+have under the summation sign.
+So this is the present value of each
+of these cash flows multiplied by t
+and multiplied by t plus 1.
+So for year 1, I will take the present value
+that we compute it here.
+I will multiply it by year, 1 in this case,
+and multiply it by 1 plus another 1.
+And I will do this calculation for each of these payments.
+And then I will add it up.
+And so you can see that to compute the convexity,
+I need to take 1/2.
+I need to divide it by the price of the bond,
+and I need to divide it by 1 plus y squared.
+And so first I will take the sum of these terms.
+And then I will divide it by 2, I
+will multiply it by the price.
+And then we'll multiply it by 1 plus YTM squared.
+And so this would exactly be the convexity of this bond.
+So the convexity will be 12.38.

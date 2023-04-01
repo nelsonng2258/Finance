@@ -1,0 +1,76 @@
+
+PROFESSOR: In this question, we're
+given a state-space model that has
+three states and three assets currently traded in the market.
+Asset 1 is a riskless bond with the current price of $95.
+It pays $100 in each of the three states.
+Asset 2 is a stock.
+Its current price is $150.
+And it pays $250 in state 1, nothing in state 2,
+and $500 in state 3.
+And finally, asset number 3 is another stock that is currently
+priced and traded at $100.
+And it pays $0 in states 1 and 2.
+And it pays $500 in the state 3.
+The question is, what are the state prices?
+To answer this question, let's start
+by writing down the pricing equation that
+connects the payoff that we get from an asset with the state
+prices.
+So recall that in question two, we
+were working with the following equation.
+So the price of any asset equals to the payoff
+that asset pays in the first state multiplied by the state
+price of that state.
+And similarly, what that asset pays
+in the second state times the price of that second state,
+plus here we have three states in total,
+so we have the third state as well.
+So now we can write down the prices
+of each of our three assets as the function of the state
+prices and what these assets pay in each of the states.
+So let's start with the riskless bond.
+So we get 95 equals to phi 1 multiplied by 100
+plus phi 2 multiplied by 100 plus phi 3 multiplied by 100.
+Now for the second asset, or for our first stock,
+we can write down the following equation.
+So its current price is $150.
+And it pays $250 in the first state.
+So it's phi 1 multiplied by 250.
+It doesn't pay anything in the second state,
+so it's going to be phi 2 times 0, which is 0.
+Plus phi 3-- and I can put 0 here--
+phi 3 times 500.
+And finally, for the asset number 3, or the second stock,
+we can write down the pricing equation
+for that stock, which is 100 equals
+to phi 3 multiplied by 500.
+And so the remaining, phi 1 times 0 is 0.
+And phi 2 times 0 is 0 as well.
+So now we have this system of equations with three unknowns.
+It's a very easy system of equations to solve.
+So from the last equation, we get phi 3 that equals 0.2.
+We can plug this phi 3 into the second equation.
+And by solving that equation, you
+could verify that phi 1 would equal to 0.2 as well.
+And finally, we can plug phi 3 and phi 1 into equation 1
+and solve that equation for phi 2.
+And so if we do that, we find that phi 2--
+and I will write it down here--
+so phi 2 would equal 0.55.
+So altogether, we get that the state prices, in this case,
+equal to--
+so phi 1 equals to 0.2, phi 2 equals 0.55,
+and phi 3 equals 0.2 as well.
+So this is the set of the state prices
+in this state-space model.
+If we were to use the state prices to price these assets
+again given their payoffs, the way we have priced assets
+in question two, we would have found
+that each of these assets, so the riskless bond, its price
+would be $95.
+The price of stock 1 would be $150.
+And the price of stock 2 would be $100.
+So altogether, this question teaches you
+how to find the state prices from the given
+prices of traded assets.

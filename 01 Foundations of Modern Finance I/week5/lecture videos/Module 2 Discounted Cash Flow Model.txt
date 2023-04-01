@@ -1,0 +1,101 @@
+
+PROFESSOR: We will now develop a basic valuation model
+for equities called Discounted Cash Flow Model, or DCF Model.
+Let's look at the prices of several financial companies.
+These are large banks like J.P. Morgan, Bank of America,
+and so forth.
+In the table, you can see prices per share
+as well as earnings per share and the valuation ratios,
+such as the price to earnings ratio of price to sales ratio.
+What is interesting about this is
+that these firms are very different in terms
+of their overall size, or market cap.
+Some of them extremely large, like Bank
+of America and JP Morgan Chase, some are a lot smaller.
+But when we look at their valuation ratios,
+such as the price to earnings ratio,
+those ratios are fairly close to each other.
+What this suggests, what this pattern is telling us,
+is that there is something that all of these financial firms
+seem to have in common as far as their valuation is concerned.
+The market is pricing these stocks
+at a similar multiple in relation to their earnings.
+Let's compare this to the automakers.
+Now we are looking at various car manufacturers, Toyota,
+Volkswagen, BMW, and so forth.
+Again, these companies are very heterogeneous in terms
+of their overall size.
+Their valuation ratios also tend to be closely related
+to each other.
+They are lower than those for the banks.
+So what is going on?
+Why is it that car manufacturers are
+priced on average at the lower level
+as a fraction of their earnings, as a P/E multiple,
+compared to banks?
+What determines valuation of different types of stocks?
+That's the question that we want to answer.
+We're going to start with very basic theoretical observations.
+Let's look at the present value of a security
+a stock in this case and relate it to the cash flows,
+the dividends.
+This is going to give us the discounted cash flow model.
+Our notation is going to be Pt for the expected stock
+price at time t, this is the ex-dividend price,
+the price of the security immediately
+after it pays off the dividend.
+Dt is the expected dividend at time t.
+And Rt is the expected stock return over period t.
+We start with an accounting identity,
+the definition of returns.
+1 plus the expected return is equal to the total cash
+flow at time 1, which is the dividend
+plus the price of the security, P1, divided
+by the initial price, P0.
+This is the definition of expected return, R1.
+We can rewrite this formula to express
+the price of the security at time 0 in relation
+to the expected dividend a time 1,
+the expected price at time 1, and the expected return.
+The price at times 0 is equal to D1 plus P1, the expected
+period for time 1 discounted at R1,
+the expected rate of return.
+The lesson here is that the price
+can be computed as expected cash flow discounted at the discount
+factor, which is equal to the expected
+return on the security.
+This relation is an accounting of mathematical identity.
+It doesn't rely on any economic assumptions.
+It is simply true because of how we define returns
+on securities.
+Now let's use our pricing formula and iterate forward.
+We are going to substitute out P1.
+We will replace it by the discounted value of D2 plus P2.
+What we obtain as a result is the relation within the price
+at time 0 and the dividend at time 1, the dividend at time 2,
+and the price at time 2.
+Again, the price at time 0 is a discounted value of future cash
+flows at time 1 and 2.
+To simplify, let's assume that expected returns
+during every period are the same, they're equal to R.
+We can continue this process, continue moving forward,
+substituting out the price using our one period DCF
+formula to obtain the following equation, the price at time 0
+is equal to the sum of the expected dividends
+during future periods discounted at the rate of return R
+plus the residual term, which is the price at time capital
+T discounted at the rate of return, again,
+our expected return of the stock.
+The price of the stock is therefore
+equal to the discounted value of future dividends
+plus the discounted value of the terminal price, Pt.
+The discount factor equals the expected stock return.
+If we take this sum to a limit by letting capital
+T go to infinity and make an additional assumption
+that the discounted value of the terminal price, p capital T,
+converges to 0, we obtain an infinite horizon discounted
+cash flow formula, which tells us
+that the price of the stock at time 0
+is equal to the discounted value of future dividends from 1
+to infinity, where each expected future dividend is discounted
+at the expected rate of return on the stock.

@@ -1,0 +1,380 @@
+0
+00:00:00,000 --> 00:00:00,720
+
+
+1
+00:00:00,720 --> 00:00:02,760
+PROFESSOR: In this video, I will introduce
+
+2
+00:00:02,760 --> 00:00:06,180
+a concept of expected return.
+
+3
+00:00:06,180 --> 00:00:08,760
+Suppose that, currently, Nikola Corporation
+
+4
+00:00:08,760 --> 00:00:12,260
+is traded at $32 a share.
+
+5
+00:00:12,260 --> 00:00:14,720
+We're given the probability distribution
+
+6
+00:00:14,720 --> 00:00:19,530
+of what will be a share price of Nikola next year.
+
+7
+00:00:19,530 --> 00:00:21,410
+Suppose, though, with probability 10%,
+
+8
+00:00:21,410 --> 00:00:26,200
+the share price will increase all the way to $150.
+
+9
+00:00:26,200 --> 00:00:28,240
+With 60% probability, the share price
+
+10
+00:00:28,240 --> 00:00:32,689
+is going to come down from $32 to $20.
+
+11
+00:00:32,689 --> 00:00:34,540
+And with the remaining 30% probability,
+
+12
+00:00:34,540 --> 00:00:39,790
+the share price will go all the way down to $2 a share.
+
+13
+00:00:39,790 --> 00:00:43,240
+The question is, what is the expected return on this stock
+
+14
+00:00:43,240 --> 00:00:45,220
+over the next year?
+
+15
+00:00:45,220 --> 00:00:50,240
+And here, by return, I would mean net return.
+
+16
+00:00:50,240 --> 00:00:52,250
+So first, let's compute what would
+
+17
+00:00:52,250 --> 00:00:56,370
+be the net return on Nikola stock price in each
+
+18
+00:00:56,370 --> 00:00:58,370
+of the corresponding cases, when the share price
+
+19
+00:00:58,370 --> 00:01:03,050
+goes up to $150, up to $20, or to $2.
+
+20
+00:01:03,050 --> 00:01:09,290
+So I will write down here net return, and I will compute it.
+
+21
+00:01:09,290 --> 00:01:12,990
+So in this first scenario, the net return on Nikola
+
+22
+00:01:12,990 --> 00:01:23,490
+is going to be $150 minus $32 divided by $32.
+
+23
+00:01:23,490 --> 00:01:33,470
+See, if you compute this, this gives us 368.75%.
+
+24
+00:01:33,470 --> 00:01:36,320
+So that is a very large return.
+
+25
+00:01:36,320 --> 00:01:40,260
+Now, in the second scenario, the net return
+
+26
+00:01:40,260 --> 00:01:48,678
+will be $20 minus $32 divided by $32.
+
+27
+00:01:48,678 --> 00:01:50,220
+And you could see that, in this case,
+
+28
+00:01:50,220 --> 00:01:53,410
+the share price declines, so the return's going to be negative.
+
+29
+00:01:53,410 --> 00:02:00,070
+So it's going to be negative 37.5%.
+
+30
+00:02:00,070 --> 00:02:03,070
+Now, in this last scenario, net return's
+
+31
+00:02:03,070 --> 00:02:10,199
+going to be $2 minus $32 divided by $32.
+
+32
+00:02:10,199 --> 00:02:15,950
+And that's going to be negative 93.75%.
+
+33
+00:02:15,950 --> 00:02:19,670
+So in this case, the share price goes almost to $0,
+
+34
+00:02:19,670 --> 00:02:22,730
+so we are losing most of our wealth.
+
+35
+00:02:22,730 --> 00:02:25,310
+Note that, by definition, net return can never
+
+36
+00:02:25,310 --> 00:02:27,765
+be less than negative 100%.
+
+37
+00:02:27,765 --> 00:02:29,390
+This would just mean that you're losing
+
+38
+00:02:29,390 --> 00:02:34,890
+all of your initial wealth that you invested into the stock.
+
+39
+00:02:34,890 --> 00:02:38,450
+Now let me define what expected return is.
+
+40
+00:02:38,450 --> 00:02:42,521
+Expected return, which I will denote as Er.
+
+41
+00:02:42,521 --> 00:02:45,680
+E stands for the expected, and this is the concept
+
+42
+00:02:45,680 --> 00:02:47,900
+from probability theory.
+
+43
+00:02:47,900 --> 00:02:51,170
+This would be the sum of all probabilities of each given
+
+44
+00:02:51,170 --> 00:02:53,660
+state, so state 1, 2, and 3, multiplied
+
+45
+00:02:53,660 --> 00:02:57,170
+by the net return in each of the corresponding states.
+
+46
+00:02:57,170 --> 00:03:00,620
+So p1 multiplied by the return that we'll
+
+47
+00:03:00,620 --> 00:03:05,690
+get on the stock in state 1, plus p2 times r2
+
+48
+00:03:05,690 --> 00:03:08,450
+plus p3 times r3.
+
+49
+00:03:08,450 --> 00:03:11,760
+If we have more states of nature,
+
+50
+00:03:11,760 --> 00:03:14,030
+we can write down the expected return
+
+51
+00:03:14,030 --> 00:03:16,430
+in a more compact way, as 1 all the way
+
+52
+00:03:16,430 --> 00:03:20,080
+to however many states of nature we have, let's say
+
+53
+00:03:20,080 --> 00:03:22,680
+n, p i times ri.
+
+54
+00:03:22,680 --> 00:03:26,620
+So the probability of each of these states of nature
+
+55
+00:03:26,620 --> 00:03:29,260
+multiplied by the net return in each
+
+56
+00:03:29,260 --> 00:03:31,690
+of the corresponding states.
+
+57
+00:03:31,690 --> 00:03:37,120
+So applied in our case, this would be 10% multiplied
+
+58
+00:03:37,120 --> 00:03:39,850
+by the return that we get in this first state, which
+
+59
+00:03:39,850 --> 00:03:47,578
+is 368.75%, plus 60%--
+
+60
+00:03:47,578 --> 00:03:49,120
+this is the probability of occurrence
+
+61
+00:03:49,120 --> 00:03:50,560
+of the second state--
+
+62
+00:03:50,560 --> 00:03:58,630
+multiplied by negative 37.50% return plus 30% multiplied
+
+63
+00:03:58,630 --> 00:04:04,840
+by negative 93.75% return.
+
+64
+00:04:04,840 --> 00:04:16,300
+If you compute this number, this would give us negative 13.75%.
+
+65
+00:04:16,300 --> 00:04:21,820
+So the expected net return on our investing
+
+66
+00:04:21,820 --> 00:04:29,180
+in this stock of Nikola Corporation is negative 13.75%.
+
+67
+00:04:29,180 --> 00:04:31,770
+Now let me also show you an alternative way
+
+68
+00:04:31,770 --> 00:04:34,240
+of solving this question.
+
+69
+00:04:34,240 --> 00:04:38,170
+What we can do is we can find the expected price of Nikola
+
+70
+00:04:38,170 --> 00:04:42,400
+stock in year one, and then use the current price
+
+71
+00:04:42,400 --> 00:04:45,090
+to find the net return.
+
+72
+00:04:45,090 --> 00:04:50,970
+So by definition, the expected price of a stock next year
+
+73
+00:04:50,970 --> 00:04:53,910
+will be the probability of each of the corresponding states
+
+74
+00:04:53,910 --> 00:04:57,810
+times the share price in that state of nature.
+
+75
+00:04:57,810 --> 00:05:00,330
+So in this case, it will be 10% multiplied
+
+76
+00:05:00,330 --> 00:05:10,980
+by $150 plus 60% multiplied by $20 plus 30% multiplied by $2.
+
+77
+00:05:10,980 --> 00:05:18,270
+If you compute the share price, we will get $27.60.
+
+78
+00:05:18,270 --> 00:05:22,330
+So right here, you already can see that, in expectation,
+
+79
+00:05:22,330 --> 00:05:24,460
+the share price of Nikola is going
+
+80
+00:05:24,460 --> 00:05:27,300
+to decline from the current price to what it
+
+81
+00:05:27,300 --> 00:05:31,270
+is going to be, or expected to be, next year.
+
+82
+00:05:31,270 --> 00:05:36,190
+Now to compute the net return, which
+
+83
+00:05:36,190 --> 00:05:41,780
+is taking the future price, the expected future price,
+
+84
+00:05:41,780 --> 00:05:50,492
+we'll divide it by the current price minus 1.
+
+85
+00:05:50,492 --> 00:06:00,416
+And so it will be $27.60 divided by $32 minus 1.
+
+86
+00:06:00,416 --> 00:06:07,520
+And this number will also be negative 13.75%.
+
+87
+00:06:07,520 --> 00:06:11,970
+So both approaches give us exactly the same final result,
+
+88
+00:06:11,970 --> 00:06:16,700
+which is the net return on the stock of negative 13.75%.
+
+89
+00:06:16,700 --> 00:06:19,850
+What it implies, this expected value or what we also
+
+90
+00:06:19,850 --> 00:06:24,830
+call mean return, is based on our assessment of probabilities
+
+91
+00:06:24,830 --> 00:06:26,870
+of different states and different prices
+
+92
+00:06:26,870 --> 00:06:29,960
+of share price of Nikola in each of those different states.
+
+93
+00:06:29,960 --> 00:06:34,070
+What is the most likely return on the share
+
+94
+00:06:34,070 --> 00:06:35,980
+over the next year?
+

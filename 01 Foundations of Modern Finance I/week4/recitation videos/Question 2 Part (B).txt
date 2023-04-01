@@ -1,0 +1,206 @@
+
+PROFESSOR: Now that we know there is arbitrage opportunity
+in this market, I will teach you how
+to construct an arbitrage trading strategy that
+takes advantage of it.
+In particular, we will construct such a strategy
+that pays off $100 today and nothing in the future.
+I will teach a very universal approach
+that you can apply to construct arbitrage
+opportunities in any situation.
+
+So we're going to assume that we're
+buying xA amount of bond A, xB amount of bond B,
+xC amount of bond C, and xD amount of bond D. We will allow
+for these amounts for xA, xB, xC, and xD to be negative.
+This would imply that we are taking a short position,
+we're selling the corresponding bonds.
+
+So we want to construct a strategy that pays--
+gives us $100 today.
+We can write the following equation.
+Bond prices multiplied by our positions
+should add up to $100.
+Here the key would be that bond prices would
+come with negative signs because we're taking--
+we're buying these bonds.
+So for example, if we're buying one unit of bond A,
+we will have to pay right now $96.90.
+This is the price of bond A. So in this case,
+we'll have a cash outflow of $96.90.
+If we are buying two units of bond A,
+then our cash outflow would be the price multiplied by 2.
+So therefore this gives us the left hand side
+of this equation, which means that we're buying xA of bond A,
+xB of bond B, xC of bond C, and xD of bond D.
+And so this expression gives us our total cash
+outflow that we have to spend on buying these bonds.
+And so this has to equal to $100 because this
+is-- we want a positive cash outflow today
+so we want to construct a strategy that gives us $100
+today.
+So you can immediately see that for this
+to work that some of this amounts
+xA, xB, and xC, and xD has to be a negative so
+that the corresponding cash flow is positive.
+So it makes sense that we would have
+to take a negative position or short sell one of these bonds.
+You could see that it's likely going
+to be bond D because we've just determined
+in the previous question that this bond is actually
+overpriced.
+
+So this is just the summary of this.
+Now the key to arbitrage is that our positions should be such
+that the bond payoffs or our payoffs from our trading
+strategy are zero in all of the subsequent years.
+And that is the definition of arbitrage.
+So we're making a positive amount today.
+So in this particular case, we're going to make $100.
+And are positions are fully hatched.
+So our cash flows are exactly zero
+in all of the subsequent years.
+So here because the maximum maturity of the bonds
+here is three years so we have to make sure
+that in the years 1, 2, and 3 we get $0 cash flows.
+Let's start with Year 1.
+So recall that bond A is a zero coupon
+bond with one year maturity.
+So it pays $100 in the year one.
+So therefore, the cash inflow or the positive cash
+flow because we bought this bond,
+so at the end of the year one, we
+get $100 times how many units of this bond we purchased,
+so times xA.
+Now bond B is a 2.75% coupon bond.
+And it's a two-year bond.
+So it pays us the first coupon at the end of Year 1.
+So we get 2.75 times xB.
+And bond D, so bond C is a zero coupon bond so it pays nothing.
+And it matures in year three.
+And bond D, it's a 3% coupon bond
+so it pays us for the first coupon $3
+at the end of year one.
+So hence we get the following expression and this
+has to equal to $0 because, again, we
+have to ensure that our cash flow at the end of year 1
+is exactly 0.
+
+So for Year 2 now bond A pays nothing.
+So it pays zero because it already matured.
+Now bond B matures actually at the end of year two,
+so it pays the second coupon of $2.75.
+Plus it pays the face value of $100.
+And bond C pays nothing because it's
+a zero-coupon bond that matures at the end of year three.
+And bond D pays our second coupon.
+It pays $3.
+So we have the following equation, 102.75 times xB
+plus 3 times xD.
+And that equals to $0.
+
+So finally for year three, we get-- so at that point in time,
+bond A already matured.
+So it pays nothing.
+Bond B also matured, so it pays nothing.
+Bond C pays its face value.
+So $100.
+And again, recall that this is a 0% coupon bond.
+And bond D pays its last coupon which is
+$3 plus its face value, $100.
+So in year three we get the following equation,
+so 100 multiplied by xC plus 103 multiplied by xD.
+And that equals to $0.
+
+So let's put this all together.
+So we have the following four equations.
+So the first equation, it's our cash flow in the year one.
+The second equation is our cash flow in the year one.
+So the first one is our cash flow in the year zero.
+Now, let's put this all together.
+We have the following system of four equations
+with four unknowns.
+These equations represent our cash flows in Years 0, 1, 2,
+and 3.
+So the goal right now is to solve this system of equations
+for xA, xB, and xC, and xD.
+So here it's fairly straightforward
+how to solve this.
+So we can see that, for example, the last two
+equations, so the tie--
+they had just two unknowns.
+So they tie xB and xD.
+This is Equation 3.
+An xC an xD, this is Equation 4.
+So what I'm going to do is that I'm
+going to solve the last two equations for xB
+as a function of xD and xC as the function of xD.
+Now let's look at the second equation.
+Second equation has xA, xB, and xD.
+So I'm going to plug in the third equation,
+or xB into the second equation, and then solve it to express xA
+as a function of xD.
+So this is me first-step plugging xB
+as the function of xD into this second equation.
+And then the next step, I'm solving xA for xD.
+So I'm solving the second equation.
+And so now the second, third, and fourth equation right now
+give us xA, xB, and xC as functions of xD.
+And so if we plug these expressions
+into the first equation, it will give us
+just equation with one unknown.
+So we'll have only xD in that equation.
+
+So doing that and solving that equation will give us
+xD equal to negative 38.85.
+So what this means, it means that we are selling,
+we are shorting 38.85 units of bond D.
+So here I implicitly assume that I can actually
+trade fractions of the bond.
+So I can buy any fraction.
+So in this case, I'm buying 0.85.
+So I'm buying 38 whole units and 85 of fraction of bond D.
+So now this does make economic sense.
+Because we've identified in the first part of this question
+is that bond D was overvalued.
+It was overpriced.
+So it was priced at 99.5.
+Well, it's fair price was $96.
+So therefore it does make sense for us
+to take advantage of this opportunity.
+We have to actually sell those bonds at this higher price
+and therefore get this higher value to us right now.
+And then we're going to be taking long positions
+in the other three bonds to make sure
+that we get $0 payoffs in the Years 1, 2, and 3.
+So now, since we have xD, what we can do
+is that we are plugging this amount
+xD that we found in the equations that tie xA with xD,
+xB with xD, and xC with xD.
+And we get the following amounts for xA, xB, and xC.
+So xA and xB equal to 1.13, which
+means that we are buying 1.13 units of bond A 1.13
+units of bond B. And we are buying 40.02 units of bond C.
+So we're taking long positions in these bonds.
+Now this is our arbitrage strategy.
+So we are selling 38.85 units of bond D
+and we're buying the corresponding units of bonds
+A, B, and C. Now the final step that I want to do here
+is that I want to actually verify that this trading
+strategy actually works.
+So what I will do is that I will plug
+in these amounts of xA, xB, xC, and xD that we found
+into our equations to make sure that we
+get the cash flows that we are thinking that we're getting.
+So if I am plugging these numbers
+into the first equation, I get $100.
+So which means that me buying the corresponding amounts
+of bonds A, B, and C, and shorting
+the corresponding amounts of bond D gives us exactly $100.
+In the Year 1, this equation tells us that we get exactly 0,
+as we expect.
+In Year 2, we also get 0.
+And in Year 3, we also get 0.
+So our arbitrage strategy indeed works.
+It gives us $100 right now.
+And it gives us nothing in the Years 1, 2, and 3.

@@ -1,0 +1,344 @@
+0
+00:00:00,000 --> 00:00:00,390
+
+
+1
+00:00:00,390 --> 00:00:02,640
+PROFESSOR: Let me show you how we can automate solving
+
+2
+00:00:02,640 --> 00:00:04,890
+this arbitrage question.
+
+3
+00:00:04,890 --> 00:00:07,860
+The first step that I will do is I will write down
+
+4
+00:00:07,860 --> 00:00:10,890
+the system of equations that we had in the following matrix
+
+5
+00:00:10,890 --> 00:00:12,520
+form.
+
+6
+00:00:12,520 --> 00:00:16,160
+So I'll have matrix A. This is a 4 by 4 matrix.
+
+7
+00:00:16,160 --> 00:00:18,430
+Then, I will have a column vector of x's.
+
+8
+00:00:18,430 --> 00:00:20,560
+This is our unknowns, our positions
+
+9
+00:00:20,560 --> 00:00:23,680
+that we're taking in this corresponding box.
+
+10
+00:00:23,680 --> 00:00:27,320
+And this would equal to the payoffs
+
+11
+00:00:27,320 --> 00:00:32,570
+that we get in years 0, 1, 2, and 3.
+
+12
+00:00:32,570 --> 00:00:36,530
+So you can see that this system of equations written
+
+13
+00:00:36,530 --> 00:00:38,570
+this way in the matrix form actually gives us
+
+14
+00:00:38,570 --> 00:00:41,460
+the system of equations that we had before.
+
+15
+00:00:41,460 --> 00:00:43,760
+Now, we have to solve this for A.
+
+16
+00:00:43,760 --> 00:00:47,945
+So all we really have to do is that we have to invert matrix A
+
+17
+00:00:47,945 --> 00:00:50,750
+and then, multiply it by the payoffs vector--
+
+18
+00:00:50,750 --> 00:00:53,020
+vector b, in this case.
+
+19
+00:00:53,020 --> 00:00:56,360
+And let me show you how to do this using Excel tools.
+
+20
+00:00:56,360 --> 00:00:59,300
+You can, of course, do it in any other software
+
+21
+00:00:59,300 --> 00:01:04,310
+that you are more accustomed to using.
+
+22
+00:01:04,310 --> 00:01:07,280
+So here, what I've done below is that I
+
+23
+00:01:07,280 --> 00:01:10,070
+have written down this system, these numbers,
+
+24
+00:01:10,070 --> 00:01:13,070
+into just Excel arrays.
+
+25
+00:01:13,070 --> 00:01:15,980
+And what I will do-- so this is my matrix A,
+
+26
+00:01:15,980 --> 00:01:19,160
+and this is my matrix B. So the goal right
+
+27
+00:01:19,160 --> 00:01:21,950
+now is to invert these highlighted cells,
+
+28
+00:01:21,950 --> 00:01:26,150
+and then multiply them by this vector b.
+
+29
+00:01:26,150 --> 00:01:31,280
+So the first, I will use minverse function that
+
+30
+00:01:31,280 --> 00:01:35,160
+inverts this 4 by 4 matrix.
+
+31
+00:01:35,160 --> 00:01:38,930
+To do this, first I have to prehighlight the location
+
+32
+00:01:38,930 --> 00:01:43,220
+where I want these numbers to be inputted by Excel.
+
+33
+00:01:43,220 --> 00:01:50,810
+And then, I'm writing the function, so minverse.
+
+34
+00:01:50,810 --> 00:01:53,850
+And then, I'm selecting array, where this--
+
+35
+00:01:53,850 --> 00:01:56,480
+where I inputted these numbers.
+
+36
+00:01:56,480 --> 00:01:59,360
+And then, this is the-- the key here
+
+37
+00:01:59,360 --> 00:02:02,370
+is to hit the following three keys at the same time,
+
+38
+00:02:02,370 --> 00:02:04,978
+so I have hit Shift and Control.
+
+39
+00:02:04,978 --> 00:02:06,770
+So I'm holding Shift and Control right now,
+
+40
+00:02:06,770 --> 00:02:09,630
+and then I'm hitting Enter.
+
+41
+00:02:09,630 --> 00:02:11,190
+So this way right now, Excel--
+
+42
+00:02:11,190 --> 00:02:13,470
+what's it's done, it inverted this matrix.
+
+43
+00:02:13,470 --> 00:02:16,080
+And so right now, what I have here on the screen
+
+44
+00:02:16,080 --> 00:02:20,573
+is that it's inverted matrix A.
+
+45
+00:02:20,573 --> 00:02:21,990
+So now, all I have to do is that I
+
+46
+00:02:21,990 --> 00:02:26,730
+have to multiply this inverted matrix by vector b.
+
+47
+00:02:26,730 --> 00:02:28,650
+So here, again, I will prehighlight
+
+48
+00:02:28,650 --> 00:02:34,530
+because I'm multiplying 4 by 4 matrix by vector 4 by 1.
+
+49
+00:02:34,530 --> 00:02:37,560
+So the resulting output would be 4 by 1 vector,
+
+50
+00:02:37,560 --> 00:02:40,110
+and this would be our vector of x's.
+
+51
+00:02:40,110 --> 00:02:44,340
+So I will use the following function, so mmult.
+
+52
+00:02:44,340 --> 00:02:47,280
+So this is a multiplication function that multiplies
+
+53
+00:02:47,280 --> 00:02:49,620
+two arrays of two matrices.
+
+54
+00:02:49,620 --> 00:02:56,790
+So select the first one, comma, and I will select vector b.
+
+55
+00:02:56,790 --> 00:02:58,140
+And now, I will also--
+
+56
+00:02:58,140 --> 00:03:00,990
+so I will hold Shift and Control.
+
+57
+00:03:00,990 --> 00:03:04,710
+And then, I will hit Enter.
+
+58
+00:03:04,710 --> 00:03:06,760
+And so this is the answer.
+
+59
+00:03:06,760 --> 00:03:08,450
+So I'm going to highlight it in yellow.
+
+60
+00:03:08,450 --> 00:03:10,950
+And you will see that this is exactly the numbers that we've
+
+61
+00:03:10,950 --> 00:03:15,060
+had before when we were solving this system of equations
+
+62
+00:03:15,060 --> 00:03:16,540
+by hand.
+
+63
+00:03:16,540 --> 00:03:20,980
+So again, we're taking long positions in bonds A, B, and C
+
+64
+00:03:20,980 --> 00:03:22,480
+and we're shorting.
+
+65
+00:03:22,480 --> 00:03:26,280
+We're selling bond D. So this is how
+
+66
+00:03:26,280 --> 00:03:30,730
+you solve the system of equations in Excel.
+
+67
+00:03:30,730 --> 00:03:32,740
+So overall, what we've learned in this question
+
+68
+00:03:32,740 --> 00:03:36,280
+is that we have learned how to tackle this type of arbitrage
+
+69
+00:03:36,280 --> 00:03:37,173
+problems.
+
+70
+00:03:37,173 --> 00:03:38,590
+So all we have to do is that we'll
+
+71
+00:03:38,590 --> 00:03:41,110
+have to assume that we're taking long positions
+
+72
+00:03:41,110 --> 00:03:42,920
+in the instruments that we have.
+
+73
+00:03:42,920 --> 00:03:43,690
+So here we have 4.
+
+74
+00:03:43,690 --> 00:03:46,070
+If we had 10, we would assume that we
+
+75
+00:03:46,070 --> 00:03:48,760
+are taking xa, xb, and so forth positions
+
+76
+00:03:48,760 --> 00:03:50,830
+in all of the 10 instruments.
+
+77
+00:03:50,830 --> 00:03:53,560
+And then, the keys to construct the payoffs that we get--
+
+78
+00:03:53,560 --> 00:03:55,660
+$100 in year 0--
+
+79
+00:03:55,660 --> 00:04:00,725
+and we get $0 payoffs in all of the subsequent years.
+
+80
+00:04:00,725 --> 00:04:02,350
+And then, what we have to do is that we
+
+81
+00:04:02,350 --> 00:04:04,140
+have to solve the system of equations,
+
+82
+00:04:04,140 --> 00:04:05,960
+as we've just done here.
+
+83
+00:04:05,960 --> 00:04:08,650
+And this way, we would know which positions
+
+84
+00:04:08,650 --> 00:04:12,210
+and which bonds to take in order to construct
+
+85
+00:04:12,210 --> 00:04:14,910
+a profitable trading strategy.
+

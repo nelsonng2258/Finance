@@ -1,0 +1,127 @@
+
+PROFESSOR: We now know how to price equities in relation
+to their future dividends and discount rates.
+Expected future dividends are an important input
+into equity pricing.
+Forecasting dividends is a complex problem.
+Our approach here is to relate dividends of the firm
+to other fundamentals.
+In particular, we are going to relate firm's dividends
+to its profits.
+For simplicity, we assume that the firm
+is all equity financed.
+It does not have debt and makes no interest payments.
+We start with firm's profits, its earnings per share,
+which we define net of depreciation and taxes.
+Dividends are related to earnings by the payout ratio.
+The payout ratio is simply a ratio of dividends per share
+to earnings per share.
+This ratio tells us what fraction of firm's earnings
+is paid out to its investors.
+The remaining profits are reinvested into the firm.
+Algebraically, dividends per share
+are equal to earnings per share times the payout ratio.
+Next, we think about how to forecast earnings.
+The key input into the forecast is retained earnings.
+Retained earnings are equal to the difference between earnings
+and dividends and represent the portion of the firm's cash
+flows reinvested into the business.
+The fraction of the earnings retained by the firm
+is called the plowback ratio.
+It is the ratio of retained to total earnings
+and is equal to 1 minus the payout ratio.
+For example, if a firm generates $2.00 per share in earnings
+and pays out $0.80 to its investors,
+then the payout ratio is 40% and the plowback ratio is 60%,
+with $1.20 reinvested into the firm.
+We should note, as an aside, that by accumulating
+retained earnings over time, we can
+keep track of the firm's book value of equity, which
+is an accounting measure of firm value.
+Unlike the market value of equity,
+which is a forward looking measure of firm value,
+the book value is backward looking
+and is simply a summary of the history of firm's investments.
+Firms' investments generate incremental cash flows
+in the future.
+We assume, for simplicity, that an investment at time t
+generates a constant, perpetual stream of additional cash flows
+starting from the next period, t plus 1.
+We will also assume that, without additional investments,
+firms expect that future earnings remain constant.
+We make both of these assumptions for simplicity
+in order to focus on the conceptual elements
+of this analysis.
+One can replace these assumptions
+with a more realistic and complex model of how investment
+generates incremental earnings.
+
+Consider the following example.
+A company, Texas Western, or TW, is expected to earn $1.00 per
+share next year.
+The firm plans an expansion to increase its earnings
+by 8% per year.
+Without these additional investments, earnings of TW
+are expected to remain constant forever.
+Each additional dollar of investment generates
+incremental perpetual cash flow of $0.10 starting
+in the following period.
+We assume that all new investment is
+financed by retained earnings.
+The discount rate is 10%.
+We assume that this discount rate applies to all future cash
+flows of the firm.
+Our task is to determine the price of TW shares and the two
+alternative growth strategies.
+In the first case, TW pays out all of its earnings
+forever and does not invest.
+In the second case, TW expands and grows its earnings forever
+at 8% per year.
+
+We start with the case of no investment.
+In this case, the firm pays out 100% of its earnings.
+Without investment, earnings of TW remain at the same expected
+level of $1.00 per share forever.
+Because the payout ratio is 100%,
+dividends per share are also expected to be $1.00 forever.
+Applying the 10% discount rate to future dividends, we find,
+using the perpetuity formula, that the initial price
+of the stock is $10.00 per share.
+Next consider the case of perpetual growth.
+TW aims to grow its earnings at the rate of 8% per year.
+The first question we must answer is, at what rate
+should TW reinvest its earnings to achieve
+the 8% rate of growth?
+In other words, we want to determine the required plowback
+ratio.
+Suppose that, at time t, TW invests fraction
+b of its earnings.
+This investment raises all future earnings
+by 10% of the total amount invested,
+which is the plowback ratio times its earnings in period t.
+As a result, earnings per share at time t plus 1
+are equal to the EPS in the previous period times 1
+plus 0.1 times the plowback ratio.
+We conclude that to achieve an 8% growth rate,
+the firm must use the plowback ratio of 80%.
+The payout rate must then equal 20%.
+Under the permanent expansion at the 8% rate,
+dividends per share in the first year are expected to be $0.20,
+which is 20% of the expected earnings.
+Using the constant growth model, the initial price
+of the stock of TW is equal to the expected dividend,
+next period, divided by the difference between the discount
+rate and the expected dividend growth rate.
+The initial stock price is then $10.00 per share.
+The price of the stock is the same as in the no growth
+scenario.
+Why are the two values the same?
+The reason is firm's future investments
+do not add anything to the firm value.
+Each time TW invests $1.00, it generates a perpetual cash flow
+stream of $0.10, starting a period later.
+The NPV of this investment with the discount rate of 10% is 0.
+As we will learn in the following section,
+this means that TW has no growth opportunities.
+Because our assumptions imply that all new investments are
+0 NPV, the value of TW does not depend on its growth strategy.

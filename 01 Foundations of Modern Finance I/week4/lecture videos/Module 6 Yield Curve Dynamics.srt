@@ -1,0 +1,884 @@
+0
+00:00:00,000 --> 00:00:00,780
+
+
+1
+00:00:00,780 --> 00:00:02,550
+PROFESSOR: Next, we're going to discuss
+
+2
+00:00:02,550 --> 00:00:05,640
+some of the properties of yield curve dynamics
+
+3
+00:00:05,640 --> 00:00:08,010
+and the models that describe how interest
+
+4
+00:00:08,010 --> 00:00:12,400
+rates of various maturities are related to each other.
+
+5
+00:00:12,400 --> 00:00:15,340
+Let's start with the expectations hypothesis,
+
+6
+00:00:15,340 --> 00:00:18,120
+which is an important theory about properties
+
+7
+00:00:18,120 --> 00:00:19,620
+of interest rates.
+
+8
+00:00:19,620 --> 00:00:22,160
+It is an important benchmark.
+
+9
+00:00:22,160 --> 00:00:24,620
+To introduce this idea, let's consider
+
+10
+00:00:24,620 --> 00:00:27,860
+two alternative investment strategies.
+
+11
+00:00:27,860 --> 00:00:30,780
+Strategy one is very simple.
+
+12
+00:00:30,780 --> 00:00:37,230
+We start with $1 and invest it into a 10-year discount bond.
+
+13
+00:00:37,230 --> 00:00:41,700
+Strategy two, invest the same dollar into a 9-year discount
+
+14
+00:00:41,700 --> 00:00:44,730
+bond, and then reinvest the proceeds
+
+15
+00:00:44,730 --> 00:00:50,130
+of that first investment over an additional 1-year period.
+
+16
+00:00:50,130 --> 00:00:53,940
+Of course, we reinvest it at the 1-year spot rate at that time,
+
+17
+00:00:53,940 --> 00:00:58,180
+between years 9 and 10.
+
+18
+00:00:58,180 --> 00:00:59,860
+Under the expectations hypothesis,
+
+19
+00:00:59,860 --> 00:01:03,850
+we assume that bonds do not carry a risk premium, which
+
+20
+00:01:03,850 --> 00:01:07,630
+means that all of these types of investment strategies
+
+21
+00:01:07,630 --> 00:01:11,620
+that move money between time 0 and time 10
+
+22
+00:01:11,620 --> 00:01:15,100
+by investing in different bonds and maybe reinvesting-- they
+
+23
+00:01:15,100 --> 00:01:19,050
+all earn the same expected rate of return.
+
+24
+00:01:19,050 --> 00:01:22,320
+In other words, under the expectations hypothesis,
+
+25
+00:01:22,320 --> 00:01:24,960
+the expected return on strategy two
+
+26
+00:01:24,960 --> 00:01:31,130
+has to be equal to the expected return on strategy one.
+
+27
+00:01:31,130 --> 00:01:35,440
+Let's explore the implication of this idea.
+
+28
+00:01:35,440 --> 00:01:39,230
+First, introduce a new piece of notation.
+
+29
+00:01:39,230 --> 00:01:43,160
+r sub s as a function of t is going
+
+30
+00:01:43,160 --> 00:01:50,620
+to denote the spot interest rate at time t with a maturity s.
+
+31
+00:01:50,620 --> 00:01:55,130
+By default, we're going to set t equal to 0.
+
+32
+00:01:55,130 --> 00:01:59,790
+So we're talking about interest rates at time 0.
+
+33
+00:01:59,790 --> 00:02:04,170
+Consider our two strategies-- strategy one, strategy two.
+
+34
+00:02:04,170 --> 00:02:08,009
+In the formula, the total return of strategy one
+
+35
+00:02:08,009 --> 00:02:10,259
+appears on the right-hand side.
+
+36
+00:02:10,259 --> 00:02:13,110
+It is equal to 1 plus the 10-year spot
+
+37
+00:02:13,110 --> 00:02:16,440
+rate raised to power 10.
+
+38
+00:02:16,440 --> 00:02:20,880
+The expected return on strategy two is on the left-hand side.
+
+39
+00:02:20,880 --> 00:02:25,530
+Notice that the realized return of strategy two is 1 plus
+
+40
+00:02:25,530 --> 00:02:30,480
+the 9-year spot rate as of time 0 raised to power 9--
+
+41
+00:02:30,480 --> 00:02:33,300
+that's the return on the first leg of the strategy
+
+42
+00:02:33,300 --> 00:02:36,540
+and the investment in that 9-year discount bond--
+
+43
+00:02:36,540 --> 00:02:41,310
+times 1 plus the 1-year spot rate as of time 9.
+
+44
+00:02:41,310 --> 00:02:43,800
+This is the second leg of the strategy.
+
+45
+00:02:43,800 --> 00:02:47,250
+And note that there is a squiggle-- the tilde-- on top
+
+46
+00:02:47,250 --> 00:02:49,380
+of that interest rate, which reminds us
+
+47
+00:02:49,380 --> 00:02:53,680
+that the spot rate at time 9 is a random variable.
+
+48
+00:02:53,680 --> 00:02:57,840
+It is not known as of time 0.
+
+49
+00:02:57,840 --> 00:03:00,990
+The expectations hypothesis equates the expected value
+
+50
+00:03:00,990 --> 00:03:03,700
+of the left-hand side and the right-hand side.
+
+51
+00:03:03,700 --> 00:03:05,830
+Of course, the right-hand side is not random.
+
+52
+00:03:05,830 --> 00:03:09,420
+We know exactly what the spot rate for a 10-year investment
+
+53
+00:03:09,420 --> 00:03:11,040
+is as of time 0.
+
+54
+00:03:11,040 --> 00:03:14,770
+It's a 10-year spot interest rate.
+
+55
+00:03:14,770 --> 00:03:18,030
+Now, if we rearrange the terms in this equation,
+
+56
+00:03:18,030 --> 00:03:24,050
+we can relate the expected value of a 1-year spot rate at time 9
+
+57
+00:03:24,050 --> 00:03:31,020
+to the spot rate at time 0 for maturities of 9 and 10.
+
+58
+00:03:31,020 --> 00:03:35,400
+This equation tells us that the expected value of a 9-year spot
+
+59
+00:03:35,400 --> 00:03:40,680
+rate is equal to the ratio of 1 plus the 10-year rate raised
+
+60
+00:03:40,680 --> 00:03:44,610
+to power 10 divided by 1 plus the 9-year spot
+
+61
+00:03:44,610 --> 00:03:48,726
+rate raised to power 9 minus 1.
+
+62
+00:03:48,726 --> 00:03:51,080
+Under the expectations hypothesis,
+
+63
+00:03:51,080 --> 00:03:56,000
+the slope of the yield curve predicts future spot rates.
+
+64
+00:03:56,000 --> 00:03:59,870
+To see what that means, let's consider our formula closely.
+
+65
+00:03:59,870 --> 00:04:04,760
+Expected value of a 1-year spot rate at time 9
+
+66
+00:04:04,760 --> 00:04:09,470
+can be expressed as the ratio of 1 plus the 10-year spot rate
+
+67
+00:04:09,470 --> 00:04:14,090
+to power 9 divided by 1 plus the 9-year spot rate to power 9
+
+68
+00:04:14,090 --> 00:04:20,984
+times 1 plus the 10-year spot rate minus 1.
+
+69
+00:04:20,984 --> 00:04:23,110
+Suppose that the 10-year spot rate
+
+70
+00:04:23,110 --> 00:04:26,620
+is above the 9-year rate as of time 0.
+
+71
+00:04:26,620 --> 00:04:28,570
+In other words, the yield curve is upward
+
+72
+00:04:28,570 --> 00:04:32,260
+sloping between years 9 and 10.
+
+73
+00:04:32,260 --> 00:04:34,360
+With that information, we can see
+
+74
+00:04:34,360 --> 00:04:36,400
+that the first term in the formula
+
+75
+00:04:36,400 --> 00:04:40,660
+is going to be at least as high as 1 plus the 10-year spot
+
+76
+00:04:40,660 --> 00:04:41,500
+rate.
+
+77
+00:04:41,500 --> 00:04:45,280
+And so as a result, the expected interest rate
+
+78
+00:04:45,280 --> 00:04:48,250
+over a single year at time 9 has to be higher
+
+79
+00:04:48,250 --> 00:04:52,190
+than the 10-year spot rate at time 0.
+
+80
+00:04:52,190 --> 00:04:55,900
+In other words, when the yield curve is upward sloping,
+
+81
+00:04:55,900 --> 00:04:57,970
+it's telling us that the expected spot
+
+82
+00:04:57,970 --> 00:05:01,560
+rate in the future has to be relatively high.
+
+83
+00:05:01,560 --> 00:05:03,880
+If the yield curve was downward sloping,
+
+84
+00:05:03,880 --> 00:05:08,450
+we would find the reverse, that the expected spot rate
+
+85
+00:05:08,450 --> 00:05:11,510
+at time 9 is relatively low.
+
+86
+00:05:11,510 --> 00:05:14,870
+Now, in a special case when the 10-year rate
+
+87
+00:05:14,870 --> 00:05:18,330
+is equal to the 9-year rate, using the formula,
+
+88
+00:05:18,330 --> 00:05:21,440
+we can see that the expected value of a 1-year spot
+
+89
+00:05:21,440 --> 00:05:26,150
+rate at time 9 is equal to the 10-year or the 9-year spot
+
+90
+00:05:26,150 --> 00:05:29,240
+rates at time 0.
+
+91
+00:05:29,240 --> 00:05:32,240
+More generally, the expectations hypothesis
+
+92
+00:05:32,240 --> 00:05:35,660
+tells us there is a relation between expected future spot
+
+93
+00:05:35,660 --> 00:05:39,310
+rates and the current spot rates.
+
+94
+00:05:39,310 --> 00:05:41,830
+This is a direct generalization of the equation
+
+95
+00:05:41,830 --> 00:05:44,650
+that we derived in our example.
+
+96
+00:05:44,650 --> 00:05:47,440
+The expected 1-year rate at time t
+
+97
+00:05:47,440 --> 00:05:52,780
+is related to the spot rates for periods t and t plus 1.
+
+98
+00:05:52,780 --> 00:05:54,610
+Specifically, it's the ratio of 1
+
+99
+00:05:54,610 --> 00:05:59,210
+plus the spot rate for period t plus 1 raised to power t
+
+100
+00:05:59,210 --> 00:06:03,680
+plus 1 divided by 1 plus the t period spot
+
+101
+00:06:03,680 --> 00:06:07,122
+rate raised to power t minus 1.
+
+102
+00:06:07,122 --> 00:06:09,690
+Under the expectations hypothesis,
+
+103
+00:06:09,690 --> 00:06:12,630
+the expected value of the future interest rates
+
+104
+00:06:12,630 --> 00:06:16,170
+is based on the current interest rates.
+
+105
+00:06:16,170 --> 00:06:19,140
+As an alternative to the expectations hypothesis,
+
+106
+00:06:19,140 --> 00:06:23,400
+consider the following so-called liquidity hypothesis.
+
+107
+00:06:23,400 --> 00:06:27,780
+Under this idea, investors regard long-term bonds
+
+108
+00:06:27,780 --> 00:06:32,260
+as relatively risky relative to short-term bonds.
+
+109
+00:06:32,260 --> 00:06:35,940
+For example, if you are an investor with a relatively
+
+110
+00:06:35,940 --> 00:06:39,000
+short horizon, and you buy a long-term bond,
+
+111
+00:06:39,000 --> 00:06:40,980
+at the end of your investment period
+
+112
+00:06:40,980 --> 00:06:44,650
+when you liquidate your position, the payoff is random.
+
+113
+00:06:44,650 --> 00:06:47,420
+It depends on the future interest rates.
+
+114
+00:06:47,420 --> 00:06:50,330
+In contrast, if you invest into a short-term bond,
+
+115
+00:06:50,330 --> 00:06:54,360
+your payoff could be relatively less risky or even fixed.
+
+116
+00:06:54,360 --> 00:06:57,030
+That's one of the arguments that could be used to justify
+
+117
+00:06:57,030 --> 00:06:59,050
+the liquidity preference.
+
+118
+00:06:59,050 --> 00:07:01,680
+More generally, under the liquidity preference
+
+119
+00:07:01,680 --> 00:07:05,640
+hypothesis, the equation that we derived for the expectations
+
+120
+00:07:05,640 --> 00:07:07,920
+hypothesis needs to be modified.
+
+121
+00:07:07,920 --> 00:07:10,020
+The right-hand side is the same.
+
+122
+00:07:10,020 --> 00:07:13,290
+It relates spot rates of different maturities.
+
+123
+00:07:13,290 --> 00:07:15,240
+On the left-hand side, what we see
+
+124
+00:07:15,240 --> 00:07:18,660
+is that in addition to the expected future spot rate,
+
+125
+00:07:18,660 --> 00:07:21,390
+we have an additional term, lambda,
+
+126
+00:07:21,390 --> 00:07:24,810
+which represents the so-called risk premium or a liquidity
+
+127
+00:07:24,810 --> 00:07:26,110
+premium.
+
+128
+00:07:26,110 --> 00:07:31,110
+In other words, the slope of the yield curve over various points
+
+129
+00:07:31,110 --> 00:07:34,410
+down the curve between time t and t plus 1
+
+130
+00:07:34,410 --> 00:07:38,850
+represents not only the expected future spot rate, but also
+
+131
+00:07:38,850 --> 00:07:42,660
+an adjustment that accounts for riskiness
+
+132
+00:07:42,660 --> 00:07:45,610
+of bonds of long maturities.
+
+133
+00:07:45,610 --> 00:07:48,490
+The implication of this hypothesis
+
+134
+00:07:48,490 --> 00:07:55,270
+is that if lambda is positive, than the long bonds on average
+
+135
+00:07:55,270 --> 00:08:00,530
+receive a higher rate of return than the short-term bonds.
+
+136
+00:08:00,530 --> 00:08:02,240
+In other words, if you're thinking
+
+137
+00:08:02,240 --> 00:08:05,330
+about predicting interest rates using the shape of the yield
+
+138
+00:08:05,330 --> 00:08:08,720
+curve, this tells us that the spot interest
+
+139
+00:08:08,720 --> 00:08:11,720
+rates of long maturities overpredict
+
+140
+00:08:11,720 --> 00:08:14,250
+the future short-term rates.
+
+141
+00:08:14,250 --> 00:08:17,150
+So if you use the expectations hypothesis formula,
+
+142
+00:08:17,150 --> 00:08:21,950
+and you form a forecast of the spot rate using that relation,
+
+143
+00:08:21,950 --> 00:08:24,050
+that forecast is going to be biased.
+
+144
+00:08:24,050 --> 00:08:26,090
+It's going to be upward biased.
+
+145
+00:08:26,090 --> 00:08:28,790
+And the reason for that is that the slope of the yield
+
+146
+00:08:28,790 --> 00:08:33,049
+curve between various points is not equal to the expected spot
+
+147
+00:08:33,049 --> 00:08:39,080
+rate, but also accounts for a liquidity or a risk premium.
+
+148
+00:08:39,080 --> 00:08:43,789
+Historically, long-term bonds produced higher average rates
+
+149
+00:08:43,789 --> 00:08:46,690
+of return than short-term bonds.
+
+150
+00:08:46,690 --> 00:08:51,790
+For instance, if you look at the period from 1926 until 2018,
+
+151
+00:08:51,790 --> 00:08:54,340
+the average rate of return on short-term Treasury
+
+152
+00:08:54,340 --> 00:08:58,870
+bonds in the US, the Treasury bills, has been 3.4%.
+
+153
+00:08:58,870 --> 00:09:03,610
+In comparison, long-term bonds earned 5.9%.
+
+154
+00:09:03,610 --> 00:09:07,870
+This highlights the fact that, on average, long-term bonds
+
+155
+00:09:07,870 --> 00:09:12,120
+produce a higher rate of return than short-term bonds.
+
+156
+00:09:12,120 --> 00:09:14,610
+This empirical fact tells us that the expectations
+
+157
+00:09:14,610 --> 00:09:19,080
+hypothesis does not describe market dynamics very well.
+
+158
+00:09:19,080 --> 00:09:21,030
+Under the expectations hypothesis,
+
+159
+00:09:21,030 --> 00:09:23,670
+average rates of return on long-term bonds
+
+160
+00:09:23,670 --> 00:09:26,010
+and on short-term bonds would have to be the same.
+
+161
+00:09:26,010 --> 00:09:28,770
+Empirically, they're quite different.
+
+162
+00:09:28,770 --> 00:09:32,900
+So why do long-term bonds earn a higher rate of return?
+
+163
+00:09:32,900 --> 00:09:37,460
+Why is there a positive spread or the positive risk premium
+
+164
+00:09:37,460 --> 00:09:40,430
+attached to the long-term bonds?
+
+165
+00:09:40,430 --> 00:09:43,440
+There could be several potential reasons for that.
+
+166
+00:09:43,440 --> 00:09:48,140
+One reason is that short-term bonds are in a way money-like.
+
+167
+00:09:48,140 --> 00:09:50,450
+They are relatively liquid.
+
+168
+00:09:50,450 --> 00:09:53,000
+They hold their value better in the short run
+
+169
+00:09:53,000 --> 00:09:54,470
+than long-term bonds.
+
+170
+00:09:54,470 --> 00:09:58,460
+If investors have needs for these types of securities that
+
+171
+00:09:58,460 --> 00:10:01,280
+are relatively safe over short horizons,
+
+172
+00:10:01,280 --> 00:10:05,180
+then they will be willing to pay more for short-term bonds.
+
+173
+00:10:05,180 --> 00:10:07,610
+In other words, they will be willing to accept lower
+
+174
+00:10:07,610 --> 00:10:10,550
+rates of return on these bonds.
+
+175
+00:10:10,550 --> 00:10:13,760
+The rate of return on cash, on money, is 0.
+
+176
+00:10:13,760 --> 00:10:16,310
+And short-term bonds, which are money-like,
+
+177
+00:10:16,310 --> 00:10:19,700
+accordingly would have to have lower rates of return.
+
+178
+00:10:19,700 --> 00:10:21,850
+That's one argument.
+
+179
+00:10:21,850 --> 00:10:24,100
+Another reason for why long-term bonds
+
+180
+00:10:24,100 --> 00:10:27,190
+may pay higher rates of return than short-term bonds
+
+181
+00:10:27,190 --> 00:10:30,460
+is because they are more exposed to inflation risk.
+
+182
+00:10:30,460 --> 00:10:32,260
+We're talking about nominal bonds here.
+
+183
+00:10:32,260 --> 00:10:35,560
+They lose value when inflation spikes.
+
+184
+00:10:35,560 --> 00:10:39,010
+Suppose there is news that inflation in the future
+
+185
+00:10:39,010 --> 00:10:41,000
+is going to be higher.
+
+186
+00:10:41,000 --> 00:10:44,720
+This news is going to reduce the value of long-term bonds
+
+187
+00:10:44,720 --> 00:10:47,760
+and is going to raise future interest rates.
+
+188
+00:10:47,760 --> 00:10:50,510
+Short-term bonds are relatively immune to these types
+
+189
+00:10:50,510 --> 00:10:52,120
+of shocks.
+
+190
+00:10:52,120 --> 00:10:54,310
+As a result, inflation risk is going
+
+191
+00:10:54,310 --> 00:10:56,110
+to affect long-term bond investors
+
+192
+00:10:56,110 --> 00:10:59,740
+more than those invested in short-term securities.
+
+193
+00:10:59,740 --> 00:11:02,920
+This could be one reason why investors in long-term bonds
+
+194
+00:11:02,920 --> 00:11:05,080
+would demand a higher rate of return
+
+195
+00:11:05,080 --> 00:11:08,870
+to compensate them for inflation risk.
+
+196
+00:11:08,870 --> 00:11:11,580
+We have seen a couple of theories
+
+197
+00:11:11,580 --> 00:11:15,340
+that talk about various determinants of yields
+
+198
+00:11:15,340 --> 00:11:18,340
+or interest rates across maturities.
+
+199
+00:11:18,340 --> 00:11:20,960
+Expectations of future spot rates, of course,
+
+200
+00:11:20,960 --> 00:11:23,680
+affect interest rates of various maturities.
+
+201
+00:11:23,680 --> 00:11:25,790
+But that is not the whole story.
+
+202
+00:11:25,790 --> 00:11:29,150
+Risk of long-term bonds is also important.
+
+203
+00:11:29,150 --> 00:11:32,480
+So expectations of future rates and their risk
+
+204
+00:11:32,480 --> 00:11:36,500
+ultimately determine the shape of the yield curve.
+
+205
+00:11:36,500 --> 00:11:40,940
+Expectations hypothesis assumes that there is no risk premium,
+
+206
+00:11:40,940 --> 00:11:43,370
+that interest rates across maturities
+
+207
+00:11:43,370 --> 00:11:46,550
+are based on the expected future spot rates.
+
+208
+00:11:46,550 --> 00:11:48,110
+The liquidity preference hypothesis
+
+209
+00:11:48,110 --> 00:11:50,820
+incorporates considerations of risk.
+
+210
+00:11:50,820 --> 00:11:54,350
+But it is not very specific about how, exactly, risk
+
+211
+00:11:54,350 --> 00:11:58,760
+affects spot rates across the yield curve.
+
+212
+00:11:58,760 --> 00:12:02,530
+There are more explicit, dynamic theories of the term structure
+
+213
+00:12:02,530 --> 00:12:05,380
+that develop mathematical models of how
+
+214
+00:12:05,380 --> 00:12:09,220
+interest rates across maturities evolve across time
+
+215
+00:12:09,220 --> 00:12:13,480
+and how their behavior is shaped by expectations
+
+216
+00:12:13,480 --> 00:12:15,580
+of future rates and their risk.
+
+217
+00:12:15,580 --> 00:12:18,010
+Examples of these are the Vasicek model,
+
+218
+00:12:18,010 --> 00:12:20,980
+the Cox-Ingersoll-Ross model, and so forth.
+
+219
+00:12:20,980 --> 00:12:24,880
+You can learn more about these dynamic models of the yield
+
+220
+00:12:24,880 --> 00:12:28,080
+curve in the fixed income course.
+

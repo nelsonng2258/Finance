@@ -1,0 +1,240 @@
+
+PROFESSOR: So far, we talked about the valuation of stocks.
+But the same techniques can be used
+to value the entire business.
+We don't need to be focusing just on equities.
+So let's start with the discounted cash flow formula.
+The present value of the business
+is equal to the discounted expected value of the free cash
+flows that the business generates
+between time 1 and time capital T plus the present value
+of the remaining cash flows, which we call PV capital
+T discounted back to time zero.
+What you see here is that we are splitting the timeline
+into two portions.
+We're discounting cash flows between time 1 and time capital
+T separately.
+And then we are discounting the residual,
+which we call the horizon value a time capital T.
+We are focusing on the free cash flows, which
+is net cash flows that can be attributed to the business
+that we are evaluating.
+In order to apply this formula, we
+need to forecast cash flows from time 1 to time capital T.
+And we need to predict the horizon value, PV capital T.
+In our previous analysis, we focused
+on the forecasting of payouts, dividends, or in this case,
+we can use the same techniques for free cash flows.
+What we now need to do is figure out
+how to predict the horizon value PV capital
+T. This is the focus of our current discussion.
+There are several alternative methods
+that one could use to forecast the horizon value.
+We are going to look at three alternatives.
+The first method uses P/E multiples.
+What this means is that we are going
+to forecast the profits that this business generates at time
+capital T. And then scale them by the P/E multiple, which
+is a typical price-to-earnings ratio that is applied to stocks
+that we view as comparable to the business
+that we're evaluating.
+The second approach is similar in nature.
+We're also using comparables.
+We're also looking for the valuation
+ratios of similar firms, similar traded businesses.
+But instead of the P/E ratio, we're
+using the price-to-book ratio, which
+is the ratio of the market price of equity to its book value.
+The last approach is what we call the DCF approach.
+In this case, we do not use valuation multiples.
+We are determining the horizon value using the discounted cash
+flow formula by making particular assumptions
+about future growth of the business after time capital T.
+Now, what is the logic behind using multipliers
+versus the DCF approach?
+The multiplier approach is a particular type
+of relative valuation.
+It is a relative valuation approach
+where we are looking for companies
+that are similar to the firm under consideration.
+And we're asking how much the market
+is paying for those businesses in relation
+to either their book value or the profits
+that they're generating.
+The challenge with using this approach
+is that businesses generally are not the same.
+It is not easy to find two firms that
+are very close comparables.
+What we're doing here is a hybrid approach,
+where we are forecasting cash flows
+over the first several periods explicitly.
+And we're discounting them.
+And then we're applying the multiples approach
+at time capital T.
+The logic of this is that even though it
+may be quite difficult to find very good comparable firms
+at time zero, this gets progressively easier as we
+are looking into the future.
+And the reason for that is that there
+tends to be a certain degree of convergence
+between different types of firms in expectation.
+So the firms that look very different at time zero
+in expectation look less different.
+And therefore, the multiples approach
+becomes more and more accurate.
+Now, one can say that the multiples approach is not
+a pure fundamental approach to valuation because rather
+than discounting cash flows, we're using multiples.
+At the end of the day, the DCF formula,
+the multiples approach, are different versions
+of relative valuation.
+If we want to use a pure DCF approach,
+we're going to make assumptions about future growth
+of the firm.
+For example, if we assume that beyond certain horizon
+the firm exhausts its growth opportunities, for instance,
+competition catches up.
+And the firm can no longer make positive NPV investments.
+We can figure out what the horizon value is.
+It is going to be equal to the free cash flow at time capital
+T plus 1 under the no-growth assumption discounted
+as a perpetuity without growth.
+So it's free cash flow time t plus 1
+divided by the opportunity cost of capital.
+Consider the following example or the data given in the table.
+We have a business here, which starts
+with the asset value of 5.
+Think of it as 5 million.
+And it grows over time.
+For each period, from 1 to six, we
+can see how the asset value evolves.
+How this business generates earnings.
+And we can see net investment.
+That investment is the investment into the business
+in the form of CAPX, capital expenditure,
+net of depreciation.
+Earnings here are also measured net of depreciation.
+Now, the free cash flow that this business generates
+is equal to earnings minus its net investment.
+This is the cash flow that is left after the firm reinvests
+back into the business.
+We make an assumption about the discount rate.
+The discount rate is constant at 15%.
+And therefore, we can compute the discount factor,
+which is then applied to cash flows in different periods.
+This is given at the bottom of the table.
+In our example, the company is going
+through two stages of growth.
+In the first few years, growth rate is relatively high.
+And the firm is reinvesting a lot back into the business.
+And therefore, the free cash flow may in fact be negative.
+This does not mean that the firm is losing money.
+It simply means that the firm is investing more
+than the cash it is generating.
+After the first few years, growth rate
+slows down and investment declines accordingly.
+The present value of this business
+can be computed as the present value of the free cash
+flows of the first several years for 1
+to capital T plus the present value of the horizon value
+at time capital T. We will now use our three
+alternative approaches to estimate the present value
+of the business.
+Let's start with the multiples approach, the P/E multiples,
+in particular.
+We are going to discount free cash flows from 1 to 4.
+And then apply the multiples approach
+to figure out the horizon value at time 4.
+The present value of the free cash flows from 1 to 4
+is minus $1.42.
+This reflects the fact that the firm in the early periods
+is investing more than the cash flow it is generating.
+To estimate the horizon value, PV4,
+we need to apply the P multiples for comparable firms
+to the expected earnings of the firm at time 5,
+one period forward.
+Expected earnings generated at time 5 are estimated at $1.75.
+Let's assume that the P multiple for comparable firms
+is equal to six.
+In which case, we are going to multiply the expected
+that earnings at time 5 by a factor of six
+to estimate the horizon value at time 4, PV4.
+The present value of this horizon value is $10.50,
+which is the value at time 4 discounted at the 15% rate back
+to time zero, which is $6.
+Next, let's estimate the firm value, the business value,
+using the price-to-book multiples.
+The logic is very similar to the previous calculation.
+Except now, instead of using the ratio of price-to-earnings
+for comparable firms, we are going
+to use the ratio of price-to-book, the market
+value of equity divided by the book value.
+Again, we're estimating the horizon value at time 4.
+The book value at time 4, the value of the assets, is $11.75.
+And this gets scaled by the average book-to-price ratio
+for comparable firms, which we assume to be equal to 1.2.
+As a result, our estimate of the horizon value is $14.10.
+And discounted back to time zero at the 15% rate,
+this gives us $8.06.
+Our final calculation uses the pure DCF approach.
+Under this approach, we have to establish a point in time
+beyond which the firm is expected to have no remaining
+growth opportunities.
+For the sake of the argument, suppose that that period is T
+equal to 5.
+From that point on, the firm is going
+to produce no positive NPV.
+And therefore, at time 5, we comprise the horizon value
+using the no growth formula.
+Let's do that.
+Between periods 1 and 5, the free cash flows of the firm,
+after being discounted back to time zero,
+adapt to minus $0.95.
+The present value at time 5 can be
+computed as the earnings, which is what the firm would pay out
+with the no growth assumption.
+Discounted at the cost of capital, 15%.
+Because without growth, the firm would
+be expected to pay $1.88, which is the earning set times 6
+in perpetuity.
+At the end of this, we find that the horizon value at time 5
+is estimated to be $12.55.
+And discounted back to time 0, this gives us $6.24.
+Notice that we are using different horizons,
+capital T under these alternative relation
+approaches.
+This is just to highlight the fact
+that there is no reason to pick the same horizon when
+we're using the multiples approach versus DCF.
+The logic is not identical.
+Under the multiples approach, we are comparing the firm
+to other similar firms.
+We simply want to find the point in time when we think
+this comparison is accurate.
+Under the pure DCF approach, we are finding a point a time
+beyond which we feel comfortable forecasting firm growth.
+In this particular example, we are finding a point in time
+beyond which the firm has no remaining growth opportunities.
+And therefore, the value of the firm
+can be computed under the no growth assumption.
+We now pull together our estimates.
+Using the P multiples, we estimate the present value
+to be $4.58.
+Under the price-to-book multiple approximation,
+we find the present value to be $6.64.
+And using the pure DCF approach, the value is $5.29.
+The solution using the P/E multiples
+gives us the most conservative estimate of the firm value.
+Now, firm valuation is not a simple problem.
+And our estimates are based on a number
+of simplifying assumptions.
+What we get from this analysis is the sense
+of the range of likely values.
+This range can be fairly wide, which is
+what our analysis illustrates.
+In order to apply these results, we have to look further.
+We have to study sensitivity of these numbers
+to their underlying assumptions.
+At the end of the day, what we find
+is that valuation is not a simple problem.
+However, we now have the tools to tackle it.

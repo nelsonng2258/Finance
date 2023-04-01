@@ -1,0 +1,82 @@
+
+PROFESSOR: This question teaches you
+how to find a present value of an annuity.
+Suppose that you have an outstanding loan that requires
+ten annual payments of $2,300.
+Now is Year 0, and the next payment on the loan
+is due next year.
+The last payment is due in Year 10.
+There is a bank account that offers 5% annual interest rate.
+You would like to make a deposit into this account today, which
+would allow you to repay this loan.
+The first part of this question asks
+you to find the amount that you need to deposit.
+The second question asks you to demonstrate
+that the amount you deposited is indeed
+enough to repay this loan.
+Let's start with the first question.
+The money you need to deposit is the present value
+of these payments discounted at 5%.
+
+To find the present value, we can use the annuity formula.
+Present value would equal to $2,300, which
+is our annual payment, divided by 5%, multiplied by 1 minus 1
+divided by 1 plus 5%, raised to the power of 10
+because we have 10 payments.
+This would equal to $17,760.
+Let me demonstrate that if we discount
+annual payments by hand, we will get the same answer.
+Let me start with the first payment
+and find its present value.
+I will take the payment itself, and I will divide it
+by 1 plus discount rate.
+Raise to the power of 1 because this payment
+occurs one year from now.
+If I extend this array all the way to Year 10,
+this will give me the present value of each
+of these individual payments.
+For example, the very last cell gives me
+the present value of the last payment, $2,300,
+discounted to the present.
+We are raising it to power of 10 because this payment occurs
+in Year 10.
+To find the total value of these payments in present value
+terms, we will just add them up.
+
+This gives us exactly $17,760, the same value that we obtained
+by using the annuity formula.
+Let's answer the second part of this question
+by demonstrating that depositing $17,760
+is enough to fully repay this loan.
+We're beginning Year 1 with this much money in our bank account.
+During this first year, the bank pays us 5% interest rate
+on this amount.
+So the interest that we earned would
+equal to the beginning balance multiplied
+by the interest rate of 5%.
+
+At the end of Year 1, we are making our annual payment.
+And therefore, the end balance would
+equal to the beginning balance plus the interest
+that you earned minus the payment that we made.
+Then, we're starting second year by having this much money
+in our bank account.
+During this year, we're still earning 5% interest
+on this balance.
+And we're making the same payments.
+And we're ending this year with the balance
+in our account of $14,865.
+Now, let's see what happens if we extend these
+arrays all the way to Year 10.
+We will see that we will start Year 10 by having
+$2,190 in our bank account.
+During this year, we're earning 5% interest on this beginning
+balance, which is exactly enough to pay
+$2,300 at the end of this year, which leaves us
+with the balance of exactly $0.
+We just demonstrated that depositing $17,760 now
+into a bank account that pays the annual interest rate of 5%
+is enough to repay this loan.
+Overall, what we learned in this question
+is how to find a present value of a stream of cash flows
+that represents an annuity.

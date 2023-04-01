@@ -1,0 +1,196 @@
+
+PROFESSOR: With a complete financial market,
+we can develop a general methodology
+to value assets using the market prices of traded assets.
+We will start with a market in which
+a complete set of Arrow-Debreu securities are traded.
+With the prices of these Arrow-Debreu securities,
+we can price other assets, securities, or cash flows
+by using the first principle of finance;
+there is no free lunch in the financial market
+without frictions.
+With the prices of the Arrow-Debreu securities,
+we can price other assets and the securities.
+To illustrate this idea, let's consider a two-state economy
+in which we only have two states for day one.
+We have three assets traded in the market.
+The first two assets are the two Arrow-Debreu securities,
+one paying $1 in state one, $0 in state two,
+and the other paying $0 in state one and $1 in state two.
+The third asset has a payoff x, paying $3 in state one
+in $5 in state two.
+The question is how is the price of the third asset
+related to the prices of the first two, namely
+the two Arrow-Debreu prices, or two-state prices?
+In order to answer this question,
+we can think of the third asset as a portfolio of the first two
+assets, namely the two Arrow-Debreu securities.
+In particular, we can think of it
+as being a portfolio of three units of the state one
+Arrow-Debreu security plus five units of the state
+two Arrow-Debreu security.
+In this case, the portfolio would pay $3 in state one,
+coming from the three units of state one Arrow-Debreu
+security, and it will pay $5 in state two
+form the five units of state two Arrow-Debreu securities.
+The claim is that the price of this asset
+x is going to be given by the following equation, namely
+its price should equal to three times
+the state one state price plus five times
+the state two state price.
+Since the third asset can be replicated
+as a portfolio of the two Arrow-Debreu securities, namely
+three units of Arrow-Debreu security one and five units
+of Arrow-Debreu security two.
+Then by no arbitrage, its price must
+equal the price of the replication portfolio, namely
+its price P must equal to three times phi 1, plus five times
+phi 2.
+If this is violated, then agents can generate arbitrage profits
+in the market.
+How?
+Well let's see.
+Suppose that actually the price of the third asset, P,
+is greater than three times phi 1, plus five times phi 2,
+then what we can do is actually to sell the asset three,
+gaining P, and then buying three units of Arrow-Debreu security
+one, plus five units of Arrow-Debreu security two.
+The price difference, in this case would be positive,
+will be our current profit, and then the net future cash flow
+would just be zero.
+So in the absence of arbitrage, we
+must have the price of the third asset being
+the same as the cost of the replication portfolio.
+This example shows a more general idea,
+sometimes called the Law of One Price,
+which states that if two assets have the same payoffs,
+they must have the same market price.
+Applying this principle, then we can
+price all the other securities using the prices
+of Arrow-Debreu securities.
+All we have to do is to construct a replication
+portfolio for a particular security,
+and then compute its price using the cost or the price
+of the replication portfolio.
+Now of course, this all relies on the assumption
+that we have the prices of all the Arrow-Debreu securities.
+What if we have prices of a bunch of composite securities?
+
+Let's consider a simple example.
+Suppose that we have two economic states at day one.
+In a financial market, we have two traded securities,
+one is a safe government bond, which pays an interest
+rate of 5% with no risk.
+The other security is a stock that pays $90 in state one
+and $120 in state two, and its current price is $100.
+The question is, what should be the proper set of state prices?
+
+Well let's see.
+From the price and the pay off of the government bond,
+we have the following equation; 100 on the left hand side,
+which is current price, equals to 105,
+its payoff in state one, times the state price for state one
+phi1, then plus 105 it's payoff in state two,
+times the state price of state two phi2.
+
+From the pay off in the price of the stock,
+we've got the second equation, 100, again it's current price,
+equals to 90, which the stocks pay off in state one,
+times phi 1, plus 120, the stocks pay off
+in stock two times phi 2.
+These two equations from the prices
+of the stock and the bond allows us determine the two state
+prices, phi 1 and phi 2.
+
+If we solve for the two state prices,
+we've got the following solution,
+phi 1 equals 10/21 and phi 2 equals 10/21 as well.
+Here's a special case in which the state prices are identical.
+This example shows that actually if we
+have, "regular securities" like a stock in the month
+from their prices and the payoffs,
+we can actually back out the Arrow-Debreu state prices.
+
+Now let's consider another example.
+Suppose there are two states next year.
+The payoff of a share of a stock and the probabilities
+of the states are $90 in state one, $110 in state two,
+with the probabilities being 0.4 and 0.6 respectively.
+We're also going to assume that the state prices for the two
+states are 0.5 for state one, and 0.4 for state two.
+We would like to answer the following questions: one,
+what is the stock price today?
+Two, what is the expected rate of return on the stock?
+The stock price today can be computed easily.
+P should just equal to phi 1, the state price for state one,
+times X1, the stocks pay off in state one, plus phi 2, time X2.
+Plug-in the numbers, it gives us 0.5.
+The state price for state one times 90,
+the stocks payoff in state one, then plus 0.4 times 110.
+That gives us 89 as the current price of the stock.
+
+Next, we can compute the expected rate of return
+on the stock, which is denote by Rbar.
+Rbar should equal to the expected payoff
+from the start, minus its price today,
+then divide by its price today.
+It can also be expressed as the expected payoff of the spot,
+divide by its price today, then minus one.
+If we plug-in the numbers, that gives us 0.4 times 90,
+plus 0.6 times 110.
+For the numerator, divide by 89, its price then minus one.
+Finishing the computation, we will
+get the expected rate of return on the stock
+to be 13 divided by 89.
+
+Given the expected rate of return
+on the stock by the market, we also
+have the following expression; the price of the stock times
+one plus the expected rate of return on a stock
+should equal to the expected payoff on the stock.
+Rewrite this equation, we have the price
+of the stock being given by the expected pay off,
+divided by one plus the expected rate of return on the stock.
+Plug in the numbers, we have 102 for the numerator,
+and then 1+ (13/89) for the denominator.
+Finishing the calculation, we get 89
+as the price of a stock, which is exactly what we got before.
+So they are basically two ways to compute the stock price
+today.
+One is by the state prices, the other
+is by the expected payoff, then discounted by the expected
+rate of return on the stock.
+Both methods give us the same answer.
+
+In general, in a complete market without frictions,
+we can value any cash flow by the no-arbitrage principle,
+the first principle of finance.
+
+Suppose a firm is considering a project yielding time one cash
+flow X, which is X1 in state one,
+X2 in state two, et cetera.
+Using the prices of Arrow-Debreu securities,
+we can then attach a value to this cash flow as follows.
+
+Its value should equal to phi 1, the state price in state one,
+times X1, its pay off in state one, plus phi 2,
+times X2, and so on.
+And that gives the current market
+value of the project or the cash flow.
+This valuation formula encapsulates
+the relative or arbitrage pricing
+principle, which we are going to be
+using for our future analysis.
+PV here is also called the present value of the project
+or asset or the cash flow.
+
+As we have seen in the previous example,
+the present value, PV, is also given
+by the expected payoff of the asset
+and then the expected rate of return on the asset.
+
+The key idea here when it comes to value an asset
+is to find traded assets with similar cash flows,
+both in timing and risk, and then
+use their prices for the expected return
+to value the particular asset we're interested in.

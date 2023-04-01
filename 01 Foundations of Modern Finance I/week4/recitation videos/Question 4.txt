@@ -1,0 +1,125 @@
+
+PROFESSOR: In this question, I will teach you
+how to find yield to maturity.
+Consider the following three-year bond.
+It pays annual coupon.
+It has face value of $100.
+And the coupon rate of 5.25%.
+The current spot interest rates are as follows.
+The one year rate is 1.1%.
+The two-year rate is 1.15%.
+And the three-year rate is 1.50%.
+We will compute yield to maturity on this bond.
+The first step in solving this question
+is to find the price of the bond.
+Now we know how to find the price of the bonds
+so we're just taking the term structure of interest rates
+that we're given and we're discounting
+each of the payments that we're getting from the bond
+to present using the term structure of interest rates.
+So first, we are taking the first coupon.
+So it's $5.25 so recall that this bond pays 5.25% percent
+coupon.
+And so at the end of year one, we get $5.25.
+At the end of year two, we get another $5.25.
+At the end of year three, we get the last coupon again $5.25.
+And at the same time, we get the face value payment
+from the bond.
+That's another 100.
+And so we're discounting each of these payments using
+the corresponding spot rates to present.
+And this gives us the price of the bond of $110.98.
+Now the second step is to write down the following equation.
+So this is definition of yield to maturity.
+Yield to maturity is the interest rate
+that if we're using it to discount all of the cash flows
+that we get from the bond, we get
+the current price of the bond.
+So therefore, we can write down the following question.
+So 110.98-- this is the current price of this bond--
+equals to the first coupon discounted
+to present at YTM, the second coupon discounted
+to present at YTM, plus the last coupon and the face value
+discounted to present at the YTM as well.
+So now all we have to do is that we
+have solve this equation for y.
+So this is just one equation with one unknown.
+The only problem here is that this equation looks non-linear.
+So in principle, this is a cubic equation.
+So we have to use a lot of effort
+to actually solve this equation for y.
+So I'm going to show you how to do this in Excel.
+You can also use your calculators
+or any other software that solves non-linear equations.
+I will show you two different functions
+that we can use to find yield to maturity in Excel.
+What I have done in the spreadsheet
+is I have entered basic information about our bond.
+So this face value of $100, the coupon rate of 5.25%, and these
+are these spot interest rates which
+we used to find the current price of the bond.
+So now here, I will use the rate function.
+So if you start adding rate, you will
+see that this function requires a certain number of inputs.
+And these are the inputs that I've put here on top.
+So the first input would be the number
+of periods, which in the bond speak is
+time to maturity of the bond.
+So it has three years to maturity
+and so therefore it makes three payments.
+So this will be our first input.
+The second input would be the periodic payment
+that our bond makes.
+So in our case this is annual coupon rate, which is $5.25.
+So this is the second input into this rate function.
+The third input is the present value or the current price
+of the bond.
+Note that it is important to enter the price of the bond
+with a negative sign.
+So here I have negative 110.98.
+So this is my second input.
+This is my third input.
+So the price of the bond again, it is negative.
+And the last input is the face value.
+So this is our terminal payment that we
+get from this instrument at the end of year three.
+So you could see how this function is structured.
+So it has the current present value, which is negative.
+It has a terminal payment which is the future or face
+value which is positive.
+It has periodic payments.
+This is the second argument in this function
+which is positive.
+And then the first one is the number of periods.
+So if we close this and we hit Enter,
+this gives us a yield to maturity
+on this bond, which is 1.48%.
+Now the second way of solving this equation
+is to use internal rate of return function.
+So here what I've done is that I'm
+showing the cash flows that we get from this bond.
+So again, in year zero, we have negative 110.98.
+So this is the price of the bond.
+So if we are a buyer of this bond,
+so this is our negative cash outflow in year zero.
+And then we have positive 5.25, positive 5.25,
+and positive 105.25.
+So another way of computing yield to maturity
+is just simply to use Internal Rate of Return function IRR
+and then just entering the array of our cash flows.
+And simply hitting Enter.
+This will give us the identical answer.
+So the yield to maturity on this bond is 1.48%.
+Now we do not know what internal rate of return is yet.
+We will learn this concept later in the course.
+But the yield to maturity on the bond
+is, in fact, the internal rate of return
+if you think of this bond as your investment.
+So therefore, we can use both rate function and internal rate
+of return.
+You could see that the internal rate of return function
+is actually much easier to use because all you have to do
+is that you have to enter the area of cash flows
+that you get from this bond.
+But we can use either of the two functions
+to find the yield to maturity in Excel.

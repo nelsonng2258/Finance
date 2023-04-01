@@ -1,0 +1,340 @@
+0
+00:00:00,000 --> 00:00:00,766
+
+
+1
+00:00:00,766 --> 00:00:04,960
+PROFESSOR: Next, we consider multi-stage growth models.
+
+2
+00:00:04,960 --> 00:00:07,840
+The Gordon model, the constant growth model,
+
+3
+00:00:07,840 --> 00:00:09,970
+is a useful approximation.
+
+4
+00:00:09,970 --> 00:00:12,190
+It's also a useful building block
+
+5
+00:00:12,190 --> 00:00:14,680
+for constructing more realistic models.
+
+6
+00:00:14,680 --> 00:00:16,810
+But of course, the assumption of constant growth
+
+7
+00:00:16,810 --> 00:00:20,350
+forever is typically not a good approximation
+
+8
+00:00:20,350 --> 00:00:23,620
+to how real firms behave.
+
+9
+00:00:23,620 --> 00:00:26,260
+It is more realistic to think of the company
+
+10
+00:00:26,260 --> 00:00:28,750
+as going through different stages of growth
+
+11
+00:00:28,750 --> 00:00:31,160
+throughout its lifecycle.
+
+12
+00:00:31,160 --> 00:00:35,330
+When the firm is young, it may start small and grow rapidly
+
+13
+00:00:35,330 --> 00:00:39,270
+by capturing an increasing market share.
+
+14
+00:00:39,270 --> 00:00:42,160
+Over time, as the company grows larger and larger,
+
+15
+00:00:42,160 --> 00:00:46,190
+it's going to be harder to maintain the same growth rate.
+
+16
+00:00:46,190 --> 00:00:49,030
+There may be some initial competitive advantages
+
+17
+00:00:49,030 --> 00:00:51,070
+that the firm has.
+
+18
+00:00:51,070 --> 00:00:54,130
+Over time, competition is going to catch up.
+
+19
+00:00:54,130 --> 00:00:57,940
+Also, as the company gets large in terms of its market share,
+
+20
+00:00:57,940 --> 00:01:00,280
+increasing the market share further is going to become
+
+21
+00:01:00,280 --> 00:01:04,810
+progressively difficult. So in the long run,
+
+22
+00:01:04,810 --> 00:01:08,080
+we cannot expect large, established firms to grow
+
+23
+00:01:08,080 --> 00:01:12,580
+at the same rate as young growth firms.
+
+24
+00:01:12,580 --> 00:01:14,620
+The way to model this is to assume
+
+25
+00:01:14,620 --> 00:01:17,470
+that in the early stages, the company may
+
+26
+00:01:17,470 --> 00:01:19,510
+go through a so-called growth stage
+
+27
+00:01:19,510 --> 00:01:22,570
+with a relatively high growth rate, which will eventually
+
+28
+00:01:22,570 --> 00:01:23,920
+slow down.
+
+29
+00:01:23,920 --> 00:01:26,200
+And long term, the company is going
+
+30
+00:01:26,200 --> 00:01:28,450
+to reach maturity, at which point
+
+31
+00:01:28,450 --> 00:01:31,690
+the growth rate is going to be relatively low
+
+32
+00:01:31,690 --> 00:01:34,240
+and is going to converge to some kind of average
+
+33
+00:01:34,240 --> 00:01:39,730
+for the same type of firms, perhaps average for the sector.
+
+34
+00:01:39,730 --> 00:01:42,360
+Now, let's consider an example.
+
+35
+00:01:42,360 --> 00:01:46,480
+Northern Company is expected to pay $1 per share in dividends
+
+36
+00:01:46,480 --> 00:01:48,170
+next year.
+
+37
+00:01:48,170 --> 00:01:51,770
+This number is expected to grow at a 10% rate for the next 5
+
+38
+00:01:51,770 --> 00:01:53,120
+years.
+
+39
+00:01:53,120 --> 00:01:55,370
+After that, the growth rate of the company
+
+40
+00:01:55,370 --> 00:01:57,080
+is going to slow down.
+
+41
+00:01:57,080 --> 00:02:01,400
+And it's going to be 2% from that point on, forever.
+
+42
+00:02:01,400 --> 00:02:03,380
+The cost of capital of this company,
+
+43
+00:02:03,380 --> 00:02:08,150
+or the discount rate on its cash flows, is 8%.
+
+44
+00:02:08,150 --> 00:02:10,550
+The question is, what is the current share
+
+45
+00:02:10,550 --> 00:02:13,260
+price of the Northern Company?
+
+46
+00:02:13,260 --> 00:02:16,680
+The following table projects dividends per share
+
+47
+00:02:16,680 --> 00:02:19,600
+for this firm over the next several years.
+
+48
+00:02:19,600 --> 00:02:23,640
+You can see that at time 1, the dividend is expected to be $1.
+
+49
+00:02:23,640 --> 00:02:25,830
+And this is going to grow at a 10% rate.
+
+50
+00:02:25,830 --> 00:02:29,970
+So it's going to be 1.1 in year 2, 1.21 in the year 3,
+
+51
+00:02:29,970 --> 00:02:33,360
+and so forth, until we hit year 6.
+
+52
+00:02:33,360 --> 00:02:38,420
+And after that, the growth rate is going to slow down to 2%.
+
+53
+00:02:38,420 --> 00:02:41,180
+We are going to value this stock by dividing
+
+54
+00:02:41,180 --> 00:02:43,770
+the timeline into two portions.
+
+55
+00:02:43,770 --> 00:02:48,290
+The first segment is going to be from year 0 up to
+
+56
+00:02:48,290 --> 00:02:52,350
+and including year 6.
+
+57
+00:02:52,350 --> 00:02:55,470
+The second segment is going to start in year 7
+
+58
+00:02:55,470 --> 00:02:58,390
+and go all the way to infinity.
+
+59
+00:02:58,390 --> 00:03:01,270
+We are going to price these two portions of cash flow
+
+60
+00:03:01,270 --> 00:03:02,920
+separately.
+
+61
+00:03:02,920 --> 00:03:05,650
+So let's start with the residual piece, which
+
+62
+00:03:05,650 --> 00:03:09,040
+is D7, D8, and so forth.
+
+63
+00:03:09,040 --> 00:03:12,940
+We are going to compute the price of this residual segment
+
+64
+00:03:12,940 --> 00:03:16,310
+from the point of view of time 6.
+
+65
+00:03:16,310 --> 00:03:19,430
+From the perspective of time 6, what we're dealing with
+
+66
+00:03:19,430 --> 00:03:20,810
+is a Gordon model.
+
+67
+00:03:20,810 --> 00:03:23,640
+The growth rate of the company starting from P at 7
+
+68
+00:03:23,640 --> 00:03:25,010
+is constant.
+
+69
+00:03:25,010 --> 00:03:27,800
+We can therefore apply the Gordon formula.
+
+70
+00:03:27,800 --> 00:03:29,930
+The price of the stock at time 6 is
+
+71
+00:03:29,930 --> 00:03:33,920
+equal to D7, the expected cash flow at time 7, which
+
+72
+00:03:33,920 --> 00:03:39,480
+is 1.64 divided by r, the discount rate, minus g,
+
+73
+00:03:39,480 --> 00:03:43,020
+the growth rate, which at that point is 2%.
+
+74
+00:03:43,020 --> 00:03:50,450
+So 1.64 divided by 8% minus 2% is $27.38.
+
+75
+00:03:50,450 --> 00:03:56,500
+That is the residual value of the stock at time 6, P6.
+
+76
+00:03:56,500 --> 00:04:00,220
+Now, we can use our DCF formula at time 0.
+
+77
+00:04:00,220 --> 00:04:03,580
+The price of the stock at time 0 is equal to the sum,
+
+78
+00:04:03,580 --> 00:04:07,320
+from 1 to 6, of the dividends discounted
+
+79
+00:04:07,320 --> 00:04:10,710
+at the 8% rate, which is the expected return,
+
+80
+00:04:10,710 --> 00:04:14,340
+plus the residual term P6 discounted
+
+81
+00:04:14,340 --> 00:04:18,260
+at the same 8% rate over 6 years.
+
+82
+00:04:18,260 --> 00:04:23,630
+When we compute the sum, the end result is $23.07.
+
+83
+00:04:23,630 --> 00:04:25,190
+And that is the value of the firm
+
+84
+00:04:25,190 --> 00:04:29,050
+under this two-stage growth assumption.
+

@@ -1,0 +1,508 @@
+0
+00:00:00,000 --> 00:00:00,786
+
+
+1
+00:00:00,786 --> 00:00:03,940
+PROFESSOR: We now apply our discounted cash flow formula
+
+2
+00:00:03,940 --> 00:00:07,060
+to develop a canonical relation model for stocks.
+
+3
+00:00:07,060 --> 00:00:09,040
+This is the Gordon model.
+
+4
+00:00:09,040 --> 00:00:13,550
+The Gordon model is also known as the constant growth model.
+
+5
+00:00:13,550 --> 00:00:16,800
+And it's based on two key assumptions.
+
+6
+00:00:16,800 --> 00:00:20,460
+First, we assume that the discount rate, or the expected
+
+7
+00:00:20,460 --> 00:00:24,160
+return on the stock, is constant across periods.
+
+8
+00:00:24,160 --> 00:00:28,270
+Second, we assume that the growth rate of dividends,
+
+9
+00:00:28,270 --> 00:00:31,570
+in expectation, is constant as well.
+
+10
+00:00:31,570 --> 00:00:34,300
+Dividends grow at the average rate
+
+11
+00:00:34,300 --> 00:00:39,130
+equal to g, which exceeds the discount rate r.
+
+12
+00:00:39,130 --> 00:00:43,240
+They grow at the same rate in perpetuity.
+
+13
+00:00:43,240 --> 00:00:44,680
+With these two assumptions, we can
+
+14
+00:00:44,680 --> 00:00:47,950
+derive the value of the firm at time 0
+
+15
+00:00:47,950 --> 00:00:50,740
+over the price of the stock in relation
+
+16
+00:00:50,740 --> 00:00:53,420
+to the initial dividends.
+
+17
+00:00:53,420 --> 00:00:56,320
+If we substitute into our discounted cash flow
+
+18
+00:00:56,320 --> 00:01:00,160
+formula the relation between dividends across time, where
+
+19
+00:01:00,160 --> 00:01:02,440
+a dividend at time t plus 1 is expected
+
+20
+00:01:02,440 --> 00:01:06,190
+to be equal to the dividend at time t times 1
+
+21
+00:01:06,190 --> 00:01:09,940
+plus the growth rate, we can see that we are dealing
+
+22
+00:01:09,940 --> 00:01:12,260
+with a growing perpetuity.
+
+23
+00:01:12,260 --> 00:01:15,220
+And the value, the present value of this growing perpetuity,
+
+24
+00:01:15,220 --> 00:01:18,540
+is equal to the expected cash flow at time 1,
+
+25
+00:01:18,540 --> 00:01:24,340
+D1, divided by r, the discount rate, minus g, the growth rate.
+
+26
+00:01:24,340 --> 00:01:26,290
+This is the Gordon model.
+
+27
+00:01:26,290 --> 00:01:29,410
+P0, the price of the stock, is equal to D1
+
+28
+00:01:29,410 --> 00:01:32,230
+divided by r minus g.
+
+29
+00:01:32,230 --> 00:01:34,130
+Let's look at an example.
+
+30
+00:01:34,130 --> 00:01:37,810
+Suppose that the current dividend on the stock is 1.
+
+31
+00:01:37,810 --> 00:01:41,550
+This is D0 equal to $1.
+
+32
+00:01:41,550 --> 00:01:45,930
+We expect dividends to grow at a 6% rate per year forever.
+
+33
+00:01:45,930 --> 00:01:48,240
+So g is equal to 6%.
+
+34
+00:01:48,240 --> 00:01:51,880
+The expected return on this stock is 20%.
+
+35
+00:01:51,880 --> 00:01:54,530
+So r is 0.2.
+
+36
+00:01:54,530 --> 00:01:57,770
+In this case, the dividend at time 1, D1,
+
+37
+00:01:57,770 --> 00:02:02,420
+is expected to be equal to 1, initial dividend, times 1
+
+38
+00:02:02,420 --> 00:02:04,110
+plus the growth rate.
+
+39
+00:02:04,110 --> 00:02:06,770
+So that's $1.06.
+
+40
+00:02:06,770 --> 00:02:09,350
+And the price of the stock is therefore
+
+41
+00:02:09,350 --> 00:02:13,670
+$1.06 divided by the difference between the expected return
+
+42
+00:02:13,670 --> 00:02:17,970
+and the growth rate, which is 0.2 minus 0.06,
+
+43
+00:02:17,970 --> 00:02:21,410
+which gives us $7.57.
+
+44
+00:02:21,410 --> 00:02:24,350
+We can use this formula as a relation between prices
+
+45
+00:02:24,350 --> 00:02:28,310
+of securities, their expected dividends, expected returns,
+
+46
+00:02:28,310 --> 00:02:30,320
+and growth rates of dividends.
+
+47
+00:02:30,320 --> 00:02:33,830
+The Gordon model, the constant growth model,
+
+48
+00:02:33,830 --> 00:02:37,550
+relates the price dividend ratio to expected returns and growth
+
+49
+00:02:37,550 --> 00:02:38,750
+rates.
+
+50
+00:02:38,750 --> 00:02:41,010
+We can apply it in various ways.
+
+51
+00:02:41,010 --> 00:02:42,830
+For example, we can look at market prices
+
+52
+00:02:42,830 --> 00:02:47,390
+and infer what the market expects future returns to be
+
+53
+00:02:47,390 --> 00:02:51,430
+or what the projected growth rates for dividends are.
+
+54
+00:02:51,430 --> 00:02:54,190
+As an example, let's consider a situation
+
+55
+00:02:54,190 --> 00:02:57,760
+where we're using valuation ratios to forecast future stock
+
+56
+00:02:57,760 --> 00:02:59,350
+returns.
+
+57
+00:02:59,350 --> 00:03:02,350
+Northern company is a utility firm.
+
+58
+00:03:02,350 --> 00:03:05,170
+Its dividends are going to grow, in expectation,
+
+59
+00:03:05,170 --> 00:03:07,610
+at a constant rate forever.
+
+60
+00:03:07,610 --> 00:03:09,640
+A utility firm, being a stable business,
+
+61
+00:03:09,640 --> 00:03:13,150
+is a good candidate for applying this kind of constant growth
+
+62
+00:03:13,150 --> 00:03:15,010
+model.
+
+63
+00:03:15,010 --> 00:03:18,000
+The current dividend price ratio,
+
+64
+00:03:18,000 --> 00:03:21,710
+which is also called dividend yield, D0 over P0,
+
+65
+00:03:21,710 --> 00:03:24,770
+is equal to 4%.
+
+66
+00:03:24,770 --> 00:03:28,190
+Analysts are forecasting the long run growth of dividends
+
+67
+00:03:28,190 --> 00:03:31,610
+to be 5% per year.
+
+68
+00:03:31,610 --> 00:03:35,660
+Based on the Gordon model, we can express the expected stock
+
+69
+00:03:35,660 --> 00:03:42,020
+return in terms of the ratio of D1 to P0 and the growth rate.
+
+70
+00:03:42,020 --> 00:03:44,500
+Specifically, expected stock return
+
+71
+00:03:44,500 --> 00:03:50,120
+is equal to D1 over P0 plus g, the growth rate of dividends.
+
+72
+00:03:50,120 --> 00:03:54,110
+Because D1 is proportional to D0,
+
+73
+00:03:54,110 --> 00:03:58,990
+we can replace D1 with D0 times 1 plus g, the growth rate.
+
+74
+00:03:58,990 --> 00:04:03,190
+As a result, we can compute the expected return on the stock.
+
+75
+00:04:03,190 --> 00:04:07,930
+It's equal to 1.05 times the dividend yield
+
+76
+00:04:07,930 --> 00:04:12,100
+of 4% plus the 5% growth rate.
+
+77
+00:04:12,100 --> 00:04:12,640
+It's 9.2%.
+
+78
+00:04:12,640 --> 00:04:15,190
+
+
+79
+00:04:15,190 --> 00:04:17,529
+One thing to note is the relation
+
+80
+00:04:17,529 --> 00:04:20,709
+between expected returns, and dividend yield,
+
+81
+00:04:20,709 --> 00:04:23,240
+and dividend growth.
+
+82
+00:04:23,240 --> 00:04:26,360
+What we see is that the expected return on the stock
+
+83
+00:04:26,360 --> 00:04:29,840
+is based on the growth rate of dividends and the dividend
+
+84
+00:04:29,840 --> 00:04:32,122
+yield.
+
+85
+00:04:32,122 --> 00:04:33,580
+In the second example, we are going
+
+86
+00:04:33,580 --> 00:04:37,470
+to forecast firm growth rate.
+
+87
+00:04:37,470 --> 00:04:41,620
+The company here is Kendall Square Cuisine.
+
+88
+00:04:41,620 --> 00:04:43,960
+It's a new health food franchise.
+
+89
+00:04:43,960 --> 00:04:45,730
+For those of you who don't know, MIT
+
+90
+00:04:45,730 --> 00:04:48,170
+is located in Kendall Square.
+
+91
+00:04:48,170 --> 00:04:52,280
+This company owns 10 restaurants as of now.
+
+92
+00:04:52,280 --> 00:04:56,720
+And each of these restaurants is expected to generate $1 million
+
+93
+00:04:56,720 --> 00:05:01,770
+in profits every year forever, in perpetuity.
+
+94
+00:05:01,770 --> 00:05:05,400
+This company, KSC, is expected to grow its market
+
+95
+00:05:05,400 --> 00:05:09,577
+share over time by opening new restaurants.
+
+96
+00:05:09,577 --> 00:05:11,160
+We are going to assume that it's going
+
+97
+00:05:11,160 --> 00:05:14,520
+to grow at a constant rate which is not known.
+
+98
+00:05:14,520 --> 00:05:16,650
+Each new restaurant is going to be just
+
+99
+00:05:16,650 --> 00:05:18,210
+like the old restaurants.
+
+100
+00:05:18,210 --> 00:05:21,600
+They're going to generate $1 million in profits every year
+
+101
+00:05:21,600 --> 00:05:23,110
+forever.
+
+102
+00:05:23,110 --> 00:05:26,380
+We're assuming that when the company opens a new restaurant,
+
+103
+00:05:26,380 --> 00:05:29,000
+the cash flows start the following year.
+
+104
+00:05:29,000 --> 00:05:31,270
+So if it were to open the restaurant this year,
+
+105
+00:05:31,270 --> 00:05:35,960
+the first cash flow is going to arrive a year later.
+
+106
+00:05:35,960 --> 00:05:39,200
+KSC is a publicly traded firm.
+
+107
+00:05:39,200 --> 00:05:43,875
+And its current market capitalization is $200 million.
+
+108
+00:05:43,875 --> 00:05:45,250
+We are assuming that the discount
+
+109
+00:05:45,250 --> 00:05:49,690
+rate, the expected return on its stock, is 10% per year.
+
+110
+00:05:49,690 --> 00:05:52,650
+And that will remain constant forever.
+
+111
+00:05:52,650 --> 00:05:55,380
+The question is, at what rate does the market
+
+112
+00:05:55,380 --> 00:05:58,530
+expect KSC to grow in terms of growing
+
+113
+00:05:58,530 --> 00:06:01,730
+its number of restaurants over time?
+
+114
+00:06:01,730 --> 00:06:06,470
+For our company, this means that the growth rate
+
+115
+00:06:06,470 --> 00:06:10,580
+g is equal to 0.1, which is the expected return,
+
+116
+00:06:10,580 --> 00:06:15,530
+minus the total dividend next year, which is $10 million--
+
+117
+00:06:15,530 --> 00:06:18,380
+remember that the company currently owns 10 restaurants,
+
+118
+00:06:18,380 --> 00:06:22,670
+and each of them is going to generate $1 million next year--
+
+119
+00:06:22,670 --> 00:06:26,440
+divided by the initial price, $200 million.
+
+120
+00:06:26,440 --> 00:06:28,870
+The end result is that the expected growth
+
+121
+00:06:28,870 --> 00:06:33,320
+rate, which is priced into the value of the firm, is 5%.
+
+122
+00:06:33,320 --> 00:06:35,680
+In other words, based on the current valuation
+
+123
+00:06:35,680 --> 00:06:40,420
+of this company, the market must be expecting the growth
+
+124
+00:06:40,420 --> 00:06:42,220
+at the rate of 5%.
+
+125
+00:06:42,220 --> 00:06:43,720
+So each year, the company is going
+
+126
+00:06:43,720 --> 00:06:47,740
+to increase its number of restaurants by 5%.
+

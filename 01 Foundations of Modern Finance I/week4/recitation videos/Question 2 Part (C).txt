@@ -1,0 +1,86 @@
+
+PROFESSOR: Let me show you how we can automate solving
+this arbitrage question.
+The first step that I will do is I will write down
+the system of equations that we had in the following matrix
+form.
+So I'll have matrix A. This is a 4 by 4 matrix.
+Then, I will have a column vector of x's.
+This is our unknowns, our positions
+that we're taking in this corresponding box.
+And this would equal to the payoffs
+that we get in years 0, 1, 2, and 3.
+So you can see that this system of equations written
+this way in the matrix form actually gives us
+the system of equations that we had before.
+Now, we have to solve this for A.
+So all we really have to do is that we have to invert matrix A
+and then, multiply it by the payoffs vector--
+vector b, in this case.
+And let me show you how to do this using Excel tools.
+You can, of course, do it in any other software
+that you are more accustomed to using.
+So here, what I've done below is that I
+have written down this system, these numbers,
+into just Excel arrays.
+And what I will do-- so this is my matrix A,
+and this is my matrix B. So the goal right
+now is to invert these highlighted cells,
+and then multiply them by this vector b.
+So the first, I will use minverse function that
+inverts this 4 by 4 matrix.
+To do this, first I have to prehighlight the location
+where I want these numbers to be inputted by Excel.
+And then, I'm writing the function, so minverse.
+And then, I'm selecting array, where this--
+where I inputted these numbers.
+And then, this is the-- the key here
+is to hit the following three keys at the same time,
+so I have hit Shift and Control.
+So I'm holding Shift and Control right now,
+and then I'm hitting Enter.
+So this way right now, Excel--
+what's it's done, it inverted this matrix.
+And so right now, what I have here on the screen
+is that it's inverted matrix A.
+So now, all I have to do is that I
+have to multiply this inverted matrix by vector b.
+So here, again, I will prehighlight
+because I'm multiplying 4 by 4 matrix by vector 4 by 1.
+So the resulting output would be 4 by 1 vector,
+and this would be our vector of x's.
+So I will use the following function, so mmult.
+So this is a multiplication function that multiplies
+two arrays of two matrices.
+So select the first one, comma, and I will select vector b.
+And now, I will also--
+so I will hold Shift and Control.
+And then, I will hit Enter.
+And so this is the answer.
+So I'm going to highlight it in yellow.
+And you will see that this is exactly the numbers that we've
+had before when we were solving this system of equations
+by hand.
+So again, we're taking long positions in bonds A, B, and C
+and we're shorting.
+We're selling bond D. So this is how
+you solve the system of equations in Excel.
+So overall, what we've learned in this question
+is that we have learned how to tackle this type of arbitrage
+problems.
+So all we have to do is that we'll
+have to assume that we're taking long positions
+in the instruments that we have.
+So here we have 4.
+If we had 10, we would assume that we
+are taking xa, xb, and so forth positions
+in all of the 10 instruments.
+And then, the keys to construct the payoffs that we get--
+$100 in year 0--
+and we get $0 payoffs in all of the subsequent years.
+And then, what we have to do is that we
+have to solve the system of equations,
+as we've just done here.
+And this way, we would know which positions
+and which bonds to take in order to construct
+a profitable trading strategy.

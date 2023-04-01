@@ -1,0 +1,189 @@
+PROFESSOR: We now apply the present value valuation method
+to a few simple cash flows.
+We do so for several reasons.
+First, to practice the new method we have just developed.
+Second, the simple cash flows we will consider are quite common
+in the market as well as in our daily life.
+Third, these simple cash flows will also
+be used to model the cash flows of various assets
+as a first pass.
+In particular, we'll consider four special cash flows--
+annuity, annuity with constant growth,
+perpetuity, and perpetuity with constant growth.
+
+Annuity refers to a constant cash flow,
+say, a repeated for t periods starting from period one.
+And this cash flow is also shown by this cash flow chart.
+We're seeing a time zero for the next t periods,
+we're going to be getting a constant cash flow a.
+How do we value a cash flow like this?
+Assuming that we know that discount rate is r.
+What we would like to compute is its present value
+which will be the first cash flow a discounted back once
+at 1 plus r plus the second cash flow, which
+is also a discounted at the discount rate r
+twice, and so on.
+Now, in order to compute this, we
+could either compute each of the terms, the present value
+of each piece of the cash flow at the month,
+or we could actually try to find a simple formula.
+In order to do so, let's do the following.
+Take the first line, the present value formula.
+Multiply both sides by 1 plus r.
+That gives us the second equation,
+and then we take the difference between these two equations,
+namely subtracting the first equation
+from the second equation.
+That gives us the third equation,
+namely r times PV the present value of this annuity
+is given by the two terms on the right-hand side, a minus a
+divided by 1 plus r to the t-th power.
+We can rearrange the terms and arriving
+at the following formula, namely the present value of annuity
+is just going to be given by a, the level of the cash
+flow, times 1 over r times what's in the square bracket.
+Of course, we can also compute the future value of annuity
+which is given by simply the present value of annuity
+times 1 plus r to the t-th power.
+That's the equation at the bottom of the slide.
+Let's consider an example.
+Suppose an insurance company is selling
+an annuity, a standard product from insurance companies,
+that pays $10,000 per year for 20 years.
+Suppose that the right discount rate is 5%.
+The question is what should be the company
+sell this product for?
+Well, with the present value formula,
+we can easily finish this computation.
+The price for this annuity should be its present value,
+and that's given by this formula.
+The level of the annuity is $10,000.
+We multiply that by 1 over the discount rate 5% times
+what's in the parentheses.
+If we finish this calculation, we're
+going to be getting $124,622 roughly.
+So that should be the price for this annuity.
+Of course, in reality, the insurance company
+might be selling at a price that's
+a little bit higher than that to pocket some profit.
+Next, we consider an annuity with a constant growth rate g
+as shown in the cash flow chart here.
+The first cash flow arrives in year one at a level a.
+Then in year two, the cash flow grows to a times 1 plus g
+and so on.
+The last cash flow occurs at year t
+with the level at a times 1 plus g to the t minus 1th power.
+The question is, what is the present value of such annuity?
+Well, the present value can be easy
+computed by summing up the present value of each
+of the cash flow.
+
+If we use the same technique as we did for annuity
+with no growth, we arrive at the formula
+which is given by the second equation.
+And we have two different cases.
+In the general case where the growth rate of the cash flow
+does not equal to the discount rate r, we have the first line.
+In a special case where the growth rate
+is the same as the discount rate,
+then we have the second line.
+If we know the growing annuity starting value, its time
+span, and growth rate, and its discount rate,
+we can easily compute its present value.
+We now consider an example of a growing annuity.
+This example resembles a saving plan for retirement.
+Suppose that you are now at age of 30
+and plan to have $2 million at age of 65 when you retire.
+How do you draw up a saving plan to achieve that?
+Suppose that at the end of each year,
+you will act to save certain amount that grows by 5%
+each year reflecting your growth in income.
+The question is, how much should you
+start saving now assuming that the return on your savings
+is 8%?
+
+We can make this calculation by thinking
+in the following fashion.
+If you want to have $2 million in 35 years,
+its present value should be just $2 million
+discounted back at 8% 35 times which
+is given by the term on the right-hand side
+of the equation.
+On the left-hand side would be the present value
+of the annuity with a growth rate
+of 5% starting at the initial level of a.
+Solving for a, we'll get the following result
+which is $6,473.
+That means that, actually, if you
+start your savings next year at $6,473
+and allow that saving to grow at 5% per year
+for 35 years and the return on your savings
+is 8%, then by the end of 35 years where you turn 65,
+the total amount in your savings account
+will be exactly $2 million as you planned.
+We now consider another example.
+Suppose you just won the lottery and it pays $100,000
+a year for 20 years.
+Suppose that actually this is the only asset you have.
+Are you a millionaire?
+Let's assume that actually the right discount rate is 10%.
+Well, we can compute the present value
+of the stream of cash flow at a level of $100,000 for 20 years.
+Plug into the formula for the present value of annuity, what
+we arrive at would be $851,356.
+That's quite nice, but it's still
+short of a million dollars.
+
+What if the payments last for 50 years instead of 20 years?
+Well, we use the same formula for the first value
+of annuity except that actually now the time span is 50 years.
+If we finished a calculation, we'll arrive at $991,481.
+Certainly, that's higher than the level before,
+but it's still shy of $1 million.
+
+How about if you're going to get $100,000 payment forever?
+Well, if we finished our calculation,
+the present value of this perpetual annuity
+would be exactly $1 million.
+
+This leads us to the next special cash
+flow, a perpetuity.
+A perpetuity is like an annuity except that it
+doesn't have a terminal date.
+The cash flow goes on forever.
+The present value of perpetuity at a level of a
+is simply given by a divide by r, the discount rate
+or the rate of return on your investments.
+
+If instead of staying a constant,
+the perpetuity also grows at a constant growth rate g,
+then we arrive at the perpetuity with the constant growth.
+It's cash flow is also shown in the cash flow chart.
+It starts at year one at a level a,
+and next year, it turns into a times 1 plus g and so on
+and continues forever.
+The present value of such a perpetuity
+with the constant growth rate g is
+given by the formula on the slide, namely
+a divide by r, the discount rate, minus g, the growth rate.
+Here, it must be that the discount rate is
+greater than the growth rate.
+Otherwise, the present value of this cash flow
+would be infinity.
+We now consider a simple example.
+Let's look at a company, Super Growth,
+which plans to pay an annual dividend next year
+of $3 per share.
+The dividend is expected to grow at 5% per year forever.
+We also know that for companies of this risk class,
+the expected rate of return is 10%.
+What should be Super Growth's share price?
+Well, it should be the present value of its future dividends.
+We can complete this computation by using the present value
+formula for perpetuity with constant growth, which
+is given on the right-hand side of the equation.
+Namely, $3 for the first dividend,
+divide by 10%, which is a discount rate, minus 5%, which
+is the growth rate.
+And that gives us $60 which should
+be the share price today.

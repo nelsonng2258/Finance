@@ -1,0 +1,75 @@
+
+PROFESSOR: In this video, we will define what is variance
+and standard deviation of the returned distribution.
+We will continue working with our example of Nikola stock.
+Let's first define, what is variance?
+Variance of return R is the expected squared deviation
+from the mean, meaning that it is expected squared deviation,
+which is this from the mean.
+And we know that this ER is the mean or the expected return.
+
+So you could see that, if the return never
+deviates from its mean, the variance will be zero.
+Otherwise, the variance will be increasing with the magnitude
+of the deviation from the mean.
+Therefore, the variance is a measure
+of how spread out the distribution of return is,
+so let us compute this variance right now for Nikola stock.
+But first, let's write down this expression that
+is written in expected value terms
+as applied to our case of this Greek distribution.
+So it's going to be sum of probabilities, PIs, multiplied
+by return RI that we'd get in a given state minus the expected
+return, and this will be squared.
+So this is for all I's from one to N,
+however many states we have.
+Now, let's continue writing down this expression
+and just applying it to our case.
+It's going to be P1 multiplied by R1 minus expected
+return plus P2 times R2 minus the expected return
+plus B3 times R3 minus the expected return,
+and we have to square all of these differences.
+So that we get the correct expression,
+and this is because we have only three states in this example.
+Now, recall that returns in individual states were this.
+So in this upstate or in the very positive scenario,
+the return was 368.75%.
+In the second scenario, the return was negative 37.5%.
+In the most adverse scenario, the return was negative 93.75%.
+The expected return was negative 13.75%.
+So now, we can plug-in all of these numbers
+into the expression for the variance of the return.
+So it's 10% multiplied by 368.75% minus,
+and we're subtracting the negative number.
+So minus negative 13.75% squared plus 60% multiplied
+by negative 37.5% minus--
+again, we're subtracting a negative number.
+So we would effectively be adding them up,
+so 23.75% squared as well plus 30% multiplied
+by negative 93.75% minus negative 13.75%
+squared as well.
+The value of this expression equals to 1.69.
+Now, finally, let me compute the standard deviation
+of the return on the stock, which
+by definition is the squared root of the variance.
+And therefore, in our case, it is the squared root
+of 1.69, which is 1.3.
+Now, standard deviation of returns,
+which is often referred to as volatility,
+is often expressed in percentages.
+So in this case, the standard deviation
+of returns on this stock would be 130%.
+Let me make one important remark.
+Notice that I expressed standard deviation or the volatility
+of returns in percentages.
+So same units in which we measure
+returns and expect that the returns as well.
+But I haven't done that for the variance of returns,
+and the reason for that is that variance returns is measured
+in percentages squared.
+And we could see it right here.
+Because when we are taking the deviations from the mean,
+we are raising them to power of two.
+Therefore, when it comes to variance,
+we typically just express it as a number and not
+as a percentage.

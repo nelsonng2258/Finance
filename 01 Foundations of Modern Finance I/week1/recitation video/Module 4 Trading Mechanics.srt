@@ -1,0 +1,328 @@
+0
+00:00:00,000 --> 00:00:00,355
+
+
+1
+00:00:00,355 --> 00:00:01,730
+PROFESSOR: In this segment, we'll
+
+2
+00:00:01,730 --> 00:00:04,640
+talk about trading mechanics.
+
+3
+00:00:04,640 --> 00:00:09,650
+Suppose you want to buy 100 shares of Uber.
+
+4
+00:00:09,650 --> 00:00:12,510
+There are two ways of doing it.
+
+5
+00:00:12,510 --> 00:00:16,190
+One, you can place what we call a limit order.
+
+6
+00:00:16,190 --> 00:00:17,990
+And the second way is you can place
+
+7
+00:00:17,990 --> 00:00:21,000
+what we call a market order.
+
+8
+00:00:21,000 --> 00:00:23,150
+Think of a limit order as placing
+
+9
+00:00:23,150 --> 00:00:27,470
+an advertising, which says how many shares and at what price
+
+10
+00:00:27,470 --> 00:00:29,490
+you want to buy.
+
+11
+00:00:29,490 --> 00:00:34,260
+And think of market order as responding to an advertising
+
+12
+00:00:34,260 --> 00:00:36,720
+posted by someone else.
+
+13
+00:00:36,720 --> 00:00:40,230
+So saying that you will be buying 100 shares of Uber
+
+14
+00:00:40,230 --> 00:00:42,270
+at the best price that is currently
+
+15
+00:00:42,270 --> 00:00:46,590
+available in the marketplace.
+
+16
+00:00:46,590 --> 00:00:49,930
+Let's consider a specific example.
+
+17
+00:00:49,930 --> 00:00:55,450
+On the slides, we see what we call a limit order book.
+
+18
+00:00:55,450 --> 00:00:59,020
+It shows us all available asking prices
+
+19
+00:00:59,020 --> 00:01:02,530
+right now of people or investors who are
+
+20
+00:01:02,530 --> 00:01:06,220
+willing to sell their shares.
+
+21
+00:01:06,220 --> 00:01:08,920
+In particular, the top part of the slide
+
+22
+00:01:08,920 --> 00:01:14,980
+shows four separate limit orders.
+
+23
+00:01:14,980 --> 00:01:16,690
+It says that someone is willing-- one
+
+24
+00:01:16,690 --> 00:01:21,760
+investor, at the very top, is willing to sell
+
+25
+00:01:21,760 --> 00:01:25,418
+their shares at $13.08.
+
+26
+00:01:25,418 --> 00:01:27,460
+And the number of shares they are willing to sell
+
+27
+00:01:27,460 --> 00:01:30,750
+at this price is 200 shares.
+
+28
+00:01:30,750 --> 00:01:33,210
+The investor right below is willing to sell also
+
+29
+00:01:33,210 --> 00:01:40,470
+200 shares, but at a price of $13.06.
+
+30
+00:01:40,470 --> 00:01:43,080
+Yet another investor is willing to sell 300 shares
+
+31
+00:01:43,080 --> 00:01:46,110
+at the price of $13.05.
+
+32
+00:01:46,110 --> 00:01:48,300
+And the last investor is willing to sell 100 shares
+
+33
+00:01:48,300 --> 00:01:52,230
+at a price of $13.04.
+
+34
+00:01:52,230 --> 00:01:56,790
+So this is the collection of all the offers of investors who are
+
+35
+00:01:56,790 --> 00:01:59,160
+willing to sell their shares.
+
+36
+00:01:59,160 --> 00:02:02,340
+And they indicate the price at which they're willing to sell
+
+37
+00:02:02,340 --> 00:02:06,730
+and the number of shares that they are willing to sell.
+
+38
+00:02:06,730 --> 00:02:10,060
+At the bottom, we have a collection of offers
+
+39
+00:02:10,060 --> 00:02:14,650
+by investors who are willing to buy shares.
+
+40
+00:02:14,650 --> 00:02:16,780
+The first investor is willing to buy 200 shares
+
+41
+00:02:16,780 --> 00:02:20,820
+at the price of $13.02.
+
+42
+00:02:20,820 --> 00:02:23,160
+The next investor is willing to buy 300 shares
+
+43
+00:02:23,160 --> 00:02:25,745
+at the price of $13.01.
+
+44
+00:02:25,745 --> 00:02:27,870
+And the other investor is willing to buy 200 shares
+
+45
+00:02:27,870 --> 00:02:32,250
+at the price of $12.99.
+
+46
+00:02:32,250 --> 00:02:38,430
+So this is the collection of what we call bids or quotes
+
+47
+00:02:38,430 --> 00:02:40,350
+from investors, limit orders from investors,
+
+48
+00:02:40,350 --> 00:02:44,820
+who are willing to buy shares or the specified number of shares
+
+49
+00:02:44,820 --> 00:02:48,740
+at these specified prices.
+
+50
+00:02:48,740 --> 00:02:50,710
+There is an important definition that we
+
+51
+00:02:50,710 --> 00:02:53,340
+will make based on this slide.
+
+52
+00:02:53,340 --> 00:02:55,970
+So the difference between the best ask,
+
+53
+00:02:55,970 --> 00:03:02,810
+which is, in our case, $13.04, and the best bid or the best
+
+54
+00:03:02,810 --> 00:03:05,180
+price at which somebody is willing to buy
+
+55
+00:03:05,180 --> 00:03:10,580
+a share, $13.02, this difference between $13.04 and $13.02
+
+56
+00:03:10,580 --> 00:03:13,580
+is called bid-ask spread, which is
+
+57
+00:03:13,580 --> 00:03:20,400
+the difference between, again, lowest ask and the highest bid.
+
+58
+00:03:20,400 --> 00:03:23,030
+Now let's try to understand what happens
+
+59
+00:03:23,030 --> 00:03:27,320
+when there is a market order that arrives to this limit
+
+60
+00:03:27,320 --> 00:03:30,180
+order book.
+
+61
+00:03:30,180 --> 00:03:32,660
+Suppose that there is a market order, comes in,
+
+62
+00:03:32,660 --> 00:03:35,230
+that wants to buy 200 shares.
+
+63
+00:03:35,230 --> 00:03:38,470
+
+
+64
+00:03:38,470 --> 00:03:44,420
+Now, the best ask is only for 100 shares.
+
+65
+00:03:44,420 --> 00:03:51,620
+So somebody is willing to sell you 100 shares at $13.04.
+
+66
+00:03:51,620 --> 00:03:59,850
+The next best ask is 300 shares at $13.05.
+
+67
+00:03:59,850 --> 00:04:03,130
+So your order got to get executed in two batches.
+
+68
+00:04:03,130 --> 00:04:08,970
+You will buy the available 100 shares at $13.04.
+
+69
+00:04:08,970 --> 00:04:14,790
+And then you will buy the remaining 100 shares at $13.05.
+
+70
+00:04:14,790 --> 00:04:16,560
+Now after your order is executed,
+
+71
+00:04:16,560 --> 00:04:19,860
+let's look at how does the limit order book
+
+72
+00:04:19,860 --> 00:04:23,130
+look like after this order is executed.
+
+73
+00:04:23,130 --> 00:04:28,040
+So we see that because we just purchased 100 shares at $13.04,
+
+74
+00:04:28,040 --> 00:04:32,060
+there is no bottom line, which indicates that we actually
+
+75
+00:04:32,060 --> 00:04:35,630
+purchased this 100 shares at this price.
+
+76
+00:04:35,630 --> 00:04:41,020
+And the ask of $13.05 for 300 shares
+
+77
+00:04:41,020 --> 00:04:44,330
+right now indicates that there are only 200 shares available
+
+78
+00:04:44,330 --> 00:04:46,540
+at $13.05.
+
+79
+00:04:46,540 --> 00:04:48,400
+Which makes sense, because we purchased
+
+80
+00:04:48,400 --> 00:04:50,260
+100 of these 300 shares that were
+
+81
+00:04:50,260 --> 00:04:53,730
+available from the beginning.
+

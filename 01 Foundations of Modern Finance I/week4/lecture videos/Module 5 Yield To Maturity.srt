@@ -1,0 +1,476 @@
+0
+00:00:00,000 --> 00:00:00,846
+
+
+1
+00:00:00,846 --> 00:00:03,520
+PROFESSOR: Next, we introduce an important concept
+
+2
+00:00:03,520 --> 00:00:07,570
+in fixed-income markets called yield to maturity.
+
+3
+00:00:07,570 --> 00:00:09,280
+If you open the Wall Street Journal
+
+4
+00:00:09,280 --> 00:00:12,010
+or you look at quotes for bond prices
+
+5
+00:00:12,010 --> 00:00:14,290
+on Bloomberg or another data source,
+
+6
+00:00:14,290 --> 00:00:17,170
+you're going to see that bond prices are typically
+
+7
+00:00:17,170 --> 00:00:19,840
+quoted not in dollars but in terms of their yield
+
+8
+00:00:19,840 --> 00:00:21,730
+to maturity.
+
+9
+00:00:21,730 --> 00:00:26,830
+Yield to maturity of the bond is defined as the rate of return
+
+10
+00:00:26,830 --> 00:00:30,640
+such that if it is applied across all of the maturities
+
+11
+00:00:30,640 --> 00:00:34,030
+from 1 to capital T, then the discounted value
+
+12
+00:00:34,030 --> 00:00:36,850
+of the cash flows paid by the bond
+
+13
+00:00:36,850 --> 00:00:39,910
+is equal to the bond price.
+
+14
+00:00:39,910 --> 00:00:43,140
+In other words, as you can see from the formula, if you
+
+15
+00:00:43,140 --> 00:00:46,890
+pretend that spot rates across all of the maturities
+
+16
+00:00:46,890 --> 00:00:50,170
+are the same and equal to yield to maturity,
+
+17
+00:00:50,170 --> 00:00:53,280
+then you should recover the bond price.
+
+18
+00:00:53,280 --> 00:00:55,830
+Yield to maturity is thus defined as the solution
+
+19
+00:00:55,830 --> 00:00:57,180
+of this equation.
+
+20
+00:00:57,180 --> 00:01:00,690
+Yield to maturity is a quoting convention.
+
+21
+00:01:00,690 --> 00:01:03,510
+It's a way of quoting bond prices.
+
+22
+00:01:03,510 --> 00:01:05,640
+It does not represent the rate of return
+
+23
+00:01:05,640 --> 00:01:07,800
+that the bond investor collects.
+
+24
+00:01:07,800 --> 00:01:10,110
+It is simply a way of summarizing
+
+25
+00:01:10,110 --> 00:01:12,960
+price information of the bond in a way that's
+
+26
+00:01:12,960 --> 00:01:14,840
+relatively intuitive.
+
+27
+00:01:14,840 --> 00:01:18,810
+Yield to maturities cannot be used to compare bonds to each
+
+28
+00:01:18,810 --> 00:01:19,590
+other.
+
+29
+00:01:19,590 --> 00:01:21,300
+A bond with a high yield to maturity
+
+30
+00:01:21,300 --> 00:01:24,330
+does not necessarily pay a higher return
+
+31
+00:01:24,330 --> 00:01:27,120
+or represent a better deal to the investors.
+
+32
+00:01:27,120 --> 00:01:31,050
+Again, these are simply quoting conventions.
+
+33
+00:01:31,050 --> 00:01:34,110
+Based on the definition, yield to maturity
+
+34
+00:01:34,110 --> 00:01:36,360
+is a somewhat complex weighted average
+
+35
+00:01:36,360 --> 00:01:39,270
+of spot rates across maturities.
+
+36
+00:01:39,270 --> 00:01:42,580
+It's a weighted average of interest rates.
+
+37
+00:01:42,580 --> 00:01:44,510
+Consider the following example.
+
+38
+00:01:44,510 --> 00:01:48,370
+Suppose that the 1-year interest rate is 5%,
+
+39
+00:01:48,370 --> 00:01:50,530
+and the 2-year rate is 6%.
+
+40
+00:01:50,530 --> 00:01:51,703
+These are the spot rates.
+
+41
+00:01:51,703 --> 00:01:53,620
+These are the rates of interest that investors
+
+42
+00:01:53,620 --> 00:01:55,800
+can collect in the market.
+
+43
+00:01:55,800 --> 00:01:59,250
+Now consider a 2-year treasury with a principal payment
+
+44
+00:01:59,250 --> 00:02:02,460
+of $100 and a coupon rate of 6%.
+
+45
+00:02:02,460 --> 00:02:05,310
+This bond pays $6 in the first year
+
+46
+00:02:05,310 --> 00:02:08,750
+and $106 in the second year.
+
+47
+00:02:08,750 --> 00:02:12,520
+Let's apply the definition of yield to maturity to this bond.
+
+48
+00:02:12,520 --> 00:02:15,070
+First, we compute the bond price.
+
+49
+00:02:15,070 --> 00:02:18,160
+The price of this bond is equal to 6
+
+50
+00:02:18,160 --> 00:02:21,190
+the first payment discounted to the 5% rate
+
+51
+00:02:21,190 --> 00:02:24,340
+over a single year plus 106--
+
+52
+00:02:24,340 --> 00:02:25,870
+that's the second payment--
+
+53
+00:02:25,870 --> 00:02:30,570
+discounted at the 6% interest rate over two years.
+
+54
+00:02:30,570 --> 00:02:36,580
+The total value, the price of this bond, is $100.05.
+
+55
+00:02:36,580 --> 00:02:39,680
+To compute the yield to maturity for this bond,
+
+56
+00:02:39,680 --> 00:02:42,140
+we now need to solve the equation.
+
+57
+00:02:42,140 --> 00:02:45,740
+$6 discounted at the rate y, yield
+
+58
+00:02:45,740 --> 00:02:51,320
+to maturity, over a single year plus $106 discounted at yield
+
+59
+00:02:51,320 --> 00:02:54,170
+to maturity over two years has to equal
+
+60
+00:02:54,170 --> 00:02:58,430
+the price of the bond, $100.05.
+
+61
+00:02:58,430 --> 00:03:03,380
+It turns out that the solution to this equation is 5.97%.
+
+62
+00:03:03,380 --> 00:03:06,530
+That is the yield to maturity of our bond.
+
+63
+00:03:06,530 --> 00:03:08,540
+If we plug this into the definition of yield
+
+64
+00:03:08,540 --> 00:03:11,450
+to maturity, we see the discounting cash
+
+65
+00:03:11,450 --> 00:03:17,660
+flows of this bond at 5.97% recovers the bond price.
+
+66
+00:03:17,660 --> 00:03:19,130
+As you can see, yield to maturity
+
+67
+00:03:19,130 --> 00:03:22,580
+falls somewhere between the two interest rates.
+
+68
+00:03:22,580 --> 00:03:24,680
+It's between 5% and 6%.
+
+69
+00:03:24,680 --> 00:03:27,140
+It's a lot closer to 6% because most
+
+70
+00:03:27,140 --> 00:03:30,710
+of the cash flows of this bond are paid at time 2.
+
+71
+00:03:30,710 --> 00:03:32,780
+In other words, yield to maturity
+
+72
+00:03:32,780 --> 00:03:35,630
+is some kind of weighted average of the spot rates.
+
+73
+00:03:35,630 --> 00:03:38,580
+But it is not a simple arithmetic average.
+
+74
+00:03:38,580 --> 00:03:41,050
+It's a solution of a somewhat complicated equation.
+
+75
+00:03:41,050 --> 00:03:44,760
+So it's a nonlinear function of the spot rates.
+
+76
+00:03:44,760 --> 00:03:48,570
+Yield to maturity has several simple properties
+
+77
+00:03:48,570 --> 00:03:51,300
+in relation to the coupon rate of the bond, which
+
+78
+00:03:51,300 --> 00:03:54,300
+are useful to keep in mind for thinking qualitatively
+
+79
+00:03:54,300 --> 00:03:58,080
+about how prices of bonds, their coupon rates, and yield
+
+80
+00:03:58,080 --> 00:04:00,960
+to maturity are related to each other.
+
+81
+00:04:00,960 --> 00:04:03,950
+First of all, bond price is inversely
+
+82
+00:04:03,950 --> 00:04:06,470
+related to yield to maturity.
+
+83
+00:04:06,470 --> 00:04:08,600
+As you increase yield to maturity,
+
+84
+00:04:08,600 --> 00:04:11,900
+you're discounting cash flows of the bond at a higher rate.
+
+85
+00:04:11,900 --> 00:04:15,220
+And of course, the bond price then declines.
+
+86
+00:04:15,220 --> 00:04:19,779
+The second property is that the bond sells at par,
+
+87
+00:04:19,779 --> 00:04:21,339
+meaning that the price of the bond
+
+88
+00:04:21,339 --> 00:04:23,680
+is equal to the principal payment,
+
+89
+00:04:23,680 --> 00:04:29,440
+if and only if yield to maturity is equal to the coupon rate.
+
+90
+00:04:29,440 --> 00:04:31,600
+To see why that is the case, consider
+
+91
+00:04:31,600 --> 00:04:33,040
+a bond with the principal payment
+
+92
+00:04:33,040 --> 00:04:36,580
+of 1 and the coupon rate c.
+
+93
+00:04:36,580 --> 00:04:39,760
+The price of this bond is equal to the sum
+
+94
+00:04:39,760 --> 00:04:42,370
+of its coupons discounted at the yield
+
+95
+00:04:42,370 --> 00:04:45,670
+to maturity y plus the principal payment, which
+
+96
+00:04:45,670 --> 00:04:50,960
+is 1, discounted at the yield to maturity back to time 0.
+
+97
+00:04:50,960 --> 00:04:55,360
+If we use the formula for an annuity with a rate of return
+
+98
+00:04:55,360 --> 00:05:00,230
+y, we can rewrite the price of the bond as a sum of two terms
+
+99
+00:05:00,230 --> 00:05:02,970
+that you can see on the right-hand side.
+
+100
+00:05:02,970 --> 00:05:04,770
+The important thing to note here is
+
+101
+00:05:04,770 --> 00:05:09,060
+that if the yield to maturity is equal to c, the coupon
+
+102
+00:05:09,060 --> 00:05:12,990
+rate of the bond, the second term disappears and becomes
+
+103
+00:05:12,990 --> 00:05:14,130
+equal to 0.
+
+104
+00:05:14,130 --> 00:05:16,320
+And the first term equals 1.
+
+105
+00:05:16,320 --> 00:05:19,830
+So the bond price is 1, which is the principal payment.
+
+106
+00:05:19,830 --> 00:05:23,910
+What this equation tells us is that when yield to maturity
+
+107
+00:05:23,910 --> 00:05:26,370
+equals the coupon rate, the bond price
+
+108
+00:05:26,370 --> 00:05:31,300
+is equal to the principal payment of the bond.
+
+109
+00:05:31,300 --> 00:05:33,880
+The bond price is declining as a function of yield
+
+110
+00:05:33,880 --> 00:05:37,420
+to maturity, which means that if yield to maturity
+
+111
+00:05:37,420 --> 00:05:41,650
+exceeds the coupon payment, the bond price is going to trade
+
+112
+00:05:41,650 --> 00:05:44,580
+at a level below the principal.
+
+113
+00:05:44,580 --> 00:05:47,230
+In this case, we say that the bond trades at a discount.
+
+114
+00:05:47,230 --> 00:05:50,880
+It trades below the par value.
+
+115
+00:05:50,880 --> 00:05:54,410
+If the yield to maturity is lower than the coupon rate,
+
+116
+00:05:54,410 --> 00:05:57,380
+then the bond is going to trade at a premium,
+
+117
+00:05:57,380 --> 00:05:59,000
+meaning that the price of the bond
+
+118
+00:05:59,000 --> 00:06:02,020
+will exceed the principal payment.
+

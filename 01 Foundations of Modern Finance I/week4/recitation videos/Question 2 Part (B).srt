@@ -1,0 +1,824 @@
+0
+00:00:00,000 --> 00:00:00,786
+
+
+1
+00:00:00,786 --> 00:00:03,790
+PROFESSOR: Now that we know there is arbitrage opportunity
+
+2
+00:00:03,790 --> 00:00:05,740
+in this market, I will teach you how
+
+3
+00:00:05,740 --> 00:00:09,100
+to construct an arbitrage trading strategy that
+
+4
+00:00:09,100 --> 00:00:10,780
+takes advantage of it.
+
+5
+00:00:10,780 --> 00:00:13,060
+In particular, we will construct such a strategy
+
+6
+00:00:13,060 --> 00:00:18,780
+that pays off $100 today and nothing in the future.
+
+7
+00:00:18,780 --> 00:00:20,440
+I will teach a very universal approach
+
+8
+00:00:20,440 --> 00:00:22,210
+that you can apply to construct arbitrage
+
+9
+00:00:22,210 --> 00:00:24,070
+opportunities in any situation.
+
+10
+00:00:24,070 --> 00:00:26,752
+
+
+11
+00:00:26,752 --> 00:00:28,210
+So we're going to assume that we're
+
+12
+00:00:28,210 --> 00:00:35,205
+buying xA amount of bond A, xB amount of bond B,
+
+13
+00:00:35,205 --> 00:00:41,910
+xC amount of bond C, and xD amount of bond D. We will allow
+
+14
+00:00:41,910 --> 00:00:47,610
+for these amounts for xA, xB, xC, and xD to be negative.
+
+15
+00:00:47,610 --> 00:00:50,460
+This would imply that we are taking a short position,
+
+16
+00:00:50,460 --> 00:00:52,920
+we're selling the corresponding bonds.
+
+17
+00:00:52,920 --> 00:00:56,440
+
+
+18
+00:00:56,440 --> 00:00:59,070
+So we want to construct a strategy that pays--
+
+19
+00:00:59,070 --> 00:01:02,290
+gives us $100 today.
+
+20
+00:01:02,290 --> 00:01:04,950
+We can write the following equation.
+
+21
+00:01:04,950 --> 00:01:07,860
+Bond prices multiplied by our positions
+
+22
+00:01:07,860 --> 00:01:10,350
+should add up to $100.
+
+23
+00:01:10,350 --> 00:01:12,982
+Here the key would be that bond prices would
+
+24
+00:01:12,982 --> 00:01:14,940
+come with negative signs because we're taking--
+
+25
+00:01:14,940 --> 00:01:17,020
+we're buying these bonds.
+
+26
+00:01:17,020 --> 00:01:22,490
+So for example, if we're buying one unit of bond A,
+
+27
+00:01:22,490 --> 00:01:25,230
+we will have to pay right now $96.90.
+
+28
+00:01:25,230 --> 00:01:27,630
+This is the price of bond A. So in this case,
+
+29
+00:01:27,630 --> 00:01:33,000
+we'll have a cash outflow of $96.90.
+
+30
+00:01:33,000 --> 00:01:35,340
+If we are buying two units of bond A,
+
+31
+00:01:35,340 --> 00:01:38,970
+then our cash outflow would be the price multiplied by 2.
+
+32
+00:01:38,970 --> 00:01:40,920
+So therefore this gives us the left hand side
+
+33
+00:01:40,920 --> 00:01:44,730
+of this equation, which means that we're buying xA of bond A,
+
+34
+00:01:44,730 --> 00:01:49,140
+xB of bond B, xC of bond C, and xD of bond D.
+
+35
+00:01:49,140 --> 00:01:53,650
+And so this expression gives us our total cash
+
+36
+00:01:53,650 --> 00:01:58,290
+outflow that we have to spend on buying these bonds.
+
+37
+00:01:58,290 --> 00:02:00,540
+And so this has to equal to $100 because this
+
+38
+00:02:00,540 --> 00:02:02,640
+is-- we want a positive cash outflow today
+
+39
+00:02:02,640 --> 00:02:06,390
+so we want to construct a strategy that gives us $100
+
+40
+00:02:06,390 --> 00:02:08,053
+today.
+
+41
+00:02:08,053 --> 00:02:09,720
+So you can immediately see that for this
+
+42
+00:02:09,720 --> 00:02:12,000
+to work that some of this amounts
+
+43
+00:02:12,000 --> 00:02:15,300
+xA, xB, and xC, and xD has to be a negative so
+
+44
+00:02:15,300 --> 00:02:17,670
+that the corresponding cash flow is positive.
+
+45
+00:02:17,670 --> 00:02:20,730
+So it makes sense that we would have
+
+46
+00:02:20,730 --> 00:02:26,010
+to take a negative position or short sell one of these bonds.
+
+47
+00:02:26,010 --> 00:02:27,510
+You could see that it's likely going
+
+48
+00:02:27,510 --> 00:02:30,540
+to be bond D because we've just determined
+
+49
+00:02:30,540 --> 00:02:34,230
+in the previous question that this bond is actually
+
+50
+00:02:34,230 --> 00:02:35,190
+overpriced.
+
+51
+00:02:35,190 --> 00:02:38,140
+
+
+52
+00:02:38,140 --> 00:02:41,190
+So this is just the summary of this.
+
+53
+00:02:41,190 --> 00:02:45,950
+Now the key to arbitrage is that our positions should be such
+
+54
+00:02:45,950 --> 00:02:49,700
+that the bond payoffs or our payoffs from our trading
+
+55
+00:02:49,700 --> 00:02:55,423
+strategy are zero in all of the subsequent years.
+
+56
+00:02:55,423 --> 00:02:57,090
+And that is the definition of arbitrage.
+
+57
+00:02:57,090 --> 00:02:59,880
+So we're making a positive amount today.
+
+58
+00:02:59,880 --> 00:03:02,700
+So in this particular case, we're going to make $100.
+
+59
+00:03:02,700 --> 00:03:04,420
+And are positions are fully hatched.
+
+60
+00:03:04,420 --> 00:03:07,080
+So our cash flows are exactly zero
+
+61
+00:03:07,080 --> 00:03:09,240
+in all of the subsequent years.
+
+62
+00:03:09,240 --> 00:03:11,700
+So here because the maximum maturity of the bonds
+
+63
+00:03:11,700 --> 00:03:13,710
+here is three years so we have to make sure
+
+64
+00:03:13,710 --> 00:03:21,180
+that in the years 1, 2, and 3 we get $0 cash flows.
+
+65
+00:03:21,180 --> 00:03:23,010
+Let's start with Year 1.
+
+66
+00:03:23,010 --> 00:03:26,040
+So recall that bond A is a zero coupon
+
+67
+00:03:26,040 --> 00:03:27,400
+bond with one year maturity.
+
+68
+00:03:27,400 --> 00:03:32,010
+So it pays $100 in the year one.
+
+69
+00:03:32,010 --> 00:03:34,830
+So therefore, the cash inflow or the positive cash
+
+70
+00:03:34,830 --> 00:03:37,260
+flow because we bought this bond,
+
+71
+00:03:37,260 --> 00:03:38,760
+so at the end of the year one, we
+
+72
+00:03:38,760 --> 00:03:43,050
+get $100 times how many units of this bond we purchased,
+
+73
+00:03:43,050 --> 00:03:45,450
+so times xA.
+
+74
+00:03:45,450 --> 00:03:50,458
+Now bond B is a 2.75% coupon bond.
+
+75
+00:03:50,458 --> 00:03:51,500
+And it's a two-year bond.
+
+76
+00:03:51,500 --> 00:03:54,780
+So it pays us the first coupon at the end of Year 1.
+
+77
+00:03:54,780 --> 00:03:58,980
+So we get 2.75 times xB.
+
+78
+00:03:58,980 --> 00:04:03,270
+And bond D, so bond C is a zero coupon bond so it pays nothing.
+
+79
+00:04:03,270 --> 00:04:05,670
+And it matures in year three.
+
+80
+00:04:05,670 --> 00:04:08,130
+And bond D, it's a 3% coupon bond
+
+81
+00:04:08,130 --> 00:04:11,640
+so it pays us for the first coupon $3
+
+82
+00:04:11,640 --> 00:04:13,560
+at the end of year one.
+
+83
+00:04:13,560 --> 00:04:16,050
+So hence we get the following expression and this
+
+84
+00:04:16,050 --> 00:04:19,050
+has to equal to $0 because, again, we
+
+85
+00:04:19,050 --> 00:04:22,800
+have to ensure that our cash flow at the end of year 1
+
+86
+00:04:22,800 --> 00:04:23,790
+is exactly 0.
+
+87
+00:04:23,790 --> 00:04:27,240
+
+
+88
+00:04:27,240 --> 00:04:31,170
+So for Year 2 now bond A pays nothing.
+
+89
+00:04:31,170 --> 00:04:33,750
+So it pays zero because it already matured.
+
+90
+00:04:33,750 --> 00:04:37,020
+Now bond B matures actually at the end of year two,
+
+91
+00:04:37,020 --> 00:04:40,920
+so it pays the second coupon of $2.75.
+
+92
+00:04:40,920 --> 00:04:44,940
+Plus it pays the face value of $100.
+
+93
+00:04:44,940 --> 00:04:47,160
+And bond C pays nothing because it's
+
+94
+00:04:47,160 --> 00:04:52,680
+a zero-coupon bond that matures at the end of year three.
+
+95
+00:04:52,680 --> 00:04:55,260
+And bond D pays our second coupon.
+
+96
+00:04:55,260 --> 00:04:56,160
+It pays $3.
+
+97
+00:04:56,160 --> 00:05:01,110
+So we have the following equation, 102.75 times xB
+
+98
+00:05:01,110 --> 00:05:03,000
+plus 3 times xD.
+
+99
+00:05:03,000 --> 00:05:04,770
+And that equals to $0.
+
+100
+00:05:04,770 --> 00:05:07,410
+
+
+101
+00:05:07,410 --> 00:05:10,652
+So finally for year three, we get-- so at that point in time,
+
+102
+00:05:10,652 --> 00:05:11,610
+bond A already matured.
+
+103
+00:05:11,610 --> 00:05:13,240
+So it pays nothing.
+
+104
+00:05:13,240 --> 00:05:16,560
+Bond B also matured, so it pays nothing.
+
+105
+00:05:16,560 --> 00:05:19,710
+Bond C pays its face value.
+
+106
+00:05:19,710 --> 00:05:20,640
+So $100.
+
+107
+00:05:20,640 --> 00:05:26,340
+And again, recall that this is a 0% coupon bond.
+
+108
+00:05:26,340 --> 00:05:29,280
+And bond D pays its last coupon which is
+
+109
+00:05:29,280 --> 00:05:33,352
+$3 plus its face value, $100.
+
+110
+00:05:33,352 --> 00:05:35,310
+So in year three we get the following equation,
+
+111
+00:05:35,310 --> 00:05:40,140
+so 100 multiplied by xC plus 103 multiplied by xD.
+
+112
+00:05:40,140 --> 00:05:42,000
+And that equals to $0.
+
+113
+00:05:42,000 --> 00:05:45,330
+
+
+114
+00:05:45,330 --> 00:05:46,870
+So let's put this all together.
+
+115
+00:05:46,870 --> 00:05:50,340
+So we have the following four equations.
+
+116
+00:05:50,340 --> 00:05:53,300
+So the first equation, it's our cash flow in the year one.
+
+117
+00:05:53,300 --> 00:05:57,200
+The second equation is our cash flow in the year one.
+
+118
+00:05:57,200 --> 00:06:01,270
+So the first one is our cash flow in the year zero.
+
+119
+00:06:01,270 --> 00:06:03,760
+Now, let's put this all together.
+
+120
+00:06:03,760 --> 00:06:06,870
+We have the following system of four equations
+
+121
+00:06:06,870 --> 00:06:08,640
+with four unknowns.
+
+122
+00:06:08,640 --> 00:06:14,710
+These equations represent our cash flows in Years 0, 1, 2,
+
+123
+00:06:14,710 --> 00:06:16,170
+and 3.
+
+124
+00:06:16,170 --> 00:06:18,690
+So the goal right now is to solve this system of equations
+
+125
+00:06:18,690 --> 00:06:22,332
+for xA, xB, and xC, and xD.
+
+126
+00:06:22,332 --> 00:06:23,790
+So here it's fairly straightforward
+
+127
+00:06:23,790 --> 00:06:25,360
+how to solve this.
+
+128
+00:06:25,360 --> 00:06:27,300
+So we can see that, for example, the last two
+
+129
+00:06:27,300 --> 00:06:29,370
+equations, so the tie--
+
+130
+00:06:29,370 --> 00:06:30,540
+they had just two unknowns.
+
+131
+00:06:30,540 --> 00:06:32,040
+So they tie xB and xD.
+
+132
+00:06:32,040 --> 00:06:33,480
+This is Equation 3.
+
+133
+00:06:33,480 --> 00:06:37,542
+An xC an xD, this is Equation 4.
+
+134
+00:06:37,542 --> 00:06:39,000
+So what I'm going to do is that I'm
+
+135
+00:06:39,000 --> 00:06:42,300
+going to solve the last two equations for xB
+
+136
+00:06:42,300 --> 00:06:47,820
+as a function of xD and xC as the function of xD.
+
+137
+00:06:47,820 --> 00:06:49,440
+Now let's look at the second equation.
+
+138
+00:06:49,440 --> 00:06:52,800
+Second equation has xA, xB, and xD.
+
+139
+00:06:52,800 --> 00:06:54,950
+So I'm going to plug in the third equation,
+
+140
+00:06:54,950 --> 00:07:00,870
+or xB into the second equation, and then solve it to express xA
+
+141
+00:07:00,870 --> 00:07:06,240
+as a function of xD.
+
+142
+00:07:06,240 --> 00:07:08,820
+So this is me first-step plugging xB
+
+143
+00:07:08,820 --> 00:07:12,510
+as the function of xD into this second equation.
+
+144
+00:07:12,510 --> 00:07:17,310
+And then the next step, I'm solving xA for xD.
+
+145
+00:07:17,310 --> 00:07:20,140
+So I'm solving the second equation.
+
+146
+00:07:20,140 --> 00:07:23,160
+And so now the second, third, and fourth equation right now
+
+147
+00:07:23,160 --> 00:07:27,690
+give us xA, xB, and xC as functions of xD.
+
+148
+00:07:27,690 --> 00:07:30,180
+And so if we plug these expressions
+
+149
+00:07:30,180 --> 00:07:34,020
+into the first equation, it will give us
+
+150
+00:07:34,020 --> 00:07:36,030
+just equation with one unknown.
+
+151
+00:07:36,030 --> 00:07:39,015
+So we'll have only xD in that equation.
+
+152
+00:07:39,015 --> 00:07:42,030
+
+
+153
+00:07:42,030 --> 00:07:45,980
+So doing that and solving that equation will give us
+
+154
+00:07:45,980 --> 00:07:52,330
+xD equal to negative 38.85.
+
+155
+00:07:52,330 --> 00:07:54,850
+So what this means, it means that we are selling,
+
+156
+00:07:54,850 --> 00:08:01,270
+we are shorting 38.85 units of bond D.
+
+157
+00:08:01,270 --> 00:08:04,180
+So here I implicitly assume that I can actually
+
+158
+00:08:04,180 --> 00:08:05,570
+trade fractions of the bond.
+
+159
+00:08:05,570 --> 00:08:07,400
+So I can buy any fraction.
+
+160
+00:08:07,400 --> 00:08:09,180
+So in this case, I'm buying 0.85.
+
+161
+00:08:09,180 --> 00:08:16,510
+So I'm buying 38 whole units and 85 of fraction of bond D.
+
+162
+00:08:16,510 --> 00:08:20,650
+So now this does make economic sense.
+
+163
+00:08:20,650 --> 00:08:23,320
+Because we've identified in the first part of this question
+
+164
+00:08:23,320 --> 00:08:25,900
+is that bond D was overvalued.
+
+165
+00:08:25,900 --> 00:08:27,820
+It was overpriced.
+
+166
+00:08:27,820 --> 00:08:30,130
+So it was priced at 99.5.
+
+167
+00:08:30,130 --> 00:08:34,630
+Well, it's fair price was $96.
+
+168
+00:08:34,630 --> 00:08:36,437
+So therefore it does make sense for us
+
+169
+00:08:36,437 --> 00:08:38,020
+to take advantage of this opportunity.
+
+170
+00:08:38,020 --> 00:08:42,220
+We have to actually sell those bonds at this higher price
+
+171
+00:08:42,220 --> 00:08:46,600
+and therefore get this higher value to us right now.
+
+172
+00:08:46,600 --> 00:08:49,180
+And then we're going to be taking long positions
+
+173
+00:08:49,180 --> 00:08:51,340
+in the other three bonds to make sure
+
+174
+00:08:51,340 --> 00:08:57,070
+that we get $0 payoffs in the Years 1, 2, and 3.
+
+175
+00:08:57,070 --> 00:09:00,150
+So now, since we have xD, what we can do
+
+176
+00:09:00,150 --> 00:09:03,710
+is that we are plugging this amount
+
+177
+00:09:03,710 --> 00:09:10,230
+xD that we found in the equations that tie xA with xD,
+
+178
+00:09:10,230 --> 00:09:12,870
+xB with xD, and xC with xD.
+
+179
+00:09:12,870 --> 00:09:19,860
+And we get the following amounts for xA, xB, and xC.
+
+180
+00:09:19,860 --> 00:09:21,990
+So xA and xB equal to 1.13, which
+
+181
+00:09:21,990 --> 00:09:29,850
+means that we are buying 1.13 units of bond A 1.13
+
+182
+00:09:29,850 --> 00:09:37,860
+units of bond B. And we are buying 40.02 units of bond C.
+
+183
+00:09:37,860 --> 00:09:42,270
+So we're taking long positions in these bonds.
+
+184
+00:09:42,270 --> 00:09:44,310
+Now this is our arbitrage strategy.
+
+185
+00:09:44,310 --> 00:09:49,455
+So we are selling 38.85 units of bond D
+
+186
+00:09:49,455 --> 00:09:52,020
+and we're buying the corresponding units of bonds
+
+187
+00:09:52,020 --> 00:09:56,610
+A, B, and C. Now the final step that I want to do here
+
+188
+00:09:56,610 --> 00:09:59,880
+is that I want to actually verify that this trading
+
+189
+00:09:59,880 --> 00:10:01,900
+strategy actually works.
+
+190
+00:10:01,900 --> 00:10:03,690
+So what I will do is that I will plug
+
+191
+00:10:03,690 --> 00:10:08,790
+in these amounts of xA, xB, xC, and xD that we found
+
+192
+00:10:08,790 --> 00:10:10,980
+into our equations to make sure that we
+
+193
+00:10:10,980 --> 00:10:14,520
+get the cash flows that we are thinking that we're getting.
+
+194
+00:10:14,520 --> 00:10:15,900
+So if I am plugging these numbers
+
+195
+00:10:15,900 --> 00:10:18,840
+into the first equation, I get $100.
+
+196
+00:10:18,840 --> 00:10:22,140
+So which means that me buying the corresponding amounts
+
+197
+00:10:22,140 --> 00:10:25,690
+of bonds A, B, and C, and shorting
+
+198
+00:10:25,690 --> 00:10:32,550
+the corresponding amounts of bond D gives us exactly $100.
+
+199
+00:10:32,550 --> 00:10:37,790
+In the Year 1, this equation tells us that we get exactly 0,
+
+200
+00:10:37,790 --> 00:10:39,500
+as we expect.
+
+201
+00:10:39,500 --> 00:10:42,530
+In Year 2, we also get 0.
+
+202
+00:10:42,530 --> 00:10:46,470
+And in Year 3, we also get 0.
+
+203
+00:10:46,470 --> 00:10:49,120
+So our arbitrage strategy indeed works.
+
+204
+00:10:49,120 --> 00:10:51,240
+It gives us $100 right now.
+
+205
+00:10:51,240 --> 00:10:56,330
+And it gives us nothing in the Years 1, 2, and 3.
+

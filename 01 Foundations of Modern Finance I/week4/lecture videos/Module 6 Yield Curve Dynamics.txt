@@ -1,0 +1,221 @@
+
+PROFESSOR: Next, we're going to discuss
+some of the properties of yield curve dynamics
+and the models that describe how interest
+rates of various maturities are related to each other.
+Let's start with the expectations hypothesis,
+which is an important theory about properties
+of interest rates.
+It is an important benchmark.
+To introduce this idea, let's consider
+two alternative investment strategies.
+Strategy one is very simple.
+We start with $1 and invest it into a 10-year discount bond.
+Strategy two, invest the same dollar into a 9-year discount
+bond, and then reinvest the proceeds
+of that first investment over an additional 1-year period.
+Of course, we reinvest it at the 1-year spot rate at that time,
+between years 9 and 10.
+Under the expectations hypothesis,
+we assume that bonds do not carry a risk premium, which
+means that all of these types of investment strategies
+that move money between time 0 and time 10
+by investing in different bonds and maybe reinvesting-- they
+all earn the same expected rate of return.
+In other words, under the expectations hypothesis,
+the expected return on strategy two
+has to be equal to the expected return on strategy one.
+Let's explore the implication of this idea.
+First, introduce a new piece of notation.
+r sub s as a function of t is going
+to denote the spot interest rate at time t with a maturity s.
+By default, we're going to set t equal to 0.
+So we're talking about interest rates at time 0.
+Consider our two strategies-- strategy one, strategy two.
+In the formula, the total return of strategy one
+appears on the right-hand side.
+It is equal to 1 plus the 10-year spot
+rate raised to power 10.
+The expected return on strategy two is on the left-hand side.
+Notice that the realized return of strategy two is 1 plus
+the 9-year spot rate as of time 0 raised to power 9--
+that's the return on the first leg of the strategy
+and the investment in that 9-year discount bond--
+times 1 plus the 1-year spot rate as of time 9.
+This is the second leg of the strategy.
+And note that there is a squiggle-- the tilde-- on top
+of that interest rate, which reminds us
+that the spot rate at time 9 is a random variable.
+It is not known as of time 0.
+The expectations hypothesis equates the expected value
+of the left-hand side and the right-hand side.
+Of course, the right-hand side is not random.
+We know exactly what the spot rate for a 10-year investment
+is as of time 0.
+It's a 10-year spot interest rate.
+Now, if we rearrange the terms in this equation,
+we can relate the expected value of a 1-year spot rate at time 9
+to the spot rate at time 0 for maturities of 9 and 10.
+This equation tells us that the expected value of a 9-year spot
+rate is equal to the ratio of 1 plus the 10-year rate raised
+to power 10 divided by 1 plus the 9-year spot
+rate raised to power 9 minus 1.
+Under the expectations hypothesis,
+the slope of the yield curve predicts future spot rates.
+To see what that means, let's consider our formula closely.
+Expected value of a 1-year spot rate at time 9
+can be expressed as the ratio of 1 plus the 10-year spot rate
+to power 9 divided by 1 plus the 9-year spot rate to power 9
+times 1 plus the 10-year spot rate minus 1.
+Suppose that the 10-year spot rate
+is above the 9-year rate as of time 0.
+In other words, the yield curve is upward
+sloping between years 9 and 10.
+With that information, we can see
+that the first term in the formula
+is going to be at least as high as 1 plus the 10-year spot
+rate.
+And so as a result, the expected interest rate
+over a single year at time 9 has to be higher
+than the 10-year spot rate at time 0.
+In other words, when the yield curve is upward sloping,
+it's telling us that the expected spot
+rate in the future has to be relatively high.
+If the yield curve was downward sloping,
+we would find the reverse, that the expected spot rate
+at time 9 is relatively low.
+Now, in a special case when the 10-year rate
+is equal to the 9-year rate, using the formula,
+we can see that the expected value of a 1-year spot
+rate at time 9 is equal to the 10-year or the 9-year spot
+rates at time 0.
+More generally, the expectations hypothesis
+tells us there is a relation between expected future spot
+rates and the current spot rates.
+This is a direct generalization of the equation
+that we derived in our example.
+The expected 1-year rate at time t
+is related to the spot rates for periods t and t plus 1.
+Specifically, it's the ratio of 1
+plus the spot rate for period t plus 1 raised to power t
+plus 1 divided by 1 plus the t period spot
+rate raised to power t minus 1.
+Under the expectations hypothesis,
+the expected value of the future interest rates
+is based on the current interest rates.
+As an alternative to the expectations hypothesis,
+consider the following so-called liquidity hypothesis.
+Under this idea, investors regard long-term bonds
+as relatively risky relative to short-term bonds.
+For example, if you are an investor with a relatively
+short horizon, and you buy a long-term bond,
+at the end of your investment period
+when you liquidate your position, the payoff is random.
+It depends on the future interest rates.
+In contrast, if you invest into a short-term bond,
+your payoff could be relatively less risky or even fixed.
+That's one of the arguments that could be used to justify
+the liquidity preference.
+More generally, under the liquidity preference
+hypothesis, the equation that we derived for the expectations
+hypothesis needs to be modified.
+The right-hand side is the same.
+It relates spot rates of different maturities.
+On the left-hand side, what we see
+is that in addition to the expected future spot rate,
+we have an additional term, lambda,
+which represents the so-called risk premium or a liquidity
+premium.
+In other words, the slope of the yield curve over various points
+down the curve between time t and t plus 1
+represents not only the expected future spot rate, but also
+an adjustment that accounts for riskiness
+of bonds of long maturities.
+The implication of this hypothesis
+is that if lambda is positive, than the long bonds on average
+receive a higher rate of return than the short-term bonds.
+In other words, if you're thinking
+about predicting interest rates using the shape of the yield
+curve, this tells us that the spot interest
+rates of long maturities overpredict
+the future short-term rates.
+So if you use the expectations hypothesis formula,
+and you form a forecast of the spot rate using that relation,
+that forecast is going to be biased.
+It's going to be upward biased.
+And the reason for that is that the slope of the yield
+curve between various points is not equal to the expected spot
+rate, but also accounts for a liquidity or a risk premium.
+Historically, long-term bonds produced higher average rates
+of return than short-term bonds.
+For instance, if you look at the period from 1926 until 2018,
+the average rate of return on short-term Treasury
+bonds in the US, the Treasury bills, has been 3.4%.
+In comparison, long-term bonds earned 5.9%.
+This highlights the fact that, on average, long-term bonds
+produce a higher rate of return than short-term bonds.
+This empirical fact tells us that the expectations
+hypothesis does not describe market dynamics very well.
+Under the expectations hypothesis,
+average rates of return on long-term bonds
+and on short-term bonds would have to be the same.
+Empirically, they're quite different.
+So why do long-term bonds earn a higher rate of return?
+Why is there a positive spread or the positive risk premium
+attached to the long-term bonds?
+There could be several potential reasons for that.
+One reason is that short-term bonds are in a way money-like.
+They are relatively liquid.
+They hold their value better in the short run
+than long-term bonds.
+If investors have needs for these types of securities that
+are relatively safe over short horizons,
+then they will be willing to pay more for short-term bonds.
+In other words, they will be willing to accept lower
+rates of return on these bonds.
+The rate of return on cash, on money, is 0.
+And short-term bonds, which are money-like,
+accordingly would have to have lower rates of return.
+That's one argument.
+Another reason for why long-term bonds
+may pay higher rates of return than short-term bonds
+is because they are more exposed to inflation risk.
+We're talking about nominal bonds here.
+They lose value when inflation spikes.
+Suppose there is news that inflation in the future
+is going to be higher.
+This news is going to reduce the value of long-term bonds
+and is going to raise future interest rates.
+Short-term bonds are relatively immune to these types
+of shocks.
+As a result, inflation risk is going
+to affect long-term bond investors
+more than those invested in short-term securities.
+This could be one reason why investors in long-term bonds
+would demand a higher rate of return
+to compensate them for inflation risk.
+We have seen a couple of theories
+that talk about various determinants of yields
+or interest rates across maturities.
+Expectations of future spot rates, of course,
+affect interest rates of various maturities.
+But that is not the whole story.
+Risk of long-term bonds is also important.
+So expectations of future rates and their risk
+ultimately determine the shape of the yield curve.
+Expectations hypothesis assumes that there is no risk premium,
+that interest rates across maturities
+are based on the expected future spot rates.
+The liquidity preference hypothesis
+incorporates considerations of risk.
+But it is not very specific about how, exactly, risk
+affects spot rates across the yield curve.
+There are more explicit, dynamic theories of the term structure
+that develop mathematical models of how
+interest rates across maturities evolve across time
+and how their behavior is shaped by expectations
+of future rates and their risk.
+Examples of these are the Vasicek model,
+the Cox-Ingersoll-Ross model, and so forth.
+You can learn more about these dynamic models of the yield
+curve in the fixed income course.

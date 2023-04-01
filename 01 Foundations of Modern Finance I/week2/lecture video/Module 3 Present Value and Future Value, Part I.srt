@@ -1,0 +1,408 @@
+0
+00:00:00,000 --> 00:00:00,640
+
+
+1
+00:00:00,640 --> 00:00:03,220
+PROFESSOR: Using market prices, prices
+
+2
+00:00:03,220 --> 00:00:06,430
+or expected returns of traded assets,
+
+3
+00:00:06,430 --> 00:00:09,730
+we can value a particular asset, project,
+
+4
+00:00:09,730 --> 00:00:14,450
+or cash flow, its current market value or present value.
+
+5
+00:00:14,450 --> 00:00:16,790
+We now expand on this idea to further
+
+6
+00:00:16,790 --> 00:00:20,300
+develop some techniques to value a cash flow
+
+7
+00:00:20,300 --> 00:00:24,410
+or to compute its present value.
+
+8
+00:00:24,410 --> 00:00:28,580
+We will do so by starting with a couple of examples,
+
+9
+00:00:28,580 --> 00:00:32,509
+the extensions of the simple examples we considered
+
+10
+00:00:32,509 --> 00:00:35,100
+in the introduction.
+
+11
+00:00:35,100 --> 00:00:38,570
+We will start with the simplest case possible.
+
+12
+00:00:38,570 --> 00:00:44,420
+That is, $1,000 of a safe cash flow in one year.
+
+13
+00:00:44,420 --> 00:00:50,990
+The question is, how much should that cash flow be worth today?
+
+14
+00:00:50,990 --> 00:00:54,230
+Let's suppose that in a market similar assets,
+
+15
+00:00:54,230 --> 00:00:58,190
+namely safe assets, are offering an annual return of 2%.
+
+16
+00:00:58,190 --> 00:01:01,030
+
+
+17
+00:01:01,030 --> 00:01:05,700
+Think of a potential buyer of this cash flow.
+
+18
+00:01:05,700 --> 00:01:09,390
+She would also expect a 2% annual return,
+
+19
+00:01:09,390 --> 00:01:15,050
+same as what other safe assets offer in a market.
+
+20
+00:01:15,050 --> 00:01:19,150
+Let the price she's willing to pay be P. Then we
+
+21
+00:01:19,150 --> 00:01:21,370
+have the following equation.
+
+22
+00:01:21,370 --> 00:01:24,160
+Namely, P, which is the price she is paying,
+
+23
+00:01:24,160 --> 00:01:30,100
+times 1 plus the 2% return she expects to get.
+
+24
+00:01:30,100 --> 00:01:34,390
+That should equal to the total cash flow at the year end.
+
+25
+00:01:34,390 --> 00:01:36,550
+That's $1,000.
+
+26
+00:01:36,550 --> 00:01:40,570
+We can solve this equation for the price, P,
+
+27
+00:01:40,570 --> 00:01:43,270
+which would equal to $1,000.
+
+28
+00:01:43,270 --> 00:01:47,860
+That's the expected cash flow in this case with certainty.
+
+29
+00:01:47,860 --> 00:01:55,220
+Divide by 1 plus the expected rate of return, 2%.
+
+30
+00:01:55,220 --> 00:02:01,630
+If we finish that computation, we're getting P to be $980.
+
+31
+00:02:01,630 --> 00:02:04,610
+This is a rounded number.
+
+32
+00:02:04,610 --> 00:02:09,550
+So this is really what any investor in a market
+
+33
+00:02:09,550 --> 00:02:12,190
+would be willing to pay, which is also
+
+34
+00:02:12,190 --> 00:02:14,950
+what we call the present value or the current market
+
+35
+00:02:14,950 --> 00:02:17,750
+value of this cash flow.
+
+36
+00:02:17,750 --> 00:02:20,420
+It's really given by the expected cash
+
+37
+00:02:20,420 --> 00:02:22,190
+flow from this asset--
+
+38
+00:02:22,190 --> 00:02:24,950
+in this case, $1,000 for sure--
+
+39
+00:02:24,950 --> 00:02:30,640
+discounted at the required rate of return of 2%.
+
+40
+00:02:30,640 --> 00:02:34,020
+So this formula is sometimes also called
+
+41
+00:02:34,020 --> 00:02:36,900
+the discounted cash flow formula, namely,
+
+42
+00:02:36,900 --> 00:02:40,350
+the value of a cash flow when an asset is
+
+43
+00:02:40,350 --> 00:02:44,070
+given by its expected payoff discounted
+
+44
+00:02:44,070 --> 00:02:47,800
+at appropriate discount rate.
+
+45
+00:02:47,800 --> 00:02:52,630
+Now of course, we realize this discount rate really reflects
+
+46
+00:02:52,630 --> 00:02:54,920
+the time value of money.
+
+47
+00:02:54,920 --> 00:02:59,950
+It adjusts for the fact that $1,000 is occurring-- not now,
+
+48
+00:02:59,950 --> 00:03:03,770
+but one year from today.
+
+49
+00:03:03,770 --> 00:03:06,350
+In the second example, we can assume
+
+50
+00:03:06,350 --> 00:03:11,360
+that this $1,000 in one year, it's no longer certain.
+
+51
+00:03:11,360 --> 00:03:13,830
+But rather, it's risky.
+
+52
+00:03:13,830 --> 00:03:19,220
+The question is how much should it be worth today?
+
+53
+00:03:19,220 --> 00:03:21,590
+Let's again look at the market.
+
+54
+00:03:21,590 --> 00:03:24,560
+Suppose that traded assets of similar risk
+
+55
+00:03:24,560 --> 00:03:28,760
+offer an expected annual rate of return of 20%.
+
+56
+00:03:28,760 --> 00:03:33,320
+Well, given that, we can easily compute the current market
+
+57
+00:03:33,320 --> 00:03:41,100
+value for this cash flow of $1,000 in one year.
+
+58
+00:03:41,100 --> 00:03:42,960
+The potential buyer, again, would
+
+59
+00:03:42,960 --> 00:03:47,400
+expect a 20% return on this by paying the current price--
+
+60
+00:03:47,400 --> 00:03:49,890
+let's say, P.
+
+61
+00:03:49,890 --> 00:03:55,320
+So by looking at this equation, P times 1 plus 20%
+
+62
+00:03:55,320 --> 00:03:57,990
+should equal to $1,000, the expected
+
+63
+00:03:57,990 --> 00:04:00,840
+payoff from this risky asset.
+
+64
+00:04:00,840 --> 00:04:02,670
+The present value of this cash flow
+
+65
+00:04:02,670 --> 00:04:07,620
+then is given by this simple discounted cash flow formula,
+
+66
+00:04:07,620 --> 00:04:11,160
+namely, $1,000 of expected cash flow discounted
+
+67
+00:04:11,160 --> 00:04:14,460
+at the 20% rate of return, which is
+
+68
+00:04:14,460 --> 00:04:17,760
+the market's expected rate of return for assets
+
+69
+00:04:17,760 --> 00:04:19,829
+with this level risk.
+
+70
+00:04:19,829 --> 00:04:22,079
+If we finish the calculation, that
+
+71
+00:04:22,079 --> 00:04:25,590
+gives the present value or the current market price
+
+72
+00:04:25,590 --> 00:04:31,850
+for this cash flow of $833.
+
+73
+00:04:31,850 --> 00:04:35,720
+As we noticed, the discount rate here of 20%
+
+74
+00:04:35,720 --> 00:04:40,730
+is quite a bit higher than the 2% in the previous example,
+
+75
+00:04:40,730 --> 00:04:44,450
+where the cash flow is certain.
+
+76
+00:04:44,450 --> 00:04:51,640
+This actual rate of return reflects the risk premium.
+
+77
+00:04:51,640 --> 00:04:54,750
+So the present value formula really
+
+78
+00:04:54,750 --> 00:04:58,770
+properly adjusts for risk by choosing
+
+79
+00:04:58,770 --> 00:05:04,085
+the appropriate discount rate for assets with same risks.
+
+80
+00:05:04,085 --> 00:05:07,910
+
+
+81
+00:05:07,910 --> 00:05:12,290
+From the two examples, we can generalize the current market
+
+82
+00:05:12,290 --> 00:05:14,840
+value of a cash flow or its present value
+
+83
+00:05:14,840 --> 00:05:17,760
+is determined by two factors.
+
+84
+00:05:17,760 --> 00:05:20,090
+First, its expected payoff.
+
+85
+00:05:20,090 --> 00:05:22,430
+Second, an appropriate discount rate,
+
+86
+00:05:22,430 --> 00:05:26,510
+where the discount rate is given by the expected rate of return
+
+87
+00:05:26,510 --> 00:05:29,030
+on traded assets with similar cash
+
+88
+00:05:29,030 --> 00:05:32,540
+flows in both timing and risk.
+
+89
+00:05:32,540 --> 00:05:35,690
+In particular, the present value of a cash flow
+
+90
+00:05:35,690 --> 00:05:40,370
+is given by its expected cash flow discounted
+
+91
+00:05:40,370 --> 00:05:44,280
+at an appropriate discount rate, r bar.
+
+92
+00:05:44,280 --> 00:05:47,460
+Therefore, the value of an asset or cash flow
+
+93
+00:05:47,460 --> 00:05:49,980
+is determined by the financial market
+
+94
+00:05:49,980 --> 00:05:52,860
+through the discount rate or expected rate of return,
+
+95
+00:05:52,860 --> 00:05:55,080
+or required rate of return.
+
+96
+00:05:55,080 --> 00:05:58,230
+They all mean more or less the same thing.
+
+97
+00:05:58,230 --> 00:06:00,390
+The discount rate here should properly
+
+98
+00:06:00,390 --> 00:06:05,250
+adjust for time and risk of the cash flow.
+
+99
+00:06:05,250 --> 00:06:08,610
+The discount rate is also called the opportunity cost of capital
+
+100
+00:06:08,610 --> 00:06:13,440
+because it is the return offered by similar assets traded
+
+101
+00:06:13,440 --> 00:06:15,230
+in the market.
+

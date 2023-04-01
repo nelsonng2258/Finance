@@ -1,0 +1,216 @@
+0
+00:00:00,000 --> 00:00:00,870
+
+
+1
+00:00:00,870 --> 00:00:04,019
+PROFESSOR: There is a company called Common App.
+
+2
+00:00:04,019 --> 00:00:07,830
+It's a startup company that produces Common App.
+
+3
+00:00:07,830 --> 00:00:10,680
+This company currently does not pay dividends.
+
+4
+00:00:10,680 --> 00:00:13,380
+It's a startup company so it reinvests all of the earnings
+
+5
+00:00:13,380 --> 00:00:16,510
+back into its operations.
+
+6
+00:00:16,510 --> 00:00:18,250
+But it is expected that this company is
+
+7
+00:00:18,250 --> 00:00:21,100
+going to start paying dividend in year five
+
+8
+00:00:21,100 --> 00:00:24,070
+and the expectation is that the dividend in year five
+
+9
+00:00:24,070 --> 00:00:26,500
+will be $1.
+
+10
+00:00:26,500 --> 00:00:28,570
+After that it is expected that this dividend is
+
+11
+00:00:28,570 --> 00:00:31,450
+going to grow at the expected rate of 3%,
+
+12
+00:00:31,450 --> 00:00:34,420
+and this growth is going to continue into perpetuity,
+
+13
+00:00:34,420 --> 00:00:36,440
+in other words forever.
+
+14
+00:00:36,440 --> 00:00:38,560
+We will assume that the appropriate discount
+
+15
+00:00:38,560 --> 00:00:41,080
+rate for the cash flows for the dividends from this stock
+
+16
+00:00:41,080 --> 00:00:42,970
+is 12%.
+
+17
+00:00:42,970 --> 00:00:45,370
+The question is, what is the current price
+
+18
+00:00:45,370 --> 00:00:48,800
+of a share of Common App?
+
+19
+00:00:48,800 --> 00:00:53,630
+Let's use Gordon growth model to compute the price of the stock.
+
+20
+00:00:53,630 --> 00:00:57,950
+First, I will put all the dividends on a timeline.
+
+21
+00:00:57,950 --> 00:00:59,912
+So recall that in the first four years
+
+22
+00:00:59,912 --> 00:01:02,120
+of the life of this company doesn't pay any dividends
+
+23
+00:01:02,120 --> 00:01:03,703
+because it's growing, it's reinvesting
+
+24
+00:01:03,703 --> 00:01:06,278
+all of its earnings, and starting in year five
+
+25
+00:01:06,278 --> 00:01:07,570
+it will start paying dividends.
+
+26
+00:01:07,570 --> 00:01:10,100
+So the first dividend will be $1.
+
+27
+00:01:10,100 --> 00:01:12,350
+From that point onwards the dividend
+
+28
+00:01:12,350 --> 00:01:14,440
+is going to grow at 3% rate.
+
+29
+00:01:14,440 --> 00:01:16,680
+So dividend in the year six for example,
+
+30
+00:01:16,680 --> 00:01:21,230
+is just $1 multiplied by 1 plus 3%.
+
+31
+00:01:21,230 --> 00:01:24,800
+I will do two steps in order to find the value of the stock
+
+32
+00:01:24,800 --> 00:01:26,000
+today.
+
+33
+00:01:26,000 --> 00:01:30,080
+First I will compute the value of all of these dividends
+
+34
+00:01:30,080 --> 00:01:32,240
+that started in year five and continue
+
+35
+00:01:32,240 --> 00:01:35,650
+to perpetuity as of year four.
+
+36
+00:01:35,650 --> 00:01:39,840
+To do that I will simply use the growing perpetuity formula.
+
+37
+00:01:39,840 --> 00:01:44,090
+So in this case, the price of the stock in year four
+
+38
+00:01:44,090 --> 00:01:47,410
+is going to be equal to the dividend in the year five,
+
+39
+00:01:47,410 --> 00:01:51,170
+D5, divided by r minus g, g is the expected growth
+
+40
+00:01:51,170 --> 00:01:54,180
+rate in dividends, r is the discount rate.
+
+41
+00:01:54,180 --> 00:01:57,470
+So this is just a simple growing perpetuity.
+
+42
+00:01:57,470 --> 00:02:02,660
+So D1 equals to $1 and we're dividing it by 12 minus 3%,
+
+43
+00:02:02,660 --> 00:02:05,990
+this gives me $11.11.
+
+44
+00:02:05,990 --> 00:02:09,250
+So this is the price of the stock in year four.
+
+45
+00:02:09,250 --> 00:02:12,040
+Now to find the price of the stock right now,
+
+46
+00:02:12,040 --> 00:02:15,760
+we need to take the P4 and discount it to present.
+
+47
+00:02:15,760 --> 00:02:18,340
+So I'm simply taking P4 and I'm dividing it
+
+48
+00:02:18,340 --> 00:02:20,900
+by 1 plus r raised to the power four,
+
+49
+00:02:20,900 --> 00:02:24,820
+again, r is our discount rate, so 11.11,
+
+50
+00:02:24,820 --> 00:02:28,990
+divided by 1 plus 12%, raise to the power four,
+
+51
+00:02:28,990 --> 00:02:33,760
+this gives me the current price of $7.06.
+
+52
+00:02:33,760 --> 00:02:38,010
+So the current price of this Common App stock is $7.06.
+
+53
+00:02:38,010 --> 00:02:39,000
+
+

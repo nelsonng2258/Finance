@@ -1,0 +1,504 @@
+0
+00:00:00,000 --> 00:00:00,952
+
+
+1
+00:00:00,952 --> 00:00:02,660
+PROFESSOR: In part c, we're asked
+
+2
+00:00:02,660 --> 00:00:06,830
+to compute duration of a 5% coupon $100
+
+3
+00:00:06,830 --> 00:00:11,820
+face value bond that has 20 years to maturity.
+
+4
+00:00:11,820 --> 00:00:14,340
+Let's start with Macaulay duration.
+
+5
+00:00:14,340 --> 00:00:17,700
+Again, this is the definition of Macaulay duration written
+
+6
+00:00:17,700 --> 00:00:20,310
+for this particular bond.
+
+7
+00:00:20,310 --> 00:00:22,530
+So capital T here is 20.
+
+8
+00:00:22,530 --> 00:00:25,530
+This is the number of years until the maturity
+
+9
+00:00:25,530 --> 00:00:26,970
+of this bond.
+
+10
+00:00:26,970 --> 00:00:31,330
+And since this bond pays annual coupon,
+
+11
+00:00:31,330 --> 00:00:35,360
+the annual payment that we get from this bond is $5.
+
+12
+00:00:35,360 --> 00:00:36,910
+So all we need to do here is that we
+
+13
+00:00:36,910 --> 00:00:39,770
+need to compute the price of this bond and compute this sum.
+
+14
+00:00:39,770 --> 00:00:43,120
+And this will give us the Macaulay duration.
+
+15
+00:00:43,120 --> 00:00:44,470
+So we can compute this by hand.
+
+16
+00:00:44,470 --> 00:00:46,980
+But it's a little bit tedious because we have to--
+
+17
+00:00:46,980 --> 00:00:47,920
+we have 20 periods.
+
+18
+00:00:47,920 --> 00:00:51,410
+And for each of the period, we have to compute these numbers.
+
+19
+00:00:51,410 --> 00:00:53,080
+So what I will do is that I will use
+
+20
+00:00:53,080 --> 00:00:55,390
+Excel to illustrate how to compute
+
+21
+00:00:55,390 --> 00:00:58,080
+the duration for this bond.
+
+22
+00:00:58,080 --> 00:01:00,990
+In this Excel spreadsheet, I have put some basic information
+
+23
+00:01:00,990 --> 00:01:02,830
+about this bond.
+
+24
+00:01:02,830 --> 00:01:05,459
+So the current YTM is 2%.
+
+25
+00:01:05,459 --> 00:01:07,680
+Face value is $100.
+
+26
+00:01:07,680 --> 00:01:09,720
+Coupon rate is 5%.
+
+27
+00:01:09,720 --> 00:01:12,160
+So this bond has 20 years to maturity.
+
+28
+00:01:12,160 --> 00:01:18,120
+So therefore each year it pays $5 coupon up until year 20,
+
+29
+00:01:18,120 --> 00:01:21,250
+when it pays the last final coupon of $5
+
+30
+00:01:21,250 --> 00:01:23,880
+plus the face value of 100.
+
+31
+00:01:23,880 --> 00:01:26,610
+So the first step that I will do here
+
+32
+00:01:26,610 --> 00:01:29,040
+is that I will compute the price of the bond.
+
+33
+00:01:29,040 --> 00:01:31,110
+Because if you just look at the, again,
+
+34
+00:01:31,110 --> 00:01:33,510
+definition of Macaulay duration, we
+
+35
+00:01:33,510 --> 00:01:37,330
+need to know the price of the bond to compute the duration.
+
+36
+00:01:37,330 --> 00:01:41,490
+So I will discount each of the individual coupons and cash
+
+37
+00:01:41,490 --> 00:01:42,870
+flows to present.
+
+38
+00:01:42,870 --> 00:01:46,240
+Then I will add them up and this will be the price of this bond.
+
+39
+00:01:46,240 --> 00:01:48,150
+So I'll start with the very first coupon,
+
+40
+00:01:48,150 --> 00:01:50,310
+so I'll take this $5.
+
+41
+00:01:50,310 --> 00:01:53,180
+And we'll divide it divided by 1 plus yield
+
+42
+00:01:53,180 --> 00:01:57,180
+to maturity on this bond.
+
+43
+00:01:57,180 --> 00:02:01,200
+And I will raise it to power 1 in this case.
+
+44
+00:02:01,200 --> 00:02:04,740
+This is when this cash flow occurs.
+
+45
+00:02:04,740 --> 00:02:08,490
+And then I will do this for all of the 20 payments.
+
+46
+00:02:08,490 --> 00:02:10,860
+And this is the present value of each
+
+47
+00:02:10,860 --> 00:02:14,850
+of these individual payments that we get from this bond.
+
+48
+00:02:14,850 --> 00:02:16,530
+So by definition, if I add this up,
+
+49
+00:02:16,530 --> 00:02:19,530
+so this would be the price of our bond.
+
+50
+00:02:19,530 --> 00:02:23,240
+
+
+51
+00:02:23,240 --> 00:02:28,600
+So the price of this bond right now is 149.05.
+
+52
+00:02:28,600 --> 00:02:30,500
+So first notice that it does make sense.
+
+53
+00:02:30,500 --> 00:02:33,250
+So if we compare the price of this bond relative to its face
+
+54
+00:02:33,250 --> 00:02:36,790
+value, it's 149 versus 100.
+
+55
+00:02:36,790 --> 00:02:38,560
+And it does make sense because, again,
+
+56
+00:02:38,560 --> 00:02:41,890
+so this bond has a much higher coupon
+
+57
+00:02:41,890 --> 00:02:46,310
+rate, which is 5%, relative to its yield to maturity.
+
+58
+00:02:46,310 --> 00:02:49,420
+So this bond should be priced at a premium
+
+59
+00:02:49,420 --> 00:02:53,350
+and its price should be above $100.
+
+60
+00:02:53,350 --> 00:02:57,130
+So the fact that its 149.05 kind of passes the smell
+
+61
+00:02:57,130 --> 00:03:02,450
+test in the sense that this bond is indeed priced at a premium.
+
+62
+00:03:02,450 --> 00:03:06,140
+So now the next step, we need to compute the following sum.
+
+63
+00:03:06,140 --> 00:03:09,820
+So I've written it down in the second equation
+
+64
+00:03:09,820 --> 00:03:14,610
+where cash flow in the year t divided by 1 plus yield raised
+
+65
+00:03:14,610 --> 00:03:17,140
+of the power of t, is just the present value
+
+66
+00:03:17,140 --> 00:03:21,550
+of that particular cash flow that occurs in the year t.
+
+67
+00:03:21,550 --> 00:03:24,700
+And then, each of these present value of cash flow in year two,
+
+68
+00:03:24,700 --> 00:03:26,920
+we have to multiply it by the year
+
+69
+00:03:26,920 --> 00:03:30,037
+in which this payment occurs.
+
+70
+00:03:30,037 --> 00:03:31,370
+And then we have to add them up.
+
+71
+00:03:31,370 --> 00:03:32,787
+So this is how we're going to find
+
+72
+00:03:32,787 --> 00:03:35,710
+the total value of this sum.
+
+73
+00:03:35,710 --> 00:03:37,600
+So here is exactly what I will do.
+
+74
+00:03:37,600 --> 00:03:40,750
+So I'll take the present value that we just
+
+75
+00:03:40,750 --> 00:03:42,820
+computed for the first payment.
+
+76
+00:03:42,820 --> 00:03:45,018
+And then we'll multiply it by the year
+
+77
+00:03:45,018 --> 00:03:46,060
+when this payment occurs.
+
+78
+00:03:46,060 --> 00:03:48,030
+In this case, it's Year 1.
+
+79
+00:03:48,030 --> 00:03:49,960
+So you could see that in Year 2, I
+
+80
+00:03:49,960 --> 00:03:53,560
+will be taking the present value of the second payment
+
+81
+00:03:53,560 --> 00:03:56,110
+and multiplying them by the year.
+
+82
+00:03:56,110 --> 00:03:58,690
+When it occurs again, this is a Year 2.
+
+83
+00:03:58,690 --> 00:04:03,990
+And so I will do it for each of the payments.
+
+84
+00:04:03,990 --> 00:04:07,140
+And now I will add them all up.
+
+85
+00:04:07,140 --> 00:04:09,240
+And this would be the sum that we
+
+86
+00:04:09,240 --> 00:04:12,930
+get in the duration expression.
+
+87
+00:04:12,930 --> 00:04:14,850
+And now by definition, all we have
+
+88
+00:04:14,850 --> 00:04:16,980
+to do is to compute the Macaulay duration,
+
+89
+00:04:16,980 --> 00:04:21,699
+I have to take this sum that they just computed and divide
+
+90
+00:04:21,699 --> 00:04:24,860
+it by the price of the bond.
+
+91
+00:04:24,860 --> 00:04:30,432
+And this will, by definition, be the Macaulay duration.
+
+92
+00:04:30,432 --> 00:04:32,140
+So this is how we can use the spreadsheet
+
+93
+00:04:32,140 --> 00:04:34,930
+to find the duration of any bond.
+
+94
+00:04:34,930 --> 00:04:36,890
+So if you have fewer than 20 years,
+
+95
+00:04:36,890 --> 00:04:38,930
+for example you have two years, three years,
+
+96
+00:04:38,930 --> 00:04:40,198
+you can do it by hand.
+
+97
+00:04:40,198 --> 00:04:41,740
+In fact, you should practice to do it
+
+98
+00:04:41,740 --> 00:04:44,680
+by hand because exam most likely is going
+
+99
+00:04:44,680 --> 00:04:47,500
+to feature a question where you have to compute the duration
+
+100
+00:04:47,500 --> 00:04:49,330
+but obviously we're not going to ask
+
+101
+00:04:49,330 --> 00:04:52,180
+you to compute the duration for, you know, a 20-year bond
+
+102
+00:04:52,180 --> 00:04:54,130
+because this is too tedious.
+
+103
+00:04:54,130 --> 00:04:58,540
+But certainly you can do it for a two-year or just a bond
+
+104
+00:04:58,540 --> 00:05:02,110
+with a shorter maturity.
+
+105
+00:05:02,110 --> 00:05:03,760
+Now the final step here, what I will do
+
+106
+00:05:03,760 --> 00:05:05,320
+is that I will compute the modified
+
+107
+00:05:05,320 --> 00:05:08,302
+duration based on the Macaulay duration
+
+108
+00:05:08,302 --> 00:05:09,260
+that you just computed.
+
+109
+00:05:09,260 --> 00:05:12,060
+And modified duration would simply be just,
+
+110
+00:05:12,060 --> 00:05:16,815
+again, the Macaulay duration divided by 1 plus the yield
+
+111
+00:05:16,815 --> 00:05:20,050
+to maturity in this bond which is 2%.
+
+112
+00:05:20,050 --> 00:05:22,390
+And this is 14.15.
+
+113
+00:05:22,390 --> 00:05:28,770
+So the modified duration for this particular bond is 14.15.
+
+114
+00:05:28,770 --> 00:05:31,260
+Now notice, going back to Macaulay duration,
+
+115
+00:05:31,260 --> 00:05:34,530
+notice that this bond has 20 years to maturity.
+
+116
+00:05:34,530 --> 00:05:38,400
+But its duration is 14.43.
+
+117
+00:05:38,400 --> 00:05:42,990
+So remember that for bond that pays 0% coupon,
+
+118
+00:05:42,990 --> 00:05:47,790
+Macaulay duration equals exactly the maturity of the bond.
+
+119
+00:05:47,790 --> 00:05:51,700
+But for any bond that pays nonzero or positive coupon
+
+120
+00:05:51,700 --> 00:05:55,020
+the Macaulay duration should be strictly less
+
+121
+00:05:55,020 --> 00:05:56,857
+than the maturity of the bond.
+
+122
+00:05:56,857 --> 00:05:58,440
+So in this case, the Macaulay duration
+
+123
+00:05:58,440 --> 00:06:03,240
+is 14.43 which is less than 20, which again is reasonable
+
+124
+00:06:03,240 --> 00:06:06,500
+because that number is less than 20.
+
+125
+00:06:06,500 --> 00:06:07,000
+
+

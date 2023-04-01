@@ -1,0 +1,508 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:02,170
+PROFESSOR: In this question, we will
+
+2
+00:00:02,170 --> 00:00:06,490
+learn how to identify arbitrage opportunities in the bond
+
+3
+00:00:06,490 --> 00:00:11,650
+market and how to take advantage of such opportunities.
+
+4
+00:00:11,650 --> 00:00:13,270
+Suppose that you're a bond trader
+
+5
+00:00:13,270 --> 00:00:15,670
+and you see the following bonds and their prices
+
+6
+00:00:15,670 --> 00:00:16,900
+on your screen.
+
+7
+00:00:16,900 --> 00:00:18,010
+So there are three bonds--
+
+8
+00:00:18,010 --> 00:00:22,570
+A, B, and C. All three have face value of $100.
+
+9
+00:00:22,570 --> 00:00:24,490
+They have corresponding maturities
+
+10
+00:00:24,490 --> 00:00:28,570
+of one, two, and three years, following coupon rates
+
+11
+00:00:28,570 --> 00:00:31,000
+and prices.
+
+12
+00:00:31,000 --> 00:00:35,290
+Now there is another bond, bond D, that just became available
+
+13
+00:00:35,290 --> 00:00:37,120
+in the market.
+
+14
+00:00:37,120 --> 00:00:40,000
+It has the same face value of $100 as bonds A, B,
+
+15
+00:00:40,000 --> 00:00:46,480
+and C. It has three years to maturity and a 3% coupon rate.
+
+16
+00:00:46,480 --> 00:00:52,560
+Its current price is $99.50.
+
+17
+00:00:52,560 --> 00:00:55,860
+The first question asks us, if there is an arbitrage
+
+18
+00:00:55,860 --> 00:00:59,580
+opportunity in this market, and if yes
+
+19
+00:00:59,580 --> 00:01:02,280
+asks us to explain how we would take
+
+20
+00:01:02,280 --> 00:01:06,732
+advantage of such opportunity.
+
+21
+00:01:06,732 --> 00:01:08,690
+The first step that we will do in this question
+
+22
+00:01:08,690 --> 00:01:13,820
+is that we will find the term structure of interest rates
+
+23
+00:01:13,820 --> 00:01:17,700
+based on the prices of bonds that are given to us.
+
+24
+00:01:17,700 --> 00:01:19,910
+So in particular, we would use prices
+
+25
+00:01:19,910 --> 00:01:27,950
+of bonds A, B, and C to find interest rates r1, r2, and r3.
+
+26
+00:01:27,950 --> 00:01:29,450
+So these are the spot interest rates
+
+27
+00:01:29,450 --> 00:01:34,140
+for Year 1, Year 2, and Year 3.
+
+28
+00:01:34,140 --> 00:01:35,640
+We would, generally speaking, follow
+
+29
+00:01:35,640 --> 00:01:37,620
+exactly the same approach as we've
+
+30
+00:01:37,620 --> 00:01:41,870
+learned in the first question that we've covered.
+
+31
+00:01:41,870 --> 00:01:44,970
+
+
+32
+00:01:44,970 --> 00:01:49,350
+So let's start with bond A. The price of bond A is given to us
+
+33
+00:01:49,350 --> 00:01:52,085
+as $96.90.
+
+34
+00:01:52,085 --> 00:01:53,460
+So the current price of this bond
+
+35
+00:01:53,460 --> 00:01:56,430
+because this is a zero coupon bond,
+
+36
+00:01:56,430 --> 00:02:03,030
+it pays $100 which is its face value at the end of year 1.
+
+37
+00:02:03,030 --> 00:02:05,610
+So therefore the current price should
+
+38
+00:02:05,610 --> 00:02:07,030
+equal to the face value discounted
+
+39
+00:02:07,030 --> 00:02:11,590
+to present at the one-year spot interest rate.
+
+40
+00:02:11,590 --> 00:02:14,422
+So we have this first equation.
+
+41
+00:02:14,422 --> 00:02:16,130
+What we do is that we solve this equation
+
+42
+00:02:16,130 --> 00:02:22,760
+for r1, which gives us one-year spot interest rate, r1.
+
+43
+00:02:22,760 --> 00:02:25,145
+In this case, it equals to 3.2%.
+
+44
+00:02:25,145 --> 00:02:28,430
+
+
+45
+00:02:28,430 --> 00:02:31,490
+Now we turn our attention to bond B.
+
+46
+00:02:31,490 --> 00:02:33,170
+We can write down the following pricing
+
+47
+00:02:33,170 --> 00:02:38,870
+equation for bond B. The price of Bond B which is given to us
+
+48
+00:02:38,870 --> 00:02:42,680
+is $99, it should be equal to the first coupon discounted
+
+49
+00:02:42,680 --> 00:02:46,880
+to present plus the second coupon plus the face value
+
+50
+00:02:46,880 --> 00:02:49,010
+discounted to present.
+
+51
+00:02:49,010 --> 00:02:51,920
+Remember, this is a two-year maturity bond.
+
+52
+00:02:51,920 --> 00:02:56,240
+It pays 2.75% coupon rate.
+
+53
+00:02:56,240 --> 00:02:59,140
+So therefore the dollar value of the annual coupon
+
+54
+00:02:59,140 --> 00:03:03,760
+that this bond pays is $2.75.
+
+55
+00:03:03,760 --> 00:03:05,740
+So we take the first coupon and we're
+
+56
+00:03:05,740 --> 00:03:11,420
+discounting it to present at one-year spot rate r1.
+
+57
+00:03:11,420 --> 00:03:14,940
+And we take the second coupon and the face value,
+
+58
+00:03:14,940 --> 00:03:16,610
+which we get at the end of year two.
+
+59
+00:03:16,610 --> 00:03:19,950
+And we discount it to present at r2
+
+60
+00:03:19,950 --> 00:03:23,120
+which is a two-year spot rate.
+
+61
+00:03:23,120 --> 00:03:27,070
+So the goal is to solve this equation for r2.
+
+62
+00:03:27,070 --> 00:03:28,570
+Glancing at this equation, it looks
+
+63
+00:03:28,570 --> 00:03:31,780
+like we have r1 and r2 in this equation.
+
+64
+00:03:31,780 --> 00:03:33,280
+But the good news is that we already
+
+65
+00:03:33,280 --> 00:03:39,970
+know r1, which we found from the price of bond A which was 3.2%.
+
+66
+00:03:39,970 --> 00:03:44,260
+So therefore we can plug this r1 into the above equation
+
+67
+00:03:44,260 --> 00:03:49,420
+and use it to solve for r2.
+
+68
+00:03:49,420 --> 00:03:55,150
+Solving that equation for r2 gives us 3.28%.
+
+69
+00:03:55,150 --> 00:03:59,660
+So this is year-two spot rate.
+
+70
+00:03:59,660 --> 00:04:01,120
+So to recap what we've done so far,
+
+71
+00:04:01,120 --> 00:04:04,570
+we've found one-year spot rate which is 3.2%,
+
+72
+00:04:04,570 --> 00:04:12,500
+we found year-two spot rate which is 3.28%.
+
+73
+00:04:12,500 --> 00:04:15,710
+Now the final step is to take the price of bond C
+
+74
+00:04:15,710 --> 00:04:20,140
+which is a three-year zero-coupon bond currently
+
+75
+00:04:20,140 --> 00:04:22,610
+traded at $88.55.
+
+76
+00:04:22,610 --> 00:04:27,300
+And based on this equation, we will find year three spot
+
+77
+00:04:27,300 --> 00:04:29,400
+rate or r3.
+
+78
+00:04:29,400 --> 00:04:32,140
+So the good news is that this equation is fairly simple.
+
+79
+00:04:32,140 --> 00:04:36,190
+In the sense that this is a zero-coupon bond.
+
+80
+00:04:36,190 --> 00:04:37,770
+So there are no intermediate coupons
+
+81
+00:04:37,770 --> 00:04:41,370
+that this bond pays in Year 1 and Year 2.
+
+82
+00:04:41,370 --> 00:04:43,920
+We've covered a situation like this in Question 1.
+
+83
+00:04:43,920 --> 00:04:46,290
+So here, just for simplicity, we've
+
+84
+00:04:46,290 --> 00:04:49,150
+given you a zero-coupon bond.
+
+85
+00:04:49,150 --> 00:04:54,250
+So solving this equation for r3 becomes fairly easy.
+
+86
+00:04:54,250 --> 00:05:01,140
+If we solve it, we get r3 that equals to 4.14%.
+
+87
+00:05:01,140 --> 00:05:03,090
+So what we've found so far is that we
+
+88
+00:05:03,090 --> 00:05:05,520
+found the term structure of interest rates
+
+89
+00:05:05,520 --> 00:05:08,700
+for the first three years, for Year 1, 2, and 3.
+
+90
+00:05:08,700 --> 00:05:11,400
+So Year 1 interest rate equals the 3.2%.
+
+91
+00:05:11,400 --> 00:05:14,550
+Year 2 interest rate equals to 3.28%.
+
+92
+00:05:14,550 --> 00:05:20,540
+And Year 3 interest rate equals to 4.14%.
+
+93
+00:05:20,540 --> 00:05:25,930
+Now let's examine whether bond D is priced fairly
+
+94
+00:05:25,930 --> 00:05:29,782
+given the current term structure of interest rates.
+
+95
+00:05:29,782 --> 00:05:31,240
+That, of course, assumes that bonds
+
+96
+00:05:31,240 --> 00:05:32,800
+A, B, and C are fairly priced.
+
+97
+00:05:32,800 --> 00:05:35,550
+
+
+98
+00:05:35,550 --> 00:05:39,150
+So recall that bond D is, again, so it
+
+99
+00:05:39,150 --> 00:05:40,590
+has three years to maturity.
+
+100
+00:05:40,590 --> 00:05:42,880
+It has 3% coupon rate.
+
+101
+00:05:42,880 --> 00:05:47,110
+So therefore it pays $3 coupon at the end of Year 1,
+
+102
+00:05:47,110 --> 00:05:52,680
+$3 coupon at the end of Year 2, $3 coupon at the end of Year 3,
+
+103
+00:05:52,680 --> 00:05:55,050
+plus the face value of $100 that it also
+
+104
+00:05:55,050 --> 00:05:57,610
+pays at the end of Year 3.
+
+105
+00:05:57,610 --> 00:06:00,640
+So therefore, we can write down the following equation.
+
+106
+00:06:00,640 --> 00:06:02,310
+So we're taking the first coupon,
+
+107
+00:06:02,310 --> 00:06:05,400
+discounting it to present at Year 1 interest rate,
+
+108
+00:06:05,400 --> 00:06:07,750
+spot rate, which is 3.2%.
+
+109
+00:06:07,750 --> 00:06:10,440
+We take the second coupon, which is again $3
+
+110
+00:06:10,440 --> 00:06:14,370
+and we are discounting it to present at the Year 2 spot
+
+111
+00:06:14,370 --> 00:06:16,770
+rate which is 3.28%.
+
+112
+00:06:16,770 --> 00:06:19,710
+And the last payment of 3 plus $100, we're
+
+113
+00:06:19,710 --> 00:06:24,930
+discounting at Year 3 spot interest rate of 4.14%.
+
+114
+00:06:24,930 --> 00:06:34,040
+So if you compute this, it gives us the price of $96.93.
+
+115
+00:06:34,040 --> 00:06:40,080
+But recall that the quoted price of this bond was $99.50.
+
+116
+00:06:40,080 --> 00:06:45,090
+So therefore, bond D appears to be overpriced, overpriced
+
+117
+00:06:45,090 --> 00:06:48,330
+relative to its fair price.
+
+118
+00:06:48,330 --> 00:06:55,120
+And therefore this presents an arbitrage opportunity.
+
+119
+00:06:55,120 --> 00:06:58,120
+So to take advantage of this arbitrage opportunity, what
+
+120
+00:06:58,120 --> 00:07:00,910
+we should do are generally two things.
+
+121
+00:07:00,910 --> 00:07:03,760
+So we either sell an overpriced bond
+
+122
+00:07:03,760 --> 00:07:08,510
+or we buy the underpriced bond, or any asset for that matter.
+
+123
+00:07:08,510 --> 00:07:11,350
+In this case, since bond D was overpriced,
+
+124
+00:07:11,350 --> 00:07:14,350
+to take advantage of this opportunity we should be
+
+125
+00:07:14,350 --> 00:07:20,180
+selling this bond at the quoted price or at $99.50.
+
+126
+00:07:20,180 --> 00:07:21,000
+
+

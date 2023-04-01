@@ -1,0 +1,700 @@
+0
+00:00:00,000 --> 00:00:00,712
+
+
+1
+00:00:00,712 --> 00:00:03,520
+PROFESSOR: We now consider a more general bond valuation
+
+2
+00:00:03,520 --> 00:00:04,510
+problem.
+
+3
+00:00:04,510 --> 00:00:07,990
+Previously, we started with prices of pure discount bonds.
+
+4
+00:00:07,990 --> 00:00:11,530
+And we figured out how to value a coupon bond.
+
+5
+00:00:11,530 --> 00:00:13,540
+Now, we are looking at the generic situation
+
+6
+00:00:13,540 --> 00:00:16,400
+where we start with prices of different types of bonds.
+
+7
+00:00:16,400 --> 00:00:17,650
+Some are discount bonds.
+
+8
+00:00:17,650 --> 00:00:19,450
+Some are coupon paying bonds.
+
+9
+00:00:19,450 --> 00:00:21,770
+And we want to answer two questions.
+
+10
+00:00:21,770 --> 00:00:24,730
+One is what are the implied interest rates?
+
+11
+00:00:24,730 --> 00:00:27,730
+What are the prices of discount bonds?
+
+12
+00:00:27,730 --> 00:00:30,040
+And the second question is if you observe
+
+13
+00:00:30,040 --> 00:00:32,170
+an instance of mispricing--
+
+14
+00:00:32,170 --> 00:00:34,785
+if some of the prices are inconsistent with each other--
+
+15
+00:00:34,785 --> 00:00:36,160
+how can you take advantage of it?
+
+16
+00:00:36,160 --> 00:00:40,380
+How can you build an arbitrage trading strategy?
+
+17
+00:00:40,380 --> 00:00:42,540
+So to be specific, we have three bonds
+
+18
+00:00:42,540 --> 00:00:47,630
+to start with, A, B, and C. A is a one-year discount bond
+
+19
+00:00:47,630 --> 00:00:50,520
+paying $100 at time 1.
+
+20
+00:00:50,520 --> 00:00:55,470
+B is a two-year coupon bond paying a 5% annual coupon.
+
+21
+00:00:55,470 --> 00:00:57,630
+And C is a three-year coupon bond
+
+22
+00:00:57,630 --> 00:01:00,630
+paying a 10% annual coupon.
+
+23
+00:01:00,630 --> 00:01:03,640
+And the prices of these bonds are given in the table.
+
+24
+00:01:03,640 --> 00:01:06,600
+A trades at $96 at time 0.
+
+25
+00:01:06,600 --> 00:01:09,640
+B trades at $99.30.
+
+26
+00:01:09,640 --> 00:01:15,140
+And bond C trades at $108.80.
+
+27
+00:01:15,140 --> 00:01:18,830
+We are also given bond D, which is a three-year discount
+
+28
+00:01:18,830 --> 00:01:21,470
+bond with a face value of $100.
+
+29
+00:01:21,470 --> 00:01:24,690
+And D trades at $84.
+
+30
+00:01:24,690 --> 00:01:27,830
+The question is, is this bond fairly priced?
+
+31
+00:01:27,830 --> 00:01:32,678
+And if it is not, how can we take advantage of mispricing?
+
+32
+00:01:32,678 --> 00:01:35,930
+So to start with, we are going to collect
+
+33
+00:01:35,930 --> 00:01:37,880
+given information in a matrix.
+
+34
+00:01:37,880 --> 00:01:40,190
+It's a matrix of bond payoffs.
+
+35
+00:01:40,190 --> 00:01:41,840
+And you could see that each of the rows
+
+36
+00:01:41,840 --> 00:01:45,100
+corresponds to one of the bonds, A, B, and C.
+
+37
+00:01:45,100 --> 00:01:48,230
+And for each of the bonds, we are tabulating their cash
+
+38
+00:01:48,230 --> 00:01:49,190
+flows.
+
+39
+00:01:49,190 --> 00:01:53,480
+Bond A pays $100 at time 1 and 0 afterwards.
+
+40
+00:01:53,480 --> 00:01:59,840
+Bond B pays $5 at time 1, $105 at time 2, and 0 afterwards.
+
+41
+00:01:59,840 --> 00:02:06,020
+And bond C pays $10, $10, and $110 at time 3.
+
+42
+00:02:06,020 --> 00:02:09,229
+Now, we are trying to find prices of discount bonds
+
+43
+00:02:09,229 --> 00:02:13,070
+of maturities 1, 2, and 3 years.
+
+44
+00:02:13,070 --> 00:02:16,580
+Let's call them P1, P2, and P3.
+
+45
+00:02:16,580 --> 00:02:21,130
+Each of these bonds has a face value of $1.
+
+46
+00:02:21,130 --> 00:02:25,370
+Let's relate prices of these bonds to the given bonds.
+
+47
+00:02:25,370 --> 00:02:28,980
+For example, focus on bond B. This bond
+
+48
+00:02:28,980 --> 00:02:31,880
+is equivalent to a portfolio of discount bonds--
+
+49
+00:02:31,880 --> 00:02:36,120
+five units of a one-year bond and 105 units
+
+50
+00:02:36,120 --> 00:02:38,250
+of a two-year discount bond.
+
+51
+00:02:38,250 --> 00:02:40,950
+So we obtain a pricing equation.
+
+52
+00:02:40,950 --> 00:02:49,940
+5 times P1 plus 105 times P2 plus 0 times P3 is equal
+
+53
+00:02:49,940 --> 00:02:53,710
+to $99.30.
+
+54
+00:02:53,710 --> 00:02:59,600
+We can obtain a similar pricing equation for bonds A and C.
+
+55
+00:02:59,600 --> 00:03:02,360
+As a result, we have a system of equations,
+
+56
+00:03:02,360 --> 00:03:04,970
+three equations, each one corresponding
+
+57
+00:03:04,970 --> 00:03:07,490
+to a price of a single bond.
+
+58
+00:03:07,490 --> 00:03:10,460
+And we have three unknowns, each one corresponding
+
+59
+00:03:10,460 --> 00:03:15,050
+to a price of a discount bond, 1, 2, and 3.
+
+60
+00:03:15,050 --> 00:03:17,900
+This system of equations has a unique solution,
+
+61
+00:03:17,900 --> 00:03:19,400
+which you can compute.
+
+62
+00:03:19,400 --> 00:03:22,910
+And what we find is that P1, the price of a one-year discount
+
+63
+00:03:22,910 --> 00:03:24,930
+bond, is $0.96 cents.
+
+64
+00:03:24,930 --> 00:03:27,350
+P2 is $0.90.
+
+65
+00:03:27,350 --> 00:03:30,170
+And P3 is $0.82.
+
+66
+00:03:30,170 --> 00:03:32,000
+What we have done is we recovered
+
+67
+00:03:32,000 --> 00:03:33,830
+prices of discount bonds.
+
+68
+00:03:33,830 --> 00:03:36,770
+Or in other words, we recovered the spot interest rates
+
+69
+00:03:36,770 --> 00:03:39,380
+from the collection of prices of various fixed income
+
+70
+00:03:39,380 --> 00:03:41,720
+securities, different types of bonds--
+
+71
+00:03:41,720 --> 00:03:44,600
+coupon bonds and discount bonds.
+
+72
+00:03:44,600 --> 00:03:46,970
+Now, looking at our solution, we can
+
+73
+00:03:46,970 --> 00:03:50,120
+see that the price of the bond D is not
+
+74
+00:03:50,120 --> 00:03:55,700
+consistent with the prices of A, B, and C. D trades at $84,
+
+75
+00:03:55,700 --> 00:03:58,370
+but the implied price for a three-year discount bond
+
+76
+00:03:58,370 --> 00:03:59,750
+is $82.
+
+77
+00:03:59,750 --> 00:04:03,650
+So D is not fairly priced relative to A, B, and C.
+
+78
+00:04:03,650 --> 00:04:06,910
+How can we take advantage of this situation?
+
+79
+00:04:06,910 --> 00:04:09,890
+We are going to build an arbitrage strategy.
+
+80
+00:04:09,890 --> 00:04:12,230
+Let's recall that an arbitrage strategy is
+
+81
+00:04:12,230 --> 00:04:14,360
+supposed to be self-financing.
+
+82
+00:04:14,360 --> 00:04:17,529
+It does not require any infusion of capital.
+
+83
+00:04:17,529 --> 00:04:19,420
+It's supposed to be risk free.
+
+84
+00:04:19,420 --> 00:04:21,459
+There is no risk of losing money.
+
+85
+00:04:21,459 --> 00:04:23,460
+And it's supposed to be profitable.
+
+86
+00:04:23,460 --> 00:04:25,870
+There should be a positive probability of generating
+
+87
+00:04:25,870 --> 00:04:28,370
+a positive cash flow.
+
+88
+00:04:28,370 --> 00:04:31,120
+So we're going to construct a portfolio of bonds A,
+
+89
+00:04:31,120 --> 00:04:35,890
+B, C, and D to generate arbitrage profits.
+
+90
+00:04:35,890 --> 00:04:42,460
+Let's call our positions xA, xB, xC, and xD respectively.
+
+91
+00:04:42,460 --> 00:04:45,070
+And x refers to the number of shares
+
+92
+00:04:45,070 --> 00:04:49,030
+of each of these securities in our portfolio.
+
+93
+00:04:49,030 --> 00:04:51,120
+Our objective is going to be to generate
+
+94
+00:04:51,120 --> 00:04:56,470
+a cash flow of $1 at time 0 and nothing in periods 1, 2, and 3.
+
+95
+00:04:56,470 --> 00:04:58,230
+Of course, this is arbitrage.
+
+96
+00:04:58,230 --> 00:05:00,490
+There is no risk of a loss.
+
+97
+00:05:00,490 --> 00:05:03,790
+And we get $1 for free at time 0.
+
+98
+00:05:03,790 --> 00:05:06,810
+That's the free lunch arbitrage.
+
+99
+00:05:06,810 --> 00:05:09,990
+Now, this requirement can be expressed
+
+100
+00:05:09,990 --> 00:05:12,810
+as a system of four equations.
+
+101
+00:05:12,810 --> 00:05:15,930
+Each equation corresponds to the cash flow
+
+102
+00:05:15,930 --> 00:05:19,290
+coming out of the portfolio in a given period.
+
+103
+00:05:19,290 --> 00:05:22,830
+The first row corresponds to time 0; second, time 1;
+
+104
+00:05:22,830 --> 00:05:25,460
+2; and 3 respectively.
+
+105
+00:05:25,460 --> 00:05:28,260
+So now, for the first period, we want
+
+106
+00:05:28,260 --> 00:05:31,510
+to generate a cash flow of $1.
+
+107
+00:05:31,510 --> 00:05:34,080
+The cash flow that the portfolio produces
+
+108
+00:05:34,080 --> 00:05:38,406
+can be computed as a function of the portfolio positions, xA,
+
+109
+00:05:38,406 --> 00:05:40,775
+xB, xC, and xD.
+
+110
+00:05:40,775 --> 00:05:42,900
+In particular, when you buy a security-- let's say,
+
+111
+00:05:42,900 --> 00:05:44,730
+you're buying bond A--
+
+112
+00:05:44,730 --> 00:05:47,070
+you are generating a negative cash flow
+
+113
+00:05:47,070 --> 00:05:49,020
+for each share you buy.
+
+114
+00:05:49,020 --> 00:05:51,600
+The negative cash flow is equal to the negative of the price
+
+115
+00:05:51,600 --> 00:05:54,050
+of the bond at time 0.
+
+116
+00:05:54,050 --> 00:05:57,140
+At time 1, you generate a positive cash flow, $100,
+
+117
+00:05:57,140 --> 00:05:59,910
+which corresponds to the payoff of the bond.
+
+118
+00:05:59,910 --> 00:06:01,980
+And then because the bond expires at time 1,
+
+119
+00:06:01,980 --> 00:06:04,950
+it pays nothing in periods 2 and 3.
+
+120
+00:06:04,950 --> 00:06:08,220
+So looking at time 0, the cash flow of the portfolio
+
+121
+00:06:08,220 --> 00:06:12,030
+is going to be minus $96 times xA--
+
+122
+00:06:12,030 --> 00:06:14,760
+that's the contribution of bond A--
+
+123
+00:06:14,760 --> 00:06:17,190
+minus $99.3, which is the price of bond B,
+
+124
+00:06:17,190 --> 00:06:19,990
+times xB, and so forth.
+
+125
+00:06:19,990 --> 00:06:21,870
+So we're summing, across all four bonds,
+
+126
+00:06:21,870 --> 00:06:26,840
+the size of the position times the negative of the bond price.
+
+127
+00:06:26,840 --> 00:06:30,320
+The combined cash flow at time 0 is supposed to be $1.
+
+128
+00:06:30,320 --> 00:06:33,760
+That's the requirement for our arbitrage strategy.
+
+129
+00:06:33,760 --> 00:06:37,150
+At time 1, we want the strategy to pay off 0.
+
+130
+00:06:37,150 --> 00:06:42,410
+So the cash flow of bond A times the number of shares,
+
+131
+00:06:42,410 --> 00:06:45,700
+which is 100 times xA, plus the cash flow of bond B,
+
+132
+00:06:45,700 --> 00:06:49,570
+which is 5 times the number of shares-- times xB--
+
+133
+00:06:49,570 --> 00:06:53,830
+plus 10 times xC-- that's contribution of bond C--
+
+134
+00:06:53,830 --> 00:06:57,940
+plus 0 times xD, because bond D does not
+
+135
+00:06:57,940 --> 00:07:00,820
+pay anything at time 1.
+
+136
+00:07:00,820 --> 00:07:02,950
+That sum has to be equal to 0.
+
+137
+00:07:02,950 --> 00:07:04,780
+And so we obtain the same kind of equation
+
+138
+00:07:04,780 --> 00:07:06,490
+for time 2 and time 3.
+
+139
+00:07:06,490 --> 00:07:09,040
+We have four equations and four unknowns.
+
+140
+00:07:09,040 --> 00:07:12,700
+The unknowns are the positions in the portfolio for bonds A,
+
+141
+00:07:12,700 --> 00:07:16,210
+B, C, and D. The system of equations
+
+142
+00:07:16,210 --> 00:07:18,660
+has a unique solution, which we find.
+
+143
+00:07:18,660 --> 00:07:21,000
+What we see is that we can indeed
+
+144
+00:07:21,000 --> 00:07:22,470
+generate arbitrage profits.
+
+145
+00:07:22,470 --> 00:07:26,100
+We knew that because prices were internally inconsistent.
+
+146
+00:07:26,100 --> 00:07:30,740
+And to do that, we have to take a short position in bond A
+
+147
+00:07:30,740 --> 00:07:33,390
+and in bond B. The size of the position
+
+148
+00:07:33,390 --> 00:07:37,270
+is minus 0.0433 shares.
+
+149
+00:07:37,270 --> 00:07:43,620
+We take a long position in bond C. The size is 0.4545 shares.
+
+150
+00:07:43,620 --> 00:07:48,190
+And we short half a share of bond D. The strategy
+
+151
+00:07:48,190 --> 00:07:51,340
+has no risk of a loss and generates a single dollar
+
+152
+00:07:51,340 --> 00:07:54,360
+of profit at time 0.
+
+153
+00:07:54,360 --> 00:07:57,210
+In conclusion, what this example illustrates
+
+154
+00:07:57,210 --> 00:08:01,860
+is that when you observe a rich set of fixed-income securities,
+
+155
+00:08:01,860 --> 00:08:06,000
+you can infer prices of various other assets.
+
+156
+00:08:06,000 --> 00:08:08,580
+You can price securities relative to each other.
+
+157
+00:08:08,580 --> 00:08:10,950
+There are strong arbitrage-based restrictions
+
+158
+00:08:10,950 --> 00:08:15,520
+on the relative prices of assets in fixed-income markets.
+
+159
+00:08:15,520 --> 00:08:17,950
+In particular, prices of coupon bonds
+
+160
+00:08:17,950 --> 00:08:20,890
+can be used to infer prices of discount bonds,
+
+161
+00:08:20,890 --> 00:08:23,810
+or in other words, spot interest rates.
+
+162
+00:08:23,810 --> 00:08:25,840
+We can therefore recover the yield curve
+
+163
+00:08:25,840 --> 00:08:29,510
+from the prices of coupon bonds.
+
+164
+00:08:29,510 --> 00:08:32,090
+So far, we looked at arbitrage restrictions
+
+165
+00:08:32,090 --> 00:08:34,390
+in a static framework.
+
+166
+00:08:34,390 --> 00:08:37,700
+Our trading strategy was one short trade at time 0.
+
+167
+00:08:37,700 --> 00:08:40,299
+We generated arbitrage profits.
+
+168
+00:08:40,299 --> 00:08:43,030
+These arbitrage-based methods are more general than that.
+
+169
+00:08:43,030 --> 00:08:45,550
+And they can be used in a dynamic setting that
+
+170
+00:08:45,550 --> 00:08:47,860
+can be applied over time.
+
+171
+00:08:47,860 --> 00:08:49,570
+To do that, we need to build models
+
+172
+00:08:49,570 --> 00:08:51,700
+which are dynamic, that incorporate trading
+
+173
+00:08:51,700 --> 00:08:53,350
+over multiple periods.
+
+174
+00:08:53,350 --> 00:08:56,730
+And this is a subject for future lectures.
+

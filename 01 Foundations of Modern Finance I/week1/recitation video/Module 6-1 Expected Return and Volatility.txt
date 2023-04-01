@@ -1,0 +1,95 @@
+
+PROFESSOR: In this video, I will introduce
+a concept of expected return.
+Suppose that, currently, Nikola Corporation
+is traded at $32 a share.
+We're given the probability distribution
+of what will be a share price of Nikola next year.
+Suppose, though, with probability 10%,
+the share price will increase all the way to $150.
+With 60% probability, the share price
+is going to come down from $32 to $20.
+And with the remaining 30% probability,
+the share price will go all the way down to $2 a share.
+The question is, what is the expected return on this stock
+over the next year?
+And here, by return, I would mean net return.
+So first, let's compute what would
+be the net return on Nikola stock price in each
+of the corresponding cases, when the share price
+goes up to $150, up to $20, or to $2.
+So I will write down here net return, and I will compute it.
+So in this first scenario, the net return on Nikola
+is going to be $150 minus $32 divided by $32.
+See, if you compute this, this gives us 368.75%.
+So that is a very large return.
+Now, in the second scenario, the net return
+will be $20 minus $32 divided by $32.
+And you could see that, in this case,
+the share price declines, so the return's going to be negative.
+So it's going to be negative 37.5%.
+Now, in this last scenario, net return's
+going to be $2 minus $32 divided by $32.
+And that's going to be negative 93.75%.
+So in this case, the share price goes almost to $0,
+so we are losing most of our wealth.
+Note that, by definition, net return can never
+be less than negative 100%.
+This would just mean that you're losing
+all of your initial wealth that you invested into the stock.
+Now let me define what expected return is.
+Expected return, which I will denote as Er.
+E stands for the expected, and this is the concept
+from probability theory.
+This would be the sum of all probabilities of each given
+state, so state 1, 2, and 3, multiplied
+by the net return in each of the corresponding states.
+So p1 multiplied by the return that we'll
+get on the stock in state 1, plus p2 times r2
+plus p3 times r3.
+If we have more states of nature,
+we can write down the expected return
+in a more compact way, as 1 all the way
+to however many states of nature we have, let's say
+n, p i times ri.
+So the probability of each of these states of nature
+multiplied by the net return in each
+of the corresponding states.
+So applied in our case, this would be 10% multiplied
+by the return that we get in this first state, which
+is 368.75%, plus 60%--
+this is the probability of occurrence
+of the second state--
+multiplied by negative 37.50% return plus 30% multiplied
+by negative 93.75% return.
+If you compute this number, this would give us negative 13.75%.
+So the expected net return on our investing
+in this stock of Nikola Corporation is negative 13.75%.
+Now let me also show you an alternative way
+of solving this question.
+What we can do is we can find the expected price of Nikola
+stock in year one, and then use the current price
+to find the net return.
+So by definition, the expected price of a stock next year
+will be the probability of each of the corresponding states
+times the share price in that state of nature.
+So in this case, it will be 10% multiplied
+by $150 plus 60% multiplied by $20 plus 30% multiplied by $2.
+If you compute the share price, we will get $27.60.
+So right here, you already can see that, in expectation,
+the share price of Nikola is going
+to decline from the current price to what it
+is going to be, or expected to be, next year.
+Now to compute the net return, which
+is taking the future price, the expected future price,
+we'll divide it by the current price minus 1.
+And so it will be $27.60 divided by $32 minus 1.
+And this number will also be negative 13.75%.
+So both approaches give us exactly the same final result,
+which is the net return on the stock of negative 13.75%.
+What it implies, this expected value or what we also
+call mean return, is based on our assessment of probabilities
+of different states and different prices
+of share price of Nikola in each of those different states.
+What is the most likely return on the share
+over the next year?

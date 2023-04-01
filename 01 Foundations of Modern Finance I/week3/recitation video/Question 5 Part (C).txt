@@ -1,0 +1,70 @@
+
+PROFESSOR: Now, suppose that the expected future annual rate
+of inflation is 2%.
+If Jeff Bezos wants to distribute
+an equal annual amount in today's dollars
+to guarantee purchasing power of distributed funds,
+how much would the annual distribution amount be?
+Assume that the first distribution
+happens one year from now.
+Suppose that the annual distribution from the fund
+equals c dollars.
+Let's denote by i the annual rate of inflation.
+Future distributions from the fund
+need to grow at the same rate as the inflation
+to guarantee their purchasing power.
+In year one, for example, distribution
+should equal to c times 1 plus i.
+More generally, in the year t, distribution amount would equal
+c times 1 plus i raised to the power of t.
+For example, in the year two, distribution amount
+would be c times 1 plus i raised to the power of 2.
+
+Let's put these distributions on the timeline.
+For comparison, let's also draw a stream
+of payments that represent a regular growing perpetuity.
+Notice that the two streams look alike with one difference.
+For regular perpetuity, the first payment in year one
+is c and the second payment in year two is c times 1
+plus g, where g is the growth rate.
+In our case, however, the first payment
+is c times 1 plus i and the second payment
+is c times 1 plus i squared.
+Now, mathematically, we can make our stream of payments
+look like a regular perpetuity if we
+factor 1 plus the rate of inflation term out.
+To see this, let's write down the present value
+of our stream, which is present value
+equals to c times 1 plus i divided
+by 1 plus r plus c multiplied by 1 plus i squared divided by 1
+plus r squared and so forth.
+Factoring 1 plus i out gives us the following expression--
+present value equals to 1 plus i multiplied
+by c divided by 1 plus r plus c multiplied by 1
+plus i divided by 1 plus r squared, and so forth.
+The expression inside large brackets
+looks just like a regular perpetuity.
+Hence, its present value is just c divided by r minus i.
+And therefore, the present value of our stream
+is 1 plus i multiplied by c divided by r minus i.
+
+All that's left here is to find c in this expression.
+Remember that we are given the present value, which
+is the amount that Jeff Bezos pledged
+to the foundation, which is $10 billion.
+Given the interest rate of 8%, we
+can solve this equation for payment amount c.
+$10 equals to 1 plus 2%, which is the rate of inflation,
+multiplied by c divided by 8%, which
+is our interest rate, minus 2%, which is the rate of inflation.
+Rearranging, this gives us c equals to $10 times
+8% minus 2% divided by 1 plus 2%.
+This equals to $588,235,294 or roughly $588.2 million.
+Note that the value of $588 million
+that we found in this question is significantly lower
+than the cost and distribution value
+that we found in part a which was $800 million.
+Intuitively, since we have to adjust for inflation,
+we have to start paying a lower amount
+so that we have enough funds to guarantee
+all the future payments and adjustments for inflation.

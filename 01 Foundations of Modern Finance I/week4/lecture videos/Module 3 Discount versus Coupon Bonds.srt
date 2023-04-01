@@ -1,0 +1,380 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:02,550
+PROFESSOR: Next, we talk about relative valuation
+
+2
+00:00:02,550 --> 00:00:06,030
+of coupon bonds in relation to pure discount bonds,
+
+3
+00:00:06,030 --> 00:00:08,280
+or zero coupon bonds.
+
+4
+00:00:08,280 --> 00:00:10,020
+First, let's consider the relation
+
+5
+00:00:10,020 --> 00:00:14,130
+between interest rates and bond prices for pure discount bonds.
+
+6
+00:00:14,130 --> 00:00:16,610
+This is a matter of definition.
+
+7
+00:00:16,610 --> 00:00:20,720
+Interest rates can express the rate of return on the bond.
+
+8
+00:00:20,720 --> 00:00:23,610
+Bond prices also explains the rate of return,
+
+9
+00:00:23,610 --> 00:00:25,520
+but in different terms.
+
+10
+00:00:25,520 --> 00:00:27,890
+Bond prices and interest rates are directly related
+
+11
+00:00:27,890 --> 00:00:29,370
+to each other.
+
+12
+00:00:29,370 --> 00:00:32,990
+The relation is that the bond price with a face value
+
+13
+00:00:32,990 --> 00:00:37,850
+of $1.00 and maturity t is equal to 1 divided by 1 plus
+
+14
+00:00:37,850 --> 00:00:39,590
+the interest rate to the power t.
+
+15
+00:00:39,590 --> 00:00:42,320
+In other words, the price of the bond today
+
+16
+00:00:42,320 --> 00:00:45,530
+is equal to the face value of the bond discounted
+
+17
+00:00:45,530 --> 00:00:48,530
+at the rate of interest from now until the maturity
+
+18
+00:00:48,530 --> 00:00:51,050
+date of the bond.
+
+19
+00:00:51,050 --> 00:00:52,720
+If we are thinking of interest rates
+
+20
+00:00:52,720 --> 00:00:54,700
+as the primary source of data, we
+
+21
+00:00:54,700 --> 00:00:57,760
+can then express bond prices as a function of the interest
+
+22
+00:00:57,760 --> 00:00:59,470
+rates.
+
+23
+00:00:59,470 --> 00:01:01,540
+Alternatively, if bond prices are
+
+24
+00:01:01,540 --> 00:01:03,100
+observed as the primary input, we
+
+25
+00:01:03,100 --> 00:01:06,595
+can express interest rates as a function of the bond prices.
+
+26
+00:01:06,595 --> 00:01:09,250
+
+
+27
+00:01:09,250 --> 00:01:11,880
+A coupon bond pays a regular stream
+
+28
+00:01:11,880 --> 00:01:14,640
+of coupon payments in addition to the principal payment
+
+29
+00:01:14,640 --> 00:01:17,260
+at maturity.
+
+30
+00:01:17,260 --> 00:01:19,120
+We're going to think of a coupon bond
+
+31
+00:01:19,120 --> 00:01:22,750
+as a portfolio of pure discount bonds,
+
+32
+00:01:22,750 --> 00:01:26,680
+where each of the payments delivered by the coupon bond
+
+33
+00:01:26,680 --> 00:01:30,520
+can be visualized as a payoff over a single discount bond
+
+34
+00:01:30,520 --> 00:01:33,220
+with the corresponding maturity.
+
+35
+00:01:33,220 --> 00:01:37,300
+We are going to use low bond price, or arbitrage valuation,
+
+36
+00:01:37,300 --> 00:01:40,630
+to establish a connection between the price of a coupon
+
+37
+00:01:40,630 --> 00:01:44,920
+bond and prices of discount bonds of various maturities.
+
+38
+00:01:44,920 --> 00:01:46,540
+We can also go in reverse.
+
+39
+00:01:46,540 --> 00:01:49,060
+We can start with the prices of coupon bonds
+
+40
+00:01:49,060 --> 00:01:52,840
+and recover implied values of discount bonds.
+
+41
+00:01:52,840 --> 00:01:54,612
+Let's consider an example.
+
+42
+00:01:54,612 --> 00:01:56,320
+Suppose we are working with a 3-year year
+
+43
+00:01:56,320 --> 00:02:01,640
+bond with a $1,000 principal payment and a 5% coupon.
+
+44
+00:02:01,640 --> 00:02:04,180
+So in the first year, the holder of the bonds
+
+45
+00:02:04,180 --> 00:02:08,650
+receives a payment of $50; second year, $50;
+
+46
+00:02:08,650 --> 00:02:13,570
+the third year, it's $1,000 and the $50 coupon payment.
+
+47
+00:02:13,570 --> 00:02:17,330
+We can think of this bond as a sequence of cash flows
+
+48
+00:02:17,330 --> 00:02:20,840
+that can be replicated by a portfolio of discount bonds.
+
+49
+00:02:20,840 --> 00:02:24,050
+In this case, we need three discount bonds.
+
+50
+00:02:24,050 --> 00:02:27,320
+We need the bond with maturity of 1,
+
+51
+00:02:27,320 --> 00:02:31,160
+the bond that pays off at time 1, paying $50 at the time.
+
+52
+00:02:31,160 --> 00:02:34,430
+We the bond that matures at time 2, also paying 50.
+
+53
+00:02:34,430 --> 00:02:39,740
+And we need a discount bond that pays $1,050 at time 3.
+
+54
+00:02:39,740 --> 00:02:44,900
+Our coupon bond is equivalent to the portfolio of zero coupon
+
+55
+00:02:44,900 --> 00:02:45,980
+bonds.
+
+56
+00:02:45,980 --> 00:02:49,550
+As a result, the price of the coupon bond
+
+57
+00:02:49,550 --> 00:02:52,520
+has to be equal to the cost of the portfolio of zero coupon
+
+58
+00:02:52,520 --> 00:02:55,640
+bonds according to the Law of One Price.
+
+59
+00:02:55,640 --> 00:02:59,750
+If that equality was violated, then there would be arbitrage.
+
+60
+00:02:59,750 --> 00:03:02,810
+For example, if the price of the coupon bond
+
+61
+00:03:02,810 --> 00:03:05,900
+were to be lower than the price of the portfolio of zero coupon
+
+62
+00:03:05,900 --> 00:03:08,210
+bonds that replicate its cash flows,
+
+63
+00:03:08,210 --> 00:03:10,790
+an investor could buy a coupon bond
+
+64
+00:03:10,790 --> 00:03:14,300
+and short sell the replicating portfolio of pure discount
+
+65
+00:03:14,300 --> 00:03:18,210
+bonds to lock in arbitrage profits.
+
+66
+00:03:18,210 --> 00:03:21,300
+We can generalize this argument to any coupon paying bond.
+
+67
+00:03:21,300 --> 00:03:24,540
+Of course, there was nothing special about our 3-year bond.
+
+68
+00:03:24,540 --> 00:03:26,340
+And we arrive at the general formula
+
+69
+00:03:26,340 --> 00:03:29,190
+that tells us that the price of a coupon bond
+
+70
+00:03:29,190 --> 00:03:33,690
+is equal to a sum across the dates from one
+
+71
+00:03:33,690 --> 00:03:36,270
+to the maturity date of the bond, capital T,
+
+72
+00:03:36,270 --> 00:03:39,690
+of the coupon payment of the bond times the price
+
+73
+00:03:39,690 --> 00:03:43,770
+of the corresponding discount bond plus the principal payment
+
+74
+00:03:43,770 --> 00:03:47,730
+to be multiplied by the price of the pure discount bond paying
+
+75
+00:03:47,730 --> 00:03:52,930
+off at time capital T. This is the formula that we see.
+
+76
+00:03:52,930 --> 00:03:56,140
+The price of the bond is equal to the discounted value
+
+77
+00:03:56,140 --> 00:03:59,020
+of its cash flows, where we are discounting them
+
+78
+00:03:59,020 --> 00:04:01,720
+at the corresponding interest rate.
+
+79
+00:04:01,720 --> 00:04:05,680
+As an example, suppose that the yield curve is given
+
+80
+00:04:05,680 --> 00:04:08,180
+by the following information.
+
+81
+00:04:08,180 --> 00:04:14,060
+The discount bond with maturity of 1 trades at 95.2 cents with
+
+82
+00:04:14,060 --> 00:04:16,029
+a face value of $1.00.
+
+83
+00:04:16,029 --> 00:04:21,130
+The discount rate with maturity 2 trades at 89.8 cents.
+
+84
+00:04:21,130 --> 00:04:25,540
+The discount bond of maturity 3 trades at 86.3 cents,
+
+85
+00:04:25,540 --> 00:04:26,500
+and so on.
+
+86
+00:04:26,500 --> 00:04:29,170
+We do not need to know the prices of other bonds.
+
+87
+00:04:29,170 --> 00:04:31,690
+For exercise, now we are pricing the 3-year bond
+
+88
+00:04:31,690 --> 00:04:34,690
+that we have seen, the price of this bond
+
+89
+00:04:34,690 --> 00:04:39,190
+comes out to be $998.65, which is
+
+90
+00:04:39,190 --> 00:04:43,900
+50 times the price of a 1-year bond, which is 95.2 cents,
+
+91
+00:04:43,900 --> 00:04:47,530
+plus $50 times the price of a 2-year bond, which
+
+92
+00:04:47,530 --> 00:04:54,160
+is 89.8 cents, plus $1,050 times the price of a 3-year discount
+
+93
+00:04:54,160 --> 00:04:57,170
+bond, which is 86.3.
+
+94
+00:04:57,170 --> 00:05:01,740
+This is a special case of the general formula bond.
+

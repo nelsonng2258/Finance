@@ -1,0 +1,101 @@
+
+PROFESSOR: In this question, we will
+learn how to work with effective annual rates
+and with annual percentage rates.
+Let's start with Part A of this question.
+A credit card company charges you 20% annual percentage
+rate or APR compounded monthly.
+What is the Effective Annual Rate or EAR
+that you are being charged?
+
+To find the effective annual rate,
+we use the formula we developed in the lecture.
+EAR equals to 1 plus APR divided by k,
+and raised to the power k, minus 1,
+where k is the number of compounding intervals
+in a year.
+In our case APR equals to 20% and k equals to 12
+because the credit card company compounds interest monthly
+and there are 12 months in a year.
+This gives us EAR of 21.94%.
+Overall this result indicates that the bank effectively
+charges us 21.94% which is substantially higher compared
+to the APR of 20%.
+Let's continue with Part B of this question.
+Suppose that you work for a credit card company
+and you would like to earn an effective annual rate of 25%
+on your credit card loans.
+You are free to choose a compounding interval
+with the only constraint that the shortest
+period has to be one day.
+Assuming that you want to present the lowest
+APR to your customers, what is the optimal frequency
+of compounding?
+What is the APR at the optimal compounding frequency?
+As we have seen in the lecture, for a given APR,
+the higher the frequency of compounding, the higher
+is the effective annual rate.
+Our goal in this question is to find the optimal compounding
+frequency for a given EAR that would result in the lowest APR.
+Intuitively, for a fixed EAR, we should compound interest
+as frequently as possible because the higher compounding
+frequency will lead to lower APR.
+In our case, the optimal frequency of compounding
+should be daily.
+Let's do the following.
+First, we will compute APR assuming daily compounding.
+Then we will compute APR assuming quarterly compounding.
+And then we will generalize this result.
+Let's start with daily compounding.
+Assume that there are 365 days in a year.
+For a given effective annual rate of 25%, let's find APR.
+Let's start with the basic relationship
+between EAR and APR.
+1 plus effective annual rate equals
+to 1 plus APR divided by k which is the compounding frequency
+raised to the power of k.
+We can rearrange this equation to find APR
+as a function of EAR.
+APR would equal to k, the compounding frequency
+multiplied by 1 plus EAR raised to the power of 1
+over k minus 1.
+For an effective annual rate of 25%
+in daily compounded interest, APR in this case
+would be 22.3%.
+Now let's compute APR if interest is compounded
+quarterly instead of daily.
+In this case, compounding frequency k
+would equal to 4, which would give us an APR of 22.9%.
+Therefore, if we choose quarterly compounding,
+the APR of 22.9% would give us effective annual rate of 25%.
+But if we choose daily compounding the APR of 22.3%
+would still give us the effective annual rate of 25%.
+So given that we want to earn effective annual rate of 25%
+and we want to display the lowest
+APR to our customer as possible, we
+should choose daily compounding.
+This would allow us to advertise APR of 22.3%.
+Let's generalize this result.
+Here, I have created an array that
+denotes the frequency of compounding from 1 all the way
+to 365.
+One corresponds to annual compounding and 365
+corresponds to daily compounding.
+Now for each of these intervals, I will compute APR.
+We see that for quarterly compounding
+APR equals to 22.9% which matches
+the number we found before.
+For annual compounding when k equals to 1,
+APR is 25% which intuitively should be correct
+because when interest is compounded annually
+APR should equal to EAR.
+Now the plot to the right shows APR
+as a function of compounding interval for a given
+effective annual rate of 25%.
+This is a decreasing function which
+indicates that highest compounding frequency
+corresponds to lowest APR.
+Recall that for daily compounding interest,
+APR equals to 22.3%.
+Overall, this illustrates that our decision
+to go with daily compounding is the right one.

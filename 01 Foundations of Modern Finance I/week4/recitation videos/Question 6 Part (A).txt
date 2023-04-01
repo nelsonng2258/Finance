@@ -1,0 +1,120 @@
+
+PROFESSOR: In this question, we will
+learn about interest rate risk.
+Suppose that you manage a pension
+fund and your liabilities consist of the following three
+payments.
+10 years from now, you have to make a payment of $40 million.
+In 15 years from now, you have to make
+another payment of $75 million.
+And in 20 years from now, you have
+to make a payment of $105 million.
+This is an approximation how actual pension funds work.
+Usually pension funds have to distribute pension payments
+to a rate that is obviously more frequently
+than every five years.
+So this is just an approximation how a regular pension
+fund works.
+But you will see that the tools that we'll
+learn in this question can be extended
+to a more realistic scenario.
+We will assume that the term structure of interest rates
+is flat at 5%.
+Part A of the question asks us to use modified duration
+to determine what happens to the present value of liabilities
+of this pension fund when interest rates increase
+by 0.2%.
+And in part B of the question, we'll
+compute the actual change in the present value of liabilities
+of the pension fund again when interest rates increase
+by 0.2%.
+To compute the modified duration of the liabilities
+of this pension fund, let's first
+start by computing its Macaulay duration.
+By definition, the Macaulay duration
+is given by this expression.
+So this is the same expression as we've
+seen in the previous question.
+So let's first compute the present value
+of the liabilities of this pension fund so that's our p.
+So in other words, let's compute the present value
+of all the future liabilities of this pension fund.
+So this is given by this expression.
+So we have to make our first payment of 40 million dollars
+in the year 10.
+So the present value of there is 40 divided by 1 plus 5.
+5 is our current yield to maturity.
+raised to the power of 10 because this payment
+occurs in the year 10.
+Plus $75 million dollars.
+This is our second payment that occurs in year 15.
+And finally $105 million is our last and third payment
+that occurs in year 20.
+So we're discounting it to present again
+at 5% interest rate.
+And we're raising it to power 20 again because this cash
+flow occurs in the year 20.
+So this gives us the present value
+or the value of the future, the present value
+of the future liabilities of this pension fund
+which is $100.21 million.
+Now the Macaulay duration, again,
+is given by this equation.
+So we've computed p, the price.
+So now we can compute the remaining term.
+So this sum term, which here consists of just three
+turns because we have three liability payments.
+So 1 divided by 100.21, this is one
+divided by the price or the present value
+of our liabilities multiplied by 40 divided by 1
+plus 5% raised to the power of 10,
+so this is the present value of the first liability
+payment multiplied by 10.
+So this is the year when this payment occurs.
+Plus 75 divided by 1 plus 5% raised to the power of 15,
+again this is the present value of the second payment
+multiplied by 15.
+This is the year when it occurs.
+Plus 105 or divided by 5% raised to the power of 20 times 20.
+Because that payment occurs in the year 20.
+So when we compute this, the Macaulay duration
+of our liabilities is 15.75 years.
+Now the modified duration by definition
+is just Macaulay duration divided by 1 plus yield.
+So in our case, this would be 15.75 divided by 1 plus 5%.
+And this will give us exactly 15.
+So the modified duration of our liabilities of this pension
+fund is just 15.
+Now what we want to do right now is
+that we want to use this modified duration
+to approximate the change in value of our liabilities
+when a yield curve shifts.
+So to be precise technically speaking,
+when is it going to be a parallel shift in the yield
+curve.
+
+The value, the change in the value of our liabilities,
+can be approximated using the following equation.
+So the change in the value, this is
+delta P would equal to the original value
+of our liabilities times the modified duration
+times the change in the yield.
+And this goes with the negative sign because the value--
+the price of the bond or the value of the bond and yields
+change in the opposite direction.
+So if yields increase the value of bonds will decrease.
+And so this is what will happen in our case.
+So now let's use the numbers that we have in this question
+so the assumption is that the yield curve shifts up by 0.2%.
+So therefore the value of our holdings
+will change by this much.
+So we are taking the original $121 million,
+we're multiplying it by the modified duration which is 15.
+And we're multiplying it by the change
+in the yield, which is 0.2%.
+And this gives us negative $3 million.
+So as yield increases by 0.2%, the value of our liabilities
+drops by 3 million dollars.
+And this answer is given to us by using this approximation
+in which we're using the modified duration to compute
+the approximate change in the value of our liabilities.

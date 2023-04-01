@@ -1,0 +1,92 @@
+
+PROFESSOR: iDoc is a health service company.
+It just paid dividends of $1.50.
+Over the next two years, iDoc is expected
+to increase their dividends by 10% per year.
+After that, the expectation is that these dividends
+will continue growing at 3% into perpetuity, so forever.
+We also know the appropriate discount rate for the dividends
+of iDoc is 8%.
+The first question asks us to find the share
+price of iDoc right now.
+As the first step, let's put all of these dividends
+on the timeline.
+So the first dividends-- recall that iDoc just paid dividend
+of $1.50, which means that in year one,
+the dividend's going to be $1.50 times 1 plus 10%, right?
+So between year zero and year one, it's going to grow by 10%.
+Now, during the year two, it's going to grow by another 10%.
+So D2 is going to be equal to D1 multiplied by 1 plus 10%.
+Since after that point--
+so from year two until year three-- so this dividend,
+the growth rate is going to come down from 10% to 3%.
+So from this point, the dividend-- so dividend 3--
+is going to be equal to dividend 2,
+so D2 multiplied by 1 plus 3%.
+And now, from year three onwards,
+this growth's going to continue at 3%.
+So sometimes, this is referred to as a two-stage Gordon Growth
+Model.
+So we have the first growth stage,
+where the dividends grow at 10%.
+And then, we'll have the second stage where dividends
+grow at a lower rate of 3%.
+This represents reality often quite well
+because a lot of companies start at the high growth stage
+when they're younger.
+So in this case, this company grows at 10%.
+And then, this growth slows down and becomes perpetual growth
+rate.
+So in this case, it is 3%.
+When we deal with a multistage Gordon Growth Model,
+the recipe to solve this question is as follows.
+First, we will start at the terminal growth stage--
+so in this case, the growth stage two.
+What we'll do is that we'll find the share price at the start
+of that terminal growth stage.
+So we'll compute P2.
+So P2 would equal to dividend that we'd get in year 3, so D3.
+So again, this would be a next dividend share
+price in the year 2.
+So P2 is going to equal to D3 divided
+by r minus this terminal growth rate, which is--
+I'll denote here as g2.
+So this is my 3%.
+This is to differentiate this from the initial growth
+rate of 10%.
+And now, I can compute D3 and I can compute P2.
+So D3 is going to be equal to--
+recall that this is D2 multiplied by 1 plus 3%.
+And we know that D2 is D1 multiplied by 1 plus 10%,
+and D1 is initial $1.50 multiplied by 1 plus 10%.
+So if we collect this altogether, so D3
+would equal to initial 1.5 multiplied
+by 1.1 multiplied by 1.1 one more
+time and multiplied by 1.03.
+So this will give me dividend in the year 3.
+And so I'm dividing it by 8%, which is my discount
+rate, minus this 3%.
+This is the second growth stage growth rate.
+So this gives me $37.39.
+The final step in finding the current share price
+in a two-stage growth model is to take the share price
+at the start of the second and terminal growth stage, P2,
+discounted to present, and take all of the dividends that
+accrued to shareholders during the first growth stage
+and discount them to present as well.
+This together would give us the current share price.
+In our case, this is the D1 discounted
+to present plus D2 discounted to present plus P2, which
+is the share price at the start of the second growth stage,
+and discounted to present as well.
+We know that D1 is the current dividends, $1.50,
+multiplied by 1 plus 10%.
+10% is our growth rate during the first stage.
+D2 is the current dividend multiplied
+by 1 plus 10% squared.
+P2-- that we just computed as $37.39,
+and we're discounting all of these cash
+flows to present at the current discount rate of 8%.
+This gives us the current share price of $35.14.
+And this is how you find the current share price
+in a two-stage growth model.

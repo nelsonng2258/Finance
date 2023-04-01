@@ -1,0 +1,119 @@
+
+PROFESSOR: Next, we introduce an important concept
+in fixed-income markets called yield to maturity.
+If you open the Wall Street Journal
+or you look at quotes for bond prices
+on Bloomberg or another data source,
+you're going to see that bond prices are typically
+quoted not in dollars but in terms of their yield
+to maturity.
+Yield to maturity of the bond is defined as the rate of return
+such that if it is applied across all of the maturities
+from 1 to capital T, then the discounted value
+of the cash flows paid by the bond
+is equal to the bond price.
+In other words, as you can see from the formula, if you
+pretend that spot rates across all of the maturities
+are the same and equal to yield to maturity,
+then you should recover the bond price.
+Yield to maturity is thus defined as the solution
+of this equation.
+Yield to maturity is a quoting convention.
+It's a way of quoting bond prices.
+It does not represent the rate of return
+that the bond investor collects.
+It is simply a way of summarizing
+price information of the bond in a way that's
+relatively intuitive.
+Yield to maturities cannot be used to compare bonds to each
+other.
+A bond with a high yield to maturity
+does not necessarily pay a higher return
+or represent a better deal to the investors.
+Again, these are simply quoting conventions.
+Based on the definition, yield to maturity
+is a somewhat complex weighted average
+of spot rates across maturities.
+It's a weighted average of interest rates.
+Consider the following example.
+Suppose that the 1-year interest rate is 5%,
+and the 2-year rate is 6%.
+These are the spot rates.
+These are the rates of interest that investors
+can collect in the market.
+Now consider a 2-year treasury with a principal payment
+of $100 and a coupon rate of 6%.
+This bond pays $6 in the first year
+and $106 in the second year.
+Let's apply the definition of yield to maturity to this bond.
+First, we compute the bond price.
+The price of this bond is equal to 6
+the first payment discounted to the 5% rate
+over a single year plus 106--
+that's the second payment--
+discounted at the 6% interest rate over two years.
+The total value, the price of this bond, is $100.05.
+To compute the yield to maturity for this bond,
+we now need to solve the equation.
+$6 discounted at the rate y, yield
+to maturity, over a single year plus $106 discounted at yield
+to maturity over two years has to equal
+the price of the bond, $100.05.
+It turns out that the solution to this equation is 5.97%.
+That is the yield to maturity of our bond.
+If we plug this into the definition of yield
+to maturity, we see the discounting cash
+flows of this bond at 5.97% recovers the bond price.
+As you can see, yield to maturity
+falls somewhere between the two interest rates.
+It's between 5% and 6%.
+It's a lot closer to 6% because most
+of the cash flows of this bond are paid at time 2.
+In other words, yield to maturity
+is some kind of weighted average of the spot rates.
+But it is not a simple arithmetic average.
+It's a solution of a somewhat complicated equation.
+So it's a nonlinear function of the spot rates.
+Yield to maturity has several simple properties
+in relation to the coupon rate of the bond, which
+are useful to keep in mind for thinking qualitatively
+about how prices of bonds, their coupon rates, and yield
+to maturity are related to each other.
+First of all, bond price is inversely
+related to yield to maturity.
+As you increase yield to maturity,
+you're discounting cash flows of the bond at a higher rate.
+And of course, the bond price then declines.
+The second property is that the bond sells at par,
+meaning that the price of the bond
+is equal to the principal payment,
+if and only if yield to maturity is equal to the coupon rate.
+To see why that is the case, consider
+a bond with the principal payment
+of 1 and the coupon rate c.
+The price of this bond is equal to the sum
+of its coupons discounted at the yield
+to maturity y plus the principal payment, which
+is 1, discounted at the yield to maturity back to time 0.
+If we use the formula for an annuity with a rate of return
+y, we can rewrite the price of the bond as a sum of two terms
+that you can see on the right-hand side.
+The important thing to note here is
+that if the yield to maturity is equal to c, the coupon
+rate of the bond, the second term disappears and becomes
+equal to 0.
+And the first term equals 1.
+So the bond price is 1, which is the principal payment.
+What this equation tells us is that when yield to maturity
+equals the coupon rate, the bond price
+is equal to the principal payment of the bond.
+The bond price is declining as a function of yield
+to maturity, which means that if yield to maturity
+exceeds the coupon payment, the bond price is going to trade
+at a level below the principal.
+In this case, we say that the bond trades at a discount.
+It trades below the par value.
+If the yield to maturity is lower than the coupon rate,
+then the bond is going to trade at a premium,
+meaning that the price of the bond
+will exceed the principal payment.

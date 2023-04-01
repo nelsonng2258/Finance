@@ -1,0 +1,296 @@
+0
+00:00:00,000 --> 00:00:01,770
+
+
+1
+00:00:01,770 --> 00:00:05,610
+PROFESSOR: Let's compute convexity of this bond.
+
+2
+00:00:05,610 --> 00:00:07,785
+I will start with definition.
+
+3
+00:00:07,785 --> 00:00:09,160
+So convexity of the bond is given
+
+4
+00:00:09,160 --> 00:00:12,640
+by 1/2 multiplied by the inverse price, multiplied
+
+5
+00:00:12,640 --> 00:00:18,663
+by the second derivative of the bond price with respect to YTM.
+
+6
+00:00:18,663 --> 00:00:20,080
+So what I'm going to do right now,
+
+7
+00:00:20,080 --> 00:00:21,455
+I will try to expand this formula
+
+8
+00:00:21,455 --> 00:00:24,400
+by taking the second derivative of the bond price
+
+9
+00:00:24,400 --> 00:00:26,630
+with respect to YTM.
+
+10
+00:00:26,630 --> 00:00:30,100
+So let's write down the bond price as this.
+
+11
+00:00:30,100 --> 00:00:33,573
+So this is just the present value of cash flows
+
+12
+00:00:33,573 --> 00:00:34,990
+that we get from the bond discount
+
+13
+00:00:34,990 --> 00:00:39,000
+at the present at its YTM.
+
+14
+00:00:39,000 --> 00:00:40,520
+I will take the first derivative,
+
+15
+00:00:40,520 --> 00:00:43,117
+which would be given by the following expression.
+
+16
+00:00:43,117 --> 00:00:45,980
+
+
+17
+00:00:45,980 --> 00:00:48,530
+Now we'll take the second derivative, which would
+
+18
+00:00:48,530 --> 00:00:53,082
+be given by this expression.
+
+19
+00:00:53,082 --> 00:00:54,790
+I will write it down slightly differently
+
+20
+00:00:54,790 --> 00:01:00,410
+by factoring out 1 over 1 plus YTM squared.
+
+21
+00:01:00,410 --> 00:01:03,540
+So that under the summation sign we
+
+22
+00:01:03,540 --> 00:01:07,430
+will get the following expression.
+
+23
+00:01:07,430 --> 00:01:10,790
+And now I will plug in this derivative
+
+24
+00:01:10,790 --> 00:01:14,450
+into the definition of the convexity.
+
+25
+00:01:14,450 --> 00:01:16,580
+And so I'm going to get 1/2 multiplied
+
+26
+00:01:16,580 --> 00:01:20,960
+by the inverse price, multiplied by 1 over 1 plus yield squared,
+
+27
+00:01:20,960 --> 00:01:24,460
+multiplied by the following sum.
+
+28
+00:01:24,460 --> 00:01:26,230
+Within this following sum, what I
+
+29
+00:01:26,230 --> 00:01:27,790
+will do is that I will write down
+
+30
+00:01:27,790 --> 00:01:32,590
+the ratio of cash flow received in the year t,
+
+31
+00:01:32,590 --> 00:01:35,350
+divided by 1 plus YTM, raised to the power t
+
+32
+00:01:35,350 --> 00:01:38,030
+as the present value of this cash flow.
+
+33
+00:01:38,030 --> 00:01:41,890
+So this is why I factored out 1 plus y squared,
+
+34
+00:01:41,890 --> 00:01:43,830
+so that I can actually write down
+
+35
+00:01:43,830 --> 00:01:46,720
+this as the present value of this cash flow.
+
+36
+00:01:46,720 --> 00:01:48,847
+And so therefore under this summation sign,
+
+37
+00:01:48,847 --> 00:01:51,430
+we're going to have the present value of cash flow in the year
+
+38
+00:01:51,430 --> 00:01:57,268
+t multiplied by year t multiplied by year t plus 1.
+
+39
+00:01:57,268 --> 00:01:58,810
+And so this is the expression that we
+
+40
+00:01:58,810 --> 00:02:01,630
+can use right now to compute the convexity of the bond
+
+41
+00:02:01,630 --> 00:02:04,698
+that we have in this question.
+
+42
+00:02:04,698 --> 00:02:06,240
+This is a similar spreadsheet that we
+
+43
+00:02:06,240 --> 00:02:08,530
+had in part A of this question.
+
+44
+00:02:08,530 --> 00:02:11,039
+So here we are given our current YTM, the face
+
+45
+00:02:11,039 --> 00:02:13,560
+value of the bond, the coupon, the cash
+
+46
+00:02:13,560 --> 00:02:14,910
+flows that we get from the bond.
+
+47
+00:02:14,910 --> 00:02:16,285
+And we've already found the price
+
+48
+00:02:16,285 --> 00:02:19,797
+of this bond, which was 106.77.
+
+49
+00:02:19,797 --> 00:02:21,380
+So right now let's use this expression
+
+50
+00:02:21,380 --> 00:02:25,780
+which is derived to compute the convexity of this bond.
+
+51
+00:02:25,780 --> 00:02:28,950
+So first, for each year 1 through 5,
+
+52
+00:02:28,950 --> 00:02:30,780
+I will compute this expression that we
+
+53
+00:02:30,780 --> 00:02:32,460
+have under the summation sign.
+
+54
+00:02:32,460 --> 00:02:34,020
+So this is the present value of each
+
+55
+00:02:34,020 --> 00:02:36,630
+of these cash flows multiplied by t
+
+56
+00:02:36,630 --> 00:02:39,010
+and multiplied by t plus 1.
+
+57
+00:02:39,010 --> 00:02:41,280
+So for year 1, I will take the present value
+
+58
+00:02:41,280 --> 00:02:42,800
+that we compute it here.
+
+59
+00:02:42,800 --> 00:02:46,350
+I will multiply it by year, 1 in this case,
+
+60
+00:02:46,350 --> 00:02:52,290
+and multiply it by 1 plus another 1.
+
+61
+00:02:52,290 --> 00:02:58,290
+And I will do this calculation for each of these payments.
+
+62
+00:02:58,290 --> 00:03:00,788
+And then I will add it up.
+
+63
+00:03:00,788 --> 00:03:02,830
+And so you can see that to compute the convexity,
+
+64
+00:03:02,830 --> 00:03:03,960
+I need to take 1/2.
+
+65
+00:03:03,960 --> 00:03:06,360
+I need to divide it by the price of the bond,
+
+66
+00:03:06,360 --> 00:03:09,960
+and I need to divide it by 1 plus y squared.
+
+67
+00:03:09,960 --> 00:03:15,180
+And so first I will take the sum of these terms.
+
+68
+00:03:15,180 --> 00:03:18,352
+And then I will divide it by 2, I
+
+69
+00:03:18,352 --> 00:03:21,370
+will multiply it by the price.
+
+70
+00:03:21,370 --> 00:03:28,990
+And then we'll multiply it by 1 plus YTM squared.
+
+71
+00:03:28,990 --> 00:03:33,970
+And so this would exactly be the convexity of this bond.
+
+72
+00:03:33,970 --> 00:03:36,860
+So the convexity will be 12.38.
+
+73
+00:03:36,860 --> 00:03:39,000
+
+

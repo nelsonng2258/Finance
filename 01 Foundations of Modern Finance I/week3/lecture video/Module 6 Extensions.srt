@@ -1,0 +1,352 @@
+0
+00:00:00,000 --> 00:00:00,720
+
+
+1
+00:00:00,720 --> 00:00:04,080
+PROFESSOR: We have now developed a general method
+
+2
+00:00:04,080 --> 00:00:06,560
+to value an asset.
+
+3
+00:00:06,560 --> 00:00:08,419
+If we are given its expected cash
+
+4
+00:00:08,419 --> 00:00:10,940
+flow and the right discount rate,
+
+5
+00:00:10,940 --> 00:00:14,180
+its value is simply given by the present value
+
+6
+00:00:14,180 --> 00:00:19,180
+of its expected cash flow, a simple calculation.
+
+7
+00:00:19,180 --> 00:00:23,190
+When using this method in different applications,
+
+8
+00:00:23,190 --> 00:00:25,700
+we need to come up with estimates
+
+9
+00:00:25,700 --> 00:00:29,840
+of an asset's expected cash flow and the corresponding discount
+
+10
+00:00:29,840 --> 00:00:31,940
+rates.
+
+11
+00:00:31,940 --> 00:00:35,220
+As we dive into these applications,
+
+12
+00:00:35,220 --> 00:00:38,210
+we will further develop the tools and techniques
+
+13
+00:00:38,210 --> 00:00:42,580
+needed to come up with these estimates.
+
+14
+00:00:42,580 --> 00:00:45,850
+For now, I would only like to mention
+
+15
+00:00:45,850 --> 00:00:47,860
+several general considerations to keep
+
+16
+00:00:47,860 --> 00:00:52,510
+in mind in actual valuation applications.
+
+17
+00:00:52,510 --> 00:00:55,150
+The first is taxes.
+
+18
+00:00:55,150 --> 00:00:59,200
+It is important to keep in mind that cash flows generated
+
+19
+00:00:59,200 --> 00:01:03,070
+by assets are often subject to taxes.
+
+20
+00:01:03,070 --> 00:01:06,940
+For example, financial assets, such as bonds and stocks,
+
+21
+00:01:06,940 --> 00:01:11,350
+pay in the form of interest, dividends, and capital gains.
+
+22
+00:01:11,350 --> 00:01:16,240
+Investors may have to pay taxes on these payments.
+
+23
+00:01:16,240 --> 00:01:21,240
+Firms earn profits, but they also have to pay taxes.
+
+24
+00:01:21,240 --> 00:01:25,410
+What then matters when it comes to valuing an asset
+
+25
+00:01:25,410 --> 00:01:28,860
+will be its cash flows after taxes.
+
+26
+00:01:28,860 --> 00:01:31,140
+Thus, in the present value calculation,
+
+27
+00:01:31,140 --> 00:01:34,530
+we have to use after tax cash flows.
+
+28
+00:01:34,530 --> 00:01:37,680
+We will see more of this point in later applications,
+
+29
+00:01:37,680 --> 00:01:41,780
+especially in project valuations.
+
+30
+00:01:41,780 --> 00:01:46,350
+The second factor to keep in mind is currency.
+
+31
+00:01:46,350 --> 00:01:49,650
+All examples so far, and throughout this course,
+
+32
+00:01:49,650 --> 00:01:54,270
+will consider cash flows denominated in US dollars.
+
+33
+00:01:54,270 --> 00:01:56,220
+This is only for convenience.
+
+34
+00:01:56,220 --> 00:01:58,260
+In practice, of course, cash flows
+
+35
+00:01:58,260 --> 00:02:01,170
+can come in other currencies.
+
+36
+00:02:01,170 --> 00:02:04,170
+Our method is perfectly applicable.
+
+37
+00:02:04,170 --> 00:02:07,710
+We only need to switch to cash flows and discount
+
+38
+00:02:07,710 --> 00:02:11,890
+rates denominated in these currencies.
+
+39
+00:02:11,890 --> 00:02:17,410
+The third factor to keep in mind is how to forecast cash flows.
+
+40
+00:02:17,410 --> 00:02:20,470
+When valuing an asset, we first need
+
+41
+00:02:20,470 --> 00:02:24,610
+to come up with estimates or forecasts of its future cash
+
+42
+00:02:24,610 --> 00:02:25,510
+flows--
+
+43
+00:02:25,510 --> 00:02:28,860
+magnitude, timing and risk.
+
+44
+00:02:28,860 --> 00:02:31,350
+Sometimes these forecasts are given
+
+45
+00:02:31,350 --> 00:02:36,170
+to us, such as the cash flow of a government bond, which
+
+46
+00:02:36,170 --> 00:02:40,430
+includes interests and the principal payment.
+
+47
+00:02:40,430 --> 00:02:43,850
+Often we need to come up with our own forecasts,
+
+48
+00:02:43,850 --> 00:02:49,740
+such as dividends from a stock or profits from a project.
+
+49
+00:02:49,740 --> 00:02:54,490
+We will do so when we get into these applications.
+
+50
+00:02:54,490 --> 00:02:58,310
+Given an asset's cash flow, size, timing and risk,
+
+51
+00:02:58,310 --> 00:03:02,920
+we need to find the right discount rates from the market.
+
+52
+00:03:02,920 --> 00:03:07,000
+How to do this operationally requires further development
+
+53
+00:03:07,000 --> 00:03:10,780
+and enrichment of our valuation methodology,
+
+54
+00:03:10,780 --> 00:03:15,040
+which we will spend more time on over this course.
+
+55
+00:03:15,040 --> 00:03:19,300
+For now, we only need to keep in mind a few points.
+
+56
+00:03:19,300 --> 00:03:24,190
+For cash flow, the discount rate will depend on its timing.
+
+57
+00:03:24,190 --> 00:03:30,420
+That is, if it's in one year, in two years, or five years.
+
+58
+00:03:30,420 --> 00:03:33,030
+In case the cash flow is risk-free,
+
+59
+00:03:33,030 --> 00:03:35,610
+we can use the risk-free interest rate
+
+60
+00:03:35,610 --> 00:03:39,390
+which reflects the time value of money as determined
+
+61
+00:03:39,390 --> 00:03:41,830
+in the financial market.
+
+62
+00:03:41,830 --> 00:03:46,290
+However, it is important to know that one year interest rate is
+
+63
+00:03:46,290 --> 00:03:49,890
+in general different from two year and five year interest
+
+64
+00:03:49,890 --> 00:03:52,420
+rates.
+
+65
+00:03:52,420 --> 00:03:55,000
+In general, cash flows are risky.
+
+66
+00:03:55,000 --> 00:03:59,710
+In this case, we need to include the proper risk adjustment
+
+67
+00:03:59,710 --> 00:04:01,390
+in the discount rate--
+
+68
+00:04:01,390 --> 00:04:04,150
+namely, the risk premium associated
+
+69
+00:04:04,150 --> 00:04:07,310
+with the risk of the cash flow.
+
+70
+00:04:07,310 --> 00:04:09,710
+It is also important to keep in mind
+
+71
+00:04:09,710 --> 00:04:12,860
+that the risk for net asset's one year cash flow
+
+72
+00:04:12,860 --> 00:04:17,930
+can be quite different from the risk in its two year cash flow.
+
+73
+00:04:17,930 --> 00:04:23,050
+Consequently, the risk premium for each of these cash flows
+
+74
+00:04:23,050 --> 00:04:25,410
+are, in general, different.
+
+75
+00:04:25,410 --> 00:04:27,720
+Putting the pieces together, we have
+
+76
+00:04:27,720 --> 00:04:29,670
+the following present value formula,
+
+77
+00:04:29,670 --> 00:04:33,690
+where present value is the sum of the present values
+
+78
+00:04:33,690 --> 00:04:36,990
+of each piece of the asset's cash flow.
+
+79
+00:04:36,990 --> 00:04:40,560
+That is, the expected cash flow at each time, t,
+
+80
+00:04:40,560 --> 00:04:44,400
+discounted at rt, the appropriate discount rate
+
+81
+00:04:44,400 --> 00:04:48,200
+for that cash flow C FT.
+
+82
+00:04:48,200 --> 00:04:51,270
+Despite the fact that the discount rate for each cash
+
+83
+00:04:51,270 --> 00:04:54,510
+flow of an asset is in general different,
+
+84
+00:04:54,510 --> 00:04:57,890
+in most of our examples, we will use the same discount
+
+85
+00:04:57,890 --> 00:05:01,940
+rate for an asset's cash flow at different points in time.
+
+86
+00:05:01,940 --> 00:05:04,610
+It is important to keep in mind that this is mostly
+
+87
+00:05:04,610 --> 00:05:07,000
+for simplicity.
+

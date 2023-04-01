@@ -1,0 +1,85 @@
+
+PROFESSOR: Next, we consider multi-stage growth models.
+The Gordon model, the constant growth model,
+is a useful approximation.
+It's also a useful building block
+for constructing more realistic models.
+But of course, the assumption of constant growth
+forever is typically not a good approximation
+to how real firms behave.
+It is more realistic to think of the company
+as going through different stages of growth
+throughout its lifecycle.
+When the firm is young, it may start small and grow rapidly
+by capturing an increasing market share.
+Over time, as the company grows larger and larger,
+it's going to be harder to maintain the same growth rate.
+There may be some initial competitive advantages
+that the firm has.
+Over time, competition is going to catch up.
+Also, as the company gets large in terms of its market share,
+increasing the market share further is going to become
+progressively difficult. So in the long run,
+we cannot expect large, established firms to grow
+at the same rate as young growth firms.
+The way to model this is to assume
+that in the early stages, the company may
+go through a so-called growth stage
+with a relatively high growth rate, which will eventually
+slow down.
+And long term, the company is going
+to reach maturity, at which point
+the growth rate is going to be relatively low
+and is going to converge to some kind of average
+for the same type of firms, perhaps average for the sector.
+Now, let's consider an example.
+Northern Company is expected to pay $1 per share in dividends
+next year.
+This number is expected to grow at a 10% rate for the next 5
+years.
+After that, the growth rate of the company
+is going to slow down.
+And it's going to be 2% from that point on, forever.
+The cost of capital of this company,
+or the discount rate on its cash flows, is 8%.
+The question is, what is the current share
+price of the Northern Company?
+The following table projects dividends per share
+for this firm over the next several years.
+You can see that at time 1, the dividend is expected to be $1.
+And this is going to grow at a 10% rate.
+So it's going to be 1.1 in year 2, 1.21 in the year 3,
+and so forth, until we hit year 6.
+And after that, the growth rate is going to slow down to 2%.
+We are going to value this stock by dividing
+the timeline into two portions.
+The first segment is going to be from year 0 up to
+and including year 6.
+The second segment is going to start in year 7
+and go all the way to infinity.
+We are going to price these two portions of cash flow
+separately.
+So let's start with the residual piece, which
+is D7, D8, and so forth.
+We are going to compute the price of this residual segment
+from the point of view of time 6.
+From the perspective of time 6, what we're dealing with
+is a Gordon model.
+The growth rate of the company starting from P at 7
+is constant.
+We can therefore apply the Gordon formula.
+The price of the stock at time 6 is
+equal to D7, the expected cash flow at time 7, which
+is 1.64 divided by r, the discount rate, minus g,
+the growth rate, which at that point is 2%.
+So 1.64 divided by 8% minus 2% is $27.38.
+That is the residual value of the stock at time 6, P6.
+Now, we can use our DCF formula at time 0.
+The price of the stock at time 0 is equal to the sum,
+from 1 to 6, of the dividends discounted
+at the 8% rate, which is the expected return,
+plus the residual term P6 discounted
+at the same 8% rate over 6 years.
+When we compute the sum, the end result is $23.07.
+And that is the value of the firm
+under this two-stage growth assumption.

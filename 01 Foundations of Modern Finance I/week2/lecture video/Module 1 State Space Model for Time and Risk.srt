@@ -1,0 +1,468 @@
+0
+00:00:00,000 --> 00:00:01,140
+
+
+1
+00:00:01,140 --> 00:00:03,780
+PROFESSOR: As we have discussed, the central problem
+
+2
+00:00:03,780 --> 00:00:07,050
+in finance or business decision making in general
+
+3
+00:00:07,050 --> 00:00:10,900
+is how to value assets or their cash flows.
+
+4
+00:00:10,900 --> 00:00:14,190
+A cash flow, in addition to its magnitude,
+
+5
+00:00:14,190 --> 00:00:17,850
+has two key characteristics, as we have discussed before.
+
+6
+00:00:17,850 --> 00:00:20,660
+Its timing and risk.
+
+7
+00:00:20,660 --> 00:00:23,210
+We are now going to develop a simple model
+
+8
+00:00:23,210 --> 00:00:27,410
+to capture the two essential elements in finance, time
+
+9
+00:00:27,410 --> 00:00:29,440
+and risk.
+
+10
+00:00:29,440 --> 00:00:33,880
+We assume that the are two dates for the economy-- today
+
+11
+00:00:33,880 --> 00:00:37,390
+and tomorrow, or now and future.
+
+12
+00:00:37,390 --> 00:00:44,170
+Denoting time by t, t equals 0 for today and 1 for tomorrow.
+
+13
+00:00:44,170 --> 00:00:47,860
+Sometimes we also draw a horizontal line
+
+14
+00:00:47,860 --> 00:00:49,540
+to represent time.
+
+15
+00:00:49,540 --> 00:00:53,470
+The timeline, as shown at the bottom on the right hand
+
+16
+00:00:53,470 --> 00:01:00,950
+side of the slide, the two dates are marked as 0 and 1.
+
+17
+00:01:00,950 --> 00:01:04,129
+For day 0, there is no uncertainty.
+
+18
+00:01:04,129 --> 00:01:08,000
+Before day 1, there is uncertainty.
+
+19
+00:01:08,000 --> 00:01:11,150
+We describe this uncertainty by assuming
+
+20
+00:01:11,150 --> 00:01:14,960
+that there are N possible economic states at day one,
+
+21
+00:01:14,960 --> 00:01:18,070
+such as boom or recession.
+
+22
+00:01:18,070 --> 00:01:23,680
+We denote the state by s, and it can be 1, 2, or N,
+
+23
+00:01:23,680 --> 00:01:27,150
+for state 1, 2, or N.
+
+24
+00:01:27,150 --> 00:01:30,090
+The likelihood of these states are
+
+25
+00:01:30,090 --> 00:01:37,366
+given by their probabilities, P1, P2, and PN.
+
+26
+00:01:37,366 --> 00:01:43,380
+The N states can also be represented by the N branches
+
+27
+00:01:43,380 --> 00:01:46,650
+at time 1, as in the graph on the right hand
+
+28
+00:01:46,650 --> 00:01:48,980
+side of the slide.
+
+29
+00:01:48,980 --> 00:01:53,410
+We assume that the possible states and their probabilities
+
+30
+00:01:53,410 --> 00:01:57,130
+are known to all decision makers.
+
+31
+00:01:57,130 --> 00:01:59,290
+The tree graph on the right hand side
+
+32
+00:01:59,290 --> 00:02:02,530
+of the slide with the associated probabilities,
+
+33
+00:02:02,530 --> 00:02:07,130
+is also called a state space model for the economy.
+
+34
+00:02:07,130 --> 00:02:09,169
+Ideally, the state space model fully
+
+35
+00:02:09,169 --> 00:02:12,050
+captures the risk of the economy.
+
+36
+00:02:12,050 --> 00:02:16,580
+The simple model described here may seem a bit too simplistic
+
+37
+00:02:16,580 --> 00:02:20,270
+for that purpose, but it can be extended easily
+
+38
+00:02:20,270 --> 00:02:25,540
+to allow many dates and many states, even the continuum
+
+39
+00:02:25,540 --> 00:02:26,900
+states.
+
+40
+00:02:26,900 --> 00:02:30,620
+We will consider some of these extensions later.
+
+41
+00:02:30,620 --> 00:02:34,090
+But for now, our main purpose is to have the simplest
+
+42
+00:02:34,090 --> 00:02:37,510
+model to capture the key elements needed
+
+43
+00:02:37,510 --> 00:02:41,680
+for our analysis, and to develop the basic ideas, principles,
+
+44
+00:02:41,680 --> 00:02:44,380
+and methods for asset valuation.
+
+45
+00:02:44,380 --> 00:02:48,040
+For this purpose, we often even reduce the number of states
+
+46
+00:02:48,040 --> 00:02:51,820
+to two for simplicity.
+
+47
+00:02:51,820 --> 00:02:54,580
+We now consider a financial market
+
+48
+00:02:54,580 --> 00:02:57,430
+with no frictions in this economy,
+
+49
+00:02:57,430 --> 00:03:01,380
+with a set of financial assets being traded.
+
+50
+00:03:01,380 --> 00:03:05,640
+Assets can be traded at time 0, and the payoffs
+
+51
+00:03:05,640 --> 00:03:09,300
+realized at day 1.
+
+52
+00:03:09,300 --> 00:03:13,653
+Let P denote the price of an asset at times 0,
+
+53
+00:03:13,653 --> 00:03:18,190
+X denote its payoff at time 1.
+
+54
+00:03:18,190 --> 00:03:21,190
+The value of X in general depends on the state
+
+55
+00:03:21,190 --> 00:03:23,900
+of the economy at time 1.
+
+56
+00:03:23,900 --> 00:03:30,460
+It will be X1 in state 1, X2 in state 2, et cetera.
+
+57
+00:03:30,460 --> 00:03:36,560
+X can also be represented as a vector of different payoffs
+
+58
+00:03:36,560 --> 00:03:38,920
+in different states.
+
+59
+00:03:38,920 --> 00:03:41,650
+It's also called a random variable
+
+60
+00:03:41,650 --> 00:03:45,520
+denoting unpredictable realizations
+
+61
+00:03:45,520 --> 00:03:48,710
+at some future time.
+
+62
+00:03:48,710 --> 00:03:53,560
+A random payoff is fully defined by its payoff
+
+63
+00:03:53,560 --> 00:03:58,880
+in each possible state and the corresponding probability.
+
+64
+00:03:58,880 --> 00:04:03,510
+Mathematically, we can write it as a payoff vector,
+
+65
+00:04:03,510 --> 00:04:06,690
+with each element of the vector denoting the payoff
+
+66
+00:04:06,690 --> 00:04:11,280
+in that state, X1 to XN.
+
+67
+00:04:11,280 --> 00:04:16,562
+Together with the corresponding probabilities P1 to PN.
+
+68
+00:04:16,562 --> 00:04:19,100
+Assets traded in the financial market
+
+69
+00:04:19,100 --> 00:04:22,040
+can have different payoff patterns.
+
+70
+00:04:22,040 --> 00:04:26,000
+In general, there are many traded assets or securities.
+
+71
+00:04:26,000 --> 00:04:29,930
+Here, securities refer to financial claims, contracts
+
+72
+00:04:29,930 --> 00:04:33,960
+traded in the financial markets, such as stocks, bonds,
+
+73
+00:04:33,960 --> 00:04:36,350
+and derivative securities.
+
+74
+00:04:36,350 --> 00:04:39,890
+We first introduce some simple securities.
+
+75
+00:04:39,890 --> 00:04:43,790
+Consider a primitive state-contingent claim,
+
+76
+00:04:43,790 --> 00:04:50,420
+which pays $1 in a single state, S, and nothing otherwise.
+
+77
+00:04:50,420 --> 00:04:53,510
+It is also called an Arrow-Debreu security,
+
+78
+00:04:53,510 --> 00:04:57,590
+named after the two economists who first introduced them
+
+79
+00:04:57,590 --> 00:05:00,740
+into financial market modeling.
+
+80
+00:05:00,740 --> 00:05:03,320
+Although Arrow-Debreu securities are not
+
+81
+00:05:03,320 --> 00:05:07,440
+the most divisible or common securities seen in a market,
+
+82
+00:05:07,440 --> 00:05:10,750
+they do exist in mature markets.
+
+83
+00:05:10,750 --> 00:05:15,460
+Introducing them here is to facilitate our analysis
+
+84
+00:05:15,460 --> 00:05:18,040
+in the simplest way possible.
+
+85
+00:05:18,040 --> 00:05:20,860
+As shown later, their actual existence
+
+86
+00:05:20,860 --> 00:05:24,820
+is not essential as long as we have a rich enough set
+
+87
+00:05:24,820 --> 00:05:27,910
+of traded securities, like bonds, stocks,
+
+88
+00:05:27,910 --> 00:05:30,410
+and derivative securities.
+
+89
+00:05:30,410 --> 00:05:36,410
+We will denote the price of the Arrow-Debreu claim on state j
+
+90
+00:05:36,410 --> 00:05:38,630
+by phi j.
+
+91
+00:05:38,630 --> 00:05:43,690
+Phi j is also called the state price for state j.
+
+92
+00:05:43,690 --> 00:05:47,230
+State price turns out to be a very useful concept
+
+93
+00:05:47,230 --> 00:05:50,020
+in our valuation analysis, as we will
+
+94
+00:05:50,020 --> 00:05:53,940
+see throughout this course.
+
+95
+00:05:53,940 --> 00:05:58,650
+No arbitrage requires that all state prices are positive.
+
+96
+00:05:58,650 --> 00:06:02,280
+A security that pays off a positive amount at least
+
+97
+00:06:02,280 --> 00:06:06,760
+in one future state must have a positive price today.
+
+98
+00:06:06,760 --> 00:06:11,340
+Otherwise, we can construct an arbitrage.
+
+99
+00:06:11,340 --> 00:06:14,480
+Since there are a total off N states,
+
+100
+00:06:14,480 --> 00:06:19,460
+there are also N different Arrow-Debreu securities.
+
+101
+00:06:19,460 --> 00:06:25,500
+A financial market is called complete
+
+102
+00:06:25,500 --> 00:06:29,040
+if all the Arrow-Debreu securities
+
+103
+00:06:29,040 --> 00:06:31,490
+are traded in the market.
+
+104
+00:06:31,490 --> 00:06:34,500
+
+
+105
+00:06:34,500 --> 00:06:39,060
+Complete market is a useful abstraction, as we'll see soon.
+
+106
+00:06:39,060 --> 00:06:42,720
+It merely means that the financial market is rich enough
+
+107
+00:06:42,720 --> 00:06:46,380
+in terms of the securities being traded in the market.
+
+108
+00:06:46,380 --> 00:06:48,700
+As we said in the introduction, there
+
+109
+00:06:48,700 --> 00:06:52,170
+are indeed tens of thousands of securities being traded
+
+110
+00:06:52,170 --> 00:06:53,820
+in the global financial market.
+
+111
+00:06:53,820 --> 00:06:57,120
+For most of the applications we discussed in this course,
+
+112
+00:06:57,120 --> 00:06:59,460
+assuming a complete financial market is
+
+113
+00:06:59,460 --> 00:07:01,470
+a reasonable starting point.
+
+114
+00:07:01,470 --> 00:07:03,120
+More discussion on this point will
+
+115
+00:07:03,120 --> 00:07:06,750
+occur when we develop more detailed risk and valuation
+
+116
+00:07:06,750 --> 00:07:08,300
+models.
+

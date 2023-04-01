@@ -1,0 +1,564 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:03,720
+PROFESSOR: In this question, we will consider a constant growth
+
+2
+00:00:03,720 --> 00:00:05,680
+model.
+
+3
+00:00:05,680 --> 00:00:08,370
+Let's take a firm, ABC.
+
+4
+00:00:08,370 --> 00:00:11,460
+This firm is expected to produce earnings per share
+
+5
+00:00:11,460 --> 00:00:15,910
+in Year 1 that equals to $20.
+
+6
+00:00:15,910 --> 00:00:20,660
+ABC's return on investment or ROI is 20%.
+
+7
+00:00:20,660 --> 00:00:24,790
+And this ROI is expected to remain constant at this level
+
+8
+00:00:24,790 --> 00:00:26,380
+forever.
+
+9
+00:00:26,380 --> 00:00:28,540
+Notice the difference between this question
+
+10
+00:00:28,540 --> 00:00:32,870
+and question 4 where ROI was not constant.
+
+11
+00:00:32,870 --> 00:00:36,680
+So for this particular firm ROI is currently 20%
+
+12
+00:00:36,680 --> 00:00:39,890
+and it is expected to be constant.
+
+13
+00:00:39,890 --> 00:00:43,120
+ABC's current payout ratio is 55%
+
+14
+00:00:43,120 --> 00:00:47,710
+and it is also expected to remain at that level forever.
+
+15
+00:00:47,710 --> 00:00:52,420
+The appropriate discount rate is 12%.
+
+16
+00:00:52,420 --> 00:00:54,140
+We will answer two questions.
+
+17
+00:00:54,140 --> 00:00:56,710
+First, we will derive the share price of the stock
+
+18
+00:00:56,710 --> 00:00:59,110
+and then we will derive its present value
+
+19
+00:00:59,110 --> 00:01:01,060
+of growth opportunities.
+
+20
+00:01:01,060 --> 00:01:05,820
+Let's follow the approach we have established in Question 4.
+
+21
+00:01:05,820 --> 00:01:09,880
+I have put EPS that we expect to get from this firm in Year
+
+22
+00:01:09,880 --> 00:01:13,400
+1, $20 earnings per share.
+
+23
+00:01:13,400 --> 00:01:15,850
+Now I will put plowback ratio.
+
+24
+00:01:15,850 --> 00:01:21,340
+Recorded plowback ratio is 1 minus the payout ratio.
+
+25
+00:01:21,340 --> 00:01:25,840
+So that means that we are plowing back 45% of EPS
+
+26
+00:01:25,840 --> 00:01:28,060
+in the Year 1.
+
+27
+00:01:28,060 --> 00:01:33,610
+And this plowback ratio remains constant forever.
+
+28
+00:01:33,610 --> 00:01:35,200
+ROI equals to 20%.
+
+29
+00:01:35,200 --> 00:01:44,000
+And again, this rate will remain constant forever.
+
+30
+00:01:44,000 --> 00:01:48,830
+Now let's compute the investment as EPS times the plowback
+
+31
+00:01:48,830 --> 00:01:50,960
+ratio.
+
+32
+00:01:50,960 --> 00:01:56,345
+The dividends is simply the EPS multiplied
+
+33
+00:01:56,345 --> 00:02:02,250
+by 1 minus the plowback rate or the payout rate.
+
+34
+00:02:02,250 --> 00:02:05,040
+
+
+35
+00:02:05,040 --> 00:02:10,620
+And then EPS in the Year 2 will be
+
+36
+00:02:10,620 --> 00:02:17,936
+the prior year's EPS plus ROI multiplied by the investment.
+
+37
+00:02:17,936 --> 00:02:21,750
+
+
+38
+00:02:21,750 --> 00:02:26,850
+And so we can just trace these arrays all the way forward
+
+39
+00:02:26,850 --> 00:02:27,900
+and get these numbers.
+
+40
+00:02:27,900 --> 00:02:30,850
+So we'll get investments and we'll get dividends.
+
+41
+00:02:30,850 --> 00:02:35,730
+Now let's look at the dividend stream.
+
+42
+00:02:35,730 --> 00:02:39,850
+Unlike the previous question, Question 4,
+
+43
+00:02:39,850 --> 00:02:44,280
+where we've stopped plowing back and we've
+
+44
+00:02:44,280 --> 00:02:48,180
+started paying out all earnings per share
+
+45
+00:02:48,180 --> 00:02:51,900
+as dividends at some point, So here we
+
+46
+00:02:51,900 --> 00:02:55,050
+continue plowing back at a constant rate.
+
+47
+00:02:55,050 --> 00:02:59,760
+So in this case, dividends always seem to grow.
+
+48
+00:02:59,760 --> 00:03:01,192
+And they don't stop.
+
+49
+00:03:01,192 --> 00:03:03,150
+So this is the difference between this question
+
+50
+00:03:03,150 --> 00:03:06,070
+and the question that we had before.
+
+51
+00:03:06,070 --> 00:03:08,070
+Now let's compute dividend growth rate
+
+52
+00:03:08,070 --> 00:03:13,020
+and see at what rate dividends grow in this model.
+
+53
+00:03:13,020 --> 00:03:16,830
+So I'll compute the growth rate between the year 2 and 1.
+
+54
+00:03:16,830 --> 00:03:20,850
+So I'll take dividend in Year 2 minus the dividend in the Year
+
+55
+00:03:20,850 --> 00:03:22,140
+1.
+
+56
+00:03:22,140 --> 00:03:25,440
+And I'll divide it by the dividend in the Year 1.
+
+57
+00:03:25,440 --> 00:03:30,440
+And so this seems to be 9%.
+
+58
+00:03:30,440 --> 00:03:32,870
+And I can just extend this array to see
+
+59
+00:03:32,870 --> 00:03:36,050
+what is the dividend growth rate for the subsequent years.
+
+60
+00:03:36,050 --> 00:03:39,500
+
+
+61
+00:03:39,500 --> 00:03:42,140
+And what we see here, very interestingly,
+
+62
+00:03:42,140 --> 00:03:47,450
+that the dividend growth rate seems to be constant and be
+
+63
+00:03:47,450 --> 00:03:49,460
+at the rate of 9%.
+
+64
+00:03:49,460 --> 00:03:51,570
+And I'm doing it only for the first 10 years.
+
+65
+00:03:51,570 --> 00:03:54,877
+But if we were to extend this all the way to Year 100,
+
+66
+00:03:54,877 --> 00:03:56,960
+we will actually find out that the dividend growth
+
+67
+00:03:56,960 --> 00:04:00,240
+rate remains at 9%.
+
+68
+00:04:00,240 --> 00:04:02,570
+And so this is a very interesting fact of this model
+
+69
+00:04:02,570 --> 00:04:06,500
+that constant-- there is constant growth
+
+70
+00:04:06,500 --> 00:04:08,870
+rate in dividends here.
+
+71
+00:04:08,870 --> 00:04:11,330
+Now let's see if we can analytically
+
+72
+00:04:11,330 --> 00:04:16,500
+derive the dividend growth rate in this model.
+
+73
+00:04:16,500 --> 00:04:18,360
+Let b be the plowback ratio.
+
+74
+00:04:18,360 --> 00:04:21,990
+And so then the dividends in year t
+
+75
+00:04:21,990 --> 00:04:25,370
+is 1 minus the plowback ratio, again the payout ratio,
+
+76
+00:04:25,370 --> 00:04:29,400
+at times earnings per share in that year t.
+
+77
+00:04:29,400 --> 00:04:34,890
+Similarly, next period's dividend is this.
+
+78
+00:04:34,890 --> 00:04:39,540
+So I colored b here in color red just
+
+79
+00:04:39,540 --> 00:04:43,072
+to denote that this b, the plowback ratio,
+
+80
+00:04:43,072 --> 00:04:44,030
+is not going to change.
+
+81
+00:04:44,030 --> 00:04:45,660
+It's going to be constant.
+
+82
+00:04:45,660 --> 00:04:49,470
+So this b here is the same in period t plus 1
+
+83
+00:04:49,470 --> 00:04:50,520
+and in period t.
+
+84
+00:04:50,520 --> 00:04:53,590
+
+
+85
+00:04:53,590 --> 00:04:56,620
+Now recall that earnings per share in year t plus 1
+
+86
+00:04:56,620 --> 00:05:01,000
+equals to the prior period's earnings per share plus ROI
+
+87
+00:05:01,000 --> 00:05:03,350
+times investment.
+
+88
+00:05:03,350 --> 00:05:05,560
+So again, here ROI is constant.
+
+89
+00:05:05,560 --> 00:05:09,940
+So I deleted the subscript t from ROI.
+
+90
+00:05:09,940 --> 00:05:12,070
+And then investment, of course, is just
+
+91
+00:05:12,070 --> 00:05:15,453
+EPS times the plowback ratio.
+
+92
+00:05:15,453 --> 00:05:17,245
+And again, this plowback ratio is constant.
+
+93
+00:05:17,245 --> 00:05:20,460
+
+
+94
+00:05:20,460 --> 00:05:23,120
+Then we can write down the EPS in the year
+
+95
+00:05:23,120 --> 00:05:26,450
+t plus 1 as EPS in year t multiplied by
+
+96
+00:05:26,450 --> 00:05:30,450
+1 plus ROI times b.
+
+97
+00:05:30,450 --> 00:05:34,650
+And now we can plug this in to our dividend equation
+
+98
+00:05:34,650 --> 00:05:40,800
+for year t plus 1 which would be 1 minus the plowback
+
+99
+00:05:40,800 --> 00:05:45,690
+ratio times EPS in year t multiplied by 1 plus ROI times
+
+100
+00:05:45,690 --> 00:05:47,280
+b.
+
+101
+00:05:47,280 --> 00:05:50,370
+And now we can actually compute the dividend growth
+
+102
+00:05:50,370 --> 00:05:55,170
+rate, which is dt plus 1 minus dt divided by dt.
+
+103
+00:05:55,170 --> 00:05:59,920
+And I will express that as Dt plus 1 divided by dt minus 1.
+
+104
+00:05:59,920 --> 00:06:03,300
+And now into this equation, I will plug in our expressions
+
+105
+00:06:03,300 --> 00:06:08,100
+for dt plus 1 and dt.
+
+106
+00:06:08,100 --> 00:06:10,540
+So we just derived what was the Dt plus 1.
+
+107
+00:06:10,540 --> 00:06:14,520
+So it's 1 minus b multiplied by EPS in year t multiplied
+
+108
+00:06:14,520 --> 00:06:17,580
+by 1 plus ROI times b.
+
+109
+00:06:17,580 --> 00:06:22,940
+And dt is just 1 minus b times EPS in year t.
+
+110
+00:06:22,940 --> 00:06:26,660
+So you could see that 1 minus b and EPS cancels out.
+
+111
+00:06:26,660 --> 00:06:31,170
+Then what we have is just 1 plus ROI times b minus 1,
+
+112
+00:06:31,170 --> 00:06:34,780
+which is just ROI times b.
+
+113
+00:06:34,780 --> 00:06:38,050
+So in this model as long as the firm
+
+114
+00:06:38,050 --> 00:06:44,920
+maintains constant plowback ratio and has constant ROI,
+
+115
+00:06:44,920 --> 00:06:48,970
+the dividend growth rate will be time independent.
+
+116
+00:06:48,970 --> 00:06:50,170
+So it will be constant.
+
+117
+00:06:50,170 --> 00:06:53,050
+And it will be the product of the return
+
+118
+00:06:53,050 --> 00:06:57,880
+on investment this firm has and the plowback ratio.
+
+119
+00:06:57,880 --> 00:07:00,760
+And that's a very important equation that we just derived.
+
+120
+00:07:00,760 --> 00:07:02,980
+Now going back to our spreadsheet,
+
+121
+00:07:02,980 --> 00:07:04,480
+it should not surprise us right now
+
+122
+00:07:04,480 --> 00:07:09,370
+that the dividend growth rate here is 9% and it is constant.
+
+123
+00:07:09,370 --> 00:07:11,590
+Indeed, if I were to compute it just given
+
+124
+00:07:11,590 --> 00:07:15,802
+the payout ratio and ROI is just simply
+
+125
+00:07:15,802 --> 00:07:19,030
+the plowback ratio which is 1 minus the payout
+
+126
+00:07:19,030 --> 00:07:23,830
+ratio multiplied by ROI.
+
+127
+00:07:23,830 --> 00:07:26,140
+And so indeed is just 9%.
+
+128
+00:07:26,140 --> 00:07:30,740
+And this growth rate will remain constant,
+
+129
+00:07:30,740 --> 00:07:34,510
+as we just analytically showed.
+
+130
+00:07:34,510 --> 00:07:37,600
+And so then just to find the current share price,
+
+131
+00:07:37,600 --> 00:07:42,520
+realizing the dividends here grow at a constant rate, 9%,
+
+132
+00:07:42,520 --> 00:07:45,070
+and this will be a perpetual constant growth rate as long
+
+133
+00:07:45,070 --> 00:07:50,650
+as, again, the plowback ratio and ROI stay constant,
+
+134
+00:07:50,650 --> 00:07:52,570
+so all we need to do to find the current share
+
+135
+00:07:52,570 --> 00:07:56,260
+price because it's the growing perpetuity so we're taking
+
+136
+00:07:56,260 --> 00:08:00,850
+the dividend that we get in year one
+
+137
+00:08:00,850 --> 00:08:06,010
+and we're dividing it by r which is our discount rate 12 percent
+
+138
+00:08:06,010 --> 00:08:10,040
+minus the dividend growth rate of 9%.
+
+139
+00:08:10,040 --> 00:08:14,250
+And so the current share price of the stock is $366.67.
+
+140
+00:08:14,250 --> 00:08:16,000
+
+

@@ -1,0 +1,436 @@
+0
+00:00:00,000 --> 00:00:00,740
+
+
+1
+00:00:00,740 --> 00:00:04,600
+PROFESSOR: Next, we introduce the concept of yield curve.
+
+2
+00:00:04,600 --> 00:00:07,900
+Let's first consider cash flows of fixed-income securities
+
+3
+00:00:07,900 --> 00:00:09,042
+or bonds.
+
+4
+00:00:09,042 --> 00:00:10,750
+There are three important characteristics
+
+5
+00:00:10,750 --> 00:00:12,520
+that define a bond--
+
+6
+00:00:12,520 --> 00:00:15,268
+time to maturity; the principal payment,
+
+7
+00:00:15,268 --> 00:00:16,810
+which is the payment that the bond is
+
+8
+00:00:16,810 --> 00:00:20,320
+promising at the maturity date; and the coupon.
+
+9
+00:00:20,320 --> 00:00:23,500
+For example, the bond that you can see here
+
+10
+00:00:23,500 --> 00:00:28,420
+is a three-year bond with a $1,000 face value, or principal
+
+11
+00:00:28,420 --> 00:00:31,180
+value, and a 5% annual coupon.
+
+12
+00:00:31,180 --> 00:00:35,160
+So each year, bond investors receive $50 in coupons.
+
+13
+00:00:35,160 --> 00:00:38,110
+And at the maturity date, in addition to the last coupon
+
+14
+00:00:38,110 --> 00:00:42,500
+payment, they receive a $1,000 principal payment.
+
+15
+00:00:42,500 --> 00:00:45,830
+We are going to value fixed-income securities using
+
+16
+00:00:45,830 --> 00:00:49,070
+absence of arbitrage or the law of one price.
+
+17
+00:00:49,070 --> 00:00:51,410
+We are going to limit our attention to situations where
+
+18
+00:00:51,410 --> 00:00:53,510
+default risk is irrelevant.
+
+19
+00:00:53,510 --> 00:00:55,700
+And the only dimension we are going to focus on
+
+20
+00:00:55,700 --> 00:00:57,630
+is the time value of money.
+
+21
+00:00:57,630 --> 00:01:00,680
+In other words, we are going to develop arbitrage relation
+
+22
+00:01:00,680 --> 00:01:04,709
+for risk-free bonds, default-free bonds.
+
+23
+00:01:04,709 --> 00:01:07,050
+Prices of various fixed-income securities
+
+24
+00:01:07,050 --> 00:01:10,830
+provide information that we need to value other cash flows,
+
+25
+00:01:10,830 --> 00:01:13,970
+other risk-free cash flows.
+
+26
+00:01:13,970 --> 00:01:16,880
+Markets provide various sources of information
+
+27
+00:01:16,880 --> 00:01:19,230
+about prices of bonds.
+
+28
+00:01:19,230 --> 00:01:23,640
+We could infer discount rates for different maturities
+
+29
+00:01:23,640 --> 00:01:25,960
+from prices of pure discount bonds--
+
+30
+00:01:25,960 --> 00:01:28,230
+these are bonds that do not pay coupons--
+
+31
+00:01:28,230 --> 00:01:31,050
+from prices of regular coupon bonds
+
+32
+00:01:31,050 --> 00:01:34,660
+or from other fixed-income securities.
+
+33
+00:01:34,660 --> 00:01:37,300
+At the end of the day, all of these various securities
+
+34
+00:01:37,300 --> 00:01:39,580
+are connected to each other by the law of one price
+
+35
+00:01:39,580 --> 00:01:41,490
+or by absence of arbitrage.
+
+36
+00:01:41,490 --> 00:01:44,710
+And we can use any combination of fixed-income assets
+
+37
+00:01:44,710 --> 00:01:46,660
+as long as there is sufficient leverage
+
+38
+00:01:46,660 --> 00:01:51,050
+to infer prices of other fixed-income securities.
+
+39
+00:01:51,050 --> 00:01:54,020
+Next, we define the spot interest rate.
+
+40
+00:01:54,020 --> 00:01:57,270
+The spot interest rate varies with maturity.
+
+41
+00:01:57,270 --> 00:01:59,470
+The spot interest rate for maturity t
+
+42
+00:01:59,470 --> 00:02:02,470
+is the rate of return that the fixed-income investor
+
+43
+00:02:02,470 --> 00:02:06,110
+is going to receive by investing today and collecting the payoff
+
+44
+00:02:06,110 --> 00:02:09,080
+t periods from now, t years from now.
+
+45
+00:02:09,080 --> 00:02:13,720
+Spot interest rates are indexed by their term, t.
+
+46
+00:02:13,720 --> 00:02:16,150
+So when we talk about spot interest rates,
+
+47
+00:02:16,150 --> 00:02:17,680
+we are talking about the entire term
+
+48
+00:02:17,680 --> 00:02:19,240
+structure of interest rates.
+
+49
+00:02:19,240 --> 00:02:23,110
+For each maturity, there is a corresponding interest rate.
+
+50
+00:02:23,110 --> 00:02:24,520
+This collection of interest rates
+
+51
+00:02:24,520 --> 00:02:26,570
+corresponding to different maturities
+
+52
+00:02:26,570 --> 00:02:29,430
+is called the yield curve.
+
+53
+00:02:29,430 --> 00:02:32,360
+If you look at the snapshot of the yield curve,
+
+54
+00:02:32,360 --> 00:02:35,600
+on the 8th of June of 2019, you can
+
+55
+00:02:35,600 --> 00:02:38,720
+see that the spot rates differ across maturities.
+
+56
+00:02:38,720 --> 00:02:41,600
+For example, if you were to invest for a period of one
+
+57
+00:02:41,600 --> 00:02:44,750
+year, the interest rate-- the risk-free rate in the market--
+
+58
+00:02:44,750 --> 00:02:47,045
+would be 1.99%.
+
+59
+00:02:47,045 --> 00:02:49,098
+If you invest for a period of 30 years,
+
+60
+00:02:49,098 --> 00:02:50,390
+the interest rate is different.
+
+61
+00:02:50,390 --> 00:02:52,460
+It's 2.57%.
+
+62
+00:02:52,460 --> 00:02:54,560
+It is higher in this case.
+
+63
+00:02:54,560 --> 00:02:56,180
+The shape of the yield curve does not
+
+64
+00:02:56,180 --> 00:02:57,960
+stay constant over time.
+
+65
+00:02:57,960 --> 00:02:59,180
+It varies.
+
+66
+00:02:59,180 --> 00:03:00,770
+And next, we are going to discuss
+
+67
+00:03:00,770 --> 00:03:03,320
+how the shape of the yield curve changes
+
+68
+00:03:03,320 --> 00:03:05,570
+with economic conditions.
+
+69
+00:03:05,570 --> 00:03:08,060
+On this graph, you can see the history
+
+70
+00:03:08,060 --> 00:03:14,990
+of interest rates or the yield curve from 1977 until 2019.
+
+71
+00:03:14,990 --> 00:03:17,000
+There are several lines on the graph,
+
+72
+00:03:17,000 --> 00:03:20,210
+which correspond to interest rates of different maturities.
+
+73
+00:03:20,210 --> 00:03:21,930
+These are color coded.
+
+74
+00:03:21,930 --> 00:03:26,750
+We are looking at interest rates for 1, 3, 5, 10, and 30 years
+
+75
+00:03:26,750 --> 00:03:28,570
+to maturity.
+
+76
+00:03:28,570 --> 00:03:32,110
+One thing we can see is that there is a common component
+
+77
+00:03:32,110 --> 00:03:33,950
+in all of these interest rates.
+
+78
+00:03:33,950 --> 00:03:36,490
+They tend to move to some degree together.
+
+79
+00:03:36,490 --> 00:03:39,050
+That's an important property of the yield curve.
+
+80
+00:03:39,050 --> 00:03:42,290
+There is something common about movements in interest rates.
+
+81
+00:03:42,290 --> 00:03:45,580
+Historically, what we observed is that over the last two,
+
+82
+00:03:45,580 --> 00:03:48,820
+three decades, interest rates across maturities
+
+83
+00:03:48,820 --> 00:03:51,190
+have been generally declining and are
+
+84
+00:03:51,190 --> 00:03:53,740
+now at a relatively low level compared
+
+85
+00:03:53,740 --> 00:03:55,480
+to the beginning of this sample, which
+
+86
+00:03:55,480 --> 00:03:58,830
+was late '70s and early '80s.
+
+87
+00:03:58,830 --> 00:04:00,990
+Another observation is that the difference
+
+88
+00:04:00,990 --> 00:04:02,790
+between the rates of various maturities
+
+89
+00:04:02,790 --> 00:04:05,370
+does not stay constant either.
+
+90
+00:04:05,370 --> 00:04:08,820
+There are periods when interest rates across maturities
+
+91
+00:04:08,820 --> 00:04:10,600
+are quite different.
+
+92
+00:04:10,600 --> 00:04:14,290
+Generally, interest rates on short-maturity bonds,
+
+93
+00:04:14,290 --> 00:04:16,480
+short-maturity fixed-income securities,
+
+94
+00:04:16,480 --> 00:04:20,190
+are lower than interest rates for longer maturities.
+
+95
+00:04:20,190 --> 00:04:22,590
+There are times when interest rates seem
+
+96
+00:04:22,590 --> 00:04:24,720
+to converge across maturities.
+
+97
+00:04:24,720 --> 00:04:27,570
+And sometimes, the yield curve even flips, in a sense
+
+98
+00:04:27,570 --> 00:04:32,210
+that short-term interest rates are higher than long term.
+
+99
+00:04:32,210 --> 00:04:34,400
+There is a correlation between these events
+
+100
+00:04:34,400 --> 00:04:36,600
+and general economic conditions.
+
+101
+00:04:36,600 --> 00:04:41,120
+What we have seen historically is that typically, convergence
+
+102
+00:04:41,120 --> 00:04:43,250
+of interest rates or inversion of the yield
+
+103
+00:04:43,250 --> 00:04:45,900
+curve with the long rates declining relative
+
+104
+00:04:45,900 --> 00:04:49,700
+to short rates tends to happen at the beginning
+
+105
+00:04:49,700 --> 00:04:51,960
+of recessionary periods.
+
+106
+00:04:51,960 --> 00:04:53,210
+This is not an exact law.
+
+107
+00:04:53,210 --> 00:04:55,500
+It is a statistical relation.
+
+108
+00:04:55,500 --> 00:04:56,000
+
+

@@ -1,0 +1,524 @@
+0
+00:00:00,000 --> 00:00:00,850
+
+
+1
+00:00:00,850 --> 00:00:04,370
+PROFESSOR: Before we finish our discussion on special cash
+
+2
+00:00:04,370 --> 00:00:06,790
+flows in compounding, we would like
+
+3
+00:00:06,790 --> 00:00:11,890
+to look at one more example, mortgage calculation.
+
+4
+00:00:11,890 --> 00:00:15,660
+Here, we are going to be looking at a fixed rate mortgage that's
+
+5
+00:00:15,660 --> 00:00:19,130
+typical in the United States.
+
+6
+00:00:19,130 --> 00:00:21,890
+It often requires a 20% down payment
+
+7
+00:00:21,890 --> 00:00:26,240
+and borrow the rest from a bank using the property
+
+8
+00:00:26,240 --> 00:00:29,090
+as collateral.
+
+9
+00:00:29,090 --> 00:00:31,670
+Over time of the mortgage, the borrower
+
+10
+00:00:31,670 --> 00:00:36,210
+would pay a fixed monthly payment
+
+11
+00:00:36,210 --> 00:00:40,620
+and, typically, the borrower also has the option to prepay.
+
+12
+00:00:40,620 --> 00:00:44,610
+Namely, during the time of the mortgage if the interest
+
+13
+00:00:44,610 --> 00:00:47,430
+rate moves in the desirable direction,
+
+14
+00:00:47,430 --> 00:00:50,610
+the borrower can actually borrow more money
+
+15
+00:00:50,610 --> 00:00:53,670
+from the market at a lower rate and then repay
+
+16
+00:00:53,670 --> 00:00:54,720
+the previous mortgage.
+
+17
+00:00:54,720 --> 00:00:58,290
+
+
+18
+00:00:58,290 --> 00:01:00,460
+Now let's consider a specific example.
+
+19
+00:01:00,460 --> 00:01:05,220
+Suppose that you're buying a house for $500,000, half
+
+20
+00:01:05,220 --> 00:01:10,860
+a million dollars, with 20% down payment, that is $100,000.
+
+21
+00:01:10,860 --> 00:01:12,960
+And then finance the remaining part
+
+22
+00:01:12,960 --> 00:01:18,840
+which is $400,000 using a 30 year fixed rate mortgage.
+
+23
+00:01:18,840 --> 00:01:21,030
+Let's assume that the mortgage rate
+
+24
+00:01:21,030 --> 00:01:26,430
+is 8.5% APR compounded monthly because the mortgage
+
+25
+00:01:26,430 --> 00:01:29,870
+payments are typically on a monthly basis.
+
+26
+00:01:29,870 --> 00:01:31,370
+The question we would like to answer
+
+27
+00:01:31,370 --> 00:01:36,155
+is, what would be the monthly payment for this mortgage?
+
+28
+00:01:36,155 --> 00:01:39,370
+
+
+29
+00:01:39,370 --> 00:01:42,630
+Well, the monthly payment for this mortgage
+
+30
+00:01:42,630 --> 00:01:47,230
+is really like annuity with 360 payments,
+
+31
+00:01:47,230 --> 00:01:53,740
+monthly payments, at some level, let's say, M. Now for this deal
+
+32
+00:01:53,740 --> 00:01:57,700
+to be fair, the present value of all these monthly mortgage
+
+33
+00:01:57,700 --> 00:02:01,090
+payments should equal to the amount of money
+
+34
+00:02:01,090 --> 00:02:05,210
+we are borrowing, namely $400,000.
+
+35
+00:02:05,210 --> 00:02:07,020
+So if you write down this equation,
+
+36
+00:02:07,020 --> 00:02:10,070
+on the left-hand side is the amount we are borrowing,
+
+37
+00:02:10,070 --> 00:02:12,560
+on the right-hand side is the present value
+
+38
+00:02:12,560 --> 00:02:15,920
+of all the future mortgage payments we have to pay,
+
+39
+00:02:15,920 --> 00:02:19,910
+total 360 of them on a monthly basis.
+
+40
+00:02:19,910 --> 00:02:24,280
+If the monthly payment is M, we can look at each one of them,
+
+41
+00:02:24,280 --> 00:02:28,750
+discount them back using the mortgage interest rate.
+
+42
+00:02:28,750 --> 00:02:32,320
+Keep in mind that the mortgage interest rate 8.5
+
+43
+00:02:32,320 --> 00:02:35,090
+is an APR with monthly compounding.
+
+44
+00:02:35,090 --> 00:02:42,280
+So the actual monthly interest is 8.5% divide by 12.
+
+45
+00:02:42,280 --> 00:02:45,030
+So if we use the present value formula
+
+46
+00:02:45,030 --> 00:02:48,300
+for annuity, what we're going to be getting
+
+47
+00:02:48,300 --> 00:02:52,830
+will be the right-hand side of the second equation.
+
+48
+00:02:52,830 --> 00:02:57,080
+What's unknown here is the monthly payment M.
+
+49
+00:02:57,080 --> 00:02:59,060
+If we solve for that, we're going
+
+50
+00:02:59,060 --> 00:03:02,420
+to be adding arriving at the following result.
+
+51
+00:03:02,420 --> 00:03:09,610
+The monthly payment would be $3,075.65.
+
+52
+00:03:09,610 --> 00:03:12,700
+What is that effective annual interest rate
+
+53
+00:03:12,700 --> 00:03:14,770
+we're paying on this mortgage?
+
+54
+00:03:14,770 --> 00:03:20,890
+That is not 8.5%, the APR, because that APR is
+
+55
+00:03:20,890 --> 00:03:24,210
+compounded on a monthly basis.
+
+56
+00:03:24,210 --> 00:03:28,140
+Using our EAR formula, we can easily
+
+57
+00:03:28,140 --> 00:03:29,970
+compute the effective annual rate
+
+58
+00:03:29,970 --> 00:03:32,040
+for this mortgage, which is given
+
+59
+00:03:32,040 --> 00:03:34,320
+by the last equation on the slide, that
+
+60
+00:03:34,320 --> 00:03:40,860
+is 8.839% rather than 8.5%.
+
+61
+00:03:40,860 --> 00:03:46,560
+So this computation is really what's behind mortgage loans.
+
+62
+00:03:46,560 --> 00:03:49,350
+What we have shown is that for a mortgage
+
+63
+00:03:49,350 --> 00:03:53,820
+of $400,000 at a mortgage rate of 8.5%
+
+64
+00:03:53,820 --> 00:03:59,130
+APR with monthly compounding, the actual monthly payment
+
+65
+00:03:59,130 --> 00:04:05,070
+is $3,075.65.
+
+66
+00:04:05,070 --> 00:04:08,190
+And that's shown in the second column
+
+67
+00:04:08,190 --> 00:04:10,170
+of the table on the slide.
+
+68
+00:04:10,170 --> 00:04:14,700
+And of course, given that this is a 30-year mortgage payment,
+
+69
+00:04:14,700 --> 00:04:16,829
+the monthly payments will continue
+
+70
+00:04:16,829 --> 00:04:23,480
+for 30 years with a total of 360 monthly payments.
+
+71
+00:04:23,480 --> 00:04:27,240
+What we can also show is that the monthly payment
+
+72
+00:04:27,240 --> 00:04:34,260
+of $3,075.65 consists of two pieces.
+
+73
+00:04:34,260 --> 00:04:38,250
+One part is the interest on the remaining principal,
+
+74
+00:04:38,250 --> 00:04:40,980
+the other part is the amount that we're
+
+75
+00:04:40,980 --> 00:04:44,250
+paying down the principal.
+
+76
+00:04:44,250 --> 00:04:48,650
+So the interest payments, over the life span of the mortgage,
+
+77
+00:04:48,650 --> 00:04:53,710
+is given by the third column in a table shown in red.
+
+78
+00:04:53,710 --> 00:05:01,510
+So for the first month, the interest payment is $2,833.33.
+
+79
+00:05:01,510 --> 00:05:08,650
+That's, that is a bigger chunk of the monthly payment.
+
+80
+00:05:08,650 --> 00:05:15,790
+Only $242.37 is used from the monthly payment
+
+81
+00:05:15,790 --> 00:05:18,100
+to pay down the principal.
+
+82
+00:05:18,100 --> 00:05:20,950
+After the first month of mortgage payment,
+
+83
+00:05:20,950 --> 00:05:25,060
+the remaining principal is given by the last column.
+
+84
+00:05:25,060 --> 00:05:36,620
+The first row gives us $399,757.68.
+
+85
+00:05:36,620 --> 00:05:40,660
+Then for the second month, the interest payment
+
+86
+00:05:40,660 --> 00:05:45,210
+would be 8.5% divide by 12, that's
+
+87
+00:05:45,210 --> 00:05:49,380
+the monthly interest times, the remaining principal that's
+
+88
+00:05:49,380 --> 00:05:55,200
+$399,757.68.
+
+89
+00:05:55,200 --> 00:06:00,870
+That will give us the second row in the third column.
+
+90
+00:06:00,870 --> 00:06:07,810
+That's the interest payment of $2,831.62.
+
+91
+00:06:07,810 --> 00:06:11,090
+The difference between that and the monthly payment,
+
+92
+00:06:11,090 --> 00:06:16,570
+which is $244.04, that's the second row
+
+93
+00:06:16,570 --> 00:06:20,440
+in the fourth column, that is the amount
+
+94
+00:06:20,440 --> 00:06:23,800
+from the second monthly payment that goes into paying down
+
+95
+00:06:23,800 --> 00:06:25,680
+the principal.
+
+96
+00:06:25,680 --> 00:06:29,040
+And after the second monthly mortgage payment,
+
+97
+00:06:29,040 --> 00:06:32,940
+the remaining principal is given by the second row
+
+98
+00:06:32,940 --> 00:06:40,390
+of the last column, $399,513.64.
+
+99
+00:06:40,390 --> 00:06:44,220
+And we can keep going through this calculation
+
+100
+00:06:44,220 --> 00:06:47,510
+all the way to the last month of the mortgage.
+
+101
+00:06:47,510 --> 00:06:49,360
+So for the last month's mortgage,
+
+102
+00:06:49,360 --> 00:06:52,140
+which is given by the last row in the table,
+
+103
+00:06:52,140 --> 00:06:58,260
+the total monthly payment is still $3,075.65.
+
+104
+00:06:58,260 --> 00:07:04,710
+Out of that only $21.63 is paying the interest
+
+105
+00:07:04,710 --> 00:07:08,300
+on the remaining principal.
+
+106
+00:07:08,300 --> 00:07:15,780
+$3,054.02 goes to paying down the remaining principal.
+
+107
+00:07:15,780 --> 00:07:19,830
+Of course, by that time, the remaining principal
+
+108
+00:07:19,830 --> 00:07:25,420
+will be paid down to zero and the mortgage is completed.
+
+109
+00:07:25,420 --> 00:07:29,130
+We can also show this through this graph.
+
+110
+00:07:29,130 --> 00:07:32,820
+What's shown here is the percentage
+
+111
+00:07:32,820 --> 00:07:39,260
+of the monthly mortgage payment, namely $3,075 or so.
+
+112
+00:07:39,260 --> 00:07:42,620
+What percentage goes to the interest payment
+
+113
+00:07:42,620 --> 00:07:46,280
+and what percentage goes into paying down the principal?
+
+114
+00:07:46,280 --> 00:07:51,350
+The red gives us the fraction of the mortgage payment
+
+115
+00:07:51,350 --> 00:07:53,420
+that's paying the interest.
+
+116
+00:07:53,420 --> 00:07:55,070
+And the blue shows the percentage
+
+117
+00:07:55,070 --> 00:07:57,320
+of the monthly mortgage payment that's used
+
+118
+00:07:57,320 --> 00:07:59,480
+to paying down the principal
+
+119
+00:07:59,480 --> 00:08:02,020
+Over the lifespan of the mortgage,
+
+120
+00:08:02,020 --> 00:08:04,250
+as we can see the fraction of interest payment
+
+121
+00:08:04,250 --> 00:08:06,830
+actually at the beginning, takes most part
+
+122
+00:08:06,830 --> 00:08:09,320
+of the monthly payment, but over time, actually
+
+123
+00:08:09,320 --> 00:08:12,920
+decreases, eventually hits zero.
+
+124
+00:08:12,920 --> 00:08:15,050
+For the percentage of monthly payment
+
+125
+00:08:15,050 --> 00:08:18,020
+paying down the principal, it's just the opposite.
+
+126
+00:08:18,020 --> 00:08:21,830
+At the beginning, only a small fraction of the monthly payment
+
+127
+00:08:21,830 --> 00:08:23,350
+goes into paying down the principal.
+
+128
+00:08:23,350 --> 00:08:25,250
+But over time, it increases.
+
+129
+00:08:25,250 --> 00:08:31,220
+By the end of the mortgage lifespan, it's almost 100%
+
+130
+00:08:31,220 --> 00:08:33,370
+of the monthly payment.
+

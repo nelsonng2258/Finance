@@ -1,0 +1,153 @@
+
+PROFESSOR: In previous examples, we effectively assume
+that cash flows and discount rates are over the same period.
+For convenience in the exposition,
+we often set the period to be one year.
+But in practice, this may not be the case.
+For example, cash flows may occur
+more frequently than annually.
+And rates of return may be quoted or realized
+more frequently than annually.
+Under these circumstances, we need to treat the time period
+in a consistent manner.
+In particular, interest or rate of return,
+may be credited or charged more often than annually.
+For example, for bank accounts and credit cards,
+interest is charged daily.
+For loans and leases, the interest
+is often computed on a monthly basis.
+For bonds the interest is paid semi-annually.
+
+For the same quoted interest rate,
+the effective annual rate may differ,
+depending on how frequent interests are received or paid.
+In the market interest rates are typically
+quoted in the form of annual percentage rate, or APR,
+with k periods of compounding within a year.
+What this means is that the actual interest paid per period
+is APR divided by k, the number of compounding periods,
+and then compounded over the whole year.
+In this case, the actual annual rate
+could be quite different from APR,
+depending on the number of compounding periods.
+In order to see the effect of compounding,
+let's consider the following example.
+Suppose that the bank quotes us in interest of 10% APR.
+Depending on how the interest is compounded,
+we'll arrive at quite different outcomes.
+Let's suppose that we deposit $1,000.
+If the compounding is annual, then
+what we're going to be getting will be an interest
+of 10% on the principle.
+That is $100 at the end of the year, and that would be $1,100.
+And that's given by the second column in the table.
+But what if the compound is semiannual?
+In that case, the interest would be
+half of the 10% APR paid over every 6 months.
+The outcome is given by the third column.
+We start with a balance of $1,000.
+In 6 months that turned into $1,050.
+That's $1,000 plus 5% of 6 months' interest.
+And therefore the next 6 months, we're
+going to be getting another 5% of interest
+on the starting balance of $1,050.
+So by the end of the year, we'll be getting $1,103.
+Clearly, that's different from the previous case
+when the 10% APR is compounded annually.
+The fourth column gives the situation
+when the 10% APR is compounded quarterly.
+Here for every quarter, we're getting 2 and 1/2%
+of the interest.
+But that accumulates over three quarters.
+The last column gives the outcome
+if the interest is compounded monthly.
+And by the end of the year, the $1,000
+of principal at the beginning of year would turn into $1,105.
+As we can see, as the compounding periods increase,
+we're actually going to be gaining more outcome.
+And the reason is that when interests
+are paid more frequently, we're earning interest
+on the interest payments paid previously.
+Let's now look at another example
+in slightly more detail.
+Suppose that actually Bank of America
+offers one-year certificates of deposits
+at an APR of 5% with semi-annual compounding.
+If you invest $10,000, how much money
+do you have at the end of one year?
+What is the actual interest rate that you earn?
+
+Well first, we already know the quoted APR of 5%
+is not the actual annual rate, because the compounding is not
+annual.
+It's only used to compute the 6-month interest rate, which
+will be half of the 5%.
+That's 2 and 1/2%.
+If we invest $10,000 at the beginning of a year,
+then by the year end what we would have
+would be $10,000 times 1 plus 2 and 1/2%.
+That's for 6 months' interest, then times 1 plus 2 and 1/2%
+again for the second 6-month period.
+In total, the end balance would be $10,506.25.
+In the second 6-month period you earn interest
+on the interest paid for the first 6 months.
+So the actual annual rate, which is also
+called the effective annual rate, or EAR,
+is given by this last equation on a slide.
+The effective annual rate equals to 1 plus 2 and 1/2%
+compounded twice, because we have two compounding periods
+within a year, then minus 1.
+That gives 5.0625%.
+That is the actual annual interest
+rate we're earning on this CD.
+More generally, we can compute the effective annual rate
+from the APR plus the number of compounding periods.
+Let our APR be the APR, and k the number of compounding
+intervals per year.
+Then in one year, $1 invested today
+would yield 1 plus the APR divided by k.
+That's the actual interest rate paid for each period.
+And then compound it k times.
+The effective annual rate is then
+given by the following equation, namely 1
+plus the effective annual rate should
+equal to 1 plus the interest per compounding period,
+then compound it 10 times.
+And this gives us the equation on the bottom right
+of the slide.
+The effective annual rate is basically the gross return
+over the year, minus 1.
+We can further see the relationship
+between the effective annual rate
+and the number of compounding periods,
+holding constant the APR.
+Suppose that the APR is 5%.
+Then the effective annual rate we're
+going to be getting as described in the table below,
+depends on the number of compounding periods.
+If k is 1, then that means that the compounding
+is on an annual basis.
+Then the effective annual rate is just 5%, same as the APR.
+If k equals 2, that is if the compounding is semi-annual,
+then the effective annual rate will be 5.0625%.
+That's higher than the 5% we are getting
+if the compounding is annual.
+If compounding is on a monthly basis, namely k equals 12,
+then we get the third row, the effective annual rate
+will be 5.1162%.
+What if k equals 365?
+That means that the compounding is on a daily basis.
+Then the effective annual rate will be 5.1267%.
+How about on an hourly basis?
+That is when k equals 8,760.
+Nobody really does that, but here
+is just as an illustration.
+Then the effective annual rate will be 5.1271.
+What if the compounding is continuous?
+Then what we're getting as the effective annual rate will
+be 5.1271.
+And that's fairly close to the hourly compounding result.
+Of course nobody really does continuous compounding.
+But as we'll see later on, for mathematical convenience,
+sometimes we assume the compounding
+is continues to arrive at some simple results.

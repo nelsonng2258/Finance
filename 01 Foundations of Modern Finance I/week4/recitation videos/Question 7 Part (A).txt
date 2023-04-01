@@ -1,0 +1,69 @@
+
+PROFESSOR: In this question, we will
+learn how to compute bond convexity
+and we'll learn how to use it to approximate the change
+in the value of our holdings or in the value of the bond.
+So assume that the yield curve is flat at 3.5%.
+We will assume that there is $100 face value
+bond that pays annual coupons and has five years to maturity.
+The coupon rate is 5%.
+So first we will compute the modified duration of this bond.
+Second we will compute its convexity,
+then we will use modified duration of this bond
+to try to find the approximate change in the value
+of the bonds when interest rates drop or the yield curve
+drops by 1.5%.
+This is exactly what we have done in question 6.
+Then we will actually use convexity,
+the one that we'll compute in part B of this question
+to find the approximate change in the value of the bond
+when interest rates drop by the same 1.5%.
+And then in the last part we'll compute the actual change
+in the value of the bond and then
+we will compare that actual change to parts C and D
+of the question and see how well both parts C
+and D approximate the actual change
+in the value of this bond.
+Let's start by computing the modified duration of this bond.
+So this is very similar to what we have done in question 5
+and the spreadsheet has the same template.
+The only difference is that this bond
+has five years to maturity.
+So the YTM on this bond, the current YTM, is 3.5%,
+its face value is $100 and this bond pays 5% annual coupon.
+So here we have the cash flows that we get from this bond
+and the first step what I will do
+is that I need to compute its price.
+So I will compute the present value of this cash flow.
+So we've already done this calculation several times.
+
+And so if I compute present value for each of these five
+payments, I add them up.
+
+This will be the price of the bond.
+Again, I always recommend making sure that the price of the bond
+makes sense.
+So in this case, we expect this bond to be priced at a premium
+because the coupon rate of this bond is higher than its yield
+to maturity.
+And so the price of the bond, 106
+is above the face value of $100, so this makes sense.
+So now the next step I will compute the present value
+of each of these individual payments
+and multiply it by the year in which it occurs.
+
+I will add them up as well.
+And then I will compute the Macaulay duration
+by taking the sum and dividing by the price of the bond.
+And so this would be the Mcaulay duration of this bond.
+So it's 4.56%.
+Again, recall the other check is that we expect the Mcaulay
+duration here because this is a coupon paying bond,
+we expect the Mcaulay duration to be lower
+than the maturity of the bond.
+So the maturity of this bond is five years,
+the Mcaulay duration is 4.56.
+And finally, the modified duration
+is just the Macaulay duration divided
+by 1 plus the current yield.
+So the answer here will be that the modified duration is 4.41.

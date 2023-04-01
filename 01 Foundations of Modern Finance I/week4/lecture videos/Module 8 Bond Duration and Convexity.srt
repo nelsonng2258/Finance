@@ -1,0 +1,576 @@
+0
+00:00:00,000 --> 00:00:00,960
+
+
+1
+00:00:00,960 --> 00:00:04,550
+PROFESSOR: Bond duration can be used as a measure of bond risk.
+
+2
+00:00:04,550 --> 00:00:06,660
+Now, let's take a closer look at how well
+
+3
+00:00:06,660 --> 00:00:11,058
+bond duration approximates the risk of the bond.
+
+4
+00:00:11,058 --> 00:00:12,350
+Consider the following example.
+
+5
+00:00:12,350 --> 00:00:16,250
+We have a four-year treasury note with a face value of 100
+
+6
+00:00:16,250 --> 00:00:20,240
+and a 7% coupon, which is paid semiannually.
+
+7
+00:00:20,240 --> 00:00:25,620
+So every six month, this bond pays $3.50 in coupons.
+
+8
+00:00:25,620 --> 00:00:28,920
+In the following table, you can see the cash flows of the bond.
+
+9
+00:00:28,920 --> 00:00:31,590
+It's 3.50 every six month.
+
+10
+00:00:31,590 --> 00:00:36,160
+And the payment of $103.5 at the maturity date.
+
+11
+00:00:36,160 --> 00:00:39,940
+Now, for this bond we can compute the Macaulay duration
+
+12
+00:00:39,940 --> 00:00:42,700
+as a weighted average of the payment tenors.
+
+13
+00:00:42,700 --> 00:00:46,780
+And that happens to be equal to 7.13 periods.
+
+14
+00:00:46,780 --> 00:00:48,530
+Each period is half a year.
+
+15
+00:00:48,530 --> 00:00:51,880
+So this is a little less than four years.
+
+16
+00:00:51,880 --> 00:00:55,180
+And the modified duration, which is Macaulay duration divided
+
+17
+00:00:55,180 --> 00:00:59,800
+by bond plus the yield on the bond, 1 plus 3%,
+
+18
+00:00:59,800 --> 00:01:02,320
+is equal to 6.92 periods.
+
+19
+00:01:02,320 --> 00:01:05,410
+So it's a little bit shorter than three and 1/2 years.
+
+20
+00:01:05,410 --> 00:01:08,730
+Based on this number, based on the modified duration,
+
+21
+00:01:08,730 --> 00:01:12,220
+our infinitesimal formula can be used to approximate risk
+
+22
+00:01:12,220 --> 00:01:14,260
+exposure of the bond.
+
+23
+00:01:14,260 --> 00:01:17,680
+The formula tells us that when the semiannual yield moves
+
+24
+00:01:17,680 --> 00:01:25,960
+by 0.1%, the bond price should decrease by roughly 0.692%.
+
+25
+00:01:25,960 --> 00:01:29,550
+The approximate change in the bond in percentage terms
+
+26
+00:01:29,550 --> 00:01:31,800
+should be equal to the modified duration
+
+27
+00:01:31,800 --> 00:01:34,960
+times the change in the yield.
+
+28
+00:01:34,960 --> 00:01:39,250
+Now, this approximation is based on the infinitesimal analysis.
+
+29
+00:01:39,250 --> 00:01:42,340
+It's based on the Taylor approximation, Taylor expansion
+
+30
+00:01:42,340 --> 00:01:44,170
+of changes in the bond price.
+
+31
+00:01:44,170 --> 00:01:47,560
+What happens if yields move by a larger amount?
+
+32
+00:01:47,560 --> 00:01:50,380
+Is this formula going to remain accurate?
+
+33
+00:01:50,380 --> 00:01:52,030
+Let's do an experiment.
+
+34
+00:01:52,030 --> 00:01:54,700
+We're going to change yields by large amounts,
+
+35
+00:01:54,700 --> 00:01:57,970
+and see how the bond price responds.
+
+36
+00:01:57,970 --> 00:01:59,500
+In the following table, you could
+
+37
+00:01:59,500 --> 00:02:03,130
+see the price of our bond exactly computed
+
+38
+00:02:03,130 --> 00:02:06,340
+as a function of several different values of the bond
+
+39
+00:02:06,340 --> 00:02:07,390
+yield.
+
+40
+00:02:07,390 --> 00:02:08,830
+In the middle of the table, we see
+
+41
+00:02:08,830 --> 00:02:13,270
+that when the bond yield in semiannual terms is 3%,
+
+42
+00:02:13,270 --> 00:02:17,440
+the price of the bond is 103.5.
+
+43
+00:02:17,440 --> 00:02:21,490
+Now, we can compute bond price for different yield levels
+
+44
+00:02:21,490 --> 00:02:25,480
+exactly, or we can compute it approximately based
+
+45
+00:02:25,480 --> 00:02:28,540
+on the modified duration number.
+
+46
+00:02:28,540 --> 00:02:31,630
+What we see here is that when yields change by 10 basis
+
+47
+00:02:31,630 --> 00:02:36,580
+points from 3% to 3.1, the exact bond price
+
+48
+00:02:36,580 --> 00:02:42,850
+moves from 103.5 to $102.79.
+
+49
+00:02:42,850 --> 00:02:47,080
+And the duration based formula is producing a highly accurate
+
+50
+00:02:47,080 --> 00:02:47,920
+approximation.
+
+51
+00:02:47,920 --> 00:02:51,080
+It's giving us basically the same number.
+
+52
+00:02:51,080 --> 00:02:55,240
+So the difference shows up in higher order digits
+
+53
+00:02:55,240 --> 00:02:57,510
+past the decimal point.
+
+54
+00:02:57,510 --> 00:03:00,900
+Now, let's assume that the yield changes by a large amount.
+
+55
+00:03:00,900 --> 00:03:03,320
+It goes from 3% to 4%.
+
+56
+00:03:03,320 --> 00:03:07,850
+Now, the price of the bond drops to $96.63.
+
+57
+00:03:07,850 --> 00:03:10,100
+That's the exact bond price.
+
+58
+00:03:10,100 --> 00:03:13,730
+And the approximation based on modified duration
+
+59
+00:03:13,730 --> 00:03:17,150
+is giving us $96.35.
+
+60
+00:03:17,150 --> 00:03:19,520
+Now, we can see that there is a difference.
+
+61
+00:03:19,520 --> 00:03:23,600
+The duration-based formula is under-predicting the bond
+
+62
+00:03:23,600 --> 00:03:25,240
+price.
+
+63
+00:03:25,240 --> 00:03:27,310
+The exact price is higher than what we get
+
+64
+00:03:27,310 --> 00:03:29,590
+based on the duration formula.
+
+65
+00:03:29,590 --> 00:03:31,420
+This is not surprising.
+
+66
+00:03:31,420 --> 00:03:34,660
+The modified duration is a first order approximation
+
+67
+00:03:34,660 --> 00:03:36,760
+the price changes of the bond.
+
+68
+00:03:36,760 --> 00:03:39,820
+But the exact relation within the bond price and the yield
+
+69
+00:03:39,820 --> 00:03:41,140
+is nonlinear.
+
+70
+00:03:41,140 --> 00:03:44,110
+Therefore, when changes in the bond price are large,
+
+71
+00:03:44,110 --> 00:03:47,620
+we need to think of higher order approximations.
+
+72
+00:03:47,620 --> 00:03:51,040
+We can see this annotation clearly in the following graph.
+
+73
+00:03:51,040 --> 00:03:56,410
+The red line here corresponds to the exact price of the bond
+
+74
+00:03:56,410 --> 00:03:58,760
+as a function of the yield.
+
+75
+00:03:58,760 --> 00:04:01,910
+The blue line is a linear approximation.
+
+76
+00:04:01,910 --> 00:04:05,870
+It's giving us a very accurate description of the bond price
+
+77
+00:04:05,870 --> 00:04:08,390
+if changes in the yield are small.
+
+78
+00:04:08,390 --> 00:04:12,770
+But it kind of falls short when changes in the yield are large.
+
+79
+00:04:12,770 --> 00:04:15,260
+This blue line corresponds to the duration-based
+
+80
+00:04:15,260 --> 00:04:16,670
+approximation.
+
+81
+00:04:16,670 --> 00:04:19,579
+Our duration number is given as the slope
+
+82
+00:04:19,579 --> 00:04:23,490
+in the relation between the bond price and the yield.
+
+83
+00:04:23,490 --> 00:04:25,560
+If we want to account for the nonlinearity,
+
+84
+00:04:25,560 --> 00:04:28,350
+if you want to capture the most important nonlinear
+
+85
+00:04:28,350 --> 00:04:30,560
+term, the curvature of this curve,
+
+86
+00:04:30,560 --> 00:04:33,120
+we need to introduce higher order charts.
+
+87
+00:04:33,120 --> 00:04:35,970
+So curvature or convexity of this curve
+
+88
+00:04:35,970 --> 00:04:38,500
+need to be captured by an additional term.
+
+89
+00:04:38,500 --> 00:04:41,920
+And that term is called the convexity term.
+
+90
+00:04:41,920 --> 00:04:46,060
+Algebraically, what we can do is expand the bond price
+
+91
+00:04:46,060 --> 00:04:51,030
+in a Taylor series as a function of changes in the bond yield.
+
+92
+00:04:51,030 --> 00:04:53,330
+The leading term, which is a derivative
+
+93
+00:04:53,330 --> 00:04:56,310
+of the bond with respect to the yield times the change
+
+94
+00:04:56,310 --> 00:04:58,860
+in the yield, the first order term,
+
+95
+00:04:58,860 --> 00:05:01,690
+is captured by the modified duration.
+
+96
+00:05:01,690 --> 00:05:04,440
+Modified duration is the negative of this derivative
+
+97
+00:05:04,440 --> 00:05:07,510
+of the bond price with respect to the yield.
+
+98
+00:05:07,510 --> 00:05:09,700
+The second order term in the Taylor expansion,
+
+99
+00:05:09,700 --> 00:05:14,430
+the quadratic term, is what we call bond convexity.
+
+100
+00:05:14,430 --> 00:05:16,140
+So from the Taylor expansion, we can
+
+101
+00:05:16,140 --> 00:05:19,050
+see that the natural definition for bond convexity
+
+102
+00:05:19,050 --> 00:05:23,370
+is one half of the second derivative of the bond price
+
+103
+00:05:23,370 --> 00:05:26,580
+with respect to the yield divided by the bond price
+
+104
+00:05:26,580 --> 00:05:28,030
+itself.
+
+105
+00:05:28,030 --> 00:05:30,970
+The second order term is going to give us
+
+106
+00:05:30,970 --> 00:05:32,970
+an additional degree of approximation that
+
+107
+00:05:32,970 --> 00:05:37,350
+goes beyond the leading term, the duration-based term.
+
+108
+00:05:37,350 --> 00:05:39,810
+Let's see how much the convexity term
+
+109
+00:05:39,810 --> 00:05:43,350
+helps when the approximate bond price changes
+
+110
+00:05:43,350 --> 00:05:46,200
+under large movements in the yield curve.
+
+111
+00:05:46,200 --> 00:05:50,070
+Suppose we are looking at a 10-year bond with a 10% coupon
+
+112
+00:05:50,070 --> 00:05:53,750
+and a 10% flat yield curve.
+
+113
+00:05:53,750 --> 00:05:59,540
+The modified duration of this 10-year bond is 6.23 years.
+
+114
+00:05:59,540 --> 00:06:03,320
+Now, if you look at the column in the center of the table,
+
+115
+00:06:03,320 --> 00:06:06,620
+this corresponds to the initial position of the bond.
+
+116
+00:06:06,620 --> 00:06:08,720
+The yield change is zero.
+
+117
+00:06:08,720 --> 00:06:10,670
+There is no movement in the price.
+
+118
+00:06:10,670 --> 00:06:13,880
+We're now going to consider different changes in the yield.
+
+119
+00:06:13,880 --> 00:06:16,340
+For example, what if the yield on the bond
+
+120
+00:06:16,340 --> 00:06:21,550
+moves up by 100 basis points, or by 1%?
+
+121
+00:06:21,550 --> 00:06:26,980
+The total change in the bond price is going to be minus $6.
+
+122
+00:06:26,980 --> 00:06:30,650
+The bond price falls by $6.
+
+123
+00:06:30,650 --> 00:06:33,330
+The duration-based approximation will tell us
+
+124
+00:06:33,330 --> 00:06:36,420
+that the bond price falls by $6.2.
+
+125
+00:06:36,420 --> 00:06:39,340
+There is an approximation error of $0.20.
+
+126
+00:06:39,340 --> 00:06:43,390
+The convexity term is going to correct that to some degree.
+
+127
+00:06:43,390 --> 00:06:45,350
+It's going to give us plus $0.30.
+
+128
+00:06:45,350 --> 00:06:48,160
+At the end of the day when we sum up all of these terms,
+
+129
+00:06:48,160 --> 00:06:50,520
+we see that the approximation is quite accurate.
+
+130
+00:06:50,520 --> 00:06:53,970
+The error is less than 10 basis points.
+
+131
+00:06:53,970 --> 00:06:56,990
+If the yield change is larger than that, for example,
+
+132
+00:06:56,990 --> 00:07:01,640
+300 basis points, 3%, the total decline in the bond price is
+
+133
+00:07:01,640 --> 00:07:04,350
+going to be $16.50.
+
+134
+00:07:04,350 --> 00:07:06,290
+The duration-based approximation is going
+
+135
+00:07:06,290 --> 00:07:08,240
+to be relatively inaccurate.
+
+136
+00:07:08,240 --> 00:07:12,860
+It will give us $18.70 decline.
+
+137
+00:07:12,860 --> 00:07:16,190
+The convexity correction is going to be $2.40.
+
+138
+00:07:16,190 --> 00:07:18,950
+And the overall error is going to be quite modest,
+
+139
+00:07:18,950 --> 00:07:21,590
+about $0.20.
+
+140
+00:07:21,590 --> 00:07:23,240
+What we see from this illustration
+
+141
+00:07:23,240 --> 00:07:26,420
+is that the convexity approximation, the convexity
+
+142
+00:07:26,420 --> 00:07:29,990
+term, provides a useful degree of correction
+
+143
+00:07:29,990 --> 00:07:34,240
+when we are concerned with large movements in the yield curve.
+

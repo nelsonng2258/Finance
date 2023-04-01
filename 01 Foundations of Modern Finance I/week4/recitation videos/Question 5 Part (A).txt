@@ -1,0 +1,64 @@
+
+PROFESSOR: In this question, we will
+learn how to compute duration for different types of bonds.
+Assume that the yield curve is flat at 2%.
+Compute the Macaulay duration and modified duration
+for the following bonds.
+Bond A is a zero-coupon $100 face value
+bond maturing in 20 years.
+Bond B is a 5% coupon, $100 face value perpetual bond.
+We will assume that the coupons are paid annually.
+And C is a 5% coupon bond with $100 face
+value maturing in 20 years.
+We will also assume that the coupons are paid annually.
+
+Let's start with question a.
+And compute the duration for a zero coupon bond
+that matures in 20 years.
+Let's start with Macaulay duration.
+So by definition, Macaulay duration
+is given by the following expression.
+So it's 1 divided by the price of the bond multiplied
+by the sum where we take each of cash
+flows that the bond pays in year, in years T and divide it
+by 1 plus yield raised to the power of t multiplied
+by the period in which this cash flow was paid, so year t.
+
+For zero-coupon bond, all of the cash
+flows except for the very terminal cash flows are zero.
+So in this case, cash flows in year small t,
+where small t is equal or less than capital T would
+be zero and cash flow in year cap T is $100.
+So therefore, the Macaulay duration expression,
+the whole sum, would be just consisting of one term.
+This is the terminal term.
+So we get 1 over P multiplied by $100 divided
+by 1 plus yield raised to the power of capital T multiplied
+by capital T. So this is the terminal year
+in which the only payment that this bond pays actually occurs.
+So now, notice that the price of the bond for a zero-coupon bond
+is given by just simply $100 divided by 1 plus yield raised
+to the power of capital T. And so what I will do right now
+is that I will plug in this price equation
+into the duration equation.
+And so you could see that, that would just
+equal to 1 over P multiplied by P and multiplied by capital T.
+And so that would just give us capital T.
+So therefore for a zero-coupon bond,
+the Macaulay duration would always
+equal to the maturity of the bond.
+And this is a very important property for zero-coupon bonds.
+So in this particular case, since our bond
+has 20 years to maturity, the Macaulay duration
+for this bond in part A of this question equals to 20 years.
+
+Now the next step is to find the modified duration, which
+by definition is the Macaulay duration divided
+by 1 plus y, which is again yield to maturity on this bond.
+
+The modified duration of this bond
+then is given simply by taking 20, which is the Macaulay
+duration, divided by 1 plus 2%.
+And this gives us 19.61%.
+So to summarize, the Macaulay duration
+for this bond is 20 and the modified duration is 19.61%.

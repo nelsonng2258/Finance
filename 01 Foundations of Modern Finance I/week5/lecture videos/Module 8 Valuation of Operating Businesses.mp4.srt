@@ -1,0 +1,960 @@
+0
+00:00:00,000 --> 00:00:00,910
+
+
+1
+00:00:00,910 --> 00:00:04,240
+PROFESSOR: So far, we talked about the valuation of stocks.
+
+2
+00:00:04,240 --> 00:00:05,710
+But the same techniques can be used
+
+3
+00:00:05,710 --> 00:00:08,410
+to value the entire business.
+
+4
+00:00:08,410 --> 00:00:13,390
+We don't need to be focusing just on equities.
+
+5
+00:00:13,390 --> 00:00:16,960
+So let's start with the discounted cash flow formula.
+
+6
+00:00:16,960 --> 00:00:19,030
+The present value of the business
+
+7
+00:00:19,030 --> 00:00:24,130
+is equal to the discounted expected value of the free cash
+
+8
+00:00:24,130 --> 00:00:26,170
+flows that the business generates
+
+9
+00:00:26,170 --> 00:00:32,570
+between time 1 and time capital T plus the present value
+
+10
+00:00:32,570 --> 00:00:35,480
+of the remaining cash flows, which we call PV capital
+
+11
+00:00:35,480 --> 00:00:39,470
+T discounted back to time zero.
+
+12
+00:00:39,470 --> 00:00:42,770
+What you see here is that we are splitting the timeline
+
+13
+00:00:42,770 --> 00:00:44,240
+into two portions.
+
+14
+00:00:44,240 --> 00:00:47,240
+We're discounting cash flows between time 1 and time capital
+
+15
+00:00:47,240 --> 00:00:48,980
+T separately.
+
+16
+00:00:48,980 --> 00:00:52,260
+And then we are discounting the residual,
+
+17
+00:00:52,260 --> 00:00:55,370
+which we call the horizon value a time capital T.
+
+18
+00:00:55,370 --> 00:00:58,340
+We are focusing on the free cash flows, which
+
+19
+00:00:58,340 --> 00:01:01,850
+is net cash flows that can be attributed to the business
+
+20
+00:01:01,850 --> 00:01:03,590
+that we are evaluating.
+
+21
+00:01:03,590 --> 00:01:05,780
+In order to apply this formula, we
+
+22
+00:01:05,780 --> 00:01:09,830
+need to forecast cash flows from time 1 to time capital T.
+
+23
+00:01:09,830 --> 00:01:15,330
+And we need to predict the horizon value, PV capital T.
+
+24
+00:01:15,330 --> 00:01:17,940
+In our previous analysis, we focused
+
+25
+00:01:17,940 --> 00:01:22,030
+on the forecasting of payouts, dividends, or in this case,
+
+26
+00:01:22,030 --> 00:01:25,080
+we can use the same techniques for free cash flows.
+
+27
+00:01:25,080 --> 00:01:26,970
+What we now need to do is figure out
+
+28
+00:01:26,970 --> 00:01:30,030
+how to predict the horizon value PV capital
+
+29
+00:01:30,030 --> 00:01:34,810
+T. This is the focus of our current discussion.
+
+30
+00:01:34,810 --> 00:01:36,370
+There are several alternative methods
+
+31
+00:01:36,370 --> 00:01:39,680
+that one could use to forecast the horizon value.
+
+32
+00:01:39,680 --> 00:01:42,560
+We are going to look at three alternatives.
+
+33
+00:01:42,560 --> 00:01:45,850
+The first method uses P/E multiples.
+
+34
+00:01:45,850 --> 00:01:47,350
+What this means is that we are going
+
+35
+00:01:47,350 --> 00:01:51,710
+to forecast the profits that this business generates at time
+
+36
+00:01:51,710 --> 00:01:56,380
+capital T. And then scale them by the P/E multiple, which
+
+37
+00:01:56,380 --> 00:02:00,370
+is a typical price-to-earnings ratio that is applied to stocks
+
+38
+00:02:00,370 --> 00:02:03,240
+that we view as comparable to the business
+
+39
+00:02:03,240 --> 00:02:06,000
+that we're evaluating.
+
+40
+00:02:06,000 --> 00:02:09,310
+The second approach is similar in nature.
+
+41
+00:02:09,310 --> 00:02:10,810
+We're also using comparables.
+
+42
+00:02:10,810 --> 00:02:12,480
+We're also looking for the valuation
+
+43
+00:02:12,480 --> 00:02:16,920
+ratios of similar firms, similar traded businesses.
+
+44
+00:02:16,920 --> 00:02:18,630
+But instead of the P/E ratio, we're
+
+45
+00:02:18,630 --> 00:02:20,850
+using the price-to-book ratio, which
+
+46
+00:02:20,850 --> 00:02:25,860
+is the ratio of the market price of equity to its book value.
+
+47
+00:02:25,860 --> 00:02:29,280
+The last approach is what we call the DCF approach.
+
+48
+00:02:29,280 --> 00:02:32,160
+In this case, we do not use valuation multiples.
+
+49
+00:02:32,160 --> 00:02:35,730
+We are determining the horizon value using the discounted cash
+
+50
+00:02:35,730 --> 00:02:38,850
+flow formula by making particular assumptions
+
+51
+00:02:38,850 --> 00:02:44,070
+about future growth of the business after time capital T.
+
+52
+00:02:44,070 --> 00:02:48,090
+Now, what is the logic behind using multipliers
+
+53
+00:02:48,090 --> 00:02:50,700
+versus the DCF approach?
+
+54
+00:02:50,700 --> 00:02:53,640
+The multiplier approach is a particular type
+
+55
+00:02:53,640 --> 00:02:54,990
+of relative valuation.
+
+56
+00:02:54,990 --> 00:02:56,970
+It is a relative valuation approach
+
+57
+00:02:56,970 --> 00:02:58,740
+where we are looking for companies
+
+58
+00:02:58,740 --> 00:03:01,990
+that are similar to the firm under consideration.
+
+59
+00:03:01,990 --> 00:03:04,650
+And we're asking how much the market
+
+60
+00:03:04,650 --> 00:03:07,620
+is paying for those businesses in relation
+
+61
+00:03:07,620 --> 00:03:09,960
+to either their book value or the profits
+
+62
+00:03:09,960 --> 00:03:12,120
+that they're generating.
+
+63
+00:03:12,120 --> 00:03:14,070
+The challenge with using this approach
+
+64
+00:03:14,070 --> 00:03:18,070
+is that businesses generally are not the same.
+
+65
+00:03:18,070 --> 00:03:21,000
+It is not easy to find two firms that
+
+66
+00:03:21,000 --> 00:03:24,180
+are very close comparables.
+
+67
+00:03:24,180 --> 00:03:27,060
+What we're doing here is a hybrid approach,
+
+68
+00:03:27,060 --> 00:03:29,130
+where we are forecasting cash flows
+
+69
+00:03:29,130 --> 00:03:31,470
+over the first several periods explicitly.
+
+70
+00:03:31,470 --> 00:03:33,150
+And we're discounting them.
+
+71
+00:03:33,150 --> 00:03:36,300
+And then we're applying the multiples approach
+
+72
+00:03:36,300 --> 00:03:38,620
+at time capital T.
+
+73
+00:03:38,620 --> 00:03:40,870
+The logic of this is that even though it
+
+74
+00:03:40,870 --> 00:03:44,170
+may be quite difficult to find very good comparable firms
+
+75
+00:03:44,170 --> 00:03:47,720
+at time zero, this gets progressively easier as we
+
+76
+00:03:47,720 --> 00:03:49,660
+are looking into the future.
+
+77
+00:03:49,660 --> 00:03:51,670
+And the reason for that is that there
+
+78
+00:03:51,670 --> 00:03:53,500
+tends to be a certain degree of convergence
+
+79
+00:03:53,500 --> 00:03:56,780
+between different types of firms in expectation.
+
+80
+00:03:56,780 --> 00:03:59,440
+So the firms that look very different at time zero
+
+81
+00:03:59,440 --> 00:04:01,420
+in expectation look less different.
+
+82
+00:04:01,420 --> 00:04:04,300
+And therefore, the multiples approach
+
+83
+00:04:04,300 --> 00:04:07,980
+becomes more and more accurate.
+
+84
+00:04:07,980 --> 00:04:10,650
+Now, one can say that the multiples approach is not
+
+85
+00:04:10,650 --> 00:04:13,740
+a pure fundamental approach to valuation because rather
+
+86
+00:04:13,740 --> 00:04:17,399
+than discounting cash flows, we're using multiples.
+
+87
+00:04:17,399 --> 00:04:19,540
+At the end of the day, the DCF formula,
+
+88
+00:04:19,540 --> 00:04:22,170
+the multiples approach, are different versions
+
+89
+00:04:22,170 --> 00:04:24,600
+of relative valuation.
+
+90
+00:04:24,600 --> 00:04:27,450
+If we want to use a pure DCF approach,
+
+91
+00:04:27,450 --> 00:04:30,150
+we're going to make assumptions about future growth
+
+92
+00:04:30,150 --> 00:04:31,260
+of the firm.
+
+93
+00:04:31,260 --> 00:04:35,580
+For example, if we assume that beyond certain horizon
+
+94
+00:04:35,580 --> 00:04:39,210
+the firm exhausts its growth opportunities, for instance,
+
+95
+00:04:39,210 --> 00:04:40,920
+competition catches up.
+
+96
+00:04:40,920 --> 00:04:44,580
+And the firm can no longer make positive NPV investments.
+
+97
+00:04:44,580 --> 00:04:47,460
+We can figure out what the horizon value is.
+
+98
+00:04:47,460 --> 00:04:51,750
+It is going to be equal to the free cash flow at time capital
+
+99
+00:04:51,750 --> 00:04:55,980
+T plus 1 under the no-growth assumption discounted
+
+100
+00:04:55,980 --> 00:04:58,450
+as a perpetuity without growth.
+
+101
+00:04:58,450 --> 00:05:00,960
+So it's free cash flow time t plus 1
+
+102
+00:05:00,960 --> 00:05:05,200
+divided by the opportunity cost of capital.
+
+103
+00:05:05,200 --> 00:05:09,610
+Consider the following example or the data given in the table.
+
+104
+00:05:09,610 --> 00:05:11,680
+We have a business here, which starts
+
+105
+00:05:11,680 --> 00:05:14,480
+with the asset value of 5.
+
+106
+00:05:14,480 --> 00:05:16,510
+Think of it as 5 million.
+
+107
+00:05:16,510 --> 00:05:19,690
+And it grows over time.
+
+108
+00:05:19,690 --> 00:05:22,280
+For each period, from 1 to six, we
+
+109
+00:05:22,280 --> 00:05:25,610
+can see how the asset value evolves.
+
+110
+00:05:25,610 --> 00:05:28,070
+How this business generates earnings.
+
+111
+00:05:28,070 --> 00:05:31,260
+And we can see net investment.
+
+112
+00:05:31,260 --> 00:05:35,700
+That investment is the investment into the business
+
+113
+00:05:35,700 --> 00:05:38,250
+in the form of CAPX, capital expenditure,
+
+114
+00:05:38,250 --> 00:05:40,810
+net of depreciation.
+
+115
+00:05:40,810 --> 00:05:45,680
+Earnings here are also measured net of depreciation.
+
+116
+00:05:45,680 --> 00:05:48,220
+Now, the free cash flow that this business generates
+
+117
+00:05:48,220 --> 00:05:52,900
+is equal to earnings minus its net investment.
+
+118
+00:05:52,900 --> 00:05:56,010
+This is the cash flow that is left after the firm reinvests
+
+119
+00:05:56,010 --> 00:05:58,700
+back into the business.
+
+120
+00:05:58,700 --> 00:06:01,440
+We make an assumption about the discount rate.
+
+121
+00:06:01,440 --> 00:06:04,130
+The discount rate is constant at 15%.
+
+122
+00:06:04,130 --> 00:06:06,260
+And therefore, we can compute the discount factor,
+
+123
+00:06:06,260 --> 00:06:09,870
+which is then applied to cash flows in different periods.
+
+124
+00:06:09,870 --> 00:06:14,410
+This is given at the bottom of the table.
+
+125
+00:06:14,410 --> 00:06:16,450
+In our example, the company is going
+
+126
+00:06:16,450 --> 00:06:18,580
+through two stages of growth.
+
+127
+00:06:18,580 --> 00:06:22,450
+In the first few years, growth rate is relatively high.
+
+128
+00:06:22,450 --> 00:06:26,020
+And the firm is reinvesting a lot back into the business.
+
+129
+00:06:26,020 --> 00:06:29,440
+And therefore, the free cash flow may in fact be negative.
+
+130
+00:06:29,440 --> 00:06:31,780
+This does not mean that the firm is losing money.
+
+131
+00:06:31,780 --> 00:06:34,690
+It simply means that the firm is investing more
+
+132
+00:06:34,690 --> 00:06:37,440
+than the cash it is generating.
+
+133
+00:06:37,440 --> 00:06:40,140
+After the first few years, growth rate
+
+134
+00:06:40,140 --> 00:06:46,270
+slows down and investment declines accordingly.
+
+135
+00:06:46,270 --> 00:06:48,550
+The present value of this business
+
+136
+00:06:48,550 --> 00:06:51,310
+can be computed as the present value of the free cash
+
+137
+00:06:51,310 --> 00:06:54,140
+flows of the first several years for 1
+
+138
+00:06:54,140 --> 00:06:58,390
+to capital T plus the present value of the horizon value
+
+139
+00:06:58,390 --> 00:07:01,780
+at time capital T. We will now use our three
+
+140
+00:07:01,780 --> 00:07:04,990
+alternative approaches to estimate the present value
+
+141
+00:07:04,990 --> 00:07:07,300
+of the business.
+
+142
+00:07:07,300 --> 00:07:11,190
+Let's start with the multiples approach, the P/E multiples,
+
+143
+00:07:11,190 --> 00:07:13,280
+in particular.
+
+144
+00:07:13,280 --> 00:07:17,450
+We are going to discount free cash flows from 1 to 4.
+
+145
+00:07:17,450 --> 00:07:20,090
+And then apply the multiples approach
+
+146
+00:07:20,090 --> 00:07:24,020
+to figure out the horizon value at time 4.
+
+147
+00:07:24,020 --> 00:07:26,930
+The present value of the free cash flows from 1 to 4
+
+148
+00:07:26,930 --> 00:07:30,770
+is minus $1.42.
+
+149
+00:07:30,770 --> 00:07:34,580
+This reflects the fact that the firm in the early periods
+
+150
+00:07:34,580 --> 00:07:39,840
+is investing more than the cash flow it is generating.
+
+151
+00:07:39,840 --> 00:07:43,200
+To estimate the horizon value, PV4,
+
+152
+00:07:43,200 --> 00:07:46,620
+we need to apply the P multiples for comparable firms
+
+153
+00:07:46,620 --> 00:07:52,100
+to the expected earnings of the firm at time 5,
+
+154
+00:07:52,100 --> 00:07:54,440
+one period forward.
+
+155
+00:07:54,440 --> 00:08:03,440
+Expected earnings generated at time 5 are estimated at $1.75.
+
+156
+00:08:03,440 --> 00:08:07,190
+Let's assume that the P multiple for comparable firms
+
+157
+00:08:07,190 --> 00:08:10,760
+is equal to six.
+
+158
+00:08:10,760 --> 00:08:13,640
+In which case, we are going to multiply the expected
+
+159
+00:08:13,640 --> 00:08:17,360
+that earnings at time 5 by a factor of six
+
+160
+00:08:17,360 --> 00:08:21,810
+to estimate the horizon value at time 4, PV4.
+
+161
+00:08:21,810 --> 00:08:26,580
+The present value of this horizon value is $10.50,
+
+162
+00:08:26,580 --> 00:08:30,705
+which is the value at time 4 discounted at the 15% rate back
+
+163
+00:08:30,705 --> 00:08:34,440
+to time zero, which is $6.
+
+164
+00:08:34,440 --> 00:08:38,669
+Next, let's estimate the firm value, the business value,
+
+165
+00:08:38,669 --> 00:08:41,610
+using the price-to-book multiples.
+
+166
+00:08:41,610 --> 00:08:44,490
+The logic is very similar to the previous calculation.
+
+167
+00:08:44,490 --> 00:08:48,030
+Except now, instead of using the ratio of price-to-earnings
+
+168
+00:08:48,030 --> 00:08:49,920
+for comparable firms, we are going
+
+169
+00:08:49,920 --> 00:08:52,950
+to use the ratio of price-to-book, the market
+
+170
+00:08:52,950 --> 00:08:56,090
+value of equity divided by the book value.
+
+171
+00:08:56,090 --> 00:09:00,480
+Again, we're estimating the horizon value at time 4.
+
+172
+00:09:00,480 --> 00:09:06,990
+The book value at time 4, the value of the assets, is $11.75.
+
+173
+00:09:06,990 --> 00:09:10,680
+And this gets scaled by the average book-to-price ratio
+
+174
+00:09:10,680 --> 00:09:15,120
+for comparable firms, which we assume to be equal to 1.2.
+
+175
+00:09:15,120 --> 00:09:20,190
+As a result, our estimate of the horizon value is $14.10.
+
+176
+00:09:20,190 --> 00:09:23,640
+And discounted back to time zero at the 15% rate,
+
+177
+00:09:23,640 --> 00:09:28,070
+this gives us $8.06.
+
+178
+00:09:28,070 --> 00:09:32,180
+Our final calculation uses the pure DCF approach.
+
+179
+00:09:32,180 --> 00:09:35,330
+Under this approach, we have to establish a point in time
+
+180
+00:09:35,330 --> 00:09:38,720
+beyond which the firm is expected to have no remaining
+
+181
+00:09:38,720 --> 00:09:41,120
+growth opportunities.
+
+182
+00:09:41,120 --> 00:09:44,075
+For the sake of the argument, suppose that that period is T
+
+183
+00:09:44,075 --> 00:09:45,350
+equal to 5.
+
+184
+00:09:45,350 --> 00:09:47,930
+From that point on, the firm is going
+
+185
+00:09:47,930 --> 00:09:49,850
+to produce no positive NPV.
+
+186
+00:09:49,850 --> 00:09:54,380
+And therefore, at time 5, we comprise the horizon value
+
+187
+00:09:54,380 --> 00:09:57,410
+using the no growth formula.
+
+188
+00:09:57,410 --> 00:09:58,980
+Let's do that.
+
+189
+00:09:58,980 --> 00:10:03,270
+Between periods 1 and 5, the free cash flows of the firm,
+
+190
+00:10:03,270 --> 00:10:05,580
+after being discounted back to time zero,
+
+191
+00:10:05,580 --> 00:10:08,430
+adapt to minus $0.95.
+
+192
+00:10:08,430 --> 00:10:10,710
+The present value at time 5 can be
+
+193
+00:10:10,710 --> 00:10:15,690
+computed as the earnings, which is what the firm would pay out
+
+194
+00:10:15,690 --> 00:10:18,750
+with the no growth assumption.
+
+195
+00:10:18,750 --> 00:10:22,470
+Discounted at the cost of capital, 15%.
+
+196
+00:10:22,470 --> 00:10:24,390
+Because without growth, the firm would
+
+197
+00:10:24,390 --> 00:10:29,460
+be expected to pay $1.88, which is the earning set times 6
+
+198
+00:10:29,460 --> 00:10:32,180
+in perpetuity.
+
+199
+00:10:32,180 --> 00:10:36,680
+At the end of this, we find that the horizon value at time 5
+
+200
+00:10:36,680 --> 00:10:40,130
+is estimated to be $12.55.
+
+201
+00:10:40,130 --> 00:10:46,270
+And discounted back to time 0, this gives us $6.24.
+
+202
+00:10:46,270 --> 00:10:49,600
+Notice that we are using different horizons,
+
+203
+00:10:49,600 --> 00:10:52,120
+capital T under these alternative relation
+
+204
+00:10:52,120 --> 00:10:53,200
+approaches.
+
+205
+00:10:53,200 --> 00:10:55,270
+This is just to highlight the fact
+
+206
+00:10:55,270 --> 00:10:58,900
+that there is no reason to pick the same horizon when
+
+207
+00:10:58,900 --> 00:11:02,080
+we're using the multiples approach versus DCF.
+
+208
+00:11:02,080 --> 00:11:04,240
+The logic is not identical.
+
+209
+00:11:04,240 --> 00:11:07,690
+Under the multiples approach, we are comparing the firm
+
+210
+00:11:07,690 --> 00:11:09,610
+to other similar firms.
+
+211
+00:11:09,610 --> 00:11:12,340
+We simply want to find the point in time when we think
+
+212
+00:11:12,340 --> 00:11:14,800
+this comparison is accurate.
+
+213
+00:11:14,800 --> 00:11:18,550
+Under the pure DCF approach, we are finding a point a time
+
+214
+00:11:18,550 --> 00:11:22,210
+beyond which we feel comfortable forecasting firm growth.
+
+215
+00:11:22,210 --> 00:11:25,450
+In this particular example, we are finding a point in time
+
+216
+00:11:25,450 --> 00:11:29,530
+beyond which the firm has no remaining growth opportunities.
+
+217
+00:11:29,530 --> 00:11:31,330
+And therefore, the value of the firm
+
+218
+00:11:31,330 --> 00:11:35,360
+can be computed under the no growth assumption.
+
+219
+00:11:35,360 --> 00:11:38,270
+We now pull together our estimates.
+
+220
+00:11:38,270 --> 00:11:41,270
+Using the P multiples, we estimate the present value
+
+221
+00:11:41,270 --> 00:11:44,980
+to be $4.58.
+
+222
+00:11:44,980 --> 00:11:47,790
+Under the price-to-book multiple approximation,
+
+223
+00:11:47,790 --> 00:11:52,120
+we find the present value to be $6.64.
+
+224
+00:11:52,120 --> 00:11:59,060
+And using the pure DCF approach, the value is $5.29.
+
+225
+00:11:59,060 --> 00:12:01,340
+The solution using the P/E multiples
+
+226
+00:12:01,340 --> 00:12:05,430
+gives us the most conservative estimate of the firm value.
+
+227
+00:12:05,430 --> 00:12:08,410
+Now, firm valuation is not a simple problem.
+
+228
+00:12:08,410 --> 00:12:10,360
+And our estimates are based on a number
+
+229
+00:12:10,360 --> 00:12:12,780
+of simplifying assumptions.
+
+230
+00:12:12,780 --> 00:12:15,520
+What we get from this analysis is the sense
+
+231
+00:12:15,520 --> 00:12:17,890
+of the range of likely values.
+
+232
+00:12:17,890 --> 00:12:19,960
+This range can be fairly wide, which is
+
+233
+00:12:19,960 --> 00:12:23,370
+what our analysis illustrates.
+
+234
+00:12:23,370 --> 00:12:26,280
+In order to apply these results, we have to look further.
+
+235
+00:12:26,280 --> 00:12:29,310
+We have to study sensitivity of these numbers
+
+236
+00:12:29,310 --> 00:12:32,040
+to their underlying assumptions.
+
+237
+00:12:32,040 --> 00:12:34,170
+At the end of the day, what we find
+
+238
+00:12:34,170 --> 00:12:37,330
+is that valuation is not a simple problem.
+
+239
+00:12:37,330 --> 00:12:40,640
+However, we now have the tools to tackle it.
+

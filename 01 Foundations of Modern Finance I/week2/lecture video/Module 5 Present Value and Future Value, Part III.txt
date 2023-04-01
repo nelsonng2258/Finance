@@ -1,0 +1,95 @@
+
+PROFESSOR: The present value looks
+at the current value of a future cash flow
+by discounting back at the appropriate discount rate.
+We can also consider the future value of a cash flow
+today by allowing it to grow at the proper rate of return.
+Suppose that we have $1 today.
+What would be its worth in one year
+if the interest rate is 4%?
+Well, we could certainly invest that $1 in the market,
+earning a rate of return of 4%.
+In one year, that $1 would turn into $1.04,
+where $0.04 will be the interest on the $1 initial investment.
+So $1.04 will be the future value
+of $1 in one year at the market rate of 4%.
+
+What about its future value in T years?
+Well, we will just have to multiply 1 plus the interest
+rate T times.
+So the future value of $1 in T years
+will be 1 plus r raised to the Tth power.
+
+Let's consider a complete example.
+Suppose a bank issues a CD with an annual interest of 4%.
+And this is a 2-year CD.
+Suppose that you deposit $10,000.
+What will be your balance in two years?
+It would just be $10,000 times 1 plus the interest rate of 4%.
+Raise it to the power of 2.
+And in that, it will give us $10,816.
+And that is the future value of $10,000 today in two years.
+Business decisions often involve choices
+between different alternatives.
+Each alternative may involve a stream of cash flow
+with many pieces.
+Comparing these cash flows is not trivial
+given that they have multiple pieces.
+Let's consider the following example.
+A drug company has developed a new flu vaccine
+and needs to choose between two strategies.
+Strategy A is to bring to market in one year, invest $1 billion
+now, and returns $500 million in year 1, $400 million year 2,
+and $300 million in year 3.
+Strategy B involves bringing the vaccine to market in two years,
+investing $200 million in year 0 and 1,
+and then returns $300 million in year 2 and 3.
+How do we make a decision between strategy A and B?
+In particular, how do we value, or compare,
+these two strategies, or their cash flows?
+Of course, the cash flows of the two strategies being
+multi-dimensional cannot be easily ranked.
+With the present value, however, the ranking becomes simple.
+The present value of a cash flow or its current market price
+is a number, a scalar, which can be easily compared.
+First, we note that the present value of a stream of cash flow
+is simply the sum of the present value of each piece of the cash
+flow as given in the present value formula here.
+
+Suppose that the right discount rate is 5%.
+We can then price the two strategies easily.
+
+Let's first consider strategy A. Its cash flow in period 0
+is minus 1 billion.
+And here, the numbers are in millions.
+In year 1, it's going to return a positive cash
+flow of 500 million, in year 2, 400 million, in year 4,
+300 million.
+
+With the discount rate of 5%, we can easily
+compute the present value of each piece of this cash flow
+stream.
+1 billion today is 1 billion today in present value.
+$500 million in year 1 would be 476.2 million
+in present value terms.
+$400 million in year 2 would be $362.8 million
+in present value terms and so on.
+If we add up the present value of each of the pieces,
+we get $98.2 million.
+That is total present value of strategy A.
+We can then do the same for strategy B.
+The cash flow from strategy B is given
+by the second row in the lower panel in the table,
+and the present value is given by the third row.
+If we add up the present value of all the pieces for strategy
+B, we get $140.8 million.
+Now, with the net present value for strategy A and B
+respectively, we can easily make a choice.
+Clearly, strategy B will give us a higher present value,
+and that is a better strategy.
+This example shows, if we can value each of the alternatives,
+the final decision becomes straightforward.
+Pick the one with the highest present value,
+assuming it's positive.
+We will see more detailed applications later
+in corporate investment decisions.

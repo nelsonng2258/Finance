@@ -1,0 +1,496 @@
+0
+00:00:00,000 --> 00:00:01,020
+
+
+1
+00:00:01,020 --> 00:00:02,410
+LEONID KOGAN: I am Leonid Kogan.
+
+2
+00:00:02,410 --> 00:00:03,577
+JIANG WANG: I am Jiang Wang.
+
+3
+00:00:03,577 --> 00:00:06,370
+Welcome to Foundations of Modern Finance.
+
+4
+00:00:06,370 --> 00:00:08,692
+We are the instructors for this course.
+
+5
+00:00:08,692 --> 00:00:10,150
+LEONID KOGAN: In this course, we'll
+
+6
+00:00:10,150 --> 00:00:12,910
+introduce you to the core principles and some
+
+7
+00:00:12,910 --> 00:00:16,570
+of the most important techniques in modern finance.
+
+8
+00:00:16,570 --> 00:00:19,360
+The global financial system is complex
+
+9
+00:00:19,360 --> 00:00:22,150
+with multiple participants including households,
+
+10
+00:00:22,150 --> 00:00:24,490
+businesses, financial intermediaries,
+
+11
+00:00:24,490 --> 00:00:26,770
+and the governments, among others.
+
+12
+00:00:26,770 --> 00:00:29,950
+Yet, the diverse problems faced by these actors
+
+13
+00:00:29,950 --> 00:00:32,439
+can be understood and addressed using a unifying
+
+14
+00:00:32,439 --> 00:00:37,030
+framework and a relatively small set of fundamental principles.
+
+15
+00:00:37,030 --> 00:00:40,560
+This framework forms the foundation of modern finance,
+
+16
+00:00:40,560 --> 00:00:42,420
+and it is our purpose in this class
+
+17
+00:00:42,420 --> 00:00:46,270
+to equip you with the concepts and tools necessary to handle
+
+18
+00:00:46,270 --> 00:00:49,090
+a wide range of financial problems.
+
+19
+00:00:49,090 --> 00:00:51,910
+JIANG WANG: Here, we would like to give a brief description
+
+20
+00:00:51,910 --> 00:00:56,620
+about the structure and content of the course.
+
+21
+00:00:56,620 --> 00:00:59,380
+Part one of the course has four sections.
+
+22
+00:00:59,380 --> 00:01:02,800
+Section A provides an introduction to finance.
+
+23
+00:01:02,800 --> 00:01:06,340
+Sections B, C, and D then cover the basics
+
+24
+00:01:06,340 --> 00:01:09,790
+of financial market, risk analysis and evaluation,
+
+25
+00:01:09,790 --> 00:01:12,070
+and corporate finance.
+
+26
+00:01:12,070 --> 00:01:15,250
+The introductory section provides the foundation
+
+27
+00:01:15,250 --> 00:01:16,810
+for the whole course.
+
+28
+00:01:16,810 --> 00:01:21,430
+In lecture 1, we will develop a comprehensive and coherent
+
+29
+00:01:21,430 --> 00:01:24,180
+analytical framework to formulate
+
+30
+00:01:24,180 --> 00:01:27,580
+the fundamental financial challenges firms and households
+
+31
+00:01:27,580 --> 00:01:30,850
+face and lay down the general principles we
+
+32
+00:01:30,850 --> 00:01:34,060
+will use to tackle them.
+
+33
+00:01:34,060 --> 00:01:37,480
+In lecture 2, we will establish the key idea
+
+34
+00:01:37,480 --> 00:01:40,430
+in solving the central problem in finance,
+
+35
+00:01:40,430 --> 00:01:45,610
+which is how to value assets, cash rolls and projects.
+
+36
+00:01:45,610 --> 00:01:49,090
+In particular, we will develop a general methodology
+
+37
+00:01:49,090 --> 00:01:53,470
+for asset valuation, the arbitrage pricing approach,
+
+38
+00:01:53,470 --> 00:01:58,570
+by using prices of assets traded in the financial market.
+
+39
+00:01:58,570 --> 00:02:01,690
+We will then further develop this general asset valuation
+
+40
+00:02:01,690 --> 00:02:06,220
+methodology into powerful tools for the pricing of assets
+
+41
+00:02:06,220 --> 00:02:07,600
+or cash flows--
+
+42
+00:02:07,600 --> 00:02:11,230
+in particular, how to use the appropriate discount
+
+43
+00:02:11,230 --> 00:02:14,110
+rate properly adjusted for timing and risk
+
+44
+00:02:14,110 --> 00:02:18,490
+to obtain the present value of a cash flow.
+
+45
+00:02:18,490 --> 00:02:20,290
+LEONID KOGAN: In part B, we introduce
+
+46
+00:02:20,290 --> 00:02:23,230
+some of the largest and most important financial markets
+
+47
+00:02:23,230 --> 00:02:28,300
+and securities, fixed income securities and common stocks.
+
+48
+00:02:28,300 --> 00:02:30,340
+We discuss the main characteristics
+
+49
+00:02:30,340 --> 00:02:33,670
+of these securities and the markets where they trade.
+
+50
+00:02:33,670 --> 00:02:35,620
+We then develop valuation techniques
+
+51
+00:02:35,620 --> 00:02:39,520
+for fixed income assets and for equities.
+
+52
+00:02:39,520 --> 00:02:42,730
+Although these assets are quite different in their properties,
+
+53
+00:02:42,730 --> 00:02:44,560
+our approach to their valuation is
+
+54
+00:02:44,560 --> 00:02:47,500
+based on the same fundamental principle.
+
+55
+00:02:47,500 --> 00:02:50,980
+We value financial securities relative to other assets,
+
+56
+00:02:50,980 --> 00:02:52,720
+based on the principle of absence
+
+57
+00:02:52,720 --> 00:02:56,170
+of arbitrage or no free lunch.
+
+58
+00:02:56,170 --> 00:02:58,000
+We maintain this common perspective
+
+59
+00:02:58,000 --> 00:03:02,050
+as we explore some of the topics specific to each asset class,
+
+60
+00:03:02,050 --> 00:03:06,380
+such as bond duration or forecasting of stock dividends.
+
+61
+00:03:06,380 --> 00:03:09,310
+By the end of this section, you will learn the principles
+
+62
+00:03:09,310 --> 00:03:12,910
+and the core valuation methods used in fixed income and equity
+
+63
+00:03:12,910 --> 00:03:14,890
+markets.
+
+64
+00:03:14,890 --> 00:03:18,370
+In section C, we explore the notion of risk
+
+65
+00:03:18,370 --> 00:03:21,460
+which is central to many problems in finance.
+
+66
+00:03:21,460 --> 00:03:24,940
+In lecture 6, we'll look at how to model investment decisions
+
+67
+00:03:24,940 --> 00:03:29,000
+under uncertainty and how to measure risk quantitatively.
+
+68
+00:03:29,000 --> 00:03:32,710
+We introduce modern portfolio theory and risk management
+
+69
+00:03:32,710 --> 00:03:34,990
+through diversification.
+
+70
+00:03:34,990 --> 00:03:38,900
+In lecture 7, we introduce the arbitrage pricing theory,
+
+71
+00:03:38,900 --> 00:03:41,950
+which is a powerful framework for pricing for national assets
+
+72
+00:03:41,950 --> 00:03:44,230
+based on their risk profile.
+
+73
+00:03:44,230 --> 00:03:45,850
+This pricing framework is heavily
+
+74
+00:03:45,850 --> 00:03:49,090
+used across financial markets, including both equity
+
+75
+00:03:49,090 --> 00:03:51,480
+and fixed-income markets.
+
+76
+00:03:51,480 --> 00:03:54,960
+In lecture 8, we introduce the fundamental important concept
+
+77
+00:03:54,960 --> 00:03:56,970
+of market efficiency.
+
+78
+00:03:56,970 --> 00:03:58,890
+The concept of market efficiency refers
+
+79
+00:03:58,890 --> 00:04:01,920
+to the ability of markets to incorporate information
+
+80
+00:04:01,920 --> 00:04:03,780
+into prices.
+
+81
+00:04:03,780 --> 00:04:06,510
+This concept is central to modern finance
+
+82
+00:04:06,510 --> 00:04:08,790
+and connects to numerous other topics,
+
+83
+00:04:08,790 --> 00:04:12,840
+from firm financial policies to asset management.
+
+84
+00:04:12,840 --> 00:04:16,200
+In this lecture, we define the notion of market efficiency
+
+85
+00:04:16,200 --> 00:04:19,709
+and discuss its uses and limitations, as well as
+
+86
+00:04:19,709 --> 00:04:23,790
+relevant empirical evidence.
+
+87
+00:04:23,790 --> 00:04:25,770
+JIANG WANG: The last section of part 1
+
+88
+00:04:25,770 --> 00:04:29,820
+lays the foundation for modern corporate finance.
+
+89
+00:04:29,820 --> 00:04:33,660
+In lecture 9, we will establish value maximization
+
+90
+00:04:33,660 --> 00:04:37,770
+as the main goal in corporate financial decision making.
+
+91
+00:04:37,770 --> 00:04:40,260
+We will then apply the general framework
+
+92
+00:04:40,260 --> 00:04:44,220
+for financial analysis to major corporate financial decisions,
+
+93
+00:04:44,220 --> 00:04:47,700
+including capital budgeting, financing, payout,
+
+94
+00:04:47,700 --> 00:04:49,980
+and risk management.
+
+95
+00:04:49,980 --> 00:04:54,270
+Lecture 10 focuses on the real investment or capital budgeting
+
+96
+00:04:54,270 --> 00:04:58,200
+decisions of the firm, its most fundamental and important
+
+97
+00:04:58,200 --> 00:05:00,030
+decisions.
+
+98
+00:05:00,030 --> 00:05:03,480
+Here, we apply the asset valuation tools developed
+
+99
+00:05:03,480 --> 00:05:07,320
+earlier in the course to project valuation and capital
+
+100
+00:05:07,320 --> 00:05:09,420
+budgeting.
+
+101
+00:05:09,420 --> 00:05:12,270
+LEONID KOGAN: I have received my PhD in finance from MIT,
+
+102
+00:05:12,270 --> 00:05:14,640
+and I have been teaching here for the past 20 years
+
+103
+00:05:14,640 --> 00:05:17,940
+in various programs, including the Master of Finance,
+
+104
+00:05:17,940 --> 00:05:21,930
+the MBA, the Doctoral Program, and Executive Education.
+
+105
+00:05:21,930 --> 00:05:23,940
+The scope of my teaching at MIT includes
+
+106
+00:05:23,940 --> 00:05:27,960
+the Foundations course, on which this online class is based,
+
+107
+00:05:27,960 --> 00:05:30,430
+as well as advanced electives and doctoral courses
+
+108
+00:05:30,430 --> 00:05:34,020
+on capital markets and financial engineering.
+
+109
+00:05:34,020 --> 00:05:36,270
+My research spans a range of topics
+
+110
+00:05:36,270 --> 00:05:40,780
+in asset pricing, macro finance, and financial engineering.
+
+111
+00:05:40,780 --> 00:05:42,780
+JIANG WANG: Let me say a few words about myself.
+
+112
+00:05:42,780 --> 00:05:45,180
+I'm the Mizuho Financial Group professor
+
+113
+00:05:45,180 --> 00:05:49,120
+at MIT, where I have been for over 30 years.
+
+114
+00:05:49,120 --> 00:05:52,260
+I've taught various finance courses in the MBA,
+
+115
+00:05:52,260 --> 00:05:55,530
+Master of Finance, PhD, and executive programs
+
+116
+00:05:55,530 --> 00:05:59,490
+at Sloan, including introductory courses, like this one,
+
+117
+00:05:59,490 --> 00:06:01,540
+for many years.
+
+118
+00:06:01,540 --> 00:06:03,720
+My research is mostly in the area
+
+119
+00:06:03,720 --> 00:06:05,940
+of asset pricing, investment and risk
+
+120
+00:06:05,940 --> 00:06:08,580
+management, financial regulation,
+
+121
+00:06:08,580 --> 00:06:11,010
+and international finance.
+
+122
+00:06:11,010 --> 00:06:14,640
+We will be working together with you throughout this course
+
+123
+00:06:14,640 --> 00:06:17,420
+and hope you will enjoy it.
+

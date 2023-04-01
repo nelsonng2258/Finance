@@ -1,0 +1,200 @@
+0
+00:00:00,000 --> 00:00:00,950
+
+
+1
+00:00:00,950 --> 00:00:04,520
+PROFESSOR: Now to practice, let me show you an alternative way
+
+2
+00:00:04,520 --> 00:00:06,760
+of solving this problem.
+
+3
+00:00:06,760 --> 00:00:08,940
+Let me first start computing the share
+
+4
+00:00:08,940 --> 00:00:13,180
+price as growing perpetuity, again, using Gordon growth
+
+5
+00:00:13,180 --> 00:00:16,480
+discount model, but starting from dividends that we
+
+6
+00:00:16,480 --> 00:00:19,510
+get from year six onwards.
+
+7
+00:00:19,510 --> 00:00:21,310
+So what I will do is that I will find
+
+8
+00:00:21,310 --> 00:00:25,960
+the share price in year five as dividend 6 divided
+
+9
+00:00:25,960 --> 00:00:27,070
+by r minus g.
+
+10
+00:00:27,070 --> 00:00:28,760
+So this is the value.
+
+11
+00:00:28,760 --> 00:00:30,730
+This is the share price ex-dividend
+
+12
+00:00:30,730 --> 00:00:32,770
+at point in time five that captures
+
+13
+00:00:32,770 --> 00:00:34,540
+the value of all of the dividends
+
+14
+00:00:34,540 --> 00:00:38,140
+that start in year six and continue forever.
+
+15
+00:00:38,140 --> 00:00:41,530
+So recall that D6 is $1 multiplied by 1
+
+16
+00:00:41,530 --> 00:00:42,910
+plus 3% percent.
+
+17
+00:00:42,910 --> 00:00:46,150
+So it is dividing that by r minus g.
+
+18
+00:00:46,150 --> 00:00:49,240
+So this gives me the share price of this stock
+
+19
+00:00:49,240 --> 00:00:54,430
+in year five of $11.44.
+
+20
+00:00:54,430 --> 00:00:58,540
+Now, to find the current price of the stock, what I will do
+
+21
+00:00:58,540 --> 00:01:02,020
+is that I will take the share price in year five,
+
+22
+00:01:02,020 --> 00:01:05,858
+plus I will add the dividend that we get in year five.
+
+23
+00:01:05,858 --> 00:01:07,150
+Recall-- and this is important.
+
+24
+00:01:07,150 --> 00:01:09,820
+Recall that share price in year five,
+
+25
+00:01:09,820 --> 00:01:11,500
+the way we're computing it here, it's
+
+26
+00:01:11,500 --> 00:01:13,250
+an ex-dividend share price.
+
+27
+00:01:13,250 --> 00:01:15,910
+So it does not take into account the dividend
+
+28
+00:01:15,910 --> 00:01:16,960
+it received in year five.
+
+29
+00:01:16,960 --> 00:01:20,330
+So this value only counts dividends
+
+30
+00:01:20,330 --> 00:01:23,018
+starting from year six onwards.
+
+31
+00:01:23,018 --> 00:01:25,060
+So therefore, to compute the current share price,
+
+32
+00:01:25,060 --> 00:01:28,493
+I'm taking the ex-dividend price in year five,
+
+33
+00:01:28,493 --> 00:01:30,910
+I'm adding the dividend that I will receive in year five--
+
+34
+00:01:30,910 --> 00:01:32,290
+this is $1--
+
+35
+00:01:32,290 --> 00:01:35,330
+and I'm discounting all of this to present.
+
+36
+00:01:35,330 --> 00:01:40,570
+So D5 plus P5 divided by 1 plus r, raised to the power of 5.
+
+37
+00:01:40,570 --> 00:01:44,140
+So this gives me $1 plus $11.44--
+
+38
+00:01:44,140 --> 00:01:46,780
+again, this is the share price in year five--
+
+39
+00:01:46,780 --> 00:01:50,150
+divided by 1 plus 12%, raised the power of 5.
+
+40
+00:01:50,150 --> 00:01:53,650
+And this gives me $7.06.
+
+41
+00:01:53,650 --> 00:01:56,700
+So unsurprisingly, we've got exactly the same answer
+
+42
+00:01:56,700 --> 00:01:58,433
+as we've gotten before.
+
+43
+00:01:58,433 --> 00:02:00,850
+This is just to illustrate that as long as you're doing it
+
+44
+00:02:00,850 --> 00:02:04,210
+consistently, you can have, potentially,
+
+45
+00:02:04,210 --> 00:02:07,300
+multiple ways of solving the same problem that gives you
+
+46
+00:02:07,300 --> 00:02:08,620
+exactly the same answer.
+
+47
+00:02:08,620 --> 00:02:11,200
+Again, the key is to make sure that you're counting
+
+48
+00:02:11,200 --> 00:02:13,500
+all dividends properly.
+
+49
+00:02:13,500 --> 00:02:14,000
+
+

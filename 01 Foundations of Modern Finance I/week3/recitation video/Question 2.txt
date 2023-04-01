@@ -1,0 +1,57 @@
+
+PROFESSOR: Suppose that you have an outstanding loan that
+requires ten annual payments of $2,300.
+Now is Year Zero, and the next payment on the loan
+is due in Year 6.
+The last payment is due in Year 15.
+There is a bank account that offers 5% annual interest rate.
+You would like to make a deposit into this account today, which
+would allow you to repay this loan.
+What is the amount that you need to deposit?
+This question is similar to question 1
+because we have the same annual payment, the same interest
+rate.
+The only difference is that our payments start in Year 6
+and end in Year 15.
+So let's first find the present value of these payments
+by using brute-force.
+So I'll start discounting each of these individual payments,
+similar to what we did in question 1,
+by taking the payment and dividing it
+by 1 plus the discount rate.
+And I will raise it to the power,
+which equals to the year in which this payment occurs.
+
+We'll extend this array.
+This would give me the present value of each
+of these individual payments.
+And I will add them up.
+And this will give me the present value
+of all of these payments, which would equal to $13,915.42.
+Now, let's do something smarter.
+First, I will relabel the timeline
+but ignoring the first year in which we receive payment
+by Year 1.
+In this case, Year 6 in the actual timeline,
+is Year 1 in the new timeline.
+In this new timeline, the stream of payments
+looks like a regular annuity, and we
+can find its present value.
+In fact, we already found it in question 1.
+It equals to $17,760.
+But in the old timeline, this is the value
+in Year 5, not present value.
+To find its present value, what we need to do,
+we need to discount it by dividing it
+by 1 plus our interest rate, 5%, raised to the power of 5.
+By doing so, we get $13,915.42.
+This is exactly the same answer as we
+obtained by discounting each payment manually.
+The stream of cash flows we started in this question
+represents a delayed annuity.
+Now, let's summarize what we learned in this question.
+If we need to find a present value of a delayed annuity that
+starts paying in Year N, we need to do the following.
+First, we use the annuity formula to find its value
+in Year N minus 1.
+And second, we discount Year N minus 1 value to present.

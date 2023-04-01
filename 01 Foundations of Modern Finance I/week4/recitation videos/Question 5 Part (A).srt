@@ -1,0 +1,260 @@
+0
+00:00:00,000 --> 00:00:00,952
+
+
+1
+00:00:00,952 --> 00:00:02,720
+PROFESSOR: In this question, we will
+
+2
+00:00:02,720 --> 00:00:08,610
+learn how to compute duration for different types of bonds.
+
+3
+00:00:08,610 --> 00:00:13,040
+Assume that the yield curve is flat at 2%.
+
+4
+00:00:13,040 --> 00:00:16,550
+Compute the Macaulay duration and modified duration
+
+5
+00:00:16,550 --> 00:00:18,890
+for the following bonds.
+
+6
+00:00:18,890 --> 00:00:22,790
+Bond A is a zero-coupon $100 face value
+
+7
+00:00:22,790 --> 00:00:25,850
+bond maturing in 20 years.
+
+8
+00:00:25,850 --> 00:00:32,280
+Bond B is a 5% coupon, $100 face value perpetual bond.
+
+9
+00:00:32,280 --> 00:00:36,040
+We will assume that the coupons are paid annually.
+
+10
+00:00:36,040 --> 00:00:41,740
+And C is a 5% coupon bond with $100 face
+
+11
+00:00:41,740 --> 00:00:45,000
+value maturing in 20 years.
+
+12
+00:00:45,000 --> 00:00:47,630
+We will also assume that the coupons are paid annually.
+
+13
+00:00:47,630 --> 00:00:51,360
+
+
+14
+00:00:51,360 --> 00:00:53,530
+Let's start with question a.
+
+15
+00:00:53,530 --> 00:00:57,420
+And compute the duration for a zero coupon bond
+
+16
+00:00:57,420 --> 00:01:00,410
+that matures in 20 years.
+
+17
+00:01:00,410 --> 00:01:02,590
+Let's start with Macaulay duration.
+
+18
+00:01:02,590 --> 00:01:04,810
+So by definition, Macaulay duration
+
+19
+00:01:04,810 --> 00:01:07,700
+is given by the following expression.
+
+20
+00:01:07,700 --> 00:01:10,670
+So it's 1 divided by the price of the bond multiplied
+
+21
+00:01:10,670 --> 00:01:13,490
+by the sum where we take each of cash
+
+22
+00:01:13,490 --> 00:01:18,200
+flows that the bond pays in year, in years T and divide it
+
+23
+00:01:18,200 --> 00:01:21,620
+by 1 plus yield raised to the power of t multiplied
+
+24
+00:01:21,620 --> 00:01:26,220
+by the period in which this cash flow was paid, so year t.
+
+25
+00:01:26,220 --> 00:01:28,970
+
+
+26
+00:01:28,970 --> 00:01:32,210
+For zero-coupon bond, all of the cash
+
+27
+00:01:32,210 --> 00:01:36,050
+flows except for the very terminal cash flows are zero.
+
+28
+00:01:36,050 --> 00:01:41,060
+So in this case, cash flows in year small t,
+
+29
+00:01:41,060 --> 00:01:44,600
+where small t is equal or less than capital T would
+
+30
+00:01:44,600 --> 00:01:52,400
+be zero and cash flow in year cap T is $100.
+
+31
+00:01:52,400 --> 00:01:55,900
+So therefore, the Macaulay duration expression,
+
+32
+00:01:55,900 --> 00:01:59,290
+the whole sum, would be just consisting of one term.
+
+33
+00:01:59,290 --> 00:02:01,210
+This is the terminal term.
+
+34
+00:02:01,210 --> 00:02:04,900
+So we get 1 over P multiplied by $100 divided
+
+35
+00:02:04,900 --> 00:02:08,830
+by 1 plus yield raised to the power of capital T multiplied
+
+36
+00:02:08,830 --> 00:02:11,650
+by capital T. So this is the terminal year
+
+37
+00:02:11,650 --> 00:02:17,670
+in which the only payment that this bond pays actually occurs.
+
+38
+00:02:17,670 --> 00:02:21,500
+So now, notice that the price of the bond for a zero-coupon bond
+
+39
+00:02:21,500 --> 00:02:26,740
+is given by just simply $100 divided by 1 plus yield raised
+
+40
+00:02:26,740 --> 00:02:30,970
+to the power of capital T. And so what I will do right now
+
+41
+00:02:30,970 --> 00:02:34,750
+is that I will plug in this price equation
+
+42
+00:02:34,750 --> 00:02:37,790
+into the duration equation.
+
+43
+00:02:37,790 --> 00:02:39,640
+And so you could see that, that would just
+
+44
+00:02:39,640 --> 00:02:48,340
+equal to 1 over P multiplied by P and multiplied by capital T.
+
+45
+00:02:48,340 --> 00:02:53,350
+And so that would just give us capital T.
+
+46
+00:02:53,350 --> 00:02:56,940
+So therefore for a zero-coupon bond,
+
+47
+00:02:56,940 --> 00:02:59,710
+the Macaulay duration would always
+
+48
+00:02:59,710 --> 00:03:03,370
+equal to the maturity of the bond.
+
+49
+00:03:03,370 --> 00:03:08,160
+And this is a very important property for zero-coupon bonds.
+
+50
+00:03:08,160 --> 00:03:10,370
+So in this particular case, since our bond
+
+51
+00:03:10,370 --> 00:03:13,850
+has 20 years to maturity, the Macaulay duration
+
+52
+00:03:13,850 --> 00:03:19,000
+for this bond in part A of this question equals to 20 years.
+
+53
+00:03:19,000 --> 00:03:21,610
+
+
+54
+00:03:21,610 --> 00:03:26,410
+Now the next step is to find the modified duration, which
+
+55
+00:03:26,410 --> 00:03:30,480
+by definition is the Macaulay duration divided
+
+56
+00:03:30,480 --> 00:03:34,800
+by 1 plus y, which is again yield to maturity on this bond.
+
+57
+00:03:34,800 --> 00:03:38,620
+
+
+58
+00:03:38,620 --> 00:03:41,310
+The modified duration of this bond
+
+59
+00:03:41,310 --> 00:03:45,450
+then is given simply by taking 20, which is the Macaulay
+
+60
+00:03:45,450 --> 00:03:48,990
+duration, divided by 1 plus 2%.
+
+61
+00:03:48,990 --> 00:03:54,180
+And this gives us 19.61%.
+
+62
+00:03:54,180 --> 00:03:56,370
+So to summarize, the Macaulay duration
+
+63
+00:03:56,370 --> 00:04:02,000
+for this bond is 20 and the modified duration is 19.61%.
+
+64
+00:04:02,000 --> 00:04:03,000
+
+

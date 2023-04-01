@@ -1,0 +1,304 @@
+0
+00:00:00,000 --> 00:00:00,273
+
+
+1
+00:00:00,273 --> 00:00:01,690
+PROFESSOR: In this question, we're
+
+2
+00:00:01,690 --> 00:00:04,210
+given a state-space model that has
+
+3
+00:00:04,210 --> 00:00:09,280
+three states and three assets currently traded in the market.
+
+4
+00:00:09,280 --> 00:00:14,380
+Asset 1 is a riskless bond with the current price of $95.
+
+5
+00:00:14,380 --> 00:00:19,620
+It pays $100 in each of the three states.
+
+6
+00:00:19,620 --> 00:00:22,250
+Asset 2 is a stock.
+
+7
+00:00:22,250 --> 00:00:25,210
+Its current price is $150.
+
+8
+00:00:25,210 --> 00:00:30,730
+And it pays $250 in state 1, nothing in state 2,
+
+9
+00:00:30,730 --> 00:00:34,450
+and $500 in state 3.
+
+10
+00:00:34,450 --> 00:00:39,250
+And finally, asset number 3 is another stock that is currently
+
+11
+00:00:39,250 --> 00:00:42,700
+priced and traded at $100.
+
+12
+00:00:42,700 --> 00:00:45,610
+And it pays $0 in states 1 and 2.
+
+13
+00:00:45,610 --> 00:00:50,880
+And it pays $500 in the state 3.
+
+14
+00:00:50,880 --> 00:00:55,820
+The question is, what are the state prices?
+
+15
+00:00:55,820 --> 00:00:58,550
+To answer this question, let's start
+
+16
+00:00:58,550 --> 00:01:01,160
+by writing down the pricing equation that
+
+17
+00:01:01,160 --> 00:01:06,350
+connects the payoff that we get from an asset with the state
+
+18
+00:01:06,350 --> 00:01:07,310
+prices.
+
+19
+00:01:07,310 --> 00:01:09,452
+So recall that in question two, we
+
+20
+00:01:09,452 --> 00:01:11,160
+were working with the following equation.
+
+21
+00:01:11,160 --> 00:01:14,920
+So the price of any asset equals to the payoff
+
+22
+00:01:14,920 --> 00:01:19,600
+that asset pays in the first state multiplied by the state
+
+23
+00:01:19,600 --> 00:01:22,640
+price of that state.
+
+24
+00:01:22,640 --> 00:01:26,380
+And similarly, what that asset pays
+
+25
+00:01:26,380 --> 00:01:29,520
+in the second state times the price of that second state,
+
+26
+00:01:29,520 --> 00:01:31,850
+plus here we have three states in total,
+
+27
+00:01:31,850 --> 00:01:35,300
+so we have the third state as well.
+
+28
+00:01:35,300 --> 00:01:38,030
+So now we can write down the prices
+
+29
+00:01:38,030 --> 00:01:43,340
+of each of our three assets as the function of the state
+
+30
+00:01:43,340 --> 00:01:47,670
+prices and what these assets pay in each of the states.
+
+31
+00:01:47,670 --> 00:01:49,790
+So let's start with the riskless bond.
+
+32
+00:01:49,790 --> 00:01:57,220
+So we get 95 equals to phi 1 multiplied by 100
+
+33
+00:01:57,220 --> 00:02:07,620
+plus phi 2 multiplied by 100 plus phi 3 multiplied by 100.
+
+34
+00:02:07,620 --> 00:02:10,652
+Now for the second asset, or for our first stock,
+
+35
+00:02:10,652 --> 00:02:12,360
+we can write down the following equation.
+
+36
+00:02:12,360 --> 00:02:15,230
+So its current price is $150.
+
+37
+00:02:15,230 --> 00:02:17,980
+And it pays $250 in the first state.
+
+38
+00:02:17,980 --> 00:02:21,610
+So it's phi 1 multiplied by 250.
+
+39
+00:02:21,610 --> 00:02:24,500
+It doesn't pay anything in the second state,
+
+40
+00:02:24,500 --> 00:02:27,650
+so it's going to be phi 2 times 0, which is 0.
+
+41
+00:02:27,650 --> 00:02:32,210
+Plus phi 3-- and I can put 0 here--
+
+42
+00:02:32,210 --> 00:02:37,670
+phi 3 times 500.
+
+43
+00:02:37,670 --> 00:02:41,660
+And finally, for the asset number 3, or the second stock,
+
+44
+00:02:41,660 --> 00:02:44,150
+we can write down the pricing equation
+
+45
+00:02:44,150 --> 00:02:46,400
+for that stock, which is 100 equals
+
+46
+00:02:46,400 --> 00:02:52,280
+to phi 3 multiplied by 500.
+
+47
+00:02:52,280 --> 00:02:54,770
+And so the remaining, phi 1 times 0 is 0.
+
+48
+00:02:54,770 --> 00:02:58,950
+And phi 2 times 0 is 0 as well.
+
+49
+00:02:58,950 --> 00:03:03,680
+So now we have this system of equations with three unknowns.
+
+50
+00:03:03,680 --> 00:03:06,020
+It's a very easy system of equations to solve.
+
+51
+00:03:06,020 --> 00:03:13,290
+So from the last equation, we get phi 3 that equals 0.2.
+
+52
+00:03:13,290 --> 00:03:17,855
+We can plug this phi 3 into the second equation.
+
+53
+00:03:17,855 --> 00:03:19,230
+And by solving that equation, you
+
+54
+00:03:19,230 --> 00:03:27,070
+could verify that phi 1 would equal to 0.2 as well.
+
+55
+00:03:27,070 --> 00:03:33,180
+And finally, we can plug phi 3 and phi 1 into equation 1
+
+56
+00:03:33,180 --> 00:03:36,600
+and solve that equation for phi 2.
+
+57
+00:03:36,600 --> 00:03:40,230
+And so if we do that, we find that phi 2--
+
+58
+00:03:40,230 --> 00:03:42,730
+and I will write it down here--
+
+59
+00:03:42,730 --> 00:03:48,940
+so phi 2 would equal 0.55.
+
+60
+00:03:48,940 --> 00:03:56,760
+So altogether, we get that the state prices, in this case,
+
+61
+00:03:56,760 --> 00:03:58,040
+equal to--
+
+62
+00:03:58,040 --> 00:04:05,310
+so phi 1 equals to 0.2, phi 2 equals 0.55,
+
+63
+00:04:05,310 --> 00:04:09,760
+and phi 3 equals 0.2 as well.
+
+64
+00:04:09,760 --> 00:04:14,610
+So this is the set of the state prices
+
+65
+00:04:14,610 --> 00:04:16,506
+in this state-space model.
+
+66
+00:04:16,506 --> 00:04:18,839
+If we were to use the state prices to price these assets
+
+67
+00:04:18,839 --> 00:04:24,510
+again given their payoffs, the way we have priced assets
+
+68
+00:04:24,510 --> 00:04:27,253
+in question two, we would have found
+
+69
+00:04:27,253 --> 00:04:29,670
+that each of these assets, so the riskless bond, its price
+
+70
+00:04:29,670 --> 00:04:31,020
+would be $95.
+
+71
+00:04:31,020 --> 00:04:32,880
+The price of stock 1 would be $150.
+
+72
+00:04:32,880 --> 00:04:36,600
+And the price of stock 2 would be $100.
+
+73
+00:04:36,600 --> 00:04:38,430
+So altogether, this question teaches you
+
+74
+00:04:38,430 --> 00:04:43,290
+how to find the state prices from the given
+
+75
+00:04:43,290 --> 00:04:46,040
+prices of traded assets.
+

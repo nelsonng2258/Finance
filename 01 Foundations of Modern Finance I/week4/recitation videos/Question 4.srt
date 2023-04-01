@@ -1,0 +1,500 @@
+0
+00:00:00,000 --> 00:00:01,115
+
+
+1
+00:00:01,115 --> 00:00:02,990
+PROFESSOR: In this question, I will teach you
+
+2
+00:00:02,990 --> 00:00:06,320
+how to find yield to maturity.
+
+3
+00:00:06,320 --> 00:00:09,740
+Consider the following three-year bond.
+
+4
+00:00:09,740 --> 00:00:10,790
+It pays annual coupon.
+
+5
+00:00:10,790 --> 00:00:14,390
+It has face value of $100.
+
+6
+00:00:14,390 --> 00:00:19,600
+And the coupon rate of 5.25%.
+
+7
+00:00:19,600 --> 00:00:23,270
+The current spot interest rates are as follows.
+
+8
+00:00:23,270 --> 00:00:25,990
+The one year rate is 1.1%.
+
+9
+00:00:25,990 --> 00:00:29,260
+The two-year rate is 1.15%.
+
+10
+00:00:29,260 --> 00:00:34,060
+And the three-year rate is 1.50%.
+
+11
+00:00:34,060 --> 00:00:38,670
+We will compute yield to maturity on this bond.
+
+12
+00:00:38,670 --> 00:00:41,800
+The first step in solving this question
+
+13
+00:00:41,800 --> 00:00:46,110
+is to find the price of the bond.
+
+14
+00:00:46,110 --> 00:00:48,350
+Now we know how to find the price of the bonds
+
+15
+00:00:48,350 --> 00:00:52,010
+so we're just taking the term structure of interest rates
+
+16
+00:00:52,010 --> 00:00:54,800
+that we're given and we're discounting
+
+17
+00:00:54,800 --> 00:00:57,020
+each of the payments that we're getting from the bond
+
+18
+00:00:57,020 --> 00:01:02,070
+to present using the term structure of interest rates.
+
+19
+00:01:02,070 --> 00:01:04,580
+So first, we are taking the first coupon.
+
+20
+00:01:04,580 --> 00:01:10,310
+So it's $5.25 so recall that this bond pays 5.25% percent
+
+21
+00:01:10,310 --> 00:01:11,840
+coupon.
+
+22
+00:01:11,840 --> 00:01:15,220
+And so at the end of year one, we get $5.25.
+
+23
+00:01:15,220 --> 00:01:19,640
+At the end of year two, we get another $5.25.
+
+24
+00:01:19,640 --> 00:01:24,350
+At the end of year three, we get the last coupon again $5.25.
+
+25
+00:01:24,350 --> 00:01:28,147
+And at the same time, we get the face value payment
+
+26
+00:01:28,147 --> 00:01:28,730
+from the bond.
+
+27
+00:01:28,730 --> 00:01:30,830
+That's another 100.
+
+28
+00:01:30,830 --> 00:01:33,140
+And so we're discounting each of these payments using
+
+29
+00:01:33,140 --> 00:01:37,070
+the corresponding spot rates to present.
+
+30
+00:01:37,070 --> 00:01:45,770
+And this gives us the price of the bond of $110.98.
+
+31
+00:01:45,770 --> 00:01:50,460
+Now the second step is to write down the following equation.
+
+32
+00:01:50,460 --> 00:01:53,510
+So this is definition of yield to maturity.
+
+33
+00:01:53,510 --> 00:01:56,570
+Yield to maturity is the interest rate
+
+34
+00:01:56,570 --> 00:02:02,070
+that if we're using it to discount all of the cash flows
+
+35
+00:02:02,070 --> 00:02:03,480
+that we get from the bond, we get
+
+36
+00:02:03,480 --> 00:02:05,148
+the current price of the bond.
+
+37
+00:02:05,148 --> 00:02:07,440
+So therefore, we can write down the following question.
+
+38
+00:02:07,440 --> 00:02:12,260
+So 110.98-- this is the current price of this bond--
+
+39
+00:02:12,260 --> 00:02:15,830
+equals to the first coupon discounted
+
+40
+00:02:15,830 --> 00:02:19,980
+to present at YTM, the second coupon discounted
+
+41
+00:02:19,980 --> 00:02:24,630
+to present at YTM, plus the last coupon and the face value
+
+42
+00:02:24,630 --> 00:02:28,660
+discounted to present at the YTM as well.
+
+43
+00:02:28,660 --> 00:02:30,930
+So now all we have to do is that we
+
+44
+00:02:30,930 --> 00:02:34,320
+have solve this equation for y.
+
+45
+00:02:34,320 --> 00:02:37,410
+So this is just one equation with one unknown.
+
+46
+00:02:37,410 --> 00:02:41,360
+The only problem here is that this equation looks non-linear.
+
+47
+00:02:41,360 --> 00:02:43,170
+So in principle, this is a cubic equation.
+
+48
+00:02:43,170 --> 00:02:46,740
+So we have to use a lot of effort
+
+49
+00:02:46,740 --> 00:02:49,320
+to actually solve this equation for y.
+
+50
+00:02:49,320 --> 00:02:51,720
+So I'm going to show you how to do this in Excel.
+
+51
+00:02:51,720 --> 00:02:53,400
+You can also use your calculators
+
+52
+00:02:53,400 --> 00:02:59,050
+or any other software that solves non-linear equations.
+
+53
+00:02:59,050 --> 00:03:01,230
+I will show you two different functions
+
+54
+00:03:01,230 --> 00:03:05,832
+that we can use to find yield to maturity in Excel.
+
+55
+00:03:05,832 --> 00:03:07,290
+What I have done in the spreadsheet
+
+56
+00:03:07,290 --> 00:03:10,810
+is I have entered basic information about our bond.
+
+57
+00:03:10,810 --> 00:03:17,610
+So this face value of $100, the coupon rate of 5.25%, and these
+
+58
+00:03:17,610 --> 00:03:20,070
+are these spot interest rates which
+
+59
+00:03:20,070 --> 00:03:24,970
+we used to find the current price of the bond.
+
+60
+00:03:24,970 --> 00:03:27,610
+So now here, I will use the rate function.
+
+61
+00:03:27,610 --> 00:03:29,910
+So if you start adding rate, you will
+
+62
+00:03:29,910 --> 00:03:33,450
+see that this function requires a certain number of inputs.
+
+63
+00:03:33,450 --> 00:03:37,210
+And these are the inputs that I've put here on top.
+
+64
+00:03:37,210 --> 00:03:39,420
+So the first input would be the number
+
+65
+00:03:39,420 --> 00:03:42,720
+of periods, which in the bond speak is
+
+66
+00:03:42,720 --> 00:03:44,740
+time to maturity of the bond.
+
+67
+00:03:44,740 --> 00:03:46,840
+So it has three years to maturity
+
+68
+00:03:46,840 --> 00:03:51,570
+and so therefore it makes three payments.
+
+69
+00:03:51,570 --> 00:03:54,340
+So this will be our first input.
+
+70
+00:03:54,340 --> 00:03:57,360
+The second input would be the periodic payment
+
+71
+00:03:57,360 --> 00:04:00,900
+that our bond makes.
+
+72
+00:04:00,900 --> 00:04:08,070
+So in our case this is annual coupon rate, which is $5.25.
+
+73
+00:04:08,070 --> 00:04:12,850
+So this is the second input into this rate function.
+
+74
+00:04:12,850 --> 00:04:17,040
+The third input is the present value or the current price
+
+75
+00:04:17,040 --> 00:04:18,720
+of the bond.
+
+76
+00:04:18,720 --> 00:04:23,910
+Note that it is important to enter the price of the bond
+
+77
+00:04:23,910 --> 00:04:25,810
+with a negative sign.
+
+78
+00:04:25,810 --> 00:04:31,640
+So here I have negative 110.98.
+
+79
+00:04:31,640 --> 00:04:34,870
+So this is my second input.
+
+80
+00:04:34,870 --> 00:04:36,360
+This is my third input.
+
+81
+00:04:36,360 --> 00:04:38,780
+So the price of the bond again, it is negative.
+
+82
+00:04:38,780 --> 00:04:40,560
+And the last input is the face value.
+
+83
+00:04:40,560 --> 00:04:43,280
+So this is our terminal payment that we
+
+84
+00:04:43,280 --> 00:04:47,240
+get from this instrument at the end of year three.
+
+85
+00:04:47,240 --> 00:04:49,610
+So you could see how this function is structured.
+
+86
+00:04:49,610 --> 00:04:52,670
+So it has the current present value, which is negative.
+
+87
+00:04:52,670 --> 00:04:55,940
+It has a terminal payment which is the future or face
+
+88
+00:04:55,940 --> 00:04:57,830
+value which is positive.
+
+89
+00:04:57,830 --> 00:04:59,630
+It has periodic payments.
+
+90
+00:04:59,630 --> 00:05:01,920
+This is the second argument in this function
+
+91
+00:05:01,920 --> 00:05:03,080
+which is positive.
+
+92
+00:05:03,080 --> 00:05:06,330
+And then the first one is the number of periods.
+
+93
+00:05:06,330 --> 00:05:09,830
+So if we close this and we hit Enter,
+
+94
+00:05:09,830 --> 00:05:12,320
+this gives us a yield to maturity
+
+95
+00:05:12,320 --> 00:05:18,230
+on this bond, which is 1.48%.
+
+96
+00:05:18,230 --> 00:05:23,000
+Now the second way of solving this equation
+
+97
+00:05:23,000 --> 00:05:27,360
+is to use internal rate of return function.
+
+98
+00:05:27,360 --> 00:05:29,780
+So here what I've done is that I'm
+
+99
+00:05:29,780 --> 00:05:34,440
+showing the cash flows that we get from this bond.
+
+100
+00:05:34,440 --> 00:05:37,855
+So again, in year zero, we have negative 110.98.
+
+101
+00:05:37,855 --> 00:05:39,230
+So this is the price of the bond.
+
+102
+00:05:39,230 --> 00:05:40,980
+So if we are a buyer of this bond,
+
+103
+00:05:40,980 --> 00:05:43,880
+so this is our negative cash outflow in year zero.
+
+104
+00:05:43,880 --> 00:05:47,660
+And then we have positive 5.25, positive 5.25,
+
+105
+00:05:47,660 --> 00:05:51,450
+and positive 105.25.
+
+106
+00:05:51,450 --> 00:05:54,410
+So another way of computing yield to maturity
+
+107
+00:05:54,410 --> 00:05:58,820
+is just simply to use Internal Rate of Return function IRR
+
+108
+00:05:58,820 --> 00:06:03,970
+and then just entering the array of our cash flows.
+
+109
+00:06:03,970 --> 00:06:08,340
+And simply hitting Enter.
+
+110
+00:06:08,340 --> 00:06:10,000
+This will give us the identical answer.
+
+111
+00:06:10,000 --> 00:06:14,640
+So the yield to maturity on this bond is 1.48%.
+
+112
+00:06:14,640 --> 00:06:18,900
+Now we do not know what internal rate of return is yet.
+
+113
+00:06:18,900 --> 00:06:22,140
+We will learn this concept later in the course.
+
+114
+00:06:22,140 --> 00:06:24,960
+But the yield to maturity on the bond
+
+115
+00:06:24,960 --> 00:06:28,180
+is, in fact, the internal rate of return
+
+116
+00:06:28,180 --> 00:06:31,870
+if you think of this bond as your investment.
+
+117
+00:06:31,870 --> 00:06:35,050
+So therefore, we can use both rate function and internal rate
+
+118
+00:06:35,050 --> 00:06:35,550
+of return.
+
+119
+00:06:35,550 --> 00:06:37,350
+You could see that the internal rate of return function
+
+120
+00:06:37,350 --> 00:06:39,725
+is actually much easier to use because all you have to do
+
+121
+00:06:39,725 --> 00:06:42,060
+is that you have to enter the area of cash flows
+
+122
+00:06:42,060 --> 00:06:44,160
+that you get from this bond.
+
+123
+00:06:44,160 --> 00:06:47,250
+But we can use either of the two functions
+
+124
+00:06:47,250 --> 00:06:51,680
+to find the yield to maturity in Excel.
+

@@ -1,0 +1,95 @@
+
+PROFESSOR: Next, we talk about relative valuation
+of coupon bonds in relation to pure discount bonds,
+or zero coupon bonds.
+First, let's consider the relation
+between interest rates and bond prices for pure discount bonds.
+This is a matter of definition.
+Interest rates can express the rate of return on the bond.
+Bond prices also explains the rate of return,
+but in different terms.
+Bond prices and interest rates are directly related
+to each other.
+The relation is that the bond price with a face value
+of $1.00 and maturity t is equal to 1 divided by 1 plus
+the interest rate to the power t.
+In other words, the price of the bond today
+is equal to the face value of the bond discounted
+at the rate of interest from now until the maturity
+date of the bond.
+If we are thinking of interest rates
+as the primary source of data, we
+can then express bond prices as a function of the interest
+rates.
+Alternatively, if bond prices are
+observed as the primary input, we
+can express interest rates as a function of the bond prices.
+
+A coupon bond pays a regular stream
+of coupon payments in addition to the principal payment
+at maturity.
+We're going to think of a coupon bond
+as a portfolio of pure discount bonds,
+where each of the payments delivered by the coupon bond
+can be visualized as a payoff over a single discount bond
+with the corresponding maturity.
+We are going to use low bond price, or arbitrage valuation,
+to establish a connection between the price of a coupon
+bond and prices of discount bonds of various maturities.
+We can also go in reverse.
+We can start with the prices of coupon bonds
+and recover implied values of discount bonds.
+Let's consider an example.
+Suppose we are working with a 3-year year
+bond with a $1,000 principal payment and a 5% coupon.
+So in the first year, the holder of the bonds
+receives a payment of $50; second year, $50;
+the third year, it's $1,000 and the $50 coupon payment.
+We can think of this bond as a sequence of cash flows
+that can be replicated by a portfolio of discount bonds.
+In this case, we need three discount bonds.
+We need the bond with maturity of 1,
+the bond that pays off at time 1, paying $50 at the time.
+We the bond that matures at time 2, also paying 50.
+And we need a discount bond that pays $1,050 at time 3.
+Our coupon bond is equivalent to the portfolio of zero coupon
+bonds.
+As a result, the price of the coupon bond
+has to be equal to the cost of the portfolio of zero coupon
+bonds according to the Law of One Price.
+If that equality was violated, then there would be arbitrage.
+For example, if the price of the coupon bond
+were to be lower than the price of the portfolio of zero coupon
+bonds that replicate its cash flows,
+an investor could buy a coupon bond
+and short sell the replicating portfolio of pure discount
+bonds to lock in arbitrage profits.
+We can generalize this argument to any coupon paying bond.
+Of course, there was nothing special about our 3-year bond.
+And we arrive at the general formula
+that tells us that the price of a coupon bond
+is equal to a sum across the dates from one
+to the maturity date of the bond, capital T,
+of the coupon payment of the bond times the price
+of the corresponding discount bond plus the principal payment
+to be multiplied by the price of the pure discount bond paying
+off at time capital T. This is the formula that we see.
+The price of the bond is equal to the discounted value
+of its cash flows, where we are discounting them
+at the corresponding interest rate.
+As an example, suppose that the yield curve is given
+by the following information.
+The discount bond with maturity of 1 trades at 95.2 cents with
+a face value of $1.00.
+The discount rate with maturity 2 trades at 89.8 cents.
+The discount bond of maturity 3 trades at 86.3 cents,
+and so on.
+We do not need to know the prices of other bonds.
+For exercise, now we are pricing the 3-year bond
+that we have seen, the price of this bond
+comes out to be $998.65, which is
+50 times the price of a 1-year bond, which is 95.2 cents,
+plus $50 times the price of a 2-year bond, which
+is 89.8 cents, plus $1,050 times the price of a 3-year discount
+bond, which is 86.3.
+This is a special case of the general formula bond.

@@ -1,0 +1,125 @@
+
+PROFESSOR: In part c, we're asked
+to compute duration of a 5% coupon $100
+face value bond that has 20 years to maturity.
+Let's start with Macaulay duration.
+Again, this is the definition of Macaulay duration written
+for this particular bond.
+So capital T here is 20.
+This is the number of years until the maturity
+of this bond.
+And since this bond pays annual coupon,
+the annual payment that we get from this bond is $5.
+So all we need to do here is that we
+need to compute the price of this bond and compute this sum.
+And this will give us the Macaulay duration.
+So we can compute this by hand.
+But it's a little bit tedious because we have to--
+we have 20 periods.
+And for each of the period, we have to compute these numbers.
+So what I will do is that I will use
+Excel to illustrate how to compute
+the duration for this bond.
+In this Excel spreadsheet, I have put some basic information
+about this bond.
+So the current YTM is 2%.
+Face value is $100.
+Coupon rate is 5%.
+So this bond has 20 years to maturity.
+So therefore each year it pays $5 coupon up until year 20,
+when it pays the last final coupon of $5
+plus the face value of 100.
+So the first step that I will do here
+is that I will compute the price of the bond.
+Because if you just look at the, again,
+definition of Macaulay duration, we
+need to know the price of the bond to compute the duration.
+So I will discount each of the individual coupons and cash
+flows to present.
+Then I will add them up and this will be the price of this bond.
+So I'll start with the very first coupon,
+so I'll take this $5.
+And we'll divide it divided by 1 plus yield
+to maturity on this bond.
+And I will raise it to power 1 in this case.
+This is when this cash flow occurs.
+And then I will do this for all of the 20 payments.
+And this is the present value of each
+of these individual payments that we get from this bond.
+So by definition, if I add this up,
+so this would be the price of our bond.
+
+So the price of this bond right now is 149.05.
+So first notice that it does make sense.
+So if we compare the price of this bond relative to its face
+value, it's 149 versus 100.
+And it does make sense because, again,
+so this bond has a much higher coupon
+rate, which is 5%, relative to its yield to maturity.
+So this bond should be priced at a premium
+and its price should be above $100.
+So the fact that its 149.05 kind of passes the smell
+test in the sense that this bond is indeed priced at a premium.
+So now the next step, we need to compute the following sum.
+So I've written it down in the second equation
+where cash flow in the year t divided by 1 plus yield raised
+of the power of t, is just the present value
+of that particular cash flow that occurs in the year t.
+And then, each of these present value of cash flow in year two,
+we have to multiply it by the year
+in which this payment occurs.
+And then we have to add them up.
+So this is how we're going to find
+the total value of this sum.
+So here is exactly what I will do.
+So I'll take the present value that we just
+computed for the first payment.
+And then we'll multiply it by the year
+when this payment occurs.
+In this case, it's Year 1.
+So you could see that in Year 2, I
+will be taking the present value of the second payment
+and multiplying them by the year.
+When it occurs again, this is a Year 2.
+And so I will do it for each of the payments.
+And now I will add them all up.
+And this would be the sum that we
+get in the duration expression.
+And now by definition, all we have
+to do is to compute the Macaulay duration,
+I have to take this sum that they just computed and divide
+it by the price of the bond.
+And this will, by definition, be the Macaulay duration.
+So this is how we can use the spreadsheet
+to find the duration of any bond.
+So if you have fewer than 20 years,
+for example you have two years, three years,
+you can do it by hand.
+In fact, you should practice to do it
+by hand because exam most likely is going
+to feature a question where you have to compute the duration
+but obviously we're not going to ask
+you to compute the duration for, you know, a 20-year bond
+because this is too tedious.
+But certainly you can do it for a two-year or just a bond
+with a shorter maturity.
+Now the final step here, what I will do
+is that I will compute the modified
+duration based on the Macaulay duration
+that you just computed.
+And modified duration would simply be just,
+again, the Macaulay duration divided by 1 plus the yield
+to maturity in this bond which is 2%.
+And this is 14.15.
+So the modified duration for this particular bond is 14.15.
+Now notice, going back to Macaulay duration,
+notice that this bond has 20 years to maturity.
+But its duration is 14.43.
+So remember that for bond that pays 0% coupon,
+Macaulay duration equals exactly the maturity of the bond.
+But for any bond that pays nonzero or positive coupon
+the Macaulay duration should be strictly less
+than the maturity of the bond.
+So in this case, the Macaulay duration
+is 14.43 which is less than 20, which again is reasonable
+because that number is less than 20.

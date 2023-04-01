@@ -1,0 +1,126 @@
+
+PROFESSOR: In this question, we will
+learn how to identify arbitrage opportunities in the bond
+market and how to take advantage of such opportunities.
+Suppose that you're a bond trader
+and you see the following bonds and their prices
+on your screen.
+So there are three bonds--
+A, B, and C. All three have face value of $100.
+They have corresponding maturities
+of one, two, and three years, following coupon rates
+and prices.
+Now there is another bond, bond D, that just became available
+in the market.
+It has the same face value of $100 as bonds A, B,
+and C. It has three years to maturity and a 3% coupon rate.
+Its current price is $99.50.
+The first question asks us, if there is an arbitrage
+opportunity in this market, and if yes
+asks us to explain how we would take
+advantage of such opportunity.
+The first step that we will do in this question
+is that we will find the term structure of interest rates
+based on the prices of bonds that are given to us.
+So in particular, we would use prices
+of bonds A, B, and C to find interest rates r1, r2, and r3.
+So these are the spot interest rates
+for Year 1, Year 2, and Year 3.
+We would, generally speaking, follow
+exactly the same approach as we've
+learned in the first question that we've covered.
+
+So let's start with bond A. The price of bond A is given to us
+as $96.90.
+So the current price of this bond
+because this is a zero coupon bond,
+it pays $100 which is its face value at the end of year 1.
+So therefore the current price should
+equal to the face value discounted
+to present at the one-year spot interest rate.
+So we have this first equation.
+What we do is that we solve this equation
+for r1, which gives us one-year spot interest rate, r1.
+In this case, it equals to 3.2%.
+
+Now we turn our attention to bond B.
+We can write down the following pricing
+equation for bond B. The price of Bond B which is given to us
+is $99, it should be equal to the first coupon discounted
+to present plus the second coupon plus the face value
+discounted to present.
+Remember, this is a two-year maturity bond.
+It pays 2.75% coupon rate.
+So therefore the dollar value of the annual coupon
+that this bond pays is $2.75.
+So we take the first coupon and we're
+discounting it to present at one-year spot rate r1.
+And we take the second coupon and the face value,
+which we get at the end of year two.
+And we discount it to present at r2
+which is a two-year spot rate.
+So the goal is to solve this equation for r2.
+Glancing at this equation, it looks
+like we have r1 and r2 in this equation.
+But the good news is that we already
+know r1, which we found from the price of bond A which was 3.2%.
+So therefore we can plug this r1 into the above equation
+and use it to solve for r2.
+Solving that equation for r2 gives us 3.28%.
+So this is year-two spot rate.
+So to recap what we've done so far,
+we've found one-year spot rate which is 3.2%,
+we found year-two spot rate which is 3.28%.
+Now the final step is to take the price of bond C
+which is a three-year zero-coupon bond currently
+traded at $88.55.
+And based on this equation, we will find year three spot
+rate or r3.
+So the good news is that this equation is fairly simple.
+In the sense that this is a zero-coupon bond.
+So there are no intermediate coupons
+that this bond pays in Year 1 and Year 2.
+We've covered a situation like this in Question 1.
+So here, just for simplicity, we've
+given you a zero-coupon bond.
+So solving this equation for r3 becomes fairly easy.
+If we solve it, we get r3 that equals to 4.14%.
+So what we've found so far is that we
+found the term structure of interest rates
+for the first three years, for Year 1, 2, and 3.
+So Year 1 interest rate equals the 3.2%.
+Year 2 interest rate equals to 3.28%.
+And Year 3 interest rate equals to 4.14%.
+Now let's examine whether bond D is priced fairly
+given the current term structure of interest rates.
+That, of course, assumes that bonds
+A, B, and C are fairly priced.
+
+So recall that bond D is, again, so it
+has three years to maturity.
+It has 3% coupon rate.
+So therefore it pays $3 coupon at the end of Year 1,
+$3 coupon at the end of Year 2, $3 coupon at the end of Year 3,
+plus the face value of $100 that it also
+pays at the end of Year 3.
+So therefore, we can write down the following equation.
+So we're taking the first coupon,
+discounting it to present at Year 1 interest rate,
+spot rate, which is 3.2%.
+We take the second coupon, which is again $3
+and we are discounting it to present at the Year 2 spot
+rate which is 3.28%.
+And the last payment of 3 plus $100, we're
+discounting at Year 3 spot interest rate of 4.14%.
+So if you compute this, it gives us the price of $96.93.
+But recall that the quoted price of this bond was $99.50.
+So therefore, bond D appears to be overpriced, overpriced
+relative to its fair price.
+And therefore this presents an arbitrage opportunity.
+So to take advantage of this arbitrage opportunity, what
+we should do are generally two things.
+So we either sell an overpriced bond
+or we buy the underpriced bond, or any asset for that matter.
+In this case, since bond D was overpriced,
+to take advantage of this opportunity we should be
+selling this bond at the quoted price or at $99.50.

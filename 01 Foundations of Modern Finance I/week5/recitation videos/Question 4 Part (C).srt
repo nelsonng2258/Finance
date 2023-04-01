@@ -1,0 +1,236 @@
+0
+00:00:00,000 --> 00:00:01,470
+
+
+1
+00:00:01,470 --> 00:00:04,800
+PROFESSOR: As an investor in the stock ABC,
+
+2
+00:00:04,800 --> 00:00:08,039
+what is the expected return that you will
+
+3
+00:00:08,039 --> 00:00:11,890
+get from holding this stock?
+
+4
+00:00:11,890 --> 00:00:15,480
+Let's compute it using the dividend stream and the prices,
+
+5
+00:00:15,480 --> 00:00:17,290
+the expected the prices per share,
+
+6
+00:00:17,290 --> 00:00:21,250
+that we computed in this question.
+
+7
+00:00:21,250 --> 00:00:23,350
+So let's start with this fundamental relationship
+
+8
+00:00:23,350 --> 00:00:26,740
+between the price today and the price
+
+9
+00:00:26,740 --> 00:00:29,140
+tomorrow plus the dividends that we get from holding
+
+10
+00:00:29,140 --> 00:00:32,020
+the stock discounted to today.
+
+11
+00:00:32,020 --> 00:00:33,820
+So what I will do right now is that I will
+
+12
+00:00:33,820 --> 00:00:36,130
+rearrange this equation for r.
+
+13
+00:00:36,130 --> 00:00:39,050
+This is our expected return.
+
+14
+00:00:39,050 --> 00:00:42,980
+So this is the first step, and this is the second step.
+
+15
+00:00:42,980 --> 00:00:46,240
+So the expected return equals to the dividend
+
+16
+00:00:46,240 --> 00:00:49,660
+that we expect to receive from the share tomorrow divided
+
+17
+00:00:49,660 --> 00:00:54,140
+by the price today plus price tomorrow minus price
+
+18
+00:00:54,140 --> 00:00:56,660
+today divided by price today.
+
+19
+00:00:56,660 --> 00:00:59,470
+So recall that this first part, D over p,
+
+20
+00:00:59,470 --> 00:01:01,880
+we referred to as dividend yield.
+
+21
+00:01:01,880 --> 00:01:05,440
+And the second part, price tomorrow minus price today
+
+22
+00:01:05,440 --> 00:01:07,870
+divided by price today, this is what
+
+23
+00:01:07,870 --> 00:01:11,380
+we refer to as capital gains.
+
+24
+00:01:11,380 --> 00:01:17,250
+And I will use this relationship to compute the expected return
+
+25
+00:01:17,250 --> 00:01:19,380
+on the stock of ABC.
+
+26
+00:01:19,380 --> 00:01:21,930
+Let's start by computing expected return
+
+27
+00:01:21,930 --> 00:01:25,920
+that we will get between year zero and year one
+
+28
+00:01:25,920 --> 00:01:28,200
+from holding this stock.
+
+29
+00:01:28,200 --> 00:01:32,250
+So it's next year's dividends divided by today's share
+
+30
+00:01:32,250 --> 00:01:35,040
+price-- so this is the dividend yield--
+
+31
+00:01:35,040 --> 00:01:36,227
+plus capital gain.
+
+32
+00:01:36,227 --> 00:01:37,810
+So this is the share price in the year
+
+33
+00:01:37,810 --> 00:01:41,100
+one minus the current share price divided
+
+34
+00:01:41,100 --> 00:01:45,923
+by the current share price, and this gives me 12%.
+
+35
+00:01:45,923 --> 00:01:47,340
+And I could just extend this array
+
+36
+00:01:47,340 --> 00:01:51,270
+and continue this calculation all the way to later years.
+
+37
+00:01:51,270 --> 00:01:53,250
+And we'll see that in every year,
+
+38
+00:01:53,250 --> 00:01:55,080
+it's just going to be 12%.
+
+39
+00:01:55,080 --> 00:01:57,330
+For example, in all of the subsequent years,
+
+40
+00:01:57,330 --> 00:01:59,070
+because the share price stays the same,
+
+41
+00:01:59,070 --> 00:02:00,420
+we only get dividends.
+
+42
+00:02:00,420 --> 00:02:03,990
+And the dividend yield in all of the subsequent years
+
+43
+00:02:03,990 --> 00:02:06,790
+is exactly 12%.
+
+44
+00:02:06,790 --> 00:02:08,919
+Now this, of course, should not surprise us
+
+45
+00:02:08,919 --> 00:02:12,100
+because the expected return is constant.
+
+46
+00:02:12,100 --> 00:02:16,270
+And it's 12%, and it actually equals the discount rate
+
+47
+00:02:16,270 --> 00:02:20,240
+that we used, which is the expected return on this stock.
+
+48
+00:02:20,240 --> 00:02:23,045
+So what we've done right now is that we are actually
+
+49
+00:02:23,045 --> 00:02:25,420
+doing this calculation backwards because we could've just
+
+50
+00:02:25,420 --> 00:02:26,795
+answered this question by saying,
+
+51
+00:02:26,795 --> 00:02:29,680
+well, we already know what is expected return
+
+52
+00:02:29,680 --> 00:02:31,630
+because we were discounting these cash
+
+53
+00:02:31,630 --> 00:02:34,000
+flows at the 12% rate.
+
+54
+00:02:34,000 --> 00:02:36,280
+So the expected return has to be 12%.
+
+55
+00:02:36,280 --> 00:02:38,200
+But right now, we just computed this
+
+56
+00:02:38,200 --> 00:02:42,520
+by using the dividend yield and the capital gains
+
+57
+00:02:42,520 --> 00:02:44,680
+from the dividends and share prices
+
+58
+00:02:44,680 --> 00:02:47,430
+that we computed in this question.
+

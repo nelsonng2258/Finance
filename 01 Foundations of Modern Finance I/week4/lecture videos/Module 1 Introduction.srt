@@ -1,0 +1,764 @@
+0
+00:00:00,000 --> 00:00:01,157
+
+
+1
+00:00:01,157 --> 00:00:02,740
+PROFESSOR: In this class, we will talk
+
+2
+00:00:02,740 --> 00:00:05,410
+about fixed income securities--
+
+3
+00:00:05,410 --> 00:00:08,260
+the properties, the markets where they trade,
+
+4
+00:00:08,260 --> 00:00:10,780
+and some of the important elements
+
+5
+00:00:10,780 --> 00:00:13,330
+of analytics of dealing with fixed income assets, how
+
+6
+00:00:13,330 --> 00:00:14,890
+we price them.
+
+7
+00:00:14,890 --> 00:00:17,440
+Let's begin with a general overview of fixed income
+
+8
+00:00:17,440 --> 00:00:19,270
+markets and securities.
+
+9
+00:00:19,270 --> 00:00:22,900
+A fixed income security is a financial claim
+
+10
+00:00:22,900 --> 00:00:27,880
+with promised cash flows of fixed amount and fixed dates.
+
+11
+00:00:27,880 --> 00:00:30,850
+When we use the term fixed income, this refers to the fact
+
+12
+00:00:30,850 --> 00:00:33,580
+that these securities are explicit about which cash
+
+13
+00:00:33,580 --> 00:00:35,640
+flows are promised and when.
+
+14
+00:00:35,640 --> 00:00:38,720
+This does not mean that they are risk free.
+
+15
+00:00:38,720 --> 00:00:40,890
+Obviously, there could be circumstances
+
+16
+00:00:40,890 --> 00:00:43,880
+when these securities do not deliver the promised cash
+
+17
+00:00:43,880 --> 00:00:46,600
+flows.
+
+18
+00:00:46,600 --> 00:00:49,050
+There are various types of fixed income securities traded
+
+19
+00:00:49,050 --> 00:00:52,320
+in the markets, and these form an important part
+
+20
+00:00:52,320 --> 00:00:54,120
+of capital markets.
+
+21
+00:00:54,120 --> 00:00:57,090
+We are going to mention just several of the major classes
+
+22
+00:00:57,090 --> 00:00:59,530
+of fixed income securities.
+
+23
+00:00:59,530 --> 00:01:02,440
+At the top of our list are treasuries.
+
+24
+00:01:02,440 --> 00:01:04,930
+These are government bonds issued
+
+25
+00:01:04,930 --> 00:01:08,320
+by various governments, US treasuries, Japanese government
+
+26
+00:01:08,320 --> 00:01:10,240
+bonds, German bonds.
+
+27
+00:01:10,240 --> 00:01:15,630
+These are used by governments to conduct their fiscal policy.
+
+28
+00:01:15,630 --> 00:01:17,730
+In the United States, we also have
+
+29
+00:01:17,730 --> 00:01:21,420
+debt of fixed income assets issued by the federal sponsored
+
+30
+00:01:21,420 --> 00:01:24,630
+agencies, such as Fannie Mae and Freddie Mac.
+
+31
+00:01:24,630 --> 00:01:26,760
+And these are the agencies that support
+
+32
+00:01:26,760 --> 00:01:28,930
+the functions of the housing market,
+
+33
+00:01:28,930 --> 00:01:33,810
+and they are important players in the fixed income markets.
+
+34
+00:01:33,810 --> 00:01:37,980
+Municipal bonds are a little bit different from treasuries
+
+35
+00:01:37,980 --> 00:01:39,780
+because of their tax treatment.
+
+36
+00:01:39,780 --> 00:01:41,790
+Municipal bonds in the United States
+
+37
+00:01:41,790 --> 00:01:44,070
+are exempt from the federal tax.
+
+38
+00:01:44,070 --> 00:01:45,810
+And for the local investors, they
+
+39
+00:01:45,810 --> 00:01:50,140
+are also exempt from the local state taxes.
+
+40
+00:01:50,140 --> 00:01:53,680
+Corporate bonds are also an important and large part
+
+41
+00:01:53,680 --> 00:01:55,730
+of the fixed income market.
+
+42
+00:01:55,730 --> 00:01:58,660
+They come in various forms and shapes.
+
+43
+00:01:58,660 --> 00:02:02,650
+They differ across maturities and various properties
+
+44
+00:02:02,650 --> 00:02:06,280
+of securities that we are going to discuss a little bit later.
+
+45
+00:02:06,280 --> 00:02:08,770
+Corporate bonds are issued by firms
+
+46
+00:02:08,770 --> 00:02:13,640
+and are used to finance a variety of business activities.
+
+47
+00:02:13,640 --> 00:02:16,690
+Finally, we should mention mortgage-backed and
+
+48
+00:02:16,690 --> 00:02:19,660
+asset-backed securities, which are created
+
+49
+00:02:19,660 --> 00:02:22,690
+using financial engineering using the process called
+
+50
+00:02:22,690 --> 00:02:24,250
+securitization.
+
+51
+00:02:24,250 --> 00:02:28,540
+And these assets are based on an underlying pool of other more
+
+52
+00:02:28,540 --> 00:02:32,260
+primitive assets, such as mortgages, car loans, student
+
+53
+00:02:32,260 --> 00:02:35,700
+loans, and so forth.
+
+54
+00:02:35,700 --> 00:02:39,920
+The following pie chart gives us a snapshot of the bond markets
+
+55
+00:02:39,920 --> 00:02:43,790
+in the United States in 2019.
+
+56
+00:02:43,790 --> 00:02:45,980
+As you can see here, there are three large segments
+
+57
+00:02:45,980 --> 00:02:50,420
+of the market that capture most of the market value
+
+58
+00:02:50,420 --> 00:02:53,430
+across fixed income securities.
+
+59
+00:02:53,430 --> 00:02:55,950
+First, the treasuries.
+
+60
+00:02:55,950 --> 00:02:57,810
+Treasuries account for roughly a third
+
+61
+00:02:57,810 --> 00:02:59,560
+of the fixed income market.
+
+62
+00:02:59,560 --> 00:03:03,440
+These are bonds issued by the US government.
+
+63
+00:03:03,440 --> 00:03:06,670
+Second, mortgage-related securities.
+
+64
+00:03:06,670 --> 00:03:10,690
+These are at a lower level than the treasury market,
+
+65
+00:03:10,690 --> 00:03:12,310
+but they capture roughly a quarter
+
+66
+00:03:12,310 --> 00:03:14,390
+of the fixed income market.
+
+67
+00:03:14,390 --> 00:03:20,560
+These are securities that are backed by pools of mortgages.
+
+68
+00:03:20,560 --> 00:03:23,550
+We also see that the corporate debt market is roughly
+
+69
+00:03:23,550 --> 00:03:27,300
+of the same size as the mortgage-related securities
+
+70
+00:03:27,300 --> 00:03:29,010
+and accounts for roughly a quarter
+
+71
+00:03:29,010 --> 00:03:31,650
+of the fixed income market.
+
+72
+00:03:31,650 --> 00:03:33,900
+We have several smaller segments,
+
+73
+00:03:33,900 --> 00:03:38,010
+such as debt securities issued by federal agencies--
+
+74
+00:03:38,010 --> 00:03:39,720
+Fannie Mae, Freddie Mac.
+
+75
+00:03:39,720 --> 00:03:43,650
+These are at roughly 4% of the total market.
+
+76
+00:03:43,650 --> 00:03:47,220
+Asset-backed securities-- these are
+
+77
+00:03:47,220 --> 00:03:50,250
+securities that are backed by pools
+
+78
+00:03:50,250 --> 00:03:53,820
+of financial assets other than mortgages-- car loans, student
+
+79
+00:03:53,820 --> 00:03:54,690
+loans.
+
+80
+00:03:54,690 --> 00:03:57,720
+These are at around 4% of the total market.
+
+81
+00:03:57,720 --> 00:04:02,508
+And the municipal market is about 8% of the total.
+
+82
+00:04:02,508 --> 00:04:04,050
+And finally, the money markets, which
+
+83
+00:04:04,050 --> 00:04:06,480
+are very short maturity securities, that
+
+84
+00:04:06,480 --> 00:04:10,310
+stands at around 2% of the total market.
+
+85
+00:04:10,310 --> 00:04:14,450
+What we can see from this graph is that fixed income markets
+
+86
+00:04:14,450 --> 00:04:16,470
+are fairly heterogeneous.
+
+87
+00:04:16,470 --> 00:04:18,332
+There are several large segments.
+
+88
+00:04:18,332 --> 00:04:19,790
+And in our discussion, we are going
+
+89
+00:04:19,790 --> 00:04:22,000
+to focus on some of these in particular.
+
+90
+00:04:22,000 --> 00:04:23,960
+In today's lecture, our primary focus
+
+91
+00:04:23,960 --> 00:04:26,702
+is going to be on the valuation of treasuries.
+
+92
+00:04:26,702 --> 00:04:28,160
+And in the following classes, we're
+
+93
+00:04:28,160 --> 00:04:31,820
+going to talk about pricing of corporate bonds.
+
+94
+00:04:31,820 --> 00:04:34,520
+Next, let's consider participants
+
+95
+00:04:34,520 --> 00:04:36,440
+in the fixed income markets.
+
+96
+00:04:36,440 --> 00:04:38,450
+It is convenient to think in terms
+
+97
+00:04:38,450 --> 00:04:40,280
+of three broad categories--
+
+98
+00:04:40,280 --> 00:04:44,670
+the issuers, the intermediaries, and the investors.
+
+99
+00:04:44,670 --> 00:04:46,730
+This division is not exact, and some
+
+100
+00:04:46,730 --> 00:04:49,610
+of the players in these markets play multiple roles
+
+101
+00:04:49,610 --> 00:04:52,520
+and show up in different categories.
+
+102
+00:04:52,520 --> 00:04:56,900
+Issuers in these markets are those entities that
+
+103
+00:04:56,900 --> 00:04:58,460
+issue fixed income securities.
+
+104
+00:04:58,460 --> 00:05:01,520
+These are the borrowers in fixed income markets.
+
+105
+00:05:01,520 --> 00:05:04,220
+Governments are important players
+
+106
+00:05:04,220 --> 00:05:05,240
+in fixed income markets.
+
+107
+00:05:05,240 --> 00:05:08,270
+They issue treasuries, government bonds.
+
+108
+00:05:08,270 --> 00:05:12,170
+Municipalities are the source of municipal securities
+
+109
+00:05:12,170 --> 00:05:16,570
+and corporations, who issue corporate bonds.
+
+110
+00:05:16,570 --> 00:05:20,040
+There are various intermediaries present in these markets that
+
+111
+00:05:20,040 --> 00:05:24,930
+facilitate primary transactions, which is when a borrower issues
+
+112
+00:05:24,930 --> 00:05:27,660
+the bond for the first time, as well as secondary market
+
+113
+00:05:27,660 --> 00:05:28,800
+transactions.
+
+114
+00:05:28,800 --> 00:05:31,350
+This is when the bonds change hands
+
+115
+00:05:31,350 --> 00:05:34,110
+and are traded among investors.
+
+116
+00:05:34,110 --> 00:05:36,060
+We are going to highlight only a few
+
+117
+00:05:36,060 --> 00:05:38,900
+of the intermediaries that are important.
+
+118
+00:05:38,900 --> 00:05:41,540
+We have various kinds of dealers in these markets.
+
+119
+00:05:41,540 --> 00:05:44,770
+We have primary dealers and other dealers.
+
+120
+00:05:44,770 --> 00:05:47,380
+Primary dealers play a special role in the sense
+
+121
+00:05:47,380 --> 00:05:51,010
+that they participate in the auctions of government
+
+122
+00:05:51,010 --> 00:05:52,400
+securities.
+
+123
+00:05:52,400 --> 00:05:54,220
+So they are the first ones to absorb
+
+124
+00:05:54,220 --> 00:05:56,680
+the supply of government bonds.
+
+125
+00:05:56,680 --> 00:05:59,200
+Other dealers facilitate transactions
+
+126
+00:05:59,200 --> 00:06:02,650
+in the secondary market among investors.
+
+127
+00:06:02,650 --> 00:06:05,530
+For example, a treasury starts its life
+
+128
+00:06:05,530 --> 00:06:08,830
+by being issued by the US government.
+
+129
+00:06:08,830 --> 00:06:11,440
+It gets sold to a primary dealer,
+
+130
+00:06:11,440 --> 00:06:13,690
+which could be a large bank.
+
+131
+00:06:13,690 --> 00:06:17,110
+And then it eventually gets sold in the secondary market
+
+132
+00:06:17,110 --> 00:06:19,160
+to other investors.
+
+133
+00:06:19,160 --> 00:06:21,400
+A bond can, of course, change hands multiple times
+
+134
+00:06:21,400 --> 00:06:25,670
+throughout its life by being traded in the secondary market.
+
+135
+00:06:25,670 --> 00:06:28,100
+Investment banks play an important role
+
+136
+00:06:28,100 --> 00:06:31,100
+as intermediaries in the fixed income markets.
+
+137
+00:06:31,100 --> 00:06:33,170
+They serve multiple functions.
+
+138
+00:06:33,170 --> 00:06:37,710
+They can act as a dealer holding an inventory of bonds.
+
+139
+00:06:37,710 --> 00:06:40,460
+They can act as a broker making matches
+
+140
+00:06:40,460 --> 00:06:44,050
+between buyers and sellers of fixed income securities.
+
+141
+00:06:44,050 --> 00:06:48,050
+And they can also help corporations or municipalities
+
+142
+00:06:48,050 --> 00:06:49,460
+issue their bonds.
+
+143
+00:06:49,460 --> 00:06:51,900
+So they can help in the primary transactions.
+
+144
+00:06:51,900 --> 00:06:56,780
+They can help structure bonds and place them with investors.
+
+145
+00:06:56,780 --> 00:07:00,320
+An important class of players in fixed income markets
+
+146
+00:07:00,320 --> 00:07:02,790
+are credit rating agencies.
+
+147
+00:07:02,790 --> 00:07:04,280
+This is a somewhat unique feature.
+
+148
+00:07:04,280 --> 00:07:09,370
+We do not see this kind of entity in the equity markets.
+
+149
+00:07:09,370 --> 00:07:11,870
+They are specific to the fixed income markets.
+
+150
+00:07:11,870 --> 00:07:15,020
+As the name suggests, credit rating agencies,
+
+151
+00:07:15,020 --> 00:07:19,460
+such as S&P or Moody's, serve to provide information
+
+152
+00:07:19,460 --> 00:07:22,160
+about the quality of fixed income securities.
+
+153
+00:07:22,160 --> 00:07:25,410
+They rate credit quality.
+
+154
+00:07:25,410 --> 00:07:28,110
+They attach credit rating to different securities
+
+155
+00:07:28,110 --> 00:07:31,260
+that indicates the relative riskiness.
+
+156
+00:07:31,260 --> 00:07:34,230
+This information can be then used by the investors
+
+157
+00:07:34,230 --> 00:07:36,540
+to decide on how to allocate their capital
+
+158
+00:07:36,540 --> 00:07:39,000
+across different types of assets.
+
+159
+00:07:39,000 --> 00:07:43,020
+We're going to look more closely at ratings of bonds
+
+160
+00:07:43,020 --> 00:07:45,270
+and how they map into their risk when
+
+161
+00:07:45,270 --> 00:07:50,340
+we discuss risky corporate bonds in the following classes.
+
+162
+00:07:50,340 --> 00:07:53,220
+There are multiple types of investors in the fixed income
+
+163
+00:07:53,220 --> 00:07:54,690
+markets.
+
+164
+00:07:54,690 --> 00:07:57,430
+Pension funds, insurance companies
+
+165
+00:07:57,430 --> 00:07:59,580
+are big holders of bonds.
+
+166
+00:07:59,580 --> 00:08:01,560
+In particular, insurance companies
+
+167
+00:08:01,560 --> 00:08:04,020
+hold large quantities of corporate bonds
+
+168
+00:08:04,020 --> 00:08:08,010
+and pension funds also hold a significant amount
+
+169
+00:08:08,010 --> 00:08:12,270
+of treasuries and corporate bonds of various maturities.
+
+170
+00:08:12,270 --> 00:08:16,200
+Mutual funds hold portfolios of fixed income securities,
+
+171
+00:08:16,200 --> 00:08:19,350
+and they can be viewed as one example of an entity which
+
+172
+00:08:19,350 --> 00:08:23,213
+is both an investor and an intermediary in this market.
+
+173
+00:08:23,213 --> 00:08:24,630
+If you think about the mutual fund
+
+174
+00:08:24,630 --> 00:08:27,060
+as a holder of corporate bonds, then of course
+
+175
+00:08:27,060 --> 00:08:28,950
+it acts as an investor.
+
+176
+00:08:28,950 --> 00:08:32,190
+At the same time, mutual funds serve an important function
+
+177
+00:08:32,190 --> 00:08:35,760
+of enabling individual investors to deploy
+
+178
+00:08:35,760 --> 00:08:38,820
+their capital invested in a diversified portfolio
+
+179
+00:08:38,820 --> 00:08:40,200
+of securities.
+
+180
+00:08:40,200 --> 00:08:44,310
+And in that capacity, mutual funds serve as intermediaries.
+
+181
+00:08:44,310 --> 00:08:46,500
+They connect individual investors
+
+182
+00:08:46,500 --> 00:08:49,050
+to the broad fixed income market.
+
+183
+00:08:49,050 --> 00:08:52,530
+Hedge funds are also players in multiple capital markets,
+
+184
+00:08:52,530 --> 00:08:54,520
+including in fixed income markets.
+
+185
+00:08:54,520 --> 00:08:57,660
+We think of hedge funds as investors in these securities.
+
+186
+00:08:57,660 --> 00:08:59,610
+They, of course, are also intermediaries
+
+187
+00:08:59,610 --> 00:09:03,000
+because hedge funds ultimately operate with capital that they
+
+188
+00:09:03,000 --> 00:09:05,690
+receive from their investors.
+
+189
+00:09:05,690 --> 00:09:08,330
+Banks and individuals are also buyers
+
+190
+00:09:08,330 --> 00:09:11,140
+of fixed income securities.
+

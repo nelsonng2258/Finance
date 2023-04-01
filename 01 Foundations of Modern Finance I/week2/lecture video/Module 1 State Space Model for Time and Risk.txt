@@ -1,0 +1,117 @@
+
+PROFESSOR: As we have discussed, the central problem
+in finance or business decision making in general
+is how to value assets or their cash flows.
+A cash flow, in addition to its magnitude,
+has two key characteristics, as we have discussed before.
+Its timing and risk.
+We are now going to develop a simple model
+to capture the two essential elements in finance, time
+and risk.
+We assume that the are two dates for the economy-- today
+and tomorrow, or now and future.
+Denoting time by t, t equals 0 for today and 1 for tomorrow.
+Sometimes we also draw a horizontal line
+to represent time.
+The timeline, as shown at the bottom on the right hand
+side of the slide, the two dates are marked as 0 and 1.
+For day 0, there is no uncertainty.
+Before day 1, there is uncertainty.
+We describe this uncertainty by assuming
+that there are N possible economic states at day one,
+such as boom or recession.
+We denote the state by s, and it can be 1, 2, or N,
+for state 1, 2, or N.
+The likelihood of these states are
+given by their probabilities, P1, P2, and PN.
+The N states can also be represented by the N branches
+at time 1, as in the graph on the right hand
+side of the slide.
+We assume that the possible states and their probabilities
+are known to all decision makers.
+The tree graph on the right hand side
+of the slide with the associated probabilities,
+is also called a state space model for the economy.
+Ideally, the state space model fully
+captures the risk of the economy.
+The simple model described here may seem a bit too simplistic
+for that purpose, but it can be extended easily
+to allow many dates and many states, even the continuum
+states.
+We will consider some of these extensions later.
+But for now, our main purpose is to have the simplest
+model to capture the key elements needed
+for our analysis, and to develop the basic ideas, principles,
+and methods for asset valuation.
+For this purpose, we often even reduce the number of states
+to two for simplicity.
+We now consider a financial market
+with no frictions in this economy,
+with a set of financial assets being traded.
+Assets can be traded at time 0, and the payoffs
+realized at day 1.
+Let P denote the price of an asset at times 0,
+X denote its payoff at time 1.
+The value of X in general depends on the state
+of the economy at time 1.
+It will be X1 in state 1, X2 in state 2, et cetera.
+X can also be represented as a vector of different payoffs
+in different states.
+It's also called a random variable
+denoting unpredictable realizations
+at some future time.
+A random payoff is fully defined by its payoff
+in each possible state and the corresponding probability.
+Mathematically, we can write it as a payoff vector,
+with each element of the vector denoting the payoff
+in that state, X1 to XN.
+Together with the corresponding probabilities P1 to PN.
+Assets traded in the financial market
+can have different payoff patterns.
+In general, there are many traded assets or securities.
+Here, securities refer to financial claims, contracts
+traded in the financial markets, such as stocks, bonds,
+and derivative securities.
+We first introduce some simple securities.
+Consider a primitive state-contingent claim,
+which pays $1 in a single state, S, and nothing otherwise.
+It is also called an Arrow-Debreu security,
+named after the two economists who first introduced them
+into financial market modeling.
+Although Arrow-Debreu securities are not
+the most divisible or common securities seen in a market,
+they do exist in mature markets.
+Introducing them here is to facilitate our analysis
+in the simplest way possible.
+As shown later, their actual existence
+is not essential as long as we have a rich enough set
+of traded securities, like bonds, stocks,
+and derivative securities.
+We will denote the price of the Arrow-Debreu claim on state j
+by phi j.
+Phi j is also called the state price for state j.
+State price turns out to be a very useful concept
+in our valuation analysis, as we will
+see throughout this course.
+No arbitrage requires that all state prices are positive.
+A security that pays off a positive amount at least
+in one future state must have a positive price today.
+Otherwise, we can construct an arbitrage.
+Since there are a total off N states,
+there are also N different Arrow-Debreu securities.
+A financial market is called complete
+if all the Arrow-Debreu securities
+are traded in the market.
+
+Complete market is a useful abstraction, as we'll see soon.
+It merely means that the financial market is rich enough
+in terms of the securities being traded in the market.
+As we said in the introduction, there
+are indeed tens of thousands of securities being traded
+in the global financial market.
+For most of the applications we discussed in this course,
+assuming a complete financial market is
+a reasonable starting point.
+More discussion on this point will
+occur when we develop more detailed risk and valuation
+models.

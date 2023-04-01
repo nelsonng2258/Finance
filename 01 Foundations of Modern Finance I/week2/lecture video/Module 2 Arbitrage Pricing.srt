@@ -1,0 +1,784 @@
+0
+00:00:00,000 --> 00:00:01,080
+
+
+1
+00:00:01,080 --> 00:00:03,600
+PROFESSOR: With a complete financial market,
+
+2
+00:00:03,600 --> 00:00:06,300
+we can develop a general methodology
+
+3
+00:00:06,300 --> 00:00:11,160
+to value assets using the market prices of traded assets.
+
+4
+00:00:11,160 --> 00:00:14,010
+We will start with a market in which
+
+5
+00:00:14,010 --> 00:00:17,970
+a complete set of Arrow-Debreu securities are traded.
+
+6
+00:00:17,970 --> 00:00:20,940
+With the prices of these Arrow-Debreu securities,
+
+7
+00:00:20,940 --> 00:00:25,020
+we can price other assets, securities, or cash flows
+
+8
+00:00:25,020 --> 00:00:27,890
+by using the first principle of finance;
+
+9
+00:00:27,890 --> 00:00:31,080
+there is no free lunch in the financial market
+
+10
+00:00:31,080 --> 00:00:33,600
+without frictions.
+
+11
+00:00:33,600 --> 00:00:37,830
+With the prices of the Arrow-Debreu securities,
+
+12
+00:00:37,830 --> 00:00:42,270
+we can price other assets and the securities.
+
+13
+00:00:42,270 --> 00:00:49,060
+To illustrate this idea, let's consider a two-state economy
+
+14
+00:00:49,060 --> 00:00:53,210
+in which we only have two states for day one.
+
+15
+00:00:53,210 --> 00:00:56,990
+We have three assets traded in the market.
+
+16
+00:00:56,990 --> 00:01:01,040
+The first two assets are the two Arrow-Debreu securities,
+
+17
+00:01:01,040 --> 00:01:05,960
+one paying $1 in state one, $0 in state two,
+
+18
+00:01:05,960 --> 00:01:11,600
+and the other paying $0 in state one and $1 in state two.
+
+19
+00:01:11,600 --> 00:01:17,600
+The third asset has a payoff x, paying $3 in state one
+
+20
+00:01:17,600 --> 00:01:20,450
+in $5 in state two.
+
+21
+00:01:20,450 --> 00:01:24,650
+The question is how is the price of the third asset
+
+22
+00:01:24,650 --> 00:01:28,100
+related to the prices of the first two, namely
+
+23
+00:01:28,100 --> 00:01:33,220
+the two Arrow-Debreu prices, or two-state prices?
+
+24
+00:01:33,220 --> 00:01:35,150
+In order to answer this question,
+
+25
+00:01:35,150 --> 00:01:39,760
+we can think of the third asset as a portfolio of the first two
+
+26
+00:01:39,760 --> 00:01:43,180
+assets, namely the two Arrow-Debreu securities.
+
+27
+00:01:43,180 --> 00:01:45,790
+In particular, we can think of it
+
+28
+00:01:45,790 --> 00:01:50,840
+as being a portfolio of three units of the state one
+
+29
+00:01:50,840 --> 00:01:54,790
+Arrow-Debreu security plus five units of the state
+
+30
+00:01:54,790 --> 00:01:58,210
+two Arrow-Debreu security.
+
+31
+00:01:58,210 --> 00:02:04,360
+In this case, the portfolio would pay $3 in state one,
+
+32
+00:02:04,360 --> 00:02:08,080
+coming from the three units of state one Arrow-Debreu
+
+33
+00:02:08,080 --> 00:02:14,010
+security, and it will pay $5 in state two
+
+34
+00:02:14,010 --> 00:02:19,680
+form the five units of state two Arrow-Debreu securities.
+
+35
+00:02:19,680 --> 00:02:23,070
+The claim is that the price of this asset
+
+36
+00:02:23,070 --> 00:02:27,740
+x is going to be given by the following equation, namely
+
+37
+00:02:27,740 --> 00:02:30,920
+its price should equal to three times
+
+38
+00:02:30,920 --> 00:02:35,060
+the state one state price plus five times
+
+39
+00:02:35,060 --> 00:02:38,710
+the state two state price.
+
+40
+00:02:38,710 --> 00:02:41,470
+Since the third asset can be replicated
+
+41
+00:02:41,470 --> 00:02:45,400
+as a portfolio of the two Arrow-Debreu securities, namely
+
+42
+00:02:45,400 --> 00:02:49,090
+three units of Arrow-Debreu security one and five units
+
+43
+00:02:49,090 --> 00:02:52,200
+of Arrow-Debreu security two.
+
+44
+00:02:52,200 --> 00:02:55,450
+Then by no arbitrage, its price must
+
+45
+00:02:55,450 --> 00:02:59,980
+equal the price of the replication portfolio, namely
+
+46
+00:02:59,980 --> 00:03:04,930
+its price P must equal to three times phi 1, plus five times
+
+47
+00:03:04,930 --> 00:03:06,790
+phi 2.
+
+48
+00:03:06,790 --> 00:03:12,550
+If this is violated, then agents can generate arbitrage profits
+
+49
+00:03:12,550 --> 00:03:14,770
+in the market.
+
+50
+00:03:14,770 --> 00:03:15,790
+How?
+
+51
+00:03:15,790 --> 00:03:16,720
+Well let's see.
+
+52
+00:03:16,720 --> 00:03:20,740
+Suppose that actually the price of the third asset, P,
+
+53
+00:03:20,740 --> 00:03:26,080
+is greater than three times phi 1, plus five times phi 2,
+
+54
+00:03:26,080 --> 00:03:31,000
+then what we can do is actually to sell the asset three,
+
+55
+00:03:31,000 --> 00:03:36,460
+gaining P, and then buying three units of Arrow-Debreu security
+
+56
+00:03:36,460 --> 00:03:40,600
+one, plus five units of Arrow-Debreu security two.
+
+57
+00:03:40,600 --> 00:03:44,380
+The price difference, in this case would be positive,
+
+58
+00:03:44,380 --> 00:03:49,420
+will be our current profit, and then the net future cash flow
+
+59
+00:03:49,420 --> 00:03:52,660
+would just be zero.
+
+60
+00:03:52,660 --> 00:03:55,060
+So in the absence of arbitrage, we
+
+61
+00:03:55,060 --> 00:03:58,720
+must have the price of the third asset being
+
+62
+00:03:58,720 --> 00:04:03,800
+the same as the cost of the replication portfolio.
+
+63
+00:04:03,800 --> 00:04:08,060
+This example shows a more general idea,
+
+64
+00:04:08,060 --> 00:04:10,940
+sometimes called the Law of One Price,
+
+65
+00:04:10,940 --> 00:04:15,650
+which states that if two assets have the same payoffs,
+
+66
+00:04:15,650 --> 00:04:20,000
+they must have the same market price.
+
+67
+00:04:20,000 --> 00:04:24,760
+Applying this principle, then we can
+
+68
+00:04:24,760 --> 00:04:28,720
+price all the other securities using the prices
+
+69
+00:04:28,720 --> 00:04:30,880
+of Arrow-Debreu securities.
+
+70
+00:04:30,880 --> 00:04:34,480
+All we have to do is to construct a replication
+
+71
+00:04:34,480 --> 00:04:37,600
+portfolio for a particular security,
+
+72
+00:04:37,600 --> 00:04:43,270
+and then compute its price using the cost or the price
+
+73
+00:04:43,270 --> 00:04:46,670
+of the replication portfolio.
+
+74
+00:04:46,670 --> 00:04:49,880
+Now of course, this all relies on the assumption
+
+75
+00:04:49,880 --> 00:04:55,750
+that we have the prices of all the Arrow-Debreu securities.
+
+76
+00:04:55,750 --> 00:05:00,370
+What if we have prices of a bunch of composite securities?
+
+77
+00:05:00,370 --> 00:05:04,010
+
+
+78
+00:05:04,010 --> 00:05:06,930
+Let's consider a simple example.
+
+79
+00:05:06,930 --> 00:05:13,240
+Suppose that we have two economic states at day one.
+
+80
+00:05:13,240 --> 00:05:16,840
+In a financial market, we have two traded securities,
+
+81
+00:05:16,840 --> 00:05:20,470
+one is a safe government bond, which pays an interest
+
+82
+00:05:20,470 --> 00:05:24,740
+rate of 5% with no risk.
+
+83
+00:05:24,740 --> 00:05:30,430
+The other security is a stock that pays $90 in state one
+
+84
+00:05:30,430 --> 00:05:36,310
+and $120 in state two, and its current price is $100.
+
+85
+00:05:36,310 --> 00:05:40,370
+The question is, what should be the proper set of state prices?
+
+86
+00:05:40,370 --> 00:05:43,640
+
+
+87
+00:05:43,640 --> 00:05:44,630
+Well let's see.
+
+88
+00:05:44,630 --> 00:05:48,560
+From the price and the pay off of the government bond,
+
+89
+00:05:48,560 --> 00:05:52,380
+we have the following equation; 100 on the left hand side,
+
+90
+00:05:52,380 --> 00:05:56,450
+which is current price, equals to 105,
+
+91
+00:05:56,450 --> 00:06:00,980
+its payoff in state one, times the state price for state one
+
+92
+00:06:00,980 --> 00:06:05,780
+phi1, then plus 105 it's payoff in state two,
+
+93
+00:06:05,780 --> 00:06:09,100
+times the state price of state two phi2.
+
+94
+00:06:09,100 --> 00:06:13,660
+
+
+95
+00:06:13,660 --> 00:06:16,840
+From the pay off in the price of the stock,
+
+96
+00:06:16,840 --> 00:06:21,910
+we've got the second equation, 100, again it's current price,
+
+97
+00:06:21,910 --> 00:06:26,830
+equals to 90, which the stocks pay off in state one,
+
+98
+00:06:26,830 --> 00:06:30,160
+times phi 1, plus 120, the stocks pay off
+
+99
+00:06:30,160 --> 00:06:34,460
+in stock two times phi 2.
+
+100
+00:06:34,460 --> 00:06:37,340
+These two equations from the prices
+
+101
+00:06:37,340 --> 00:06:42,540
+of the stock and the bond allows us determine the two state
+
+102
+00:06:42,540 --> 00:06:44,850
+prices, phi 1 and phi 2.
+
+103
+00:06:44,850 --> 00:06:47,490
+
+
+104
+00:06:47,490 --> 00:06:50,970
+If we solve for the two state prices,
+
+105
+00:06:50,970 --> 00:06:52,380
+we've got the following solution,
+
+106
+00:06:52,380 --> 00:06:59,420
+phi 1 equals 10/21 and phi 2 equals 10/21 as well.
+
+107
+00:06:59,420 --> 00:07:06,710
+Here's a special case in which the state prices are identical.
+
+108
+00:07:06,710 --> 00:07:10,760
+This example shows that actually if we
+
+109
+00:07:10,760 --> 00:07:15,920
+have, "regular securities" like a stock in the month
+
+110
+00:07:15,920 --> 00:07:18,470
+from their prices and the payoffs,
+
+111
+00:07:18,470 --> 00:07:21,990
+we can actually back out the Arrow-Debreu state prices.
+
+112
+00:07:21,990 --> 00:07:25,120
+
+
+113
+00:07:25,120 --> 00:07:27,180
+Now let's consider another example.
+
+114
+00:07:27,180 --> 00:07:29,950
+Suppose there are two states next year.
+
+115
+00:07:29,950 --> 00:07:33,190
+The payoff of a share of a stock and the probabilities
+
+116
+00:07:33,190 --> 00:07:40,750
+of the states are $90 in state one, $110 in state two,
+
+117
+00:07:40,750 --> 00:07:46,020
+with the probabilities being 0.4 and 0.6 respectively.
+
+118
+00:07:46,020 --> 00:07:49,300
+We're also going to assume that the state prices for the two
+
+119
+00:07:49,300 --> 00:07:55,700
+states are 0.5 for state one, and 0.4 for state two.
+
+120
+00:07:55,700 --> 00:07:59,120
+We would like to answer the following questions: one,
+
+121
+00:07:59,120 --> 00:08:01,580
+what is the stock price today?
+
+122
+00:08:01,580 --> 00:08:07,280
+Two, what is the expected rate of return on the stock?
+
+123
+00:08:07,280 --> 00:08:10,400
+The stock price today can be computed easily.
+
+124
+00:08:10,400 --> 00:08:14,930
+P should just equal to phi 1, the state price for state one,
+
+125
+00:08:14,930 --> 00:08:20,910
+times X1, the stocks pay off in state one, plus phi 2, time X2.
+
+126
+00:08:20,910 --> 00:08:24,290
+Plug-in the numbers, it gives us 0.5.
+
+127
+00:08:24,290 --> 00:08:26,650
+The state price for state one times 90,
+
+128
+00:08:26,650 --> 00:08:33,200
+the stocks payoff in state one, then plus 0.4 times 110.
+
+129
+00:08:33,200 --> 00:08:36,230
+That gives us 89 as the current price of the stock.
+
+130
+00:08:36,230 --> 00:08:38,929
+
+
+131
+00:08:38,929 --> 00:08:42,470
+Next, we can compute the expected rate of return
+
+132
+00:08:42,470 --> 00:08:47,060
+on the stock, which is denote by Rbar.
+
+133
+00:08:47,060 --> 00:08:49,940
+Rbar should equal to the expected payoff
+
+134
+00:08:49,940 --> 00:08:53,360
+from the start, minus its price today,
+
+135
+00:08:53,360 --> 00:08:56,150
+then divide by its price today.
+
+136
+00:08:56,150 --> 00:09:02,180
+It can also be expressed as the expected payoff of the spot,
+
+137
+00:09:02,180 --> 00:09:05,891
+divide by its price today, then minus one.
+
+138
+00:09:05,891 --> 00:09:10,310
+If we plug-in the numbers, that gives us 0.4 times 90,
+
+139
+00:09:10,310 --> 00:09:13,490
+plus 0.6 times 110.
+
+140
+00:09:13,490 --> 00:09:18,492
+For the numerator, divide by 89, its price then minus one.
+
+141
+00:09:18,492 --> 00:09:20,340
+Finishing the computation, we will
+
+142
+00:09:20,340 --> 00:09:23,580
+get the expected rate of return on the stock
+
+143
+00:09:23,580 --> 00:09:25,790
+to be 13 divided by 89.
+
+144
+00:09:25,790 --> 00:09:30,240
+
+
+145
+00:09:30,240 --> 00:09:32,220
+Given the expected rate of return
+
+146
+00:09:32,220 --> 00:09:35,220
+on the stock by the market, we also
+
+147
+00:09:35,220 --> 00:09:41,140
+have the following expression; the price of the stock times
+
+148
+00:09:41,140 --> 00:09:45,070
+one plus the expected rate of return on a stock
+
+149
+00:09:45,070 --> 00:09:49,600
+should equal to the expected payoff on the stock.
+
+150
+00:09:49,600 --> 00:09:53,170
+Rewrite this equation, we have the price
+
+151
+00:09:53,170 --> 00:09:57,760
+of the stock being given by the expected pay off,
+
+152
+00:09:57,760 --> 00:10:04,630
+divided by one plus the expected rate of return on the stock.
+
+153
+00:10:04,630 --> 00:10:08,740
+Plug in the numbers, we have 102 for the numerator,
+
+154
+00:10:08,740 --> 00:10:14,710
+and then 1+ (13/89) for the denominator.
+
+155
+00:10:14,710 --> 00:10:17,380
+Finishing the calculation, we get 89
+
+156
+00:10:17,380 --> 00:10:23,070
+as the price of a stock, which is exactly what we got before.
+
+157
+00:10:23,070 --> 00:10:27,350
+So they are basically two ways to compute the stock price
+
+158
+00:10:27,350 --> 00:10:27,960
+today.
+
+159
+00:10:27,960 --> 00:10:31,430
+One is by the state prices, the other
+
+160
+00:10:31,430 --> 00:10:38,260
+is by the expected payoff, then discounted by the expected
+
+161
+00:10:38,260 --> 00:10:40,600
+rate of return on the stock.
+
+162
+00:10:40,600 --> 00:10:43,210
+Both methods give us the same answer.
+
+163
+00:10:43,210 --> 00:10:46,830
+
+
+164
+00:10:46,830 --> 00:10:50,580
+In general, in a complete market without frictions,
+
+165
+00:10:50,580 --> 00:10:55,200
+we can value any cash flow by the no-arbitrage principle,
+
+166
+00:10:55,200 --> 00:10:56,865
+the first principle of finance.
+
+167
+00:10:56,865 --> 00:11:00,820
+
+
+168
+00:11:00,820 --> 00:11:05,370
+Suppose a firm is considering a project yielding time one cash
+
+169
+00:11:05,370 --> 00:11:08,740
+flow X, which is X1 in state one,
+
+170
+00:11:08,740 --> 00:11:13,240
+X2 in state two, et cetera.
+
+171
+00:11:13,240 --> 00:11:16,270
+Using the prices of Arrow-Debreu securities,
+
+172
+00:11:16,270 --> 00:11:20,480
+we can then attach a value to this cash flow as follows.
+
+173
+00:11:20,480 --> 00:11:23,390
+
+
+174
+00:11:23,390 --> 00:11:28,820
+Its value should equal to phi 1, the state price in state one,
+
+175
+00:11:28,820 --> 00:11:36,760
+times X1, its pay off in state one, plus phi 2,
+
+176
+00:11:36,760 --> 00:11:40,910
+times X2, and so on.
+
+177
+00:11:40,910 --> 00:11:43,150
+And that gives the current market
+
+178
+00:11:43,150 --> 00:11:47,770
+value of the project or the cash flow.
+
+179
+00:11:47,770 --> 00:11:50,890
+This valuation formula encapsulates
+
+180
+00:11:50,890 --> 00:11:52,900
+the relative or arbitrage pricing
+
+181
+00:11:52,900 --> 00:11:54,940
+principle, which we are going to be
+
+182
+00:11:54,940 --> 00:11:59,270
+using for our future analysis.
+
+183
+00:11:59,270 --> 00:12:03,720
+PV here is also called the present value of the project
+
+184
+00:12:03,720 --> 00:12:05,520
+or asset or the cash flow.
+
+185
+00:12:05,520 --> 00:12:09,270
+
+
+186
+00:12:09,270 --> 00:12:12,500
+As we have seen in the previous example,
+
+187
+00:12:12,500 --> 00:12:15,070
+the present value, PV, is also given
+
+188
+00:12:15,070 --> 00:12:19,540
+by the expected payoff of the asset
+
+189
+00:12:19,540 --> 00:12:23,050
+and then the expected rate of return on the asset.
+
+190
+00:12:23,050 --> 00:12:25,660
+
+
+191
+00:12:25,660 --> 00:12:30,100
+The key idea here when it comes to value an asset
+
+192
+00:12:30,100 --> 00:12:34,450
+is to find traded assets with similar cash flows,
+
+193
+00:12:34,450 --> 00:12:37,060
+both in timing and risk, and then
+
+194
+00:12:37,060 --> 00:12:40,150
+use their prices for the expected return
+
+195
+00:12:40,150 --> 00:12:45,150
+to value the particular asset we're interested in.
+

@@ -1,0 +1,756 @@
+0
+00:00:00,000 --> 00:00:03,880
+PROFESSOR: We now apply the present value valuation method
+
+1
+00:00:03,880 --> 00:00:07,210
+to a few simple cash flows.
+
+2
+00:00:07,210 --> 00:00:09,200
+We do so for several reasons.
+
+3
+00:00:09,200 --> 00:00:13,150
+First, to practice the new method we have just developed.
+
+4
+00:00:13,150 --> 00:00:18,340
+Second, the simple cash flows we will consider are quite common
+
+5
+00:00:18,340 --> 00:00:22,730
+in the market as well as in our daily life.
+
+6
+00:00:22,730 --> 00:00:25,240
+Third, these simple cash flows will also
+
+7
+00:00:25,240 --> 00:00:29,080
+be used to model the cash flows of various assets
+
+8
+00:00:29,080 --> 00:00:32,490
+as a first pass.
+
+9
+00:00:32,490 --> 00:00:36,870
+In particular, we'll consider four special cash flows--
+
+10
+00:00:36,870 --> 00:00:41,100
+annuity, annuity with constant growth,
+
+11
+00:00:41,100 --> 00:00:44,700
+perpetuity, and perpetuity with constant growth.
+
+12
+00:00:44,700 --> 00:00:47,300
+
+
+13
+00:00:47,300 --> 00:00:50,420
+Annuity refers to a constant cash flow,
+
+14
+00:00:50,420 --> 00:00:57,170
+say, a repeated for t periods starting from period one.
+
+15
+00:00:57,170 --> 00:01:02,380
+And this cash flow is also shown by this cash flow chart.
+
+16
+00:01:02,380 --> 00:01:05,470
+We're seeing a time zero for the next t periods,
+
+17
+00:01:05,470 --> 00:01:10,220
+we're going to be getting a constant cash flow a.
+
+18
+00:01:10,220 --> 00:01:15,230
+How do we value a cash flow like this?
+
+19
+00:01:15,230 --> 00:01:18,440
+Assuming that we know that discount rate is r.
+
+20
+00:01:18,440 --> 00:01:21,800
+What we would like to compute is its present value
+
+21
+00:01:21,800 --> 00:01:26,630
+which will be the first cash flow a discounted back once
+
+22
+00:01:26,630 --> 00:01:30,260
+at 1 plus r plus the second cash flow, which
+
+23
+00:01:30,260 --> 00:01:33,740
+is also a discounted at the discount rate r
+
+24
+00:01:33,740 --> 00:01:37,380
+twice, and so on.
+
+25
+00:01:37,380 --> 00:01:40,080
+Now, in order to compute this, we
+
+26
+00:01:40,080 --> 00:01:44,640
+could either compute each of the terms, the present value
+
+27
+00:01:44,640 --> 00:01:47,910
+of each piece of the cash flow at the month,
+
+28
+00:01:47,910 --> 00:01:53,060
+or we could actually try to find a simple formula.
+
+29
+00:01:53,060 --> 00:01:55,520
+In order to do so, let's do the following.
+
+30
+00:01:55,520 --> 00:01:58,460
+Take the first line, the present value formula.
+
+31
+00:01:58,460 --> 00:02:02,000
+Multiply both sides by 1 plus r.
+
+32
+00:02:02,000 --> 00:02:04,880
+That gives us the second equation,
+
+33
+00:02:04,880 --> 00:02:08,660
+and then we take the difference between these two equations,
+
+34
+00:02:08,660 --> 00:02:11,150
+namely subtracting the first equation
+
+35
+00:02:11,150 --> 00:02:12,830
+from the second equation.
+
+36
+00:02:12,830 --> 00:02:14,660
+That gives us the third equation,
+
+37
+00:02:14,660 --> 00:02:20,510
+namely r times PV the present value of this annuity
+
+38
+00:02:20,510 --> 00:02:25,670
+is given by the two terms on the right-hand side, a minus a
+
+39
+00:02:25,670 --> 00:02:30,620
+divided by 1 plus r to the t-th power.
+
+40
+00:02:30,620 --> 00:02:33,470
+We can rearrange the terms and arriving
+
+41
+00:02:33,470 --> 00:02:37,970
+at the following formula, namely the present value of annuity
+
+42
+00:02:37,970 --> 00:02:41,270
+is just going to be given by a, the level of the cash
+
+43
+00:02:41,270 --> 00:02:47,580
+flow, times 1 over r times what's in the square bracket.
+
+44
+00:02:47,580 --> 00:02:51,650
+Of course, we can also compute the future value of annuity
+
+45
+00:02:51,650 --> 00:02:54,800
+which is given by simply the present value of annuity
+
+46
+00:02:54,800 --> 00:02:58,400
+times 1 plus r to the t-th power.
+
+47
+00:02:58,400 --> 00:03:02,530
+That's the equation at the bottom of the slide.
+
+48
+00:03:02,530 --> 00:03:04,970
+Let's consider an example.
+
+49
+00:03:04,970 --> 00:03:07,210
+Suppose an insurance company is selling
+
+50
+00:03:07,210 --> 00:03:10,960
+an annuity, a standard product from insurance companies,
+
+51
+00:03:10,960 --> 00:03:15,650
+that pays $10,000 per year for 20 years.
+
+52
+00:03:15,650 --> 00:03:18,370
+Suppose that the right discount rate is 5%.
+
+53
+00:03:18,370 --> 00:03:20,890
+The question is what should be the company
+
+54
+00:03:20,890 --> 00:03:24,260
+sell this product for?
+
+55
+00:03:24,260 --> 00:03:27,200
+Well, with the present value formula,
+
+56
+00:03:27,200 --> 00:03:31,890
+we can easily finish this computation.
+
+57
+00:03:31,890 --> 00:03:35,730
+The price for this annuity should be its present value,
+
+58
+00:03:35,730 --> 00:03:38,080
+and that's given by this formula.
+
+59
+00:03:38,080 --> 00:03:41,100
+The level of the annuity is $10,000.
+
+60
+00:03:41,100 --> 00:03:45,180
+We multiply that by 1 over the discount rate 5% times
+
+61
+00:03:45,180 --> 00:03:47,170
+what's in the parentheses.
+
+62
+00:03:47,170 --> 00:03:49,200
+If we finish this calculation, we're
+
+63
+00:03:49,200 --> 00:03:54,930
+going to be getting $124,622 roughly.
+
+64
+00:03:54,930 --> 00:03:57,660
+So that should be the price for this annuity.
+
+65
+00:03:57,660 --> 00:04:00,030
+Of course, in reality, the insurance company
+
+66
+00:04:00,030 --> 00:04:01,860
+might be selling at a price that's
+
+67
+00:04:01,860 --> 00:04:05,670
+a little bit higher than that to pocket some profit.
+
+68
+00:04:05,670 --> 00:04:11,070
+Next, we consider an annuity with a constant growth rate g
+
+69
+00:04:11,070 --> 00:04:14,100
+as shown in the cash flow chart here.
+
+70
+00:04:14,100 --> 00:04:18,029
+The first cash flow arrives in year one at a level a.
+
+71
+00:04:18,029 --> 00:04:22,800
+Then in year two, the cash flow grows to a times 1 plus g
+
+72
+00:04:22,800 --> 00:04:24,180
+and so on.
+
+73
+00:04:24,180 --> 00:04:28,660
+The last cash flow occurs at year t
+
+74
+00:04:28,660 --> 00:04:34,790
+with the level at a times 1 plus g to the t minus 1th power.
+
+75
+00:04:34,790 --> 00:04:41,600
+The question is, what is the present value of such annuity?
+
+76
+00:04:41,600 --> 00:04:43,060
+Well, the present value can be easy
+
+77
+00:04:43,060 --> 00:04:47,230
+computed by summing up the present value of each
+
+78
+00:04:47,230 --> 00:04:48,160
+of the cash flow.
+
+79
+00:04:48,160 --> 00:04:51,110
+
+
+80
+00:04:51,110 --> 00:04:54,830
+If we use the same technique as we did for annuity
+
+81
+00:04:54,830 --> 00:04:58,290
+with no growth, we arrive at the formula
+
+82
+00:04:58,290 --> 00:05:01,880
+which is given by the second equation.
+
+83
+00:05:01,880 --> 00:05:04,040
+And we have two different cases.
+
+84
+00:05:04,040 --> 00:05:07,700
+In the general case where the growth rate of the cash flow
+
+85
+00:05:07,700 --> 00:05:13,670
+does not equal to the discount rate r, we have the first line.
+
+86
+00:05:13,670 --> 00:05:15,890
+In a special case where the growth rate
+
+87
+00:05:15,890 --> 00:05:18,180
+is the same as the discount rate,
+
+88
+00:05:18,180 --> 00:05:21,220
+then we have the second line.
+
+89
+00:05:21,220 --> 00:05:25,590
+If we know the growing annuity starting value, its time
+
+90
+00:05:25,590 --> 00:05:28,960
+span, and growth rate, and its discount rate,
+
+91
+00:05:28,960 --> 00:05:32,880
+we can easily compute its present value.
+
+92
+00:05:32,880 --> 00:05:36,960
+We now consider an example of a growing annuity.
+
+93
+00:05:36,960 --> 00:05:41,760
+This example resembles a saving plan for retirement.
+
+94
+00:05:41,760 --> 00:05:44,940
+Suppose that you are now at age of 30
+
+95
+00:05:44,940 --> 00:05:51,180
+and plan to have $2 million at age of 65 when you retire.
+
+96
+00:05:51,180 --> 00:05:55,570
+How do you draw up a saving plan to achieve that?
+
+97
+00:05:55,570 --> 00:05:57,700
+Suppose that at the end of each year,
+
+98
+00:05:57,700 --> 00:06:01,960
+you will act to save certain amount that grows by 5%
+
+99
+00:06:01,960 --> 00:06:07,870
+each year reflecting your growth in income.
+
+100
+00:06:07,870 --> 00:06:10,030
+The question is, how much should you
+
+101
+00:06:10,030 --> 00:06:15,400
+start saving now assuming that the return on your savings
+
+102
+00:06:15,400 --> 00:06:16,060
+is 8%?
+
+103
+00:06:16,060 --> 00:06:21,930
+
+
+104
+00:06:21,930 --> 00:06:25,100
+We can make this calculation by thinking
+
+105
+00:06:25,100 --> 00:06:27,200
+in the following fashion.
+
+106
+00:06:27,200 --> 00:06:32,030
+If you want to have $2 million in 35 years,
+
+107
+00:06:32,030 --> 00:06:34,880
+its present value should be just $2 million
+
+108
+00:06:34,880 --> 00:06:39,680
+discounted back at 8% 35 times which
+
+109
+00:06:39,680 --> 00:06:43,340
+is given by the term on the right-hand side
+
+110
+00:06:43,340 --> 00:06:44,630
+of the equation.
+
+111
+00:06:44,630 --> 00:06:48,260
+On the left-hand side would be the present value
+
+112
+00:06:48,260 --> 00:06:51,740
+of the annuity with a growth rate
+
+113
+00:06:51,740 --> 00:06:58,100
+of 5% starting at the initial level of a.
+
+114
+00:06:58,100 --> 00:07:02,720
+Solving for a, we'll get the following result
+
+115
+00:07:02,720 --> 00:07:07,075
+which is $6,473.
+
+116
+00:07:07,075 --> 00:07:08,450
+That means that, actually, if you
+
+117
+00:07:08,450 --> 00:07:14,630
+start your savings next year at $6,473
+
+118
+00:07:14,630 --> 00:07:17,720
+and allow that saving to grow at 5% per year
+
+119
+00:07:17,720 --> 00:07:22,040
+for 35 years and the return on your savings
+
+120
+00:07:22,040 --> 00:07:29,540
+is 8%, then by the end of 35 years where you turn 65,
+
+121
+00:07:29,540 --> 00:07:32,180
+the total amount in your savings account
+
+122
+00:07:32,180 --> 00:07:37,190
+will be exactly $2 million as you planned.
+
+123
+00:07:37,190 --> 00:07:40,340
+We now consider another example.
+
+124
+00:07:40,340 --> 00:07:44,510
+Suppose you just won the lottery and it pays $100,000
+
+125
+00:07:44,510 --> 00:07:47,160
+a year for 20 years.
+
+126
+00:07:47,160 --> 00:07:50,300
+Suppose that actually this is the only asset you have.
+
+127
+00:07:50,300 --> 00:07:52,490
+Are you a millionaire?
+
+128
+00:07:52,490 --> 00:07:56,540
+Let's assume that actually the right discount rate is 10%.
+
+129
+00:07:56,540 --> 00:07:59,180
+Well, we can compute the present value
+
+130
+00:07:59,180 --> 00:08:06,280
+of the stream of cash flow at a level of $100,000 for 20 years.
+
+131
+00:08:06,280 --> 00:08:09,640
+Plug into the formula for the present value of annuity, what
+
+132
+00:08:09,640 --> 00:08:16,720
+we arrive at would be $851,356.
+
+133
+00:08:16,720 --> 00:08:18,460
+That's quite nice, but it's still
+
+134
+00:08:18,460 --> 00:08:19,660
+short of a million dollars.
+
+135
+00:08:19,660 --> 00:08:22,240
+
+
+136
+00:08:22,240 --> 00:08:27,040
+What if the payments last for 50 years instead of 20 years?
+
+137
+00:08:27,040 --> 00:08:31,090
+Well, we use the same formula for the first value
+
+138
+00:08:31,090 --> 00:08:36,100
+of annuity except that actually now the time span is 50 years.
+
+139
+00:08:36,100 --> 00:08:44,610
+If we finished a calculation, we'll arrive at $991,481.
+
+140
+00:08:44,610 --> 00:08:47,780
+Certainly, that's higher than the level before,
+
+141
+00:08:47,780 --> 00:08:49,760
+but it's still shy of $1 million.
+
+142
+00:08:49,760 --> 00:08:54,040
+
+
+143
+00:08:54,040 --> 00:08:59,860
+How about if you're going to get $100,000 payment forever?
+
+144
+00:08:59,860 --> 00:09:02,930
+Well, if we finished our calculation,
+
+145
+00:09:02,930 --> 00:09:07,540
+the present value of this perpetual annuity
+
+146
+00:09:07,540 --> 00:09:09,310
+would be exactly $1 million.
+
+147
+00:09:09,310 --> 00:09:12,080
+
+
+148
+00:09:12,080 --> 00:09:15,420
+This leads us to the next special cash
+
+149
+00:09:15,420 --> 00:09:17,320
+flow, a perpetuity.
+
+150
+00:09:17,320 --> 00:09:20,600
+A perpetuity is like an annuity except that it
+
+151
+00:09:20,600 --> 00:09:22,820
+doesn't have a terminal date.
+
+152
+00:09:22,820 --> 00:09:26,040
+The cash flow goes on forever.
+
+153
+00:09:26,040 --> 00:09:30,150
+The present value of perpetuity at a level of a
+
+154
+00:09:30,150 --> 00:09:34,680
+is simply given by a divide by r, the discount rate
+
+155
+00:09:34,680 --> 00:09:38,467
+or the rate of return on your investments.
+
+156
+00:09:38,467 --> 00:09:41,210
+
+
+157
+00:09:41,210 --> 00:09:44,740
+If instead of staying a constant,
+
+158
+00:09:44,740 --> 00:09:49,640
+the perpetuity also grows at a constant growth rate g,
+
+159
+00:09:49,640 --> 00:09:54,590
+then we arrive at the perpetuity with the constant growth.
+
+160
+00:09:54,590 --> 00:09:58,370
+It's cash flow is also shown in the cash flow chart.
+
+161
+00:09:58,370 --> 00:10:02,090
+It starts at year one at a level a,
+
+162
+00:10:02,090 --> 00:10:07,460
+and next year, it turns into a times 1 plus g and so on
+
+163
+00:10:07,460 --> 00:10:10,220
+and continues forever.
+
+164
+00:10:10,220 --> 00:10:12,830
+The present value of such a perpetuity
+
+165
+00:10:12,830 --> 00:10:14,990
+with the constant growth rate g is
+
+166
+00:10:14,990 --> 00:10:18,170
+given by the formula on the slide, namely
+
+167
+00:10:18,170 --> 00:10:22,670
+a divide by r, the discount rate, minus g, the growth rate.
+
+168
+00:10:22,670 --> 00:10:25,790
+Here, it must be that the discount rate is
+
+169
+00:10:25,790 --> 00:10:27,860
+greater than the growth rate.
+
+170
+00:10:27,860 --> 00:10:30,500
+Otherwise, the present value of this cash flow
+
+171
+00:10:30,500 --> 00:10:34,010
+would be infinity.
+
+172
+00:10:34,010 --> 00:10:37,330
+We now consider a simple example.
+
+173
+00:10:37,330 --> 00:10:40,180
+Let's look at a company, Super Growth,
+
+174
+00:10:40,180 --> 00:10:42,390
+which plans to pay an annual dividend next year
+
+175
+00:10:42,390 --> 00:10:44,470
+of $3 per share.
+
+176
+00:10:44,470 --> 00:10:49,730
+The dividend is expected to grow at 5% per year forever.
+
+177
+00:10:49,730 --> 00:10:52,880
+We also know that for companies of this risk class,
+
+178
+00:10:52,880 --> 00:10:56,490
+the expected rate of return is 10%.
+
+179
+00:10:56,490 --> 00:11:01,040
+What should be Super Growth's share price?
+
+180
+00:11:01,040 --> 00:11:06,560
+Well, it should be the present value of its future dividends.
+
+181
+00:11:06,560 --> 00:11:10,730
+We can complete this computation by using the present value
+
+182
+00:11:10,730 --> 00:11:14,450
+formula for perpetuity with constant growth, which
+
+183
+00:11:14,450 --> 00:11:17,240
+is given on the right-hand side of the equation.
+
+184
+00:11:17,240 --> 00:11:20,370
+Namely, $3 for the first dividend,
+
+185
+00:11:20,370 --> 00:11:24,770
+divide by 10%, which is a discount rate, minus 5%, which
+
+186
+00:11:24,770 --> 00:11:26,250
+is the growth rate.
+
+187
+00:11:26,250 --> 00:11:28,610
+And that gives us $60 which should
+
+188
+00:11:28,610 --> 00:11:31,570
+be the share price today.
+

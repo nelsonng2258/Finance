@@ -1,0 +1,480 @@
+0
+00:00:00,000 --> 00:00:00,672
+
+
+1
+00:00:00,672 --> 00:00:02,180
+PROFESSOR: In this question, we will
+
+2
+00:00:02,180 --> 00:00:04,900
+learn about interest rate risk.
+
+3
+00:00:04,900 --> 00:00:06,610
+Suppose that you manage a pension
+
+4
+00:00:06,610 --> 00:00:09,370
+fund and your liabilities consist of the following three
+
+5
+00:00:09,370 --> 00:00:10,760
+payments.
+
+6
+00:00:10,760 --> 00:00:15,100
+10 years from now, you have to make a payment of $40 million.
+
+7
+00:00:15,100 --> 00:00:17,110
+In 15 years from now, you have to make
+
+8
+00:00:17,110 --> 00:00:19,670
+another payment of $75 million.
+
+9
+00:00:19,670 --> 00:00:21,160
+And in 20 years from now, you have
+
+10
+00:00:21,160 --> 00:00:26,200
+to make a payment of $105 million.
+
+11
+00:00:26,200 --> 00:00:30,100
+This is an approximation how actual pension funds work.
+
+12
+00:00:30,100 --> 00:00:33,720
+Usually pension funds have to distribute pension payments
+
+13
+00:00:33,720 --> 00:00:36,100
+to a rate that is obviously more frequently
+
+14
+00:00:36,100 --> 00:00:38,390
+than every five years.
+
+15
+00:00:38,390 --> 00:00:41,950
+So this is just an approximation how a regular pension
+
+16
+00:00:41,950 --> 00:00:43,060
+fund works.
+
+17
+00:00:43,060 --> 00:00:45,880
+But you will see that the tools that we'll
+
+18
+00:00:45,880 --> 00:00:47,950
+learn in this question can be extended
+
+19
+00:00:47,950 --> 00:00:51,277
+to a more realistic scenario.
+
+20
+00:00:51,277 --> 00:00:53,610
+We will assume that the term structure of interest rates
+
+21
+00:00:53,610 --> 00:00:57,140
+is flat at 5%.
+
+22
+00:00:57,140 --> 00:01:00,770
+Part A of the question asks us to use modified duration
+
+23
+00:01:00,770 --> 00:01:04,849
+to determine what happens to the present value of liabilities
+
+24
+00:01:04,849 --> 00:01:07,730
+of this pension fund when interest rates increase
+
+25
+00:01:07,730 --> 00:01:11,340
+by 0.2%.
+
+26
+00:01:11,340 --> 00:01:13,550
+And in part B of the question, we'll
+
+27
+00:01:13,550 --> 00:01:17,150
+compute the actual change in the present value of liabilities
+
+28
+00:01:17,150 --> 00:01:20,600
+of the pension fund again when interest rates increase
+
+29
+00:01:20,600 --> 00:01:22,640
+by 0.2%.
+
+30
+00:01:22,640 --> 00:01:25,760
+To compute the modified duration of the liabilities
+
+31
+00:01:25,760 --> 00:01:27,800
+of this pension fund, let's first
+
+32
+00:01:27,800 --> 00:01:31,910
+start by computing its Macaulay duration.
+
+33
+00:01:31,910 --> 00:01:34,160
+By definition, the Macaulay duration
+
+34
+00:01:34,160 --> 00:01:36,660
+is given by this expression.
+
+35
+00:01:36,660 --> 00:01:38,510
+So this is the same expression as we've
+
+36
+00:01:38,510 --> 00:01:41,580
+seen in the previous question.
+
+37
+00:01:41,580 --> 00:01:44,240
+So let's first compute the present value
+
+38
+00:01:44,240 --> 00:01:49,640
+of the liabilities of this pension fund so that's our p.
+
+39
+00:01:49,640 --> 00:01:52,310
+So in other words, let's compute the present value
+
+40
+00:01:52,310 --> 00:01:57,070
+of all the future liabilities of this pension fund.
+
+41
+00:01:57,070 --> 00:01:59,080
+So this is given by this expression.
+
+42
+00:01:59,080 --> 00:02:02,340
+So we have to make our first payment of 40 million dollars
+
+43
+00:02:02,340 --> 00:02:04,120
+in the year 10.
+
+44
+00:02:04,120 --> 00:02:07,170
+So the present value of there is 40 divided by 1 plus 5.
+
+45
+00:02:07,170 --> 00:02:12,160
+5 is our current yield to maturity.
+
+46
+00:02:12,160 --> 00:02:15,060
+raised to the power of 10 because this payment
+
+47
+00:02:15,060 --> 00:02:16,650
+occurs in the year 10.
+
+48
+00:02:16,650 --> 00:02:19,650
+Plus $75 million dollars.
+
+49
+00:02:19,650 --> 00:02:22,890
+This is our second payment that occurs in year 15.
+
+50
+00:02:22,890 --> 00:02:27,810
+And finally $105 million is our last and third payment
+
+51
+00:02:27,810 --> 00:02:29,040
+that occurs in year 20.
+
+52
+00:02:29,040 --> 00:02:32,730
+So we're discounting it to present again
+
+53
+00:02:32,730 --> 00:02:33,900
+at 5% interest rate.
+
+54
+00:02:33,900 --> 00:02:36,390
+And we're raising it to power 20 again because this cash
+
+55
+00:02:36,390 --> 00:02:40,230
+flow occurs in the year 20.
+
+56
+00:02:40,230 --> 00:02:42,450
+So this gives us the present value
+
+57
+00:02:42,450 --> 00:02:44,920
+or the value of the future, the present value
+
+58
+00:02:44,920 --> 00:02:47,350
+of the future liabilities of this pension fund
+
+59
+00:02:47,350 --> 00:02:55,470
+which is $100.21 million.
+
+60
+00:02:55,470 --> 00:02:57,180
+Now the Macaulay duration, again,
+
+61
+00:02:57,180 --> 00:02:58,510
+is given by this equation.
+
+62
+00:02:58,510 --> 00:03:00,720
+So we've computed p, the price.
+
+63
+00:03:00,720 --> 00:03:02,990
+So now we can compute the remaining term.
+
+64
+00:03:02,990 --> 00:03:06,780
+So this sum term, which here consists of just three
+
+65
+00:03:06,780 --> 00:03:10,890
+turns because we have three liability payments.
+
+66
+00:03:10,890 --> 00:03:14,010
+So 1 divided by 100.21, this is one
+
+67
+00:03:14,010 --> 00:03:17,250
+divided by the price or the present value
+
+68
+00:03:17,250 --> 00:03:22,620
+of our liabilities multiplied by 40 divided by 1
+
+69
+00:03:22,620 --> 00:03:24,750
+plus 5% raised to the power of 10,
+
+70
+00:03:24,750 --> 00:03:26,940
+so this is the present value of the first liability
+
+71
+00:03:26,940 --> 00:03:29,100
+payment multiplied by 10.
+
+72
+00:03:29,100 --> 00:03:32,350
+So this is the year when this payment occurs.
+
+73
+00:03:32,350 --> 00:03:36,090
+Plus 75 divided by 1 plus 5% raised to the power of 15,
+
+74
+00:03:36,090 --> 00:03:39,660
+again this is the present value of the second payment
+
+75
+00:03:39,660 --> 00:03:40,740
+multiplied by 15.
+
+76
+00:03:40,740 --> 00:03:42,810
+This is the year when it occurs.
+
+77
+00:03:42,810 --> 00:03:48,000
+Plus 105 or divided by 5% raised to the power of 20 times 20.
+
+78
+00:03:48,000 --> 00:03:51,930
+Because that payment occurs in the year 20.
+
+79
+00:03:51,930 --> 00:03:55,230
+So when we compute this, the Macaulay duration
+
+80
+00:03:55,230 --> 00:04:01,780
+of our liabilities is 15.75 years.
+
+81
+00:04:01,780 --> 00:04:04,600
+Now the modified duration by definition
+
+82
+00:04:04,600 --> 00:04:08,500
+is just Macaulay duration divided by 1 plus yield.
+
+83
+00:04:08,500 --> 00:04:14,890
+So in our case, this would be 15.75 divided by 1 plus 5%.
+
+84
+00:04:14,890 --> 00:04:16,600
+And this will give us exactly 15.
+
+85
+00:04:16,600 --> 00:04:21,490
+So the modified duration of our liabilities of this pension
+
+86
+00:04:21,490 --> 00:04:24,950
+fund is just 15.
+
+87
+00:04:24,950 --> 00:04:27,200
+Now what we want to do right now is
+
+88
+00:04:27,200 --> 00:04:30,530
+that we want to use this modified duration
+
+89
+00:04:30,530 --> 00:04:34,390
+to approximate the change in value of our liabilities
+
+90
+00:04:34,390 --> 00:04:37,340
+when a yield curve shifts.
+
+91
+00:04:37,340 --> 00:04:39,500
+So to be precise technically speaking,
+
+92
+00:04:39,500 --> 00:04:41,840
+when is it going to be a parallel shift in the yield
+
+93
+00:04:41,840 --> 00:04:42,340
+curve.
+
+94
+00:04:42,340 --> 00:04:45,060
+
+
+95
+00:04:45,060 --> 00:04:48,630
+The value, the change in the value of our liabilities,
+
+96
+00:04:48,630 --> 00:04:51,670
+can be approximated using the following equation.
+
+97
+00:04:51,670 --> 00:04:53,220
+So the change in the value, this is
+
+98
+00:04:53,220 --> 00:04:55,740
+delta P would equal to the original value
+
+99
+00:04:55,740 --> 00:04:59,360
+of our liabilities times the modified duration
+
+100
+00:04:59,360 --> 00:05:01,800
+times the change in the yield.
+
+101
+00:05:01,800 --> 00:05:05,040
+And this goes with the negative sign because the value--
+
+102
+00:05:05,040 --> 00:05:08,565
+the price of the bond or the value of the bond and yields
+
+103
+00:05:08,565 --> 00:05:09,940
+change in the opposite direction.
+
+104
+00:05:09,940 --> 00:05:13,780
+So if yields increase the value of bonds will decrease.
+
+105
+00:05:13,780 --> 00:05:17,400
+And so this is what will happen in our case.
+
+106
+00:05:17,400 --> 00:05:21,540
+So now let's use the numbers that we have in this question
+
+107
+00:05:21,540 --> 00:05:27,570
+so the assumption is that the yield curve shifts up by 0.2%.
+
+108
+00:05:27,570 --> 00:05:29,850
+So therefore the value of our holdings
+
+109
+00:05:29,850 --> 00:05:31,060
+will change by this much.
+
+110
+00:05:31,060 --> 00:05:36,020
+So we are taking the original $121 million,
+
+111
+00:05:36,020 --> 00:05:38,910
+we're multiplying it by the modified duration which is 15.
+
+112
+00:05:38,910 --> 00:05:40,800
+And we're multiplying it by the change
+
+113
+00:05:40,800 --> 00:05:43,290
+in the yield, which is 0.2%.
+
+114
+00:05:43,290 --> 00:05:48,180
+And this gives us negative $3 million.
+
+115
+00:05:48,180 --> 00:05:55,650
+So as yield increases by 0.2%, the value of our liabilities
+
+116
+00:05:55,650 --> 00:05:58,890
+drops by 3 million dollars.
+
+117
+00:05:58,890 --> 00:06:04,310
+And this answer is given to us by using this approximation
+
+118
+00:06:04,310 --> 00:06:07,220
+in which we're using the modified duration to compute
+
+119
+00:06:07,220 --> 00:06:11,860
+the approximate change in the value of our liabilities.
+

@@ -1,0 +1,140 @@
+
+PROFESSOR: We now turn our attention
+to the valuation of assets.
+The asset can be a real asset like an investment project
+or a financial asset like a bond or stock.
+Each asset is fully defined by its future cash flow.
+Its cash flow can have many pieces occurring
+at different points in time from time 0, which is today,
+to times 1, 2, et cetera.
+To be concrete, we can describe an asset's cash flow
+in the table, listing each piece of outflow and inflow
+over the asset's lifespan.
+Let the initial cash flow be CF0,
+which can be negative in the case of initial investment.
+The cash flow in year 1 be CF1 and so on.
+The valuation of an asset is then
+equivalent to the valuation of its cash flow.
+For convenience, sometimes we also
+draw a flow chart to describe a cash flow
+as shown in the figure here like what we
+did in our beginning example.
+Again, a downward arrow represents a cash outflow,
+while an upward arrow represents a cash inflow.
+When we consider a cash flow, other than its magnitude,
+it has two important characteristics.
+The first is time.
+Let's now consider two cash flows
+in the first example on the slide,
+$1,000 today and $1,000 next year.
+They have the same magnitude but arrive at different times.
+Which one would you prefer?
+In general, people are not indifferent between these two
+cash flows.
+The fact that market interest rates are typically positive
+suggest that market participants on average
+prefers $1,000 today over later.
+We will return to this topic later.
+But for the moment, the point we want to establish
+is simply that the timing of a cash flow matters.
+How much it matters is what we refer
+to as the time value of money.
+The second important characteristic of a cash flow
+is its risk.
+To see this, let's consider the two cash flows
+in the second example on the slide.
+Cash flow one on the left-hand side is $1,000 for sure.
+There's no uncertainty here.
+Cash flow two, which is on the right-hand side,
+will be $2,000 or $0 with equal chances.
+The expected value of this cash flow
+is still 1,000, same as the first one.
+But it is risky.
+
+Which one of these two cash flows would you prefer?
+Different people may have different preferences.
+In the market often, cash flow two, which is risky,
+will be selling for a lower price than cash flow one.
+We will spend more time to understand this difference
+later.
+But for now, the key point for us
+is that the uncertainty or risk of a cash flow
+matters for its valuation.
+How much it matters is often called the risk premium.
+
+Therefore, we conclude that time and risk
+are the two key elements in finance
+because they are critical in the valuation of assets.
+How can we value or price a cash flow on an asset then?
+We will devote a lot of time to develop
+a set of tools and techniques to help us solving this problem.
+For now, we will use a couple of simple examples
+to illustrate the key idea behind our general approach.
+Let's consider an asset which yields a cash flow in one
+year of a sure value of $1,000.
+How much is it worth today?
+In order to have an objective valuation,
+we can look into the financial market for similar assets
+and their prices.
+
+Suppose that assets or cash flows
+traded in the financial market with the same timing and risk
+offer a return of 5%.
+A good example of these assets would be one year US government
+bonds.
+
+The prices of these bonds then will give us
+a market-based valuation for the cash flow
+that we would like to value.
+Let's think about the following.
+A potential buyer of the asset also
+expects a sure return of 5%, the same as what the one year
+US government bonds offer.
+Let the price of the asset we like to value be x.
+Then x times 1 plus the expected 5% of return
+should equal to the payoff in one year, which is the $1,000.
+Solving for x, the current price gives us 1,000 divide by 1
+plus 5%, and that is $952.
+This gives us the assets current market value.
+What if the asset can be traded at a higher price, say 960?
+This will then lead to what we call a free lunch.
+Let's consider the following set of trades.
+
+First, buy $952 worth of one-year US treasury
+bonds, which will pay $1,000 in one year
+at a 5% interest rate, the same as the asset.
+Next, we sell this sure cash flow
+of $1,000 in one year for $960 today.
+These two trades will net a positive cash flow today,
+which is 960 minus 952.
+That equals $8.
+There will be no future cash flows.
+This is a free lunch, a no-risk profitable opportunity.
+Naturally, free lunches will be eaten very quickly
+in the effective financial market.
+In particular, sophisticated market participants
+will make these trades at large quantities
+until the price deviation disappears.
+
+Therefore, if there are no frictions, that
+is, hurdles preventing free lunches to be taken,
+such as trading costs and constrains,
+the price of the asset can't be higher than $952.
+What if the price of this cash flow is below $952?
+Or in this case, we will also have a free lunch.
+All we have to do is to reverse the trades we
+did in the previous situation.
+I will leave that as an exercise for you.
+To summarize, given the prices of similar assets traded
+in the market, the price of a sure cash flow
+of $1,000 in one year must be exactly
+$952, not higher, not lower.
+This example gives us the key idea in asset valuation.
+In order to value an asset, we can find a traded asset
+with the same cash flow in the market.
+The price of the traded asset then
+should give the current market value of the asset
+under consideration.
+The logic behind this idea comes from the fact
+that an effective financial market should not
+allow free lunches.

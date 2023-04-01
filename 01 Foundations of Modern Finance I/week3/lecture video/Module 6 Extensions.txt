@@ -1,0 +1,88 @@
+
+PROFESSOR: We have now developed a general method
+to value an asset.
+If we are given its expected cash
+flow and the right discount rate,
+its value is simply given by the present value
+of its expected cash flow, a simple calculation.
+When using this method in different applications,
+we need to come up with estimates
+of an asset's expected cash flow and the corresponding discount
+rates.
+As we dive into these applications,
+we will further develop the tools and techniques
+needed to come up with these estimates.
+For now, I would only like to mention
+several general considerations to keep
+in mind in actual valuation applications.
+The first is taxes.
+It is important to keep in mind that cash flows generated
+by assets are often subject to taxes.
+For example, financial assets, such as bonds and stocks,
+pay in the form of interest, dividends, and capital gains.
+Investors may have to pay taxes on these payments.
+Firms earn profits, but they also have to pay taxes.
+What then matters when it comes to valuing an asset
+will be its cash flows after taxes.
+Thus, in the present value calculation,
+we have to use after tax cash flows.
+We will see more of this point in later applications,
+especially in project valuations.
+The second factor to keep in mind is currency.
+All examples so far, and throughout this course,
+will consider cash flows denominated in US dollars.
+This is only for convenience.
+In practice, of course, cash flows
+can come in other currencies.
+Our method is perfectly applicable.
+We only need to switch to cash flows and discount
+rates denominated in these currencies.
+The third factor to keep in mind is how to forecast cash flows.
+When valuing an asset, we first need
+to come up with estimates or forecasts of its future cash
+flows--
+magnitude, timing and risk.
+Sometimes these forecasts are given
+to us, such as the cash flow of a government bond, which
+includes interests and the principal payment.
+Often we need to come up with our own forecasts,
+such as dividends from a stock or profits from a project.
+We will do so when we get into these applications.
+Given an asset's cash flow, size, timing and risk,
+we need to find the right discount rates from the market.
+How to do this operationally requires further development
+and enrichment of our valuation methodology,
+which we will spend more time on over this course.
+For now, we only need to keep in mind a few points.
+For cash flow, the discount rate will depend on its timing.
+That is, if it's in one year, in two years, or five years.
+In case the cash flow is risk-free,
+we can use the risk-free interest rate
+which reflects the time value of money as determined
+in the financial market.
+However, it is important to know that one year interest rate is
+in general different from two year and five year interest
+rates.
+In general, cash flows are risky.
+In this case, we need to include the proper risk adjustment
+in the discount rate--
+namely, the risk premium associated
+with the risk of the cash flow.
+It is also important to keep in mind
+that the risk for net asset's one year cash flow
+can be quite different from the risk in its two year cash flow.
+Consequently, the risk premium for each of these cash flows
+are, in general, different.
+Putting the pieces together, we have
+the following present value formula,
+where present value is the sum of the present values
+of each piece of the asset's cash flow.
+That is, the expected cash flow at each time, t,
+discounted at rt, the appropriate discount rate
+for that cash flow C FT.
+Despite the fact that the discount rate for each cash
+flow of an asset is in general different,
+in most of our examples, we will use the same discount
+rate for an asset's cash flow at different points in time.
+It is important to keep in mind that this is mostly
+for simplicity.

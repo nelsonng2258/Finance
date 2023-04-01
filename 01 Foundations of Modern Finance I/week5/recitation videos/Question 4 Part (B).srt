@@ -1,0 +1,708 @@
+0
+00:00:00,000 --> 00:00:00,500
+
+
+1
+00:00:00,500 --> 00:00:02,800
+PROFESSOR: Let's solve this question.
+
+2
+00:00:02,800 --> 00:00:05,420
+And by solving this question, I mean finding the current share
+
+3
+00:00:05,420 --> 00:00:09,050
+price and understanding the dynamics of the key variables
+
+4
+00:00:09,050 --> 00:00:10,500
+here.
+
+5
+00:00:10,500 --> 00:00:13,130
+So in this spreadsheet I put the information
+
+6
+00:00:13,130 --> 00:00:15,660
+that we're given in the question.
+
+7
+00:00:15,660 --> 00:00:17,900
+And I would like to start computing and filling
+
+8
+00:00:17,900 --> 00:00:21,150
+in the blanks for all of the key variables that we have here.
+
+9
+00:00:21,150 --> 00:00:25,800
+Down at the bottom here, I've written the key equations.
+
+10
+00:00:25,800 --> 00:00:28,640
+So let's start with investment.
+
+11
+00:00:28,640 --> 00:00:32,090
+So by definition, investment in Year 1
+
+12
+00:00:32,090 --> 00:00:37,670
+would be the EPS multiplied by the plow-back ratio.
+
+13
+00:00:37,670 --> 00:00:39,800
+So that's going to be $16.
+
+14
+00:00:39,800 --> 00:00:42,740
+It does make sense because our EPS is 20.
+
+15
+00:00:42,740 --> 00:00:44,450
+We're retaining 80% of that.
+
+16
+00:00:44,450 --> 00:00:46,490
+So that's $16.
+
+17
+00:00:46,490 --> 00:00:50,540
+So our investments in Year 1 is $16.
+
+18
+00:00:50,540 --> 00:00:58,370
+Now we can compute EPS in Year 2 which would be EPS in Year 1
+
+19
+00:00:58,370 --> 00:01:04,220
+plus ROI in Year 1 which is 20%, multiplied
+
+20
+00:01:04,220 --> 00:01:09,130
+by the investment which is $16.
+
+21
+00:01:09,130 --> 00:01:13,750
+And so the earnings per share in Year 2 is going to be $23.20.
+
+22
+00:01:13,750 --> 00:01:21,750
+Now we can also compute the book value per share
+
+23
+00:01:21,750 --> 00:01:27,030
+in year one, which would be the prior book value per share
+
+24
+00:01:27,030 --> 00:01:32,370
+plus the investments that we made in Year 1.
+
+25
+00:01:32,370 --> 00:01:35,190
+And let's also compute the dividend, which
+
+26
+00:01:35,190 --> 00:01:37,470
+would be the earnings per share multiplied
+
+27
+00:01:37,470 --> 00:01:41,650
+by 1 minus the plow-back ratio.
+
+28
+00:01:41,650 --> 00:01:44,576
+So dividend in Year 1 is $4.
+
+29
+00:01:44,576 --> 00:01:47,220
+And now we can compute the same calculation.
+
+30
+00:01:47,220 --> 00:01:52,350
+So again investments in Year 2 will
+
+31
+00:01:52,350 --> 00:01:57,090
+be our new earnings per share multiplied
+
+32
+00:01:57,090 --> 00:01:59,100
+by the plow-back ratio.
+
+33
+00:01:59,100 --> 00:02:02,190
+So it's going to be $11.60.
+
+34
+00:02:02,190 --> 00:02:06,450
+Earnings per share is going to be $24.94, again computed
+
+35
+00:02:06,450 --> 00:02:11,280
+as the prior year's earnings per share
+
+36
+00:02:11,280 --> 00:02:16,210
+plus ROI multiplied by the investment.
+
+37
+00:02:16,210 --> 00:02:20,280
+Book value per share, again, is just
+
+38
+00:02:20,280 --> 00:02:25,230
+prior year's book value per share plus the new investment.
+
+39
+00:02:25,230 --> 00:02:27,690
+And the dividends, again, this is just
+
+40
+00:02:27,690 --> 00:02:31,567
+EPS multiplied by 1 minus plow-back ratio.
+
+41
+00:02:31,567 --> 00:02:33,150
+You can see that because in the Year 2
+
+42
+00:02:33,150 --> 00:02:36,060
+we are retaining half of the EPS.
+
+43
+00:02:36,060 --> 00:02:38,620
+And half of it we are paying out as dividends.
+
+44
+00:02:38,620 --> 00:02:40,470
+So of course, investment and dividends
+
+45
+00:02:40,470 --> 00:02:44,010
+are the same in in the Year 2.
+
+46
+00:02:44,010 --> 00:02:49,530
+And now all I can do is that I can just simply do this,
+
+47
+00:02:49,530 --> 00:02:53,040
+stretch all these arrays down.
+
+48
+00:02:53,040 --> 00:02:55,240
+And because we have these equations,
+
+49
+00:02:55,240 --> 00:03:00,190
+we will be able to compute the key variables going forward.
+
+50
+00:03:00,190 --> 00:03:01,680
+Now we could see that again.
+
+51
+00:03:01,680 --> 00:03:05,130
+So in Year 3 for example, where we retain half
+
+52
+00:03:05,130 --> 00:03:09,060
+and we pay out half of our EPS, so investment and dividend
+
+53
+00:03:09,060 --> 00:03:10,733
+is the same.
+
+54
+00:03:10,733 --> 00:03:12,150
+Then of course starting in Year 4,
+
+55
+00:03:12,150 --> 00:03:16,170
+because we don't retain any of the earnings,
+
+56
+00:03:16,170 --> 00:03:17,940
+the investment is 0.
+
+57
+00:03:17,940 --> 00:03:19,740
+And therefore, earnings per share
+
+58
+00:03:19,740 --> 00:03:24,870
+stays constant starting from Year 4 onwards.
+
+59
+00:03:24,870 --> 00:03:28,830
+And in fact, dividends equal earnings per share
+
+60
+00:03:28,830 --> 00:03:30,665
+starting from Year 4.
+
+61
+00:03:30,665 --> 00:03:32,040
+And it does make sense because we
+
+62
+00:03:32,040 --> 00:03:37,460
+don't retain any earnings we pay them all out in dividends.
+
+63
+00:03:37,460 --> 00:03:39,670
+And you could also see that because investment is 0
+
+64
+00:03:39,670 --> 00:03:41,450
+so our book value per share stays
+
+65
+00:03:41,450 --> 00:03:45,390
+constant forever after Year 3.
+
+66
+00:03:45,390 --> 00:03:48,410
+Now let's look at the relationship between the EPS
+
+67
+00:03:48,410 --> 00:03:53,390
+and ERT plus 1, and EPS and ERT, and understand
+
+68
+00:03:53,390 --> 00:03:57,630
+where this equation comes from.
+
+69
+00:03:57,630 --> 00:04:01,280
+So what I will do here right now is that I will actually
+
+70
+00:04:01,280 --> 00:04:05,510
+write down year by year earnings per share that
+
+71
+00:04:05,510 --> 00:04:10,520
+comes from the existing assets and from these new investments
+
+72
+00:04:10,520 --> 00:04:12,560
+that we're making.
+
+73
+00:04:12,560 --> 00:04:17,630
+So what I mean is that in Year 1, so there is Year 1 EPS.
+
+74
+00:04:17,630 --> 00:04:24,140
+So for example, if we have not invested anything at all,
+
+75
+00:04:24,140 --> 00:04:27,920
+our EPS would have stayed at $20 forever.
+
+76
+00:04:27,920 --> 00:04:31,530
+Because this is what was given to us.
+
+77
+00:04:31,530 --> 00:04:35,570
+And so this $20 is something that
+
+78
+00:04:35,570 --> 00:04:37,730
+is generated by the existing assets,
+
+79
+00:04:37,730 --> 00:04:39,530
+by the book value per share that we
+
+80
+00:04:39,530 --> 00:04:44,150
+had prior to making these new investments.
+
+81
+00:04:44,150 --> 00:04:50,170
+Now the remaining EPS comes from, again,
+
+82
+00:04:50,170 --> 00:04:51,340
+these new investments.
+
+83
+00:04:51,340 --> 00:04:56,290
+So in Year 2, we're getting additional earnings
+
+84
+00:04:56,290 --> 00:04:58,600
+per share from the $16 investments
+
+85
+00:04:58,600 --> 00:05:00,430
+that we made in Year 1.
+
+86
+00:05:00,430 --> 00:05:04,360
+So here I will denote what this is.
+
+87
+00:05:04,360 --> 00:05:13,840
+And so this is just 20% multiplied by $16 investment.
+
+88
+00:05:13,840 --> 00:05:20,770
+And so, because we said that these investments are such that
+
+89
+00:05:20,770 --> 00:05:24,460
+they produce earnings per share in perpetuity.
+
+90
+00:05:24,460 --> 00:05:32,320
+So this $16 and 20% ROI on this investment produces $3.20.
+
+91
+00:05:32,320 --> 00:05:34,690
+And these earnings will continue in perpetuity.
+
+92
+00:05:34,690 --> 00:05:36,640
+So here I'm doing just 10 years, but they
+
+93
+00:05:36,640 --> 00:05:39,350
+will continue into perpetuity.
+
+94
+00:05:39,350 --> 00:05:46,180
+So similarly, in the Year 2, we invest $11.60 and our ROI is
+
+95
+00:05:46,180 --> 00:05:46,680
+15.
+
+96
+00:05:46,680 --> 00:05:50,700
+So starting from Year 2, the new additional EPS
+
+97
+00:05:50,700 --> 00:05:53,880
+that we get from that investment is just, again,
+
+98
+00:05:53,880 --> 00:05:56,900
+this ROI multiplied by the investment.
+
+99
+00:05:56,900 --> 00:06:01,400
+
+
+100
+00:06:01,400 --> 00:06:06,940
+And again, by the same logic, this EPS will continue forever.
+
+101
+00:06:06,940 --> 00:06:10,060
+And the final investments here we're making in the Year 3
+
+102
+00:06:10,060 --> 00:06:13,090
+where we're investing $12.47.
+
+103
+00:06:13,090 --> 00:06:16,940
+And our ROI at that point is 10%.
+
+104
+00:06:16,940 --> 00:06:21,340
+So we're generating, we're starting generating
+
+105
+00:06:21,340 --> 00:06:24,730
+this new EPS in Year 4.
+
+106
+00:06:24,730 --> 00:06:29,390
+And this equals to the investment times ROI.
+
+107
+00:06:29,390 --> 00:06:35,010
+
+
+108
+00:06:35,010 --> 00:06:39,360
+And again, this continues forever.
+
+109
+00:06:39,360 --> 00:06:42,500
+So what I've done in this last column
+
+110
+00:06:42,500 --> 00:06:47,060
+is that so here I'm going to add up all of these EPS.
+
+111
+00:06:47,060 --> 00:06:53,730
+So in the Year 1, or I'll just sum them all up,
+
+112
+00:06:53,730 --> 00:06:58,740
+and of course in Year 1 we just have the initial $20.
+
+113
+00:06:58,740 --> 00:07:02,030
+And then we're adding up all of the investments that our--
+
+114
+00:07:02,030 --> 00:07:04,970
+all of the earnings per share that our new investments
+
+115
+00:07:04,970 --> 00:07:06,860
+generate.
+
+116
+00:07:06,860 --> 00:07:09,470
+And we could, of course, see that the column that I just
+
+117
+00:07:09,470 --> 00:07:15,260
+computed here, and let me color it in red,
+
+118
+00:07:15,260 --> 00:07:18,590
+it's the same exact as the EPS that we've computed here
+
+119
+00:07:18,590 --> 00:07:21,710
+by using this expression.
+
+120
+00:07:21,710 --> 00:07:23,960
+You can see that this is just mechanically happens
+
+121
+00:07:23,960 --> 00:07:26,570
+because we're just--
+
+122
+00:07:26,570 --> 00:07:31,160
+once this investment generates the EPS of 3.20 in the first
+
+123
+00:07:31,160 --> 00:07:33,860
+year, in Year 2, we're continuing adding it up
+
+124
+00:07:33,860 --> 00:07:37,580
+because we are writing down those recursive relationship.
+
+125
+00:07:37,580 --> 00:07:40,520
+And so therefore this equation does make sense.
+
+126
+00:07:40,520 --> 00:07:45,320
+But this was just to illustrate that these new investments,
+
+127
+00:07:45,320 --> 00:07:48,710
+indeed, generate perpetual earnings.
+
+128
+00:07:48,710 --> 00:07:53,210
+And this is how we are computing the EPS in year t plus 1
+
+129
+00:07:53,210 --> 00:07:55,400
+and relating it to EPS in the year t.
+
+130
+00:07:55,400 --> 00:07:57,830
+And this equation is indeed giving us
+
+131
+00:07:57,830 --> 00:08:00,740
+the correct earnings per share given the assumptions
+
+132
+00:08:00,740 --> 00:08:02,940
+that we made in this model.
+
+133
+00:08:02,940 --> 00:08:07,440
+Finally, let us compute the share price.
+
+134
+00:08:07,440 --> 00:08:09,710
+We could see that starting from Year 4,
+
+135
+00:08:09,710 --> 00:08:12,350
+the dividends are constant.
+
+136
+00:08:12,350 --> 00:08:15,320
+And therefore from Year 4 onwards,
+
+137
+00:08:15,320 --> 00:08:18,710
+this is just a simple perpetuity.
+
+138
+00:08:18,710 --> 00:08:20,780
+So for example, we can start by finding the share
+
+139
+00:08:20,780 --> 00:08:23,270
+price in Year 9.
+
+140
+00:08:23,270 --> 00:08:27,820
+So I will take the dividends in Year 10
+
+141
+00:08:27,820 --> 00:08:29,510
+and I'll just divide it by r.
+
+142
+00:08:29,510 --> 00:08:33,522
+This is our discount rate.
+
+143
+00:08:33,522 --> 00:08:34,980
+Again, this is just because this is
+
+144
+00:08:34,980 --> 00:08:38,480
+a perpetuity and the current share price or share
+
+145
+00:08:38,480 --> 00:08:41,570
+price in the Year 9 is the present value
+
+146
+00:08:41,570 --> 00:08:44,660
+of all of the dividends the start from Year 10.
+
+147
+00:08:44,660 --> 00:08:46,280
+And because this is a perpetuity,
+
+148
+00:08:46,280 --> 00:08:51,680
+this is the value of share in the Year 9.
+
+149
+00:08:51,680 --> 00:08:56,780
+And then we can just backfill that all the way to Year 0
+
+150
+00:08:56,780 --> 00:08:58,830
+by doing this.
+
+151
+00:08:58,830 --> 00:09:02,540
+So for example, in Year 8, what would be the share price?
+
+152
+00:09:02,540 --> 00:09:05,720
+Well, the share price would be the dividends
+
+153
+00:09:05,720 --> 00:09:10,130
+that we get in Year 9 plus the share price
+
+154
+00:09:10,130 --> 00:09:16,820
+it will be in Year 9 discounted by one year to Year 8.
+
+155
+00:09:16,820 --> 00:09:19,850
+So I can just write down this fundamental relationship
+
+156
+00:09:19,850 --> 00:09:27,260
+between the price of one share in Year 8 and Year 9.
+
+157
+00:09:27,260 --> 00:09:29,000
+So of course, not surprisingly, it
+
+158
+00:09:29,000 --> 00:09:31,550
+has to be the same, because there was an alternative way,
+
+159
+00:09:31,550 --> 00:09:35,510
+we could have just written down the same perpetuity present
+
+160
+00:09:35,510 --> 00:09:38,610
+value formula and it will have given us the same answer.
+
+161
+00:09:38,610 --> 00:09:40,410
+So that all makes sense.
+
+162
+00:09:40,410 --> 00:09:43,070
+But what this allows me to do is that this just
+
+163
+00:09:43,070 --> 00:09:46,760
+allows me to stretch this array all the way to 0.
+
+164
+00:09:46,760 --> 00:09:50,600
+And this will automatically compute the share price for me.
+
+165
+00:09:50,600 --> 00:09:53,780
+Because again, what I'm doing is that in every year,
+
+166
+00:09:53,780 --> 00:09:57,632
+for example, in the Year 1, the way I'm comparing the share
+
+167
+00:09:57,632 --> 00:09:59,090
+price, I'm taking the dividend they
+
+168
+00:09:59,090 --> 00:10:02,990
+will get in Year 2 and the share price that will be in Year 2
+
+169
+00:10:02,990 --> 00:10:05,030
+and then I'm just discounting it to Year 1.
+
+170
+00:10:05,030 --> 00:10:07,970
+So because this is, again, fundamental relationship
+
+171
+00:10:07,970 --> 00:10:12,740
+that ties the price right now with the dividend and the price
+
+172
+00:10:12,740 --> 00:10:15,110
+next period discounted to the period
+
+173
+00:10:15,110 --> 00:10:18,170
+before, this has to be correct.
+
+174
+00:10:18,170 --> 00:10:20,810
+And so therefore the current share price of the stock
+
+175
+00:10:20,810 --> 00:10:23,300
+is $177.02.
+
+176
+00:10:23,300 --> 00:10:26,000
+
+

@@ -1,0 +1,179 @@
+PROFESSOR: In this question, I will teach you
+how to find spot interest rates from given bond prices.
+In this question we're given three bonds--
+Bond A, Bond B, and Bond C. Bond A has 0% coupon
+and has one year until it matures.
+Bond B has a 3% coupon rate and has two years until it matures.
+And bond C has a 3.5% coupon rate
+and has three years until maturity.
+Bond prices are given as such.
+So Bond A costs $97.60 right now.
+Bond B costs $96.
+And Bond C costs $98.
+So the goal is to take this information
+about the bonds in green here and find spot interest
+rates for Years 1, 2, and 3.
+So this is the question.
+The first step that we'll do here
+is that we will write the prices of these bonds
+as the function of interest rates.
+So let's start with bond A.
+So the price of Bond A, PA would equal to $1 face value
+that this bond pays at the end of Year 1 divided
+by 1 plus interest rate r1.
+So this is the one-year spot interest rate.
+One thing to know here is that all of the bonds
+have $100 face value.
+And all of these bonds are risk free.
+So we are talking about spot interest rates, risk-free spot
+interest rates.
+So this is for bond A.
+The next step is to write the price
+as the function of the coupon and interest rates for bond B.
+So Bond B has two years until maturity and pays 3% coupon.
+This means that if we are the holder of this bond
+we will get $3 at the end of year one, which
+is our first coupon.
+We'll get $3 at the end of year two, which
+is our second coupon.
+And then we will get the face value of $100 paid
+to us at the end of year two.
+So now what we do is we're discounting these coupon
+payments and the face value to present using
+the appropriate discount rates.
+So the first $3 we get at the end of Year 1.
+So therefore we're discounting it by discount rate r1.
+And the second payment, the last coupon in the face value,
+we're getting at the end of Year 2.
+And therefore, we're discounting it to present.
+We're using r2 as the discount rate.
+Hence power of 2 here because this payment
+comes at the end of Year 2.
+The final step is to do the same thing for Bond C.
+So the price of Bond C, this bond has three years
+until maturity, base coupon 3.5%, so 3.5 dollars
+discounted by 1 plus r1.
+So this is our first payment.
+Our second payment is the next coupon $3.50 discounted
+to present at discount rate r2 raised to the power of 2
+because this payment occurs in Year 2.
+And finally we get our last coupon
+at the end of year three.
+We get face value of this bond as well at the end Year 3.
+And we're discounting it to present
+using r3 as a discount rate.
+And we're raising it the power of 3
+because this payment occurs at the end of Year 3.
+Now the goal is to find spot interest rates r1, r2, and r3.
+I've written down the prices of these bonds right here.
+So they are given to us.
+So what we effectively have here is
+that we have a system of three equations with three unknowns.
+And notice that this is an easy system to solve in the sense
+that the first equation has only one unknown, r1.
+So we can solve this equation, plug this r1
+into the second equation, at which point
+this ratio will become known.
+And this will just become an equation with one unknown, r2.
+At which point we can solve this equation for r2,
+plug our known r1 and r2 into the last equation,
+and solve this last equation for r3.
+And so this is exactly what I'm going to do now.
+So I'm going to start solving the first equation for r1.
+So r1 is going to be equal to $100 divided by $97.50 minus 1.
+So this would give me the first spot interest rate, r1.
+So I solved this first equation for the first spot interest
+rate, r1.
+And the answer is r1 equals to 2.56%.
+Now the next step is to take this known r1
+and put it into the second equation.
+I've erased the third equation here right now so that I
+have more space to work here.
+So what I will do here is that I will plug this
+into this equation.
+And I will get the following.
+So I'll get 96 equals to $3 divided by 1
+plus 2.56% plus 103 divided by 1 plus r2 raised to power of 2.
+This is a known number that we can compute.
+And so this just becomes an equation
+with one unknown, which I can solve for r2.
+
+I just solved this equation for r2.
+So r2 equals to 5.2%.
+Now the last step is to find r3.
+So I've written down back the bond pricing
+equation that we had before for Bond C.
+And so right now what I will do is
+that I will take again r1 that we computed before
+and I will put it down here.
+And I will also do the new r2 that we found.
+And I'll put it into this last equation
+as well, at which point again this will become just one
+equation with one unknown.
+So let's do it.
+So $98 equals to 3 and 1/2, 1 plus 2.56% plus another 3.5,
+that's our second coupon, divided by 1 plus 5.2%
+squared plus 103.5 Divided by 1 plus r3 raised to power of 3.
+So this we can compute.
+This we can compute.
+And again, this just becomes one equation with one unknown.
+So the goal right now is to solve this equation for r3.
+So I just solved this equation for r3
+and I found that r3 equals to 4.22%.
+And that's how we find spot interest rates.
+So r1 equals to 2.56%.
+r2 equals to 5.2%.
+And r3 equals to 4.22%.
+This is the answer to this question.
+So this is how we find from given bond prices.
+This is how we find spot interest rates.
+When we start with finding the closest or the shortest
+interest rate from the first given bond and then
+we continue working and finding the second
+and the third interest rate.
+So if we're given a fourth bond and we were given four periods,
+we would continue doing that, and just solving this equation
+and stripping these spot interest rates.
+Now the last step what I will show
+is that I want to actually use this discount rate
+and make sure that I solve this question correctly in the sense
+that if I were to price those bonds using this term
+structure spot interest rates, that I would actually get
+the prices that we were given.
+And I will show this to you right now.
+So let's compute the prices given the interest
+rate that we just found.
+So the price of Bond A would equal to,
+again, it's a zero-coupon bond, one year to maturity.
+So it's $100 divided by 1 plus r1.
+So r1 right now equals to 2.56%.
+So if we compute this price of this Bond A,
+what we will find is that it equals to $97.50.
+The price of Bond B would equal to the first coupon,
+so $3 divided by 1 plus r1 which is
+2.56% plus the last coupon plus the face value
+divided by r2 which is 5.2% raised to the power of two
+because this cash flow occurs at the end of Year 2.
+So if we compute this price right now
+with this interest rate, what we will find
+is that the price of this bond is indeed
+$96, the number that was given to us in this question.
+Finally, the bond price C equals to the first coupon payment
+3.5 dollars because this bond, again, has 3.5% coupon rate,
+divided by 1 plus 2.56%.
+This is our r1.
+Second coupon, $3.50 divided by 1 plus the second discount
+rate, r2, Plus the last coupon payment,
+3.5 plus the face value received at the end of Year 3
+it's counted by 1 plus r3.
+That's 4.22% raised to the power of 3
+again because this cash flow occurs at the end of Year 3.
+So if we compute this price, we will find
+that it also equals to $98.
+So what we've done, we've confirmed
+that the discount rates that we've found from given bond
+prices, if we plug them back in and try
+to price those bonds with these discount rates,
+it will, indeed, find the numbers or the bond prices that
+were given in this question, which means that we have solved
+this question correctly.
