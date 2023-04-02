@@ -1,0 +1,322 @@
+PROFESSOR: Let's talk briefly about multivariate time series
+when there's more than one variable.
+We didn't do that in lecture this week.
+But there is a question on the P set.
+So I'd like to make sure everyone's ready to tackle it.
+Now, when there are many variables
+and they're interconnected, there are pretty much
+three things that could happen.
+One of them is you can solve it with the same techniques.
+You can do things recursively.
+And you certainly can do that with this problem.
+And maybe by brute force, you're fiddling around.
+You might see some interesting symmetries or simplifications.
+The second category of things that can't be solved at all.
+They're just complicated.
+And there's no special insight for them.
+And some phase like that, like the GARCH model,
+which I mentioned earlier, don't have simple solutions in terms
+of elementary functions.
+But the other category is when there are symmetries.
+And there are multiple variables to come in on an equal footing.
+And in that, there are some ways that we
+can reframe the equations that not only help us solve it,
+the numbers we got will be the same
+as with any other valid technique.
+But they give us a little bit of insight as to what's going on.
+So let me just remind you for the structure,
+I think we've got a problem here from this week.
+Let me just grab that.
+And let's expand it a bit--
+shall we?
+So we have two equations.
+We've got xt is lambda y.
+Oops, I'm sorry.
+We should have t minus 1--
+
+minus 1.
+And this should be minus 1.
+So we've got xt is lambda times t minus 1 plus sigma z.
+And then we have the same thing basically
+with x and y reversed.
+And we've given z and w.
+They're all independent of each other.
+But we've given them different letters.
+So we have x is related to a past y.
+Y is related to a past x.
+And certainly, we could substitute that
+and look at it recursively.
+But what's really going on in the dynamics?
+What's really going on is these equations
+say that x and y are jointly influenced
+by their past histories.
+Whatever happened in the past in x influences.
+Y, whatever happened in the past of y influences x.
+And, of course, then they cross over in the next time step,
+they go back and forth.
+So what it's saying is these two variables
+are really jointly working together.
+And they're processing information together
+as they go forward in time.
+So it's fine.
+And the z's and the w's are independent.
+They're just noise terms that show up
+new in each period of time.
+But what often happens when we have linear equations like this
+whether they're linear time series models like this one,
+whether they're linear differential equations,
+whether they're statistics for joint distributions
+of random variables in certain case,
+like jointly normal distributions,
+it turns out that we can analyze this
+to identify certain linear combinations
+of our basic variables in terms of which the model,
+the dynamics all simplify.
+And it reduces to a bunch of uncoupled equation.
+That is to say if we start with N equations of this type--
+and maybe they're more complicated
+on the right-hand side.
+But the basic point is suppose we have N variables, not just
+two, x and y.
+So we've got x1, x2, x3.
+We've got a whole bunch of variables.
+And we have a linear structure where
+we have the x's at time t are related to the previous value
+plus some noise term.
+And maybe we could generalize from
+this autoregressive structure which
+is known as a VAR or vector autoregressive
+model to a more general ARMA type model or ARIMA model.
+But it's a linear structure that's of interest to us.
+So when we have this linear structure,
+one of the things we might look for
+is, is there a way to reduce N coupled equations
+down to N independent univariate equations
+with only one variable where that variable is
+a well-chosen linear combination of the starting variables.
+And then we are down to a problem
+that we've already solved.
+We solve it, and we transform the variables back.
+Now, this case is particularly easy.
+And I don't want to give away the answer.
+You can do it either by inspection and playing with it
+or by taking a look.
+But let me show you the general way that we can analyze this.
+
+So the first step is we'll define vector variable
+in terms of the old variable.
+And then at the end, we'll invert.
+we'll turn them back.
+Or you will.
+I'll just show you the general structure here today.
+So let's take a vector, xt, yt.
+And let's give it a new name.
+Instead of primes or other things,
+let me try some Greek letters.
+Let's just call it xi sub t.
+And I will sometimes put arrows.
+But often, I'll drop my arrows.
+So I hope-- that's one reason I went
+to pick different letters that from the context
+is clear which are vectors.
+And let's combine our noise terms zt and wt.
+And let's put them in a vector that we're going to call eta t.
+So in terms of these, what is our equation look like?
+Well, our structure of our equation
+is going to be such that we have xi_t,
+the vector, is going to be some matrix M times t,
+t minus 1 plus sigma times eta t.
+And what is the matrix M?
+Well, in this particular example, M is going to be a 2
+by 2 matrix, which has the form 0 lambda, lambda 0.
+
+When this matrix M here acts on this vector,
+you can see that it interchanges the x and y.
+It gives lambda-- excuse me-- x goes down.
+Y goes up.
+And then we have our basic equation.
+Here, this gives us the right-hand side
+of our original equation.
+So in terms of this structure, all we've done
+is we've used linear algebra notation.
+To rewrite it, we haven't done anything at all yet.
+We notice that M does have a particularly nice and symmetric
+form.
+But our task when we want to decouple things
+when we want to separate them and see what
+the real independent drivers are is
+to diagonalize or orthogonalize that.
+So diagonalize we can do in general
+by doing an eigenvalue decomposition.
+And in the case of a symmetric matrix,
+the eigenvectors that we find will be orthogonal.
+And what are these eigenvectors before we get there?
+What we're looking for is the eigenvectors
+are going to be particular combinations of x and y--
+our original x and y in terms of which the equations simplify
+and actually can be written as two
+independent one-variable equation.
+So we can do this if we had six variables,
+if we had 16 variables.
+We could take it and reduce it to that same number
+of independent linear equations.
+So let me just remind you of what those features are.
+So in general, we can diagonalize a matrix.
+We can diagonalize M, writing it in the form of v.
+And normally, I would call it lambda.
+But I've already used lambda.
+So let me call it gamma for our matrix
+of eigenvalues v minus 1.
+So v is a matrix whose columns are eigenvectors.
+
+And gamma is a diagonal matrix--
+eigenvalues.
+
+Now, take a moment--
+just look at the matrix M for a moment that we have right here
+and see if you can figure out what the eigenvalues
+and eigenvectors are.
+And then I'll write them down, and we can compare notes.
+So pause the video here, go take a look, and then come back.
+So the eigenvectors are 1, 1, and 1 minus 1.
+And they have eigenvalues lambda and minus lambda respectively.
+So to formalize that, what we do is we put them into a matrix.
+And we will normalize because they're orthogonal.
+We will normalize them with a Euclidean metric.
+Let's write that we have v is going to be the matrix
+1 over square root of 2 times 1 minus 1, 1, 1.
+It's inverse.
+It's an orthogonal matrix.
+It's just equal to the transpose.
+V minus 1 is going to be 1 over square root of 2.
+And that's just in this example.
+In general, it might be so much more complicated
+and by a matrix.
+1, 1.
+So this is just a nice 2 by 2 example.
+And gamma is going to be the matrix, the diagonal matrix,
+lambda 0--
+0 minus lambda.
+So this matrix V encodes each of the columns
+is an eigenvector of M. And you can check that.
+If you multiply M times that, you'll get lambda.
+If you take the M times the first column,
+you'll get lambda times the first column.
+If you take M times the first column,
+you'll get lambda times the first column.
+If you take M times the second column,
+you get minus lambda times the second column.
+So this is exactly what we need.
+And how do we use it?
+Well, let's just substitute it into our equation.
+So well, so here's our equation.
+And what we're going to do is we're going to write this M.
+We're going to substitute this eigenvalue decomposition-- v
+gamma v minus 1.
+So let's do that.
+And we will write that xi_t vector is going to be v gamma v
+minus 1 times t minus 1 plus sigma eta_t .
+And now, let's multiply the equation through by v minus 1.
+So we write v inverse xi_t on the left.
+
+And that's going to be equal to v inverse times v is just
+the identity matrix.
+So this is going to be gamma, which
+is a diagonal matrix times v minus 1,
+xi_t minus 1 plus sigma times v inverse times eta of t.
+So this is actually all we need.
+So now we're basically done.
+So we have two equations--
+the first and second components of this thing.
+Let's call-- let's give it a name.
+If we define-- now, I will use a prime.
+Let's call it xi_t prime to be v inverse times xi_t.
+
+Then we have two equations.
+
+We have the first component is going
+to be xi prime 1t is going to be lambda times
+xi prime 1 at t minus 1 plus sigma times eta
+prime 1, the first component.
+And our second component is going
+to be xi 2 prime at time t is going
+to be minus lambda, xi 2 at time t minus 1
+plus sigma times eta 2.
+So if you take the equations for v and you solve it
+and you plug it in, you can find that you can decouple
+these equations or other ones.
+And you can solve them that way.
+So this is a more general approach.
+Now, just so a recap and one further comment.
+So the first thing is that what we did is we looked for a way
+when the variables enter in such a way
+that the dynamics, the multiple equations-- but they're
+really doing is they're all the same kind of equation.
+They all have the same general structure.
+In this case, this vector autoregressive model
+is component by component.
+Each line is a AR type model.
+And the multiple equations just reshuffle the variable.
+So what we're going to do is unshuffle them,
+solve the equations, and then reshuffle the combinations back
+to get our final answers.
+So very straightforward.
+That way, we don't need any new or magical tricks.
+One thing that did make this particularly easy,
+however, was in addition to the way
+in which the variables entered and the coefficients were all
+very simple in this case, again, more generally,
+we'd have a general matrix, general eigenvalue
+decomposition.
+But also, it was full rank.
+And therefore, the M was invertable.
+So that was important.
+And also, the noise terms all entered
+with the single coefficient.
+So their coefficient was basically a diagonal matrix.
+And everything went through.
+When we look at other settings where
+we look at linear models in finance,
+for example, factor models of covariance in portfolio
+management and risk management-- we
+have two things that differ quite significantly.
+The first one is that the matrices we use in a factor
+model may be of lower rank.
+In fact, that's the entire benefit of factor models.
+What we want to do in that setting,
+unlike this particular setting, is
+we want to eliminate degrees of freedom.
+We want to describe the important risk
+drivers of a set of financial instruments
+in terms of common factors, which might
+be an overall market factor.
+It might be industry exposure.
+It might be other economic or financial variables.
+But the idea is to simplify to say
+that we have some common factors affecting many assets.
+Let's simplify the description.
+So we would expect to have matrices that
+are of less than full rank.
+On the other hand, the noise terms
+do need to have a matrix, which is full rank,
+because the noise terms are idiosyncratic.
+They are independent.
+So we may have these two differences,
+which is we may see that the matrices have different ranks.
+And we may see, in fact, that a lot of the way and the factor
+model setting and some of the structure that we
+see in the covariance matrix really
+is driven more by the noise terms
+than by the nonnoise terms.
+Here, they come in more or less on an equal footing
+and in this example where one matrix was
+the coefficient of the noise terms must diagonal.
+It made it rather simple to take a look at.
+So I hope this was helpful.
+And however you solve the problem,
+I hope you're always on the lookout
+for new ways and multiple ways to solve a problem not only so
+that you have multiple techniques, because generally,
+each new technique brings some different insights into what's
+going on with the underlying functions, data,
+and random processes.

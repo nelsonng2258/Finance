@@ -1,0 +1,688 @@
+0
+00:00:00,000 --> 00:00:01,210
+
+
+1
+00:00:01,210 --> 00:00:03,730
+PROFESSOR: Now let's look at sums of random variables.
+
+2
+00:00:03,730 --> 00:00:05,860
+And this is going to open the door
+
+3
+00:00:05,860 --> 00:00:09,460
+to our construction of discrete time stochastic processes.
+
+4
+00:00:09,460 --> 00:00:12,460
+We're going to use a basic property for probability,
+
+5
+00:00:12,460 --> 00:00:14,500
+that if we have random variables,
+
+6
+00:00:14,500 --> 00:00:17,680
+we can add them together to get new random variables.
+
+7
+00:00:17,680 --> 00:00:19,120
+We'll see that we'll do everything
+
+8
+00:00:19,120 --> 00:00:21,250
+in terms of the expectations, which
+
+9
+00:00:21,250 --> 00:00:24,100
+are going to be easy to compute using linearity.
+
+10
+00:00:24,100 --> 00:00:26,830
+And you're going to have really interesting behavior
+
+11
+00:00:26,830 --> 00:00:31,760
+as a function of the number of items in our sum.
+
+12
+00:00:31,760 --> 00:00:34,460
+So when we have several random variables,
+
+13
+00:00:34,460 --> 00:00:37,170
+we construct a new one just by adding them together.
+
+14
+00:00:37,170 --> 00:00:40,160
+So imagine I've got a collection of n random variables--
+
+15
+00:00:40,160 --> 00:00:45,500
+xyz, X1, X2, X3, X4 to the Xn, and I define their sum.
+
+16
+00:00:45,500 --> 00:00:47,750
+There are lots of other functions we could talk about.
+
+17
+00:00:47,750 --> 00:00:48,708
+We could take products.
+
+18
+00:00:48,708 --> 00:00:51,110
+We could do all kinds of polynomials
+
+19
+00:00:51,110 --> 00:00:52,910
+or transcendental functions, but we're
+
+20
+00:00:52,910 --> 00:00:55,430
+going to only be talking about the sum
+
+21
+00:00:55,430 --> 00:00:57,490
+of basic random variables.
+
+22
+00:00:57,490 --> 00:01:02,660
+Now in certain cases, we could ask what the full probability
+
+23
+00:01:02,660 --> 00:01:06,410
+distribution is S, in terms of the probability
+
+24
+00:01:06,410 --> 00:01:11,150
+distributions for X1, X2, X3 and up through Xn.
+
+25
+00:01:11,150 --> 00:01:13,360
+They have a definite probability distribution.
+
+26
+00:01:13,360 --> 00:01:17,400
+So that determines what happens with S.
+
+27
+00:01:17,400 --> 00:01:20,270
+But in many cases, we don't need to know
+
+28
+00:01:20,270 --> 00:01:24,200
+everything about S. We just need to know about its moments.
+
+29
+00:01:24,200 --> 00:01:26,870
+And those are easy.
+
+30
+00:01:26,870 --> 00:01:29,510
+They're easy because we can use linearity.
+
+31
+00:01:29,510 --> 00:01:32,120
+What we do is we apply the expectation operator
+
+32
+00:01:32,120 --> 00:01:37,190
+to the sum, and we see that the expectation of the sum is
+
+33
+00:01:37,190 --> 00:01:41,430
+the sum of the expectations of the individual X's.
+
+34
+00:01:41,430 --> 00:01:44,360
+So the full probability distribution
+
+35
+00:01:44,360 --> 00:01:46,160
+can be quite complicated.
+
+36
+00:01:46,160 --> 00:01:48,710
+But what we need to do is to get the mean value,
+
+37
+00:01:48,710 --> 00:01:52,010
+we just add the means of the individual variables.
+
+38
+00:01:52,010 --> 00:01:54,260
+Now due to the Central Limit Theorem,
+
+39
+00:01:54,260 --> 00:01:57,470
+this is actually often all we need,
+
+40
+00:01:57,470 --> 00:01:59,810
+because we get a tremendous amount out of this.
+
+41
+00:01:59,810 --> 00:02:05,120
+If we n is a large number, then the sum of random variables
+
+42
+00:02:05,120 --> 00:02:08,639
+is going to converge on a Gaussian random variable.
+
+43
+00:02:08,639 --> 00:02:11,150
+That's the distribution of S will approach a Gaussian
+
+44
+00:02:11,150 --> 00:02:16,110
+distribution, regardless of what the X initial distributions
+
+45
+00:02:16,110 --> 00:02:16,610
+are.
+
+46
+00:02:16,610 --> 00:02:19,700
+And we'll see that in just a moment in pictures,
+
+47
+00:02:19,700 --> 00:02:23,090
+and then in a subsequent video, I'll
+
+48
+00:02:23,090 --> 00:02:25,190
+show you how you can derive that.
+
+49
+00:02:25,190 --> 00:02:27,860
+
+
+50
+00:02:27,860 --> 00:02:29,740
+But let's take a look first, at where
+
+51
+00:02:29,740 --> 00:02:31,900
+we might apply this sum of random variables
+
+52
+00:02:31,900 --> 00:02:33,320
+in financial terms.
+
+53
+00:02:33,320 --> 00:02:35,800
+So one case is when we look at portfolios.
+
+54
+00:02:35,800 --> 00:02:39,400
+So suppose we have a portfolio that consists of N assets.
+
+55
+00:02:39,400 --> 00:02:43,720
+And let's let w represent the weight of asset,
+
+56
+00:02:43,720 --> 00:02:45,640
+i, within a portfolio.
+
+57
+00:02:45,640 --> 00:02:49,100
+So i runs 1, 2, 3, 4 through the number of assets we have.
+
+58
+00:02:49,100 --> 00:02:52,030
+Suppose we have stocks in the Dow Jones Industrial
+
+59
+00:02:52,030 --> 00:02:54,590
+average-- i would run from 1 through 30
+
+60
+00:02:54,590 --> 00:02:56,510
+and would be equal to 30.
+
+61
+00:02:56,510 --> 00:02:59,890
+Let's let r sub i be the return on that asset.
+
+62
+00:02:59,890 --> 00:03:02,600
+And let's think of it as being a random variable.
+
+63
+00:03:02,600 --> 00:03:04,510
+So each of the stocks is going to have
+
+64
+00:03:04,510 --> 00:03:07,690
+an independent probability distribution.
+
+65
+00:03:07,690 --> 00:03:10,150
+And each probability distribution
+
+66
+00:03:10,150 --> 00:03:14,740
+has a mu_i which is the expectation of R.
+
+67
+00:03:14,740 --> 00:03:18,550
+And it's got a variance, sigma i squared, which
+
+68
+00:03:18,550 --> 00:03:21,580
+is just a variance of the random variable, R_i
+
+69
+00:03:21,580 --> 00:03:23,050
+So what's a portfolio?
+
+70
+00:03:23,050 --> 00:03:26,280
+A portfolio is a weighted average of stocks.
+
+71
+00:03:26,280 --> 00:03:28,390
+So here our weights are not probabilities,
+
+72
+00:03:28,390 --> 00:03:33,460
+they're capital allocations to a portfolio so the rule
+
+73
+00:03:33,460 --> 00:03:36,700
+and this is just arithmetic that the return
+
+74
+00:03:36,700 --> 00:03:39,790
+on a portfolio the simple return on a portfolio in a given
+
+75
+00:03:39,790 --> 00:03:43,000
+period is the weighted average of the returns
+
+76
+00:03:43,000 --> 00:03:44,600
+on the individual assets.
+
+77
+00:03:44,600 --> 00:03:47,350
+So we've got this bilinear form.
+
+78
+00:03:47,350 --> 00:03:50,470
+We've got a linear combination of the returns--
+
+79
+00:03:50,470 --> 00:03:53,390
+w1R1 plus w2R2 and so on.
+
+80
+00:03:53,390 --> 00:03:56,060
+So we have a linear combination of random variables.
+
+81
+00:03:56,060 --> 00:03:59,530
+So it's not just a sum, it's a weighted average.
+
+82
+00:03:59,530 --> 00:04:01,420
+What's the expectation of R?
+
+83
+00:04:01,420 --> 00:04:04,000
+Well, that's the portfolio, mean return.
+
+84
+00:04:04,000 --> 00:04:07,480
+And the expectation of R using linearity,
+
+85
+00:04:07,480 --> 00:04:09,910
+is the weighted average of the expectations
+
+86
+00:04:09,910 --> 00:04:12,010
+of the individual stock returns.
+
+87
+00:04:12,010 --> 00:04:16,420
+No surprise-- the expected return on the portfolio
+
+88
+00:04:16,420 --> 00:04:18,970
+is the weighted average of the expected return
+
+89
+00:04:18,970 --> 00:04:20,600
+of the individual stocks.
+
+90
+00:04:20,600 --> 00:04:25,180
+So that's a case where we don't know what the full return
+
+91
+00:04:25,180 --> 00:04:26,290
+distribution is.
+
+92
+00:04:26,290 --> 00:04:28,900
+But we've related the mean of the portfolio
+
+93
+00:04:28,900 --> 00:04:31,750
+to the mean of the individual stocks.
+
+94
+00:04:31,750 --> 00:04:33,220
+What about the variance?
+
+95
+00:04:33,220 --> 00:04:36,610
+Well, if the variables were uncorrelated,
+
+96
+00:04:36,610 --> 00:04:37,760
+that would be one thing.
+
+97
+00:04:37,760 --> 00:04:40,870
+But that is not the case with most financial variables.
+
+98
+00:04:40,870 --> 00:04:43,760
+And certainly, it's not the case for asset returns.
+
+99
+00:04:43,760 --> 00:04:45,700
+So let's take a look at what happens
+
+100
+00:04:45,700 --> 00:04:47,340
+when we compute the variance.
+
+101
+00:04:47,340 --> 00:04:50,830
+What we'll see as we define the variance of our portfolio,
+
+102
+00:04:50,830 --> 00:05:05,230
+R_p Remember that R_p is just this weighted average.
+
+103
+00:05:05,230 --> 00:05:11,520
+So when we take a look at R_p minus mu_p
+
+104
+00:05:11,520 --> 00:05:15,570
+we can expand that out in terms of our individual stocks
+
+105
+00:05:15,570 --> 00:05:16,810
+in this way.
+
+106
+00:05:16,810 --> 00:05:18,990
+And if we expand out the quadratics--
+
+107
+00:05:18,990 --> 00:05:20,520
+so this is a quadratic.
+
+108
+00:05:20,520 --> 00:05:22,260
+We expand out all the terms and we
+
+109
+00:05:22,260 --> 00:05:25,330
+group them together, we get two kinds of terms.
+
+110
+00:05:25,330 --> 00:05:26,770
+We get diagonal terms.
+
+111
+00:05:26,770 --> 00:05:32,370
+We get an i with itself gives a set of n terms, w_i squared
+
+112
+00:05:32,370 --> 00:05:35,940
+times the expectation of R_i minus mu_i quantity squared
+
+113
+00:05:35,940 --> 00:05:39,960
+plus all the cross terms that come from i not equal to j.
+
+114
+00:05:39,960 --> 00:05:45,030
+These terms, you'll notice, are a weighting factor,
+
+115
+00:05:45,030 --> 00:05:51,570
+w_i squared, times the variance of stock, i.
+
+116
+00:05:51,570 --> 00:05:58,350
+And the cross terms give us for each i not equal to j or twice
+
+117
+00:05:58,350 --> 00:06:03,150
+for each i less than j, wiwj times the covariance
+
+118
+00:06:03,150 --> 00:06:04,470
+of R_i and R_j.
+
+119
+00:06:04,470 --> 00:06:06,060
+And that just comes from expanding
+
+120
+00:06:06,060 --> 00:06:09,030
+out the polynomial inside the expectation
+
+121
+00:06:09,030 --> 00:06:11,490
+here, and grouping the terms together.
+
+122
+00:06:11,490 --> 00:06:16,800
+We can rewrite these two terms in terms of sigma squared.
+
+123
+00:06:16,800 --> 00:06:19,860
+Sigma i squared is the variance of R_i.
+
+124
+00:06:19,860 --> 00:06:22,830
+And using our formula for the correlation,
+
+125
+00:06:22,830 --> 00:06:26,550
+we can relate the covariance to the correlation by noting that
+
+126
+00:06:26,550 --> 00:06:30,000
+the covariance is just sigma_i sigma_j ,
+
+127
+00:06:30,000 --> 00:06:32,100
+times the correlation of i with j,
+
+128
+00:06:32,100 --> 00:06:35,310
+which I've denoted here by rho_ij .
+
+129
+00:06:35,310 --> 00:06:38,820
+So you notice the structure of the formula that we have.
+
+130
+00:06:38,820 --> 00:06:42,420
+The return on the portfolio is quadratic.
+
+131
+00:06:42,420 --> 00:06:44,520
+Excuse me, the variance of the portfolio
+
+132
+00:06:44,520 --> 00:06:46,500
+is quadratic in the weights.
+
+133
+00:06:46,500 --> 00:06:50,700
+It has a term in w_i squared times the sigma is squared
+
+134
+00:06:50,700 --> 00:06:58,530
+for each of the stocks, plus twice w_iw_j, sigma_i sigma_j ,
+
+135
+00:06:58,530 --> 00:07:00,750
+rho_ij .
+
+136
+00:07:00,750 --> 00:07:03,030
+So if the stocks were uncorrelated,
+
+137
+00:07:03,030 --> 00:07:06,040
+we'd only have the first term.
+
+138
+00:07:06,040 --> 00:07:09,780
+And if the w's were 0, of course, this would vanish.
+
+139
+00:07:09,780 --> 00:07:13,630
+A couple of special cases of this are worth keeping in mind.
+
+140
+00:07:13,630 --> 00:07:16,020
+One of them is if the correlations
+
+141
+00:07:16,020 --> 00:07:20,200
+rho_ij were equal to 0, then we see we have the first term.
+
+142
+00:07:20,200 --> 00:07:24,840
+But notice that it becomes the sum of a bunch of squares.
+
+143
+00:07:24,840 --> 00:07:28,410
+On the other hand, if rho_ij in this expression,
+
+144
+00:07:28,410 --> 00:07:32,220
+if these were all equal to 1, then you
+
+145
+00:07:32,220 --> 00:07:34,470
+notice that this becomes an expression
+
+146
+00:07:34,470 --> 00:07:37,920
+for a perfect square.
+
+147
+00:07:37,920 --> 00:07:42,810
+If rho_ij is equal to 1, then the variance of the portfolio
+
+148
+00:07:42,810 --> 00:07:47,450
+is the weighted average squared.
+
+149
+00:07:47,450 --> 00:07:49,870
+So it's the square of the sum instead
+
+150
+00:07:49,870 --> 00:07:52,640
+of the sum of the squares.
+
+151
+00:07:52,640 --> 00:07:55,850
+Finally if the correlation were 0
+
+152
+00:07:55,850 --> 00:07:59,270
+and everything were the same-- all the stocks were the same.
+
+153
+00:07:59,270 --> 00:08:00,860
+They all had the same volatility.
+
+154
+00:08:00,860 --> 00:08:02,450
+They all had the same variance.
+
+155
+00:08:02,450 --> 00:08:06,050
+And the portfolio were equal weighted, what would we see?
+
+156
+00:08:06,050 --> 00:08:08,090
+Well, if the portfolio is equal weighted,
+
+157
+00:08:08,090 --> 00:08:11,000
+each stock will have weight 1/n.
+
+158
+00:08:11,000 --> 00:08:14,540
+If the sigmas are all equal, we can give them the name.
+
+159
+00:08:14,540 --> 00:08:18,140
+If the sigma i's are all equal, let's call it sigma 0.
+
+160
+00:08:18,140 --> 00:08:22,910
+And now, this formula here, if we bring it down and substitute
+
+161
+00:08:22,910 --> 00:08:26,180
+those in, we see it as a portfolio value becomes
+
+162
+00:08:26,180 --> 00:08:29,330
+sigma 0 squared divided by n.
+
+163
+00:08:29,330 --> 00:08:31,620
+That is we've got 1 over n squared.
+
+164
+00:08:31,620 --> 00:08:34,470
+But there are n identical terms in the sum.
+
+165
+00:08:34,470 --> 00:08:37,620
+So we get sigma 0 squared over n,
+
+166
+00:08:37,620 --> 00:08:41,750
+which means that the volatility of the portfolio
+
+167
+00:08:41,750 --> 00:08:46,740
+is proportional to 1 over square root of n.
+
+168
+00:08:46,740 --> 00:08:52,050
+That means that as n gets large, the volatility in the portfolio
+
+169
+00:08:52,050 --> 00:08:53,050
+goes down.
+
+170
+00:08:53,050 --> 00:08:55,710
+And this is the basic idea behind portfolio
+
+171
+00:08:55,710 --> 00:08:58,160
+diversification.
+

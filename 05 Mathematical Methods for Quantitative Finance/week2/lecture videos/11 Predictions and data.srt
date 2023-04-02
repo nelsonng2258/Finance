@@ -1,0 +1,976 @@
+0
+00:00:00,000 --> 00:00:02,560
+PROFESSOR: The random walk model that we've seen thus far
+
+1
+00:00:02,560 --> 00:00:04,480
+is a two-parameter model, as this
+
+2
+00:00:04,480 --> 00:00:05,860
+is our generalized random walk.
+
+3
+00:00:05,860 --> 00:00:09,590
+We have two parameters, mu and sigma, which are constant.
+
+4
+00:00:09,590 --> 00:00:11,860
+And that tells us how the returns get generated
+
+5
+00:00:11,860 --> 00:00:13,370
+in subsequent periods.
+
+6
+00:00:13,370 --> 00:00:15,520
+So one of the things about this model
+
+7
+00:00:15,520 --> 00:00:17,800
+is if we're to look at data and try to match returns
+
+8
+00:00:17,800 --> 00:00:20,170
+to this model, obviously, that means
+
+9
+00:00:20,170 --> 00:00:23,440
+that if mu and sigma really are the constants
+
+10
+00:00:23,440 --> 00:00:26,170
+and this really is the model, then it means that if we
+
+11
+00:00:26,170 --> 00:00:31,030
+observe, measure, and estimate the parameters, mu and sigma,
+
+12
+00:00:31,030 --> 00:00:33,680
+they should be the same in any time period we look at,
+
+13
+00:00:33,680 --> 00:00:36,700
+to within sampling error and statistical estimates.
+
+14
+00:00:36,700 --> 00:00:40,060
+So one way you could think of testing the model
+
+15
+00:00:40,060 --> 00:00:41,840
+is we could say, well, this is the model.
+
+16
+00:00:41,840 --> 00:00:43,390
+Let's do mu and sigma.
+
+17
+00:00:43,390 --> 00:00:44,890
+Can we estimate them?
+
+18
+00:00:44,890 --> 00:00:46,120
+Do we get constants?
+
+19
+00:00:46,120 --> 00:00:47,380
+Then we're done.
+
+20
+00:00:47,380 --> 00:00:49,300
+Well, that's a little bit too specific.
+
+21
+00:00:49,300 --> 00:00:52,360
+And it doesn't generalize quite as nicely.
+
+22
+00:00:52,360 --> 00:00:53,860
+So what we're going to do is we want
+
+23
+00:00:53,860 --> 00:00:58,180
+to look at quantifying how big the variations are, so we can
+
+24
+00:00:58,180 --> 00:01:02,110
+get an idea as to how significant departures might be
+
+25
+00:01:02,110 --> 00:01:05,740
+if there are any, and to give us some insight as to what
+
+26
+00:01:05,740 --> 00:01:07,330
+other directions might be available
+
+27
+00:01:07,330 --> 00:01:09,440
+and what might be driving the results.
+
+28
+00:01:09,440 --> 00:01:11,440
+So what we're going to do is we're
+
+29
+00:01:11,440 --> 00:01:15,700
+going to look at some properties of the random walk--
+
+30
+00:01:15,700 --> 00:01:18,610
+in particular, the way that the variance scales,
+
+31
+00:01:18,610 --> 00:01:21,250
+with time, which we've already seen for the pure random walk
+
+32
+00:01:21,250 --> 00:01:22,120
+model.
+
+33
+00:01:22,120 --> 00:01:24,070
+And we're going to apply that to data
+
+34
+00:01:24,070 --> 00:01:28,000
+by looking at aggregating data over different observation
+
+35
+00:01:28,000 --> 00:01:29,230
+frequencies.
+
+36
+00:01:29,230 --> 00:01:33,160
+And let's do that concretely with particular stock.
+
+37
+00:01:33,160 --> 00:01:35,650
+And the stock that I like to use for this example
+
+38
+00:01:35,650 --> 00:01:37,240
+is Tootsie Roll.
+
+39
+00:01:37,240 --> 00:01:40,295
+The Tootsie Roll company makes wonderful candies
+
+40
+00:01:40,295 --> 00:01:42,670
+that will stick to your teeth, and make your dentist very
+
+41
+00:01:42,670 --> 00:01:44,110
+happy, probably over time.
+
+42
+00:01:44,110 --> 00:01:45,640
+And you'll enjoy eating them.
+
+43
+00:01:45,640 --> 00:01:49,240
+But a couple of reasons why I picked Tootsie Roll-- but you
+
+44
+00:01:49,240 --> 00:01:52,400
+can and should pick your own company to do the same thing.
+
+45
+00:01:52,400 --> 00:01:55,540
+First of all, the company is founded in 1896,
+
+46
+00:01:55,540 --> 00:01:59,050
+and has one of the longest track records
+
+47
+00:01:59,050 --> 00:02:01,120
+for any publicly-traded company.
+
+48
+00:02:01,120 --> 00:02:04,630
+So most companies, even the most venerable ones eventually
+
+49
+00:02:04,630 --> 00:02:08,169
+end up either going out of business,
+
+50
+00:02:08,169 --> 00:02:10,660
+acquiring or being acquired by somebody else.
+
+51
+00:02:10,660 --> 00:02:13,540
+And it's unusual to find extremely long time series.
+
+52
+00:02:13,540 --> 00:02:15,190
+There are only handful of companies
+
+53
+00:02:15,190 --> 00:02:18,040
+that go back to the beginning of the 20th century.
+
+54
+00:02:18,040 --> 00:02:21,560
+And data providers usually don't go back before 1926.
+
+55
+00:02:21,560 --> 00:02:24,590
+But Tootsie Roll is one of them, so that's one good reason.
+
+56
+00:02:24,590 --> 00:02:26,770
+It also recently found popularity
+
+57
+00:02:26,770 --> 00:02:30,610
+with the wallstreetbets crowd on Reddit.
+
+58
+00:02:30,610 --> 00:02:33,380
+So if you want to look at some real challenges
+
+59
+00:02:33,380 --> 00:02:35,380
+to the random walk model, you should take a look
+
+60
+00:02:35,380 --> 00:02:36,490
+at the data from 2020.
+
+61
+00:02:36,490 --> 00:02:38,590
+So we're going to cut off a bit before that.
+
+62
+00:02:38,590 --> 00:02:41,350
+Because certainly, the madness of crowds
+
+63
+00:02:41,350 --> 00:02:43,115
+is a subject for a whole other course
+
+64
+00:02:43,115 --> 00:02:44,240
+that we can take a look at.
+
+65
+00:02:44,240 --> 00:02:46,670
+But if you want to test the null hypothesis,
+
+66
+00:02:46,670 --> 00:02:49,750
+I'll leave that data out of sample.
+
+67
+00:02:49,750 --> 00:02:51,910
+And you can try it out on more recent data.
+
+68
+00:02:51,910 --> 00:02:55,810
+And finally, one of the reasons I like Tootsie Roll is they
+
+69
+00:02:55,810 --> 00:03:00,580
+ran a famous add back in my childhood ages
+
+70
+00:03:00,580 --> 00:03:03,970
+ago, with an owl and animals in the forest.
+
+71
+00:03:03,970 --> 00:03:07,330
+But the owl was the wise one who was
+
+72
+00:03:07,330 --> 00:03:09,670
+able to answer the question-- how many licks
+
+73
+00:03:09,670 --> 00:03:13,300
+does it take to get to the center of a Tootsie Pop.
+
+74
+00:03:13,300 --> 00:03:15,820
+And you should go look at that video on YouTube
+
+75
+00:03:15,820 --> 00:03:18,880
+or on Tootsie Roll's corporate website if you can find it.
+
+76
+00:03:18,880 --> 00:03:24,250
+It's a great example of empirical science at work.
+
+77
+00:03:24,250 --> 00:03:28,707
+So the approach we're going to take, as I mentioned before,
+
+78
+00:03:28,707 --> 00:03:30,040
+is falling to other economists--
+
+79
+00:03:30,040 --> 00:03:34,120
+Andrew Lo and Craig MacKinlay, who tested the random
+
+80
+00:03:34,120 --> 00:03:38,620
+walk model on a variety of data in the late 1980s.
+
+81
+00:03:38,620 --> 00:03:43,720
+And their approach was to look at some general properties
+
+82
+00:03:43,720 --> 00:03:48,730
+that we would expect to find if the random walk model held,
+
+83
+00:03:48,730 --> 00:03:51,910
+scaling behavior and by looking at the variance.
+
+84
+00:03:51,910 --> 00:03:54,340
+And they were able to analyze data
+
+85
+00:03:54,340 --> 00:03:56,400
+and came up with some really interesting results.
+
+86
+00:03:56,400 --> 00:03:57,820
+So I want to show you what they did.
+
+87
+00:03:57,820 --> 00:04:00,070
+Give you some code to show you how you can do it yourself--
+
+88
+00:04:00,070 --> 00:04:02,360
+and we'll take a look at the results for one example,
+
+89
+00:04:02,360 --> 00:04:04,630
+for the case of Tootsie Roll stock.
+
+90
+00:04:04,630 --> 00:04:07,240
+Lo and MacKinlay applied this for individual stocks.
+
+91
+00:04:07,240 --> 00:04:09,550
+They looked across stock indices.
+
+92
+00:04:09,550 --> 00:04:12,040
+They looked at equal weighted, market cap weighted indices.
+
+93
+00:04:12,040 --> 00:04:17,110
+And I strongly recommend taking a look at their original paper,
+
+94
+00:04:17,110 --> 00:04:20,930
+after or before or alongside going through this.
+
+95
+00:04:20,930 --> 00:04:22,330
+So what were the elements?
+
+96
+00:04:22,330 --> 00:04:24,940
+They were looking at what's called a variance ratio
+
+97
+00:04:24,940 --> 00:04:28,480
+test, that we'll define in a moment, which
+
+98
+00:04:28,480 --> 00:04:31,960
+lets us get at the behavior of a random walk
+
+99
+00:04:31,960 --> 00:04:33,910
+in the following way-- we have a problem
+
+100
+00:04:33,910 --> 00:04:36,220
+if we were to apply the data.
+
+101
+00:04:36,220 --> 00:04:38,590
+The version that we saw, where we
+
+102
+00:04:38,590 --> 00:04:40,840
+saw that the variance of a random walk
+
+103
+00:04:40,840 --> 00:04:42,950
+grew linearly with time, is great.
+
+104
+00:04:42,950 --> 00:04:45,142
+If you look at longer and longer time periods.
+
+105
+00:04:45,142 --> 00:04:47,350
+But if we think about doing that with financial data,
+
+106
+00:04:47,350 --> 00:04:49,350
+we immediately see that there's a problem, which
+
+107
+00:04:49,350 --> 00:04:52,870
+is something might have changed in the market.
+
+108
+00:04:52,870 --> 00:04:56,530
+It's not the same data if this were
+
+109
+00:04:56,530 --> 00:04:59,080
+generated from a random number generator and a Monte Carlo.
+
+110
+00:04:59,080 --> 00:05:01,030
+Sure that would work.
+
+111
+00:05:01,030 --> 00:05:03,520
+But we have a lot of different potential things
+
+112
+00:05:03,520 --> 00:05:10,480
+that might come into play if we look at 1896 to 2000.
+
+113
+00:05:10,480 --> 00:05:13,570
+And then the next 20 years and the next 50 years and so on,
+
+114
+00:05:13,570 --> 00:05:14,920
+a lot of economic things change.
+
+115
+00:05:14,920 --> 00:05:17,770
+And perhaps we don't need to assume
+
+116
+00:05:17,770 --> 00:05:20,260
+that over the entire period that everything was random.
+
+117
+00:05:20,260 --> 00:05:22,460
+There might be over some period.
+
+118
+00:05:22,460 --> 00:05:25,030
+So the idea that Lo and MacKinlay applied
+
+119
+00:05:25,030 --> 00:05:29,410
+was to look at the variance over random walks
+
+120
+00:05:29,410 --> 00:05:32,920
+of different lengths taken not by extending the time period,
+
+121
+00:05:32,920 --> 00:05:35,260
+but by increasing the observation frequency.
+
+122
+00:05:35,260 --> 00:05:38,620
+That is they subdivided into smaller and smaller chunks
+
+123
+00:05:38,620 --> 00:05:43,030
+so they could look at one month returns, one week returns, one
+
+124
+00:05:43,030 --> 00:05:44,300
+day returns, and so on.
+
+125
+00:05:44,300 --> 00:05:46,750
+In the case of Lo and MacKinlay, they did weeks.
+
+126
+00:05:46,750 --> 00:05:48,640
+Conversely, we could aggregate up.
+
+127
+00:05:48,640 --> 00:05:51,730
+So we could think of a base observation frequency.
+
+128
+00:05:51,730 --> 00:05:54,130
+I'll use daily frequencies.
+
+129
+00:05:54,130 --> 00:05:55,720
+Lo and MacKinlay used weekly.
+
+130
+00:05:55,720 --> 00:05:57,850
+And we could say what happens if I compute
+
+131
+00:05:57,850 --> 00:06:01,570
+using one day, if I compute using two days, four days,
+
+132
+00:06:01,570 --> 00:06:03,430
+15-day periods, and so on.
+
+133
+00:06:03,430 --> 00:06:07,060
+And in each case, if the observation period
+
+134
+00:06:07,060 --> 00:06:09,070
+gets longer and is more coarse grained,
+
+135
+00:06:09,070 --> 00:06:11,350
+that there will be fewer returns in the sum.
+
+136
+00:06:11,350 --> 00:06:13,090
+So that will give us some behavior,
+
+137
+00:06:13,090 --> 00:06:15,310
+and let's just do the arithmetic and we'll see.
+
+138
+00:06:15,310 --> 00:06:17,120
+And then we'll compare it with the data.
+
+139
+00:06:17,120 --> 00:06:22,570
+So what we'll do is we'll construct a test that nicely
+
+140
+00:06:22,570 --> 00:06:25,090
+eliminates a lot of things that we don't really
+
+141
+00:06:25,090 --> 00:06:27,640
+want to worry about from real world market and the data.
+
+142
+00:06:27,640 --> 00:06:32,240
+And then we'll compare and see what the consequences are.
+
+143
+00:06:32,240 --> 00:06:34,100
+So let's first look at some of the data.
+
+144
+00:06:34,100 --> 00:06:37,450
+So I've gotten this data from Yahoo Finance.
+
+145
+00:06:37,450 --> 00:06:43,000
+in R using the tidyquant package and the tq_get() function.
+
+146
+00:06:43,000 --> 00:06:44,560
+You can pull this data in, or you
+
+147
+00:06:44,560 --> 00:06:48,050
+can download it and do the same thing in Excel if you want.
+
+148
+00:06:48,050 --> 00:06:48,980
+But let's take a look.
+
+149
+00:06:48,980 --> 00:06:52,090
+Here's an example of recent period
+
+150
+00:06:52,090 --> 00:06:57,610
+of prices for Tootsie Roll stock, ending through 2017.
+
+151
+00:06:57,610 --> 00:07:00,850
+As I mentioned, we're leaving out the Reddit period.
+
+152
+00:07:00,850 --> 00:07:05,320
+If I compute the log returns from the successive price
+
+153
+00:07:05,320 --> 00:07:10,360
+differences on a daily level and I plot their time series,
+
+154
+00:07:10,360 --> 00:07:12,880
+I get this graph of differences, differences
+
+155
+00:07:12,880 --> 00:07:14,600
+of the logs over here.
+
+156
+00:07:14,600 --> 00:07:17,000
+And what we can see is a few interesting features--
+
+157
+00:07:17,000 --> 00:07:20,470
+and this is typical of all sorts of stock returns.
+
+158
+00:07:20,470 --> 00:07:21,700
+You should try this out.
+
+159
+00:07:21,700 --> 00:07:24,250
+First of all, it's noisy.
+
+160
+00:07:24,250 --> 00:07:25,720
+There are a lot of ups and downs.
+
+161
+00:07:25,720 --> 00:07:28,690
+Although the first graph on the left looks like Tootsie Roll
+
+162
+00:07:28,690 --> 00:07:31,180
+had a very successful period in this.
+
+163
+00:07:31,180 --> 00:07:33,190
+And the stock price rose a lot.
+
+164
+00:07:33,190 --> 00:07:35,260
+If we look at it day-by-day level, what we see
+
+165
+00:07:35,260 --> 00:07:36,140
+is lots of noise.
+
+166
+00:07:36,140 --> 00:07:38,050
+There lots of ups and downs.
+
+167
+00:07:38,050 --> 00:07:41,020
+If we even try to look at what the mean is,
+
+168
+00:07:41,020 --> 00:07:43,060
+if we try to eyeball and draw a line through it,
+
+169
+00:07:43,060 --> 00:07:46,210
+the line you see through it is the origin .
+
+170
+00:07:46,210 --> 00:07:49,270
+It's hard to say that the mean is
+
+171
+00:07:49,270 --> 00:07:50,680
+significantly different from 0.
+
+172
+00:07:50,680 --> 00:07:53,020
+And that's typically true on a one-day level
+
+173
+00:07:53,020 --> 00:07:55,400
+at high frequencies, financial data,
+
+174
+00:07:55,400 --> 00:07:56,950
+it's very difficult to discern what
+
+175
+00:07:56,950 --> 00:08:00,940
+the mean return is that will aggregate over
+
+176
+00:08:00,940 --> 00:08:02,380
+a long period of time.
+
+177
+00:08:02,380 --> 00:08:05,110
+But then we also notice that there are these spikes.
+
+178
+00:08:05,110 --> 00:08:07,450
+This is really not uniform volatility.
+
+179
+00:08:07,450 --> 00:08:09,940
+It doesn't look like uniform randomness.
+
+180
+00:08:09,940 --> 00:08:14,000
+And to compare that, look behind me at this graph here.
+
+181
+00:08:14,000 --> 00:08:17,800
+This shows a simulated white noise process.
+
+182
+00:08:17,800 --> 00:08:19,480
+White noise just means that we're
+
+183
+00:08:19,480 --> 00:08:24,010
+drawing from a random, normal distribution
+
+184
+00:08:24,010 --> 00:08:25,788
+with constant volatility.
+
+185
+00:08:25,788 --> 00:08:28,330
+And you can see that there's a pretty clear envelope function
+
+186
+00:08:28,330 --> 00:08:33,740
+here that's at around say, the equivalent of plus or minus
+
+187
+00:08:33,740 --> 00:08:35,330
+say, three standard deviation.
+
+188
+00:08:35,330 --> 00:08:37,840
+So I've normalized this graph on the right
+
+189
+00:08:37,840 --> 00:08:42,280
+to have the volatility equal to the empirical volatility
+
+190
+00:08:42,280 --> 00:08:43,270
+of Tootsie Roll.
+
+191
+00:08:43,270 --> 00:08:46,480
+So just kind of intuitively looking at the two,
+
+192
+00:08:46,480 --> 00:08:48,430
+does Tootsie Roll look like the random walk?
+
+193
+00:08:48,430 --> 00:08:50,300
+Those graphs look kind of different.
+
+194
+00:08:50,300 --> 00:08:53,350
+But obviously, that's not enough to make a definitive statement,
+
+195
+00:08:53,350 --> 00:08:56,770
+much less to tell us if a random walk isn't good,
+
+196
+00:08:56,770 --> 00:09:00,350
+what might be a better model for Tootsie Roll.
+
+197
+00:09:00,350 --> 00:09:01,910
+We can look at summary statistics.
+
+198
+00:09:01,910 --> 00:09:04,250
+And I've got a bunch of them here in R,
+
+199
+00:09:04,250 --> 00:09:08,300
+including ranges for the values over time.
+
+200
+00:09:08,300 --> 00:09:10,790
+And we can take a look at the distribution
+
+201
+00:09:10,790 --> 00:09:12,090
+for the statistics.
+
+202
+00:09:12,090 --> 00:09:13,880
+So we've got numbers overall.
+
+203
+00:09:13,880 --> 00:09:19,460
+For example, over time, the mean annualized return is 8 and 1/2%
+
+204
+00:09:19,460 --> 00:09:22,340
+with the volatility of 24%--
+
+205
+00:09:22,340 --> 00:09:24,950
+kind of typical numbers for a stock.
+
+206
+00:09:24,950 --> 00:09:27,650
+The histogram, we can take a look at--
+
+207
+00:09:27,650 --> 00:09:28,800
+how does it look to you?
+
+208
+00:09:28,800 --> 00:09:30,770
+So we've go, it's a single peak.
+
+209
+00:09:30,770 --> 00:09:33,500
+It's humped.
+
+210
+00:09:33,500 --> 00:09:35,480
+See if we can get that back, I'm sorry.
+
+211
+00:09:35,480 --> 00:09:38,090
+So it has a single peak.
+
+212
+00:09:38,090 --> 00:09:39,750
+It's humped in the middle.
+
+213
+00:09:39,750 --> 00:09:43,480
+Notice it looks kind of narrow and peaky, not nice
+
+214
+00:09:43,480 --> 00:09:46,610
+and rounded like a typical Gaussian distribution.
+
+215
+00:09:46,610 --> 00:09:49,310
+It has fat tails, which don't show up here
+
+216
+00:09:49,310 --> 00:09:51,470
+because the tails are really small.
+
+217
+00:09:51,470 --> 00:09:54,500
+But you might have heard of fat tail distribution.
+
+218
+00:09:54,500 --> 00:09:58,400
+A corollary of distributions, since the probability has
+
+219
+00:09:58,400 --> 00:10:00,740
+to sum to 1, is that if they've got fat tails,
+
+220
+00:10:00,740 --> 00:10:02,660
+then they also have to have thin middles.
+
+221
+00:10:02,660 --> 00:10:04,610
+There's less probability in the middle
+
+222
+00:10:04,610 --> 00:10:06,050
+than you would otherwise.
+
+223
+00:10:06,050 --> 00:10:08,990
+Notice that it is roughly symmetric.
+
+224
+00:10:08,990 --> 00:10:13,190
+That is upside and downside returns are about the same.
+
+225
+00:10:13,190 --> 00:10:15,748
+And we look at returns, not prices.
+
+226
+00:10:15,748 --> 00:10:16,790
+Why do you think that is?
+
+227
+00:10:16,790 --> 00:10:21,580
+
+
+228
+00:10:21,580 --> 00:10:24,640
+You can try it, and take a look at the price distribution.
+
+229
+00:10:24,640 --> 00:10:29,020
+The reason that we expect that the return distribution,
+
+230
+00:10:29,020 --> 00:10:33,190
+from an investment perspective, is likely to be stationary.
+
+231
+00:10:33,190 --> 00:10:36,610
+That is the price levels are not, or shouldn't
+
+232
+00:10:36,610 --> 00:10:38,470
+be important to investors.
+
+233
+00:10:38,470 --> 00:10:40,290
+What matters is the return that you have.
+
+234
+00:10:40,290 --> 00:10:43,510
+So if the initial price is $10 or $100 or $1,000,
+
+235
+00:10:43,510 --> 00:10:44,590
+it shouldn't matter.
+
+236
+00:10:44,590 --> 00:10:47,530
+The price levels will depend on the actual history
+
+237
+00:10:47,530 --> 00:10:50,080
+of the stock, and where it started out and where it went.
+
+238
+00:10:50,080 --> 00:10:54,550
+Whereas in the case that we're especially interested in here
+
+239
+00:10:54,550 --> 00:11:00,092
+for, random walk-type behavior, the returns
+
+240
+00:11:00,092 --> 00:11:02,300
+are always going to be independent of where we start.
+
+241
+00:11:02,300 --> 00:11:06,040
+So prices would just introduce a lot of artifacts of history,
+
+242
+00:11:06,040 --> 00:11:08,800
+whereas the returns tell us what's actually going on.
+
+243
+00:11:08,800 --> 00:11:12,720
+And as I said, they are what's interesting for the investors.
+

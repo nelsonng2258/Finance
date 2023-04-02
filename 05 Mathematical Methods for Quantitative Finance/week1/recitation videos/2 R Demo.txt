@@ -1,0 +1,286 @@
+
+PROFESSOR: Let's take a look together
+at the code for simulating the scaling
+of the binomial distribution in R. You can install RStudio.
+It's freely available for PCs, for Macs, for Linux.
+And when you install it and you open it up,
+you should see something like this.
+So there are four panes.
+On the left-hand side, on the lower left
+is the console area, which is where we'll type commands
+interactively.
+On the upper part is where you'll see source files.
+And this is the code that is in the slides
+as during recitation.
+On the lower right is where plots will show up,
+where help information is given, where you can see list
+of installed packages that are part
+of your particular installation.
+And on the upper right is where you can see the variables
+you've created.
+So let's take a look through the code one step at a time,
+run it together.
+You should do this along with me, or after watching
+this short video.
+And go in and tweak the code.
+Tweak the parameters.
+Run it yourself.
+You should get your hands on with the code.
+Try it out.
+There's nothing special about R, necessarily.
+But it's a great language to learn.
+It's very practical.
+If you don't know it, now is a great chance to learn.
+And in the finance industry, you will
+find that while people may have all kinds of different opinions
+about what the pros and cons are of different computational
+environments, usually on the job, you don't get to choose--
+or even if you're in charge, you'll
+eventually have to interface with the counterparty who's
+going to have another choice.
+So it's always good to know new languages,
+to keep the ideas separate from the particular code
+implementations, and ready to pick things up and try them
+out, particularly when you've got a problem
+to try as, you do here.
+So let's do this together.
+Anyway, so let's go through a demonstration.
+So the first thing, which is a bit R-specific,
+is I'm going to define a list of values that I want to try.
+So nlist is going to be the name of my variable.
+The left assignment arrow, the less than dash,
+you can use in the equation.
+That works fine.
+That's a symbolic thing, and it's conventional in R.
+And then the c operator concatenates the list operator.
+It creates them.
+So my list consists, instead of going every step, one, two,
+three, four, five, up through 1,000.
+I just picked some convenient samples.
+In RStudio, I can take this--
+I certainly could take this line,
+and I can type it in the lower part and run it.
+And if I type n list, I'll get my values out.
+And you notice that in my list of my environment variables,
+it showed up here in the upper right.
+However, if we're working with code,
+and you've got more than just a couple of lines interactively,
+you may find it helpful as I do to open a new window for an R
+script as a scratchpad.
+Or in more structured examples, in R notebook.
+Keep them up here, and then if you
+want to run something that's highlighted up here,
+you can highlight one or more lines of code.
+Click on run, and it will run your selection.
+So let's take a look for those values of n,
+I'm going to define my probability to be 10%.
+And we can change that in a moment.
+And then I've got a for loop.
+So the for loop is going to take n
+to run through all the values in the list.
+And then the contents of the for loop are enclosed in brackets.
+So white space is not important.
+Unlike Python, indentation is just
+for the convenience of user.
+It's not read by the language.
+So everything between those two brackets
+is repeated within the for loop.
+I'm going to go let k go from 0 to n
+is going to be a list of all the integers.
+If you want to see what that looks like,
+if you just type 0 to--
+oops, 0 to 5, it will give you the value 0 to 5.
+Or 0 to 12.
+It will give you 0 to 12.
+So what we're doing is for each value of n--
+so for n trials, we're going to let k go from 0 successes up
+through all of them being successes.
+You could think of the number of heads
+in n flips of a biased coin.
+And then we're going to compute the probability for each one
+from the binomial distribution.
+Now this is a built-in function in R.
+And if you want to take a look at what it is for any function,
+you can type question mark dbinom to get the description.
+Or over here in the help panel, you
+can just type in what you want.
+So if you want to see for any other distribution,
+for the data distribution or so on, you can get its details.
+So this is all the details you need
+for the binomial distribution along with some examples
+and some references.
+So we're going to use binomial distribution.
+The conventions are the same ones that we use.
+F will be our distribution function.
+K is the number of successes.
+N is the total number of trials.
+P is the probability of success.
+Then having done that, we just need to draw some pictures.
+So we'll use the bar plot command,
+and you can read about that here.
+I'm going to use, for now, the basic base package r commands.
+There's other popular packages, like ggplot,
+which have much more sophisticated and interesting
+aesthetic options.
+But we'll just get our base results for right now.
+So the barplot is going to plot the values of f.
+It's going to plot the names label--
+is going to give the labels that correspond to each bar.
+And then xlab and ylab are the labels
+on the plot for the x-axis and the y-axis labels.
+Main is the title of the graph.
+And this paste command concatenates
+a bunch of string variables and numbers
+together, so that we can get numerical values on our plot.
+And then readline() is just a pause command.
+It waits for input at the keyboard,
+so that we can build the graph successively, as I showed you.
+So let's take this whole thing.
+I'm going to select all of this text.
+I can include the comment.
+And I'm going to hit Run.
+And now, down at the bottom, it's
+waiting for me to hit a key.
+So if I want to expand this graph so it fills up
+the whole thing, these little icons over here will expand it.
+If I want to see both of those at the same time, I can do it.
+And I can resize the window between them.
+For right now, let's make this big.
+Let me resize this to give us a little more room.
+So what we can see here is two plots.
+I've done one trial.
+There's 10% probability of success.
+Therefore, the chance of zero successes is 90%.
+The chance of one success is 10%.
+No surprise there.
+Now I'm going to click, put focus in the lower right,
+and hit return.
+And it draws the next.
+So this is incremented by 1.
+So now we're looking at n equals 2.
+There are two trials.
+I could have zero, one, or two successes.
+The probabilities are 81%, 0.9 squared, down to 1%
+for the chance of getting two successes.
+If we keep going, these are the different values.
+And as I hit return each time, you
+see the graph drawn in the way that we did in class.
+OK, so I can go all the way to the end.
+Now if you want, you can go in, and you
+can pick a different number.
+You could pick that this could be, let's say 30%.
+And rerun the whole thing to your heart's content.
+
+And if we rerun this now, we have-- that's for one,
+two, five, 10, 20, 50, 100.
+And you see the features we saw in class, which are,
+we started with an asymmetric distribution.
+And we're getting something which is actually fairly
+symmetric about the mean.
+It's also looking pretty Gaussian, isn't it?
+We'll see in a moment how we can rescale the variables to get
+the true universality behavior that we expect
+from the central limit theorem.
+Keep in mind that whenever we're running a numerical simulation
+now, whenever we think about either using a random number
+generator to get Gaussian variables or looking
+at the relationship between binomial,
+binomial tree models and Gaussian distributions,
+the binomial distribution with a finite number of steps cannot
+go from minus infinity to infinity.
+Can't go negative at all.
+And in this case, the maximum value that we could have
+would be 100.
+Given that the probability of being in the tails
+becomes very, very small very quickly,
+we wouldn't see that on the graph.
+But remember, in finance we often care about rare events.
+And getting the probability of rare events
+wrong on a picture like this might not seem that big a deal.
+It's a rounding error in the number
+of pixels in the corners.
+But in finance, the consequences are often
+proportional to the distance away from the mean.
+So we frequently run into situations
+where we have events of interest that
+have very low probability but very high consequence.
+Multiplying the two together gives us
+an economically significant number.
+So we can't just look crudely at pictures on a graph like this.
+OK, so if we keep going, that's 1,000.
+Now let's take a look at our scaling variable.
+Remember what the basic idea was?
+We want to have the scaling variable, under which
+the distribution looks stable.
+It doesn't keep shifting around and moving to the side.
+And there's one thing that we might
+want to keep in mind, which is that we always
+have, for any random variable x, that where its moments exist,
+if we have x, and we can compute its expectation--
+let's give that a name.
+Call it mu, or x bar.
+And we can compute its variance, and let's assume
+that that exists also.
+And let's give it a name.
+Let's call it sigma squared.
+That if these are-- if mu and sigma are
+any numbers for our distribution,
+we know that for our binomial distribution,
+the mean is n times p.
+We know that the variance is n times p times q.
+But for any values of mu and sigma,
+we can take any variable x where mu and sigma exist,
+and define standardized variable.
+And we do it in a very trivial construction.
+Let's call it define z to be x minus the mean of x.
+Guess what?
+The mean of that variable by construction is 0.
+What about its variance?
+Well, its variance is going to be sigma squared.
+So let's just divide this by sigma.
+And if this is a definition, this variable z
+is always going to have 0 mean and unit variance.
+So let's go back to our example.
+And now let's look at our code for rescaling the sequence.
+In here, we're going to look at the same set of values.
+But now what we're going to do is, after we define k,
+we're going to define z to be a rescaled variable.
+That is we're going to take k, we're
+going to subtract its mean, and we're
+going to divide by the square root of the variance.
+And then we're going to plot the results.
+OK.
+I'm going to cut off--
+
+so we're going to cut off our graph
+at values of plus or minus 5, just so that we can see
+everything that we're doing.
+And now, if we take our list, let's run this again.
+Same commands.
+So this time z is going to be our scaled variable.
+F is going to be the binomial distribution,
+and let's take a look at the plot.
+So I've highlighted the text here.
+I'm going to hit run.
+Oops, let's make sure that we get that right.
+We need to highlight the entire thing, including
+the top definitions of those variables.
+So let's do that, and hit run.
+And you could run these one at a time or type them in.
+So here is, in terms of our scaling variable.
+So here we've got for n equals 1,
+and I've set p back to point 1.
+And now for n equals 2, n equals 5, n equals 10, n equals 20.
+And now you can see that within the same picture,
+our graph is staying centered.
+And as I get to larger and larger values,
+we see that we've reached the central value
+to be in the middle of the graph to be our rescaled variable
+equal to--
+centered around 0, around the mean value in terms
+of our rescale variable.
+And our shape is looking quite Gaussian.
+
+Try it out yourself.
+Change the numbers.
+And play with the code.

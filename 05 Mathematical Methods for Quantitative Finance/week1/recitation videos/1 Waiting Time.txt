@@ -1,0 +1,251 @@
+
+PROFESSOR: Finance involves a lot of uncertainty,
+and we use language of probability
+to model that uncertainty.
+The common distributions of finance occur in many ways,
+sometimes directly and more often
+as the building blocks for more complicated processes.
+So let's take a look at a couple of examples
+of how we compute expectations from distributions,
+how we can solve some interesting problems
+from some simple ones.
+And let's start thinking ahead already
+as we review probability to thinking about how we're
+going to use these basic tools of probability to describe
+processes that evolve over time, where
+we need to think about uncertainty
+over multiple horizons in the future
+and where information may arrive gradually
+from one point to another and get incorporated
+in our description.
+So our starting example, let's just think of a random variable
+x, a binomial random variable where I have probability
+p that we sometimes call success of getting
+a 1, probability q which is just shorthand for 1
+minus p of getting a 0.
+The typical question we ask and that we saw in lecture
+is, what's the probability of observing a fixed number,
+say, k successes out of a total number n of trials?
+So to do that, there are two common things we do.
+First, we ask for a given sequence,
+what would be its probability?
+Well, if there are k successes and there
+are n minus k failures, then the probability
+has to be p to the k q to the n minus k.
+Because the events are independent,
+our probabilities multiply.
+And then, there are a lot of different ways of doing that.
+How many?
+Well, we've got a sequence of n events.
+The 1's could be placed at any orders between them.
+The number is n choose k probabilistically,
+and this is the familiar binomial distribution,
+sometimes written k of n with parameter p,
+the probability for success.
+Now, suppose we ask a different question.
+Suppose we ask how long it would take us to observe success.
+That is, we don't know what n is in advance.
+We'd like n to be the outcome.
+So n is our random variable or we
+might call it T to think about a waiting time.
+So let's call T the waiting time.
+
+And that's how long we would need to wait for success.
+So what might happen?
+Well, we could have it happen on the first event.
+So we could have a T equals 1, we get a success,
+and that could happen with probability p.
+It could happen on our second trial.
+T equals 2.
+That is, we could fail it first--
+
+have a failure and then a success.
+And that would be probability q times p.
+Third trial, if it happened at T equals 3,
+we would have fail, fail, succeed.
+That would be q squared p.
+And in general, we can see that for T equals n,
+we're going to have probability q to the n minus 1 p.
+That is, we have a string of n minus 1 failures followed
+by a success, and this is the geometric distribution.
+So we have that the probability that the waiting time is
+equal to some particular n is given by q to the n minus 1 p,
+or we can write that of course as 1 minus p
+to the n minus 1 times p.
+So how long should we expect to wait on average?
+Let's compute.
+When in doubt, compute.
+
+The expectation of our waiting time
+T is going to be the probability weighted average of the waiting
+time.
+So we have a formula for that.
+So we can write this as the sum from n
+equals 0 to infinity of n times q to the n minus 1 p.
+Now, if we look at this, we notice
+that this combination here looks familiar, doesn't it?
+It's the derivative of q to the n.
+So we'll use a trick.
+What we're going to do is we're going
+to write it as a derivative.
+And then, because q is positive and less than 1,
+the sums are convergent.
+And we'll interchange the order of differentiation
+in summation, which will give us something
+that will be a nice, quick answer and something that
+generalizes for more complex cases.
+So let's see how that goes taking, it step by step.
+This is equal to--
+I'll pull the p out in front times the summation of d
+by dq of q to the n, which I'll write as p d
+by dq times the sum of q to the n.
+And the term in parentheses right here is a geometric sum.
+So we can do that sum.
+
+This is just p times 1 over 1 minus q.
+And its derivative gives us 1 over 1 minus q squared.
+Now we remember that p plus q equals 1, so this is p times 1
+over p squared.
+Therefore, we find that the expectation of T
+is equal to 1 over p.
+
+So this should make some amount of sense.
+First of all, we see that as p gets small,
+the expected waiting time gets large.
+If we have a 1 over 6 chance of throwing
+a seven with a pair of dice, we wait on average six turns
+till we get that.
+If we're looking for a set of two aces and playing poker,
+then we'll have to wait on average 221 turns.
+Now, it's important to note that in both these cases they
+satisfy the Markov property, which
+says that there's no memory of what happened before.
+That is, if we just got a pair of aces
+our expected waiting time for another pair of aces is 221.
+But if we've been waiting 220 hands,
+we still have an expected waiting time of 221.
+Regardless of what came before, the future expectations
+depend only on the present-state variables for where we are now,
+not on how we got there.
+And this notion of Markov processes
+will be important for characterizing
+different kinds of time evolution
+and for the way in which information
+gets incorporated into interesting financial
+variables.
+So when it comes to games of chance,
+certainly we know that in a fair game
+that the next outcome is independent of the ones that
+came before, that each one should be independent.
+Let's now extend and ask, what would
+be the variance of the waiting time?
+So for the variance, let's remember
+that the variance of the waiting time or for any random variable
+is the expectation of the variable
+minus its mean value, which here I just
+to simplify the notation.
+Instead E of T within the expectation,
+I'll just call T-bar quantity squared.
+And we have the general property for all expectations
+that the variance is the expectation
+of the square minus the square of the expectation.
+Let's just review that.
+This is expectation, and I'm going
+to expand out the quadratic.
+T squared minus 2 T-bar T plus T-bar squared.
+Remember, the T-bar, the expectation of T,
+is just a number, whereas T is a random variable.
+Now applying linearity, we have that the expectation of the sum
+is the sum of the expectations and the expectation of a scalar
+times an expectation-- we just bring the scalar out front--
+
+plus T squared.
+Now, we notice it in this second term, right here,
+that we have T-bar times T-bar.
+That is, this combines to be minus 2 T-bar times T
+bar, which gives us minus 2 T-bar squared
+plus T-bar squared.
+Minus 2 plus 1 is minus 1.
+So we have that this is equal to, as advertised,
+the expectation of the squared minus the square
+of the expectation.
+So how do we apply that to our Bernoulli trial case?
+Well, we'd like to find the second moment.
+T-bar, we've already computed.
+It's 1 over p.
+So T-bar squared is going to be 1 over p squared.
+So we'd like to do for our Bernoulli case is
+compute the second moment.
+So we'd like to compute expectation of T squared,
+and that's the second moment.
+So this is going to be the sum from n equals 0
+to infinity, this time of n squared times the probability
+that T equals n which is the same as we saw before.
+Now you notice we're not quite in as good shape
+as we were before because I have n squared instead of n,
+and this quantity here is not just the derivative of q
+to the n.
+But we can come close.
+We can still use a derivative trick in a slightly different
+formula.
+And what we'll do is we'll notice that every time
+when we took a derivative once, we brought down a power of n.
+If I want repeated derivatives, I
+would-- if I just keep taking repeated derivatives,
+I'd end up with n factorial which isn't what I want.
+So if I take a derivative but multiply back by q,
+then I will have what I want.
+So let's take a look.
+So specifically, let's look at the more general problem
+of computing, say, the moment T to the power r--
+and that I can write as--
+let me take out this p here.
+And let me take out 1 over q out front.
+So let me write this as p divided by q times
+the sum from n equals 0 to infinity of what would
+be an n to the r q to the n.
+And I'm going to write that in the following way, q d by dq
+with this operator raised to the r-th power times q to the n.
+So if r is equal to 1, I take q d by dq.
+d by dq gives me an n times q to the n minus 1 multiplied by q.
+And I'm left with n with a single power of n in front.
+If I do that repeatedly-- twice, three times, r times--
+each time I act with the operator q
+d by dq, I'll bring down in front a power of n.
+So this is going to be equal to--
+this is going to be the same thing as p over q
+times the sum of n to the r q to the n.
+So obviously, we can apply this in the special case
+where n equals 2.
+
+But we want to do one more thing, which
+is to do our derivative trick--
+so where we interchange the order of the derivative
+and the summation.
+So let's put this in the form p over q q d by dq.
+
+Let's take this operator to the r-th power times 1 over 1
+minus q.
+So here's your chance.
+Take these formulas that we have here.
+Take a moment right now to go ahead and compute,
+what is the variance of T?
+So compute the expectation of T squared
+and subtract the expectation of T quantity squared
+and express the results in terms of our original probability
+value p.
+
+Hit pause now if you haven't got it yet
+and you want a little more time to work it out.
+But the value that we have is we have now
+that the variance of T for the waiting
+time for a success in a single series of Bernoulli trials
+is going to be the expectation T squared minus the expectation
+of T quantity squared.
+And this is equal to 1 minus p over p squared.
+So we have a general formula that we
+could extend to computing higher moments,
+and we can apply this to other settings
+where perhaps a Bernoulli process like this
+might be part of a more complex sequence
+of conditional probabilities.

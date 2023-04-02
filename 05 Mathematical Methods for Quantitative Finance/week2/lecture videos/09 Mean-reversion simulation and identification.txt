@@ -1,0 +1,133 @@
+
+PROFESSOR: Now, we can also extend our process
+to things that are our approach, to things
+that are not just random walks.
+In fact, the random walk is a bit
+of the special case for a bunch of reasons.
+One of them is that, because the returns are all independent,
+I didn't need to do the for loop.
+I could have used some matrix algebra to do everything in one
+fell swoop.
+And you might have noticed, that because I'm adding together,
+in my last case, a sum of random variables,
+the sum of random variables of normal random variables
+is a normal random variable.
+That's very special for Gaussian distributions,
+and I didn't need to iterate things at all.
+So, just to show you why the method matters more
+than the particular example, let's
+take a look at an AR(1) process which is defined recursively,
+but where the value in each step now does
+depend on the prior history.
+So it's essential that we construct the simulation
+by running forward in time.
+So, here are some parameters that we can have.
+We can keep our Mu value, again, annualized at 10%.
+We'll let the lambda value, which is a pure number,
+be the strength of the mean reversion
+and I'll set that initially at 40%, to of 0.4.
+And this, again, is something I'd encourage
+you to try out in the data.
+So now, when I run things, I replace my generating function
+by the iteration for the AR(1) process.
+So here's my lambda and, again, you
+can check the special case where lambda equals zero,
+it should recover a random walk, and I can generate--
+So if I think of these, this is convention, it's Monte Carlo.
+We could do it we want, but if I think these
+as being simple returns, just how this model is often
+applied, I can turn them into logarithmic returns
+and then look at some sample paths in their distribution.
+So the first thing you'll see on the left and on the right.
+On the left, we'll see a bunch of sample paths
+that don't necessarily look different from what
+we saw before.
+It's kind of hard to tell by eye whether we're
+looking at something that has mean reversion in the presence
+of the significant amount of randomness.
+So, looking at it by eye isn't really going to help us.
+When we look at the histogram of the data,
+we see again a little bit of a departure from normality.
+But where things really get revealed
+is by looking at serial correlation and coefficient.
+So we ask about the correlation between the returns in one
+period and the returns in the next period.
+And here are two different examples
+where, in the case of a random walk,
+this left hand graph, we have the, first,
+is the correlation of the series with itself, which
+by definition is equal to one.
+Each of these other terms, which is labeled by a lag variable,
+is the correlation of our simulated results
+with the same series offset by one-time step 2, 3, 4, or 5.
+And one of the interesting things
+that we see here is the time one lag
+for our auto-regressive process, and that's
+exactly what we built in, was the return on one day.
+It starts with minus 40% of the previous day's
+return plus some randomness, and that's what we see here.
+On the right, I've fiddled with the parameters
+and you can try this too.
+And we can crank up the lambda and we can crank down the sigma
+to turn off the randomness and see what the interplay is
+between the two.
+The Mu is actually not that interesting.
+It drops out of all the correlations.
+But what we're often facing is, how big
+is the randomness in a financial price process compared
+to other drivers in the marketplace, other factors,
+other correlations, or something like a restoring force
+like mean reversion.
+So let's summarize what we've talked about
+in looking at Monte Carlo methods.
+Monte Carlo uses computer random number generators
+to simulate data for a given model,
+and we can apply this to a wide variety of models
+and compare across models.
+The simulations give us an idealized testing environment
+because we know what the data generating process is
+and this is our best case.
+Usually, we don't know what it is.
+So, this way, we can at least look at the best case
+and make sure that we could correctly identify our data.
+For example, you could imagine starting.
+If we wanted to do model identification,
+we could generate some data and then pretend
+that someone had just handed us the data without knowing
+what model it came from.
+Could we correctly identify what the model is?
+We also have the advantage that we
+can run lots of different simulations,
+and real financial market data doesn't allow that.
+We don't get to rerun the experiment.
+Even if we figure out what happened
+and why in the past, that's not-- there's no guarantee
+it's going to repeat again in the future.
+At least, in the lab, we can do that
+and try it and check that our ideas are working
+the way that we would expect.
+When we apply this to asset price dynamics,
+we do it by drawing successive period returns
+and then constructing the price process
+as it goes forward in time.
+And those could be independent or they
+could be correlated returns.
+When we go to compute analytics like means
+and standard deviations and variances and Sharpe ratios
+and kurtosis, and so on, we do that
+not by doing Gaussian or other integrals in closed form.
+We do it by computing statistics on the realized data.
+The results are subject to sampling error, of course.
+Because they're statistical, they
+can be improved by doing more simulations.
+But there are also important machine limitations,
+some things we can't ever solve like the fact
+that we can't exactly represent real numbers
+or unbounded numbers on the computer.
+And, we also might find that some of these things
+are not necessarily efficient if we do them in a naive way.
+And there's a very large literature
+and a lot of techniques have been developed
+for doing Monte Carlos in more efficient ways
+and to get better accuracy for the same amount
+of computational effort.

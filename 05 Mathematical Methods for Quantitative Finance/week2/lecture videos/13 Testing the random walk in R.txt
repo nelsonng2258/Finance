@@ -1,0 +1,449 @@
+
+PROFESSOR: In this video will test a random walk.
+We'll look at the computational and data
+tables that are needed to do an analysis,
+perform a variance ratio test, and explore whether asset
+prices may be predictable, whether the random walk
+hypothesis holds for a given data set or not.
+I'm doing this in an R notebook.
+And R notebooks are text files that contain code
+but they also contain discussion around them.
+So on the left hand side of my screen,
+you can see the raw contents of the text
+file of the R notebook.
+And you can load that into your own version of RStudio.
+And on the right hand side is the formatted version in HTML
+which you can do whatever you'd like with.
+And when you hit this preview button
+on the top of the screen, it'll regenerate
+the preview of the notebook.
+But right now what we'll be doing
+is mostly working on the left hand side.
+And we'll start by loading a few packages.
+Now packages in R are installed once
+and then they're run many times.
+So to install a package if you've never seen it,
+you uncomment these lines, it'll grab the package
+and run the package to install it on your computer.
+Subsequently, packages are loaded into a given session
+using the library command.
+So for right now I think the only one
+that we need here is going to be the tidyquant package that
+will help us with the function to fetch some data directly
+into R so that we don't need to load it from a flat file.
+That's a perfectly honorable thing to do.
+So I click here and run this current chunk,
+and it will run and load the packages of interest.
+We'll get a few descriptive messages that will go away
+the next time we run it.
+So those are not essential information
+or essential reading.
+Now let's take a look at some data.
+Specifically, we'll take a look at stock for Tootsie Roll
+when the longest continuously the companies that's
+been around publicly traded for a long period of time
+since the beginning of the end of the 19th century
+beginning of the 20th century.
+And we'll get some data for Tootsie Roll.
+And if we do grab data, there are a number
+of issues we normally need to be concerned about, which are,
+what's the data source?
+How do they handle corporate actions?
+What's the format of the file?
+How are the line breaks handled?
+What is delimiters and so on?
+So we could start with the CSV file
+or we could grab things directly from Yahoo Finance.
+So I'll show you the latter here.
+So what we'll do is we'll use this one function called
+tq_get() which is the tidyquant get function that will grab
+a given ticker symbol for a range of dates,
+and grab data from Yahoo Finance.
+So we'll do that now.
+The ticker symbol that will define here
+is tr for Tootsie Roll and we'll pick a range of dates.
+Now one of the things that we're going to do, so hit the Run
+button here and with fingers crossed because we're
+running this live.
+Will hope that everything looks.
+So one of the things that we commonly do
+is because we usually are more interested in returns
+than in prices, we need to get and we'll always
+need extra prices to be able to compute a return series.
+So we typically want to start retrieving data few days
+at least before the first return that we need to compute.
+So here I've done this for the period
+from 1988 to the end of 2017.
+So this is before the Wall Street Bets era.
+So to check that we've got the data, we can go to our console
+and take a look at a view data, or we can run and take a look
+at any of the lines.
+
+So we can either say head TR to take a look
+at the first few rows, or we can say View with a capital V,
+to take a look at all of the data.
+And what we see is that, we've got here from Yahoo Finance
+is data structure where the first column is the ticker
+symbol.
+Then we have the date open high-low close volume.
+And the last column called adjusted is what we'll use.
+That's where the prices have been
+adjusted for corporate actions.
+Tootsie roll was an interesting and unusual dividend policy
+which we won't go into, we'll just
+be working with these adjusted prices.
+So, what does the data look like?
+Well, here's what the price chart looks like over time.
+So I'm going to click here, and I
+wanted to show you some code through example.
+I'm just using the base R plot function,
+we can make much nicer plots using the GG plot package.
+But here we're just doing vanilla plots,
+and we can dress them up later on.
+So here's the Tootsie Roll adjusted price
+over this period.
+So it's had a bumpy ride.
+But generally if you are invested in toastie roll,
+you've done pretty well.
+OK?
+Next, now notice that as I update this
+as we run chunks of code, that on the right hand
+side of my notebook up here, and as we scroll down,
+we'll get these graphs will be incorporated.
+And we can even include formulas by writing things, commands,
+and LaTeX.
+So we can get formulas here.
+So here's what we do.
+We defined the logarithmic returns,
+as being the logarithm of the price
+ratios, the last observed price divided by the previous price,
+and we see that can be written as a difference
+of successive price logarithms.
+So, in code what we're going to do is extract the prices,
+get the return series and most of our analysis
+really is going to be testing the returns themselves.
+Because the returns, when we talk about random walk we
+sometimes in finance because the context is usually clear,
+we may abuse the language a little bit.
+What we're talking about is the return series
+for a random walk being uncorrelated random variables
+over time.
+The price series does have levels that matter,
+and it's by taking these differences of logarithms
+and we get to the series of interest.
+So there are two things we could do.
+First, we could just strip off the data and work with that,
+or we can also store the data as part of our data structure.
+So there are two ways we can do it.
+First of all, what I can do is I can
+define a variable p that just pulls out the adjusted price
+process.
+I can say r is diff log p.
+That implements the formula that we
+see behind me you just move that up the screen a little bit.
+There we go.
+So for that formula right here.
+
+Sorry, trying to highlight it, there we go.
+A little awkwardly, sorry about that.
+So anyway this formula here is the formula that we want.
+We get that in code by saying diff log R,
+you could write a for loop if you like just
+to take successive differences, and then we'll
+add and be the length of the series.
+Then what we can also do, let me just run this chunk
+as we're speaking.
+What we can also do is we can add a new column to our data
+structure.
+And when I do that, if I look at tr,
+we'll see that now there's a new column here R. At the end,
+I don't think I want things sorted by R, sorry about that.
+But here we've got this new column.
+So let's just see what we did in the code.
+What we did was we set a new column here for our TR.
+We added a column r, and we had to include a leading
+NA for the simple reason that we're always
+going to have one less return than we do prices.
+So if we want things to line up, the return corresponding
+to our very first price is not available
+because we don't know the price before that.
+But all the others will line up with their corresponding dates,
+and then that first date of interest we'll toss it out,
+so that everything is lined up starting on the first trading
+day of 1988 in this example.
+Now we can take the returns and then
+we can plot those, and see what those look like.
+And if we do that, we get a graph
+that you can see over here on the side,
+where we see the daily return series.
+Now, the daily return series is noisy.
+And the mean return is not really visible on this scale.
+And this is typical of a lot of financial return data,
+that on very short time scales like a day or less,
+it's almost impossible to see the mean return.
+But you certainly can see the risk.
+You certainly can see the fluctuations in value.
+So we'll use some statistics to get
+at the heart of what's going on to both characterize,
+to describe the data, and then look
+at what we can say about the relationship across time
+and about any predictability that might
+be present in the data series.
+So let's just compare this picture
+with what it would look like if it were a pure white noise
+series.
+So what I'm going to do here, is I'm
+going to generate using the rnorm function.
+A set of random variables drawn from a normal distribution
+that are scaled to have 0 mean and the same standard deviation
+as the Tootsie Roll data does.
+So we can see at a glance this is hardly a statistical test,
+but we can see that they don't exactly look the same.
+That is the white noise process is noisy,
+but it's much more uniform over time.
+Whereas the Tootsie Roll process has not only some pretty big
+spikes that come along, but there
+are periods of intense fluctuation
+and some periods of quiet.
+So what this might suggest is that volatility
+itself can vary over time.
+And then when we talk about the volatility of a process,
+maybe that's something that we would eventually
+need to generalize.
+OK?
+So that's just in pictures for looking at our data.
+We can get some summary statistics for the data.
+So we can use the summary command in R
+to give us a look at our data set.
+And it tells us for each of our data fields
+open, high-low, close, and the return.
+What's the mean?
+What's the max?
+What's mean?
+What's the median, interquartile range, and so on.
+So we've got 7,500 observations which isn't bad,
+and we can see a range of the numbers.
+Now these numbers in particular, if we look at the returns
+are pretty small because their daily numbers.
+So the convention is that we annualize numbers
+when we're looking at return and risk data.
+And that means that for our annualization conventions,
+that when it comes to returns, we're
+going to multiply by the number of time periods.
+And when it comes two standard deviations,
+we're going to multiply by the square root
+of the number of time periods.
+And this is just a convention for scaling
+our descriptive statistics.
+It would be natural if, in fact, we
+have random walks, because we know that the variance scales
+with the square that with time linearly,
+and the standard deviation with its square root.
+We don't know how this data behaves,
+but by convention when we report descriptive statistics,
+we typically use these conventions.
+Why 252?
+It's the typical number of trading days in the US equity
+markets.
+
+Now, if we look at what that would correspond to, let's
+run this, and let's take a look at how
+we would get the numbers.
+So if we take the mean return and multiply by 252,
+and we take the standard deviation
+and we multiplied by the square root of 252,
+we find that we get a return, annualized return of about 8.3%
+with a volatility of about 24%, which
+is not unusual for US stock.
+Now let's take a look at the histogram of the returns,
+and see what their distribution looks like.
+Now the histogram is very sharply peaked in the middle.
+So it doesn't look Gaussian, it's not rounded over the top.
+It's kind of squished in the middle, which is interesting.
+But it is single peaked and if you remember,
+our discussion of the attributes of a random walk, and of time
+series models generally use primarily the moment
+of the distribution not the full distribution.
+So when we're interested in the sum of the random variables,
+whether the individual random variables are
+drawn from a Gaussian or a log normal distribution,
+or whether there binomial coin flips
+doesn't make a difference in terms of the large time scale
+properties when we add together a large number
+of random variables, and we ask about the mean and variance
+of the sum.
+But it's always a good idea to look at your data.
+So Lo and MacKinlay asked about whether the variance
+of a sample of returns, in fact, grows linearly
+as a function of the observation interval?
+So the difference is, what they did
+is instead of letting the time and just adding
+more and more days where the market conditions might
+have changed, they ask about taking a fixed number of days
+and looking at different course screening.
+So we can look at daily observations,
+then we can go to two day periods.
+We can go to four day periods.
+We can go to one week, one month, and so on.
+So they did powers of 2.
+Here we'll just run a for loop and do different numbers
+of days from two days through 100 days,
+and let's take a look at it.
+What we're doing here is, we're looking
+at the variance, of the difference, of the logarithms,
+of the price.
+And the price what we're doing in our
+we're looking at taking steps but of size n.
+Now that's going to leave in the event
+where n does not evenly divide 7,561 or 7562 observations
+that we have.
+That will leave a few points left over at the end.
+So this is just to give us a rough idea.
+It's not as precise as making sure that we divide things,
+but we can see at a glance that we've got a generally
+linear behavior.
+And now we could ask, so does that settle the matter.
+Does that say a yes, the variance
+grows linearly with time.
+Well, we don't know what the slope
+is, we don't know it's exactly linear,
+and after all, there is some scatter around
+and the scatter gets worse as we go further out.
+Now that could be because we have
+a breakdown of the hypothesis as we get to larger values.
+And then, on the other hand, it could just
+be that as our observation windows get larger,
+there are fewer of them and we're
+going to have less statistical significance
+in our observations, and we would think that things
+would be somewhat noisier.
+So let's take a look at some of these metrics.
+Now this is the code.
+And let me move this over here.
+So you can see the code.
+So this is the code that's in the Lo and MacKinlay paper,
+and that I discussed in lecture where we can construct
+a variety of different flavors of variants,
+where we might have overlapping windows,
+we have some scale adjustments, some removal of bias factors.
+But the basic idea is that what we're going to do
+is construct an adjusted variance for our data,
+get all the scaling and all the pre factors
+right on our Lo and MacKinlay.
+And then, we're going to compute the sampling statistic
+for the variance ratio.
+So remember that in the ideal case,
+the variance ratio where we take the variance
+divide by n or q times the, if q is the number of days
+that we're aggregating, that if we take the variance
+and take the ratio to the day variance,
+and we include a factor of q to scale out
+the obvious overall dependence, that variance ratio should
+be equal to 1 if there's a random walk.
+But the question is not do we get.
+One, we're going to get something
+in the neighborhood of one this would be what we'd expect.
+But how significant are the deviations from one.
+And to do that, we have the Z statistic.
+And the Z statistic is constructed
+so that it is sampled from an n zero 1 distribution.
+That is it should be Gaussian distributed with 0 mean
+and unit variance itself.
+So a Z that falls in the range of between plus or minus 2
+or maybe even plus or minus 3, could
+be consistent with a hypothesis being true.
+Large values of the Z, outside of plus or minus 2
+would be considered a significant departure.
+And if we were to do different tests
+we'd expect the Z's to be uncorrelated with each other.
+So let's take a look.
+So we can run this now that we've got our data,
+and we have our return series.
+We define this function variance.c for a function
+and we'll run it on our data set.
+OK, so let's run this chunk.
+And let's take a look at some of the results that we get.
+Now again if I want to update things on the right hand side,
+I click the Preview button just above my window.
+And now things will be update on the right hand side as well.
+And here's a bar plot of the results of our variance ratio
+test.
+So what we can see is that all of the values
+have the same sign.
+These are all negative.
+Of course, each of these windows these are not independent
+data samples were doing different levels
+of aggregation, but what we see is that a lot of the values
+are greatly in excess of minus 2.
+In fact, almost all of these are.
+So that means that in our Tootsie Roll data
+set that we can reject the random walk
+hypothesis for this range of values,
+and for this time period within the data set.
+OK?
+So what you can do is certainly you can go back and take
+a look at rerunning this or you should run it first yourself,
+but you can go back and change pretty much everything.
+You can pick a different stock, and you can pick the same stock
+in a different range, or you can change all of this,
+rerun and take a look and see what you get.
+I'd encourage you to take a look at it
+for a couple of stocks of interest to you,
+and also to take a look at stock indices.
+We might expect stocks and stock indices
+to behave differently after all stock index has values that
+are generated by a weighted sum of a bunch
+of different companies, which may have
+low correlation to each other.
+So some of the noise may average out.
+So I would encourage you to take this code, or even better
+to write your own, and to run the tests
+on some data of your own.
+So just one final thing to take a look
+at a, what this means in terms of volatility
+is, if we were to go back and construct the returns
+and scale them.
+So if we take the variance and we now multiply times
+square root of q or square root of n
+to the appropriate numerator denominator.
+So that we get things normalized.
+If we take a look here what I've defined
+is sigma n to be scaled with 1 over square root of n
+times the standard deviation.
+And instead of looking at is the plot linear,
+let's take out that expected dependence
+and ask if our results are constant.
+After all, that's what we're looking at in our Z statistic.
+The idea of something that is a random walk
+by the variance ratio test is, that no matter what aggregation
+scale we look at, we should always
+get the same value for the variance.
+So if we do that, we find that we
+get kind of a bumpy ride for different values,
+but we wouldn't expect it to be exactly flat.
+And the values are all in the 20 to 30%
+range, which are reasonable for a stock.
+If we want to get a rough idea without the precise statistical
+analysis, then what we could do is
+we might want to compare that again to simulated data,
+and run a Monte Carlo to generate
+data that could have come from a white noise random walk
+process.
+And we could ask what we would expect
+to see for its variance just due to sampling error.
+So this is just a visualization to help give us an intuitive
+sense of the statistical test on the one hand,
+and we have an intuitive pictorial sense,
+and I think both that reasoning might be helpful.
+So in this case you've got some code
+that implements a variance ratio test,
+you've got some code that will go grab data from Yahoo
+Finance, or if you can put it in yourself manually from any data
+source that you like.
+You can run the test and take a look
+at the behavior of the variance as you
+run through the different aggregations.
+And you can take a look at the detailed statistical analysis
+for Lo and MacKinlay carefully normalized Z statistic,
+and see for your data set whether you can reject
+the random walk hypothesis.

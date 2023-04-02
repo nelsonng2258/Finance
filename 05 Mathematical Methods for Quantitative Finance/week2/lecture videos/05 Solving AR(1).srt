@@ -1,0 +1,1296 @@
+0
+00:00:00,000 --> 00:00:01,340
+
+
+1
+00:00:01,340 --> 00:00:04,490
+PROFESSOR: We solve the AR 1 model
+
+2
+00:00:04,490 --> 00:00:07,610
+by applying the expectation operator
+
+3
+00:00:07,610 --> 00:00:09,900
+to both sides of the equation.
+
+4
+00:00:09,900 --> 00:00:13,100
+So doing that, we use linearity.
+
+5
+00:00:13,100 --> 00:00:16,340
+We take expectations term by term,
+
+6
+00:00:16,340 --> 00:00:20,750
+and we see that the expectation of R sub t
+
+7
+00:00:20,750 --> 00:00:24,350
+is c times the expectation of 1, which
+
+8
+00:00:24,350 --> 00:00:28,640
+is just 1 plus c 1 times the expectation of R t minus 1,
+
+9
+00:00:28,640 --> 00:00:29,840
+which we don't know.
+
+10
+00:00:29,840 --> 00:00:35,030
+Plus 0, 0 trend expectation of the standard variable z t.
+
+11
+00:00:35,030 --> 00:00:38,540
+So what we're left with, this interesting expression.
+
+12
+00:00:38,540 --> 00:00:42,200
+We have the expectation of R t as a constant
+
+13
+00:00:42,200 --> 00:00:45,800
+plus another constant times expectation of R t minus 1.
+
+14
+00:00:45,800 --> 00:00:47,840
+Now here's where we used stationarity.
+
+15
+00:00:47,840 --> 00:00:49,940
+It says, that the two expectations
+
+16
+00:00:49,940 --> 00:00:52,532
+on the left and the right, are the same as each other.
+
+17
+00:00:52,532 --> 00:00:53,990
+We don't know what they are, but we
+
+18
+00:00:53,990 --> 00:00:55,590
+do know that they're the same.
+
+19
+00:00:55,590 --> 00:00:58,850
+So we can solve algebraically for them
+
+20
+00:00:58,850 --> 00:01:01,130
+by rewriting on the right hand side.
+
+21
+00:01:01,130 --> 00:01:08,030
+c 0 plus c 1 expectation of R sub t, and solving for R sub t.
+
+22
+00:01:08,030 --> 00:01:10,890
+So we substitute, and what do we find?
+
+23
+00:01:10,890 --> 00:01:13,070
+We find that we now have an expression
+
+24
+00:01:13,070 --> 00:01:17,420
+for the mean, the expected value of R sub t in terms
+
+25
+00:01:17,420 --> 00:01:19,220
+of the basic parameters of the model.
+
+26
+00:01:19,220 --> 00:01:24,500
+c 0 over 1 minus c 1, and sigma doesn't appear.
+
+27
+00:01:24,500 --> 00:01:27,740
+So we've solved for the first moment of R t
+
+28
+00:01:27,740 --> 00:01:29,990
+by using stationarity, and this is
+
+29
+00:01:29,990 --> 00:01:31,940
+a trick we'll continue to use.
+
+30
+00:01:31,940 --> 00:01:36,290
+We take things, we plug in our basic equation for the Rs,
+
+31
+00:01:36,290 --> 00:01:40,160
+we expand out the things inside the expectation.
+
+32
+00:01:40,160 --> 00:01:43,520
+And then as needed, we apply stationarity.
+
+33
+00:01:43,520 --> 00:01:47,790
+Now for convenience, instead of this handful of symbols,
+
+34
+00:01:47,790 --> 00:01:49,710
+it's the mean value of R t.
+
+35
+00:01:49,710 --> 00:01:52,520
+So let's give it a new name, let's call it mu.
+
+36
+00:01:52,520 --> 00:01:56,990
+And for interpretations for physical and financial
+
+37
+00:01:56,990 --> 00:01:58,850
+interpretations later on, I'm going
+
+38
+00:01:58,850 --> 00:02:01,760
+to take the innocuous and boring sounding c 1.
+
+39
+00:02:01,760 --> 00:02:03,260
+And I'm going to give it a new name,
+
+40
+00:02:03,260 --> 00:02:05,400
+I'm going to call it minus lambda.
+
+41
+00:02:05,400 --> 00:02:09,770
+So in terms of these variables, we can rewrite our AR 1 model.
+
+42
+00:02:09,770 --> 00:02:12,140
+And you can check this, by checking the variables.
+
+43
+00:02:12,140 --> 00:02:15,830
+In terms of an expression on the left and the right hand side,
+
+44
+00:02:15,830 --> 00:02:25,340
+that both are written in terms of this combination R minus mu.
+
+45
+00:02:25,340 --> 00:02:27,950
+And on the left hand side, it's a time t and the right hand
+
+46
+00:02:27,950 --> 00:02:29,510
+side it's R t minus 1.
+
+47
+00:02:29,510 --> 00:02:32,270
+So we have the usual typical recursive structure
+
+48
+00:02:32,270 --> 00:02:33,530
+that we've been seeing.
+
+49
+00:02:33,530 --> 00:02:36,410
+Plus the shock term, the sigma z t.
+
+50
+00:02:36,410 --> 00:02:40,391
+So how do we want to interpret this,
+
+51
+00:02:40,391 --> 00:02:42,560
+this is a model that's often used
+
+52
+00:02:42,560 --> 00:02:44,840
+for modeling mean reversion.
+
+53
+00:02:44,840 --> 00:02:49,580
+We think of mu as being the mean of our process and R
+
+54
+00:02:49,580 --> 00:02:52,550
+t minus mu or t minus 1--
+
+55
+00:02:52,550 --> 00:02:58,610
+R sub t minus 1 minus mu, are the variables difference
+
+56
+00:02:58,610 --> 00:03:01,470
+from the mean value from mu.
+
+57
+00:03:01,470 --> 00:03:06,110
+So if R at each time were exactly equal to mu or minus mu
+
+58
+00:03:06,110 --> 00:03:07,550
+would be 0.
+
+59
+00:03:07,550 --> 00:03:11,390
+However, and it would stay 0 for the recursion, if for example,
+
+60
+00:03:11,390 --> 00:03:12,710
+if sigma were equal to 0.
+
+61
+00:03:12,710 --> 00:03:16,080
+But because there's randomness, there will be changes.
+
+62
+00:03:16,080 --> 00:03:19,460
+So the real driving variable here, the real thing
+
+63
+00:03:19,460 --> 00:03:22,080
+to keep an eye on, is R minus mu,
+
+64
+00:03:22,080 --> 00:03:24,770
+that's what's moving things.
+
+65
+00:03:24,770 --> 00:03:25,680
+So what does it say?
+
+66
+00:03:25,680 --> 00:03:26,900
+What about the minus lambda?
+
+67
+00:03:26,900 --> 00:03:28,610
+And why have they written it this way?
+
+68
+00:03:28,610 --> 00:03:31,910
+Well, let's think of lambda as being a positive constant,
+
+69
+00:03:31,910 --> 00:03:35,780
+we'll see in a few moments the only requirement is
+
+70
+00:03:35,780 --> 00:03:38,240
+that the absolute value of lambda be less than 1.
+
+71
+00:03:38,240 --> 00:03:41,150
+So lambda can be negative, but the usual applications
+
+72
+00:03:41,150 --> 00:03:44,420
+it's positive with the sign convention, where I've written
+
+73
+00:03:44,420 --> 00:03:46,290
+minus lambda on the right hand side.
+
+74
+00:03:46,290 --> 00:03:48,150
+So here's how we can think about it.
+
+75
+00:03:48,150 --> 00:03:51,890
+We can say that for a positive value of the coefficient mu,
+
+76
+00:03:51,890 --> 00:03:55,250
+the first term on the right hand side says,
+
+77
+00:03:55,250 --> 00:03:59,300
+that if R in the previous period exceeded its mean,
+
+78
+00:03:59,300 --> 00:04:02,330
+if it was larger, then we multiply times the negative
+
+79
+00:04:02,330 --> 00:04:02,900
+constant --
+
+80
+00:04:02,900 --> 00:04:04,010
+minus lambda.
+
+81
+00:04:04,010 --> 00:04:07,035
+And that pushes it in a negative direction.
+
+82
+00:04:07,035 --> 00:04:08,910
+What is it pushing in the negative direction?
+
+83
+00:04:08,910 --> 00:04:10,493
+Well, the thing on the left hand side,
+
+84
+00:04:10,493 --> 00:04:13,910
+which is the subsequent periods change in the value
+
+85
+00:04:13,910 --> 00:04:15,600
+relative to its mean.
+
+86
+00:04:15,600 --> 00:04:18,079
+So this says, that if we overshoot
+
+87
+00:04:18,079 --> 00:04:20,630
+the mean in one period, will we push down
+
+88
+00:04:20,630 --> 00:04:22,019
+toward it in the other.
+
+89
+00:04:22,019 --> 00:04:27,380
+If we undershoot, if R period t minus 1 was less than mu,
+
+90
+00:04:27,380 --> 00:04:29,900
+then multiplying the term in parentheses times
+
+91
+00:04:29,900 --> 00:04:34,440
+c minus lambda, will give a positive number,
+
+92
+00:04:34,440 --> 00:04:38,660
+and that will tend to increase the value towards its mean.
+
+93
+00:04:38,660 --> 00:04:41,120
+And in each period we get a random shock,
+
+94
+00:04:41,120 --> 00:04:44,870
+we get a new sigma z t, but that's symmetrically
+
+95
+00:04:44,870 --> 00:04:45,530
+distributed.
+
+96
+00:04:45,530 --> 00:04:49,592
+It's just as likely to be positive or negative.
+
+97
+00:04:49,592 --> 00:04:51,050
+Now that we have that structure, we
+
+98
+00:04:51,050 --> 00:04:54,350
+can solve the rest of the model 2 for the remaining moments.
+
+99
+00:04:54,350 --> 00:04:56,420
+That means that we can solve for the variance,
+
+100
+00:04:56,420 --> 00:04:59,160
+and it's square root, the standard deviation.
+
+101
+00:04:59,160 --> 00:05:01,900
+And we can solve for covariances.
+
+102
+00:05:01,900 --> 00:05:04,970
+And in this case, in the times series context,
+
+103
+00:05:04,970 --> 00:05:06,850
+these are called autocovariance.
+
+104
+00:05:06,850 --> 00:05:10,600
+Auto, because we're computing and R with an R,
+
+105
+00:05:10,600 --> 00:05:12,700
+just the two different periods in time.
+
+106
+00:05:12,700 --> 00:05:14,410
+Instead of computing the covariance
+
+107
+00:05:14,410 --> 00:05:17,890
+of two independent random variable to random variables,
+
+108
+00:05:17,890 --> 00:05:20,500
+maybe not necessarily independent x and y,
+
+109
+00:05:20,500 --> 00:05:22,610
+where we compute covariance of x and covariance
+
+110
+00:05:22,610 --> 00:05:26,080
+with-- the variance in x and y, is taking the expectation
+
+111
+00:05:26,080 --> 00:05:28,420
+of the product of each random variable
+
+112
+00:05:28,420 --> 00:05:30,040
+relative to its own mean.
+
+113
+00:05:30,040 --> 00:05:33,070
+We do the same thing here but, where the two variables
+
+114
+00:05:33,070 --> 00:05:35,530
+are taken at two different points in time
+
+115
+00:05:35,530 --> 00:05:38,870
+within the same time series.
+
+116
+00:05:38,870 --> 00:05:40,920
+OK so how does that work?
+
+117
+00:05:40,920 --> 00:05:43,028
+Well, we'll start with the variance,
+
+118
+00:05:43,028 --> 00:05:44,070
+and we'll give it a name.
+
+119
+00:05:44,070 --> 00:05:47,100
+We'll call it gamma 0, and you'll see why in a moment.
+
+120
+00:05:47,100 --> 00:05:50,510
+So the variance of R is defined as usual
+
+121
+00:05:50,510 --> 00:05:59,650
+as the expectation of the square of R t minus mu,
+
+122
+00:05:59,650 --> 00:06:01,990
+where R t is taken relative to its means,
+
+123
+00:06:01,990 --> 00:06:04,330
+so we take the expectation of the square.
+
+124
+00:06:04,330 --> 00:06:06,250
+Now for R t minus mu, we're going
+
+125
+00:06:06,250 --> 00:06:08,380
+to substitute in our equation of motion.
+
+126
+00:06:08,380 --> 00:06:10,720
+We're going to substitute in, the expression
+
+127
+00:06:10,720 --> 00:06:13,450
+for R t minus mu, in terms of the previous values
+
+128
+00:06:13,450 --> 00:06:14,950
+on the right hand side.
+
+129
+00:06:14,950 --> 00:06:18,340
+And will expand it out, take expectations term by term
+
+130
+00:06:18,340 --> 00:06:19,250
+and what do we get?
+
+131
+00:06:19,250 --> 00:06:23,500
+Well, one of the terms we get, we recognize this first term
+
+132
+00:06:23,500 --> 00:06:27,250
+here, is lambda squared or properly minus lambda quantity
+
+133
+00:06:27,250 --> 00:06:30,910
+squared, times the expectation of R t minus 1
+
+134
+00:06:30,910 --> 00:06:32,990
+minus mu quantity squared.
+
+135
+00:06:32,990 --> 00:06:38,680
+And this expression taken as a whole from stationarity,
+
+136
+00:06:38,680 --> 00:06:40,600
+is also gamma 0.
+
+137
+00:06:40,600 --> 00:06:43,270
+It's the thing that's on the left hand side.
+
+138
+00:06:43,270 --> 00:06:46,060
+The term over here from the z squared,
+
+139
+00:06:46,060 --> 00:06:49,810
+gives us a sigma squared down here,
+
+140
+00:06:49,810 --> 00:06:51,500
+this should be a sigma squared up here.
+
+141
+00:06:51,500 --> 00:06:53,170
+Apologies for the typo.
+
+142
+00:06:53,170 --> 00:06:55,240
+And the cross term vanishes.
+
+143
+00:06:55,240 --> 00:06:59,410
+So at the end, we have the gamma 0 can be written,
+
+144
+00:06:59,410 --> 00:07:03,850
+because we solve this equation algebraically for gamma 0,
+
+145
+00:07:03,850 --> 00:07:05,650
+and there's a gamma 0 on the right.
+
+146
+00:07:05,650 --> 00:07:08,440
+And we get the gamma 0, the variance of R,
+
+147
+00:07:08,440 --> 00:07:12,410
+is sigma squared over 1 minus lambda squared.
+
+148
+00:07:12,410 --> 00:07:15,370
+So what we see is first of all, that it's
+
+149
+00:07:15,370 --> 00:07:18,820
+proportional to sigma squared, which we would expect.
+
+150
+00:07:18,820 --> 00:07:20,770
+This is the variance of the process.
+
+151
+00:07:20,770 --> 00:07:24,970
+The bigger sigma is, the bigger gamma 0 is.
+
+152
+00:07:24,970 --> 00:07:27,550
+We also see the special case, the random walk.
+
+153
+00:07:27,550 --> 00:07:29,440
+If we set lambda equals 0, we should
+
+154
+00:07:29,440 --> 00:07:32,920
+get our usual generalized random walk result, and we do,
+
+155
+00:07:32,920 --> 00:07:37,010
+we get the gamma 0, the variance of R, is sigma squared.
+
+156
+00:07:37,010 --> 00:07:38,960
+But now look at the denominator.
+
+157
+00:07:38,960 --> 00:07:41,080
+We notice the denominator blows up
+
+158
+00:07:41,080 --> 00:07:47,560
+if lambda gets to be larger than 1 or less than minus 1.
+
+159
+00:07:47,560 --> 00:07:50,920
+So this will only be defined for values less than that.
+
+160
+00:07:50,920 --> 00:07:52,420
+How do we know it doesn't make sense
+
+161
+00:07:52,420 --> 00:07:53,898
+for values larger than that?
+
+162
+00:07:53,898 --> 00:07:55,440
+Well, there's an easy interpretation.
+
+163
+00:07:55,440 --> 00:07:57,940
+Remember that lambda is telling us
+
+164
+00:07:57,940 --> 00:08:01,090
+how much of the previous periods result
+
+165
+00:08:01,090 --> 00:08:04,180
+is going to contribute to the next periods result.
+
+166
+00:08:04,180 --> 00:08:06,520
+And when that's less than 1, it means
+
+167
+00:08:06,520 --> 00:08:09,400
+that affects that shocks tend to die off
+
+168
+00:08:09,400 --> 00:08:12,040
+over time in the absence of the new shocks that
+
+169
+00:08:12,040 --> 00:08:15,380
+are arriving via the new z ts in that's reasonable.
+
+170
+00:08:15,380 --> 00:08:18,760
+However, a case for lambda greater than 1 into the shocks
+
+171
+00:08:18,760 --> 00:08:20,990
+get amplified, they get bigger and bigger.
+
+172
+00:08:20,990 --> 00:08:23,950
+So that once a shock enters the system, it runs away
+
+173
+00:08:23,950 --> 00:08:25,310
+and it takes over the system.
+
+174
+00:08:25,310 --> 00:08:27,850
+So the result would not be convergent.
+
+175
+00:08:27,850 --> 00:08:30,160
+So even though it's a formal recursion,
+
+176
+00:08:30,160 --> 00:08:32,900
+the recursion doesn't actually exist.
+
+177
+00:08:32,900 --> 00:08:35,179
+So the most typical case as I said,
+
+178
+00:08:35,179 --> 00:08:37,450
+is going to be lambda positive.
+
+179
+00:08:37,450 --> 00:08:40,360
+But in any event, we're going to have lambda less than 1
+
+180
+00:08:40,360 --> 00:08:43,600
+in magnitude.
+
+181
+00:08:43,600 --> 00:08:45,970
+Now we don't need to stop there.
+
+182
+00:08:45,970 --> 00:08:48,570
+We can now extend our result to look
+
+183
+00:08:48,570 --> 00:08:50,850
+at what happens, when we consider R is
+
+184
+00:08:50,850 --> 00:08:52,590
+taken at two different times.
+
+185
+00:08:52,590 --> 00:08:54,760
+And we'll use the notation gamma sub
+
+186
+00:08:54,760 --> 00:08:57,810
+K to denote the autocovariance.
+
+187
+00:08:57,810 --> 00:09:04,230
+That is the covariance of R t with an R t at lagged
+
+188
+00:09:04,230 --> 00:09:06,750
+by K times steps.
+
+189
+00:09:06,750 --> 00:09:08,730
+Remember that because it's stationary,
+
+190
+00:09:08,730 --> 00:09:10,950
+that means that this doesn't depend on t
+
+191
+00:09:10,950 --> 00:09:12,570
+it only depends on K.
+
+192
+00:09:12,570 --> 00:09:16,650
+So the correlation between R 1 and R 3,
+
+193
+00:09:16,650 --> 00:09:20,820
+is the same as the correlation between R 21 and R 23,
+
+194
+00:09:20,820 --> 00:09:21,880
+it doesn't matter.
+
+195
+00:09:21,880 --> 00:09:25,300
+All that matters, is how far apart they are in time.
+
+196
+00:09:25,300 --> 00:09:29,400
+So we can think of K as being a delay, or a distance,
+
+197
+00:09:29,400 --> 00:09:33,720
+or a length of time, over which information propagates.
+
+198
+00:09:33,720 --> 00:09:34,530
+How do we solve?
+
+199
+00:09:34,530 --> 00:09:38,190
+Well, we use our same friend, plugging in and applying
+
+200
+00:09:38,190 --> 00:09:41,520
+linearity and stationary, the difference this time is.
+
+201
+00:09:41,520 --> 00:09:45,120
+That instead of substituting the equation of motion everywhere,
+
+202
+00:09:45,120 --> 00:09:47,230
+we do it in one of the two terms.
+
+203
+00:09:47,230 --> 00:09:50,670
+So it goes like this gamma K is defined
+
+204
+00:09:50,670 --> 00:09:54,990
+to be the expectation of R t minus mu and R t
+
+205
+00:09:54,990 --> 00:09:57,030
+minus k minus mu.
+
+206
+00:09:57,030 --> 00:09:58,980
+We'll leave the first--
+
+207
+00:09:58,980 --> 00:09:59,550
+works for me.
+
+208
+00:09:59,550 --> 00:10:02,100
+We'll leave the second factor alone,
+
+209
+00:10:02,100 --> 00:10:05,130
+and the first one will apply our equation of motion
+
+210
+00:10:05,130 --> 00:10:06,360
+for recursion.
+
+211
+00:10:06,360 --> 00:10:08,710
+So we'll plug in just for this.
+
+212
+00:10:08,710 --> 00:10:11,640
+So we have the lambda term minus lambda,
+
+213
+00:10:11,640 --> 00:10:14,370
+times R t minus 1 minus mu.
+
+214
+00:10:14,370 --> 00:10:16,530
+And then there will be another term with z,
+
+215
+00:10:16,530 --> 00:10:20,190
+which vanishes, because as we saw in the cross terms vanish.
+
+216
+00:10:20,190 --> 00:10:23,070
+And here by stationarity, this is
+
+217
+00:10:23,070 --> 00:10:29,730
+just dependent on the difference in times between these two Rs.
+
+218
+00:10:29,730 --> 00:10:32,850
+And that's K minus 1 steps apart.
+
+219
+00:10:32,850 --> 00:10:34,450
+But that's just our with minus lambda
+
+220
+00:10:34,450 --> 00:10:39,330
+at times, our expression for the autocovariance gamma sub
+
+221
+00:10:39,330 --> 00:10:42,250
+k minus 1, where there was one time step in part.
+
+222
+00:10:42,250 --> 00:10:44,940
+So we've got is recursion by substituting
+
+223
+00:10:44,940 --> 00:10:48,510
+in the equations of motion, we can relate gamma K
+
+224
+00:10:48,510 --> 00:10:50,250
+to gamma K minus 1.
+
+225
+00:10:50,250 --> 00:10:54,150
+And the rule is, for every K that you increase, you multiply
+
+226
+00:10:54,150 --> 00:10:57,070
+times a factor of minus gamma.
+
+227
+00:10:57,070 --> 00:11:00,750
+So we would expect to see a function of minus gamma raised
+
+228
+00:11:00,750 --> 00:11:04,690
+to the case power, which we do down here in our final result.
+
+229
+00:11:04,690 --> 00:11:11,250
+And we're able to tie off this series,
+
+230
+00:11:11,250 --> 00:11:14,100
+because if we think about doing the recursion backwards.
+
+231
+00:11:14,100 --> 00:11:15,840
+When we get to gamma 0, we can stop.
+
+232
+00:11:15,840 --> 00:11:18,880
+We know what gamma 0 is in closed form.
+
+233
+00:11:18,880 --> 00:11:23,520
+So our final result for any K, any finite K
+
+234
+00:11:23,520 --> 00:11:27,720
+is that, gamma K is minus lambda to the K-th power
+
+235
+00:11:27,720 --> 00:11:29,220
+times the variance.
+
+236
+00:11:29,220 --> 00:11:33,510
+And explicitly, that's minus lambda to the K-th power,
+
+237
+00:11:33,510 --> 00:11:37,030
+1 minus lambda squared times sigma squared.
+
+238
+00:11:37,030 --> 00:11:40,020
+So this is the lag-K autocovariance,
+
+239
+00:11:40,020 --> 00:11:42,780
+and if we think of this now not as a function of lambda,
+
+240
+00:11:42,780 --> 00:11:46,710
+but is a function of K, we see that-- remember lambda
+
+241
+00:11:46,710 --> 00:11:49,800
+is less than 1 in magnitude, this tells us
+
+242
+00:11:49,800 --> 00:11:55,520
+that the influence is dying off as K gets larger and larger.
+
+243
+00:11:55,520 --> 00:11:58,560
+OK, but it does persist over time.
+
+244
+00:11:58,560 --> 00:12:01,400
+Therefore, this model allows for there
+
+245
+00:12:01,400 --> 00:12:04,310
+to be a causal connection between observations
+
+246
+00:12:04,310 --> 00:12:07,670
+and one period, and observations in all prior periods.
+
+247
+00:12:07,670 --> 00:12:10,640
+And we have a very specific way, that they're related
+
+248
+00:12:10,640 --> 00:12:13,790
+that the information dies out.
+
+249
+00:12:13,790 --> 00:12:15,850
+So let's summarize what we've done
+
+250
+00:12:15,850 --> 00:12:18,580
+in looking at our structure of time series models.
+
+251
+00:12:18,580 --> 00:12:22,780
+We've seen that we can construct time series models by building
+
+252
+00:12:22,780 --> 00:12:26,260
+a bunch of linear terms, that generalize the pieces we
+
+253
+00:12:26,260 --> 00:12:27,640
+saw from the random walk.
+
+254
+00:12:27,640 --> 00:12:31,390
+The pieces that show up in our recursive definitions
+
+255
+00:12:31,390 --> 00:12:32,800
+on the right hand side.
+
+256
+00:12:32,800 --> 00:12:36,250
+Include shocks, that is sigma z t terms,
+
+257
+00:12:36,250 --> 00:12:38,860
+we're adding new and new random information
+
+258
+00:12:38,860 --> 00:12:40,540
+at each point in time.
+
+259
+00:12:40,540 --> 00:12:44,800
+They can include past observations of the zs, that
+
+260
+00:12:44,800 --> 00:12:46,900
+is previous period zs.
+
+261
+00:12:46,900 --> 00:12:49,150
+And they can include past observations
+
+262
+00:12:49,150 --> 00:12:51,820
+of the variables themselves, and everything can have
+
+263
+00:12:51,820 --> 00:12:53,600
+an independent coefficient.
+
+264
+00:12:53,600 --> 00:12:55,210
+So those are the basic ingredients
+
+265
+00:12:55,210 --> 00:12:56,920
+of this class of models.
+
+266
+00:12:56,920 --> 00:13:00,970
+As long as they are linear in terms of the random variables,
+
+267
+00:13:00,970 --> 00:13:03,790
+we have a good chance of solving them using the techniques
+
+268
+00:13:03,790 --> 00:13:07,240
+that we worked out in detail for AR 1.
+
+269
+00:13:07,240 --> 00:13:09,940
+These models have temporal correlations that's
+
+270
+00:13:09,940 --> 00:13:11,540
+built into their structure.
+
+271
+00:13:11,540 --> 00:13:14,350
+So they're written recursively, which
+
+272
+00:13:14,350 --> 00:13:16,570
+makes a compact definition, it means
+
+273
+00:13:16,570 --> 00:13:19,810
+that we can solve them and think about them one period ahead.
+
+274
+00:13:19,810 --> 00:13:22,210
+But it also means that when we make assumptions
+
+275
+00:13:22,210 --> 00:13:24,250
+about stationarity of the series,
+
+276
+00:13:24,250 --> 00:13:27,310
+that we have good tools for solving them.
+
+277
+00:13:27,310 --> 00:13:29,890
+And understanding how to interpret
+
+278
+00:13:29,890 --> 00:13:32,440
+that as the propagation of information
+
+279
+00:13:32,440 --> 00:13:35,950
+forward in time and the decay of the influence of shocks
+
+280
+00:13:35,950 --> 00:13:37,430
+over time as well.
+
+281
+00:13:37,430 --> 00:13:39,040
+The example we looked at in detail
+
+282
+00:13:39,040 --> 00:13:42,280
+was AR 1, which we used for mean reversion.
+
+283
+00:13:42,280 --> 00:13:44,830
+And this model, this structure shows up
+
+284
+00:13:44,830 --> 00:13:47,320
+in many areas of finance econometrics
+
+285
+00:13:47,320 --> 00:13:51,190
+and in other areas of applied mathematics.
+
+286
+00:13:51,190 --> 00:13:53,830
+The model is for where we have randomness that
+
+287
+00:13:53,830 --> 00:13:55,570
+enters through this noise term.
+
+288
+00:13:55,570 --> 00:13:59,230
+But where there's an influence--
+
+289
+00:13:59,230 --> 00:14:01,270
+where the influence of new information
+
+290
+00:14:01,270 --> 00:14:03,860
+tends to die out over time.
+
+291
+00:14:03,860 --> 00:14:06,100
+So the way in which we model this and describe
+
+292
+00:14:06,100 --> 00:14:10,900
+it is in terms of the relative displacement from a long term
+
+293
+00:14:10,900 --> 00:14:11,920
+mean average.
+
+294
+00:14:11,920 --> 00:14:13,780
+And the minus lambda says, that when
+
+295
+00:14:13,780 --> 00:14:16,030
+we see shocks in one period, they
+
+296
+00:14:16,030 --> 00:14:19,780
+tend to get damped out, in the following period,
+
+297
+00:14:19,780 --> 00:14:23,150
+in the absence of a correction.
+
+298
+00:14:23,150 --> 00:14:26,870
+OK, so we apply weak stationarity,
+
+299
+00:14:26,870 --> 00:14:29,420
+that gives us the first and second moment.
+
+300
+00:14:29,420 --> 00:14:33,030
+It doesn't tell us everything about the full distribution.
+
+301
+00:14:33,030 --> 00:14:36,590
+Fortunately, for us, that's what we're usually interested in.
+
+302
+00:14:36,590 --> 00:14:41,120
+One last detail to keep in mind is that the lag variables--
+
+303
+00:14:41,120 --> 00:14:43,520
+will sometimes think about in two different ways,
+
+304
+00:14:43,520 --> 00:14:46,560
+and mathematically we'll treat it in two different ways.
+
+305
+00:14:46,560 --> 00:14:49,820
+One of them is as in the equations we wrote down,
+
+306
+00:14:49,820 --> 00:14:53,660
+we think about them as the different periods is all
+
+307
+00:14:53,660 --> 00:14:55,850
+being unobserved, they're all random variables
+
+308
+00:14:55,850 --> 00:14:59,210
+that have not yet been drawn from their distribution.
+
+309
+00:14:59,210 --> 00:15:01,640
+There are no observations that have yet been made.
+
+310
+00:15:01,640 --> 00:15:03,920
+And those expectations that we took
+
+311
+00:15:03,920 --> 00:15:06,560
+are called unconditional expectations.
+
+312
+00:15:06,560 --> 00:15:08,900
+But we'll see that sometimes when we actually
+
+313
+00:15:08,900 --> 00:15:10,550
+want to look at data, or if we want
+
+314
+00:15:10,550 --> 00:15:13,798
+to use Monte Carlo techniques to generate simulated data.
+
+315
+00:15:13,798 --> 00:15:15,840
+Well, think about these a little bit differently,
+
+316
+00:15:15,840 --> 00:15:20,360
+we'll ask, what's the expectation for the future
+
+317
+00:15:20,360 --> 00:15:23,960
+given that we're currently at a particular time t,
+
+318
+00:15:23,960 --> 00:15:27,770
+and that everything at earlier times has already transpired,
+
+319
+00:15:27,770 --> 00:15:28,920
+has already arrived.
+
+320
+00:15:28,920 --> 00:15:33,680
+And in that case, we take the values of the earlier
+
+321
+00:15:33,680 --> 00:15:38,090
+realized numbers to be constants.
+
+322
+00:15:38,090 --> 00:15:39,980
+And the things that are unrealized
+
+323
+00:15:39,980 --> 00:15:42,880
+are things that are in our future.
+

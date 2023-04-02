@@ -1,0 +1,304 @@
+0
+00:00:00,000 --> 00:00:00,590
+[MUSIC PLAYING]
+
+1
+00:00:00,590 --> 00:00:01,882
+EGOR MATVEYEV: Hello, everyone.
+
+2
+00:00:01,882 --> 00:00:03,350
+And welcome to mathematical methods
+
+3
+00:00:03,350 --> 00:00:05,180
+for quantitative finance.
+
+4
+00:00:05,180 --> 00:00:08,150
+This course is part of a MIT's MicroMasters Program
+
+5
+00:00:08,150 --> 00:00:09,830
+in Finance.
+
+6
+00:00:09,830 --> 00:00:12,920
+To the learners who have taken other courses in this series,
+
+7
+00:00:12,920 --> 00:00:14,240
+welcome back.
+
+8
+00:00:14,240 --> 00:00:16,740
+To the learners who are joining us for the first time,
+
+9
+00:00:16,740 --> 00:00:20,570
+I would like to welcome you to our MicroMasters program.
+
+10
+00:00:20,570 --> 00:00:22,070
+My name is Egor Matveyev.
+
+11
+00:00:22,070 --> 00:00:24,830
+I'm the executive director of the MicroMasters program
+
+12
+00:00:24,830 --> 00:00:27,770
+and a faculty member of the Finance Group at MIT Sloan
+
+13
+00:00:27,770 --> 00:00:29,270
+School of Management.
+
+14
+00:00:29,270 --> 00:00:32,600
+I joined the Finance Group at MIT Sloan four years ago.
+
+15
+00:00:32,600 --> 00:00:35,660
+I have taught various finance courses in our MBA,
+
+16
+00:00:35,660 --> 00:00:39,200
+master's in finance, and MBA Sloan Fellows program.
+
+17
+00:00:39,200 --> 00:00:41,450
+The scope of my teaching includes introductory classes
+
+18
+00:00:41,450 --> 00:00:43,520
+to MBA students and Sloan Fellows,
+
+19
+00:00:43,520 --> 00:00:46,580
+as well as an advanced elective in corporate finance.
+
+20
+00:00:46,580 --> 00:00:49,430
+I also teach MIT Sloan's action learning course
+
+21
+00:00:49,430 --> 00:00:52,490
+in corporate finance and investment banking.
+
+22
+00:00:52,490 --> 00:00:56,010
+My academic research covers areas of corporate finance,
+
+23
+00:00:56,010 --> 00:00:58,700
+corporate governance, organizational economics,
+
+24
+00:00:58,700 --> 00:01:00,800
+and asset management with a particular focus
+
+25
+00:01:00,800 --> 00:01:04,670
+on asset management of nonprofit foundations and endowments.
+
+26
+00:01:04,670 --> 00:01:06,410
+In this video, I would like to give you
+
+27
+00:01:06,410 --> 00:01:10,040
+an overview of the MicroMasters Program in Finance.
+
+28
+00:01:10,040 --> 00:01:12,920
+Our program consists of five courses--
+
+29
+00:01:12,920 --> 00:01:15,440
+Mathematical Methods for Quantitative Finance,
+
+30
+00:01:15,440 --> 00:01:18,830
+Foundations of Modern Finance parts I and II,
+
+31
+00:01:18,830 --> 00:01:22,500
+Financial Accounting, and Derivatives Markets.
+
+32
+00:01:22,500 --> 00:01:24,900
+By successfully completing all five courses,
+
+33
+00:01:24,900 --> 00:01:29,840
+you will earn the MicroMasters credential in finance from MIT.
+
+34
+00:01:29,840 --> 00:01:33,380
+How does completing the MicroMasters program in finance
+
+35
+00:01:33,380 --> 00:01:34,920
+benefit you?
+
+36
+00:01:34,920 --> 00:01:38,360
+First, it can be used to advance your career.
+
+37
+00:01:38,360 --> 00:01:40,820
+All of our courses have the same rigorous content
+
+38
+00:01:40,820 --> 00:01:45,620
+that we teach to our in-resident students at MIT Sloan.
+
+39
+00:01:45,620 --> 00:01:47,540
+In all our courses, we have developed
+
+40
+00:01:47,540 --> 00:01:51,110
+individual proctored exams that allow us to test your knowledge
+
+41
+00:01:51,110 --> 00:01:55,060
+and allows you to show your understanding of the subject.
+
+42
+00:01:55,060 --> 00:01:58,040
+Our testing process is rigorous and complies
+
+43
+00:01:58,040 --> 00:02:02,210
+with our internal practices for MIT students.
+
+44
+00:02:02,210 --> 00:02:04,040
+Earning our credential will allow
+
+45
+00:02:04,040 --> 00:02:06,320
+you to demonstrate your financial knowledge
+
+46
+00:02:06,320 --> 00:02:10,820
+and your skills at the level of the MIT Sloan.
+
+47
+00:02:10,820 --> 00:02:13,610
+Second, our MicroMasters credential
+
+48
+00:02:13,610 --> 00:02:16,190
+can be a first step in earning a master's degree
+
+49
+00:02:16,190 --> 00:02:22,530
+in finance, either at MIT or at our pathway universities.
+
+50
+00:02:22,530 --> 00:02:25,800
+If you're currently a sophomore in an undergraduate program,
+
+51
+00:02:25,800 --> 00:02:28,135
+starting our MicroMasters program now
+
+52
+00:02:28,135 --> 00:02:29,760
+would allow you to complete the program
+
+53
+00:02:29,760 --> 00:02:33,420
+by the beginning of your senior year,
+
+54
+00:02:33,420 --> 00:02:35,760
+right in time for your applications
+
+55
+00:02:35,760 --> 00:02:38,250
+to master's programs.
+
+56
+00:02:38,250 --> 00:02:40,290
+At MIT Sloan School of Management,
+
+57
+00:02:40,290 --> 00:02:42,690
+learners who earn the MicroMasters credential
+
+58
+00:02:42,690 --> 00:02:46,590
+in finance are eligible to receive credit for four courses
+
+59
+00:02:46,590 --> 00:02:49,500
+upon acceptance into the program.
+
+60
+00:02:49,500 --> 00:02:51,810
+This would allow you to waive the summer term
+
+61
+00:02:51,810 --> 00:02:55,000
+and accelerate program completion.
+
+62
+00:02:55,000 --> 00:02:58,540
+The list of pathway universities that accept our MicroMasters
+
+63
+00:02:58,540 --> 00:03:03,930
+credential is growing and is available on our website.
+
+64
+00:03:03,930 --> 00:03:07,000
+Even if you are not currently interested in a full master's
+
+65
+00:03:07,000 --> 00:03:09,850
+degree, our MicroMasters credential
+
+66
+00:03:09,850 --> 00:03:12,400
+may give you an edge in the labor market,
+
+67
+00:03:12,400 --> 00:03:14,560
+as our committee of credential holders
+
+68
+00:03:14,560 --> 00:03:17,500
+grows and more employers become familiar
+
+69
+00:03:17,500 --> 00:03:21,590
+with the rigor of our content and testing.
+
+70
+00:03:21,590 --> 00:03:25,240
+You're also welcome to take our individual courses.
+
+71
+00:03:25,240 --> 00:03:28,660
+For example, if you already have a strong general foundation
+
+72
+00:03:28,660 --> 00:03:31,120
+in finance and you would like to deepen
+
+73
+00:03:31,120 --> 00:03:33,850
+your understanding of derivative securities and markets,
+
+74
+00:03:33,850 --> 00:03:35,500
+you can take our derivatives course
+
+75
+00:03:35,500 --> 00:03:40,020
+and earn a certificate specifically for that course.
+

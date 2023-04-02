@@ -1,0 +1,996 @@
+0
+00:00:00,000 --> 00:00:00,750
+
+
+1
+00:00:00,750 --> 00:00:06,240
+PROFESSOR: Now, in expanding n, we'll
+
+2
+00:00:06,240 --> 00:00:09,000
+often want to take a look at what happens as n increases.
+
+3
+00:00:09,000 --> 00:00:13,200
+And I'd like to show you that in pictures right now
+
+4
+00:00:13,200 --> 00:00:16,140
+on the computer, doing a simulation in R.
+
+5
+00:00:16,140 --> 00:00:19,320
+And for the full binomial distribution,
+
+6
+00:00:19,320 --> 00:00:20,820
+we run into a problem when we put it
+
+7
+00:00:20,820 --> 00:00:23,400
+on the computer, which is that if we write out
+
+8
+00:00:23,400 --> 00:00:26,700
+all the factorials, the factorials quickly
+
+9
+00:00:26,700 --> 00:00:28,230
+overrun the machine limit.
+
+10
+00:00:28,230 --> 00:00:31,980
+But the combinations are usually well behaved,
+
+11
+00:00:31,980 --> 00:00:37,380
+so we use a function that's built for this purpose.
+
+12
+00:00:37,380 --> 00:00:40,260
+We'll use the function in R called choose.
+
+13
+00:00:40,260 --> 00:00:43,200
+So choose(n,k) is what you would expect.
+
+14
+00:00:43,200 --> 00:00:45,840
+It's n choose k in a way that doesn't blow up
+
+15
+00:00:45,840 --> 00:00:47,310
+for moderate values.
+
+16
+00:00:47,310 --> 00:00:51,630
+And dbinom is the distribution function
+
+17
+00:00:51,630 --> 00:00:55,380
+for the binomial of k, n, p using the same definitions
+
+18
+00:00:55,380 --> 00:00:56,410
+that we had here.
+
+19
+00:00:56,410 --> 00:00:58,650
+So what I'm going to do is I'm going to pick
+
+20
+00:00:58,650 --> 00:01:00,150
+a particular set of values.
+
+21
+00:01:00,150 --> 00:01:03,300
+I'm going to get n equal 1, 2, and then we're
+
+22
+00:01:03,300 --> 00:01:04,209
+going to keep going.
+
+23
+00:01:04,209 --> 00:01:04,959
+I'm going to jump.
+
+24
+00:01:04,959 --> 00:01:06,930
+We're not going to every single value of n.
+
+25
+00:01:06,930 --> 00:01:09,900
+But I want to start at n equals 1, 2, 5,
+
+26
+00:01:09,900 --> 00:01:12,720
+and quickly get to 1,000, and I'd
+
+27
+00:01:12,720 --> 00:01:15,480
+like to see what happens to the binomial distribution
+
+28
+00:01:15,480 --> 00:01:19,110
+as n gets large, holding p and q fixed.
+
+29
+00:01:19,110 --> 00:01:22,830
+And the values I'm going to pick, we'll let p equal 10%
+
+30
+00:01:22,830 --> 00:01:25,210
+and we'll let q, therefore, equal 90%.
+
+31
+00:01:25,210 --> 00:01:27,600
+So we have a 10% chance of success.
+
+32
+00:01:27,600 --> 00:01:31,410
+And remember, the binomial distribution tells us
+
+33
+00:01:31,410 --> 00:01:36,150
+if I've got a 10% chance of success per trial,
+
+34
+00:01:36,150 --> 00:01:41,160
+if I do n trials, what's the probability of getting 0
+
+35
+00:01:41,160 --> 00:01:44,260
+through n successes?
+
+36
+00:01:44,260 --> 00:01:47,230
+So if I've got 1--
+
+37
+00:01:47,230 --> 00:01:50,680
+if I run n equals 1, I could either have 0 or 1.
+
+38
+00:01:50,680 --> 00:01:53,210
+And if it's a 10% chance of success,
+
+39
+00:01:53,210 --> 00:01:55,310
+I have a 90% chance of failure.
+
+40
+00:01:55,310 --> 00:01:56,510
+And here they are.
+
+41
+00:01:56,510 --> 00:02:00,100
+So this is a 90% failure.
+
+42
+00:02:00,100 --> 00:02:01,720
+Probability of 0.
+
+43
+00:02:01,720 --> 00:02:05,110
+And here's a 10% chance of getting 1.
+
+44
+00:02:05,110 --> 00:02:10,120
+For n equals 2, I still have 81% chance of failure.
+
+45
+00:02:10,120 --> 00:02:14,560
+I have a 1% chance of two successes,
+
+46
+00:02:14,560 --> 00:02:17,275
+and the rest of the probability distribution
+
+47
+00:02:17,275 --> 00:02:22,390
+is here that I have one success and one failure.
+
+48
+00:02:22,390 --> 00:02:25,515
+This is for n equals 5.
+
+49
+00:02:25,515 --> 00:02:27,330
+n equals 10.
+
+50
+00:02:27,330 --> 00:02:29,390
+And notice that when we've gotten--
+
+51
+00:02:29,390 --> 00:02:32,660
+once we get to n equals 10, the largest value
+
+52
+00:02:32,660 --> 00:02:34,680
+now is not the smallest value.
+
+53
+00:02:34,680 --> 00:02:36,680
+So instead of the whole probability distribution
+
+54
+00:02:36,680 --> 00:02:38,840
+being bunched up to the left-hand side,
+
+55
+00:02:38,840 --> 00:02:40,400
+where's the mean value?
+
+56
+00:02:40,400 --> 00:02:42,250
+n times p.
+
+57
+00:02:42,250 --> 00:02:45,830
+p is 10%, n is 10, it's at 1.
+
+58
+00:02:45,830 --> 00:02:48,990
+That's right here at the largest value in the distribution.
+
+59
+00:02:48,990 --> 00:02:50,610
+Let's keep going.
+
+60
+00:02:50,610 --> 00:02:56,880
+This is for 20, 50, 100.
+
+61
+00:02:56,880 --> 00:02:59,430
+And now by the time we get to 100, take a look at there's
+
+62
+00:02:59,430 --> 00:03:02,310
+this large tail off to the right-hand side, which
+
+63
+00:03:02,310 --> 00:03:03,810
+isn't even visible because these are
+
+64
+00:03:03,810 --> 00:03:07,990
+less than 1 pixel high with the resolution of your screen.
+
+65
+00:03:07,990 --> 00:03:13,650
+So it's possible in 100 trials, in this case for n equals 100,
+
+66
+00:03:13,650 --> 00:03:16,950
+that you might get more than 24 trials.
+
+67
+00:03:16,950 --> 00:03:19,380
+But the probability is so small that we
+
+68
+00:03:19,380 --> 00:03:21,810
+can't see it on this scale.
+
+69
+00:03:21,810 --> 00:03:24,030
+Notice something else interesting is going on.
+
+70
+00:03:24,030 --> 00:03:27,910
+This distribution, where it is active, first of all,
+
+71
+00:03:27,910 --> 00:03:28,980
+it's peaked around where?
+
+72
+00:03:28,980 --> 00:03:30,830
+It's around 10.
+
+73
+00:03:30,830 --> 00:03:34,240
+p times n is 10, and that's about where the peak is.
+
+74
+00:03:34,240 --> 00:03:36,840
+But notice the distribution for the part of it
+
+75
+00:03:36,840 --> 00:03:41,190
+that's noticeably non-zero is looking much more symmetric
+
+76
+00:03:41,190 --> 00:03:44,910
+between the values less than 10 and the values above 10
+
+77
+00:03:44,910 --> 00:03:50,090
+if we don't pay attention to this big right tail over here.
+
+78
+00:03:50,090 --> 00:03:54,050
+And this is for 1,000, where we have things centered on 100.
+
+79
+00:03:54,050 --> 00:03:55,850
+And again, the distribution is getting
+
+80
+00:03:55,850 --> 00:03:59,250
+very tall and very narrow.
+
+81
+00:03:59,250 --> 00:04:05,130
+So for fixed p, the distribution initially decreases.
+
+82
+00:04:05,130 --> 00:04:07,620
+As n increases, the distribution stays
+
+83
+00:04:07,620 --> 00:04:10,260
+centered near np, which is consistent with what
+
+84
+00:04:10,260 --> 00:04:12,990
+we computed analytically for the mean value.
+
+85
+00:04:12,990 --> 00:04:16,019
+The distribution gets narrower and more symmetric.
+
+86
+00:04:16,019 --> 00:04:19,829
+And this is an illustration of two important limit theorems,
+
+87
+00:04:19,829 --> 00:04:20,940
+just done in pictures.
+
+88
+00:04:20,940 --> 00:04:25,550
+We haven't done a mathematical derivation by any means.
+
+89
+00:04:25,550 --> 00:04:28,680
+The first one is known as the law of large numbers.
+
+90
+00:04:28,680 --> 00:04:32,660
+The law of large numbers says that as the number of trials
+
+91
+00:04:32,660 --> 00:04:36,470
+gets large, you're going to see the mean value of the number
+
+92
+00:04:36,470 --> 00:04:39,200
+of the realizations in experiments
+
+93
+00:04:39,200 --> 00:04:42,300
+is going to approach a theoretical mean.
+
+94
+00:04:42,300 --> 00:04:46,100
+Another way to say that is that the probability of observing
+
+95
+00:04:46,100 --> 00:04:48,950
+the mean deviating from--
+
+96
+00:04:48,950 --> 00:04:52,760
+the average value deviating from the mean value,
+
+97
+00:04:52,760 --> 00:04:55,280
+the expectation of the probability distribution
+
+98
+00:04:55,280 --> 00:04:56,480
+goes to 0.
+
+99
+00:04:56,480 --> 00:05:00,200
+And that's why the probability distribution is narrowing
+
+100
+00:05:00,200 --> 00:05:03,020
+around that mean value.
+
+101
+00:05:03,020 --> 00:05:05,686
+The other one is the central limit theorem.
+
+102
+00:05:05,686 --> 00:05:09,200
+The central limit theorem says that as we
+
+103
+00:05:09,200 --> 00:05:13,010
+add more and more variables, the shape of the distribution
+
+104
+00:05:13,010 --> 00:05:15,680
+approaches a Gaussian distribution,
+
+105
+00:05:15,680 --> 00:05:17,670
+or a normal distribution.
+
+106
+00:05:17,670 --> 00:05:19,730
+Now, to see that a little bit more clearly,
+
+107
+00:05:19,730 --> 00:05:23,270
+let's change variables to what I'll call a scaling variable.
+
+108
+00:05:23,270 --> 00:05:28,910
+And what I'm going to do is because as n gets large,
+
+109
+00:05:28,910 --> 00:05:33,620
+the interesting value of k is going to be the one near np,
+
+110
+00:05:33,620 --> 00:05:36,530
+near the mean, let's pick a value that's centered
+
+111
+00:05:36,530 --> 00:05:38,310
+right around where we want it.
+
+112
+00:05:38,310 --> 00:05:45,090
+So I'm going to define this scaling variable z to be--
+
+113
+00:05:45,090 --> 00:05:47,010
+I'm going to use this to replace k.
+
+114
+00:05:47,010 --> 00:05:48,510
+So what I'm going to do is I'm going
+
+115
+00:05:48,510 --> 00:05:49,930
+to subtract off the mean value.
+
+116
+00:05:49,930 --> 00:05:53,010
+So the numerator, k minus np, says
+
+117
+00:05:53,010 --> 00:05:56,790
+how far my k is away from the expected
+
+118
+00:05:56,790 --> 00:05:58,560
+value, which is n times p.
+
+119
+00:05:58,560 --> 00:06:01,600
+And then I'm going to divide it by the standard deviation.
+
+120
+00:06:01,600 --> 00:06:05,510
+So that gives me kind of units as to how far away I am so
+
+121
+00:06:05,510 --> 00:06:07,140
+that that also scales with n.
+
+122
+00:06:07,140 --> 00:06:09,000
+And let's see what happens if I do that.
+
+123
+00:06:09,000 --> 00:06:11,850
+And the code is here, which you can take and copy and paste
+
+124
+00:06:11,850 --> 00:06:17,200
+from the website, or you can retype it--
+
+125
+00:06:17,200 --> 00:06:19,720
+it's just a couple of lines of code-- and run it yourself.
+
+126
+00:06:19,720 --> 00:06:22,090
+Or I'm sure you can write better code than mine.
+
+127
+00:06:22,090 --> 00:06:24,110
+So give it a try.
+
+128
+00:06:24,110 --> 00:06:26,300
+Let's look in pictures at what happens now.
+
+129
+00:06:26,300 --> 00:06:28,540
+So starting out, we see the same picture--
+
+130
+00:06:28,540 --> 00:06:34,490
+n equals 1, n equals 2, n equals 5, n equals 10.
+
+131
+00:06:34,490 --> 00:06:37,250
+And now what's happening is we've recentered things
+
+132
+00:06:37,250 --> 00:06:40,540
+so that the whole distribution is staying
+
+133
+00:06:40,540 --> 00:06:42,670
+on a similar kind of scale.
+
+134
+00:06:42,670 --> 00:06:49,570
+As we keep going, n equals 20, n equals 50, 100, and 1,000.
+
+135
+00:06:49,570 --> 00:06:52,900
+And now we've got something that looks symmetric.
+
+136
+00:06:52,900 --> 00:06:54,190
+It looks Gaussian.
+
+137
+00:06:54,190 --> 00:06:55,470
+It's our favorite bell curve.
+
+138
+00:06:55,470 --> 00:06:58,210
+Now, it's not exactly the bell curve, to be sure.
+
+139
+00:06:58,210 --> 00:07:01,280
+It doesn't go to minus infinity or plus infinity.
+
+140
+00:07:01,280 --> 00:07:03,730
+It only goes to 0 on the left and the most
+
+141
+00:07:03,730 --> 00:07:05,750
+we could be is 1,000 on the right.
+
+142
+00:07:05,750 --> 00:07:08,290
+So the midpoint is centered where we'd expect,
+
+143
+00:07:08,290 --> 00:07:12,550
+at n times p around 100, but it is not the exact Gaussian
+
+144
+00:07:12,550 --> 00:07:13,390
+distribution.
+
+145
+00:07:13,390 --> 00:07:16,630
+It looks like it just because of the scale on the computer.
+
+146
+00:07:16,630 --> 00:07:18,340
+We don't see the behavior of the tails.
+
+147
+00:07:18,340 --> 00:07:23,410
+We need different graphics, transfer it--
+
+148
+00:07:23,410 --> 00:07:25,520
+different plots with different transformations,
+
+149
+00:07:25,520 --> 00:07:28,330
+such as qqPlot to see the behavior of the tails
+
+150
+00:07:28,330 --> 00:07:30,790
+or to look more carefully and analytically.
+
+151
+00:07:30,790 --> 00:07:32,650
+But in the bulk of the distribution
+
+152
+00:07:32,650 --> 00:07:34,750
+we've recovered, we see the central limit
+
+153
+00:07:34,750 --> 00:07:37,150
+theorem in action, where adding together
+
+154
+00:07:37,150 --> 00:07:39,580
+a bunch of non-Gaussian random variables,
+
+155
+00:07:39,580 --> 00:07:42,880
+non-normal variables, each of the variables
+
+156
+00:07:42,880 --> 00:07:44,110
+also is very skewed.
+
+157
+00:07:44,110 --> 00:07:48,610
+It's 10-90%, so it's not equally likely up or down.
+
+158
+00:07:48,610 --> 00:07:51,440
+Nevertheless, when we add 1,000 of them together,
+
+159
+00:07:51,440 --> 00:07:53,470
+we get something that looks Gaussian.
+
+160
+00:07:53,470 --> 00:07:58,430
+So this is what's going on with the central limit theorem.
+
+161
+00:07:58,430 --> 00:08:01,450
+So the distribution, if we wanted
+
+162
+00:08:01,450 --> 00:08:03,880
+to write down an approximation for what
+
+163
+00:08:03,880 --> 00:08:07,690
+the limiting distribution is, we could approximate our function
+
+164
+00:08:07,690 --> 00:08:13,950
+f of k and n, p by introducing the scaling variable z sub
+
+165
+00:08:13,950 --> 00:08:15,340
+k as I've defined it.
+
+166
+00:08:15,340 --> 00:08:17,710
+And in terms of z sub k--
+
+167
+00:08:17,710 --> 00:08:20,020
+so we could substitute in those values--
+
+168
+00:08:20,020 --> 00:08:24,580
+this function is approximated by a standard Gaussian
+
+169
+00:08:24,580 --> 00:08:27,790
+distribution, 1 over square root of 2pi, e
+
+170
+00:08:27,790 --> 00:08:32,150
+to the minus z squared over 2.
+
+171
+00:08:32,150 --> 00:08:34,490
+We can see that this is a good approximation in lots
+
+172
+00:08:34,490 --> 00:08:36,034
+of practical examples.
+
+173
+00:08:36,034 --> 00:08:37,909
+Here's one that we took a look at it at Sloan
+
+174
+00:08:37,909 --> 00:08:39,020
+when we were trying to figure out
+
+175
+00:08:39,020 --> 00:08:41,570
+if there were enough Bloomberg terminals for the students,
+
+176
+00:08:41,570 --> 00:08:43,789
+back when we used to show up in the building
+
+177
+00:08:43,789 --> 00:08:45,140
+before the pandemic.
+
+178
+00:08:45,140 --> 00:08:49,580
+And the class size for a master of finance program
+
+179
+00:08:49,580 --> 00:08:51,350
+was about 120 students.
+
+180
+00:08:51,350 --> 00:08:53,330
+We had nine Bloomberg terminals at the time.
+
+181
+00:08:53,330 --> 00:08:55,010
+I think we may have more now.
+
+182
+00:08:55,010 --> 00:08:57,260
+And suppose that they independently
+
+183
+00:08:57,260 --> 00:09:00,980
+wanted to use a terminal with probability 7 and 1/2%.
+
+184
+00:09:00,980 --> 00:09:05,780
+So we'd want to know, what's the cumulative probability
+
+185
+00:09:05,780 --> 00:09:07,552
+that nine or fewer students would
+
+186
+00:09:07,552 --> 00:09:09,260
+want to use it at the same time, if there
+
+187
+00:09:09,260 --> 00:09:10,820
+were independent demand?
+
+188
+00:09:10,820 --> 00:09:13,950
+We could have 120 students all show up at once,
+
+189
+00:09:13,950 --> 00:09:15,720
+but that's very unlikely.
+
+190
+00:09:15,720 --> 00:09:18,350
+So the binomial distribution lets
+
+191
+00:09:18,350 --> 00:09:21,440
+us compute, what's the probability of 0, 1, 2, 3,
+
+192
+00:09:21,440 --> 00:09:25,940
+up through 120, and we can sum that up and get an exact answer
+
+193
+00:09:25,940 --> 00:09:27,870
+from the binomial distribution.
+
+194
+00:09:27,870 --> 00:09:32,120
+But in fact, we get an almost exactly
+
+195
+00:09:32,120 --> 00:09:35,180
+the same answer by using the normal distribution to plug in,
+
+196
+00:09:35,180 --> 00:09:37,100
+and you can see on this plot where
+
+197
+00:09:37,100 --> 00:09:40,010
+I've shown in red sort of the integral
+
+198
+00:09:40,010 --> 00:09:43,880
+up to the point of interest that the distribution looks
+
+199
+00:09:43,880 --> 00:09:47,090
+Gaussian, and we get a very good result from the Gaussian
+
+200
+00:09:47,090 --> 00:09:48,300
+distribution.
+
+201
+00:09:48,300 --> 00:09:50,090
+So let's summarize what we've said
+
+202
+00:09:50,090 --> 00:09:53,600
+in discussing random variables, because this is our jumping off
+
+203
+00:09:53,600 --> 00:09:59,090
+point for looking at random processes that describe lots
+
+204
+00:09:59,090 --> 00:10:01,670
+and lots of behavior in financial markets,
+
+205
+00:10:01,670 --> 00:10:06,670
+and help us think about financial decision making.
+
+206
+00:10:06,670 --> 00:10:10,860
+Any set of random variables can be
+
+207
+00:10:10,860 --> 00:10:13,170
+used to construct a new random variable, their sum,
+
+208
+00:10:13,170 --> 00:10:16,090
+just by adding them together.
+
+209
+00:10:16,090 --> 00:10:19,320
+We could ask about the distribution of this S.
+
+210
+00:10:19,320 --> 00:10:20,880
+If we want to compute it, we need
+
+211
+00:10:20,880 --> 00:10:23,310
+to do convolutions of the probability
+
+212
+00:10:23,310 --> 00:10:25,980
+distributions of each of the axes,
+
+213
+00:10:25,980 --> 00:10:29,040
+and that means n fold multiple intervals
+
+214
+00:10:29,040 --> 00:10:32,200
+in n dimensional space, which is hard.
+
+215
+00:10:32,200 --> 00:10:34,450
+But for most of our applications,
+
+216
+00:10:34,450 --> 00:10:37,170
+we only need the moments, like the mean and the variance,
+
+217
+00:10:37,170 --> 00:10:39,720
+and that we can compute just from what we're
+
+218
+00:10:39,720 --> 00:10:42,600
+looking at in terms of the mean and the variance
+
+219
+00:10:42,600 --> 00:10:44,970
+of the individual random variables.
+
+220
+00:10:44,970 --> 00:10:46,320
+And that's easy.
+
+221
+00:10:46,320 --> 00:10:48,420
+So the moments of the new random variable
+
+222
+00:10:48,420 --> 00:10:51,270
+are computed by linearity.
+
+223
+00:10:51,270 --> 00:10:55,530
+And if the variables are IID, if they're
+
+224
+00:10:55,530 --> 00:10:59,250
+independent and identically distributed, that is,
+
+225
+00:10:59,250 --> 00:11:01,230
+this collection of n variables are not just
+
+226
+00:11:01,230 --> 00:11:04,200
+n variables from completely different corners of the world
+
+227
+00:11:04,200 --> 00:11:06,090
+but they're the same kind of variable
+
+228
+00:11:06,090 --> 00:11:10,930
+repeatedly, then as n gets large,
+
+229
+00:11:10,930 --> 00:11:15,910
+this sum S is going to have a full distribution that's
+
+230
+00:11:15,910 --> 00:11:18,740
+going to in limit approach a Gaussian distribution.
+
+231
+00:11:18,740 --> 00:11:21,900
+So we will know its full distribution in that case.
+
+232
+00:11:21,900 --> 00:11:24,970
+We still get the moments, of course, but in special cases,
+
+233
+00:11:24,970 --> 00:11:27,190
+we get the full distribution.
+
+234
+00:11:27,190 --> 00:11:30,220
+The application we're going to be looking at in our next unit
+
+235
+00:11:30,220 --> 00:11:32,950
+is the construction of stochastic processes,
+
+236
+00:11:32,950 --> 00:11:35,980
+and those have exactly the structure we've looked at,
+
+237
+00:11:35,980 --> 00:11:38,560
+but where the variables are ordered
+
+238
+00:11:38,560 --> 00:11:40,540
+and they correspond to information
+
+239
+00:11:40,540 --> 00:11:42,560
+being revealed over time.
+
+240
+00:11:42,560 --> 00:11:46,220
+So X_1 would be an information that was available on day one,
+
+241
+00:11:46,220 --> 00:11:49,360
+X_2 would be new information that arrived on day two,
+
+242
+00:11:49,360 --> 00:11:50,450
+and so on.
+
+243
+00:11:50,450 --> 00:11:55,510
+So we'll be interested in using this structure, the behavior
+
+244
+00:11:55,510 --> 00:11:57,400
+of sums of random variables, to see
+
+245
+00:11:57,400 --> 00:12:01,690
+how information evolves in time to see how valuation
+
+246
+00:12:01,690 --> 00:12:07,420
+is done when the dynamics of these processes
+
+247
+00:12:07,420 --> 00:12:09,500
+can be fully described.
+
+248
+00:12:09,500 --> 00:12:10,000
+
+

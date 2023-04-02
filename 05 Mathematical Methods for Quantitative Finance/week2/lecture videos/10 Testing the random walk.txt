@@ -1,0 +1,135 @@
+PROFESSOR: The random walk model, like many models,
+can and should be tested when it's applied against real world
+data.
+So let's do that.
+The random walk model has a long history in finance.
+It actually began back over a century in 1900
+with Bachelier, whose mathematics thesis
+studied the movements of stock prices on the Paris Bourse.
+It was not much appreciated by his dissertation committee.
+And the work was forgotten for a long time.
+And we'll talk in more modern terms.
+By the 1960s, random walks had reappeared in finance,
+had been rediscovered, including Bachelier's work.
+And the idea was that not only might random
+walks provide a good model for the way stock prices seem
+to behave in the market.
+It would explain why there's so much randomness and noise
+and why not everybody can get rich trading stocks.
+But at a deeper level, it might be
+a key to understanding how markets should behave
+and how markets serve not only as
+places where value is exchanged but where
+information is exchanged.
+And the idea is very simple.
+The idea is that if people had access to information
+in the markets, then if everyone knew
+what something should be worth, then
+the price should be at that value.
+If you knew that something was going to be worth twice as
+much tomorrow, why would you sell it today for anything
+less?
+So in a-- if we take that one step further,
+we have this notion that if markets
+were efficient in the sense that investors are taking
+into account the available information,
+then the only reason prices should change
+is the arrival of new information
+that hadn't been anticipated.
+That's sort of the definition of news.
+And in such a world, prices would behave randomly.
+So somewhat paradoxically, randomness of prices
+would be a sign of markets operating efficiently.
+That is, a good market, a well functioning market,
+is one where things look chaotic.
+So this was promoted by a number of celebrated economists,
+including these papers that I am showing you here.
+One by Eugene Fama, who said specifically
+that we can model stock prices as random walks.
+And Paul Samuelson, who looked at exactly how and why it
+was that this paradox might work mathematically.
+And he has one of the most wonderful titles
+in the paper, the Proof that Properly Anticipated Prices
+Fluctuate Randomly, which captures this paradox.
+But we're not interested just in the theoretical side.
+We want to see the empirical side.
+So what I'd like to do is show you how this can be tested.
+And we'll follow another set of economists
+who did celebrated work a couple of decades after this.
+And you have the advantage of coming to this a couple decades
+after them.
+And you can check data now and see if they were right.
+And who you agree with.
+So what I'd like to do is review these results,
+show you the computational approach,
+give you some of the computational tools,
+and then let you loose on the data.
+OK?
+So this is a great starting point
+for doing empirical analysis and for seeing
+how we might test different ideas
+over different periods of time.
+So the basic questions, though, that
+motivate this are this question as to how stock prices--
+I'll talk about stocks for concreteness.
+But this could apply to any asset that
+is investable and its tradable.
+We do want to think about this primarily as being something
+that we're going to apply to either exchange traded
+instruments or things in a very active public market.
+So that the data is observable.
+It is essential that people be able to observe the data
+and what goes on.
+And possibly for different versions
+of the efficient markets hypothesis
+have access to other amounts of information.
+But our examples will be with stocks
+and the generalizations that are most easily
+accessible with these computational tools
+are those that come from published
+prices on exchange traded assets of different kinds.
+So we want to ask two things.
+One of them is that we have the question about how
+stock prices do behave.
+That's an empirical question.
+And then behind that is how stock prices should behave.
+And as a background idea, let's think
+of this idea of Fama and Samuelson and back to Bachelier
+that possibly our null hypothesis should
+be that stocks behave randomly.
+Which sounds kind of crazy and radical when you first hear
+it, but let's assume that that's the case,
+let's follow this logic.
+That it's the sign of a well functioning market.
+And let's see how the behavior actually works.
+So many people, depending on your background,
+you might come to this with different ideas.
+You might think that asset prices should be deterministic.
+That's certainly true if you buy a bond
+or you put money in a savings account.
+You know how much money you should get out
+if the bond is risk free and guaranteed.
+And we've seen that in other financial instruments
+and financial settings.
+But when it comes to things like stocks,
+there's a lot of uncertainty.
+So it could be that there are general trends
+that we could now and discern but there's some noise.
+So maybe it's deterministic but for a little bit of noise.
+Or maybe things are fundamentally random
+and there's nothing deterministic at all.
+So behind this, these are the questions again motivating it.
+Are markets efficient?
+And for many financial applications, really what this
+comes down to is if they're not efficient in the economist
+sense, we can ask a very practical question
+that every investor has in mind.
+Are asset prices predictable?
+So the random walk model would say
+that they're not except in a certain kind of trivial way.
+And deviations from the random walk,
+if we were to reject a random walk model, that
+opens the door to the question to some of these questions like
+are asset prices predictable?
+What might be alternative models that we have?
+So let's take a look at the data.

@@ -1,0 +1,740 @@
+0
+00:00:00,000 --> 00:00:02,170
+
+
+1
+00:00:02,170 --> 00:00:04,570
+PROFESSOR: We use probabilities to serve
+
+2
+00:00:04,570 --> 00:00:06,670
+as weights for computing weighted averages.
+
+3
+00:00:06,670 --> 00:00:08,703
+And these, we call expectations.
+
+4
+00:00:08,703 --> 00:00:10,120
+These expectations are going to be
+
+5
+00:00:10,120 --> 00:00:11,590
+very important for what we do.
+
+6
+00:00:11,590 --> 00:00:15,220
+In fact, our next slide, our next proposition
+
+7
+00:00:15,220 --> 00:00:17,230
+is going to give us a shortcut through a lot
+
+8
+00:00:17,230 --> 00:00:20,140
+of complex mathematics to get straight to the analytics we
+
+9
+00:00:20,140 --> 00:00:23,830
+want in terms of using expectation values instead
+
+10
+00:00:23,830 --> 00:00:26,090
+of full probability distributions.
+
+11
+00:00:26,090 --> 00:00:28,720
+So the important thing is that an expectation value
+
+12
+00:00:28,720 --> 00:00:31,570
+can be thought of as a kind of a weighted average.
+
+13
+00:00:31,570 --> 00:00:34,060
+In the discrete case for any function,
+
+14
+00:00:34,060 --> 00:00:38,080
+f of x, the expectation that I write with E and brackets
+
+15
+00:00:38,080 --> 00:00:42,100
+around it, is a weighted average over the possible states,
+
+16
+00:00:42,100 --> 00:00:45,250
+the possible allowed values of the random variable, x
+
+17
+00:00:45,250 --> 00:00:47,170
+sub k, however many there are.
+
+18
+00:00:47,170 --> 00:00:51,610
+And it's the value of f at each of the possible values
+
+19
+00:00:51,610 --> 00:00:54,970
+of the random variable, weighted by the probability of observing
+
+20
+00:00:54,970 --> 00:00:56,060
+that variable.
+
+21
+00:00:56,060 --> 00:00:57,580
+So it's a weighted average.
+
+22
+00:00:57,580 --> 00:01:02,590
+If f is 1, identically, then, the expectation of 1
+
+23
+00:01:02,590 --> 00:01:05,500
+has to be equal to 1, because the probabilities sum to 1.
+
+24
+00:01:05,500 --> 00:01:08,980
+In the continuous case, it's even more elegant.
+
+25
+00:01:08,980 --> 00:01:10,670
+This just becomes an integral.
+
+26
+00:01:10,670 --> 00:01:14,170
+So we integrate f of x times p of x dx.
+
+27
+00:01:14,170 --> 00:01:18,370
+And again, if f is just 1, then the integral of p of x dx
+
+28
+00:01:18,370 --> 00:01:21,100
+has to be equal to 1, the normalization of probability,
+
+29
+00:01:21,100 --> 00:01:22,930
+and we get 1.
+
+30
+00:01:22,930 --> 00:01:27,160
+So expectations are weighted averages of functions
+
+31
+00:01:27,160 --> 00:01:28,520
+with probability numbers.
+
+32
+00:01:28,520 --> 00:01:31,160
+But the important thing is that they're numbers,
+
+33
+00:01:31,160 --> 00:01:32,420
+they're not functions.
+
+34
+00:01:32,420 --> 00:01:33,700
+We do a definite integral.
+
+35
+00:01:33,700 --> 00:01:35,200
+We do a definite sum.
+
+36
+00:01:35,200 --> 00:01:37,330
+So p of x is a function.
+
+37
+00:01:37,330 --> 00:01:44,750
+The expectation of some function of x, though, is just a number.
+
+38
+00:01:44,750 --> 00:01:47,580
+The classic example is the mean of the distribution,
+
+39
+00:01:47,580 --> 00:01:51,110
+which is just the expectation of the random variable itself.
+
+40
+00:01:51,110 --> 00:01:53,660
+And we have lots of different notations for expectations,
+
+41
+00:01:53,660 --> 00:01:55,410
+and I'll just give you a few of them.
+
+42
+00:01:55,410 --> 00:01:57,380
+One of them, for the mean in particular,
+
+43
+00:01:57,380 --> 00:01:59,630
+is often denoted by mu.
+
+44
+00:01:59,630 --> 00:02:02,360
+And that's going to be our definition for E of x.
+
+45
+00:02:02,360 --> 00:02:04,760
+Sometimes this is written as x-bar.
+
+46
+00:02:04,760 --> 00:02:08,120
+Sometimes it's also written is x inside angle brackets.
+
+47
+00:02:08,120 --> 00:02:10,250
+All of these things mean the expectation
+
+48
+00:02:10,250 --> 00:02:12,920
+of x for the mean value.
+
+49
+00:02:12,920 --> 00:02:15,890
+And we'll use the angle brackets a little bit more just when we
+
+50
+00:02:15,890 --> 00:02:17,240
+want to simplify the notation.
+
+51
+00:02:17,240 --> 00:02:19,830
+Generally, we'll be using the E notation.
+
+52
+00:02:19,830 --> 00:02:22,370
+So in this case, in the case of the discrete,
+
+53
+00:02:22,370 --> 00:02:25,010
+it means the sum of x times p of x.
+
+54
+00:02:25,010 --> 00:02:28,910
+In the integral case, it just means x p of x dx.
+
+55
+00:02:28,910 --> 00:02:33,255
+So in the case of a discrete sum--
+
+56
+00:02:33,255 --> 00:02:34,880
+if there are a finite number of states,
+
+57
+00:02:34,880 --> 00:02:37,130
+we're always going to get a finite result.
+
+58
+00:02:37,130 --> 00:02:40,400
+When we have integrals, even though we require
+
+59
+00:02:40,400 --> 00:02:42,920
+that p of x be an integrable function,
+
+60
+00:02:42,920 --> 00:02:45,920
+it's possible that x p of x might not
+
+61
+00:02:45,920 --> 00:02:47,670
+have a convergent integral.
+
+62
+00:02:47,670 --> 00:02:50,690
+So it is possible to have a perfectly well-behaved
+
+63
+00:02:50,690 --> 00:02:54,530
+probability distribution where the mean doesn't necessarily
+
+64
+00:02:54,530 --> 00:02:56,360
+exist.
+
+65
+00:02:56,360 --> 00:03:00,800
+Similarly, we can generalize to the moments of a distribution.
+
+66
+00:03:00,800 --> 00:03:02,960
+And those might not exist in the case
+
+67
+00:03:02,960 --> 00:03:05,910
+of a continuous distribution.
+
+68
+00:03:05,910 --> 00:03:08,090
+So the moments just generalize.
+
+69
+00:03:08,090 --> 00:03:11,870
+Instead of e of x, we take the expectation of x to a power--
+
+70
+00:03:11,870 --> 00:03:14,220
+in this case, x to the lth power.
+
+71
+00:03:14,220 --> 00:03:18,120
+So this is our definition of the lth moment.
+
+72
+00:03:18,120 --> 00:03:21,350
+And you might not be surprised to know
+
+73
+00:03:21,350 --> 00:03:23,960
+that if we know all of the moments,
+
+74
+00:03:23,960 --> 00:03:27,860
+then we can read to reconstruct the full probability
+
+75
+00:03:27,860 --> 00:03:29,280
+distribution itself.
+
+76
+00:03:29,280 --> 00:03:31,473
+Think of it as a kind of Taylor's theorem.
+
+77
+00:03:31,473 --> 00:03:33,890
+And we'll see that when we look at generating functionals.
+
+78
+00:03:33,890 --> 00:03:36,380
+So we can go back and forth from moments
+
+79
+00:03:36,380 --> 00:03:37,860
+to the full distribution.
+
+80
+00:03:37,860 --> 00:03:39,960
+But if we're interested in a particular moment,
+
+81
+00:03:39,960 --> 00:03:42,240
+here's the formula for how we compute it.
+
+82
+00:03:42,240 --> 00:03:45,440
+So expectation of x to any power is
+
+83
+00:03:45,440 --> 00:03:47,360
+for the continuous case, integral
+
+84
+00:03:47,360 --> 00:03:50,770
+of x to the l p of x dx.
+
+85
+00:03:50,770 --> 00:03:55,870
+Now, the most important property of the expectation operator--
+
+86
+00:03:55,870 --> 00:03:58,510
+because it's either a sum or an integral,
+
+87
+00:03:58,510 --> 00:04:00,580
+is that it obeys linearity.
+
+88
+00:04:00,580 --> 00:04:03,790
+And linearity means we have the following two properties--
+
+89
+00:04:03,790 --> 00:04:08,530
+first, the expectation of any scalar, c, times any function
+
+90
+00:04:08,530 --> 00:04:12,460
+f, is just the scalar times the expectation.
+
+91
+00:04:12,460 --> 00:04:16,000
+And if we have the sum of any two functions, f and g,
+
+92
+00:04:16,000 --> 00:04:21,579
+the expectation of the sum is the sum of the expectations.
+
+93
+00:04:21,579 --> 00:04:25,390
+That's simple property, that the sum of that expectation
+
+94
+00:04:25,390 --> 00:04:27,340
+is the expectation of the sum, will
+
+95
+00:04:27,340 --> 00:04:31,420
+let us bypass a lot of complicated calculations
+
+96
+00:04:31,420 --> 00:04:34,970
+that we'd rather cut through.
+
+97
+00:04:34,970 --> 00:04:38,390
+Now, there are some moments and algebraic functions
+
+98
+00:04:38,390 --> 00:04:40,700
+of moments that are particularly interesting.
+
+99
+00:04:40,700 --> 00:04:43,130
+And maybe the most important one in finance
+
+100
+00:04:43,130 --> 00:04:45,450
+is the variance or its square root,
+
+101
+00:04:45,450 --> 00:04:47,220
+which is a standard deviation.
+
+102
+00:04:47,220 --> 00:04:50,420
+So the variance is related to the expectation
+
+103
+00:04:50,420 --> 00:04:54,290
+of x squared by the expectation of x
+
+104
+00:04:54,290 --> 00:04:57,570
+squared minus the square of the expectation.
+
+105
+00:04:57,570 --> 00:05:00,530
+But to get there, let's look at how we formally define it.
+
+106
+00:05:00,530 --> 00:05:03,500
+The variance of x is the expectation
+
+107
+00:05:03,500 --> 00:05:08,190
+of x minus its mean, the whole quantity squared.
+
+108
+00:05:08,190 --> 00:05:11,090
+So if x were not random at all and were equal to m,
+
+109
+00:05:11,090 --> 00:05:12,950
+this would be equal to 0.
+
+110
+00:05:12,950 --> 00:05:16,520
+We look at x minus mu to measure how much x
+
+111
+00:05:16,520 --> 00:05:18,990
+deviates from its mean value.
+
+112
+00:05:18,990 --> 00:05:21,050
+We take the square so that we don't
+
+113
+00:05:21,050 --> 00:05:24,800
+have positive and negative fluctuations canceling
+
+114
+00:05:24,800 --> 00:05:26,810
+each other out.
+
+115
+00:05:26,810 --> 00:05:29,750
+Once we have this definition, the rest of this
+
+116
+00:05:29,750 --> 00:05:31,320
+is just algebra.
+
+117
+00:05:31,320 --> 00:05:34,620
+So what we do is we expand out the quantity in parentheses--
+
+118
+00:05:34,620 --> 00:05:36,470
+x minus quantity squared.
+
+119
+00:05:36,470 --> 00:05:38,600
+We expand it out it's a quadratic.
+
+120
+00:05:38,600 --> 00:05:42,320
+We use our rule for linearity, that the expectation of the sum
+
+121
+00:05:42,320 --> 00:05:44,310
+is the sum of an expectation.
+
+122
+00:05:44,310 --> 00:05:46,460
+So we get the expectation of x squared
+
+123
+00:05:46,460 --> 00:05:50,430
+minus 2mu times the expectation of x plus mu squared.
+
+124
+00:05:50,430 --> 00:05:52,690
+This is just a constant.
+
+125
+00:05:52,690 --> 00:05:55,270
+Expectation of x squared minus--
+
+126
+00:05:55,270 --> 00:05:58,810
+now, I have minus 2mu, you but e of x is mu.
+
+127
+00:05:58,810 --> 00:06:02,657
+So this is minus 2mu squared plus minus square, gives me
+
+128
+00:06:02,657 --> 00:06:04,240
+a minus mu squared.
+
+129
+00:06:04,240 --> 00:06:07,210
+And of course, mu squared is the same thing as the expectation
+
+130
+00:06:07,210 --> 00:06:09,080
+of x squared.
+
+131
+00:06:09,080 --> 00:06:11,620
+So this is a good rule for calculation.
+
+132
+00:06:11,620 --> 00:06:14,880
+The variance is the expectation of the square minus the square
+
+133
+00:06:14,880 --> 00:06:16,210
+of the expectation.
+
+134
+00:06:16,210 --> 00:06:19,930
+And we often use the square root of the variance, which
+
+135
+00:06:19,930 --> 00:06:22,840
+plays the role of the volatility in looking
+
+136
+00:06:22,840 --> 00:06:24,430
+at financial processes.
+
+137
+00:06:24,430 --> 00:06:27,010
+And one reason we do that is that the square root
+
+138
+00:06:27,010 --> 00:06:28,000
+has the same units.
+
+139
+00:06:28,000 --> 00:06:29,200
+It has the same dimensions.
+
+140
+00:06:29,200 --> 00:06:32,870
+We measure it the same way as we do the random variable itself.
+
+141
+00:06:32,870 --> 00:06:35,050
+So if x is in dollars, sigma is in dollars.
+
+142
+00:06:35,050 --> 00:06:41,800
+If x is annualized return, then the standard deviation
+
+143
+00:06:41,800 --> 00:06:44,090
+is also in the same units.
+
+144
+00:06:44,090 --> 00:06:47,290
+So we might say, for example, that a given stock has
+
+145
+00:06:47,290 --> 00:06:50,680
+an expected return, a mean return in a probability
+
+146
+00:06:50,680 --> 00:06:54,760
+distribution of 10% per year, with a sigma or standard
+
+147
+00:06:54,760 --> 00:06:58,090
+deviation of 30% per year, which is a little bit easier
+
+148
+00:06:58,090 --> 00:07:00,580
+than the square of 30% for the variance.
+
+149
+00:07:00,580 --> 00:07:03,140
+
+
+150
+00:07:03,140 --> 00:07:06,860
+Now the moments and particular combinations,
+
+151
+00:07:06,860 --> 00:07:08,960
+linear combinations, of them, help
+
+152
+00:07:08,960 --> 00:07:11,900
+us characterize some of the properties of a probability
+
+153
+00:07:11,900 --> 00:07:13,020
+distribution.
+
+154
+00:07:13,020 --> 00:07:14,570
+And we're going to see that we're
+
+155
+00:07:14,570 --> 00:07:17,960
+going to get quite far using only a few
+
+156
+00:07:17,960 --> 00:07:19,070
+of the lower moments.
+
+157
+00:07:19,070 --> 00:07:20,840
+And we won't need all the details
+
+158
+00:07:20,840 --> 00:07:22,550
+of the full function, p of x.
+
+159
+00:07:22,550 --> 00:07:25,080
+There's a lot of universality in low moments.
+
+160
+00:07:25,080 --> 00:07:27,750
+So in addition to the variance and the mean,
+
+161
+00:07:27,750 --> 00:07:29,900
+the next two moments of interest are the main ones.
+
+162
+00:07:29,900 --> 00:07:31,400
+Then we can kind of stop.
+
+163
+00:07:31,400 --> 00:07:34,610
+The third moment gives us what's called the skewness.
+
+164
+00:07:34,610 --> 00:07:36,980
+And the skewness is an asymmetry parameter.
+
+165
+00:07:36,980 --> 00:07:39,170
+It tells us whether we're more or less
+
+166
+00:07:39,170 --> 00:07:44,090
+likely to see things above the mean versus below the mean.
+
+167
+00:07:44,090 --> 00:07:48,280
+So a skewness of 0 is what we'll find if a probability
+
+168
+00:07:48,280 --> 00:07:50,530
+distribution is symmetric.
+
+169
+00:07:50,530 --> 00:07:55,510
+And that's because it depends on an odd power of x minus mu.
+
+170
+00:07:55,510 --> 00:07:59,230
+Notice that after the variance, the skewness
+
+171
+00:07:59,230 --> 00:08:03,490
+is defined in a way that's dimensionless.
+
+172
+00:08:03,490 --> 00:08:08,410
+That is if x is in units of dollars or of return,
+
+173
+00:08:08,410 --> 00:08:11,620
+sigma has the same units of 3 powers in the numerator, 3
+
+174
+00:08:11,620 --> 00:08:12,890
+in the denominator.
+
+175
+00:08:12,890 --> 00:08:14,690
+So s is a pure number.
+
+176
+00:08:14,690 --> 00:08:18,220
+Similarly, the kurtosis involves the fourth power.
+
+177
+00:08:18,220 --> 00:08:22,540
+And to make it dimensionless, I divide by four powers of sigma.
+
+178
+00:08:22,540 --> 00:08:25,600
+Sometimes you'll see this called the excess kurtosis,
+
+179
+00:08:25,600 --> 00:08:27,790
+with the minus 3 subtract it off,
+
+180
+00:08:27,790 --> 00:08:32,169
+and the non-excess kurtosis, just without the minus 3.
+
+181
+00:08:32,169 --> 00:08:34,630
+We like this definition because as we'll, see,
+
+182
+00:08:34,630 --> 00:08:38,720
+for Gaussian distributions, for a normal distribution,
+
+183
+00:08:38,720 --> 00:08:42,039
+the skewness and the kurtosis measured in this way
+
+184
+00:08:42,039 --> 00:08:44,430
+are both equal to 0.
+

@@ -1,0 +1,868 @@
+0
+00:00:00,000 --> 00:00:01,380
+
+
+1
+00:00:01,380 --> 00:00:04,110
+PROFESSOR: Gaussians are very special,
+
+2
+00:00:04,110 --> 00:00:06,810
+because the Fourier transform of the Gaussian
+
+3
+00:00:06,810 --> 00:00:08,880
+is actually also a Gaussian.
+
+4
+00:00:08,880 --> 00:00:11,340
+And you can check that by doing out the intervals
+
+5
+00:00:11,340 --> 00:00:15,250
+or taking a look at your favorite table book.
+
+6
+00:00:15,250 --> 00:00:20,020
+Notice that if this is our usual friend on the left,
+
+7
+00:00:20,020 --> 00:00:23,040
+the Gaussian distribution-- notice where the sigma appears.
+
+8
+00:00:23,040 --> 00:00:25,950
+It appears in the denominator of the exponent.
+
+9
+00:00:25,950 --> 00:00:31,740
+The Fourier transform over here, is a function of t.
+
+10
+00:00:31,740 --> 00:00:34,890
+So it's e to the minus t squared times something.
+
+11
+00:00:34,890 --> 00:00:38,160
+But the sigma squared is in the numerator of the Fourier
+
+12
+00:00:38,160 --> 00:00:39,840
+transform, not the denominator.
+
+13
+00:00:39,840 --> 00:00:41,460
+And they both have a 1/2.
+
+14
+00:00:41,460 --> 00:00:44,640
+So the first one is x minus mu quantity
+
+15
+00:00:44,640 --> 00:00:46,380
+squared over 2 sigma squared.
+
+16
+00:00:46,380 --> 00:00:50,130
+This one is t squared sigma squared over 2
+
+17
+00:00:50,130 --> 00:00:53,310
+in the numerator plus i.
+
+18
+00:00:53,310 --> 00:00:55,590
+There's our complex value--
+
+19
+00:00:55,590 --> 00:00:59,280
+i times mu times t for the case mu is non-zero.
+
+20
+00:00:59,280 --> 00:01:01,200
+But basically, it's a Gaussian form.
+
+21
+00:01:01,200 --> 00:01:05,440
+It's of the form e to the minus t squared.
+
+22
+00:01:05,440 --> 00:01:07,300
+What that means is that if we have
+
+23
+00:01:07,300 --> 00:01:11,080
+a sum of n random variables, what's
+
+24
+00:01:11,080 --> 00:01:12,830
+the probability distribution of the sum?
+
+25
+00:01:12,830 --> 00:01:18,370
+Well, the p-tilde is going to be the product of all the p's.
+
+26
+00:01:18,370 --> 00:01:20,080
+Those are each Gaussians.
+
+27
+00:01:20,080 --> 00:01:24,250
+So for 1, 2, 3, 4 up through n, I multiply together,
+
+28
+00:01:24,250 --> 00:01:29,620
+the Fourier transforms, exponential with sigma 1
+
+29
+00:01:29,620 --> 00:01:37,330
+squared t plus sigma 1 squared t squared over 2, plus i mu 1t.
+
+30
+00:01:37,330 --> 00:01:40,360
+And the same thing with 2 and the same thing with 3 and so
+
+31
+00:01:40,360 --> 00:01:41,440
+on--
+
+32
+00:01:41,440 --> 00:01:44,440
+the product of exponentials the exponential
+
+33
+00:01:44,440 --> 00:01:48,260
+of the sum of the exponents.
+
+34
+00:01:48,260 --> 00:01:52,240
+So we can combine these things up in the exponent here.
+
+35
+00:01:52,240 --> 00:01:54,370
+And these simplify-- you notice that they
+
+36
+00:01:54,370 --> 00:02:01,560
+take the form of the exponential of minus 1/2 something
+
+37
+00:02:01,560 --> 00:02:07,250
+times t squared, plus something else times t.
+
+38
+00:02:07,250 --> 00:02:11,400
+The coefficient of t squared is the sum of the sigma squared.
+
+39
+00:02:11,400 --> 00:02:13,010
+So we could define a new thing, we
+
+40
+00:02:13,010 --> 00:02:15,680
+could call sigma hat squared, to be
+
+41
+00:02:15,680 --> 00:02:17,670
+the sum of the sigma squares.
+
+42
+00:02:17,670 --> 00:02:23,760
+And we could define mu hat to be the sum of the individual mus.
+
+43
+00:02:23,760 --> 00:02:27,750
+But the important thing is that we can rewrite p-tilde
+
+44
+00:02:27,750 --> 00:02:33,030
+in the form of any one of those individual p-tildes.
+
+45
+00:02:33,030 --> 00:02:36,850
+That is it's a Fourier transform of the Gaussian.
+
+46
+00:02:36,850 --> 00:02:41,680
+So this shows that the sum of Gaussian random variables
+
+47
+00:02:41,680 --> 00:02:45,350
+itself, has a Gaussian distribution.
+
+48
+00:02:45,350 --> 00:02:47,420
+It also tells us what the parameters
+
+49
+00:02:47,420 --> 00:02:50,060
+of that new distribution are.
+
+50
+00:02:50,060 --> 00:02:52,670
+If they're identical random variables,
+
+51
+00:02:52,670 --> 00:02:55,927
+if all of the mu's and sigma were equal for 1, 2,
+
+52
+00:02:55,927 --> 00:02:59,240
+3 4, 5 6, 7, then when we add together
+
+53
+00:02:59,240 --> 00:03:03,050
+n identical Gaussian random variables that are all
+
+54
+00:03:03,050 --> 00:03:06,680
+independent, their mean is N times the mean
+
+55
+00:03:06,680 --> 00:03:08,300
+of an individual one.
+
+56
+00:03:08,300 --> 00:03:10,670
+Their variance is N times the sigma
+
+57
+00:03:10,670 --> 00:03:12,290
+squared for an individual one.
+
+58
+00:03:12,290 --> 00:03:14,630
+And therefore, their volatility, their sigma,
+
+59
+00:03:14,630 --> 00:03:17,390
+is the square root of N times the sigma of one
+
+60
+00:03:17,390 --> 00:03:21,790
+of the individual random variables.
+
+61
+00:03:21,790 --> 00:03:25,320
+Now because the Fourier transforms multiply,
+
+62
+00:03:25,320 --> 00:03:28,230
+their logarithms add.
+
+63
+00:03:28,230 --> 00:03:32,790
+So we define something called the cumulant expansion, which
+
+64
+00:03:32,790 --> 00:03:37,290
+is convenient when we're taking logarithms.
+
+65
+00:03:37,290 --> 00:03:41,070
+And here, p-tilde is the exponential.
+
+66
+00:03:41,070 --> 00:03:43,470
+So before we expanded, that we had
+
+67
+00:03:43,470 --> 00:03:46,050
+an exponential the other way, this
+
+68
+00:03:46,050 --> 00:03:48,690
+is the exponential of a sum.
+
+69
+00:03:48,690 --> 00:03:52,620
+And these C coefficients are particular linear combinations
+
+70
+00:03:52,620 --> 00:03:53,730
+of expectations.
+
+71
+00:03:53,730 --> 00:03:56,550
+They just group together in a very convenient way
+
+72
+00:03:56,550 --> 00:03:58,080
+for certain applications.
+
+73
+00:03:58,080 --> 00:04:02,320
+And this one you'll see right here.
+
+74
+00:04:02,320 --> 00:04:05,190
+So here are some examples of where we would apply this
+
+75
+00:04:05,190 --> 00:04:07,110
+if I want to get the--
+
+76
+00:04:07,110 --> 00:04:10,620
+so to extract the C's, what I do is I compute p-tilde.
+
+77
+00:04:10,620 --> 00:04:12,438
+That's just a Gaussian, for example--
+
+78
+00:04:12,438 --> 00:04:13,980
+in the case of the Gaussian, it could
+
+79
+00:04:13,980 --> 00:04:15,750
+be any of our other examples.
+
+80
+00:04:15,750 --> 00:04:20,190
+We take n derivatives of the logarithm of p.
+
+81
+00:04:20,190 --> 00:04:22,740
+And then we have our pre-factor of the i's.
+
+82
+00:04:22,740 --> 00:04:29,010
+So the first few terms are C1 is just the expectation of X. C2
+
+83
+00:04:29,010 --> 00:04:30,300
+Is the variance.
+
+84
+00:04:30,300 --> 00:04:33,570
+It's the expectation of X squared
+
+85
+00:04:33,570 --> 00:04:37,050
+minus the square of the expectation of X.
+
+86
+00:04:37,050 --> 00:04:39,250
+C3 is a bit more complicated.
+
+87
+00:04:39,250 --> 00:04:43,920
+It's the expectation of X cubed minus 3 times the expectation
+
+88
+00:04:43,920 --> 00:04:48,060
+of X times the expectation of X squared, plus twice
+
+89
+00:04:48,060 --> 00:04:51,810
+the mean of X, the expectation of X quantity cubed.
+
+90
+00:04:51,810 --> 00:04:55,290
+And for C4, we have this other complicated algebraic
+
+91
+00:04:55,290 --> 00:04:56,130
+expression.
+
+92
+00:04:56,130 --> 00:04:58,860
+But it's a particular linear combination.
+
+93
+00:04:58,860 --> 00:05:01,740
+Now, what's nice about these combinations,
+
+94
+00:05:01,740 --> 00:05:04,560
+is that they take a very simple form for Gaussians--
+
+95
+00:05:04,560 --> 00:05:08,830
+namely, they're all 0 after the second one.
+
+96
+00:05:08,830 --> 00:05:12,270
+So in the case of a Gaussian, all of these higher cumulant,
+
+97
+00:05:12,270 --> 00:05:17,310
+C3, C4, C5, C6 are all 0, whereas the individual moments
+
+98
+00:05:17,310 --> 00:05:19,260
+take some values that we could compute.
+
+99
+00:05:19,260 --> 00:05:23,700
+So in this particular grouping, for a Gaussian distribution,
+
+100
+00:05:23,700 --> 00:05:26,250
+we have C1 and C2 are non-zero.
+
+101
+00:05:26,250 --> 00:05:29,910
+For a general function, It could be--
+
+102
+00:05:29,910 --> 00:05:31,410
+these are just some numbers we could
+
+103
+00:05:31,410 --> 00:05:36,480
+compute using the formulas on the top of our screen.
+
+104
+00:05:36,480 --> 00:05:39,000
+Now, here's a way to see the Central Limit
+
+105
+00:05:39,000 --> 00:05:40,860
+Theorem and how it comes about.
+
+106
+00:05:40,860 --> 00:05:45,690
+If we take a look at the cumulants for sum of N IID
+
+107
+00:05:45,690 --> 00:05:51,670
+random variables, because they're identically distributed
+
+108
+00:05:51,670 --> 00:05:54,850
+and because the cumulants add, the nth
+
+109
+00:05:54,850 --> 00:05:57,700
+cumulant it's going to be N times one
+
+110
+00:05:57,700 --> 00:05:59,020
+of the individual ones.
+
+111
+00:05:59,020 --> 00:06:00,040
+So they just add.
+
+112
+00:06:00,040 --> 00:06:03,230
+So we just multiply times N and that's it.
+
+113
+00:06:03,230 --> 00:06:08,020
+OK so if we know the C sub n's for one of the variables,
+
+114
+00:06:08,020 --> 00:06:12,682
+we know what it is for a sum of N of them, big N of them.
+
+115
+00:06:12,682 --> 00:06:14,890
+We just multiply times the number of random variables
+
+116
+00:06:14,890 --> 00:06:15,970
+that we have.
+
+117
+00:06:15,970 --> 00:06:17,890
+Now we can normalize these.
+
+118
+00:06:17,890 --> 00:06:19,840
+These are going to have dimensions-- remember,
+
+119
+00:06:19,840 --> 00:06:22,270
+they depended on powers of X. So let's turn them
+
+120
+00:06:22,270 --> 00:06:25,850
+into pure numbers by dividing by powers of sigma,
+
+121
+00:06:25,850 --> 00:06:27,940
+same way we did in defining the skewness
+
+122
+00:06:27,940 --> 00:06:29,860
+and the kurtosis, originally.
+
+123
+00:06:29,860 --> 00:06:31,960
+But now when we do this, if we want
+
+124
+00:06:31,960 --> 00:06:39,070
+to relate these dimensionless numbers for our sum,
+
+125
+00:06:39,070 --> 00:06:41,950
+to the corresponding dimensionless numbers for one
+
+126
+00:06:41,950 --> 00:06:44,320
+of the individual random variables,
+
+127
+00:06:44,320 --> 00:06:48,340
+there's a pre-factor that comes from all these powers of n that
+
+128
+00:06:48,340 --> 00:06:51,700
+are over here and from our sigma.
+
+129
+00:06:51,700 --> 00:06:57,760
+And it goes as 1 over big N to the n over 2 minus 1.
+
+130
+00:06:57,760 --> 00:07:03,550
+And when the cumulant is greater than 2, for n greater than 2,
+
+131
+00:07:03,550 --> 00:07:07,720
+these are positive powers in the denominator.
+
+132
+00:07:07,720 --> 00:07:10,660
+And that means that as big N goes to infinity,
+
+133
+00:07:10,660 --> 00:07:13,820
+all of these scaled cumulants vanish.
+
+134
+00:07:13,820 --> 00:07:16,550
+And that's how we can see that the distribution has
+
+135
+00:07:16,550 --> 00:07:18,257
+to become Gaussian.
+
+136
+00:07:18,257 --> 00:07:20,090
+If we had done this in terms of the moments,
+
+137
+00:07:20,090 --> 00:07:21,632
+it would have been much more complex.
+
+138
+00:07:21,632 --> 00:07:24,690
+The cumulants group things together very nicely,
+
+139
+00:07:24,690 --> 00:07:27,110
+so that everything above 2, everything that doesn't
+
+140
+00:07:27,110 --> 00:07:29,490
+look like a Gaussian goes away.
+
+141
+00:07:29,490 --> 00:07:33,860
+So in this way, we can see that the cumulant expansion
+
+142
+00:07:33,860 --> 00:07:36,920
+uniquely defines the probability distribution.
+
+143
+00:07:36,920 --> 00:07:41,090
+When big N goes to infinity, there's a universal behavior.
+
+144
+00:07:41,090 --> 00:07:47,870
+And everything greater than C2 vanishes,
+
+145
+00:07:47,870 --> 00:07:51,980
+and therefore, whatever the original distribution was,
+
+146
+00:07:51,980 --> 00:07:55,200
+it looks like a Gaussian distribution.
+
+147
+00:07:55,200 --> 00:07:57,990
+Now there are a whole bunch of caveats.
+
+148
+00:07:57,990 --> 00:07:59,660
+And let me just mention two--
+
+149
+00:07:59,660 --> 00:08:01,910
+one of them is that this just tells you
+
+150
+00:08:01,910 --> 00:08:05,397
+that if N is sufficiently large, the distribution will
+
+151
+00:08:05,397 --> 00:08:06,230
+approach a Gaussian.
+
+152
+00:08:06,230 --> 00:08:09,500
+But it doesn't tell you how large and needs to be.
+
+153
+00:08:09,500 --> 00:08:12,750
+And the convergence isn't uniform.
+
+154
+00:08:12,750 --> 00:08:19,070
+So for large values of the random variable away
+
+155
+00:08:19,070 --> 00:08:22,070
+from the mean value, the convergence is much slower.
+
+156
+00:08:22,070 --> 00:08:24,000
+And it's much faster in the center.
+
+157
+00:08:24,000 --> 00:08:26,450
+So the rate of convergence is uniform,
+
+158
+00:08:26,450 --> 00:08:29,420
+and we don't know how big N needs to be for that.
+
+159
+00:08:29,420 --> 00:08:33,200
+Also, this is subject to the cumulants existing.
+
+160
+00:08:33,200 --> 00:08:35,840
+So if we have things like the fat-tail distribution
+
+161
+00:08:35,840 --> 00:08:39,230
+we looked at earlier, then all bets are off.
+
+162
+00:08:39,230 --> 00:08:41,580
+This scaling argument won't work.
+
+163
+00:08:41,580 --> 00:08:44,840
+So for nicely behaved functions where the moments exist,
+
+164
+00:08:44,840 --> 00:08:46,310
+the cumulants will exist.
+
+165
+00:08:46,310 --> 00:08:50,670
+And the Central Limit Theorem gives us that important result.
+
+166
+00:08:50,670 --> 00:08:54,470
+Here's an example of a bunch of random variables.
+
+167
+00:08:54,470 --> 00:08:59,240
+And how large does n need to be close to infinity?
+
+168
+00:08:59,240 --> 00:08:59,840
+I don't know.
+
+169
+00:08:59,840 --> 00:09:01,070
+How about 6?
+
+170
+00:09:01,070 --> 00:09:05,990
+This used to be a poor man's random number generator.
+
+171
+00:09:05,990 --> 00:09:09,410
+Add together six uniform random variables,
+
+172
+00:09:09,410 --> 00:09:13,320
+and see what the distribution looks like.
+
+173
+00:09:13,320 --> 00:09:15,220
+Here's some R code to do that.
+
+174
+00:09:15,220 --> 00:09:20,460
+And I overlain the results with a exact Gaussian function.
+
+175
+00:09:20,460 --> 00:09:23,520
+Not bad-- certainly for eyeballing.
+
+176
+00:09:23,520 --> 00:09:27,060
+Again, there's the caveat that any finite distribution
+
+177
+00:09:27,060 --> 00:09:28,260
+is going to be bounded.
+
+178
+00:09:28,260 --> 00:09:31,230
+In this case, if I have six uniform random variables,
+
+179
+00:09:31,230 --> 00:09:34,830
+values can't be smaller than 0, can't be bigger than 6.
+
+180
+00:09:34,830 --> 00:09:37,830
+But in the places in the center of the distribution,
+
+181
+00:09:37,830 --> 00:09:42,130
+we're actually getting close to the shape that we would expect.
+
+182
+00:09:42,130 --> 00:09:45,540
+So here, I've done 100,000 simulations of adding together
+
+183
+00:09:45,540 --> 00:09:47,700
+six uniform random variables.
+
+184
+00:09:47,700 --> 00:09:51,000
+And the distribution we get is anything but uniform.
+
+185
+00:09:51,000 --> 00:09:52,830
+It looks quite Gaussian.
+
+186
+00:09:52,830 --> 00:09:54,240
+So let's just summarize.
+
+187
+00:09:54,240 --> 00:09:57,540
+The characteristic function of a probability distribution
+
+188
+00:09:57,540 --> 00:10:00,480
+gives a compact formula for generating
+
+189
+00:10:00,480 --> 00:10:02,640
+all of the moments of the distribution
+
+190
+00:10:02,640 --> 00:10:04,990
+by taking derivatives.
+
+191
+00:10:04,990 --> 00:10:08,980
+For continuous random variables, if we computed in closed form,
+
+192
+00:10:08,980 --> 00:10:13,120
+we find that we're in the domain of Fourier transforms
+
+193
+00:10:13,120 --> 00:10:14,342
+and complex analysis.
+
+194
+00:10:14,342 --> 00:10:16,300
+So if that's something that you've seen before,
+
+195
+00:10:16,300 --> 00:10:18,250
+you know how to do these calculations.
+
+196
+00:10:18,250 --> 00:10:20,500
+And you know when these integrals converge
+
+197
+00:10:20,500 --> 00:10:23,280
+and how to compute them.
+
+198
+00:10:23,280 --> 00:10:26,020
+Gaussians are special in a lot of ways.
+
+199
+00:10:26,020 --> 00:10:28,500
+First, the Fourier transform of the Gaussian
+
+200
+00:10:28,500 --> 00:10:30,030
+is also a Gaussian.
+
+201
+00:10:30,030 --> 00:10:33,630
+And that means that the sum of Gaussian random variables
+
+202
+00:10:33,630 --> 00:10:37,200
+is always a Gaussian, not just for an infinite number
+
+203
+00:10:37,200 --> 00:10:40,650
+of terms, but for any number of terms.
+
+204
+00:10:40,650 --> 00:10:43,290
+The Central Limit Theorem tells us
+
+205
+00:10:43,290 --> 00:10:47,970
+that if we add together a large number of any IID
+
+206
+00:10:47,970 --> 00:10:50,280
+random variables, that will get something
+
+207
+00:10:50,280 --> 00:10:51,570
+that will approach a Gaussian.
+
+208
+00:10:51,570 --> 00:10:54,120
+So Gaussians really are universal.
+
+209
+00:10:54,120 --> 00:10:58,360
+When we look at adding together a large number of influences,
+
+210
+00:10:58,360 --> 00:11:04,290
+such as economic factors and drivers, behavior
+
+211
+00:11:04,290 --> 00:11:07,350
+of lots of market participants-- when we add together
+
+212
+00:11:07,350 --> 00:11:10,740
+a very large number of random shocks and influences
+
+213
+00:11:10,740 --> 00:11:13,830
+from independent sources, there's a good chance
+
+214
+00:11:13,830 --> 00:11:16,710
+that we might see Gaussians start to emerge,
+
+215
+00:11:16,710 --> 00:11:19,140
+even if the underlying behaviors have
+
+216
+00:11:19,140 --> 00:11:23,270
+no connection with the Gaussian distribution at all.
+

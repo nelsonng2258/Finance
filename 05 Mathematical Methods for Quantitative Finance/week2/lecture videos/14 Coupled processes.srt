@@ -1,0 +1,1288 @@
+0
+00:00:00,000 --> 00:00:03,570
+PROFESSOR: Let's talk briefly about multivariate time series
+
+1
+00:00:03,570 --> 00:00:06,085
+when there's more than one variable.
+
+2
+00:00:06,085 --> 00:00:07,710
+We didn't do that in lecture this week.
+
+3
+00:00:07,710 --> 00:00:09,840
+But there is a question on the P set.
+
+4
+00:00:09,840 --> 00:00:12,150
+So I'd like to make sure everyone's ready to tackle it.
+
+5
+00:00:12,150 --> 00:00:15,510
+Now, when there are many variables
+
+6
+00:00:15,510 --> 00:00:17,760
+and they're interconnected, there are pretty much
+
+7
+00:00:17,760 --> 00:00:19,370
+three things that could happen.
+
+8
+00:00:19,370 --> 00:00:21,980
+One of them is you can solve it with the same techniques.
+
+9
+00:00:21,980 --> 00:00:23,230
+You can do things recursively.
+
+10
+00:00:23,230 --> 00:00:25,230
+And you certainly can do that with this problem.
+
+11
+00:00:25,230 --> 00:00:27,390
+And maybe by brute force, you're fiddling around.
+
+12
+00:00:27,390 --> 00:00:30,803
+You might see some interesting symmetries or simplifications.
+
+13
+00:00:30,803 --> 00:00:33,220
+The second category of things that can't be solved at all.
+
+14
+00:00:33,220 --> 00:00:34,710
+They're just complicated.
+
+15
+00:00:34,710 --> 00:00:36,840
+And there's no special insight for them.
+
+16
+00:00:36,840 --> 00:00:39,780
+And some phase like that, like the GARCH model,
+
+17
+00:00:39,780 --> 00:00:43,200
+which I mentioned earlier, don't have simple solutions in terms
+
+18
+00:00:43,200 --> 00:00:44,940
+of elementary functions.
+
+19
+00:00:44,940 --> 00:00:50,940
+But the other category is when there are symmetries.
+
+20
+00:00:50,940 --> 00:00:54,330
+And there are multiple variables to come in on an equal footing.
+
+21
+00:00:54,330 --> 00:00:56,970
+And in that, there are some ways that we
+
+22
+00:00:56,970 --> 00:01:00,852
+can reframe the equations that not only help us solve it,
+
+23
+00:01:00,852 --> 00:01:02,310
+the numbers we got will be the same
+
+24
+00:01:02,310 --> 00:01:04,080
+as with any other valid technique.
+
+25
+00:01:04,080 --> 00:01:07,090
+But they give us a little bit of insight as to what's going on.
+
+26
+00:01:07,090 --> 00:01:09,660
+So let me just remind you for the structure,
+
+27
+00:01:09,660 --> 00:01:13,200
+I think we've got a problem here from this week.
+
+28
+00:01:13,200 --> 00:01:14,430
+Let me just grab that.
+
+29
+00:01:14,430 --> 00:01:17,490
+And let's expand it a bit--
+
+30
+00:01:17,490 --> 00:01:18,640
+shall we?
+
+31
+00:01:18,640 --> 00:01:20,340
+So we have two equations.
+
+32
+00:01:20,340 --> 00:01:23,640
+We've got xt is lambda y.
+
+33
+00:01:23,640 --> 00:01:24,780
+Oops, I'm sorry.
+
+34
+00:01:24,780 --> 00:01:26,190
+We should have t minus 1--
+
+35
+00:01:26,190 --> 00:01:29,900
+
+
+36
+00:01:29,900 --> 00:01:30,650
+minus 1.
+
+37
+00:01:30,650 --> 00:01:32,420
+And this should be minus 1.
+
+38
+00:01:32,420 --> 00:01:40,042
+So we've got xt is lambda times t minus 1 plus sigma z.
+
+39
+00:01:40,042 --> 00:01:41,750
+And then we have the same thing basically
+
+40
+00:01:41,750 --> 00:01:43,010
+with x and y reversed.
+
+41
+00:01:43,010 --> 00:01:45,020
+And we've given z and w.
+
+42
+00:01:45,020 --> 00:01:46,620
+They're all independent of each other.
+
+43
+00:01:46,620 --> 00:01:48,245
+But we've given them different letters.
+
+44
+00:01:48,245 --> 00:01:51,440
+So we have x is related to a past y.
+
+45
+00:01:51,440 --> 00:01:53,450
+Y is related to a past x.
+
+46
+00:01:53,450 --> 00:01:55,160
+And certainly, we could substitute that
+
+47
+00:01:55,160 --> 00:01:56,848
+and look at it recursively.
+
+48
+00:01:56,848 --> 00:01:58,640
+But what's really going on in the dynamics?
+
+49
+00:01:58,640 --> 00:02:01,400
+What's really going on is these equations
+
+50
+00:02:01,400 --> 00:02:04,520
+say that x and y are jointly influenced
+
+51
+00:02:04,520 --> 00:02:05,660
+by their past histories.
+
+52
+00:02:05,660 --> 00:02:08,240
+Whatever happened in the past in x influences.
+
+53
+00:02:08,240 --> 00:02:11,150
+Y, whatever happened in the past of y influences x.
+
+54
+00:02:11,150 --> 00:02:13,670
+And, of course, then they cross over in the next time step,
+
+55
+00:02:13,670 --> 00:02:14,970
+they go back and forth.
+
+56
+00:02:14,970 --> 00:02:17,720
+So what it's saying is these two variables
+
+57
+00:02:17,720 --> 00:02:20,210
+are really jointly working together.
+
+58
+00:02:20,210 --> 00:02:22,250
+And they're processing information together
+
+59
+00:02:22,250 --> 00:02:23,910
+as they go forward in time.
+
+60
+00:02:23,910 --> 00:02:24,830
+So it's fine.
+
+61
+00:02:24,830 --> 00:02:27,020
+And the z's and the w's are independent.
+
+62
+00:02:27,020 --> 00:02:28,790
+They're just noise terms that show up
+
+63
+00:02:28,790 --> 00:02:30,990
+new in each period of time.
+
+64
+00:02:30,990 --> 00:02:34,850
+But what often happens when we have linear equations like this
+
+65
+00:02:34,850 --> 00:02:37,910
+whether they're linear time series models like this one,
+
+66
+00:02:37,910 --> 00:02:40,340
+whether they're linear differential equations,
+
+67
+00:02:40,340 --> 00:02:44,210
+whether they're statistics for joint distributions
+
+68
+00:02:44,210 --> 00:02:46,790
+of random variables in certain case,
+
+69
+00:02:46,790 --> 00:02:49,130
+like jointly normal distributions,
+
+70
+00:02:49,130 --> 00:02:52,670
+it turns out that we can analyze this
+
+71
+00:02:52,670 --> 00:02:56,180
+to identify certain linear combinations
+
+72
+00:02:56,180 --> 00:03:01,040
+of our basic variables in terms of which the model,
+
+73
+00:03:01,040 --> 00:03:03,230
+the dynamics all simplify.
+
+74
+00:03:03,230 --> 00:03:07,190
+And it reduces to a bunch of uncoupled equation.
+
+75
+00:03:07,190 --> 00:03:11,740
+That is to say if we start with N equations of this type--
+
+76
+00:03:11,740 --> 00:03:13,212
+and maybe they're more complicated
+
+77
+00:03:13,212 --> 00:03:14,170
+on the right-hand side.
+
+78
+00:03:14,170 --> 00:03:17,530
+But the basic point is suppose we have N variables, not just
+
+79
+00:03:17,530 --> 00:03:18,940
+two, x and y.
+
+80
+00:03:18,940 --> 00:03:20,390
+So we've got x1, x2, x3.
+
+81
+00:03:20,390 --> 00:03:22,030
+We've got a whole bunch of variables.
+
+82
+00:03:22,030 --> 00:03:24,130
+And we have a linear structure where
+
+83
+00:03:24,130 --> 00:03:28,900
+we have the x's at time t are related to the previous value
+
+84
+00:03:28,900 --> 00:03:30,160
+plus some noise term.
+
+85
+00:03:30,160 --> 00:03:31,660
+And maybe we could generalize from
+
+86
+00:03:31,660 --> 00:03:33,670
+this autoregressive structure which
+
+87
+00:03:33,670 --> 00:03:36,280
+is known as a VAR or vector autoregressive
+
+88
+00:03:36,280 --> 00:03:39,790
+model to a more general ARMA type model or ARIMA model.
+
+89
+00:03:39,790 --> 00:03:42,320
+But it's a linear structure that's of interest to us.
+
+90
+00:03:42,320 --> 00:03:44,500
+So when we have this linear structure,
+
+91
+00:03:44,500 --> 00:03:46,390
+one of the things we might look for
+
+92
+00:03:46,390 --> 00:03:50,920
+is, is there a way to reduce N coupled equations
+
+93
+00:03:50,920 --> 00:03:55,630
+down to N independent univariate equations
+
+94
+00:03:55,630 --> 00:03:58,360
+with only one variable where that variable is
+
+95
+00:03:58,360 --> 00:04:02,270
+a well-chosen linear combination of the starting variables.
+
+96
+00:04:02,270 --> 00:04:04,777
+And then we are down to a problem
+
+97
+00:04:04,777 --> 00:04:05,860
+that we've already solved.
+
+98
+00:04:05,860 --> 00:04:08,110
+We solve it, and we transform the variables back.
+
+99
+00:04:08,110 --> 00:04:10,420
+Now, this case is particularly easy.
+
+100
+00:04:10,420 --> 00:04:12,520
+And I don't want to give away the answer.
+
+101
+00:04:12,520 --> 00:04:15,400
+You can do it either by inspection and playing with it
+
+102
+00:04:15,400 --> 00:04:16,480
+or by taking a look.
+
+103
+00:04:16,480 --> 00:04:19,870
+But let me show you the general way that we can analyze this.
+
+104
+00:04:19,870 --> 00:04:22,820
+
+
+105
+00:04:22,820 --> 00:04:26,080
+So the first step is we'll define vector variable
+
+106
+00:04:26,080 --> 00:04:27,800
+in terms of the old variable.
+
+107
+00:04:27,800 --> 00:04:29,795
+And then at the end, we'll invert.
+
+108
+00:04:29,795 --> 00:04:30,670
+we'll turn them back.
+
+109
+00:04:30,670 --> 00:04:31,720
+Or you will.
+
+110
+00:04:31,720 --> 00:04:34,430
+I'll just show you the general structure here today.
+
+111
+00:04:34,430 --> 00:04:40,420
+So let's take a vector, xt, yt.
+
+112
+00:04:40,420 --> 00:04:41,680
+And let's give it a new name.
+
+113
+00:04:41,680 --> 00:04:43,520
+Instead of primes or other things,
+
+114
+00:04:43,520 --> 00:04:45,850
+let me try some Greek letters.
+
+115
+00:04:45,850 --> 00:04:49,390
+Let's just call it xi sub t.
+
+116
+00:04:49,390 --> 00:04:52,210
+And I will sometimes put arrows.
+
+117
+00:04:52,210 --> 00:04:53,560
+But often, I'll drop my arrows.
+
+118
+00:04:53,560 --> 00:04:55,060
+So I hope-- that's one reason I went
+
+119
+00:04:55,060 --> 00:04:57,430
+to pick different letters that from the context
+
+120
+00:04:57,430 --> 00:04:59,110
+is clear which are vectors.
+
+121
+00:04:59,110 --> 00:05:04,690
+And let's combine our noise terms zt and wt.
+
+122
+00:05:04,690 --> 00:05:10,310
+And let's put them in a vector that we're going to call eta t.
+
+123
+00:05:10,310 --> 00:05:13,920
+So in terms of these, what is our equation look like?
+
+124
+00:05:13,920 --> 00:05:17,990
+Well, our structure of our equation
+
+125
+00:05:17,990 --> 00:05:23,010
+is going to be such that we have xi_t,
+
+126
+00:05:23,010 --> 00:05:27,870
+the vector, is going to be some matrix M times t,
+
+127
+00:05:27,870 --> 00:05:35,010
+t minus 1 plus sigma times eta t.
+
+128
+00:05:35,010 --> 00:05:36,450
+And what is the matrix M?
+
+129
+00:05:36,450 --> 00:05:40,350
+Well, in this particular example, M is going to be a 2
+
+130
+00:05:40,350 --> 00:05:45,730
+by 2 matrix, which has the form 0 lambda, lambda 0.
+
+131
+00:05:45,730 --> 00:05:50,670
+
+
+132
+00:05:50,670 --> 00:05:56,380
+When this matrix M here acts on this vector,
+
+133
+00:05:56,380 --> 00:05:59,470
+you can see that it interchanges the x and y.
+
+134
+00:05:59,470 --> 00:06:04,730
+It gives lambda-- excuse me-- x goes down.
+
+135
+00:06:04,730 --> 00:06:05,770
+Y goes up.
+
+136
+00:06:05,770 --> 00:06:09,550
+And then we have our basic equation.
+
+137
+00:06:09,550 --> 00:06:11,530
+Here, this gives us the right-hand side
+
+138
+00:06:11,530 --> 00:06:13,670
+of our original equation.
+
+139
+00:06:13,670 --> 00:06:16,060
+So in terms of this structure, all we've done
+
+140
+00:06:16,060 --> 00:06:18,580
+is we've used linear algebra notation.
+
+141
+00:06:18,580 --> 00:06:21,400
+To rewrite it, we haven't done anything at all yet.
+
+142
+00:06:21,400 --> 00:06:24,070
+We notice that M does have a particularly nice and symmetric
+
+143
+00:06:24,070 --> 00:06:24,820
+form.
+
+144
+00:06:24,820 --> 00:06:27,700
+But our task when we want to decouple things
+
+145
+00:06:27,700 --> 00:06:29,950
+when we want to separate them and see what
+
+146
+00:06:29,950 --> 00:06:32,590
+the real independent drivers are is
+
+147
+00:06:32,590 --> 00:06:35,490
+to diagonalize or orthogonalize that.
+
+148
+00:06:35,490 --> 00:06:37,420
+So diagonalize we can do in general
+
+149
+00:06:37,420 --> 00:06:39,670
+by doing an eigenvalue decomposition.
+
+150
+00:06:39,670 --> 00:06:41,800
+And in the case of a symmetric matrix,
+
+151
+00:06:41,800 --> 00:06:45,310
+the eigenvectors that we find will be orthogonal.
+
+152
+00:06:45,310 --> 00:06:47,710
+And what are these eigenvectors before we get there?
+
+153
+00:06:47,710 --> 00:06:49,720
+What we're looking for is the eigenvectors
+
+154
+00:06:49,720 --> 00:06:53,440
+are going to be particular combinations of x and y--
+
+155
+00:06:53,440 --> 00:06:58,180
+our original x and y in terms of which the equations simplify
+
+156
+00:06:58,180 --> 00:07:00,340
+and actually can be written as two
+
+157
+00:07:00,340 --> 00:07:02,990
+independent one-variable equation.
+
+158
+00:07:02,990 --> 00:07:05,980
+So we can do this if we had six variables,
+
+159
+00:07:05,980 --> 00:07:08,830
+if we had 16 variables.
+
+160
+00:07:08,830 --> 00:07:11,110
+We could take it and reduce it to that same number
+
+161
+00:07:11,110 --> 00:07:13,400
+of independent linear equations.
+
+162
+00:07:13,400 --> 00:07:16,360
+So let me just remind you of what those features are.
+
+163
+00:07:16,360 --> 00:07:20,750
+So in general, we can diagonalize a matrix.
+
+164
+00:07:20,750 --> 00:07:31,640
+We can diagonalize M, writing it in the form of v.
+
+165
+00:07:31,640 --> 00:07:33,212
+And normally, I would call it lambda.
+
+166
+00:07:33,212 --> 00:07:34,420
+But I've already used lambda.
+
+167
+00:07:34,420 --> 00:07:37,130
+So let me call it gamma for our matrix
+
+168
+00:07:37,130 --> 00:07:39,920
+of eigenvalues v minus 1.
+
+169
+00:07:39,920 --> 00:07:46,930
+So v is a matrix whose columns are eigenvectors.
+
+170
+00:07:46,930 --> 00:07:51,730
+
+
+171
+00:07:51,730 --> 00:08:02,340
+And gamma is a diagonal matrix--
+
+172
+00:08:02,340 --> 00:08:03,240
+eigenvalues.
+
+173
+00:08:03,240 --> 00:08:05,850
+
+
+174
+00:08:05,850 --> 00:08:07,650
+Now, take a moment--
+
+175
+00:08:07,650 --> 00:08:13,340
+just look at the matrix M for a moment that we have right here
+
+176
+00:08:13,340 --> 00:08:17,600
+and see if you can figure out what the eigenvalues
+
+177
+00:08:17,600 --> 00:08:19,010
+and eigenvectors are.
+
+178
+00:08:19,010 --> 00:08:22,130
+And then I'll write them down, and we can compare notes.
+
+179
+00:08:22,130 --> 00:08:27,650
+So pause the video here, go take a look, and then come back.
+
+180
+00:08:27,650 --> 00:08:33,309
+So the eigenvectors are 1, 1, and 1 minus 1.
+
+181
+00:08:33,309 --> 00:08:37,700
+And they have eigenvalues lambda and minus lambda respectively.
+
+182
+00:08:37,700 --> 00:08:42,140
+So to formalize that, what we do is we put them into a matrix.
+
+183
+00:08:42,140 --> 00:08:47,110
+And we will normalize because they're orthogonal.
+
+184
+00:08:47,110 --> 00:08:51,190
+We will normalize them with a Euclidean metric.
+
+185
+00:08:51,190 --> 00:08:58,650
+Let's write that we have v is going to be the matrix
+
+186
+00:08:58,650 --> 00:09:05,590
+1 over square root of 2 times 1 minus 1, 1, 1.
+
+187
+00:09:05,590 --> 00:09:07,780
+It's inverse.
+
+188
+00:09:07,780 --> 00:09:09,040
+It's an orthogonal matrix.
+
+189
+00:09:09,040 --> 00:09:11,410
+It's just equal to the transpose.
+
+190
+00:09:11,410 --> 00:09:14,860
+V minus 1 is going to be 1 over square root of 2.
+
+191
+00:09:14,860 --> 00:09:16,300
+And that's just in this example.
+
+192
+00:09:16,300 --> 00:09:19,120
+In general, it might be so much more complicated
+
+193
+00:09:19,120 --> 00:09:21,560
+and by a matrix.
+
+194
+00:09:21,560 --> 00:09:22,260
+1, 1.
+
+195
+00:09:22,260 --> 00:09:24,920
+So this is just a nice 2 by 2 example.
+
+196
+00:09:24,920 --> 00:09:31,270
+And gamma is going to be the matrix, the diagonal matrix,
+
+197
+00:09:31,270 --> 00:09:33,520
+lambda 0--
+
+198
+00:09:33,520 --> 00:09:35,380
+0 minus lambda.
+
+199
+00:09:35,380 --> 00:09:42,430
+So this matrix V encodes each of the columns
+
+200
+00:09:42,430 --> 00:09:44,500
+is an eigenvector of M. And you can check that.
+
+201
+00:09:44,500 --> 00:09:47,950
+If you multiply M times that, you'll get lambda.
+
+202
+00:09:47,950 --> 00:09:50,030
+If you take the M times the first column,
+
+203
+00:09:50,030 --> 00:09:53,920
+you'll get lambda times the first column.
+
+204
+00:09:53,920 --> 00:09:55,462
+If you take M times the first column,
+
+205
+00:09:55,462 --> 00:09:57,170
+you'll get lambda times the first column.
+
+206
+00:09:57,170 --> 00:09:59,000
+If you take M times the second column,
+
+207
+00:09:59,000 --> 00:10:01,610
+you get minus lambda times the second column.
+
+208
+00:10:01,610 --> 00:10:03,880
+So this is exactly what we need.
+
+209
+00:10:03,880 --> 00:10:05,180
+And how do we use it?
+
+210
+00:10:05,180 --> 00:10:08,270
+Well, let's just substitute it into our equation.
+
+211
+00:10:08,270 --> 00:10:14,440
+So well, so here's our equation.
+
+212
+00:10:14,440 --> 00:10:17,350
+And what we're going to do is we're going to write this M.
+
+213
+00:10:17,350 --> 00:10:20,380
+We're going to substitute this eigenvalue decomposition-- v
+
+214
+00:10:20,380 --> 00:10:22,130
+gamma v minus 1.
+
+215
+00:10:22,130 --> 00:10:24,130
+So let's do that.
+
+216
+00:10:24,130 --> 00:10:36,170
+And we will write that xi_t vector is going to be v gamma v
+
+217
+00:10:36,170 --> 00:10:47,010
+minus 1 times t minus 1 plus sigma eta_t .
+
+218
+00:10:47,010 --> 00:10:51,450
+And now, let's multiply the equation through by v minus 1.
+
+219
+00:10:51,450 --> 00:10:55,815
+So we write v inverse xi_t on the left.
+
+220
+00:10:55,815 --> 00:10:58,420
+
+
+221
+00:10:58,420 --> 00:11:01,680
+And that's going to be equal to v inverse times v is just
+
+222
+00:11:01,680 --> 00:11:02,960
+the identity matrix.
+
+223
+00:11:02,960 --> 00:11:05,190
+So this is going to be gamma, which
+
+224
+00:11:05,190 --> 00:11:12,200
+is a diagonal matrix times v minus 1,
+
+225
+00:11:12,200 --> 00:11:31,590
+xi_t minus 1 plus sigma times v inverse times eta of t.
+
+226
+00:11:31,590 --> 00:11:34,600
+So this is actually all we need.
+
+227
+00:11:34,600 --> 00:11:36,120
+So now we're basically done.
+
+228
+00:11:36,120 --> 00:11:38,920
+So we have two equations--
+
+229
+00:11:38,920 --> 00:11:41,130
+the first and second components of this thing.
+
+230
+00:11:41,130 --> 00:11:43,200
+Let's call-- let's give it a name.
+
+231
+00:11:43,200 --> 00:11:48,690
+If we define-- now, I will use a prime.
+
+232
+00:11:48,690 --> 00:11:58,265
+Let's call it xi_t prime to be v inverse times xi_t.
+
+233
+00:11:58,265 --> 00:12:01,860
+
+
+234
+00:12:01,860 --> 00:12:03,300
+Then we have two equations.
+
+235
+00:12:03,300 --> 00:12:06,510
+
+
+236
+00:12:06,510 --> 00:12:08,580
+We have the first component is going
+
+237
+00:12:08,580 --> 00:12:20,270
+to be xi prime 1t is going to be lambda times
+
+238
+00:12:20,270 --> 00:12:30,980
+xi prime 1 at t minus 1 plus sigma times eta
+
+239
+00:12:30,980 --> 00:12:34,550
+prime 1, the first component.
+
+240
+00:12:34,550 --> 00:12:36,560
+And our second component is going
+
+241
+00:12:36,560 --> 00:12:40,070
+to be xi 2 prime at time t is going
+
+242
+00:12:40,070 --> 00:12:47,240
+to be minus lambda, xi 2 at time t minus 1
+
+243
+00:12:47,240 --> 00:12:50,480
+plus sigma times eta 2.
+
+244
+00:12:50,480 --> 00:12:54,140
+So if you take the equations for v and you solve it
+
+245
+00:12:54,140 --> 00:12:57,260
+and you plug it in, you can find that you can decouple
+
+246
+00:12:57,260 --> 00:12:58,667
+these equations or other ones.
+
+247
+00:12:58,667 --> 00:13:00,000
+And you can solve them that way.
+
+248
+00:13:00,000 --> 00:13:01,520
+So this is a more general approach.
+
+249
+00:13:01,520 --> 00:13:05,240
+Now, just so a recap and one further comment.
+
+250
+00:13:05,240 --> 00:13:09,350
+So the first thing is that what we did is we looked for a way
+
+251
+00:13:09,350 --> 00:13:12,260
+when the variables enter in such a way
+
+252
+00:13:12,260 --> 00:13:14,750
+that the dynamics, the multiple equations-- but they're
+
+253
+00:13:14,750 --> 00:13:17,150
+really doing is they're all the same kind of equation.
+
+254
+00:13:17,150 --> 00:13:18,990
+They all have the same general structure.
+
+255
+00:13:18,990 --> 00:13:21,620
+In this case, this vector autoregressive model
+
+256
+00:13:21,620 --> 00:13:23,480
+is component by component.
+
+257
+00:13:23,480 --> 00:13:27,710
+Each line is a AR type model.
+
+258
+00:13:27,710 --> 00:13:31,040
+And the multiple equations just reshuffle the variable.
+
+259
+00:13:31,040 --> 00:13:33,230
+So what we're going to do is unshuffle them,
+
+260
+00:13:33,230 --> 00:13:36,590
+solve the equations, and then reshuffle the combinations back
+
+261
+00:13:36,590 --> 00:13:38,040
+to get our final answers.
+
+262
+00:13:38,040 --> 00:13:39,050
+So very straightforward.
+
+263
+00:13:39,050 --> 00:13:41,840
+That way, we don't need any new or magical tricks.
+
+264
+00:13:41,840 --> 00:13:44,390
+One thing that did make this particularly easy,
+
+265
+00:13:44,390 --> 00:13:46,150
+however, was in addition to the way
+
+266
+00:13:46,150 --> 00:13:48,650
+in which the variables entered and the coefficients were all
+
+267
+00:13:48,650 --> 00:13:51,470
+very simple in this case, again, more generally,
+
+268
+00:13:51,470 --> 00:13:53,390
+we'd have a general matrix, general eigenvalue
+
+269
+00:13:53,390 --> 00:13:54,470
+decomposition.
+
+270
+00:13:54,470 --> 00:13:57,860
+But also, it was full rank.
+
+271
+00:13:57,860 --> 00:14:01,010
+And therefore, the M was invertable.
+
+272
+00:14:01,010 --> 00:14:02,150
+So that was important.
+
+273
+00:14:02,150 --> 00:14:04,773
+And also, the noise terms all entered
+
+274
+00:14:04,773 --> 00:14:05,940
+with the single coefficient.
+
+275
+00:14:05,940 --> 00:14:08,540
+So their coefficient was basically a diagonal matrix.
+
+276
+00:14:08,540 --> 00:14:10,310
+And everything went through.
+
+277
+00:14:10,310 --> 00:14:12,230
+When we look at other settings where
+
+278
+00:14:12,230 --> 00:14:14,040
+we look at linear models in finance,
+
+279
+00:14:14,040 --> 00:14:17,960
+for example, factor models of covariance in portfolio
+
+280
+00:14:17,960 --> 00:14:20,180
+management and risk management-- we
+
+281
+00:14:20,180 --> 00:14:23,700
+have two things that differ quite significantly.
+
+282
+00:14:23,700 --> 00:14:29,570
+The first one is that the matrices we use in a factor
+
+283
+00:14:29,570 --> 00:14:31,190
+model may be of lower rank.
+
+284
+00:14:31,190 --> 00:14:33,380
+In fact, that's the entire benefit of factor models.
+
+285
+00:14:33,380 --> 00:14:35,630
+What we want to do in that setting,
+
+286
+00:14:35,630 --> 00:14:37,700
+unlike this particular setting, is
+
+287
+00:14:37,700 --> 00:14:40,040
+we want to eliminate degrees of freedom.
+
+288
+00:14:40,040 --> 00:14:42,710
+We want to describe the important risk
+
+289
+00:14:42,710 --> 00:14:45,920
+drivers of a set of financial instruments
+
+290
+00:14:45,920 --> 00:14:48,020
+in terms of common factors, which might
+
+291
+00:14:48,020 --> 00:14:49,470
+be an overall market factor.
+
+292
+00:14:49,470 --> 00:14:50,960
+It might be industry exposure.
+
+293
+00:14:50,960 --> 00:14:54,680
+It might be other economic or financial variables.
+
+294
+00:14:54,680 --> 00:14:56,840
+But the idea is to simplify to say
+
+295
+00:14:56,840 --> 00:14:59,630
+that we have some common factors affecting many assets.
+
+296
+00:14:59,630 --> 00:15:01,280
+Let's simplify the description.
+
+297
+00:15:01,280 --> 00:15:03,680
+So we would expect to have matrices that
+
+298
+00:15:03,680 --> 00:15:05,330
+are of less than full rank.
+
+299
+00:15:05,330 --> 00:15:07,550
+On the other hand, the noise terms
+
+300
+00:15:07,550 --> 00:15:09,650
+do need to have a matrix, which is full rank,
+
+301
+00:15:09,650 --> 00:15:12,290
+because the noise terms are idiosyncratic.
+
+302
+00:15:12,290 --> 00:15:13,680
+They are independent.
+
+303
+00:15:13,680 --> 00:15:15,240
+So we may have these two differences,
+
+304
+00:15:15,240 --> 00:15:19,010
+which is we may see that the matrices have different ranks.
+
+305
+00:15:19,010 --> 00:15:22,380
+And we may see, in fact, that a lot of the way and the factor
+
+306
+00:15:22,380 --> 00:15:24,950
+model setting and some of the structure that we
+
+307
+00:15:24,950 --> 00:15:26,480
+see in the covariance matrix really
+
+308
+00:15:26,480 --> 00:15:28,310
+is driven more by the noise terms
+
+309
+00:15:28,310 --> 00:15:29,750
+than by the nonnoise terms.
+
+310
+00:15:29,750 --> 00:15:31,940
+Here, they come in more or less on an equal footing
+
+311
+00:15:31,940 --> 00:15:35,180
+and in this example where one matrix was
+
+312
+00:15:35,180 --> 00:15:37,460
+the coefficient of the noise terms must diagonal.
+
+313
+00:15:37,460 --> 00:15:40,560
+It made it rather simple to take a look at.
+
+314
+00:15:40,560 --> 00:15:42,080
+So I hope this was helpful.
+
+315
+00:15:42,080 --> 00:15:45,020
+And however you solve the problem,
+
+316
+00:15:45,020 --> 00:15:46,670
+I hope you're always on the lookout
+
+317
+00:15:46,670 --> 00:15:50,540
+for new ways and multiple ways to solve a problem not only so
+
+318
+00:15:50,540 --> 00:15:52,940
+that you have multiple techniques, because generally,
+
+319
+00:15:52,940 --> 00:15:56,660
+each new technique brings some different insights into what's
+
+320
+00:15:56,660 --> 00:16:01,460
+going on with the underlying functions, data,
+
+321
+00:16:01,460 --> 00:16:04,030
+and random processes.
+

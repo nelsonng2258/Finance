@@ -1,0 +1,212 @@
+0
+00:00:00,000 --> 00:00:00,867
+
+
+1
+00:00:00,867 --> 00:00:02,950
+PROFESSOR: Let's look at some of the basic objects
+
+2
+00:00:02,950 --> 00:00:05,720
+and terminology in probability.
+
+3
+00:00:05,720 --> 00:00:07,820
+A random variable is really a function.
+
+4
+00:00:07,820 --> 00:00:10,880
+We could really call it a random-valued function
+
+5
+00:00:10,880 --> 00:00:12,300
+on the sample space.
+
+6
+00:00:12,300 --> 00:00:14,480
+So the sample space is a set of all events,
+
+7
+00:00:14,480 --> 00:00:16,309
+or possible outcomes of experiments,
+
+8
+00:00:16,309 --> 00:00:18,830
+or possible observations that we might have.
+
+9
+00:00:18,830 --> 00:00:20,600
+And we want to assign numbers to them
+
+10
+00:00:20,600 --> 00:00:23,430
+so that we can do some math, so that we can do some analytics.
+
+11
+00:00:23,430 --> 00:00:27,500
+So for example, if we have the abstract outcomes of success
+
+12
+00:00:27,500 --> 00:00:30,200
+or failure in an experiment, or we flip coins,
+
+13
+00:00:30,200 --> 00:00:32,750
+and we have heads and tails, or we roll dice,
+
+14
+00:00:32,750 --> 00:00:35,000
+and we get one of sides to come up,
+
+15
+00:00:35,000 --> 00:00:37,580
+we are used to assigning numbers to those.
+
+16
+00:00:37,580 --> 00:00:39,570
+And those numbers are the random variables.
+
+17
+00:00:39,570 --> 00:00:41,930
+So I've given a couple of examples right here.
+
+18
+00:00:41,930 --> 00:00:43,700
+In the case of heads and tails, we
+
+19
+00:00:43,700 --> 00:00:45,525
+might assign them 1 or minus 1.
+
+20
+00:00:45,525 --> 00:00:47,150
+But there's nothing special about that.
+
+21
+00:00:47,150 --> 00:00:49,520
+You could pick a different random variable w
+
+22
+00:00:49,520 --> 00:00:52,880
+and pick different values, 12 and minus 3, if you'd like.
+
+23
+00:00:52,880 --> 00:00:58,215
+Z is also a common random variable
+
+24
+00:00:58,215 --> 00:00:59,840
+that we see where we have two outcomes,
+
+25
+00:00:59,840 --> 00:01:01,880
+and we think of them as being success or failure
+
+26
+00:01:01,880 --> 00:01:03,110
+of an experiment.
+
+27
+00:01:03,110 --> 00:01:05,840
+They might be gains or losses on an investment.
+
+28
+00:01:05,840 --> 00:01:09,455
+Again, two states, we map the two possible states
+
+29
+00:01:09,455 --> 00:01:11,000
+to two possible numbers.
+
+30
+00:01:11,000 --> 00:01:12,710
+We could have a large number of states,
+
+31
+00:01:12,710 --> 00:01:15,110
+and we could combine different kinds of outcome.
+
+32
+00:01:15,110 --> 00:01:17,180
+We could add two dice together, we
+
+33
+00:01:17,180 --> 00:01:21,200
+could add a coin flip and a die, and we might also
+
+34
+00:01:21,200 --> 00:01:23,850
+have continuous outcomes.
+
+35
+00:01:23,850 --> 00:01:26,220
+So they don't need to be discrete.
+
+36
+00:01:26,220 --> 00:01:27,270
+What's the probability?
+
+37
+00:01:27,270 --> 00:01:28,980
+Well, we describe the probability
+
+38
+00:01:28,980 --> 00:01:32,160
+of an outcome as a number that we
+
+39
+00:01:32,160 --> 00:01:36,940
+assign to a random variable taking a particular value.
+
+40
+00:01:36,940 --> 00:01:39,690
+So for example, in the case of a fair coin,
+
+41
+00:01:39,690 --> 00:01:44,130
+the probability of observing X equals 1 would be 1/2.
+
+42
+00:01:44,130 --> 00:01:49,380
+For the case of Y equals 2, in the case of our dice,
+
+43
+00:01:49,380 --> 00:01:51,630
+we know that we would only see that in 1
+
+44
+00:01:51,630 --> 00:01:54,450
+out of 36 times when both the dice come up
+
+45
+00:01:54,450 --> 00:01:56,680
+with 1 on one side.
+
+46
+00:01:56,680 --> 00:01:59,822
+We can compute functions of a random variable as well,
+
+47
+00:01:59,822 --> 00:02:01,780
+and we'll have more to say about this later on.
+
+48
+00:02:01,780 --> 00:02:04,200
+But for example, if we take X squared,
+
+49
+00:02:04,200 --> 00:02:07,620
+the probability of observing X squared equals 1
+
+50
+00:02:07,620 --> 00:02:11,039
+is 1 because X could be plus 1 or minus 1
+
+51
+00:02:11,039 --> 00:02:12,540
+with equal probability.
+
+52
+00:02:12,540 --> 00:02:17,630
+And either way, X squared is equal to 1 and so on.
+

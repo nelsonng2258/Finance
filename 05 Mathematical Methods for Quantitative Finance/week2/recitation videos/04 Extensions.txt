@@ -1,0 +1,84 @@
+
+PROFESSOR: Exercise-- let's let xt be zt plus theta zt minus 2.
+The z's are IID normalized random variables,
+means 0 in variance 1.
+And let's let A be the average of the first four
+observations-- let's say x1, x2, x3, x4.
+And you can generalize this, and you
+should after you've done this.
+But here, let's try this.
+Using the results that we did in the previous exercise,
+let's see what we can say about computing the mean
+and the variance of A So pause the video now.
+And A is an average.
+It doesn't have a time index, but it's
+based on a particular set, not an infinite sum
+of random variables.
+So A constitutes a new random variable.
+What it its mean?
+What is its variance?
+
+Let's compute.
+Plug in the formulas and take some expectations.
+So first of all, it should be obvious that the expectation
+of A is going to be 0, because it's the sum of a bunch of 0
+mean variables, each of the x's.
+What about the variance?
+So we have the expectation of A squared.
+This is the variance of A with the covariance
+of A with itself.
+Sorry, let me rewrite that.
+Let's do it a little bit more neatly, as A. And then
+let's just use our definition.
+This is going to be 1/16 the expectation of x1 plus x2
+plus x3 plus x4, quantity squared.
+So what we're going to do, is we're going
+to expand out the quadratic.
+
+Take expectations, simplify terms,
+and get our result. So what do we have here?
+We're going to have two kinds of terms.
+We're going to have terms in x1 squared plus x2 squared
+plus x3 squared plus x4 squared.
+Let's just write this out.
+This is going to be 1/16 of--
+now, we'll have the expectation of let's just
+call it x1 squared plus 2 squared
+plus 3 squared plus x4 squared.
+But remember, these are independent
+and identically distributed.
+So that whatever the variance is,
+they all have the same variance.
+And actually, we know what that variances.
+This is going to give us 4 times 1 plus theta squared,
+because we just computed that.
+
+Now, what about the cross term?
+So the cross terms are going to be interesting.
+So we're going to have 2x 1x2 plus 2x 2x3 and so on.
+But the only ones that are going to have
+non-vanishing expectation are going
+to be x1, x3, and x2, x4, because they're
+separated by two time indices.
+That's the calculation that we just did a moment ago
+in the previous exercise.
+So we're going to have this plus-- let me write down
+2 expectation of x1, x3 plus twice
+the expectation of x2, x4.
+And we'll close our big bracket over here.
+And we know what those are.
+This is going to be plus 2 theta,
+plus 2 more theta over here.
+So we have our final result--
+the variance of A is going to be 1/4 of 1
+plus theta plus theta squared.
+Again, our principles were take the basic process,
+expand out the things inside the expectation,
+write things out algebraically.
+Expectation of a sum is the sum of the expectations.
+Reduce things down to z's or to previously known product
+formulas.
+And then, get the final numbers in terms of the parameters
+of the problem.
+And there we are.
+I hope that answer matches yours.

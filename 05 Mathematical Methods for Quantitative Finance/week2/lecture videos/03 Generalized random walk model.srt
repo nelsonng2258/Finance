@@ -1,0 +1,720 @@
+0
+00:00:00,000 --> 00:00:00,742
+
+
+1
+00:00:00,742 --> 00:00:02,950
+PROFESSOR: Let's generalize the random walk model now
+
+2
+00:00:02,950 --> 00:00:05,920
+by adding two parameters.
+
+3
+00:00:05,920 --> 00:00:09,780
+So what we'll do is we will take our basic standardized random
+
+4
+00:00:09,780 --> 00:00:12,900
+variable, z, and we're going to multiply it times 1
+
+5
+00:00:12,900 --> 00:00:14,700
+constant called sigma.
+
+6
+00:00:14,700 --> 00:00:16,440
+And that's a scale factor.
+
+7
+00:00:16,440 --> 00:00:19,360
+And then, we're going to add another constant, mu.
+
+8
+00:00:19,360 --> 00:00:22,650
+So it's very simple-- just a linear generalization
+
+9
+00:00:22,650 --> 00:00:23,820
+of our previous z.
+
+10
+00:00:23,820 --> 00:00:27,600
+So we'll call this linear combination sigma z plus mu.
+
+11
+00:00:27,600 --> 00:00:28,660
+We'll give it a new name.
+
+12
+00:00:28,660 --> 00:00:30,930
+We'll call it r.
+
+13
+00:00:30,930 --> 00:00:33,930
+We still have the property that the steps
+
+14
+00:00:33,930 --> 00:00:35,820
+are independent in each time period.
+
+15
+00:00:35,820 --> 00:00:38,350
+That follows from the independence of the z's.
+
+16
+00:00:38,350 --> 00:00:41,460
+So the z's are our same old friends the z's we had before.
+
+17
+00:00:41,460 --> 00:00:44,040
+And the new random variable, not surprisingly,
+
+18
+00:00:44,040 --> 00:00:47,430
+is going to have a different mean and variance.
+
+19
+00:00:47,430 --> 00:00:50,720
+The two parameters that we have, sigma and mu,
+
+20
+00:00:50,720 --> 00:00:53,930
+are going to be interpreted in financial applications
+
+21
+00:00:53,930 --> 00:00:57,710
+as parameters that describe risk and return, which are the two
+
+22
+00:00:57,710 --> 00:01:01,100
+basic elements we need of course, for understanding
+
+23
+00:01:01,100 --> 00:01:03,530
+investments, for understanding financial markets.
+
+24
+00:01:03,530 --> 00:01:05,780
+And this is the simplest non-trivial model
+
+25
+00:01:05,780 --> 00:01:06,500
+that we've got.
+
+26
+00:01:06,500 --> 00:01:09,040
+So let's see where that takes us.
+
+27
+00:01:09,040 --> 00:01:12,340
+If we want to match this on-- just to give you a heads up
+
+28
+00:01:12,340 --> 00:01:13,820
+for where we're going--
+
+29
+00:01:13,820 --> 00:01:16,300
+consider stock prices.
+
+30
+00:01:16,300 --> 00:01:18,070
+Observe regularly, say daily--
+
+31
+00:01:18,070 --> 00:01:21,350
+P1, P2, P3 are different stock prices.
+
+32
+00:01:21,350 --> 00:01:25,030
+And we can think of the return from one period to the next
+
+33
+00:01:25,030 --> 00:01:29,493
+as being possibly modeled by a random variable.
+
+34
+00:01:29,493 --> 00:01:30,910
+We don't know in the future what's
+
+35
+00:01:30,910 --> 00:01:32,830
+going to happen from one day to the next.
+
+36
+00:01:32,830 --> 00:01:35,590
+We can ask what's the distribution from which
+
+37
+00:01:35,590 --> 00:01:37,370
+these variables are drawn.
+
+38
+00:01:37,370 --> 00:01:40,840
+And if they are drawn from an IID distribution,
+
+39
+00:01:40,840 --> 00:01:43,600
+if they're independent and identically distributed,
+
+40
+00:01:43,600 --> 00:01:46,990
+what would be the consequences of compounding these returns
+
+41
+00:01:46,990 --> 00:01:49,000
+over a long period of time?
+
+42
+00:01:49,000 --> 00:01:51,910
+The identification we typically make
+
+43
+00:01:51,910 --> 00:01:56,560
+is to identify r sub t, which I've denoted with a little r,
+
+44
+00:01:56,560 --> 00:01:59,470
+to be the logarithm of the price ratio.
+
+45
+00:01:59,470 --> 00:02:02,380
+And this is close to the simple return numerically.
+
+46
+00:02:02,380 --> 00:02:04,630
+But we'll see that this is a better
+
+47
+00:02:04,630 --> 00:02:07,060
+model both empirically and theoretically.
+
+48
+00:02:07,060 --> 00:02:10,240
+We can go backwards from these returns
+
+49
+00:02:10,240 --> 00:02:13,420
+to the prices in the same way that we mentioned before,
+
+50
+00:02:13,420 --> 00:02:17,920
+that we can add and iterate the process if we
+
+51
+00:02:17,920 --> 00:02:20,800
+have a recursive idea of what the returns are
+
+52
+00:02:20,800 --> 00:02:22,360
+and the prices are.
+
+53
+00:02:22,360 --> 00:02:24,340
+And we can build up the price series
+
+54
+00:02:24,340 --> 00:02:27,940
+by looking at a compounded sum of returns.
+
+55
+00:02:27,940 --> 00:02:29,410
+Because we've taken the logarithm
+
+56
+00:02:29,410 --> 00:02:33,140
+to get the little bars, we exponentiate to get the prices.
+
+57
+00:02:33,140 --> 00:02:36,220
+So this is how we can think about where
+
+58
+00:02:36,220 --> 00:02:40,180
+these r's in this generalized random model,
+
+59
+00:02:40,180 --> 00:02:47,850
+these r's are going to fit in to a model for asset prices.
+
+60
+00:02:47,850 --> 00:02:51,390
+Now, since the expectational operator is linear,
+
+61
+00:02:51,390 --> 00:02:54,570
+we're going to generalize our previous results.
+
+62
+00:02:54,570 --> 00:02:57,310
+It will be almost as easy as what we did before.
+
+63
+00:02:57,310 --> 00:03:04,020
+So we have that the return is just a constant time z plus mu.
+
+64
+00:03:04,020 --> 00:03:06,360
+We know that the expectation of a constant,
+
+65
+00:03:06,360 --> 00:03:07,890
+and we know the expectation of a sum
+
+66
+00:03:07,890 --> 00:03:09,700
+is the sum of the expectations.
+
+67
+00:03:09,700 --> 00:03:15,120
+So the expectation of the sum is mu plus sigma times
+
+68
+00:03:15,120 --> 00:03:16,980
+the expectation of z.
+
+69
+00:03:16,980 --> 00:03:19,440
+And we remember that the expectation of z is 0.
+
+70
+00:03:19,440 --> 00:03:24,000
+So very simply, the expected return of r sub t is mu.
+
+71
+00:03:24,000 --> 00:03:25,380
+What about the variance?
+
+72
+00:03:25,380 --> 00:03:30,030
+The variance is defined as the expectation of the square
+
+73
+00:03:30,030 --> 00:03:31,980
+of the variable minus its mean.
+
+74
+00:03:31,980 --> 00:03:34,290
+We just computed the mean on the line above.
+
+75
+00:03:34,290 --> 00:03:37,830
+And r minus mu is sigma z.
+
+76
+00:03:37,830 --> 00:03:39,360
+We take that squared.
+
+77
+00:03:39,360 --> 00:03:42,480
+The constant, sigma squared, comes out of the expectation.
+
+78
+00:03:42,480 --> 00:03:45,150
+The expectation of z squared is 1.
+
+79
+00:03:45,150 --> 00:03:50,310
+So we're left with the variance of r is sigma squared.
+
+80
+00:03:50,310 --> 00:03:53,670
+And then our last relationship among the z's translates here
+
+81
+00:03:53,670 --> 00:03:54,310
+as well.
+
+82
+00:03:54,310 --> 00:03:57,660
+And this gives us the covariance of two
+
+83
+00:03:57,660 --> 00:04:00,820
+r's taken at different periods of time.
+
+84
+00:04:00,820 --> 00:04:03,810
+The definition of the covariance is the expectation
+
+85
+00:04:03,810 --> 00:04:06,030
+of the product of two random variables,
+
+86
+00:04:06,030 --> 00:04:08,040
+relative to their means.
+
+87
+00:04:08,040 --> 00:04:12,700
+Because rt and our rt prime have an arbitrary time index,
+
+88
+00:04:12,700 --> 00:04:14,130
+they have the same mean.
+
+89
+00:04:14,130 --> 00:04:17,529
+And this is just the same thing as the expectation value.
+
+90
+00:04:17,529 --> 00:04:19,110
+It's proportional to the expectation
+
+91
+00:04:19,110 --> 00:04:22,620
+value of the zt equals zt prime at two different times.
+
+92
+00:04:22,620 --> 00:04:27,900
+And that's equal to 0, as we've seen before.
+
+93
+00:04:27,900 --> 00:04:30,292
+Now, here's where it gets interesting.
+
+94
+00:04:30,292 --> 00:04:32,000
+Let's take a look at what happens when we
+
+95
+00:04:32,000 --> 00:04:33,540
+add a bunch of them together.
+
+96
+00:04:33,540 --> 00:04:37,100
+So let's look at defining a new thing I'll call X big T
+
+97
+00:04:37,100 --> 00:04:39,080
+to be r1 plus r2 plus r3.
+
+98
+00:04:39,080 --> 00:04:42,960
+And what we're interested in is the dependence on time.
+
+99
+00:04:42,960 --> 00:04:45,810
+So the r's are independent of each other.
+
+100
+00:04:45,810 --> 00:04:49,400
+But we'd like to know how the distribution of X
+
+101
+00:04:49,400 --> 00:04:52,790
+depends on the moments of the individual r's,
+
+102
+00:04:52,790 --> 00:04:55,490
+and in particular how it depends on how many of them
+
+103
+00:04:55,490 --> 00:04:58,130
+we have-- that is what's the time dependence.
+
+104
+00:04:58,130 --> 00:05:01,520
+So once again, we use linearity.
+
+105
+00:05:01,520 --> 00:05:05,030
+We take expectations of both sides of this equation,
+
+106
+00:05:05,030 --> 00:05:07,370
+and we expand out.
+
+107
+00:05:07,370 --> 00:05:08,870
+What do we find?
+
+108
+00:05:08,870 --> 00:05:12,380
+First, for the mean, the expectation of XT
+
+109
+00:05:12,380 --> 00:05:16,170
+is the expectation of r1 plus expectation of r2 and so on.
+
+110
+00:05:16,170 --> 00:05:19,200
+Each of these expectations is identical.
+
+111
+00:05:19,200 --> 00:05:22,520
+This is mu plus mu plus mu, T times.
+
+112
+00:05:22,520 --> 00:05:25,040
+And that gives us T times mu.
+
+113
+00:05:25,040 --> 00:05:27,750
+So remember that our standardized,
+
+114
+00:05:27,750 --> 00:05:30,230
+our pure random walk standardized, just
+
+115
+00:05:30,230 --> 00:05:32,180
+the sum of the z's had been 0.
+
+116
+00:05:32,180 --> 00:05:34,130
+Now we have a slightly different result,
+
+117
+00:05:34,130 --> 00:05:38,660
+because each of the r's has a non-zero mean.
+
+118
+00:05:38,660 --> 00:05:41,690
+The result is T times the individual mean.
+
+119
+00:05:41,690 --> 00:05:43,400
+How about the variance?
+
+120
+00:05:43,400 --> 00:05:47,490
+The variance is only slightly more complicated.
+
+121
+00:05:47,490 --> 00:05:49,520
+We just need to do a little bit of algebra.
+
+122
+00:05:49,520 --> 00:05:52,310
+The variance, as always, is defined
+
+123
+00:05:52,310 --> 00:05:57,650
+as the expectation of the square of the variable minus its mean.
+
+124
+00:05:57,650 --> 00:05:58,850
+We just computed the mean.
+
+125
+00:05:58,850 --> 00:06:00,420
+It was T times mu.
+
+126
+00:06:00,420 --> 00:06:02,300
+Now, here's a convenient trick.
+
+127
+00:06:02,300 --> 00:06:03,440
+Let's write it out.
+
+128
+00:06:03,440 --> 00:06:06,790
+Let's write T mu is mu plus mu plus mu plus mu.
+
+129
+00:06:06,790 --> 00:06:09,350
+And let's expand out X. So that we
+
+130
+00:06:09,350 --> 00:06:12,590
+can group this together in these suggestive and interesting
+
+131
+00:06:12,590 --> 00:06:17,120
+groupings, as the expectation of r1 minus mu plus r2
+
+132
+00:06:17,120 --> 00:06:20,850
+minus mu, plus, and so on up to rT minus mu.
+
+133
+00:06:20,850 --> 00:06:22,400
+So each of these things--
+
+134
+00:06:22,400 --> 00:06:27,680
+r minus mu as a unit, is the random component
+
+135
+00:06:27,680 --> 00:06:29,010
+of our process.
+
+136
+00:06:29,010 --> 00:06:32,270
+We can think of mu as being a deterministic piece.
+
+137
+00:06:32,270 --> 00:06:34,970
+It's the amount that gets added in every single period.
+
+138
+00:06:34,970 --> 00:06:37,790
+And we're also getting a random component.
+
+139
+00:06:37,790 --> 00:06:39,890
+That's our sigma zT term.
+
+140
+00:06:39,890 --> 00:06:43,400
+So these are the sum of these random variables.
+
+141
+00:06:43,400 --> 00:06:49,760
+Since each of these r minus mus is a sigma z1, sigma z2, and so
+
+142
+00:06:49,760 --> 00:06:53,450
+on, we have a sigma squared that pulls out of the expectation,
+
+143
+00:06:53,450 --> 00:06:55,580
+because it's a constant multiplier.
+
+144
+00:06:55,580 --> 00:06:58,190
+And then, we got to use our previous result--
+
+145
+00:06:58,190 --> 00:07:01,520
+that we have the expectation of the sum of z's quantity squared
+
+146
+00:07:01,520 --> 00:07:08,220
+is just T. So, now we have this scale factor of sigma squared.
+
+147
+00:07:08,220 --> 00:07:12,150
+And that's our basic result for this generalized random walk.
+
+148
+00:07:12,150 --> 00:07:15,500
+So to summarize-- the generalized random walk model
+
+149
+00:07:15,500 --> 00:07:18,620
+is constructed as a sum of IID random variables,
+
+150
+00:07:18,620 --> 00:07:20,870
+r1 plus r2 plus r3.
+
+151
+00:07:20,870 --> 00:07:24,440
+Each of these generalizes our standard z
+
+152
+00:07:24,440 --> 00:07:27,230
+by multiplying it times 1 constant, sigma,
+
+153
+00:07:27,230 --> 00:07:29,060
+and adding another mu.
+
+154
+00:07:29,060 --> 00:07:33,020
+We can think of these as being related to volatility,
+
+155
+00:07:33,020 --> 00:07:35,960
+the risk associated with an investment,
+
+156
+00:07:35,960 --> 00:07:39,170
+and mu, the constant deterministic return
+
+157
+00:07:39,170 --> 00:07:42,680
+that we would have if we turn volatility off.
+
+158
+00:07:42,680 --> 00:07:45,660
+The mean and the variance are linear in time.
+
+159
+00:07:45,660 --> 00:07:49,970
+So as before, we apply linearity and compute expectations.
+
+160
+00:07:49,970 --> 00:07:53,300
+Notice that we're not computing here, the full distribution
+
+161
+00:07:53,300 --> 00:07:53,990
+of x.
+
+162
+00:07:53,990 --> 00:07:57,020
+And we haven't used the full distribution of the individual
+
+163
+00:07:57,020 --> 00:07:57,620
+r's.
+
+164
+00:07:57,620 --> 00:07:59,600
+We've just used the mean and variance
+
+165
+00:07:59,600 --> 00:08:04,010
+of r's to get the mean and variance and covariances,
+
+166
+00:08:04,010 --> 00:08:07,580
+and those properties for x and T.
+
+167
+00:08:07,580 --> 00:08:09,350
+Our basic result that's going to be
+
+168
+00:08:09,350 --> 00:08:12,050
+important for financial applications
+
+169
+00:08:12,050 --> 00:08:14,450
+and for our intuition about randomness
+
+170
+00:08:14,450 --> 00:08:17,420
+and financial markets, is that the mean
+
+171
+00:08:17,420 --> 00:08:20,440
+is proportional to time.
+
+172
+00:08:20,440 --> 00:08:22,940
+And the variance is proportional to time,
+
+173
+00:08:22,940 --> 00:08:25,990
+which means it's square root, which we associate
+
+174
+00:08:25,990 --> 00:08:29,860
+with the volatility grows as square root of T.
+
+175
+00:08:29,860 --> 00:08:35,509
+That is the volatility, the standard deviation of x sub T,
+
+176
+00:08:35,509 --> 00:08:38,409
+is sigma times the square root of T.
+
+177
+00:08:38,409 --> 00:08:40,539
+And square root of T, as it gets large,
+
+178
+00:08:40,539 --> 00:08:43,500
+grows more slowly than T.
+
+179
+00:08:43,500 --> 00:08:44,000
+
+

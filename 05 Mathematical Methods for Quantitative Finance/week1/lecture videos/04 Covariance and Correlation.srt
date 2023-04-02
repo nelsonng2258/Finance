@@ -1,0 +1,428 @@
+0
+00:00:00,000 --> 00:00:00,952
+
+
+1
+00:00:00,952 --> 00:00:03,410
+PROFESSOR: What if we've got more than one random variable,
+
+2
+00:00:03,410 --> 00:00:04,970
+as we often do?
+
+3
+00:00:04,970 --> 00:00:07,160
+Well, if we have two random variables,
+
+4
+00:00:07,160 --> 00:00:10,370
+they could be independent, but they might not be independent.
+
+5
+00:00:10,370 --> 00:00:13,940
+And one of the measures we have for how
+
+6
+00:00:13,940 --> 00:00:17,600
+two different random variables might be related to each other
+
+7
+00:00:17,600 --> 00:00:20,090
+is to look at an expectation, as well.
+
+8
+00:00:20,090 --> 00:00:23,640
+It's to look at the expectation of a bilinear product.
+
+9
+00:00:23,640 --> 00:00:27,770
+So the covariance of two random variables x and y,
+
+10
+00:00:27,770 --> 00:00:30,800
+which I sometimes write in this notation, covariance
+
+11
+00:00:30,800 --> 00:00:35,480
+of x and y, is the expectation of x minus its mean,
+
+12
+00:00:35,480 --> 00:00:37,880
+times y minus its mean.
+
+13
+00:00:37,880 --> 00:00:41,605
+Now if you expand this out and do the same trick
+
+14
+00:00:41,605 --> 00:00:42,980
+that we did for the variance, you
+
+15
+00:00:42,980 --> 00:00:45,110
+find that this can be simplified to be
+
+16
+00:00:45,110 --> 00:00:48,440
+the expectation of the product minus the product
+
+17
+00:00:48,440 --> 00:00:51,950
+of the expectations for two variables, x and y.
+
+18
+00:00:51,950 --> 00:00:54,680
+This has units, unsurprisingly, the units
+
+19
+00:00:54,680 --> 00:00:56,660
+of x times units of y.
+
+20
+00:00:56,660 --> 00:00:59,810
+So if x is in dollars and y is in yen,
+
+21
+00:00:59,810 --> 00:01:02,810
+the product is going to be in dollars times yen.
+
+22
+00:01:02,810 --> 00:01:05,550
+We often like to have things in dimensionless units.
+
+23
+00:01:05,550 --> 00:01:10,010
+So we define the correlation to be the covariance divided
+
+24
+00:01:10,010 --> 00:01:12,710
+by the square root of the variance of x
+
+25
+00:01:12,710 --> 00:01:14,900
+and the square root of the variance of y.
+
+26
+00:01:14,900 --> 00:01:17,670
+That makes the correlation a dimensionless number.
+
+27
+00:01:17,670 --> 00:01:22,550
+And in fact, it's bounded between minus 1 and plus 1
+
+28
+00:01:22,550 --> 00:01:25,680
+for the correlation of two random variables.
+
+29
+00:01:25,680 --> 00:01:28,880
+Notice that we can rewrite this by taking
+
+30
+00:01:28,880 --> 00:01:30,560
+the square root of the variances,
+
+31
+00:01:30,560 --> 00:01:33,290
+writing that as sigma x, sigma y.
+
+32
+00:01:33,290 --> 00:01:35,240
+Because those are constants, I can bring them
+
+33
+00:01:35,240 --> 00:01:36,830
+inside the expectation.
+
+34
+00:01:36,830 --> 00:01:40,490
+And I can write the correlation as an expectation
+
+35
+00:01:40,490 --> 00:01:42,290
+in this interesting way.
+
+36
+00:01:42,290 --> 00:01:46,160
+It's the expectation of x minus mu over sigma times y
+
+37
+00:01:46,160 --> 00:01:49,520
+minus mu over sigma, where the mu and the sigma
+
+38
+00:01:49,520 --> 00:01:51,140
+are for the y distribution.
+
+39
+00:01:51,140 --> 00:01:53,990
+And each of these quantities in parentheses,
+
+40
+00:01:53,990 --> 00:01:57,530
+you'll notice has 0 mean, because I've subtracted off
+
+41
+00:01:57,530 --> 00:01:58,370
+its mean.
+
+42
+00:01:58,370 --> 00:02:01,070
+And it has unit variance, because I've
+
+43
+00:02:01,070 --> 00:02:04,000
+divided by the variance.
+
+44
+00:02:04,000 --> 00:02:09,560
+Now if the random variables are independent of each other,
+
+45
+00:02:09,560 --> 00:02:13,330
+then these expectations factorize, and we'll get 0.
+
+46
+00:02:13,330 --> 00:02:16,520
+So if the variables, x and y, are independent,
+
+47
+00:02:16,520 --> 00:02:19,210
+then they're covariance and correlation are 0.
+
+48
+00:02:19,210 --> 00:02:21,260
+What about the other way around?
+
+49
+00:02:21,260 --> 00:02:23,360
+Well, the other way around is different.
+
+50
+00:02:23,360 --> 00:02:27,070
+So it is possible to have vanishing covariance,
+
+51
+00:02:27,070 --> 00:02:29,470
+but not have the variables be independent. .
+
+52
+00:02:29,470 --> 00:02:31,550
+Let's take a look at a quick example.
+
+53
+00:02:31,550 --> 00:02:35,150
+If we have x to be a function that takes,
+
+54
+00:02:35,150 --> 00:02:38,830
+let's say, plus or minus a with probability p1,
+
+55
+00:02:38,830 --> 00:02:42,910
+and it takes plus or minus b with probability p2,
+
+56
+00:02:42,910 --> 00:02:45,610
+then we can see that it's mean has to be 0,
+
+57
+00:02:45,610 --> 00:02:47,470
+simply because it's symmetric.
+
+58
+00:02:47,470 --> 00:02:49,390
+It's equally likely to have a positive number
+
+59
+00:02:49,390 --> 00:02:51,020
+and a negative number.
+
+60
+00:02:51,020 --> 00:02:54,980
+Now what if we define y to be x squared?
+
+61
+00:02:54,980 --> 00:02:58,480
+So if y is a function of x, it's not independent.
+
+62
+00:02:58,480 --> 00:03:00,100
+It's completely dependent.
+
+63
+00:03:00,100 --> 00:03:02,770
+If we know what x is, then we know what y is.
+
+64
+00:03:02,770 --> 00:03:04,780
+It's the square the value of x.
+
+65
+00:03:04,780 --> 00:03:08,620
+So in this case, this would be a squared with probability 2pi1,
+
+66
+00:03:08,620 --> 00:03:11,710
+because whether it's plus or minus a, each
+
+67
+00:03:11,710 --> 00:03:15,590
+with probability pi, y is going to have value a squared--
+
+68
+00:03:15,590 --> 00:03:17,290
+and similarly for b.
+
+69
+00:03:17,290 --> 00:03:20,530
+So its mean is not going to be 0 because y
+
+70
+00:03:20,530 --> 00:03:24,940
+is a positive function, and we can compute its mean.
+
+71
+00:03:24,940 --> 00:03:27,340
+And now if we go and compute the covariance,
+
+72
+00:03:27,340 --> 00:03:31,660
+and we put in the numbers, we take the probability
+
+73
+00:03:31,660 --> 00:03:34,330
+weighted average of the functions,
+
+74
+00:03:34,330 --> 00:03:37,480
+we find that the covariance of x and y is 0.
+
+75
+00:03:37,480 --> 00:03:41,950
+So if the covariance vanishes, it does not imply independence.
+
+76
+00:03:41,950 --> 00:03:45,010
+Independence implies vanishing covariance, but not
+
+77
+00:03:45,010 --> 00:03:47,070
+the other way around.
+
+78
+00:03:47,070 --> 00:03:52,100
+So let's summarize-- random variables are functions
+
+79
+00:03:52,100 --> 00:03:54,830
+that assign probability to events or outcomes
+
+80
+00:03:54,830 --> 00:03:56,025
+in the sample space.
+
+81
+00:03:56,025 --> 00:03:56,900
+They can be discrete.
+
+82
+00:03:56,900 --> 00:03:57,920
+They can be continuous.
+
+83
+00:03:57,920 --> 00:03:59,870
+They can be a mix of both.
+
+84
+00:03:59,870 --> 00:04:04,200
+We describe the probabilities by a probability distribution,
+
+85
+00:04:04,200 --> 00:04:05,300
+which could be discrete.
+
+86
+00:04:05,300 --> 00:04:07,730
+It can be continuous, but either way, it's sums
+
+87
+00:04:07,730 --> 00:04:11,750
+or it integrates to 1, and the values are always positive.
+
+88
+00:04:11,750 --> 00:04:14,870
+Expected values or expectations-- and I'll
+
+89
+00:04:14,870 --> 00:04:18,170
+use those interchangeably-- are weighted averages, where
+
+90
+00:04:18,170 --> 00:04:20,959
+the weights are taken from the probabilities.
+
+91
+00:04:20,959 --> 00:04:24,560
+The moment of a distribution are the expectation,
+
+92
+00:04:24,560 --> 00:04:28,040
+not of some general function, but in particular, of powers
+
+93
+00:04:28,040 --> 00:04:29,510
+of the random variable.
+
+94
+00:04:29,510 --> 00:04:33,470
+The first power, x to the 1, gives us the mean.
+
+95
+00:04:33,470 --> 00:04:37,160
+X squared minus the constant gives us the variance.
+
+96
+00:04:37,160 --> 00:04:39,290
+We can do x cubed, x to the fourth, and so on.
+
+97
+00:04:39,290 --> 00:04:41,820
+
+
+98
+00:04:41,820 --> 00:04:44,000
+So the variance, skewness, and kurtosis
+
+99
+00:04:44,000 --> 00:04:46,790
+are simple functions of the moments that are used,
+
+100
+00:04:46,790 --> 00:04:49,760
+the second, third, and fourth moments of the distribution,
+
+101
+00:04:49,760 --> 00:04:52,740
+and they help us characterize the shape of the distribution.
+
+102
+00:04:52,740 --> 00:04:55,220
+And if there are multiple random variables,
+
+103
+00:04:55,220 --> 00:04:58,770
+we define using expectations again, the covariance
+
+104
+00:04:58,770 --> 00:04:59,900
+and the correlation.
+
+105
+00:04:59,900 --> 00:05:04,500
+And for independent random variables, those vanish.
+
+106
+00:05:04,500 --> 00:05:05,000
+
+

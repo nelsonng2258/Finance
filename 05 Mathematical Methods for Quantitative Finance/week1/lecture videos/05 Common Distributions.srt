@@ -1,0 +1,568 @@
+0
+00:00:00,000 --> 00:00:00,493
+
+
+1
+00:00:00,493 --> 00:00:01,910
+PROFESSOR: Let's take a quick look
+
+2
+00:00:01,910 --> 00:00:03,830
+at some of the common distributions
+
+3
+00:00:03,830 --> 00:00:06,000
+that we see in finance.
+
+4
+00:00:06,000 --> 00:00:08,550
+First, uniform probability distribution
+
+5
+00:00:08,550 --> 00:00:10,605
+is always our starting test case.
+
+6
+00:00:10,605 --> 00:00:14,310
+The probability density p of x is equal to 1
+
+7
+00:00:14,310 --> 00:00:18,510
+if x is in the interval between 0 and 1, and 0 otherwise.
+
+8
+00:00:18,510 --> 00:00:21,615
+We compute the probability for X to lie between two values
+
+9
+00:00:21,615 --> 00:00:25,060
+a and b by computing the interval.
+
+10
+00:00:25,060 --> 00:00:28,530
+So this one is obviously just b minus a.
+
+11
+00:00:28,530 --> 00:00:30,990
+How do we get the cumulative distribution function
+
+12
+00:00:30,990 --> 00:00:32,910
+from minus infinity to x?
+
+13
+00:00:32,910 --> 00:00:35,880
+Assuming that we're inside the interval where
+
+14
+00:00:35,880 --> 00:00:40,590
+x is between 0 and 1, this is just the function x itself.
+
+15
+00:00:40,590 --> 00:00:41,730
+What about moments?
+
+16
+00:00:41,730 --> 00:00:44,400
+Well, we do the integrals The mean is the integral
+
+17
+00:00:44,400 --> 00:00:47,610
+of x p of x dx, and that's 1/2.
+
+18
+00:00:47,610 --> 00:00:49,320
+We can obviously do these integrals
+
+19
+00:00:49,320 --> 00:00:51,540
+in closed form for any value.
+
+20
+00:00:51,540 --> 00:00:56,190
+So for x to the l, we get the l-th moment is 1 over l plus 1.
+
+21
+00:00:56,190 --> 00:01:00,210
+And for the variance, for sigma squared, we use our definition.
+
+22
+00:01:00,210 --> 00:01:03,180
+It's the integral of p of x, which is 1,
+
+23
+00:01:03,180 --> 00:01:07,500
+times x minus the mean, so x minus 1/2 quantity squared.
+
+24
+00:01:07,500 --> 00:01:11,610
+Do the integral, and we get 1/12.
+
+25
+00:01:11,610 --> 00:01:14,280
+The binomial distribution is very important
+
+26
+00:01:14,280 --> 00:01:16,560
+since it describes random walks and it's
+
+27
+00:01:16,560 --> 00:01:21,150
+used in the binomial tree model for option pricing.
+
+28
+00:01:21,150 --> 00:01:24,390
+So the binomial distribution provides a model for anything
+
+29
+00:01:24,390 --> 00:01:28,710
+that has two possible outcomes-- success or failure,
+
+30
+00:01:28,710 --> 00:01:30,278
+they're typically called.
+
+31
+00:01:30,278 --> 00:01:32,070
+But we could be thinking of heads or tails,
+
+32
+00:01:32,070 --> 00:01:34,410
+we could be thinking of something going up or down,
+
+33
+00:01:34,410 --> 00:01:38,940
+or left or right, or two possible outcomes, win or lose.
+
+34
+00:01:38,940 --> 00:01:40,440
+But they don't need to be symmetric.
+
+35
+00:01:40,440 --> 00:01:43,230
+So for example, if we put our money on 19 in roulette,
+
+36
+00:01:43,230 --> 00:01:49,950
+it could be 19 is one state and not-19 is the other state.
+
+37
+00:01:49,950 --> 00:01:52,140
+So lots of possible examples where we
+
+38
+00:01:52,140 --> 00:01:53,700
+have two states of the world.
+
+39
+00:01:53,700 --> 00:01:58,230
+What we do is we define the probability for one state
+
+40
+00:01:58,230 --> 00:02:00,300
+to be-- we'll call it p-- the probability
+
+41
+00:02:00,300 --> 00:02:03,810
+for the complementary state to be 1 minus p,
+
+42
+00:02:03,810 --> 00:02:05,520
+and then we'll imagine that we repeat
+
+43
+00:02:05,520 --> 00:02:07,170
+this a certain number of times.
+
+44
+00:02:07,170 --> 00:02:09,479
+And we want to know-- our question for the binomial
+
+45
+00:02:09,479 --> 00:02:10,830
+distribution is--
+
+46
+00:02:10,830 --> 00:02:13,470
+how many successes and failures do we
+
+47
+00:02:13,470 --> 00:02:16,980
+have out of the given number of experiments,
+
+48
+00:02:16,980 --> 00:02:18,610
+out of the given number of trials?
+
+49
+00:02:18,610 --> 00:02:21,360
+So imagine that we do the experiment n times.
+
+50
+00:02:21,360 --> 00:02:24,240
+And we want to know, what's the probability, if I do this n
+
+51
+00:02:24,240 --> 00:02:29,530
+times, of observing k successes and n minus k failures?
+
+52
+00:02:29,530 --> 00:02:33,330
+So if I flip a coin 10 times in a row, n is equal to 10.
+
+53
+00:02:33,330 --> 00:02:36,000
+If I want to know the probability
+
+54
+00:02:36,000 --> 00:02:39,540
+of getting 5 heads and 5 tails, I would take k equals 5.
+
+55
+00:02:39,540 --> 00:02:42,960
+If I want to know about getting 2 heads and 8 tails,
+
+56
+00:02:42,960 --> 00:02:44,730
+I would take k equals 2.
+
+57
+00:02:44,730 --> 00:02:46,500
+So how do we compute the probability?
+
+58
+00:02:46,500 --> 00:02:48,420
+Well, it depends.
+
+59
+00:02:48,420 --> 00:02:52,080
+Probability is a function that depends on k.
+
+60
+00:02:52,080 --> 00:02:55,470
+But it has two parameters, n and p, that are held fixed.
+
+61
+00:02:55,470 --> 00:02:57,580
+So n could be 10, p could be 1/2,
+
+62
+00:02:57,580 --> 00:02:59,730
+for the example of flipping a fair coin.
+
+63
+00:02:59,730 --> 00:03:01,980
+But actually, n can be any integer,
+
+64
+00:03:01,980 --> 00:03:04,770
+and p can be any number between 0 and 1.
+
+65
+00:03:04,770 --> 00:03:08,430
+So we can see that if we want all possible ways
+
+66
+00:03:08,430 --> 00:03:12,810
+that in n trials we could have k successes,
+
+67
+00:03:12,810 --> 00:03:14,640
+the number of ways of doing that is n
+
+68
+00:03:14,640 --> 00:03:19,270
+choose k-- n factorial over k factorial n minus k factorial.
+
+69
+00:03:19,270 --> 00:03:22,860
+And by properties of combinatorics and factorials,
+
+70
+00:03:22,860 --> 00:03:28,170
+that's the same as n choose n minus k, of course.
+
+71
+00:03:28,170 --> 00:03:32,640
+Now, we're going to weight that by the probability of success
+
+72
+00:03:32,640 --> 00:03:33,960
+to the k-th power.
+
+73
+00:03:33,960 --> 00:03:37,350
+Because these are independent events happening separately,
+
+74
+00:03:37,350 --> 00:03:40,830
+the probability of having it happen k times are it
+
+75
+00:03:40,830 --> 00:03:42,840
+needed to happen each of k times.
+
+76
+00:03:42,840 --> 00:03:45,190
+So the probabilities multiply.
+
+77
+00:03:45,190 --> 00:03:51,780
+So in the case where I have k successes and n minus k
+
+78
+00:03:51,780 --> 00:03:54,840
+failures, I'm going to have p raised to the k,
+
+79
+00:03:54,840 --> 00:03:58,320
+q raised to the n minus k will be that probability
+
+80
+00:03:58,320 --> 00:04:00,810
+of a particular event, and the multiplicity
+
+81
+00:04:00,810 --> 00:04:04,600
+will be n choose k.
+
+82
+00:04:04,600 --> 00:04:07,000
+Now, what's the mean of that expectation?
+
+83
+00:04:07,000 --> 00:04:09,460
+Well, we could compute it.
+
+84
+00:04:09,460 --> 00:04:11,950
+And let me just show you how it's done the hard way.
+
+85
+00:04:11,950 --> 00:04:15,130
+And very shortly, we'll find a much easier way
+
+86
+00:04:15,130 --> 00:04:16,690
+to do it, which will generalize.
+
+87
+00:04:16,690 --> 00:04:18,482
+And that's what we'll be doing for the rest
+
+88
+00:04:18,482 --> 00:04:19,720
+of our calculations.
+
+89
+00:04:19,720 --> 00:04:22,960
+It's both easier to compute and it opens doors
+
+90
+00:04:22,960 --> 00:04:27,800
+to some other properties of stochastic processes.
+
+91
+00:04:27,800 --> 00:04:30,500
+So the hard way is we use the definition.
+
+92
+00:04:30,500 --> 00:04:31,990
+So the definition is that we take
+
+93
+00:04:31,990 --> 00:04:35,710
+the mean is defined as the expectation of X.
+
+94
+00:04:35,710 --> 00:04:40,600
+So we take the value of X, we sum over all possibilities.
+
+95
+00:04:40,600 --> 00:04:42,670
+We take the value times the probability
+
+96
+00:04:42,670 --> 00:04:44,150
+of finding that value.
+
+97
+00:04:44,150 --> 00:04:49,030
+So we could have k could be 0 successes up through infinity,
+
+98
+00:04:49,030 --> 00:04:51,640
+theoretically, and we would compute this sum.
+
+99
+00:04:51,640 --> 00:04:54,100
+Of course, it can't really go to infinity.
+
+100
+00:04:54,100 --> 00:04:59,800
+If we have n trials, k can either be 0 through n--
+
+101
+00:04:59,800 --> 00:05:03,800
+so we can cut off our sum at n on the upper end of the limit.
+
+102
+00:05:03,800 --> 00:05:05,815
+And if k is equal to 0, that term
+
+103
+00:05:05,815 --> 00:05:07,960
+is not going to show up either, because k
+
+104
+00:05:07,960 --> 00:05:11,670
+equals 0 would just drop out because of this factor here.
+
+105
+00:05:11,670 --> 00:05:14,350
+So let's write our sum from k equals 1 to n
+
+106
+00:05:14,350 --> 00:05:17,570
+and then plug in our definition.
+
+107
+00:05:17,570 --> 00:05:21,700
+So we've got our factorial, k factorial n minus k factorial
+
+108
+00:05:21,700 --> 00:05:25,030
+on the bottom, n factorial in the numerator times the k
+
+109
+00:05:25,030 --> 00:05:29,560
+prefactor here, p to the k, q to the n minus k.
+
+110
+00:05:29,560 --> 00:05:31,990
+I can rearrange the terms a little bit.
+
+111
+00:05:31,990 --> 00:05:35,945
+I can cancel a k in the numerator and the denominator
+
+112
+00:05:35,945 --> 00:05:36,445
+here.
+
+113
+00:05:36,445 --> 00:05:39,460
+
+
+114
+00:05:39,460 --> 00:05:44,030
+See if my magic screen will cooperate.
+
+115
+00:05:44,030 --> 00:05:48,450
+Here and here, we can cancel out a k to get k minus 1 factorial.
+
+116
+00:05:48,450 --> 00:05:54,080
+And now to neaten things up, I'd like to write this as n minus 1
+
+117
+00:05:54,080 --> 00:05:56,330
+factorial times n.
+
+118
+00:05:56,330 --> 00:05:58,590
+That's the same thing as n factorial.
+
+119
+00:05:58,590 --> 00:06:00,890
+So written in this way, I'm getting
+
+120
+00:06:00,890 --> 00:06:03,540
+ready to shift the variables.
+
+121
+00:06:03,540 --> 00:06:10,370
+So I've written this in terms of n minus 1 choose k minus 1.
+
+122
+00:06:10,370 --> 00:06:12,242
+And I've pulled a factor of n out in front,
+
+123
+00:06:12,242 --> 00:06:14,450
+and I'm also going to go ahead and pull a factor of p
+
+124
+00:06:14,450 --> 00:06:17,960
+out in front as well, so that the coefficient up here is
+
+125
+00:06:17,960 --> 00:06:20,670
+k minus 1.
+
+126
+00:06:20,670 --> 00:06:25,350
+I can then redefine my variables, k prime and n prime.
+
+127
+00:06:25,350 --> 00:06:29,550
+I notice this whole expression right here
+
+128
+00:06:29,550 --> 00:06:33,360
+is the same thing as my function f, just
+
+129
+00:06:33,360 --> 00:06:36,360
+in terms of new variables k prime and n prime,
+
+130
+00:06:36,360 --> 00:06:40,240
+where k prime is k minus 1, n prime is n minus 1.
+
+131
+00:06:40,240 --> 00:06:43,890
+And then that entire summation is just equal to 1.
+
+132
+00:06:43,890 --> 00:06:46,950
+So after going through all the combinatorics, all
+
+133
+00:06:46,950 --> 00:06:48,540
+the shifting around of variables,
+
+134
+00:06:48,540 --> 00:06:50,160
+I get a very simple result--
+
+135
+00:06:50,160 --> 00:06:53,430
+that the mean value is n times p.
+
+136
+00:06:53,430 --> 00:06:56,490
+And if you think about it, of course it is.
+
+137
+00:06:56,490 --> 00:06:59,820
+We have probability p of seeing a success.
+
+138
+00:06:59,820 --> 00:07:02,280
+Let's say the probability is 1/10.
+
+139
+00:07:02,280 --> 00:07:04,800
+We maybe do the experiment 100 times.
+
+140
+00:07:04,800 --> 00:07:06,300
+What would we expect to see?
+
+141
+00:07:06,300 --> 00:07:12,260
+Probably about 1/10 of 100 mean value of n times p.
+

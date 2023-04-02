@@ -1,0 +1,544 @@
+0
+00:00:00,000 --> 00:00:03,060
+PROFESSOR: The random walk model, like many models,
+
+1
+00:00:03,060 --> 00:00:07,460
+can and should be tested when it's applied against real world
+
+2
+00:00:07,460 --> 00:00:07,960
+data.
+
+3
+00:00:07,960 --> 00:00:09,030
+So let's do that.
+
+4
+00:00:09,030 --> 00:00:12,240
+The random walk model has a long history in finance.
+
+5
+00:00:12,240 --> 00:00:15,690
+It actually began back over a century in 1900
+
+6
+00:00:15,690 --> 00:00:18,720
+with Bachelier, whose mathematics thesis
+
+7
+00:00:18,720 --> 00:00:22,680
+studied the movements of stock prices on the Paris Bourse.
+
+8
+00:00:22,680 --> 00:00:26,590
+It was not much appreciated by his dissertation committee.
+
+9
+00:00:26,590 --> 00:00:29,400
+And the work was forgotten for a long time.
+
+10
+00:00:29,400 --> 00:00:32,700
+And we'll talk in more modern terms.
+
+11
+00:00:32,700 --> 00:00:37,200
+By the 1960s, random walks had reappeared in finance,
+
+12
+00:00:37,200 --> 00:00:39,870
+had been rediscovered, including Bachelier's work.
+
+13
+00:00:39,870 --> 00:00:47,110
+And the idea was that not only might random
+
+14
+00:00:47,110 --> 00:00:52,390
+walks provide a good model for the way stock prices seem
+
+15
+00:00:52,390 --> 00:00:53,480
+to behave in the market.
+
+16
+00:00:53,480 --> 00:00:56,530
+It would explain why there's so much randomness and noise
+
+17
+00:00:56,530 --> 00:01:00,380
+and why not everybody can get rich trading stocks.
+
+18
+00:01:00,380 --> 00:01:03,070
+But at a deeper level, it might be
+
+19
+00:01:03,070 --> 00:01:07,540
+a key to understanding how markets should behave
+
+20
+00:01:07,540 --> 00:01:10,270
+and how markets serve not only as
+
+21
+00:01:10,270 --> 00:01:12,790
+places where value is exchanged but where
+
+22
+00:01:12,790 --> 00:01:14,770
+information is exchanged.
+
+23
+00:01:14,770 --> 00:01:16,940
+And the idea is very simple.
+
+24
+00:01:16,940 --> 00:01:20,290
+The idea is that if people had access to information
+
+25
+00:01:20,290 --> 00:01:23,380
+in the markets, then if everyone knew
+
+26
+00:01:23,380 --> 00:01:24,940
+what something should be worth, then
+
+27
+00:01:24,940 --> 00:01:26,357
+the price should be at that value.
+
+28
+00:01:26,357 --> 00:01:28,732
+If you knew that something was going to be worth twice as
+
+29
+00:01:28,732 --> 00:01:31,150
+much tomorrow, why would you sell it today for anything
+
+30
+00:01:31,150 --> 00:01:32,150
+less?
+
+31
+00:01:32,150 --> 00:01:36,110
+So in a-- if we take that one step further,
+
+32
+00:01:36,110 --> 00:01:39,790
+we have this notion that if markets
+
+33
+00:01:39,790 --> 00:01:43,630
+were efficient in the sense that investors are taking
+
+34
+00:01:43,630 --> 00:01:45,700
+into account the available information,
+
+35
+00:01:45,700 --> 00:01:48,190
+then the only reason prices should change
+
+36
+00:01:48,190 --> 00:01:50,380
+is the arrival of new information
+
+37
+00:01:50,380 --> 00:01:52,780
+that hadn't been anticipated.
+
+38
+00:01:52,780 --> 00:01:54,820
+That's sort of the definition of news.
+
+39
+00:01:54,820 --> 00:01:57,880
+And in such a world, prices would behave randomly.
+
+40
+00:01:57,880 --> 00:02:02,380
+So somewhat paradoxically, randomness of prices
+
+41
+00:02:02,380 --> 00:02:05,860
+would be a sign of markets operating efficiently.
+
+42
+00:02:05,860 --> 00:02:09,550
+That is, a good market, a well functioning market,
+
+43
+00:02:09,550 --> 00:02:13,120
+is one where things look chaotic.
+
+44
+00:02:13,120 --> 00:02:18,200
+So this was promoted by a number of celebrated economists,
+
+45
+00:02:18,200 --> 00:02:21,670
+including these papers that I am showing you here.
+
+46
+00:02:21,670 --> 00:02:24,880
+One by Eugene Fama, who said specifically
+
+47
+00:02:24,880 --> 00:02:27,640
+that we can model stock prices as random walks.
+
+48
+00:02:27,640 --> 00:02:32,260
+And Paul Samuelson, who looked at exactly how and why it
+
+49
+00:02:32,260 --> 00:02:37,390
+was that this paradox might work mathematically.
+
+50
+00:02:37,390 --> 00:02:39,400
+And he has one of the most wonderful titles
+
+51
+00:02:39,400 --> 00:02:43,540
+in the paper, the Proof that Properly Anticipated Prices
+
+52
+00:02:43,540 --> 00:02:46,960
+Fluctuate Randomly, which captures this paradox.
+
+53
+00:02:46,960 --> 00:02:49,603
+But we're not interested just in the theoretical side.
+
+54
+00:02:49,603 --> 00:02:51,020
+We want to see the empirical side.
+
+55
+00:02:51,020 --> 00:02:54,460
+So what I'd like to do is show you how this can be tested.
+
+56
+00:02:54,460 --> 00:02:58,570
+And we'll follow another set of economists
+
+57
+00:02:58,570 --> 00:03:01,780
+who did celebrated work a couple of decades after this.
+
+58
+00:03:01,780 --> 00:03:04,660
+And you have the advantage of coming to this a couple decades
+
+59
+00:03:04,660 --> 00:03:05,680
+after them.
+
+60
+00:03:05,680 --> 00:03:08,770
+And you can check data now and see if they were right.
+
+61
+00:03:08,770 --> 00:03:10,240
+And who you agree with.
+
+62
+00:03:10,240 --> 00:03:12,970
+So what I'd like to do is review these results,
+
+63
+00:03:12,970 --> 00:03:15,070
+show you the computational approach,
+
+64
+00:03:15,070 --> 00:03:17,290
+give you some of the computational tools,
+
+65
+00:03:17,290 --> 00:03:19,400
+and then let you loose on the data.
+
+66
+00:03:19,400 --> 00:03:20,050
+OK?
+
+67
+00:03:20,050 --> 00:03:22,210
+So this is a great starting point
+
+68
+00:03:22,210 --> 00:03:26,230
+for doing empirical analysis and for seeing
+
+69
+00:03:26,230 --> 00:03:27,790
+how we might test different ideas
+
+70
+00:03:27,790 --> 00:03:29,570
+over different periods of time.
+
+71
+00:03:29,570 --> 00:03:31,240
+So the basic questions, though, that
+
+72
+00:03:31,240 --> 00:03:34,793
+motivate this are this question as to how stock prices--
+
+73
+00:03:34,793 --> 00:03:36,460
+I'll talk about stocks for concreteness.
+
+74
+00:03:36,460 --> 00:03:39,700
+But this could apply to any asset that
+
+75
+00:03:39,700 --> 00:03:41,800
+is investable and its tradable.
+
+76
+00:03:41,800 --> 00:03:46,240
+We do want to think about this primarily as being something
+
+77
+00:03:46,240 --> 00:03:50,650
+that we're going to apply to either exchange traded
+
+78
+00:03:50,650 --> 00:03:53,810
+instruments or things in a very active public market.
+
+79
+00:03:53,810 --> 00:03:55,510
+So that the data is observable.
+
+80
+00:03:55,510 --> 00:03:58,180
+It is essential that people be able to observe the data
+
+81
+00:03:58,180 --> 00:03:59,200
+and what goes on.
+
+82
+00:03:59,200 --> 00:04:00,730
+And possibly for different versions
+
+83
+00:04:00,730 --> 00:04:02,380
+of the efficient markets hypothesis
+
+84
+00:04:02,380 --> 00:04:04,340
+have access to other amounts of information.
+
+85
+00:04:04,340 --> 00:04:06,310
+But our examples will be with stocks
+
+86
+00:04:06,310 --> 00:04:09,670
+and the generalizations that are most easily
+
+87
+00:04:09,670 --> 00:04:11,740
+accessible with these computational tools
+
+88
+00:04:11,740 --> 00:04:14,590
+are those that come from published
+
+89
+00:04:14,590 --> 00:04:19,130
+prices on exchange traded assets of different kinds.
+
+90
+00:04:19,130 --> 00:04:20,990
+So we want to ask two things.
+
+91
+00:04:20,990 --> 00:04:24,070
+One of them is that we have the question about how
+
+92
+00:04:24,070 --> 00:04:25,360
+stock prices do behave.
+
+93
+00:04:25,360 --> 00:04:26,930
+That's an empirical question.
+
+94
+00:04:26,930 --> 00:04:30,310
+And then behind that is how stock prices should behave.
+
+95
+00:04:30,310 --> 00:04:33,070
+And as a background idea, let's think
+
+96
+00:04:33,070 --> 00:04:37,600
+of this idea of Fama and Samuelson and back to Bachelier
+
+97
+00:04:37,600 --> 00:04:40,450
+that possibly our null hypothesis should
+
+98
+00:04:40,450 --> 00:04:42,920
+be that stocks behave randomly.
+
+99
+00:04:42,920 --> 00:04:45,520
+Which sounds kind of crazy and radical when you first hear
+
+100
+00:04:45,520 --> 00:04:47,740
+it, but let's assume that that's the case,
+
+101
+00:04:47,740 --> 00:04:50,800
+let's follow this logic.
+
+102
+00:04:50,800 --> 00:04:53,330
+That it's the sign of a well functioning market.
+
+103
+00:04:53,330 --> 00:04:57,080
+And let's see how the behavior actually works.
+
+104
+00:04:57,080 --> 00:04:59,617
+So many people, depending on your background,
+
+105
+00:04:59,617 --> 00:05:01,450
+you might come to this with different ideas.
+
+106
+00:05:01,450 --> 00:05:05,420
+You might think that asset prices should be deterministic.
+
+107
+00:05:05,420 --> 00:05:08,647
+That's certainly true if you buy a bond
+
+108
+00:05:08,647 --> 00:05:10,230
+or you put money in a savings account.
+
+109
+00:05:10,230 --> 00:05:11,980
+You know how much money you should get out
+
+110
+00:05:11,980 --> 00:05:14,830
+if the bond is risk free and guaranteed.
+
+111
+00:05:14,830 --> 00:05:18,460
+And we've seen that in other financial instruments
+
+112
+00:05:18,460 --> 00:05:19,700
+and financial settings.
+
+113
+00:05:19,700 --> 00:05:22,250
+But when it comes to things like stocks,
+
+114
+00:05:22,250 --> 00:05:23,660
+there's a lot of uncertainty.
+
+115
+00:05:23,660 --> 00:05:25,660
+So it could be that there are general trends
+
+116
+00:05:25,660 --> 00:05:28,550
+that we could now and discern but there's some noise.
+
+117
+00:05:28,550 --> 00:05:32,570
+So maybe it's deterministic but for a little bit of noise.
+
+118
+00:05:32,570 --> 00:05:35,210
+Or maybe things are fundamentally random
+
+119
+00:05:35,210 --> 00:05:37,590
+and there's nothing deterministic at all.
+
+120
+00:05:37,590 --> 00:05:41,480
+So behind this, these are the questions again motivating it.
+
+121
+00:05:41,480 --> 00:05:43,610
+Are markets efficient?
+
+122
+00:05:43,610 --> 00:05:47,810
+And for many financial applications, really what this
+
+123
+00:05:47,810 --> 00:05:50,500
+comes down to is if they're not efficient in the economist
+
+124
+00:05:50,500 --> 00:05:53,150
+sense, we can ask a very practical question
+
+125
+00:05:53,150 --> 00:05:55,190
+that every investor has in mind.
+
+126
+00:05:55,190 --> 00:05:57,930
+Are asset prices predictable?
+
+127
+00:05:57,930 --> 00:05:59,810
+So the random walk model would say
+
+128
+00:05:59,810 --> 00:06:03,260
+that they're not except in a certain kind of trivial way.
+
+129
+00:06:03,260 --> 00:06:06,200
+And deviations from the random walk,
+
+130
+00:06:06,200 --> 00:06:08,990
+if we were to reject a random walk model, that
+
+131
+00:06:08,990 --> 00:06:13,970
+opens the door to the question to some of these questions like
+
+132
+00:06:13,970 --> 00:06:15,860
+are asset prices predictable?
+
+133
+00:06:15,860 --> 00:06:18,960
+What might be alternative models that we have?
+
+134
+00:06:18,960 --> 00:06:22,390
+So let's take a look at the data.
+
+135
+00:06:22,390 --> 00:06:23,000
+
+

@@ -1,0 +1,572 @@
+0
+00:00:00,000 --> 00:00:02,500
+PROFESSOR: Let's take a look at the random walk model, which
+
+1
+00:00:02,500 --> 00:00:04,770
+is going to be our first and most basic example
+
+2
+00:00:04,770 --> 00:00:07,050
+of a stochastic process, and it's
+
+3
+00:00:07,050 --> 00:00:09,150
+building block for many more complex models
+
+4
+00:00:09,150 --> 00:00:12,060
+and finance, as many applications in other fields
+
+5
+00:00:12,060 --> 00:00:13,270
+as well.
+
+6
+00:00:13,270 --> 00:00:17,610
+So the first notion that we want to examine
+
+7
+00:00:17,610 --> 00:00:20,490
+is that of a stochastic process.
+
+8
+00:00:20,490 --> 00:00:24,820
+So a stochastic process is a time dependent random variable.
+
+9
+00:00:24,820 --> 00:00:28,050
+So we saw random variables x, y, z before,
+
+10
+00:00:28,050 --> 00:00:30,770
+and they occurred individually, we could add them up.
+
+11
+00:00:30,770 --> 00:00:33,930
+But now imagine, that we have one that's labeled by times.
+
+12
+00:00:33,930 --> 00:00:36,240
+So for each time we get a different value.
+
+13
+00:00:36,240 --> 00:00:39,190
+Now there are two important different cases.
+
+14
+00:00:39,190 --> 00:00:43,050
+One of them is where time evolves continuously,
+
+15
+00:00:43,050 --> 00:00:45,690
+and our variable S of t can be thought
+
+16
+00:00:45,690 --> 00:00:49,800
+of as a function of a continuous real variable t.
+
+17
+00:00:49,800 --> 00:00:53,790
+The other case, is where t evolves discretely.
+
+18
+00:00:53,790 --> 00:00:58,200
+And we have a sequence of points S 1, S 2, S 3 and so on,
+
+19
+00:00:58,200 --> 00:01:01,140
+that are separated in time.
+
+20
+00:01:01,140 --> 00:01:03,900
+When these are taken at uniform intervals,
+
+21
+00:01:03,900 --> 00:01:06,210
+we use these as the basis for a time series model.
+
+22
+00:01:06,210 --> 00:01:09,240
+After all, when we talk about time series data,
+
+23
+00:01:09,240 --> 00:01:13,380
+we think about a sequence of observations, usually labeled
+
+24
+00:01:13,380 --> 00:01:15,820
+by an integer, and sequential in time.
+
+25
+00:01:15,820 --> 00:01:20,220
+And typically, considered a uniform intervals, or at least
+
+26
+00:01:20,220 --> 00:01:22,540
+we like to think of them as uniform intervals.
+
+27
+00:01:22,540 --> 00:01:25,500
+So the continuous time is more complex
+
+28
+00:01:25,500 --> 00:01:27,145
+and uses different mathematical tools.
+
+29
+00:01:27,145 --> 00:01:28,770
+So we're going to deal with that later.
+
+30
+00:01:28,770 --> 00:01:31,050
+Within the discrete case, what are some
+
+31
+00:01:31,050 --> 00:01:34,960
+of the attributes and properties that we'd like to be aware of?
+
+32
+00:01:34,960 --> 00:01:37,770
+Well, we're going to label these with integer indices,
+
+33
+00:01:37,770 --> 00:01:40,530
+and there are cases where something might
+
+34
+00:01:40,530 --> 00:01:42,840
+be a finite or infinite length.
+
+35
+00:01:42,840 --> 00:01:46,020
+But we'll typically pick an origin, we'll call time 0,
+
+36
+00:01:46,020 --> 00:01:48,120
+and then we'll go forward from there.
+
+37
+00:01:48,120 --> 00:01:50,580
+We think about these being equally spaced,
+
+38
+00:01:50,580 --> 00:01:54,810
+but all that's required is that, the applications
+
+39
+00:01:54,810 --> 00:01:56,520
+view them as equally spaced.
+
+40
+00:01:56,520 --> 00:02:00,230
+An example from finance, in the equity markets,
+
+41
+00:02:00,230 --> 00:02:03,680
+is its conventional to look only at market day.
+
+42
+00:02:03,680 --> 00:02:06,290
+So we exclude weekends and holidays, and number
+
+43
+00:02:06,290 --> 00:02:07,680
+of the days sequentially.
+
+44
+00:02:07,680 --> 00:02:10,630
+That doesn't apply, for example, for earning of interest
+
+45
+00:02:10,630 --> 00:02:12,940
+that happens on a calendar day basis.
+
+46
+00:02:12,940 --> 00:02:16,610
+But we might still label points 1, 2, 3, 4, 5, 6, 7, 8, 9,
+
+47
+00:02:16,610 --> 00:02:20,130
+10 to cover a two week period, even though the period is
+
+48
+00:02:20,130 --> 00:02:24,000
+14 days and the gap is longer over the weekends.
+
+49
+00:02:24,000 --> 00:02:28,440
+The choice of origin is going to depend on our convention and/or
+
+50
+00:02:28,440 --> 00:02:29,550
+applications.
+
+51
+00:02:29,550 --> 00:02:31,420
+We'll see interestingly, you might
+
+52
+00:02:31,420 --> 00:02:34,560
+want to keep an eye on this, usually it's not a big deal
+
+53
+00:02:34,560 --> 00:02:36,510
+and it's usually obvious where to begin.
+
+54
+00:02:36,510 --> 00:02:40,170
+But some of the mathematical properties strictly speaking,
+
+55
+00:02:40,170 --> 00:02:44,640
+such as stationarity, require series to be infinitely long.
+
+56
+00:02:44,640 --> 00:02:47,520
+And, of course, that's not true in financial applications.
+
+57
+00:02:47,520 --> 00:02:49,590
+Markets haven't been around infinitely long,
+
+58
+00:02:49,590 --> 00:02:51,600
+and we usually don't want to go back
+
+59
+00:02:51,600 --> 00:02:53,970
+to the beginning of time in any event.
+
+60
+00:02:53,970 --> 00:02:57,630
+Moreover, when we look at how to simulate
+
+61
+00:02:57,630 --> 00:02:59,655
+some of these processes, put them on a computer,
+
+62
+00:02:59,655 --> 00:03:01,530
+we're not going to be able to deal too easily
+
+63
+00:03:01,530 --> 00:03:03,480
+with infinite processes either.
+
+64
+00:03:03,480 --> 00:03:07,680
+So although the choice of an origin
+
+65
+00:03:07,680 --> 00:03:11,190
+is different from whether the integers run
+
+66
+00:03:11,190 --> 00:03:14,970
+from minus infinity to infinity or from 0 to infinity,
+
+67
+00:03:14,970 --> 00:03:19,560
+there are distinctions in the mathematics,
+
+68
+00:03:19,560 --> 00:03:21,720
+for a financial applications they shouldn't matter.
+
+69
+00:03:21,720 --> 00:03:25,250
+But it's something that we ought to check, as we go.
+
+70
+00:03:25,250 --> 00:03:28,020
+Now discrete time processes.
+
+71
+00:03:28,020 --> 00:03:30,770
+So we're to be talking about our often constructed
+
+72
+00:03:30,770 --> 00:03:34,310
+by taking an existing value and adding a new increment.
+
+73
+00:03:34,310 --> 00:03:37,940
+And this gives us a recursive definition, a building block,
+
+74
+00:03:37,940 --> 00:03:40,470
+a building method for a series.
+
+75
+00:03:40,470 --> 00:03:42,300
+So we start with a particular value,
+
+76
+00:03:42,300 --> 00:03:45,170
+we add a new increment x, that gives us our next value,
+
+77
+00:03:45,170 --> 00:03:46,680
+we add 1 and so on.
+
+78
+00:03:46,680 --> 00:03:47,810
+So we can also--
+
+79
+00:03:47,810 --> 00:03:50,030
+we can either think of a recursive definition.
+
+80
+00:03:50,030 --> 00:03:53,360
+Or we can just think of the value at a given point,
+
+81
+00:03:53,360 --> 00:03:56,720
+as the sum of all the increments that have come to that point.
+
+82
+00:03:56,720 --> 00:04:00,230
+Now of course, if we have the sequence S 1, S 2, S 3, S 4,
+
+83
+00:04:00,230 --> 00:04:04,885
+we can recover the increments by differencing successive ones.
+
+84
+00:04:04,885 --> 00:04:06,510
+And we'll see that that's very natural,
+
+85
+00:04:06,510 --> 00:04:08,210
+when we look at asset prices.
+
+86
+00:04:08,210 --> 00:04:11,390
+That the difference between price observations
+
+87
+00:04:11,390 --> 00:04:14,570
+or their logarithms, will be related to the returns
+
+88
+00:04:14,570 --> 00:04:15,830
+over a given period.
+
+89
+00:04:15,830 --> 00:04:19,610
+
+
+90
+00:04:19,610 --> 00:04:24,200
+Time series are used for modeling processes that evolve
+
+91
+00:04:24,200 --> 00:04:26,520
+or that are observed discreetly in time.
+
+92
+00:04:26,520 --> 00:04:28,550
+So what we care about is that there
+
+93
+00:04:28,550 --> 00:04:31,160
+are discrete observations, discrete moments where
+
+94
+00:04:31,160 --> 00:04:35,450
+we might observe, measure, or draw
+
+95
+00:04:35,450 --> 00:04:37,400
+a value of a random variable.
+
+96
+00:04:37,400 --> 00:04:39,020
+It could be, that there's something
+
+97
+00:04:39,020 --> 00:04:41,000
+that's happening continuously, and we just
+
+98
+00:04:41,000 --> 00:04:42,830
+observe it periodically.
+
+99
+00:04:42,830 --> 00:04:46,190
+Or it could be a process that's genuinely discrete.
+
+100
+00:04:46,190 --> 00:04:48,890
+Also the values themselves can be
+
+101
+00:04:48,890 --> 00:04:50,750
+either continuous or discrete.
+
+102
+00:04:50,750 --> 00:04:53,840
+But the characteristic of a time series,
+
+103
+00:04:53,840 --> 00:04:55,680
+is that there are discrete values.
+
+104
+00:04:55,680 --> 00:04:59,570
+Now because of that, we often do describe them
+
+105
+00:04:59,570 --> 00:05:02,990
+in recursively, where we think about what the previous value
+
+106
+00:05:02,990 --> 00:05:04,940
+is and there's some innovation.
+
+107
+00:05:04,940 --> 00:05:06,560
+And this gives us--
+
+108
+00:05:06,560 --> 00:05:08,420
+when we think about this constructively,
+
+109
+00:05:08,420 --> 00:05:09,920
+notion about how things do evolve
+
+110
+00:05:09,920 --> 00:05:12,530
+in time and about how information arrives.
+
+111
+00:05:12,530 --> 00:05:14,600
+So we're always building on the past,
+
+112
+00:05:14,600 --> 00:05:18,590
+we're never drawing information from the future.
+
+113
+00:05:18,590 --> 00:05:20,520
+What does it mean to solve such a model?
+
+114
+00:05:20,520 --> 00:05:23,180
+Well, what we'll see is that, will
+
+115
+00:05:23,180 --> 00:05:26,990
+be interested in the entire sequence of random variables.
+
+116
+00:05:26,990 --> 00:05:31,100
+and it's often more natural to think of the entire trajectory,
+
+117
+00:05:31,100 --> 00:05:32,540
+the entire path.
+
+118
+00:05:32,540 --> 00:05:34,670
+But at a minimum, what we want to ask
+
+119
+00:05:34,670 --> 00:05:37,340
+are some description, some attributes,
+
+120
+00:05:37,340 --> 00:05:41,270
+some properties of the distribution of not yet
+
+121
+00:05:41,270 --> 00:05:45,320
+observed values, and possibly to construct
+
+122
+00:05:45,320 --> 00:05:48,050
+probabilistic forecasts for what they might be.
+
+123
+00:05:48,050 --> 00:05:51,830
+Some examples of things that could
+
+124
+00:05:51,830 --> 00:05:54,590
+be modeled via time series that evolve in time that
+
+125
+00:05:54,590 --> 00:05:56,570
+have this cumulative nature, we might
+
+126
+00:05:56,570 --> 00:05:59,630
+be looking inside a corporation and its cumulative revenues,
+
+127
+00:05:59,630 --> 00:06:01,280
+or its income or its profit.
+
+128
+00:06:01,280 --> 00:06:07,220
+And we might take its values, such as I 1, plus I 2 plus I 3,
+
+129
+00:06:07,220 --> 00:06:09,440
+say quater 1, quater 2, quater 3.
+
+130
+00:06:09,440 --> 00:06:13,418
+And adding up to the cumulative revenue for a firm,
+
+131
+00:06:13,418 --> 00:06:15,710
+we might be interested in the evolution of stock prices
+
+132
+00:06:15,710 --> 00:06:18,050
+and more of a lot more to say about this later on.
+
+133
+00:06:18,050 --> 00:06:20,960
+If we think of little r as representing
+
+134
+00:06:20,960 --> 00:06:24,000
+the logarithmic return of a stock price,
+
+135
+00:06:24,000 --> 00:06:26,210
+then we can see that actually, we
+
+136
+00:06:26,210 --> 00:06:27,680
+could write the value of the stock
+
+137
+00:06:27,680 --> 00:06:30,890
+price at time t as an initial value
+
+138
+00:06:30,890 --> 00:06:33,170
+plus the cumulative effect of returns
+
+139
+00:06:33,170 --> 00:06:36,035
+during period 1, period 2, period 3, period 4.
+
+140
+00:06:36,035 --> 00:06:38,720
+We'll be coming back to this very quickly.
+
+141
+00:06:38,720 --> 00:06:43,500
+And the simplest model of all, is the random walk model.
+
+142
+00:06:43,500 --> 00:06:44,000
+
+

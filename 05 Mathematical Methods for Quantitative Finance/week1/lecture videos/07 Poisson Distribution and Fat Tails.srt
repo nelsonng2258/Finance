@@ -1,0 +1,764 @@
+0
+00:00:00,000 --> 00:00:00,660
+
+
+1
+00:00:00,660 --> 00:00:02,370
+PROFESSOR: The Poisson distribution
+
+2
+00:00:02,370 --> 00:00:06,570
+shows up in looking typically at the arrival of events
+
+3
+00:00:06,570 --> 00:00:08,010
+or at jump processes.
+
+4
+00:00:08,010 --> 00:00:11,100
+So we look for the arrival of a jump,
+
+5
+00:00:11,100 --> 00:00:15,520
+maybe in a market price, or the arrival of an event,
+
+6
+00:00:15,520 --> 00:00:18,690
+such as a credit default or customers
+
+7
+00:00:18,690 --> 00:00:21,960
+arriving or customers departing, for orders
+
+8
+00:00:21,960 --> 00:00:23,590
+arriving at an exchange.
+
+9
+00:00:23,590 --> 00:00:25,710
+So we often apply it where we're thinking
+
+10
+00:00:25,710 --> 00:00:29,610
+of continuous time and discrete events arriving
+
+11
+00:00:29,610 --> 00:00:31,950
+at some unknown interval.
+
+12
+00:00:31,950 --> 00:00:33,390
+And we use a Poisson distribution
+
+13
+00:00:33,390 --> 00:00:34,930
+to model those intervals.
+
+14
+00:00:34,930 --> 00:00:37,050
+So mathematically, the Poisson distribution
+
+15
+00:00:37,050 --> 00:00:40,740
+has two parameters, two values.
+
+16
+00:00:40,740 --> 00:00:43,170
+And sometimes it's convenient to think of it as a function
+
+17
+00:00:43,170 --> 00:00:45,120
+of one or the other.
+
+18
+00:00:45,120 --> 00:00:49,200
+But we have k, which is an integer, and lambda, which
+
+19
+00:00:49,200 --> 00:00:51,120
+is a real valued variable.
+
+20
+00:00:51,120 --> 00:00:54,640
+And the probability is e to the minus lambda, lambda
+
+21
+00:00:54,640 --> 00:00:56,740
+to the k over k factorial.
+
+22
+00:00:56,740 --> 00:00:58,440
+So when we're looking at arrivals,
+
+23
+00:00:58,440 --> 00:01:01,410
+we apply that by thinking of lambda
+
+24
+00:01:01,410 --> 00:01:03,630
+as being an arrival rate.
+
+25
+00:01:03,630 --> 00:01:06,090
+And we replace lambda by lambda t
+
+26
+00:01:06,090 --> 00:01:09,690
+as being the number of events that
+
+27
+00:01:09,690 --> 00:01:13,650
+might arrive during a particular time interval, t.
+
+28
+00:01:13,650 --> 00:01:16,110
+And we would use this probability distribution.
+
+29
+00:01:16,110 --> 00:01:17,320
+What are its properties?
+
+30
+00:01:17,320 --> 00:01:20,100
+Well, the mean value we just compute.
+
+31
+00:01:20,100 --> 00:01:24,720
+We sum over k, over all the possible k's times
+
+32
+00:01:24,720 --> 00:01:27,330
+the probability of observing each k.
+
+33
+00:01:27,330 --> 00:01:33,690
+And we find the expectation of X, the average value of k,
+
+34
+00:01:33,690 --> 00:01:35,610
+is just equal to lambda.
+
+35
+00:01:35,610 --> 00:01:38,610
+And if we do the calculation for the second moment,
+
+36
+00:01:38,610 --> 00:01:41,940
+we do the math and we compute this sum.
+
+37
+00:01:41,940 --> 00:01:45,130
+And we find that it's lambda plus lambda squared.
+
+38
+00:01:45,130 --> 00:01:47,070
+If we then go and compute the variance--
+
+39
+00:01:47,070 --> 00:01:50,310
+remember that the variance is the expectation of the square,
+
+40
+00:01:50,310 --> 00:01:52,900
+lambda plus lambda squared, minus the square
+
+41
+00:01:52,900 --> 00:01:57,070
+of the variance, which is lambda quantity squared.
+
+42
+00:01:57,070 --> 00:01:59,670
+And what we get is that sigma squared
+
+43
+00:01:59,670 --> 00:02:01,380
+is equal to the lambda, which is actually
+
+44
+00:02:01,380 --> 00:02:06,950
+the same thing as the mean, interestingly.
+
+45
+00:02:06,950 --> 00:02:10,860
+Now, the Poisson distribution is also a special case.
+
+46
+00:02:10,860 --> 00:02:13,700
+It's the limiting distribution when n goes to infinity,
+
+47
+00:02:13,700 --> 00:02:17,360
+of the binomial distribution, in this special case where
+
+48
+00:02:17,360 --> 00:02:21,260
+we let n go to infinity and the probability go to 0,
+
+49
+00:02:21,260 --> 00:02:23,990
+holding their product fixed.
+
+50
+00:02:23,990 --> 00:02:26,710
+So in that case, we can show that we recovered the parcel
+
+51
+00:02:26,710 --> 00:02:27,730
+distribution.
+
+52
+00:02:27,730 --> 00:02:30,880
+And an example of where we could apply it numerically
+
+53
+00:02:30,880 --> 00:02:33,610
+as a useful distribution-- because the binomial
+
+54
+00:02:33,610 --> 00:02:35,200
+distribution is pretty hard to compute
+
+55
+00:02:35,200 --> 00:02:38,060
+with all those factorial when n gets large.
+
+56
+00:02:38,060 --> 00:02:40,210
+So this is an easy thing to compute.
+
+57
+00:02:40,210 --> 00:02:42,760
+Remember the k is typically going to be a small number.
+
+58
+00:02:42,760 --> 00:02:45,850
+But n going to infinity going to 0
+
+59
+00:02:45,850 --> 00:02:50,200
+or n very large, p very small, we can just take their product,
+
+60
+00:02:50,200 --> 00:02:52,780
+hold it fixed, and get a good calculation,
+
+61
+00:02:52,780 --> 00:02:55,420
+a good approximation from the Poisson distribution.
+
+62
+00:02:55,420 --> 00:02:58,340
+For example, if we have a classroom that has,
+
+63
+00:02:58,340 --> 00:03:01,930
+let's say 65 students and we ask who has a birthday on a given
+
+64
+00:03:01,930 --> 00:03:04,990
+day, if we assume birthdays are equally likely to be
+
+65
+00:03:04,990 --> 00:03:10,090
+on any day of the year, an approximation, 1/365,
+
+66
+00:03:10,090 --> 00:03:14,620
+65 students, we would compute lambda as n times p.
+
+67
+00:03:14,620 --> 00:03:17,810
+We could ask is 65 close to infinity.
+
+68
+00:03:17,810 --> 00:03:19,400
+Well, let's take a look.
+
+69
+00:03:19,400 --> 00:03:23,230
+If we compute n times p for this particular values,
+
+70
+00:03:23,230 --> 00:03:26,290
+we get the lambda is 0.178.
+
+71
+00:03:26,290 --> 00:03:29,362
+And if we compute the exact Poisson probability
+
+72
+00:03:29,362 --> 00:03:30,820
+and compare it to what we would get
+
+73
+00:03:30,820 --> 00:03:34,120
+from the exact binomial formula, we compare it
+
+74
+00:03:34,120 --> 00:03:37,000
+to the Poisson approximation, we find out
+
+75
+00:03:37,000 --> 00:03:40,840
+for 0, 1, and 2, that these approximations are pretty good.
+
+76
+00:03:40,840 --> 00:03:43,570
+They're good to three decimal places at least.
+
+77
+00:03:43,570 --> 00:03:47,640
+And that's only for an n of 65.
+
+78
+00:03:47,640 --> 00:03:51,750
+The Poisson distribution does have different qualitative
+
+79
+00:03:51,750 --> 00:03:54,520
+behaviors depending on the value of lambda.
+
+80
+00:03:54,520 --> 00:03:57,600
+So when lambda is small, the values
+
+81
+00:03:57,600 --> 00:03:59,880
+are always decreasing in k.
+
+82
+00:03:59,880 --> 00:04:01,980
+When lambda gets to be above 1--
+
+83
+00:04:01,980 --> 00:04:04,470
+and here, I've taken this upper graph
+
+84
+00:04:04,470 --> 00:04:08,370
+is the value that we used in our previous birthday example--
+
+85
+00:04:08,370 --> 00:04:11,550
+down below, I multiplied it by a factor of 10.
+
+86
+00:04:11,550 --> 00:04:14,610
+And now we see that when lambda is greater than 1,
+
+87
+00:04:14,610 --> 00:04:20,040
+it's a skewed distribution with the long tail off to the right.
+
+88
+00:04:20,040 --> 00:04:23,070
+And here is our mean value, is lambda.
+
+89
+00:04:23,070 --> 00:04:25,560
+And we notice that we said that our mean value was
+
+90
+00:04:25,560 --> 00:04:26,520
+going to be lambda.
+
+91
+00:04:26,520 --> 00:04:28,860
+If lambda is less than 1, then that's
+
+92
+00:04:28,860 --> 00:04:30,780
+why the whole distribution is bunched up
+
+93
+00:04:30,780 --> 00:04:32,070
+on the left-hand side.
+
+94
+00:04:32,070 --> 00:04:33,840
+When lambda is greater than 1--
+
+95
+00:04:33,840 --> 00:04:35,370
+in this case, lambda is 2.
+
+96
+00:04:35,370 --> 00:04:38,070
+And we see that the p value is around 2.
+
+97
+00:04:38,070 --> 00:04:40,880
+
+
+98
+00:04:40,880 --> 00:04:43,457
+There are a bunch of combinatorial formulas
+
+99
+00:04:43,457 --> 00:04:45,040
+if you want to play around with those.
+
+100
+00:04:45,040 --> 00:04:47,070
+I've just put these in here for completeness.
+
+101
+00:04:47,070 --> 00:04:48,060
+And you can check.
+
+102
+00:04:48,060 --> 00:04:50,100
+But as I said, we've got a couple of tricks
+
+103
+00:04:50,100 --> 00:04:53,040
+up our sleeve that will save us from doing
+
+104
+00:04:53,040 --> 00:04:58,070
+a lot of combinatorics for computing moments in a bit.
+
+105
+00:04:58,070 --> 00:04:59,710
+Finally, I want to say that when it
+
+106
+00:04:59,710 --> 00:05:01,300
+comes to looking at distributions,
+
+107
+00:05:01,300 --> 00:05:03,850
+that not all distributions are as well behaved.
+
+108
+00:05:03,850 --> 00:05:06,820
+And some of them are going to be exceptions to our rule
+
+109
+00:05:06,820 --> 00:05:08,890
+about being able to only look at moments.
+
+110
+00:05:08,890 --> 00:05:11,110
+And the problem is, the thing that
+
+111
+00:05:11,110 --> 00:05:15,310
+happens that's interesting, is that sometimes those moments
+
+112
+00:05:15,310 --> 00:05:16,030
+don't exist.
+
+113
+00:05:16,030 --> 00:05:18,790
+And I mentioned before, that we could try to compute the mean
+
+114
+00:05:18,790 --> 00:05:20,200
+and have the integral diverge.
+
+115
+00:05:20,200 --> 00:05:22,160
+Well, here's another example of that.
+
+116
+00:05:22,160 --> 00:05:24,910
+Here's a very nice looking probability distribution
+
+117
+00:05:24,910 --> 00:05:27,730
+from a distance or at a low resolution monitor.
+
+118
+00:05:27,730 --> 00:05:29,990
+You might think this looks like a bell curve.
+
+119
+00:05:29,990 --> 00:05:30,790
+But it's not.
+
+120
+00:05:30,790 --> 00:05:34,040
+So this distribution is given by this function.
+
+121
+00:05:34,040 --> 00:05:37,930
+It's a constant times that constant squared plus x
+
+122
+00:05:37,930 --> 00:05:38,620
+squared.
+
+123
+00:05:38,620 --> 00:05:41,500
+And asymptotically, as x gets large,
+
+124
+00:05:41,500 --> 00:05:43,600
+it doesn't behave like a Gaussian that
+
+125
+00:05:43,600 --> 00:05:45,610
+falls like e minus x squared.
+
+126
+00:05:45,610 --> 00:05:48,280
+It falls off much more slowly with a power.
+
+127
+00:05:48,280 --> 00:05:51,790
+So asymptotically as x goes to plus or minus infinity,
+
+128
+00:05:51,790 --> 00:05:54,980
+this function decreases as 1 over x squared.
+
+129
+00:05:54,980 --> 00:05:57,070
+And you can see what the problem is right away.
+
+130
+00:05:57,070 --> 00:06:00,760
+If we want to compute the expectation of x squared,
+
+131
+00:06:00,760 --> 00:06:02,350
+the integral won't converge.
+
+132
+00:06:02,350 --> 00:06:05,830
+If we want to compute even the expectation of x
+
+133
+00:06:05,830 --> 00:06:07,900
+or of x the fourth and x to the eighth,
+
+134
+00:06:07,900 --> 00:06:10,450
+the integral is going to diverge wildly.
+
+135
+00:06:10,450 --> 00:06:13,870
+So the probability distribution is fine.
+
+136
+00:06:13,870 --> 00:06:14,980
+It sums to 1.
+
+137
+00:06:14,980 --> 00:06:16,300
+There's no problem.
+
+138
+00:06:16,300 --> 00:06:19,480
+We can compute the probability of being in a given area.
+
+139
+00:06:19,480 --> 00:06:22,500
+But none of the moments exist.
+
+140
+00:06:22,500 --> 00:06:26,880
+If we were to see things like this in data,
+
+141
+00:06:26,880 --> 00:06:29,520
+if we were to look at observations like let's say,
+
+142
+00:06:29,520 --> 00:06:32,890
+stock returns that were drawn from a distribution,
+
+143
+00:06:32,890 --> 00:06:35,430
+such as this that had power-law tails.
+
+144
+00:06:35,430 --> 00:06:36,390
+What would we see?
+
+145
+00:06:36,390 --> 00:06:40,230
+Well, qualitatively, like a normal distribution,
+
+146
+00:06:40,230 --> 00:06:42,480
+most of the event, we'd see a single peak.
+
+147
+00:06:42,480 --> 00:06:44,670
+Most of the events are near the center.
+
+148
+00:06:44,670 --> 00:06:48,120
+But fat tails means that extreme events
+
+149
+00:06:48,120 --> 00:06:51,900
+occur quite likely, much, much more often than
+
+150
+00:06:51,900 --> 00:06:53,770
+under a Gaussian distribution.
+
+151
+00:06:53,770 --> 00:06:55,350
+They don't occur that often.
+
+152
+00:06:55,350 --> 00:06:57,570
+After all, the tails that values out
+
+153
+00:06:57,570 --> 00:07:00,540
+there are smaller than the central values.
+
+154
+00:07:00,540 --> 00:07:05,490
+But the area under the curve going out from any given point
+
+155
+00:07:05,490 --> 00:07:07,920
+is divergent.
+
+156
+00:07:07,920 --> 00:07:09,660
+The weighted averages are divergent so
+
+157
+00:07:09,660 --> 00:07:15,090
+that the power-law tails are giving us
+
+158
+00:07:15,090 --> 00:07:17,820
+more and more of the contributions
+
+159
+00:07:17,820 --> 00:07:19,950
+to analytical quantities of interest.
+
+160
+00:07:19,950 --> 00:07:23,250
+And if we were to try to estimate the volatility using
+
+161
+00:07:23,250 --> 00:07:26,280
+our standard metrics, we would get finite numbers
+
+162
+00:07:26,280 --> 00:07:28,260
+for any finite number of observations.
+
+163
+00:07:28,260 --> 00:07:30,990
+But as we increase the number of observations,
+
+164
+00:07:30,990 --> 00:07:33,570
+rather than having convergence, we
+
+165
+00:07:33,570 --> 00:07:36,380
+would see divergence in the results.
+
+166
+00:07:36,380 --> 00:07:40,010
+So quick summary-- some common probability
+
+167
+00:07:40,010 --> 00:07:42,470
+distributions that you've seen before in your probability
+
+168
+00:07:42,470 --> 00:07:44,040
+and statistics classes.
+
+169
+00:07:44,040 --> 00:07:46,430
+These are the main ones that are important in finance--
+
+170
+00:07:46,430 --> 00:07:51,140
+uniform distribution, binomial, Poisson, normal, and Lognormal.
+
+171
+00:07:51,140 --> 00:07:52,792
+These all have well-defined moments,
+
+172
+00:07:52,792 --> 00:07:55,250
+or some interesting limits where we can go from one of them
+
+173
+00:07:55,250 --> 00:07:56,150
+to another.
+
+174
+00:07:56,150 --> 00:07:59,780
+And they appear in all kinds of applications-- option pricing,
+
+175
+00:07:59,780 --> 00:08:02,300
+credit defaults, jump processes, lots
+
+176
+00:08:02,300 --> 00:08:06,290
+of models of asset pricing, and a forecast in future returns.
+
+177
+00:08:06,290 --> 00:08:08,510
+The Gaussian distribution is the most special
+
+178
+00:08:08,510 --> 00:08:10,920
+of all because of the Central Limit Theorem,
+
+179
+00:08:10,920 --> 00:08:13,700
+which we'll see the Gaussian distributions is universal.
+
+180
+00:08:13,700 --> 00:08:16,790
+It shows up in places, even where we might not normally
+
+181
+00:08:16,790 --> 00:08:17,870
+expect them.
+
+182
+00:08:17,870 --> 00:08:20,960
+Picking which distribution to use for modeling a given
+
+183
+00:08:20,960 --> 00:08:27,530
+problem partly depends on the theory and motivation
+
+184
+00:08:27,530 --> 00:08:29,430
+behind the problem that we're looking at,
+
+185
+00:08:29,430 --> 00:08:32,669
+but it always depends on the empirical behavior.
+
+186
+00:08:32,669 --> 00:08:36,119
+So we can't just postulate that things are normal
+
+187
+00:08:36,119 --> 00:08:37,869
+and that they are log normally distributed
+
+188
+00:08:37,869 --> 00:08:39,679
+and assume that all will go well.
+
+189
+00:08:39,679 --> 00:08:43,500
+We'll need to check that that's how the real world behaves.
+
+190
+00:08:43,500 --> 00:08:44,000
+
+

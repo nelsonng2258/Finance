@@ -1,0 +1,148 @@
+
+PROFESSOR: Consider a stationary process.
+xt is epsilon t plus theta times epsilon t minus 2, where theta
+is a constant and epsilon is a 0 mean random variable
+with variance sigma squared.
+So this is a notation you'll often see in the literature,
+and you can be tempted in fact, you can just rescale the sigma
+and re express things in terms of a completely standardized
+random variable z.
+They're just simple linear transformations.
+But in this notation, we would typically
+write that the expectation is 0, that the variance is sigma
+squared, and since the mean is 0 the covariance of epsilon t
+and epsilon s is equal to 0 unless t is equal to s.
+So when t and s are different we get 0,
+and when t and s are equal, we get the previous result.
+We sometimes write those in a compact notation
+using the Kroncker delta notation,
+where that's simply defined here.
+This delta t sub s just is something
+that's 1 when the indices are equal and it's 0 otherwise.
+So here's our question.
+Is the series x sub d stationary?
+And find the mean, the variance and the autocorrelation
+function.
+So why don't you pause the video, solve these questions,
+and then come back and we'll do it together on the board.
+
+OK.
+Let's look at solving this problem.
+First of all, is it stationary?
+It is a stationary series because we have
+expressed things recursively.
+If we shift things in time, we still
+have the same relative relationship
+of the axis across different points in time.
+How about computing the mean?
+Well the mean we can do just by expectation.
+We take expectations it's linear,
+so we have that the expectation of x--
+this is zero expectation, and this
+is theta times 0 expectation, so that's equal to 0.
+How about the rest of it?
+
+Well I'm going to simplify things a bit
+by letting epsilon t be sigma zt.
+And then I'm going to divide through by sigma.
+I'm going to keep calling my variable--
+I'll call it little x, and then at the end
+we can switch variables and we can multiply everything
+through by sigma if we'd like.
+So I'm going to have the defining equation
+that xt is now going to be zt plus theta
+times z of t minus 2.
+And we've seen that the expectation of xt is 0.
+The variance is xt squared, and that's just
+the expectation of zt plus theta zt minus 2 quantity squared.
+Obviously what's going to happen as we expand this out,
+the cross term will have vanishing expectation
+because zt and zt minus 2 are necessarily two time steps
+apart.
+So that's going to vanish, and the final term
+we're going to be left with is going
+to be expectation of zt squared plus theta squared expectation
+of zt minus 2 quantity squared, or in other words
+1 plus theta squared.
+And if we multiply through by sigma squared,
+we'll get the answer to our original question
+in terms of big X. Is that what you got?
+All right, now let's take a look at the autocorrelation function
+and things will get interesting.
+So the autocorrelation function, or ACF is defined--
+and we're just going to do calculations,
+so we're just going to use our definitions.
+So our ACF is going to be obtained
+by just computing expectation of xt and xt minus k.
+Now remember, this is a special case when the means are 0.
+More generally what we properly should write
+is it's the covariance of xt in xt minus k.
+But it's the same as this expectation in the case
+where the means are 0, and otherwise
+as we know we would subtract off the product
+of the expectations.
+So what do we do?
+Let's just substitute in.
+So we have this is going to be the expectation of zt
+plus theta zt minus 2--
+let's change colors here--
+times z of t minus k plus theta of zt minus k minus 2.
+
+Now when we do the expectation, what's going to happen?
+Well, we know that zt could be paired with--
+it can't be the same as this one,
+we're excluding the case where k equals 0.
+We've already done that, that's the variance.
+So we know the t and t minus k have to be different.
+And we know that t minus 2 and t minus 2 minus k
+have to be different.
+So the term with no thetas and determined theta squared are
+both going to have varnishing expectations of the z's.
+So we're left with two possible terms.
+So we're left with theta times the expectation of z
+t minus 2 times z t minus k plus theta times the expectation
+of zt with z t minus k minus 2.
+Now usually, one comment I should make
+is that often we do things only for positive k
+and we think going forward.
+Formally for stationary series--
+and it's a property you can check
+and you can show from the definition--
+that if we take k to minus k, that the autocovariance
+functions are the same.
+We often don't think of them that way because we usually
+want to think about autocovariance and lag
+variables because we expect information
+to propagate forward in time, not backward in time.
+So there's no time travel rule in finance.
+But formally we could have either of these, but what
+we can see is if we look at the two expressions,
+we can see right away that generally they will vanish
+except if k is equal to 2.
+If k is equal to 2, then the first expression
+will have expectation 1, and otherwise it will vanish.
+And in the second term, this one here,
+this will generally vanish unless k were equal to minus 2,
+in which case this would give me an expectation of 1
+and this expectation would vanish.
+So either way when we put these together,
+what we're going to get is that this is equal to theta
+if k is equal to plus or minus 2, and it's equal to 0
+otherwise.
+
+And of course, if we want to go back and put in our sigmas,
+we would multiply this through by sigma squared.
+So the interesting thing about this structure
+is that it's only a quadratic term, it's very simple algebra
+that we've done.
+And because of the way the variables get paired together,
+there are only certain combinations
+that have a chance of meeting.
+So we've reduced something that does involve
+lag propagation of time, so there
+are things that are moving forward two time steps ahead.
+But when we express things in terms of the z's, we
+need the z's to be coincident, or the same time index,
+and that picks out the terms that are going to be there,
+and then the result is just what we
+get by doing a little bit of algebra.

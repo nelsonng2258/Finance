@@ -1,0 +1,324 @@
+
+PROFESSOR: We solve the AR 1 model
+by applying the expectation operator
+to both sides of the equation.
+So doing that, we use linearity.
+We take expectations term by term,
+and we see that the expectation of R sub t
+is c times the expectation of 1, which
+is just 1 plus c 1 times the expectation of R t minus 1,
+which we don't know.
+Plus 0, 0 trend expectation of the standard variable z t.
+So what we're left with, this interesting expression.
+We have the expectation of R t as a constant
+plus another constant times expectation of R t minus 1.
+Now here's where we used stationarity.
+It says, that the two expectations
+on the left and the right, are the same as each other.
+We don't know what they are, but we
+do know that they're the same.
+So we can solve algebraically for them
+by rewriting on the right hand side.
+c 0 plus c 1 expectation of R sub t, and solving for R sub t.
+So we substitute, and what do we find?
+We find that we now have an expression
+for the mean, the expected value of R sub t in terms
+of the basic parameters of the model.
+c 0 over 1 minus c 1, and sigma doesn't appear.
+So we've solved for the first moment of R t
+by using stationarity, and this is
+a trick we'll continue to use.
+We take things, we plug in our basic equation for the Rs,
+we expand out the things inside the expectation.
+And then as needed, we apply stationarity.
+Now for convenience, instead of this handful of symbols,
+it's the mean value of R t.
+So let's give it a new name, let's call it mu.
+And for interpretations for physical and financial
+interpretations later on, I'm going
+to take the innocuous and boring sounding c 1.
+And I'm going to give it a new name,
+I'm going to call it minus lambda.
+So in terms of these variables, we can rewrite our AR 1 model.
+And you can check this, by checking the variables.
+In terms of an expression on the left and the right hand side,
+that both are written in terms of this combination R minus mu.
+And on the left hand side, it's a time t and the right hand
+side it's R t minus 1.
+So we have the usual typical recursive structure
+that we've been seeing.
+Plus the shock term, the sigma z t.
+So how do we want to interpret this,
+this is a model that's often used
+for modeling mean reversion.
+We think of mu as being the mean of our process and R
+t minus mu or t minus 1--
+R sub t minus 1 minus mu, are the variables difference
+from the mean value from mu.
+So if R at each time were exactly equal to mu or minus mu
+would be 0.
+However, and it would stay 0 for the recursion, if for example,
+if sigma were equal to 0.
+But because there's randomness, there will be changes.
+So the real driving variable here, the real thing
+to keep an eye on, is R minus mu,
+that's what's moving things.
+So what does it say?
+What about the minus lambda?
+And why have they written it this way?
+Well, let's think of lambda as being a positive constant,
+we'll see in a few moments the only requirement is
+that the absolute value of lambda be less than 1.
+So lambda can be negative, but the usual applications
+it's positive with the sign convention, where I've written
+minus lambda on the right hand side.
+So here's how we can think about it.
+We can say that for a positive value of the coefficient mu,
+the first term on the right hand side says,
+that if R in the previous period exceeded its mean,
+if it was larger, then we multiply times the negative
+constant --
+minus lambda.
+And that pushes it in a negative direction.
+What is it pushing in the negative direction?
+Well, the thing on the left hand side,
+which is the subsequent periods change in the value
+relative to its mean.
+So this says, that if we overshoot
+the mean in one period, will we push down
+toward it in the other.
+If we undershoot, if R period t minus 1 was less than mu,
+then multiplying the term in parentheses times
+c minus lambda, will give a positive number,
+and that will tend to increase the value towards its mean.
+And in each period we get a random shock,
+we get a new sigma z t, but that's symmetrically
+distributed.
+It's just as likely to be positive or negative.
+Now that we have that structure, we
+can solve the rest of the model 2 for the remaining moments.
+That means that we can solve for the variance,
+and it's square root, the standard deviation.
+And we can solve for covariances.
+And in this case, in the times series context,
+these are called autocovariance.
+Auto, because we're computing and R with an R,
+just the two different periods in time.
+Instead of computing the covariance
+of two independent random variable to random variables,
+maybe not necessarily independent x and y,
+where we compute covariance of x and covariance
+with-- the variance in x and y, is taking the expectation
+of the product of each random variable
+relative to its own mean.
+We do the same thing here but, where the two variables
+are taken at two different points in time
+within the same time series.
+OK so how does that work?
+Well, we'll start with the variance,
+and we'll give it a name.
+We'll call it gamma 0, and you'll see why in a moment.
+So the variance of R is defined as usual
+as the expectation of the square of R t minus mu,
+where R t is taken relative to its means,
+so we take the expectation of the square.
+Now for R t minus mu, we're going
+to substitute in our equation of motion.
+We're going to substitute in, the expression
+for R t minus mu, in terms of the previous values
+on the right hand side.
+And will expand it out, take expectations term by term
+and what do we get?
+Well, one of the terms we get, we recognize this first term
+here, is lambda squared or properly minus lambda quantity
+squared, times the expectation of R t minus 1
+minus mu quantity squared.
+And this expression taken as a whole from stationarity,
+is also gamma 0.
+It's the thing that's on the left hand side.
+The term over here from the z squared,
+gives us a sigma squared down here,
+this should be a sigma squared up here.
+Apologies for the typo.
+And the cross term vanishes.
+So at the end, we have the gamma 0 can be written,
+because we solve this equation algebraically for gamma 0,
+and there's a gamma 0 on the right.
+And we get the gamma 0, the variance of R,
+is sigma squared over 1 minus lambda squared.
+So what we see is first of all, that it's
+proportional to sigma squared, which we would expect.
+This is the variance of the process.
+The bigger sigma is, the bigger gamma 0 is.
+We also see the special case, the random walk.
+If we set lambda equals 0, we should
+get our usual generalized random walk result, and we do,
+we get the gamma 0, the variance of R, is sigma squared.
+But now look at the denominator.
+We notice the denominator blows up
+if lambda gets to be larger than 1 or less than minus 1.
+So this will only be defined for values less than that.
+How do we know it doesn't make sense
+for values larger than that?
+Well, there's an easy interpretation.
+Remember that lambda is telling us
+how much of the previous periods result
+is going to contribute to the next periods result.
+And when that's less than 1, it means
+that affects that shocks tend to die off
+over time in the absence of the new shocks that
+are arriving via the new z ts in that's reasonable.
+However, a case for lambda greater than 1 into the shocks
+get amplified, they get bigger and bigger.
+So that once a shock enters the system, it runs away
+and it takes over the system.
+So the result would not be convergent.
+So even though it's a formal recursion,
+the recursion doesn't actually exist.
+So the most typical case as I said,
+is going to be lambda positive.
+But in any event, we're going to have lambda less than 1
+in magnitude.
+Now we don't need to stop there.
+We can now extend our result to look
+at what happens, when we consider R is
+taken at two different times.
+And we'll use the notation gamma sub
+K to denote the autocovariance.
+That is the covariance of R t with an R t at lagged
+by K times steps.
+Remember that because it's stationary,
+that means that this doesn't depend on t
+it only depends on K.
+So the correlation between R 1 and R 3,
+is the same as the correlation between R 21 and R 23,
+it doesn't matter.
+All that matters, is how far apart they are in time.
+So we can think of K as being a delay, or a distance,
+or a length of time, over which information propagates.
+How do we solve?
+Well, we use our same friend, plugging in and applying
+linearity and stationary, the difference this time is.
+That instead of substituting the equation of motion everywhere,
+we do it in one of the two terms.
+So it goes like this gamma K is defined
+to be the expectation of R t minus mu and R t
+minus k minus mu.
+We'll leave the first--
+works for me.
+We'll leave the second factor alone,
+and the first one will apply our equation of motion
+for recursion.
+So we'll plug in just for this.
+So we have the lambda term minus lambda,
+times R t minus 1 minus mu.
+And then there will be another term with z,
+which vanishes, because as we saw in the cross terms vanish.
+And here by stationarity, this is
+just dependent on the difference in times between these two Rs.
+And that's K minus 1 steps apart.
+But that's just our with minus lambda
+at times, our expression for the autocovariance gamma sub
+k minus 1, where there was one time step in part.
+So we've got is recursion by substituting
+in the equations of motion, we can relate gamma K
+to gamma K minus 1.
+And the rule is, for every K that you increase, you multiply
+times a factor of minus gamma.
+So we would expect to see a function of minus gamma raised
+to the case power, which we do down here in our final result.
+And we're able to tie off this series,
+because if we think about doing the recursion backwards.
+When we get to gamma 0, we can stop.
+We know what gamma 0 is in closed form.
+So our final result for any K, any finite K
+is that, gamma K is minus lambda to the K-th power
+times the variance.
+And explicitly, that's minus lambda to the K-th power,
+1 minus lambda squared times sigma squared.
+So this is the lag-K autocovariance,
+and if we think of this now not as a function of lambda,
+but is a function of K, we see that-- remember lambda
+is less than 1 in magnitude, this tells us
+that the influence is dying off as K gets larger and larger.
+OK, but it does persist over time.
+Therefore, this model allows for there
+to be a causal connection between observations
+and one period, and observations in all prior periods.
+And we have a very specific way, that they're related
+that the information dies out.
+So let's summarize what we've done
+in looking at our structure of time series models.
+We've seen that we can construct time series models by building
+a bunch of linear terms, that generalize the pieces we
+saw from the random walk.
+The pieces that show up in our recursive definitions
+on the right hand side.
+Include shocks, that is sigma z t terms,
+we're adding new and new random information
+at each point in time.
+They can include past observations of the zs, that
+is previous period zs.
+And they can include past observations
+of the variables themselves, and everything can have
+an independent coefficient.
+So those are the basic ingredients
+of this class of models.
+As long as they are linear in terms of the random variables,
+we have a good chance of solving them using the techniques
+that we worked out in detail for AR 1.
+These models have temporal correlations that's
+built into their structure.
+So they're written recursively, which
+makes a compact definition, it means
+that we can solve them and think about them one period ahead.
+But it also means that when we make assumptions
+about stationarity of the series,
+that we have good tools for solving them.
+And understanding how to interpret
+that as the propagation of information
+forward in time and the decay of the influence of shocks
+over time as well.
+The example we looked at in detail
+was AR 1, which we used for mean reversion.
+And this model, this structure shows up
+in many areas of finance econometrics
+and in other areas of applied mathematics.
+The model is for where we have randomness that
+enters through this noise term.
+But where there's an influence--
+where the influence of new information
+tends to die out over time.
+So the way in which we model this and describe
+it is in terms of the relative displacement from a long term
+mean average.
+And the minus lambda says, that when
+we see shocks in one period, they
+tend to get damped out, in the following period,
+in the absence of a correction.
+OK, so we apply weak stationarity,
+that gives us the first and second moment.
+It doesn't tell us everything about the full distribution.
+Fortunately, for us, that's what we're usually interested in.
+One last detail to keep in mind is that the lag variables--
+will sometimes think about in two different ways,
+and mathematically we'll treat it in two different ways.
+One of them is as in the equations we wrote down,
+we think about them as the different periods is all
+being unobserved, they're all random variables
+that have not yet been drawn from their distribution.
+There are no observations that have yet been made.
+And those expectations that we took
+are called unconditional expectations.
+But we'll see that sometimes when we actually
+want to look at data, or if we want
+to use Monte Carlo techniques to generate simulated data.
+Well, think about these a little bit differently,
+we'll ask, what's the expectation for the future
+given that we're currently at a particular time t,
+and that everything at earlier times has already transpired,
+has already arrived.
+And in that case, we take the values of the earlier
+realized numbers to be constants.
+And the things that are unrealized
+are things that are in our future.

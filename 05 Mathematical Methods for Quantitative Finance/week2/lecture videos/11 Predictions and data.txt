@@ -1,0 +1,244 @@
+PROFESSOR: The random walk model that we've seen thus far
+is a two-parameter model, as this
+is our generalized random walk.
+We have two parameters, mu and sigma, which are constant.
+And that tells us how the returns get generated
+in subsequent periods.
+So one of the things about this model
+is if we're to look at data and try to match returns
+to this model, obviously, that means
+that if mu and sigma really are the constants
+and this really is the model, then it means that if we
+observe, measure, and estimate the parameters, mu and sigma,
+they should be the same in any time period we look at,
+to within sampling error and statistical estimates.
+So one way you could think of testing the model
+is we could say, well, this is the model.
+Let's do mu and sigma.
+Can we estimate them?
+Do we get constants?
+Then we're done.
+Well, that's a little bit too specific.
+And it doesn't generalize quite as nicely.
+So what we're going to do is we want
+to look at quantifying how big the variations are, so we can
+get an idea as to how significant departures might be
+if there are any, and to give us some insight as to what
+other directions might be available
+and what might be driving the results.
+So what we're going to do is we're
+going to look at some properties of the random walk--
+in particular, the way that the variance scales,
+with time, which we've already seen for the pure random walk
+model.
+And we're going to apply that to data
+by looking at aggregating data over different observation
+frequencies.
+And let's do that concretely with particular stock.
+And the stock that I like to use for this example
+is Tootsie Roll.
+The Tootsie Roll company makes wonderful candies
+that will stick to your teeth, and make your dentist very
+happy, probably over time.
+And you'll enjoy eating them.
+But a couple of reasons why I picked Tootsie Roll-- but you
+can and should pick your own company to do the same thing.
+First of all, the company is founded in 1896,
+and has one of the longest track records
+for any publicly-traded company.
+So most companies, even the most venerable ones eventually
+end up either going out of business,
+acquiring or being acquired by somebody else.
+And it's unusual to find extremely long time series.
+There are only handful of companies
+that go back to the beginning of the 20th century.
+And data providers usually don't go back before 1926.
+But Tootsie Roll is one of them, so that's one good reason.
+It also recently found popularity
+with the wallstreetbets crowd on Reddit.
+So if you want to look at some real challenges
+to the random walk model, you should take a look
+at the data from 2020.
+So we're going to cut off a bit before that.
+Because certainly, the madness of crowds
+is a subject for a whole other course
+that we can take a look at.
+But if you want to test the null hypothesis,
+I'll leave that data out of sample.
+And you can try it out on more recent data.
+And finally, one of the reasons I like Tootsie Roll is they
+ran a famous add back in my childhood ages
+ago, with an owl and animals in the forest.
+But the owl was the wise one who was
+able to answer the question-- how many licks
+does it take to get to the center of a Tootsie Pop.
+And you should go look at that video on YouTube
+or on Tootsie Roll's corporate website if you can find it.
+It's a great example of empirical science at work.
+So the approach we're going to take, as I mentioned before,
+is falling to other economists--
+Andrew Lo and Craig MacKinlay, who tested the random
+walk model on a variety of data in the late 1980s.
+And their approach was to look at some general properties
+that we would expect to find if the random walk model held,
+scaling behavior and by looking at the variance.
+And they were able to analyze data
+and came up with some really interesting results.
+So I want to show you what they did.
+Give you some code to show you how you can do it yourself--
+and we'll take a look at the results for one example,
+for the case of Tootsie Roll stock.
+Lo and MacKinlay applied this for individual stocks.
+They looked across stock indices.
+They looked at equal weighted, market cap weighted indices.
+And I strongly recommend taking a look at their original paper,
+after or before or alongside going through this.
+So what were the elements?
+They were looking at what's called a variance ratio
+test, that we'll define in a moment, which
+lets us get at the behavior of a random walk
+in the following way-- we have a problem
+if we were to apply the data.
+The version that we saw, where we
+saw that the variance of a random walk
+grew linearly with time, is great.
+If you look at longer and longer time periods.
+But if we think about doing that with financial data,
+we immediately see that there's a problem, which
+is something might have changed in the market.
+It's not the same data if this were
+generated from a random number generator and a Monte Carlo.
+Sure that would work.
+But we have a lot of different potential things
+that might come into play if we look at 1896 to 2000.
+And then the next 20 years and the next 50 years and so on,
+a lot of economic things change.
+And perhaps we don't need to assume
+that over the entire period that everything was random.
+There might be over some period.
+So the idea that Lo and MacKinlay applied
+was to look at the variance over random walks
+of different lengths taken not by extending the time period,
+but by increasing the observation frequency.
+That is they subdivided into smaller and smaller chunks
+so they could look at one month returns, one week returns, one
+day returns, and so on.
+In the case of Lo and MacKinlay, they did weeks.
+Conversely, we could aggregate up.
+So we could think of a base observation frequency.
+I'll use daily frequencies.
+Lo and MacKinlay used weekly.
+And we could say what happens if I compute
+using one day, if I compute using two days, four days,
+15-day periods, and so on.
+And in each case, if the observation period
+gets longer and is more coarse grained,
+that there will be fewer returns in the sum.
+So that will give us some behavior,
+and let's just do the arithmetic and we'll see.
+And then we'll compare it with the data.
+So what we'll do is we'll construct a test that nicely
+eliminates a lot of things that we don't really
+want to worry about from real world market and the data.
+And then we'll compare and see what the consequences are.
+So let's first look at some of the data.
+So I've gotten this data from Yahoo Finance.
+in R using the tidyquant package and the tq_get() function.
+You can pull this data in, or you
+can download it and do the same thing in Excel if you want.
+But let's take a look.
+Here's an example of recent period
+of prices for Tootsie Roll stock, ending through 2017.
+As I mentioned, we're leaving out the Reddit period.
+If I compute the log returns from the successive price
+differences on a daily level and I plot their time series,
+I get this graph of differences, differences
+of the logs over here.
+And what we can see is a few interesting features--
+and this is typical of all sorts of stock returns.
+You should try this out.
+First of all, it's noisy.
+There are a lot of ups and downs.
+Although the first graph on the left looks like Tootsie Roll
+had a very successful period in this.
+And the stock price rose a lot.
+If we look at it day-by-day level, what we see
+is lots of noise.
+There lots of ups and downs.
+If we even try to look at what the mean is,
+if we try to eyeball and draw a line through it,
+the line you see through it is the origin .
+It's hard to say that the mean is
+significantly different from 0.
+And that's typically true on a one-day level
+at high frequencies, financial data,
+it's very difficult to discern what
+the mean return is that will aggregate over
+a long period of time.
+But then we also notice that there are these spikes.
+This is really not uniform volatility.
+It doesn't look like uniform randomness.
+And to compare that, look behind me at this graph here.
+This shows a simulated white noise process.
+White noise just means that we're
+drawing from a random, normal distribution
+with constant volatility.
+And you can see that there's a pretty clear envelope function
+here that's at around say, the equivalent of plus or minus
+say, three standard deviation.
+So I've normalized this graph on the right
+to have the volatility equal to the empirical volatility
+of Tootsie Roll.
+So just kind of intuitively looking at the two,
+does Tootsie Roll look like the random walk?
+Those graphs look kind of different.
+But obviously, that's not enough to make a definitive statement,
+much less to tell us if a random walk isn't good,
+what might be a better model for Tootsie Roll.
+We can look at summary statistics.
+And I've got a bunch of them here in R,
+including ranges for the values over time.
+And we can take a look at the distribution
+for the statistics.
+So we've got numbers overall.
+For example, over time, the mean annualized return is 8 and 1/2%
+with the volatility of 24%--
+kind of typical numbers for a stock.
+The histogram, we can take a look at--
+how does it look to you?
+So we've go, it's a single peak.
+It's humped.
+See if we can get that back, I'm sorry.
+So it has a single peak.
+It's humped in the middle.
+Notice it looks kind of narrow and peaky, not nice
+and rounded like a typical Gaussian distribution.
+It has fat tails, which don't show up here
+because the tails are really small.
+But you might have heard of fat tail distribution.
+A corollary of distributions, since the probability has
+to sum to 1, is that if they've got fat tails,
+then they also have to have thin middles.
+There's less probability in the middle
+than you would otherwise.
+Notice that it is roughly symmetric.
+That is upside and downside returns are about the same.
+And we look at returns, not prices.
+Why do you think that is?
+
+You can try it, and take a look at the price distribution.
+The reason that we expect that the return distribution,
+from an investment perspective, is likely to be stationary.
+That is the price levels are not, or shouldn't
+be important to investors.
+What matters is the return that you have.
+So if the initial price is $10 or $100 or $1,000,
+it shouldn't matter.
+The price levels will depend on the actual history
+of the stock, and where it started out and where it went.
+Whereas in the case that we're especially interested in here
+for, random walk-type behavior, the returns
+are always going to be independent of where we start.
+So prices would just introduce a lot of artifacts of history,
+whereas the returns tell us what's actually going on.
+And as I said, they are what's interesting for the investors.

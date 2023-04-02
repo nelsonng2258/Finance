@@ -1,0 +1,119 @@
+
+PROFESSOR: Exercise.
+Let's let xt be defined as z cosine omega t plus z prime
+times sine omega t, where omega is a constant--
+and think of it as a frequency, let's let it not be a rational
+multiple of pi--
+and let's let z and z prime be independent,
+normalized, random variables.
+So show that xt is weakly stationary
+or if you don't think it is, show that it's not.
+So pause the video, take a few minutes,
+and see if you can work it out.
+And then we'll do it on the board together.
+
+OK, let's take a look together.
+So first of all, let's compute the mean and the variance.
+So the mean is going to be 0 because z
+and z prime each have mean 0.
+So we can compute that e of xt is going to be cosine omega t--
+which is just a scalar with respect
+to our random variable--
+times the expectation of z plus sine omega t expectation
+of z prime.
+And this is 0, and this is 0, because those have mean 0,
+and therefore this is equal to 0.
+OK, that part was easy.
+How about the variance?
+Well since the mean is 0, the variance of xt
+is going to be the expectation of xt squared.
+And again, what are we going to see? xt squared
+is going to have that expression on the top, this expression.
+We're going to have this term, squared, this term squared,
+and a cross term of this with this.
+The cross term is going to have vanishing expectation
+because it will be an expectation of z and z prime,
+and what we'll have is going to be--
+just by doing it out, this is going
+to be the expectation of z squared times cosine
+squared omega t plus--
+
+let's try this here--
+plus expectation of z prime squared times sine
+squared omega t plus the vanishing term, which
+is going to be 2 cosine omega t sine omega t expectation of z
+z prime.
+In this last term vanishes, because that's
+equal to 0 because z and z prime are statistically independent.
+Now this term here is equal to 1,
+this expectation is equal to 1, so we're
+left with cosine omega t squared plus sine squared omega
+t, which is just equal to 1.
+
+Let's keep our colors consistent if we can.
+And that's equal to 1.
+Now let's look at the two point function,
+or the autocovariance function.
+So we will look at the expectation of xt
+with xs where t and s are just two different arbitrary points
+in time.
+We could do t and t minus k, but let's write it
+out this way for the moment.
+OK?
+So we just substitute in, and this is our basic trick
+for most of these.
+We just substitute in the defining equations,
+we do out the algebra, we apply linearity,
+and we compute the expectations in terms of our building
+blocks, which usually we can reduce to basic z's.
+So we'll be doing this trick again and again.
+The one other trick that will be doing that you saw in lecture,
+is will be using stationarity and recursion
+to sometimes replace something with a t
+by something with the t minus 1, or will take something
+on the right hand side and use it to substitute
+for the left hand side.
+But here we're just going to do a straight calculation
+for this problem.
+So what's xt?
+Well xt was given by the z cosine omega
+t plus z prime sine omega t.
+And x sub s is given by the same thing,
+just with t replaced by s, z cosine omega s plus z
+prime sine omega s.
+And let's close all our brackets.
+
+And now what are we going to have?
+Well we're going to have the two z's will come together.
+So we're going to have the expectation of z squared times
+cosine omega t cosine omega s.
+
+And if you can see where we're going with this,
+I'll write this out just this one time
+and then I'll start doing these a little faster.
+We're going to have also expectation
+of z prime squared times sine omega t sine omega s,
+and then we have the cross terms,
+which involve z multiplied by z prime and z prime multiplied
+by z.
+But we don't need to keep those, we
+know that the expectation of z times z prime vanishes.
+So what we're left with here then
+is cosine omega t cosine omega s plus sine omega t sine omega s.
+And if you recall from trigonometry,
+that's the formula for the difference of angles.
+So this is equal to cosine of omega times t minus s.
+Now the exact form is not that important,
+although it's kind of cute that this comes out.
+The important thing is that it depends only
+on the difference t minus s.
+So stationarity is the property that if we shift t and s--
+if we shift these two points by an equal amount,
+that all the expectations of the probability
+distributions, at least the first and second moments all
+stay the same.
+And here that's satisfied.
+We see that the mean was 0, the variance
+was 1 independent of time, and the two point function
+which does depend on time, does so only
+through differences between those two points.

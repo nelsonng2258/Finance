@@ -1,0 +1,86 @@
+
+PAUL MENDE: Welcome to 15.455x, Mathematical Methods
+of Quantitative Finance.
+I'm Paul Mende, and I'm your instructor for this course.
+The main topics that we cover are probability, time series
+models, discrete-time stochastic processes,
+continuous-time processes, linear algebra,
+and optimization.
+Our approach in this course is to develop mathematical methods
+that are applied in finance.
+We're oriented toward practical and innovative problem solving.
+So we'd like you to understand where the ideas come from,
+how to use them, not only in standard situations,
+but in novel ones, where maybe some
+of the standard assumptions don't apply.
+We'll survey the key ideas and tools and methods
+in each of these areas.
+And we'll provide a foundation for applications
+in industry and research and for further study,
+depending on where you are in your career
+and where you are in your studies.
+Learning in the class is very much hands on.
+You'll be doing examples, you'll be doing problems,
+you'll be doing applications.
+And mostly, you should be asking questions all the time.
+Where does this apply?
+What do the results mean?
+What are some counterexamples?
+How do we generalize?
+We begin with probability because
+of the basic observation that financial data
+is noisy and financial data--
+excuse me, financial decisions, more generally,
+are characterized by uncertainty.
+So we need probability.
+Probability is the language of uncertainty.
+And we want to ultimately be describing an uncertain world
+and making good decisions under uncertain conditions.
+So we begin with the basic review
+of probability and a few key ideas
+that we'll be building on to describe how events unfold
+in a sometimes noisy world.
+Look at discrete-time stochastic processes
+that characterize the evolution of random variables
+to describe financial and econometric quantities.
+We want to think about the entire past, present,
+and future trajectory of different quantities
+of interest.
+So we'll be developing some specific time series
+models that find a variety of applications.
+We'll be looking at numerical, as well as analytical,
+techniques to solving closed form, to solve numerically.
+We'll see how to estimate parameters
+and how to identify what might be the appropriate model
+for different situations.
+We'll then take a look at things in continuous time,
+and we'll see it's much more interesting
+than simply your ordinary delta t goes to 0 limit.
+We'll see stochastic processes become fractals,
+and we need a whole new calculus, the ito calculus,
+to describe stochastic financial variables.
+So we'll develop that.
+And then we'll see how we can go from these stochastic equations
+back to more familiar partial differential equations
+and look at some of the key equations that
+are important in finance and some that have application
+to important areas, such as derivative pricing,
+option pricing, and so on.
+We'll look at linear algebra, because pricing relationships
+and many other relationships among financial variables
+are linear.
+And linear algebra captures the essential relationships
+and constraints among financial quantities
+to identify what are independent drivers, to identify
+how many independent securities might be in a market,
+and we'll look at applications, such as market completeness,
+security replication, and arbitrage.
+Finally, we'll look at optimization.
+Whether it's trading, investments,
+or other kind of decision making under uncertainty,
+we'd like to take the best action or find the best policy.
+We often have to do so in the presence not only of
+uncertainty, but constraints.
+So we'll take a look at constrained optimization
+in single and multivariate settings,
+in a single period settings, and over multiple time horizons.

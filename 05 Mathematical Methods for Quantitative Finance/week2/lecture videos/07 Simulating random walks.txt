@@ -1,0 +1,258 @@
+
+PROFESSOR: So most computer languages, including R,
+have functions that generate random numbers.
+Now in R, the main ones to take a look at,
+are the function sample, which returns discrete values.
+So if you want to pick from a list,
+0 and 1 could happen with probability p and 1 minus p
+or values 1 minus 1, values 1, 2, 3, 4, 5--
+if they're discrete, we can use the sample function.
+And we can sample with or without replacement.
+For Monte Carlo applications, we typically
+sample with replacement.
+We're not exhausting lists.
+We're generating things consistently over time.
+Two other functions-- the runif--
+that's not run if, which looks like it
+could be a reasonable command--
+returns random numbers with a uniform probability
+distribution.
+So these are real numbers bounded between 0 and 1.
+And rnorm generate things drawn from
+a normal or Gaussian distribution, with mean 0
+and variance 1.
+There are a bunch of parameters that you can use to tune this,
+such as setting the mean and variance
+of the normal distribution to something else.
+Now we have to keep in mind that the random number generated
+by a computer are not truly random.
+These are approximations.
+And there are a lot of limitations.
+So you need to keep in mind what the real world limitations are
+in our hypothetical world of Monte Carlo simulations,
+namely what are the limitations of computers.
+So a few things to keep in mind include--
+we can't do real numbers on a computer.
+We can only do finite precision.
+Now double precision, 15 decimal digits, is pretty good.
+But it's not infinitely divisible.
+So some of the things that means are
+that if we're looking say, at a uniform distribution,
+we can't get every possible number.
+And in a true uniform distribution,
+the probability of getting any particular number
+is measure zero, and that won't be the case.
+We'll have some finite probability.
+When we think about not only the find greatness
+for real numbers, we also should think about their boundedness.
+So a Gaussian random variable could go from minus infinity
+to infinity.
+We knew that it's very unlikely that it
+goes outside of say, plus or minus 3 or plus or 6,
+but we could get a value that could be arbitrarily large.
+And computers don't do arbitrarily large.
+They have very large numbers.
+So we need to keep in mind that anything that we generate
+is going to be truncated and finite.
+And that's particularly important in risk applications,
+where we're studying the occurrence of rare events.
+Because there may be events that the computer's actually not
+generating that are very, very unlikely.
+So we need to keep that in mind.
+That's part of the limitations which will qualify our results.
+And we can take account for our approximations.
+So there are many subtleties here,
+which we won't be going into.
+But I do want to mention them so you
+can do further reading if you want to apply this
+to more advanced applications.
+So here are some basic functions that I commonly use in R,
+and that you might find helpful as well for getting started,
+for generating some random numbers.
+And we'll take a look at some examples.
+In just a moment.
+The first example that we have here
+involves taking a look at generating a matrix
+of independent random numbers.
+So let's think of z as being our typical standardized random
+variable, or actually in this case, not standardized.
+This is going to be a uniform distribution.
+It will be standardized in a moment.
+But z is some random variable, drawn from some distribution.
+In this case, a uniform distribution--
+so it's uniformly distributed on 0 and 1.
+Now what I'd like to do is I'd like
+to pick Nt, the number of time steps,
+and I'd like to think of orienting
+this as a matrix, where I typically think of time series
+on a computer as column vectors.
+So I think of aligning the successive elements from top
+to bottom, from oldest to newest--
+1 2, 3, 4, 5, all the way up to Nt.
+And for efficiency, we're going to run many simulations
+in parallel.
+And I'll think of Np as a number of sample paths
+that we're going to generate.
+So as far as the computer is concerned,
+Nt times Np, they're all independent random numbers
+anyways.
+It hardly matters.
+How I choose to arrange them for convenience is it a matrix.
+And these are the conventions I'll
+use always for time series.
+So time goes down.
+Each column represents an independent time series.
+And in this case, the columns represent
+different possible realizations of our price paths.
+So the first line gives us a matrix
+of Nt times Np independent, pseudo-random draws
+from our distribution.
+The next example right here, shows a way
+that we can turn things into discrete random variables
+if we have a uniform distribution.
+And of course, the sample function I mentioned earlier--
+there's an easier way to do it.
+But there are simple sometimes to code things using
+continuous distributions, and take the discrete case
+as a special case, rather than writing different functions.
+It doesn't make any difference.
+You can do whatever you prefer.
+But in this case, what I've done is
+I've shifted it so that with probability p,
+I get a positive number.
+With probability 1 minus p, I get a negative number.
+And then I take the sign of that.
+Notice that there is a small problem, potentially here,
+with 0, which shouldn't be allowed.
+And the sample function won't run into that trouble.
+But rather than making the function complex
+with lots of parameters, it's easier
+to do simple linear transformations
+on the variables to move them into a range we want.
+So typically, we want to shift the endpoints
+and re-scale things.
+For example, instead of plus or minus 1, I might want 0 and 1.
+And these are related so that the x on the line
+above gives me new variable i, that just shifts the values.
+So when x is 1, u is 1.
+When x is minus 1, u is equal to 0.
+The next line right here, gives us--
+this looks a little bit more complicated.
+But this is an example of one way,
+among many, that you can generate data, which
+is normally distributed with a given mean, mu, and a given
+standard deviation, sigma, and again, arranged in matrix form.
+And then finally, this is our specific--
+but it isn't required.
+We can do this iteratively, but it's very convenient--
+is way of applying a cumulative summation
+function to aggregate our returns.
+And this is typically what we look
+at when we're doing asset price dynamics and price simulation,
+we're going to add up successive returns.
+So we'll have r1, r1 plus r2, r1 plus r2 plus r3, and so on.
+So this is r-specific.
+And this will generate-- typically,
+what we have if r is our matrix of returns,
+this will do a cumulative sum in the time direction.
+That's what the second argument here is, 2.
+And this applies it across the entire matrix.
+And then we exponentiate, as we'll see--
+if we're simulating log returns, we'll
+typically want to exponentiate the cumulative sums and returns
+to get the actual asset price paths.
+
+So let's look at some examples.
+In this case, this is code that generates
+a simple 20-step random walk with equal probability
+for going up and down.
+So notice-- I define up top what the probabilities are.
+And it's conventional sometimes, to call with a probability, p.
+And the probability of the opposite outcome, q.
+1 minus p-- it's not required.
+You can code it any way you'd like.
+And the number of times steps is 20.
+For simplicity, I'm picking only one sample path in this case.
+Here's my assignment to z of a set of random numbers
+that are drawn.
+Here, I'm mapping them to the range I want.
+I initialize a set of partial sums, s, to be 0.
+And it's important to keep in mind that we usually
+want to start at time 0, with a fixed value.
+So in order to have N sub t steps and returns,
+we need Nt plus 1 placeholders for the actual values
+of our state variable.
+So if we want to have, let's say, 252 daily returns
+for a stock price, which is typical
+for an annual simulation, then we
+need 253 values for the price.
+Because the first one will be p0 will be initial price.
+And then we'll have the next one.
+So it's always one less return than the number of prices
+that we have.
+So, now that we have it initialized,
+let's just run a simple for loop.
+And at each step, we'll say that the value at step k plus 1,
+at the next step, is wherever we were
+in the previous step plus the random value that we had.
+Where I've written this with the argument having comma
+and then a blank in R, is the syntax meaning
+do it for this row and for all of the columns.
+In this particular case, we have N sub p is 1.
+There's only one column there.
+But in general, this is going to be the format that we'll use.
+And then we can take a look.
+And behind me, is an example of what a 20-step random walk
+looks like.
+When you run it-- each time we rerun it,
+we'll get some different value.
+,
+Now, let's take a look at how we might do this
+if we want to get a little bit closer to finance.
+One of the things we'll do is let's
+pick a particular number of time steps.
+I like 252.
+252 is the standard convention for modeling daily returns.
+The idea is that we have approximately 21 trading days,
+excluding weekends and holidays on average in a month.
+12 months-- that gives us 252 trading days.
+And we're going to treat weekends as being nonexistent.
+So we'll assume that everything is homogeneous from Friday
+to Monday, and that we keep going.
+The number of simulations I'm going to run
+is going to be 10,000 simulations, which
+is a good starting point.
+It's kind of a handy number, a good balance between being
+tractable and being accurate.
+Just as a rough rule of thumb--
+the accuracy of our results typically
+is going to scale with 1 over the square root of the number
+of simulations that we do.
+So 10,000 means that we can get things that might be roughly 1%
+accurate to a range of 1%.
+A million would be better.
+A billion might be even better.
+But that would take a very long time to run on most computers.
+So I like to start at around 10,000,
+And then work from there as far as needed.
+So now I've got a bunch of random numbers.
+I'm going to treat these again, as discrete values,
+plus or minus 1.
+So this is a random, discrete random walk,
+where we're going by discrete steps up or down.
+And then I'm going to run this, but now, over many paths,
+over time.
+And I have each location is the previous one.
+And what does that look like?
+Well, now I can get my ensemble of paths.
+I have 10,000 of them.
+That would make for a pretty cluttered diagram.
+So I've drawn three of them here.
+And you can see that if these were stock prices,
+you might feel very differently about them but.
+These are all three paths drawn from the same distribution.
+OK, in this case, the distribution
+is equally likely to go up or down.
+So the fact that one of the paths went up, one of them
+ended up at 0, and one of them ended up very negative,
+is just quite literally the luck of the draw.

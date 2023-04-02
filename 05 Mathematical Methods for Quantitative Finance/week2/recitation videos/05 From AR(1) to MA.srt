@@ -1,0 +1,620 @@
+0
+00:00:00,000 --> 00:00:04,630
+
+
+1
+00:00:04,630 --> 00:00:08,109
+PROFESSOR: Let Rt minus mu be equal to minus lambda
+
+2
+00:00:08,109 --> 00:00:11,720
+times Rt minus 1 minus mu plus sigma zt,
+
+3
+00:00:11,720 --> 00:00:15,130
+that's the definition of our AR1 process.
+
+4
+00:00:15,130 --> 00:00:20,140
+Now can you show that this AR1 process can be rewritten
+
+5
+00:00:20,140 --> 00:00:23,960
+as a moving average process?
+
+6
+00:00:23,960 --> 00:00:25,660
+Let me give you two hints.
+
+7
+00:00:25,660 --> 00:00:30,730
+Number one is to use recursion, and number two is to keep
+
+8
+00:00:30,730 --> 00:00:35,140
+in mind what the goal is, is to express Rt on the left hand
+
+9
+00:00:35,140 --> 00:00:37,900
+side, and something that doesn't have any R's on the right hand
+
+10
+00:00:37,900 --> 00:00:40,840
+side that only has z's.
+
+11
+00:00:40,840 --> 00:00:42,460
+That's a general rule that we have.
+
+12
+00:00:42,460 --> 00:00:45,610
+They can be of different lags, but there should be only
+
+13
+00:00:45,610 --> 00:00:49,690
+z's on the right hand side and no R's.
+
+14
+00:00:49,690 --> 00:00:52,420
+So see if you can do that, come back.
+
+15
+00:00:52,420 --> 00:00:56,790
+Pause the video, see if you can work it out, and then come back
+
+16
+00:00:56,790 --> 00:00:58,575
+and we'll look at it together.
+
+17
+00:00:58,575 --> 00:01:14,030
+
+
+18
+00:01:14,030 --> 00:01:17,380
+So I'm going to simplify notation a little bit for me
+
+19
+00:01:17,380 --> 00:01:19,600
+by removing some of the scaling, let's
+
+20
+00:01:19,600 --> 00:01:22,480
+get rid of the mu's and the sigmas and boil things down
+
+21
+00:01:22,480 --> 00:01:24,620
+so they're a little bit easier to follow.
+
+22
+00:01:24,620 --> 00:01:29,060
+So I'm going to define a new variable
+
+23
+00:01:29,060 --> 00:01:37,350
+I'll call y sub t to just be Rt minus mu divided by sigma.
+
+24
+00:01:37,350 --> 00:01:40,040
+So you notice that this looks like a standardized random
+
+25
+00:01:40,040 --> 00:01:43,520
+variable, but be careful because the sigma is not necessarily
+
+26
+00:01:43,520 --> 00:01:46,790
+the variance of R. In fact, we know it's not.
+
+27
+00:01:46,790 --> 00:01:50,330
+It's the parameter that multiplies z.
+
+28
+00:01:50,330 --> 00:01:54,140
+So this is just a definition, and in terms
+
+29
+00:01:54,140 --> 00:02:02,570
+of which I can rewrite my AR1 process of the form yt
+
+30
+00:02:02,570 --> 00:02:11,300
+is equal to minus lambda yt plus z sub t.
+
+31
+00:02:11,300 --> 00:02:13,160
+Now what I'm going to do is make a series
+
+32
+00:02:13,160 --> 00:02:16,270
+of recursive substitutions.
+
+33
+00:02:16,270 --> 00:02:18,220
+So the first thing I'm going to do
+
+34
+00:02:18,220 --> 00:02:23,270
+is I'm going to leave this zt right here.
+
+35
+00:02:23,270 --> 00:02:27,650
+And what I'm going to do-- oops, sorry.
+
+36
+00:02:27,650 --> 00:02:30,700
+This should be minus 1, very important.
+
+37
+00:02:30,700 --> 00:02:33,030
+So what I'm going to do-- so this is our expression,
+
+38
+00:02:33,030 --> 00:02:34,830
+let's just compare it and check.
+
+39
+00:02:34,830 --> 00:02:40,620
+So what I've done up here is I've divided through by sigma,
+
+40
+00:02:40,620 --> 00:02:42,540
+and then after dividing through by sigma,
+
+41
+00:02:42,540 --> 00:02:44,850
+this is y sub t, which is here.
+
+42
+00:02:44,850 --> 00:02:47,820
+The minus lambda stays, this divided by sigma
+
+43
+00:02:47,820 --> 00:02:51,750
+is y sub t minus 1, and then zt over here
+
+44
+00:02:51,750 --> 00:02:53,740
+comes from dividing this term by sigma.
+
+45
+00:02:53,740 --> 00:02:56,580
+So that's just our previous expression.
+
+46
+00:02:56,580 --> 00:02:58,260
+What I'm going to do, though, is now
+
+47
+00:02:58,260 --> 00:03:02,460
+I'm going to take this piece here
+
+48
+00:03:02,460 --> 00:03:05,700
+and I'm going to take y sub t minus 1
+
+49
+00:03:05,700 --> 00:03:07,540
+and substitute it in this expression.
+
+50
+00:03:07,540 --> 00:03:09,900
+So it'll be a little bit more convenient
+
+51
+00:03:09,900 --> 00:03:12,160
+if I put the z on the left hand side.
+
+52
+00:03:12,160 --> 00:03:15,350
+So let's do it like this.
+
+53
+00:03:15,350 --> 00:03:18,830
+I'm going to write down that yt is
+
+54
+00:03:18,830 --> 00:03:28,040
+equal to zt minus lambda times y t minus 1,
+
+55
+00:03:28,040 --> 00:03:33,340
+but that's the same thing as zt minus lambda times--
+
+56
+00:03:33,340 --> 00:03:34,990
+let's change colors.
+
+57
+00:03:34,990 --> 00:03:45,650
+Now y t minus 1 is just z t minus 1 minus lambda times y
+
+58
+00:03:45,650 --> 00:03:48,500
+of t minus 2.
+
+59
+00:03:48,500 --> 00:03:57,990
+That is, this expression here just corresponds to this
+
+60
+00:03:57,990 --> 00:03:59,850
+by using this entire definition.
+
+61
+00:03:59,850 --> 00:04:04,050
+That is, if I take t and I replace it by t minus 1,
+
+62
+00:04:04,050 --> 00:04:08,280
+this becomes t minus 1, this becomes t minus 2,
+
+63
+00:04:08,280 --> 00:04:09,510
+and that's what I have here.
+
+64
+00:04:09,510 --> 00:04:15,480
+This is z t minus 1 minus lambda times y of t minus 2.
+
+65
+00:04:15,480 --> 00:04:19,589
+We simplify, and then we do it again.
+
+66
+00:04:19,589 --> 00:04:26,100
+So to simplify, this is going to be zt minus lambda times
+
+67
+00:04:26,100 --> 00:04:28,440
+z t minus 1.
+
+68
+00:04:28,440 --> 00:04:33,720
+And now I'm going to have plus lambda squared times
+
+69
+00:04:33,720 --> 00:04:38,890
+y of t minus 2.
+
+70
+00:04:38,890 --> 00:04:41,470
+Let's substitute in for that y of t minus 2.
+
+71
+00:04:41,470 --> 00:04:45,130
+
+
+72
+00:04:45,130 --> 00:04:57,830
+This is going to be equal to zt minus lambda z t minus 1
+
+73
+00:04:57,830 --> 00:05:11,000
+plus lambda squared times z t minus 2 minus lambda of y t
+
+74
+00:05:11,000 --> 00:05:11,900
+minus 3.
+
+75
+00:05:11,900 --> 00:05:16,330
+
+
+76
+00:05:16,330 --> 00:05:18,250
+And we can simplify that.
+
+77
+00:05:18,250 --> 00:05:23,730
+Let's expand that out and you can see the pattern coming.
+
+78
+00:05:23,730 --> 00:05:32,880
+z t minus 1 plus lambda squared z t minus 2 now minus lambda
+
+79
+00:05:32,880 --> 00:05:39,990
+cubed times y of t minus 3.
+
+80
+00:05:39,990 --> 00:05:42,780
+So we're going to keep going, and what's going to happen
+
+81
+00:05:42,780 --> 00:05:45,600
+is we're going to push the y farther and farther off
+
+82
+00:05:45,600 --> 00:05:46,553
+to the side.
+
+83
+00:05:46,553 --> 00:05:47,970
+And there there's one thing that's
+
+84
+00:05:47,970 --> 00:05:51,600
+important to keep in mind, which is that lambda, remember, must
+
+85
+00:05:51,600 --> 00:05:54,270
+be less than 1 in absolute magnitude, otherwise
+
+86
+00:05:54,270 --> 00:05:55,830
+this series blows up.
+
+87
+00:05:55,830 --> 00:05:59,790
+So we can imagine that as we push y farther and farther
+
+88
+00:05:59,790 --> 00:06:00,570
+back--
+
+89
+00:06:00,570 --> 00:06:03,390
+because t minus 3, t minus 4, t minus 5--
+
+90
+00:06:03,390 --> 00:06:05,700
+each time it's being made smaller and smaller,
+
+91
+00:06:05,700 --> 00:06:08,610
+not only can we run this recursion infinitely,
+
+92
+00:06:08,610 --> 00:06:11,340
+assuming we could go infinitely far back,
+
+93
+00:06:11,340 --> 00:06:14,400
+but any residual term that's left over
+
+94
+00:06:14,400 --> 00:06:16,810
+is getting smaller, and smaller, and smaller.
+
+95
+00:06:16,810 --> 00:06:19,980
+So finally, we can write this as an MA series,
+
+96
+00:06:19,980 --> 00:06:23,140
+but the trick is it's of infinite order.
+
+97
+00:06:23,140 --> 00:06:24,790
+So what do we get?
+
+98
+00:06:24,790 --> 00:06:30,160
+We write this out and we can summarize our result.
+
+99
+00:06:30,160 --> 00:06:33,120
+So we continue going down, and finally what we're left with
+
+100
+00:06:33,120 --> 00:06:36,510
+is an expression that y sub t can
+
+101
+00:06:36,510 --> 00:06:42,210
+be written as the sum from k equals 0
+
+102
+00:06:42,210 --> 00:06:51,040
+to infinity of minus lambda to the kz sub t minus k.
+
+103
+00:06:51,040 --> 00:06:56,300
+
+
+104
+00:06:56,300 --> 00:07:00,810
+So this is our formal result for this expression.
+
+105
+00:07:00,810 --> 00:07:02,930
+We know that in practice we're not really
+
+106
+00:07:02,930 --> 00:07:04,910
+going to be able to do infinite sums,
+
+107
+00:07:04,910 --> 00:07:07,730
+but we expect that it's going to be a good approximation if we
+
+108
+00:07:07,730 --> 00:07:10,310
+truncate after a reasonable number of terms
+
+109
+00:07:10,310 --> 00:07:14,030
+because they're all being suppressed by powers of lambda.
+
+110
+00:07:14,030 --> 00:07:19,220
+So even if this is a formal expression,
+
+111
+00:07:19,220 --> 00:07:22,320
+it encodes one thing that's actually quite important,
+
+112
+00:07:22,320 --> 00:07:25,310
+which is that this is not just an infinite sum
+
+113
+00:07:25,310 --> 00:07:26,210
+in both directions.
+
+114
+00:07:26,210 --> 00:07:29,390
+It's a semi-infinite sum into the past.
+
+115
+00:07:29,390 --> 00:07:33,470
+What that means is that this shows that yt,
+
+116
+00:07:33,470 --> 00:07:37,460
+because it can be expressed as a sum of all of the previous
+
+117
+00:07:37,460 --> 00:07:38,930
+z's--
+
+118
+00:07:38,930 --> 00:07:40,570
+and I've eliminated the previous y's,
+
+119
+00:07:40,570 --> 00:07:42,500
+so we're back to our original variables,
+
+120
+00:07:42,500 --> 00:07:46,640
+remember that this is in fact the same thing
+
+121
+00:07:46,640 --> 00:07:52,410
+as Rt minus mu over sigma.
+
+122
+00:07:52,410 --> 00:07:59,630
+So we can write this for R sub t as just sigma times yt plus mu.
+
+123
+00:07:59,630 --> 00:08:03,440
+What this shows is that it depends only
+
+124
+00:08:03,440 --> 00:08:06,840
+on z's of the same time or earlier.
+
+125
+00:08:06,840 --> 00:08:09,320
+So in particular, it means that if we
+
+126
+00:08:09,320 --> 00:08:11,810
+take two different times--
+
+127
+00:08:11,810 --> 00:08:14,220
+if I were to compute, for example,
+
+128
+00:08:14,220 --> 00:08:25,120
+the expectation of z sub s with y sub t,
+
+129
+00:08:25,120 --> 00:08:33,500
+this is going to be 0 whenever t is earlier than s.
+
+130
+00:08:33,500 --> 00:08:38,230
+So if we pick a point subsequently,
+
+131
+00:08:38,230 --> 00:08:41,470
+this term here, this sum includes
+
+132
+00:08:41,470 --> 00:08:47,170
+from our starting point, from lag 0
+
+133
+00:08:47,170 --> 00:08:50,170
+from t, all the way to the past-- t minus 1, t minus 2,
+
+134
+00:08:50,170 --> 00:08:53,560
+t minus 3, if we pick something that happens after that it
+
+135
+00:08:53,560 --> 00:08:56,800
+is necessarily uncorrelated.
+
+136
+00:08:56,800 --> 00:09:00,310
+And that means-- in coming back to our AR1 model--
+
+137
+00:09:00,310 --> 00:09:04,330
+that we have an interesting result that's
+
+138
+00:09:04,330 --> 00:09:06,585
+actually important in doing other derivations.
+
+139
+00:09:06,585 --> 00:09:08,860
+And now that we've shown it, it should
+
+140
+00:09:08,860 --> 00:09:17,840
+be intuitively reasonable that whenever
+
+141
+00:09:17,840 --> 00:09:21,800
+we have crossed terms of this form--
+
+142
+00:09:21,800 --> 00:09:25,670
+whenever we look at the expectation or the covariance
+
+143
+00:09:25,670 --> 00:09:26,960
+of one of the z's--
+
+144
+00:09:26,960 --> 00:09:32,330
+one of the noise terms with one of the excess return pieces,
+
+145
+00:09:32,330 --> 00:09:36,110
+the Rt minus mu, at a different point in time
+
+146
+00:09:36,110 --> 00:09:38,180
+this expectation is going to vanish.
+
+147
+00:09:38,180 --> 00:09:39,740
+These have no covariance.
+
+148
+00:09:39,740 --> 00:09:42,350
+So intuitively, it makes sense that the noise
+
+149
+00:09:42,350 --> 00:09:46,740
+is independent of the general variable,
+
+150
+00:09:46,740 --> 00:09:49,400
+but now here, we can see that as a consequence
+
+151
+00:09:49,400 --> 00:09:53,810
+of the temporal structure, that we can write the AR1 process
+
+152
+00:09:53,810 --> 00:09:58,160
+in terms of an MA1 process in the semi-infinite past
+
+153
+00:09:58,160 --> 00:10:00,940
+or in the infinite past.
+
+154
+00:10:00,940 --> 00:10:02,467
+
+

@@ -1,0 +1,536 @@
+0
+00:00:00,000 --> 00:00:01,140
+
+
+1
+00:00:01,140 --> 00:00:05,030
+PROFESSOR: Now, we can also extend our process
+
+2
+00:00:05,030 --> 00:00:08,268
+to things that are our approach, to things
+
+3
+00:00:08,268 --> 00:00:09,560
+that are not just random walks.
+
+4
+00:00:09,560 --> 00:00:11,690
+In fact, the random walk is a bit
+
+5
+00:00:11,690 --> 00:00:14,820
+of the special case for a bunch of reasons.
+
+6
+00:00:14,820 --> 00:00:19,340
+One of them is that, because the returns are all independent,
+
+7
+00:00:19,340 --> 00:00:21,088
+I didn't need to do the for loop.
+
+8
+00:00:21,088 --> 00:00:23,630
+I could have used some matrix algebra to do everything in one
+
+9
+00:00:23,630 --> 00:00:24,680
+fell swoop.
+
+10
+00:00:24,680 --> 00:00:28,850
+And you might have noticed, that because I'm adding together,
+
+11
+00:00:28,850 --> 00:00:32,090
+in my last case, a sum of random variables,
+
+12
+00:00:32,090 --> 00:00:35,090
+the sum of random variables of normal random variables
+
+13
+00:00:35,090 --> 00:00:36,830
+is a normal random variable.
+
+14
+00:00:36,830 --> 00:00:39,100
+That's very special for Gaussian distributions,
+
+15
+00:00:39,100 --> 00:00:41,130
+and I didn't need to iterate things at all.
+
+16
+00:00:41,130 --> 00:00:43,820
+So, just to show you why the method matters more
+
+17
+00:00:43,820 --> 00:00:45,620
+than the particular example, let's
+
+18
+00:00:45,620 --> 00:00:50,120
+take a look at an AR(1) process which is defined recursively,
+
+19
+00:00:50,120 --> 00:00:52,610
+but where the value in each step now does
+
+20
+00:00:52,610 --> 00:00:54,540
+depend on the prior history.
+
+21
+00:00:54,540 --> 00:00:58,910
+So it's essential that we construct the simulation
+
+22
+00:00:58,910 --> 00:01:01,950
+by running forward in time.
+
+23
+00:01:01,950 --> 00:01:04,332
+So, here are some parameters that we can have.
+
+24
+00:01:04,332 --> 00:01:08,360
+We can keep our Mu value, again, annualized at 10%.
+
+25
+00:01:08,360 --> 00:01:10,970
+We'll let the lambda value, which is a pure number,
+
+26
+00:01:10,970 --> 00:01:13,010
+be the strength of the mean reversion
+
+27
+00:01:13,010 --> 00:01:17,188
+and I'll set that initially at 40%, to of 0.4.
+
+28
+00:01:17,188 --> 00:01:18,980
+And this, again, is something I'd encourage
+
+29
+00:01:18,980 --> 00:01:20,820
+you to try out in the data.
+
+30
+00:01:20,820 --> 00:01:25,790
+So now, when I run things, I replace my generating function
+
+31
+00:01:25,790 --> 00:01:32,370
+by the iteration for the AR(1) process.
+
+32
+00:01:32,370 --> 00:01:33,838
+So here's my lambda and, again, you
+
+33
+00:01:33,838 --> 00:01:36,005
+can check the special case where lambda equals zero,
+
+34
+00:01:36,005 --> 00:01:40,770
+it should recover a random walk, and I can generate--
+
+35
+00:01:40,770 --> 00:01:44,227
+So if I think of these, this is convention, it's Monte Carlo.
+
+36
+00:01:44,227 --> 00:01:46,060
+We could do it we want, but if I think these
+
+37
+00:01:46,060 --> 00:01:48,920
+as being simple returns, just how this model is often
+
+38
+00:01:48,920 --> 00:01:51,500
+applied, I can turn them into logarithmic returns
+
+39
+00:01:51,500 --> 00:01:54,360
+and then look at some sample paths in their distribution.
+
+40
+00:01:54,360 --> 00:01:57,500
+So the first thing you'll see on the left and on the right.
+
+41
+00:01:57,500 --> 00:01:59,450
+On the left, we'll see a bunch of sample paths
+
+42
+00:01:59,450 --> 00:02:01,408
+that don't necessarily look different from what
+
+43
+00:02:01,408 --> 00:02:02,210
+we saw before.
+
+44
+00:02:02,210 --> 00:02:04,340
+It's kind of hard to tell by eye whether we're
+
+45
+00:02:04,340 --> 00:02:07,520
+looking at something that has mean reversion in the presence
+
+46
+00:02:07,520 --> 00:02:09,560
+of the significant amount of randomness.
+
+47
+00:02:09,560 --> 00:02:12,530
+So, looking at it by eye isn't really going to help us.
+
+48
+00:02:12,530 --> 00:02:16,100
+When we look at the histogram of the data,
+
+49
+00:02:16,100 --> 00:02:21,270
+we see again a little bit of a departure from normality.
+
+50
+00:02:21,270 --> 00:02:23,390
+But where things really get revealed
+
+51
+00:02:23,390 --> 00:02:28,080
+is by looking at serial correlation and coefficient.
+
+52
+00:02:28,080 --> 00:02:32,120
+So we ask about the correlation between the returns in one
+
+53
+00:02:32,120 --> 00:02:34,530
+period and the returns in the next period.
+
+54
+00:02:34,530 --> 00:02:36,140
+And here are two different examples
+
+55
+00:02:36,140 --> 00:02:38,120
+where, in the case of a random walk,
+
+56
+00:02:38,120 --> 00:02:41,180
+this left hand graph, we have the, first,
+
+57
+00:02:41,180 --> 00:02:43,910
+is the correlation of the series with itself, which
+
+58
+00:02:43,910 --> 00:02:45,980
+by definition is equal to one.
+
+59
+00:02:45,980 --> 00:02:49,580
+Each of these other terms, which is labeled by a lag variable,
+
+60
+00:02:49,580 --> 00:02:52,370
+is the correlation of our simulated results
+
+61
+00:02:52,370 --> 00:02:57,680
+with the same series offset by one-time step 2, 3, 4, or 5.
+
+62
+00:02:57,680 --> 00:02:59,360
+And one of the interesting things
+
+63
+00:02:59,360 --> 00:03:02,630
+that we see here is the time one lag
+
+64
+00:03:02,630 --> 00:03:05,120
+for our auto-regressive process, and that's
+
+65
+00:03:05,120 --> 00:03:08,060
+exactly what we built in, was the return on one day.
+
+66
+00:03:08,060 --> 00:03:11,840
+It starts with minus 40% of the previous day's
+
+67
+00:03:11,840 --> 00:03:15,980
+return plus some randomness, and that's what we see here.
+
+68
+00:03:15,980 --> 00:03:18,500
+On the right, I've fiddled with the parameters
+
+69
+00:03:18,500 --> 00:03:19,760
+and you can try this too.
+
+70
+00:03:19,760 --> 00:03:24,905
+And we can crank up the lambda and we can crank down the sigma
+
+71
+00:03:24,905 --> 00:03:28,040
+to turn off the randomness and see what the interplay is
+
+72
+00:03:28,040 --> 00:03:28,730
+between the two.
+
+73
+00:03:28,730 --> 00:03:30,397
+The Mu is actually not that interesting.
+
+74
+00:03:30,397 --> 00:03:32,180
+It drops out of all the correlations.
+
+75
+00:03:32,180 --> 00:03:34,850
+But what we're often facing is, how big
+
+76
+00:03:34,850 --> 00:03:38,810
+is the randomness in a financial price process compared
+
+77
+00:03:38,810 --> 00:03:41,600
+to other drivers in the marketplace, other factors,
+
+78
+00:03:41,600 --> 00:03:45,590
+other correlations, or something like a restoring force
+
+79
+00:03:45,590 --> 00:03:49,040
+like mean reversion.
+
+80
+00:03:49,040 --> 00:03:50,950
+So let's summarize what we've talked about
+
+81
+00:03:50,950 --> 00:03:53,530
+in looking at Monte Carlo methods.
+
+82
+00:03:53,530 --> 00:03:57,310
+Monte Carlo uses computer random number generators
+
+83
+00:03:57,310 --> 00:04:00,340
+to simulate data for a given model,
+
+84
+00:04:00,340 --> 00:04:03,430
+and we can apply this to a wide variety of models
+
+85
+00:04:03,430 --> 00:04:05,140
+and compare across models.
+
+86
+00:04:05,140 --> 00:04:08,020
+The simulations give us an idealized testing environment
+
+87
+00:04:08,020 --> 00:04:10,790
+because we know what the data generating process is
+
+88
+00:04:10,790 --> 00:04:12,400
+and this is our best case.
+
+89
+00:04:12,400 --> 00:04:14,360
+Usually, we don't know what it is.
+
+90
+00:04:14,360 --> 00:04:16,930
+So, this way, we can at least look at the best case
+
+91
+00:04:16,930 --> 00:04:19,970
+and make sure that we could correctly identify our data.
+
+92
+00:04:19,970 --> 00:04:22,270
+For example, you could imagine starting.
+
+93
+00:04:22,270 --> 00:04:24,460
+If we wanted to do model identification,
+
+94
+00:04:24,460 --> 00:04:26,327
+we could generate some data and then pretend
+
+95
+00:04:26,327 --> 00:04:28,660
+that someone had just handed us the data without knowing
+
+96
+00:04:28,660 --> 00:04:30,010
+what model it came from.
+
+97
+00:04:30,010 --> 00:04:33,270
+Could we correctly identify what the model is?
+
+98
+00:04:33,270 --> 00:04:35,280
+We also have the advantage that we
+
+99
+00:04:35,280 --> 00:04:37,500
+can run lots of different simulations,
+
+100
+00:04:37,500 --> 00:04:40,590
+and real financial market data doesn't allow that.
+
+101
+00:04:40,590 --> 00:04:42,210
+We don't get to rerun the experiment.
+
+102
+00:04:42,210 --> 00:04:43,860
+Even if we figure out what happened
+
+103
+00:04:43,860 --> 00:04:46,530
+and why in the past, that's not-- there's no guarantee
+
+104
+00:04:46,530 --> 00:04:48,490
+it's going to repeat again in the future.
+
+105
+00:04:48,490 --> 00:04:50,070
+At least, in the lab, we can do that
+
+106
+00:04:50,070 --> 00:04:53,490
+and try it and check that our ideas are working
+
+107
+00:04:53,490 --> 00:04:55,110
+the way that we would expect.
+
+108
+00:04:55,110 --> 00:04:57,570
+When we apply this to asset price dynamics,
+
+109
+00:04:57,570 --> 00:05:00,210
+we do it by drawing successive period returns
+
+110
+00:05:00,210 --> 00:05:02,280
+and then constructing the price process
+
+111
+00:05:02,280 --> 00:05:03,780
+as it goes forward in time.
+
+112
+00:05:03,780 --> 00:05:05,460
+And those could be independent or they
+
+113
+00:05:05,460 --> 00:05:07,260
+could be correlated returns.
+
+114
+00:05:07,260 --> 00:05:10,740
+When we go to compute analytics like means
+
+115
+00:05:10,740 --> 00:05:13,740
+and standard deviations and variances and Sharpe ratios
+
+116
+00:05:13,740 --> 00:05:16,050
+and kurtosis, and so on, we do that
+
+117
+00:05:16,050 --> 00:05:18,840
+not by doing Gaussian or other integrals in closed form.
+
+118
+00:05:18,840 --> 00:05:23,100
+We do it by computing statistics on the realized data.
+
+119
+00:05:23,100 --> 00:05:26,645
+The results are subject to sampling error, of course.
+
+120
+00:05:26,645 --> 00:05:28,020
+Because they're statistical, they
+
+121
+00:05:28,020 --> 00:05:30,330
+can be improved by doing more simulations.
+
+122
+00:05:30,330 --> 00:05:33,030
+But there are also important machine limitations,
+
+123
+00:05:33,030 --> 00:05:35,370
+some things we can't ever solve like the fact
+
+124
+00:05:35,370 --> 00:05:37,530
+that we can't exactly represent real numbers
+
+125
+00:05:37,530 --> 00:05:39,600
+or unbounded numbers on the computer.
+
+126
+00:05:39,600 --> 00:05:43,470
+And, we also might find that some of these things
+
+127
+00:05:43,470 --> 00:05:47,040
+are not necessarily efficient if we do them in a naive way.
+
+128
+00:05:47,040 --> 00:05:51,240
+And there's a very large literature
+
+129
+00:05:51,240 --> 00:05:54,210
+and a lot of techniques have been developed
+
+130
+00:05:54,210 --> 00:05:56,490
+for doing Monte Carlos in more efficient ways
+
+131
+00:05:56,490 --> 00:05:59,520
+and to get better accuracy for the same amount
+
+132
+00:05:59,520 --> 00:06:02,500
+of computational effort.
+
+133
+00:06:02,500 --> 00:06:03,000
+
+

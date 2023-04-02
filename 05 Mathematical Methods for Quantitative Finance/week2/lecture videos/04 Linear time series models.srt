@@ -1,0 +1,736 @@
+0
+00:00:00,000 --> 00:00:02,640
+PROFESSOR: Let's generalize further by looking
+
+1
+00:00:02,640 --> 00:00:06,930
+at linear time series models that go beyond the random walk.
+
+2
+00:00:06,930 --> 00:00:09,640
+We want to capture correlation across time.
+
+3
+00:00:09,640 --> 00:00:11,460
+And we saw that one of the things that
+
+4
+00:00:11,460 --> 00:00:13,220
+was a property the random walk model,
+
+5
+00:00:13,220 --> 00:00:15,330
+the generalized random walk model,
+
+6
+00:00:15,330 --> 00:00:19,200
+was that the increments were independent, they were IID.
+
+7
+00:00:19,200 --> 00:00:21,900
+And simply, multiplying by constant
+
+8
+00:00:21,900 --> 00:00:26,040
+and adding a constant to our zs didn't change that.
+
+9
+00:00:26,040 --> 00:00:28,650
+So in the generalized random walk model,
+
+10
+00:00:28,650 --> 00:00:33,180
+we can have a non-zero mean, we can have a non-zero volatility
+
+11
+00:00:33,180 --> 00:00:34,350
+or randomness.
+
+12
+00:00:34,350 --> 00:00:37,170
+But the increments are still independent of each other
+
+13
+00:00:37,170 --> 00:00:38,220
+over time.
+
+14
+00:00:38,220 --> 00:00:41,490
+For many things, so we do want to have dependence over time.
+
+15
+00:00:41,490 --> 00:00:43,530
+We'd like to have causal influences,
+
+16
+00:00:43,530 --> 00:00:46,870
+we want to be able to propagate information across time.
+
+17
+00:00:46,870 --> 00:00:48,870
+So we need more complex models.
+
+18
+00:00:48,870 --> 00:00:52,590
+The great thing is, that we can build them out of the pieces
+
+19
+00:00:52,590 --> 00:00:54,120
+we've already seen.
+
+20
+00:00:54,120 --> 00:00:57,150
+Our main friend here is going to be linearity.
+
+21
+00:00:57,150 --> 00:00:59,680
+And let me just give you a couple of examples.
+
+22
+00:00:59,680 --> 00:01:02,670
+One of them is the so-called MA 1 model, where
+
+23
+00:01:02,670 --> 00:01:05,099
+MA stands for moving average.
+
+24
+00:01:05,099 --> 00:01:10,290
+And the idea here is that the return in a given period
+
+25
+00:01:10,290 --> 00:01:12,762
+or a realization of a variable--
+
+26
+00:01:12,762 --> 00:01:13,470
+let's be general.
+
+27
+00:01:13,470 --> 00:01:17,370
+Let's say that r is something that looks like the random walk
+
+28
+00:01:17,370 --> 00:01:19,950
+model, mu plus sigma z t, plus I'm
+
+29
+00:01:19,950 --> 00:01:22,255
+going to add a new term on the right hand side.
+
+30
+00:01:22,255 --> 00:01:23,880
+And the new term on the right hand side
+
+31
+00:01:23,880 --> 00:01:25,890
+is going to be a constant phi, just
+
+32
+00:01:25,890 --> 00:01:28,980
+some other constant parameter, some scalar
+
+33
+00:01:28,980 --> 00:01:33,870
+times a previous value of z sub t minus 1.
+
+34
+00:01:33,870 --> 00:01:38,430
+So notice that by the time we get to time t
+
+35
+00:01:38,430 --> 00:01:41,370
+and we're waiting to see what new realization,
+
+36
+00:01:41,370 --> 00:01:44,400
+we're going to have this random variable z sub t.
+
+37
+00:01:44,400 --> 00:01:47,340
+This variable will have already been observed,
+
+38
+00:01:47,340 --> 00:01:49,360
+it will be in and constant.
+
+39
+00:01:49,360 --> 00:01:52,560
+And that means that over different periods of time,
+
+40
+00:01:52,560 --> 00:01:55,970
+the rs are not being drawn from the same distribution.
+
+41
+00:01:55,970 --> 00:01:58,800
+So the model is not IID.
+
+42
+00:01:58,800 --> 00:02:01,140
+We can get into more complex examples
+
+43
+00:02:01,140 --> 00:02:04,080
+as well by letting other features vary with time, not
+
+44
+00:02:04,080 --> 00:02:08,070
+just the constant offset to a random variable,
+
+45
+00:02:08,070 --> 00:02:10,120
+but the size of the randomness itself.
+
+46
+00:02:10,120 --> 00:02:13,410
+And this is an attribute of the so-called GARCH models.
+
+47
+00:02:13,410 --> 00:02:17,730
+And in a GARCH model, it's really a two component model
+
+48
+00:02:17,730 --> 00:02:19,320
+with two random variables.
+
+49
+00:02:19,320 --> 00:02:21,210
+It looks deceptively simple, so let
+
+50
+00:02:21,210 --> 00:02:23,850
+me show you because you'll get the intuition right away.
+
+51
+00:02:23,850 --> 00:02:27,270
+The idea is that in the model, that the return is
+
+52
+00:02:27,270 --> 00:02:31,920
+a random walk form mu plus sigma times z sub t.
+
+53
+00:02:31,920 --> 00:02:36,270
+The difference is, that the coefficient sigma now itself
+
+54
+00:02:36,270 --> 00:02:38,580
+has the time dependence.
+
+55
+00:02:38,580 --> 00:02:40,650
+We then need an equation to specify
+
+56
+00:02:40,650 --> 00:02:42,600
+how sigma evolves with t and that's
+
+57
+00:02:42,600 --> 00:02:45,750
+what defines the GARCH model, and there
+
+58
+00:02:45,750 --> 00:02:47,550
+are different possible dynamical models.
+
+59
+00:02:47,550 --> 00:02:49,470
+But you could think of this as saying,
+
+60
+00:02:49,470 --> 00:02:52,590
+that within each period say each day or each month,
+
+61
+00:02:52,590 --> 00:02:56,100
+there's a generalized random walk process.
+
+62
+00:02:56,100 --> 00:03:00,300
+But the parameters of that random walk change from one day
+
+63
+00:03:00,300 --> 00:03:01,000
+to the next.
+
+64
+00:03:01,000 --> 00:03:01,905
+The sigma's change.
+
+65
+00:03:01,905 --> 00:03:05,060
+
+
+66
+00:03:05,060 --> 00:03:08,150
+Another way to model causal influences,
+
+67
+00:03:08,150 --> 00:03:11,150
+is to have other terms on the right hand side
+
+68
+00:03:11,150 --> 00:03:13,580
+not just previous values of z, but we
+
+69
+00:03:13,580 --> 00:03:16,880
+could have previous values of the variable of interest
+
+70
+00:03:16,880 --> 00:03:18,090
+itself.
+
+71
+00:03:18,090 --> 00:03:23,270
+So we could generalize, and have this model of this form.
+
+72
+00:03:23,270 --> 00:03:25,470
+This is called an autoregressive model,
+
+73
+00:03:25,470 --> 00:03:27,260
+and it's of order P, which simply
+
+74
+00:03:27,260 --> 00:03:31,430
+means that the coefficients c 0, c 1,
+
+75
+00:03:31,430 --> 00:03:34,400
+c 2 up through c P that at least c P
+
+76
+00:03:34,400 --> 00:03:39,770
+is non-zero, that these has this non-trivial structure.
+
+77
+00:03:39,770 --> 00:03:42,350
+But the idea is terms on the right hand
+
+78
+00:03:42,350 --> 00:03:45,170
+side are now lagged versions, they're
+
+79
+00:03:45,170 --> 00:03:48,080
+referring to previous values not of the zs,
+
+80
+00:03:48,080 --> 00:03:49,940
+but of the variable in question.
+
+81
+00:03:49,940 --> 00:03:51,920
+In this case, R sub t.
+
+82
+00:03:51,920 --> 00:03:55,760
+And the right hand side I have, 1 period before all the way
+
+83
+00:03:55,760 --> 00:03:58,260
+through t periods before.
+
+84
+00:03:58,260 --> 00:04:03,230
+Again, those are telling us that the present value
+
+85
+00:04:03,230 --> 00:04:05,880
+is going to depend on what happened in the past.
+
+86
+00:04:05,880 --> 00:04:08,000
+So there will be a causal relationship.
+
+87
+00:04:08,000 --> 00:04:10,820
+Plus it's not deterministic, it is random.
+
+88
+00:04:10,820 --> 00:04:14,270
+Plus in each time period, we're getting a new kick--
+
+89
+00:04:14,270 --> 00:04:17,220
+a new kick from z, which is going
+
+90
+00:04:17,220 --> 00:04:19,730
+to z is going to be a standardized random variable,
+
+91
+00:04:19,730 --> 00:04:23,060
+identical and independently distributed with mean 0,
+
+92
+00:04:23,060 --> 00:04:24,290
+variance 1.
+
+93
+00:04:24,290 --> 00:04:26,420
+But we have a scale factor sigma,
+
+94
+00:04:26,420 --> 00:04:28,670
+that lets us generate the size of the kick.
+
+95
+00:04:28,670 --> 00:04:33,620
+And although z has no mean, the c 0 and potentially other
+
+96
+00:04:33,620 --> 00:04:34,700
+terms do.
+
+97
+00:04:34,700 --> 00:04:36,530
+So this is a generalization and it
+
+98
+00:04:36,530 --> 00:04:39,390
+will have some causal structure, and we'll take a look at this.
+
+99
+00:04:39,390 --> 00:04:42,140
+We can go further and combine both of the two
+
+100
+00:04:42,140 --> 00:04:43,560
+that we had before.
+
+101
+00:04:43,560 --> 00:04:45,290
+And this is known as an ARMA model
+
+102
+00:04:45,290 --> 00:04:50,540
+for AR autoregressive moving average of order P, Q, where
+
+103
+00:04:50,540 --> 00:04:52,100
+we've got a bunch of terms.
+
+104
+00:04:52,100 --> 00:04:53,930
+All I've done is I've combined these two
+
+105
+00:04:53,930 --> 00:04:59,150
+forms, on the top line I've got c 0 through c P,
+
+106
+00:04:59,150 --> 00:05:02,510
+adding lagged values of the past variable R,
+
+107
+00:05:02,510 --> 00:05:09,485
+plus I've got Q terms with past values of the variable z.
+
+108
+00:05:09,485 --> 00:05:15,220
+
+
+109
+00:05:15,220 --> 00:05:18,155
+These models have in common that they have a linear structure.
+
+110
+00:05:18,155 --> 00:05:20,530
+So what we're doing is we're just adding a bunch of stuff
+
+111
+00:05:20,530 --> 00:05:21,560
+to the right hand side.
+
+112
+00:05:21,560 --> 00:05:23,290
+That means we can apply linearity.
+
+113
+00:05:23,290 --> 00:05:25,390
+The terms have are all of the form
+
+114
+00:05:25,390 --> 00:05:28,450
+a constant, times a random variable.
+
+115
+00:05:28,450 --> 00:05:30,190
+And whether that variable depending
+
+116
+00:05:30,190 --> 00:05:33,160
+on when we take the expectation, whether it's
+
+117
+00:05:33,160 --> 00:05:36,220
+conditional or unconditional expectation,
+
+118
+00:05:36,220 --> 00:05:40,480
+we'll either treat those as being unknown or being known.
+
+119
+00:05:40,480 --> 00:05:43,540
+But the causal, the time ordering structure
+
+120
+00:05:43,540 --> 00:05:45,430
+is clear, the things on the right hand
+
+121
+00:05:45,430 --> 00:05:51,250
+side all refer to times before time t that's on the left hand
+
+122
+00:05:51,250 --> 00:05:52,840
+side with one exception.
+
+123
+00:05:52,840 --> 00:05:57,760
+There's one term the sigma z t term it's new,
+
+124
+00:05:57,760 --> 00:06:00,640
+it's sometimes known as a shock or an innovation that
+
+125
+00:06:00,640 --> 00:06:02,240
+occurs in each period.
+
+126
+00:06:02,240 --> 00:06:04,630
+So we have that basic linear structure,
+
+127
+00:06:04,630 --> 00:06:07,210
+we have the past values on the right hand
+
+128
+00:06:07,210 --> 00:06:10,360
+side that are going to determine subsequent outcomes.
+
+129
+00:06:10,360 --> 00:06:12,100
+They're going to be part of the evolution
+
+130
+00:06:12,100 --> 00:06:14,680
+of future random variables.
+
+131
+00:06:14,680 --> 00:06:18,160
+And the coefficients need to be specified or determined,
+
+132
+00:06:18,160 --> 00:06:21,130
+and we'll see that they often have natural interpretations.
+
+133
+00:06:21,130 --> 00:06:24,340
+
+
+134
+00:06:24,340 --> 00:06:25,850
+How do we solve such a model?
+
+135
+00:06:25,850 --> 00:06:29,830
+Well, we take a look using our old friend linearity.
+
+136
+00:06:29,830 --> 00:06:34,000
+We use the recursive structure of the definitions, that
+
+137
+00:06:34,000 --> 00:06:38,050
+is that each period in time t refers to previous periods
+
+138
+00:06:38,050 --> 00:06:38,980
+from the past.
+
+139
+00:06:38,980 --> 00:06:42,430
+And we use one new property that's called stationarity.
+
+140
+00:06:42,430 --> 00:06:44,600
+Stationary means time and variance.
+
+141
+00:06:44,600 --> 00:06:47,830
+It doesn't mean that the process is static.
+
+142
+00:06:47,830 --> 00:06:50,410
+What it means is, that the probability distributions
+
+143
+00:06:50,410 --> 00:06:51,800
+don't change over time.
+
+144
+00:06:51,800 --> 00:06:53,680
+So think of going into a Casino, you
+
+145
+00:06:53,680 --> 00:06:55,480
+would like the games to be stationary,
+
+146
+00:06:55,480 --> 00:06:57,400
+the probability on the dice, it should
+
+147
+00:06:57,400 --> 00:07:00,407
+be the same every day on every roll that it was before.
+
+148
+00:07:00,407 --> 00:07:01,990
+The probability on the roulette wheel,
+
+149
+00:07:01,990 --> 00:07:04,270
+should be the same on every turn that it was before.
+
+150
+00:07:04,270 --> 00:07:07,060
+The probability on the decks of cards
+
+151
+00:07:07,060 --> 00:07:08,860
+in a poker game or a blackjack game,
+
+152
+00:07:08,860 --> 00:07:10,960
+should be the same as they were before.
+
+153
+00:07:10,960 --> 00:07:11,590
+All right.
+
+154
+00:07:11,590 --> 00:07:13,960
+Blackjack, we would have to assume
+
+155
+00:07:13,960 --> 00:07:17,170
+that we're reshuffling after each turn for that to be true,
+
+156
+00:07:17,170 --> 00:07:18,610
+for that to be stationary.
+
+157
+00:07:18,610 --> 00:07:21,160
+Otherwise it would be a non stationary process.
+
+158
+00:07:21,160 --> 00:07:24,370
+So stationarity means, that the probability distribution
+
+159
+00:07:24,370 --> 00:07:25,040
+is the same.
+
+160
+00:07:25,040 --> 00:07:27,830
+It does not mean that the outcomes are the same.
+
+161
+00:07:27,830 --> 00:07:30,820
+Now where stationarity is a strong condition,
+
+162
+00:07:30,820 --> 00:07:33,820
+and we don't need anything that strong necessarily.
+
+163
+00:07:33,820 --> 00:07:36,490
+We're going to use a weaker condition that is appropriately
+
+164
+00:07:36,490 --> 00:07:39,550
+named weak stationarity, and we're
+
+165
+00:07:39,550 --> 00:07:42,970
+going to say that a process is weakly stationary, if just
+
+166
+00:07:42,970 --> 00:07:46,870
+the first and second moments are stationary, that is there
+
+167
+00:07:46,870 --> 00:07:48,222
+time translation invariant.
+
+168
+00:07:48,222 --> 00:07:50,680
+And that's good because we're going to play our usual game,
+
+169
+00:07:50,680 --> 00:07:53,620
+instead of finding out the entire distribution
+
+170
+00:07:53,620 --> 00:07:55,100
+of our process.
+
+171
+00:07:55,100 --> 00:07:56,770
+The whole probability distribution,
+
+172
+00:07:56,770 --> 00:07:58,900
+we're going to ask about its mean and its variance,
+
+173
+00:07:58,900 --> 00:08:01,420
+we're not going to know what the fourth, eighth, tenth,
+
+174
+00:08:01,420 --> 00:08:04,640
+and in moments are to all orders.
+
+175
+00:08:04,640 --> 00:08:08,980
+So to see this, let's take one case and do it in detail.
+
+176
+00:08:08,980 --> 00:08:13,690
+And the case, we're going to do in detail, is the case of AR 1.
+
+177
+00:08:13,690 --> 00:08:16,880
+The AR 1 structure looks like this.
+
+178
+00:08:16,880 --> 00:08:20,470
+It's got one term has just two coefficients.
+
+179
+00:08:20,470 --> 00:08:24,880
+There's a constant, plus c 0 plus another proportionality
+
+180
+00:08:24,880 --> 00:08:30,370
+constant c 1, times the previous values observation, plus well
+
+181
+00:08:30,370 --> 00:08:31,400
+our old friend sigma.
+
+182
+00:08:31,400 --> 00:08:35,110
+So a third constant actually, times a random shock
+
+183
+00:08:35,110 --> 00:08:37,950
+that occurs in each period.
+

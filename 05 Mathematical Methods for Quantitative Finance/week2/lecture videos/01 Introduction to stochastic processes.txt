@@ -1,0 +1,142 @@
+PROFESSOR: Let's take a look at the random walk model, which
+is going to be our first and most basic example
+of a stochastic process, and it's
+building block for many more complex models
+and finance, as many applications in other fields
+as well.
+So the first notion that we want to examine
+is that of a stochastic process.
+So a stochastic process is a time dependent random variable.
+So we saw random variables x, y, z before,
+and they occurred individually, we could add them up.
+But now imagine, that we have one that's labeled by times.
+So for each time we get a different value.
+Now there are two important different cases.
+One of them is where time evolves continuously,
+and our variable S of t can be thought
+of as a function of a continuous real variable t.
+The other case, is where t evolves discretely.
+And we have a sequence of points S 1, S 2, S 3 and so on,
+that are separated in time.
+When these are taken at uniform intervals,
+we use these as the basis for a time series model.
+After all, when we talk about time series data,
+we think about a sequence of observations, usually labeled
+by an integer, and sequential in time.
+And typically, considered a uniform intervals, or at least
+we like to think of them as uniform intervals.
+So the continuous time is more complex
+and uses different mathematical tools.
+So we're going to deal with that later.
+Within the discrete case, what are some
+of the attributes and properties that we'd like to be aware of?
+Well, we're going to label these with integer indices,
+and there are cases where something might
+be a finite or infinite length.
+But we'll typically pick an origin, we'll call time 0,
+and then we'll go forward from there.
+We think about these being equally spaced,
+but all that's required is that, the applications
+view them as equally spaced.
+An example from finance, in the equity markets,
+is its conventional to look only at market day.
+So we exclude weekends and holidays, and number
+of the days sequentially.
+That doesn't apply, for example, for earning of interest
+that happens on a calendar day basis.
+But we might still label points 1, 2, 3, 4, 5, 6, 7, 8, 9,
+10 to cover a two week period, even though the period is
+14 days and the gap is longer over the weekends.
+The choice of origin is going to depend on our convention and/or
+applications.
+We'll see interestingly, you might
+want to keep an eye on this, usually it's not a big deal
+and it's usually obvious where to begin.
+But some of the mathematical properties strictly speaking,
+such as stationarity, require series to be infinitely long.
+And, of course, that's not true in financial applications.
+Markets haven't been around infinitely long,
+and we usually don't want to go back
+to the beginning of time in any event.
+Moreover, when we look at how to simulate
+some of these processes, put them on a computer,
+we're not going to be able to deal too easily
+with infinite processes either.
+So although the choice of an origin
+is different from whether the integers run
+from minus infinity to infinity or from 0 to infinity,
+there are distinctions in the mathematics,
+for a financial applications they shouldn't matter.
+But it's something that we ought to check, as we go.
+Now discrete time processes.
+So we're to be talking about our often constructed
+by taking an existing value and adding a new increment.
+And this gives us a recursive definition, a building block,
+a building method for a series.
+So we start with a particular value,
+we add a new increment x, that gives us our next value,
+we add 1 and so on.
+So we can also--
+we can either think of a recursive definition.
+Or we can just think of the value at a given point,
+as the sum of all the increments that have come to that point.
+Now of course, if we have the sequence S 1, S 2, S 3, S 4,
+we can recover the increments by differencing successive ones.
+And we'll see that that's very natural,
+when we look at asset prices.
+That the difference between price observations
+or their logarithms, will be related to the returns
+over a given period.
+
+Time series are used for modeling processes that evolve
+or that are observed discreetly in time.
+So what we care about is that there
+are discrete observations, discrete moments where
+we might observe, measure, or draw
+a value of a random variable.
+It could be, that there's something
+that's happening continuously, and we just
+observe it periodically.
+Or it could be a process that's genuinely discrete.
+Also the values themselves can be
+either continuous or discrete.
+But the characteristic of a time series,
+is that there are discrete values.
+Now because of that, we often do describe them
+in recursively, where we think about what the previous value
+is and there's some innovation.
+And this gives us--
+when we think about this constructively,
+notion about how things do evolve
+in time and about how information arrives.
+So we're always building on the past,
+we're never drawing information from the future.
+What does it mean to solve such a model?
+Well, what we'll see is that, will
+be interested in the entire sequence of random variables.
+and it's often more natural to think of the entire trajectory,
+the entire path.
+But at a minimum, what we want to ask
+are some description, some attributes,
+some properties of the distribution of not yet
+observed values, and possibly to construct
+probabilistic forecasts for what they might be.
+Some examples of things that could
+be modeled via time series that evolve in time that
+have this cumulative nature, we might
+be looking inside a corporation and its cumulative revenues,
+or its income or its profit.
+And we might take its values, such as I 1, plus I 2 plus I 3,
+say quater 1, quater 2, quater 3.
+And adding up to the cumulative revenue for a firm,
+we might be interested in the evolution of stock prices
+and more of a lot more to say about this later on.
+If we think of little r as representing
+the logarithmic return of a stock price,
+then we can see that actually, we
+could write the value of the stock
+price at time t as an initial value
+plus the cumulative effect of returns
+during period 1, period 2, period 3, period 4.
+We'll be coming back to this very quickly.
+And the simplest model of all, is the random walk model.

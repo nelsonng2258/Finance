@@ -1,0 +1,356 @@
+0
+00:00:00,000 --> 00:00:01,005
+
+
+1
+00:00:01,005 --> 00:00:02,380
+PROFESSOR: Monte Carlo simulation
+
+2
+00:00:02,380 --> 00:00:05,470
+means we use computers instead of our pen and paper,
+
+3
+00:00:05,470 --> 00:00:09,940
+to work out consequences of probability models
+
+4
+00:00:09,940 --> 00:00:12,790
+and stochastic processes.
+
+5
+00:00:12,790 --> 00:00:15,670
+What we do is, we simulate stochastic processes
+
+6
+00:00:15,670 --> 00:00:18,670
+by drawing random numbers using the random number
+
+7
+00:00:18,670 --> 00:00:20,200
+generator on a computer.
+
+8
+00:00:20,200 --> 00:00:22,870
+And this can be found in most programming languages.
+
+9
+00:00:22,870 --> 00:00:26,170
+This provides us with really an idealized test
+
+10
+00:00:26,170 --> 00:00:28,465
+lab for exploring some of the ideas
+
+11
+00:00:28,465 --> 00:00:30,340
+we've talked about and for much more advanced
+
+12
+00:00:30,340 --> 00:00:31,990
+financial applications.
+
+13
+00:00:31,990 --> 00:00:34,210
+The reason is, that because we're
+
+14
+00:00:34,210 --> 00:00:36,280
+doing the simulation ourselves, because we're
+
+15
+00:00:36,280 --> 00:00:38,530
+deploying the random number generator that we're
+
+16
+00:00:38,530 --> 00:00:40,420
+parameterized, that we're coding,
+
+17
+00:00:40,420 --> 00:00:42,100
+we know where the data comes from.
+
+18
+00:00:42,100 --> 00:00:45,040
+In the real world we don't know the true data generating
+
+19
+00:00:45,040 --> 00:00:49,690
+process, that's part of the subtlety and art in model
+
+20
+00:00:49,690 --> 00:00:52,450
+building as we try to infer that, that's
+
+21
+00:00:52,450 --> 00:00:53,980
+what we're trying to solve.
+
+22
+00:00:53,980 --> 00:00:56,652
+In the Monte Carlo lab, we assume that that's known,
+
+23
+00:00:56,652 --> 00:00:58,360
+and we'll see it still gives us our hands
+
+24
+00:00:58,360 --> 00:01:01,060
+full of a lot of things that we need to check out.
+
+25
+00:01:01,060 --> 00:01:05,943
+But if we can't understand and do the analysis with data
+
+26
+00:01:05,943 --> 00:01:07,360
+that we've generated ourselves, we
+
+27
+00:01:07,360 --> 00:01:09,920
+have no hope for doing it in the real world.
+
+28
+00:01:09,920 --> 00:01:14,140
+On the other hand, doing things thoroughly in a test lab,
+
+29
+00:01:14,140 --> 00:01:18,130
+gives us great idea about the abilities and limits of some
+
+30
+00:01:18,130 --> 00:01:19,640
+of our analytical tools.
+
+31
+00:01:19,640 --> 00:01:22,100
+So we'll find out how much accuracy and precision,
+
+32
+00:01:22,100 --> 00:01:25,400
+we can have in different kinds of simulation settings.
+
+33
+00:01:25,400 --> 00:01:29,330
+So the idea is, that we're going to assume a particular model,
+
+34
+00:01:29,330 --> 00:01:31,810
+we're going to assume that we know the way the world works,
+
+35
+00:01:31,810 --> 00:01:35,120
+and we're going to generate data that is consistent with that.
+
+36
+00:01:35,120 --> 00:01:37,750
+So those properties will all be true self-consistently
+
+37
+00:01:37,750 --> 00:01:39,760
+because we built the model that way.
+
+38
+00:01:39,760 --> 00:01:41,908
+We can then for some purposes, forget
+
+39
+00:01:41,908 --> 00:01:43,450
+that we knew where the data came from
+
+40
+00:01:43,450 --> 00:01:46,300
+and analyze it as if it were real world data.
+
+41
+00:01:46,300 --> 00:01:48,700
+But typically, one of the applications that we'll do,
+
+42
+00:01:48,700 --> 00:01:52,910
+is we'll generate a large number of possible outcomes.
+
+43
+00:01:52,910 --> 00:01:57,790
+So think of doing a simulation for the evolution of a stock
+
+44
+00:01:57,790 --> 00:02:01,120
+price, or an entire stock market, or some other asset
+
+45
+00:02:01,120 --> 00:02:01,930
+price.
+
+46
+00:02:01,930 --> 00:02:04,150
+In the real world we only get to see history once,
+
+47
+00:02:04,150 --> 00:02:07,300
+and when we look at actual historical data,
+
+48
+00:02:07,300 --> 00:02:09,460
+we only have one history.
+
+49
+00:02:09,460 --> 00:02:11,620
+We can't redo the experiment.
+
+50
+00:02:11,620 --> 00:02:13,120
+We might be able to get more data,
+
+51
+00:02:13,120 --> 00:02:14,620
+by looking at different time periods
+
+52
+00:02:14,620 --> 00:02:16,690
+or going further back in time.
+
+53
+00:02:16,690 --> 00:02:19,180
+But that's not the same thing, as repeating everything
+
+54
+00:02:19,180 --> 00:02:20,960
+under the same conditions.
+
+55
+00:02:20,960 --> 00:02:23,620
+So here will be limited only by our computers
+
+56
+00:02:23,620 --> 00:02:26,590
+abilities and the time we're willing to commit to it.
+
+57
+00:02:26,590 --> 00:02:30,100
+But the usual process, involves taking a large number
+
+58
+00:02:30,100 --> 00:02:33,190
+say, 10,000 or a million different simulations.
+
+59
+00:02:33,190 --> 00:02:36,370
+And constructing what we'll call an ensemble
+
+60
+00:02:36,370 --> 00:02:40,240
+a set of possible hypothetical paths that might have
+
+61
+00:02:40,240 --> 00:02:44,020
+happened, each of which typically being equally likely.
+
+62
+00:02:44,020 --> 00:02:47,650
+And then, instead of what we've done so far,
+
+63
+00:02:47,650 --> 00:02:50,590
+where we've computed properties of a distribution.
+
+64
+00:02:50,590 --> 00:02:53,980
+Like moments in the distribution, mean,
+
+65
+00:02:53,980 --> 00:02:58,270
+and variance by doing mathematical expectations
+
+66
+00:02:58,270 --> 00:03:00,490
+against a known probability density,
+
+67
+00:03:00,490 --> 00:03:03,910
+here we're going to do statistical calculations
+
+68
+00:03:03,910 --> 00:03:07,330
+against the empirical data set that's been generated
+
+69
+00:03:07,330 --> 00:03:09,100
+through our Monte Carlo data.
+
+70
+00:03:09,100 --> 00:03:11,830
+And what we'll see is, that the results typically
+
+71
+00:03:11,830 --> 00:03:15,490
+become more precise as we look at more and more data, which
+
+72
+00:03:15,490 --> 00:03:18,920
+is only limited again by our computational resources.
+
+73
+00:03:18,920 --> 00:03:22,690
+So I'll show you some examples, and I'll you
+
+74
+00:03:22,690 --> 00:03:23,815
+should run them yourselves.
+
+75
+00:03:23,815 --> 00:03:26,260
+So I'm providing some code here, and you
+
+76
+00:03:26,260 --> 00:03:28,850
+can take a look at in the R programming language.
+
+77
+00:03:28,850 --> 00:03:30,970
+And you can play around with all the parameters.
+
+78
+00:03:30,970 --> 00:03:32,595
+And you can take a look at what happens
+
+79
+00:03:32,595 --> 00:03:35,590
+as we increase the number of simulations,
+
+80
+00:03:35,590 --> 00:03:37,240
+or as we change some of the parameters.
+
+81
+00:03:37,240 --> 00:03:39,430
+So it's a great chance to try some things out
+
+82
+00:03:39,430 --> 00:03:41,680
+in a different setting apart from the pencil and paper
+
+83
+00:03:41,680 --> 00:03:43,870
+things that we've done before.
+
+84
+00:03:43,870 --> 00:03:45,520
+To build applications that we have
+
+85
+00:03:45,520 --> 00:03:47,500
+are going to include asset price dynamics
+
+86
+00:03:47,500 --> 00:03:49,000
+that we'll look at now.
+
+87
+00:03:49,000 --> 00:03:52,010
+Option pricing, which we'll look at a little bit later on.
+
+88
+00:03:52,010 --> 00:03:56,520
+And many applications in portfolio and risk management.
+

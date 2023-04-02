@@ -1,0 +1,275 @@
+
+PROFESSOR: Now, how do we apply this
+to real world modeling for asset price dynamics?
+So, a typical model and kind of the most common model
+in finance and in applications like option pricing,
+is to start with the idea that returns are lognormally
+distributed.
+That is the logarithmic returns are normally distributed.
+And of course, whether or not this is a good model,
+is an empirical question.
+We need to look at actual data.
+But let's start here for a simulation process,
+and see what some of the paths look like
+and see what some of the consequences are.
+So we draw our returns from a lognormal distribution.
+And of course, this is the same thing as our random walk model
+that we've seen before, except so I have returns drawn
+from a normal distribution with mean mu and variance
+sigma squared.
+And that's the same as writing rt equals mu plus sigma
+zt, where z is drawn from a standardized normal
+distribution.
+Now these are logarithmic returns.
+And the returns are defined in terms of the logarithm
+of the price ratio of a day.
+And this is approximately equal to the simple return
+for small values.
+And we can invert this.
+So if we look at the recursion, we
+see that the price today is yesterday's price
+times the next return.
+And if we keep iterating backward farther and farther
+in time, we get this result, which
+we'll use as the basis for our Monte Carlo,
+namely that the price at time t, is
+equal to an initial price, P0 times the exponential
+of the sum of returns.
+And these individual r's are drawn in each period.
+We take their sum.
+We exponentiate, and that will give us the price.
+So here are the steps that we use for generating Monte Carlo
+simulations.
+We first decide what the parameters
+are for the underlying distribution-- like what
+are mu and sigma?
+Where should they come from?
+What units are they in?
+We need to scale them appropriately for the sampling
+interval.
+So typically, for example, we take mu and sigma
+to be our given annualized units.
+For example, a stock might have a 10% annual return,
+with the volatility of 30%.
+But if our individual time steps are on a one day level,
+then we need to change the parameters in order
+that they make sense for the one day period.
+Then we draw numbers from our distribution.
+We use the scaled parameters to simulate our distribution
+and how it evolves over time.
+We construct the ensemble of paths.
+And then once we've got this at say, 10,000 possible paths,
+we're going to compute analytics based on it.
+So if we want to know what the variance of the terminal
+returns is, we just compute it by taking
+the statistical calculation of the variance on the values
+that we've generated on our actual sample data.
+So here's an example of how we could do that.
+So let's take the parameters I just mentioned.
+The sigma of 0.3 has annualized volatility
+of 30%, an annualized return of 10%.
+Now how should we scale these?
+Well remember, we want the annualized return to be 10%.
+So that means since we know that if we do a whole bunch of time
+steps, we know that the mean scales linearly with time.
+That means that the return on each day
+should be mu, 10%, divided by 252,
+which we can write as mu dt.
+This Is our constant term.
+So we've re-scale the constant in our r equals
+mu plus sigma z, to be mu delta t.
+That's going to be 10% over 252.
+So over a year, we'll get the right number.
+And then for the coefficient of z,
+we need to scale by square root of t.
+So in the Monte Carlo simulation,
+we're going to take our normalized z--
+this is just drawn from a standard normalized
+distribution.
+And we multiply it times sigma times the square root of 1/252,
+which is about 15.87.
+The square root of 252 ends up showing up a lot in Monte Carlo
+simulations and in conversions.
+So it's good to get that number in mind.
+So I've written down two different ways that we could do
+this in R. One of them is simply,
+we start with normalized z's.
+And then we scale them.
+We add a constant, mu dt, plus our normalized variable z,
+times sigma square root of dt.
+Or you can use the parameters in R.
+But this ends up again, being more language-specific,
+because there are optional arguments
+for the normal distribution, where
+the first argument is the number of random numbers you want.
+The next one is what's the mean.
+The default is 0.
+The next one is what's the standard deviation, sd.
+And again, the default is 1.
+So either of these lines will produce the same numbers.
+Then we take the same thing we did before.
+S is an initialized matrix to hold
+our partial sums, our partial cumulative sums of results.
+We work through iteratively step by step--
+t from 1 up through Nt.
+And then we take our result and we exponentiate
+it to get our price paths.
+And again, I've shown you a couple of sample paths here.
+And if I told you that these were three stocks, what
+do you think?
+You might think gosh, that one in red--
+that looks like one that went for a really wild ride.
+Maybe it showed up on Reddit somewhere.
+And it rose, and it crashed and burned.
+And the green one is some company that's struggling.
+But in fact, all of these came from exactly
+the same data-generating process.
+
+Now, let's take a look at some of the results
+that we have from our distribution.
+One of the things we can do-- remember
+that P holds our price paths.
+And the terminal values of the price paths,
+we started with an initial value of 1. ,
+Remember the initial return was 0.
+So we exponentiated the initial value, P0 was equal to 1.
+We could have multiplied it time some other constant.
+So the terminal value minus 1--
+the terminal value here minus 1 is the simple return
+on the stock over a one-year period.
+And we can see right here, the histogram in blue of the data.
+This is showing the distribution of one-year returns
+under our model.
+So we notice that this distribution is not normal.
+The red line is showing a normal distribution.
+But we can see that there's a positive mean.
+
+And there we go.
+So we have the center of this is positive.
+There's a certain width to it.
+But it's not symmetric.
+You notice that the distribution is definitely skewed,
+with a large right tail.
+And of course, the lowest value can't be below minus 1
+for what we've done.
+Because the price can't go below 0.
+So what I've done and the red line, is I've
+compared this to a normal distribution
+that has the same empirical observed
+mean and standard deviation.
+So we can obviously see by looking at it,
+that this is not normal.
+Now remember, these are the simple returns.
+And they're not expected to be normally distributed.
+If I take the logarithm of the returns and compute,
+then things would match up rather nicely.
+But again, we could ask how nicely should they match up.
+What level of variance would I expect?
+If I had done less than 10,000 simulations,
+this would be a more ragged plot.
+If I were to do a million simulations,
+we would find it would fit quite nicely under the curve.
+So depending on our application and our patience,
+that will dictate the number of simulations that we might do.
+Now in this particular case, we do have closed form numbers.
+So we can compare, we can compute
+what the mean and standard deviation or the variance
+are with the results that you would
+get if you did a whole bunch of Gaussian intervals.
+I don't know about you, but sometimes Gaussian integrals
+can be tedious.
+Certainly, look at the answers in a book.
+But if you want to do the Gaussian integrals,
+you can do that.
+Monte Carlo simulation can be very quick.
+And we can add numbers.
+So let's see how they compare.
+And this is helpful for cases where we'll often
+apply Monte Carlos, where the closed form
+solutions are either too difficult
+or they don't even exist.
+So for example, I compute the mean empirically
+of the R's as 1.547869.
+And the theoretical result, which
+is written down below by doing the actual expectation
+and doing a Gaussian integral, the expectation in fact
+is e to the mu plus sigma squared over 2 minus 1.
+That's because the little r's are logarithmic,
+and the big R's are not.
+This is approximately-- we can expand this out
+in a Taylor series.
+But this is the exact result. And we
+can see that we're pretty good two and almost three decimal
+places--
+0.156.
+And if you run it, you'll get of course, a different number
+for the first one.
+And you can try this here.
+How about the variance?
+Well again, there's a particular result for the exact value.
+And the numbers that we get here for the standard deviation,
+I've taken the square root of the result for the variance.
+And again, these look pretty close.
+So that's the idea.
+We have two different ways of computing the same thing.
+One of them is doing a bunch of Gaussian integrals
+in closed form.
+The other one is we do a whole bunch of simulations
+on the computer, and then take.
+Some averages and standard deviations.
+You notice that compared to the doing
+a Gaussian integrals, which is fun
+if you like doing integrals.
+But here, we have a little bit more
+when we do some visualizations, a little bit more idea as
+to what's going on.
+Like here's the spread.
+These are all the things that could have happened.
+Sometimes the individual price paths can look really striking,
+and we can learn some things by looking at our data.
+We can keep going.
+This is the empirical cumulative density function,
+which can be done in R. It depends
+on how we do it as a plot of the cumulative distribution
+function, which is equivalent to integrating up
+the integral from the left.
+And another quick and dirty way of looking
+at the data, sort of a transpose the previous one,
+is to plot the sorted returns.
+So I've done that here this command
+will work in R, that we can use do a bar
+plot or any plotting package you want in R or another language,
+where I sort the returns in order--
+remember that the Monte Carlo, the 10,000 paths
+we're not ordered in a particular way.
+Let me sort them in the outcomes from lowest to highest.
+And this is a different way of visualizing the distribution.
+This is actually an interesting way
+of looking at actual financial returns.
+So we see that we go from smallest to largest.
+And we get a characteristic kind of S-shaped curve.
+And we can see there are big outliers on the upper end
+of the distribution.
+We can also take a look at things
+to compare to a normal distribution.
+A Q-Q plot-- in this case, Q-Q norm is a special case in R.
+But a Q-Q plot typically lets us visualize a comparison of two
+probability distributions.
+And the idea is that if in this case, where
+we're comparing with the normal distribution,
+if the data were normal, it would lie on a straight line.
+Q-Q plots are especially helpful if we're
+looking at deviations in the tails of the distribution.
+A histogram is not so great for looking
+at outliers in the tails, because the tails are small.
+Rare events are rare.
+And visually, they're going to show up as maybe 0 or 1
+pixels on our screen.
+A Q-Q plot emphasizes the tails and it
+keeps the boring stuff in the middle, which
+is most of the data, of course.
+But typically, the middle of any Q-Q plot
+is going to look like a straight line somewhere.
+And then the deviations in the tails
+tell us something characteristic about how we depart
+from normality, potentially.

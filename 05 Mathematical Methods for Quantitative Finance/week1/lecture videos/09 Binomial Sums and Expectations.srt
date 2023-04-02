@@ -1,0 +1,628 @@
+0
+00:00:00,000 --> 00:00:01,180
+
+
+1
+00:00:01,180 --> 00:00:04,940
+PROFESSOR: Now, that's for a special case of a portfolio.
+
+2
+00:00:04,940 --> 00:00:07,140
+And I said we'd look at a large number.
+
+3
+00:00:07,140 --> 00:00:09,320
+If we take a look at two random variables
+
+4
+00:00:09,320 --> 00:00:11,720
+and we want to compute the full distribution,
+
+5
+00:00:11,720 --> 00:00:14,420
+I said that we could do that, rather than just computing
+
+6
+00:00:14,420 --> 00:00:15,530
+the mean and the variance.
+
+7
+00:00:15,530 --> 00:00:17,970
+But it does get complicated pretty quickly.
+
+8
+00:00:17,970 --> 00:00:19,890
+Let's start with the simplest case.
+
+9
+00:00:19,890 --> 00:00:22,610
+The simplest case would be two random variables.
+
+10
+00:00:22,610 --> 00:00:24,410
+And two is not a big number.
+
+11
+00:00:24,410 --> 00:00:29,140
+And let's let them both be uniformly distributed.
+
+12
+00:00:29,140 --> 00:00:34,960
+So to compute the probability function--
+
+13
+00:00:34,960 --> 00:00:37,660
+which is going to have this shape down here by the time
+
+14
+00:00:37,660 --> 00:00:39,690
+we're done, this is our result--
+
+15
+00:00:39,690 --> 00:00:43,270
+what I do is I compute the cumulative distribution
+
+16
+00:00:43,270 --> 00:00:43,990
+function.
+
+17
+00:00:43,990 --> 00:00:48,190
+I have to do a double integral in dx and dy.
+
+18
+00:00:48,190 --> 00:00:51,050
+I have to pick particular regions of integration.
+
+19
+00:00:51,050 --> 00:00:55,150
+And I have to do this complicated integral, which
+
+20
+00:00:55,150 --> 00:00:56,710
+is known as a convolution.
+
+21
+00:00:56,710 --> 00:00:59,500
+But I can do it in closed form for two variables.
+
+22
+00:00:59,500 --> 00:01:02,220
+I get this result here.
+
+23
+00:01:02,220 --> 00:01:04,620
+And it looks the probability distribution
+
+24
+00:01:04,620 --> 00:01:07,530
+has this triangular shape.
+
+25
+00:01:07,530 --> 00:01:08,390
+And it's done.
+
+26
+00:01:08,390 --> 00:01:09,060
+So we've got it.
+
+27
+00:01:09,060 --> 00:01:10,920
+So it can be done in this case.
+
+28
+00:01:10,920 --> 00:01:12,760
+But now imagine doing this for three,
+
+29
+00:01:12,760 --> 00:01:14,610
+four, five, six variables.
+
+30
+00:01:14,610 --> 00:01:17,080
+Each one is going to look different.
+
+31
+00:01:17,080 --> 00:01:18,810
+So that's more work than we want to do,
+
+32
+00:01:18,810 --> 00:01:20,490
+and it's not going to be necessary.
+
+33
+00:01:20,490 --> 00:01:22,500
+It's both more work and less intuition.
+
+34
+00:01:22,500 --> 00:01:25,050
+However, if we just want to check our intuition
+
+35
+00:01:25,050 --> 00:01:27,330
+and run a quick numerical simulation to take
+
+36
+00:01:27,330 --> 00:01:29,730
+a look at this, we can do this here,
+
+37
+00:01:29,730 --> 00:01:32,160
+with this command in the R programming language.
+
+38
+00:01:32,160 --> 00:01:35,610
+And I'd encourage you to setup and install R and RStudio
+
+39
+00:01:35,610 --> 00:01:36,840
+and to run this.
+
+40
+00:01:36,840 --> 00:01:39,600
+The function that we want here that we'll
+
+41
+00:01:39,600 --> 00:01:41,640
+be seeing when we discuss Montecarlo
+
+42
+00:01:41,640 --> 00:01:47,020
+is, pick a random variable from a uniform distribution.
+
+43
+00:01:47,020 --> 00:01:49,050
+So this looks like it says "run if,"
+
+44
+00:01:49,050 --> 00:01:52,330
+but it's "r unif," from uniform distribution.
+
+45
+00:01:52,330 --> 00:01:54,600
+So here, I've picked 10,000, excuse me,
+
+46
+00:01:54,600 --> 00:01:59,430
+100,000 random numbers for X_1 I picked 100,000 random numbers
+
+47
+00:01:59,430 --> 00:02:02,820
+for X_2 And I'm looking at a histogram that gives me
+
+48
+00:02:02,820 --> 00:02:04,920
+a discrete approximation to the probability
+
+49
+00:02:04,920 --> 00:02:07,080
+distribution for their sum.
+
+50
+00:02:07,080 --> 00:02:09,120
+And you can see that it looks approximately
+
+51
+00:02:09,120 --> 00:02:11,460
+like the triangular distribution that we
+
+52
+00:02:11,460 --> 00:02:14,780
+solved for in closed form.
+
+53
+00:02:14,780 --> 00:02:17,220
+Now, let's come back to the binomial distribution
+
+54
+00:02:17,220 --> 00:02:18,890
+that I talked about earlier where
+
+55
+00:02:18,890 --> 00:02:22,280
+we computed the mean value doing a lot of combinatorics
+
+56
+00:02:22,280 --> 00:02:24,830
+and shifting around the variables in some kind
+
+57
+00:02:24,830 --> 00:02:26,390
+of mysterious ways.
+
+58
+00:02:26,390 --> 00:02:27,890
+If we want the mean and the variance
+
+59
+00:02:27,890 --> 00:02:30,830
+in the binomial distribution the easy way,
+
+60
+00:02:30,830 --> 00:02:34,140
+we just apply linearity to a sum.
+
+61
+00:02:34,140 --> 00:02:35,390
+So how do we think of the sum?
+
+62
+00:02:35,390 --> 00:02:38,450
+We said that we wanted to compute successes
+
+63
+00:02:38,450 --> 00:02:43,460
+as positive successful outcomes.
+
+64
+00:02:43,460 --> 00:02:47,040
+And we wanted to count them up versus the number of failures.
+
+65
+00:02:47,040 --> 00:02:51,800
+So one way we can do that is by having the variable X_1 X_2
+
+66
+00:02:51,800 --> 00:02:55,400
+X_3 represent the outcome of the first, second, or third
+
+67
+00:02:55,400 --> 00:02:56,300
+experiment.
+
+68
+00:02:56,300 --> 00:02:58,760
+And we'll let a plus 1 designate a success,
+
+69
+00:02:58,760 --> 00:03:00,980
+zero designates a failure.
+
+70
+00:03:00,980 --> 00:03:03,350
+And then adding together all the axes
+
+71
+00:03:03,350 --> 00:03:07,430
+is a variable, S, that counts the number of successes.
+
+72
+00:03:07,430 --> 00:03:10,200
+And notice it doesn't matter in what order they occur.
+
+73
+00:03:10,200 --> 00:03:13,230
+If I get success, success, fail, fail, fail, fail, fail,
+
+74
+00:03:13,230 --> 00:03:15,710
+it doesn't matter where those two successes come.
+
+75
+00:03:15,710 --> 00:03:18,290
+It could be fail, fail, fail, fail, fail, success, success.
+
+76
+00:03:18,290 --> 00:03:20,990
+Anywhere they are, they get the same value of S
+
+77
+00:03:20,990 --> 00:03:23,510
+So what's the expectation of S?
+
+78
+00:03:23,510 --> 00:03:24,980
+What's our mean value?
+
+79
+00:03:24,980 --> 00:03:29,750
+Expectation of the sum is the sum of the expectations.
+
+80
+00:03:29,750 --> 00:03:35,340
+And each of these is equal to p, because I
+
+81
+00:03:35,340 --> 00:03:39,810
+have probability p of getting a 1, probability 1 minus
+
+82
+00:03:39,810 --> 00:03:41,340
+p of getting a 0.
+
+83
+00:03:41,340 --> 00:03:43,960
+So the expectation of X_1 is p.
+
+84
+00:03:43,960 --> 00:03:46,470
+The expectation of X_2 is p.
+
+85
+00:03:46,470 --> 00:03:48,630
+Each of the expectations is p.
+
+86
+00:03:48,630 --> 00:03:51,190
+I've got n of them, n times p.
+
+87
+00:03:51,190 --> 00:03:52,450
+We're done.
+
+88
+00:03:52,450 --> 00:03:53,040
+OK?
+
+89
+00:03:53,040 --> 00:03:54,790
+So I've shown that down here.
+
+90
+00:03:54,790 --> 00:03:57,750
+So the expectation of X_1 is p.
+
+91
+00:03:57,750 --> 00:04:01,090
+And we're going to do the variance in a moment.
+
+92
+00:04:01,090 --> 00:04:06,600
+So let's continue the expectation of X_1 squared.
+
+93
+00:04:06,600 --> 00:04:07,560
+How do we compute it?
+
+94
+00:04:07,560 --> 00:04:09,360
+We use our rule that the expectation
+
+95
+00:04:09,360 --> 00:04:12,780
+is the probability-weighted average of the thing
+
+96
+00:04:12,780 --> 00:04:14,440
+inside the expectation.
+
+97
+00:04:14,440 --> 00:04:17,459
+So with probability p, I get a 1.
+
+98
+00:04:17,459 --> 00:04:19,470
+1 squared is 1.
+
+99
+00:04:19,470 --> 00:04:24,180
+Probability q, I get 0 squared, and that gives me a p.
+
+100
+00:04:24,180 --> 00:04:24,840
+OK?
+
+101
+00:04:24,840 --> 00:04:29,990
+So the expectation of any of the X's is p.
+
+102
+00:04:29,990 --> 00:04:33,950
+The probability of any of the X squareds is p.
+
+103
+00:04:33,950 --> 00:04:38,480
+And if I take two different X's, the expectation of X_1
+
+104
+00:04:38,480 --> 00:04:42,600
+times X_2, well, now they're independent random variables.
+
+105
+00:04:42,600 --> 00:04:46,370
+So they could both be 1, with probability p squared.
+
+106
+00:04:46,370 --> 00:04:49,090
+p that the the first one is a success, p
+
+107
+00:04:49,090 --> 00:04:51,710
+that the second one's a success, is p squared.
+
+108
+00:04:51,710 --> 00:04:54,500
+And then I would multiply that times X_1 being 1 and X_2
+
+109
+00:04:54,500 --> 00:04:55,430
+being 1.
+
+110
+00:04:55,430 --> 00:04:57,830
+And then everything else here, success
+
+111
+00:04:57,830 --> 00:05:01,550
+fail, fail success, and fail fail,
+
+112
+00:05:01,550 --> 00:05:03,210
+those all have 0's in them.
+
+113
+00:05:03,210 --> 00:05:04,505
+So those all drop out.
+
+114
+00:05:04,505 --> 00:05:07,790
+So the only term that survives is this one,
+
+115
+00:05:07,790 --> 00:05:10,290
+and that gives me this result.
+
+116
+00:05:10,290 --> 00:05:14,460
+So because these X's are independent of each other,
+
+117
+00:05:14,460 --> 00:05:17,360
+and because they're identically distributed--
+
+118
+00:05:17,360 --> 00:05:21,290
+any one of the X_1 is the same as X_2 Or X_3 or X_7--
+
+119
+00:05:21,290 --> 00:05:23,730
+I have these results and I can apply them.
+
+120
+00:05:23,730 --> 00:05:27,140
+So now let's apply this for the calculation of the variance.
+
+121
+00:05:27,140 --> 00:05:29,300
+We're just going to do a little bit of algebra.
+
+122
+00:05:29,300 --> 00:05:33,470
+It's almost as easy, no combinatorics involved.
+
+123
+00:05:33,470 --> 00:05:36,380
+Well, a little bit of combinatorics.
+
+124
+00:05:36,380 --> 00:05:38,880
+But no factorials, not like we had before.
+
+125
+00:05:38,880 --> 00:05:41,420
+So the definition of our variance
+
+126
+00:05:41,420 --> 00:05:46,700
+is that the expectation of the random variable
+
+127
+00:05:46,700 --> 00:05:49,280
+minus its mean quantity squared.
+
+128
+00:05:49,280 --> 00:05:52,370
+Or it's the expectation of the variable
+
+129
+00:05:52,370 --> 00:05:54,730
+squared minus the mean squared.
+
+130
+00:05:54,730 --> 00:05:56,360
+So that's what we use here.
+
+131
+00:05:56,360 --> 00:06:02,190
+We can expand out this sum into n terms with an X squared.
+
+132
+00:06:02,190 --> 00:06:04,650
+So these are all going to be identical.
+
+133
+00:06:04,650 --> 00:06:06,020
+They're going to be n terms.
+
+134
+00:06:06,020 --> 00:06:08,950
+I'm going to have X_1 squared, X_2 squared, X_3 squared.
+
+135
+00:06:08,950 --> 00:06:10,170
+I'm going to have n of them.
+
+136
+00:06:10,170 --> 00:06:12,878
+So let me just take n times the first one.
+
+137
+00:06:12,878 --> 00:06:14,670
+And then I'm going to have the cross terms.
+
+138
+00:06:14,670 --> 00:06:19,340
+I'm going to have n choose two possibilities.
+
+139
+00:06:19,340 --> 00:06:22,730
+But actually, I'm going to get X_1 X_2 and X_2 X_1.
+
+140
+00:06:22,730 --> 00:06:26,480
+So I'm going to have twice n choose two, which just gives me
+
+141
+00:06:26,480 --> 00:06:29,450
+n times n minus 1 cross terms.
+
+142
+00:06:29,450 --> 00:06:30,470
+OK?
+
+143
+00:06:30,470 --> 00:06:34,130
+And each of the cross terms is going to be the same as 1 2.
+
+144
+00:06:34,130 --> 00:06:37,760
+So 1 2 is the same as 2 3 is the same as 4 6.
+
+145
+00:06:37,760 --> 00:06:39,030
+They're all the same.
+
+146
+00:06:39,030 --> 00:06:46,630
+So I'm going to get n times p plus n n minus 1 times p
+
+147
+00:06:46,630 --> 00:06:47,700
+squared.
+
+148
+00:06:47,700 --> 00:06:51,210
+And then I'm going to subtract off my previous result squared,
+
+149
+00:06:51,210 --> 00:06:53,580
+which is np quantity squared.
+
+150
+00:06:53,580 --> 00:06:57,980
+And when I combine the terms, I get my final result, npq,
+
+151
+00:06:57,980 --> 00:07:03,350
+or our final, final result that the standard deviation
+
+152
+00:07:03,350 --> 00:07:07,940
+is the square root of n, square root of n times p times q.
+
+153
+00:07:07,940 --> 00:07:12,150
+Remember that p and q, q is 1 minus p. p and q are constant.
+
+154
+00:07:12,150 --> 00:07:16,490
+So this says that the variance is proportional to n
+
+155
+00:07:16,490 --> 00:07:18,830
+and that the standard deviation is
+
+156
+00:07:18,830 --> 00:07:22,030
+proportional to the square root of n.
+

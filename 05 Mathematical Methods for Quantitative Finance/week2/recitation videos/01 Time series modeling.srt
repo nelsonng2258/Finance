@@ -1,0 +1,436 @@
+0
+00:00:00,000 --> 00:00:01,320
+
+
+1
+00:00:01,320 --> 00:00:03,870
+PROFESSOR: We study discrete time stochastic processes
+
+2
+00:00:03,870 --> 00:00:07,050
+in order to develop models that help us make inferences
+
+3
+00:00:07,050 --> 00:00:10,960
+and predictions about data that's observed over time.
+
+4
+00:00:10,960 --> 00:00:14,558
+We look to the past to understand how data arose
+
+5
+00:00:14,558 --> 00:00:17,100
+and to try to figure out what the underlying mechanisms where
+
+6
+00:00:17,100 --> 00:00:19,980
+they produced it, and we look to the future
+
+7
+00:00:19,980 --> 00:00:23,470
+in applying models to make predictions and to take action.
+
+8
+00:00:23,470 --> 00:00:26,230
+So time series models are useful in a number of ways.
+
+9
+00:00:26,230 --> 00:00:29,790
+They can summarize data, provide useful descriptive statistics
+
+10
+00:00:29,790 --> 00:00:32,070
+such as measures of serial correlation,
+
+11
+00:00:32,070 --> 00:00:34,470
+they can be used for filtering, for detrending,
+
+12
+00:00:34,470 --> 00:00:36,180
+and more generally to differentiate
+
+13
+00:00:36,180 --> 00:00:39,360
+a noisy background from potentially meaningful signals
+
+14
+00:00:39,360 --> 00:00:41,070
+that might otherwise be obscured.
+
+15
+00:00:41,070 --> 00:00:43,680
+By quantifying the balance between signal and noise
+
+16
+00:00:43,680 --> 00:00:45,870
+in the context of a model, we can
+
+17
+00:00:45,870 --> 00:00:49,800
+have some guidance in identifying opportunities
+
+18
+00:00:49,800 --> 00:00:51,810
+and managing risk.
+
+19
+00:00:51,810 --> 00:00:54,630
+Most financial market data is noisy.
+
+20
+00:00:54,630 --> 00:00:56,790
+Can we determine whether two sets of data
+
+21
+00:00:56,790 --> 00:00:58,830
+describe similar market conditions?
+
+22
+00:00:58,830 --> 00:01:00,390
+Did they come from the same model?
+
+23
+00:01:00,390 --> 00:01:03,420
+Do they have the same underlying data generating process?
+
+24
+00:01:03,420 --> 00:01:05,069
+Did an old model break?
+
+25
+00:01:05,069 --> 00:01:06,930
+Has there been a new regime change?
+
+26
+00:01:06,930 --> 00:01:09,893
+If we need a new model, how do we know when it's needed?
+
+27
+00:01:09,893 --> 00:01:11,310
+How do we know what its connection
+
+28
+00:01:11,310 --> 00:01:12,840
+should be with the old one?
+
+29
+00:01:12,840 --> 00:01:15,840
+Time series models help us perform simulations,
+
+30
+00:01:15,840 --> 00:01:19,410
+make predictions, evaluate data adequacy,
+
+31
+00:01:19,410 --> 00:01:24,280
+quantify expected performance, and improve decision making.
+
+32
+00:01:24,280 --> 00:01:28,020
+Now we started with a bunch of stationary models,
+
+33
+00:01:28,020 --> 00:01:30,330
+and in this recitation we'll do a few exercises
+
+34
+00:01:30,330 --> 00:01:32,130
+and we'll talk about stationarity.
+
+35
+00:01:32,130 --> 00:01:36,720
+So stationarity means that we can shift the model in time.
+
+36
+00:01:36,720 --> 00:01:38,890
+It doesn't have a fixed origin.
+
+37
+00:01:38,890 --> 00:01:43,050
+That means when we write down things, definitions like these,
+
+38
+00:01:43,050 --> 00:01:45,300
+that if we shift the time index--
+
+39
+00:01:45,300 --> 00:01:46,950
+not that the data will be the same,
+
+40
+00:01:46,950 --> 00:01:49,350
+but that the probability distributions are the same
+
+41
+00:01:49,350 --> 00:01:51,610
+and that the defining equations are the same.
+
+42
+00:01:51,610 --> 00:01:53,370
+And you can see that for each of these,
+
+43
+00:01:53,370 --> 00:01:57,480
+for the generalized random walk model, for this moving average
+
+44
+00:01:57,480 --> 00:02:00,863
+model, and for our old friend the AR1 model.
+
+45
+00:02:00,863 --> 00:02:02,280
+In each of these cases if you were
+
+46
+00:02:02,280 --> 00:02:05,460
+to replace t by t plus k or t minus
+
+47
+00:02:05,460 --> 00:02:09,539
+l, the equation would take the same form.
+
+48
+00:02:09,539 --> 00:02:14,355
+Now stationarity in reality is much too strong a condition.
+
+49
+00:02:14,355 --> 00:02:15,480
+It would almost never hold.
+
+50
+00:02:15,480 --> 00:02:17,850
+First of all, it would require that the conditions
+
+51
+00:02:17,850 --> 00:02:19,170
+be the same forever.
+
+52
+00:02:19,170 --> 00:02:21,780
+And financial markets haven't been around forever,
+
+53
+00:02:21,780 --> 00:02:25,210
+and they might be around forever in the future,
+
+54
+00:02:25,210 --> 00:02:28,180
+but certainly not under identical conditions.
+
+55
+00:02:28,180 --> 00:02:31,170
+So what we really require for applying them--
+
+56
+00:02:31,170 --> 00:02:33,570
+we don't expect it to literally hold in practice,
+
+57
+00:02:33,570 --> 00:02:36,778
+but for the mathematics to be sensibly applied
+
+58
+00:02:36,778 --> 00:02:38,820
+we have a couple of things that we need to check.
+
+59
+00:02:38,820 --> 00:02:40,237
+One thing that we want to check is
+
+60
+00:02:40,237 --> 00:02:42,450
+this thing about long memory.
+
+61
+00:02:42,450 --> 00:02:44,770
+Do we need things infinitely far in the past?
+
+62
+00:02:44,770 --> 00:02:47,820
+So if we can find out and show in our models
+
+63
+00:02:47,820 --> 00:02:50,910
+that the initial conditions do not
+
+64
+00:02:50,910 --> 00:02:53,970
+have an infinitely long persistence over time,
+
+65
+00:02:53,970 --> 00:02:56,972
+that after some period of time at least
+
+66
+00:02:56,972 --> 00:02:58,680
+the behavior of the models doesn't depend
+
+67
+00:02:58,680 --> 00:03:00,510
+on the specific initial conditions,
+
+68
+00:03:00,510 --> 00:03:03,480
+or if it started a finite point in the past, then
+
+69
+00:03:03,480 --> 00:03:06,930
+at least we have a chance of applying these usefully.
+
+70
+00:03:06,930 --> 00:03:09,720
+Second, we don't want full stationarity.
+
+71
+00:03:09,720 --> 00:03:11,550
+We usually only require something
+
+72
+00:03:11,550 --> 00:03:14,640
+called weak stationarity, which uses
+
+73
+00:03:14,640 --> 00:03:16,560
+the first and second moments only.
+
+74
+00:03:16,560 --> 00:03:18,630
+So it says that the first moments, the means,
+
+75
+00:03:18,630 --> 00:03:22,200
+should be time invariant, and the second moments,
+
+76
+00:03:22,200 --> 00:03:24,810
+the variances and two point functions
+
+77
+00:03:24,810 --> 00:03:26,880
+like the autocovariance functions,
+
+78
+00:03:26,880 --> 00:03:30,060
+should depend only on the difference in time indices,
+
+79
+00:03:30,060 --> 00:03:34,840
+not on the exact location of a particular point in time.
+
+80
+00:03:34,840 --> 00:03:36,510
+And that's a good thing because usually
+
+81
+00:03:36,510 --> 00:03:38,160
+don't know what the higher moments are,
+
+82
+00:03:38,160 --> 00:03:40,577
+and we certainly don't know that everything is stationary.
+
+83
+00:03:40,577 --> 00:03:43,390
+So weaker conditions are good for us.
+
+84
+00:03:43,390 --> 00:03:46,620
+So keep in mind that the financial world does change.
+
+85
+00:03:46,620 --> 00:03:49,590
+We don't expect to find universal laws that will always
+
+86
+00:03:49,590 --> 00:03:52,560
+be applicable, we expect them to hold some period of time.
+
+87
+00:03:52,560 --> 00:03:54,120
+It might be a number of years, it
+
+88
+00:03:54,120 --> 00:03:55,800
+might be in a high frequency trading
+
+89
+00:03:55,800 --> 00:03:59,550
+context for a number of days, but there's
+
+90
+00:03:59,550 --> 00:04:03,180
+some persistence over which we can apply these models to help
+
+91
+00:04:03,180 --> 00:04:05,520
+understand signals and noise.
+
+92
+00:04:05,520 --> 00:04:10,380
+And if we're lucky, a model will be successful for a long time.
+
+93
+00:04:10,380 --> 00:04:11,790
+It'll have a good and stable run,
+
+94
+00:04:11,790 --> 00:04:14,430
+but eventually we want to be on the lookout for when
+
+95
+00:04:14,430 --> 00:04:15,960
+it will no longer be useful.
+
+96
+00:04:15,960 --> 00:04:18,930
+When it comes to an end it could be through a crash, a crisis,
+
+97
+00:04:18,930 --> 00:04:22,530
+a pandemic, or changes in behavior, changes
+
+98
+00:04:22,530 --> 00:04:25,290
+in institutions, changes in systems
+
+99
+00:04:25,290 --> 00:04:27,390
+of financial intermediation.
+
+100
+00:04:27,390 --> 00:04:29,310
+But for right now what we want to discuss
+
+101
+00:04:29,310 --> 00:04:32,220
+are some practical ways that we can
+
+102
+00:04:32,220 --> 00:04:34,680
+look at some examples of problems
+
+103
+00:04:34,680 --> 00:04:39,210
+with stationary time series using our tools of linearity
+
+104
+00:04:39,210 --> 00:04:41,250
+of expectation operators, and now we
+
+105
+00:04:41,250 --> 00:04:45,150
+add this additional feature that, for a stationary series,
+
+106
+00:04:45,150 --> 00:04:46,350
+we can shift them in time.
+
+107
+00:04:46,350 --> 00:04:49,530
+And that means that we can use translations or recursion,
+
+108
+00:04:49,530 --> 00:04:52,490
+and it can take a number of different forms.
+

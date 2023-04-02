@@ -1,0 +1,217 @@
+
+PROFESSOR: So what does random walk model consist of?
+It's a sum of IID random variables.
+IID means independent and identically distributed.
+By independent, we mean that the z1, z2,
+z3 are independent random variables like two
+different dice, two different flips of a coin,
+or two different coins entirely.
+So the individual z's have nothing to do with each other.
+But we are putting them together in a particular sequence.
+Identically distributed means that they
+each are drawn from the same probability
+distribution no surprise there.
+What are the attributes of this sum ST where I take
+it to be z1, plus z2, plus z3?
+Because the variables are independent,
+the values that we have don't depend on--
+the new values that get added don't
+depend on the previous history.
+So each new increment can be added independently
+of what came before.
+The other thing is the importance
+of the identically distributed part
+is-- it means that the evolution in time is uniform.
+And we call this property stationarity.
+It doesn't mean that the model is static.
+It doesn't mean it's deterministic.
+All it means is that if we look at the values between any two
+points in time, the properties depend only
+on the differences in the point in time,
+not on some absolute point in time.
+So any given three-step period is going to be equivalent.
+One of the things we're going to see
+that's fascinating about the random walk model
+are some of its aspects of universality.
+There are a lot of features of it
+that are really independent of the micro-level.
+And that's going to be interesting
+for us starting out right now.
+And it's going to be something we'll
+take advantage of when we take the limit of this model
+to go to continuous time a little bit later in the course.
+So it's easy to generalize for financial applications.
+This bare-bones model is going to be a little bit simple.
+But hang on a very short time, and we'll add in two parameters
+to make it useful for finance.
+The random walk appears in many other contexts
+in applied mathematics, and physics, and engineering.
+And it's the building block for more complex models.
+So we're going to start to get to know it well.
+Then we'll see how to build it.
+Although this model doesn't have any memory of the past,
+we'll see that models that do have
+interesting non-trivial causal structure
+can be expressed in terms of building blocks
+that do come from what we'll see in the random walk model.
+So what we're going to do is we're
+going to start with the simplest of all random variables.
+We'll call these standardized random variables,
+and we'll denote them by the letter z.
+And they've got these properties.
+First, they're mean is 0.
+So these are unbiased.
+They're equally likely to be positive or negative.
+The average value is 0.
+Their variance is 1.
+So they have a standard amount of randomness, a standard step
+size for these given increments.
+And for our independence part, the correlation
+of any two random variables taken at different points
+in time is 0.
+So we can summarize these three properties symbolically
+in this box.
+We've got that the expectation of z is 0.
+The expectation of z squared is the variance.
+Remember that the variance is the expectation
+of the square minus the square of the expectation.
+The expectation is 0.
+So expectation of z squared is the variance.
+It's equal to 1.
+And, because z of t and z of t prime,
+if t and t prime are two different times,
+are two independent random variables,
+the expectation of the product is equal to 0.
+And this is the same as their correlation
+when they have mean 0.
+And remember for independent random variables,
+the expectation of a product is the product
+of the expectations.
+Each of the expectations is 0.
+0 times 0 is 0.
+So what are some examples z's that we could use?
+This is all we need.
+We only need the things that we have here in this box.
+So one example, the classic random walk,
+is something like a coin toss.
+We take a step to the left, to the right.
+We go up.
+We go down.
+We move plus 1 or minus 1 with equal probability.
+So we can model that with the discrete random variable, zt.
+zt takes values plus or minus 1 with equal probability.
+Obviously, it satisfies these properties in the box above.
+Another example is a continuous z, a Gaussian random variable.
+This one is also going to be normalized.
+So zt is drawn from an N 0, 1 distribution with mean 0,
+variance 1.
+And it's probability distribution
+is the usual Gaussian form normalized.
+So e to the minus z squared over 2 is the probability density.
+The expectation is 0 because this is an even function.
+And to show that its variance is equal to 1
+involves doing a definite integral.
+So everything that we're about to see
+would be true with either of these variables.
+Notice that they're quite different in detail
+that the first one, the discrete one,
+will only allow our sum to have discrete values.
+The second one is continuously distributed.
+Our trick-- and we're going to be coming back to this again
+and again--
+is that, when we're interested in a sum of random variables--
+this is our S of T--
+we're not going to ask for the full probability distribution.
+We're only going to ask for the mean and the variance.
+We're only going to ask for the individual moments.
+And the detailed distribution could
+be complicated in the case of the plus or minus 1.
+We have a binomial distribution.
+It's easy to work out the combinatorics.
+It's a lot more work than what we're going to do.
+And we're not going to need the more fine grained detail
+of all the higher moments.
+For the Gaussian random variable,
+it's kind of a special case because, as you may know,
+the sum of Gaussian random variables is Gaussian.
+So there's some special results there.
+But any z that satisfies these properties
+will work for what we're about to see.
+So what's that?
+Let's take a look.
+We'll consider the sum of random variables.
+ST is z1 plus, z2, plus z3.
+And we're not going to ask about the distribution of S of T.
+But we're going to ask about its mean and its variance.
+So what about the mean?
+For the mean of the sum, ST, We have a very simple result.
+Remember that expectation is a linear operator.
+That means that the expectation of a sum
+is the sum of the expectations so the expectation of ST
+is the expectation of z1, plus the expectation z2, plus da,
+da, da, da, up to the expectation of the final one.
+Since each of these expectations is equal to 0,
+your sum is equal to 0, no surprise
+there really if you think about it.
+This is unbiased.
+We add together a bunch of unbiased random variables.
+The mean value is the same as the value of each of them.
+It's 0.
+What about the variance?
+The variance a little more interesting.
+So for the variance, we have the expectation of S squared.
+Again, we're able to simplify this because S has mean 0.
+So let's just plug it in.
+Expand out this quadratic.
+So the term in parentheses z1, plus z2, plus zT,
+all the way up is S of T. We take the square.
+Let's expand that quadratic, and we get two kinds terms.
+And then we apply linearity.
+That is, for each of the terms, the expectation of the sum
+is the sum of the expectations.
+So we have two kinds of terms.
+We have these squared terms whereas z1
+gets multiplied times z1.
+And I have these terms here, which
+are the expectation of one of z's with itself, z1 squared,
+z2 squared, z3 squared.
+And I have T of these.
+And I could have the cross terms,
+where I have z1 with z2, z2 with z3, z4 with z7, and so on.
+Each of those appear twice.
+There are T choose 2 of those terms.
+But wonderfully in this product, each of these is equal to 0.
+So every single term in this second sum is equal to 0.
+And the first consists of T terms, each of which
+is equal to 1.
+So the result is the variance of ST,
+the sum of the random variables, is equal to T.
+So here's our basic result. The mean of the random walk is 0.
+The variance of the random walk grows linearly
+with the number of steps.
+And the standard deviation, which
+is the square root of the variance,
+grows with the square root of T. Let's summarize.
+The random walk model is constructed
+as a sum of IID random variables.
+We take a bunch of z's.
+We put them together.
+And S1 is z1.
+S2 is z1 plus z2.
+S3 is z1, plus z2, plus z3, and so on.
+It's a simple example of a discrete time
+stochastic process.
+Rather than asking for the complete distribution of ST,
+we ask about the moments.
+We ask about the mean and the variance.
+And those are computed very easily by linearity.
+The mean is 0.
+The variance is proportional to the number of steps.
+And we've done this all using standardized random variable z.
+They could be continuous, discrete.
+They could be anything that satisfies
+these basic standard properties.
+Namely, the expectation of z is 0.
+The variance of z is 1.
+And the expectation of two different z's
+taken at two different times is equal to 0.

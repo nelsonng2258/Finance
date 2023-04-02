@@ -1,0 +1,1032 @@
+0
+00:00:00,000 --> 00:00:01,170
+
+
+1
+00:00:01,170 --> 00:00:04,260
+PROFESSOR: So most computer languages, including R,
+
+2
+00:00:04,260 --> 00:00:07,130
+have functions that generate random numbers.
+
+3
+00:00:07,130 --> 00:00:09,600
+Now in R, the main ones to take a look at,
+
+4
+00:00:09,600 --> 00:00:13,812
+are the function sample, which returns discrete values.
+
+5
+00:00:13,812 --> 00:00:15,270
+So if you want to pick from a list,
+
+6
+00:00:15,270 --> 00:00:18,600
+0 and 1 could happen with probability p and 1 minus p
+
+7
+00:00:18,600 --> 00:00:22,110
+or values 1 minus 1, values 1, 2, 3, 4, 5--
+
+8
+00:00:22,110 --> 00:00:25,290
+if they're discrete, we can use the sample function.
+
+9
+00:00:25,290 --> 00:00:27,300
+And we can sample with or without replacement.
+
+10
+00:00:27,300 --> 00:00:29,520
+For Monte Carlo applications, we typically
+
+11
+00:00:29,520 --> 00:00:30,870
+sample with replacement.
+
+12
+00:00:30,870 --> 00:00:33,180
+We're not exhausting lists.
+
+13
+00:00:33,180 --> 00:00:36,840
+We're generating things consistently over time.
+
+14
+00:00:36,840 --> 00:00:39,150
+Two other functions-- the runif--
+
+15
+00:00:39,150 --> 00:00:41,130
+that's not run if, which looks like it
+
+16
+00:00:41,130 --> 00:00:43,590
+could be a reasonable command--
+
+17
+00:00:43,590 --> 00:00:46,650
+returns random numbers with a uniform probability
+
+18
+00:00:46,650 --> 00:00:47,650
+distribution.
+
+19
+00:00:47,650 --> 00:00:50,490
+So these are real numbers bounded between 0 and 1.
+
+20
+00:00:50,490 --> 00:00:53,010
+And rnorm generate things drawn from
+
+21
+00:00:53,010 --> 00:00:55,740
+a normal or Gaussian distribution, with mean 0
+
+22
+00:00:55,740 --> 00:00:56,365
+and variance 1.
+
+23
+00:00:56,365 --> 00:00:58,948
+There are a bunch of parameters that you can use to tune this,
+
+24
+00:00:58,948 --> 00:01:00,720
+such as setting the mean and variance
+
+25
+00:01:00,720 --> 00:01:03,510
+of the normal distribution to something else.
+
+26
+00:01:03,510 --> 00:01:07,200
+Now we have to keep in mind that the random number generated
+
+27
+00:01:07,200 --> 00:01:09,750
+by a computer are not truly random.
+
+28
+00:01:09,750 --> 00:01:10,962
+These are approximations.
+
+29
+00:01:10,962 --> 00:01:12,420
+And there are a lot of limitations.
+
+30
+00:01:12,420 --> 00:01:17,790
+So you need to keep in mind what the real world limitations are
+
+31
+00:01:17,790 --> 00:01:21,630
+in our hypothetical world of Monte Carlo simulations,
+
+32
+00:01:21,630 --> 00:01:23,640
+namely what are the limitations of computers.
+
+33
+00:01:23,640 --> 00:01:26,220
+So a few things to keep in mind include--
+
+34
+00:01:26,220 --> 00:01:28,440
+we can't do real numbers on a computer.
+
+35
+00:01:28,440 --> 00:01:30,280
+We can only do finite precision.
+
+36
+00:01:30,280 --> 00:01:34,740
+Now double precision, 15 decimal digits, is pretty good.
+
+37
+00:01:34,740 --> 00:01:37,890
+But it's not infinitely divisible.
+
+38
+00:01:37,890 --> 00:01:40,590
+So some of the things that means are
+
+39
+00:01:40,590 --> 00:01:43,380
+that if we're looking say, at a uniform distribution,
+
+40
+00:01:43,380 --> 00:01:45,180
+we can't get every possible number.
+
+41
+00:01:45,180 --> 00:01:47,370
+And in a true uniform distribution,
+
+42
+00:01:47,370 --> 00:01:50,010
+the probability of getting any particular number
+
+43
+00:01:50,010 --> 00:01:52,780
+is measure zero, and that won't be the case.
+
+44
+00:01:52,780 --> 00:01:55,260
+We'll have some finite probability.
+
+45
+00:01:55,260 --> 00:01:58,110
+When we think about not only the find greatness
+
+46
+00:01:58,110 --> 00:02:00,900
+for real numbers, we also should think about their boundedness.
+
+47
+00:02:00,900 --> 00:02:05,250
+So a Gaussian random variable could go from minus infinity
+
+48
+00:02:05,250 --> 00:02:06,310
+to infinity.
+
+49
+00:02:06,310 --> 00:02:08,250
+We knew that it's very unlikely that it
+
+50
+00:02:08,250 --> 00:02:12,690
+goes outside of say, plus or minus 3 or plus or 6,
+
+51
+00:02:12,690 --> 00:02:16,920
+but we could get a value that could be arbitrarily large.
+
+52
+00:02:16,920 --> 00:02:19,140
+And computers don't do arbitrarily large.
+
+53
+00:02:19,140 --> 00:02:20,680
+They have very large numbers.
+
+54
+00:02:20,680 --> 00:02:24,030
+So we need to keep in mind that anything that we generate
+
+55
+00:02:24,030 --> 00:02:26,820
+is going to be truncated and finite.
+
+56
+00:02:26,820 --> 00:02:30,300
+And that's particularly important in risk applications,
+
+57
+00:02:30,300 --> 00:02:32,490
+where we're studying the occurrence of rare events.
+
+58
+00:02:32,490 --> 00:02:34,990
+Because there may be events that the computer's actually not
+
+59
+00:02:34,990 --> 00:02:37,360
+generating that are very, very unlikely.
+
+60
+00:02:37,360 --> 00:02:38,880
+So we need to keep that in mind.
+
+61
+00:02:38,880 --> 00:02:42,060
+That's part of the limitations which will qualify our results.
+
+62
+00:02:42,060 --> 00:02:45,210
+And we can take account for our approximations.
+
+63
+00:02:45,210 --> 00:02:46,750
+So there are many subtleties here,
+
+64
+00:02:46,750 --> 00:02:47,790
+which we won't be going into.
+
+65
+00:02:47,790 --> 00:02:49,290
+But I do want to mention them so you
+
+66
+00:02:49,290 --> 00:02:52,110
+can do further reading if you want to apply this
+
+67
+00:02:52,110 --> 00:02:55,530
+to more advanced applications.
+
+68
+00:02:55,530 --> 00:02:59,270
+So here are some basic functions that I commonly use in R,
+
+69
+00:02:59,270 --> 00:03:02,540
+and that you might find helpful as well for getting started,
+
+70
+00:03:02,540 --> 00:03:04,190
+for generating some random numbers.
+
+71
+00:03:04,190 --> 00:03:05,940
+And we'll take a look at some examples.
+
+72
+00:03:05,940 --> 00:03:07,200
+In just a moment.
+
+73
+00:03:07,200 --> 00:03:09,920
+The first example that we have here
+
+74
+00:03:09,920 --> 00:03:13,010
+involves taking a look at generating a matrix
+
+75
+00:03:13,010 --> 00:03:15,060
+of independent random numbers.
+
+76
+00:03:15,060 --> 00:03:20,390
+So let's think of z as being our typical standardized random
+
+77
+00:03:20,390 --> 00:03:22,640
+variable, or actually in this case, not standardized.
+
+78
+00:03:22,640 --> 00:03:24,432
+This is going to be a uniform distribution.
+
+79
+00:03:24,432 --> 00:03:26,160
+It will be standardized in a moment.
+
+80
+00:03:26,160 --> 00:03:29,990
+But z is some random variable, drawn from some distribution.
+
+81
+00:03:29,990 --> 00:03:31,680
+In this case, a uniform distribution--
+
+82
+00:03:31,680 --> 00:03:33,980
+so it's uniformly distributed on 0 and 1.
+
+83
+00:03:33,980 --> 00:03:35,600
+Now what I'd like to do is I'd like
+
+84
+00:03:35,600 --> 00:03:39,830
+to pick Nt, the number of time steps,
+
+85
+00:03:39,830 --> 00:03:41,750
+and I'd like to think of orienting
+
+86
+00:03:41,750 --> 00:03:44,930
+this as a matrix, where I typically think of time series
+
+87
+00:03:44,930 --> 00:03:47,850
+on a computer as column vectors.
+
+88
+00:03:47,850 --> 00:03:53,000
+So I think of aligning the successive elements from top
+
+89
+00:03:53,000 --> 00:03:55,520
+to bottom, from oldest to newest--
+
+90
+00:03:55,520 --> 00:03:58,340
+1 2, 3, 4, 5, all the way up to Nt.
+
+91
+00:03:58,340 --> 00:04:01,400
+And for efficiency, we're going to run many simulations
+
+92
+00:04:01,400 --> 00:04:02,330
+in parallel.
+
+93
+00:04:02,330 --> 00:04:04,940
+And I'll think of Np as a number of sample paths
+
+94
+00:04:04,940 --> 00:04:06,390
+that we're going to generate.
+
+95
+00:04:06,390 --> 00:04:08,240
+So as far as the computer is concerned,
+
+96
+00:04:08,240 --> 00:04:10,890
+Nt times Np, they're all independent random numbers
+
+97
+00:04:10,890 --> 00:04:11,390
+anyways.
+
+98
+00:04:11,390 --> 00:04:12,500
+It hardly matters.
+
+99
+00:04:12,500 --> 00:04:15,612
+How I choose to arrange them for convenience is it a matrix.
+
+100
+00:04:15,612 --> 00:04:17,029
+And these are the conventions I'll
+
+101
+00:04:17,029 --> 00:04:18,959
+use always for time series.
+
+102
+00:04:18,959 --> 00:04:21,260
+So time goes down.
+
+103
+00:04:21,260 --> 00:04:24,390
+Each column represents an independent time series.
+
+104
+00:04:24,390 --> 00:04:26,390
+And in this case, the columns represent
+
+105
+00:04:26,390 --> 00:04:29,940
+different possible realizations of our price paths.
+
+106
+00:04:29,940 --> 00:04:32,390
+So the first line gives us a matrix
+
+107
+00:04:32,390 --> 00:04:37,070
+of Nt times Np independent, pseudo-random draws
+
+108
+00:04:37,070 --> 00:04:40,090
+from our distribution.
+
+109
+00:04:40,090 --> 00:04:44,300
+The next example right here, shows a way
+
+110
+00:04:44,300 --> 00:04:50,180
+that we can turn things into discrete random variables
+
+111
+00:04:50,180 --> 00:04:51,840
+if we have a uniform distribution.
+
+112
+00:04:51,840 --> 00:04:54,173
+And of course, the sample function I mentioned earlier--
+
+113
+00:04:54,173 --> 00:04:55,470
+there's an easier way to do it.
+
+114
+00:04:55,470 --> 00:05:00,410
+But there are simple sometimes to code things using
+
+115
+00:05:00,410 --> 00:05:03,262
+continuous distributions, and take the discrete case
+
+116
+00:05:03,262 --> 00:05:05,720
+as a special case, rather than writing different functions.
+
+117
+00:05:05,720 --> 00:05:07,012
+It doesn't make any difference.
+
+118
+00:05:07,012 --> 00:05:08,580
+You can do whatever you prefer.
+
+119
+00:05:08,580 --> 00:05:10,130
+But in this case, what I've done is
+
+120
+00:05:10,130 --> 00:05:12,950
+I've shifted it so that with probability p,
+
+121
+00:05:12,950 --> 00:05:14,270
+I get a positive number.
+
+122
+00:05:14,270 --> 00:05:16,980
+With probability 1 minus p, I get a negative number.
+
+123
+00:05:16,980 --> 00:05:18,500
+And then I take the sign of that.
+
+124
+00:05:18,500 --> 00:05:21,830
+Notice that there is a small problem, potentially here,
+
+125
+00:05:21,830 --> 00:05:23,990
+with 0, which shouldn't be allowed.
+
+126
+00:05:23,990 --> 00:05:29,390
+And the sample function won't run into that trouble.
+
+127
+00:05:29,390 --> 00:05:33,570
+But rather than making the function complex
+
+128
+00:05:33,570 --> 00:05:35,190
+with lots of parameters, it's easier
+
+129
+00:05:35,190 --> 00:05:37,320
+to do simple linear transformations
+
+130
+00:05:37,320 --> 00:05:39,747
+on the variables to move them into a range we want.
+
+131
+00:05:39,747 --> 00:05:41,580
+So typically, we want to shift the endpoints
+
+132
+00:05:41,580 --> 00:05:42,970
+and re-scale things.
+
+133
+00:05:42,970 --> 00:05:47,580
+For example, instead of plus or minus 1, I might want 0 and 1.
+
+134
+00:05:47,580 --> 00:05:56,060
+And these are related so that the x on the line
+
+135
+00:05:56,060 --> 00:06:00,660
+above gives me new variable i, that just shifts the values.
+
+136
+00:06:00,660 --> 00:06:02,690
+So when x is 1, u is 1.
+
+137
+00:06:02,690 --> 00:06:06,770
+When x is minus 1, u is equal to 0.
+
+138
+00:06:06,770 --> 00:06:10,492
+The next line right here, gives us--
+
+139
+00:06:10,492 --> 00:06:12,200
+this looks a little bit more complicated.
+
+140
+00:06:12,200 --> 00:06:14,720
+But this is an example of one way,
+
+141
+00:06:14,720 --> 00:06:17,450
+among many, that you can generate data, which
+
+142
+00:06:17,450 --> 00:06:21,440
+is normally distributed with a given mean, mu, and a given
+
+143
+00:06:21,440 --> 00:06:25,890
+standard deviation, sigma, and again, arranged in matrix form.
+
+144
+00:06:25,890 --> 00:06:28,190
+And then finally, this is our specific--
+
+145
+00:06:28,190 --> 00:06:29,970
+but it isn't required.
+
+146
+00:06:29,970 --> 00:06:32,630
+We can do this iteratively, but it's very convenient--
+
+147
+00:06:32,630 --> 00:06:35,240
+is way of applying a cumulative summation
+
+148
+00:06:35,240 --> 00:06:37,963
+function to aggregate our returns.
+
+149
+00:06:37,963 --> 00:06:39,380
+And this is typically what we look
+
+150
+00:06:39,380 --> 00:06:42,170
+at when we're doing asset price dynamics and price simulation,
+
+151
+00:06:42,170 --> 00:06:44,320
+we're going to add up successive returns.
+
+152
+00:06:44,320 --> 00:06:49,020
+So we'll have r1, r1 plus r2, r1 plus r2 plus r3, and so on.
+
+153
+00:06:49,020 --> 00:06:50,780
+So this is r-specific.
+
+154
+00:06:50,780 --> 00:06:52,850
+And this will generate-- typically,
+
+155
+00:06:52,850 --> 00:06:57,440
+what we have if r is our matrix of returns,
+
+156
+00:06:57,440 --> 00:07:01,210
+this will do a cumulative sum in the time direction.
+
+157
+00:07:01,210 --> 00:07:03,560
+That's what the second argument here is, 2.
+
+158
+00:07:03,560 --> 00:07:06,650
+And this applies it across the entire matrix.
+
+159
+00:07:06,650 --> 00:07:08,870
+And then we exponentiate, as we'll see--
+
+160
+00:07:08,870 --> 00:07:10,790
+if we're simulating log returns, we'll
+
+161
+00:07:10,790 --> 00:07:14,630
+typically want to exponentiate the cumulative sums and returns
+
+162
+00:07:14,630 --> 00:07:16,565
+to get the actual asset price paths.
+
+163
+00:07:16,565 --> 00:07:20,160
+
+
+164
+00:07:20,160 --> 00:07:22,420
+So let's look at some examples.
+
+165
+00:07:22,420 --> 00:07:24,480
+In this case, this is code that generates
+
+166
+00:07:24,480 --> 00:07:28,650
+a simple 20-step random walk with equal probability
+
+167
+00:07:28,650 --> 00:07:30,010
+for going up and down.
+
+168
+00:07:30,010 --> 00:07:34,110
+So notice-- I define up top what the probabilities are.
+
+169
+00:07:34,110 --> 00:07:37,620
+And it's conventional sometimes, to call with a probability, p.
+
+170
+00:07:37,620 --> 00:07:40,980
+And the probability of the opposite outcome, q.
+
+171
+00:07:40,980 --> 00:07:43,230
+1 minus p-- it's not required.
+
+172
+00:07:43,230 --> 00:07:44,980
+You can code it any way you'd like.
+
+173
+00:07:44,980 --> 00:07:47,280
+And the number of times steps is 20.
+
+174
+00:07:47,280 --> 00:07:50,880
+For simplicity, I'm picking only one sample path in this case.
+
+175
+00:07:50,880 --> 00:07:57,180
+Here's my assignment to z of a set of random numbers
+
+176
+00:07:57,180 --> 00:07:58,140
+that are drawn.
+
+177
+00:07:58,140 --> 00:08:00,550
+Here, I'm mapping them to the range I want.
+
+178
+00:08:00,550 --> 00:08:04,680
+I initialize a set of partial sums, s, to be 0.
+
+179
+00:08:04,680 --> 00:08:07,080
+And it's important to keep in mind that we usually
+
+180
+00:08:07,080 --> 00:08:10,100
+want to start at time 0, with a fixed value.
+
+181
+00:08:10,100 --> 00:08:15,120
+So in order to have N sub t steps and returns,
+
+182
+00:08:15,120 --> 00:08:22,020
+we need Nt plus 1 placeholders for the actual values
+
+183
+00:08:22,020 --> 00:08:23,290
+of our state variable.
+
+184
+00:08:23,290 --> 00:08:28,980
+So if we want to have, let's say, 252 daily returns
+
+185
+00:08:28,980 --> 00:08:31,110
+for a stock price, which is typical
+
+186
+00:08:31,110 --> 00:08:33,720
+for an annual simulation, then we
+
+187
+00:08:33,720 --> 00:08:37,830
+need 253 values for the price.
+
+188
+00:08:37,830 --> 00:08:41,275
+Because the first one will be p0 will be initial price.
+
+189
+00:08:41,275 --> 00:08:42,650
+And then we'll have the next one.
+
+190
+00:08:42,650 --> 00:08:46,170
+So it's always one less return than the number of prices
+
+191
+00:08:46,170 --> 00:08:48,980
+that we have.
+
+192
+00:08:48,980 --> 00:08:51,190
+So, now that we have it initialized,
+
+193
+00:08:51,190 --> 00:08:53,200
+let's just run a simple for loop.
+
+194
+00:08:53,200 --> 00:09:00,580
+And at each step, we'll say that the value at step k plus 1,
+
+195
+00:09:00,580 --> 00:09:03,010
+at the next step, is wherever we were
+
+196
+00:09:03,010 --> 00:09:07,600
+in the previous step plus the random value that we had.
+
+197
+00:09:07,600 --> 00:09:12,430
+Where I've written this with the argument having comma
+
+198
+00:09:12,430 --> 00:09:15,910
+and then a blank in R, is the syntax meaning
+
+199
+00:09:15,910 --> 00:09:18,490
+do it for this row and for all of the columns.
+
+200
+00:09:18,490 --> 00:09:21,070
+In this particular case, we have N sub p is 1.
+
+201
+00:09:21,070 --> 00:09:22,700
+There's only one column there.
+
+202
+00:09:22,700 --> 00:09:26,203
+But in general, this is going to be the format that we'll use.
+
+203
+00:09:26,203 --> 00:09:27,370
+And then we can take a look.
+
+204
+00:09:27,370 --> 00:09:31,240
+And behind me, is an example of what a 20-step random walk
+
+205
+00:09:31,240 --> 00:09:32,290
+looks like.
+
+206
+00:09:32,290 --> 00:09:34,300
+When you run it-- each time we rerun it,
+
+207
+00:09:34,300 --> 00:09:36,780
+we'll get some different value.
+
+208
+00:09:36,780 --> 00:09:37,280
+,
+
+209
+00:09:37,280 --> 00:09:39,440
+Now, let's take a look at how we might do this
+
+210
+00:09:39,440 --> 00:09:41,642
+if we want to get a little bit closer to finance.
+
+211
+00:09:41,642 --> 00:09:43,100
+One of the things we'll do is let's
+
+212
+00:09:43,100 --> 00:09:45,500
+pick a particular number of time steps.
+
+213
+00:09:45,500 --> 00:09:46,820
+I like 252.
+
+214
+00:09:46,820 --> 00:09:53,570
+252 is the standard convention for modeling daily returns.
+
+215
+00:09:53,570 --> 00:09:57,680
+The idea is that we have approximately 21 trading days,
+
+216
+00:09:57,680 --> 00:10:01,190
+excluding weekends and holidays on average in a month.
+
+217
+00:10:01,190 --> 00:10:04,190
+12 months-- that gives us 252 trading days.
+
+218
+00:10:04,190 --> 00:10:06,800
+And we're going to treat weekends as being nonexistent.
+
+219
+00:10:06,800 --> 00:10:09,620
+So we'll assume that everything is homogeneous from Friday
+
+220
+00:10:09,620 --> 00:10:11,810
+to Monday, and that we keep going.
+
+221
+00:10:11,810 --> 00:10:14,360
+The number of simulations I'm going to run
+
+222
+00:10:14,360 --> 00:10:17,728
+is going to be 10,000 simulations, which
+
+223
+00:10:17,728 --> 00:10:18,770
+is a good starting point.
+
+224
+00:10:18,770 --> 00:10:23,420
+It's kind of a handy number, a good balance between being
+
+225
+00:10:23,420 --> 00:10:25,370
+tractable and being accurate.
+
+226
+00:10:25,370 --> 00:10:28,250
+Just as a rough rule of thumb--
+
+227
+00:10:28,250 --> 00:10:31,070
+the accuracy of our results typically
+
+228
+00:10:31,070 --> 00:10:36,830
+is going to scale with 1 over the square root of the number
+
+229
+00:10:36,830 --> 00:10:38,640
+of simulations that we do.
+
+230
+00:10:38,640 --> 00:10:44,090
+So 10,000 means that we can get things that might be roughly 1%
+
+231
+00:10:44,090 --> 00:10:46,230
+accurate to a range of 1%.
+
+232
+00:10:46,230 --> 00:10:47,795
+A million would be better.
+
+233
+00:10:47,795 --> 00:10:49,427
+A billion might be even better.
+
+234
+00:10:49,427 --> 00:10:52,010
+But that would take a very long time to run on most computers.
+
+235
+00:10:52,010 --> 00:10:55,010
+So I like to start at around 10,000,
+
+236
+00:10:55,010 --> 00:10:57,810
+And then work from there as far as needed.
+
+237
+00:10:57,810 --> 00:11:01,340
+So now I've got a bunch of random numbers.
+
+238
+00:11:01,340 --> 00:11:05,420
+I'm going to treat these again, as discrete values,
+
+239
+00:11:05,420 --> 00:11:06,440
+plus or minus 1.
+
+240
+00:11:06,440 --> 00:11:09,140
+So this is a random, discrete random walk,
+
+241
+00:11:09,140 --> 00:11:12,540
+where we're going by discrete steps up or down.
+
+242
+00:11:12,540 --> 00:11:16,310
+And then I'm going to run this, but now, over many paths,
+
+243
+00:11:16,310 --> 00:11:17,330
+over time.
+
+244
+00:11:17,330 --> 00:11:19,880
+And I have each location is the previous one.
+
+245
+00:11:19,880 --> 00:11:21,360
+And what does that look like?
+
+246
+00:11:21,360 --> 00:11:24,260
+Well, now I can get my ensemble of paths.
+
+247
+00:11:24,260 --> 00:11:25,310
+I have 10,000 of them.
+
+248
+00:11:25,310 --> 00:11:27,510
+That would make for a pretty cluttered diagram.
+
+249
+00:11:27,510 --> 00:11:29,130
+So I've drawn three of them here.
+
+250
+00:11:29,130 --> 00:11:31,962
+And you can see that if these were stock prices,
+
+251
+00:11:31,962 --> 00:11:33,920
+you might feel very differently about them but.
+
+252
+00:11:33,920 --> 00:11:37,650
+These are all three paths drawn from the same distribution.
+
+253
+00:11:37,650 --> 00:11:40,640
+OK, in this case, the distribution
+
+254
+00:11:40,640 --> 00:11:43,980
+is equally likely to go up or down.
+
+255
+00:11:43,980 --> 00:11:46,400
+So the fact that one of the paths went up, one of them
+
+256
+00:11:46,400 --> 00:11:49,460
+ended up at 0, and one of them ended up very negative,
+
+257
+00:11:49,460 --> 00:11:53,830
+is just quite literally the luck of the draw.
+

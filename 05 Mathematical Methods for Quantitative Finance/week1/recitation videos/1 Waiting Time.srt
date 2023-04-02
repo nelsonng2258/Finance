@@ -1,0 +1,1008 @@
+0
+00:00:00,000 --> 00:00:01,950
+
+
+1
+00:00:01,950 --> 00:00:04,050
+PROFESSOR: Finance involves a lot of uncertainty,
+
+2
+00:00:04,050 --> 00:00:06,060
+and we use language of probability
+
+3
+00:00:06,060 --> 00:00:08,220
+to model that uncertainty.
+
+4
+00:00:08,220 --> 00:00:11,310
+The common distributions of finance occur in many ways,
+
+5
+00:00:11,310 --> 00:00:13,350
+sometimes directly and more often
+
+6
+00:00:13,350 --> 00:00:16,780
+as the building blocks for more complicated processes.
+
+7
+00:00:16,780 --> 00:00:19,470
+So let's take a look at a couple of examples
+
+8
+00:00:19,470 --> 00:00:23,750
+of how we compute expectations from distributions,
+
+9
+00:00:23,750 --> 00:00:25,500
+how we can solve some interesting problems
+
+10
+00:00:25,500 --> 00:00:26,790
+from some simple ones.
+
+11
+00:00:26,790 --> 00:00:28,710
+And let's start thinking ahead already
+
+12
+00:00:28,710 --> 00:00:31,560
+as we review probability to thinking about how we're
+
+13
+00:00:31,560 --> 00:00:35,370
+going to use these basic tools of probability to describe
+
+14
+00:00:35,370 --> 00:00:38,220
+processes that evolve over time, where
+
+15
+00:00:38,220 --> 00:00:39,810
+we need to think about uncertainty
+
+16
+00:00:39,810 --> 00:00:42,030
+over multiple horizons in the future
+
+17
+00:00:42,030 --> 00:00:44,910
+and where information may arrive gradually
+
+18
+00:00:44,910 --> 00:00:48,210
+from one point to another and get incorporated
+
+19
+00:00:48,210 --> 00:00:51,140
+in our description.
+
+20
+00:00:51,140 --> 00:00:54,410
+So our starting example, let's just think of a random variable
+
+21
+00:00:54,410 --> 00:00:58,640
+x, a binomial random variable where I have probability
+
+22
+00:00:58,640 --> 00:01:01,340
+p that we sometimes call success of getting
+
+23
+00:01:01,340 --> 00:01:04,640
+a 1, probability q which is just shorthand for 1
+
+24
+00:01:04,640 --> 00:01:08,380
+minus p of getting a 0.
+
+25
+00:01:08,380 --> 00:01:11,710
+The typical question we ask and that we saw in lecture
+
+26
+00:01:11,710 --> 00:01:15,310
+is, what's the probability of observing a fixed number,
+
+27
+00:01:15,310 --> 00:01:20,900
+say, k successes out of a total number n of trials?
+
+28
+00:01:20,900 --> 00:01:23,230
+So to do that, there are two common things we do.
+
+29
+00:01:23,230 --> 00:01:28,000
+First, we ask for a given sequence,
+
+30
+00:01:28,000 --> 00:01:29,320
+what would be its probability?
+
+31
+00:01:29,320 --> 00:01:32,800
+Well, if there are k successes and there
+
+32
+00:01:32,800 --> 00:01:36,130
+are n minus k failures, then the probability
+
+33
+00:01:36,130 --> 00:01:47,200
+has to be p to the k q to the n minus k.
+
+34
+00:01:47,200 --> 00:01:48,700
+Because the events are independent,
+
+35
+00:01:48,700 --> 00:01:49,923
+our probabilities multiply.
+
+36
+00:01:49,923 --> 00:01:52,340
+And then, there are a lot of different ways of doing that.
+
+37
+00:01:52,340 --> 00:01:53,080
+How many?
+
+38
+00:01:53,080 --> 00:01:55,240
+Well, we've got a sequence of n events.
+
+39
+00:01:55,240 --> 00:01:57,910
+The 1's could be placed at any orders between them.
+
+40
+00:01:57,910 --> 00:02:02,460
+The number is n choose k probabilistically,
+
+41
+00:02:02,460 --> 00:02:06,870
+and this is the familiar binomial distribution,
+
+42
+00:02:06,870 --> 00:02:10,400
+sometimes written k of n with parameter p,
+
+43
+00:02:10,400 --> 00:02:13,070
+the probability for success.
+
+44
+00:02:13,070 --> 00:02:15,560
+Now, suppose we ask a different question.
+
+45
+00:02:15,560 --> 00:02:19,670
+Suppose we ask how long it would take us to observe success.
+
+46
+00:02:19,670 --> 00:02:22,250
+That is, we don't know what n is in advance.
+
+47
+00:02:22,250 --> 00:02:24,420
+We'd like n to be the outcome.
+
+48
+00:02:24,420 --> 00:02:26,630
+So n is our random variable or we
+
+49
+00:02:26,630 --> 00:02:29,860
+might call it T to think about a waiting time.
+
+50
+00:02:29,860 --> 00:02:34,700
+So let's call T the waiting time.
+
+51
+00:02:34,700 --> 00:02:40,480
+
+
+52
+00:02:40,480 --> 00:02:43,595
+And that's how long we would need to wait for success.
+
+53
+00:02:43,595 --> 00:02:44,470
+So what might happen?
+
+54
+00:02:44,470 --> 00:02:48,010
+Well, we could have it happen on the first event.
+
+55
+00:02:48,010 --> 00:02:52,090
+So we could have a T equals 1, we get a success,
+
+56
+00:02:52,090 --> 00:02:55,780
+and that could happen with probability p.
+
+57
+00:02:55,780 --> 00:02:57,880
+It could happen on our second trial.
+
+58
+00:02:57,880 --> 00:02:58,780
+T equals 2.
+
+59
+00:02:58,780 --> 00:03:00,340
+That is, we could fail it first--
+
+60
+00:03:00,340 --> 00:03:03,580
+
+
+61
+00:03:03,580 --> 00:03:05,740
+have a failure and then a success.
+
+62
+00:03:05,740 --> 00:03:09,730
+And that would be probability q times p.
+
+63
+00:03:09,730 --> 00:03:12,970
+Third trial, if it happened at T equals 3,
+
+64
+00:03:12,970 --> 00:03:15,910
+we would have fail, fail, succeed.
+
+65
+00:03:15,910 --> 00:03:18,100
+That would be q squared p.
+
+66
+00:03:18,100 --> 00:03:24,700
+And in general, we can see that for T equals n,
+
+67
+00:03:24,700 --> 00:03:29,200
+we're going to have probability q to the n minus 1 p.
+
+68
+00:03:29,200 --> 00:03:32,800
+That is, we have a string of n minus 1 failures followed
+
+69
+00:03:32,800 --> 00:03:37,730
+by a success, and this is the geometric distribution.
+
+70
+00:03:37,730 --> 00:03:47,120
+So we have that the probability that the waiting time is
+
+71
+00:03:47,120 --> 00:03:52,610
+equal to some particular n is given by q to the n minus 1 p,
+
+72
+00:03:52,610 --> 00:03:56,680
+or we can write that of course as 1 minus p
+
+73
+00:03:56,680 --> 00:04:00,390
+to the n minus 1 times p.
+
+74
+00:04:00,390 --> 00:04:05,960
+So how long should we expect to wait on average?
+
+75
+00:04:05,960 --> 00:04:07,220
+Let's compute.
+
+76
+00:04:07,220 --> 00:04:08,190
+When in doubt, compute.
+
+77
+00:04:08,190 --> 00:04:15,100
+
+
+78
+00:04:15,100 --> 00:04:17,260
+The expectation of our waiting time
+
+79
+00:04:17,260 --> 00:04:27,700
+T is going to be the probability weighted average of the waiting
+
+80
+00:04:27,700 --> 00:04:28,730
+time.
+
+81
+00:04:28,730 --> 00:04:30,470
+So we have a formula for that.
+
+82
+00:04:30,470 --> 00:04:33,520
+So we can write this as the sum from n
+
+83
+00:04:33,520 --> 00:04:43,230
+equals 0 to infinity of n times q to the n minus 1 p.
+
+84
+00:04:43,230 --> 00:04:45,240
+Now, if we look at this, we notice
+
+85
+00:04:45,240 --> 00:04:49,210
+that this combination here looks familiar, doesn't it?
+
+86
+00:04:49,210 --> 00:04:51,550
+It's the derivative of q to the n.
+
+87
+00:04:51,550 --> 00:04:52,425
+So we'll use a trick.
+
+88
+00:04:52,425 --> 00:04:53,967
+What we're going to do is we're going
+
+89
+00:04:53,967 --> 00:04:55,200
+to write it as a derivative.
+
+90
+00:04:55,200 --> 00:04:58,020
+And then, because q is positive and less than 1,
+
+91
+00:04:58,020 --> 00:04:59,490
+the sums are convergent.
+
+92
+00:04:59,490 --> 00:05:01,650
+And we'll interchange the order of differentiation
+
+93
+00:05:01,650 --> 00:05:03,720
+in summation, which will give us something
+
+94
+00:05:03,720 --> 00:05:06,150
+that will be a nice, quick answer and something that
+
+95
+00:05:06,150 --> 00:05:08,800
+generalizes for more complex cases.
+
+96
+00:05:08,800 --> 00:05:13,260
+So let's see how that goes taking, it step by step.
+
+97
+00:05:13,260 --> 00:05:14,400
+This is equal to--
+
+98
+00:05:14,400 --> 00:05:19,430
+I'll pull the p out in front times the summation of d
+
+99
+00:05:19,430 --> 00:05:27,110
+by dq of q to the n, which I'll write as p d
+
+100
+00:05:27,110 --> 00:05:36,060
+by dq times the sum of q to the n.
+
+101
+00:05:36,060 --> 00:05:43,780
+And the term in parentheses right here is a geometric sum.
+
+102
+00:05:43,780 --> 00:05:44,940
+So we can do that sum.
+
+103
+00:05:44,940 --> 00:05:47,840
+
+
+104
+00:05:47,840 --> 00:05:52,826
+This is just p times 1 over 1 minus q.
+
+105
+00:05:52,826 --> 00:05:57,510
+And its derivative gives us 1 over 1 minus q squared.
+
+106
+00:05:57,510 --> 00:06:02,170
+Now we remember that p plus q equals 1, so this is p times 1
+
+107
+00:06:02,170 --> 00:06:03,740
+over p squared.
+
+108
+00:06:03,740 --> 00:06:08,320
+Therefore, we find that the expectation of T
+
+109
+00:06:08,320 --> 00:06:11,140
+is equal to 1 over p.
+
+110
+00:06:11,140 --> 00:06:17,560
+
+
+111
+00:06:17,560 --> 00:06:19,780
+So this should make some amount of sense.
+
+112
+00:06:19,780 --> 00:06:22,570
+First of all, we see that as p gets small,
+
+113
+00:06:22,570 --> 00:06:25,150
+the expected waiting time gets large.
+
+114
+00:06:25,150 --> 00:06:27,460
+If we have a 1 over 6 chance of throwing
+
+115
+00:06:27,460 --> 00:06:31,150
+a seven with a pair of dice, we wait on average six turns
+
+116
+00:06:31,150 --> 00:06:32,320
+till we get that.
+
+117
+00:06:32,320 --> 00:06:37,780
+If we're looking for a set of two aces and playing poker,
+
+118
+00:06:37,780 --> 00:06:41,050
+then we'll have to wait on average 221 turns.
+
+119
+00:06:41,050 --> 00:06:44,440
+Now, it's important to note that in both these cases they
+
+120
+00:06:44,440 --> 00:06:53,110
+satisfy the Markov property, which
+
+121
+00:06:53,110 --> 00:06:56,020
+says that there's no memory of what happened before.
+
+122
+00:06:56,020 --> 00:06:59,410
+That is, if we just got a pair of aces
+
+123
+00:06:59,410 --> 00:07:03,130
+our expected waiting time for another pair of aces is 221.
+
+124
+00:07:03,130 --> 00:07:06,340
+But if we've been waiting 220 hands,
+
+125
+00:07:06,340 --> 00:07:09,610
+we still have an expected waiting time of 221.
+
+126
+00:07:09,610 --> 00:07:13,150
+Regardless of what came before, the future expectations
+
+127
+00:07:13,150 --> 00:07:17,650
+depend only on the present-state variables for where we are now,
+
+128
+00:07:17,650 --> 00:07:19,300
+not on how we got there.
+
+129
+00:07:19,300 --> 00:07:22,420
+And this notion of Markov processes
+
+130
+00:07:22,420 --> 00:07:25,150
+will be important for characterizing
+
+131
+00:07:25,150 --> 00:07:27,430
+different kinds of time evolution
+
+132
+00:07:27,430 --> 00:07:29,530
+and for the way in which information
+
+133
+00:07:29,530 --> 00:07:32,410
+gets incorporated into interesting financial
+
+134
+00:07:32,410 --> 00:07:33,590
+variables.
+
+135
+00:07:33,590 --> 00:07:35,440
+So when it comes to games of chance,
+
+136
+00:07:35,440 --> 00:07:38,020
+certainly we know that in a fair game
+
+137
+00:07:38,020 --> 00:07:41,080
+that the next outcome is independent of the ones that
+
+138
+00:07:41,080 --> 00:07:44,230
+came before, that each one should be independent.
+
+139
+00:07:44,230 --> 00:07:46,420
+Let's now extend and ask, what would
+
+140
+00:07:46,420 --> 00:07:49,070
+be the variance of the waiting time?
+
+141
+00:07:49,070 --> 00:07:51,610
+So for the variance, let's remember
+
+142
+00:07:51,610 --> 00:07:58,380
+that the variance of the waiting time or for any random variable
+
+143
+00:07:58,380 --> 00:08:03,330
+is the expectation of the variable
+
+144
+00:08:03,330 --> 00:08:05,610
+minus its mean value, which here I just
+
+145
+00:08:05,610 --> 00:08:07,350
+to simplify the notation.
+
+146
+00:08:07,350 --> 00:08:09,390
+Instead E of T within the expectation,
+
+147
+00:08:09,390 --> 00:08:14,820
+I'll just call T-bar quantity squared.
+
+148
+00:08:14,820 --> 00:08:18,110
+And we have the general property for all expectations
+
+149
+00:08:18,110 --> 00:08:20,600
+that the variance is the expectation
+
+150
+00:08:20,600 --> 00:08:24,300
+of the square minus the square of the expectation.
+
+151
+00:08:24,300 --> 00:08:26,780
+Let's just review that.
+
+152
+00:08:26,780 --> 00:08:29,570
+This is expectation, and I'm going
+
+153
+00:08:29,570 --> 00:08:31,430
+to expand out the quadratic.
+
+154
+00:08:31,430 --> 00:08:40,809
+T squared minus 2 T-bar T plus T-bar squared.
+
+155
+00:08:40,809 --> 00:08:43,570
+Remember, the T-bar, the expectation of T,
+
+156
+00:08:43,570 --> 00:08:47,270
+is just a number, whereas T is a random variable.
+
+157
+00:08:47,270 --> 00:08:51,640
+Now applying linearity, we have that the expectation of the sum
+
+158
+00:08:51,640 --> 00:08:58,150
+is the sum of the expectations and the expectation of a scalar
+
+159
+00:08:58,150 --> 00:09:01,360
+times an expectation-- we just bring the scalar out front--
+
+160
+00:09:01,360 --> 00:09:05,260
+
+
+161
+00:09:05,260 --> 00:09:08,550
+plus T squared.
+
+162
+00:09:08,550 --> 00:09:12,980
+Now, we notice it in this second term, right here,
+
+163
+00:09:12,980 --> 00:09:16,130
+that we have T-bar times T-bar.
+
+164
+00:09:16,130 --> 00:09:20,720
+That is, this combines to be minus 2 T-bar times T
+
+165
+00:09:20,720 --> 00:09:23,780
+bar, which gives us minus 2 T-bar squared
+
+166
+00:09:23,780 --> 00:09:25,460
+plus T-bar squared.
+
+167
+00:09:25,460 --> 00:09:27,980
+Minus 2 plus 1 is minus 1.
+
+168
+00:09:27,980 --> 00:09:31,790
+So we have that this is equal to, as advertised,
+
+169
+00:09:31,790 --> 00:09:37,510
+the expectation of the squared minus the square
+
+170
+00:09:37,510 --> 00:09:39,470
+of the expectation.
+
+171
+00:09:39,470 --> 00:09:45,400
+So how do we apply that to our Bernoulli trial case?
+
+172
+00:09:45,400 --> 00:09:48,130
+Well, we'd like to find the second moment.
+
+173
+00:09:48,130 --> 00:09:49,690
+T-bar, we've already computed.
+
+174
+00:09:49,690 --> 00:09:50,890
+It's 1 over p.
+
+175
+00:09:50,890 --> 00:09:53,840
+So T-bar squared is going to be 1 over p squared.
+
+176
+00:09:53,840 --> 00:09:57,460
+So we'd like to do for our Bernoulli case is
+
+177
+00:09:57,460 --> 00:09:59,120
+compute the second moment.
+
+178
+00:09:59,120 --> 00:10:05,630
+So we'd like to compute expectation of T squared,
+
+179
+00:10:05,630 --> 00:10:07,070
+and that's the second moment.
+
+180
+00:10:07,070 --> 00:10:10,690
+So this is going to be the sum from n equals 0
+
+181
+00:10:10,690 --> 00:10:15,190
+to infinity, this time of n squared times the probability
+
+182
+00:10:15,190 --> 00:10:20,950
+that T equals n which is the same as we saw before.
+
+183
+00:10:20,950 --> 00:10:23,340
+Now you notice we're not quite in as good shape
+
+184
+00:10:23,340 --> 00:10:27,090
+as we were before because I have n squared instead of n,
+
+185
+00:10:27,090 --> 00:10:33,150
+and this quantity here is not just the derivative of q
+
+186
+00:10:33,150 --> 00:10:34,350
+to the n.
+
+187
+00:10:34,350 --> 00:10:35,850
+But we can come close.
+
+188
+00:10:35,850 --> 00:10:38,610
+We can still use a derivative trick in a slightly different
+
+189
+00:10:38,610 --> 00:10:39,480
+formula.
+
+190
+00:10:39,480 --> 00:10:42,420
+And what we'll do is we'll notice that every time
+
+191
+00:10:42,420 --> 00:10:45,750
+when we took a derivative once, we brought down a power of n.
+
+192
+00:10:45,750 --> 00:10:48,065
+If I want repeated derivatives, I
+
+193
+00:10:48,065 --> 00:10:50,190
+would-- if I just keep taking repeated derivatives,
+
+194
+00:10:50,190 --> 00:10:53,080
+I'd end up with n factorial which isn't what I want.
+
+195
+00:10:53,080 --> 00:10:57,390
+So if I take a derivative but multiply back by q,
+
+196
+00:10:57,390 --> 00:11:00,360
+then I will have what I want.
+
+197
+00:11:00,360 --> 00:11:01,250
+So let's take a look.
+
+198
+00:11:01,250 --> 00:11:08,340
+So specifically, let's look at the more general problem
+
+199
+00:11:08,340 --> 00:11:13,440
+of computing, say, the moment T to the power r--
+
+200
+00:11:13,440 --> 00:11:16,620
+and that I can write as--
+
+201
+00:11:16,620 --> 00:11:19,890
+let me take out this p here.
+
+202
+00:11:19,890 --> 00:11:23,870
+And let me take out 1 over q out front.
+
+203
+00:11:23,870 --> 00:11:31,520
+So let me write this as p divided by q times
+
+204
+00:11:31,520 --> 00:11:36,880
+the sum from n equals 0 to infinity of what would
+
+205
+00:11:36,880 --> 00:11:39,650
+be an n to the r q to the n.
+
+206
+00:11:39,650 --> 00:11:48,380
+And I'm going to write that in the following way, q d by dq
+
+207
+00:11:48,380 --> 00:11:56,830
+with this operator raised to the r-th power times q to the n.
+
+208
+00:11:56,830 --> 00:12:01,600
+So if r is equal to 1, I take q d by dq.
+
+209
+00:12:01,600 --> 00:12:09,440
+d by dq gives me an n times q to the n minus 1 multiplied by q.
+
+210
+00:12:09,440 --> 00:12:16,140
+And I'm left with n with a single power of n in front.
+
+211
+00:12:16,140 --> 00:12:20,170
+If I do that repeatedly-- twice, three times, r times--
+
+212
+00:12:20,170 --> 00:12:22,650
+each time I act with the operator q
+
+213
+00:12:22,650 --> 00:12:26,100
+d by dq, I'll bring down in front a power of n.
+
+214
+00:12:26,100 --> 00:12:29,670
+So this is going to be equal to--
+
+215
+00:12:29,670 --> 00:12:35,410
+this is going to be the same thing as p over q
+
+216
+00:12:35,410 --> 00:12:44,490
+times the sum of n to the r q to the n.
+
+217
+00:12:44,490 --> 00:12:47,280
+So obviously, we can apply this in the special case
+
+218
+00:12:47,280 --> 00:12:48,465
+where n equals 2.
+
+219
+00:12:48,465 --> 00:12:51,960
+
+
+220
+00:12:51,960 --> 00:12:53,940
+But we want to do one more thing, which
+
+221
+00:12:53,940 --> 00:12:55,860
+is to do our derivative trick--
+
+222
+00:12:55,860 --> 00:12:58,260
+so where we interchange the order of the derivative
+
+223
+00:12:58,260 --> 00:12:59,690
+and the summation.
+
+224
+00:12:59,690 --> 00:13:08,260
+So let's put this in the form p over q q d by dq.
+
+225
+00:13:08,260 --> 00:13:10,850
+
+
+226
+00:13:10,850 --> 00:13:19,350
+Let's take this operator to the r-th power times 1 over 1
+
+227
+00:13:19,350 --> 00:13:21,240
+minus q.
+
+228
+00:13:21,240 --> 00:13:23,880
+So here's your chance.
+
+229
+00:13:23,880 --> 00:13:26,820
+Take these formulas that we have here.
+
+230
+00:13:26,820 --> 00:13:31,720
+Take a moment right now to go ahead and compute,
+
+231
+00:13:31,720 --> 00:13:34,480
+what is the variance of T?
+
+232
+00:13:34,480 --> 00:13:37,090
+So compute the expectation of T squared
+
+233
+00:13:37,090 --> 00:13:41,450
+and subtract the expectation of T quantity squared
+
+234
+00:13:41,450 --> 00:13:44,380
+and express the results in terms of our original probability
+
+235
+00:13:44,380 --> 00:13:45,700
+value p.
+
+236
+00:13:45,700 --> 00:14:09,300
+
+
+237
+00:14:09,300 --> 00:14:11,220
+Hit pause now if you haven't got it yet
+
+238
+00:14:11,220 --> 00:14:13,620
+and you want a little more time to work it out.
+
+239
+00:14:13,620 --> 00:14:16,320
+But the value that we have is we have now
+
+240
+00:14:16,320 --> 00:14:20,420
+that the variance of T for the waiting
+
+241
+00:14:20,420 --> 00:14:25,370
+time for a success in a single series of Bernoulli trials
+
+242
+00:14:25,370 --> 00:14:34,170
+is going to be the expectation T squared minus the expectation
+
+243
+00:14:34,170 --> 00:14:36,910
+of T quantity squared.
+
+244
+00:14:36,910 --> 00:14:44,420
+And this is equal to 1 minus p over p squared.
+
+245
+00:14:44,420 --> 00:14:47,200
+So we have a general formula that we
+
+246
+00:14:47,200 --> 00:14:49,810
+could extend to computing higher moments,
+
+247
+00:14:49,810 --> 00:14:51,700
+and we can apply this to other settings
+
+248
+00:14:51,700 --> 00:14:54,850
+where perhaps a Bernoulli process like this
+
+249
+00:14:54,850 --> 00:14:57,640
+might be part of a more complex sequence
+
+250
+00:14:57,640 --> 00:15:00,540
+of conditional probabilities.
+
+251
+00:15:00,540 --> 00:15:02,000
+
+

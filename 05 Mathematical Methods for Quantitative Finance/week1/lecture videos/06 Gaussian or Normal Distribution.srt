@@ -1,0 +1,500 @@
+0
+00:00:00,000 --> 00:00:05,080
+PROFESSOR: The next distribution that's common everywhere
+
+1
+00:00:05,080 --> 00:00:07,795
+in finance and statistics and in many other areas
+
+2
+00:00:07,795 --> 00:00:10,810
+of applied mathematics is the Gaussian distribution
+
+3
+00:00:10,810 --> 00:00:12,190
+or the normal distribution.
+
+4
+00:00:12,190 --> 00:00:15,200
+And I'll use the two terms interchangeably.
+
+5
+00:00:15,200 --> 00:00:18,580
+So the normal distribution is the famous bell curve
+
+6
+00:00:18,580 --> 00:00:20,920
+that we see over here, OK?
+
+7
+00:00:20,920 --> 00:00:23,860
+So the bell curve is symmetric around 0.
+
+8
+00:00:23,860 --> 00:00:26,230
+It has a width like, goes all the way out
+
+9
+00:00:26,230 --> 00:00:28,550
+to minus infinity and plus infinity.
+
+10
+00:00:28,550 --> 00:00:29,920
+So it's unbounded.
+
+11
+00:00:29,920 --> 00:00:31,870
+But most of its support--
+
+12
+00:00:31,870 --> 00:00:35,470
+99% of its support lies between plus and minus 3.
+
+13
+00:00:35,470 --> 00:00:37,780
+And the tails get short very quickly.
+
+14
+00:00:37,780 --> 00:00:39,490
+What's the functional form of it?
+
+15
+00:00:39,490 --> 00:00:42,100
+Well, it's e to the minus x squared.
+
+16
+00:00:42,100 --> 00:00:46,390
+Specifically, we can write this as e to the minus x
+
+17
+00:00:46,390 --> 00:00:50,290
+minus mu quantity squared over 2 sigma squared.
+
+18
+00:00:50,290 --> 00:00:53,020
+And mu and sigma have a particular meaning.
+
+19
+00:00:53,020 --> 00:00:56,350
+If we set mu to 0 and sigma equal to 1,
+
+20
+00:00:56,350 --> 00:00:59,230
+we would have this standardized form, which
+
+21
+00:00:59,230 --> 00:01:01,480
+I've written in terms of z.
+
+22
+00:01:01,480 --> 00:01:05,050
+And generally, I'll try to reserve z for this special form
+
+23
+00:01:05,050 --> 00:01:09,460
+for this standardized random variable where in terms of z,
+
+24
+00:01:09,460 --> 00:01:11,380
+this is peaked at 0.
+
+25
+00:01:11,380 --> 00:01:14,540
+And its width-- its standard deviation,
+
+26
+00:01:14,540 --> 00:01:18,260
+which we can compute, is equal to 1.
+
+27
+00:01:18,260 --> 00:01:23,970
+
+
+28
+00:01:23,970 --> 00:01:28,920
+If I replace z by x minus mu divided by sigma,
+
+29
+00:01:28,920 --> 00:01:30,670
+I can recover this form here.
+
+30
+00:01:30,670 --> 00:01:33,300
+And if I remember to use my change of variables formula,
+
+31
+00:01:33,300 --> 00:01:36,810
+that's where this sigma squared under the square root
+
+32
+00:01:36,810 --> 00:01:38,580
+in the denominator comes from.
+
+33
+00:01:38,580 --> 00:01:41,790
+But there's a good physical interpretation of mu and sigma.
+
+34
+00:01:41,790 --> 00:01:47,040
+So the mu is the center of the distribution.
+
+35
+00:01:47,040 --> 00:01:52,080
+Because exponential will decrease as its argument
+
+36
+00:01:52,080 --> 00:01:55,800
+increases, the largest value the exponential takes
+
+37
+00:01:55,800 --> 00:02:02,460
+is when either z vanishes down here or when x is equal to mu.
+
+38
+00:02:02,460 --> 00:02:05,400
+And that corresponds to the peak of the distribution here.
+
+39
+00:02:05,400 --> 00:02:07,980
+Or at the peak of these different distributions,
+
+40
+00:02:07,980 --> 00:02:11,009
+each of which is computed for a different value of mu,
+
+41
+00:02:11,009 --> 00:02:14,500
+mu tells you where the center of the distribution is.
+
+42
+00:02:14,500 --> 00:02:17,220
+So if we want to shift the distribution left or right,
+
+43
+00:02:17,220 --> 00:02:18,660
+we change mu.
+
+44
+00:02:18,660 --> 00:02:21,600
+If we want to change the width of the distribution,
+
+45
+00:02:21,600 --> 00:02:22,980
+we change sigma.
+
+46
+00:02:22,980 --> 00:02:26,430
+A small sigma is a narrow distribution.
+
+47
+00:02:26,430 --> 00:02:29,400
+A large sigma is a wide distribution
+
+48
+00:02:29,400 --> 00:02:31,200
+because the area under the curve needs
+
+49
+00:02:31,200 --> 00:02:34,470
+to equal 1, the curve if it's wide,
+
+50
+00:02:34,470 --> 00:02:36,120
+it's going to be lower down.
+
+51
+00:02:36,120 --> 00:02:39,330
+And if the sigma is narrow, then it's going to be peaked.
+
+52
+00:02:39,330 --> 00:02:42,950
+And the center will be higher.
+
+53
+00:02:42,950 --> 00:02:44,450
+There are a couple of handy formulas
+
+54
+00:02:44,450 --> 00:02:47,750
+for checking the normalization of the Gaussian.
+
+55
+00:02:47,750 --> 00:02:51,020
+And you should get familiar with doing small scale integrals.
+
+56
+00:02:51,020 --> 00:02:52,400
+We'll be doing them a bit.
+
+57
+00:02:52,400 --> 00:02:55,310
+But handy formula for getting the normalization
+
+58
+00:02:55,310 --> 00:02:59,480
+are a definite integral with this generating function.
+
+59
+00:02:59,480 --> 00:03:02,090
+There's a trick for doing this using polar coordinates.
+
+60
+00:03:02,090 --> 00:03:04,760
+But for right now, you just need to know the result
+
+61
+00:03:04,760 --> 00:03:07,550
+because you can get everything you need from this that if you
+
+62
+00:03:07,550 --> 00:03:10,830
+look at the integral of e to the minus ax squared,
+
+63
+00:03:10,830 --> 00:03:13,010
+we notice that this is a definite integral.
+
+64
+00:03:13,010 --> 00:03:16,800
+But it contains a as a constant under the integral.
+
+65
+00:03:16,800 --> 00:03:18,890
+So the integral is a function of a.
+
+66
+00:03:18,890 --> 00:03:22,100
+And the function is square root of pi over a.
+
+67
+00:03:22,100 --> 00:03:24,500
+And that's what gives us that normalization factor,
+
+68
+00:03:24,500 --> 00:03:27,060
+the 1 over square root of 2 pi sigma squared.
+
+69
+00:03:27,060 --> 00:03:29,750
+And so that when we integrate the probability density,
+
+70
+00:03:29,750 --> 00:03:31,880
+it integrates to one the way it has to.
+
+71
+00:03:31,880 --> 00:03:34,550
+And if we need to get higher moments,
+
+72
+00:03:34,550 --> 00:03:36,030
+we can do it by differentiating.
+
+73
+00:03:36,030 --> 00:03:40,340
+So, for example, you notice that if I differentiate the integral
+
+74
+00:03:40,340 --> 00:03:44,120
+with respect to the parameter, if I compute dI da--
+
+75
+00:03:44,120 --> 00:03:47,840
+or actually minus dI da, OK, I can move the derivative
+
+76
+00:03:47,840 --> 00:03:49,280
+inside the integral.
+
+77
+00:03:49,280 --> 00:03:53,293
+The coefficient of a in the exponential is x squared.
+
+78
+00:03:53,293 --> 00:03:55,085
+And that gives me the integral of a squared
+
+79
+00:03:55,085 --> 00:03:57,570
+e to the minus ax squared.
+
+80
+00:03:57,570 --> 00:04:01,440
+And that we recognize as the expectation of x squared.
+
+81
+00:04:01,440 --> 00:04:04,160
+So I can get moments by taking derivatives.
+
+82
+00:04:04,160 --> 00:04:07,050
+And we'll see how to generalize this as well.
+
+83
+00:04:07,050 --> 00:04:09,770
+What about the cumulative distribution function?
+
+84
+00:04:09,770 --> 00:04:14,510
+Well, F of z in this case, which is sometimes known as capital
+
+85
+00:04:14,510 --> 00:04:15,290
+phi--
+
+86
+00:04:15,290 --> 00:04:18,980
+in some places, you'll see it written with the letter N
+
+87
+00:04:18,980 --> 00:04:20,750
+and sometimes related to a function known
+
+88
+00:04:20,750 --> 00:04:23,230
+as the error function-- is a definite integral.
+
+89
+00:04:23,230 --> 00:04:25,730
+We integrate from minus infinity to infinity [correction: z]
+
+90
+00:04:25,730 --> 00:04:28,790
+of e to the minus z' squared over 2.
+
+91
+00:04:28,790 --> 00:04:32,690
+And that gives us this distribution function.
+
+92
+00:04:32,690 --> 00:04:35,240
+You notice that if we differentiate the integral
+
+93
+00:04:35,240 --> 00:04:37,560
+we get back our probability density.
+
+94
+00:04:37,560 --> 00:04:40,700
+So this gives us the probability that the random variable
+
+95
+00:04:40,700 --> 00:04:43,130
+will be between any two points.
+
+96
+00:04:43,130 --> 00:04:45,590
+Or for F of z itself that it will be
+
+97
+00:04:45,590 --> 00:04:49,710
+equal to the given z or less.
+
+98
+00:04:49,710 --> 00:04:53,440
+The log-normal distribution shows up in finance as well.
+
+99
+00:04:53,440 --> 00:04:55,710
+We often look at logarithmic returns.
+
+100
+00:04:55,710 --> 00:05:00,060
+And our standard model for return distributions on assets
+
+101
+00:05:00,060 --> 00:05:04,860
+is a starting point to see if the logarithmic returns might
+
+102
+00:05:04,860 --> 00:05:06,150
+be normally distributed.
+
+103
+00:05:06,150 --> 00:05:09,030
+And that distribution is called the log-normal distribution.
+
+104
+00:05:09,030 --> 00:05:11,010
+The way it's defined mathematically
+
+105
+00:05:11,010 --> 00:05:14,910
+is simply to define X to be log of Y.
+
+106
+00:05:14,910 --> 00:05:18,180
+And we can compute x is log of y here
+
+107
+00:05:18,180 --> 00:05:21,360
+for a probability density and substitution,
+
+108
+00:05:21,360 --> 00:05:23,370
+apply change of variable formula.
+
+109
+00:05:23,370 --> 00:05:27,820
+And we see that we get this form right here.
+
+110
+00:05:27,820 --> 00:05:30,838
+Now, computationally, this is just to change the variable.
+
+111
+00:05:30,838 --> 00:05:32,380
+So if we're going to compute moments,
+
+112
+00:05:32,380 --> 00:05:34,930
+we can use whichever variables we prefer.
+
+113
+00:05:34,930 --> 00:05:39,770
+And the usual application of this is in looking at returns.
+
+114
+00:05:39,770 --> 00:05:44,410
+So we often have a relationship between the simple returns
+
+115
+00:05:44,410 --> 00:05:48,220
+that we designate by R, simple returns on an asset.
+
+116
+00:05:48,220 --> 00:05:52,240
+And the logarithmic returns are defined
+
+117
+00:05:52,240 --> 00:05:56,410
+to be e to the little r minus 1 is big R.
+
+118
+00:05:56,410 --> 00:05:59,020
+We'll see in more detail how that works with pricing.
+
+119
+00:05:59,020 --> 00:06:02,420
+But we can compute with respect to either distribution.
+
+120
+00:06:02,420 --> 00:06:05,020
+Remember that the moments are just numbers.
+
+121
+00:06:05,020 --> 00:06:07,960
+And whichever way we choose to do the integral-- whatever
+
+122
+00:06:07,960 --> 00:06:10,090
+changes the variables we make in the integral--
+
+123
+00:06:10,090 --> 00:06:12,500
+it isn't going to change the final result.
+
+124
+00:06:12,500 --> 00:06:13,000
+
+

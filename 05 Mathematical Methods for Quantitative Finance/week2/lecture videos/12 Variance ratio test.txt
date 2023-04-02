@@ -1,0 +1,404 @@
+
+PROFESSOR: So there are a few different flavors
+of the random walks.
+We talk about the random walk model,
+and of course the idealized random walk
+is a zero parameter model with one step plus or minus one.
+And that's kind of boring, and not useful for finance.
+The three versions that we might consider,
+and that Lo and MacKinlay explored,
+we'll only be looking at the first one.
+But we might think about different ways
+of generalizing things.
+So the first one is where the returns
+are IID, that is, are independent and identically
+distributed.
+So X, think of as being the logarithm of the price,
+so that Xt minus 1 is a logarithm of the price ratio.
+Technically speaking, we can't take logarithms of prices,
+only of pure numbers.
+But a ratio of prices is a pure number.
+So you could think of the Xt as being
+the logarithm of the price divided by a reference price.
+But here what we have is in each step
+that Xt is the previous value plus mu
+plus some random increment, which here I'm
+calling epsilon T to leave it a bit more general.
+And one of the things that we'll see
+is in the analysis of Lo and MacKinlay,
+they did it in such a way that it doesn't matter
+what the distribution is.
+So we're going to say that epsilon is required only
+to be IID with mean 0 and variant sigma.
+So it certainly could be something written in the form
+sigma Zt that we wrote before.
+But this allows possibly this notation is common
+and we might allow for other kinds of distributions.
+And we do have the requirement that,
+in different time periods, that the epsilons be uncorrelated.
+That's what we mean by independence.
+So the delta function, delta TT prime, is equal to 1
+if T is equal to T prime, and 0 otherwise.
+So this says that epsilons in different time periods
+aren't correlated, and that the variance
+of the epsilon in the same period, epsilon T
+squared, as expectation sigma squared.
+We can also look at the conditional expectations.
+So this says that the expectation of Xt
+given X zero--
+so we take the expectation of our series--
+is going to be Xt plus UT.
+That's our result, that the mean return grows linearly
+with time, and that the variance conditioned
+on a particular starting point X0,
+is going to grow linearly with time.
+Now two generalizations.
+We have the random walk two, where
+we can have instead of IID we can have them be independent,
+but not identically distributed.
+That is, the distribution could change over
+different periods of time.
+And there are important models in finance that do this,
+and an example is a model of time varying volatility, where
+we might have something where the returns are drawn
+from a log normal distribution.
+They look like a random walk within a day.
+But then the parameters change from day to day.
+So that would be a simple case that would not
+fit under the random walk one.
+So the returns would be not identical,
+but they might be varying in some particular way
+that we would specify.
+And then we could have things that are not independent.
+They could be dependent but maybe
+they're dependent at a higher order.
+So it's possible to have series where
+we satisfy that the increments are uncorrelated,
+but that doesn't mean that they're
+independent random variables.
+So it just means, remember that the independence implies
+that the returns are uncorrelated,
+but the returns can be uncorrelated
+without them being independent.
+So an example of this that also shows up in volatility models,
+is one where the epsilons are uncorrelated,
+but the squares are correlated.
+And that would be another generalization.
+So for this purpose for our analysis,
+we're only going to do the first version.
+
+Now variance ratios are constructed
+in the following way.
+We start with some base frequency.
+And in our case, we're going to think about this
+as being daily.
+And as mentioned, in the case of Lo and MacKinlay,
+they used weekly.
+Then we're going to aggregate returns.
+And we're going to do it in a very simple way.
+So the two day return at time period T
+is the return over the two days ending at time T.
+So compared to the day returns, it's
+equal to the period return plus the previous period return.
+And of course, the logarithm using the property
+that the logarithm of ratio is the difference
+in the logarithm, logarithm of product
+is the sum of the logarithms.
+You can check that this just drops
+out the intermediate value P sub T minus 1,
+and gives us the return over a two day period.
+So imagine you just looked at the stock prices,
+you checked your portfolio every other day,
+or possibly every two days.
+So in that case, we would construct this
+that I'm calling RT.
+So ending on time period T, but with this superscript
+in parentheses to denote the length of the observation
+period, because it matters.
+Usually we don't write that down, because we stick
+to a convention, like daily.
+But here we're going to be changing that.
+So q denotes the observation window.
+T denotes the particular period.
+And for a given period it's the logarithmic return
+over the period.
+So starting q time steps back, up through the end
+of the present period.
+All right.
+So if the returns were uncorrelated,
+then we know that the variance computed from each series
+is going to be proportional to its length.
+That's the basic result we had from our original random walk
+and generalized random walk model.
+So if they're uncorrelated-- and that means that in this case,
+that the variance of the q returns, the q period, or q day
+returns, is q times the variance of the base frequency.
+So the way we typically set up the test
+is to see if this q dependence is really there.
+And one way we can do it is to construct
+the ratio of the variance of the q day
+periods divided by q times the variance on the base frequency.
+And if everything works and the returns are uncorrelated,
+that should be equal to 1.
+So for any q I construct this quantity down here.
+And this quantity should be equal to 1,
+no matter what q is.
+So I can do it for q equals 2, 3, 17, any number at all.
+And the number should be equal to 1.
+So we have two questions.
+One of them is, let's put it in the data.
+Does it work?
+And when we put in the data, it's
+not going to be equal exactly to 1.
+It never would be, even if the model works perfectly.
+So how big a departure from 1 is actually significant?
+So let's grab some data from Yahoo Finance, throw it into R,
+and let's just compute a bunch of variances,
+which you can do using the code that I've put here.
+And what we see is, I've just plotted
+the variance computed over N day observations against N.
+And what do we see?
+Well, we see this dependence over here,
+which looks kind of linear.
+It looks pretty good, right?
+So we're done.
+It actually works.
+There's our random walk hypothesis.
+Well, maybe we can do a little bit better.
+First of all, is it exactly linear?
+No.
+How close should it be?
+Can we say something about what the slope should be?
+What about the variation around the slope?
+And why does it seem to be getting rougher and more ragged
+the farther out we go?
+Is there a breakdown here, or is that something
+that we should have expected?
+
+So let's get into some details.
+And these are some formulas taken from Lo
+and MacKinlay's paper, which you can look
+at there for the full details.
+But let's take a look at what the estimates are,
+how we can compute the variance ratio more precisely,
+and then we'll take a look at the sampling
+distribution for the tests that they actually did.
+But we're not going to derive all of the statistical results.
+I'd like to go for what the meaning is, show you
+how you can implement it yourself,
+and then refer you to the original paper
+if you're interested in the full details.
+So the first thing is we compute the returns,
+and we need to match the length of the time series.
+So we use our usual estimator, that the mean
+is the arithmetical average.
+So I take 1 over T times the sum of the returns,
+and that gives me mu hat.
+Now in terms of the variance, we can use the usual estimate
+for the variance.
+And we'll see that normally we have a T minus 1.
+We'll get to some of the exact bias corrections in a moment,
+but let's just work with this for right now.
+So what we do is we take the returns relative to the mean,
+compute their squared difference,
+take the mean square variation over the period.
+And we see already that as the sampling frequency gets
+less frequent as we coarse grain over more and more days,
+there are going to be fewer terms than the sum,
+and that could be a contribution to that ragged behavior we
+saw for the larger observation windows.
+There are just fewer things in the sum.
+And we know that we need at least say, 30 points for this
+to be meaningful.
+And 300 would be better.
+3 million would be terrific.
+But it's not going to be uniform as we
+look over different periods.
+What we do have in the Lo and MacKinlay approach though,
+is that we're looking at a given historical period,
+and by subdividing it at least we're not changing the period.
+So if we pick 1988 to 2017, that's the same period.
+If we subdivided, at least we're not
+looking at things in different market conditions.
+So the base frequency, we can look
+at this computed with sigma hat a.
+Sigma hat squared with a B subscript
+is defined as relating to the q period
+observations in this way.
+So in this case, the returns need
+to be taken relative to the mean for a q period return.
+And the sampling distribution of this
+tells us what we should expect.
+So where should this be drawn from.
+So it can be shown that we've got a sampling distribution
+that these statistics are asymptotically
+normal with a particular mean invariance.
+We're going to take the square root of T
+be here and scale it out, because we
+know that's always there.
+And we'll take a look for these distributions,
+and when we get to the actual data
+we'll turn things into normalized
+so we can look at typical kind of z-scores and T statistics.
+We can account for overlapping returns
+and slightly increase the power of the results
+by looking at returns that are taken over possibly overlapping
+periods, rather than looking at discrete windows.
+And one advantage to doing that, certainly,
+is that we don't want there to be any arbitrariness in when
+we started our series.
+But we need to account for multiple counting,
+because those returns are obviously
+not going to be independent if the windows were overlapping.
+So the test that we perform is to see if the variance ratio is
+equal to 1.
+And when we boil everything down,
+or when Lo and MacKinlay do, what we
+find is we can define a nice value called z over here.
+So this z number is what we're going to compute,
+and we're going to compute it because it is normally
+distributed with mean 0 and variance 1.
+Which means that if, under the null hypothesis,
+if the random walk holds, we should
+expect z to lie between plus or minus 2, 95% of the time.
+In between plus or minus 3, 99% of the time.
+And if we get values that are much larger than that,
+then that would be evidence for rejecting a random walk.
+The things that we have here involve the variance ratio
+itself, in this case computed with
+this particular combination.
+And we'll adjust that again.
+But a particular-- this is in the spirit that we had before.
+These are just the computational details.
+So we take the ratio of the variance
+divided by q times the variance over the base period.
+We subtract 1, and then this pre-factor over here
+adjusts for the overlapping periods for the scaling
+with the square root of T.
+And we'll see that there are additional bias
+corrections that make this a little more accurate.
+But the idea is, scale everything so that we can
+compare it to N(0,1).
+That's easier than just taking this ratio here, and comparing
+it to a more complicated distribution.
+So it's a choice that we can make.
+So to improve things a little bit
+we can tighten up the formulas and write them
+in this way, where we have the mu.
+Obviously, we don't need to compute
+the intermediate returns, because we can just
+look at the endpoints.
+So we can compute the mean return here.
+We can compute sigma a variance a, in terms of the base
+frequency.
+Sigma B is the one that we had before,
+which is done with the q period observations.
+And C is the one done over overlapping periods.
+And you notice that the pre-factor and the summation
+are done a little bit differently
+for the terms that entered.
+But this one is done using overlapping windows, which can
+improve the power for the test.
+I've put some code here that you can take and run
+that implements this.
+Where we can take some data, compute
+these different variances at the base frequency,
+and at any given frequency R.
+And we can compute then, this function z as a function of q
+for our data.
+And then we can get things out.
+So we can compute a set of variances
+that we could look at for our data.
+We can compute these z statistics.
+The function z of q, which are T stats for the tests,
+and see if they lie between minus 2 and 2,
+or minus 3 and 3.
+And then if we want, we can get p values that
+are the probabilities of observing
+extreme results as extreme, or more extreme
+than we see from z.
+And then finally, we can do some plots of this.
+So the idea of building this particular z with this
+particular function is so that we can compare it to the N(0,1)
+distribution, which makes it very nice.
+So remember, it's a normal distribution.
+And if the random walk holds, we're
+going to see z be somewhere near 0.
+The variance ratio should be near 1.
+The z statistic, which measures the significance
+of the departures just due to sampling error from
+our distribution of a given finite length,
+is what we want to study to see if a number that's not 1.000 is
+exactly meaningful or not.
+And if not, we'll see if there are any other directions
+that we might choose to go.
+Now there are a whole bunch of other technical complications
+if we really want to sharpen this,
+but I think that we can actually get a good idea just
+by doing the variance ratio test on the simple data
+that we did before.
+But if you want to do it right, there
+are additional formulas to get this very precise z
+with these additional factors just to normalize everything
+exactly right.
+When Lo and MacKinlay did this they
+looked for individual stocks, and they
+looked at different periods, and different frequencies.
+And what they found was that nothing obeyed the random walk.
+So to pick a particular example, if we
+look where they looked at both equally weighted and value
+weighted indices, the numbers that they report here,
+and here, and here, none of these numbers is equal to 1.
+In fact, they're actually all bigger than 1.
+If these were due to sampling error
+we might expect some to be high, some to be low.
+These are the different frequencies
+that they looked at two, four, eight, 16.
+So they looked at evenly divisible series.
+That's not necessarily required, but it is convenient.
+And then below the numbers they show the T statistics,
+or the magnitude of the z of q.
+And you'll see that these are all very large numbers.
+So not only are the numbers 1.3, 1.64, not equal to 1,
+they're significantly different from 1.
+
+So let's take a look at it with our Tootsie Roll data.
+So what we can do is, we can look at our data.
+We can get a rough idea of what's
+going on by computing the variance or the volatility
+at using different sampling frequencies,
+and just see if we're in the ballpark.
+So if we do that-- you can try this,
+running the code I have before--
+you get the result that we see here
+on this graph, where the volatility is
+done over the entire period, but using different scaling
+results.
+So is it exactly the same over every sampling window?
+Absolutely not.
+But it's roughly constant.
+So you can see why we need these statistical tests.
+Is that close enough?
+So roughly speaking, it looks like it
+might be like a random walk.
+It has that general attribute.
+This is just another rescaled version
+of what we saw earlier on the linear plot.
+But how well does this actually hold?
+If we want to get a very quick and dirty idea just to eyeball
+it and say, are those variations reasonable before we
+run any statistical tests, what we can do
+is we can do a Monte Carlo.
+So let's compute simulated price data that
+has the same mean and volatility as the Tootsie Roll stock does.
+And then on that simulated data-- pretending
+that we didn't know it's simulated--
+do the same calculation.
+That is, let's compute volatility
+over different time periods.
+And here we see the same general qualitative behavior
+on this plot as we saw in the previous one.
+So it's possible that what we're looking at
+could just be statistical error, or it's possible
+that there could be systematic departures from the random walk
+when we do the detailed analysis.

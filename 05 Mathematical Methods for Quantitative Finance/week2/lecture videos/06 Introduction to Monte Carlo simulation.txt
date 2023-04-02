@@ -1,0 +1,89 @@
+
+PROFESSOR: Monte Carlo simulation
+means we use computers instead of our pen and paper,
+to work out consequences of probability models
+and stochastic processes.
+What we do is, we simulate stochastic processes
+by drawing random numbers using the random number
+generator on a computer.
+And this can be found in most programming languages.
+This provides us with really an idealized test
+lab for exploring some of the ideas
+we've talked about and for much more advanced
+financial applications.
+The reason is, that because we're
+doing the simulation ourselves, because we're
+deploying the random number generator that we're
+parameterized, that we're coding,
+we know where the data comes from.
+In the real world we don't know the true data generating
+process, that's part of the subtlety and art in model
+building as we try to infer that, that's
+what we're trying to solve.
+In the Monte Carlo lab, we assume that that's known,
+and we'll see it still gives us our hands
+full of a lot of things that we need to check out.
+But if we can't understand and do the analysis with data
+that we've generated ourselves, we
+have no hope for doing it in the real world.
+On the other hand, doing things thoroughly in a test lab,
+gives us great idea about the abilities and limits of some
+of our analytical tools.
+So we'll find out how much accuracy and precision,
+we can have in different kinds of simulation settings.
+So the idea is, that we're going to assume a particular model,
+we're going to assume that we know the way the world works,
+and we're going to generate data that is consistent with that.
+So those properties will all be true self-consistently
+because we built the model that way.
+We can then for some purposes, forget
+that we knew where the data came from
+and analyze it as if it were real world data.
+But typically, one of the applications that we'll do,
+is we'll generate a large number of possible outcomes.
+So think of doing a simulation for the evolution of a stock
+price, or an entire stock market, or some other asset
+price.
+In the real world we only get to see history once,
+and when we look at actual historical data,
+we only have one history.
+We can't redo the experiment.
+We might be able to get more data,
+by looking at different time periods
+or going further back in time.
+But that's not the same thing, as repeating everything
+under the same conditions.
+So here will be limited only by our computers
+abilities and the time we're willing to commit to it.
+But the usual process, involves taking a large number
+say, 10,000 or a million different simulations.
+And constructing what we'll call an ensemble
+a set of possible hypothetical paths that might have
+happened, each of which typically being equally likely.
+And then, instead of what we've done so far,
+where we've computed properties of a distribution.
+Like moments in the distribution, mean,
+and variance by doing mathematical expectations
+against a known probability density,
+here we're going to do statistical calculations
+against the empirical data set that's been generated
+through our Monte Carlo data.
+And what we'll see is, that the results typically
+become more precise as we look at more and more data, which
+is only limited again by our computational resources.
+So I'll show you some examples, and I'll you
+should run them yourselves.
+So I'm providing some code here, and you
+can take a look at in the R programming language.
+And you can play around with all the parameters.
+And you can take a look at what happens
+as we increase the number of simulations,
+or as we change some of the parameters.
+So it's a great chance to try some things out
+in a different setting apart from the pencil and paper
+things that we've done before.
+To build applications that we have
+are going to include asset price dynamics
+that we'll look at now.
+Option pricing, which we'll look at a little bit later on.
+And many applications in portfolio and risk management.

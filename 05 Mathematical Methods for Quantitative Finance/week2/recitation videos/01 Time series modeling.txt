@@ -1,0 +1,109 @@
+
+PROFESSOR: We study discrete time stochastic processes
+in order to develop models that help us make inferences
+and predictions about data that's observed over time.
+We look to the past to understand how data arose
+and to try to figure out what the underlying mechanisms where
+they produced it, and we look to the future
+in applying models to make predictions and to take action.
+So time series models are useful in a number of ways.
+They can summarize data, provide useful descriptive statistics
+such as measures of serial correlation,
+they can be used for filtering, for detrending,
+and more generally to differentiate
+a noisy background from potentially meaningful signals
+that might otherwise be obscured.
+By quantifying the balance between signal and noise
+in the context of a model, we can
+have some guidance in identifying opportunities
+and managing risk.
+Most financial market data is noisy.
+Can we determine whether two sets of data
+describe similar market conditions?
+Did they come from the same model?
+Do they have the same underlying data generating process?
+Did an old model break?
+Has there been a new regime change?
+If we need a new model, how do we know when it's needed?
+How do we know what its connection
+should be with the old one?
+Time series models help us perform simulations,
+make predictions, evaluate data adequacy,
+quantify expected performance, and improve decision making.
+Now we started with a bunch of stationary models,
+and in this recitation we'll do a few exercises
+and we'll talk about stationarity.
+So stationarity means that we can shift the model in time.
+It doesn't have a fixed origin.
+That means when we write down things, definitions like these,
+that if we shift the time index--
+not that the data will be the same,
+but that the probability distributions are the same
+and that the defining equations are the same.
+And you can see that for each of these,
+for the generalized random walk model, for this moving average
+model, and for our old friend the AR1 model.
+In each of these cases if you were
+to replace t by t plus k or t minus
+l, the equation would take the same form.
+Now stationarity in reality is much too strong a condition.
+It would almost never hold.
+First of all, it would require that the conditions
+be the same forever.
+And financial markets haven't been around forever,
+and they might be around forever in the future,
+but certainly not under identical conditions.
+So what we really require for applying them--
+we don't expect it to literally hold in practice,
+but for the mathematics to be sensibly applied
+we have a couple of things that we need to check.
+One thing that we want to check is
+this thing about long memory.
+Do we need things infinitely far in the past?
+So if we can find out and show in our models
+that the initial conditions do not
+have an infinitely long persistence over time,
+that after some period of time at least
+the behavior of the models doesn't depend
+on the specific initial conditions,
+or if it started a finite point in the past, then
+at least we have a chance of applying these usefully.
+Second, we don't want full stationarity.
+We usually only require something
+called weak stationarity, which uses
+the first and second moments only.
+So it says that the first moments, the means,
+should be time invariant, and the second moments,
+the variances and two point functions
+like the autocovariance functions,
+should depend only on the difference in time indices,
+not on the exact location of a particular point in time.
+And that's a good thing because usually
+don't know what the higher moments are,
+and we certainly don't know that everything is stationary.
+So weaker conditions are good for us.
+So keep in mind that the financial world does change.
+We don't expect to find universal laws that will always
+be applicable, we expect them to hold some period of time.
+It might be a number of years, it
+might be in a high frequency trading
+context for a number of days, but there's
+some persistence over which we can apply these models to help
+understand signals and noise.
+And if we're lucky, a model will be successful for a long time.
+It'll have a good and stable run,
+but eventually we want to be on the lookout for when
+it will no longer be useful.
+When it comes to an end it could be through a crash, a crisis,
+a pandemic, or changes in behavior, changes
+in institutions, changes in systems
+of financial intermediation.
+But for right now what we want to discuss
+are some practical ways that we can
+look at some examples of problems
+with stationary time series using our tools of linearity
+of expectation operators, and now we
+add this additional feature that, for a stationary series,
+we can shift them in time.
+And that means that we can use translations or recursion,
+and it can take a number of different forms.

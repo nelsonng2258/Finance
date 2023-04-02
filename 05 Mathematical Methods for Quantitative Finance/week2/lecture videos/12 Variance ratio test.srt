@@ -1,0 +1,1616 @@
+0
+00:00:00,000 --> 00:00:00,652
+
+
+1
+00:00:00,652 --> 00:00:02,610
+PROFESSOR: So there are a few different flavors
+
+2
+00:00:02,610 --> 00:00:03,460
+of the random walks.
+
+3
+00:00:03,460 --> 00:00:05,100
+We talk about the random walk model,
+
+4
+00:00:05,100 --> 00:00:07,320
+and of course the idealized random walk
+
+5
+00:00:07,320 --> 00:00:10,560
+is a zero parameter model with one step plus or minus one.
+
+6
+00:00:10,560 --> 00:00:13,320
+And that's kind of boring, and not useful for finance.
+
+7
+00:00:13,320 --> 00:00:19,100
+The three versions that we might consider,
+
+8
+00:00:19,100 --> 00:00:21,980
+and that Lo and MacKinlay explored,
+
+9
+00:00:21,980 --> 00:00:23,895
+we'll only be looking at the first one.
+
+10
+00:00:23,895 --> 00:00:25,520
+But we might think about different ways
+
+11
+00:00:25,520 --> 00:00:26,770
+of generalizing things.
+
+12
+00:00:26,770 --> 00:00:29,270
+So the first one is where the returns
+
+13
+00:00:29,270 --> 00:00:32,090
+are IID, that is, are independent and identically
+
+14
+00:00:32,090 --> 00:00:33,100
+distributed.
+
+15
+00:00:33,100 --> 00:00:36,510
+So X, think of as being the logarithm of the price,
+
+16
+00:00:36,510 --> 00:00:41,210
+so that Xt minus 1 is a logarithm of the price ratio.
+
+17
+00:00:41,210 --> 00:00:43,880
+Technically speaking, we can't take logarithms of prices,
+
+18
+00:00:43,880 --> 00:00:44,900
+only of pure numbers.
+
+19
+00:00:44,900 --> 00:00:47,990
+But a ratio of prices is a pure number.
+
+20
+00:00:47,990 --> 00:00:50,960
+So you could think of the Xt as being
+
+21
+00:00:50,960 --> 00:00:55,070
+the logarithm of the price divided by a reference price.
+
+22
+00:00:55,070 --> 00:00:57,950
+But here what we have is in each step
+
+23
+00:00:57,950 --> 00:01:03,170
+that Xt is the previous value plus mu
+
+24
+00:01:03,170 --> 00:01:05,150
+plus some random increment, which here I'm
+
+25
+00:01:05,150 --> 00:01:07,370
+calling epsilon T to leave it a bit more general.
+
+26
+00:01:07,370 --> 00:01:08,870
+And one of the things that we'll see
+
+27
+00:01:08,870 --> 00:01:10,830
+is in the analysis of Lo and MacKinlay,
+
+28
+00:01:10,830 --> 00:01:12,830
+they did it in such a way that it doesn't matter
+
+29
+00:01:12,830 --> 00:01:14,420
+what the distribution is.
+
+30
+00:01:14,420 --> 00:01:17,480
+So we're going to say that epsilon is required only
+
+31
+00:01:17,480 --> 00:01:20,570
+to be IID with mean 0 and variant sigma.
+
+32
+00:01:20,570 --> 00:01:22,820
+So it certainly could be something written in the form
+
+33
+00:01:22,820 --> 00:01:25,460
+sigma Zt that we wrote before.
+
+34
+00:01:25,460 --> 00:01:28,250
+But this allows possibly this notation is common
+
+35
+00:01:28,250 --> 00:01:31,550
+and we might allow for other kinds of distributions.
+
+36
+00:01:31,550 --> 00:01:33,410
+And we do have the requirement that,
+
+37
+00:01:33,410 --> 00:01:37,850
+in different time periods, that the epsilons be uncorrelated.
+
+38
+00:01:37,850 --> 00:01:39,650
+That's what we mean by independence.
+
+39
+00:01:39,650 --> 00:01:43,470
+So the delta function, delta TT prime, is equal to 1
+
+40
+00:01:43,470 --> 00:01:46,350
+if T is equal to T prime, and 0 otherwise.
+
+41
+00:01:46,350 --> 00:01:49,190
+So this says that epsilons in different time periods
+
+42
+00:01:49,190 --> 00:01:51,170
+aren't correlated, and that the variance
+
+43
+00:01:51,170 --> 00:01:53,420
+of the epsilon in the same period, epsilon T
+
+44
+00:01:53,420 --> 00:01:57,350
+squared, as expectation sigma squared.
+
+45
+00:01:57,350 --> 00:02:00,110
+We can also look at the conditional expectations.
+
+46
+00:02:00,110 --> 00:02:03,970
+So this says that the expectation of Xt
+
+47
+00:02:03,970 --> 00:02:06,160
+given X zero--
+
+48
+00:02:06,160 --> 00:02:08,770
+so we take the expectation of our series--
+
+49
+00:02:08,770 --> 00:02:11,320
+is going to be Xt plus UT.
+
+50
+00:02:11,320 --> 00:02:17,710
+That's our result, that the mean return grows linearly
+
+51
+00:02:17,710 --> 00:02:20,230
+with time, and that the variance conditioned
+
+52
+00:02:20,230 --> 00:02:22,660
+on a particular starting point X0,
+
+53
+00:02:22,660 --> 00:02:24,890
+is going to grow linearly with time.
+
+54
+00:02:24,890 --> 00:02:25,900
+Now two generalizations.
+
+55
+00:02:25,900 --> 00:02:30,010
+We have the random walk two, where
+
+56
+00:02:30,010 --> 00:02:33,220
+we can have instead of IID we can have them be independent,
+
+57
+00:02:33,220 --> 00:02:35,110
+but not identically distributed.
+
+58
+00:02:35,110 --> 00:02:37,000
+That is, the distribution could change over
+
+59
+00:02:37,000 --> 00:02:38,350
+different periods of time.
+
+60
+00:02:38,350 --> 00:02:41,650
+And there are important models in finance that do this,
+
+61
+00:02:41,650 --> 00:02:45,460
+and an example is a model of time varying volatility, where
+
+62
+00:02:45,460 --> 00:02:48,160
+we might have something where the returns are drawn
+
+63
+00:02:48,160 --> 00:02:50,410
+from a log normal distribution.
+
+64
+00:02:50,410 --> 00:02:53,360
+They look like a random walk within a day.
+
+65
+00:02:53,360 --> 00:02:55,910
+But then the parameters change from day to day.
+
+66
+00:02:55,910 --> 00:02:58,000
+So that would be a simple case that would not
+
+67
+00:02:58,000 --> 00:02:59,530
+fit under the random walk one.
+
+68
+00:02:59,530 --> 00:03:03,100
+So the returns would be not identical,
+
+69
+00:03:03,100 --> 00:03:05,530
+but they might be varying in some particular way
+
+70
+00:03:05,530 --> 00:03:06,760
+that we would specify.
+
+71
+00:03:06,760 --> 00:03:10,330
+And then we could have things that are not independent.
+
+72
+00:03:10,330 --> 00:03:12,580
+They could be dependent but maybe
+
+73
+00:03:12,580 --> 00:03:14,140
+they're dependent at a higher order.
+
+74
+00:03:14,140 --> 00:03:16,210
+So it's possible to have series where
+
+75
+00:03:16,210 --> 00:03:22,540
+we satisfy that the increments are uncorrelated,
+
+76
+00:03:22,540 --> 00:03:25,090
+but that doesn't mean that they're
+
+77
+00:03:25,090 --> 00:03:26,420
+independent random variables.
+
+78
+00:03:26,420 --> 00:03:30,513
+So it just means, remember that the independence implies
+
+79
+00:03:30,513 --> 00:03:31,930
+that the returns are uncorrelated,
+
+80
+00:03:31,930 --> 00:03:33,340
+but the returns can be uncorrelated
+
+81
+00:03:33,340 --> 00:03:34,632
+without them being independent.
+
+82
+00:03:34,632 --> 00:03:38,080
+So an example of this that also shows up in volatility models,
+
+83
+00:03:38,080 --> 00:03:42,070
+is one where the epsilons are uncorrelated,
+
+84
+00:03:42,070 --> 00:03:44,702
+but the squares are correlated.
+
+85
+00:03:44,702 --> 00:03:46,410
+And that would be another generalization.
+
+86
+00:03:46,410 --> 00:03:48,580
+So for this purpose for our analysis,
+
+87
+00:03:48,580 --> 00:03:50,350
+we're only going to do the first version.
+
+88
+00:03:50,350 --> 00:03:56,700
+
+
+89
+00:03:56,700 --> 00:04:00,420
+Now variance ratios are constructed
+
+90
+00:04:00,420 --> 00:04:01,810
+in the following way.
+
+91
+00:04:01,810 --> 00:04:03,310
+We start with some base frequency.
+
+92
+00:04:03,310 --> 00:04:05,310
+And in our case, we're going to think about this
+
+93
+00:04:05,310 --> 00:04:05,950
+as being daily.
+
+94
+00:04:05,950 --> 00:04:08,040
+And as mentioned, in the case of Lo and MacKinlay,
+
+95
+00:04:08,040 --> 00:04:09,570
+they used weekly.
+
+96
+00:04:09,570 --> 00:04:11,530
+Then we're going to aggregate returns.
+
+97
+00:04:11,530 --> 00:04:13,447
+And we're going to do it in a very simple way.
+
+98
+00:04:13,447 --> 00:04:16,800
+So the two day return at time period T
+
+99
+00:04:16,800 --> 00:04:20,970
+is the return over the two days ending at time T.
+
+100
+00:04:20,970 --> 00:04:23,190
+So compared to the day returns, it's
+
+101
+00:04:23,190 --> 00:04:28,140
+equal to the period return plus the previous period return.
+
+102
+00:04:28,140 --> 00:04:31,410
+And of course, the logarithm using the property
+
+103
+00:04:31,410 --> 00:04:36,910
+that the logarithm of ratio is the difference
+
+104
+00:04:36,910 --> 00:04:38,790
+in the logarithm, logarithm of product
+
+105
+00:04:38,790 --> 00:04:40,320
+is the sum of the logarithms.
+
+106
+00:04:40,320 --> 00:04:42,810
+You can check that this just drops
+
+107
+00:04:42,810 --> 00:04:46,260
+out the intermediate value P sub T minus 1,
+
+108
+00:04:46,260 --> 00:04:49,930
+and gives us the return over a two day period.
+
+109
+00:04:49,930 --> 00:04:52,500
+So imagine you just looked at the stock prices,
+
+110
+00:04:52,500 --> 00:04:54,720
+you checked your portfolio every other day,
+
+111
+00:04:54,720 --> 00:04:57,090
+or possibly every two days.
+
+112
+00:04:57,090 --> 00:04:59,580
+So in that case, we would construct this
+
+113
+00:04:59,580 --> 00:05:01,460
+that I'm calling RT.
+
+114
+00:05:01,460 --> 00:05:04,590
+So ending on time period T, but with this superscript
+
+115
+00:05:04,590 --> 00:05:07,500
+in parentheses to denote the length of the observation
+
+116
+00:05:07,500 --> 00:05:09,250
+period, because it matters.
+
+117
+00:05:09,250 --> 00:05:12,660
+Usually we don't write that down, because we stick
+
+118
+00:05:12,660 --> 00:05:14,082
+to a convention, like daily.
+
+119
+00:05:14,082 --> 00:05:15,790
+But here we're going to be changing that.
+
+120
+00:05:15,790 --> 00:05:18,270
+So q denotes the observation window.
+
+121
+00:05:18,270 --> 00:05:20,280
+T denotes the particular period.
+
+122
+00:05:20,280 --> 00:05:24,090
+And for a given period it's the logarithmic return
+
+123
+00:05:24,090 --> 00:05:25,070
+over the period.
+
+124
+00:05:25,070 --> 00:05:29,220
+So starting q time steps back, up through the end
+
+125
+00:05:29,220 --> 00:05:30,630
+of the present period.
+
+126
+00:05:30,630 --> 00:05:31,440
+All right.
+
+127
+00:05:31,440 --> 00:05:34,630
+So if the returns were uncorrelated,
+
+128
+00:05:34,630 --> 00:05:37,770
+then we know that the variance computed from each series
+
+129
+00:05:37,770 --> 00:05:40,660
+is going to be proportional to its length.
+
+130
+00:05:40,660 --> 00:05:43,800
+That's the basic result we had from our original random walk
+
+131
+00:05:43,800 --> 00:05:45,820
+and generalized random walk model.
+
+132
+00:05:45,820 --> 00:05:49,110
+So if they're uncorrelated-- and that means that in this case,
+
+133
+00:05:49,110 --> 00:05:55,890
+that the variance of the q returns, the q period, or q day
+
+134
+00:05:55,890 --> 00:06:00,520
+returns, is q times the variance of the base frequency.
+
+135
+00:06:00,520 --> 00:06:03,730
+So the way we typically set up the test
+
+136
+00:06:03,730 --> 00:06:06,430
+is to see if this q dependence is really there.
+
+137
+00:06:06,430 --> 00:06:09,250
+And one way we can do it is to construct
+
+138
+00:06:09,250 --> 00:06:11,770
+the ratio of the variance of the q day
+
+139
+00:06:11,770 --> 00:06:17,290
+periods divided by q times the variance on the base frequency.
+
+140
+00:06:17,290 --> 00:06:20,470
+And if everything works and the returns are uncorrelated,
+
+141
+00:06:20,470 --> 00:06:22,480
+that should be equal to 1.
+
+142
+00:06:22,480 --> 00:06:27,940
+So for any q I construct this quantity down here.
+
+143
+00:06:27,940 --> 00:06:31,000
+And this quantity should be equal to 1,
+
+144
+00:06:31,000 --> 00:06:32,290
+no matter what q is.
+
+145
+00:06:32,290 --> 00:06:36,260
+So I can do it for q equals 2, 3, 17, any number at all.
+
+146
+00:06:36,260 --> 00:06:38,620
+And the number should be equal to 1.
+
+147
+00:06:38,620 --> 00:06:39,950
+So we have two questions.
+
+148
+00:06:39,950 --> 00:06:42,050
+One of them is, let's put it in the data.
+
+149
+00:06:42,050 --> 00:06:43,360
+Does it work?
+
+150
+00:06:43,360 --> 00:06:46,960
+And when we put in the data, it's
+
+151
+00:06:46,960 --> 00:06:49,540
+not going to be equal exactly to 1.
+
+152
+00:06:49,540 --> 00:06:53,340
+It never would be, even if the model works perfectly.
+
+153
+00:06:53,340 --> 00:06:58,570
+So how big a departure from 1 is actually significant?
+
+154
+00:06:58,570 --> 00:07:04,630
+So let's grab some data from Yahoo Finance, throw it into R,
+
+155
+00:07:04,630 --> 00:07:07,270
+and let's just compute a bunch of variances,
+
+156
+00:07:07,270 --> 00:07:10,120
+which you can do using the code that I've put here.
+
+157
+00:07:10,120 --> 00:07:12,390
+And what we see is, I've just plotted
+
+158
+00:07:12,390 --> 00:07:18,750
+the variance computed over N day observations against N.
+
+159
+00:07:18,750 --> 00:07:20,320
+And what do we see?
+
+160
+00:07:20,320 --> 00:07:25,420
+Well, we see this dependence over here,
+
+161
+00:07:25,420 --> 00:07:26,625
+which looks kind of linear.
+
+162
+00:07:26,625 --> 00:07:28,590
+It looks pretty good, right?
+
+163
+00:07:28,590 --> 00:07:29,430
+So we're done.
+
+164
+00:07:29,430 --> 00:07:30,930
+It actually works.
+
+165
+00:07:30,930 --> 00:07:34,020
+There's our random walk hypothesis.
+
+166
+00:07:34,020 --> 00:07:36,340
+Well, maybe we can do a little bit better.
+
+167
+00:07:36,340 --> 00:07:38,760
+First of all, is it exactly linear?
+
+168
+00:07:38,760 --> 00:07:40,350
+No.
+
+169
+00:07:40,350 --> 00:07:41,800
+How close should it be?
+
+170
+00:07:41,800 --> 00:07:44,340
+Can we say something about what the slope should be?
+
+171
+00:07:44,340 --> 00:07:46,830
+What about the variation around the slope?
+
+172
+00:07:46,830 --> 00:07:50,040
+And why does it seem to be getting rougher and more ragged
+
+173
+00:07:50,040 --> 00:07:51,450
+the farther out we go?
+
+174
+00:07:51,450 --> 00:07:53,700
+Is there a breakdown here, or is that something
+
+175
+00:07:53,700 --> 00:07:54,908
+that we should have expected?
+
+176
+00:07:54,908 --> 00:07:57,570
+
+
+177
+00:07:57,570 --> 00:08:00,232
+So let's get into some details.
+
+178
+00:08:00,232 --> 00:08:01,940
+And these are some formulas taken from Lo
+
+179
+00:08:01,940 --> 00:08:03,648
+and MacKinlay's paper, which you can look
+
+180
+00:08:03,648 --> 00:08:05,180
+at there for the full details.
+
+181
+00:08:05,180 --> 00:08:08,210
+But let's take a look at what the estimates are,
+
+182
+00:08:08,210 --> 00:08:12,530
+how we can compute the variance ratio more precisely,
+
+183
+00:08:12,530 --> 00:08:14,360
+and then we'll take a look at the sampling
+
+184
+00:08:14,360 --> 00:08:16,498
+distribution for the tests that they actually did.
+
+185
+00:08:16,498 --> 00:08:19,040
+But we're not going to derive all of the statistical results.
+
+186
+00:08:19,040 --> 00:08:21,200
+I'd like to go for what the meaning is, show you
+
+187
+00:08:21,200 --> 00:08:23,690
+how you can implement it yourself,
+
+188
+00:08:23,690 --> 00:08:26,330
+and then refer you to the original paper
+
+189
+00:08:26,330 --> 00:08:30,190
+if you're interested in the full details.
+
+190
+00:08:30,190 --> 00:08:32,580
+So the first thing is we compute the returns,
+
+191
+00:08:32,580 --> 00:08:35,530
+and we need to match the length of the time series.
+
+192
+00:08:35,530 --> 00:08:38,220
+So we use our usual estimator, that the mean
+
+193
+00:08:38,220 --> 00:08:41,860
+is the arithmetical average.
+
+194
+00:08:41,860 --> 00:08:44,159
+So I take 1 over T times the sum of the returns,
+
+195
+00:08:44,159 --> 00:08:46,410
+and that gives me mu hat.
+
+196
+00:08:46,410 --> 00:08:51,700
+Now in terms of the variance, we can use the usual estimate
+
+197
+00:08:51,700 --> 00:08:52,830
+for the variance.
+
+198
+00:08:52,830 --> 00:08:55,710
+And we'll see that normally we have a T minus 1.
+
+199
+00:08:55,710 --> 00:08:59,620
+We'll get to some of the exact bias corrections in a moment,
+
+200
+00:08:59,620 --> 00:09:02,310
+but let's just work with this for right now.
+
+201
+00:09:02,310 --> 00:09:04,860
+So what we do is we take the returns relative to the mean,
+
+202
+00:09:04,860 --> 00:09:06,450
+compute their squared difference,
+
+203
+00:09:06,450 --> 00:09:10,600
+take the mean square variation over the period.
+
+204
+00:09:10,600 --> 00:09:16,020
+And we see already that as the sampling frequency gets
+
+205
+00:09:16,020 --> 00:09:18,750
+less frequent as we coarse grain over more and more days,
+
+206
+00:09:18,750 --> 00:09:20,850
+there are going to be fewer terms than the sum,
+
+207
+00:09:20,850 --> 00:09:23,610
+and that could be a contribution to that ragged behavior we
+
+208
+00:09:23,610 --> 00:09:25,830
+saw for the larger observation windows.
+
+209
+00:09:25,830 --> 00:09:27,540
+There are just fewer things in the sum.
+
+210
+00:09:27,540 --> 00:09:31,230
+And we know that we need at least say, 30 points for this
+
+211
+00:09:31,230 --> 00:09:32,400
+to be meaningful.
+
+212
+00:09:32,400 --> 00:09:34,380
+And 300 would be better.
+
+213
+00:09:34,380 --> 00:09:35,790
+3 million would be terrific.
+
+214
+00:09:35,790 --> 00:09:37,560
+But it's not going to be uniform as we
+
+215
+00:09:37,560 --> 00:09:38,940
+look over different periods.
+
+216
+00:09:38,940 --> 00:09:41,920
+What we do have in the Lo and MacKinlay approach though,
+
+217
+00:09:41,920 --> 00:09:44,670
+is that we're looking at a given historical period,
+
+218
+00:09:44,670 --> 00:09:47,260
+and by subdividing it at least we're not changing the period.
+
+219
+00:09:47,260 --> 00:09:51,240
+So if we pick 1988 to 2017, that's the same period.
+
+220
+00:09:51,240 --> 00:09:52,950
+If we subdivided, at least we're not
+
+221
+00:09:52,950 --> 00:09:55,720
+looking at things in different market conditions.
+
+222
+00:09:55,720 --> 00:10:01,740
+So the base frequency, we can look
+
+223
+00:10:01,740 --> 00:10:06,780
+at this computed with sigma hat a.
+
+224
+00:10:06,780 --> 00:10:10,920
+Sigma hat squared with a B subscript
+
+225
+00:10:10,920 --> 00:10:17,310
+is defined as relating to the q period
+
+226
+00:10:17,310 --> 00:10:19,030
+observations in this way.
+
+227
+00:10:19,030 --> 00:10:20,850
+So in this case, the returns need
+
+228
+00:10:20,850 --> 00:10:27,660
+to be taken relative to the mean for a q period return.
+
+229
+00:10:27,660 --> 00:10:33,840
+And the sampling distribution of this
+
+230
+00:10:33,840 --> 00:10:35,500
+tells us what we should expect.
+
+231
+00:10:35,500 --> 00:10:40,080
+So where should this be drawn from.
+
+232
+00:10:40,080 --> 00:10:43,710
+So it can be shown that we've got a sampling distribution
+
+233
+00:10:43,710 --> 00:10:48,870
+that these statistics are asymptotically
+
+234
+00:10:48,870 --> 00:10:51,840
+normal with a particular mean invariance.
+
+235
+00:10:51,840 --> 00:10:53,730
+We're going to take the square root of T
+
+236
+00:10:53,730 --> 00:10:55,770
+be here and scale it out, because we
+
+237
+00:10:55,770 --> 00:10:57,240
+know that's always there.
+
+238
+00:10:57,240 --> 00:10:59,670
+And we'll take a look for these distributions,
+
+239
+00:10:59,670 --> 00:11:01,500
+and when we get to the actual data
+
+240
+00:11:01,500 --> 00:11:04,710
+we'll turn things into normalized
+
+241
+00:11:04,710 --> 00:11:09,520
+so we can look at typical kind of z-scores and T statistics.
+
+242
+00:11:09,520 --> 00:11:11,550
+We can account for overlapping returns
+
+243
+00:11:11,550 --> 00:11:13,890
+and slightly increase the power of the results
+
+244
+00:11:13,890 --> 00:11:23,400
+by looking at returns that are taken over possibly overlapping
+
+245
+00:11:23,400 --> 00:11:25,830
+periods, rather than looking at discrete windows.
+
+246
+00:11:25,830 --> 00:11:27,720
+And one advantage to doing that, certainly,
+
+247
+00:11:27,720 --> 00:11:30,178
+is that we don't want there to be any arbitrariness in when
+
+248
+00:11:30,178 --> 00:11:31,350
+we started our series.
+
+249
+00:11:31,350 --> 00:11:33,270
+But we need to account for multiple counting,
+
+250
+00:11:33,270 --> 00:11:35,010
+because those returns are obviously
+
+251
+00:11:35,010 --> 00:11:38,290
+not going to be independent if the windows were overlapping.
+
+252
+00:11:38,290 --> 00:11:41,880
+So the test that we perform is to see if the variance ratio is
+
+253
+00:11:41,880 --> 00:11:42,870
+equal to 1.
+
+254
+00:11:42,870 --> 00:11:45,510
+And when we boil everything down,
+
+255
+00:11:45,510 --> 00:11:47,460
+or when Lo and MacKinlay do, what we
+
+256
+00:11:47,460 --> 00:11:54,870
+find is we can define a nice value called z over here.
+
+257
+00:11:54,870 --> 00:11:57,810
+So this z number is what we're going to compute,
+
+258
+00:11:57,810 --> 00:12:00,690
+and we're going to compute it because it is normally
+
+259
+00:12:00,690 --> 00:12:04,590
+distributed with mean 0 and variance 1.
+
+260
+00:12:04,590 --> 00:12:07,620
+Which means that if, under the null hypothesis,
+
+261
+00:12:07,620 --> 00:12:09,660
+if the random walk holds, we should
+
+262
+00:12:09,660 --> 00:12:15,930
+expect z to lie between plus or minus 2, 95% of the time.
+
+263
+00:12:15,930 --> 00:12:19,590
+In between plus or minus 3, 99% of the time.
+
+264
+00:12:19,590 --> 00:12:22,230
+And if we get values that are much larger than that,
+
+265
+00:12:22,230 --> 00:12:25,410
+then that would be evidence for rejecting a random walk.
+
+266
+00:12:25,410 --> 00:12:29,160
+The things that we have here involve the variance ratio
+
+267
+00:12:29,160 --> 00:12:31,350
+itself, in this case computed with
+
+268
+00:12:31,350 --> 00:12:33,240
+this particular combination.
+
+269
+00:12:33,240 --> 00:12:34,830
+And we'll adjust that again.
+
+270
+00:12:34,830 --> 00:12:38,110
+But a particular-- this is in the spirit that we had before.
+
+271
+00:12:38,110 --> 00:12:40,050
+These are just the computational details.
+
+272
+00:12:40,050 --> 00:12:42,090
+So we take the ratio of the variance
+
+273
+00:12:42,090 --> 00:12:45,150
+divided by q times the variance over the base period.
+
+274
+00:12:45,150 --> 00:12:49,350
+We subtract 1, and then this pre-factor over here
+
+275
+00:12:49,350 --> 00:12:53,310
+adjusts for the overlapping periods for the scaling
+
+276
+00:12:53,310 --> 00:12:54,537
+with the square root of T.
+
+277
+00:12:54,537 --> 00:12:56,370
+And we'll see that there are additional bias
+
+278
+00:12:56,370 --> 00:12:58,453
+corrections that make this a little more accurate.
+
+279
+00:12:58,453 --> 00:13:01,170
+But the idea is, scale everything so that we can
+
+280
+00:13:01,170 --> 00:13:02,640
+compare it to N(0,1).
+
+281
+00:13:02,640 --> 00:13:07,500
+That's easier than just taking this ratio here, and comparing
+
+282
+00:13:07,500 --> 00:13:09,370
+it to a more complicated distribution.
+
+283
+00:13:09,370 --> 00:13:11,680
+So it's a choice that we can make.
+
+284
+00:13:11,680 --> 00:13:14,145
+So to improve things a little bit
+
+285
+00:13:14,145 --> 00:13:16,020
+we can tighten up the formulas and write them
+
+286
+00:13:16,020 --> 00:13:18,150
+in this way, where we have the mu.
+
+287
+00:13:18,150 --> 00:13:19,980
+Obviously, we don't need to compute
+
+288
+00:13:19,980 --> 00:13:21,960
+the intermediate returns, because we can just
+
+289
+00:13:21,960 --> 00:13:23,400
+look at the endpoints.
+
+290
+00:13:23,400 --> 00:13:26,230
+So we can compute the mean return here.
+
+291
+00:13:26,230 --> 00:13:31,320
+We can compute sigma a variance a, in terms of the base
+
+292
+00:13:31,320 --> 00:13:32,280
+frequency.
+
+293
+00:13:32,280 --> 00:13:35,140
+Sigma B is the one that we had before,
+
+294
+00:13:35,140 --> 00:13:37,800
+which is done with the q period observations.
+
+295
+00:13:37,800 --> 00:13:40,980
+And C is the one done over overlapping periods.
+
+296
+00:13:40,980 --> 00:13:44,190
+And you notice that the pre-factor and the summation
+
+297
+00:13:44,190 --> 00:13:46,305
+are done a little bit differently
+
+298
+00:13:46,305 --> 00:13:47,430
+for the terms that entered.
+
+299
+00:13:47,430 --> 00:13:49,830
+But this one is done using overlapping windows, which can
+
+300
+00:13:49,830 --> 00:13:54,560
+improve the power for the test.
+
+301
+00:13:54,560 --> 00:13:57,740
+I've put some code here that you can take and run
+
+302
+00:13:57,740 --> 00:13:59,030
+that implements this.
+
+303
+00:13:59,030 --> 00:14:02,390
+Where we can take some data, compute
+
+304
+00:14:02,390 --> 00:14:04,610
+these different variances at the base frequency,
+
+305
+00:14:04,610 --> 00:14:06,950
+and at any given frequency R.
+
+306
+00:14:06,950 --> 00:14:11,750
+And we can compute then, this function z as a function of q
+
+307
+00:14:11,750 --> 00:14:12,980
+for our data.
+
+308
+00:14:12,980 --> 00:14:14,360
+And then we can get things out.
+
+309
+00:14:14,360 --> 00:14:16,500
+So we can compute a set of variances
+
+310
+00:14:16,500 --> 00:14:18,050
+that we could look at for our data.
+
+311
+00:14:18,050 --> 00:14:20,930
+We can compute these z statistics.
+
+312
+00:14:20,930 --> 00:14:24,710
+The function z of q, which are T stats for the tests,
+
+313
+00:14:24,710 --> 00:14:28,850
+and see if they lie between minus 2 and 2,
+
+314
+00:14:28,850 --> 00:14:30,200
+or minus 3 and 3.
+
+315
+00:14:30,200 --> 00:14:33,320
+And then if we want, we can get p values that
+
+316
+00:14:33,320 --> 00:14:35,510
+are the probabilities of observing
+
+317
+00:14:35,510 --> 00:14:38,660
+extreme results as extreme, or more extreme
+
+318
+00:14:38,660 --> 00:14:39,680
+than we see from z.
+
+319
+00:14:39,680 --> 00:14:42,060
+And then finally, we can do some plots of this.
+
+320
+00:14:42,060 --> 00:14:46,070
+So the idea of building this particular z with this
+
+321
+00:14:46,070 --> 00:14:49,580
+particular function is so that we can compare it to the N(0,1)
+
+322
+00:14:49,580 --> 00:14:51,530
+distribution, which makes it very nice.
+
+323
+00:14:51,530 --> 00:14:54,210
+So remember, it's a normal distribution.
+
+324
+00:14:54,210 --> 00:14:56,600
+And if the random walk holds, we're
+
+325
+00:14:56,600 --> 00:14:59,000
+going to see z be somewhere near 0.
+
+326
+00:14:59,000 --> 00:15:01,220
+The variance ratio should be near 1.
+
+327
+00:15:01,220 --> 00:15:04,490
+The z statistic, which measures the significance
+
+328
+00:15:04,490 --> 00:15:09,500
+of the departures just due to sampling error from
+
+329
+00:15:09,500 --> 00:15:12,680
+our distribution of a given finite length,
+
+330
+00:15:12,680 --> 00:15:17,060
+is what we want to study to see if a number that's not 1.000 is
+
+331
+00:15:17,060 --> 00:15:18,780
+exactly meaningful or not.
+
+332
+00:15:18,780 --> 00:15:22,790
+And if not, we'll see if there are any other directions
+
+333
+00:15:22,790 --> 00:15:24,230
+that we might choose to go.
+
+334
+00:15:24,230 --> 00:15:27,080
+Now there are a whole bunch of other technical complications
+
+335
+00:15:27,080 --> 00:15:28,890
+if we really want to sharpen this,
+
+336
+00:15:28,890 --> 00:15:31,190
+but I think that we can actually get a good idea just
+
+337
+00:15:31,190 --> 00:15:33,680
+by doing the variance ratio test on the simple data
+
+338
+00:15:33,680 --> 00:15:34,560
+that we did before.
+
+339
+00:15:34,560 --> 00:15:36,260
+But if you want to do it right, there
+
+340
+00:15:36,260 --> 00:15:40,820
+are additional formulas to get this very precise z
+
+341
+00:15:40,820 --> 00:15:45,500
+with these additional factors just to normalize everything
+
+342
+00:15:45,500 --> 00:15:48,280
+exactly right.
+
+343
+00:15:48,280 --> 00:15:50,020
+When Lo and MacKinlay did this they
+
+344
+00:15:50,020 --> 00:15:51,640
+looked for individual stocks, and they
+
+345
+00:15:51,640 --> 00:15:53,960
+looked at different periods, and different frequencies.
+
+346
+00:15:53,960 --> 00:15:57,830
+And what they found was that nothing obeyed the random walk.
+
+347
+00:15:57,830 --> 00:15:59,770
+So to pick a particular example, if we
+
+348
+00:15:59,770 --> 00:16:03,130
+look where they looked at both equally weighted and value
+
+349
+00:16:03,130 --> 00:16:06,610
+weighted indices, the numbers that they report here,
+
+350
+00:16:06,610 --> 00:16:11,050
+and here, and here, none of these numbers is equal to 1.
+
+351
+00:16:11,050 --> 00:16:13,450
+In fact, they're actually all bigger than 1.
+
+352
+00:16:13,450 --> 00:16:15,970
+If these were due to sampling error
+
+353
+00:16:15,970 --> 00:16:18,850
+we might expect some to be high, some to be low.
+
+354
+00:16:18,850 --> 00:16:20,320
+These are the different frequencies
+
+355
+00:16:20,320 --> 00:16:22,900
+that they looked at two, four, eight, 16.
+
+356
+00:16:22,900 --> 00:16:26,140
+So they looked at evenly divisible series.
+
+357
+00:16:26,140 --> 00:16:29,980
+That's not necessarily required, but it is convenient.
+
+358
+00:16:29,980 --> 00:16:33,520
+And then below the numbers they show the T statistics,
+
+359
+00:16:33,520 --> 00:16:36,870
+or the magnitude of the z of q.
+
+360
+00:16:36,870 --> 00:16:39,320
+And you'll see that these are all very large numbers.
+
+361
+00:16:39,320 --> 00:16:43,510
+So not only are the numbers 1.3, 1.64, not equal to 1,
+
+362
+00:16:43,510 --> 00:16:45,490
+they're significantly different from 1.
+
+363
+00:16:45,490 --> 00:16:48,730
+
+
+364
+00:16:48,730 --> 00:16:52,700
+So let's take a look at it with our Tootsie Roll data.
+
+365
+00:16:52,700 --> 00:16:56,360
+So what we can do is, we can look at our data.
+
+366
+00:16:56,360 --> 00:17:02,670
+We can get a rough idea of what's
+
+367
+00:17:02,670 --> 00:17:05,819
+going on by computing the variance or the volatility
+
+368
+00:17:05,819 --> 00:17:08,700
+at using different sampling frequencies,
+
+369
+00:17:08,700 --> 00:17:10,480
+and just see if we're in the ballpark.
+
+370
+00:17:10,480 --> 00:17:12,599
+So if we do that-- you can try this,
+
+371
+00:17:12,599 --> 00:17:14,280
+running the code I have before--
+
+372
+00:17:14,280 --> 00:17:16,079
+you get the result that we see here
+
+373
+00:17:16,079 --> 00:17:19,920
+on this graph, where the volatility is
+
+374
+00:17:19,920 --> 00:17:22,650
+done over the entire period, but using different scaling
+
+375
+00:17:22,650 --> 00:17:23,280
+results.
+
+376
+00:17:23,280 --> 00:17:26,250
+So is it exactly the same over every sampling window?
+
+377
+00:17:26,250 --> 00:17:27,190
+Absolutely not.
+
+378
+00:17:27,190 --> 00:17:29,890
+But it's roughly constant.
+
+379
+00:17:29,890 --> 00:17:32,790
+So you can see why we need these statistical tests.
+
+380
+00:17:32,790 --> 00:17:34,170
+Is that close enough?
+
+381
+00:17:34,170 --> 00:17:36,480
+So roughly speaking, it looks like it
+
+382
+00:17:36,480 --> 00:17:38,510
+might be like a random walk.
+
+383
+00:17:38,510 --> 00:17:40,380
+It has that general attribute.
+
+384
+00:17:40,380 --> 00:17:42,270
+This is just another rescaled version
+
+385
+00:17:42,270 --> 00:17:46,470
+of what we saw earlier on the linear plot.
+
+386
+00:17:46,470 --> 00:17:49,930
+But how well does this actually hold?
+
+387
+00:17:49,930 --> 00:17:53,980
+If we want to get a very quick and dirty idea just to eyeball
+
+388
+00:17:53,980 --> 00:17:57,580
+it and say, are those variations reasonable before we
+
+389
+00:17:57,580 --> 00:18:00,130
+run any statistical tests, what we can do
+
+390
+00:18:00,130 --> 00:18:01,330
+is we can do a Monte Carlo.
+
+391
+00:18:01,330 --> 00:18:05,140
+So let's compute simulated price data that
+
+392
+00:18:05,140 --> 00:18:10,150
+has the same mean and volatility as the Tootsie Roll stock does.
+
+393
+00:18:10,150 --> 00:18:12,370
+And then on that simulated data-- pretending
+
+394
+00:18:12,370 --> 00:18:13,870
+that we didn't know it's simulated--
+
+395
+00:18:13,870 --> 00:18:15,070
+do the same calculation.
+
+396
+00:18:15,070 --> 00:18:16,570
+That is, let's compute volatility
+
+397
+00:18:16,570 --> 00:18:17,920
+over different time periods.
+
+398
+00:18:17,920 --> 00:18:21,370
+And here we see the same general qualitative behavior
+
+399
+00:18:21,370 --> 00:18:24,590
+on this plot as we saw in the previous one.
+
+400
+00:18:24,590 --> 00:18:27,610
+So it's possible that what we're looking at
+
+401
+00:18:27,610 --> 00:18:30,580
+could just be statistical error, or it's possible
+
+402
+00:18:30,580 --> 00:18:34,930
+that there could be systematic departures from the random walk
+
+403
+00:18:34,930 --> 00:18:38,580
+when we do the detailed analysis.
+

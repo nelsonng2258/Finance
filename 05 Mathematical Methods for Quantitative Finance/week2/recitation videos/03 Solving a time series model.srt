@@ -1,0 +1,596 @@
+0
+00:00:00,000 --> 00:00:02,510
+
+
+1
+00:00:02,510 --> 00:00:04,760
+PROFESSOR: Consider a stationary process.
+
+2
+00:00:04,760 --> 00:00:10,370
+xt is epsilon t plus theta times epsilon t minus 2, where theta
+
+3
+00:00:10,370 --> 00:00:14,210
+is a constant and epsilon is a 0 mean random variable
+
+4
+00:00:14,210 --> 00:00:16,800
+with variance sigma squared.
+
+5
+00:00:16,800 --> 00:00:19,830
+So this is a notation you'll often see in the literature,
+
+6
+00:00:19,830 --> 00:00:24,470
+and you can be tempted in fact, you can just rescale the sigma
+
+7
+00:00:24,470 --> 00:00:27,500
+and re express things in terms of a completely standardized
+
+8
+00:00:27,500 --> 00:00:28,400
+random variable z.
+
+9
+00:00:28,400 --> 00:00:31,020
+They're just simple linear transformations.
+
+10
+00:00:31,020 --> 00:00:32,990
+But in this notation, we would typically
+
+11
+00:00:32,990 --> 00:00:38,060
+write that the expectation is 0, that the variance is sigma
+
+12
+00:00:38,060 --> 00:00:43,370
+squared, and since the mean is 0 the covariance of epsilon t
+
+13
+00:00:43,370 --> 00:00:47,640
+and epsilon s is equal to 0 unless t is equal to s.
+
+14
+00:00:47,640 --> 00:00:49,835
+So when t and s are different we get 0,
+
+15
+00:00:49,835 --> 00:00:52,710
+and when t and s are equal, we get the previous result.
+
+16
+00:00:52,710 --> 00:00:55,250
+We sometimes write those in a compact notation
+
+17
+00:00:55,250 --> 00:00:57,500
+using the Kroncker delta notation,
+
+18
+00:00:57,500 --> 00:00:59,330
+where that's simply defined here.
+
+19
+00:00:59,330 --> 00:01:02,390
+This delta t sub s just is something
+
+20
+00:01:02,390 --> 00:01:06,660
+that's 1 when the indices are equal and it's 0 otherwise.
+
+21
+00:01:06,660 --> 00:01:08,180
+So here's our question.
+
+22
+00:01:08,180 --> 00:01:11,660
+Is the series x sub d stationary?
+
+23
+00:01:11,660 --> 00:01:15,830
+And find the mean, the variance and the autocorrelation
+
+24
+00:01:15,830 --> 00:01:17,220
+function.
+
+25
+00:01:17,220 --> 00:01:23,355
+So why don't you pause the video, solve these questions,
+
+26
+00:01:23,355 --> 00:01:25,730
+and then come back and we'll do it together on the board.
+
+27
+00:01:25,730 --> 00:01:44,410
+
+
+28
+00:01:44,410 --> 00:01:45,250
+OK.
+
+29
+00:01:45,250 --> 00:01:47,690
+Let's look at solving this problem.
+
+30
+00:01:47,690 --> 00:01:50,030
+First of all, is it stationary?
+
+31
+00:01:50,030 --> 00:01:54,310
+It is a stationary series because we have
+
+32
+00:01:54,310 --> 00:01:56,240
+expressed things recursively.
+
+33
+00:01:56,240 --> 00:01:58,240
+If we shift things in time, we still
+
+34
+00:01:58,240 --> 00:02:00,340
+have the same relative relationship
+
+35
+00:02:00,340 --> 00:02:03,580
+of the axis across different points in time.
+
+36
+00:02:03,580 --> 00:02:05,000
+How about computing the mean?
+
+37
+00:02:05,000 --> 00:02:07,120
+Well the mean we can do just by expectation.
+
+38
+00:02:07,120 --> 00:02:09,680
+We take expectations it's linear,
+
+39
+00:02:09,680 --> 00:02:12,460
+so we have that the expectation of x--
+
+40
+00:02:12,460 --> 00:02:14,200
+this is zero expectation, and this
+
+41
+00:02:14,200 --> 00:02:18,190
+is theta times 0 expectation, so that's equal to 0.
+
+42
+00:02:18,190 --> 00:02:19,240
+How about the rest of it?
+
+43
+00:02:19,240 --> 00:02:23,375
+
+
+44
+00:02:23,375 --> 00:02:25,000
+Well I'm going to simplify things a bit
+
+45
+00:02:25,000 --> 00:02:34,860
+by letting epsilon t be sigma zt.
+
+46
+00:02:34,860 --> 00:02:36,895
+And then I'm going to divide through by sigma.
+
+47
+00:02:36,895 --> 00:02:38,520
+I'm going to keep calling my variable--
+
+48
+00:02:38,520 --> 00:02:40,630
+I'll call it little x, and then at the end
+
+49
+00:02:40,630 --> 00:02:43,500
+we can switch variables and we can multiply everything
+
+50
+00:02:43,500 --> 00:02:46,710
+through by sigma if we'd like.
+
+51
+00:02:46,710 --> 00:02:49,410
+So I'm going to have the defining equation
+
+52
+00:02:49,410 --> 00:02:55,350
+that xt is now going to be zt plus theta
+
+53
+00:02:55,350 --> 00:02:57,960
+times z of t minus 2.
+
+54
+00:02:57,960 --> 00:03:04,055
+And we've seen that the expectation of xt is 0.
+
+55
+00:03:04,055 --> 00:03:11,050
+The variance is xt squared, and that's just
+
+56
+00:03:11,050 --> 00:03:20,830
+the expectation of zt plus theta zt minus 2 quantity squared.
+
+57
+00:03:20,830 --> 00:03:23,830
+Obviously what's going to happen as we expand this out,
+
+58
+00:03:23,830 --> 00:03:26,320
+the cross term will have vanishing expectation
+
+59
+00:03:26,320 --> 00:03:31,150
+because zt and zt minus 2 are necessarily two time steps
+
+60
+00:03:31,150 --> 00:03:31,880
+apart.
+
+61
+00:03:31,880 --> 00:03:35,470
+So that's going to vanish, and the final term
+
+62
+00:03:35,470 --> 00:03:37,210
+we're going to be left with is going
+
+63
+00:03:37,210 --> 00:03:45,460
+to be expectation of zt squared plus theta squared expectation
+
+64
+00:03:45,460 --> 00:03:51,590
+of zt minus 2 quantity squared, or in other words
+
+65
+00:03:51,590 --> 00:03:53,330
+1 plus theta squared.
+
+66
+00:03:53,330 --> 00:03:55,690
+And if we multiply through by sigma squared,
+
+67
+00:03:55,690 --> 00:03:58,030
+we'll get the answer to our original question
+
+68
+00:03:58,030 --> 00:04:00,820
+in terms of big X. Is that what you got?
+
+69
+00:04:00,820 --> 00:04:04,360
+All right, now let's take a look at the autocorrelation function
+
+70
+00:04:04,360 --> 00:04:06,120
+and things will get interesting.
+
+71
+00:04:06,120 --> 00:04:09,758
+So the autocorrelation function, or ACF is defined--
+
+72
+00:04:09,758 --> 00:04:11,425
+and we're just going to do calculations,
+
+73
+00:04:11,425 --> 00:04:13,870
+so we're just going to use our definitions.
+
+74
+00:04:13,870 --> 00:04:16,959
+So our ACF is going to be obtained
+
+75
+00:04:16,959 --> 00:04:27,850
+by just computing expectation of xt and xt minus k.
+
+76
+00:04:27,850 --> 00:04:30,580
+Now remember, this is a special case when the means are 0.
+
+77
+00:04:30,580 --> 00:04:33,560
+More generally what we properly should write
+
+78
+00:04:33,560 --> 00:04:38,860
+is it's the covariance of xt in xt minus k.
+
+79
+00:04:38,860 --> 00:04:41,110
+But it's the same as this expectation in the case
+
+80
+00:04:41,110 --> 00:04:43,270
+where the means are 0, and otherwise
+
+81
+00:04:43,270 --> 00:04:45,730
+as we know we would subtract off the product
+
+82
+00:04:45,730 --> 00:04:47,050
+of the expectations.
+
+83
+00:04:47,050 --> 00:04:47,840
+So what do we do?
+
+84
+00:04:47,840 --> 00:04:49,690
+Let's just substitute in.
+
+85
+00:04:49,690 --> 00:04:57,160
+So we have this is going to be the expectation of zt
+
+86
+00:04:57,160 --> 00:05:00,790
+plus theta zt minus 2--
+
+87
+00:05:00,790 --> 00:05:02,140
+let's change colors here--
+
+88
+00:05:02,140 --> 00:05:13,860
+times z of t minus k plus theta of zt minus k minus 2.
+
+89
+00:05:13,860 --> 00:05:20,880
+
+
+90
+00:05:20,880 --> 00:05:23,560
+Now when we do the expectation, what's going to happen?
+
+91
+00:05:23,560 --> 00:05:30,930
+Well, we know that zt could be paired with--
+
+92
+00:05:30,930 --> 00:05:32,550
+it can't be the same as this one,
+
+93
+00:05:32,550 --> 00:05:34,380
+we're excluding the case where k equals 0.
+
+94
+00:05:34,380 --> 00:05:36,430
+We've already done that, that's the variance.
+
+95
+00:05:36,430 --> 00:05:39,670
+So we know the t and t minus k have to be different.
+
+96
+00:05:39,670 --> 00:05:44,910
+And we know that t minus 2 and t minus 2 minus k
+
+97
+00:05:44,910 --> 00:05:46,270
+have to be different.
+
+98
+00:05:46,270 --> 00:05:49,980
+So the term with no thetas and determined theta squared are
+
+99
+00:05:49,980 --> 00:05:53,230
+both going to have varnishing expectations of the z's.
+
+100
+00:05:53,230 --> 00:05:55,830
+So we're left with two possible terms.
+
+101
+00:05:55,830 --> 00:06:08,560
+So we're left with theta times the expectation of z
+
+102
+00:06:08,560 --> 00:06:19,870
+t minus 2 times z t minus k plus theta times the expectation
+
+103
+00:06:19,870 --> 00:06:29,810
+of zt with z t minus k minus 2.
+
+104
+00:06:29,810 --> 00:06:32,620
+Now usually, one comment I should make
+
+105
+00:06:32,620 --> 00:06:35,470
+is that often we do things only for positive k
+
+106
+00:06:35,470 --> 00:06:36,970
+and we think going forward.
+
+107
+00:06:36,970 --> 00:06:39,100
+Formally for stationary series--
+
+108
+00:06:39,100 --> 00:06:40,510
+and it's a property you can check
+
+109
+00:06:40,510 --> 00:06:42,430
+and you can show from the definition--
+
+110
+00:06:42,430 --> 00:06:45,760
+that if we take k to minus k, that the autocovariance
+
+111
+00:06:45,760 --> 00:06:47,020
+functions are the same.
+
+112
+00:06:47,020 --> 00:06:49,420
+We often don't think of them that way because we usually
+
+113
+00:06:49,420 --> 00:06:51,700
+want to think about autocovariance and lag
+
+114
+00:06:51,700 --> 00:06:53,620
+variables because we expect information
+
+115
+00:06:53,620 --> 00:06:56,660
+to propagate forward in time, not backward in time.
+
+116
+00:06:56,660 --> 00:06:59,020
+So there's no time travel rule in finance.
+
+117
+00:06:59,020 --> 00:07:01,330
+But formally we could have either of these, but what
+
+118
+00:07:01,330 --> 00:07:03,910
+we can see is if we look at the two expressions,
+
+119
+00:07:03,910 --> 00:07:06,940
+we can see right away that generally they will vanish
+
+120
+00:07:06,940 --> 00:07:11,820
+except if k is equal to 2.
+
+121
+00:07:11,820 --> 00:07:16,020
+If k is equal to 2, then the first expression
+
+122
+00:07:16,020 --> 00:07:20,700
+will have expectation 1, and otherwise it will vanish.
+
+123
+00:07:20,700 --> 00:07:24,180
+And in the second term, this one here,
+
+124
+00:07:24,180 --> 00:07:27,720
+this will generally vanish unless k were equal to minus 2,
+
+125
+00:07:27,720 --> 00:07:32,280
+in which case this would give me an expectation of 1
+
+126
+00:07:32,280 --> 00:07:34,230
+and this expectation would vanish.
+
+127
+00:07:34,230 --> 00:07:36,210
+So either way when we put these together,
+
+128
+00:07:36,210 --> 00:07:58,630
+what we're going to get is that this is equal to theta
+
+129
+00:07:58,630 --> 00:08:07,330
+if k is equal to plus or minus 2, and it's equal to 0
+
+130
+00:08:07,330 --> 00:08:08,050
+otherwise.
+
+131
+00:08:08,050 --> 00:08:11,840
+
+
+132
+00:08:11,840 --> 00:08:14,830
+And of course, if we want to go back and put in our sigmas,
+
+133
+00:08:14,830 --> 00:08:17,600
+we would multiply this through by sigma squared.
+
+134
+00:08:17,600 --> 00:08:20,140
+So the interesting thing about this structure
+
+135
+00:08:20,140 --> 00:08:24,340
+is that it's only a quadratic term, it's very simple algebra
+
+136
+00:08:24,340 --> 00:08:25,420
+that we've done.
+
+137
+00:08:25,420 --> 00:08:29,900
+And because of the way the variables get paired together,
+
+138
+00:08:29,900 --> 00:08:31,990
+there are only certain combinations
+
+139
+00:08:31,990 --> 00:08:33,700
+that have a chance of meeting.
+
+140
+00:08:33,700 --> 00:08:36,549
+So we've reduced something that does involve
+
+141
+00:08:36,549 --> 00:08:38,620
+lag propagation of time, so there
+
+142
+00:08:38,620 --> 00:08:41,409
+are things that are moving forward two time steps ahead.
+
+143
+00:08:41,409 --> 00:08:44,770
+But when we express things in terms of the z's, we
+
+144
+00:08:44,770 --> 00:08:47,800
+need the z's to be coincident, or the same time index,
+
+145
+00:08:47,800 --> 00:08:50,740
+and that picks out the terms that are going to be there,
+
+146
+00:08:50,740 --> 00:08:52,540
+and then the result is just what we
+
+147
+00:08:52,540 --> 00:08:55,260
+get by doing a little bit of algebra.
+
+148
+00:08:55,260 --> 00:08:56,000
+
+

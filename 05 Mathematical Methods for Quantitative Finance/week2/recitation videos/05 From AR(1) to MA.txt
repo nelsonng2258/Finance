@@ -1,0 +1,154 @@
+
+PROFESSOR: Let Rt minus mu be equal to minus lambda
+times Rt minus 1 minus mu plus sigma zt,
+that's the definition of our AR1 process.
+Now can you show that this AR1 process can be rewritten
+as a moving average process?
+Let me give you two hints.
+Number one is to use recursion, and number two is to keep
+in mind what the goal is, is to express Rt on the left hand
+side, and something that doesn't have any R's on the right hand
+side that only has z's.
+That's a general rule that we have.
+They can be of different lags, but there should be only
+z's on the right hand side and no R's.
+So see if you can do that, come back.
+Pause the video, see if you can work it out, and then come back
+and we'll look at it together.
+
+So I'm going to simplify notation a little bit for me
+by removing some of the scaling, let's
+get rid of the mu's and the sigmas and boil things down
+so they're a little bit easier to follow.
+So I'm going to define a new variable
+I'll call y sub t to just be Rt minus mu divided by sigma.
+So you notice that this looks like a standardized random
+variable, but be careful because the sigma is not necessarily
+the variance of R. In fact, we know it's not.
+It's the parameter that multiplies z.
+So this is just a definition, and in terms
+of which I can rewrite my AR1 process of the form yt
+is equal to minus lambda yt plus z sub t.
+Now what I'm going to do is make a series
+of recursive substitutions.
+So the first thing I'm going to do
+is I'm going to leave this zt right here.
+And what I'm going to do-- oops, sorry.
+This should be minus 1, very important.
+So what I'm going to do-- so this is our expression,
+let's just compare it and check.
+So what I've done up here is I've divided through by sigma,
+and then after dividing through by sigma,
+this is y sub t, which is here.
+The minus lambda stays, this divided by sigma
+is y sub t minus 1, and then zt over here
+comes from dividing this term by sigma.
+So that's just our previous expression.
+What I'm going to do, though, is now
+I'm going to take this piece here
+and I'm going to take y sub t minus 1
+and substitute it in this expression.
+So it'll be a little bit more convenient
+if I put the z on the left hand side.
+So let's do it like this.
+I'm going to write down that yt is
+equal to zt minus lambda times y t minus 1,
+but that's the same thing as zt minus lambda times--
+let's change colors.
+Now y t minus 1 is just z t minus 1 minus lambda times y
+of t minus 2.
+That is, this expression here just corresponds to this
+by using this entire definition.
+That is, if I take t and I replace it by t minus 1,
+this becomes t minus 1, this becomes t minus 2,
+and that's what I have here.
+This is z t minus 1 minus lambda times y of t minus 2.
+We simplify, and then we do it again.
+So to simplify, this is going to be zt minus lambda times
+z t minus 1.
+And now I'm going to have plus lambda squared times
+y of t minus 2.
+Let's substitute in for that y of t minus 2.
+
+This is going to be equal to zt minus lambda z t minus 1
+plus lambda squared times z t minus 2 minus lambda of y t
+minus 3.
+
+And we can simplify that.
+Let's expand that out and you can see the pattern coming.
+z t minus 1 plus lambda squared z t minus 2 now minus lambda
+cubed times y of t minus 3.
+So we're going to keep going, and what's going to happen
+is we're going to push the y farther and farther off
+to the side.
+And there there's one thing that's
+important to keep in mind, which is that lambda, remember, must
+be less than 1 in absolute magnitude, otherwise
+this series blows up.
+So we can imagine that as we push y farther and farther
+back--
+because t minus 3, t minus 4, t minus 5--
+each time it's being made smaller and smaller,
+not only can we run this recursion infinitely,
+assuming we could go infinitely far back,
+but any residual term that's left over
+is getting smaller, and smaller, and smaller.
+So finally, we can write this as an MA series,
+but the trick is it's of infinite order.
+So what do we get?
+We write this out and we can summarize our result.
+So we continue going down, and finally what we're left with
+is an expression that y sub t can
+be written as the sum from k equals 0
+to infinity of minus lambda to the kz sub t minus k.
+
+So this is our formal result for this expression.
+We know that in practice we're not really
+going to be able to do infinite sums,
+but we expect that it's going to be a good approximation if we
+truncate after a reasonable number of terms
+because they're all being suppressed by powers of lambda.
+So even if this is a formal expression,
+it encodes one thing that's actually quite important,
+which is that this is not just an infinite sum
+in both directions.
+It's a semi-infinite sum into the past.
+What that means is that this shows that yt,
+because it can be expressed as a sum of all of the previous
+z's--
+and I've eliminated the previous y's,
+so we're back to our original variables,
+remember that this is in fact the same thing
+as Rt minus mu over sigma.
+So we can write this for R sub t as just sigma times yt plus mu.
+What this shows is that it depends only
+on z's of the same time or earlier.
+So in particular, it means that if we
+take two different times--
+if I were to compute, for example,
+the expectation of z sub s with y sub t,
+this is going to be 0 whenever t is earlier than s.
+So if we pick a point subsequently,
+this term here, this sum includes
+from our starting point, from lag 0
+from t, all the way to the past-- t minus 1, t minus 2,
+t minus 3, if we pick something that happens after that it
+is necessarily uncorrelated.
+And that means-- in coming back to our AR1 model--
+that we have an interesting result that's
+actually important in doing other derivations.
+And now that we've shown it, it should
+be intuitively reasonable that whenever
+we have crossed terms of this form--
+whenever we look at the expectation or the covariance
+of one of the z's--
+one of the noise terms with one of the excess return pieces,
+the Rt minus mu, at a different point in time
+this expectation is going to vanish.
+These have no covariance.
+So intuitively, it makes sense that the noise
+is independent of the general variable,
+but now here, we can see that as a consequence
+of the temporal structure, that we can write the AR1 process
+in terms of an MA1 process in the semi-infinite past
+or in the infinite past.

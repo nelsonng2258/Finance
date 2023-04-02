@@ -1,0 +1,179 @@
+
+PROFESSOR: Let's generalize the random walk model now
+by adding two parameters.
+So what we'll do is we will take our basic standardized random
+variable, z, and we're going to multiply it times 1
+constant called sigma.
+And that's a scale factor.
+And then, we're going to add another constant, mu.
+So it's very simple-- just a linear generalization
+of our previous z.
+So we'll call this linear combination sigma z plus mu.
+We'll give it a new name.
+We'll call it r.
+We still have the property that the steps
+are independent in each time period.
+That follows from the independence of the z's.
+So the z's are our same old friends the z's we had before.
+And the new random variable, not surprisingly,
+is going to have a different mean and variance.
+The two parameters that we have, sigma and mu,
+are going to be interpreted in financial applications
+as parameters that describe risk and return, which are the two
+basic elements we need of course, for understanding
+investments, for understanding financial markets.
+And this is the simplest non-trivial model
+that we've got.
+So let's see where that takes us.
+If we want to match this on-- just to give you a heads up
+for where we're going--
+consider stock prices.
+Observe regularly, say daily--
+P1, P2, P3 are different stock prices.
+And we can think of the return from one period to the next
+as being possibly modeled by a random variable.
+We don't know in the future what's
+going to happen from one day to the next.
+We can ask what's the distribution from which
+these variables are drawn.
+And if they are drawn from an IID distribution,
+if they're independent and identically distributed,
+what would be the consequences of compounding these returns
+over a long period of time?
+The identification we typically make
+is to identify r sub t, which I've denoted with a little r,
+to be the logarithm of the price ratio.
+And this is close to the simple return numerically.
+But we'll see that this is a better
+model both empirically and theoretically.
+We can go backwards from these returns
+to the prices in the same way that we mentioned before,
+that we can add and iterate the process if we
+have a recursive idea of what the returns are
+and the prices are.
+And we can build up the price series
+by looking at a compounded sum of returns.
+Because we've taken the logarithm
+to get the little bars, we exponentiate to get the prices.
+So this is how we can think about where
+these r's in this generalized random model,
+these r's are going to fit in to a model for asset prices.
+Now, since the expectational operator is linear,
+we're going to generalize our previous results.
+It will be almost as easy as what we did before.
+So we have that the return is just a constant time z plus mu.
+We know that the expectation of a constant,
+and we know the expectation of a sum
+is the sum of the expectations.
+So the expectation of the sum is mu plus sigma times
+the expectation of z.
+And we remember that the expectation of z is 0.
+So very simply, the expected return of r sub t is mu.
+What about the variance?
+The variance is defined as the expectation of the square
+of the variable minus its mean.
+We just computed the mean on the line above.
+And r minus mu is sigma z.
+We take that squared.
+The constant, sigma squared, comes out of the expectation.
+The expectation of z squared is 1.
+So we're left with the variance of r is sigma squared.
+And then our last relationship among the z's translates here
+as well.
+And this gives us the covariance of two
+r's taken at different periods of time.
+The definition of the covariance is the expectation
+of the product of two random variables,
+relative to their means.
+Because rt and our rt prime have an arbitrary time index,
+they have the same mean.
+And this is just the same thing as the expectation value.
+It's proportional to the expectation
+value of the zt equals zt prime at two different times.
+And that's equal to 0, as we've seen before.
+Now, here's where it gets interesting.
+Let's take a look at what happens when we
+add a bunch of them together.
+So let's look at defining a new thing I'll call X big T
+to be r1 plus r2 plus r3.
+And what we're interested in is the dependence on time.
+So the r's are independent of each other.
+But we'd like to know how the distribution of X
+depends on the moments of the individual r's,
+and in particular how it depends on how many of them
+we have-- that is what's the time dependence.
+So once again, we use linearity.
+We take expectations of both sides of this equation,
+and we expand out.
+What do we find?
+First, for the mean, the expectation of XT
+is the expectation of r1 plus expectation of r2 and so on.
+Each of these expectations is identical.
+This is mu plus mu plus mu, T times.
+And that gives us T times mu.
+So remember that our standardized,
+our pure random walk standardized, just
+the sum of the z's had been 0.
+Now we have a slightly different result,
+because each of the r's has a non-zero mean.
+The result is T times the individual mean.
+How about the variance?
+The variance is only slightly more complicated.
+We just need to do a little bit of algebra.
+The variance, as always, is defined
+as the expectation of the square of the variable minus its mean.
+We just computed the mean.
+It was T times mu.
+Now, here's a convenient trick.
+Let's write it out.
+Let's write T mu is mu plus mu plus mu plus mu.
+And let's expand out X. So that we
+can group this together in these suggestive and interesting
+groupings, as the expectation of r1 minus mu plus r2
+minus mu, plus, and so on up to rT minus mu.
+So each of these things--
+r minus mu as a unit, is the random component
+of our process.
+We can think of mu as being a deterministic piece.
+It's the amount that gets added in every single period.
+And we're also getting a random component.
+That's our sigma zT term.
+So these are the sum of these random variables.
+Since each of these r minus mus is a sigma z1, sigma z2, and so
+on, we have a sigma squared that pulls out of the expectation,
+because it's a constant multiplier.
+And then, we got to use our previous result--
+that we have the expectation of the sum of z's quantity squared
+is just T. So, now we have this scale factor of sigma squared.
+And that's our basic result for this generalized random walk.
+So to summarize-- the generalized random walk model
+is constructed as a sum of IID random variables,
+r1 plus r2 plus r3.
+Each of these generalizes our standard z
+by multiplying it times 1 constant, sigma,
+and adding another mu.
+We can think of these as being related to volatility,
+the risk associated with an investment,
+and mu, the constant deterministic return
+that we would have if we turn volatility off.
+The mean and the variance are linear in time.
+So as before, we apply linearity and compute expectations.
+Notice that we're not computing here, the full distribution
+of x.
+And we haven't used the full distribution of the individual
+r's.
+We've just used the mean and variance
+of r's to get the mean and variance and covariances,
+and those properties for x and T.
+Our basic result that's going to be
+important for financial applications
+and for our intuition about randomness
+and financial markets, is that the mean
+is proportional to time.
+And the variance is proportional to time,
+which means it's square root, which we associate
+with the volatility grows as square root of T.
+That is the volatility, the standard deviation of x sub T,
+is sigma times the square root of T.
+And square root of T, as it gets large,
+grows more slowly than T.

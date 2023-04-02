@@ -1,0 +1,344 @@
+0
+00:00:00,000 --> 00:00:00,900
+
+
+1
+00:00:00,900 --> 00:00:04,800
+PAUL MENDE: Welcome to 15.455x, Mathematical Methods
+
+2
+00:00:04,800 --> 00:00:06,720
+of Quantitative Finance.
+
+3
+00:00:06,720 --> 00:00:11,440
+I'm Paul Mende, and I'm your instructor for this course.
+
+4
+00:00:11,440 --> 00:00:17,610
+The main topics that we cover are probability, time series
+
+5
+00:00:17,610 --> 00:00:21,330
+models, discrete-time stochastic processes,
+
+6
+00:00:21,330 --> 00:00:25,140
+continuous-time processes, linear algebra,
+
+7
+00:00:25,140 --> 00:00:27,510
+and optimization.
+
+8
+00:00:27,510 --> 00:00:31,410
+Our approach in this course is to develop mathematical methods
+
+9
+00:00:31,410 --> 00:00:33,390
+that are applied in finance.
+
+10
+00:00:33,390 --> 00:00:36,920
+We're oriented toward practical and innovative problem solving.
+
+11
+00:00:36,920 --> 00:00:39,630
+So we'd like you to understand where the ideas come from,
+
+12
+00:00:39,630 --> 00:00:42,610
+how to use them, not only in standard situations,
+
+13
+00:00:42,610 --> 00:00:44,310
+but in novel ones, where maybe some
+
+14
+00:00:44,310 --> 00:00:46,740
+of the standard assumptions don't apply.
+
+15
+00:00:46,740 --> 00:00:49,770
+We'll survey the key ideas and tools and methods
+
+16
+00:00:49,770 --> 00:00:51,340
+in each of these areas.
+
+17
+00:00:51,340 --> 00:00:53,400
+And we'll provide a foundation for applications
+
+18
+00:00:53,400 --> 00:00:56,460
+in industry and research and for further study,
+
+19
+00:00:56,460 --> 00:00:58,530
+depending on where you are in your career
+
+20
+00:00:58,530 --> 00:01:00,870
+and where you are in your studies.
+
+21
+00:01:00,870 --> 00:01:03,250
+Learning in the class is very much hands on.
+
+22
+00:01:03,250 --> 00:01:05,400
+You'll be doing examples, you'll be doing problems,
+
+23
+00:01:05,400 --> 00:01:06,960
+you'll be doing applications.
+
+24
+00:01:06,960 --> 00:01:10,350
+And mostly, you should be asking questions all the time.
+
+25
+00:01:10,350 --> 00:01:11,470
+Where does this apply?
+
+26
+00:01:11,470 --> 00:01:12,700
+What do the results mean?
+
+27
+00:01:12,700 --> 00:01:14,400
+What are some counterexamples?
+
+28
+00:01:14,400 --> 00:01:16,830
+How do we generalize?
+
+29
+00:01:16,830 --> 00:01:18,570
+We begin with probability because
+
+30
+00:01:18,570 --> 00:01:20,820
+of the basic observation that financial data
+
+31
+00:01:20,820 --> 00:01:24,020
+is noisy and financial data--
+
+32
+00:01:24,020 --> 00:01:26,910
+excuse me, financial decisions, more generally,
+
+33
+00:01:26,910 --> 00:01:29,920
+are characterized by uncertainty.
+
+34
+00:01:29,920 --> 00:01:31,470
+So we need probability.
+
+35
+00:01:31,470 --> 00:01:34,020
+Probability is the language of uncertainty.
+
+36
+00:01:34,020 --> 00:01:38,470
+And we want to ultimately be describing an uncertain world
+
+37
+00:01:38,470 --> 00:01:41,980
+and making good decisions under uncertain conditions.
+
+38
+00:01:41,980 --> 00:01:43,560
+So we begin with the basic review
+
+39
+00:01:43,560 --> 00:01:45,525
+of probability and a few key ideas
+
+40
+00:01:45,525 --> 00:01:50,310
+that we'll be building on to describe how events unfold
+
+41
+00:01:50,310 --> 00:01:53,670
+in a sometimes noisy world.
+
+42
+00:01:53,670 --> 00:01:56,610
+Look at discrete-time stochastic processes
+
+43
+00:01:56,610 --> 00:02:00,750
+that characterize the evolution of random variables
+
+44
+00:02:00,750 --> 00:02:03,720
+to describe financial and econometric quantities.
+
+45
+00:02:03,720 --> 00:02:06,150
+We want to think about the entire past, present,
+
+46
+00:02:06,150 --> 00:02:09,210
+and future trajectory of different quantities
+
+47
+00:02:09,210 --> 00:02:10,250
+of interest.
+
+48
+00:02:10,250 --> 00:02:12,480
+So we'll be developing some specific time series
+
+49
+00:02:12,480 --> 00:02:15,810
+models that find a variety of applications.
+
+50
+00:02:15,810 --> 00:02:18,510
+We'll be looking at numerical, as well as analytical,
+
+51
+00:02:18,510 --> 00:02:21,570
+techniques to solving closed form, to solve numerically.
+
+52
+00:02:21,570 --> 00:02:23,550
+We'll see how to estimate parameters
+
+53
+00:02:23,550 --> 00:02:26,520
+and how to identify what might be the appropriate model
+
+54
+00:02:26,520 --> 00:02:29,060
+for different situations.
+
+55
+00:02:29,060 --> 00:02:31,430
+We'll then take a look at things in continuous time,
+
+56
+00:02:31,430 --> 00:02:33,530
+and we'll see it's much more interesting
+
+57
+00:02:33,530 --> 00:02:38,040
+than simply your ordinary delta t goes to 0 limit.
+
+58
+00:02:38,040 --> 00:02:41,540
+We'll see stochastic processes become fractals,
+
+59
+00:02:41,540 --> 00:02:45,440
+and we need a whole new calculus, the ito calculus,
+
+60
+00:02:45,440 --> 00:02:51,330
+to describe stochastic financial variables.
+
+61
+00:02:51,330 --> 00:02:52,760
+So we'll develop that.
+
+62
+00:02:52,760 --> 00:02:56,180
+And then we'll see how we can go from these stochastic equations
+
+63
+00:02:56,180 --> 00:02:59,180
+back to more familiar partial differential equations
+
+64
+00:02:59,180 --> 00:03:01,160
+and look at some of the key equations that
+
+65
+00:03:01,160 --> 00:03:04,460
+are important in finance and some that have application
+
+66
+00:03:04,460 --> 00:03:07,940
+to important areas, such as derivative pricing,
+
+67
+00:03:07,940 --> 00:03:11,160
+option pricing, and so on.
+
+68
+00:03:11,160 --> 00:03:15,810
+We'll look at linear algebra, because pricing relationships
+
+69
+00:03:15,810 --> 00:03:19,170
+and many other relationships among financial variables
+
+70
+00:03:19,170 --> 00:03:20,040
+are linear.
+
+71
+00:03:20,040 --> 00:03:23,400
+And linear algebra captures the essential relationships
+
+72
+00:03:23,400 --> 00:03:25,770
+and constraints among financial quantities
+
+73
+00:03:25,770 --> 00:03:29,940
+to identify what are independent drivers, to identify
+
+74
+00:03:29,940 --> 00:03:32,700
+how many independent securities might be in a market,
+
+75
+00:03:32,700 --> 00:03:35,730
+and we'll look at applications, such as market completeness,
+
+76
+00:03:35,730 --> 00:03:40,600
+security replication, and arbitrage.
+
+77
+00:03:40,600 --> 00:03:43,840
+Finally, we'll look at optimization.
+
+78
+00:03:43,840 --> 00:03:46,000
+Whether it's trading, investments,
+
+79
+00:03:46,000 --> 00:03:49,360
+or other kind of decision making under uncertainty,
+
+80
+00:03:49,360 --> 00:03:53,440
+we'd like to take the best action or find the best policy.
+
+81
+00:03:53,440 --> 00:03:56,800
+We often have to do so in the presence not only of
+
+82
+00:03:56,800 --> 00:03:59,280
+uncertainty, but constraints.
+
+83
+00:03:59,280 --> 00:04:02,530
+So we'll take a look at constrained optimization
+
+84
+00:04:02,530 --> 00:04:04,480
+in single and multivariate settings,
+
+85
+00:04:04,480 --> 00:04:10,050
+in a single period settings, and over multiple time horizons.
+

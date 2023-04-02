@@ -1,0 +1,476 @@
+0
+00:00:00,000 --> 00:00:01,450
+
+
+1
+00:00:01,450 --> 00:00:02,560
+PROFESSOR: Exercise.
+
+2
+00:00:02,560 --> 00:00:08,650
+Let's let xt be defined as z cosine omega t plus z prime
+
+3
+00:00:08,650 --> 00:00:11,650
+times sine omega t, where omega is a constant--
+
+4
+00:00:11,650 --> 00:00:14,950
+and think of it as a frequency, let's let it not be a rational
+
+5
+00:00:14,950 --> 00:00:17,300
+multiple of pi--
+
+6
+00:00:17,300 --> 00:00:21,310
+and let's let z and z prime be independent,
+
+7
+00:00:21,310 --> 00:00:24,350
+normalized, random variables.
+
+8
+00:00:24,350 --> 00:00:28,330
+So show that xt is weakly stationary
+
+9
+00:00:28,330 --> 00:00:34,030
+or if you don't think it is, show that it's not.
+
+10
+00:00:34,030 --> 00:00:37,398
+So pause the video, take a few minutes,
+
+11
+00:00:37,398 --> 00:00:38,690
+and see if you can work it out.
+
+12
+00:00:38,690 --> 00:00:40,482
+And then we'll do it on the board together.
+
+13
+00:00:40,482 --> 00:00:54,950
+
+
+14
+00:00:54,950 --> 00:00:57,690
+OK, let's take a look together.
+
+15
+00:00:57,690 --> 00:01:02,040
+So first of all, let's compute the mean and the variance.
+
+16
+00:01:02,040 --> 00:01:04,159
+So the mean is going to be 0 because z
+
+17
+00:01:04,159 --> 00:01:06,530
+and z prime each have mean 0.
+
+18
+00:01:06,530 --> 00:01:14,970
+So we can compute that e of xt is going to be cosine omega t--
+
+19
+00:01:14,970 --> 00:01:16,670
+which is just a scalar with respect
+
+20
+00:01:16,670 --> 00:01:18,680
+to our random variable--
+
+21
+00:01:18,680 --> 00:01:26,420
+times the expectation of z plus sine omega t expectation
+
+22
+00:01:26,420 --> 00:01:29,030
+of z prime.
+
+23
+00:01:29,030 --> 00:01:33,500
+And this is 0, and this is 0, because those have mean 0,
+
+24
+00:01:33,500 --> 00:01:38,470
+and therefore this is equal to 0.
+
+25
+00:01:38,470 --> 00:01:40,680
+OK, that part was easy.
+
+26
+00:01:40,680 --> 00:01:42,030
+How about the variance?
+
+27
+00:01:42,030 --> 00:01:50,490
+Well since the mean is 0, the variance of xt
+
+28
+00:01:50,490 --> 00:01:57,320
+is going to be the expectation of xt squared.
+
+29
+00:01:57,320 --> 00:02:00,040
+And again, what are we going to see? xt squared
+
+30
+00:02:00,040 --> 00:02:04,660
+is going to have that expression on the top, this expression.
+
+31
+00:02:04,660 --> 00:02:11,540
+We're going to have this term, squared, this term squared,
+
+32
+00:02:11,540 --> 00:02:13,870
+and a cross term of this with this.
+
+33
+00:02:13,870 --> 00:02:16,810
+The cross term is going to have vanishing expectation
+
+34
+00:02:16,810 --> 00:02:19,780
+because it will be an expectation of z and z prime,
+
+35
+00:02:19,780 --> 00:02:22,330
+and what we'll have is going to be--
+
+36
+00:02:22,330 --> 00:02:24,580
+just by doing it out, this is going
+
+37
+00:02:24,580 --> 00:02:31,350
+to be the expectation of z squared times cosine
+
+38
+00:02:31,350 --> 00:02:33,900
+squared omega t plus--
+
+39
+00:02:33,900 --> 00:02:41,920
+
+
+40
+00:02:41,920 --> 00:02:43,840
+let's try this here--
+
+41
+00:02:43,840 --> 00:02:50,190
+plus expectation of z prime squared times sine
+
+42
+00:02:50,190 --> 00:02:53,430
+squared omega t plus the vanishing term, which
+
+43
+00:02:53,430 --> 00:03:01,005
+is going to be 2 cosine omega t sine omega t expectation of z
+
+44
+00:03:01,005 --> 00:03:02,790
+z prime.
+
+45
+00:03:02,790 --> 00:03:06,270
+In this last term vanishes, because that's
+
+46
+00:03:06,270 --> 00:03:10,590
+equal to 0 because z and z prime are statistically independent.
+
+47
+00:03:10,590 --> 00:03:14,370
+Now this term here is equal to 1,
+
+48
+00:03:14,370 --> 00:03:18,300
+this expectation is equal to 1, so we're
+
+49
+00:03:18,300 --> 00:03:22,200
+left with cosine omega t squared plus sine squared omega
+
+50
+00:03:22,200 --> 00:03:23,760
+t, which is just equal to 1.
+
+51
+00:03:23,760 --> 00:03:26,931
+
+
+52
+00:03:26,931 --> 00:03:29,610
+Let's keep our colors consistent if we can.
+
+53
+00:03:29,610 --> 00:03:31,860
+And that's equal to 1.
+
+54
+00:03:31,860 --> 00:03:33,870
+Now let's look at the two point function,
+
+55
+00:03:33,870 --> 00:03:36,520
+or the autocovariance function.
+
+56
+00:03:36,520 --> 00:03:45,020
+So we will look at the expectation of xt
+
+57
+00:03:45,020 --> 00:03:49,670
+with xs where t and s are just two different arbitrary points
+
+58
+00:03:49,670 --> 00:03:50,480
+in time.
+
+59
+00:03:50,480 --> 00:03:53,150
+We could do t and t minus k, but let's write it
+
+60
+00:03:53,150 --> 00:03:54,840
+out this way for the moment.
+
+61
+00:03:54,840 --> 00:03:55,700
+OK?
+
+62
+00:03:55,700 --> 00:03:59,630
+So we just substitute in, and this is our basic trick
+
+63
+00:03:59,630 --> 00:04:00,800
+for most of these.
+
+64
+00:04:00,800 --> 00:04:04,070
+We just substitute in the defining equations,
+
+65
+00:04:04,070 --> 00:04:08,120
+we do out the algebra, we apply linearity,
+
+66
+00:04:08,120 --> 00:04:11,330
+and we compute the expectations in terms of our building
+
+67
+00:04:11,330 --> 00:04:14,360
+blocks, which usually we can reduce to basic z's.
+
+68
+00:04:14,360 --> 00:04:17,075
+So we'll be doing this trick again and again.
+
+69
+00:04:17,075 --> 00:04:19,700
+The one other trick that will be doing that you saw in lecture,
+
+70
+00:04:19,700 --> 00:04:22,550
+is will be using stationarity and recursion
+
+71
+00:04:22,550 --> 00:04:24,770
+to sometimes replace something with a t
+
+72
+00:04:24,770 --> 00:04:27,740
+by something with the t minus 1, or will take something
+
+73
+00:04:27,740 --> 00:04:30,680
+on the right hand side and use it to substitute
+
+74
+00:04:30,680 --> 00:04:31,730
+for the left hand side.
+
+75
+00:04:31,730 --> 00:04:33,770
+But here we're just going to do a straight calculation
+
+76
+00:04:33,770 --> 00:04:34,560
+for this problem.
+
+77
+00:04:34,560 --> 00:04:36,260
+So what's xt?
+
+78
+00:04:36,260 --> 00:04:44,900
+Well xt was given by the z cosine omega
+
+79
+00:04:44,900 --> 00:04:51,650
+t plus z prime sine omega t.
+
+80
+00:04:51,650 --> 00:04:56,880
+And x sub s is given by the same thing,
+
+81
+00:04:56,880 --> 00:05:03,200
+just with t replaced by s, z cosine omega s plus z
+
+82
+00:05:03,200 --> 00:05:07,490
+prime sine omega s.
+
+83
+00:05:07,490 --> 00:05:09,140
+And let's close all our brackets.
+
+84
+00:05:09,140 --> 00:05:12,250
+
+
+85
+00:05:12,250 --> 00:05:14,140
+And now what are we going to have?
+
+86
+00:05:14,140 --> 00:05:18,620
+Well we're going to have the two z's will come together.
+
+87
+00:05:18,620 --> 00:05:30,420
+So we're going to have the expectation of z squared times
+
+88
+00:05:30,420 --> 00:05:34,860
+cosine omega t cosine omega s.
+
+89
+00:05:34,860 --> 00:05:37,600
+
+
+90
+00:05:37,600 --> 00:05:39,790
+And if you can see where we're going with this,
+
+91
+00:05:39,790 --> 00:05:41,620
+I'll write this out just this one time
+
+92
+00:05:41,620 --> 00:05:44,620
+and then I'll start doing these a little faster.
+
+93
+00:05:44,620 --> 00:05:50,210
+We're going to have also expectation
+
+94
+00:05:50,210 --> 00:06:00,600
+of z prime squared times sine omega t sine omega s,
+
+95
+00:06:00,600 --> 00:06:02,520
+and then we have the cross terms,
+
+96
+00:06:02,520 --> 00:06:09,950
+which involve z multiplied by z prime and z prime multiplied
+
+97
+00:06:09,950 --> 00:06:10,760
+by z.
+
+98
+00:06:10,760 --> 00:06:12,230
+But we don't need to keep those, we
+
+99
+00:06:12,230 --> 00:06:15,410
+know that the expectation of z times z prime vanishes.
+
+100
+00:06:15,410 --> 00:06:17,840
+So what we're left with here then
+
+101
+00:06:17,840 --> 00:06:31,980
+is cosine omega t cosine omega s plus sine omega t sine omega s.
+
+102
+00:06:31,980 --> 00:06:34,230
+And if you recall from trigonometry,
+
+103
+00:06:34,230 --> 00:06:36,850
+that's the formula for the difference of angles.
+
+104
+00:06:36,850 --> 00:06:41,520
+So this is equal to cosine of omega times t minus s.
+
+105
+00:06:41,520 --> 00:06:44,700
+Now the exact form is not that important,
+
+106
+00:06:44,700 --> 00:06:47,730
+although it's kind of cute that this comes out.
+
+107
+00:06:47,730 --> 00:06:49,920
+The important thing is that it depends only
+
+108
+00:06:49,920 --> 00:06:52,170
+on the difference t minus s.
+
+109
+00:06:52,170 --> 00:06:57,390
+So stationarity is the property that if we shift t and s--
+
+110
+00:06:57,390 --> 00:07:00,210
+if we shift these two points by an equal amount,
+
+111
+00:07:00,210 --> 00:07:04,200
+that all the expectations of the probability
+
+112
+00:07:04,200 --> 00:07:07,200
+distributions, at least the first and second moments all
+
+113
+00:07:07,200 --> 00:07:08,180
+stay the same.
+
+114
+00:07:08,180 --> 00:07:09,780
+And here that's satisfied.
+
+115
+00:07:09,780 --> 00:07:13,680
+We see that the mean was 0, the variance
+
+116
+00:07:13,680 --> 00:07:17,550
+was 1 independent of time, and the two point function
+
+117
+00:07:17,550 --> 00:07:21,090
+which does depend on time, does so only
+
+118
+00:07:21,090 --> 00:07:24,680
+through differences between those two points.
+
