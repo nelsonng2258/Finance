@@ -1,0 +1,640 @@
+0
+00:00:00,000 --> 00:00:01,185
+
+
+1
+00:00:01,185 --> 00:00:03,620
+PROFESSOR: Let's take a look at some common MBS
+
+2
+00:00:03,620 --> 00:00:06,500
+structures and the motivations behind creating them.
+
+3
+00:00:06,500 --> 00:00:09,050
+
+
+4
+00:00:09,050 --> 00:00:12,290
+Passthrough securities are the oldest and simplest structures
+
+5
+00:00:12,290 --> 00:00:14,270
+for mortgage-backed securities.
+
+6
+00:00:14,270 --> 00:00:16,700
+As their name suggests, these securities
+
+7
+00:00:16,700 --> 00:00:19,370
+have cash flows that are distributed proportionally
+
+8
+00:00:19,370 --> 00:00:23,490
+to the principal value of each security holder.
+
+9
+00:00:23,490 --> 00:00:25,650
+The repayment of principal and accrued interest
+
+10
+00:00:25,650 --> 00:00:28,880
+is generally guaranteed.
+
+11
+00:00:28,880 --> 00:00:31,130
+The main benefit of this structure,
+
+12
+00:00:31,130 --> 00:00:33,380
+relative to investing in home mortgages,
+
+13
+00:00:33,380 --> 00:00:36,260
+is diversification of prepayment risk, which
+
+14
+00:00:36,260 --> 00:00:38,270
+makes the securities less risky and easier
+
+15
+00:00:38,270 --> 00:00:42,470
+to price, which in turn also makes them more liquid.
+
+16
+00:00:42,470 --> 00:00:44,840
+This diagram gives a stylized example
+
+17
+00:00:44,840 --> 00:00:47,900
+of the structure of a passthrough securitization.
+
+18
+00:00:47,900 --> 00:00:50,270
+Here, each mortgage loan is assumed
+
+19
+00:00:50,270 --> 00:00:54,140
+to have principal of $200,000, and the total pool
+
+20
+00:00:54,140 --> 00:00:58,730
+has principal of $1 million based on having five loans.
+
+21
+00:00:58,730 --> 00:01:01,250
+Each month, the borrowers make payments
+
+22
+00:01:01,250 --> 00:01:05,660
+that consist of interest and principal that comes due.
+
+23
+00:01:05,660 --> 00:01:09,800
+Plus, they may choose to prepay some principal.
+
+24
+00:01:09,800 --> 00:01:12,080
+The pooled cash flows are then distributed
+
+25
+00:01:12,080 --> 00:01:15,080
+to investors proportionately, or pro-rata,
+
+26
+00:01:15,080 --> 00:01:18,050
+to their principal claim, which is reduced over time
+
+27
+00:01:18,050 --> 00:01:20,840
+by principal repayments.
+
+28
+00:01:20,840 --> 00:01:23,960
+Assuming there's a guarantee against default losses,
+
+29
+00:01:23,960 --> 00:01:26,960
+from an investor perspective, a default
+
+30
+00:01:26,960 --> 00:01:29,750
+has the same effect of prepayment.
+
+31
+00:01:29,750 --> 00:01:32,840
+That is, default results in an immediate return of principal
+
+32
+00:01:32,840 --> 00:01:37,460
+to investors that equals the balance of the defaulted loan.
+
+33
+00:01:37,460 --> 00:01:40,100
+Collateralized mortgage obligations, or CMOs,
+
+34
+00:01:40,100 --> 00:01:42,740
+have a wide variety of structures, some of which
+
+35
+00:01:42,740 --> 00:01:44,720
+are listed on the slide.
+
+36
+00:01:44,720 --> 00:01:47,810
+The strategy of issuers is to carve up the cash flows
+
+37
+00:01:47,810 --> 00:01:50,660
+to appeal to a variety of investor clienteles.
+
+38
+00:01:50,660 --> 00:01:52,700
+Some investors can tolerate more risk
+
+39
+00:01:52,700 --> 00:01:55,070
+than others in the timing and size of the cash flows
+
+40
+00:01:55,070 --> 00:01:56,000
+received.
+
+41
+00:01:56,000 --> 00:01:58,010
+Some prefer shorter maturities, and some
+
+42
+00:01:58,010 --> 00:02:00,290
+prefer longer maturities.
+
+43
+00:02:00,290 --> 00:02:03,350
+Well, starting with sequential pay structures,
+
+44
+00:02:03,350 --> 00:02:06,380
+those offer different average maturities
+
+45
+00:02:06,380 --> 00:02:08,509
+in the different tranches.
+
+46
+00:02:08,509 --> 00:02:12,320
+CMOs that include planned amortization,
+
+47
+00:02:12,320 --> 00:02:16,490
+or targeted amortization classes, PACs and TACs,
+
+48
+00:02:16,490 --> 00:02:19,460
+create securities with very predictable cash flows
+
+49
+00:02:19,460 --> 00:02:22,790
+as long as prepayment rates stay within the range of upper
+
+50
+00:02:22,790 --> 00:02:26,420
+and lower bounds that are specified in the contracts.
+
+51
+00:02:26,420 --> 00:02:28,580
+Now, in order to provide that certainty
+
+52
+00:02:28,580 --> 00:02:32,220
+to holders of TACs and PACs, other securities,
+
+53
+00:02:32,220 --> 00:02:34,040
+which are called support classes,
+
+54
+00:02:34,040 --> 00:02:37,190
+are structured to absorb the variation in prepayment rates
+
+55
+00:02:37,190 --> 00:02:38,600
+within that range.
+
+56
+00:02:38,600 --> 00:02:41,030
+They receive proportionally larger payments
+
+57
+00:02:41,030 --> 00:02:43,580
+when prepayment rates are high and proportionally smaller
+
+58
+00:02:43,580 --> 00:02:46,280
+payments when prepayment rates are low.
+
+59
+00:02:46,280 --> 00:02:48,650
+In exchange for absorbing that risk,
+
+60
+00:02:48,650 --> 00:02:50,420
+the yield on those support classes
+
+61
+00:02:50,420 --> 00:02:54,560
+is typically higher than on PACs or TACs.
+
+62
+00:02:54,560 --> 00:02:57,890
+Another type of restructuring is to break fixed rate payments
+
+63
+00:02:57,890 --> 00:03:02,330
+into two pieces, a floater and an inverse floater.
+
+64
+00:03:02,330 --> 00:03:05,750
+The sum of the cash flows on the floater and the inverse floater
+
+65
+00:03:05,750 --> 00:03:08,040
+equal the fixed rate payment.
+
+66
+00:03:08,040 --> 00:03:10,190
+The floater has a payment that's positively
+
+67
+00:03:10,190 --> 00:03:12,530
+related to a short term rate like LIBOR,
+
+68
+00:03:12,530 --> 00:03:14,720
+and the inverse floater receives a payment
+
+69
+00:03:14,720 --> 00:03:18,950
+based on a fixed rate minus the short term rate.
+
+70
+00:03:18,950 --> 00:03:21,260
+Inverse floaters can be attractive to investors
+
+71
+00:03:21,260 --> 00:03:23,870
+that want to invest in securities with a very long
+
+72
+00:03:23,870 --> 00:03:27,440
+effective duration, and floaters appeal to investors
+
+73
+00:03:27,440 --> 00:03:29,270
+seeking shorter durations.
+
+74
+00:03:29,270 --> 00:03:31,850
+
+
+75
+00:03:31,850 --> 00:03:35,330
+You probably remember from your introductory finance courses
+
+76
+00:03:35,330 --> 00:03:38,420
+that the Modigliani-Miller theorem for capital structures
+
+77
+00:03:38,420 --> 00:03:41,390
+says that the weighted average yield on all
+
+78
+00:03:41,390 --> 00:03:43,520
+of these securities should be based
+
+79
+00:03:43,520 --> 00:03:48,530
+on the fair rate of return for the underlying mortgage assets.
+
+80
+00:03:48,530 --> 00:03:50,840
+If that were literally true, there
+
+81
+00:03:50,840 --> 00:03:53,900
+would be no point in creating these complicated structures
+
+82
+00:03:53,900 --> 00:03:56,360
+because it wouldn't lower cost.
+
+83
+00:03:56,360 --> 00:03:59,910
+Well, although the MM theorem is a good first approximation,
+
+84
+00:03:59,910 --> 00:04:02,090
+and it's an important reminder that there shouldn't
+
+85
+00:04:02,090 --> 00:04:05,960
+be any big, free lunches here, the overall cost
+
+86
+00:04:05,960 --> 00:04:07,850
+of mortgage capital can be reduced
+
+87
+00:04:07,850 --> 00:04:09,710
+by catering to different preferences
+
+88
+00:04:09,710 --> 00:04:13,080
+across investors for liquidity, safety,
+
+89
+00:04:13,080 --> 00:04:16,380
+and the timing of cash flows.
+
+90
+00:04:16,380 --> 00:04:19,680
+This diagram provides a simple example of a sequential pay
+
+91
+00:04:19,680 --> 00:04:24,630
+structure the pool has the same five underlying mortgage loans
+
+92
+00:04:24,630 --> 00:04:26,580
+that we looked at in the last example
+
+93
+00:04:26,580 --> 00:04:29,580
+with a total value of $1 million.
+
+94
+00:04:29,580 --> 00:04:32,460
+Here, are the securities issued against those cash flows
+
+95
+00:04:32,460 --> 00:04:34,560
+from the mortgages are structured into four
+
+96
+00:04:34,560 --> 00:04:39,120
+tranches or classes, A, B, C, and Z.
+
+97
+00:04:39,120 --> 00:04:44,160
+Each month, there are scheduled principal, scheduled interest,
+
+98
+00:04:44,160 --> 00:04:46,260
+and prepayments.
+
+99
+00:04:46,260 --> 00:04:49,200
+Rather than being distributed evenly across the security
+
+100
+00:04:49,200 --> 00:04:52,680
+holders, the principle goes towards repaying the Class A
+
+101
+00:04:52,680 --> 00:04:55,980
+securities until those securities are completely paid
+
+102
+00:04:55,980 --> 00:04:56,820
+off.
+
+103
+00:04:56,820 --> 00:05:02,060
+Then it goes to paying off Class B And so on down the stack.
+
+104
+00:05:02,060 --> 00:05:04,100
+The interest that comes in each month
+
+105
+00:05:04,100 --> 00:05:08,360
+is distributed proportionally to the remaining principal in each
+
+106
+00:05:08,360 --> 00:05:13,790
+of the classes A, B, and C. The Z class, which is effectively
+
+107
+00:05:13,790 --> 00:05:17,420
+an equity tranche, receives no payments until the A, B, and C
+
+108
+00:05:17,420 --> 00:05:20,240
+securities are fully paid off, after which,
+
+109
+00:05:20,240 --> 00:05:24,680
+it gets any accumulated interest and the remaining payments.
+
+110
+00:05:24,680 --> 00:05:27,710
+In terms of effective duration, clearly,
+
+111
+00:05:27,710 --> 00:05:31,040
+it's also ordered by class, being lowest for Class A
+
+112
+00:05:31,040 --> 00:05:34,520
+and highest for Class Z. The amount of uncertainty
+
+113
+00:05:34,520 --> 00:05:38,420
+in the timing of cash flows is also increasing across classes,
+
+114
+00:05:38,420 --> 00:05:42,110
+with modest uncertainty for the A class and considerable
+
+115
+00:05:42,110 --> 00:05:44,820
+uncertainty for the Z's.
+
+116
+00:05:44,820 --> 00:05:47,490
+The reason for that is that the payments on the A class
+
+117
+00:05:47,490 --> 00:05:50,190
+consist largely of scheduled principal and interest
+
+118
+00:05:50,190 --> 00:05:53,700
+payments, which are quite predictable, whereas over time,
+
+119
+00:05:53,700 --> 00:05:55,620
+the importance of volatile prepayments
+
+120
+00:05:55,620 --> 00:05:59,210
+becomes the most important factor.
+
+121
+00:05:59,210 --> 00:06:03,410
+IOs and POs are interest-only and principle-only securities.
+
+122
+00:06:03,410 --> 00:06:06,410
+Like other MBS, they're derivatives on a pool
+
+123
+00:06:06,410 --> 00:06:08,300
+of underlying mortgages.
+
+124
+00:06:08,300 --> 00:06:11,690
+They're structured so that the holders of IO securities
+
+125
+00:06:11,690 --> 00:06:15,050
+only get interest payments, and holders of PO securities
+
+126
+00:06:15,050 --> 00:06:17,480
+only get principal payments.
+
+127
+00:06:17,480 --> 00:06:20,450
+Beyond being split between principal and interest,
+
+128
+00:06:20,450 --> 00:06:22,940
+IOs and POs may be further structured
+
+129
+00:06:22,940 --> 00:06:25,460
+into PACs, TACs, and support classes,
+
+130
+00:06:25,460 --> 00:06:28,820
+or into sequential or other structures.
+
+131
+00:06:28,820 --> 00:06:30,470
+The effect of interest rate changes
+
+132
+00:06:30,470 --> 00:06:32,990
+is quite different for IOs and POs.
+
+133
+00:06:32,990 --> 00:06:35,480
+Let's start with IOs and consider
+
+134
+00:06:35,480 --> 00:06:37,250
+a fall in interest rates.
+
+135
+00:06:37,250 --> 00:06:39,170
+That has two effects.
+
+136
+00:06:39,170 --> 00:06:41,690
+There's the usual present value effect
+
+137
+00:06:41,690 --> 00:06:45,260
+that raises the value of the IO because future fixed payments
+
+138
+00:06:45,260 --> 00:06:48,410
+are discounted at a lower rate.
+
+139
+00:06:48,410 --> 00:06:52,580
+However, an offsetting effect is that lower rates speed up
+
+140
+00:06:52,580 --> 00:06:53,930
+prepayment.
+
+141
+00:06:53,930 --> 00:06:57,470
+Prepayment is very bad for an IO because when principal
+
+142
+00:06:57,470 --> 00:07:00,350
+is no longer outstanding, no interest payments
+
+143
+00:07:00,350 --> 00:07:02,310
+will be made on it.
+
+144
+00:07:02,310 --> 00:07:05,040
+The effects of prepayment increases when rates fall
+
+145
+00:07:05,040 --> 00:07:07,800
+means that at least over some range of interest rates,
+
+146
+00:07:07,800 --> 00:07:12,180
+IOs may be expected to fall in value when rates fall.
+
+147
+00:07:12,180 --> 00:07:14,730
+That means they have negative effective duration
+
+148
+00:07:14,730 --> 00:07:18,990
+in that range, which may make them attractive to investors
+
+149
+00:07:18,990 --> 00:07:21,990
+looking for securities with negative duration
+
+150
+00:07:21,990 --> 00:07:24,710
+in a long position.
+
+151
+00:07:24,710 --> 00:07:28,370
+For POs, the effect of prepayment is the opposite.
+
+152
+00:07:28,370 --> 00:07:30,260
+It causes the return of principal
+
+153
+00:07:30,260 --> 00:07:32,510
+to happen sooner, which increases
+
+154
+00:07:32,510 --> 00:07:34,790
+the present value of PO claims.
+
+155
+00:07:34,790 --> 00:07:38,540
+For POs, the usual discounting effect of interest rate changes
+
+156
+00:07:38,540 --> 00:07:42,620
+works in the same direction as the prepayment effect, which,
+
+157
+00:07:42,620 --> 00:07:45,980
+together, causes them to have a longer effective duration
+
+158
+00:07:45,980 --> 00:07:48,576
+than the underlying mortgages.
+
+159
+00:07:48,576 --> 00:07:49,076
+
+

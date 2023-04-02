@@ -1,0 +1,692 @@
+0
+00:00:00,000 --> 00:00:01,033
+
+
+1
+00:00:01,033 --> 00:00:02,700
+PROFESSOR: The payoff on an Asian option
+
+2
+00:00:02,700 --> 00:00:06,270
+is based on an average price over some period of time.
+
+3
+00:00:06,270 --> 00:00:08,850
+That makes them fundamentally different from the options
+
+4
+00:00:08,850 --> 00:00:11,280
+we've studied so far, because instead of depending
+
+5
+00:00:11,280 --> 00:00:14,250
+on the value of an underlying asset at a point in time,
+
+6
+00:00:14,250 --> 00:00:17,160
+the payoffs are path dependent.
+
+7
+00:00:17,160 --> 00:00:20,530
+Asian options can be useful for a variety of reasons.
+
+8
+00:00:20,530 --> 00:00:24,270
+For instance, they can provide an effective and less expensive
+
+9
+00:00:24,270 --> 00:00:27,510
+hedge than a traditional option when a firm's profit depends
+
+10
+00:00:27,510 --> 00:00:30,450
+only on the average price of a factor of production,
+
+11
+00:00:30,450 --> 00:00:34,960
+like electricity or exchange rates over some time period.
+
+12
+00:00:34,960 --> 00:00:37,410
+It also makes sense to base option payoffs
+
+13
+00:00:37,410 --> 00:00:40,050
+on an average reference price in situations
+
+14
+00:00:40,050 --> 00:00:42,510
+where the price at a particular point in time
+
+15
+00:00:42,510 --> 00:00:44,400
+may be unreliable.
+
+16
+00:00:44,400 --> 00:00:46,200
+That could happen because the price could
+
+17
+00:00:46,200 --> 00:00:48,390
+be subject to short-term manipulation,
+
+18
+00:00:48,390 --> 00:00:50,190
+or it could be prone to big swings
+
+19
+00:00:50,190 --> 00:00:53,190
+in thin or illiquid markets.
+
+20
+00:00:53,190 --> 00:00:55,500
+An example of a popular Asian option
+
+21
+00:00:55,500 --> 00:00:57,420
+is embedded in convertible bonds that
+
+22
+00:00:57,420 --> 00:00:59,580
+can be exchanged for some number of shares
+
+23
+00:00:59,580 --> 00:01:03,510
+of the stock of a company at the bond's maturity.
+
+24
+00:01:03,510 --> 00:01:05,310
+There, the conversion factor is often
+
+25
+00:01:05,310 --> 00:01:07,050
+based on the average of the stock
+
+26
+00:01:07,050 --> 00:01:10,560
+price over a period, for instance, 20 days,
+
+27
+00:01:10,560 --> 00:01:13,730
+at the end of the bond's life.
+
+28
+00:01:13,730 --> 00:01:15,620
+I mentioned that an Asian option can
+
+29
+00:01:15,620 --> 00:01:17,600
+be less expensive than an otherwise
+
+30
+00:01:17,600 --> 00:01:19,850
+similar standard option.
+
+31
+00:01:19,850 --> 00:01:22,620
+Why is that?
+
+32
+00:01:22,620 --> 00:01:25,850
+It's because the average price is much less volatile
+
+33
+00:01:25,850 --> 00:01:27,590
+than the underlying price.
+
+34
+00:01:27,590 --> 00:01:31,340
+Lower volatility translates to lower option value for both
+
+35
+00:01:31,340 --> 00:01:32,105
+puts and calls.
+
+36
+00:01:32,105 --> 00:01:36,280
+
+
+37
+00:01:36,280 --> 00:01:38,860
+Asian options come in many varieties.
+
+38
+00:01:38,860 --> 00:01:42,040
+One choice is whether to use a geometric or arithmetic
+
+39
+00:01:42,040 --> 00:01:43,580
+average.
+
+40
+00:01:43,580 --> 00:01:46,540
+Remember that an arithmetic average of a random variable
+
+41
+00:01:46,540 --> 00:01:49,570
+is found by adding together the outcomes of N draws
+
+42
+00:01:49,570 --> 00:01:54,430
+and then dividing by N. The geometric average
+
+43
+00:01:54,430 --> 00:01:57,550
+is found by taking the product of those N draws
+
+44
+00:01:57,550 --> 00:02:00,670
+and taking them to the 1 over N-th power.
+
+45
+00:02:00,670 --> 00:02:03,310
+One can prove that the arithmetic average is
+
+46
+00:02:03,310 --> 00:02:06,130
+greater than or equal to the geometric average,
+
+47
+00:02:06,130 --> 00:02:08,979
+and the difference between them increases with the volatility
+
+48
+00:02:08,979 --> 00:02:11,600
+of the random variable.
+
+49
+00:02:11,600 --> 00:02:13,880
+With Asian options, the averaging
+
+50
+00:02:13,880 --> 00:02:16,220
+can be applied to the asset price that
+
+51
+00:02:16,220 --> 00:02:20,180
+determines the payoff relative to a fixed strike price K,
+
+52
+00:02:20,180 --> 00:02:23,840
+or the averaging can be applied to the strike price
+
+53
+00:02:23,840 --> 00:02:25,490
+that the current value of the asset
+
+54
+00:02:25,490 --> 00:02:30,370
+is compared to at a potential exercise date.
+
+55
+00:02:30,370 --> 00:02:34,270
+This table summarizes the calculation of the payoffs
+
+56
+00:02:34,270 --> 00:02:37,900
+depending on whether the option is a put or a call,
+
+57
+00:02:37,900 --> 00:02:41,410
+whether the averaging is geometric or arithmetic,
+
+58
+00:02:41,410 --> 00:02:44,290
+and whether the averaging applies to the strike
+
+59
+00:02:44,290 --> 00:02:46,360
+or to the asset price.
+
+60
+00:02:46,360 --> 00:02:49,150
+Clearly, each of those choices will have an effect
+
+61
+00:02:49,150 --> 00:02:50,395
+on the value of the option.
+
+62
+00:02:50,395 --> 00:02:53,230
+
+
+63
+00:02:53,230 --> 00:02:55,320
+Note, also, that the payoffs in this table
+
+64
+00:02:55,320 --> 00:02:58,140
+assume the options are European, but they could also
+
+65
+00:02:58,140 --> 00:02:59,190
+be American.
+
+66
+00:02:59,190 --> 00:03:01,800
+And that choice, too, often will affect their value.
+
+67
+00:03:01,800 --> 00:03:04,620
+
+
+68
+00:03:04,620 --> 00:03:08,310
+In this example, we return to a common challenge for exporters,
+
+69
+00:03:08,310 --> 00:03:11,580
+which is to figure out how to best manage the risk arising
+
+70
+00:03:11,580 --> 00:03:13,800
+from revenues being in a different currency
+
+71
+00:03:13,800 --> 00:03:16,200
+than production costs.
+
+72
+00:03:16,200 --> 00:03:18,540
+Let's assume that a US firm called
+
+73
+00:03:18,540 --> 00:03:24,030
+XYZ has exports that generate a certain monthly revenue of 100
+
+74
+00:03:24,030 --> 00:03:26,130
+million euros.
+
+75
+00:03:26,130 --> 00:03:28,380
+Those revenues are converted to dollars
+
+76
+00:03:28,380 --> 00:03:32,190
+and repatriated at the end of each month.
+
+77
+00:03:32,190 --> 00:03:37,440
+XYZ's operating costs are entirely in US dollars.
+
+78
+00:03:37,440 --> 00:03:40,080
+Uncertainty about future exchange rates
+
+79
+00:03:40,080 --> 00:03:42,930
+leaves it exposed to a weakening euro that
+
+80
+00:03:42,930 --> 00:03:46,020
+could cause revenues in dollar terms to fall below its costs.
+
+81
+00:03:46,020 --> 00:03:48,530
+
+
+82
+00:03:48,530 --> 00:03:50,600
+We'll call the spot price of a euro
+
+83
+00:03:50,600 --> 00:03:56,400
+in dollar terms x, where x is a random variable.
+
+84
+00:03:56,400 --> 00:03:59,370
+Then in dollar terms, the value of revenues
+
+85
+00:03:59,370 --> 00:04:02,430
+at the end of the year is also a random variable,
+
+86
+00:04:02,430 --> 00:04:07,110
+and it's given by this equation here, based on the 100 million
+
+87
+00:04:07,110 --> 00:04:11,670
+per month times whatever the exchange rate turns out to be
+
+88
+00:04:11,670 --> 00:04:15,260
+and a future value factor.
+
+89
+00:04:15,260 --> 00:04:19,610
+Ignoring the usual small effect of the future value factors
+
+90
+00:04:19,610 --> 00:04:22,790
+over the horizon of just a year, the amount
+
+91
+00:04:22,790 --> 00:04:25,850
+of euro exposure that XYZ wants to hedge
+
+92
+00:04:25,850 --> 00:04:30,260
+can be described as 12 months of protection
+
+93
+00:04:30,260 --> 00:04:32,750
+against its average exchange rate risk
+
+94
+00:04:32,750 --> 00:04:36,700
+exposure over the year.
+
+95
+00:04:36,700 --> 00:04:39,040
+An arithmetic average price option
+
+96
+00:04:39,040 --> 00:04:41,200
+is a natural choice for a hedge that
+
+97
+00:04:41,200 --> 00:04:44,410
+protects against the average value of the euro over the year
+
+98
+00:04:44,410 --> 00:04:49,510
+weakening below some floor exchange rate K. Specifically,
+
+99
+00:04:49,510 --> 00:04:52,840
+the firm can use an average price put option on the euro
+
+100
+00:04:52,840 --> 00:04:56,470
+with a payoff equal to the maximum of 0
+
+101
+00:04:56,470 --> 00:05:01,690
+and K minus the average exchange rate received over the 12
+
+102
+00:05:01,690 --> 00:05:04,490
+months.
+
+103
+00:05:04,490 --> 00:05:07,250
+Of course, an average price put option isn't the only way
+
+104
+00:05:07,250 --> 00:05:09,200
+the exporter could hedge.
+
+105
+00:05:09,200 --> 00:05:11,450
+It's worthwhile to compare the average price put
+
+106
+00:05:11,450 --> 00:05:14,090
+option with some of the leading alternatives
+
+107
+00:05:14,090 --> 00:05:18,020
+and to think about the relative costs and benefits.
+
+108
+00:05:18,020 --> 00:05:20,710
+One possibility would simply be to buy 12 put
+
+109
+00:05:20,710 --> 00:05:25,350
+options on the euro that all expire at the end of the year.
+
+110
+00:05:25,350 --> 00:05:28,710
+A second possibility would be to use a basket of 12 monthly put
+
+111
+00:05:28,710 --> 00:05:31,680
+options, each with the same strike price
+
+112
+00:05:31,680 --> 00:05:34,870
+but with expiration dates of one month, two months,
+
+113
+00:05:34,870 --> 00:05:37,170
+and so on out to 12 months.
+
+114
+00:05:37,170 --> 00:05:39,930
+A final alternative would be to use a currency
+
+115
+00:05:39,930 --> 00:05:44,220
+swap that exchanges euros for dollars.
+
+116
+00:05:44,220 --> 00:05:46,980
+To make these comparisons more concrete,
+
+117
+00:05:46,980 --> 00:05:51,360
+let's assume that the current exchange rate is $0.9 per euro,
+
+118
+00:05:51,360 --> 00:05:54,660
+that the strike price in all cases where there's an option
+
+119
+00:05:54,660 --> 00:05:59,460
+is at the money at 0.9, that the dollar risk-free rate is 6%
+
+120
+00:05:59,460 --> 00:06:01,950
+and the euro risk-free rate is 3%,
+
+121
+00:06:01,950 --> 00:06:05,070
+and finally that the volatility of the dollar-for-euro exchange
+
+122
+00:06:05,070 --> 00:06:07,690
+rate is 10%.
+
+123
+00:06:07,690 --> 00:06:09,870
+The results of plugging these assumptions
+
+124
+00:06:09,870 --> 00:06:13,920
+into the various pricing formulas is shown here.
+
+125
+00:06:13,920 --> 00:06:16,680
+The most expensive choice is the portfolio
+
+126
+00:06:16,680 --> 00:06:20,790
+of 12 put options, each with a one-year expiration.
+
+127
+00:06:20,790 --> 00:06:23,370
+That makes sense because it gives the firm a lot
+
+128
+00:06:23,370 --> 00:06:26,980
+of upside from the 12 options.
+
+129
+00:06:26,980 --> 00:06:30,850
+The basket of 12 options with consecutive monthly expiration
+
+130
+00:06:30,850 --> 00:06:34,480
+dates is less expensive because the options
+
+131
+00:06:34,480 --> 00:06:38,080
+have a positive theta, meaning that longer-maturity currency
+
+132
+00:06:38,080 --> 00:06:42,920
+options are worth more than those with a shorter maturity.
+
+133
+00:06:42,920 --> 00:06:47,390
+Turning to the two Asian option alternatives, one arithmetic
+
+134
+00:06:47,390 --> 00:06:51,500
+and one geometric, both are significantly less expensive
+
+135
+00:06:51,500 --> 00:06:54,800
+than the basket of 12 European puts.
+
+136
+00:06:54,800 --> 00:06:58,190
+Here, we're seeing the effect of the averaging reducing
+
+137
+00:06:58,190 --> 00:07:01,970
+the volatility of the price that determines the payoff, implying
+
+138
+00:07:01,970 --> 00:07:07,090
+less upside for the firm but also a lower cost of hedging.
+
+139
+00:07:07,090 --> 00:07:09,760
+The geometric put is slightly more expensive
+
+140
+00:07:09,760 --> 00:07:14,680
+than the arithmetic put because the geometric average is lower
+
+141
+00:07:14,680 --> 00:07:17,080
+than the arithmetic average.
+
+142
+00:07:17,080 --> 00:07:21,330
+Finally, what about a currency swap?
+
+143
+00:07:21,330 --> 00:07:24,750
+Remember that a new currency swap has a zero upfront
+
+144
+00:07:24,750 --> 00:07:27,420
+cost because it's priced to have an equal value
+
+145
+00:07:27,420 --> 00:07:29,340
+for both counterparties.
+
+146
+00:07:29,340 --> 00:07:33,650
+It also leaves the firm with no upside.
+
+147
+00:07:33,650 --> 00:07:35,720
+The swap is actually the only one
+
+148
+00:07:35,720 --> 00:07:38,690
+of these alternatives that's a pure hedge in that it
+
+149
+00:07:38,690 --> 00:07:41,230
+eliminates risk completely.
+
+150
+00:07:41,230 --> 00:07:45,370
+Any of the options-based choices protects against the downside
+
+151
+00:07:45,370 --> 00:07:48,940
+risk, but it also has a speculative element
+
+152
+00:07:48,940 --> 00:07:51,190
+because it's a bet that the euro will
+
+153
+00:07:51,190 --> 00:07:54,870
+depreciate against the dollar.
+
+154
+00:07:54,870 --> 00:07:56,580
+I bet that some of you are wondering
+
+155
+00:07:56,580 --> 00:07:59,700
+about how you'd estimate the values of these various options
+
+156
+00:07:59,700 --> 00:08:01,820
+on your own.
+
+157
+00:08:01,820 --> 00:08:03,530
+You've learned the formula for pricing
+
+158
+00:08:03,530 --> 00:08:05,840
+standard European currency options,
+
+159
+00:08:05,840 --> 00:08:08,630
+and you can use it to confirm the values for the 12
+
+160
+00:08:08,630 --> 00:08:11,840
+one-year options and also for the basket of options
+
+161
+00:08:11,840 --> 00:08:14,510
+that are reported here.
+
+162
+00:08:14,510 --> 00:08:16,760
+Closed form approximation formulas
+
+163
+00:08:16,760 --> 00:08:20,210
+for geometric Asian options can be found in textbooks
+
+164
+00:08:20,210 --> 00:08:22,610
+based on Black's model.
+
+165
+00:08:22,610 --> 00:08:25,220
+You're not responsible, though, for knowing that fairly
+
+166
+00:08:25,220 --> 00:08:28,290
+complicated formula.
+
+167
+00:08:28,290 --> 00:08:31,110
+For arithmetic average options, pricing
+
+168
+00:08:31,110 --> 00:08:34,080
+is typically done using a binomial tree or Monte Carlo
+
+169
+00:08:34,080 --> 00:08:35,580
+simulation.
+
+170
+00:08:35,580 --> 00:08:38,909
+We'll go over how to price Asian options with these techniques
+
+171
+00:08:38,909 --> 00:08:40,500
+later today.
+
+172
+00:08:40,500 --> 00:08:41,000
+
+

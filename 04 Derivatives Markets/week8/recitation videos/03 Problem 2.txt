@@ -1,0 +1,128 @@
+
+INSTRUCTOR: Alright, now let's begin with the second topic --
+pricing an American option.
+Assume that the following annual binomial
+tree is correct for risk-neutral pricing of bonds and bond
+options, where the probability of an up move
+is the same as the probability of a down move, which
+is equal to 0.5.
+In particular, the spot rate at initiation
+is 3.5% and either moves up to a higher interest rate state
+or down to a lower interest rate state.
+In the week 8 lecture, we saw how to price a European call
+option on a bond using the same binomial tree,
+as on the slide here.
+Now, can we use the same tree to price an American call option,
+in which case, a three-year 5.25% annual coupon bond is
+callable at the end of either one or two years for $99.50?
+As in the week 8 lecture, the first step
+is to use the binomial tree to price
+a noncallable three-year 5.25% annual coupon bond,
+as shown in the diagram below.
+Since it's the same diagram that appears in the week 8 lecture,
+I'm not going to repeat the calculations here,
+but I do recommend repeating the calculations on your own
+for additional practice.
+Now, in order to price an American call option with
+a strike price, K, equal to 99.50 that can be exercised
+at the end of either one or two years, we, as usual,
+work backwards through the binomial tree.
+In particular, at the end of two years, that
+is when T equals 2 on the binomial tree model here,
+the value of the call option is as follows.
+In the up-up node at T equals 2, the value of the call option is
+the maximum of the difference between the value of the bond
+in the up-up node, which is equal to 98.588, here,
+and the strike price K of 99.50 and 0, which is equal to 0.
+Similarly, in the up-down or down-up node,
+the value of the call option is equal to the difference between
+99.732 --
+that's the value of the bond in either the up-down or down-up
+node here --
+and the strike price of 99.50, which is equal to 0.232.
+Finally, in the down-down at T equals 2,
+the value of the call option is equal to the maximum
+of the difference between 100.689,
+the value of the bond in the down-down node --
+here -- minus 99.5, the strike price, and 0,
+which is equal to 1.189.
+While the calculations were pretty straightforward
+for the T equals 2 case, things are a little bit more
+complicated at the end of one year, that is,
+when T equals 1, since now we have
+to compare the value of exercising the call option at T
+equals 1 to the value of waiting to exercise the call
+option at T equals 2.
+In particular, at the up node at T equals 1, --
+that is, this node here --
+
+the value of waiting to exercise the call option at T equals 2
+in the next period is equal to 0.5 --
+that is the risk-neutral probability of an up move --
+times 0 -- that is the value of the call option in the up-up
+node at equals 2 --
+plus 0.5 risk-neutral probability of a down move
+times 0.232 --
+that is the value of the call option at equals 2 in either
+the up-down or down-up node. --
+discounted as the interest rate of 4.976% in the up node at T
+equals 1, which is equal 0.110.
+On the other hand, the value of exercising the call option
+immediately at T equals 1 is equal to the maximum
+of the difference between the value of the bond in the up
+node at T equals 1, V, which is equal to 99.461,
+minus the strike price of the call option, which is 99.5,
+and 0, which is equal to 0.
+
+Thus, the value of the call option in the up node at T
+equals 1 is the maximum of the value of waiting to exercise
+the call option, 0.110, and the value of exercising the call
+option immediately, which is equal to 0,
+which is itself 0.110, as it is optimal to wait to exercise
+the call option at T equals 2.
+OK, now what about the down node at T equals 1 --
+that is, this node here?
+Well, the value of waiting to exercise the call option at T
+equals 2 is equal to 0.5, the risk-neutral probability
+of an up move, times 0.232 --
+that is the value of the call option at T equals 2
+in the up-down or down up-node --
+plus 0.5, the risk-neutral probability of a down move,
+times 1.19 --
+that's the value of the call option in the down-down node
+at T equals 2 --
+discounted at the risk-free rate of 4.074% in the down node at T
+equals 1, which is equal to 0.683.
+On the other hand, the value of immediately exercising the call
+option in the down node at T equals 1 is equal
+to the maximum of the difference between the value
+of the noncallable bond in the down node at T equals 1,
+which is 101.333, minus the strike price of the call option
+of 99.50 and 0, which is equal to 1.833.
+Thus, the value of the call option in the down node
+is equal to the maximum of the value of waiting
+to exercise the call option at T equals 2, 0.683,
+and the value of immediately exercising the call option
+at the down node at T equals 1 of 1.833, which is equal
+to 1.833, indicating that it is indeed
+optimal to exercise the call option at T
+equals 1 in the down node.
+In the final step, we can find the overall value
+of the American call option at T equals 0, the initial node,
+to be as follows: the value of the call option is equal
+to the risk-neutral probability of an up move, 0.5,
+times the value of the call option of 0.110 in the up node
+at T equals 1 plus the risk-neutral probability
+of a down move from 0.5 times the value of the call option
+in the down node at T equals 1 of 1.833,
+which we just found here, discounted at the prevailing
+interest rate at initiation of 3.5%, which is equal to 0.938.
+All right, one last thing before we move on to the final topic.
+Since we went over a lot of calculations
+over the last few slides, I thought
+I would include the following diagram here
+on this slide that summarizes the value of the call option
+at each node of the binomial tree,
+as well as the prevailing interest rate at that node.
+Hopefully, this is a useful diagram for your reference
+as you work through these nodes.

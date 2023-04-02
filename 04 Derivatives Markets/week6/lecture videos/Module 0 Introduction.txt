@@ -1,0 +1,34 @@
+
+PROFESSOR: This week, our main topic
+will be volatility, which is one of the most important drivers
+of option value and, of course, what motivates
+people to trade options and other derivatives
+in the first place.
+I also want to introduce you to some useful options
+pricing models that are variants on Black-Scholes Merton.
+Before we turn to those other pricing models
+and to volatility, we'll finish up
+on our discussion from last week on hedging with the Greeks
+and we'll learn to implement delta-gamma hedging.
+The other options pricing models that I want to briefly cover
+include variations on BSM that are frequently
+used to price options on stock indices, options on currencies,
+and options on futures.
+We won't go into detail derivations,
+but it's useful for you to be aware of these models
+and understand how to use them.
+Then we'll turn to volatility.
+We'll start by seeing that the simple Black-Scholes Merton
+framework, with its constant volatility assumption,
+can't completely explain observed option prices.
+We'll get a better read on the market's perception
+of volatility through the concept of implied volatility.
+We'll also see how implied volatilities
+go into constructing the VIX, a widely watched index of stock
+market volatility that's also, itself, directly traded
+in risk management strategies.
+Finally, we'll look at some of the approaches
+that have been developed to incorporate
+the variation in volatility over time
+and how they can be used to create better options pricing
+models.

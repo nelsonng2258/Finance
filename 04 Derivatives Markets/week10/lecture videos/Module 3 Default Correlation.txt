@@ -1,0 +1,61 @@
+
+PROFESSOR: An important driver of risk in CDOs
+is the default correlation between the bonds
+and the reference portfolio of credits.
+Sophisticated investors may choose
+to speculate on this default correlation,
+choosing to invest in different tranches,
+depending on how their view of default correlation
+affects their perception of the risk-adjusted value
+of the different tranches.
+To begin to understand the effects of default correlation,
+let's consider the loss distribution
+in each tranche as a function of the correlation of defaults
+across pairs of bonds in the underlying portfolio.
+One possibility is a correlation of 1,
+which means either that all bonds default or none of them
+do.
+In that case, the default risk affects all tranches similarly,
+in that all would take losses in the event of a default
+and all would receive full payment otherwise.
+The distribution of losses on a risky portfolio
+as a function of the degree of default correlation
+can easily be illustrated via a simulation.
+Assume a portfolio with 100 names, or bonds, each
+with individual default probability of 14%.
+We'll look at the distribution of total portfolio payoffs
+when the correlation across defaults
+is either 15%, 40%, or 100%.
+The results of those simulations for the implied distribution
+of portfolio losses are shown here.
+When default correlation is low, there's
+very little weight on the right tail of the distribution, where
+default losses are the highest.
+As default correlation increases,
+the distribution spreads out, putting much more weight
+on the very low loss rates, but also on very high loss rates.
+The effect of the tails of the loss distributions getting
+wider affects the various tranches quite differently
+from one another.
+The safer tranches are adversely affected
+by an increase in correlation, because they only
+experience a loss when total losses are very high,
+and that becomes more likely.
+By contrast, the equity tranche holders
+are unaffected when large losses become more likely,
+because over that range of outcomes
+they already would have been wiped out.
+Rather, they benefit from the increased probability
+of the left tail, of no or very low default losses, which
+is the situation in which they will receive
+a full or partial payout.
+As this graph shows, the equity and mezzanine tranches
+are much more sensitive to the effect of correlation
+than is the senior tranche, but its value is also
+affected by correlation.
+This description also explains why the equity tranches
+are described as being long correlation,
+since they benefit from an increase in default
+correlation.
+Conversely, the senior tranches are short correlation
+since they're harmed if it increases.

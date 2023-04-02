@@ -1,0 +1,544 @@
+0
+00:00:00,000 --> 00:00:01,950
+PROFESSOR: Many fixed income securities
+
+1
+00:00:01,950 --> 00:00:05,670
+have options that are embedded into their contractual terms.
+
+2
+00:00:05,670 --> 00:00:08,070
+Those include corporate and government bonds
+
+3
+00:00:08,070 --> 00:00:10,600
+that contain a call or put provision.
+
+4
+00:00:10,600 --> 00:00:13,290
+It also includes prepayable mortgages that
+
+5
+00:00:13,290 --> 00:00:16,160
+give borrowers a call option.
+
+6
+00:00:16,160 --> 00:00:18,290
+Other options in the fixed income marketplace
+
+7
+00:00:18,290 --> 00:00:20,000
+are standalone contracts that are
+
+8
+00:00:20,000 --> 00:00:23,840
+traded on exchanges or in the over-the-counter market.
+
+9
+00:00:23,840 --> 00:00:27,590
+Those include options on futures contracts for Treasury notes
+
+10
+00:00:27,590 --> 00:00:30,200
+and bonds and on short-term rates,
+
+11
+00:00:30,200 --> 00:00:34,460
+the trade on exchanges, and options on interest rates,
+
+12
+00:00:34,460 --> 00:00:36,470
+such as caps, floors, and collars,
+
+13
+00:00:36,470 --> 00:00:40,640
+and swaptions that often trade in the over-the-counter market,
+
+14
+00:00:40,640 --> 00:00:45,000
+although they're sometimes also embedded in other contracts.
+
+15
+00:00:45,000 --> 00:00:47,520
+You might think that bond options could be priced just
+
+16
+00:00:47,520 --> 00:00:50,310
+like stock options, substituting bond
+
+17
+00:00:50,310 --> 00:00:52,530
+prices in the place of stock prices
+
+18
+00:00:52,530 --> 00:00:56,790
+and using the same formulas and procedures as before.
+
+19
+00:00:56,790 --> 00:00:59,010
+While that idea is broadly correct,
+
+20
+00:00:59,010 --> 00:01:01,890
+the models we've studied often do a very poor job
+
+21
+00:01:01,890 --> 00:01:04,379
+of pricing options in the fixed income world
+
+22
+00:01:04,379 --> 00:01:08,010
+because of the major differences in the statistical behavior
+
+23
+00:01:08,010 --> 00:01:10,980
+of bond prices and of stock prices.
+
+24
+00:01:10,980 --> 00:01:13,710
+Specifically, the critical assumptions
+
+25
+00:01:13,710 --> 00:01:16,350
+underlying the traditional Black-Scholes-Merton options
+
+26
+00:01:16,350 --> 00:01:18,810
+pricing model are often seriously
+
+27
+00:01:18,810 --> 00:01:21,540
+violating for bond prices.
+
+28
+00:01:21,540 --> 00:01:23,490
+The problematic assumptions include,
+
+29
+00:01:23,490 --> 00:01:27,060
+first, a constant volatility parameter.
+
+30
+00:01:27,060 --> 00:01:30,300
+Second, that prices are lognormally
+
+31
+00:01:30,300 --> 00:01:32,610
+distributed and unbounded.
+
+32
+00:01:32,610 --> 00:01:36,680
+And, third, that the risk free rate is constant.
+
+33
+00:01:36,680 --> 00:01:38,510
+Furthermore, many bond options are
+
+34
+00:01:38,510 --> 00:01:43,590
+American style and early exercises frequently optimal.
+
+35
+00:01:43,590 --> 00:01:47,370
+Similar statistical problems arise using binomial models
+
+36
+00:01:47,370 --> 00:01:48,330
+in bond prices.
+
+37
+00:01:48,330 --> 00:01:51,180
+
+
+38
+00:01:51,180 --> 00:01:53,940
+We'll see shortly that the way to address these issues
+
+39
+00:01:53,940 --> 00:01:56,370
+is to drive the price of the options
+
+40
+00:01:56,370 --> 00:02:00,180
+on fixed income securities using stochastic models of interest
+
+41
+00:02:00,180 --> 00:02:02,220
+rates not bond prices.
+
+42
+00:02:02,220 --> 00:02:06,470
+
+
+43
+00:02:06,470 --> 00:02:09,380
+This example provides a very dramatic demonstration
+
+44
+00:02:09,380 --> 00:02:12,260
+of how directly applying the Black-Scholes-Merton model
+
+45
+00:02:12,260 --> 00:02:15,260
+to price bond options can fail.
+
+46
+00:02:15,260 --> 00:02:18,020
+Consider a three-year European call option
+
+47
+00:02:18,020 --> 00:02:21,320
+with a strike price of $110 written
+
+48
+00:02:21,320 --> 00:02:26,180
+on a three-year zero coupon bond with a face value of $100.
+
+49
+00:02:26,180 --> 00:02:29,420
+Clearly the option is worthless because the bond will pay off
+
+50
+00:02:29,420 --> 00:02:32,600
+$100 with certainty at the end of the three years
+
+51
+00:02:32,600 --> 00:02:36,770
+and the option will always expire out of the money.
+
+52
+00:02:36,770 --> 00:02:39,020
+But if someone hadn't thought about this
+
+53
+00:02:39,020 --> 00:02:41,990
+and instead tried to use the Black-Scholes-Merton model
+
+54
+00:02:41,990 --> 00:02:44,720
+with standard assumptions reflecting current interest
+
+55
+00:02:44,720 --> 00:02:48,950
+rates and observed bond price volatilities, say, they
+
+56
+00:02:48,950 --> 00:02:53,540
+saw an interest rate of 10% and estimated a 4% annual bond
+
+57
+00:02:53,540 --> 00:02:56,270
+price volatility, they would then
+
+58
+00:02:56,270 --> 00:03:02,770
+conclude that the option was worth 7.78 not 0.
+
+59
+00:03:02,770 --> 00:03:04,750
+One of the most important reasons
+
+60
+00:03:04,750 --> 00:03:08,110
+that models for stock options fail when directly applied
+
+61
+00:03:08,110 --> 00:03:12,160
+to bond options is the constant volatility parameter
+
+62
+00:03:12,160 --> 00:03:13,750
+assumption.
+
+63
+00:03:13,750 --> 00:03:16,810
+The graph here illustrates the critical difference
+
+64
+00:03:16,810 --> 00:03:19,450
+for stocks and for bonds.
+
+65
+00:03:19,450 --> 00:03:21,910
+On this figure the x-axis represents
+
+66
+00:03:21,910 --> 00:03:23,590
+the horizon one is looking forward
+
+67
+00:03:23,590 --> 00:03:26,140
+to from the perspective of time 0
+
+68
+00:03:26,140 --> 00:03:31,540
+and the y-axis is the volatility of the underlying asset price.
+
+69
+00:03:31,540 --> 00:03:35,050
+For assets like stocks whose prices can be reasonably
+
+70
+00:03:35,050 --> 00:03:38,520
+approximated by a lognormal distribution,
+
+71
+00:03:38,520 --> 00:03:41,850
+the volatility, as a function of horizon,
+
+72
+00:03:41,850 --> 00:03:45,000
+is given by the volatility parameter
+
+73
+00:03:45,000 --> 00:03:51,330
+sigma multiplied by the square root of the time horizon.
+
+74
+00:03:51,330 --> 00:03:53,790
+Thus, the volatility can be represented
+
+75
+00:03:53,790 --> 00:03:56,960
+by a fixed parameter sigma.
+
+76
+00:03:56,960 --> 00:04:02,180
+And the pattern looks like this with volatility
+
+77
+00:04:02,180 --> 00:04:05,630
+as a function of horizon.
+
+78
+00:04:05,630 --> 00:04:08,630
+The price volatility of bonds is primarily
+
+79
+00:04:08,630 --> 00:04:11,600
+driven by changes in interest rates.
+
+80
+00:04:11,600 --> 00:04:13,850
+Initially, volatility of bond prices
+
+81
+00:04:13,850 --> 00:04:17,209
+also increases with horizon because interest rates
+
+82
+00:04:17,209 --> 00:04:19,190
+become more uncertain looking forward
+
+83
+00:04:19,190 --> 00:04:20,674
+over a longer time period.
+
+84
+00:04:20,674 --> 00:04:24,570
+
+
+85
+00:04:24,570 --> 00:04:27,350
+However, there's a second offsetting effect that
+
+86
+00:04:27,350 --> 00:04:31,151
+isn't present for stocks, that's--
+
+87
+00:04:31,151 --> 00:04:33,260
+that the remaining duration of the bond
+
+88
+00:04:33,260 --> 00:04:36,810
+becomes shorter as time passes.
+
+89
+00:04:36,810 --> 00:04:39,050
+We know that the price sensitivity to interest rate
+
+90
+00:04:39,050 --> 00:04:41,600
+changes is proportional to duration.
+
+91
+00:04:41,600 --> 00:04:44,930
+So as duration shrinks, so does the volatility
+
+92
+00:04:44,930 --> 00:04:47,580
+of the bond price.
+
+93
+00:04:47,580 --> 00:04:50,330
+That's what's called a pull-to-par, where
+
+94
+00:04:50,330 --> 00:04:52,160
+at the bond's maturity date there's
+
+95
+00:04:52,160 --> 00:04:54,530
+no uncertainty about its value, which
+
+96
+00:04:54,530 --> 00:04:58,360
+will be equal to its par value.
+
+97
+00:04:58,360 --> 00:05:00,425
+Despite the problems that we saw arise
+
+98
+00:05:00,425 --> 00:05:02,050
+applying the Black-Scholes-Merton model
+
+99
+00:05:02,050 --> 00:05:06,190
+to bond options, a variant of it, Black's model,
+
+100
+00:05:06,190 --> 00:05:10,900
+is often used for short dated options on longer term bonds.
+
+101
+00:05:10,900 --> 00:05:14,170
+Recall the Black's model is popular for pricing commodities
+
+102
+00:05:14,170 --> 00:05:16,030
+and futures options.
+
+103
+00:05:16,030 --> 00:05:20,170
+In general, it's applicable when two conditions hold.
+
+104
+00:05:20,170 --> 00:05:23,620
+First, the option payoff depends only
+
+105
+00:05:23,620 --> 00:05:27,280
+on the value of a variable at a particular point in time
+
+106
+00:05:27,280 --> 00:05:30,400
+but not on the path it took to get there.
+
+107
+00:05:30,400 --> 00:05:33,430
+And, second, that it's reasonable to assume
+
+108
+00:05:33,430 --> 00:05:37,270
+that the distribution of the variable at that point in time
+
+109
+00:05:37,270 --> 00:05:40,480
+is normally or lognormally distributed.
+
+110
+00:05:40,480 --> 00:05:45,100
+The formula is shown here is for a lognormal distribution.
+
+111
+00:05:45,100 --> 00:05:48,610
+Those assumptions are often realistic for bond options
+
+112
+00:05:48,610 --> 00:05:51,430
+when the life of the option is much shorter than the maturity
+
+113
+00:05:51,430 --> 00:05:54,190
+of the underlying bond.
+
+114
+00:05:54,190 --> 00:05:58,100
+Looking back at the graph we just talked about,
+
+115
+00:05:58,100 --> 00:05:59,980
+you can see that early in the life
+
+116
+00:05:59,980 --> 00:06:05,340
+of the bond, the pattern of volatility is much the same
+
+117
+00:06:05,340 --> 00:06:08,520
+as it is for a stock.
+
+118
+00:06:08,520 --> 00:06:11,010
+Therefore, it's reasonable to treat the distribution
+
+119
+00:06:11,010 --> 00:06:13,860
+of the future price at short horizons
+
+120
+00:06:13,860 --> 00:06:16,590
+as being lognormally distributed.
+
+121
+00:06:16,590 --> 00:06:18,810
+Black's model is versatile and it's
+
+122
+00:06:18,810 --> 00:06:21,390
+used for a variety of applications.
+
+123
+00:06:21,390 --> 00:06:24,430
+Along with commodities and futures options,
+
+124
+00:06:24,430 --> 00:06:26,850
+it's also frequently used to price and quote
+
+125
+00:06:26,850 --> 00:06:29,550
+interest rate caps, and floors, and swaptions.
+
+126
+00:06:29,550 --> 00:06:32,320
+
+
+127
+00:06:32,320 --> 00:06:35,920
+As a reminder, this slide shows the Black's model formulas,
+
+128
+00:06:35,920 --> 00:06:39,610
+which we also looked at a few weeks ago.
+
+129
+00:06:39,610 --> 00:06:42,450
+You can find it programmed into the Excel spreadsheet
+
+130
+00:06:42,450 --> 00:06:45,750
+available on the course materials page called
+
+131
+00:06:45,750 --> 00:06:49,080
+BSMandBlacksmodel.xls.
+
+132
+00:06:49,080 --> 00:06:52,530
+In the recitation, you'll see a numerical example
+
+133
+00:06:52,530 --> 00:06:55,680
+of how it can be used to price short dated options on longer
+
+134
+00:06:55,680 --> 00:06:57,500
+maturity bonds.
+
+135
+00:06:57,500 --> 00:06:58,000
+
+

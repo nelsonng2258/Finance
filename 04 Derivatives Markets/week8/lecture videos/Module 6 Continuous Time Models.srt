@@ -1,0 +1,864 @@
+0
+00:00:00,000 --> 00:00:01,337
+
+
+1
+00:00:01,337 --> 00:00:03,670
+PROFESSOR: The name of the game in pricing interest rate
+
+2
+00:00:03,670 --> 00:00:06,880
+sensitive derivatives is to model the stochastic properties
+
+3
+00:00:06,880 --> 00:00:08,620
+of the term structure of interest rates
+
+4
+00:00:08,620 --> 00:00:12,100
+as accurately as possible, while at the same time
+
+5
+00:00:12,100 --> 00:00:13,990
+avoiding excessive complexity that
+
+6
+00:00:13,990 --> 00:00:16,120
+doesn't improve performance but that
+
+7
+00:00:16,120 --> 00:00:18,760
+slows down computation times.
+
+8
+00:00:18,760 --> 00:00:20,170
+Many of the models that have been
+
+9
+00:00:20,170 --> 00:00:24,070
+developed with this goal in mind are continuous time models.
+
+10
+00:00:24,070 --> 00:00:27,010
+I want to give you a sense of what these models look like
+
+11
+00:00:27,010 --> 00:00:28,780
+and how they're used for pricing,
+
+12
+00:00:28,780 --> 00:00:31,840
+but we only have time to scratch the surface of this very
+
+13
+00:00:31,840 --> 00:00:35,290
+interesting topic and I won't ask you any difficult questions
+
+14
+00:00:35,290 --> 00:00:37,690
+about it on the final.
+
+15
+00:00:37,690 --> 00:00:40,630
+A large class of continuous time models for interest rates
+
+16
+00:00:40,630 --> 00:00:44,380
+are known as one-factor models in the short rate.
+
+17
+00:00:44,380 --> 00:00:48,490
+In these models, the short rate is, in fact, very short.
+
+18
+00:00:48,490 --> 00:00:50,420
+It's instantaneous.
+
+19
+00:00:50,420 --> 00:00:53,620
+That means that it covers an infinitesimally short period
+
+20
+00:00:53,620 --> 00:00:55,450
+of time.
+
+21
+00:00:55,450 --> 00:00:57,700
+The general form of this class of models
+
+22
+00:00:57,700 --> 00:01:00,880
+is described by this equation for the change
+
+23
+00:01:00,880 --> 00:01:03,700
+in the instantaneous short rate over time.
+
+24
+00:01:03,700 --> 00:01:07,160
+
+
+25
+00:01:07,160 --> 00:01:14,140
+The change has a deterministic drift term given by a function,
+
+26
+00:01:14,140 --> 00:01:20,110
+a of rt, and a volatility term parameterized by a function,
+
+27
+00:01:20,110 --> 00:01:23,280
+sigma of r and t.
+
+28
+00:01:23,280 --> 00:01:26,640
+The function sigma of r and t is multiplied
+
+29
+00:01:26,640 --> 00:01:32,190
+by dz, where dz is an increment to a Brownian motion.
+
+30
+00:01:32,190 --> 00:01:36,240
+You can think of dz as a draw from a standard normal density
+
+31
+00:01:36,240 --> 00:01:38,340
+function.
+
+32
+00:01:38,340 --> 00:01:41,600
+Notice that both the drift and the volatility
+
+33
+00:01:41,600 --> 00:01:43,550
+can depend on the current level of
+
+34
+00:01:43,550 --> 00:01:50,290
+the instantaneous short rate, r, and current calendar time.
+
+35
+00:01:50,290 --> 00:01:52,300
+The different models in this class
+
+36
+00:01:52,300 --> 00:01:55,330
+are distinguished by the specifications that
+
+37
+00:01:55,330 --> 00:01:57,445
+are chosen for the drift function,
+
+38
+00:01:57,445 --> 00:02:03,140
+a of rt, and the volatility function, sigma of r and t.
+
+39
+00:02:03,140 --> 00:02:06,860
+These models are called one-factor models
+
+40
+00:02:06,860 --> 00:02:09,320
+because the rate change only depends
+
+41
+00:02:09,320 --> 00:02:13,980
+on a single stochastic shock term.
+
+42
+00:02:13,980 --> 00:02:18,060
+Some model implementations are based on physical probabilities
+
+43
+00:02:18,060 --> 00:02:20,760
+but the ones used for pricing are generally
+
+44
+00:02:20,760 --> 00:02:24,400
+the risk-neutral versions of the models.
+
+45
+00:02:24,400 --> 00:02:27,370
+Like the short rate models that we've been looking at,
+
+46
+00:02:27,370 --> 00:02:29,440
+because the models have implications
+
+47
+00:02:29,440 --> 00:02:32,830
+for bond prices of any possible maturity,
+
+48
+00:02:32,830 --> 00:02:35,800
+the entire term structure of interest rates
+
+49
+00:02:35,800 --> 00:02:41,590
+at any future point in time is also implicit in the model.
+
+50
+00:02:41,590 --> 00:02:43,450
+These one-factor models generally
+
+51
+00:02:43,450 --> 00:02:46,990
+bear the name of the researchers that first proposed them.
+
+52
+00:02:46,990 --> 00:02:49,780
+The reason that no major new models in this class
+
+53
+00:02:49,780 --> 00:02:52,090
+have been proposed in the last 30 years
+
+54
+00:02:52,090 --> 00:02:54,010
+is that all the possible variations
+
+55
+00:02:54,010 --> 00:02:57,460
+are pretty much covered by these existing models.
+
+56
+00:02:57,460 --> 00:03:00,070
+Since that time, though, interest
+
+57
+00:03:00,070 --> 00:03:03,130
+has shifted to continuous time models of the forward rate
+
+58
+00:03:03,130 --> 00:03:08,120
+curve rather than models of the instantaneous spot rates.
+
+59
+00:03:08,120 --> 00:03:10,340
+Those forward rate models are much more
+
+60
+00:03:10,340 --> 00:03:13,730
+complicated to understand and you can get the basic idea
+
+61
+00:03:13,730 --> 00:03:16,880
+from the one-factor models so for today, I'm
+
+62
+00:03:16,880 --> 00:03:19,280
+going to stick to these.
+
+63
+00:03:19,280 --> 00:03:21,500
+The whole textbook, though, is a good place
+
+64
+00:03:21,500 --> 00:03:23,510
+to look if you're interested in learning more
+
+65
+00:03:23,510 --> 00:03:26,300
+about the more complex models for forward rates,
+
+66
+00:03:26,300 --> 00:03:29,870
+which include the Heath, Jarrow, and Morton model and the LIBOR
+
+67
+00:03:29,870 --> 00:03:32,860
+market model.
+
+68
+00:03:32,860 --> 00:03:35,020
+One of the most famous one-factor models
+
+69
+00:03:35,020 --> 00:03:40,070
+is the Cox-Ingersoll-Ross model, or CIR for short.
+
+70
+00:03:40,070 --> 00:03:45,130
+That model sets the drift to be mean reverting,
+
+71
+00:03:45,130 --> 00:03:48,480
+so that if the current instantaneous rate, r, is
+
+72
+00:03:48,480 --> 00:03:51,990
+above the long-term target rate, b,
+
+73
+00:03:51,990 --> 00:03:54,030
+the drift tends to be negative.
+
+74
+00:03:54,030 --> 00:03:56,430
+And if the current rate is below the target rate,
+
+75
+00:03:56,430 --> 00:03:58,650
+the drift is positive.
+
+76
+00:03:58,650 --> 00:04:01,170
+That reflects the idea that interest rates usually
+
+77
+00:04:01,170 --> 00:04:03,660
+stay within some normal range rather
+
+78
+00:04:03,660 --> 00:04:08,430
+than drifting up or drifting down for a very long time.
+
+79
+00:04:08,430 --> 00:04:11,340
+The speed of mean reversion is controlled by the choice
+
+80
+00:04:11,340 --> 00:04:12,735
+of the parameter, alpha.
+
+81
+00:04:12,735 --> 00:04:17,480
+
+
+82
+00:04:17,480 --> 00:04:23,180
+The volatility is based on a constant parameter, sigma,
+
+83
+00:04:23,180 --> 00:04:26,990
+multiplied by the square root of the current instantaneous short
+
+84
+00:04:26,990 --> 00:04:33,410
+rate and by an increment to a Brownian motion, dz.
+
+85
+00:04:33,410 --> 00:04:35,360
+The purpose of the square root term
+
+86
+00:04:35,360 --> 00:04:39,830
+is to reduce the variance as the rate gets close to 0.
+
+87
+00:04:39,830 --> 00:04:42,020
+That has the effect of preventing rates
+
+88
+00:04:42,020 --> 00:04:45,680
+from going negative, which under many interest rate conditions
+
+89
+00:04:45,680 --> 00:04:48,680
+is a desirable attribute.
+
+90
+00:04:48,680 --> 00:04:50,360
+A convenient feature of this model
+
+91
+00:04:50,360 --> 00:04:53,630
+is that it can be solved to get an equation for the yield curve
+
+92
+00:04:53,630 --> 00:04:56,090
+in terms of all these parameter values
+
+93
+00:04:56,090 --> 00:05:00,520
+and the current level of the instantaneous short rate.
+
+94
+00:05:00,520 --> 00:05:04,000
+You can see the stochastic path that this model generates
+
+95
+00:05:04,000 --> 00:05:07,120
+and also see how the parameter choices affect the implied
+
+96
+00:05:07,120 --> 00:05:11,380
+yield curve using the spreadsheet CIR demo
+
+97
+00:05:11,380 --> 00:05:15,460
+mm.xls, which is included with the class materials.
+
+98
+00:05:15,460 --> 00:05:18,050
+
+
+99
+00:05:18,050 --> 00:05:19,790
+It's good to know that there's also
+
+100
+00:05:19,790 --> 00:05:22,760
+a multi-factor version of this model available
+
+101
+00:05:22,760 --> 00:05:26,120
+that can generate a much richer set of shapes for the yield
+
+102
+00:05:26,120 --> 00:05:28,060
+curve.
+
+103
+00:05:28,060 --> 00:05:30,610
+To price options using the CIR model,
+
+104
+00:05:30,610 --> 00:05:32,950
+or any other continuous time model,
+
+105
+00:05:32,950 --> 00:05:36,940
+the basic choices are to either use Monte Carlo simulation
+
+106
+00:05:36,940 --> 00:05:39,880
+or to represent the model in a discretized form
+
+107
+00:05:39,880 --> 00:05:41,950
+on a binomial tree.
+
+108
+00:05:41,950 --> 00:05:44,440
+As we solve for stock options, it's
+
+109
+00:05:44,440 --> 00:05:48,160
+convenient to use Monte Carlo for European-style options
+
+110
+00:05:48,160 --> 00:05:49,840
+where there's no choice about whether
+
+111
+00:05:49,840 --> 00:05:52,690
+or not to early exercise the option.
+
+112
+00:05:52,690 --> 00:05:55,030
+Implementing these models using Monte Carlo
+
+113
+00:05:55,030 --> 00:05:56,930
+involves three steps.
+
+114
+00:05:56,930 --> 00:06:00,010
+The first is to discretize a risk-neutral version
+
+115
+00:06:00,010 --> 00:06:01,360
+of the model.
+
+116
+00:06:01,360 --> 00:06:05,200
+That allows you to then generate short-term paths of interest
+
+117
+00:06:05,200 --> 00:06:08,680
+rates using a random number generator to get draws
+
+118
+00:06:08,680 --> 00:06:11,170
+from a standard normal density function.
+
+119
+00:06:11,170 --> 00:06:15,690
+Remember that we discussed how to do that in Excel last week.
+
+120
+00:06:15,690 --> 00:06:19,710
+The discretized version of the general one-factor model
+
+121
+00:06:19,710 --> 00:06:21,165
+can be written like this.
+
+122
+00:06:21,165 --> 00:06:24,090
+
+
+123
+00:06:24,090 --> 00:06:28,940
+It says that the short-term rate at the next time step,
+
+124
+00:06:28,940 --> 00:06:36,220
+time t plus delta t, is the rate at time t
+
+125
+00:06:36,220 --> 00:06:41,110
+plus the drift function times the size of the time
+
+126
+00:06:41,110 --> 00:06:49,090
+step, delta t, plus a volatility term based on the function
+
+127
+00:06:49,090 --> 00:06:53,890
+sigma of r and t, the draw from the standard normal density,
+
+128
+00:06:53,890 --> 00:06:58,420
+epsilon of t, and the square root of the time
+
+129
+00:06:58,420 --> 00:07:01,690
+increment, root delta t.
+
+130
+00:07:01,690 --> 00:07:06,760
+The term, epsilon t, times the square root of delta t
+
+131
+00:07:06,760 --> 00:07:10,360
+is the discrete representation of the dz
+
+132
+00:07:10,360 --> 00:07:11,500
+in the original equation.
+
+133
+00:07:11,500 --> 00:07:15,280
+
+
+134
+00:07:15,280 --> 00:07:18,190
+The second step is to calculate the implied term structure
+
+135
+00:07:18,190 --> 00:07:21,290
+of interest rates as of time 0.
+
+136
+00:07:21,290 --> 00:07:24,290
+If you have a closed form solution for the yield curve,
+
+137
+00:07:24,290 --> 00:07:28,310
+as in the case of the CIR model, you can use that.
+
+138
+00:07:28,310 --> 00:07:30,170
+It's more likely though that you'll
+
+139
+00:07:30,170 --> 00:07:33,990
+have to infer the term structure from pricing zero-coupon bonds
+
+140
+00:07:33,990 --> 00:07:36,980
+of various maturities.
+
+141
+00:07:36,980 --> 00:07:40,220
+To price a cheap period zero-coupon bonds using Monte
+
+142
+00:07:40,220 --> 00:07:43,460
+Carlo, you discount the payoff on the bond
+
+143
+00:07:43,460 --> 00:07:47,990
+at time cap t, its maturity, back to time 0
+
+144
+00:07:47,990 --> 00:07:51,950
+by compounding the short-term rates along each Monte Carlo
+
+145
+00:07:51,950 --> 00:07:53,470
+path.
+
+146
+00:07:53,470 --> 00:07:56,650
+Averaging the implied prices across a large number
+
+147
+00:07:56,650 --> 00:08:00,220
+of Monte Carlo paths gives the price
+
+148
+00:08:00,220 --> 00:08:03,420
+estimate for the bond at time 0.
+
+149
+00:08:03,420 --> 00:08:06,180
+Then the yield implied by the average price
+
+150
+00:08:06,180 --> 00:08:10,120
+is the t period yield and the yield curve.
+
+151
+00:08:10,120 --> 00:08:12,100
+Depending on what you're trying to do,
+
+152
+00:08:12,100 --> 00:08:15,130
+you may also need to calculate the term structure
+
+153
+00:08:15,130 --> 00:08:17,860
+on future dates, such as on the expiration
+
+154
+00:08:17,860 --> 00:08:23,200
+date of an option you're pricing along each path at that date.
+
+155
+00:08:23,200 --> 00:08:26,170
+You would need to do that, for example, to figure out
+
+156
+00:08:26,170 --> 00:08:28,180
+the distribution of a bond's price
+
+157
+00:08:28,180 --> 00:08:31,660
+on that future date as an input into calculating the payoff
+
+158
+00:08:31,660 --> 00:08:34,780
+on a put or call option on that bond.
+
+159
+00:08:34,780 --> 00:08:36,490
+You can follow the same procedure
+
+160
+00:08:36,490 --> 00:08:39,669
+I just described starting with the rate on each path
+
+161
+00:08:39,669 --> 00:08:43,360
+at the expiration date and solving for the term structure
+
+162
+00:08:43,360 --> 00:08:47,080
+starting at that point, based on another large number
+
+163
+00:08:47,080 --> 00:08:50,530
+of additional Monte Carlo simulations.
+
+164
+00:08:50,530 --> 00:08:54,220
+As you can see, this can all require a very large number
+
+165
+00:08:54,220 --> 00:08:57,130
+of computations, but it's made feasible
+
+166
+00:08:57,130 --> 00:09:00,010
+by the availability of high-speed computing.
+
+167
+00:09:00,010 --> 00:09:02,900
+
+
+168
+00:09:02,900 --> 00:09:05,480
+The third and final step is to find the payoff
+
+169
+00:09:05,480 --> 00:09:07,220
+on the option you're trying to price
+
+170
+00:09:07,220 --> 00:09:10,970
+on each path on the expiration date.
+
+171
+00:09:10,970 --> 00:09:14,890
+The option payoff on each path is discounted back to time 0,
+
+172
+00:09:14,890 --> 00:09:17,590
+again, using the product of successive rates
+
+173
+00:09:17,590 --> 00:09:20,860
+along the path for discounting.
+
+174
+00:09:20,860 --> 00:09:23,470
+The average of those time 0 present values
+
+175
+00:09:23,470 --> 00:09:29,410
+across simulated paths is your estimate of the option value.
+
+176
+00:09:29,410 --> 00:09:31,650
+This is also a good time to say a word
+
+177
+00:09:31,650 --> 00:09:34,080
+about calibrating these models.
+
+178
+00:09:34,080 --> 00:09:37,680
+In these models, the drift function and the volatility
+
+179
+00:09:37,680 --> 00:09:42,120
+function are where you have free variables available to tune
+
+180
+00:09:42,120 --> 00:09:46,530
+the model to match current bond price data and current option
+
+181
+00:09:46,530 --> 00:09:48,150
+price data.
+
+182
+00:09:48,150 --> 00:09:50,340
+The process for doing that generally
+
+183
+00:09:50,340 --> 00:09:54,210
+involves a nonlinear fitting optimization program.
+
+184
+00:09:54,210 --> 00:09:57,190
+
+
+185
+00:09:57,190 --> 00:09:59,800
+Continuous time models can also be discretized
+
+186
+00:09:59,800 --> 00:10:02,020
+in a way that's consistent with representing them
+
+187
+00:10:02,020 --> 00:10:03,880
+on a binomial tree.
+
+188
+00:10:03,880 --> 00:10:06,490
+As I've emphasized, that can be necessary
+
+189
+00:10:06,490 --> 00:10:08,650
+when the optimal exercise policy needs
+
+190
+00:10:08,650 --> 00:10:10,180
+to be determined at the same time
+
+191
+00:10:10,180 --> 00:10:13,030
+as option value is being calculated.
+
+192
+00:10:13,030 --> 00:10:16,360
+Again, starting with the general equation for one-factor models
+
+193
+00:10:16,360 --> 00:10:18,760
+of the instantaneous interest rates,
+
+194
+00:10:18,760 --> 00:10:20,860
+a binomial tree can be calibrated
+
+195
+00:10:20,860 --> 00:10:24,790
+using these equations for the up or down node where r is
+
+196
+00:10:24,790 --> 00:10:26,980
+the value on the previous node.
+
+197
+00:10:26,980 --> 00:10:31,570
+
+
+198
+00:10:31,570 --> 00:10:34,900
+Because these models represent very short-term rates,
+
+199
+00:10:34,900 --> 00:10:37,120
+it takes a very large number of steps
+
+200
+00:10:37,120 --> 00:10:39,580
+to approximate the original continuous time
+
+201
+00:10:39,580 --> 00:10:43,020
+model with any accuracy.
+
+202
+00:10:43,020 --> 00:10:46,410
+Once again, we've covered a lot of ground this week.
+
+203
+00:10:46,410 --> 00:10:48,480
+The theme has been on pricing options
+
+204
+00:10:48,480 --> 00:10:53,160
+on fixed income securities and directly on interest rates.
+
+205
+00:10:53,160 --> 00:10:56,490
+We saw that because the statistical properties of bonds
+
+206
+00:10:56,490 --> 00:10:59,760
+are often not well behaved, it's typical to start
+
+207
+00:10:59,760 --> 00:11:03,870
+with a model of the statistical process for interest rates.
+
+208
+00:11:03,870 --> 00:11:07,950
+Nevertheless, the options prices that come out of these modeling
+
+209
+00:11:07,950 --> 00:11:12,090
+approaches rest on no arbitrage logic and the fact
+
+210
+00:11:12,090 --> 00:11:15,480
+that option payoffs can be replicated by a dynamic trading
+
+211
+00:11:15,480 --> 00:11:18,750
+strategy in the underlying fixed-income securities
+
+212
+00:11:18,750 --> 00:11:21,270
+and a risk free bond.
+
+213
+00:11:21,270 --> 00:11:23,240
+You'll get some further practice with pricing
+
+214
+00:11:23,240 --> 00:11:24,920
+using binomial trees and interest
+
+215
+00:11:24,920 --> 00:11:29,140
+rates in the recitation and in the homework problems.
+

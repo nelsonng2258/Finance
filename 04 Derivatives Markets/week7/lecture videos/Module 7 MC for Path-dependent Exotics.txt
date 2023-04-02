@@ -1,0 +1,108 @@
+PROFESSOR: Clearly, for ordinary put and call options,
+like the ones we just looked at, there's
+no reason to choose Monte Carlo over binomial valuation.
+And in fact, the simplest thing to do
+is to use an analytical formula, such as
+the Black-Scholes-Merton model, when you can.
+The utility of a Monte Carlo simulation approach
+becomes apparent for exotic derivatives that
+have path dependent payoffs.
+That is the value of the option at maturity
+depends on the path taken by the stock
+during the life of the option.
+We saw that agent options are path-dependent because they
+have a payoff that's based on the average of the stock price
+over the life of the option.
+It's possible to price these options on a binomial tree.
+But doing so involves some complications
+that are illustrated by this next example
+and that are avoided with Monte Carlo simulation.
+
+This figure shows a 2-step binomial stock price tree
+that we can use to price a European-Asian call
+option with an at the money strike price of 100.
+As usual, the tree will track the stock price over time
+on each node based on the up or down moves we've calculated
+to calibrate the tree.
+But now we also need to keep track
+of the average price along every possible path
+and the probability of every possible path.
+For example, on the up-up path, the average
+of 100, and 123, and 152.8 give us an average stock price
+of 125.49.
+Then the call option is in the money by 25.49 at that node.
+Well, the additional complexity arises
+with a comparison of the up-down and the down-up situations.
+Although the underlying stock price tree is recombining,
+reaching a stock price of 100 in both the up-down
+and the down-up, the average of the stock prices
+is much higher with an up-down than with a down-up,
+resulting in a call that's in the money in one case
+and out of the money on the other, hence a tree
+representing the averages won't be a recombining
+tree and the number of terminal nodes
+will grow exponentially with the number of steps
+rather than linearly.
+
+We can calculate the probability of reaching each of these four
+possible outcomes for the value of the call option
+at expiration by taking into account the number of up
+and down moves along each path.
+For instance, any path with one up and one down
+will have a risk neutral probability of q star times 1
+minus q star, which will equal 24.91%,
+given all the assumptions used to compute this example.
+The terminal payoffs at each node
+are weighted by their respective probabilities,
+then discounted at the risk-free rate,
+and added together to get an Asian option value of 7.45
+implied by the tree.
+
+Well, rather than doing all of this combinatorial calculations
+to get the probability of every possible path and its outcome,
+it's simpler to just use Monte Carlo simulation.
+That will involve simulating a large number of stock price
+paths, calculating the average stock
+price along each of those paths, and finding
+the corresponding discounted option payoff.
+The averages across the discounted payoffs
+is the estimate of the options value.
+Doing this for a simulation with 100 Monte Carlo runs
+produces an estimate of 7.56 with a standard error of 0.316,
+which is quite close to the value we
+found using the tree of 7.45.
+I want to take a minute to recap the advantages of Monte Carlo
+simulation for valuing path-dependent options
+and to illustrate the conclusions graphically.
+The top graph here shows the original stock price
+paths over 10 Monte Carlo runs.
+The lower graph shows the corresponding averages
+at each node, which are the relevant asset
+values underlying the payoffs on Asian options.
+While the original stock price paths
+look like the recombining tree that we started with,
+the averages look like paths on a non-recombining tree.
+Non-recombining trees are much harder
+to evaluate numerically for a large number of time steps
+because the number of possible outcomes
+grows exponentially in the number of times steps.
+However, I also want to note that when
+a path-dependent derivative is American rather than European,
+so that it involves a decision about optimal exercise,
+it's more straightforward to go back
+to the non-recombining binomial tree
+than to try to use Monte Carlo methods.
+The reason is that it's quite tricky
+to infer the optimal exercise policy with a Monte Carlo.
+There are some Monte Carlo approaches
+that have been proposed to deal with that added
+layer of complexity but those are
+beyond the scope of what we're going to look at here.
+
+Finally, a reminder that we looked
+at several other types of exotic options
+that are path dependent.
+Those include barrier options of various flavors, loopback
+options, and Asian strike options.
+Monte Carlo simulation provides a useful tool for valuation
+in each of these cases as well.

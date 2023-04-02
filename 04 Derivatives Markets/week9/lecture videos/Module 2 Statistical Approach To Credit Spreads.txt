@@ -1,0 +1,160 @@
+
+PROFESSOR: The credit spread, also sometimes called
+a yield spread, is the difference
+in the yield-to-maturity on a risky bond
+and on a Treasury bond of similar maturity.
+The statistical approach to pricing credit risk
+seeks to explain a portion of the credit spread
+based on estimates of default and recovery rates.
+Data on credit spreads by rating is readily available,
+for instance, on the website, FRED,
+which provides economic time series data from the Federal
+Reserve Bank of St. Louis.
+Such time series data are often presented
+as an option-adjusted spread.
+As I mentioned last week, that means that the reported yields
+have been adjusted to remove the effects
+of other embedded options, such as prepayment or call options.
+For a given credit rating, the observed yield spread also
+tends to vary with maturity.
+Credit spreads tend to increase with maturity,
+as one might expect, due to the greater
+risk of an adverse event occurring over longer horizons.
+However, that pattern sometimes reverses
+at very long maturities, with credit spreads
+starting to narrow.
+That may partially reflect compositional differences
+in firms borrowing at different maturities,
+with only high quality borrowers able to issue
+very long maturity debt.
+
+These figures show the average credit spread on BB bonds
+on the top panel and on AA bonds in the bottom panel
+between 1997 and 2020.
+The shaded areas are recessions.
+The BB bonds are below investment grade
+and have significantly higher spreads
+than do the much safer AA bonds.
+Not surprisingly, the spreads mirror the pattern
+we saw for default rates, which spike
+during economic downturns.
+The increase in yields during recessions
+translates into a decrease in prices,
+again, consistent with the idea that risky debt has
+a positive beta that implies that their prices will
+be lower because of the market risk premium.
+
+The difference in the yield to maturity between treasuries
+and default of securities of the same maturity
+can conceptually be decomposed into several components.
+The first is based on the statistics we've just
+been discussing, the default rate and the loss given
+default. The product of the two gives
+an annualized expected loss rate.
+
+In addition, there's compensation
+for the market or beta risk associated with these losses.
+In the representation here, that's
+incorporated using risk-neutral probabilities
+and risk-neutral expectations in the calculation of the expected
+loss rate.
+The risk-neutral expected loss rate
+is higher than the physical expected loss rate
+because it includes the value of the associated market risk.
+Empirical analyses of credit spreads
+find that plausible estimates of risk-adjusted expected losses
+account for only a fraction of the observed credit spread.
+The remaining non-credit component
+is attributable to other factors like differences and tax
+treatment and the presence of other embedded options.
+The residual, after accounting for all identifiable effects,
+is usually described as a liquidity premium.
+The liquidity premium is viewed as compensation
+to investors for the relative illiquidity of corporate bonds
+relative to treasuries.
+Finally, something to remember in modeling credit
+spreads and their implications for default and recovery rates
+is that because the non-credit component of the rate spread
+is often sizable, neglecting that fact
+may result in overestimating the probability of default
+and the loss rate.
+
+A fairly simple valuation model for risky debt
+that's consistent with the statistical approach to credit
+risk modeling is developed in the next few slides.
+The model takes, as inputs, a bond's fixed characteristics
+that include its coupon rate and time to maturity
+and assumes a face value of a dollar.
+It also takes as inputs estimates of the default
+rate, the recovery rate and the risk-adjusted expected return
+on the bond.
+The model outputs are the bond's predicted yield to maturity
+per period and its price.
+The model is implemented in the spreadsheet default.xls that's
+available to you on the class page.
+Note that the model abstracts from non-credit features
+of the yield spread and so may not
+produce price predictions that match observed market prices.
+Matching market prices might require an adjustment
+based on an estimate of the liquidity
+premium and other factors.
+In this model, T denotes the number of remaining periods
+in a bond's life.
+If coupons are paid annually, then T will represent years.
+If coupons are semi-annual, T will be years times 2.
+And the coupon rate, c, will be the annual coupon
+rate divided by 2.
+Similarly, if coupons are paid monthly,
+T should be the number of years of remaining life times 12.
+And the coupon rate, c, should be
+the annual rate divided by 12.
+All calculations are per dollar of face value.
+
+With a constant default rate, d, assumed
+per period, the probability of the firm
+not defaulting up until time t is
+1 minus d to the power of t minus 1.
+The fixed recovery rate is denoted by a small g.
+It's the share of principal and accrued interest that's
+assumed to be recovered at the time of a default.
+The expected rate of return, r, is the risk-free rate
+plus a market risk premium.
+For example, a BBB bond might be expected
+to have a beta of about 0.1.
+This expected return will be used
+in the model for discounting expected cash flows.
+
+In the model, the bond price is found
+by calculating the present value of expected future cash
+flows discounting at the expected return, r.
+
+To understand the model, consider the expected payment
+on a bond at a time i which is less than T.
+It clearly depends on whether or not
+a default has already occurred, because if the bond is already
+in default, then the expected payment at that time is zero.
+The probability that the firm has survived without default
+until time i is 1 minus d to the i minus 1.
+And in that case, it will make a payment during that period.
+If there's no default at time i, the full coupon payment
+will be made.
+That happens with probability 1 minus d.
+If there is a default, which happens with probability d,
+a recovery will be made based on the recovery rate, g,
+multiplied by the amount owed of 1 plus c.
+The last term here represents the present value
+of the return of principal at maturity
+when there's no default over the entire life of the bond.
+
+Now, once you've used this equation
+to estimate the bond's price, we can figure out
+its yield-to-maturity in the usual way
+by equating that price to the present value of the promised
+cash flows treating them as if they're certain.
+
+If you play with the spreadsheet,
+you'll see that for bonds with high default or low recovery
+rates, the yield-to-maturity will be significantly higher
+than the expected return.
+That's because part of the yield spread
+is compensation for expected losses.

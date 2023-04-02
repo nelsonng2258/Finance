@@ -1,0 +1,57 @@
+
+PROFESSOR: Well, that wraps up the first topic.
+Let's move on to the second topic of this recitation,
+Black's model.
+Recall from the Week 6 lecture that we
+can price European options on futures contracts using
+Black's model.
+A version of the Black-Scholes-Merton model
+that assumes that futures prices are log-normally distributed.
+Let's see how we can use Black's model to price a European call
+option on a bond.
+
+Let's assume that a European call
+option with 10 months to expiration
+is written on a bond with 9.75 years to maturity,
+a face value of $1,000, and a semi-annual coupon of $50.
+Furthermore, assume that the futures price of the bond
+is $939.68, the strike price of the European call option
+is $1,000, or the face value of the bond,
+and the risk-free rate for the next 10 months is 10%.
+
+If the volatility of the futures bond price is 9% annually,
+what would be the price of the call option
+according to Black's model?
+We'll begin by recalling that according
+to Black's model, the price of a European call
+option on a futures contract with strike price, K, futures
+price, F, risk-free rate, r, and volatility of the futures
+price, sigma, is equal to c, the price of the call option,
+is equal to e to the negative r times T,
+times the difference between the futures price F,
+times N evaluated at d1, minus the strike price K,
+times N evaluated at d2, where d1 and d2 are defined similarly
+as in the Black-Scholes-Merton model, only this time instead
+of the spot price of the underlying asset,
+we have the futures price, F.
+As noted in the Week 6 lecture, this pricing formula
+for Black's model is identical to that of the European call
+option on the stock according to the Black-Scholes-Merton model
+except that as noted earlier, we substitute the futures price
+F for the stock price and set the dividend yield
+equal to the risk-free rate.
+From here, solving the problem is pretty mechanical.
+All we need to do is plug-in for the strike price K, $1,000,
+for the futures price F, $939.68,
+for the risk-free rate, r, 0.1 for 10%, for, sigma,
+the volatility of the futures price, 0.09 or 9%,
+and for T, the time to maturity, 10 divided
+by 12 for 10 months, which is equal to 0.8333
+into the expressions for d1, d2, and c, that we just derived.
+Doing so, we can solve analytically for d1, d2, and c.
+However, it's probably easier to just input the parameters
+into the corresponding cells in the Black's model
+tab of the BSM in Black's Model.xls spreadsheet.
+This will allow us to find the price of the European call
+option directly.
+Doing so will yield a price of $9.49.

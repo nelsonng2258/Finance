@@ -1,0 +1,80 @@
+PROFESSOR: Compound options are options that
+are written on other options.
+Those would include a call on a call, a put on a call,
+a call on a put, and a put on a put.
+Or the chain could have even more steps--
+a call on a call on a call, for example.
+These compound options typically must
+be priced by backward induction on a binomial tree.
+Compound options are actually more common
+than you might first imagine because they arise
+in many situations and, particularly, in the context
+of real investment options.
+For example, think about an investment in higher education.
+In a two-year college program, you
+might have an option in the first year
+to enroll with a payment of $10,000.
+And then, in year 2, you have the option
+to complete the second year for an additional tuition
+payment of another $10,000.
+The option to continue in year 2 is like a regular call option
+with a strike price of $10,000, which you would exercise when
+the present value of the degree at that point
+exceeds the $10,000.
+The option to enter into the two-year program
+in the first place is what makes it a compound option.
+
+Another type of exotic is a gap option.
+A gap call option has a payoff based
+on the difference between the underlying asset price
+and a fixed strike price, K1.
+But the payoff is only realized when the asset price
+is greater than a barrier, K2.
+The formula for a gap option is given here.
+When the underlying assets satisfy
+the usual Black-Scholes-Merton assumptions.
+Notice that K1 is like K in the standard Black-Scholes-Merton
+formula, but that the probabilities N of d1 and N
+of d2 depend on the probability of being over the barrier,
+rather than over the strike price.
+
+This is a payoff diagram for a gap call
+option with a strike, K1, of 90 and a barrier, K2, of 100.
+To answer the question on the slide
+of whether the option costs more or less than a similar option
+without the gap, we can draw the path diagram on a call option
+with a strike price of 90 and no barrier.
+
+We can see that the difference in payoffs between the two
+is this triangular region.
+In this region, our regular call option
+has a higher payoff than the gap option.
+Therefore, the gap option is worth
+less than the traditional call option.
+
+The final stop on this whirlwind tour of exotic options
+is one of my favorites.
+A quanto is an exotic option that
+provides a payoff in one currency that's
+directly based on an index value in a second currency.
+It allows investors to take a position
+in a risky foreign asset without any exchange rate risk.
+For example, the Nikkei put warrants traded on the American
+Stock Exchange are quantos because the payoffs
+and the premiums are in dollars but the payoff is directly
+scaled by the yen price of the Nikkei index
+relative to a yen strike price.
+That allows investors to take a positional bet on the direction
+of the Japanese stock market without exposure
+to the risk of the dollar-yen exchange rate.
+That exchange rate risk couldn't be completely
+hedged with a regular forward contract
+because there's uncertainty about the size
+of the amount that needs to be hedged when the underlying is
+a risky stock.
+So what's special about quantos is
+that they have an embedded currency forward
+with a variable notional amount.
+It's that variable notional amount
+that gives quantos their name.
+Quanto is short for quantity adjusting option.

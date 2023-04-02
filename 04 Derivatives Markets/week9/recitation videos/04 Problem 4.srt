@@ -1,0 +1,264 @@
+0
+00:00:00,000 --> 00:00:01,707
+
+
+1
+00:00:01,707 --> 00:00:03,290
+PROFESSOR: That does it for Problem 3.
+
+2
+00:00:03,290 --> 00:00:08,550
+Let's finish the recitation by reviewing Problem 4.
+
+3
+00:00:08,550 --> 00:00:11,910
+In Problem 4, it stated that your boss asks you
+
+4
+00:00:11,910 --> 00:00:14,580
+for a quick price estimate for a credit
+
+5
+00:00:14,580 --> 00:00:19,200
+guarantee on the risky bond of a publicly traded firm.
+
+6
+00:00:19,200 --> 00:00:21,600
+You have the following information.
+
+7
+00:00:21,600 --> 00:00:23,750
+First, that the Treasury yield curve
+
+8
+00:00:23,750 --> 00:00:27,620
+is flat at 4% on a continuous basis.
+
+9
+00:00:27,620 --> 00:00:31,310
+Second, the bond to be guaranteed a zero coupon
+
+10
+00:00:31,310 --> 00:00:34,540
+and has a face value of $50 million.
+
+11
+00:00:34,540 --> 00:00:40,176
+It matures in 3.25 years and it is the only debt of the firm.
+
+12
+00:00:40,176 --> 00:00:42,510
+The credit guarantee ensures payment
+
+13
+00:00:42,510 --> 00:00:47,100
+to the holder of the full face value at maturity.
+
+14
+00:00:47,100 --> 00:00:52,920
+Third the firm has 5.11 million shares of equity outstanding
+
+15
+00:00:52,920 --> 00:00:57,270
+currently priced at $10.69 per share.
+
+16
+00:00:57,270 --> 00:01:01,562
+The equity volatility is 25% per year.
+
+17
+00:01:01,562 --> 00:01:06,340
+And fourth, using the Merton model for valuing risky debt,
+
+18
+00:01:06,340 --> 00:01:10,750
+you conclude that the market value of assets is $95 million
+
+19
+00:01:10,750 --> 00:01:17,290
+and the asset volatility is 12% per year.
+
+20
+00:01:17,290 --> 00:01:19,780
+Based on all this information, what
+
+21
+00:01:19,780 --> 00:01:24,690
+is your best estimate of the value of the credit guarantee?
+
+22
+00:01:24,690 --> 00:01:27,360
+Now, this problem is tricky because although we
+
+23
+00:01:27,360 --> 00:01:29,430
+threw a lot of information at you,
+
+24
+00:01:29,430 --> 00:01:32,970
+you actually don't need to apply either the Merton model
+
+25
+00:01:32,970 --> 00:01:38,120
+or to build a binomial tree in order to solve the problem.
+
+26
+00:01:38,120 --> 00:01:39,920
+The first step in solving the problem
+
+27
+00:01:39,920 --> 00:01:42,890
+is to simply recall from the Week 9 lecture
+
+28
+00:01:42,890 --> 00:01:45,890
+that the Merton model relies on the relationship
+
+29
+00:01:45,890 --> 00:01:50,150
+that A equals E plus D, where A is the market
+
+30
+00:01:50,150 --> 00:01:53,450
+value of the firm's assets, E is the market value
+
+31
+00:01:53,450 --> 00:01:57,020
+of the firm's equity, and D is the market value
+
+32
+00:01:57,020 --> 00:01:59,990
+of the firm's debt.
+
+33
+00:01:59,990 --> 00:02:02,330
+From the information provided, we
+
+34
+00:02:02,330 --> 00:02:04,880
+can compute the market value of the firm's equity,
+
+35
+00:02:04,880 --> 00:02:11,060
+or E, to be equal to $10.69, the price per share,
+
+36
+00:02:11,060 --> 00:02:14,340
+times 5.11 million shares outstanding,
+
+37
+00:02:14,340 --> 00:02:20,615
+which is equal to $54.519 million.
+
+38
+00:02:20,615 --> 00:02:25,250
+Since the market value of the firm's assets is $95 million
+
+39
+00:02:25,250 --> 00:02:28,000
+according to the Merton model, we
+
+40
+00:02:28,000 --> 00:02:32,500
+can infer that D, which is equal to A minus E,
+
+41
+00:02:32,500 --> 00:02:39,160
+is equal to $95 million minus $54.519 million,
+
+42
+00:02:39,160 --> 00:02:46,226
+which is equal to $40.481 million.
+
+43
+00:02:46,226 --> 00:02:49,280
+Now, as we saw in the Week 9 lecture,
+
+44
+00:02:49,280 --> 00:02:53,060
+the value of a credit guarantee on a risky bond
+
+45
+00:02:53,060 --> 00:02:56,870
+is equal to the difference between the hypothetical price
+
+46
+00:02:56,870 --> 00:02:58,830
+of the promised payments of the bond,
+
+47
+00:02:58,830 --> 00:03:01,520
+if they were, in fact, risk-free,
+
+48
+00:03:01,520 --> 00:03:03,530
+and the price of the risky bond.
+
+49
+00:03:03,530 --> 00:03:06,260
+
+
+50
+00:03:06,260 --> 00:03:09,130
+If the firm's debt were in fact risk-free,
+
+51
+00:03:09,130 --> 00:03:12,265
+then its price would be equal to 50--
+
+52
+00:03:12,265 --> 00:03:15,790
+so the $50 million face value the bond--
+
+53
+00:03:15,790 --> 00:03:19,780
+times the exponential of negative 0.04,
+
+54
+00:03:19,780 --> 00:03:24,220
+since the risk-free rate is 4% on a continuous basis, times
+
+55
+00:03:24,220 --> 00:03:30,130
+3.25, since the debt has 3.25 years to maturity, which
+
+56
+00:03:30,130 --> 00:03:35,740
+is equal to $43.905 million.
+
+57
+00:03:35,740 --> 00:03:39,100
+Thus, the credit guarantee is estimated
+
+58
+00:03:39,100 --> 00:03:47,050
+to be worth 43.905 minus 40.481, that's the market
+
+59
+00:03:47,050 --> 00:03:49,600
+value of the firm's debt according
+
+60
+00:03:49,600 --> 00:03:56,250
+to the Merton model, which is equal to $3.424 million.
+
+61
+00:03:56,250 --> 00:04:01,070
+Pretty simple, right?
+
+62
+00:04:01,070 --> 00:04:05,270
+All right, that concludes Problem 4 and the Week 9
+
+63
+00:04:05,270 --> 00:04:06,380
+recitation.
+
+64
+00:04:06,380 --> 00:04:09,020
+Thank you everyone for coming and I look forward
+
+65
+00:04:09,020 --> 00:04:12,520
+to seeing you one more time next week.
+

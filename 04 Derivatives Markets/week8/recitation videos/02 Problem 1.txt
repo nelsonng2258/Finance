@@ -1,0 +1,101 @@
+
+PROFESSOR: Without further ado, let's
+begin with the first topic.
+Suppose that you have estimated the following binomial model
+for one-year interest rates, where the probability of rates
+rising or falling equals 50%.
+In particular, the interest rate either increases
+to 5.5% next period or decreases to 3.9%.
+
+In part a, we are asked, using this model, what
+is the theoretical price of a two-year 6% coupon
+bond with no options attached?
+Assume that the coupon payments are paid annually
+and the face value of the bond is $100.
+As always, let's move backwards through the binomial tree
+in order to solve this problem.
+At the end of two years, the holder of the bond
+will receive the face value of $100
+plus an annual coupon payment of $6.
+Since the diagram above shows the evolution of one-year
+interest rates --
+that is the interest rate between the beginning of one
+year and the end of the year --
+the appropriate discount rate for the payoff received
+at the end of two years is equal to 1.04 for 4% times 1.055
+for 5.5% in the up node, and 1.04 times 1.039
+for 3.9%, which is equal to 1.08056 in the down node.
+Since there is a 50% chance of rates either rising or falling,
+the expected discounted payoff received
+at the end of two years is as follows: 0.5 times the terminal
+payoff of 106 divided by 1.04 times 1.039
+for the down node plus 0.5 times 106 divided by 1.04 times 1.055
+for the up node, which is equal to 97.35.
+Now, the holder of the bond will also receive a coupon payment
+of $6 at the end of one year -- remember,
+these are annual coupon payments --
+which has a present value of simply 6 divided by the spot
+interest rate at initiation of 4%,
+or 1.04 as a decimal, which is equal to 5.77.
+Thus, the price of the two-year 6% coupon
+bond with no options attached is simply
+5.77, the present value of the coupon payment
+received at the end of one year, plus 97.35,
+the present value of the face value
+plus coupon payment received at the end of two years,
+which is equal to 103.12.
+In part b, we are asked to consider the same bond
+as in part a but with a call option that now allows
+the issuer to call the bond at the end of the first year
+for $101.
+What is the value of this call option?
+What would be the theoretical value of the callable bond?
+We'll begin by recalling from the week eight lecture
+that the value of a callable bond
+is equal to the value of a non-callable bond
+minus the value of the embedded call option.
+We know from part a that the value of the non-callable bond
+is 103.12.
+So we just need to find the value of the call option
+on the bond using the same binomial tree.
+In particular, let's let the payoff of the call option
+at each node, which can either be up for u or down for d,
+at the end of the first year to be equal to C is equal
+to the maximum of the difference between P sub i and K and 0,
+were P sub i is the value of the non-callable bond in each node
+--
+which can either be up or down --
+and K, which is equal to 101, is the strike price
+of the call option.
+Well, using the binomial tree given,
+we can first find the value of the non-callable bond
+in the up node to be the terminal payoff of 106
+discounted at the spot rate in the up node of 5.5%, which
+is equal to 100.47.
+So the call option payoff in the up node
+is equal to the maximum of the difference between 100.47
+and the strike price of 101 and 0, which is equal to 0.
+A similar calculation for the down node
+shows that the value of the non-callable bond
+in the down node is equal to 106 divided by 1.039,
+which is equal to 102.02.
+And the payoff of the call option in the down node
+is equal to the maximum of the difference between 102.02
+minus 101 and 0, which is equal to 1.02.
+Since the value of the call option
+is the present value of the expected
+payoffs of the option at the end of the first year,
+we simply take 0, which is the value of the call
+option at the end of the first year
+and the up node, multiplied by the probability of an up
+move of 0.5, discounted at the risk-free rate
+of 4% at the initial node, plus the probability of a down move
+of 0.5 times the payoff of the call option
+in the down node of 1.02 discounted at the 4% interest
+rate, which gives us a total value of the call
+option of 0.49.
+Now, since the value of the callable bond
+is the difference between the value of the non-callable bond
+and the value of the embedded call option,
+we know that the value of the callable bond
+must be equal to 103.12 minus 0.49, which is equal to 102.63.

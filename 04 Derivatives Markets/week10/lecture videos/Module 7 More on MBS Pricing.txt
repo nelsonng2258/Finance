@@ -1,0 +1,82 @@
+
+PROFESSOR: As I emphasized earlier,
+pricing mortgages and MBSs is complicated
+by having to model prepayment behavior.
+Another complication is that credit risk and liquidity risk
+also affect MBS prices but to a much lesser extent
+than prepayment risk.
+Earlier in the class, we saw how to price credit risk based
+on a model of asset price volatility
+and how to value callable bonds using a model
+of stochastic interest rates.
+The question arises, what's the best procedure
+to use when both call and credit risk are present?
+For MBS pricing in a binomial framework,
+my recommendation is to model the uncertainty associated
+with interest rates explicitly and then
+to incorporate other factors that affect value
+like credit and liquidity via an assumption about a market
+spread over the risk-free rate.
+The final example I'm about to turn to
+illustrates that procedure.
+In cases where default risk is judged to be insignificant,
+for instance, because there's a credit guarantee,
+this is a reasonable approach.
+However, I want to note that in instances where both interest
+rate and default risk are important,
+it's probably best to use a risk-neutral Monte
+Carlo with two stochastic processes, one
+for each major source of risk.
+I now want to turn to a simple binomial example that
+captures the idea of pricing MBS on an interest rate
+tree augmented by a statistical model of pre-payment.
+In this example, I'll start with this binomial tree here.
+It represents the evolution of the risk-free rate.
+For simplicity, I'm going to assume that all paths are
+equally likely.
+For each path through the interest rate tree
+imagine linking it to a pre-payment model that
+is a function of market interest rates, when rates go down,
+prepayment rates go up.
+On paths where past prepayments are higher,
+future cash payouts will be lower
+because interest payments are reduced
+and there will be less principal left to pay off.
+The story provides a loose motivation
+for the patterns of cash flows shown on each path
+through this tree, that is I assume the payment at time 1
+is expected to be $100 given the current market conditions
+at time 0.
+When rates rise at time 1 there is no change in the expected
+payment size at time 2 but when rates fall,
+there's an additional prepayment of $50 expected at time 2.
+When rates rise from time 1 to time 2, the payment at time 3
+is lower than if rates fall over that interval,
+again reflecting more prepayments when rates fall.
+Because MBSs are illiquid and there may be some default risk,
+investors demand a spread above the risk-free rate.
+Let's assume we estimate that spread to be 0.25%.
+This slide shows that spread added to all the rates
+on the previous tree.
+The cash flows are the same as before.
+
+The final step in valuing the MBS is to discount the cash
+flows back along each path of the tree
+using the risk-adjusted rates on the tree for discounting
+and taking into account the probability of each path.
+Notice that in this example, MBSs
+are like exotic options with path dependence.
+The conclusion we reach averaging
+across all the paths, which remember
+were assumed to be equally likely,
+is that the security is worth $269.81.
+We've come to the end of this lecture
+and also to the end of the class.
+I want to thank all of you who have put in the effort
+to understand this challenging material
+and to learn how to apply the ideas
+and models to a wide variety of practical applications.
+I hope these skills serve you well
+in your future financial endeavors
+personal and professional.
+And I wish you success on the final and beyond.

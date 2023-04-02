@@ -1,0 +1,74 @@
+
+All right, let's move on to Problem 3.
+Problem 3 says to consider a risky one-year zero-coupon bond
+priced to yield 6.375% on a bond equivalent basis,
+where, recall from the Week 3 recitation, that a bond
+equivalent yield is the single interest rate that
+equates the price of a bond to the present value
+of its future cash flows but assumes semiannual compounding.
+At the same time, the one-year spot yield on a Treasury bill
+is 2.3% on a bond equivalent basis.
+A credit default swap is available on the risky bond.
+The upfront premium for the credit default swap
+is $4,500 per $100,000 face value of the risky bond.
+In Part A, we are asked, does there
+appear to be an arbitrage opportunity between the cash
+and CDS markets?
+Explain with a calculation.
+First, the value of the risky one-year zero-coupon bond
+is equal to the $100,000 face value discounted at 1
+plus the 6.375% yield to maturity expressed a decimal.
+And since it's on a bond equivalent basis, that
+is it assumes semiannual compounding,
+we take the yield to maturity divided by 2
+and adjust the time unit, which gives us $93,917.35.
+A similar calculation could be used
+to find the value of the risk-free one-year Treasury
+bond as the face value of $100,000 discounted
+at the 2.3% risk-free yield to maturity on the bond.
+And, again, because it's on a bond equivalent basis,
+we divide the yield by 2 and adjust the time unit
+for semiannual coupons, which is equal to $97,739.08.
+As we saw in the Week 9 lecture, the difference
+between the risk-free bond price, this one here,
+and the risky bond price, here, is
+equal to the fair price of the credit default swap
+premium, which in this case is equal to $3,821.73.
+Thus, there appears to be an arbitrage opportunity
+as the credit default swap is selling for $4,500
+and appears to be relatively overpriced
+relative to its fair value of $3,821.
+Part B asks, describe the transactions
+that you would have to simultaneously make
+in both the cash and the CDS markets
+in order to exploit this arbitrage opportunity.
+Well, since the CDS is overpriced
+relative to its fair value, the most straightforward way
+to structure the transactions is to do the following.
+First, sell the credit default swap.
+Second, purchase a one-year Treasury bill with face value
+equal to $100,000.
+And, third, short the risky one-year zero-coupon bond
+with face value equal to $100,000.
+The upfront profit from this strategy
+is equal to the $4,500 from selling the CDS minus $97,739
+from purchasing the one-year Treasury bill plus $93,917
+from shorting the risky one-year zero-coupon bond, which
+is equal to $678.27.
+Notice that this strategy has zero future cash flows
+paid or received from the strategy.
+So it's certainly an arbitrage opportunity
+with a positive payoff initially and no possibility
+of paying money in the future.
+Why is this the case?
+Well, if the risky bond defaults,
+that is the risky bond that we shorted,
+then the credit default swap payment
+is covered by the difference between the face
+value of the Treasury bill and the recovery
+value of the risky bond.
+If the risky bond, on the other hand, doesn't default,
+then the credit default swap pays
+nothing and the face values of the one year Treasury bill
+of $100,000 and the risky one-year zero-coupon bond
+cancel out on both the long and short positions.

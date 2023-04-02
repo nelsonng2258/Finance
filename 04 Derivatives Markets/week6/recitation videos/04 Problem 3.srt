@@ -1,0 +1,464 @@
+0
+00:00:00,000 --> 00:00:01,580
+
+
+1
+00:00:01,580 --> 00:00:05,060
+PROFESSOR: Topic two was brief, so let's finish the recitation
+
+2
+00:00:05,060 --> 00:00:09,320
+by reviewing currency options.
+
+3
+00:00:09,320 --> 00:00:11,960
+Currency options are actually conceptually quite
+
+4
+00:00:11,960 --> 00:00:15,080
+similar to the options on stocks and futures
+
+5
+00:00:15,080 --> 00:00:17,900
+that we've seen in lectures so far.
+
+6
+00:00:17,900 --> 00:00:20,930
+A currency option gives the holder of the option
+
+7
+00:00:20,930 --> 00:00:23,450
+the right, but not the obligation,
+
+8
+00:00:23,450 --> 00:00:27,260
+to buy or sell a certain currency at a predetermined
+
+9
+00:00:27,260 --> 00:00:31,190
+exchange rate on or before a specific date, maturity
+
+10
+00:00:31,190 --> 00:00:33,390
+date of the option.
+
+11
+00:00:33,390 --> 00:00:36,960
+Are there a Black-Scholes-Merton type formula
+
+12
+00:00:36,960 --> 00:00:40,590
+analogous to those used to price call and put options
+
+13
+00:00:40,590 --> 00:00:45,770
+on stocks for European currency options?
+
+14
+00:00:45,770 --> 00:00:48,650
+We'll begin by recalling from the week five lecture
+
+15
+00:00:48,650 --> 00:00:50,510
+that the Black-Scholes-Merton pricing
+
+16
+00:00:50,510 --> 00:00:53,240
+formula for European call and put
+
+17
+00:00:53,240 --> 00:00:57,650
+options on the stock with a known dividend yield, delta,
+
+18
+00:00:57,650 --> 00:00:59,340
+are as follows.
+
+19
+00:00:59,340 --> 00:01:02,540
+On the left hand side, we have the price of a European call
+
+20
+00:01:02,540 --> 00:01:06,530
+option for a stock with a known dividend yield, delta,
+
+21
+00:01:06,530 --> 00:01:10,610
+on the right hand side, the price of the put option with d1
+
+22
+00:01:10,610 --> 00:01:13,970
+and d2 given as the usual formulas,
+
+23
+00:01:13,970 --> 00:01:17,210
+except we have this adjustment and this term
+
+24
+00:01:17,210 --> 00:01:20,550
+here for the dividend yield.
+
+25
+00:01:20,550 --> 00:01:22,970
+The key to pricing currency options
+
+26
+00:01:22,970 --> 00:01:26,120
+is to realize that foreign currency is
+
+27
+00:01:26,120 --> 00:01:30,860
+analogous to a stock that pays a known dividend yield.
+
+28
+00:01:30,860 --> 00:01:34,160
+In particular, the holder of the foreign currency
+
+29
+00:01:34,160 --> 00:01:38,600
+will receive a dividend yield equal to the risk-free rate,
+
+30
+00:01:38,600 --> 00:01:42,190
+rf, in the foreign currency.
+
+31
+00:01:42,190 --> 00:01:45,160
+To keep the notation consistent, let's define
+
+32
+00:01:45,160 --> 00:01:48,670
+S to be the spot exchange rate.
+
+33
+00:01:48,670 --> 00:01:53,800
+In particular, S is the value of one unit of a foreign currency
+
+34
+00:01:53,800 --> 00:01:57,120
+in terms of US dollars.
+
+35
+00:01:57,120 --> 00:02:02,090
+Then the prices of the European call and put currency options
+
+36
+00:02:02,090 --> 00:02:06,140
+are the exact same as those for a stock with a known dividend
+
+37
+00:02:06,140 --> 00:02:10,970
+yield, except now we replace delta, the dividend yield,
+
+38
+00:02:10,970 --> 00:02:14,850
+with the foreign risk-free rate, rf.
+
+39
+00:02:14,850 --> 00:02:19,020
+On the left hand side, we have the price of a European call
+
+40
+00:02:19,020 --> 00:02:22,260
+currency option, where if you notice,
+
+41
+00:02:22,260 --> 00:02:23,910
+the dividend yield delta has been
+
+42
+00:02:23,910 --> 00:02:27,345
+replaced with rf and the same thing for the put option.
+
+43
+00:02:27,345 --> 00:02:29,890
+
+
+44
+00:02:29,890 --> 00:02:32,410
+Both the domestic risk-free rate, r,
+
+45
+00:02:32,410 --> 00:02:34,780
+and the foreign risk-free rate, rf,
+
+46
+00:02:34,780 --> 00:02:40,350
+are for maturity, T, of the option here.
+
+47
+00:02:40,350 --> 00:02:44,610
+As a concrete example, consider a six month European call
+
+48
+00:02:44,610 --> 00:02:47,690
+option on the British pound.
+
+49
+00:02:47,690 --> 00:02:52,190
+Suppose that the spot exchange rate, S, is 1.5,
+
+50
+00:02:52,190 --> 00:02:56,450
+the strike price is also 1.5, the risk-free rate
+
+51
+00:02:56,450 --> 00:02:59,990
+in the United States is 5% per annum,
+
+52
+00:02:59,990 --> 00:03:04,130
+the risk-free rate in the United Kingdom is 7% per annum,
+
+53
+00:03:04,130 --> 00:03:06,620
+and the pound to dollar exchange rate
+
+54
+00:03:06,620 --> 00:03:10,710
+has a volatility of 12% per annum.
+
+55
+00:03:10,710 --> 00:03:14,370
+What would be the price of the call option in dollars
+
+56
+00:03:14,370 --> 00:03:17,220
+according to the equations above?
+
+57
+00:03:17,220 --> 00:03:21,450
+Using the Black-Scholes-Merton tab of the BSM and Black's
+
+58
+00:03:21,450 --> 00:03:25,410
+Model xls spreadsheet that we saw in topic one,
+
+59
+00:03:25,410 --> 00:03:28,860
+we can calculate the price of the European call option
+
+60
+00:03:28,860 --> 00:03:33,060
+with S, the spot exchange rate, equal to 1.5,
+
+61
+00:03:33,060 --> 00:03:36,390
+K, the strike price, equal to 1.5,
+
+62
+00:03:36,390 --> 00:03:40,710
+r, the domestic risk-free rate, equal to 5%,
+
+63
+00:03:40,710 --> 00:03:45,030
+sigma, the volatility of the exchange rate, equal to 12%,
+
+64
+00:03:45,030 --> 00:03:48,240
+and delta, which is our dividend yield, in this case,
+
+65
+00:03:48,240 --> 00:03:52,530
+the foreign risk-free rate equal to 7%,
+
+66
+00:03:52,530 --> 00:03:56,970
+and finally T, the maturity of the currency option,
+
+67
+00:03:56,970 --> 00:04:01,400
+equal to 0.5 for six months.
+
+68
+00:04:01,400 --> 00:04:04,070
+Plugging those input into the Black-Scholes-Merton
+
+69
+00:04:04,070 --> 00:04:09,350
+calculator, we find a price of the currency call option
+
+70
+00:04:09,350 --> 00:04:14,390
+to be $0.042.
+
+71
+00:04:14,390 --> 00:04:19,220
+Finally, let's now assume that the six month forward exchange
+
+72
+00:04:19,220 --> 00:04:22,220
+rate, F, between pounds and dollars
+
+73
+00:04:22,220 --> 00:04:28,270
+is the same as the strike price, K, of the European call option.
+
+74
+00:04:28,270 --> 00:04:30,310
+Armed with this information, what
+
+75
+00:04:30,310 --> 00:04:32,950
+would be the price of a six month European
+
+76
+00:04:32,950 --> 00:04:35,810
+put option on the pound?
+
+77
+00:04:35,810 --> 00:04:38,240
+We actually don't need any other information
+
+78
+00:04:38,240 --> 00:04:40,880
+in order to solve this problem.
+
+79
+00:04:40,880 --> 00:04:45,380
+From put-call parity, note that we can relate European call
+
+80
+00:04:45,380 --> 00:04:50,010
+and put prices on currency options as follows.
+
+81
+00:04:50,010 --> 00:04:54,290
+On the left hand side, the price of a European call option
+
+82
+00:04:54,290 --> 00:04:59,510
+plus the strike price of the option times the exponential
+
+83
+00:04:59,510 --> 00:05:05,270
+of negative r times t, where r is the domestic risk-free rate,
+
+84
+00:05:05,270 --> 00:05:09,860
+is equal to the put price plus the spot exchange
+
+85
+00:05:09,860 --> 00:05:14,630
+rate times e to the negative rf T, where rf
+
+86
+00:05:14,630 --> 00:05:18,390
+is the foreign risk-free rate.
+
+87
+00:05:18,390 --> 00:05:20,700
+Back in the week one lecture, we learned
+
+88
+00:05:20,700 --> 00:05:23,580
+the following very important relationship
+
+89
+00:05:23,580 --> 00:05:26,940
+between the forward exchange rate, F, and the spot exchange
+
+90
+00:05:26,940 --> 00:05:31,740
+rate, S. In particular, the forward exchange rate
+
+91
+00:05:31,740 --> 00:05:35,760
+is equal to the spot exchange rate times the exponential
+
+92
+00:05:35,760 --> 00:05:39,030
+of the difference between the domestic risk-free rate,
+
+93
+00:05:39,030 --> 00:05:42,690
+r, and the foreign risk-free rate, rf,
+
+94
+00:05:42,690 --> 00:05:48,070
+times T, the maturity of the option.
+
+95
+00:05:48,070 --> 00:05:50,470
+Combining these two equations, we
+
+96
+00:05:50,470 --> 00:05:57,080
+have that the price of the call option plus the strike price
+
+97
+00:05:57,080 --> 00:05:59,930
+times e to negative rt, the left hand
+
+98
+00:05:59,930 --> 00:06:02,570
+side of our put-call parity relationship
+
+99
+00:06:02,570 --> 00:06:06,550
+on the top of the slide, is equal to the put price
+
+100
+00:06:06,550 --> 00:06:13,710
+plus the forward exchange rate, F, times e to the negative rt.
+
+101
+00:06:13,710 --> 00:06:18,190
+So we substitute for Se to the negative rfT
+
+102
+00:06:18,190 --> 00:06:20,950
+using a relationship between the forward exchange rate
+
+103
+00:06:20,950 --> 00:06:24,750
+and the spot exchange rate.
+
+104
+00:06:24,750 --> 00:06:28,980
+Clearly from this equation here at the bottom of the slide,
+
+105
+00:06:28,980 --> 00:06:33,030
+if K is equal to F, so if the strike price is
+
+106
+00:06:33,030 --> 00:06:37,560
+equal to the forward price, c, the price of the call option,
+
+107
+00:06:37,560 --> 00:06:40,750
+is equal to p, the price of the put option.
+
+108
+00:06:40,750 --> 00:06:43,470
+So the price of the European put option
+
+109
+00:06:43,470 --> 00:06:48,350
+is the same as the price of a European call option.
+
+110
+00:06:48,350 --> 00:06:50,630
+This result is going to hold generically
+
+111
+00:06:50,630 --> 00:06:55,820
+for options on any underlying asset, not just exchange rates,
+
+112
+00:06:55,820 --> 00:07:01,310
+as long as the strike price is equal to the forward price.
+
+113
+00:07:01,310 --> 00:07:04,460
+That concludes recitation six.
+
+114
+00:07:04,460 --> 00:07:06,860
+Thank you everyone for coming, and I look forward
+
+115
+00:07:06,860 --> 00:07:09,310
+to seeing you next week.
+

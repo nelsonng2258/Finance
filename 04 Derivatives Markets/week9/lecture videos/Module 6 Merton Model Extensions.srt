@@ -1,0 +1,388 @@
+0
+00:00:00,000 --> 00:00:00,540
+
+
+1
+00:00:00,540 --> 00:00:02,040
+PROFESSOR: The Merton model captures
+
+2
+00:00:02,040 --> 00:00:04,750
+some of the most important drivers of credit risk,
+
+3
+00:00:04,750 --> 00:00:07,020
+including the volatility of the value of assets
+
+4
+00:00:07,020 --> 00:00:11,020
+backing an obligation and how leveraged those assets are.
+
+5
+00:00:11,020 --> 00:00:13,980
+An advantage over a simple statistical approach
+
+6
+00:00:13,980 --> 00:00:17,670
+is that it links the probability and severity of default events,
+
+7
+00:00:17,670 --> 00:00:19,650
+and provides a framework to understand
+
+8
+00:00:19,650 --> 00:00:22,080
+how the cost of credit risk will evolve over time
+
+9
+00:00:22,080 --> 00:00:24,060
+with market conditions.
+
+10
+00:00:24,060 --> 00:00:27,090
+Nevertheless, Merton's analytical formulas
+
+11
+00:00:27,090 --> 00:00:29,370
+rest on strong assumptions that are clearly
+
+12
+00:00:29,370 --> 00:00:31,500
+violated in practice.
+
+13
+00:00:31,500 --> 00:00:33,990
+In response, researchers have developed
+
+14
+00:00:33,990 --> 00:00:37,050
+related models that avoid some of those shortcomings.
+
+15
+00:00:37,050 --> 00:00:38,730
+Those models are typically solved
+
+16
+00:00:38,730 --> 00:00:41,220
+numerically and implemented with binomial trees
+
+17
+00:00:41,220 --> 00:00:43,320
+or using Monte Carlo simulation.
+
+18
+00:00:43,320 --> 00:00:45,570
+Several of the variations deal with the issue
+
+19
+00:00:45,570 --> 00:00:48,300
+that firms have complicated capital structures
+
+20
+00:00:48,300 --> 00:00:50,580
+with a variety of maturities of debt
+
+21
+00:00:50,580 --> 00:00:53,340
+and that when debt matures, it's typically
+
+22
+00:00:53,340 --> 00:00:56,310
+rolled over into new debt.
+
+23
+00:00:56,310 --> 00:01:01,920
+That includes early bankruptcy and stationary leverage.
+
+24
+00:01:01,920 --> 00:01:04,709
+With early bankruptcy, there is the possibility
+
+25
+00:01:04,709 --> 00:01:07,770
+of default at any time and default is typically
+
+26
+00:01:07,770 --> 00:01:09,720
+assumed to be triggered by assets falling
+
+27
+00:01:09,720 --> 00:01:12,630
+below some default boundary.
+
+28
+00:01:12,630 --> 00:01:15,360
+Default is still a put option, but now it's
+
+29
+00:01:15,360 --> 00:01:19,080
+treated as an American option.
+
+30
+00:01:19,080 --> 00:01:21,210
+The assumption of stationary leverage
+
+31
+00:01:21,210 --> 00:01:23,700
+is a way of setting a default boundary, which
+
+32
+00:01:23,700 --> 00:01:26,550
+can be defined in various ways.
+
+33
+00:01:26,550 --> 00:01:28,800
+Assuming stationary leverage incorporates
+
+34
+00:01:28,800 --> 00:01:32,850
+the idea that debt tends to be rolled over rather than retired
+
+35
+00:01:32,850 --> 00:01:35,160
+and, that as asset values change,
+
+36
+00:01:35,160 --> 00:01:38,160
+leverage may be gradually adjusted towards some target
+
+37
+00:01:38,160 --> 00:01:40,370
+leverage ratio.
+
+38
+00:01:40,370 --> 00:01:42,650
+Modeling firm values as unobservable
+
+39
+00:01:42,650 --> 00:01:46,190
+incorporates the possibility of surprise bankruptcies
+
+40
+00:01:46,190 --> 00:01:49,580
+due to event risk, such as when embezzlement or fraud
+
+41
+00:01:49,580 --> 00:01:52,770
+by top managers is revealed.
+
+42
+00:01:52,770 --> 00:01:54,600
+An example of this was the bankruptcy
+
+43
+00:01:54,600 --> 00:01:56,880
+of the energy company, Enron that
+
+44
+00:01:56,880 --> 00:01:58,800
+was rated investment grade when it
+
+45
+00:01:58,800 --> 00:02:03,860
+failed after dubious accounting practices were revealed.
+
+46
+00:02:03,860 --> 00:02:05,540
+Technically, such events are often
+
+47
+00:02:05,540 --> 00:02:08,930
+incorporated with a jump process that periodically causes asset
+
+48
+00:02:08,930 --> 00:02:11,890
+values to fall discreetly.
+
+49
+00:02:11,890 --> 00:02:13,660
+Finally, for highly leveraged firms
+
+50
+00:02:13,660 --> 00:02:16,030
+such as large financial institutions,
+
+51
+00:02:16,030 --> 00:02:19,240
+interest rate risk can be a driver of bankruptcy
+
+52
+00:02:19,240 --> 00:02:23,640
+and that can be incorporated as a source of risk.
+
+53
+00:02:23,640 --> 00:02:27,090
+The KMV model is a widely used extension of the Merton model
+
+54
+00:02:27,090 --> 00:02:30,180
+that has been commercialized by Moody's.
+
+55
+00:02:30,180 --> 00:02:33,450
+As in the original Merton model, equity value and equity
+
+56
+00:02:33,450 --> 00:02:36,810
+volatility, which are inferred from market prices,
+
+57
+00:02:36,810 --> 00:02:39,750
+are nonlinear functions of the unobservable value
+
+58
+00:02:39,750 --> 00:02:43,100
+and volatility of firm assets.
+
+59
+00:02:43,100 --> 00:02:46,010
+The two equations representing those relationships
+
+60
+00:02:46,010 --> 00:02:49,850
+can be solved simultaneously to infer asset value and asset
+
+61
+00:02:49,850 --> 00:02:53,090
+volatility given the other inputs.
+
+62
+00:02:53,090 --> 00:02:56,180
+The main feature distinguishing it from the classic Merton
+
+63
+00:02:56,180 --> 00:02:59,240
+model is that rather than using the face value of debt
+
+64
+00:02:59,240 --> 00:03:01,940
+at maturity as a strike price, there's
+
+65
+00:03:01,940 --> 00:03:05,180
+a default barrier that's based on a firm's observed capital
+
+66
+00:03:05,180 --> 00:03:06,700
+structure.
+
+67
+00:03:06,700 --> 00:03:08,410
+That default barrier --
+
+68
+00:03:08,410 --> 00:03:11,110
+that can be called a "default point" --
+
+69
+00:03:11,110 --> 00:03:14,640
+is based on a simple proprietary rule.
+
+70
+00:03:14,640 --> 00:03:17,670
+For example, in an early technical document
+
+71
+00:03:17,670 --> 00:03:21,510
+they suggested a good rule is that default occurs when assets
+
+72
+00:03:21,510 --> 00:03:24,930
+fall below 70% of short-term liabilities,
+
+73
+00:03:24,930 --> 00:03:29,210
+plus half of long-term book liabilities.
+
+74
+00:03:29,210 --> 00:03:32,600
+The results of the KMV model are summarized by a measure they
+
+75
+00:03:32,600 --> 00:03:35,510
+call "distance to default".
+
+76
+00:03:35,510 --> 00:03:38,870
+The distance to default is the number of standard deviations
+
+77
+00:03:38,870 --> 00:03:41,030
+the estimated market value currently
+
+78
+00:03:41,030 --> 00:03:42,905
+is away from the default point.
+
+79
+00:03:42,905 --> 00:03:45,620
+
+
+80
+00:03:45,620 --> 00:03:47,660
+Compared to traditional credit ratings
+
+81
+00:03:47,660 --> 00:03:51,500
+that fall into discrete buckets, it measures credit risk
+
+82
+00:03:51,500 --> 00:03:54,350
+as a continuous variable.
+
+83
+00:03:54,350 --> 00:03:56,470
+The distance to default doesn't directly
+
+84
+00:03:56,470 --> 00:03:58,660
+reveal the probability of default
+
+85
+00:03:58,660 --> 00:04:01,900
+because that would require also knowing the imputed volatility
+
+86
+00:04:01,900 --> 00:04:04,030
+of assets.
+
+87
+00:04:04,030 --> 00:04:05,860
+Moody's sells a product that maps
+
+88
+00:04:05,860 --> 00:04:11,060
+distance to default into an expected frequency of default.
+
+89
+00:04:11,060 --> 00:04:14,870
+As with other Merton style models, simple implementations
+
+90
+00:04:14,870 --> 00:04:18,260
+of the KMV model underestimate the near-term likelihood
+
+91
+00:04:18,260 --> 00:04:20,209
+of default because of the assumption
+
+92
+00:04:20,209 --> 00:04:24,540
+that assets are following a continuous log-normal process.
+
+93
+00:04:24,540 --> 00:04:27,900
+Incorporating random jumps in asset value that
+
+94
+00:04:27,900 --> 00:04:31,470
+may be driven by plus on arrival times of low frequency
+
+95
+00:04:31,470 --> 00:04:36,330
+adverse events, or making the default barrier stochastic
+
+96
+00:04:36,330 --> 00:04:40,370
+have been shown to improve the performance of this model.
+

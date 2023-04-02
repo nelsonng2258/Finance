@@ -1,0 +1,196 @@
+
+PROFESSOR: We'll now turn to options pricing models that
+rest on assumptions about the underlying
+distribution of interest rates rather than of bond prices.
+To price options on fixed income securities,
+it's important to recognize that this often requires not just
+modeling the distribution of a particular future rate,
+but rather a model of the stochastic evolution
+of the entire term structure of interest rates or the yield
+curve.
+You need to be able to answer the question,
+how are spot and forward rates expected to move over time
+and what's the volatility of those movements?
+We'll start by building answers to those questions,
+starting with binomial models of short term interest rates
+and how to calibrate them to market data
+and then use them to price interest rate derivatives.
+Then we'll look at some continuous time
+models of stochastic yield curves
+and how they can be used for pricing by Monte
+Carlo or binomial methods.
+This figure shows a binomial tree
+that represents the time evolution of the short term
+risk free interest rate.
+
+As with any binomial model, choices
+have to be made about what determines
+the value of the underlying variable at each node, which
+in this case is a short term interest rate and about
+the probabilities of an up and a down move at each node.
+For tractability and to avoid overfitting,
+the evolution of interest rates and the associated
+probabilities are restricted by a set of rules.
+Different models are distinguished by how
+those rules are set.
+As in the earlier binomial models we've worked with,
+the model can be either physical or risk neutral.
+For pricing purposes, the risk neutral version of the models
+is typically used.
+For other applications, like understanding
+the physical distribution of outcomes,
+for instance to calculate the value of risk for a portfolio,
+physical probabilities are used instead.
+In all cases we want to use a model that
+produces realistic predictions about the prices
+of the fixed income securities and options
+that we want to use the model for.
+
+Volatility is a key input for all stochastic interest rate
+models and options pricing models.
+As before, the vertical distance between nodes
+on a tree at a point in time is how volatility is incorporated
+into a binomial model.
+Rate volatility can be estimated from historical data
+or it can be inferred using implied volatilities
+from option prices.
+The formulas here are a reminder of how
+to estimate interest rate volatility using
+historical data.
+As usual, the first step is to choose
+the relevant historical period and collect data.
+
+A natural question is, how long to look back historically.
+Unfortunately, there's no general answer
+to that question because there's always a trade off
+between having enough data to come up
+with a reliable estimate and avoiding using data that's
+too old and that may be no longer
+relevant to the current environment.
+Judgment must always be exercised.
+The second step is to calculate the standard deviation
+of yields.
+Note here that standard deviations
+are calculated in terms of proportional interest rate
+changes, not level changes.
+But either approach can be used.
+And how the information is incorporated into a tree
+will be different with a multiplicative factor
+in the case of proportional changes
+and with an additive one with level changes.
+Volatility of course, is based on the standard deviation,
+here using daily data annualized by multiplying
+by a factor of either the square root of 365
+or the square root of 250.
+The former reflects the idea that volatility
+on trading days and online trading days
+is similar, even if you can't see it on the nontrading days.
+The latter reflects the idea that volatility only
+occurs on trading days.
+The truth probably lies somewhere in between.
+As with other variables used in calibrations
+the choice of volatility can be fine tuned
+to produce a model that most accurately reproduces observed
+security and options prices.
+In either case, scaling by a square root factor
+based on a number of days reflects the assumption
+that rate changes are independent over time.
+Here's an example of using this procedure
+to estimate proportional interest rate
+changes based on daily data on one year rates.
+The first percentage change here is
+based on the difference between the first two
+daily observations.
+
+The standard deviation of daily changes,
+found here to be 0.00857, in this particular example
+was annualized by multiplying by the square root of 365
+to give an annualized volatility of 0.1638 or 16.38%.
+A very simple model of the evolution of short term rates
+assumes that the rate on the up node
+is the rate on the previous time step multiplied by 1 plus D,
+where D is a fixed constant.
+The rate on the down node is the rate
+of the previous time step divided
+by 1 plus D. This creates a recombining tree
+Let's assume that the initial rate is 4%
+and that the risk neutral probability of an up move
+is 0.5.
+If we equate the D parameter to our estimate
+of an annualized proportional standard deviation.
+And if each step on the tree represents one year,
+we can get a 2-step tree calibrated to the volatility
+estimate we just calculated.
+And that's shown here.
+For shorter time steps, we use the annualized estimate
+multiplied by the square root of the time interval,
+for instance multiplying by the square root of 0.5
+for a period of six months.
+The algebra here in the blue box establishes
+that equating D to the volatility, in this case,
+produces a standard deviation of rate changes in the tree that's
+consistent with the estimated volatility.
+
+So far we've seen an example of how the evolution of short term
+rates can be represented on a binomial tree
+and how rate volatility can be incorporated into the model.
+But what we need to price bond options
+is not just a model of the evolution of short term rates
+but of the entire yield curve.
+An extremely important observation
+that you should definitely spend some time to really understand
+is this.
+Implicit in any bond pricing model
+based on the evolution of short term rates
+is also a model of the evolution of the entire yield curve.
+To see why that's true, let's look at a very simple example
+based on the first step of the risk neutral binomial tree
+we just constructed.
+The key will be to recall that the yield curve can
+be derived from bond prices.
+So if a tree can be used to price bonds
+of different maturities, it can also
+be used to find the implied yield curve.
+This is most straightforward to do by using the implied
+prices of zero coupon bonds.
+
+The one year spot rate here is 4%.
+And it goes up to 4.66 in one year or down to 3.44.
+To find a two year spot yield, we
+use this tree to find the time zero price of a two year
+zero coupon bond with a face value of 100.
+We're going to do this working backward through the tree.
+But the difference from what we did earlier
+is that instead of using a constant value for the risk
+free rate we'll be discounting using
+the rates at the different points on the tree.
+For example, the price of the bond
+at time one, when the bond has one year left
+to maturity and on the up node where the rate is 4.66%
+is 100 divided by 1.0466 which gives us
+a price on that node of 95.547.
+On the down node, the bond is worth 96.674,
+found by discounting at the 3.44% rate on that node.
+Using the risk neutral probability of 0.5,
+the expected value of the bond at time one
+is the numerator in this equation.
+
+The value that is discounted back to time
+zero using the one year rate of 4%
+to give a time 0 price of 92.414.
+The two year yield implicit in the zero coupon bond price
+is found then in the usual way by asking what yield equates
+the bond price with the discounted
+value of its promised payoff of 102 years.
+
+Solving for y2 gives a two year spot yield
+of 4.02% stated as a simple annual percentage rate.
+
+To generalize, what this example establishes
+is that starting from any node on a binomial tree
+you can use the model of short rates
+and risk neutral probabilities to infer the prices of zero
+coupon bonds of any maturity.
+Thus embedded in a binomial model of short rates
+is also a model of the entire future yield
+curve from the perspective of any node on the tree.

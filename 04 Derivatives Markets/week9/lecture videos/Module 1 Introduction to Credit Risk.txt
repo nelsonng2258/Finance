@@ -1,0 +1,121 @@
+
+PROFESSOR: There are many types of contracts
+that involve credit risk, including loans to individuals
+and small businesses, mortgages, sovereign debt,
+and corporate debt.
+Although the general principles that we'll be discussing
+applied to all of these, the main emphasis
+will be on models that are most directly
+applicable to corporate debt.
+So I want to start with a few general observations
+about corporate debt and the nature of default risk.
+The first has to do with credit ratings.
+As you probably know, rating agencies
+like Moody's, Standard & Poor's, and Fitch
+assign ratings to corporate debt issues that give investors
+some idea of the default risk that's
+associated with a particular issuer or security.
+There are many levels of ratings,
+ranging from very safe triple-A rated securities down to D
+rated securities that are in default.
+A major distinction based on ratings
+is the difference between investment grade
+and below investment grade.
+Below investment grade securities
+are also described as speculative, high-yield,
+or junk.
+High-yield bonds historically have
+had much higher default rates than investment grade bonds.
+However, many high-yield bonds were originally
+investment grade and they were downgraded as their issuers ran
+into trouble.
+These are the so-called fallen angels.
+Hence buying an investment grade bond
+isn't a guarantee that you won't eventually
+experience default losses.
+However, it's interesting that high-yield bonds have performed
+well historically in the sense of having realized relatively
+high risk adjusted returns.
+Regarding the nature of default risk,
+it's also important to understand
+that only a small percentage of corporate bonds
+will ever default. Nevertheless, bond prices are significantly
+affected by the possibility that default losses will occur
+and the fact that the likelihood of loss
+vary significantly over time.
+While default events are rare, rating changes
+are much more frequent.
+Those are a manifestation of default risk
+and can be described as downgrade risk.
+A bond that's downgraded when the market isn't expecting it
+is likely to experience a price drop and conversely
+for a bond that's upgraded.
+There are variants of events that themselves don't directly
+cause default but that can significantly
+change its likelihood.
+For instance, a legal ruling that significantly
+changes the profitability of a corporation.
+Liquidity, that is the ability to buy or sell a bond quickly
+with minimal price impact, is typically lower
+for riskier bonds, hence credit risk and liquidity
+risk tend to be related.
+Default and recovery rates are key statistics
+used to quantify credit risk.
+The default rate is the probability
+that a default will occur.
+It's usually stated on an annual basis.
+What constitutes a default event depends on whose definition
+is being used.
+Rating agencies have stated criteria
+for what determines a default and then
+contracts like credit default swaps
+also will specify what they treat as a default event.
+Now, the recovery rate is the percentage of the amount owed,
+usually principal plus any accrued interest,
+that will be received by the creditor
+in the event of a default. Recoveries
+are calculated in various ways.
+One approach is to estimate the present value of the cash that
+will be eventually recovered, such as when
+the remaining assets of the firm are liquidated.
+Alternatively, sometimes the market price
+of the bond right after default is announced
+is used as a proxy for the present value of recoveries.
+Note that the recovery rate is one minus the loss rate.
+And the loss rate is also called the loss given default.
+Default and recovery rates can vary significantly
+over the life of a bond.
+For example, a bond issued to build a nuclear power plant
+may have a much higher probability of default
+and a lower expected recovery rate during the first few years
+it's outstanding and the plant is still under construction.
+Once the reactor is up and running and producing revenues,
+it's much less likely that there will be a default.
+That sort of situation can also give rise
+to what's called a term structure of default
+and recovery rates.
+In the model we're going to look at,
+for simplicity, we'll assume that those rates are
+held constant, but the model is easily
+modified to incorporate a term structure of rates.
+
+This graph illustrates the magnitude of default rates
+over time for investment grade, speculative grade,
+and overall debt issuances for the period from 1981 to 2018.
+I want to highlight several observations here.
+First, there are clearly large fluctuations
+in default rates over time with spikes during recessions.
+Those fluctuations are driven by speculative grade debt.
+As shown here, those spikes and default rates
+occurred during the 1991, 2001, and 2008 recessions.
+Second, even in recessions, default rates
+are close to zero for investment grade debt.
+The overall default rate is also quite low.
+Over this time period, it only touched 4%
+in the severe recession of 2008-2009 and for most periods
+it's below 2%.
+Importantly, the positive covariance
+of default rates with the economic downturns imparts
+market risk to corporate debt, hence risky corporate debt
+has a positive beta and the cost of that market risk
+is reflected in bond prices.

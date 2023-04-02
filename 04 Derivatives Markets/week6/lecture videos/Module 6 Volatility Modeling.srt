@@ -1,0 +1,520 @@
+0
+00:00:00,000 --> 00:00:00,303
+
+
+1
+00:00:00,303 --> 00:00:01,970
+PROFESSOR: It would be incorrect for you
+
+2
+00:00:01,970 --> 00:00:03,740
+to take away from this discussion
+
+3
+00:00:03,740 --> 00:00:06,530
+that the Black-Scholes-Merton model is just too inaccurate
+
+4
+00:00:06,530 --> 00:00:09,230
+to be useful for practitioners.
+
+5
+00:00:09,230 --> 00:00:11,660
+To the contrary, it works reasonably
+
+6
+00:00:11,660 --> 00:00:15,320
+well for a number of purposes, including hedging options
+
+7
+00:00:15,320 --> 00:00:18,050
+positions against changes in stock prices,
+
+8
+00:00:18,050 --> 00:00:20,900
+using delta or delta gamma hedging.
+
+9
+00:00:20,900 --> 00:00:24,350
+It also remains the basis for widely used implied volatility
+
+10
+00:00:24,350 --> 00:00:28,840
+calculations and for some price quotations
+
+11
+00:00:28,840 --> 00:00:30,820
+and while more complicated models
+
+12
+00:00:30,820 --> 00:00:33,490
+may yield more accurate price predictions,
+
+13
+00:00:33,490 --> 00:00:35,680
+it turns out to be very valuable to have
+
+14
+00:00:35,680 --> 00:00:38,200
+a model like the Black-Scholes-Merton model that
+
+15
+00:00:38,200 --> 00:00:40,780
+can generate price approximations extremely
+
+16
+00:00:40,780 --> 00:00:43,420
+quickly when speed is essential.
+
+17
+00:00:43,420 --> 00:00:45,970
+Of course, there are times when a more accurate pricing
+
+18
+00:00:45,970 --> 00:00:49,900
+tool is valuable, such as if an investment bank wants
+
+19
+00:00:49,900 --> 00:00:53,620
+to price complicated option contracts that they write,
+
+20
+00:00:53,620 --> 00:00:56,140
+or when the possibility of early exercise
+
+21
+00:00:56,140 --> 00:00:59,230
+has a significant effect on value.
+
+22
+00:00:59,230 --> 00:01:01,060
+A number of modeling approaches have
+
+23
+00:01:01,060 --> 00:01:03,850
+been developed to provide more accurate options prices
+
+24
+00:01:03,850 --> 00:01:05,980
+that overcome particular shortcomings
+
+25
+00:01:05,980 --> 00:01:08,170
+of the Black-Scholes-Merton model.
+
+26
+00:01:08,170 --> 00:01:10,420
+Those include models where volatility
+
+27
+00:01:10,420 --> 00:01:13,090
+changes over time, either deterministically
+
+28
+00:01:13,090 --> 00:01:14,950
+or stochastically.
+
+29
+00:01:14,950 --> 00:01:18,250
+There's also models that incorporate price jumps.
+
+30
+00:01:18,250 --> 00:01:21,040
+The implied volatilities from these other models
+
+31
+00:01:21,040 --> 00:01:23,230
+or from the market prices of options
+
+32
+00:01:23,230 --> 00:01:26,560
+can be incorporated into what's called an implied tree model,
+
+33
+00:01:26,560 --> 00:01:29,560
+and then the tree can be used to price other options more
+
+34
+00:01:29,560 --> 00:01:31,620
+accurately.
+
+35
+00:01:31,620 --> 00:01:33,180
+All of these models were designed
+
+36
+00:01:33,180 --> 00:01:36,270
+to deliver results that are consistent with the idea that
+
+37
+00:01:36,270 --> 00:01:39,510
+out of the money put options are expensive because of the risk
+
+38
+00:01:39,510 --> 00:01:42,540
+premium associated with the protection against very
+
+39
+00:01:42,540 --> 00:01:45,430
+large negative returns.
+
+40
+00:01:45,430 --> 00:01:48,730
+We'll now go on a short tour of some of these models.
+
+41
+00:01:48,730 --> 00:01:50,800
+You won't be tested on their details,
+
+42
+00:01:50,800 --> 00:01:52,900
+beyond what appears in homework problems
+
+43
+00:01:52,900 --> 00:01:55,660
+but you should understand the main ideas and motivations
+
+44
+00:01:55,660 --> 00:01:57,550
+behind them.
+
+45
+00:01:57,550 --> 00:01:59,130
+One way to account for the patterns
+
+46
+00:01:59,130 --> 00:02:01,290
+we observe in implied volatilities
+
+47
+00:02:01,290 --> 00:02:04,350
+is to incorporate the assumption that volatility is not
+
+48
+00:02:04,350 --> 00:02:09,009
+constant, but rather, that it's a function of the stock price.
+
+49
+00:02:09,009 --> 00:02:12,760
+The constant elasticity of variance model shown here
+
+50
+00:02:12,760 --> 00:02:16,210
+does this by modeling the log of the growth stock return
+
+51
+00:02:16,210 --> 00:02:22,300
+as having a drift, mu times h, plus a volatility term that's
+
+52
+00:02:22,300 --> 00:02:24,740
+based on three factors.
+
+53
+00:02:24,740 --> 00:02:27,010
+The first is the current stock price
+
+54
+00:02:27,010 --> 00:02:28,880
+taken to the power of alpha.
+
+55
+00:02:28,880 --> 00:02:32,890
+The second is a constant, which scales volatility.
+
+56
+00:02:32,890 --> 00:02:35,920
+And the third is a shock drawn from
+
+57
+00:02:35,920 --> 00:02:37,850
+a standard normal distribution.
+
+58
+00:02:37,850 --> 00:02:40,870
+This model reduces to the Black-Scholes-Merton assumption
+
+59
+00:02:40,870 --> 00:02:44,950
+about stock returns when alpha is set equal to 0.
+
+60
+00:02:44,950 --> 00:02:48,520
+When alpha is negative, it causes return volatility
+
+61
+00:02:48,520 --> 00:02:51,600
+to increase when stock prices fall.
+
+62
+00:02:51,600 --> 00:02:56,170
+That implies a volatility smirk consistent with the data.
+
+63
+00:02:56,170 --> 00:02:58,770
+The reason is that if volatility is high
+
+64
+00:02:58,770 --> 00:03:00,930
+when stock prices have low moneyness,
+
+65
+00:03:00,930 --> 00:03:04,140
+that higher volatility will cause both putting call option
+
+66
+00:03:04,140 --> 00:03:07,860
+values to increase, which in turn increases the implied
+
+67
+00:03:07,860 --> 00:03:09,540
+volatility.
+
+68
+00:03:09,540 --> 00:03:11,400
+The most well-known model that incorporates
+
+69
+00:03:11,400 --> 00:03:14,020
+stochastic volatility is the Heston model,
+
+70
+00:03:14,020 --> 00:03:15,690
+named after its inventor.
+
+71
+00:03:15,690 --> 00:03:18,000
+This stochastic volatility model also
+
+72
+00:03:18,000 --> 00:03:20,700
+captures the smirk and implied volatilities.
+
+73
+00:03:20,700 --> 00:03:22,920
+In addition, it reflects the empirical fact
+
+74
+00:03:22,920 --> 00:03:26,130
+that volatility varies considerably over time.
+
+75
+00:03:26,130 --> 00:03:30,270
+The Heston model specifies a process for stock returns
+
+76
+00:03:30,270 --> 00:03:33,090
+that has a drift term that, as usual,
+
+77
+00:03:33,090 --> 00:03:38,070
+represents the expected return over the interval h.
+
+78
+00:03:38,070 --> 00:03:40,740
+It also has a volatility term based
+
+79
+00:03:40,740 --> 00:03:43,800
+on the square root of stochastic function v,
+
+80
+00:03:43,800 --> 00:03:46,860
+and a draw, epsilon 1 at each time t,
+
+81
+00:03:46,860 --> 00:03:49,740
+from a standard normal distribution.
+
+82
+00:03:49,740 --> 00:03:55,440
+The innovations in volatility, v of t plus h minus v of t,
+
+83
+00:03:55,440 --> 00:03:58,530
+are model as being mean reverting.
+
+84
+00:03:58,530 --> 00:04:01,080
+The mean reversion is at a rate k
+
+85
+00:04:01,080 --> 00:04:04,770
+so that, when v is below its mean reverting level
+
+86
+00:04:04,770 --> 00:04:08,380
+v upper bar, it tends to increase.
+
+87
+00:04:08,380 --> 00:04:12,240
+And when v is above its mean reverting level,
+
+88
+00:04:12,240 --> 00:04:14,250
+v tends to decrease.
+
+89
+00:04:14,250 --> 00:04:16,980
+This reflects what we saw in the data,
+
+90
+00:04:16,980 --> 00:04:20,100
+that periods of higher or lower than normal volatility
+
+91
+00:04:20,100 --> 00:04:21,870
+tend to be short lived.
+
+92
+00:04:21,870 --> 00:04:25,470
+There's also a second term in the innovations that
+
+93
+00:04:25,470 --> 00:04:29,550
+involves a second draw from a standard normal distribution,
+
+94
+00:04:29,550 --> 00:04:31,110
+epsilon 2.
+
+95
+00:04:31,110 --> 00:04:33,630
+One can prove that, when you assume
+
+96
+00:04:33,630 --> 00:04:37,080
+that the correlation between epsilon 1 and epsilon 2
+
+97
+00:04:37,080 --> 00:04:42,030
+is negative, the model will imply a volatility smirk.
+
+98
+00:04:42,030 --> 00:04:45,000
+The intuition is that, if epsilon 1 is negative
+
+99
+00:04:45,000 --> 00:04:48,690
+so that returns are low, then epsilon 2
+
+100
+00:04:48,690 --> 00:04:52,530
+tends to be positive because of that negative correlation.
+
+101
+00:04:52,530 --> 00:04:54,330
+That has the effect of increasing
+
+102
+00:04:54,330 --> 00:04:57,870
+the volatility of the following period when prices are low,
+
+103
+00:04:57,870 --> 00:05:00,900
+increasing the probability of further price declines,
+
+104
+00:05:00,900 --> 00:05:05,500
+and increasing the value of insurance against downturns.
+
+105
+00:05:05,500 --> 00:05:07,780
+It's fairly straightforward to introduce jumps
+
+106
+00:05:07,780 --> 00:05:10,340
+into the stock return process.
+
+107
+00:05:10,340 --> 00:05:13,810
+For example, the specification here for the stochastic stock
+
+108
+00:05:13,810 --> 00:05:19,700
+return between times t and t plus h has three terms--
+
+109
+00:05:19,700 --> 00:05:27,030
+mu times h, the expected return over an interval of h;
+
+110
+00:05:27,030 --> 00:05:32,250
+sigma times epsilon, a draw from a standard normal distribution
+
+111
+00:05:32,250 --> 00:05:36,310
+representing volatility during normal times;
+
+112
+00:05:36,310 --> 00:05:41,370
+and a jump term, omega times Q of t.
+
+113
+00:05:41,370 --> 00:05:45,560
+Omega parameterizes the size of the jumps.
+
+114
+00:05:45,560 --> 00:05:49,560
+Qt is an indicator variable that is 0 most of the time
+
+115
+00:05:49,560 --> 00:05:53,520
+and equal to 1 with the probability assumed
+
+116
+00:05:53,520 --> 00:05:56,690
+for a jump occurring.
+
+117
+00:05:56,690 --> 00:06:00,530
+Omega could be a constant, or it could be modeled as,
+
+118
+00:06:00,530 --> 00:06:03,660
+itself, a random variable.
+
+119
+00:06:03,660 --> 00:06:05,880
+If it's constrained to be negative,
+
+120
+00:06:05,880 --> 00:06:09,270
+it captures the idea that most large jumps in prices
+
+121
+00:06:09,270 --> 00:06:11,640
+are in fact negative ones.
+
+122
+00:06:11,640 --> 00:06:14,100
+When it's taken to be negative, it also
+
+123
+00:06:14,100 --> 00:06:18,220
+induces an implied volatility smirk.
+
+124
+00:06:18,220 --> 00:06:21,220
+Technically, pricing with jumps involves
+
+125
+00:06:21,220 --> 00:06:23,830
+additional complications, because relying
+
+126
+00:06:23,830 --> 00:06:26,560
+on the price of a continuous replication strategy
+
+127
+00:06:26,560 --> 00:06:28,610
+is no longer possible.
+
+128
+00:06:28,610 --> 00:06:31,570
+And how to incorporate the price of jump risk
+
+129
+00:06:31,570 --> 00:06:35,040
+remains a largely unsolved problem.
+

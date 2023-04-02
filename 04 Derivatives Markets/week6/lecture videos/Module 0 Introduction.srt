@@ -1,0 +1,136 @@
+0
+00:00:00,000 --> 00:00:00,460
+
+
+1
+00:00:00,460 --> 00:00:01,960
+PROFESSOR: This week, our main topic
+
+2
+00:00:01,960 --> 00:00:05,170
+will be volatility, which is one of the most important drivers
+
+3
+00:00:05,170 --> 00:00:07,690
+of option value and, of course, what motivates
+
+4
+00:00:07,690 --> 00:00:09,880
+people to trade options and other derivatives
+
+5
+00:00:09,880 --> 00:00:11,270
+in the first place.
+
+6
+00:00:11,270 --> 00:00:14,470
+I also want to introduce you to some useful options
+
+7
+00:00:14,470 --> 00:00:18,460
+pricing models that are variants on Black-Scholes Merton.
+
+8
+00:00:18,460 --> 00:00:21,160
+Before we turn to those other pricing models
+
+9
+00:00:21,160 --> 00:00:23,650
+and to volatility, we'll finish up
+
+10
+00:00:23,650 --> 00:00:26,920
+on our discussion from last week on hedging with the Greeks
+
+11
+00:00:26,920 --> 00:00:30,650
+and we'll learn to implement delta-gamma hedging.
+
+12
+00:00:30,650 --> 00:00:34,670
+The other options pricing models that I want to briefly cover
+
+13
+00:00:34,670 --> 00:00:38,330
+include variations on BSM that are frequently
+
+14
+00:00:38,330 --> 00:00:43,250
+used to price options on stock indices, options on currencies,
+
+15
+00:00:43,250 --> 00:00:45,530
+and options on futures.
+
+16
+00:00:45,530 --> 00:00:48,290
+We won't go into detail derivations,
+
+17
+00:00:48,290 --> 00:00:51,320
+but it's useful for you to be aware of these models
+
+18
+00:00:51,320 --> 00:00:53,450
+and understand how to use them.
+
+19
+00:00:53,450 --> 00:00:55,550
+Then we'll turn to volatility.
+
+20
+00:00:55,550 --> 00:00:58,550
+We'll start by seeing that the simple Black-Scholes Merton
+
+21
+00:00:58,550 --> 00:01:02,180
+framework, with its constant volatility assumption,
+
+22
+00:01:02,180 --> 00:01:06,260
+can't completely explain observed option prices.
+
+23
+00:01:06,260 --> 00:01:09,050
+We'll get a better read on the market's perception
+
+24
+00:01:09,050 --> 00:01:13,720
+of volatility through the concept of implied volatility.
+
+25
+00:01:13,720 --> 00:01:16,510
+We'll also see how implied volatilities
+
+26
+00:01:16,510 --> 00:01:21,160
+go into constructing the VIX, a widely watched index of stock
+
+27
+00:01:21,160 --> 00:01:25,330
+market volatility that's also, itself, directly traded
+
+28
+00:01:25,330 --> 00:01:27,830
+in risk management strategies.
+
+29
+00:01:27,830 --> 00:01:30,370
+Finally, we'll look at some of the approaches
+
+30
+00:01:30,370 --> 00:01:32,230
+that have been developed to incorporate
+
+31
+00:01:32,230 --> 00:01:34,780
+the variation in volatility over time
+
+32
+00:01:34,780 --> 00:01:38,500
+and how they can be used to create better options pricing
+
+33
+00:01:38,500 --> 00:01:40,050
+models.
+

@@ -1,0 +1,644 @@
+0
+00:00:00,000 --> 00:00:01,420
+
+
+1
+00:00:01,420 --> 00:00:04,390
+PROFESSOR: The credit spread, also sometimes called
+
+2
+00:00:04,390 --> 00:00:07,000
+a yield spread, is the difference
+
+3
+00:00:07,000 --> 00:00:09,640
+in the yield-to-maturity on a risky bond
+
+4
+00:00:09,640 --> 00:00:13,370
+and on a Treasury bond of similar maturity.
+
+5
+00:00:13,370 --> 00:00:16,100
+The statistical approach to pricing credit risk
+
+6
+00:00:16,100 --> 00:00:18,890
+seeks to explain a portion of the credit spread
+
+7
+00:00:18,890 --> 00:00:22,820
+based on estimates of default and recovery rates.
+
+8
+00:00:22,820 --> 00:00:26,600
+Data on credit spreads by rating is readily available,
+
+9
+00:00:26,600 --> 00:00:28,850
+for instance, on the website, FRED,
+
+10
+00:00:28,850 --> 00:00:31,790
+which provides economic time series data from the Federal
+
+11
+00:00:31,790 --> 00:00:34,190
+Reserve Bank of St. Louis.
+
+12
+00:00:34,190 --> 00:00:37,640
+Such time series data are often presented
+
+13
+00:00:37,640 --> 00:00:40,800
+as an option-adjusted spread.
+
+14
+00:00:40,800 --> 00:00:44,490
+As I mentioned last week, that means that the reported yields
+
+15
+00:00:44,490 --> 00:00:46,350
+have been adjusted to remove the effects
+
+16
+00:00:46,350 --> 00:00:51,700
+of other embedded options, such as prepayment or call options.
+
+17
+00:00:51,700 --> 00:00:55,750
+For a given credit rating, the observed yield spread also
+
+18
+00:00:55,750 --> 00:00:58,840
+tends to vary with maturity.
+
+19
+00:00:58,840 --> 00:01:01,660
+Credit spreads tend to increase with maturity,
+
+20
+00:01:01,660 --> 00:01:04,330
+as one might expect, due to the greater
+
+21
+00:01:04,330 --> 00:01:09,520
+risk of an adverse event occurring over longer horizons.
+
+22
+00:01:09,520 --> 00:01:12,280
+However, that pattern sometimes reverses
+
+23
+00:01:12,280 --> 00:01:15,040
+at very long maturities, with credit spreads
+
+24
+00:01:15,040 --> 00:01:17,800
+starting to narrow.
+
+25
+00:01:17,800 --> 00:01:21,400
+That may partially reflect compositional differences
+
+26
+00:01:21,400 --> 00:01:24,010
+in firms borrowing at different maturities,
+
+27
+00:01:24,010 --> 00:01:26,920
+with only high quality borrowers able to issue
+
+28
+00:01:26,920 --> 00:01:28,375
+very long maturity debt.
+
+29
+00:01:28,375 --> 00:01:32,600
+
+
+30
+00:01:32,600 --> 00:01:36,110
+These figures show the average credit spread on BB bonds
+
+31
+00:01:36,110 --> 00:01:40,070
+on the top panel and on AA bonds in the bottom panel
+
+32
+00:01:40,070 --> 00:01:43,130
+between 1997 and 2020.
+
+33
+00:01:43,130 --> 00:01:46,610
+The shaded areas are recessions.
+
+34
+00:01:46,610 --> 00:01:49,340
+The BB bonds are below investment grade
+
+35
+00:01:49,340 --> 00:01:52,010
+and have significantly higher spreads
+
+36
+00:01:52,010 --> 00:01:55,430
+than do the much safer AA bonds.
+
+37
+00:01:55,430 --> 00:01:58,370
+Not surprisingly, the spreads mirror the pattern
+
+38
+00:01:58,370 --> 00:02:00,710
+we saw for default rates, which spike
+
+39
+00:02:00,710 --> 00:02:03,290
+during economic downturns.
+
+40
+00:02:03,290 --> 00:02:05,750
+The increase in yields during recessions
+
+41
+00:02:05,750 --> 00:02:08,479
+translates into a decrease in prices,
+
+42
+00:02:08,479 --> 00:02:12,080
+again, consistent with the idea that risky debt has
+
+43
+00:02:12,080 --> 00:02:15,980
+a positive beta that implies that their prices will
+
+44
+00:02:15,980 --> 00:02:18,140
+be lower because of the market risk premium.
+
+45
+00:02:18,140 --> 00:02:20,720
+
+
+46
+00:02:20,720 --> 00:02:23,210
+The difference in the yield to maturity between treasuries
+
+47
+00:02:23,210 --> 00:02:25,550
+and default of securities of the same maturity
+
+48
+00:02:25,550 --> 00:02:30,090
+can conceptually be decomposed into several components.
+
+49
+00:02:30,090 --> 00:02:32,330
+The first is based on the statistics we've just
+
+50
+00:02:32,330 --> 00:02:35,150
+been discussing, the default rate and the loss given
+
+51
+00:02:35,150 --> 00:02:38,480
+default. The product of the two gives
+
+52
+00:02:38,480 --> 00:02:40,700
+an annualized expected loss rate.
+
+53
+00:02:40,700 --> 00:02:43,340
+
+
+54
+00:02:43,340 --> 00:02:45,710
+In addition, there's compensation
+
+55
+00:02:45,710 --> 00:02:49,190
+for the market or beta risk associated with these losses.
+
+56
+00:02:49,190 --> 00:02:52,100
+In the representation here, that's
+
+57
+00:02:52,100 --> 00:02:54,500
+incorporated using risk-neutral probabilities
+
+58
+00:02:54,500 --> 00:02:57,890
+and risk-neutral expectations in the calculation of the expected
+
+59
+00:02:57,890 --> 00:02:59,150
+loss rate.
+
+60
+00:02:59,150 --> 00:03:01,460
+The risk-neutral expected loss rate
+
+61
+00:03:01,460 --> 00:03:04,040
+is higher than the physical expected loss rate
+
+62
+00:03:04,040 --> 00:03:09,480
+because it includes the value of the associated market risk.
+
+63
+00:03:09,480 --> 00:03:11,550
+Empirical analyses of credit spreads
+
+64
+00:03:11,550 --> 00:03:16,530
+find that plausible estimates of risk-adjusted expected losses
+
+65
+00:03:16,530 --> 00:03:21,170
+account for only a fraction of the observed credit spread.
+
+66
+00:03:21,170 --> 00:03:23,420
+The remaining non-credit component
+
+67
+00:03:23,420 --> 00:03:26,750
+is attributable to other factors like differences and tax
+
+68
+00:03:26,750 --> 00:03:30,890
+treatment and the presence of other embedded options.
+
+69
+00:03:30,890 --> 00:03:34,730
+The residual, after accounting for all identifiable effects,
+
+70
+00:03:34,730 --> 00:03:38,830
+is usually described as a liquidity premium.
+
+71
+00:03:38,830 --> 00:03:41,950
+The liquidity premium is viewed as compensation
+
+72
+00:03:41,950 --> 00:03:45,550
+to investors for the relative illiquidity of corporate bonds
+
+73
+00:03:45,550 --> 00:03:48,310
+relative to treasuries.
+
+74
+00:03:48,310 --> 00:03:50,590
+Finally, something to remember in modeling credit
+
+75
+00:03:50,590 --> 00:03:54,130
+spreads and their implications for default and recovery rates
+
+76
+00:03:54,130 --> 00:03:56,890
+is that because the non-credit component of the rate spread
+
+77
+00:03:56,890 --> 00:04:00,190
+is often sizable, neglecting that fact
+
+78
+00:04:00,190 --> 00:04:03,880
+may result in overestimating the probability of default
+
+79
+00:04:03,880 --> 00:04:04,855
+and the loss rate.
+
+80
+00:04:04,855 --> 00:04:08,160
+
+
+81
+00:04:08,160 --> 00:04:10,830
+A fairly simple valuation model for risky debt
+
+82
+00:04:10,830 --> 00:04:13,590
+that's consistent with the statistical approach to credit
+
+83
+00:04:13,590 --> 00:04:17,680
+risk modeling is developed in the next few slides.
+
+84
+00:04:17,680 --> 00:04:21,450
+The model takes, as inputs, a bond's fixed characteristics
+
+85
+00:04:21,450 --> 00:04:25,050
+that include its coupon rate and time to maturity
+
+86
+00:04:25,050 --> 00:04:28,390
+and assumes a face value of a dollar.
+
+87
+00:04:28,390 --> 00:04:31,090
+It also takes as inputs estimates of the default
+
+88
+00:04:31,090 --> 00:04:34,480
+rate, the recovery rate and the risk-adjusted expected return
+
+89
+00:04:34,480 --> 00:04:36,140
+on the bond.
+
+90
+00:04:36,140 --> 00:04:39,260
+The model outputs are the bond's predicted yield to maturity
+
+91
+00:04:39,260 --> 00:04:42,340
+per period and its price.
+
+92
+00:04:42,340 --> 00:04:47,380
+The model is implemented in the spreadsheet default.xls that's
+
+93
+00:04:47,380 --> 00:04:50,570
+available to you on the class page.
+
+94
+00:04:50,570 --> 00:04:53,500
+Note that the model abstracts from non-credit features
+
+95
+00:04:53,500 --> 00:04:55,690
+of the yield spread and so may not
+
+96
+00:04:55,690 --> 00:04:59,470
+produce price predictions that match observed market prices.
+
+97
+00:04:59,470 --> 00:05:02,890
+Matching market prices might require an adjustment
+
+98
+00:05:02,890 --> 00:05:04,750
+based on an estimate of the liquidity
+
+99
+00:05:04,750 --> 00:05:08,480
+premium and other factors.
+
+100
+00:05:08,480 --> 00:05:12,710
+In this model, T denotes the number of remaining periods
+
+101
+00:05:12,710 --> 00:05:15,700
+in a bond's life.
+
+102
+00:05:15,700 --> 00:05:21,450
+If coupons are paid annually, then T will represent years.
+
+103
+00:05:21,450 --> 00:05:26,970
+If coupons are semi-annual, T will be years times 2.
+
+104
+00:05:26,970 --> 00:05:30,390
+And the coupon rate, c, will be the annual coupon
+
+105
+00:05:30,390 --> 00:05:33,100
+rate divided by 2.
+
+106
+00:05:33,100 --> 00:05:37,360
+Similarly, if coupons are paid monthly,
+
+107
+00:05:37,360 --> 00:05:40,930
+T should be the number of years of remaining life times 12.
+
+108
+00:05:40,930 --> 00:05:43,300
+And the coupon rate, c, should be
+
+109
+00:05:43,300 --> 00:05:47,660
+the annual rate divided by 12.
+
+110
+00:05:47,660 --> 00:05:51,095
+All calculations are per dollar of face value.
+
+111
+00:05:51,095 --> 00:05:53,860
+
+
+112
+00:05:53,860 --> 00:05:57,370
+With a constant default rate, d, assumed
+
+113
+00:05:57,370 --> 00:06:01,010
+per period, the probability of the firm
+
+114
+00:06:01,010 --> 00:06:05,560
+not defaulting up until time t is
+
+115
+00:06:05,560 --> 00:06:11,590
+1 minus d to the power of t minus 1.
+
+116
+00:06:11,590 --> 00:06:16,870
+The fixed recovery rate is denoted by a small g.
+
+117
+00:06:16,870 --> 00:06:19,570
+It's the share of principal and accrued interest that's
+
+118
+00:06:19,570 --> 00:06:24,250
+assumed to be recovered at the time of a default.
+
+119
+00:06:24,250 --> 00:06:30,020
+The expected rate of return, r, is the risk-free rate
+
+120
+00:06:30,020 --> 00:06:33,950
+plus a market risk premium.
+
+121
+00:06:33,950 --> 00:06:37,400
+For example, a BBB bond might be expected
+
+122
+00:06:37,400 --> 00:06:40,960
+to have a beta of about 0.1.
+
+123
+00:06:40,960 --> 00:06:42,940
+This expected return will be used
+
+124
+00:06:42,940 --> 00:06:45,655
+in the model for discounting expected cash flows.
+
+125
+00:06:45,655 --> 00:06:48,400
+
+
+126
+00:06:48,400 --> 00:06:50,590
+In the model, the bond price is found
+
+127
+00:06:50,590 --> 00:06:53,740
+by calculating the present value of expected future cash
+
+128
+00:06:53,740 --> 00:06:57,265
+flows discounting at the expected return, r.
+
+129
+00:06:57,265 --> 00:07:01,920
+
+
+130
+00:07:01,920 --> 00:07:05,610
+To understand the model, consider the expected payment
+
+131
+00:07:05,610 --> 00:07:10,570
+on a bond at a time i which is less than T.
+
+132
+00:07:10,570 --> 00:07:12,670
+It clearly depends on whether or not
+
+133
+00:07:12,670 --> 00:07:16,000
+a default has already occurred, because if the bond is already
+
+134
+00:07:16,000 --> 00:07:21,590
+in default, then the expected payment at that time is zero.
+
+135
+00:07:21,590 --> 00:07:24,950
+The probability that the firm has survived without default
+
+136
+00:07:24,950 --> 00:07:29,810
+until time i is 1 minus d to the i minus 1.
+
+137
+00:07:29,810 --> 00:07:34,990
+And in that case, it will make a payment during that period.
+
+138
+00:07:34,990 --> 00:07:39,950
+If there's no default at time i, the full coupon payment
+
+139
+00:07:39,950 --> 00:07:42,270
+will be made.
+
+140
+00:07:42,270 --> 00:07:46,870
+That happens with probability 1 minus d.
+
+141
+00:07:46,870 --> 00:07:52,640
+If there is a default, which happens with probability d,
+
+142
+00:07:52,640 --> 00:07:57,500
+a recovery will be made based on the recovery rate, g,
+
+143
+00:07:57,500 --> 00:08:02,560
+multiplied by the amount owed of 1 plus c.
+
+144
+00:08:02,560 --> 00:08:07,000
+The last term here represents the present value
+
+145
+00:08:07,000 --> 00:08:10,000
+of the return of principal at maturity
+
+146
+00:08:10,000 --> 00:08:13,015
+when there's no default over the entire life of the bond.
+
+147
+00:08:13,015 --> 00:08:15,560
+
+
+148
+00:08:15,560 --> 00:08:17,350
+Now, once you've used this equation
+
+149
+00:08:17,350 --> 00:08:20,890
+to estimate the bond's price, we can figure out
+
+150
+00:08:20,890 --> 00:08:23,800
+its yield-to-maturity in the usual way
+
+151
+00:08:23,800 --> 00:08:26,890
+by equating that price to the present value of the promised
+
+152
+00:08:26,890 --> 00:08:29,905
+cash flows treating them as if they're certain.
+
+153
+00:08:29,905 --> 00:08:34,150
+
+
+154
+00:08:34,150 --> 00:08:35,809
+If you play with the spreadsheet,
+
+155
+00:08:35,809 --> 00:08:39,340
+you'll see that for bonds with high default or low recovery
+
+156
+00:08:39,340 --> 00:08:42,909
+rates, the yield-to-maturity will be significantly higher
+
+157
+00:08:42,909 --> 00:08:45,160
+than the expected return.
+
+158
+00:08:45,160 --> 00:08:47,110
+That's because part of the yield spread
+
+159
+00:08:47,110 --> 00:08:50,500
+is compensation for expected losses.
+
+160
+00:08:50,500 --> 00:08:51,000
+
+

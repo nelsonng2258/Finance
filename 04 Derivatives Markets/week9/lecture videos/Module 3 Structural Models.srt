@@ -1,0 +1,332 @@
+0
+00:00:00,000 --> 00:00:02,980
+PROFESSOR: We'll now turn to structural modeling
+
+1
+00:00:02,980 --> 00:00:07,150
+of credit risk, which differs from statistical approaches
+
+2
+00:00:07,150 --> 00:00:10,330
+by linking default and recovery rates to an underlying
+
+3
+00:00:10,330 --> 00:00:13,900
+model of the stochastic evolution of a firm's asset
+
+4
+00:00:13,900 --> 00:00:15,970
+value.
+
+5
+00:00:15,970 --> 00:00:19,390
+You probably remember from your introductory finance courses
+
+6
+00:00:19,390 --> 00:00:23,260
+that the payoffs on the debt and equity of a corporation as
+
+7
+00:00:23,260 --> 00:00:27,490
+of the maturity date of the debt, time T,
+
+8
+00:00:27,490 --> 00:00:31,120
+can be represented as functions of the firm's total asset
+
+9
+00:00:31,120 --> 00:00:38,010
+value, V sub T. Specifically, zero coupon risky debt
+
+10
+00:00:38,010 --> 00:00:42,450
+receives its promised face value of F as long
+
+11
+00:00:42,450 --> 00:00:45,780
+as the firm's asset value is sufficiently high
+
+12
+00:00:45,780 --> 00:00:48,300
+to cover the promised payment.
+
+13
+00:00:48,300 --> 00:00:51,720
+If the asset value is at less than F,
+
+14
+00:00:51,720 --> 00:00:55,110
+the debt holders get whatever the asset value turns out
+
+15
+00:00:55,110 --> 00:00:56,160
+to be.
+
+16
+00:00:56,160 --> 00:01:01,060
+That is, they become the equity holders of the corporation.
+
+17
+00:01:01,060 --> 00:01:03,820
+The equity, then, is like a call option
+
+18
+00:01:03,820 --> 00:01:08,950
+with a strike price of F on the value of the assets at time T
+
+19
+00:01:08,950 --> 00:01:13,450
+since once the debt is paid off the equity holders
+
+20
+00:01:13,450 --> 00:01:18,830
+have a claim equal to the remaining value of the assets.
+
+21
+00:01:18,830 --> 00:01:21,730
+The sum of the debt and equity is, of course, the total asset
+
+22
+00:01:21,730 --> 00:01:25,450
+value and it would be represented on a payoff diagram
+
+23
+00:01:25,450 --> 00:01:28,810
+simply as a 90-degree line running through
+
+24
+00:01:28,810 --> 00:01:29,910
+the (0,0) point.
+
+25
+00:01:29,910 --> 00:01:35,320
+
+
+26
+00:01:35,320 --> 00:01:37,270
+The payoff diagram for the risky debt
+
+27
+00:01:37,270 --> 00:01:41,450
+can be further decomposed into the sum of two components.
+
+28
+00:01:41,450 --> 00:01:46,840
+The first is a risk-free bond with a face value of F.
+
+29
+00:01:46,840 --> 00:01:48,945
+The second is a short put option.
+
+30
+00:01:48,945 --> 00:01:52,460
+
+
+31
+00:01:52,460 --> 00:01:55,650
+Clearly, from the diagram on the left,
+
+32
+00:01:55,650 --> 00:01:58,610
+the sum of the two positions is identical to that
+
+33
+00:01:58,610 --> 00:01:59,435
+of risky debt.
+
+34
+00:01:59,435 --> 00:02:02,400
+
+
+35
+00:02:02,400 --> 00:02:05,100
+The decomposition is useful when the default risk
+
+36
+00:02:05,100 --> 00:02:08,220
+is borne by someone other than the bondholder.
+
+37
+00:02:08,220 --> 00:02:10,979
+For example: when a risky loan is guaranteed
+
+38
+00:02:10,979 --> 00:02:15,180
+by a private insurance contract or by a government guarantee,
+
+39
+00:02:15,180 --> 00:02:17,580
+the value of the guarantee is just
+
+40
+00:02:17,580 --> 00:02:19,870
+the value of the put option.
+
+41
+00:02:19,870 --> 00:02:21,970
+With the guarantee, the bondholder
+
+42
+00:02:21,970 --> 00:02:25,930
+has a safe claim that can be valued separately,
+
+43
+00:02:25,930 --> 00:02:30,550
+discounting the payoff at the risk-free rate.
+
+44
+00:02:30,550 --> 00:02:33,450
+This example is a reminder that, because credit guarantees are
+
+45
+00:02:33,450 --> 00:02:35,940
+like put options on a company's assets,
+
+46
+00:02:35,940 --> 00:02:38,100
+they can be valued on binomial trees,
+
+47
+00:02:38,100 --> 00:02:40,650
+either using a replicating portfolio approach
+
+48
+00:02:40,650 --> 00:02:43,500
+or risk neutral pricing, which, as always,
+
+49
+00:02:43,500 --> 00:02:46,020
+are equivalent mathematically.
+
+50
+00:02:46,020 --> 00:02:49,590
+Here we have a company, XYZ, whose assets
+
+51
+00:02:49,590 --> 00:02:53,370
+are currently worth $100 and next period
+
+52
+00:02:53,370 --> 00:02:57,300
+will be worth $140 or $70.
+
+53
+00:02:57,300 --> 00:03:01,980
+Imagine it has debt with face value of $90,
+
+54
+00:03:01,980 --> 00:03:05,610
+and that debt is guaranteed by a third party.
+
+55
+00:03:05,610 --> 00:03:07,890
+We want to know what the value of that guarantee
+
+56
+00:03:07,890 --> 00:03:11,340
+is from the perspective of the guarantor.
+
+57
+00:03:11,340 --> 00:03:13,980
+Since we haven't looked at a replicating portfolio
+
+58
+00:03:13,980 --> 00:03:16,860
+approach for a few weeks, I'll review it here
+
+59
+00:03:16,860 --> 00:03:19,720
+by answering the question that way.
+
+60
+00:03:19,720 --> 00:03:21,970
+Well, the payout by the guarantor
+
+61
+00:03:21,970 --> 00:03:27,310
+will be 0 if the assets are worth $140 and the payout
+
+62
+00:03:27,310 --> 00:03:32,570
+will be $20 if the assets are only worth $70.
+
+63
+00:03:32,570 --> 00:03:34,670
+To use the replicating portfolio approach,
+
+64
+00:03:34,670 --> 00:03:37,400
+we also need information on the risk-free rate.
+
+65
+00:03:37,400 --> 00:03:40,400
+Here, that information is represented by one-step tree
+
+66
+00:03:40,400 --> 00:03:45,050
+showing that a risk-free bond with a certain payoff of $100
+
+67
+00:03:45,050 --> 00:03:49,260
+currently sells for $95.
+
+68
+00:03:49,260 --> 00:03:52,140
+We replicate the payoff of the guarantee
+
+69
+00:03:52,140 --> 00:03:55,200
+by buying a fraction X of the risk-free bond
+
+70
+00:03:55,200 --> 00:03:57,900
+and a fraction Y of the risky firm assets.
+
+71
+00:03:57,900 --> 00:04:01,940
+
+
+72
+00:04:01,940 --> 00:04:08,370
+Solving for X and Y, we find that X is equal to -0.4,
+
+73
+00:04:08,370 --> 00:04:12,440
+and Y is equal to 0.2857.
+
+74
+00:04:12,440 --> 00:04:15,560
+The guarantor has the equivalent of a highly leveraged
+
+75
+00:04:15,560 --> 00:04:19,430
+long position in the assets of the firm.
+
+76
+00:04:19,430 --> 00:04:21,760
+The cost of the guarantee to the issuer
+
+77
+00:04:21,760 --> 00:04:25,720
+is the cost of that replicating portfolio, which
+
+78
+00:04:25,720 --> 00:04:27,580
+we can calculate based on the bond
+
+79
+00:04:27,580 --> 00:04:34,270
+price and the current asset price to be $9.43.
+
+80
+00:04:34,270 --> 00:04:37,180
+From the perspective of the guaranteed bond holders,
+
+81
+00:04:37,180 --> 00:04:41,220
+the value of the guarantee is a positive $9.43.
+
+82
+00:04:41,220 --> 00:04:43,000
+
+

@@ -1,0 +1,114 @@
+
+PROFESSOR: OK, in the final part of the recitation,
+let's review a few rapid-fire questions
+related to the concepts of duration and convexity.
+For the first three questions we'll
+consider a five-year, 3.5% coupon
+bond with no embedded options and is priced at par.
+For each of the following changes to the bond's structure
+or to the market environment-- just one at a time--
+what would happen to either the effective duration
+or effective convexity of the bond?
+Effective duration or convexity can, one, not change, two,
+become smaller, three, become bigger, or four,
+it's indeterminate.
+In our first situation in Part A,
+the yield curve is going to make a parallel shift downward.
+Well, what would be the effect of this parallel shift
+downward on the effective duration
+and effective convexity of our five-year, 3.5% coupon bond?
+Well, both the effective duration
+and the effective convexity would go up;
+they become larger.
+What's the intuition for this?
+Well, the lower yield curve-- the parallel shift downward--
+has the effect of making more distant payments--
+those payments in the bond in, say, year four or year five--
+relatively more valuable through the discount rate effect.
+Lower discount rates on longer dated payments
+increases their value.
+Overall, this discount rate effect
+is going to put more weight on those more distant terms
+in the calculation of duration and convexity
+and increase the overall values of effective duration
+and effective convexity.
+All right, the situation in Part B
+is now that our coupon bond is puttable after two
+years at par.
+Well, the effect on the effective duration of our bond
+would be to lower the effective duration,
+so it becomes smaller, and the effect
+on the effective convexity would be
+to increase the effective convexity of our bond--
+it becomes larger.
+What's the intuition for this?
+Well, the put option is going to shorten the effective duration
+because the likelihood of receiving future payments
+in the bond goes down.
+If I have this option to sell the bond back,
+that's going to reduce the probability
+that the holder of the bond is going to receive payments
+in the distant future.
+It's going to increase the effective convexity,
+on the other hand, by putting a floor on the value of the bond
+equal to the price of the put option as interest rates rise.
+
+In Part C, the situation is that the probability
+of our coupon bond defaulting in any year increases from 0%--
+so it's risk-free-- to 3%.
+The expected recovery given default, on the other hand,
+is unchanged.
+Well, an increase in the probability of default
+is going to first, lower the effective duration and second,
+lower the effective convexity.
+What's the intuition here?
+Well, higher default probability is
+going to reduce the present value of more distant payments
+relative to the total present value of cash flows, basically
+the same intuition as in Part B for the put option on the bond.
+However, in this case, it's also going
+to pull down the convexity of our coupon bond.
+
+In Part D, we don't have a situation,
+just a true or false.
+We are asked that since PO securities--
+principal only securities-- are derivatives based on mortgages,
+and mortgages, as we discuss in the week 10 lecture,
+have negative convexity due to the prepayment option,
+POs also have negative convexity.
+Well, this is false.
+As we saw in the first part of this recitation,
+POs generally have positive convexity.
+Unlike their underlying mortgages, the value of POs
+rise sharply when interest rates fall since the prepayment
+results in the early payment of principal,
+which increases the present value of cash flows,
+to the PO investors.
+
+Finally, Part E is asking, is the risk
+of default on an underlying mortgage
+in a mortgage-backed security relevant to the returns
+of investors in a mortgage-backed security
+issued by, say, one of the GSEs, Fannie Mae or Freddie Mac?
+
+Yes.
+As discussed in the week 10 lecture,
+it's true that investors are promised the full payment
+of their principal and any accrued interest
+on these mortgage-backed securities issued
+by Fannie Mae or Freddie Mac because both of them
+provide credit guarantees.
+However, that doesn't mean that the returns to investors
+are not affected by the risk of default
+because default could affect the pattern of realized cash flows,
+since at the time of default the full amount
+owed on the mortgage is repaid to the investors.
+Thus, the possibility of default is
+going to affect the duration of the mortgage-backed securities
+and its exposure to interest rate risk, exactly
+the intuition that we went over on Part C on the slide
+previously.
+Well that does it for recitation 10
+and that does it for the recitations for this semester.
+Thank you very much, everyone, for coming.
+Good luck on the final exam and hope to see you soon.

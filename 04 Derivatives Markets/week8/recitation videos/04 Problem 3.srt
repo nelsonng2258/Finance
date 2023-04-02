@@ -1,0 +1,564 @@
+0
+00:00:00,000 --> 00:00:00,318
+
+
+1
+00:00:00,318 --> 00:00:02,360
+PROFESSOR: All right, let's finish the recitation
+
+2
+00:00:02,360 --> 00:00:05,900
+by reviewing the last topic, effective duration
+
+3
+00:00:05,900 --> 00:00:09,040
+and effective convexity.
+
+4
+00:00:09,040 --> 00:00:12,190
+Let's begin by recalling the definitions of modified
+
+5
+00:00:12,190 --> 00:00:16,780
+duration and convexity for an option-free bond from all
+
+6
+00:00:16,780 --> 00:00:20,260
+the way back in the week three lecture.
+
+7
+00:00:20,260 --> 00:00:22,480
+In particular, modified duration is
+
+8
+00:00:22,480 --> 00:00:24,640
+related to the first derivative of
+
+9
+00:00:24,640 --> 00:00:26,890
+the price-yield relationship.
+
+10
+00:00:26,890 --> 00:00:30,160
+It's negative, because prices move inversely with yields.
+
+11
+00:00:30,160 --> 00:00:34,690
+And it's equal to the first derivative dP of the price,
+
+12
+00:00:34,690 --> 00:00:40,620
+with respect to the yield dy, scaled by 1 over the price.
+
+13
+00:00:40,620 --> 00:00:42,570
+Convexity, on the other hand, is related
+
+14
+00:00:42,570 --> 00:00:46,260
+to the second derivative of the price-yield relationship.
+
+15
+00:00:46,260 --> 00:00:49,830
+Since most bonds have positive convexity,
+
+16
+00:00:49,830 --> 00:00:53,820
+the second derivative the price with respect to the yield,
+
+17
+00:00:53,820 --> 00:00:57,480
+scaled by 1 over the price, is positive.
+
+18
+00:00:57,480 --> 00:01:00,510
+Together, modified duration and convexity
+
+19
+00:01:00,510 --> 00:01:02,850
+could be used to approximate the price
+
+20
+00:01:02,850 --> 00:01:06,780
+change of a bond associated with a small change in yields.
+
+21
+00:01:06,780 --> 00:01:09,270
+So dP, the price change of the bond,
+
+22
+00:01:09,270 --> 00:01:13,380
+is approximately equal to negative Dm, which
+
+23
+00:01:13,380 --> 00:01:17,490
+is the modified duration of the bond, times its price, P,
+
+24
+00:01:17,490 --> 00:01:23,610
+times the change in yields, dy, plus 1/2 times the convexity
+
+25
+00:01:23,610 --> 00:01:26,370
+times the price of the bond times the change in yields
+
+26
+00:01:26,370 --> 00:01:27,330
+squared.
+
+27
+00:01:27,330 --> 00:01:30,690
+This ultimately comes from a second-order Taylor series
+
+28
+00:01:30,690 --> 00:01:35,260
+expansion of the price-yield relationship.
+
+29
+00:01:35,260 --> 00:01:37,830
+But those definitions only apply to bonds
+
+30
+00:01:37,830 --> 00:01:41,000
+without any embedded options.
+
+31
+00:01:41,000 --> 00:01:42,760
+How can we adjust our definitions
+
+32
+00:01:42,760 --> 00:01:46,240
+of modified duration and convexity for bonds
+
+33
+00:01:46,240 --> 00:01:48,760
+that have embedded options?
+
+34
+00:01:48,760 --> 00:01:51,700
+Well, since embedded options will affect the sensitivity
+
+35
+00:01:51,700 --> 00:01:54,670
+of bond prices to yields, we can use
+
+36
+00:01:54,670 --> 00:01:59,080
+effective duration and effective convexity instead.
+
+37
+00:01:59,080 --> 00:02:01,240
+These measures are ultimately estimated
+
+38
+00:02:01,240 --> 00:02:05,770
+using a model of how prices move with changes in yields.
+
+39
+00:02:05,770 --> 00:02:08,050
+For the option-free bonds that we considered
+
+40
+00:02:08,050 --> 00:02:10,840
+on the previous slide, the effective duration
+
+41
+00:02:10,840 --> 00:02:13,960
+and effective convexity will be exactly the same
+
+42
+00:02:13,960 --> 00:02:19,160
+as modified duration and standard convexity.
+
+43
+00:02:19,160 --> 00:02:21,260
+Effective duration and effective convexity
+
+44
+00:02:21,260 --> 00:02:25,250
+are very commonly-used in delta and gamma hedging strategies
+
+45
+00:02:25,250 --> 00:02:27,740
+that we reviewed in week three.
+
+46
+00:02:27,740 --> 00:02:30,980
+For example, hedging mortgage portfolios
+
+47
+00:02:30,980 --> 00:02:33,230
+requires using effective duration
+
+48
+00:02:33,230 --> 00:02:36,530
+and effective convexity, because the prepayment
+
+49
+00:02:36,530 --> 00:02:41,310
+option of a mortgage is a type of American call option.
+
+50
+00:02:41,310 --> 00:02:44,220
+Formally, we can define effective duration
+
+51
+00:02:44,220 --> 00:02:46,860
+as follows in equation one.
+
+52
+00:02:46,860 --> 00:02:51,090
+Effective duration is equal to 1 over the price of the bond
+
+53
+00:02:51,090 --> 00:02:54,120
+initially before interest rates change
+
+54
+00:02:54,120 --> 00:02:56,670
+times the difference between the price
+
+55
+00:02:56,670 --> 00:03:00,480
+of the bond after interest rates fall and the price of the bond
+
+56
+00:03:00,480 --> 00:03:02,850
+after interest rates rise divided
+
+57
+00:03:02,850 --> 00:03:07,410
+by 2 times s, where s is the amount the interest rates rise
+
+58
+00:03:07,410 --> 00:03:08,370
+or fall.
+
+59
+00:03:08,370 --> 00:03:11,760
+In the case of duration, this is for a level shift
+
+60
+00:03:11,760 --> 00:03:14,360
+in the yield curve.
+
+61
+00:03:14,360 --> 00:03:17,470
+Note that this equation one and definition
+
+62
+00:03:17,470 --> 00:03:21,010
+of effective duration is conceptually quite similar
+
+63
+00:03:21,010 --> 00:03:23,980
+to the definition of modified duration,
+
+64
+00:03:23,980 --> 00:03:28,450
+except now we replace the first derivative of the change
+
+65
+00:03:28,450 --> 00:03:30,850
+in the price of the bond for the change in yield
+
+66
+00:03:30,850 --> 00:03:35,470
+with its corresponding difference quotient.
+
+67
+00:03:35,470 --> 00:03:39,370
+Similarly, effective convexity is defined as 1
+
+68
+00:03:39,370 --> 00:03:43,180
+over the initial price of the bond times the difference
+
+69
+00:03:43,180 --> 00:03:45,490
+between the price after rates fall
+
+70
+00:03:45,490 --> 00:03:47,680
+minus the initial price of the bond
+
+71
+00:03:47,680 --> 00:03:51,010
+minus the difference between the initial price of the bond
+
+72
+00:03:51,010 --> 00:03:54,460
+minus the price after rates rise, now divided
+
+73
+00:03:54,460 --> 00:03:58,480
+by the change in interest rates squared.
+
+74
+00:03:58,480 --> 00:04:02,020
+Conceptually, this is, again, quite similar to the definition
+
+75
+00:04:02,020 --> 00:04:05,590
+of convexity we saw earlier, except now
+
+76
+00:04:05,590 --> 00:04:09,160
+the second derivative of the bond's price with respect
+
+77
+00:04:09,160 --> 00:04:12,460
+to the change in yields is replaced by its difference
+
+78
+00:04:12,460 --> 00:04:14,440
+quotient.
+
+79
+00:04:14,440 --> 00:04:18,010
+Just like before, we can use effective duration
+
+80
+00:04:18,010 --> 00:04:20,860
+and effective convexity to approximate the price
+
+81
+00:04:20,860 --> 00:04:23,740
+change of a bond with embedded options
+
+82
+00:04:23,740 --> 00:04:26,140
+for a small change in yields.
+
+83
+00:04:26,140 --> 00:04:29,140
+Equation three is identical to the equation that we
+
+84
+00:04:29,140 --> 00:04:36,560
+saw earlier, this one here, except now modified duration
+
+85
+00:04:36,560 --> 00:04:38,750
+and standard convexity are replaced
+
+86
+00:04:38,750 --> 00:04:42,470
+with effective duration and effective convexity.
+
+87
+00:04:42,470 --> 00:04:44,540
+All right, since those definitions
+
+88
+00:04:44,540 --> 00:04:47,480
+of effective duration and effective convexity
+
+89
+00:04:47,480 --> 00:04:51,020
+are rather abstract, let's see if we can illuminate things
+
+90
+00:04:51,020 --> 00:04:53,790
+with an empirical example.
+
+91
+00:04:53,790 --> 00:04:56,060
+Suppose that a mortgage-backed security
+
+92
+00:04:56,060 --> 00:04:59,810
+has an estimated price-yield relationship summarized
+
+93
+00:04:59,810 --> 00:05:01,580
+in the following figure.
+
+94
+00:05:01,580 --> 00:05:03,590
+Such a relationship like this usually
+
+95
+00:05:03,590 --> 00:05:05,510
+comes from a model that's estimated
+
+96
+00:05:05,510 --> 00:05:08,680
+using historical data.
+
+97
+00:05:08,680 --> 00:05:11,320
+In part a we are asked, if yields are currently
+
+98
+00:05:11,320 --> 00:05:15,160
+at 5.5%, what is the effective duration
+
+99
+00:05:15,160 --> 00:05:20,430
+and effective convexity for the mortgage-backed security?
+
+100
+00:05:20,430 --> 00:05:22,410
+Well, according to the figure, the price
+
+101
+00:05:22,410 --> 00:05:28,810
+of the mortgage-backed security is $97 when yields are at 5.5%.
+
+102
+00:05:28,810 --> 00:05:33,730
+So here, when the yield is 5.5%, the price per $100
+
+103
+00:05:33,730 --> 00:05:37,640
+face value is $97.
+
+104
+00:05:37,640 --> 00:05:40,610
+In order to apply equations one and equations two--
+
+105
+00:05:40,610 --> 00:05:43,430
+in order to find the effective duration and effective
+
+106
+00:05:43,430 --> 00:05:46,970
+convexity of the mortgage-backed security, respectively--
+
+107
+00:05:46,970 --> 00:05:52,160
+we can consider a 0.5% increase or decrease in yields.
+
+108
+00:05:52,160 --> 00:05:57,710
+So s is equal to 0.005 as a decimal.
+
+109
+00:05:57,710 --> 00:06:00,560
+A 0.5% increase or decrease in yields
+
+110
+00:06:00,560 --> 00:06:03,320
+is small enough such that the first-order
+
+111
+00:06:03,320 --> 00:06:08,190
+and second-order Taylor series expansions are justified.
+
+112
+00:06:08,190 --> 00:06:11,250
+From the figure, the price of the mortgage-backed security
+
+113
+00:06:11,250 --> 00:06:18,580
+is $100 when yields fall to 5%, so here.
+
+114
+00:06:18,580 --> 00:06:26,570
+And it's equal to $92 when yields rise to 6% here.
+
+115
+00:06:26,570 --> 00:06:30,370
+So from equation one, we can find the effective duration
+
+116
+00:06:30,370 --> 00:06:33,370
+of the mortgage-backed security as follows.
+
+117
+00:06:33,370 --> 00:06:36,250
+It's equal to 1 over the initial price--
+
+118
+00:06:36,250 --> 00:06:41,200
+well, $97 is the price when yields are 5.5%--
+
+119
+00:06:41,200 --> 00:06:46,650
+times the difference between the price when rates fall to 5%
+
+120
+00:06:46,650 --> 00:06:51,360
+of 100 minus the price when rates rise to 6%
+
+121
+00:06:51,360 --> 00:06:58,390
+of 92 divided by 2 times s, which is 2 times 0.005,
+
+122
+00:06:58,390 --> 00:07:03,220
+which is equal to 8.247.
+
+123
+00:07:03,220 --> 00:07:07,270
+Similarly, from equation two, the effective convexity
+
+124
+00:07:07,270 --> 00:07:11,110
+of the mortgage-backed security is 1 over the initial price
+
+125
+00:07:11,110 --> 00:07:15,970
+of 97 times the difference between the price after rates
+
+126
+00:07:15,970 --> 00:07:21,700
+fall of 100 minus the initial price of 97 minus the initial
+
+127
+00:07:21,700 --> 00:07:28,420
+price of 97 minus the price after rates rise of 92 divided
+
+128
+00:07:28,420 --> 00:07:33,430
+by 0.005 squared, which is equal to--
+
+129
+00:07:33,430 --> 00:07:39,310
+get ready-- negative 824.74.
+
+130
+00:07:39,310 --> 00:07:41,620
+In this case, the mortgage-backed security
+
+131
+00:07:41,620 --> 00:07:44,080
+actually has negative convexity.
+
+132
+00:07:44,080 --> 00:07:45,880
+And that's very different from what
+
+133
+00:07:45,880 --> 00:07:49,880
+we saw with most standard bonds earlier in this course.
+
+134
+00:07:49,880 --> 00:07:53,230
+This, however, is actually typical for mortgage bonds
+
+135
+00:07:53,230 --> 00:07:55,690
+as well as for callable bonds more
+
+136
+00:07:55,690 --> 00:07:58,540
+generally when yields are very low.
+
+137
+00:07:58,540 --> 00:08:03,020
+That is when they are more likely to be called.
+
+138
+00:08:03,020 --> 00:08:05,630
+All right, that ends recitation eight.
+
+139
+00:08:05,630 --> 00:08:07,190
+Thank you everyone for coming.
+
+140
+00:08:07,190 --> 00:08:10,660
+And I look forward to seeing you next week.
+

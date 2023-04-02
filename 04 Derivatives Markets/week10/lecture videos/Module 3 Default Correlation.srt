@@ -1,0 +1,248 @@
+0
+00:00:00,000 --> 00:00:00,800
+
+
+1
+00:00:00,800 --> 00:00:03,020
+PROFESSOR: An important driver of risk in CDOs
+
+2
+00:00:03,020 --> 00:00:05,300
+is the default correlation between the bonds
+
+3
+00:00:05,300 --> 00:00:07,880
+and the reference portfolio of credits.
+
+4
+00:00:07,880 --> 00:00:10,040
+Sophisticated investors may choose
+
+5
+00:00:10,040 --> 00:00:12,710
+to speculate on this default correlation,
+
+6
+00:00:12,710 --> 00:00:15,050
+choosing to invest in different tranches,
+
+7
+00:00:15,050 --> 00:00:17,630
+depending on how their view of default correlation
+
+8
+00:00:17,630 --> 00:00:20,810
+affects their perception of the risk-adjusted value
+
+9
+00:00:20,810 --> 00:00:22,670
+of the different tranches.
+
+10
+00:00:22,670 --> 00:00:25,550
+To begin to understand the effects of default correlation,
+
+11
+00:00:25,550 --> 00:00:27,710
+let's consider the loss distribution
+
+12
+00:00:27,710 --> 00:00:30,920
+in each tranche as a function of the correlation of defaults
+
+13
+00:00:30,920 --> 00:00:34,980
+across pairs of bonds in the underlying portfolio.
+
+14
+00:00:34,980 --> 00:00:37,860
+One possibility is a correlation of 1,
+
+15
+00:00:37,860 --> 00:00:41,580
+which means either that all bonds default or none of them
+
+16
+00:00:41,580 --> 00:00:42,660
+do.
+
+17
+00:00:42,660 --> 00:00:47,070
+In that case, the default risk affects all tranches similarly,
+
+18
+00:00:47,070 --> 00:00:50,250
+in that all would take losses in the event of a default
+
+19
+00:00:50,250 --> 00:00:54,080
+and all would receive full payment otherwise.
+
+20
+00:00:54,080 --> 00:00:56,930
+The distribution of losses on a risky portfolio
+
+21
+00:00:56,930 --> 00:00:59,690
+as a function of the degree of default correlation
+
+22
+00:00:59,690 --> 00:01:04,160
+can easily be illustrated via a simulation.
+
+23
+00:01:04,160 --> 00:01:08,450
+Assume a portfolio with 100 names, or bonds, each
+
+24
+00:01:08,450 --> 00:01:12,930
+with individual default probability of 14%.
+
+25
+00:01:12,930 --> 00:01:16,470
+We'll look at the distribution of total portfolio payoffs
+
+26
+00:01:16,470 --> 00:01:18,690
+when the correlation across defaults
+
+27
+00:01:18,690 --> 00:01:25,150
+is either 15%, 40%, or 100%.
+
+28
+00:01:25,150 --> 00:01:28,000
+The results of those simulations for the implied distribution
+
+29
+00:01:28,000 --> 00:01:30,950
+of portfolio losses are shown here.
+
+30
+00:01:30,950 --> 00:01:33,640
+When default correlation is low, there's
+
+31
+00:01:33,640 --> 00:01:37,030
+very little weight on the right tail of the distribution, where
+
+32
+00:01:37,030 --> 00:01:39,190
+default losses are the highest.
+
+33
+00:01:39,190 --> 00:01:41,720
+As default correlation increases,
+
+34
+00:01:41,720 --> 00:01:44,920
+the distribution spreads out, putting much more weight
+
+35
+00:01:44,920 --> 00:01:50,800
+on the very low loss rates, but also on very high loss rates.
+
+36
+00:01:50,800 --> 00:01:53,500
+The effect of the tails of the loss distributions getting
+
+37
+00:01:53,500 --> 00:01:56,290
+wider affects the various tranches quite differently
+
+38
+00:01:56,290 --> 00:01:58,310
+from one another.
+
+39
+00:01:58,310 --> 00:02:00,770
+The safer tranches are adversely affected
+
+40
+00:02:00,770 --> 00:02:03,710
+by an increase in correlation, because they only
+
+41
+00:02:03,710 --> 00:02:07,010
+experience a loss when total losses are very high,
+
+42
+00:02:07,010 --> 00:02:09,500
+and that becomes more likely.
+
+43
+00:02:09,500 --> 00:02:12,410
+By contrast, the equity tranche holders
+
+44
+00:02:12,410 --> 00:02:15,380
+are unaffected when large losses become more likely,
+
+45
+00:02:15,380 --> 00:02:17,570
+because over that range of outcomes
+
+46
+00:02:17,570 --> 00:02:20,900
+they already would have been wiped out.
+
+47
+00:02:20,900 --> 00:02:24,560
+Rather, they benefit from the increased probability
+
+48
+00:02:24,560 --> 00:02:29,150
+of the left tail, of no or very low default losses, which
+
+49
+00:02:29,150 --> 00:02:31,310
+is the situation in which they will receive
+
+50
+00:02:31,310 --> 00:02:33,410
+a full or partial payout.
+
+51
+00:02:33,410 --> 00:02:36,860
+As this graph shows, the equity and mezzanine tranches
+
+52
+00:02:36,860 --> 00:02:39,380
+are much more sensitive to the effect of correlation
+
+53
+00:02:39,380 --> 00:02:42,860
+than is the senior tranche, but its value is also
+
+54
+00:02:42,860 --> 00:02:45,290
+affected by correlation.
+
+55
+00:02:45,290 --> 00:02:48,770
+This description also explains why the equity tranches
+
+56
+00:02:48,770 --> 00:02:52,670
+are described as being long correlation,
+
+57
+00:02:52,670 --> 00:02:54,830
+since they benefit from an increase in default
+
+58
+00:02:54,830 --> 00:02:55,910
+correlation.
+
+59
+00:02:55,910 --> 00:03:00,230
+Conversely, the senior tranches are short correlation
+
+60
+00:03:00,230 --> 00:03:03,520
+since they're harmed if it increases.
+
+61
+00:03:03,520 --> 00:03:05,000
+
+

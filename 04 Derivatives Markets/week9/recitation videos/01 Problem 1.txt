@@ -1,0 +1,66 @@
+
+PROFESSOR: Without further ado, let's begin with problem one.
+Problem one says to consider two 7% annual coupon
+corporate bonds each with one year until maturity.
+Both bonds are expected to default with a 20% probability.
+Investors demand a risk adjusted expected return
+of 4.5% on both bonds, and the only difference between the two
+bonds is that, in the event of default,
+the expected recovery rate on the first bond
+is 75% whereas the expected recovery
+rate on the second bond is 25%.
+
+Use this information to estimate the difference
+in the quoted yields to maturity between the two bonds.
+
+Well, before we solve the problem,
+let's first get some notation out of the way.
+Let P sub 1 be the value of the first bond that
+has the expected recovery rate of 75%,
+and P sub 2 be the value of the second bond
+with the expected recovery rate of 25%.
+Assume that both bonds in this example
+have a face value of 100.
+Since there's one year until maturity on both bonds,
+the holder of each bond will receive its face value of 100
+plus a terminal coupon payment of 7
+if the bond doesn't default, which occurs 100 minus 20,
+which is equal to 80% of the time.
+If the first bond defaults, then the holder of the bond will
+receive 75% --
+the expected recovery rate --
+times the terminal payoff of 100 of the face value
+plus the terminal coupon of 7, which is equal to 80.25.
+On the other hand if the second bond defaults,
+the holder of the bond will receive 25% --
+it's expected recovery rate --
+times 107, which is equal to 26.75.
+Thus, we can solve for P1, the price of the first bond,
+as 0.8, which is the probability that the bond doesn't default,
+times 107, its terminal payoff, discounted at the risk adjusted
+interest rate of 4.5%, plus 0.2, the probability
+that the bond does default, times its expected recovery
+rate of 75% times it's terminal payoff of 107,
+also discounted at the risk adjusted
+interest rate of 4.5%, which is equal to 97.273.
+A similar calculation for the price of the second bond
+yields a price of 87.033.
+The only difference here is that now the expected recovery
+rate if the bond does default is equal to 25% rather than 75%.
+Finally, we can find the yield-to-maturity of each bond
+as follows.
+The yield-to-maturity, for instance on the first bond,
+is the single interest rate that equates
+the present value of the bond on the left hand
+side with its price.
+Solving the first equation for Y1,
+we find that the yield to maturity
+on the first bond that has the higher expected recovery rate
+is 10%.
+A similar calculation shows that the yield
+to maturity on the second bond that has the lower recovery
+rate is 22.94.
+Thus, the difference between these two yields is 12.94.
+Intuitively, the higher yield on the second bond,
+that is, the bond with the lower recovery rate,
+reflects its greater credit risk.

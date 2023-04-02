@@ -1,0 +1,680 @@
+0
+00:00:00,000 --> 00:00:01,680
+PROFESSOR: Just as their name suggests,
+
+1
+00:00:01,680 --> 00:00:03,480
+barrier options have features that
+
+2
+00:00:03,480 --> 00:00:06,550
+depend on the underlying asset hitting a barrier value
+
+3
+00:00:06,550 --> 00:00:08,910
+specified in the contract.
+
+4
+00:00:08,910 --> 00:00:10,740
+Barrier put and call options fall
+
+5
+00:00:10,740 --> 00:00:12,910
+into three broad categories.
+
+6
+00:00:12,910 --> 00:00:16,530
+First, there's knock-out options that
+
+7
+00:00:16,530 --> 00:00:18,750
+go out of existence if the underlying
+
+8
+00:00:18,750 --> 00:00:23,300
+price hits a specified barrier.
+
+9
+00:00:23,300 --> 00:00:26,960
+A down-and-out option is canceled when the price falls
+
+10
+00:00:26,960 --> 00:00:29,700
+below a specified barrier.
+
+11
+00:00:29,700 --> 00:00:33,540
+And an up-and-out option is canceled if the price
+
+12
+00:00:33,540 --> 00:00:36,990
+rises above the barrier.
+
+13
+00:00:36,990 --> 00:00:40,830
+Second, knock-in options are activated when
+
+14
+00:00:40,830 --> 00:00:44,350
+a specified barrier is hit.
+
+15
+00:00:44,350 --> 00:00:46,420
+A down-and-in knock-in in option is
+
+16
+00:00:46,420 --> 00:00:50,620
+activated when the underlying price falls below the barrier.
+
+17
+00:00:50,620 --> 00:00:53,410
+And up-and-in option is activated when the underlying
+
+18
+00:00:53,410 --> 00:00:56,760
+price rises above the barrier.
+
+19
+00:00:56,760 --> 00:00:59,380
+The third category, rebate options,
+
+20
+00:00:59,380 --> 00:01:01,350
+make a fixed payment when a barrier
+
+21
+00:01:01,350 --> 00:01:05,290
+is hit from above, a down rebate,
+
+22
+00:01:05,290 --> 00:01:09,340
+or hit from below, an up rebate.
+
+23
+00:01:09,340 --> 00:01:11,950
+We can ask how did the values of these options
+
+24
+00:01:11,950 --> 00:01:17,180
+compare to the corresponding options without the barriers.
+
+25
+00:01:17,180 --> 00:01:19,790
+Well, clearly these options are worth less
+
+26
+00:01:19,790 --> 00:01:21,560
+because there are times when they're
+
+27
+00:01:21,560 --> 00:01:24,170
+inoperative when a non-barrier option would
+
+28
+00:01:24,170 --> 00:01:26,120
+have a positive payoff.
+
+29
+00:01:26,120 --> 00:01:30,890
+As such, they offer a way to buy more limited protection focused
+
+30
+00:01:30,890 --> 00:01:32,900
+on situations where the protection is
+
+31
+00:01:32,900 --> 00:01:35,000
+most highly valued.
+
+32
+00:01:35,000 --> 00:01:38,540
+These can be thought of as alternatives to buying out
+
+33
+00:01:38,540 --> 00:01:42,610
+of the money traditional options.
+
+34
+00:01:42,610 --> 00:01:46,660
+This graph shows an example of how a down-and-in option works.
+
+35
+00:01:46,660 --> 00:01:49,855
+The strike price in this case is set above the barrier.
+
+36
+00:01:49,855 --> 00:01:53,380
+
+
+37
+00:01:53,380 --> 00:01:57,490
+Also, the stock price, at the time the option is written,
+
+38
+00:01:57,490 --> 00:02:00,670
+is above both the strike price and the barrier.
+
+39
+00:02:00,670 --> 00:02:03,320
+
+
+40
+00:02:03,320 --> 00:02:06,050
+The option doesn't become active until the stock price
+
+41
+00:02:06,050 --> 00:02:09,490
+hits the barrier from above.
+
+42
+00:02:09,490 --> 00:02:15,610
+Along this particular path, that happens
+
+43
+00:02:15,610 --> 00:02:21,540
+when it gets here, which is at about six months.
+
+44
+00:02:21,540 --> 00:02:23,910
+The payoff on this path will depend
+
+45
+00:02:23,910 --> 00:02:25,980
+on the asset price and the strike price
+
+46
+00:02:25,980 --> 00:02:27,225
+at the expiration date.
+
+47
+00:02:27,225 --> 00:02:29,860
+
+
+48
+00:02:29,860 --> 00:02:33,220
+These barrier options must satisfy the parity conditions
+
+49
+00:02:33,220 --> 00:02:36,050
+that are shown here.
+
+50
+00:02:36,050 --> 00:02:41,060
+The relationships are intuitive and pretty easy to establish.
+
+51
+00:02:41,060 --> 00:02:43,310
+For example, consider a portfolio
+
+52
+00:02:43,310 --> 00:02:47,930
+consisting of an up-and-in call and an up-and-out call,
+
+53
+00:02:47,930 --> 00:02:51,140
+both on the same underlying stock with the same strike
+
+54
+00:02:51,140 --> 00:02:55,420
+price, the same barrier, and the same expiration date.
+
+55
+00:02:55,420 --> 00:02:59,390
+As long as the underlying stock price stays below the barrier,
+
+56
+00:02:59,390 --> 00:03:02,050
+then the up-and-out call is operative
+
+57
+00:03:02,050 --> 00:03:05,810
+and the up-and-in call is inoperative.
+
+58
+00:03:05,810 --> 00:03:09,770
+If it hits the barrier from below, things switch.
+
+59
+00:03:09,770 --> 00:03:12,380
+The up-and-in option becomes operative
+
+60
+00:03:12,380 --> 00:03:16,800
+and the up-and-out call option becomes inoperative,
+
+61
+00:03:16,800 --> 00:03:20,790
+thus just one of the options is always in effect
+
+62
+00:03:20,790 --> 00:03:23,160
+and the barrier doesn't really matter.
+
+63
+00:03:23,160 --> 00:03:27,950
+The outcome is the same as with a standard call.
+
+64
+00:03:27,950 --> 00:03:30,230
+As with other parity relationships,
+
+65
+00:03:30,230 --> 00:03:32,900
+the formulas can be useful when you have a pricing
+
+66
+00:03:32,900 --> 00:03:35,510
+formula for two of the options involved
+
+67
+00:03:35,510 --> 00:03:39,560
+and want to infer the value of the third option.
+
+68
+00:03:39,560 --> 00:03:41,510
+Now pricing these options typically
+
+69
+00:03:41,510 --> 00:03:45,110
+involves a binomial tree or Monte Carlo simulation.
+
+70
+00:03:45,110 --> 00:03:47,860
+And we'll get to those soon.
+
+71
+00:03:47,860 --> 00:03:50,530
+But the example here shows the value
+
+72
+00:03:50,530 --> 00:03:53,830
+of a variety of barrier currency put options.
+
+73
+00:03:53,830 --> 00:03:55,870
+You can think of it as a continuation
+
+74
+00:03:55,870 --> 00:03:57,760
+of the previous example we were looking
+
+75
+00:03:57,760 --> 00:04:00,700
+at where the strike prices represent
+
+76
+00:04:00,700 --> 00:04:03,960
+the dollar value of one euro.
+
+77
+00:04:03,960 --> 00:04:06,580
+If you look at the outcomes closely,
+
+78
+00:04:06,580 --> 00:04:09,060
+you can verify that the prices shown
+
+79
+00:04:09,060 --> 00:04:12,190
+satisfy the parity relations.
+
+80
+00:04:12,190 --> 00:04:14,770
+You should also be able to convince yourself
+
+81
+00:04:14,770 --> 00:04:18,790
+that the qualitative pattern of prices relative to the two
+
+82
+00:04:18,790 --> 00:04:21,610
+different option types, the different strikes,
+
+83
+00:04:21,610 --> 00:04:24,550
+and the different barrier values all make sense.
+
+84
+00:04:24,550 --> 00:04:27,290
+
+
+85
+00:04:27,290 --> 00:04:30,050
+Lookback options have payoffs or strike prices
+
+86
+00:04:30,050 --> 00:04:33,590
+that give the holder the benefit of perfect hindsight.
+
+87
+00:04:33,590 --> 00:04:36,530
+That's because they depend on the most favorable outcome
+
+88
+00:04:36,530 --> 00:04:39,410
+for the option holder over the life of the option.
+
+89
+00:04:39,410 --> 00:04:43,130
+Lookback options can take a variety of forms.
+
+90
+00:04:43,130 --> 00:04:46,520
+A floating lookback call has a payoff
+
+91
+00:04:46,520 --> 00:04:48,650
+at maturity based on the difference
+
+92
+00:04:48,650 --> 00:04:51,920
+between the underlying price at maturity
+
+93
+00:04:51,920 --> 00:04:54,650
+and the minimum price of the underlying
+
+94
+00:04:54,650 --> 00:04:57,590
+over the life of the option.
+
+95
+00:04:57,590 --> 00:05:00,020
+A floating lookback put, similarly,
+
+96
+00:05:00,020 --> 00:05:03,200
+has a payoff equal to the maximum price of the underlying
+
+97
+00:05:03,200 --> 00:05:07,100
+over the life of the option minus the value
+
+98
+00:05:07,100 --> 00:05:10,920
+of the underlying at expiration.
+
+99
+00:05:10,920 --> 00:05:14,550
+Therefore, in both cases, it's the strike price
+
+100
+00:05:14,550 --> 00:05:17,170
+that's floating.
+
+101
+00:05:17,170 --> 00:05:23,660
+With a fixed lookback call, the strike price K is fixed
+
+102
+00:05:23,660 --> 00:05:26,300
+but the payoff, if it's positive,
+
+103
+00:05:26,300 --> 00:05:28,940
+will be based on the maximum price of the underlying
+
+104
+00:05:28,940 --> 00:05:31,620
+over the life of the option.
+
+105
+00:05:31,620 --> 00:05:34,920
+And with a fixed lookback put, again the strike price
+
+106
+00:05:34,920 --> 00:05:39,030
+is fixed at K, but the payoff, if it's positive,
+
+107
+00:05:39,030 --> 00:05:41,340
+depends on the minimum realized price
+
+108
+00:05:41,340 --> 00:05:44,070
+over the life of the option.
+
+109
+00:05:44,070 --> 00:05:45,840
+Not surprisingly, these options are
+
+110
+00:05:45,840 --> 00:05:48,720
+relatively expensive because the payoffs are higher than
+
+111
+00:05:48,720 --> 00:05:51,610
+on otherwise similar options.
+
+112
+00:05:51,610 --> 00:05:55,210
+Analytical formulas are available to value them.
+
+113
+00:05:55,210 --> 00:05:59,260
+And those assume a lognormal process for the underlying.
+
+114
+00:05:59,260 --> 00:06:02,320
+They're also based on the statistical distributions
+
+115
+00:06:02,320 --> 00:06:05,380
+of the maximum and minimum.
+
+116
+00:06:05,380 --> 00:06:07,630
+It's also straightforward to value these options
+
+117
+00:06:07,630 --> 00:06:10,510
+numerically.
+
+118
+00:06:10,510 --> 00:06:14,020
+Another type of exotic options, shout options,
+
+119
+00:06:14,020 --> 00:06:16,730
+are closely related to lookback options.
+
+120
+00:06:16,730 --> 00:06:19,150
+Let me tell you a little bit about them.
+
+121
+00:06:19,150 --> 00:06:23,290
+With a shout option, the holder has one opportunity
+
+122
+00:06:23,290 --> 00:06:27,010
+to shout when the price reaches a level that will determine
+
+123
+00:06:27,010 --> 00:06:30,630
+a floor payoff for the option.
+
+124
+00:06:30,630 --> 00:06:33,660
+For example, imagine a shout call option
+
+125
+00:06:33,660 --> 00:06:36,930
+that has a strike price of $25.
+
+126
+00:06:36,930 --> 00:06:40,860
+And also imagine that the holder of the call shouts
+
+127
+00:06:40,860 --> 00:06:45,300
+when the price of the underlying asset hits $30.
+
+128
+00:06:45,300 --> 00:06:50,310
+Well, if the final asset price at expiration is less than $30,
+
+129
+00:06:50,310 --> 00:06:53,790
+the holder receives the payoff of the $30
+
+130
+00:06:53,790 --> 00:06:56,490
+that they shouted minus the $25 strike
+
+131
+00:06:56,490 --> 00:07:00,190
+price, so a payoff of $5.
+
+132
+00:07:00,190 --> 00:07:03,120
+If the stock price at expiration is greater than 30,
+
+133
+00:07:03,120 --> 00:07:05,520
+the holder receives the excess of the asset
+
+134
+00:07:05,520 --> 00:07:09,090
+price over the $25 strike price as they
+
+135
+00:07:09,090 --> 00:07:11,826
+would on a regular call.
+
+136
+00:07:11,826 --> 00:07:15,080
+A shout option is a bit cheaper than a lookback option
+
+137
+00:07:15,080 --> 00:07:19,310
+because the shout, even under an optimal shouting strategy,
+
+138
+00:07:19,310 --> 00:07:22,340
+may turn out to be less advantageous than the payoff
+
+139
+00:07:22,340 --> 00:07:24,260
+you'd get with perfect foresight.
+
+140
+00:07:24,260 --> 00:07:27,170
+
+
+141
+00:07:27,170 --> 00:07:29,990
+A very popular type of exotic option contract
+
+142
+00:07:29,990 --> 00:07:32,000
+is an exchange option.
+
+143
+00:07:32,000 --> 00:07:34,100
+An exchange option has a payoff which
+
+144
+00:07:34,100 --> 00:07:37,700
+depends on the amount by which the price of one asset,
+
+145
+00:07:37,700 --> 00:07:41,780
+which we'll call S, exceeds the price of a second asset we'll
+
+146
+00:07:41,780 --> 00:07:46,430
+call capital N. It's a way to make a bet on relative price
+
+147
+00:07:46,430 --> 00:07:49,520
+movements without exposure to changes in prices that are
+
+148
+00:07:49,520 --> 00:07:51,980
+common across both securities.
+
+149
+00:07:51,980 --> 00:07:55,370
+For example, you might want to bet the stock price of Tesla
+
+150
+00:07:55,370 --> 00:07:57,950
+will fall relative to that of Toyota
+
+151
+00:07:57,950 --> 00:08:00,830
+but without having to take a stand on whether the price
+
+152
+00:08:00,830 --> 00:08:04,040
+of auto manufacturers is likely to rise or fall
+
+153
+00:08:04,040 --> 00:08:06,830
+over the life of the option.
+
+154
+00:08:06,830 --> 00:08:10,310
+When both assets are assumed to be lognormally distributed
+
+155
+00:08:10,310 --> 00:08:14,030
+and when the option is European, the valuation formula
+
+156
+00:08:14,030 --> 00:08:17,210
+Bears some similarity to the Black-Scholes-Merton model
+
+157
+00:08:17,210 --> 00:08:20,570
+with a second asset N in place of the strike price
+
+158
+00:08:20,570 --> 00:08:22,460
+on a standard call option.
+
+159
+00:08:22,460 --> 00:08:24,110
+The formula is given here.
+
+160
+00:08:24,110 --> 00:08:27,150
+
+
+161
+00:08:27,150 --> 00:08:29,610
+As one would expect, the solution
+
+162
+00:08:29,610 --> 00:08:32,190
+depends on the variance of both assets
+
+163
+00:08:32,190 --> 00:08:35,429
+and the correlation rho between them.
+
+164
+00:08:35,429 --> 00:08:38,370
+The higher that correlation, the less valuable
+
+165
+00:08:38,370 --> 00:08:40,590
+the option will be because the chance
+
+166
+00:08:40,590 --> 00:08:44,020
+that the two prices will diverge becomes smaller.
+
+167
+00:08:44,020 --> 00:08:48,370
+And as usual, the value depends on the dividend yields,
+
+168
+00:08:48,370 --> 00:08:50,610
+which have to be taken into account because they
+
+169
+00:08:50,610 --> 00:08:54,410
+affect the relative drift in the two asset prices.
+

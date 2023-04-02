@@ -1,0 +1,157 @@
+
+PROFESSOR: When the default barrier is more complicated
+and default can occur at any time,
+binomial pricing approach is a natural choice.
+I'll illustrate that approach with a simplified version
+of an analysis I led at the Congressional Budget Office
+to determine the value of a loan guarantee made by the US
+government to America West Airlines,
+or AWA, shortly after 9/11.
+At that time, AWA was the eighth largest passenger airline
+in the United States but it had already
+been experiencing financial difficulties
+as had the rest of the industry.
+Following 9/11, Moody's downgraded AWA
+from B1 in early April of 2001 to CA on November 21, 2001.
+Well, to help airlines that had experienced large revenue
+drops in the wake of the terrorist attack,
+Congress enacted a program to allow airlines
+to apply for credit guarantees.
+AWA received approval for a government loan guarantee
+on $380 million of new debt it planned to issue.
+In return, the government received fees and warrants.
+My team was asked to calculate the value of the net assistance
+provided to AWA and I want to show you that analysis.
+The valuation exercise was based on estimates of the key inputs
+that are listed here.
+The risk-free rate, loan maturity, loan coupon rate,
+and rest of the firm capital structure were observable.
+Since AWA was publicly traded, data
+was available on historical returns that
+could be used to estimate its equity beta and equity
+volatility.
+The default barrier was set to be
+similar to the one I just described for the KMV model
+based on its liabilities.
+The guaranteed debt was pre-payable and because
+of the high guarantee fees charged by the government,
+it seemed likely that it would be prepaid
+if AWA's assets recovered to the point
+where it could more inexpensively
+borrow on its own.
+Rules for pre-payment based on an assumed prepayment barrier
+were therefore also incorporated.
+As in all Morton style models, a first critical step
+is to estimate the initial value of firm assets and asset
+volatility.
+That first stage was based on using a simple Merton
+model with a single debt maturity date.
+Sensitivity analysis showed that the results
+were fairly stable over a range of plausible assumptions
+for the default barrier.
+The next step was to represent the returns on assets
+as a normally distributed stochastic process
+with a constant drift.
+That model can be represented in either a physical or
+risk-neutral form, the only difference
+being the drift term.
+In the physical representation, the drift
+is the expected risk-adjusted return
+on assets minus any payouts.
+That representation is useful for analyzing
+the true distribution of possible outcomes.
+In the risk-neutral representation,
+the drift is based on the risk-free rate, also
+minus an assumed payout rate.
+That representation is used for pricing derivatives
+on the asset process, including the loan guarantee,
+the warrants received by the government, and the fees paid.
+To represent that continuous time process
+on a discrete binomial tree with time step,
+delta T, the asset process on the up and down nodes
+is given by these equations.
+Here they're shown for the risk-neutral case.
+The drift affects both subsequent nodes the same way
+and the addition or subtraction of the volatility term
+causes the vertical distance between the two nodes
+at the same time to be spaced by 2 standard deviations.
+To price the guarantee, the next step
+is to identify the nodes where a default will
+occur based on comparing the asset value to the default
+barrier.
+Say a default cause is here and here.
+To keep the numerical example simple,
+I'm abstracting from the more complicated situation for AWA
+and assuming its only liability is a guaranteed zero coupon
+bond that has a face value of F.
+The guaranteed payout on nodes who are a default occurs
+is calculated, weighted by the probability
+of reaching that node, and discounted back to time 0.
+To attach numbers to the example,
+imagine that the guarantee is on a three-year zero coupon
+bond with a face value of $900, that the risk-free interest
+rate is 5%, and that the risk neutral probability of an up
+is 0.5.
+The initial asset value is estimated to be $1,000,
+and the calibrated tree with the inferred asset
+volatility and other assumptions looks like the one pictured
+here.
+Default occurs at time 3 on the lowest two nodes
+because the asset value is less than the $900 face
+value of the bond.
+
+This tree shows the payout by the government
+on the guarantee on each node where a default occurs.
+Discounting back to time 0 implies a guarantee value
+of 30.126.
+The risky bond value can be found
+by calculating its value as if it had no default risk
+and subtracting the value of the guarantee.
+The calibrated binomial model of AWA's asset value
+was used to estimate not only the value of the government
+guarantee but also the value of the warrants and guarantee fees
+that the firm gave the government in exchange.
+This table summarizes the terms of the deal.
+Notice that at 8% annually, the guarantee fee
+was quite high, although still substantially less
+than the credit spread AWA would have faced directly
+in the market without a guarantee.
+With the guarantee, AWA was able to borrow at a much lower rate
+of LIBOR plus 40 basis points.
+You may be wondering why, with the guarantee,
+the borrowing rate is still higher than the risk-free rate.
+That can be attributed to the low liquidity of the debt
+and also that investors may believe
+that an unforeseen event could cause the guarantee
+to be revoked.
+The warrants gave the government the right
+to purchase 18.8 million shares of stock for $3 per share
+after 10 years.
+The results of the AWA analysis are summarized here.
+The guarantee was estimated to be worth $150.5 million,
+more than the sum of the value of the warrants and fees.
+Unmet, the present value of the subsidy
+was estimated to be $43.7 million.
+Note that whereas the loan guarantee had payouts
+on the lower branches of the tree,
+the valuation of the warrants was
+based on their payouts occurring on the upper branches.
+The fees were also valued on the tree.
+Fee payments were positive on most of the nodes
+but zero on some of them.
+The possibility of zero fees arose
+because the loan was assumed to be prepaid on nodes with a very
+high asset value and also because no fees
+were paid on nodes where the firm was in default.
+A final comment is that this estimate represents the market
+value of the net subsidy.
+In its official cost estimates, the US government
+treats its cost of capital as the risk-free rate,
+effectively ignoring the cost of the market risk
+it passes through to taxpayers when
+it provides credit support.
+Under that assumption, the net profit
+is estimated to be positive because the warrants are
+assessed to be worth more, and the guarantees
+are assessed to be worth less than
+in this market-based analysis.

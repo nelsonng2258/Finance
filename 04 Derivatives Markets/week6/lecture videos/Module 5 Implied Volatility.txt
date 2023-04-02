@@ -1,0 +1,162 @@
+
+PROFESSOR: In the context of the Black-Scholes-Merton model,
+implied volatility is defined as the level of the volatility
+parameter, sigma, such that given the other formula inputs,
+the model price for an option matches its market price.
+For example, say we know from the table we looked
+at earlier today that the market price of a put option
+with a strike price of $1,500 and a time to expiration
+of 0.12 is equal to $20.35.
+We can find the implied volatility, sigma sub
+imp, where "imp" stands for implied,
+by using the Black-Scholes-Merton formula
+for the price of a put calibrated
+with the other inputs we know and solving it
+for sigma sub imp that's consistent with that observed
+market price of the option.
+Clearly this means that every option in the market
+can potentially have a different implied volatility.
+You may have heard the term volatility
+smile or volatility smirk.
+Those terms refer to the typical shape of implied volatility
+when plotted as a function of the moneyness
+of the underlying option, holding
+all the parameters other than the strike price fixed.
+For example, this figure shows that there is a volatility
+smirk implied by the market prices for put options
+given in the table we looked at earlier.
+Had the implied volatility started
+increasing for high levels of moneyness as sometimes happens,
+it would have been described as a smile instead of a smirk.
+For comparison, the volatility estimate
+we saw based on the last three months of data
+is also plotted on the graph, as is the volatility estimate that
+comes out of just looking at the last month of data.
+Under these market conditions, the implied volatilities
+were all higher than the last month of historical volatility,
+but similar on average to the historical volatility based
+on a three month look back.
+The relationship between implied volatility
+and historical volatility can vary considerably over time.
+That's because implied volatility is forward looking
+and expectations about the future
+can become quite different than what was
+experienced in the recent past.
+Estimates of implied volatility are
+useful for several purposes.
+One is simply to get a forward looking read on how
+market participants gauge the amount of general market
+uncertainty.
+Higher uncertainty translates to higher options
+prices, which in turn means higher implied volatilities.
+Remember that Vega, the effect of volatility
+on options prices, is always positive,
+both for puts and calls.
+The graph here compares implied volatilities,
+indicated by the lighter dashed line,
+to volatilities estimated using historical data,
+the solid line.
+The two series tend to track each other over time,
+but sometimes there can be significant differences
+between them.
+A few regularities stand out.
+One is that implied volatility tends
+to be higher than historical volatility,
+and that the difference becomes more pronounced during periods
+where volatility is unusually high.
+Those differences are consistent with options prices containing
+a risk premium that isn't captured
+by the Black-Scholes-Merton model.
+I thought you might be interested in seeing
+some more recent data on implied volatilities.
+This graph plots the VIX from 2017 through October of 2021.
+The VIX is the most commonly used measure
+of implied volatility for the overall stock market
+and we'll talk more about it shortly.
+The graph shows that the stock market was relatively calm
+over the earlier part of this period.
+The onset of the COVID-19 panic caused implied volatility
+to spike sharply, and then to stay elevated
+over pre-pandemic levels.
+A very practical use of implied volatility
+is to look for profitable trading opportunities
+in the options market.
+If you look directly at the prices of options
+with different maturities and strike prices,
+it's impossible to directly evaluate
+which are relatively expensive and which are relatively cheap.
+With different strike prices, there
+are differences in intrinsic value, which
+is the difference between the stock price and the strike
+price.
+Those differences have a significant but variable effect
+on the value of an option.
+Different maturities are hard to compare
+because that entails adjustments for time value and uncertainty.
+For example, if you were to directly compare the market
+price on May 3, 2007 of two of the put options we looked
+at with maturity of 0.12, one with a strike price of $1,500
+and another with a strike price of $1,475,
+you would find $1.00 difference between them of $7.75.
+You wouldn't know how much of a difference
+to attribute to the $25 difference in their strike
+prices and how much to attribute to something else.
+Instead of looking directly at prices
+to make value comparisons, you could take the data
+and create what's called an implied volatility surface.
+An implied volatility surface plots
+implied volatility on the vertical z-axis
+of a three-dimensional graph with maturity and moneyness
+on the x- and y-axis.
+This can make it much clearer which options appear cheap
+and which appear expensive.
+An option with a higher implied volatility compared
+to its close neighbors on the volatility surface
+are relatively expensive, controlling
+for the most important sources of price variation.
+Options that are significantly below the surface, that
+have a relatively low implied volatility, are cheap.
+A trading strategy then is to buy options
+that seem significantly underpriced
+and to sell options that appear to be significantly overpriced.
+Be warned though, if you do this without hedging those trades,
+you're very exposed to changes in market conditions
+that affect the value of your position.
+A more prudent strategy would be to delta or delta gamma
+hedge those trades using liquid options
+or a replicating portfolio of the underlying stock
+or a combination of the two.
+By hedging, you're then left with a pure bet
+on the price of the overpriced or underpriced option moving
+back in line with other options.
+The VIX is an index of the S&P 500 implied volatility
+based on options traded on the S&P 500
+index at the CBOE with expirations
+between 23 and 37 days.
+Note that the VIX is based on an average across options
+with different amounts of moneyness,
+and that the individual implied volatilities on the underlying
+contracts may differ significantly
+from the average that's the VIX.
+For that reason, the VIX is useful in trading strategies
+based on general trends in stock market volatility.
+Both futures and options are traded on the VIX.
+And those derivatives can be used to hedge or to speculate.
+A long position in volatility means
+that you profit if volatility rises and vice
+versa for short positions.
+An example of using the VIX to hedge
+would be for an index fund manager who's
+compensated based on how closely his portfolio tracks the S&P
+500 index.
+Because tracking error tends to rise with volatility,
+the manager can hedge his compensation
+by buying a contract whose payoff increases
+with volatility.
+A speculative example is if you want
+to make a directional bet on what will happen to market
+volatility and you want to avoid a directional bet
+on whether the market will rise or fall.
+Recall that you can also use options
+to bet on volatility using long and short positions
+in straddles and strangles.

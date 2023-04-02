@@ -1,0 +1,516 @@
+0
+00:00:00,000 --> 00:00:01,940
+
+
+1
+00:00:01,940 --> 00:00:03,440
+PROFESSOR: The Merton model provides
+
+2
+00:00:03,440 --> 00:00:07,960
+an analytical approximation formula for valuing risky debt.
+
+3
+00:00:07,960 --> 00:00:10,930
+It's in the spirit of the Black-Scholes-Merton model
+
+4
+00:00:10,930 --> 00:00:14,230
+but it's different in a number of respects.
+
+5
+00:00:14,230 --> 00:00:17,860
+Most fundamentally, it starts with the assumption
+
+6
+00:00:17,860 --> 00:00:19,540
+that it's the underlying firm asset
+
+7
+00:00:19,540 --> 00:00:22,150
+value that's log-normally distributed,
+
+8
+00:00:22,150 --> 00:00:24,640
+not its stock price.
+
+9
+00:00:24,640 --> 00:00:28,090
+The formula here represents the resulting distribution
+
+10
+00:00:28,090 --> 00:00:36,700
+of a firm's asset value, V sub T, at time T.
+
+11
+00:00:36,700 --> 00:00:39,790
+The value depends on a drift term that's
+
+12
+00:00:39,790 --> 00:00:43,870
+parameterized by a constant return parameter, mu,
+
+13
+00:00:43,870 --> 00:00:47,920
+and a volatility correction of minus one half sigma squared.
+
+14
+00:00:47,920 --> 00:00:50,660
+
+
+15
+00:00:50,660 --> 00:00:56,000
+The volatility term is based on the parameter, sigma,
+
+16
+00:00:56,000 --> 00:01:01,430
+multiplied by the square root of the horizon, T, and by a draw
+
+17
+00:01:01,430 --> 00:01:06,560
+from a standard normal density function, epsilon.
+
+18
+00:01:06,560 --> 00:01:10,630
+Assets are financed with a combination of debt and equity.
+
+19
+00:01:10,630 --> 00:01:13,600
+The zero coupon debt is issued at time zero,
+
+20
+00:01:13,600 --> 00:01:19,960
+and comes due at time T. As we saw in the payoff diagrams,
+
+21
+00:01:19,960 --> 00:01:24,520
+the debt will be paid in full if the asset value V of T
+
+22
+00:01:24,520 --> 00:01:28,150
+covers its face value and the equity holders own
+
+23
+00:01:28,150 --> 00:01:31,000
+the remaining asset value.
+
+24
+00:01:31,000 --> 00:01:33,790
+If V sub T is less than F, the debt holders
+
+25
+00:01:33,790 --> 00:01:37,330
+become the owners of the firm, and the original equity holders
+
+26
+00:01:37,330 --> 00:01:40,170
+get nothing.
+
+27
+00:01:40,170 --> 00:01:42,480
+Although we're ultimately interested in valuing
+
+28
+00:01:42,480 --> 00:01:45,540
+the risky debt of the firm, the first step
+
+29
+00:01:45,540 --> 00:01:48,660
+is to value of the firm's equity, whose payoff is
+
+30
+00:01:48,660 --> 00:01:52,860
+the max of V of T minus F and zero,
+
+31
+00:01:52,860 --> 00:01:57,100
+which is a call option on the firm's assets.
+
+32
+00:01:57,100 --> 00:01:59,440
+Under the assumptions made, then, equity
+
+33
+00:01:59,440 --> 00:02:02,080
+can be valued using the Black-Scholes-Merton model
+
+34
+00:02:02,080 --> 00:02:04,870
+with the face value of debt as the strike price
+
+35
+00:02:04,870 --> 00:02:08,919
+and with the firm's assets as the underlying variable.
+
+36
+00:02:08,919 --> 00:02:11,530
+The familiar formula for the value of a call option
+
+37
+00:02:11,530 --> 00:02:14,550
+is shown here.
+
+38
+00:02:14,550 --> 00:02:16,820
+We know that the volatility of a firm's equity
+
+39
+00:02:16,820 --> 00:02:19,970
+can be estimated based on historical stock price data
+
+40
+00:02:19,970 --> 00:02:22,430
+or from implied volatilities of options
+
+41
+00:02:22,430 --> 00:02:24,570
+that are traded on the firm.
+
+42
+00:02:24,570 --> 00:02:27,080
+However, it's not easy to directly infer
+
+43
+00:02:27,080 --> 00:02:29,420
+the volatility of a firm's assets
+
+44
+00:02:29,420 --> 00:02:32,630
+because assets generally aren't traded.
+
+45
+00:02:32,630 --> 00:02:36,570
+Or to put it differently, we could estimate asset volatility
+
+46
+00:02:36,570 --> 00:02:38,990
+if we had historical data on both the market
+
+47
+00:02:38,990 --> 00:02:43,070
+value of a firm's equity and the market value of its debt,
+
+48
+00:02:43,070 --> 00:02:45,260
+but it's often difficult to find data
+
+49
+00:02:45,260 --> 00:02:47,240
+on the market price of a firm's debt
+
+50
+00:02:47,240 --> 00:02:49,880
+because either it trades infrequently
+
+51
+00:02:49,880 --> 00:02:52,880
+or it's privately placed and that information
+
+52
+00:02:52,880 --> 00:02:54,710
+isn't made public.
+
+53
+00:02:54,710 --> 00:02:56,720
+Professor Merton came up with a clever way
+
+54
+00:02:56,720 --> 00:02:58,970
+to get around that problem, which
+
+55
+00:02:58,970 --> 00:03:03,110
+is to use the formula for vega, the sensitivity of option
+
+56
+00:03:03,110 --> 00:03:06,020
+prices to changes in the volatility of the underlying
+
+57
+00:03:06,020 --> 00:03:08,000
+asset.
+
+58
+00:03:08,000 --> 00:03:10,850
+The formula for vega that comes out of the Black-Scholes-Merton
+
+59
+00:03:10,850 --> 00:03:15,350
+model implies that the volatility of equity returns --
+
+60
+00:03:15,350 --> 00:03:17,900
+here, sigma E --
+
+61
+00:03:17,900 --> 00:03:22,970
+is related to the volatility of asset returns, sigma,
+
+62
+00:03:22,970 --> 00:03:23,855
+by this equation.
+
+63
+00:03:23,855 --> 00:03:27,060
+
+
+64
+00:03:27,060 --> 00:03:30,180
+Written in this form, vega highlights
+
+65
+00:03:30,180 --> 00:03:32,190
+that the volatility of equity can
+
+66
+00:03:32,190 --> 00:03:34,890
+be much larger than that of the assets
+
+67
+00:03:34,890 --> 00:03:38,250
+through a leverage effect, which concentrates the asset
+
+68
+00:03:38,250 --> 00:03:41,990
+volatility on the equity.
+
+69
+00:03:41,990 --> 00:03:44,090
+This equation can be simplified also
+
+70
+00:03:44,090 --> 00:03:47,450
+by noticing that the denominator is
+
+71
+00:03:47,450 --> 00:03:50,850
+the Black-Scholes-Merton value of a call option on assets,
+
+72
+00:03:50,850 --> 00:03:53,240
+which we determined is the value of the equity.
+
+73
+00:03:53,240 --> 00:03:57,950
+
+
+74
+00:03:57,950 --> 00:04:00,430
+Notice that the leverage effect on volatility
+
+75
+00:04:00,430 --> 00:04:03,340
+gets larger as the firm becomes more distressed
+
+76
+00:04:03,340 --> 00:04:06,090
+and the value of equity falls.
+
+77
+00:04:06,090 --> 00:04:08,100
+A very important implication of this
+
+78
+00:04:08,100 --> 00:04:11,700
+is that, for firms that are close to insolvency,
+
+79
+00:04:11,700 --> 00:04:14,580
+analyzing the expected return on equity
+
+80
+00:04:14,580 --> 00:04:17,820
+using a linear model like a CAPM becomes
+
+81
+00:04:17,820 --> 00:04:22,470
+very problematic because when volatility changes, so will
+
+82
+00:04:22,470 --> 00:04:24,780
+the stock's beta.
+
+83
+00:04:24,780 --> 00:04:27,210
+These graphs demonstrate the effect of leverage
+
+84
+00:04:27,210 --> 00:04:30,480
+on the volatility of equity in the Merton model.
+
+85
+00:04:30,480 --> 00:04:33,090
+The top graph shows the relation as a function
+
+86
+00:04:33,090 --> 00:04:35,700
+of the value of assets, and the lower graph
+
+87
+00:04:35,700 --> 00:04:39,590
+shows that as a function of the value of equity.
+
+88
+00:04:39,590 --> 00:04:41,990
+In the bottom graph, the volatility
+
+89
+00:04:41,990 --> 00:04:45,440
+changes very dramatically when equity values are low,
+
+90
+00:04:45,440 --> 00:04:48,350
+underscoring the potential for significant time
+
+91
+00:04:48,350 --> 00:04:52,950
+variation in volatility in a distressed firm.
+
+92
+00:04:52,950 --> 00:04:56,010
+On both graphs, the volatility of assets
+
+93
+00:04:56,010 --> 00:04:59,500
+is plotted as a flat dashed line.
+
+94
+00:04:59,500 --> 00:05:02,820
+That's because, under the assumptions of the model,
+
+95
+00:05:02,820 --> 00:05:05,640
+asset volatility is constant over time,
+
+96
+00:05:05,640 --> 00:05:11,110
+and therefore independent of the value of assets or of equity.
+
+97
+00:05:11,110 --> 00:05:13,210
+We now have what we need to infer the market
+
+98
+00:05:13,210 --> 00:05:16,240
+value of assets and the volatility of assets,
+
+99
+00:05:16,240 --> 00:05:18,250
+assuming we can observe or estimate
+
+100
+00:05:18,250 --> 00:05:21,100
+the market value of equity and its volatility.
+
+101
+00:05:21,100 --> 00:05:25,270
+That is to say we have two nonlinear equations and two
+
+102
+00:05:25,270 --> 00:05:27,790
+unknowns, which are the initial market value of assets
+
+103
+00:05:27,790 --> 00:05:29,980
+and the volatility of assets.
+
+104
+00:05:29,980 --> 00:05:32,050
+The first equation is the formula
+
+105
+00:05:32,050 --> 00:05:37,480
+for equity as a call option, and the second equation
+
+106
+00:05:37,480 --> 00:05:43,130
+relates to volatility of equity to the volatility of assets.
+
+107
+00:05:43,130 --> 00:05:45,920
+These equations can be solved simultaneously
+
+108
+00:05:45,920 --> 00:05:49,610
+using numerical methods, for instance using Solver in Excel.
+
+109
+00:05:49,610 --> 00:05:52,320
+
+
+110
+00:05:52,320 --> 00:05:54,180
+Now we have all the information needed
+
+111
+00:05:54,180 --> 00:05:57,120
+to achieve our main goal, which is to estimate the market
+
+112
+00:05:57,120 --> 00:05:59,940
+value of a firm's risky debt.
+
+113
+00:05:59,940 --> 00:06:02,850
+The value of the risky debt is the difference
+
+114
+00:06:02,850 --> 00:06:08,880
+between the value of assets, which we just imputed,
+
+115
+00:06:08,880 --> 00:06:13,440
+and the value of equity, which was established
+
+116
+00:06:13,440 --> 00:06:16,170
+to be the value of a call option on the firm's assets
+
+117
+00:06:16,170 --> 00:06:20,180
+with a strike price equal to the face value of the debt.
+
+118
+00:06:20,180 --> 00:06:23,120
+Using put-call parity, the value of the debt
+
+119
+00:06:23,120 --> 00:06:26,060
+can also be described as the difference between the value
+
+120
+00:06:26,060 --> 00:06:30,590
+of the debt if it were risk-free and the value of a put option
+
+121
+00:06:30,590 --> 00:06:34,400
+on the assets with a strike price of F and an expiration
+
+122
+00:06:34,400 --> 00:06:38,270
+date the same as the maturity date on the debt.
+
+123
+00:06:38,270 --> 00:06:41,750
+That's exactly what we saw before on the payoff diagram,
+
+124
+00:06:41,750 --> 00:06:46,520
+that risky debt is equivalent to a long position in safe debt
+
+125
+00:06:46,520 --> 00:06:49,820
+and a short position in a put option.
+
+126
+00:06:49,820 --> 00:06:52,160
+Remember, too, that the value of the put option
+
+127
+00:06:52,160 --> 00:06:56,587
+equals the value of a full guarantee on the debt.
+
+128
+00:06:56,587 --> 00:06:57,087
+
+

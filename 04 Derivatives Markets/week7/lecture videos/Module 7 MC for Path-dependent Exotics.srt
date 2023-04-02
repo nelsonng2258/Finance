@@ -1,0 +1,432 @@
+0
+00:00:00,000 --> 00:00:02,700
+PROFESSOR: Clearly, for ordinary put and call options,
+
+1
+00:00:02,700 --> 00:00:05,070
+like the ones we just looked at, there's
+
+2
+00:00:05,070 --> 00:00:09,580
+no reason to choose Monte Carlo over binomial valuation.
+
+3
+00:00:09,580 --> 00:00:12,480
+And in fact, the simplest thing to do
+
+4
+00:00:12,480 --> 00:00:15,690
+is to use an analytical formula, such as
+
+5
+00:00:15,690 --> 00:00:19,420
+the Black-Scholes-Merton model, when you can.
+
+6
+00:00:19,420 --> 00:00:22,090
+The utility of a Monte Carlo simulation approach
+
+7
+00:00:22,090 --> 00:00:24,970
+becomes apparent for exotic derivatives that
+
+8
+00:00:24,970 --> 00:00:27,520
+have path dependent payoffs.
+
+9
+00:00:27,520 --> 00:00:30,130
+That is the value of the option at maturity
+
+10
+00:00:30,130 --> 00:00:32,890
+depends on the path taken by the stock
+
+11
+00:00:32,890 --> 00:00:36,260
+during the life of the option.
+
+12
+00:00:36,260 --> 00:00:39,340
+We saw that agent options are path-dependent because they
+
+13
+00:00:39,340 --> 00:00:42,640
+have a payoff that's based on the average of the stock price
+
+14
+00:00:42,640 --> 00:00:45,540
+over the life of the option.
+
+15
+00:00:45,540 --> 00:00:49,590
+It's possible to price these options on a binomial tree.
+
+16
+00:00:49,590 --> 00:00:52,170
+But doing so involves some complications
+
+17
+00:00:52,170 --> 00:00:54,990
+that are illustrated by this next example
+
+18
+00:00:54,990 --> 00:00:57,870
+and that are avoided with Monte Carlo simulation.
+
+19
+00:00:57,870 --> 00:01:01,080
+
+
+20
+00:01:01,080 --> 00:01:04,440
+This figure shows a 2-step binomial stock price tree
+
+21
+00:01:04,440 --> 00:01:07,650
+that we can use to price a European-Asian call
+
+22
+00:01:07,650 --> 00:01:13,610
+option with an at the money strike price of 100.
+
+23
+00:01:13,610 --> 00:01:17,120
+As usual, the tree will track the stock price over time
+
+24
+00:01:17,120 --> 00:01:22,160
+on each node based on the up or down moves we've calculated
+
+25
+00:01:22,160 --> 00:01:24,460
+to calibrate the tree.
+
+26
+00:01:24,460 --> 00:01:26,500
+But now we also need to keep track
+
+27
+00:01:26,500 --> 00:01:29,830
+of the average price along every possible path
+
+28
+00:01:29,830 --> 00:01:33,220
+and the probability of every possible path.
+
+29
+00:01:33,220 --> 00:01:38,320
+For example, on the up-up path, the average
+
+30
+00:01:38,320 --> 00:01:45,100
+of 100, and 123, and 152.8 give us an average stock price
+
+31
+00:01:45,100 --> 00:01:48,490
+of 125.49.
+
+32
+00:01:48,490 --> 00:01:57,540
+Then the call option is in the money by 25.49 at that node.
+
+33
+00:01:57,540 --> 00:02:00,390
+Well, the additional complexity arises
+
+34
+00:02:00,390 --> 00:02:09,110
+with a comparison of the up-down and the down-up situations.
+
+35
+00:02:09,110 --> 00:02:13,310
+Although the underlying stock price tree is recombining,
+
+36
+00:02:13,310 --> 00:02:17,000
+reaching a stock price of 100 in both the up-down
+
+37
+00:02:17,000 --> 00:02:22,640
+and the down-up, the average of the stock prices
+
+38
+00:02:22,640 --> 00:02:27,290
+is much higher with an up-down than with a down-up,
+
+39
+00:02:27,290 --> 00:02:31,010
+resulting in a call that's in the money in one case
+
+40
+00:02:31,010 --> 00:02:36,880
+and out of the money on the other, hence a tree
+
+41
+00:02:36,880 --> 00:02:40,150
+representing the averages won't be a recombining
+
+42
+00:02:40,150 --> 00:02:43,480
+tree and the number of terminal nodes
+
+43
+00:02:43,480 --> 00:02:46,660
+will grow exponentially with the number of steps
+
+44
+00:02:46,660 --> 00:02:47,800
+rather than linearly.
+
+45
+00:02:47,800 --> 00:02:50,790
+
+
+46
+00:02:50,790 --> 00:02:54,720
+We can calculate the probability of reaching each of these four
+
+47
+00:02:54,720 --> 00:02:57,660
+possible outcomes for the value of the call option
+
+48
+00:02:57,660 --> 00:03:01,770
+at expiration by taking into account the number of up
+
+49
+00:03:01,770 --> 00:03:04,800
+and down moves along each path.
+
+50
+00:03:04,800 --> 00:03:09,630
+For instance, any path with one up and one down
+
+51
+00:03:09,630 --> 00:03:13,770
+will have a risk neutral probability of q star times 1
+
+52
+00:03:13,770 --> 00:03:17,850
+minus q star, which will equal 24.91%,
+
+53
+00:03:17,850 --> 00:03:23,460
+given all the assumptions used to compute this example.
+
+54
+00:03:23,460 --> 00:03:25,910
+The terminal payoffs at each node
+
+55
+00:03:25,910 --> 00:03:29,240
+are weighted by their respective probabilities,
+
+56
+00:03:29,240 --> 00:03:31,880
+then discounted at the risk-free rate,
+
+57
+00:03:31,880 --> 00:03:37,370
+and added together to get an Asian option value of 7.45
+
+58
+00:03:37,370 --> 00:03:38,360
+implied by the tree.
+
+59
+00:03:38,360 --> 00:03:41,190
+
+
+60
+00:03:41,190 --> 00:03:45,630
+Well, rather than doing all of this combinatorial calculations
+
+61
+00:03:45,630 --> 00:03:49,740
+to get the probability of every possible path and its outcome,
+
+62
+00:03:49,740 --> 00:03:53,400
+it's simpler to just use Monte Carlo simulation.
+
+63
+00:03:53,400 --> 00:03:56,370
+That will involve simulating a large number of stock price
+
+64
+00:03:56,370 --> 00:03:58,920
+paths, calculating the average stock
+
+65
+00:03:58,920 --> 00:04:01,470
+price along each of those paths, and finding
+
+66
+00:04:01,470 --> 00:04:05,010
+the corresponding discounted option payoff.
+
+67
+00:04:05,010 --> 00:04:08,400
+The averages across the discounted payoffs
+
+68
+00:04:08,400 --> 00:04:12,390
+is the estimate of the options value.
+
+69
+00:04:12,390 --> 00:04:16,110
+Doing this for a simulation with 100 Monte Carlo runs
+
+70
+00:04:16,110 --> 00:04:22,860
+produces an estimate of 7.56 with a standard error of 0.316,
+
+71
+00:04:22,860 --> 00:04:24,900
+which is quite close to the value we
+
+72
+00:04:24,900 --> 00:04:32,760
+found using the tree of 7.45.
+
+73
+00:04:32,760 --> 00:04:35,940
+I want to take a minute to recap the advantages of Monte Carlo
+
+74
+00:04:35,940 --> 00:04:39,240
+simulation for valuing path-dependent options
+
+75
+00:04:39,240 --> 00:04:42,870
+and to illustrate the conclusions graphically.
+
+76
+00:04:42,870 --> 00:04:46,380
+The top graph here shows the original stock price
+
+77
+00:04:46,380 --> 00:04:50,860
+paths over 10 Monte Carlo runs.
+
+78
+00:04:50,860 --> 00:04:53,950
+The lower graph shows the corresponding averages
+
+79
+00:04:53,950 --> 00:04:56,560
+at each node, which are the relevant asset
+
+80
+00:04:56,560 --> 00:05:00,820
+values underlying the payoffs on Asian options.
+
+81
+00:05:00,820 --> 00:05:02,950
+While the original stock price paths
+
+82
+00:05:02,950 --> 00:05:06,250
+look like the recombining tree that we started with,
+
+83
+00:05:06,250 --> 00:05:11,380
+the averages look like paths on a non-recombining tree.
+
+84
+00:05:11,380 --> 00:05:13,690
+Non-recombining trees are much harder
+
+85
+00:05:13,690 --> 00:05:17,260
+to evaluate numerically for a large number of time steps
+
+86
+00:05:17,260 --> 00:05:19,600
+because the number of possible outcomes
+
+87
+00:05:19,600 --> 00:05:24,670
+grows exponentially in the number of times steps.
+
+88
+00:05:24,670 --> 00:05:26,730
+However, I also want to note that when
+
+89
+00:05:26,730 --> 00:05:31,530
+a path-dependent derivative is American rather than European,
+
+90
+00:05:31,530 --> 00:05:35,700
+so that it involves a decision about optimal exercise,
+
+91
+00:05:35,700 --> 00:05:37,710
+it's more straightforward to go back
+
+92
+00:05:37,710 --> 00:05:40,140
+to the non-recombining binomial tree
+
+93
+00:05:40,140 --> 00:05:43,600
+than to try to use Monte Carlo methods.
+
+94
+00:05:43,600 --> 00:05:45,510
+The reason is that it's quite tricky
+
+95
+00:05:45,510 --> 00:05:50,490
+to infer the optimal exercise policy with a Monte Carlo.
+
+96
+00:05:50,490 --> 00:05:52,650
+There are some Monte Carlo approaches
+
+97
+00:05:52,650 --> 00:05:55,110
+that have been proposed to deal with that added
+
+98
+00:05:55,110 --> 00:05:57,420
+layer of complexity but those are
+
+99
+00:05:57,420 --> 00:06:00,105
+beyond the scope of what we're going to look at here.
+
+100
+00:06:00,105 --> 00:06:02,670
+
+
+101
+00:06:02,670 --> 00:06:04,160
+Finally, a reminder that we looked
+
+102
+00:06:04,160 --> 00:06:06,500
+at several other types of exotic options
+
+103
+00:06:06,500 --> 00:06:08,090
+that are path dependent.
+
+104
+00:06:08,090 --> 00:06:12,080
+Those include barrier options of various flavors, loopback
+
+105
+00:06:12,080 --> 00:06:15,380
+options, and Asian strike options.
+
+106
+00:06:15,380 --> 00:06:19,550
+Monte Carlo simulation provides a useful tool for valuation
+
+107
+00:06:19,550 --> 00:06:22,810
+in each of these cases as well.
+

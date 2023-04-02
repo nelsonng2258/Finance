@@ -1,0 +1,512 @@
+0
+00:00:00,000 --> 00:00:01,048
+
+
+1
+00:00:01,048 --> 00:00:03,590
+INSTRUCTOR: Alright, now let's begin with the second topic --
+
+2
+00:00:03,590 --> 00:00:07,220
+pricing an American option.
+
+3
+00:00:07,220 --> 00:00:09,500
+Assume that the following annual binomial
+
+4
+00:00:09,500 --> 00:00:13,370
+tree is correct for risk-neutral pricing of bonds and bond
+
+5
+00:00:13,370 --> 00:00:16,790
+options, where the probability of an up move
+
+6
+00:00:16,790 --> 00:00:20,270
+is the same as the probability of a down move, which
+
+7
+00:00:20,270 --> 00:00:23,120
+is equal to 0.5.
+
+8
+00:00:23,120 --> 00:00:26,120
+In particular, the spot rate at initiation
+
+9
+00:00:26,120 --> 00:00:31,610
+is 3.5% and either moves up to a higher interest rate state
+
+10
+00:00:31,610 --> 00:00:36,040
+or down to a lower interest rate state.
+
+11
+00:00:36,040 --> 00:00:39,940
+In the week 8 lecture, we saw how to price a European call
+
+12
+00:00:39,940 --> 00:00:43,150
+option on a bond using the same binomial tree,
+
+13
+00:00:43,150 --> 00:00:45,420
+as on the slide here.
+
+14
+00:00:45,420 --> 00:00:50,580
+Now, can we use the same tree to price an American call option,
+
+15
+00:00:50,580 --> 00:00:55,880
+in which case, a three-year 5.25% annual coupon bond is
+
+16
+00:00:55,880 --> 00:01:02,540
+callable at the end of either one or two years for $99.50?
+
+17
+00:01:02,540 --> 00:01:05,030
+As in the week 8 lecture, the first step
+
+18
+00:01:05,030 --> 00:01:07,610
+is to use the binomial tree to price
+
+19
+00:01:07,610 --> 00:01:12,860
+a noncallable three-year 5.25% annual coupon bond,
+
+20
+00:01:12,860 --> 00:01:16,150
+as shown in the diagram below.
+
+21
+00:01:16,150 --> 00:01:20,440
+Since it's the same diagram that appears in the week 8 lecture,
+
+22
+00:01:20,440 --> 00:01:22,990
+I'm not going to repeat the calculations here,
+
+23
+00:01:22,990 --> 00:01:26,530
+but I do recommend repeating the calculations on your own
+
+24
+00:01:26,530 --> 00:01:28,720
+for additional practice.
+
+25
+00:01:28,720 --> 00:01:31,960
+Now, in order to price an American call option with
+
+26
+00:01:31,960 --> 00:01:36,820
+a strike price, K, equal to 99.50 that can be exercised
+
+27
+00:01:36,820 --> 00:01:41,530
+at the end of either one or two years, we, as usual,
+
+28
+00:01:41,530 --> 00:01:45,280
+work backwards through the binomial tree.
+
+29
+00:01:45,280 --> 00:01:48,280
+In particular, at the end of two years, that
+
+30
+00:01:48,280 --> 00:01:54,740
+is when T equals 2 on the binomial tree model here,
+
+31
+00:01:54,740 --> 00:01:59,230
+the value of the call option is as follows.
+
+32
+00:01:59,230 --> 00:02:03,900
+In the up-up node at T equals 2, the value of the call option is
+
+33
+00:02:03,900 --> 00:02:07,500
+the maximum of the difference between the value of the bond
+
+34
+00:02:07,500 --> 00:02:15,540
+in the up-up node, which is equal to 98.588, here,
+
+35
+00:02:15,540 --> 00:02:22,470
+and the strike price K of 99.50 and 0, which is equal to 0.
+
+36
+00:02:22,470 --> 00:02:26,920
+Similarly, in the up-down or down-up node,
+
+37
+00:02:26,920 --> 00:02:30,510
+the value of the call option is equal to the difference between
+
+38
+00:02:30,510 --> 00:02:33,000
+99.732 --
+
+39
+00:02:33,000 --> 00:02:36,750
+that's the value of the bond in either the up-down or down-up
+
+40
+00:02:36,750 --> 00:02:41,160
+node here --
+
+41
+00:02:41,160 --> 00:02:47,870
+and the strike price of 99.50, which is equal to 0.232.
+
+42
+00:02:47,870 --> 00:02:51,410
+Finally, in the down-down at T equals 2,
+
+43
+00:02:51,410 --> 00:02:54,080
+the value of the call option is equal to the maximum
+
+44
+00:02:54,080 --> 00:02:57,950
+of the difference between 100.689,
+
+45
+00:02:57,950 --> 00:03:03,410
+the value of the bond in the down-down node --
+
+46
+00:03:03,410 --> 00:03:10,330
+here -- minus 99.5, the strike price, and 0,
+
+47
+00:03:10,330 --> 00:03:13,810
+which is equal to 1.189.
+
+48
+00:03:13,810 --> 00:03:16,090
+While the calculations were pretty straightforward
+
+49
+00:03:16,090 --> 00:03:20,080
+for the T equals 2 case, things are a little bit more
+
+50
+00:03:20,080 --> 00:03:22,690
+complicated at the end of one year, that is,
+
+51
+00:03:22,690 --> 00:03:25,210
+when T equals 1, since now we have
+
+52
+00:03:25,210 --> 00:03:28,660
+to compare the value of exercising the call option at T
+
+53
+00:03:28,660 --> 00:03:32,380
+equals 1 to the value of waiting to exercise the call
+
+54
+00:03:32,380 --> 00:03:35,530
+option at T equals 2.
+
+55
+00:03:35,530 --> 00:03:39,940
+In particular, at the up node at T equals 1, --
+
+56
+00:03:39,940 --> 00:03:42,920
+that is, this node here --
+
+57
+00:03:42,920 --> 00:03:46,550
+
+
+58
+00:03:46,550 --> 00:03:50,840
+the value of waiting to exercise the call option at T equals 2
+
+59
+00:03:50,840 --> 00:03:54,720
+in the next period is equal to 0.5 --
+
+60
+00:03:54,720 --> 00:03:58,460
+that is the risk-neutral probability of an up move --
+
+61
+00:03:58,460 --> 00:04:03,050
+times 0 -- that is the value of the call option in the up-up
+
+62
+00:04:03,050 --> 00:04:05,090
+node at equals 2 --
+
+63
+00:04:05,090 --> 00:04:09,380
+plus 0.5 risk-neutral probability of a down move
+
+64
+00:04:09,380 --> 00:04:12,140
+times 0.232 --
+
+65
+00:04:12,140 --> 00:04:16,339
+that is the value of the call option at equals 2 in either
+
+66
+00:04:16,339 --> 00:04:19,220
+the up-down or down-up node. --
+
+67
+00:04:19,220 --> 00:04:26,330
+discounted as the interest rate of 4.976% in the up node at T
+
+68
+00:04:26,330 --> 00:04:33,340
+equals 1, which is equal 0.110.
+
+69
+00:04:33,340 --> 00:04:37,150
+On the other hand, the value of exercising the call option
+
+70
+00:04:37,150 --> 00:04:41,710
+immediately at T equals 1 is equal to the maximum
+
+71
+00:04:41,710 --> 00:04:45,370
+of the difference between the value of the bond in the up
+
+72
+00:04:45,370 --> 00:04:50,980
+node at T equals 1, V, which is equal to 99.461,
+
+73
+00:04:50,980 --> 00:04:56,050
+minus the strike price of the call option, which is 99.5,
+
+74
+00:04:56,050 --> 00:04:58,300
+and 0, which is equal to 0.
+
+75
+00:04:58,300 --> 00:05:00,960
+
+
+76
+00:05:00,960 --> 00:05:04,680
+Thus, the value of the call option in the up node at T
+
+77
+00:05:04,680 --> 00:05:09,660
+equals 1 is the maximum of the value of waiting to exercise
+
+78
+00:05:09,660 --> 00:05:15,360
+the call option, 0.110, and the value of exercising the call
+
+79
+00:05:15,360 --> 00:05:19,080
+option immediately, which is equal to 0,
+
+80
+00:05:19,080 --> 00:05:25,440
+which is itself 0.110, as it is optimal to wait to exercise
+
+81
+00:05:25,440 --> 00:05:28,470
+the call option at T equals 2.
+
+82
+00:05:28,470 --> 00:05:32,100
+OK, now what about the down node at T equals 1 --
+
+83
+00:05:32,100 --> 00:05:37,240
+that is, this node here?
+
+84
+00:05:37,240 --> 00:05:41,290
+Well, the value of waiting to exercise the call option at T
+
+85
+00:05:41,290 --> 00:05:46,090
+equals 2 is equal to 0.5, the risk-neutral probability
+
+86
+00:05:46,090 --> 00:05:49,870
+of an up move, times 0.232 --
+
+87
+00:05:49,870 --> 00:05:52,780
+that is the value of the call option at T equals 2
+
+88
+00:05:52,780 --> 00:05:56,110
+in the up-down or down up-node --
+
+89
+00:05:56,110 --> 00:06:00,370
+plus 0.5, the risk-neutral probability of a down move,
+
+90
+00:06:00,370 --> 00:06:02,320
+times 1.19 --
+
+91
+00:06:02,320 --> 00:06:05,890
+that's the value of the call option in the down-down node
+
+92
+00:06:05,890 --> 00:06:07,720
+at T equals 2 --
+
+93
+00:06:07,720 --> 00:06:14,890
+discounted at the risk-free rate of 4.074% in the down node at T
+
+94
+00:06:14,890 --> 00:06:20,220
+equals 1, which is equal to 0.683.
+
+95
+00:06:20,220 --> 00:06:24,090
+On the other hand, the value of immediately exercising the call
+
+96
+00:06:24,090 --> 00:06:27,690
+option in the down node at T equals 1 is equal
+
+97
+00:06:27,690 --> 00:06:31,710
+to the maximum of the difference between the value
+
+98
+00:06:31,710 --> 00:06:35,670
+of the noncallable bond in the down node at T equals 1,
+
+99
+00:06:35,670 --> 00:06:40,800
+which is 101.333, minus the strike price of the call option
+
+100
+00:06:40,800 --> 00:06:48,010
+of 99.50 and 0, which is equal to 1.833.
+
+101
+00:06:48,010 --> 00:06:51,040
+Thus, the value of the call option in the down node
+
+102
+00:06:51,040 --> 00:06:54,460
+is equal to the maximum of the value of waiting
+
+103
+00:06:54,460 --> 00:06:59,380
+to exercise the call option at T equals 2, 0.683,
+
+104
+00:06:59,380 --> 00:07:03,490
+and the value of immediately exercising the call option
+
+105
+00:07:03,490 --> 00:07:08,920
+at the down node at T equals 1 of 1.833, which is equal
+
+106
+00:07:08,920 --> 00:07:12,550
+to 1.833, indicating that it is indeed
+
+107
+00:07:12,550 --> 00:07:15,550
+optimal to exercise the call option at T
+
+108
+00:07:15,550 --> 00:07:19,180
+equals 1 in the down node.
+
+109
+00:07:19,180 --> 00:07:22,180
+In the final step, we can find the overall value
+
+110
+00:07:22,180 --> 00:07:26,230
+of the American call option at T equals 0, the initial node,
+
+111
+00:07:26,230 --> 00:07:31,120
+to be as follows: the value of the call option is equal
+
+112
+00:07:31,120 --> 00:07:35,140
+to the risk-neutral probability of an up move, 0.5,
+
+113
+00:07:35,140 --> 00:07:43,040
+times the value of the call option of 0.110 in the up node
+
+114
+00:07:43,040 --> 00:07:46,100
+at T equals 1 plus the risk-neutral probability
+
+115
+00:07:46,100 --> 00:07:51,410
+of a down move from 0.5 times the value of the call option
+
+116
+00:07:51,410 --> 00:07:55,070
+in the down node at T equals 1 of 1.833,
+
+117
+00:07:55,070 --> 00:07:59,960
+which we just found here, discounted at the prevailing
+
+118
+00:07:59,960 --> 00:08:08,900
+interest rate at initiation of 3.5%, which is equal to 0.938.
+
+119
+00:08:08,900 --> 00:08:12,110
+All right, one last thing before we move on to the final topic.
+
+120
+00:08:12,110 --> 00:08:14,300
+Since we went over a lot of calculations
+
+121
+00:08:14,300 --> 00:08:16,250
+over the last few slides, I thought
+
+122
+00:08:16,250 --> 00:08:18,350
+I would include the following diagram here
+
+123
+00:08:18,350 --> 00:08:22,580
+on this slide that summarizes the value of the call option
+
+124
+00:08:22,580 --> 00:08:24,770
+at each node of the binomial tree,
+
+125
+00:08:24,770 --> 00:08:28,130
+as well as the prevailing interest rate at that node.
+
+126
+00:08:28,130 --> 00:08:31,340
+Hopefully, this is a useful diagram for your reference
+
+127
+00:08:31,340 --> 00:08:33,760
+as you work through these nodes.
+

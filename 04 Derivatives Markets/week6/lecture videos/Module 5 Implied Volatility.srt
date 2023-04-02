@@ -1,0 +1,648 @@
+0
+00:00:00,000 --> 00:00:00,620
+
+
+1
+00:00:00,620 --> 00:00:03,120
+PROFESSOR: In the context of the Black-Scholes-Merton model,
+
+2
+00:00:03,120 --> 00:00:06,390
+implied volatility is defined as the level of the volatility
+
+3
+00:00:06,390 --> 00:00:10,890
+parameter, sigma, such that given the other formula inputs,
+
+4
+00:00:10,890 --> 00:00:14,790
+the model price for an option matches its market price.
+
+5
+00:00:14,790 --> 00:00:17,820
+For example, say we know from the table we looked
+
+6
+00:00:17,820 --> 00:00:20,880
+at earlier today that the market price of a put option
+
+7
+00:00:20,880 --> 00:00:25,470
+with a strike price of $1,500 and a time to expiration
+
+8
+00:00:25,470 --> 00:00:30,370
+of 0.12 is equal to $20.35.
+
+9
+00:00:30,370 --> 00:00:34,690
+We can find the implied volatility, sigma sub
+
+10
+00:00:34,690 --> 00:00:37,180
+imp, where "imp" stands for implied,
+
+11
+00:00:37,180 --> 00:00:39,760
+by using the Black-Scholes-Merton formula
+
+12
+00:00:39,760 --> 00:00:42,310
+for the price of a put calibrated
+
+13
+00:00:42,310 --> 00:00:45,820
+with the other inputs we know and solving it
+
+14
+00:00:45,820 --> 00:00:49,390
+for sigma sub imp that's consistent with that observed
+
+15
+00:00:49,390 --> 00:00:51,340
+market price of the option.
+
+16
+00:00:51,340 --> 00:00:54,070
+Clearly this means that every option in the market
+
+17
+00:00:54,070 --> 00:00:57,550
+can potentially have a different implied volatility.
+
+18
+00:00:57,550 --> 00:00:59,800
+You may have heard the term volatility
+
+19
+00:00:59,800 --> 00:01:02,530
+smile or volatility smirk.
+
+20
+00:01:02,530 --> 00:01:06,490
+Those terms refer to the typical shape of implied volatility
+
+21
+00:01:06,490 --> 00:01:08,680
+when plotted as a function of the moneyness
+
+22
+00:01:08,680 --> 00:01:10,900
+of the underlying option, holding
+
+23
+00:01:10,900 --> 00:01:14,110
+all the parameters other than the strike price fixed.
+
+24
+00:01:14,110 --> 00:01:17,680
+For example, this figure shows that there is a volatility
+
+25
+00:01:17,680 --> 00:01:20,800
+smirk implied by the market prices for put options
+
+26
+00:01:20,800 --> 00:01:23,350
+given in the table we looked at earlier.
+
+27
+00:01:23,350 --> 00:01:25,450
+Had the implied volatility started
+
+28
+00:01:25,450 --> 00:01:29,320
+increasing for high levels of moneyness as sometimes happens,
+
+29
+00:01:29,320 --> 00:01:33,190
+it would have been described as a smile instead of a smirk.
+
+30
+00:01:33,190 --> 00:01:36,010
+For comparison, the volatility estimate
+
+31
+00:01:36,010 --> 00:01:38,560
+we saw based on the last three months of data
+
+32
+00:01:38,560 --> 00:01:43,090
+is also plotted on the graph, as is the volatility estimate that
+
+33
+00:01:43,090 --> 00:01:46,750
+comes out of just looking at the last month of data.
+
+34
+00:01:46,750 --> 00:01:50,050
+Under these market conditions, the implied volatilities
+
+35
+00:01:50,050 --> 00:01:53,530
+were all higher than the last month of historical volatility,
+
+36
+00:01:53,530 --> 00:01:56,950
+but similar on average to the historical volatility based
+
+37
+00:01:56,950 --> 00:01:58,690
+on a three month look back.
+
+38
+00:01:58,690 --> 00:02:01,450
+The relationship between implied volatility
+
+39
+00:02:01,450 --> 00:02:06,190
+and historical volatility can vary considerably over time.
+
+40
+00:02:06,190 --> 00:02:09,280
+That's because implied volatility is forward looking
+
+41
+00:02:09,280 --> 00:02:11,710
+and expectations about the future
+
+42
+00:02:11,710 --> 00:02:13,960
+can become quite different than what was
+
+43
+00:02:13,960 --> 00:02:16,510
+experienced in the recent past.
+
+44
+00:02:16,510 --> 00:02:18,370
+Estimates of implied volatility are
+
+45
+00:02:18,370 --> 00:02:20,390
+useful for several purposes.
+
+46
+00:02:20,390 --> 00:02:22,810
+One is simply to get a forward looking read on how
+
+47
+00:02:22,810 --> 00:02:25,780
+market participants gauge the amount of general market
+
+48
+00:02:25,780 --> 00:02:27,310
+uncertainty.
+
+49
+00:02:27,310 --> 00:02:30,130
+Higher uncertainty translates to higher options
+
+50
+00:02:30,130 --> 00:02:34,330
+prices, which in turn means higher implied volatilities.
+
+51
+00:02:34,330 --> 00:02:37,360
+Remember that Vega, the effect of volatility
+
+52
+00:02:37,360 --> 00:02:40,330
+on options prices, is always positive,
+
+53
+00:02:40,330 --> 00:02:42,770
+both for puts and calls.
+
+54
+00:02:42,770 --> 00:02:45,200
+The graph here compares implied volatilities,
+
+55
+00:02:45,200 --> 00:02:47,900
+indicated by the lighter dashed line,
+
+56
+00:02:47,900 --> 00:02:51,080
+to volatilities estimated using historical data,
+
+57
+00:02:51,080 --> 00:02:52,640
+the solid line.
+
+58
+00:02:52,640 --> 00:02:55,640
+The two series tend to track each other over time,
+
+59
+00:02:55,640 --> 00:02:58,130
+but sometimes there can be significant differences
+
+60
+00:02:58,130 --> 00:02:59,600
+between them.
+
+61
+00:02:59,600 --> 00:03:02,430
+A few regularities stand out.
+
+62
+00:03:02,430 --> 00:03:04,580
+One is that implied volatility tends
+
+63
+00:03:04,580 --> 00:03:07,130
+to be higher than historical volatility,
+
+64
+00:03:07,130 --> 00:03:10,760
+and that the difference becomes more pronounced during periods
+
+65
+00:03:10,760 --> 00:03:13,650
+where volatility is unusually high.
+
+66
+00:03:13,650 --> 00:03:17,310
+Those differences are consistent with options prices containing
+
+67
+00:03:17,310 --> 00:03:19,380
+a risk premium that isn't captured
+
+68
+00:03:19,380 --> 00:03:22,008
+by the Black-Scholes-Merton model.
+
+69
+00:03:22,008 --> 00:03:23,800
+I thought you might be interested in seeing
+
+70
+00:03:23,800 --> 00:03:26,710
+some more recent data on implied volatilities.
+
+71
+00:03:26,710 --> 00:03:32,110
+This graph plots the VIX from 2017 through October of 2021.
+
+72
+00:03:32,110 --> 00:03:34,390
+The VIX is the most commonly used measure
+
+73
+00:03:34,390 --> 00:03:37,300
+of implied volatility for the overall stock market
+
+74
+00:03:37,300 --> 00:03:39,970
+and we'll talk more about it shortly.
+
+75
+00:03:39,970 --> 00:03:42,880
+The graph shows that the stock market was relatively calm
+
+76
+00:03:42,880 --> 00:03:45,190
+over the earlier part of this period.
+
+77
+00:03:45,190 --> 00:03:48,970
+The onset of the COVID-19 panic caused implied volatility
+
+78
+00:03:48,970 --> 00:03:52,030
+to spike sharply, and then to stay elevated
+
+79
+00:03:52,030 --> 00:03:54,780
+over pre-pandemic levels.
+
+80
+00:03:54,780 --> 00:03:57,300
+A very practical use of implied volatility
+
+81
+00:03:57,300 --> 00:03:59,550
+is to look for profitable trading opportunities
+
+82
+00:03:59,550 --> 00:04:01,500
+in the options market.
+
+83
+00:04:01,500 --> 00:04:04,350
+If you look directly at the prices of options
+
+84
+00:04:04,350 --> 00:04:06,900
+with different maturities and strike prices,
+
+85
+00:04:06,900 --> 00:04:09,210
+it's impossible to directly evaluate
+
+86
+00:04:09,210 --> 00:04:12,900
+which are relatively expensive and which are relatively cheap.
+
+87
+00:04:12,900 --> 00:04:15,030
+With different strike prices, there
+
+88
+00:04:15,030 --> 00:04:17,347
+are differences in intrinsic value, which
+
+89
+00:04:17,347 --> 00:04:19,680
+is the difference between the stock price and the strike
+
+90
+00:04:19,680 --> 00:04:20,519
+price.
+
+91
+00:04:20,519 --> 00:04:24,240
+Those differences have a significant but variable effect
+
+92
+00:04:24,240 --> 00:04:26,190
+on the value of an option.
+
+93
+00:04:26,190 --> 00:04:28,510
+Different maturities are hard to compare
+
+94
+00:04:28,510 --> 00:04:33,210
+because that entails adjustments for time value and uncertainty.
+
+95
+00:04:33,210 --> 00:04:36,150
+For example, if you were to directly compare the market
+
+96
+00:04:36,150 --> 00:04:40,770
+price on May 3, 2007 of two of the put options we looked
+
+97
+00:04:40,770 --> 00:04:46,080
+at with maturity of 0.12, one with a strike price of $1,500
+
+98
+00:04:46,080 --> 00:04:49,650
+and another with a strike price of $1,475,
+
+99
+00:04:49,650 --> 00:04:54,720
+you would find $1.00 difference between them of $7.75.
+
+100
+00:04:54,720 --> 00:04:56,700
+You wouldn't know how much of a difference
+
+101
+00:04:56,700 --> 00:04:59,490
+to attribute to the $25 difference in their strike
+
+102
+00:04:59,490 --> 00:05:03,420
+prices and how much to attribute to something else.
+
+103
+00:05:03,420 --> 00:05:05,460
+Instead of looking directly at prices
+
+104
+00:05:05,460 --> 00:05:08,400
+to make value comparisons, you could take the data
+
+105
+00:05:08,400 --> 00:05:12,000
+and create what's called an implied volatility surface.
+
+106
+00:05:12,000 --> 00:05:14,490
+An implied volatility surface plots
+
+107
+00:05:14,490 --> 00:05:17,160
+implied volatility on the vertical z-axis
+
+108
+00:05:17,160 --> 00:05:20,820
+of a three-dimensional graph with maturity and moneyness
+
+109
+00:05:20,820 --> 00:05:23,100
+on the x- and y-axis.
+
+110
+00:05:23,100 --> 00:05:26,460
+This can make it much clearer which options appear cheap
+
+111
+00:05:26,460 --> 00:05:28,800
+and which appear expensive.
+
+112
+00:05:28,800 --> 00:05:31,680
+An option with a higher implied volatility compared
+
+113
+00:05:31,680 --> 00:05:34,200
+to its close neighbors on the volatility surface
+
+114
+00:05:34,200 --> 00:05:36,630
+are relatively expensive, controlling
+
+115
+00:05:36,630 --> 00:05:40,050
+for the most important sources of price variation.
+
+116
+00:05:40,050 --> 00:05:43,500
+Options that are significantly below the surface, that
+
+117
+00:05:43,500 --> 00:05:47,980
+have a relatively low implied volatility, are cheap.
+
+118
+00:05:47,980 --> 00:05:50,770
+A trading strategy then is to buy options
+
+119
+00:05:50,770 --> 00:05:53,170
+that seem significantly underpriced
+
+120
+00:05:53,170 --> 00:05:57,720
+and to sell options that appear to be significantly overpriced.
+
+121
+00:05:57,720 --> 00:06:02,340
+Be warned though, if you do this without hedging those trades,
+
+122
+00:06:02,340 --> 00:06:05,280
+you're very exposed to changes in market conditions
+
+123
+00:06:05,280 --> 00:06:07,770
+that affect the value of your position.
+
+124
+00:06:07,770 --> 00:06:11,250
+A more prudent strategy would be to delta or delta gamma
+
+125
+00:06:11,250 --> 00:06:14,340
+hedge those trades using liquid options
+
+126
+00:06:14,340 --> 00:06:17,970
+or a replicating portfolio of the underlying stock
+
+127
+00:06:17,970 --> 00:06:20,280
+or a combination of the two.
+
+128
+00:06:20,280 --> 00:06:23,370
+By hedging, you're then left with a pure bet
+
+129
+00:06:23,370 --> 00:06:27,090
+on the price of the overpriced or underpriced option moving
+
+130
+00:06:27,090 --> 00:06:29,520
+back in line with other options.
+
+131
+00:06:29,520 --> 00:06:33,450
+The VIX is an index of the S&P 500 implied volatility
+
+132
+00:06:33,450 --> 00:06:36,090
+based on options traded on the S&P 500
+
+133
+00:06:36,090 --> 00:06:38,820
+index at the CBOE with expirations
+
+134
+00:06:38,820 --> 00:06:42,220
+between 23 and 37 days.
+
+135
+00:06:42,220 --> 00:06:45,540
+Note that the VIX is based on an average across options
+
+136
+00:06:45,540 --> 00:06:47,370
+with different amounts of moneyness,
+
+137
+00:06:47,370 --> 00:06:50,520
+and that the individual implied volatilities on the underlying
+
+138
+00:06:50,520 --> 00:06:52,470
+contracts may differ significantly
+
+139
+00:06:52,470 --> 00:06:55,050
+from the average that's the VIX.
+
+140
+00:06:55,050 --> 00:06:58,830
+For that reason, the VIX is useful in trading strategies
+
+141
+00:06:58,830 --> 00:07:02,670
+based on general trends in stock market volatility.
+
+142
+00:07:02,670 --> 00:07:05,670
+Both futures and options are traded on the VIX.
+
+143
+00:07:05,670 --> 00:07:09,480
+And those derivatives can be used to hedge or to speculate.
+
+144
+00:07:09,480 --> 00:07:11,880
+A long position in volatility means
+
+145
+00:07:11,880 --> 00:07:14,730
+that you profit if volatility rises and vice
+
+146
+00:07:14,730 --> 00:07:17,070
+versa for short positions.
+
+147
+00:07:17,070 --> 00:07:19,320
+An example of using the VIX to hedge
+
+148
+00:07:19,320 --> 00:07:22,140
+would be for an index fund manager who's
+
+149
+00:07:22,140 --> 00:07:25,920
+compensated based on how closely his portfolio tracks the S&P
+
+150
+00:07:25,920 --> 00:07:27,330
+500 index.
+
+151
+00:07:27,330 --> 00:07:30,720
+Because tracking error tends to rise with volatility,
+
+152
+00:07:30,720 --> 00:07:33,270
+the manager can hedge his compensation
+
+153
+00:07:33,270 --> 00:07:36,000
+by buying a contract whose payoff increases
+
+154
+00:07:36,000 --> 00:07:37,380
+with volatility.
+
+155
+00:07:37,380 --> 00:07:39,960
+A speculative example is if you want
+
+156
+00:07:39,960 --> 00:07:42,510
+to make a directional bet on what will happen to market
+
+157
+00:07:42,510 --> 00:07:45,630
+volatility and you want to avoid a directional bet
+
+158
+00:07:45,630 --> 00:07:48,450
+on whether the market will rise or fall.
+
+159
+00:07:48,450 --> 00:07:50,280
+Recall that you can also use options
+
+160
+00:07:50,280 --> 00:07:53,490
+to bet on volatility using long and short positions
+
+161
+00:07:53,490 --> 00:07:56,360
+in straddles and strangles.
+

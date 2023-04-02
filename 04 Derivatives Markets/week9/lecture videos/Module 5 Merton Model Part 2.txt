@@ -1,0 +1,120 @@
+
+PROFESSOR: A more physical sense of what's
+going on in the Merton model is obtained
+by considering what happens along a single sample
+path for asset value over time.
+In this example here, the face value of debt
+is the solid red line, and the asset value
+winds up below that value at the debt maturity date.
+The loss given default on that path
+is just the difference between the face value
+and the asset value on that maturity date.
+You can think of the model is equivalent to running many risk
+neutral Monte Carlo paths of lognormal model for asset
+prices and calculating the present value of the expected
+loss given default by averaging across those many paths.
+With the predicted bond price from the Merton model,
+it's straightforward to derive the corresponding credit
+spread.
+We start with the bond price D0 and find the yield
+to maturity on the bond on a continuous basis
+from this formula here.
+Substituting in the expression for D0
+that's based on the price of a risk free bond minus the price
+of a put option, we can rearrange
+and solve for the credit spread, which is given here.
+As you'd expect, the spread gets wider the more valuable
+the put option, which of course equals the value
+of the expected losses.
+
+How the credits spread moves over time
+depends on the model parameters, and it's
+especially sensitive to asset volatility and the leverage
+ratio, D divided by A.
+These graphs show the relationship
+for two different levels of assumed asset volatility
+and for a range of leverage ratios.
+The graphs reveal some counterfactual predictions
+of the model.
+One is that the credit spread is close to 0
+when the bond is nearing maturity.
+The technical reason for that is because the price of the asset
+is assumed to follow a continuous path,
+and there's essentially no chance
+over a short horizon of a price move
+that is adverse enough for the possibility of loss to become
+significant.
+A second problem is that the predicted magnitudes
+of the credit spreads are far lower than those
+observed in the data.
+As I mentioned earlier, one reason for that
+is that the empirical credit spread
+reflects more than just the direct cost of default losses.
+Finally, the pattern of sharply declining credit spreads
+over time for some parameterizations
+is also contrary to what is observed in the market.
+The reason in the model for the declining spreads
+is that assets on average grow and the face value of the debt
+is fixed, which has the effect of reducing
+the likelihood of default over time as the leverage
+ratio tends to shrink.
+Despite these shortcomings, it's convenient to use this model
+to develop an understanding of the relative pricing
+of some more complicated debt structures,
+and we'll turn to that next.
+We'll also discuss some modifications
+to the basic model that address some of these shortcomings
+and that produce more reliable price estimates.
+Corporations often issue a combination
+of senior and junior debt.
+Doing that may lower the total cost of debt financing
+by creating securities that appeal
+to clienteles with different tolerances for risk and return.
+In the event of default, the senior debt
+is fully repaid before the junior debt
+holders receive any payments.
+Both groups of debt holders must be
+repaid before any value goes to the equity holders.
+To take a simple example, imagine
+that a firm has two issues of zero-coupon bonds
+outstanding, both maturing at the same time Cap(t).
+Fs is the face value of the senior debt,
+and Fj is the face value of the junior debt.
+This table describes the payoffs to the different claimants
+as a function of the asset value at maturity, V sub t.
+If the asset value is less than the face
+value of the senior debt, the entire value
+goes to pay the senior debt holders.
+If the asset value is enough to pay
+the senior debt holders but less than the sum of the face
+value of the junior and the senior debt,
+then the junior debt holders get the remaining value
+after the senior debt holders are paid in full.
+Finally, if the asset value is greater
+than the sum of the face value of the junior and senior debt,
+there isn't a default. The bondholders are paid in full,
+and any residual asset value goes to the equity holders.
+That description of the payoffs can
+be translated into expressions that
+are in terms of the value of call options
+on the underlying assets of the firm.
+The senior debt holders have a position
+that's equivalent to owning the assets of the firm
+and writing a call option.
+
+That call option has a strike price
+equal to the face value of their debt.
+Then the junior debt holders are long that same call option,
+and they're short another call option with the strike price
+equal to the sum of the face value of the senior
+and the junior debt.
+Finally, as we know, the equity holders
+are long the call option written by the junior debt
+holders, which has a strike price of the sum of the face
+values of the debt.
+For pricing more complicated structured claims,
+the stochastic model for asset prices
+can be implemented on a risk neutral binomial tree
+or with Monte Carlo that can then
+be used for finding and pricing the payoffs
+to different claimants.

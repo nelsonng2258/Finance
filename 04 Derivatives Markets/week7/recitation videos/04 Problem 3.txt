@@ -1,0 +1,41 @@
+PROFESSOR: All right, that completes problem two.
+Let's finish the recitation by reviewing a rather brief
+problem, problem three.
+Problem three is quite straightforward.
+It asks us to explain why a regular European call
+option is the sum of a down-and-out European call
+option and a down-and-in European call option.
+Is the same true for American call options?
+Well, first recall that a down-and-out call
+option is a particular type of a knockout option.
+Specifically, it is a regular call option
+that ceases to exist if the underlying stock price reaches
+a certain barrier level.
+Let's call it H. The barrier level is going to be
+below the initial stock price.
+
+The corresponding knock-in version of the option
+is called a down-and-in call option.
+This is a regular call option that
+comes into existence only if the stock price reaches the barrier
+level, H.
+So in order to solve this problem,
+we have to consider two different cases.
+In the first case, if the barrier level, H, is reached,
+then the down-and-out call option
+is going to be worth nothing while the down-and-in call
+option will have the same value as a regular call option.
+In the second case, if the barrier level, H, is not
+reached, then the down-and-in call option
+is worth nothing while the down-and-out call
+option has the same value as a regular option.
+Thus, the payoffs from a portfolio
+that consists of a down-and-out call
+option plus a down-and-in call option
+are identical to those of a regular European call option
+regardless of whether the barrier level, H, is reached.
+However, a similar argument cannot be used for American
+options because American options have an early exercise premium.
+Well, that does it for recitation seven.
+Thank you everyone for coming, and I look forward
+to seeing all of you next week.

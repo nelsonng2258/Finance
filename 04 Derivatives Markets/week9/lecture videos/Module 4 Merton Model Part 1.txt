@@ -1,0 +1,128 @@
+
+PROFESSOR: The Merton model provides
+an analytical approximation formula for valuing risky debt.
+It's in the spirit of the Black-Scholes-Merton model
+but it's different in a number of respects.
+Most fundamentally, it starts with the assumption
+that it's the underlying firm asset
+value that's log-normally distributed,
+not its stock price.
+The formula here represents the resulting distribution
+of a firm's asset value, V sub T, at time T.
+The value depends on a drift term that's
+parameterized by a constant return parameter, mu,
+and a volatility correction of minus one half sigma squared.
+
+The volatility term is based on the parameter, sigma,
+multiplied by the square root of the horizon, T, and by a draw
+from a standard normal density function, epsilon.
+Assets are financed with a combination of debt and equity.
+The zero coupon debt is issued at time zero,
+and comes due at time T. As we saw in the payoff diagrams,
+the debt will be paid in full if the asset value V of T
+covers its face value and the equity holders own
+the remaining asset value.
+If V sub T is less than F, the debt holders
+become the owners of the firm, and the original equity holders
+get nothing.
+Although we're ultimately interested in valuing
+the risky debt of the firm, the first step
+is to value of the firm's equity, whose payoff is
+the max of V of T minus F and zero,
+which is a call option on the firm's assets.
+Under the assumptions made, then, equity
+can be valued using the Black-Scholes-Merton model
+with the face value of debt as the strike price
+and with the firm's assets as the underlying variable.
+The familiar formula for the value of a call option
+is shown here.
+We know that the volatility of a firm's equity
+can be estimated based on historical stock price data
+or from implied volatilities of options
+that are traded on the firm.
+However, it's not easy to directly infer
+the volatility of a firm's assets
+because assets generally aren't traded.
+Or to put it differently, we could estimate asset volatility
+if we had historical data on both the market
+value of a firm's equity and the market value of its debt,
+but it's often difficult to find data
+on the market price of a firm's debt
+because either it trades infrequently
+or it's privately placed and that information
+isn't made public.
+Professor Merton came up with a clever way
+to get around that problem, which
+is to use the formula for vega, the sensitivity of option
+prices to changes in the volatility of the underlying
+asset.
+The formula for vega that comes out of the Black-Scholes-Merton
+model implies that the volatility of equity returns --
+here, sigma E --
+is related to the volatility of asset returns, sigma,
+by this equation.
+
+Written in this form, vega highlights
+that the volatility of equity can
+be much larger than that of the assets
+through a leverage effect, which concentrates the asset
+volatility on the equity.
+This equation can be simplified also
+by noticing that the denominator is
+the Black-Scholes-Merton value of a call option on assets,
+which we determined is the value of the equity.
+
+Notice that the leverage effect on volatility
+gets larger as the firm becomes more distressed
+and the value of equity falls.
+A very important implication of this
+is that, for firms that are close to insolvency,
+analyzing the expected return on equity
+using a linear model like a CAPM becomes
+very problematic because when volatility changes, so will
+the stock's beta.
+These graphs demonstrate the effect of leverage
+on the volatility of equity in the Merton model.
+The top graph shows the relation as a function
+of the value of assets, and the lower graph
+shows that as a function of the value of equity.
+In the bottom graph, the volatility
+changes very dramatically when equity values are low,
+underscoring the potential for significant time
+variation in volatility in a distressed firm.
+On both graphs, the volatility of assets
+is plotted as a flat dashed line.
+That's because, under the assumptions of the model,
+asset volatility is constant over time,
+and therefore independent of the value of assets or of equity.
+We now have what we need to infer the market
+value of assets and the volatility of assets,
+assuming we can observe or estimate
+the market value of equity and its volatility.
+That is to say we have two nonlinear equations and two
+unknowns, which are the initial market value of assets
+and the volatility of assets.
+The first equation is the formula
+for equity as a call option, and the second equation
+relates to volatility of equity to the volatility of assets.
+These equations can be solved simultaneously
+using numerical methods, for instance using Solver in Excel.
+
+Now we have all the information needed
+to achieve our main goal, which is to estimate the market
+value of a firm's risky debt.
+The value of the risky debt is the difference
+between the value of assets, which we just imputed,
+and the value of equity, which was established
+to be the value of a call option on the firm's assets
+with a strike price equal to the face value of the debt.
+Using put-call parity, the value of the debt
+can also be described as the difference between the value
+of the debt if it were risk-free and the value of a put option
+on the assets with a strike price of F and an expiration
+date the same as the maturity date on the debt.
+That's exactly what we saw before on the payoff diagram,
+that risky debt is equivalent to a long position in safe debt
+and a short position in a put option.
+Remember, too, that the value of the put option
+equals the value of a full guarantee on the debt.

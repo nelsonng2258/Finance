@@ -1,0 +1,412 @@
+0
+00:00:00,000 --> 00:00:01,195
+
+
+1
+00:00:01,195 --> 00:00:02,570
+PROFESSOR: Previously, we saw how
+
+2
+00:00:02,570 --> 00:00:05,870
+to find options prices given a binomial tree representing
+
+3
+00:00:05,870 --> 00:00:07,850
+stock price evolution.
+
+4
+00:00:07,850 --> 00:00:10,550
+With implied trees, we start with some
+
+5
+00:00:10,550 --> 00:00:14,480
+observed options prices and calibrate the stock price
+
+6
+00:00:14,480 --> 00:00:17,600
+tree to be consistent with those prices.
+
+7
+00:00:17,600 --> 00:00:21,120
+We can then use the tree to price other options.
+
+8
+00:00:21,120 --> 00:00:25,370
+For example, consider a binomial tree
+
+9
+00:00:25,370 --> 00:00:28,460
+calibrated to be consistent with the example we've been looking
+
+10
+00:00:28,460 --> 00:00:31,210
+at for the S&P 500.
+
+11
+00:00:31,210 --> 00:00:37,570
+We'll take the current index value to be 1502.4.
+
+12
+00:00:37,570 --> 00:00:40,930
+Volatility will be 12.36.
+
+13
+00:00:40,930 --> 00:00:43,900
+The risk free rate is 4.713.
+
+14
+00:00:43,900 --> 00:00:46,390
+The dividend yield is 1.91.
+
+15
+00:00:46,390 --> 00:00:51,730
+And the time to expiration of the option is 0.12.
+
+16
+00:00:51,730 --> 00:00:54,910
+Consistent with these parameters,
+
+17
+00:00:54,910 --> 00:01:00,790
+we would calibrate u to be e to the sigma root T, as usual.
+
+18
+00:01:00,790 --> 00:01:03,880
+And we would get 1.0437 for that.
+
+19
+00:01:03,880 --> 00:01:06,100
+d is 1 over u.
+
+20
+00:01:06,100 --> 00:01:08,980
+And then the risk neutral probability
+
+21
+00:01:08,980 --> 00:01:11,530
+is e to the risk free rate minus the dividend
+
+22
+00:01:11,530 --> 00:01:15,100
+yield times the time to expiration minus d,
+
+23
+00:01:15,100 --> 00:01:16,600
+over u minus d.
+
+24
+00:01:16,600 --> 00:01:21,460
+That gives you a q* of 0.5286.
+
+25
+00:01:21,460 --> 00:01:26,350
+Notice that the q* here looks a little different than it did
+
+26
+00:01:26,350 --> 00:01:29,380
+in our case when the dividend yield was 0.
+
+27
+00:01:29,380 --> 00:01:33,615
+Now we have to reduce the drift of the stock price by the fact
+
+28
+00:01:33,615 --> 00:01:34,990
+that the dividend yield is there,
+
+29
+00:01:34,990 --> 00:01:37,430
+as we've talked about before.
+
+30
+00:01:37,430 --> 00:01:44,180
+Well, the price, then, of an option with a strike of 1,500,
+
+31
+00:01:44,180 --> 00:01:49,280
+according to the model turns out to be 28.394.
+
+32
+00:01:49,280 --> 00:01:52,010
+And that's higher than what we saw was the traded market
+
+33
+00:01:52,010 --> 00:01:56,440
+price, which was 20.35.
+
+34
+00:01:56,440 --> 00:01:58,810
+As shown by the calculations we just went over
+
+35
+00:01:58,810 --> 00:02:00,760
+on the previous slide and using the tree
+
+36
+00:02:00,760 --> 00:02:03,650
+based on historical volatility shown here,
+
+37
+00:02:03,650 --> 00:02:07,840
+we get a price of the put of 28.394, which is
+
+38
+00:02:07,840 --> 00:02:10,639
+higher than its market value.
+
+39
+00:02:10,639 --> 00:02:13,120
+So instead of starting with historical volatility
+
+40
+00:02:13,120 --> 00:02:15,640
+as the basis for calibrating the tree model,
+
+41
+00:02:15,640 --> 00:02:18,700
+we can alter the binomial tree parameters
+
+42
+00:02:18,700 --> 00:02:22,750
+to reproduce the observed market prices of the put option.
+
+43
+00:02:22,750 --> 00:02:28,330
+On this slide, that procedure is described as choosing S1u,
+
+44
+00:02:28,330 --> 00:02:32,470
+which will imply a new value for u, d and q*.
+
+45
+00:02:32,470 --> 00:02:35,830
+You can think of choosing S1u as equivalent to choosing
+
+46
+00:02:35,830 --> 00:02:39,790
+an implied volatility from the observed option price.
+
+47
+00:02:39,790 --> 00:02:44,830
+In any case, you can solve for it using a computer program
+
+48
+00:02:44,830 --> 00:02:47,110
+to solve for the option price, where
+
+49
+00:02:47,110 --> 00:02:51,850
+you can iterate on S1u until you match the observed price.
+
+50
+00:02:51,850 --> 00:02:57,970
+This slide shows the tree with the value of S1u, 1551.26,
+
+51
+00:02:57,970 --> 00:03:01,750
+that results in the tree properly pricing the put option
+
+52
+00:03:01,750 --> 00:03:05,110
+at its market value of 2035.
+
+53
+00:03:05,110 --> 00:03:07,510
+Once we have the implied tree, we
+
+54
+00:03:07,510 --> 00:03:10,240
+can use it to price other options.
+
+55
+00:03:10,240 --> 00:03:14,260
+For instance, consider an option with a strike price of K
+
+56
+00:03:14,260 --> 00:03:20,140
+equal to 1490, the same time to maturity of 0.12.
+
+57
+00:03:20,140 --> 00:03:26,260
+The put price from the binomial tree for this option is 15.82.
+
+58
+00:03:26,260 --> 00:03:28,900
+And if we compare that to the market price
+
+59
+00:03:28,900 --> 00:03:33,130
+that we have in our table from earlier of 17.05,
+
+60
+00:03:33,130 --> 00:03:36,430
+we see that it's much closer than had we
+
+61
+00:03:36,430 --> 00:03:39,760
+tried to price it using our original tree, which
+
+62
+00:03:39,760 --> 00:03:41,980
+would have implied a large error with a price
+
+63
+00:03:41,980 --> 00:03:44,970
+prediction of 23.7.
+
+64
+00:03:44,970 --> 00:03:47,370
+Well, obviously, you want to choose options
+
+65
+00:03:47,370 --> 00:03:49,710
+in calibrating the tree with prices
+
+66
+00:03:49,710 --> 00:03:53,080
+that you think are representative of the market.
+
+67
+00:03:53,080 --> 00:03:55,980
+It's also possible, as you'll see in the recitation,
+
+68
+00:03:55,980 --> 00:03:59,280
+to extend this idea to a multi-step tree.
+
+69
+00:03:59,280 --> 00:04:02,730
+That provides the flexibility to treat the volatility
+
+70
+00:04:02,730 --> 00:04:05,730
+as varying over different future time periods.
+
+71
+00:04:05,730 --> 00:04:08,400
+That can capture the idea of mean reverting
+
+72
+00:04:08,400 --> 00:04:12,180
+volatility or other assumptions about its expected time
+
+73
+00:04:12,180 --> 00:04:14,380
+evolution.
+
+74
+00:04:14,380 --> 00:04:17,019
+We've covered a lot of useful ground this week,
+
+75
+00:04:17,019 --> 00:04:19,390
+and I hope you come away from it with a deeper
+
+76
+00:04:19,390 --> 00:04:22,450
+understanding of the drivers of options prices
+
+77
+00:04:22,450 --> 00:04:24,130
+and how they're modeled.
+
+78
+00:04:24,130 --> 00:04:26,350
+We've seen that the Black-Scholes-Merton formula
+
+79
+00:04:26,350 --> 00:04:29,690
+doesn't price options very accurately.
+
+80
+00:04:29,690 --> 00:04:32,270
+Given the strong assumptions that it relies on,
+
+81
+00:04:32,270 --> 00:04:35,270
+perhaps that's not too surprising.
+
+82
+00:04:35,270 --> 00:04:37,430
+More accurate estimates of option value
+
+83
+00:04:37,430 --> 00:04:39,650
+can be obtained by incorporating factors
+
+84
+00:04:39,650 --> 00:04:43,040
+such as stochastic volatility, jumps, and fatter
+
+85
+00:04:43,040 --> 00:04:44,750
+tailed distributions.
+
+86
+00:04:44,750 --> 00:04:47,330
+Still, the Black-Scholes-Merton model
+
+87
+00:04:47,330 --> 00:04:49,520
+is a very useful benchmark.
+
+88
+00:04:49,520 --> 00:04:53,660
+It gives decent approximations to prices close to the money.
+
+89
+00:04:53,660 --> 00:04:57,260
+And it typically is used for finding hedge ratios.
+
+90
+00:04:57,260 --> 00:04:59,480
+If you look at the quotations for options
+
+91
+00:04:59,480 --> 00:05:01,820
+at the CBOE and elsewhere, you'll
+
+92
+00:05:01,820 --> 00:05:03,650
+see that the Black-Scholes-Merton model has
+
+93
+00:05:03,650 --> 00:05:06,200
+become the industry standard for quoting options
+
+94
+00:05:06,200 --> 00:05:09,240
+in terms of implied volatility.
+
+95
+00:05:09,240 --> 00:05:13,020
+The BSM model is also used to construct implied volatility
+
+96
+00:05:13,020 --> 00:05:15,540
+surfaces that provide a simple way
+
+97
+00:05:15,540 --> 00:05:18,120
+to evaluate the relative value of options
+
+98
+00:05:18,120 --> 00:05:20,730
+and to look for potential profit opportunities
+
+99
+00:05:20,730 --> 00:05:23,510
+from temporary mispricing.
+
+100
+00:05:23,510 --> 00:05:26,630
+The more complicated models do fit the data better,
+
+101
+00:05:26,630 --> 00:05:30,350
+and you can use them for product pricing and trading strategies
+
+102
+00:05:30,350 --> 00:05:33,760
+where more accuracy is important.
+

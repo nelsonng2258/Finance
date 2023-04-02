@@ -1,0 +1,66 @@
+
+PROFESSOR: That does it for Problem 3.
+Let's finish the recitation by reviewing Problem 4.
+In Problem 4, it stated that your boss asks you
+for a quick price estimate for a credit
+guarantee on the risky bond of a publicly traded firm.
+You have the following information.
+First, that the Treasury yield curve
+is flat at 4% on a continuous basis.
+Second, the bond to be guaranteed a zero coupon
+and has a face value of $50 million.
+It matures in 3.25 years and it is the only debt of the firm.
+The credit guarantee ensures payment
+to the holder of the full face value at maturity.
+Third the firm has 5.11 million shares of equity outstanding
+currently priced at $10.69 per share.
+The equity volatility is 25% per year.
+And fourth, using the Merton model for valuing risky debt,
+you conclude that the market value of assets is $95 million
+and the asset volatility is 12% per year.
+Based on all this information, what
+is your best estimate of the value of the credit guarantee?
+Now, this problem is tricky because although we
+threw a lot of information at you,
+you actually don't need to apply either the Merton model
+or to build a binomial tree in order to solve the problem.
+The first step in solving the problem
+is to simply recall from the Week 9 lecture
+that the Merton model relies on the relationship
+that A equals E plus D, where A is the market
+value of the firm's assets, E is the market value
+of the firm's equity, and D is the market value
+of the firm's debt.
+From the information provided, we
+can compute the market value of the firm's equity,
+or E, to be equal to $10.69, the price per share,
+times 5.11 million shares outstanding,
+which is equal to $54.519 million.
+Since the market value of the firm's assets is $95 million
+according to the Merton model, we
+can infer that D, which is equal to A minus E,
+is equal to $95 million minus $54.519 million,
+which is equal to $40.481 million.
+Now, as we saw in the Week 9 lecture,
+the value of a credit guarantee on a risky bond
+is equal to the difference between the hypothetical price
+of the promised payments of the bond,
+if they were, in fact, risk-free,
+and the price of the risky bond.
+
+If the firm's debt were in fact risk-free,
+then its price would be equal to 50--
+so the $50 million face value the bond--
+times the exponential of negative 0.04,
+since the risk-free rate is 4% on a continuous basis, times
+3.25, since the debt has 3.25 years to maturity, which
+is equal to $43.905 million.
+Thus, the credit guarantee is estimated
+to be worth 43.905 minus 40.481, that's the market
+value of the firm's debt according
+to the Merton model, which is equal to $3.424 million.
+Pretty simple, right?
+All right, that concludes Problem 4 and the Week 9
+recitation.
+Thank you everyone for coming and I look forward
+to seeing you one more time next week.

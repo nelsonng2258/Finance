@@ -1,0 +1,332 @@
+0
+00:00:00,000 --> 00:00:00,890
+
+
+1
+00:00:00,890 --> 00:00:03,200
+PROFESSOR: As I emphasized earlier,
+
+2
+00:00:03,200 --> 00:00:05,810
+pricing mortgages and MBSs is complicated
+
+3
+00:00:05,810 --> 00:00:08,700
+by having to model prepayment behavior.
+
+4
+00:00:08,700 --> 00:00:11,750
+Another complication is that credit risk and liquidity risk
+
+5
+00:00:11,750 --> 00:00:15,590
+also affect MBS prices but to a much lesser extent
+
+6
+00:00:15,590 --> 00:00:17,390
+than prepayment risk.
+
+7
+00:00:17,390 --> 00:00:20,420
+Earlier in the class, we saw how to price credit risk based
+
+8
+00:00:20,420 --> 00:00:22,670
+on a model of asset price volatility
+
+9
+00:00:22,670 --> 00:00:25,190
+and how to value callable bonds using a model
+
+10
+00:00:25,190 --> 00:00:27,500
+of stochastic interest rates.
+
+11
+00:00:27,500 --> 00:00:30,440
+The question arises, what's the best procedure
+
+12
+00:00:30,440 --> 00:00:35,260
+to use when both call and credit risk are present?
+
+13
+00:00:35,260 --> 00:00:38,440
+For MBS pricing in a binomial framework,
+
+14
+00:00:38,440 --> 00:00:41,800
+my recommendation is to model the uncertainty associated
+
+15
+00:00:41,800 --> 00:00:44,740
+with interest rates explicitly and then
+
+16
+00:00:44,740 --> 00:00:47,170
+to incorporate other factors that affect value
+
+17
+00:00:47,170 --> 00:00:51,010
+like credit and liquidity via an assumption about a market
+
+18
+00:00:51,010 --> 00:00:54,010
+spread over the risk-free rate.
+
+19
+00:00:54,010 --> 00:00:56,130
+The final example I'm about to turn to
+
+20
+00:00:56,130 --> 00:00:59,050
+illustrates that procedure.
+
+21
+00:00:59,050 --> 00:01:02,410
+In cases where default risk is judged to be insignificant,
+
+22
+00:01:02,410 --> 00:01:05,379
+for instance, because there's a credit guarantee,
+
+23
+00:01:05,379 --> 00:01:07,600
+this is a reasonable approach.
+
+24
+00:01:07,600 --> 00:01:11,260
+However, I want to note that in instances where both interest
+
+25
+00:01:11,260 --> 00:01:13,570
+rate and default risk are important,
+
+26
+00:01:13,570 --> 00:01:16,480
+it's probably best to use a risk-neutral Monte
+
+27
+00:01:16,480 --> 00:01:19,510
+Carlo with two stochastic processes, one
+
+28
+00:01:19,510 --> 00:01:22,850
+for each major source of risk.
+
+29
+00:01:22,850 --> 00:01:25,400
+I now want to turn to a simple binomial example that
+
+30
+00:01:25,400 --> 00:01:28,670
+captures the idea of pricing MBS on an interest rate
+
+31
+00:01:28,670 --> 00:01:33,410
+tree augmented by a statistical model of pre-payment.
+
+32
+00:01:33,410 --> 00:01:38,180
+In this example, I'll start with this binomial tree here.
+
+33
+00:01:38,180 --> 00:01:41,510
+It represents the evolution of the risk-free rate.
+
+34
+00:01:41,510 --> 00:01:45,050
+For simplicity, I'm going to assume that all paths are
+
+35
+00:01:45,050 --> 00:01:47,150
+equally likely.
+
+36
+00:01:47,150 --> 00:01:49,190
+For each path through the interest rate tree
+
+37
+00:01:49,190 --> 00:01:51,860
+imagine linking it to a pre-payment model that
+
+38
+00:01:51,860 --> 00:01:54,980
+is a function of market interest rates, when rates go down,
+
+39
+00:01:54,980 --> 00:01:56,510
+prepayment rates go up.
+
+40
+00:01:56,510 --> 00:01:59,210
+On paths where past prepayments are higher,
+
+41
+00:01:59,210 --> 00:02:01,070
+future cash payouts will be lower
+
+42
+00:02:01,070 --> 00:02:02,720
+because interest payments are reduced
+
+43
+00:02:02,720 --> 00:02:05,150
+and there will be less principal left to pay off.
+
+44
+00:02:05,150 --> 00:02:07,100
+The story provides a loose motivation
+
+45
+00:02:07,100 --> 00:02:10,310
+for the patterns of cash flows shown on each path
+
+46
+00:02:10,310 --> 00:02:14,600
+through this tree, that is I assume the payment at time 1
+
+47
+00:02:14,600 --> 00:02:18,140
+is expected to be $100 given the current market conditions
+
+48
+00:02:18,140 --> 00:02:19,820
+at time 0.
+
+49
+00:02:19,820 --> 00:02:23,480
+When rates rise at time 1 there is no change in the expected
+
+50
+00:02:23,480 --> 00:02:26,810
+payment size at time 2 but when rates fall,
+
+51
+00:02:26,810 --> 00:02:30,920
+there's an additional prepayment of $50 expected at time 2.
+
+52
+00:02:30,920 --> 00:02:35,810
+When rates rise from time 1 to time 2, the payment at time 3
+
+53
+00:02:35,810 --> 00:02:38,660
+is lower than if rates fall over that interval,
+
+54
+00:02:38,660 --> 00:02:43,270
+again reflecting more prepayments when rates fall.
+
+55
+00:02:43,270 --> 00:02:47,170
+Because MBSs are illiquid and there may be some default risk,
+
+56
+00:02:47,170 --> 00:02:50,440
+investors demand a spread above the risk-free rate.
+
+57
+00:02:50,440 --> 00:02:55,750
+Let's assume we estimate that spread to be 0.25%.
+
+58
+00:02:55,750 --> 00:02:59,140
+This slide shows that spread added to all the rates
+
+59
+00:02:59,140 --> 00:03:00,940
+on the previous tree.
+
+60
+00:03:00,940 --> 00:03:02,860
+The cash flows are the same as before.
+
+61
+00:03:02,860 --> 00:03:05,800
+
+
+62
+00:03:05,800 --> 00:03:09,520
+The final step in valuing the MBS is to discount the cash
+
+63
+00:03:09,520 --> 00:03:12,070
+flows back along each path of the tree
+
+64
+00:03:12,070 --> 00:03:15,490
+using the risk-adjusted rates on the tree for discounting
+
+65
+00:03:15,490 --> 00:03:19,400
+and taking into account the probability of each path.
+
+66
+00:03:19,400 --> 00:03:22,910
+Notice that in this example, MBSs
+
+67
+00:03:22,910 --> 00:03:27,440
+are like exotic options with path dependence.
+
+68
+00:03:27,440 --> 00:03:29,450
+The conclusion we reach averaging
+
+69
+00:03:29,450 --> 00:03:32,060
+across all the paths, which remember
+
+70
+00:03:32,060 --> 00:03:34,220
+were assumed to be equally likely,
+
+71
+00:03:34,220 --> 00:03:41,270
+is that the security is worth $269.81.
+
+72
+00:03:41,270 --> 00:03:43,220
+We've come to the end of this lecture
+
+73
+00:03:43,220 --> 00:03:45,990
+and also to the end of the class.
+
+74
+00:03:45,990 --> 00:03:48,380
+I want to thank all of you who have put in the effort
+
+75
+00:03:48,380 --> 00:03:50,900
+to understand this challenging material
+
+76
+00:03:50,900 --> 00:03:52,940
+and to learn how to apply the ideas
+
+77
+00:03:52,940 --> 00:03:57,210
+and models to a wide variety of practical applications.
+
+78
+00:03:57,210 --> 00:03:59,000
+I hope these skills serve you well
+
+79
+00:03:59,000 --> 00:04:01,100
+in your future financial endeavors
+
+80
+00:04:01,100 --> 00:04:03,240
+personal and professional.
+
+81
+00:04:03,240 --> 00:04:07,390
+And I wish you success on the final and beyond.
+
+82
+00:04:07,390 --> 00:04:08,000
+
+

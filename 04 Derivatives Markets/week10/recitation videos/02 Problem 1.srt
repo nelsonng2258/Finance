@@ -1,0 +1,432 @@
+0
+00:00:00,000 --> 00:00:01,170
+
+
+1
+00:00:01,170 --> 00:00:02,850
+PROFESSOR: Without further ado, let's
+
+2
+00:00:02,850 --> 00:00:05,760
+begin with the first topic, IOs and POs.
+
+3
+00:00:05,760 --> 00:00:08,380
+
+
+4
+00:00:08,380 --> 00:00:12,850
+Recall from the Week 10 lecture that principal-only (PO)
+
+5
+00:00:12,850 --> 00:00:16,059
+and interest-only (IO) securities
+
+6
+00:00:16,059 --> 00:00:18,850
+could be created from mortgage-backed securities,
+
+7
+00:00:18,850 --> 00:00:20,710
+MBSes.
+
+8
+00:00:20,710 --> 00:00:25,540
+In particular, investors in IOs receive only the interest
+
+9
+00:00:25,540 --> 00:00:27,880
+payments from the underlying pool
+
+10
+00:00:27,880 --> 00:00:30,700
+of mortgages for the mortgage-backed security
+
+11
+00:00:30,700 --> 00:00:35,170
+while investors in POs receive only the principal payments
+
+12
+00:00:35,170 --> 00:00:38,420
+on the mortgages.
+
+13
+00:00:38,420 --> 00:00:39,950
+Let's assume that you're provided
+
+14
+00:00:39,950 --> 00:00:43,610
+with the following information on the estimated prices
+
+15
+00:00:43,610 --> 00:00:47,090
+and prepayment rates for two different mortgage-backed
+
+16
+00:00:47,090 --> 00:00:51,110
+securities, Security A and Security B,
+
+17
+00:00:51,110 --> 00:00:55,250
+that are based on the same pool of underlying mortgages.
+
+18
+00:00:55,250 --> 00:00:59,480
+In the first column, we see as interest rates increase
+
+19
+00:00:59,480 --> 00:01:05,600
+from 6% to 8%, the Percent PSA, which represents the prepayment
+
+20
+00:01:05,600 --> 00:01:14,600
+behavior, decreases from 450% to 360%, the price of Security A
+
+21
+00:01:14,600 --> 00:01:20,810
+increases from $92 to $98, and the price of Security B
+
+22
+00:01:20,810 --> 00:01:26,570
+decreases from $103 to $98.
+
+23
+00:01:26,570 --> 00:01:31,010
+In Part A, we are asked, which of the two securities, Security
+
+24
+00:01:31,010 --> 00:01:36,845
+A or Security B, is an IO, which is a PO, and why?
+
+25
+00:01:36,845 --> 00:01:39,540
+
+
+26
+00:01:39,540 --> 00:01:41,820
+Well, the first thing to ask ourselves here
+
+27
+00:01:41,820 --> 00:01:48,720
+is what does the Percent PSA column mean in this table?
+
+28
+00:01:48,720 --> 00:01:52,640
+Well, recall from the lecture that the standard 100% PSA
+
+29
+00:01:52,640 --> 00:01:57,230
+model assumes that the annual pre-payment rate increases
+
+30
+00:01:57,230 --> 00:02:01,670
+linearly from 0% immediately after the origination
+
+31
+00:02:01,670 --> 00:02:07,130
+of the mortgage to 6% after 30 months.
+
+32
+00:02:07,130 --> 00:02:12,170
+Higher values of percent PSA indicate faster prepayment
+
+33
+00:02:12,170 --> 00:02:15,380
+behavior and as evidenced in the table above,
+
+34
+00:02:15,380 --> 00:02:21,290
+prepayments generally increase as interest rates decline.
+
+35
+00:02:21,290 --> 00:02:24,620
+That's why as the interest rate increases
+
+36
+00:02:24,620 --> 00:02:29,500
+going down the table here, the percent PSA decreases.
+
+37
+00:02:29,500 --> 00:02:33,010
+
+
+38
+00:02:33,010 --> 00:02:36,430
+The thing to notice here is that the price of Security A
+
+39
+00:02:36,430 --> 00:02:39,160
+actually falls when the percent PSA is
+
+40
+00:02:39,160 --> 00:02:43,760
+larger and, equivalently, prepayments increase.
+
+41
+00:02:43,760 --> 00:02:46,210
+On the other hand, the price of Security B
+
+42
+00:02:46,210 --> 00:02:50,380
+increases when the percent PSA is larger and prepayments
+
+43
+00:02:50,380 --> 00:02:52,260
+increase.
+
+44
+00:02:52,260 --> 00:02:56,490
+Since we know that investors in POs prefer faster repayment
+
+45
+00:02:56,490 --> 00:02:59,550
+of principal -- they are principal-only securities,
+
+46
+00:02:59,550 --> 00:03:00,990
+by the way --
+
+47
+00:03:00,990 --> 00:03:05,620
+Security B is the PO.
+
+48
+00:03:05,620 --> 00:03:09,430
+Security A must be the IO because as prepayments
+
+49
+00:03:09,430 --> 00:03:12,100
+increase, fewer interest payments
+
+50
+00:03:12,100 --> 00:03:15,130
+are made to the IO investors.
+
+51
+00:03:15,130 --> 00:03:18,310
+OK, now that we know that Security B is
+
+52
+00:03:18,310 --> 00:03:22,540
+the PO and Security A is the IO, Part B
+
+53
+00:03:22,540 --> 00:03:25,720
+asks to calculate the effective duration
+
+54
+00:03:25,720 --> 00:03:30,220
+and effective convexity for each security assuming that yields
+
+55
+00:03:30,220 --> 00:03:33,400
+are currently at 7%.
+
+56
+00:03:33,400 --> 00:03:36,895
+That is the median value of the interest rate in this table.
+
+57
+00:03:36,895 --> 00:03:40,670
+
+
+58
+00:03:40,670 --> 00:03:43,480
+We'll recall from the Week 8 recitation that we can
+
+59
+00:03:43,480 --> 00:03:45,940
+calculate effective duration -- that is,
+
+60
+00:03:45,940 --> 00:03:48,700
+modified duration that takes into consideration
+
+61
+00:03:48,700 --> 00:03:51,160
+the influence of optionality --
+
+62
+00:03:51,160 --> 00:03:53,710
+as follows in Equation 1.
+
+63
+00:03:53,710 --> 00:03:56,290
+The effective duration is equal to 1
+
+64
+00:03:56,290 --> 00:04:01,000
+over the initial price of the security times the difference
+
+65
+00:04:01,000 --> 00:04:03,340
+between the price of the security when interest
+
+66
+00:04:03,340 --> 00:04:06,100
+rates fall and the price of the security
+
+67
+00:04:06,100 --> 00:04:10,780
+when interest rates rise divided by 2 times S, where
+
+68
+00:04:10,780 --> 00:04:15,900
+S is the amount that interest rates rise or fall.
+
+69
+00:04:15,900 --> 00:04:20,130
+Applying equation 1 to both Security A and Security B
+
+70
+00:04:20,130 --> 00:04:25,590
+yields for Security A an effective duration of 1 over
+
+71
+00:04:25,590 --> 00:04:27,480
+96.5 --
+
+72
+00:04:27,480 --> 00:04:32,040
+that's the initial price when interest rates are at 7% --
+
+73
+00:04:32,040 --> 00:04:35,970
+times 92 minus 98 --
+
+74
+00:04:35,970 --> 00:04:41,430
+the price when rates fall to 6% minus the price when rates rise
+
+75
+00:04:41,430 --> 00:04:42,780
+to 8% --
+
+76
+00:04:42,780 --> 00:04:45,220
+divided by 2 times s --
+
+77
+00:04:45,220 --> 00:04:51,040
+s here is 1% or 0.01 as a decimal --
+
+78
+00:04:51,040 --> 00:04:55,410
+which is equal to negative 3.1.
+
+79
+00:04:55,410 --> 00:04:58,500
+A similar calculation for Security B
+
+80
+00:04:58,500 --> 00:05:04,490
+yields an effective duration of 2.5.
+
+81
+00:05:04,490 --> 00:05:07,580
+This should make sense because as we discussed in the Week 10
+
+82
+00:05:07,580 --> 00:05:10,790
+lecture, it's typical for IOs to have
+
+83
+00:05:10,790 --> 00:05:13,700
+a negative effective duration over a range
+
+84
+00:05:13,700 --> 00:05:18,500
+of relevant interest rates and Security A, we said, is the IO,
+
+85
+00:05:18,500 --> 00:05:23,390
+whereas POs typically have a positive effective duration
+
+86
+00:05:23,390 --> 00:05:27,890
+and we said that security B is the PO.
+
+87
+00:05:27,890 --> 00:05:33,200
+Finally, the effective convexity of Security A and Security B
+
+88
+00:05:33,200 --> 00:05:38,270
+could be calculated as follows using Equation 2.
+
+89
+00:05:38,270 --> 00:05:42,770
+The effective convexity is equal to 1 over the price
+
+90
+00:05:42,770 --> 00:05:45,860
+of the security at the initial interest rate -- in this case,
+
+91
+00:05:45,860 --> 00:05:47,330
+7% --
+
+92
+00:05:47,330 --> 00:05:50,090
+times the price of the security when
+
+93
+00:05:50,090 --> 00:05:55,820
+rates fall to 6% minus the initial price of the security
+
+94
+00:05:55,820 --> 00:06:00,170
+minus the initial price of the security minus the price
+
+95
+00:06:00,170 --> 00:06:05,480
+of the security when rates rise to 8% divided by s squared.
+
+96
+00:06:05,480 --> 00:06:08,480
+
+
+97
+00:06:08,480 --> 00:06:13,580
+Applying Equation 2 to both Security A and Security B
+
+98
+00:06:13,580 --> 00:06:21,880
+yields an effective convexity of Security A of negative 310.9
+
+99
+00:06:21,880 --> 00:06:28,670
+and an effective convexity of Security B of positive 100.
+
+100
+00:06:28,670 --> 00:06:32,660
+The thing to note here is that Security A, the IO,
+
+101
+00:06:32,660 --> 00:06:36,170
+actually has negative effective convexity,
+
+102
+00:06:36,170 --> 00:06:41,870
+whereas Security B, the PO, has positive effective convexity.
+
+103
+00:06:41,870 --> 00:06:44,690
+This is weird because we're pretty much used
+
+104
+00:06:44,690 --> 00:06:48,480
+to bonds having positive effective convexity,
+
+105
+00:06:48,480 --> 00:06:52,310
+but it's this optionality, the prepayment risk,
+
+106
+00:06:52,310 --> 00:06:56,090
+that is causing the IO to have negative effective convexity
+
+107
+00:06:56,090 --> 00:06:59,320
+for the given range of interest rates.
+

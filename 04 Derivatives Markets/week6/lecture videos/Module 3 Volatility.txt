@@ -1,0 +1,166 @@
+PROFESSOR: We're now going to switch gears one more time
+and turn to volatility, its effects on observed options
+prices, and how to better incorporate it into our options
+pricing models.
+Academics and practitioners, seeking
+to improve options pricing models,
+have focused a lot of energy on volatility modeling,
+because the constant volatility assumption is a leading
+candidate for why the Black-Scholes-Merton model
+often fails to explain the options prices observed
+in the market.
+We'll start by looking at an example that illustrates
+the type of deviations that typically
+arise between the Black-Scholes-Merton model
+predictions and observed market prices.
+We'll then look at approaches to volatility modeling that
+have been developed to improve the accuracy of options pricing
+models.
+The example here is based on data
+from May 3rd of 2007, which was a few months
+before the onset of the global financial crisis
+later that year.
+The S&P 500 index was at 1502, the one-month risk free rate
+was 4.713% on a continuously compounded basis,
+the dividend yield on the S&P 500 was about 1.91%.
+Those three inputs into options pricing models
+can be observed fairly accurately.
+The volatility, however, has to be estimated from data
+or inferred from other options prices.
+We'll start with an estimate of volatility,
+based on using the previous three months of daily stock
+returns.
+The estimated volatility, then, is based, as usual,
+on the average of a square deviation of daily returns
+from their mean and we're only using observations
+from trading days.
+The daily volatility estimate is then
+annualized by multiplying by the square root
+of the number of trading days in a year, which
+is taken to be 252 days.
+The resulting estimate of annual volatility in the market
+at that time was 12.36%.
+Using those inputs, we can calculate the BSM prices
+for some of the many put and call
+options that were trading in the market on that day.
+All of the options shown here have the same maturity date,
+and hence the same time to expiration, which is 0.12.
+They vary in their strike prices, which
+range from 1430 down to 1575.
+The current index value of 1,502.39
+lies towards the middle of that available range of options.
+The next column here shows the ratio of the strike prices
+to the index value, which is known
+as the moneyness of the option.
+Then, both for puts and calls, we
+have the market price, the Black-Scholes-Merton estimate
+of what the price would be, and then
+the ratio of the estimated price over the actual price.
+There are several features of this data that
+are quite noteworthy and actually typical
+of the patterns observed in options prices.
+Whereas the Black-Scholes-Merton model prices and market prices
+are usually within a few percentage
+points of each other for options that
+are close to being at-the-money, that
+isn't true for other strike prices.
+For calls, the largest deviations are for deep
+out-of-the-money options, where market values are considerably
+lower than those predicted by the Black-Scholes-Merton
+formula.
+For puts, the largest deviations are for deep out-of-the-money
+options, where market values are much higher than those
+predicted by the Black-Scholes-Merton formula,
+this region here.
+The way we're going to interpret this is that it indicates that,
+despite the fact that Black-Scholes-Merton prices are
+based on a no-arbitrage strategy of dynamic trading
+in a replicating portfolio, traders' valuations in fact
+seem conservative or pessimistic in the following sense:
+the market puts a higher value on the protection value
+of out-of-the-money puts against large downward price movements
+than predicted by the Black-Scholes-Merton model.
+The market is also conservative in treating the upside obtained
+from out-of-the-money call options as worth less than
+the BSM model predicts.
+A slightly different way to characterize
+the patterns observed in the table
+is to focus on the concept of moneyness.
+Again, moneyness is the ratio of the strike price to the index
+price, K/S. The table shows that, for both puts and calls,
+for options with low moneyness, the Black-Scholes-Merton model
+seems to underprice the options, whereas for options
+with high moneyness, Black-Scholes-Merton
+seems to overprice the options.
+This observation is also consistent
+with the pessimistic view that the likelihood of very negative
+stock returns is higher than what the BSM model assumes,
+and that the likelihood of extremely high returns
+is lower.
+To account for these systematic discrepancies between observed
+and model prices, the natural starting point
+is to more closely examine the inputs that go into the model.
+We have six of these to consider: the strike price,
+the time to expiration, the current stock
+price, the interest rate, the dividend yield, and volatility.
+The first two inputs are specified in the options
+contract, and the current stock price is easily observable.
+Interest rates and dividend yields are also observable
+and they don't vary too much over time.
+Moreover, their variation has an opposite effect
+on calls and on puts but we saw that mispricing
+went in the same direction for puts and calls.
+That leaves volatility, then, as the most likely suspect
+on our list.
+It's harder to predict, and we'll
+see that it changes significantly over time.
+However, as we'll see on the next slide,
+the average level of mispricing may
+be related to inaccuracies in our volatility estimate
+but adjusting that alone can't explain
+why the Black-Scholes-Merton model under-prices out
+of the money puts and over-prices in the money
+puts, and vice versa for calls.
+Hence, we need to consider what else
+could explain the mispricing.
+The list of additional suspects include
+various possible violations of our frictionless markets
+assumption, that goes into deriving
+the Black-Scholes-Merton model.
+Those include limits on dynamic hedging, discontinuous stock
+price paths, or other deviations from log normality,
+transactions costs, and limits to shorting.
+Taken together, these all suggest
+that pricing can't be purely done by no arbitrage.
+A risk premium also affects option values.
+That leaves us with some practical questions
+to try to answer.
+First, which of these frictions is important enough
+to impact pricing?
+And how do we need to modify our pricing models
+to make them more accurate?
+The simplest fix would be if it were simply
+a matter of having estimated the volatility
+parameter differently than what other market participants were
+doing.
+Recall, we looked at three months of recent daily returns,
+calculated the standard deviation,
+and annualized the estimate.
+That procedure is intrinsically backwards-looking,
+and perhaps traders that were forward-looking
+came to a different conclusion about
+the appropriate volatility parameter
+for the life of the option.
+To test this hypothesis, this table
+recalculates all of the Black-Scholes-Merton prices
+for the puts and calls in this table, but under the assumption
+that sigma is 11.5 instead of the 12.4
+that was estimated earlier.
+The 11.5 was chosen so that the Black-Scholes-Merton model
+would correctly price at-the-money options.
+As you can see, that change doesn't affect the conclusion
+that the Black-Scholes-Merton formula under-prices options
+with low moneyness and overprices
+those with high moneyness.
+We'll need to look further for explanations of these price
+patterns.

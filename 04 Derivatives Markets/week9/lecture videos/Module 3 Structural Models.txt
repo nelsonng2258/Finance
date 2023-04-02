@@ -1,0 +1,82 @@
+PROFESSOR: We'll now turn to structural modeling
+of credit risk, which differs from statistical approaches
+by linking default and recovery rates to an underlying
+model of the stochastic evolution of a firm's asset
+value.
+You probably remember from your introductory finance courses
+that the payoffs on the debt and equity of a corporation as
+of the maturity date of the debt, time T,
+can be represented as functions of the firm's total asset
+value, V sub T. Specifically, zero coupon risky debt
+receives its promised face value of F as long
+as the firm's asset value is sufficiently high
+to cover the promised payment.
+If the asset value is at less than F,
+the debt holders get whatever the asset value turns out
+to be.
+That is, they become the equity holders of the corporation.
+The equity, then, is like a call option
+with a strike price of F on the value of the assets at time T
+since once the debt is paid off the equity holders
+have a claim equal to the remaining value of the assets.
+The sum of the debt and equity is, of course, the total asset
+value and it would be represented on a payoff diagram
+simply as a 90-degree line running through
+the (0,0) point.
+
+The payoff diagram for the risky debt
+can be further decomposed into the sum of two components.
+The first is a risk-free bond with a face value of F.
+The second is a short put option.
+
+Clearly, from the diagram on the left,
+the sum of the two positions is identical to that
+of risky debt.
+
+The decomposition is useful when the default risk
+is borne by someone other than the bondholder.
+For example: when a risky loan is guaranteed
+by a private insurance contract or by a government guarantee,
+the value of the guarantee is just
+the value of the put option.
+With the guarantee, the bondholder
+has a safe claim that can be valued separately,
+discounting the payoff at the risk-free rate.
+This example is a reminder that, because credit guarantees are
+like put options on a company's assets,
+they can be valued on binomial trees,
+either using a replicating portfolio approach
+or risk neutral pricing, which, as always,
+are equivalent mathematically.
+Here we have a company, XYZ, whose assets
+are currently worth $100 and next period
+will be worth $140 or $70.
+Imagine it has debt with face value of $90,
+and that debt is guaranteed by a third party.
+We want to know what the value of that guarantee
+is from the perspective of the guarantor.
+Since we haven't looked at a replicating portfolio
+approach for a few weeks, I'll review it here
+by answering the question that way.
+Well, the payout by the guarantor
+will be 0 if the assets are worth $140 and the payout
+will be $20 if the assets are only worth $70.
+To use the replicating portfolio approach,
+we also need information on the risk-free rate.
+Here, that information is represented by one-step tree
+showing that a risk-free bond with a certain payoff of $100
+currently sells for $95.
+We replicate the payoff of the guarantee
+by buying a fraction X of the risk-free bond
+and a fraction Y of the risky firm assets.
+
+Solving for X and Y, we find that X is equal to -0.4,
+and Y is equal to 0.2857.
+The guarantor has the equivalent of a highly leveraged
+long position in the assets of the firm.
+The cost of the guarantee to the issuer
+is the cost of that replicating portfolio, which
+we can calculate based on the bond
+price and the current asset price to be $9.43.
+From the perspective of the guaranteed bond holders,
+the value of the guarantee is a positive $9.43.

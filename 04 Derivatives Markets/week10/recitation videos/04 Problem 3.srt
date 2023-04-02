@@ -1,0 +1,456 @@
+0
+00:00:00,000 --> 00:00:01,050
+
+
+1
+00:00:01,050 --> 00:00:03,630
+PROFESSOR: OK, in the final part of the recitation,
+
+2
+00:00:03,630 --> 00:00:06,810
+let's review a few rapid-fire questions
+
+3
+00:00:06,810 --> 00:00:11,400
+related to the concepts of duration and convexity.
+
+4
+00:00:11,400 --> 00:00:13,500
+For the first three questions we'll
+
+5
+00:00:13,500 --> 00:00:16,860
+consider a five-year, 3.5% coupon
+
+6
+00:00:16,860 --> 00:00:22,020
+bond with no embedded options and is priced at par.
+
+7
+00:00:22,020 --> 00:00:24,990
+For each of the following changes to the bond's structure
+
+8
+00:00:24,990 --> 00:00:28,230
+or to the market environment-- just one at a time--
+
+9
+00:00:28,230 --> 00:00:31,080
+what would happen to either the effective duration
+
+10
+00:00:31,080 --> 00:00:34,540
+or effective convexity of the bond?
+
+11
+00:00:34,540 --> 00:00:39,880
+Effective duration or convexity can, one, not change, two,
+
+12
+00:00:39,880 --> 00:00:44,230
+become smaller, three, become bigger, or four,
+
+13
+00:00:44,230 --> 00:00:46,870
+it's indeterminate.
+
+14
+00:00:46,870 --> 00:00:49,090
+In our first situation in Part A,
+
+15
+00:00:49,090 --> 00:00:54,010
+the yield curve is going to make a parallel shift downward.
+
+16
+00:00:54,010 --> 00:00:56,920
+Well, what would be the effect of this parallel shift
+
+17
+00:00:56,920 --> 00:00:59,560
+downward on the effective duration
+
+18
+00:00:59,560 --> 00:01:04,750
+and effective convexity of our five-year, 3.5% coupon bond?
+
+19
+00:01:04,750 --> 00:01:06,460
+Well, both the effective duration
+
+20
+00:01:06,460 --> 00:01:08,810
+and the effective convexity would go up;
+
+21
+00:01:08,810 --> 00:01:10,630
+they become larger.
+
+22
+00:01:10,630 --> 00:01:12,640
+What's the intuition for this?
+
+23
+00:01:12,640 --> 00:01:18,100
+Well, the lower yield curve-- the parallel shift downward--
+
+24
+00:01:18,100 --> 00:01:21,430
+has the effect of making more distant payments--
+
+25
+00:01:21,430 --> 00:01:24,820
+those payments in the bond in, say, year four or year five--
+
+26
+00:01:24,820 --> 00:01:29,320
+relatively more valuable through the discount rate effect.
+
+27
+00:01:29,320 --> 00:01:33,880
+Lower discount rates on longer dated payments
+
+28
+00:01:33,880 --> 00:01:37,160
+increases their value.
+
+29
+00:01:37,160 --> 00:01:39,500
+Overall, this discount rate effect
+
+30
+00:01:39,500 --> 00:01:44,060
+is going to put more weight on those more distant terms
+
+31
+00:01:44,060 --> 00:01:47,150
+in the calculation of duration and convexity
+
+32
+00:01:47,150 --> 00:01:51,560
+and increase the overall values of effective duration
+
+33
+00:01:51,560 --> 00:01:54,170
+and effective convexity.
+
+34
+00:01:54,170 --> 00:01:56,750
+All right, the situation in Part B
+
+35
+00:01:56,750 --> 00:02:01,430
+is now that our coupon bond is puttable after two
+
+36
+00:02:01,430 --> 00:02:03,995
+years at par.
+
+37
+00:02:03,995 --> 00:02:07,830
+Well, the effect on the effective duration of our bond
+
+38
+00:02:07,830 --> 00:02:10,419
+would be to lower the effective duration,
+
+39
+00:02:10,419 --> 00:02:12,900
+so it becomes smaller, and the effect
+
+40
+00:02:12,900 --> 00:02:15,180
+on the effective convexity would be
+
+41
+00:02:15,180 --> 00:02:18,480
+to increase the effective convexity of our bond--
+
+42
+00:02:18,480 --> 00:02:20,100
+it becomes larger.
+
+43
+00:02:20,100 --> 00:02:22,140
+What's the intuition for this?
+
+44
+00:02:22,140 --> 00:02:27,390
+Well, the put option is going to shorten the effective duration
+
+45
+00:02:27,390 --> 00:02:30,570
+because the likelihood of receiving future payments
+
+46
+00:02:30,570 --> 00:02:32,400
+in the bond goes down.
+
+47
+00:02:32,400 --> 00:02:35,460
+If I have this option to sell the bond back,
+
+48
+00:02:35,460 --> 00:02:37,980
+that's going to reduce the probability
+
+49
+00:02:37,980 --> 00:02:42,000
+that the holder of the bond is going to receive payments
+
+50
+00:02:42,000 --> 00:02:44,680
+in the distant future.
+
+51
+00:02:44,680 --> 00:02:47,890
+It's going to increase the effective convexity,
+
+52
+00:02:47,890 --> 00:02:52,120
+on the other hand, by putting a floor on the value of the bond
+
+53
+00:02:52,120 --> 00:02:56,305
+equal to the price of the put option as interest rates rise.
+
+54
+00:02:56,305 --> 00:02:59,500
+
+
+55
+00:02:59,500 --> 00:03:03,580
+In Part C, the situation is that the probability
+
+56
+00:03:03,580 --> 00:03:09,730
+of our coupon bond defaulting in any year increases from 0%--
+
+57
+00:03:09,730 --> 00:03:13,390
+so it's risk-free-- to 3%.
+
+58
+00:03:13,390 --> 00:03:16,130
+The expected recovery given default, on the other hand,
+
+59
+00:03:16,130 --> 00:03:19,190
+is unchanged.
+
+60
+00:03:19,190 --> 00:03:22,160
+Well, an increase in the probability of default
+
+61
+00:03:22,160 --> 00:03:27,650
+is going to first, lower the effective duration and second,
+
+62
+00:03:27,650 --> 00:03:30,800
+lower the effective convexity.
+
+63
+00:03:30,800 --> 00:03:32,600
+What's the intuition here?
+
+64
+00:03:32,600 --> 00:03:34,520
+Well, higher default probability is
+
+65
+00:03:34,520 --> 00:03:38,090
+going to reduce the present value of more distant payments
+
+66
+00:03:38,090 --> 00:03:41,810
+relative to the total present value of cash flows, basically
+
+67
+00:03:41,810 --> 00:03:46,350
+the same intuition as in Part B for the put option on the bond.
+
+68
+00:03:46,350 --> 00:03:48,620
+However, in this case, it's also going
+
+69
+00:03:48,620 --> 00:03:53,150
+to pull down the convexity of our coupon bond.
+
+70
+00:03:53,150 --> 00:03:56,490
+
+
+71
+00:03:56,490 --> 00:03:58,800
+In Part D, we don't have a situation,
+
+72
+00:03:58,800 --> 00:04:01,180
+just a true or false.
+
+73
+00:04:01,180 --> 00:04:04,050
+We are asked that since PO securities--
+
+74
+00:04:04,050 --> 00:04:08,550
+principal only securities-- are derivatives based on mortgages,
+
+75
+00:04:08,550 --> 00:04:12,570
+and mortgages, as we discuss in the week 10 lecture,
+
+76
+00:04:12,570 --> 00:04:16,829
+have negative convexity due to the prepayment option,
+
+77
+00:04:16,829 --> 00:04:21,410
+POs also have negative convexity.
+
+78
+00:04:21,410 --> 00:04:22,670
+Well, this is false.
+
+79
+00:04:22,670 --> 00:04:26,540
+As we saw in the first part of this recitation,
+
+80
+00:04:26,540 --> 00:04:30,710
+POs generally have positive convexity.
+
+81
+00:04:30,710 --> 00:04:35,360
+Unlike their underlying mortgages, the value of POs
+
+82
+00:04:35,360 --> 00:04:40,280
+rise sharply when interest rates fall since the prepayment
+
+83
+00:04:40,280 --> 00:04:43,280
+results in the early payment of principal,
+
+84
+00:04:43,280 --> 00:04:46,100
+which increases the present value of cash flows,
+
+85
+00:04:46,100 --> 00:04:48,200
+to the PO investors.
+
+86
+00:04:48,200 --> 00:04:51,060
+
+
+87
+00:04:51,060 --> 00:04:54,300
+Finally, Part E is asking, is the risk
+
+88
+00:04:54,300 --> 00:04:56,730
+of default on an underlying mortgage
+
+89
+00:04:56,730 --> 00:04:59,970
+in a mortgage-backed security relevant to the returns
+
+90
+00:04:59,970 --> 00:05:02,850
+of investors in a mortgage-backed security
+
+91
+00:05:02,850 --> 00:05:07,305
+issued by, say, one of the GSEs, Fannie Mae or Freddie Mac?
+
+92
+00:05:07,305 --> 00:05:10,500
+
+
+93
+00:05:10,500 --> 00:05:11,490
+Yes.
+
+94
+00:05:11,490 --> 00:05:13,980
+As discussed in the week 10 lecture,
+
+95
+00:05:13,980 --> 00:05:17,220
+it's true that investors are promised the full payment
+
+96
+00:05:17,220 --> 00:05:20,130
+of their principal and any accrued interest
+
+97
+00:05:20,130 --> 00:05:22,170
+on these mortgage-backed securities issued
+
+98
+00:05:22,170 --> 00:05:25,380
+by Fannie Mae or Freddie Mac because both of them
+
+99
+00:05:25,380 --> 00:05:28,670
+provide credit guarantees.
+
+100
+00:05:28,670 --> 00:05:31,730
+However, that doesn't mean that the returns to investors
+
+101
+00:05:31,730 --> 00:05:34,460
+are not affected by the risk of default
+
+102
+00:05:34,460 --> 00:05:39,230
+because default could affect the pattern of realized cash flows,
+
+103
+00:05:39,230 --> 00:05:42,650
+since at the time of default the full amount
+
+104
+00:05:42,650 --> 00:05:47,870
+owed on the mortgage is repaid to the investors.
+
+105
+00:05:47,870 --> 00:05:50,690
+Thus, the possibility of default is
+
+106
+00:05:50,690 --> 00:05:54,140
+going to affect the duration of the mortgage-backed securities
+
+107
+00:05:54,140 --> 00:05:57,500
+and its exposure to interest rate risk, exactly
+
+108
+00:05:57,500 --> 00:06:01,550
+the intuition that we went over on Part C on the slide
+
+109
+00:06:01,550 --> 00:06:03,900
+previously.
+
+110
+00:06:03,900 --> 00:06:06,540
+Well that does it for recitation 10
+
+111
+00:06:06,540 --> 00:06:09,430
+and that does it for the recitations for this semester.
+
+112
+00:06:09,430 --> 00:06:12,330
+Thank you very much, everyone, for coming.
+
+113
+00:06:12,330 --> 00:06:17,000
+Good luck on the final exam and hope to see you soon.
+

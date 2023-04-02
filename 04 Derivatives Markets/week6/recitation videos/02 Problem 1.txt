@@ -1,0 +1,90 @@
+
+PROFESSOR: Without further ado, let's
+begin with the first topic--
+implied volatility.
+In the week 6 lecture, we saw how
+the Black-Scholes-Merton model can
+be used to infer the volatilities of underlying
+stock prices.
+These so-called implied volatilities--
+that is, volatilities that are reverse engineered
+in the Black-Scholes-Merton model using observed options
+prices--
+are forward looking measures of market uncertainty
+about future returns, and are typically
+less variable than options prices themselves.
+For example, consider a European call option
+on a non dividend paying stock with spot price, S,
+equal to 21, strike price, K, equal to 20,
+risk-free rate, r, equal to 10%, and time
+to expiration, T minus t, equal to 0.25.
+Recall the Black-Scholes-Merton pricing formula
+for a European call option, given in equation 1 below.
+The price of the call option on the left hand side
+is equal to the spot price, S, times the cumulative density
+function of a standard normal random variable evaluated
+at d1, minus K, the strike price of the option, times
+e to the negative r times T minus t,
+times N evaluated at d2.
+Now, suppose that the market price of the call option,
+which we'll call C, is equal to 1.875.
+How can we use equation 1 to find sigma, the volatility
+of the underlying stock price?
+While it's generally impossible to invert equation 1 in order
+to solve for sigma as a function of S, K, r, T, and C,
+we can numerically iterate on sigma using the BSM and Black's
+Model.xls spreadsheet.
+In particular, let's begin by guessing an initial value
+for sigma, say 0.3 or 30%.
+Plugging these parameters into the BSM tab of the spreadsheet,
+we calculate a call price of $2.10.
+The inputs and output of the spreadsheet are in the figure
+below.
+Clearly, the call price of 2.10 is too high,
+relative to the market price of 1.875.
+So what value of sigma should we try next?
+Well, since we know that the price of the European call
+option is increasing the volatility of the underlying
+stock price, we should try a smaller value of sigma--
+say, 0.2.
+Doing so yields a call price of 1.76,
+which is now too low relative to the market price of 1.875.
+We can repeat the above procedure, plugging
+in a value of sigma somewhere between 0.2 and 0.3, say 0.25.
+Depending on whether the calculated call
+price is above or below the market price,
+we adjust our input of sigma upward or downward,
+iterating until the calculated call price is close
+enough to the market price.
+The resulting value of sigma will be the implied volatility
+of the call option.
+This iterative method can be pretty tedious to implement
+by hand, though.
+Is there a faster way to find the optimal input of sigma?
+The answer, unsurprisingly, is yes.
+In particular, one way to efficiently calculate
+the implied volatility of the call option
+is to use Microsoft Excel's solver tool.
+In order to retrieve the solver tool,
+first load the Solver add-in, and then open Solver
+under the Analysis group in the Data tab.
+In the pop up menu, define the objective
+to be the cell corresponding to the value of the call option--
+in this case, cell D16.
+We want to change the variable in the cell corresponding
+to sigma, such that the call option has
+a value equal to its market price of 1.875.
+So we want to set the objective to the value of 1.875.
+The changing variable cell, D9, is
+going to be the sigma, or volatility of the underlying
+stock price.
+After running the solver, you should
+find that an optimal value of sigma equal to 0.235
+will yield the value of the call option
+that is approximately equal to its market price of 1.875.
+In other words, the implied volatility of the call option
+is 23.5% per annum.
+The output of the solver is displayed in this figure below.
+In principle, one could also use a similar procedure
+with binomial trees to compute the implied volatilities
+of American options.

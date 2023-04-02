@@ -1,0 +1,141 @@
+
+PROFESSOR: All right, let's finish the recitation
+by reviewing the last topic, effective duration
+and effective convexity.
+Let's begin by recalling the definitions of modified
+duration and convexity for an option-free bond from all
+the way back in the week three lecture.
+In particular, modified duration is
+related to the first derivative of
+the price-yield relationship.
+It's negative, because prices move inversely with yields.
+And it's equal to the first derivative dP of the price,
+with respect to the yield dy, scaled by 1 over the price.
+Convexity, on the other hand, is related
+to the second derivative of the price-yield relationship.
+Since most bonds have positive convexity,
+the second derivative the price with respect to the yield,
+scaled by 1 over the price, is positive.
+Together, modified duration and convexity
+could be used to approximate the price
+change of a bond associated with a small change in yields.
+So dP, the price change of the bond,
+is approximately equal to negative Dm, which
+is the modified duration of the bond, times its price, P,
+times the change in yields, dy, plus 1/2 times the convexity
+times the price of the bond times the change in yields
+squared.
+This ultimately comes from a second-order Taylor series
+expansion of the price-yield relationship.
+But those definitions only apply to bonds
+without any embedded options.
+How can we adjust our definitions
+of modified duration and convexity for bonds
+that have embedded options?
+Well, since embedded options will affect the sensitivity
+of bond prices to yields, we can use
+effective duration and effective convexity instead.
+These measures are ultimately estimated
+using a model of how prices move with changes in yields.
+For the option-free bonds that we considered
+on the previous slide, the effective duration
+and effective convexity will be exactly the same
+as modified duration and standard convexity.
+Effective duration and effective convexity
+are very commonly-used in delta and gamma hedging strategies
+that we reviewed in week three.
+For example, hedging mortgage portfolios
+requires using effective duration
+and effective convexity, because the prepayment
+option of a mortgage is a type of American call option.
+Formally, we can define effective duration
+as follows in equation one.
+Effective duration is equal to 1 over the price of the bond
+initially before interest rates change
+times the difference between the price
+of the bond after interest rates fall and the price of the bond
+after interest rates rise divided
+by 2 times s, where s is the amount the interest rates rise
+or fall.
+In the case of duration, this is for a level shift
+in the yield curve.
+Note that this equation one and definition
+of effective duration is conceptually quite similar
+to the definition of modified duration,
+except now we replace the first derivative of the change
+in the price of the bond for the change in yield
+with its corresponding difference quotient.
+Similarly, effective convexity is defined as 1
+over the initial price of the bond times the difference
+between the price after rates fall
+minus the initial price of the bond
+minus the difference between the initial price of the bond
+minus the price after rates rise, now divided
+by the change in interest rates squared.
+Conceptually, this is, again, quite similar to the definition
+of convexity we saw earlier, except now
+the second derivative of the bond's price with respect
+to the change in yields is replaced by its difference
+quotient.
+Just like before, we can use effective duration
+and effective convexity to approximate the price
+change of a bond with embedded options
+for a small change in yields.
+Equation three is identical to the equation that we
+saw earlier, this one here, except now modified duration
+and standard convexity are replaced
+with effective duration and effective convexity.
+All right, since those definitions
+of effective duration and effective convexity
+are rather abstract, let's see if we can illuminate things
+with an empirical example.
+Suppose that a mortgage-backed security
+has an estimated price-yield relationship summarized
+in the following figure.
+Such a relationship like this usually
+comes from a model that's estimated
+using historical data.
+In part a we are asked, if yields are currently
+at 5.5%, what is the effective duration
+and effective convexity for the mortgage-backed security?
+Well, according to the figure, the price
+of the mortgage-backed security is $97 when yields are at 5.5%.
+So here, when the yield is 5.5%, the price per $100
+face value is $97.
+In order to apply equations one and equations two--
+in order to find the effective duration and effective
+convexity of the mortgage-backed security, respectively--
+we can consider a 0.5% increase or decrease in yields.
+So s is equal to 0.005 as a decimal.
+A 0.5% increase or decrease in yields
+is small enough such that the first-order
+and second-order Taylor series expansions are justified.
+From the figure, the price of the mortgage-backed security
+is $100 when yields fall to 5%, so here.
+And it's equal to $92 when yields rise to 6% here.
+So from equation one, we can find the effective duration
+of the mortgage-backed security as follows.
+It's equal to 1 over the initial price--
+well, $97 is the price when yields are 5.5%--
+times the difference between the price when rates fall to 5%
+of 100 minus the price when rates rise to 6%
+of 92 divided by 2 times s, which is 2 times 0.005,
+which is equal to 8.247.
+Similarly, from equation two, the effective convexity
+of the mortgage-backed security is 1 over the initial price
+of 97 times the difference between the price after rates
+fall of 100 minus the initial price of 97 minus the initial
+price of 97 minus the price after rates rise of 92 divided
+by 0.005 squared, which is equal to--
+get ready-- negative 824.74.
+In this case, the mortgage-backed security
+actually has negative convexity.
+And that's very different from what
+we saw with most standard bonds earlier in this course.
+This, however, is actually typical for mortgage bonds
+as well as for callable bonds more
+generally when yields are very low.
+That is when they are more likely to be called.
+All right, that ends recitation eight.
+Thank you everyone for coming.
+And I look forward to seeing you next week.

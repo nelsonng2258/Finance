@@ -1,0 +1,76 @@
+
+PROFESSOR: It's well-known that the lognormal model for stock
+prices fails to accurately capture
+the historical distribution of observed stock prices.
+The empirical distribution has what's known as "fatter tails."
+That is, there's a higher chance of very large negative returns
+and also a higher chance of very high returns
+than the best fit of a lognormal distribution to the data
+would imply.
+Remember also that, if prices are lognormally distributed,
+then returns--
+inclusive of dividends-- are normally distributed.
+That fact is illustrated in the graph where the red bars are
+from the histogram constructed from a stock market return
+data.
+The smooth graph is the fitted distribution of returns,
+assuming a normal distribution.
+You can see that the fitted distribution attributes
+too low a probability to the tails
+of the empirical distribution.
+It's hard to tell from the previous graph exactly how
+large the tail deviations are from what
+would be expected if returns were normally distributed.
+This interesting table is from an article
+on the website Seeking Alpha.
+It shows the number of expected versus realized occurrences
+of daily stock market realizations
+that are greater than 1 standard deviation, 2
+standard deviations, et cetera, going all the way out
+to 9 standard deviations.
+It shows that there are 163 events that
+exceeded 4 standard deviations based on the best
+fit of a normal distribution versus the 1 event
+the theory predicts would be that large.
+Consistent then with the previous graph,
+it also shows that the frequency of moves
+that are less than 1 standard deviation
+are more likely than is captured by a normal distribution.
+These sorts of tabulations have led researchers
+to consider fat-tailed distributions--
+like the student's t-distribution
+or the Laplace distribution-- as candidates
+to better fit the data.
+To what extent the value of the stock market
+moves smoothly over time is a topic
+of debate among academic economists.
+Well, even if stock prices are in some theoretical sense
+continuous, as a practical matter,
+traders experience prices as having
+sometimes significant jumps.
+For example, there are periods when markets are closed--
+such as overnight-- when price movements are unobservable
+and by the time the markets reopen,
+prices can be far different than they were at the previous day's
+close.
+And even as a theoretical matter, what moves
+stock prices is new information.
+If there is an announcement of an event that
+affects the market broadly--
+such as a surprise increase in inflation
+or a fall in unemployment or a declaration of war--
+those could all cause the index value to jump.
+This graph plots high-frequency percentage price changes
+for the US stock market over the same period
+as shown in the previous graph.
+Clearly, there are episodes that appear
+to be jumps that range from about minus 20% to positive
+15%.
+For individual stocks, which trade far less frequently,
+there can be many sources of new information
+that significantly move the price
+and thereby can create a jump.
+You might expect that to happen, for instance, when
+the company announces that it plans
+on making a large acquisition or that it will itself
+be acquired by another firm.

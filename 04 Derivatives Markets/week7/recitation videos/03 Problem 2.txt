@@ -1,0 +1,191 @@
+
+PROFESSOR: All right, that does it for problem one.
+Let's move on to problem two.
+In problem two, we are asked to estimate the value of a new six
+month European-style arithmetic average price call option
+on a non-dividend paying stock.
+The initial stock price is $30.
+The strike price is $30.
+The risk-free rate is 5%.
+And the stock price's volatility is 30%.
+In part A, we are asked to perform this estimation
+by writing a program to run a Monte Carlo
+simulation to estimate the price of the option.
+Use 5,000 stochastic paths for the risk neutral representation
+of the evolution of stock prices assuming log-normality,
+drawing innovations from a normal distribution,
+and with a time step, h, equal to 1 month.
+Before performing the Monte Carlo simulation,
+let's first see if we can derive a closed-form expression
+for the value of the average price call option.
+Since this material is admittedly more advanced
+than what we usually see in lecture,
+feel free to skip directly to the Monte Carlo simulation
+if desired.
+
+The options payoff here is going to depend on the arithmetic
+average of the price of the underlying stock
+throughout the life of the option.
+In particular, the payoff is the maximum of 0
+and the average price of the stock, S sub average,
+minus the strike price.
+Under the assumption that the average price of the stock
+is log-normally distributed, the average price call
+can be valued using a similar formula
+to the one we've used to price a regular European call option.
+Suppose M sub 1 and M sub 2 are the first two
+moments of the average price of the stock, which recall,
+is log-normally distributed.
+The first two moments correspond to the mean and the volatility
+of that distribution.
+The value of the average price call
+is given by Black's model, equation one here.
+This is identical to the equation
+we saw for Black's model in the last recitation.
+However, now, the forward, or futures, price of the option
+is equal to the first moment of the log-normal distribution
+of the average stock price.
+And similarly, the volatility of the forward or futures price
+is equal to 1 over t times the natural log
+of the second moment divided by the first moment squared,
+that equation at the bottom of the slide.
+Assuming that the average is calculated continuously,
+then we get the following two expressions
+for the first and second moments of the log-normal distribution
+of our average stock price.
+These expressions are not too intuitive.
+So we'll just say that if we plug
+in the risk free rate of 5%, q, the dividend yield of 0
+since is a non-dividend paying stock, our volatility, sigma,
+of 30%, our time to maturity, 0.5 for six months,
+the initial stock price of 30, and the strike price of 30
+to the expressions for M1 and M2 above,
+we get that the first moment, M1 is equal to 30.378.
+And the second moment is equal to 936.9.
+Consequently, the volatility of F, sigma squared sub F,
+is equal to 1 over t times the natural log
+of M2 divided by M1 squared, which is equal to 17.41.
+Finally, from equation one on the previous slide,
+we can find the value of the average price call as follows--
+the exponential of the negative risk
+free rate, expressed as a decimal,
+times 0.5, the time to maturity, times 30.378 and 1 times N
+of d1, which in this case is 0.163, minus 30,
+which in this case is the strike price times N of d2,
+which is equal to $1.64.
+Now that we've seen how we can derive an analytical expression
+for the value of the average price call option using Black's
+model, let's see how we can use Monte Carlo in order
+to find a numerical approximation of the value.
+In particular, we can simulate the log-normal stock price
+process under the risk neutral representation using
+the following algorithm: the stock price at time t plus some
+time step, h --
+or in this case, the time step is equal to 1 over 12 for one
+month --
+is equal to the current stock price times the exponential
+of the difference between the risk free rate, r, and sigma
+squared divided by 2 times the time step plus sigma times
+the square root of h times epsilon
+where epsilon is an independent and identically
+distributed standard normal increment.
+After generating 5,000 different paths for the stock price using
+this algorithm, we can calculate the payoff on each path i
+as follows--
+Vi, the payoff on each path, is equal to the maximum
+of two different terms.
+The first is the average of the stock price over the six months
+for that path i minus the strike price, K. The second term
+is zero.
+
+Finally, after calculating the payoff on each path i,
+we can find the value of the average price call
+by discounting the average payoff over all the paths i
+where there are 5,000 of them by the exponential
+of negative 0.5, the risk free rate, times 0.5,
+the time to maturity of the option.
+For time step h equals the 1/12, you
+should find that the value of the average price call option
+is roughly equal to $1.89.
+Note that this is very close to the analytical result of $1.64
+that we derived above using Black's model.
+On the next slide, I have some example R code that shows you
+how to numerically do this.
+You don't need to know how to program in R in order
+to understand the code at a high level.
+In the first part of the code, I'm
+merely setting up the parameters necessary in order
+to perform the Monte Carlo simulation.
+In particular, I'm setting number
+of simulated paths, the length of the time step,
+the length of maturity of the option,
+the initial value of the stock, the volatility of the stock,
+the risk free rate, the strike price,
+and a vector that collects the payoff of the option along each
+of the simulated stock price paths.
+The second part of the code implements a for loop.
+Looping over each of the individual stock price paths,
+I'm going to simulate a log-normal distribution
+for the stock price over that path
+and then calculate the value of the option
+as the maximum of the difference between the average stock
+price over that path and the strike price and 0.
+The final line of the code merely
+implements the formula to calculate
+the value of the average price call option
+that we saw on the previous slide, this one here.
+OK.
+Part B is asking us to repeat that Monte Carlo exercise,
+but now setting the time step h equal to 1 week
+as opposed to one month, assuming here
+that six months is equal to 26 weeks,
+or equivalently, that there are 52 weeks in a year.
+The R code that I provide below is almost identical to the R
+code that we just saw.
+Only now, the time step h is equal to 1 over 52 instead of 1
+over 12.
+The one thing to notice that is that with the smaller time
+step, the simulated value of the average price
+call of $1.66 at the bottom of the slide
+is nearly identical to the analytical result of $1.64.
+This makes sense.
+The analytical result was a continuous time result
+from Black's model.
+As we shrink the value of the time step,
+making it smaller and smaller, from one month to one week,
+we're getting closer to that continuous time approximation.
+Finally, in part C, we are asked that if we use the same Monte
+Carlo simulation of stock prices as we
+did in part B, what would be the price of a knock-in call
+option with a strike price of $30 and a barrier level of $35?
+
+The first thing to do is to recall that a knock-in call
+option comes into existence when the stock price reaches
+its barrier level, in this case $35, before expiration.
+Using the same algorithm to simulate the log-normal stock
+price process as we did in part B,
+in particular with the time step h equal to 1 over 52 for one
+week, we can simulate the payoff of the knock-in call
+on a particular stochastic path as the maximum
+of the difference between the stock price at maturity
+and the strike price, K, and 0 if the stock price reaches its
+barrier level of $35.00 and 0 otherwise.
+The R code on the next slide is going
+to have the implementation of this Monte Carlo simulation.
+Ultimately, the price of the knock-in call
+will be estimated to be $2.65.
+The code is incredibly similar to the code
+that we saw for parts A and part B. Only this time,
+we have an extra parameter, B, for the $35 barrier level
+of the knock-in call option.
+And at the end of our for loop, we have a condition.
+So if the maximum price of the stock along the simulated
+stochastic path is greater than the barrier level,
+then we calculate the value of the call option as we have
+before --
+the maximum of the difference between the average price
+of the stock along its path and the strike price, K, and 0.
+Otherwise, if the maximum value of the stock
+price along its simulated path is not
+greater than the barrier level, then the value of the option
+will be worthless.

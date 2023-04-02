@@ -1,0 +1,178 @@
+PROFESSOR: We've seen some of the problems that
+can arise with delta hedging, namely,
+that for the hedge to be effective,
+we need to rebalance the portfolio frequently,
+which is expensive because of transactions costs that include
+the time it takes to make the trades,
+and secondly, that the hedge can break down when there are
+large changes in stock prices.
+As we saw, it caused the failure of portfolio insurance
+strategies when the stock market crashed.
+Those problems can be alleviated, but not completely
+avoided by delta-gamma hedging.
+delta-gamma hedging involves adding to the hedge portfolio
+a security with a positive gamma.
+In the example here, we're using a long position
+in a liquid short term traded option to do that.
+We're choosing to use a short term traded option,
+because they're highly liquid and readily available.
+But other securities with a positive gamma
+could have been used as well.
+For an example of constructing the hedged position,
+consider a portfolio we'll call I, which is short the cap
+T dated call option, like the one that's embedded
+in the capital protected note.
+It's long, a fraction n in the stock index, which is currently
+at s, and it's also long in the shorter dated call
+option that matures the time t1 in an amount nc.
+So the short position in the call
+is being hedged by these two long positions.
+As before, we'll hedge the sensitivity of I
+to changes in the stock price, which first means delta hedging
+by setting di ds equal to 0.
+Now, though, we also want to hedge
+against changes in delta, which we will
+occur when stock prices change.
+This implies also setting the second derivative
+of the portfolio.
+It's gamma equal to 0.
+This graph is a reminder that the capital protected
+note provided holders of that security with exposure
+to the S&P 500, which was effectively
+like what they would have been able to get
+if they could buy a very long dated call option on the index.
+The replicating portfolio used in a delta hedging strategy
+locally protects the issuer of the capital
+protected note, because its value changes
+by the same amount for small changes in the S&P 500 index.
+Here, initially, the index was at 10.
+And the delta hedging strategy was set up,
+so that for small stock price changes around 10,
+the change in the replicating portfolio
+would mirror the change in the value of the structured note.
+Delta-gamma hedging requires setting
+the first and second derivatives of our hedged portfolio
+I to 0 with respect to the underlying stock value s.
+The strategy also involves rebalancing the hedge
+over time.
+So differentiating the expression for I
+once with respect to s, we get the delta of that portfolio,
+which will set equal to 0.
+And then differentiating it a second time,
+we get the gamma or convexity of the portfolio, which we also
+set equal to 0.
+This gives us two linear equations and two unknowns,
+the fraction of the stock, and the number
+of short term call options, nc.
+We can solve the second equation directly for nc.
+It implies that nc is the ratio of the gamma of the option we
+have a short position in and the gamma of the option we're
+using to hedge the curvature.
+This makes intuitive sense, that the larger
+the gamma of the position being hedged relative to the option
+we're using to hedge it, the larger the size of the hedge
+position needs to be.
+Well, once we know nc, we can solve
+for n using first equation, and we get this expression for m.
+Notice that the position in stocks
+here is different than if we had only delta
+hedged, and that's generally the case
+when we do delta-gamma hedging.
+In this case, the long position of the stock is smaller.
+That's because part of the delta hedge
+is being accomplished by the delta of the short term call
+option, and in this case, that delta is positive.
+We'll now apply this methodology to the capital protected
+note example and see how much the strategy is
+likely to improve over just delta hedging.
+We calculated last time that the at the money short call
+per unit of the index had a value of 1.7.
+Plugging our assumptions into the BSM formulas
+for the delta and gamma of this option, the gamma is 0.08,
+and the delta is 0.5747.
+Let's also imagine that we're going to use a one year call
+option as part of the hedge, and let's
+hold the other assumptions, of course, as before.
+Well, we find that option we're using to hedge is worth 0.6443,
+that it has a gamma of 0.2575, and that it
+has a delta of 0.5512.
+Putting this information into the equation
+for the number of one year call options, nc,
+we find that we need 0.3113 in that long call option position.
+Turning to the position in the replicating portfolio
+in the stock, we get n equals 0.4031.
+And then, finally, we find the position
+in bonds in the usual way, which is
+to take the difference between the call option
+and the value of the risky part of the hedge portfolio.
+We find that we need a short position in bonds
+equal to minus 2.53.
+Just a few comments I want to add here.
+You should loopback at last week's notes
+and compare the replicating portfolio we just
+derived with the one last week that employed a pure delta
+hedge.
+You'll see that this portfolio today involves a smaller
+position in the stock index, because, again, the short term
+call option contributes its positive delta
+to the replicating portfolio.
+Another option observation I want
+to make that might not seem as obvious at first
+is that you could have accomplished
+the same delta-gamma hedge using a put option in place
+of the short term call option and as the source
+of positive convexity.
+Note, though, that because the put option has
+a negative delta, it would have implied
+that the position in the stock in the replicating portfolio
+would have actually been larger than it
+would have been in the case of pure delta hedging.
+In general, the choice of which option to use,
+as we've seen for other strategies,
+generally comes down to cost and liquidity.
+Turning back to the diagram of the sensitivity
+of the current value of the capital protected note
+to the stock index value, we can compare it
+to the sensitivity of the replicating portfolio
+for a delta hedge and for a delta-gamma hedge.
+The replicating portfolio for a delta hedge
+as before as represented by the tangent line
+at the current normalized index value of 10.
+As we saw before, the delta hedge
+tracks the price fairly well between, say,
+an index value of nine and 11, so for about this region.
+For larger stock price movements,
+the tracking error starts to become significant.
+The replicating portfolio for the delta-gamma hedge
+is shown by the dotted line.
+You can see that it more closely follows
+the curvature of the value of the capital protected note
+and provides pretty good protection for a significantly
+wider range of stock price movements
+approximately for stock prices between eight and 13.
+This slide summarizes the key points.
+The delta-gamma hedging strategy offers protection
+against considerably larger swings in stock prices
+and so allows for less frequent rebalancing.
+In the example we just looked at,
+it widened the region of stock prices, where the hedge was
+effective from a range of about nine to 11
+to a range of about eight to 13.
+An advantage then of delta-gamma hedging
+is that it can economize on transactions costs,
+because it allows for less frequent portfolio rebalancing.
+An offsetting factor, though, is that using options
+as part of the hedge can be more expensive than just
+trading in the stock for a delta hedging strategy.
+The gamma hedge is also valuable,
+because it protects better against jumps
+in stock prices, which can cause delta hedges to fail badly.
+A final observation is that the capital protected
+note was marketed as a great way of achieving stock market
+exposure, while protecting your principal.
+In fact, the value of the capital
+protected note will vary over time with the stock price
+as the diagram shows and could easily fall below $10.
+So while the capital protected note
+does protect the initial capital at the horizon of seven years,
+it doesn't really offer capital protection along the way.

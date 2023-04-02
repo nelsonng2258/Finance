@@ -1,0 +1,324 @@
+0
+00:00:00,000 --> 00:00:02,220
+PROFESSOR: Compound options are options that
+
+1
+00:00:02,220 --> 00:00:04,330
+are written on other options.
+
+2
+00:00:04,330 --> 00:00:07,980
+Those would include a call on a call, a put on a call,
+
+3
+00:00:07,980 --> 00:00:11,250
+a call on a put, and a put on a put.
+
+4
+00:00:11,250 --> 00:00:13,736
+Or the chain could have even more steps--
+
+5
+00:00:13,736 --> 00:00:17,550
+a call on a call on a call, for example.
+
+6
+00:00:17,550 --> 00:00:20,100
+These compound options typically must
+
+7
+00:00:20,100 --> 00:00:25,090
+be priced by backward induction on a binomial tree.
+
+8
+00:00:25,090 --> 00:00:27,610
+Compound options are actually more common
+
+9
+00:00:27,610 --> 00:00:30,490
+than you might first imagine because they arise
+
+10
+00:00:30,490 --> 00:00:33,970
+in many situations and, particularly, in the context
+
+11
+00:00:33,970 --> 00:00:36,500
+of real investment options.
+
+12
+00:00:36,500 --> 00:00:41,670
+For example, think about an investment in higher education.
+
+13
+00:00:41,670 --> 00:00:44,250
+In a two-year college program, you
+
+14
+00:00:44,250 --> 00:00:46,800
+might have an option in the first year
+
+15
+00:00:46,800 --> 00:00:50,410
+to enroll with a payment of $10,000.
+
+16
+00:00:50,410 --> 00:00:53,100
+And then, in year 2, you have the option
+
+17
+00:00:53,100 --> 00:00:55,800
+to complete the second year for an additional tuition
+
+18
+00:00:55,800 --> 00:00:59,130
+payment of another $10,000.
+
+19
+00:00:59,130 --> 00:01:03,210
+The option to continue in year 2 is like a regular call option
+
+20
+00:01:03,210 --> 00:01:07,260
+with a strike price of $10,000, which you would exercise when
+
+21
+00:01:07,260 --> 00:01:09,720
+the present value of the degree at that point
+
+22
+00:01:09,720 --> 00:01:12,750
+exceeds the $10,000.
+
+23
+00:01:12,750 --> 00:01:14,970
+The option to enter into the two-year program
+
+24
+00:01:14,970 --> 00:01:18,045
+in the first place is what makes it a compound option.
+
+25
+00:01:18,045 --> 00:01:21,300
+
+
+26
+00:01:21,300 --> 00:01:24,390
+Another type of exotic is a gap option.
+
+27
+00:01:24,390 --> 00:01:27,300
+A gap call option has a payoff based
+
+28
+00:01:27,300 --> 00:01:30,150
+on the difference between the underlying asset price
+
+29
+00:01:30,150 --> 00:01:33,560
+and a fixed strike price, K1.
+
+30
+00:01:33,560 --> 00:01:36,560
+But the payoff is only realized when the asset price
+
+31
+00:01:36,560 --> 00:01:40,080
+is greater than a barrier, K2.
+
+32
+00:01:40,080 --> 00:01:43,840
+The formula for a gap option is given here.
+
+33
+00:01:43,840 --> 00:01:46,290
+When the underlying assets satisfy
+
+34
+00:01:46,290 --> 00:01:50,130
+the usual Black-Scholes-Merton assumptions.
+
+35
+00:01:50,130 --> 00:01:54,870
+Notice that K1 is like K in the standard Black-Scholes-Merton
+
+36
+00:01:54,870 --> 00:01:59,310
+formula, but that the probabilities N of d1 and N
+
+37
+00:01:59,310 --> 00:02:03,810
+of d2 depend on the probability of being over the barrier,
+
+38
+00:02:03,810 --> 00:02:05,580
+rather than over the strike price.
+
+39
+00:02:05,580 --> 00:02:09,600
+
+
+40
+00:02:09,600 --> 00:02:11,990
+This is a payoff diagram for a gap call
+
+41
+00:02:11,990 --> 00:02:22,080
+option with a strike, K1, of 90 and a barrier, K2, of 100.
+
+42
+00:02:22,080 --> 00:02:23,880
+To answer the question on the slide
+
+43
+00:02:23,880 --> 00:02:27,840
+of whether the option costs more or less than a similar option
+
+44
+00:02:27,840 --> 00:02:32,400
+without the gap, we can draw the path diagram on a call option
+
+45
+00:02:32,400 --> 00:02:35,130
+with a strike price of 90 and no barrier.
+
+46
+00:02:35,130 --> 00:02:43,730
+
+
+47
+00:02:43,730 --> 00:02:48,050
+We can see that the difference in payoffs between the two
+
+48
+00:02:48,050 --> 00:02:52,130
+is this triangular region.
+
+49
+00:02:52,130 --> 00:02:55,430
+In this region, our regular call option
+
+50
+00:02:55,430 --> 00:02:58,470
+has a higher payoff than the gap option.
+
+51
+00:02:58,470 --> 00:03:00,530
+Therefore, the gap option is worth
+
+52
+00:03:00,530 --> 00:03:03,380
+less than the traditional call option.
+
+53
+00:03:03,380 --> 00:03:07,740
+
+
+54
+00:03:07,740 --> 00:03:10,980
+The final stop on this whirlwind tour of exotic options
+
+55
+00:03:10,980 --> 00:03:12,780
+is one of my favorites.
+
+56
+00:03:12,780 --> 00:03:15,030
+A quanto is an exotic option that
+
+57
+00:03:15,030 --> 00:03:17,970
+provides a payoff in one currency that's
+
+58
+00:03:17,970 --> 00:03:22,620
+directly based on an index value in a second currency.
+
+59
+00:03:22,620 --> 00:03:24,960
+It allows investors to take a position
+
+60
+00:03:24,960 --> 00:03:29,680
+in a risky foreign asset without any exchange rate risk.
+
+61
+00:03:29,680 --> 00:03:33,540
+For example, the Nikkei put warrants traded on the American
+
+62
+00:03:33,540 --> 00:03:37,170
+Stock Exchange are quantos because the payoffs
+
+63
+00:03:37,170 --> 00:03:41,100
+and the premiums are in dollars but the payoff is directly
+
+64
+00:03:41,100 --> 00:03:44,580
+scaled by the yen price of the Nikkei index
+
+65
+00:03:44,580 --> 00:03:47,880
+relative to a yen strike price.
+
+66
+00:03:47,880 --> 00:03:51,390
+That allows investors to take a positional bet on the direction
+
+67
+00:03:51,390 --> 00:03:54,510
+of the Japanese stock market without exposure
+
+68
+00:03:54,510 --> 00:03:58,630
+to the risk of the dollar-yen exchange rate.
+
+69
+00:03:58,630 --> 00:04:01,300
+That exchange rate risk couldn't be completely
+
+70
+00:04:01,300 --> 00:04:03,670
+hedged with a regular forward contract
+
+71
+00:04:03,670 --> 00:04:06,070
+because there's uncertainty about the size
+
+72
+00:04:06,070 --> 00:04:08,950
+of the amount that needs to be hedged when the underlying is
+
+73
+00:04:08,950 --> 00:04:11,180
+a risky stock.
+
+74
+00:04:11,180 --> 00:04:13,990
+So what's special about quantos is
+
+75
+00:04:13,990 --> 00:04:16,990
+that they have an embedded currency forward
+
+76
+00:04:16,990 --> 00:04:19,990
+with a variable notional amount.
+
+77
+00:04:19,990 --> 00:04:22,300
+It's that variable notional amount
+
+78
+00:04:22,300 --> 00:04:24,580
+that gives quantos their name.
+
+79
+00:04:24,580 --> 00:04:29,340
+Quanto is short for quantity adjusting option.
+
+80
+00:04:29,340 --> 00:04:30,000
+
+

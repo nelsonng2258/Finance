@@ -1,0 +1,130 @@
+
+PROFESSOR: It would be incorrect for you
+to take away from this discussion
+that the Black-Scholes-Merton model is just too inaccurate
+to be useful for practitioners.
+To the contrary, it works reasonably
+well for a number of purposes, including hedging options
+positions against changes in stock prices,
+using delta or delta gamma hedging.
+It also remains the basis for widely used implied volatility
+calculations and for some price quotations
+and while more complicated models
+may yield more accurate price predictions,
+it turns out to be very valuable to have
+a model like the Black-Scholes-Merton model that
+can generate price approximations extremely
+quickly when speed is essential.
+Of course, there are times when a more accurate pricing
+tool is valuable, such as if an investment bank wants
+to price complicated option contracts that they write,
+or when the possibility of early exercise
+has a significant effect on value.
+A number of modeling approaches have
+been developed to provide more accurate options prices
+that overcome particular shortcomings
+of the Black-Scholes-Merton model.
+Those include models where volatility
+changes over time, either deterministically
+or stochastically.
+There's also models that incorporate price jumps.
+The implied volatilities from these other models
+or from the market prices of options
+can be incorporated into what's called an implied tree model,
+and then the tree can be used to price other options more
+accurately.
+All of these models were designed
+to deliver results that are consistent with the idea that
+out of the money put options are expensive because of the risk
+premium associated with the protection against very
+large negative returns.
+We'll now go on a short tour of some of these models.
+You won't be tested on their details,
+beyond what appears in homework problems
+but you should understand the main ideas and motivations
+behind them.
+One way to account for the patterns
+we observe in implied volatilities
+is to incorporate the assumption that volatility is not
+constant, but rather, that it's a function of the stock price.
+The constant elasticity of variance model shown here
+does this by modeling the log of the growth stock return
+as having a drift, mu times h, plus a volatility term that's
+based on three factors.
+The first is the current stock price
+taken to the power of alpha.
+The second is a constant, which scales volatility.
+And the third is a shock drawn from
+a standard normal distribution.
+This model reduces to the Black-Scholes-Merton assumption
+about stock returns when alpha is set equal to 0.
+When alpha is negative, it causes return volatility
+to increase when stock prices fall.
+That implies a volatility smirk consistent with the data.
+The reason is that if volatility is high
+when stock prices have low moneyness,
+that higher volatility will cause both putting call option
+values to increase, which in turn increases the implied
+volatility.
+The most well-known model that incorporates
+stochastic volatility is the Heston model,
+named after its inventor.
+This stochastic volatility model also
+captures the smirk and implied volatilities.
+In addition, it reflects the empirical fact
+that volatility varies considerably over time.
+The Heston model specifies a process for stock returns
+that has a drift term that, as usual,
+represents the expected return over the interval h.
+It also has a volatility term based
+on the square root of stochastic function v,
+and a draw, epsilon 1 at each time t,
+from a standard normal distribution.
+The innovations in volatility, v of t plus h minus v of t,
+are model as being mean reverting.
+The mean reversion is at a rate k
+so that, when v is below its mean reverting level
+v upper bar, it tends to increase.
+And when v is above its mean reverting level,
+v tends to decrease.
+This reflects what we saw in the data,
+that periods of higher or lower than normal volatility
+tend to be short lived.
+There's also a second term in the innovations that
+involves a second draw from a standard normal distribution,
+epsilon 2.
+One can prove that, when you assume
+that the correlation between epsilon 1 and epsilon 2
+is negative, the model will imply a volatility smirk.
+The intuition is that, if epsilon 1 is negative
+so that returns are low, then epsilon 2
+tends to be positive because of that negative correlation.
+That has the effect of increasing
+the volatility of the following period when prices are low,
+increasing the probability of further price declines,
+and increasing the value of insurance against downturns.
+It's fairly straightforward to introduce jumps
+into the stock return process.
+For example, the specification here for the stochastic stock
+return between times t and t plus h has three terms--
+mu times h, the expected return over an interval of h;
+sigma times epsilon, a draw from a standard normal distribution
+representing volatility during normal times;
+and a jump term, omega times Q of t.
+Omega parameterizes the size of the jumps.
+Qt is an indicator variable that is 0 most of the time
+and equal to 1 with the probability assumed
+for a jump occurring.
+Omega could be a constant, or it could be modeled as,
+itself, a random variable.
+If it's constrained to be negative,
+it captures the idea that most large jumps in prices
+are in fact negative ones.
+When it's taken to be negative, it also
+induces an implied volatility smirk.
+Technically, pricing with jumps involves
+additional complications, because relying
+on the price of a continuous replication strategy
+is no longer possible.
+And how to incorporate the price of jump risk
+remains a largely unsolved problem.

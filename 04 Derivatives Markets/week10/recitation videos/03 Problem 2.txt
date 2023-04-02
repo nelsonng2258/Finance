@@ -1,0 +1,197 @@
+
+PROFESSOR: All right.
+That does it for the first topic.
+Let's move on to securitization.
+
+As an example of securitization, let's assume
+that the following bonds are available in the market where
+each bond has LIBOR risk and pricing.
+The first bond is a 3.75% fixed-rate coupon
+bond that has a yield of 3.716% on a bond-equivalent basis,
+a maturity of five years, a modified
+duration of 4.483 years, and a convexity of 25.29.
+The second bond is a zero-coupon bond
+with a yield on a bond equivalent
+basis of 3.15%, a maturity of one year, a modified
+duration of 0.969 years, and a convexity of 1.879.
+In part A, we are asked to consider a plain vanilla
+interest rate swap.
+That is, a fixed for floating swap
+with an annual fixed-rate payment of 3.75%.
+That's the payment on the fixed-rate coupon bond
+here in the first column.
+And an annual floating-rate payment
+set to LIBOR and a maturity of five years.
+That interest rate is going to correspond to the interest
+rate on the zero coupon bond with a one year
+maturity and LIBOR risk.
+What would be the modified duration
+of the swap from the perspective of the floating-rate payer?
+Recall that the floating-rate payer in a plain vanilla swap
+is effectively long a fixed-rate bond,
+in short a floating-rate bond with equal long and short
+amounts in present value terms.
+Since the modified duration of that long-short portfolio,
+is simply the difference between the modified durations
+of its component parts, the modified duration
+of the swap from the perspective of the floating rate payer, who
+is long a fixed-rate bond and short a floating-rate bond
+is going to be 4.483.
+That's the modified duration of the fixed leg of the swap
+that comes from the modified duration of the fixed rate
+3.75% coupon bond minus the modified
+duration of the floating leg of the swap, which
+comes from the modified duration of the one year zero coupon
+bond of 0.969.
+That difference is equal to 3.514, which is positive.
+In part B, it stated that Frida Mae
+specializes in financing non-callable commercial
+fixed-rate mortgages.
+Frida Mae's balance sheet, where all of the figures
+are in millions of dollars, looks like as follows.
+On the asset side of the balance sheet,
+Frida Mae has $280 million in short-term mortgages
+with an average modified duration of 0.5 years
+and $350 million of long-term mortgages
+with an average modified duration of six years.
+On the liability side, Frida Mae has $600 million
+worth of bank loans with an average modified
+duration of one year and $30 million of owner's equity.
+Now is Frida Mae adversely exposed
+to either an increase or a decrease in interest rates?
+If Frida Mae wants to use the swap described in part A
+in order to reduce the duration gap between its assets
+and liabilities, would it enter the swap
+as a fixed-rate payer or a floating-rate payer?
+Well first, we can find the modified duration of Frida Mae
+assets as the weighted average of the modified
+duration of the short-term mortgages on the assets side
+of its balance sheet and the modified
+duration of the long-term mortgages on the assets
+of its balance sheet where the weights are
+given by the value of the short-term or long-term
+mortgages, either 280 or 350, divided
+by the total value of its assets of 630.
+That calculation gives you a modified duration
+of 3.556 years for Frida Mae's assets.
+Clearly, the modified duration of Frida Mae's liabilities
+is one year because its only liabilities are
+bank loans, which have an average modified
+duration of one year.
+
+Now since the modified duration of 3.556 years for Frida Mae's
+assets is greater than that of its liabilities,
+which is one year, Frida Mae is exposed
+to an increase in interest rates as higher interest rates will
+cause Frida Mae's net worth, its owner's equity,
+to fall in value.
+Frida Mae could hedge this duration gap
+by entering the swap as a fixed-rate payer.
+Which is effectively long a floating-rate bond and short
+a fixed-rate bond and has a negative duration.
+In part c, we are asked if Frida Mae enters into the interest
+rate swap with a notional principal of $370 million
+on the side of the transaction recommended
+in part B of a fixed-rate payer, estimate what would happen
+to the value of owner's equity if interest rates rise
+at all maturities by 1%.
+
+Well, we can calculate the change
+in the value of owner's equity using the following formula.
+The change in owner's equity, E, is
+equal to the change in the value of Frida Mae's assets,
+short-term mortgages, plus long-term mortgages
+minus the change in the value of Frida Mae's liabilities,
+loans, plus the change in the value of the swap.
+Where d denotes a change in value,
+STM denotes short-term mortgages and LTM
+denotes long-term mortgages.
+Now how do we get these d terms?
+Well, recall that we can use modified duration
+to approximate the price change of a security
+for a small change in interest rates as follows.
+The change in price, dP of a security
+is equal to the negative of the modified
+duration of the security times its price,
+times the change in interest rates, dy Therefore,
+each component of equation three can
+be approximated using the modified duration approximation
+on the bottom of the slide.
+In particular, the change in the value of owner's equity
+is approximately equal to the change
+in the value of the short-term mortgages
+on the asset side of Frida Mae's balance sheet, which
+is equal to the negative of its modified
+duration of 0.5 times its value of $280 million times
+the change in interest rate dy of 1%, or 0.01 as a decimal,
+minus the modified duration of the long-term mortgages
+on Frida Mae's balance sheet of six
+years times their value of $350 times the change
+in interest rates.
+Plus, the modified duration of the bank loans on the liability
+side of Frida Mae's balance sheet
+of one year multiplied by their value of $600 million times dy.
+Plus the modified duration of the swap
+from the perspective of the fixed-rate payer,
+which is normally negative.
+So this term here, the modified duration, is negative,
+and we put a negative sign in front of that.
+And we add the change in value of the swap, which
+accounts for the positive sign of 3.514
+times the notional value of the swap of $370 million times
+the change in interest rate, which overall yields
+a change in the value of owner's equity of negative $3.398
+million.
+So owner's equity would decrease in value of $3.398 million,
+or slightly over 10%.
+
+In part d, it's stated that as an alternative to the swap
+that we just discussed, Frida Mae's CFO
+also considers securitizing some of the long-term mortgages
+and using the proceeds from securitization to pay down
+its bank loans as liabilities.
+There is no recourse on the securitized loans.
+Show what happens to the balance sheet if $200 million
+of the long-term mortgages are securitized.
+After the securitization, would owner's equity
+be adversely affected by either a rise
+or fall in interest rates?
+After securitization, Frida Mae's balance sheet
+would be as follows.
+The two things to note here is now
+that on the asset side of the balance sheet,
+the value of long-term mortgages has fallen from $350 million
+to $150 million because we sold $200 million
+worth of long-term mortgages through the securitization.
+On the liability side of the balance sheet,
+the value of bank loans has also declined
+from $600 million to $400 million
+since we paid off $200 million of our liabilities
+using the proceeds from the securitization.
+Now using equation three, the same equation as before,
+to approximate the change in value of owner's equity
+for a 1% increase in interest rates,
+we find that the change in value of owner's equity
+is approximately equal to the change in value
+of the short-term mortgages on Frida Mae's asset
+side of its balance sheet, which is the same as before.
+Now, minus the change in value of the long-term mortgages
+on Frida Mae's balance sheet, which
+instead of negative 6 times 350 times 0.01
+is now negative 6 times 150, since we sold off $200 million
+of these long-term mortgages plus one year, which
+is the average modified duration of our bank loans
+or liabilities, times $400 instead of $600, because we
+paid off $200 million of our liabilities
+times 0.01, which now gives us a change in value
+of negative 6.4, or equivalently the value of owner's equity
+falls by $6.4 million, which is actually more than when
+using the swap in part C.
+Which, if you recall, was negative $3.398 million.
+In all, the securitization of a large amount
+of long-term mortgages will still
+leave Frida Mae with exposure to rising interest rates.
+Since it's the duration gap, the average duration
+of its assets being longer than that of its liabilities
+that are funding them, that's causing
+the exposure of Frida Mae to this interest rate risk.

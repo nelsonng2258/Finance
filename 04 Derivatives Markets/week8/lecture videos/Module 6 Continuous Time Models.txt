@@ -1,0 +1,216 @@
+
+PROFESSOR: The name of the game in pricing interest rate
+sensitive derivatives is to model the stochastic properties
+of the term structure of interest rates
+as accurately as possible, while at the same time
+avoiding excessive complexity that
+doesn't improve performance but that
+slows down computation times.
+Many of the models that have been
+developed with this goal in mind are continuous time models.
+I want to give you a sense of what these models look like
+and how they're used for pricing,
+but we only have time to scratch the surface of this very
+interesting topic and I won't ask you any difficult questions
+about it on the final.
+A large class of continuous time models for interest rates
+are known as one-factor models in the short rate.
+In these models, the short rate is, in fact, very short.
+It's instantaneous.
+That means that it covers an infinitesimally short period
+of time.
+The general form of this class of models
+is described by this equation for the change
+in the instantaneous short rate over time.
+
+The change has a deterministic drift term given by a function,
+a of rt, and a volatility term parameterized by a function,
+sigma of r and t.
+The function sigma of r and t is multiplied
+by dz, where dz is an increment to a Brownian motion.
+You can think of dz as a draw from a standard normal density
+function.
+Notice that both the drift and the volatility
+can depend on the current level of
+the instantaneous short rate, r, and current calendar time.
+The different models in this class
+are distinguished by the specifications that
+are chosen for the drift function,
+a of rt, and the volatility function, sigma of r and t.
+These models are called one-factor models
+because the rate change only depends
+on a single stochastic shock term.
+Some model implementations are based on physical probabilities
+but the ones used for pricing are generally
+the risk-neutral versions of the models.
+Like the short rate models that we've been looking at,
+because the models have implications
+for bond prices of any possible maturity,
+the entire term structure of interest rates
+at any future point in time is also implicit in the model.
+These one-factor models generally
+bear the name of the researchers that first proposed them.
+The reason that no major new models in this class
+have been proposed in the last 30 years
+is that all the possible variations
+are pretty much covered by these existing models.
+Since that time, though, interest
+has shifted to continuous time models of the forward rate
+curve rather than models of the instantaneous spot rates.
+Those forward rate models are much more
+complicated to understand and you can get the basic idea
+from the one-factor models so for today, I'm
+going to stick to these.
+The whole textbook, though, is a good place
+to look if you're interested in learning more
+about the more complex models for forward rates,
+which include the Heath, Jarrow, and Morton model and the LIBOR
+market model.
+One of the most famous one-factor models
+is the Cox-Ingersoll-Ross model, or CIR for short.
+That model sets the drift to be mean reverting,
+so that if the current instantaneous rate, r, is
+above the long-term target rate, b,
+the drift tends to be negative.
+And if the current rate is below the target rate,
+the drift is positive.
+That reflects the idea that interest rates usually
+stay within some normal range rather
+than drifting up or drifting down for a very long time.
+The speed of mean reversion is controlled by the choice
+of the parameter, alpha.
+
+The volatility is based on a constant parameter, sigma,
+multiplied by the square root of the current instantaneous short
+rate and by an increment to a Brownian motion, dz.
+The purpose of the square root term
+is to reduce the variance as the rate gets close to 0.
+That has the effect of preventing rates
+from going negative, which under many interest rate conditions
+is a desirable attribute.
+A convenient feature of this model
+is that it can be solved to get an equation for the yield curve
+in terms of all these parameter values
+and the current level of the instantaneous short rate.
+You can see the stochastic path that this model generates
+and also see how the parameter choices affect the implied
+yield curve using the spreadsheet CIR demo
+mm.xls, which is included with the class materials.
+
+It's good to know that there's also
+a multi-factor version of this model available
+that can generate a much richer set of shapes for the yield
+curve.
+To price options using the CIR model,
+or any other continuous time model,
+the basic choices are to either use Monte Carlo simulation
+or to represent the model in a discretized form
+on a binomial tree.
+As we solve for stock options, it's
+convenient to use Monte Carlo for European-style options
+where there's no choice about whether
+or not to early exercise the option.
+Implementing these models using Monte Carlo
+involves three steps.
+The first is to discretize a risk-neutral version
+of the model.
+That allows you to then generate short-term paths of interest
+rates using a random number generator to get draws
+from a standard normal density function.
+Remember that we discussed how to do that in Excel last week.
+The discretized version of the general one-factor model
+can be written like this.
+
+It says that the short-term rate at the next time step,
+time t plus delta t, is the rate at time t
+plus the drift function times the size of the time
+step, delta t, plus a volatility term based on the function
+sigma of r and t, the draw from the standard normal density,
+epsilon of t, and the square root of the time
+increment, root delta t.
+The term, epsilon t, times the square root of delta t
+is the discrete representation of the dz
+in the original equation.
+
+The second step is to calculate the implied term structure
+of interest rates as of time 0.
+If you have a closed form solution for the yield curve,
+as in the case of the CIR model, you can use that.
+It's more likely though that you'll
+have to infer the term structure from pricing zero-coupon bonds
+of various maturities.
+To price a cheap period zero-coupon bonds using Monte
+Carlo, you discount the payoff on the bond
+at time cap t, its maturity, back to time 0
+by compounding the short-term rates along each Monte Carlo
+path.
+Averaging the implied prices across a large number
+of Monte Carlo paths gives the price
+estimate for the bond at time 0.
+Then the yield implied by the average price
+is the t period yield and the yield curve.
+Depending on what you're trying to do,
+you may also need to calculate the term structure
+on future dates, such as on the expiration
+date of an option you're pricing along each path at that date.
+You would need to do that, for example, to figure out
+the distribution of a bond's price
+on that future date as an input into calculating the payoff
+on a put or call option on that bond.
+You can follow the same procedure
+I just described starting with the rate on each path
+at the expiration date and solving for the term structure
+starting at that point, based on another large number
+of additional Monte Carlo simulations.
+As you can see, this can all require a very large number
+of computations, but it's made feasible
+by the availability of high-speed computing.
+
+The third and final step is to find the payoff
+on the option you're trying to price
+on each path on the expiration date.
+The option payoff on each path is discounted back to time 0,
+again, using the product of successive rates
+along the path for discounting.
+The average of those time 0 present values
+across simulated paths is your estimate of the option value.
+This is also a good time to say a word
+about calibrating these models.
+In these models, the drift function and the volatility
+function are where you have free variables available to tune
+the model to match current bond price data and current option
+price data.
+The process for doing that generally
+involves a nonlinear fitting optimization program.
+
+Continuous time models can also be discretized
+in a way that's consistent with representing them
+on a binomial tree.
+As I've emphasized, that can be necessary
+when the optimal exercise policy needs
+to be determined at the same time
+as option value is being calculated.
+Again, starting with the general equation for one-factor models
+of the instantaneous interest rates,
+a binomial tree can be calibrated
+using these equations for the up or down node where r is
+the value on the previous node.
+
+Because these models represent very short-term rates,
+it takes a very large number of steps
+to approximate the original continuous time
+model with any accuracy.
+Once again, we've covered a lot of ground this week.
+The theme has been on pricing options
+on fixed income securities and directly on interest rates.
+We saw that because the statistical properties of bonds
+are often not well behaved, it's typical to start
+with a model of the statistical process for interest rates.
+Nevertheless, the options prices that come out of these modeling
+approaches rest on no arbitrage logic and the fact
+that option payoffs can be replicated by a dynamic trading
+strategy in the underlying fixed-income securities
+and a risk free bond.
+You'll get some further practice with pricing
+using binomial trees and interest
+rates in the recitation and in the homework problems.

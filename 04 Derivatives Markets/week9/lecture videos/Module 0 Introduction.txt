@@ -1,0 +1,28 @@
+
+PROFESSOR: This week, we'll cover several approaches
+for quantifying and pricing credit risk.
+Credit risk is one of my main research and policy interests,
+and I'm looking forward to telling you about it.
+We'll start with a statistical approach, where the main focus
+is on estimating default and recovery rates for securities
+with credit risk.
+Those statistics help to explain the credit spread, which
+is the difference in promised yields
+between safe and credit-sensitive securities
+that are otherwise similar.
+We'll then turn to the structural approach that
+relates both to default and recovery rate
+to a stochastic model of an entity's asset value
+and a rule for when a default is triggered.
+Those models treat default as a put option
+and apply options pricing methods
+to value default losses.
+As we've seen in many other contexts,
+a derivative pricing approach can
+be implemented very generally using binomial trees.
+And if certain assumptions hold, analytical solutions,
+most famously the Merton model, can be derived to price default
+options.
+Finally, we'll discuss credit derivatives like credit default
+swaps, whose payoffs depend on the outcome of credit events
+and that also can be priced by no-arbitrage principles.

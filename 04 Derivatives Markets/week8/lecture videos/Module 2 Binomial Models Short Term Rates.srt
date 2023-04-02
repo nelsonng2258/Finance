@@ -1,0 +1,788 @@
+0
+00:00:00,000 --> 00:00:00,927
+
+
+1
+00:00:00,927 --> 00:00:03,260
+PROFESSOR: We'll now turn to options pricing models that
+
+2
+00:00:03,260 --> 00:00:05,330
+rest on assumptions about the underlying
+
+3
+00:00:05,330 --> 00:00:10,880
+distribution of interest rates rather than of bond prices.
+
+4
+00:00:10,880 --> 00:00:13,640
+To price options on fixed income securities,
+
+5
+00:00:13,640 --> 00:00:17,000
+it's important to recognize that this often requires not just
+
+6
+00:00:17,000 --> 00:00:20,840
+modeling the distribution of a particular future rate,
+
+7
+00:00:20,840 --> 00:00:24,770
+but rather a model of the stochastic evolution
+
+8
+00:00:24,770 --> 00:00:28,010
+of the entire term structure of interest rates or the yield
+
+9
+00:00:28,010 --> 00:00:29,660
+curve.
+
+10
+00:00:29,660 --> 00:00:32,150
+You need to be able to answer the question,
+
+11
+00:00:32,150 --> 00:00:35,960
+how are spot and forward rates expected to move over time
+
+12
+00:00:35,960 --> 00:00:39,870
+and what's the volatility of those movements?
+
+13
+00:00:39,870 --> 00:00:42,950
+We'll start by building answers to those questions,
+
+14
+00:00:42,950 --> 00:00:46,430
+starting with binomial models of short term interest rates
+
+15
+00:00:46,430 --> 00:00:48,980
+and how to calibrate them to market data
+
+16
+00:00:48,980 --> 00:00:52,820
+and then use them to price interest rate derivatives.
+
+17
+00:00:52,820 --> 00:00:54,650
+Then we'll look at some continuous time
+
+18
+00:00:54,650 --> 00:00:56,840
+models of stochastic yield curves
+
+19
+00:00:56,840 --> 00:00:59,720
+and how they can be used for pricing by Monte
+
+20
+00:00:59,720 --> 00:01:04,220
+Carlo or binomial methods.
+
+21
+00:01:04,220 --> 00:01:06,050
+This figure shows a binomial tree
+
+22
+00:01:06,050 --> 00:01:09,080
+that represents the time evolution of the short term
+
+23
+00:01:09,080 --> 00:01:10,340
+risk free interest rate.
+
+24
+00:01:10,340 --> 00:01:14,750
+
+
+25
+00:01:14,750 --> 00:01:16,940
+As with any binomial model, choices
+
+26
+00:01:16,940 --> 00:01:18,830
+have to be made about what determines
+
+27
+00:01:18,830 --> 00:01:21,830
+the value of the underlying variable at each node, which
+
+28
+00:01:21,830 --> 00:01:25,130
+in this case is a short term interest rate and about
+
+29
+00:01:25,130 --> 00:01:28,820
+the probabilities of an up and a down move at each node.
+
+30
+00:01:28,820 --> 00:01:32,090
+For tractability and to avoid overfitting,
+
+31
+00:01:32,090 --> 00:01:35,030
+the evolution of interest rates and the associated
+
+32
+00:01:35,030 --> 00:01:38,330
+probabilities are restricted by a set of rules.
+
+33
+00:01:38,330 --> 00:01:40,730
+Different models are distinguished by how
+
+34
+00:01:40,730 --> 00:01:42,920
+those rules are set.
+
+35
+00:01:42,920 --> 00:01:46,220
+As in the earlier binomial models we've worked with,
+
+36
+00:01:46,220 --> 00:01:50,180
+the model can be either physical or risk neutral.
+
+37
+00:01:50,180 --> 00:01:54,440
+For pricing purposes, the risk neutral version of the models
+
+38
+00:01:54,440 --> 00:01:56,770
+is typically used.
+
+39
+00:01:56,770 --> 00:01:59,260
+For other applications, like understanding
+
+40
+00:01:59,260 --> 00:02:01,480
+the physical distribution of outcomes,
+
+41
+00:02:01,480 --> 00:02:05,500
+for instance to calculate the value of risk for a portfolio,
+
+42
+00:02:05,500 --> 00:02:09,229
+physical probabilities are used instead.
+
+43
+00:02:09,229 --> 00:02:11,990
+In all cases we want to use a model that
+
+44
+00:02:11,990 --> 00:02:14,810
+produces realistic predictions about the prices
+
+45
+00:02:14,810 --> 00:02:17,120
+of the fixed income securities and options
+
+46
+00:02:17,120 --> 00:02:18,800
+that we want to use the model for.
+
+47
+00:02:18,800 --> 00:02:22,530
+
+
+48
+00:02:22,530 --> 00:02:25,920
+Volatility is a key input for all stochastic interest rate
+
+49
+00:02:25,920 --> 00:02:29,500
+models and options pricing models.
+
+50
+00:02:29,500 --> 00:02:32,590
+As before, the vertical distance between nodes
+
+51
+00:02:32,590 --> 00:02:36,520
+on a tree at a point in time is how volatility is incorporated
+
+52
+00:02:36,520 --> 00:02:38,900
+into a binomial model.
+
+53
+00:02:38,900 --> 00:02:42,870
+Rate volatility can be estimated from historical data
+
+54
+00:02:42,870 --> 00:02:46,040
+or it can be inferred using implied volatilities
+
+55
+00:02:46,040 --> 00:02:49,090
+from option prices.
+
+56
+00:02:49,090 --> 00:02:51,220
+The formulas here are a reminder of how
+
+57
+00:02:51,220 --> 00:02:53,410
+to estimate interest rate volatility using
+
+58
+00:02:53,410 --> 00:02:55,240
+historical data.
+
+59
+00:02:55,240 --> 00:02:57,640
+As usual, the first step is to choose
+
+60
+00:02:57,640 --> 00:03:00,235
+the relevant historical period and collect data.
+
+61
+00:03:00,235 --> 00:03:02,970
+
+
+62
+00:03:02,970 --> 00:03:07,810
+A natural question is, how long to look back historically.
+
+63
+00:03:07,810 --> 00:03:09,750
+Unfortunately, there's no general answer
+
+64
+00:03:09,750 --> 00:03:12,630
+to that question because there's always a trade off
+
+65
+00:03:12,630 --> 00:03:14,370
+between having enough data to come up
+
+66
+00:03:14,370 --> 00:03:17,790
+with a reliable estimate and avoiding using data that's
+
+67
+00:03:17,790 --> 00:03:20,070
+too old and that may be no longer
+
+68
+00:03:20,070 --> 00:03:22,080
+relevant to the current environment.
+
+69
+00:03:22,080 --> 00:03:26,070
+Judgment must always be exercised.
+
+70
+00:03:26,070 --> 00:03:29,010
+The second step is to calculate the standard deviation
+
+71
+00:03:29,010 --> 00:03:30,330
+of yields.
+
+72
+00:03:30,330 --> 00:03:32,340
+Note here that standard deviations
+
+73
+00:03:32,340 --> 00:03:35,520
+are calculated in terms of proportional interest rate
+
+74
+00:03:35,520 --> 00:03:38,800
+changes, not level changes.
+
+75
+00:03:38,800 --> 00:03:40,810
+But either approach can be used.
+
+76
+00:03:40,810 --> 00:03:43,930
+And how the information is incorporated into a tree
+
+77
+00:03:43,930 --> 00:03:46,300
+will be different with a multiplicative factor
+
+78
+00:03:46,300 --> 00:03:48,280
+in the case of proportional changes
+
+79
+00:03:48,280 --> 00:03:52,660
+and with an additive one with level changes.
+
+80
+00:03:52,660 --> 00:03:56,320
+Volatility of course, is based on the standard deviation,
+
+81
+00:03:56,320 --> 00:04:00,340
+here using daily data annualized by multiplying
+
+82
+00:04:00,340 --> 00:04:04,030
+by a factor of either the square root of 365
+
+83
+00:04:04,030 --> 00:04:07,060
+or the square root of 250.
+
+84
+00:04:07,060 --> 00:04:09,460
+The former reflects the idea that volatility
+
+85
+00:04:09,460 --> 00:04:11,800
+on trading days and online trading days
+
+86
+00:04:11,800 --> 00:04:16,180
+is similar, even if you can't see it on the nontrading days.
+
+87
+00:04:16,180 --> 00:04:19,120
+The latter reflects the idea that volatility only
+
+88
+00:04:19,120 --> 00:04:21,430
+occurs on trading days.
+
+89
+00:04:21,430 --> 00:04:24,790
+The truth probably lies somewhere in between.
+
+90
+00:04:24,790 --> 00:04:27,820
+As with other variables used in calibrations
+
+91
+00:04:27,820 --> 00:04:30,280
+the choice of volatility can be fine tuned
+
+92
+00:04:30,280 --> 00:04:33,820
+to produce a model that most accurately reproduces observed
+
+93
+00:04:33,820 --> 00:04:36,070
+security and options prices.
+
+94
+00:04:36,070 --> 00:04:39,310
+In either case, scaling by a square root factor
+
+95
+00:04:39,310 --> 00:04:42,250
+based on a number of days reflects the assumption
+
+96
+00:04:42,250 --> 00:04:45,800
+that rate changes are independent over time.
+
+97
+00:04:45,800 --> 00:04:47,740
+Here's an example of using this procedure
+
+98
+00:04:47,740 --> 00:04:49,720
+to estimate proportional interest rate
+
+99
+00:04:49,720 --> 00:04:54,270
+changes based on daily data on one year rates.
+
+100
+00:04:54,270 --> 00:04:56,790
+The first percentage change here is
+
+101
+00:04:56,790 --> 00:04:59,190
+based on the difference between the first two
+
+102
+00:04:59,190 --> 00:05:00,480
+daily observations.
+
+103
+00:05:00,480 --> 00:05:10,260
+
+
+104
+00:05:10,260 --> 00:05:13,440
+The standard deviation of daily changes,
+
+105
+00:05:13,440 --> 00:05:19,710
+found here to be 0.00857, in this particular example
+
+106
+00:05:19,710 --> 00:05:24,090
+was annualized by multiplying by the square root of 365
+
+107
+00:05:24,090 --> 00:05:32,980
+to give an annualized volatility of 0.1638 or 16.38%.
+
+108
+00:05:32,980 --> 00:05:36,570
+A very simple model of the evolution of short term rates
+
+109
+00:05:36,570 --> 00:05:39,300
+assumes that the rate on the up node
+
+110
+00:05:39,300 --> 00:05:44,550
+is the rate on the previous time step multiplied by 1 plus D,
+
+111
+00:05:44,550 --> 00:05:47,800
+where D is a fixed constant.
+
+112
+00:05:47,800 --> 00:05:50,050
+The rate on the down node is the rate
+
+113
+00:05:50,050 --> 00:05:52,420
+of the previous time step divided
+
+114
+00:05:52,420 --> 00:06:00,180
+by 1 plus D. This creates a recombining tree
+
+115
+00:06:00,180 --> 00:06:04,620
+Let's assume that the initial rate is 4%
+
+116
+00:06:04,620 --> 00:06:07,620
+and that the risk neutral probability of an up move
+
+117
+00:06:07,620 --> 00:06:10,230
+is 0.5.
+
+118
+00:06:10,230 --> 00:06:13,520
+If we equate the D parameter to our estimate
+
+119
+00:06:13,520 --> 00:06:17,250
+of an annualized proportional standard deviation.
+
+120
+00:06:17,250 --> 00:06:21,500
+And if each step on the tree represents one year,
+
+121
+00:06:21,500 --> 00:06:25,370
+we can get a 2-step tree calibrated to the volatility
+
+122
+00:06:25,370 --> 00:06:28,620
+estimate we just calculated.
+
+123
+00:06:28,620 --> 00:06:31,330
+And that's shown here.
+
+124
+00:06:31,330 --> 00:06:35,530
+For shorter time steps, we use the annualized estimate
+
+125
+00:06:35,530 --> 00:06:38,440
+multiplied by the square root of the time interval,
+
+126
+00:06:38,440 --> 00:06:41,650
+for instance multiplying by the square root of 0.5
+
+127
+00:06:41,650 --> 00:06:45,390
+for a period of six months.
+
+128
+00:06:45,390 --> 00:06:48,480
+The algebra here in the blue box establishes
+
+129
+00:06:48,480 --> 00:06:51,450
+that equating D to the volatility, in this case,
+
+130
+00:06:51,450 --> 00:06:55,380
+produces a standard deviation of rate changes in the tree that's
+
+131
+00:06:55,380 --> 00:06:57,960
+consistent with the estimated volatility.
+
+132
+00:06:57,960 --> 00:07:00,790
+
+
+133
+00:07:00,790 --> 00:07:04,050
+So far we've seen an example of how the evolution of short term
+
+134
+00:07:04,050 --> 00:07:06,780
+rates can be represented on a binomial tree
+
+135
+00:07:06,780 --> 00:07:10,690
+and how rate volatility can be incorporated into the model.
+
+136
+00:07:10,690 --> 00:07:12,690
+But what we need to price bond options
+
+137
+00:07:12,690 --> 00:07:16,090
+is not just a model of the evolution of short term rates
+
+138
+00:07:16,090 --> 00:07:18,540
+but of the entire yield curve.
+
+139
+00:07:18,540 --> 00:07:20,910
+An extremely important observation
+
+140
+00:07:20,910 --> 00:07:24,480
+that you should definitely spend some time to really understand
+
+141
+00:07:24,480 --> 00:07:25,800
+is this.
+
+142
+00:07:25,800 --> 00:07:28,050
+Implicit in any bond pricing model
+
+143
+00:07:28,050 --> 00:07:30,900
+based on the evolution of short term rates
+
+144
+00:07:30,900 --> 00:07:35,760
+is also a model of the evolution of the entire yield curve.
+
+145
+00:07:35,760 --> 00:07:39,300
+To see why that's true, let's look at a very simple example
+
+146
+00:07:39,300 --> 00:07:42,300
+based on the first step of the risk neutral binomial tree
+
+147
+00:07:42,300 --> 00:07:44,610
+we just constructed.
+
+148
+00:07:44,610 --> 00:07:47,130
+The key will be to recall that the yield curve can
+
+149
+00:07:47,130 --> 00:07:49,270
+be derived from bond prices.
+
+150
+00:07:49,270 --> 00:07:51,870
+So if a tree can be used to price bonds
+
+151
+00:07:51,870 --> 00:07:54,000
+of different maturities, it can also
+
+152
+00:07:54,000 --> 00:07:57,580
+be used to find the implied yield curve.
+
+153
+00:07:57,580 --> 00:08:00,810
+This is most straightforward to do by using the implied
+
+154
+00:08:00,810 --> 00:08:02,835
+prices of zero coupon bonds.
+
+155
+00:08:02,835 --> 00:08:05,370
+
+
+156
+00:08:05,370 --> 00:08:08,400
+The one year spot rate here is 4%.
+
+157
+00:08:08,400 --> 00:08:14,920
+And it goes up to 4.66 in one year or down to 3.44.
+
+158
+00:08:14,920 --> 00:08:17,350
+To find a two year spot yield, we
+
+159
+00:08:17,350 --> 00:08:22,090
+use this tree to find the time zero price of a two year
+
+160
+00:08:22,090 --> 00:08:27,270
+zero coupon bond with a face value of 100.
+
+161
+00:08:27,270 --> 00:08:30,650
+We're going to do this working backward through the tree.
+
+162
+00:08:30,650 --> 00:08:33,020
+But the difference from what we did earlier
+
+163
+00:08:33,020 --> 00:08:36,140
+is that instead of using a constant value for the risk
+
+164
+00:08:36,140 --> 00:08:39,110
+free rate we'll be discounting using
+
+165
+00:08:39,110 --> 00:08:42,289
+the rates at the different points on the tree.
+
+166
+00:08:42,289 --> 00:08:44,720
+For example, the price of the bond
+
+167
+00:08:44,720 --> 00:08:47,630
+at time one, when the bond has one year left
+
+168
+00:08:47,630 --> 00:08:51,440
+to maturity and on the up node where the rate is 4.66%
+
+169
+00:08:51,440 --> 00:08:58,820
+is 100 divided by 1.0466 which gives us
+
+170
+00:08:58,820 --> 00:09:06,840
+a price on that node of 95.547.
+
+171
+00:09:06,840 --> 00:09:13,020
+On the down node, the bond is worth 96.674,
+
+172
+00:09:13,020 --> 00:09:20,170
+found by discounting at the 3.44% rate on that node.
+
+173
+00:09:20,170 --> 00:09:23,410
+Using the risk neutral probability of 0.5,
+
+174
+00:09:23,410 --> 00:09:26,440
+the expected value of the bond at time one
+
+175
+00:09:26,440 --> 00:09:28,375
+is the numerator in this equation.
+
+176
+00:09:28,375 --> 00:09:31,590
+
+
+177
+00:09:31,590 --> 00:09:33,860
+The value that is discounted back to time
+
+178
+00:09:33,860 --> 00:09:38,840
+zero using the one year rate of 4%
+
+179
+00:09:38,840 --> 00:09:45,050
+to give a time 0 price of 92.414.
+
+180
+00:09:45,050 --> 00:09:49,550
+The two year yield implicit in the zero coupon bond price
+
+181
+00:09:49,550 --> 00:09:55,040
+is found then in the usual way by asking what yield equates
+
+182
+00:09:55,040 --> 00:09:56,960
+the bond price with the discounted
+
+183
+00:09:56,960 --> 00:09:59,660
+value of its promised payoff of 102 years.
+
+184
+00:09:59,660 --> 00:10:02,800
+
+
+185
+00:10:02,800 --> 00:10:06,670
+Solving for y2 gives a two year spot yield
+
+186
+00:10:06,670 --> 00:10:10,975
+of 4.02% stated as a simple annual percentage rate.
+
+187
+00:10:10,975 --> 00:10:13,620
+
+
+188
+00:10:13,620 --> 00:10:17,430
+To generalize, what this example establishes
+
+189
+00:10:17,430 --> 00:10:20,880
+is that starting from any node on a binomial tree
+
+190
+00:10:20,880 --> 00:10:23,130
+you can use the model of short rates
+
+191
+00:10:23,130 --> 00:10:27,300
+and risk neutral probabilities to infer the prices of zero
+
+192
+00:10:27,300 --> 00:10:30,600
+coupon bonds of any maturity.
+
+193
+00:10:30,600 --> 00:10:33,420
+Thus embedded in a binomial model of short rates
+
+194
+00:10:33,420 --> 00:10:36,630
+is also a model of the entire future yield
+
+195
+00:10:36,630 --> 00:10:40,500
+curve from the perspective of any node on the tree.
+
+196
+00:10:40,500 --> 00:10:41,000
+
+

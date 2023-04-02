@@ -1,0 +1,130 @@
+INSTRUCTOR: Now that we've gone over the most common types
+of exotic options and some of the motivations
+for trading them, we'll turn to the numerical methods that
+are most frequently used for pricing.
+We saw that for some of the exotic options
+we looked at the formulas developed
+to price them usually involve modifications
+and extensions of the basic Black-Scholes-Merton model.
+For the many exotics for which an analytical formula isn't
+available, or when the underlying asset doesn't
+satisfy the log normality and other assumptions needed,
+numerical methods are used instead.
+The two most common and related approaches
+are binomial trees and Monte Carlo simulations.
+With either method, we continue to rely on no arbitrage
+logic that makes it possible to estimate the value of quite
+complex derivative products with a good degree of confidence.
+To understand the relation between risk neutral pricing
+on binomial trees and Monte Carlo pricing on trees,
+we'll start by reviewing the simple case of pricing
+a standard call option on a non-dividend-paying stock
+and a one-step tree.
+Assume that the stock price is initially at $100.
+The strike is out the money, also at $100.
+The time to expiration is 1.
+The risk-free rate is 2%.
+And sigma, the volatility, is equal to 30%.
+
+The tree is calibrated with an up calculated
+and e to the sigma root T, which is
+the usual way we find the up.
+And the down is 1/u.
+So the up turns out to be 1.35, and that gets us
+from the initial stock price to the stock price in the upstate.
+And multiplying by 1/u gets us 74.082 in the down state.
+So in the usual way, the call is in the money in the upstate,
+not in the downstate.
+We take the expected value discounted back to time 0.
+And we find that the value of the call is 15.73.
+Note that we can price any European derivative
+of the stock in the same way, calculating its expected
+payoff at expiration, using the risk-neutral probabilities,
+and discounting back at the risk-free rate
+to get it's time 0 value.
+
+An alternative way of computing the expected future payoff
+is to simulate the up and down stock price movements.
+For each simulation, the probability of an up
+corresponds to the q star that was computed
+based on the stock price tree.
+To calculate whether a move is up or down,
+we use a uniform random number generator.
+In Excel, that built-in function is called RAND.
+It generates a draw from a uniform distribution
+that lies between 0 and 1.
+We take a draw from the uniform distribution
+N times, where each draw represents
+the path taken on the tree, and N is
+the number of simulated paths.
+If the draw is less than q star, it represents an up move.
+And the stock price outcome is S 1,u.
+And if the draw is greater than q star,
+it represents a down move.
+And the stock price outcome is S 1, d.
+Those values S 1,u you and S 1, d are the same as the ones we
+computed for the tree.
+Using many draws, this share of ups will approach q star.
+For each simulation, we compute the payoffs
+of the derivatives at time 1 based
+on the outcomes of S. The value of the derivative security,
+then, is the average of the present values of the payoffs
+across the N simulations.
+
+The procedure I just described is most easily
+understood with an example.
+Using the risk-neutral probability of 0.4587
+that we calculated for the example shown
+on the binomial tree, this table shows one set of outcomes
+from running 10 Monte Carlo simulations.
+Each row represents the outcome of one Monte Carlo run.
+The draws from RAND determine whether a move is up or down.
+For example, the first one results
+in the up price because the draw of 0.4573
+is less than the q star of 0.4587.
+The corresponding option payoff is 34.986.
+And that will be the same any time there's an up.
+And the payoff will be 0 whenever there's a down.
+
+Discounting the payoff to time 0 gives 34.293
+as the present value of the payoff
+whenever there's an up move.
+
+Then averaging across our 10 Monte Carlo runs,
+the average of 17.147 is the estimate
+for the value of the call option.
+It turns out that this outcome is rather far from the 15.731
+that we found using the tree.
+That discrepancy is due to the fact
+that the average number of ups isn't very accurately estimated
+with just 10 simulations.
+As N gets large, the two values will converge.
+
+Analysts relying on Monte Carlo simulation
+need to assess how many simulation runs are necessary
+in order to produce a sufficiently reliable estimate
+of option value.
+One's error tolerance can be expressed
+in terms of an acceptable standard error on the estimated
+option values.
+The standard deviation of the estimates
+is given by the formula here, assuming
+that the random draws on each simulation path
+are independent.
+The important observation here is
+that the standard deviation depends
+on a factor of the square root of 1/N.
+That means that the accuracy increases within N,
+but as a decreasing rate as N gets large.
+For example, the standard deviation
+of 10 estimates in the previous example
+was calculated to be 5.715.
+A two-standard deviation confidence band
+around the estimate, then, has a range of 5.7 to 28.6,
+much too large to want to rely on that estimate.
+In a rut of Monte Carlo simulations,
+where I've increased N to 1,000, the sample estimate of 15.725
+is much closer to the 15.731 that
+was found with risk-neutral pricing on the binomial tree.
+And the estimated two-standard deviation confidence band
+is also much narrower with a range of 14.64 to 16.8.

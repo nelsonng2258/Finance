@@ -1,0 +1,184 @@
+
+INSTRUCTOR: We'll now turn to the largest securitization
+market, the MBS market.
+
+A mortgage is a loan backed by real estate,
+either residential, commercial, or undeveloped land.
+I'll focus on US residential mortgages,
+which make up the largest part of the MBS market.
+The institutional and regulatory features
+of the US residential mortgage market
+have influenced how MBSs are structured,
+and also they affect the supply and demand for the securities.
+Mortgages in the US are primarily
+fixed-rate amortizing loans, most with an initial maturity
+of 30 or 15 years.
+Various adjustable rate options also exist.
+What makes most fixed-rate mortgages particularly
+risky for investors is that they're typically
+prepayable without penalty.
+The option to prepay is an embedded call option
+whose value depends on the volatility of mortgage interest
+rates and other factors.
+Most residential mortgages in the US
+are securitized by Fannie Mae, Freddie Mac, or Ginnie Mae,
+which are government entities.
+Jumbo, very large, and other mortgages
+that don't qualify for purchase by those federal agencies
+are primarily held on the balance sheets of banks.
+Although, in principle, they could also be
+securitized, and have been in the past.
+Mortgage investors are exposed to a number of risks.
+First, there's credit default risk.
+Credit risk is mitigated by the value of the real estate that
+serves as collateral, and typical credit loss rates
+are quite low.
+In securitizations, credit risk is further
+reduced by a third-party guarantee,
+often from a federal agency.
+Interest rate risk can be a significant source of risk
+on longer term mortgages.
+Recall that interest rate risk exposure
+is proportional to duration.
+Because mortgages are frequently prepaid long
+before their final maturity, the operative measure
+of their first order exposure to interest rate risk
+is effective duration.
+For example, a 30-year mortgage typically
+would have an effective duration of seven years or less.
+As mentioned earlier, prepayment risk
+arises because of the embedded call option.
+When rates fall sufficiently, homeowners
+have an incentive to refinance their mortgage
+at the new lower rates.
+The flip side of prepayment risk is called extension risk.
+That risk also arises because of the embedded call option.
+Extension risk refers to the fact
+that in a rising interest rate environment,
+homeowners will prepay more slowly than anticipated.
+That's to the disadvantage of investors
+that would benefit under those conditions
+from quicker prepayments, so they
+could reinvest their money at the new higher interest rates.
+The combination of prepayment and extension risk,
+or equivalently, the embedded call option,
+causes mortgages to have negative convexity.
+
+Interest rate and prepayment risk
+can be hedged with delta or delta-gamma hedging,
+using the cash market or interest rate derivatives,
+like swaps.
+In fact, the large portion of interest rate
+swap market volume can be attributed to hedging mortgage
+risk.
+Finally, mortgages and MBSs have liquidity risk.
+The liquidity of different securities in the same MBS
+structure can be considerably different,
+with the riskier securities typically
+being the least liquid.
+
+The typical steps in a mortgage securitization
+are similar to the ones described earlier
+for other asset-backed securities.
+First, a commercial bank, mortgage broker, or thrift
+originates the mortgage loan.
+Second, the originator sells the loan to the securitizer.
+In the case of mortgages, typically Fannie Mae,
+Freddie Mac, or Ginnie Mae.
+The securitizer serves a number of functions,
+including creating a security backed
+by a pool of similar mortgages, guaranteeing
+timely payment of principal and interest,
+and selling the asset-backed securities to the market.
+
+As for any security, an MBS price
+is just the present value of expected future cash
+flows, discounted at appropriate risk-adjusted rates.
+However, for MBS, due to the difficulty
+of predicting prepayment behavior,
+and the complexity of some of the securities,
+cash flows can be challenging to model.
+Relatedly, identifying the appropriate risk-adjusted
+discount rates is also tricky.
+A derivatives pricing approach can
+be useful for valuing the embedded default and prepayment
+options, which are both American-style options.
+However, complications arise because
+of the complexity of default and prepayment behavior.
+Unlike the American options we've talked about before now,
+typically exercise behavior can't
+be inferred by analyzing what exercise policy would minimize
+the cost of mortgage financing.
+
+A complete discussion of modeling mortgage prepayment
+would fill an entire lecture.
+So I just want to highlight a few important ideas.
+Prior to the very large losses from mortgage defaults that
+contributed to the failure of many financial institutions
+in the 1980s and again in the 1990s,
+prepayment modeling was an afterthought.
+A simple but inadequate representation of prepayment
+would be to assume a constant annual
+or a constant monthly prepayment rate
+over the life of the mortgage.
+
+Despite the inadequacy of a constant prepayment rate
+assumption, a standard tool used to describe rather than
+to predict prepayment rates is called the PSA model.
+
+It assumes a constant prepayment rate after 30 months.
+I'll say more about it on the next slide.
+The negative correlation between prepayment and interest rates,
+and the effect of that on value, makes a constant rate
+assumption inadequate for pricing mortgages.
+The state of the art in prepayment modeling
+is to take a statistical approach.
+Analysis of historical data shows that prepayment rates
+are related to loan characteristics, such as loan
+size, coupon rate, and the age of the mortgage.
+It's related to borrower characteristics,
+such as location and income, and to market characteristics,
+such as the current interest rate
+and the loan-to-value ratio, which varies
+with the level of house prices.
+Statistical models that aim to simultaneously predict
+prepayment and default behavior also take
+into account that the two are competing
+hazards, in that a loan that has defaulted won't prepay,
+and the loan that has prepaid can't default.
+My own experience with estimating
+these models is to warn you that the parameters tend
+to be quite unstable, varying significantly year to year.
+That creates a danger of overfitting.
+I want to emphasize, though, that
+despite these difficulties, it makes much more sense to use
+statistical models of prepayment than to assume optimizing
+models of prepayment.
+Mortgage borrowers' decisions about whether to prepay
+or to default are complicated by other factors outside
+of any model, such as wanting to sell their house, whether they
+qualify for refinancing, or the considerable transactions costs
+incurred when refinancing a mortgage.
+Those complications are captured, indirectly,
+using a statistical modeling approach.
+This graph illustrates the PSA model,
+which is commonly used to communicate assumptions
+about mortgage prepayment rates, rather than to predict them.
+For instance, you'll see it mentioned
+in offering documents for a mortgage securitization
+in the context of explaining the risk of cash
+flows for different tranches.
+100% PSA assumes that the annual prepayment rate ramps up
+linearly from 0 immediately after origination, to 6%
+after 30 months.
+The reason for the ramp up is that it's
+unusual to refinance or sell a house shortly after taking out
+a new mortgage, but the likelihood of those actions
+increases over time, until it eventually plateaus.
+Again, this is not a prediction of repayment rates.
+Often, market conditions have much higher prepayment rates
+than 100% PSA.
+If the rate was described as 200% of PSA, for example,
+that means that the prepayment rate ramps up linearly,
+from 0 to 12%, 2 times 6%, over 30 months,
+and then flattens out at that 12% rate.

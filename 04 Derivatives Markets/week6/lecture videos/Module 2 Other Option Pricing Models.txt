@@ -1,0 +1,177 @@
+PROFESSOR: We're now going to switch gears and take
+a look at some of the other options
+pricing models that were derived using
+similar logic to Black-Scholes-Merton
+but that take into account the special features of stock
+indices, currencies, and options on futures.
+Last week, we saw that it just takes
+a minor adjustment of the original Black-Scholes-Merton
+model to incorporate a known dividend or a known dividend
+yield.
+Now we're returning to this idea and expanding on it.
+For a stock index, the dividend yield is usually fairly stable
+at least over moderate periods of time
+and it's well-approximated by a constant we'll call q.
+Formulas for the price of a put or call option on a stock price
+index then is shown here.
+Notice that the higher the dividend yield, q,
+the higher the value of a put option and the lower
+the value of a call option, holding all else equal.
+That's because the dividend yield
+reduces the average growth rate of the stock price.
+That average growth rate is r minus q in a risk-neutral world
+and it shows up here in the equation.
+You can verify for yourself that if the dividend yield is
+set to 0, the formula is identical to the original
+Black-Scholes-Merton formula.
+The value of a put option on the index
+can be found using the put-call parity relationship shown here,
+which is also adjusted for the presence of a constant dividend
+yield.
+It's also noteworthy that you can use this put-call parity
+relationship to solve for the implied dividend
+yield on the index given the market price of a put and call
+option and taking the other inputs into the model as known.
+A similar variation on the original Black-Scholes-Merton
+formula can be used to price European options on currencies.
+It has to account for the implicit dividend
+stream on the foreign currency because the currency can
+be invested in a risk-free bond paying a rate we call rf where
+here the subscript f stands for foreign
+rather than the more familiar risk-free.
+Well, another way to understand the adjustment
+is because of a no-arbitrage condition
+which is known as covered interest rate parity.
+That states that a foreign currency that pays a higher
+interest rate relative to the dollar
+must have a correspondingly lower rate of appreciation
+against the dollar.
+Else, there'd be an arbitrage opportunity.
+Well, let's define S0 as the current spot exchange rate
+and, to be precise, S0 is the value
+of 1 unit of foreign currency in US dollars.
+So for example, if the exchange rate
+implies that you get one euro per $1.1, then S0 is 1.1.
+Notice, though, that this relationship will
+be true for any currency pair.
+It need not involve the dollar or the euro.
+So it's important to keep in mind that the underlying
+asset here is consistently being described
+as the foreign currency.
+That means that the call option formula treats
+the currency that's being delivered
+in the contract as the foreign currency,
+and the put option formula similarly
+treats the currency that's being delivered
+in the contract as the foreign currency.
+Now looking at the pricing formula
+for the call option and the put-call parity relationship
+here, you can immediately see that these
+are the same formulas as we used for a stock
+with a constant dividend yield where
+the risk-free rate on the foreign currency
+is used in place of the assumed dividend yield.
+Options on futures contracts are known as futures options.
+They can also be priced using the variant
+of the original Black-Scholes-Merton formula
+that incorporates a constant dividend yield.
+To preview the bottom line that comes out of the analysis,
+it will turn out that the dividend yield in this case
+will be set equal to the risk-free rate.
+Well, futures options have a number of potential advantages
+over options on the spot market assets,
+and that makes them very popular.
+One is the liquidity of futures contracts,
+which may far exceed the liquidity of the underlying
+asset.
+Another advantage is that exercising the option
+never leads to having to deliver or receive
+an underlying asset that one doesn't want
+or that's very costly to transfer.
+Because futures options typically
+trade on the same exchange as the underlying futures
+contract, there can also be additional efficiencies
+such as an reduced margin requirement.
+A useful fact is that European futures options
+and European spot options will be equivalent
+when the futures contract matures at the same time
+as the option expires.
+That's because, as we saw, the futures price always
+converges to the cash price at the futures contract expiration
+date.
+A futures call option confers the right
+to enter into some number of long futures contracts
+at a prespecified futures price, K.
+If the option is exercised, the holder gets two things--
+first, a long position in the specified number of currently
+priced futures contracts and second, the cash difference
+between the most recent settlement price on the futures
+contracts and the strike price specified
+in the futures option.
+The effective payoff per futures contract
+turns out to be the maximum of the futures price
+minus the strike price and 0.
+Now, notice that this just reflects
+the second item, the cash difference
+between the current futures price and the strike price.
+Why is that?
+It's because the currently priced futures contract
+is always worth 0 as we learned way back at the beginning
+of this course.
+A futures put option is similar.
+It confers the right to enter into a short futures
+contract at a prespecified futures price,
+K. If it's exercised, the holder gets a currently priced
+short position in the futures contracts
+and receives the cash difference between the strike price
+and the most recent futures settlement price.
+The effective payoff then is the maximum of the strike price
+minus the futures price and 0.
+It's also worth noting that popular futures options
+contracts include agricultural commodities, energy, metals,
+and all sorts of interest rates.
+Also note that most futures options
+are American, not European.
+A very famous and frequently used
+formula for pricing various types of futures options
+is called Black's model.
+It's also frequently used for pricing commodity options.
+In fact, one of its advantages in that context
+is that by focusing on the forward price at expiration,
+it eliminates the need to model the convenience yield
+or carrying cost over the life of the options contract.
+Some cautions, though, the formula
+is for European options.
+Hence, you shouldn't really rely on it
+when the futures option is American,
+and there's the possibility that early exercise will be optimal.
+A further caution is that the formula will only
+be appropriate for commodities whose forward price can
+be reasonably modeled as being log-normally distributed.
+We'll see later how it's used for fixed income options,
+including pricing short-dated options on bonds and interest
+rate caps and floors.
+Well, if you look closely at Black's model, which
+is shown here, you'll see that it's
+equivalent to the model for pricing stock
+options with a constant dividend yield
+where the dividend yield term is set to be
+equal to the risk-free rate.
+The intuition behind that adjustment
+has to do with the formula for the futures price, which
+we know is the spot price multiplied by the future value
+factor.
+Then with the passage of time, the future value factor
+is going to shrink at the rate, r.
+That shrinkage has the same effect
+as that of a dividend yield on the price of a stock.
+Hence, it enters in the same way into the options pricing
+formula.
+Stepping back, I've introduced all
+of these formulas for pricing options
+on stock indices, currencies, and futures options
+because it's useful for you to know
+that they're available and quite straightforward to implement.
+You can also use them for setting up
+delta and delta gamma hedging strategies using
+exactly the same logic as in the example we started with today.

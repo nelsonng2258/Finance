@@ -1,0 +1,708 @@
+0
+00:00:00,000 --> 00:00:02,330
+PROFESSOR: We're now going to switch gears and take
+
+1
+00:00:02,330 --> 00:00:03,860
+a look at some of the other options
+
+2
+00:00:03,860 --> 00:00:05,840
+pricing models that were derived using
+
+3
+00:00:05,840 --> 00:00:08,090
+similar logic to Black-Scholes-Merton
+
+4
+00:00:08,090 --> 00:00:11,150
+but that take into account the special features of stock
+
+5
+00:00:11,150 --> 00:00:15,800
+indices, currencies, and options on futures.
+
+6
+00:00:15,800 --> 00:00:17,450
+Last week, we saw that it just takes
+
+7
+00:00:17,450 --> 00:00:20,090
+a minor adjustment of the original Black-Scholes-Merton
+
+8
+00:00:20,090 --> 00:00:23,720
+model to incorporate a known dividend or a known dividend
+
+9
+00:00:23,720 --> 00:00:25,440
+yield.
+
+10
+00:00:25,440 --> 00:00:29,800
+Now we're returning to this idea and expanding on it.
+
+11
+00:00:29,800 --> 00:00:33,850
+For a stock index, the dividend yield is usually fairly stable
+
+12
+00:00:33,850 --> 00:00:36,220
+at least over moderate periods of time
+
+13
+00:00:36,220 --> 00:00:41,310
+and it's well-approximated by a constant we'll call q.
+
+14
+00:00:41,310 --> 00:00:44,520
+Formulas for the price of a put or call option on a stock price
+
+15
+00:00:44,520 --> 00:00:47,910
+index then is shown here.
+
+16
+00:00:47,910 --> 00:00:51,440
+Notice that the higher the dividend yield, q,
+
+17
+00:00:51,440 --> 00:00:54,260
+the higher the value of a put option and the lower
+
+18
+00:00:54,260 --> 00:00:58,520
+the value of a call option, holding all else equal.
+
+19
+00:00:58,520 --> 00:01:00,350
+That's because the dividend yield
+
+20
+00:01:00,350 --> 00:01:04,349
+reduces the average growth rate of the stock price.
+
+21
+00:01:04,349 --> 00:01:09,400
+That average growth rate is r minus q in a risk-neutral world
+
+22
+00:01:09,400 --> 00:01:12,540
+and it shows up here in the equation.
+
+23
+00:01:12,540 --> 00:01:15,660
+You can verify for yourself that if the dividend yield is
+
+24
+00:01:15,660 --> 00:01:19,290
+set to 0, the formula is identical to the original
+
+25
+00:01:19,290 --> 00:01:21,090
+Black-Scholes-Merton formula.
+
+26
+00:01:21,090 --> 00:01:23,340
+The value of a put option on the index
+
+27
+00:01:23,340 --> 00:01:27,340
+can be found using the put-call parity relationship shown here,
+
+28
+00:01:27,340 --> 00:01:31,230
+which is also adjusted for the presence of a constant dividend
+
+29
+00:01:31,230 --> 00:01:32,430
+yield.
+
+30
+00:01:32,430 --> 00:01:35,850
+It's also noteworthy that you can use this put-call parity
+
+31
+00:01:35,850 --> 00:01:39,480
+relationship to solve for the implied dividend
+
+32
+00:01:39,480 --> 00:01:44,070
+yield on the index given the market price of a put and call
+
+33
+00:01:44,070 --> 00:01:49,580
+option and taking the other inputs into the model as known.
+
+34
+00:01:49,580 --> 00:01:52,910
+A similar variation on the original Black-Scholes-Merton
+
+35
+00:01:52,910 --> 00:01:57,840
+formula can be used to price European options on currencies.
+
+36
+00:01:57,840 --> 00:02:00,150
+It has to account for the implicit dividend
+
+37
+00:02:00,150 --> 00:02:03,540
+stream on the foreign currency because the currency can
+
+38
+00:02:03,540 --> 00:02:08,220
+be invested in a risk-free bond paying a rate we call rf where
+
+39
+00:02:08,220 --> 00:02:12,270
+here the subscript f stands for foreign
+
+40
+00:02:12,270 --> 00:02:16,240
+rather than the more familiar risk-free.
+
+41
+00:02:16,240 --> 00:02:18,730
+Well, another way to understand the adjustment
+
+42
+00:02:18,730 --> 00:02:21,050
+is because of a no-arbitrage condition
+
+43
+00:02:21,050 --> 00:02:24,090
+which is known as covered interest rate parity.
+
+44
+00:02:24,090 --> 00:02:27,060
+That states that a foreign currency that pays a higher
+
+45
+00:02:27,060 --> 00:02:29,070
+interest rate relative to the dollar
+
+46
+00:02:29,070 --> 00:02:32,250
+must have a correspondingly lower rate of appreciation
+
+47
+00:02:32,250 --> 00:02:33,600
+against the dollar.
+
+48
+00:02:33,600 --> 00:02:37,170
+Else, there'd be an arbitrage opportunity.
+
+49
+00:02:37,170 --> 00:02:41,520
+Well, let's define S0 as the current spot exchange rate
+
+50
+00:02:41,520 --> 00:02:44,610
+and, to be precise, S0 is the value
+
+51
+00:02:44,610 --> 00:02:48,840
+of 1 unit of foreign currency in US dollars.
+
+52
+00:02:48,840 --> 00:02:52,020
+So for example, if the exchange rate
+
+53
+00:02:52,020 --> 00:03:00,440
+implies that you get one euro per $1.1, then S0 is 1.1.
+
+54
+00:03:00,440 --> 00:03:03,140
+Notice, though, that this relationship will
+
+55
+00:03:03,140 --> 00:03:05,300
+be true for any currency pair.
+
+56
+00:03:05,300 --> 00:03:08,690
+It need not involve the dollar or the euro.
+
+57
+00:03:08,690 --> 00:03:11,840
+So it's important to keep in mind that the underlying
+
+58
+00:03:11,840 --> 00:03:14,900
+asset here is consistently being described
+
+59
+00:03:14,900 --> 00:03:18,360
+as the foreign currency.
+
+60
+00:03:18,360 --> 00:03:20,880
+That means that the call option formula treats
+
+61
+00:03:20,880 --> 00:03:22,530
+the currency that's being delivered
+
+62
+00:03:22,530 --> 00:03:24,900
+in the contract as the foreign currency,
+
+63
+00:03:24,900 --> 00:03:27,090
+and the put option formula similarly
+
+64
+00:03:27,090 --> 00:03:28,950
+treats the currency that's being delivered
+
+65
+00:03:28,950 --> 00:03:33,000
+in the contract as the foreign currency.
+
+66
+00:03:33,000 --> 00:03:34,490
+Now looking at the pricing formula
+
+67
+00:03:34,490 --> 00:03:38,730
+for the call option and the put-call parity relationship
+
+68
+00:03:38,730 --> 00:03:42,090
+here, you can immediately see that these
+
+69
+00:03:42,090 --> 00:03:45,480
+are the same formulas as we used for a stock
+
+70
+00:03:45,480 --> 00:03:48,600
+with a constant dividend yield where
+
+71
+00:03:48,600 --> 00:03:51,060
+the risk-free rate on the foreign currency
+
+72
+00:03:51,060 --> 00:03:56,050
+is used in place of the assumed dividend yield.
+
+73
+00:03:56,050 --> 00:04:00,660
+Options on futures contracts are known as futures options.
+
+74
+00:04:00,660 --> 00:04:03,090
+They can also be priced using the variant
+
+75
+00:04:03,090 --> 00:04:05,310
+of the original Black-Scholes-Merton formula
+
+76
+00:04:05,310 --> 00:04:09,210
+that incorporates a constant dividend yield.
+
+77
+00:04:09,210 --> 00:04:12,990
+To preview the bottom line that comes out of the analysis,
+
+78
+00:04:12,990 --> 00:04:16,170
+it will turn out that the dividend yield in this case
+
+79
+00:04:16,170 --> 00:04:20,100
+will be set equal to the risk-free rate.
+
+80
+00:04:20,100 --> 00:04:23,630
+Well, futures options have a number of potential advantages
+
+81
+00:04:23,630 --> 00:04:26,750
+over options on the spot market assets,
+
+82
+00:04:26,750 --> 00:04:29,810
+and that makes them very popular.
+
+83
+00:04:29,810 --> 00:04:32,850
+One is the liquidity of futures contracts,
+
+84
+00:04:32,850 --> 00:04:35,720
+which may far exceed the liquidity of the underlying
+
+85
+00:04:35,720 --> 00:04:37,320
+asset.
+
+86
+00:04:37,320 --> 00:04:41,040
+Another advantage is that exercising the option
+
+87
+00:04:41,040 --> 00:04:43,860
+never leads to having to deliver or receive
+
+88
+00:04:43,860 --> 00:04:46,740
+an underlying asset that one doesn't want
+
+89
+00:04:46,740 --> 00:04:50,280
+or that's very costly to transfer.
+
+90
+00:04:50,280 --> 00:04:52,470
+Because futures options typically
+
+91
+00:04:52,470 --> 00:04:55,440
+trade on the same exchange as the underlying futures
+
+92
+00:04:55,440 --> 00:04:59,070
+contract, there can also be additional efficiencies
+
+93
+00:04:59,070 --> 00:05:03,480
+such as an reduced margin requirement.
+
+94
+00:05:03,480 --> 00:05:07,380
+A useful fact is that European futures options
+
+95
+00:05:07,380 --> 00:05:10,890
+and European spot options will be equivalent
+
+96
+00:05:10,890 --> 00:05:14,220
+when the futures contract matures at the same time
+
+97
+00:05:14,220 --> 00:05:16,200
+as the option expires.
+
+98
+00:05:16,200 --> 00:05:19,620
+That's because, as we saw, the futures price always
+
+99
+00:05:19,620 --> 00:05:24,210
+converges to the cash price at the futures contract expiration
+
+100
+00:05:24,210 --> 00:05:26,650
+date.
+
+101
+00:05:26,650 --> 00:05:29,020
+A futures call option confers the right
+
+102
+00:05:29,020 --> 00:05:32,110
+to enter into some number of long futures contracts
+
+103
+00:05:32,110 --> 00:05:37,230
+at a prespecified futures price, K.
+
+104
+00:05:37,230 --> 00:05:41,650
+If the option is exercised, the holder gets two things--
+
+105
+00:05:41,650 --> 00:05:45,690
+first, a long position in the specified number of currently
+
+106
+00:05:45,690 --> 00:05:50,730
+priced futures contracts and second, the cash difference
+
+107
+00:05:50,730 --> 00:05:53,310
+between the most recent settlement price on the futures
+
+108
+00:05:53,310 --> 00:05:56,340
+contracts and the strike price specified
+
+109
+00:05:56,340 --> 00:05:59,560
+in the futures option.
+
+110
+00:05:59,560 --> 00:06:02,290
+The effective payoff per futures contract
+
+111
+00:06:02,290 --> 00:06:07,060
+turns out to be the maximum of the futures price
+
+112
+00:06:07,060 --> 00:06:11,130
+minus the strike price and 0.
+
+113
+00:06:11,130 --> 00:06:12,960
+Now, notice that this just reflects
+
+114
+00:06:12,960 --> 00:06:15,510
+the second item, the cash difference
+
+115
+00:06:15,510 --> 00:06:19,360
+between the current futures price and the strike price.
+
+116
+00:06:19,360 --> 00:06:21,160
+Why is that?
+
+117
+00:06:21,160 --> 00:06:23,820
+It's because the currently priced futures contract
+
+118
+00:06:23,820 --> 00:06:27,300
+is always worth 0 as we learned way back at the beginning
+
+119
+00:06:27,300 --> 00:06:29,810
+of this course.
+
+120
+00:06:29,810 --> 00:06:32,210
+A futures put option is similar.
+
+121
+00:06:32,210 --> 00:06:35,150
+It confers the right to enter into a short futures
+
+122
+00:06:35,150 --> 00:06:38,030
+contract at a prespecified futures price,
+
+123
+00:06:38,030 --> 00:06:41,930
+K. If it's exercised, the holder gets a currently priced
+
+124
+00:06:41,930 --> 00:06:44,510
+short position in the futures contracts
+
+125
+00:06:44,510 --> 00:06:47,690
+and receives the cash difference between the strike price
+
+126
+00:06:47,690 --> 00:06:50,660
+and the most recent futures settlement price.
+
+127
+00:06:50,660 --> 00:06:55,430
+The effective payoff then is the maximum of the strike price
+
+128
+00:06:55,430 --> 00:06:58,880
+minus the futures price and 0.
+
+129
+00:06:58,880 --> 00:07:02,180
+It's also worth noting that popular futures options
+
+130
+00:07:02,180 --> 00:07:07,310
+contracts include agricultural commodities, energy, metals,
+
+131
+00:07:07,310 --> 00:07:10,010
+and all sorts of interest rates.
+
+132
+00:07:10,010 --> 00:07:12,260
+Also note that most futures options
+
+133
+00:07:12,260 --> 00:07:15,530
+are American, not European.
+
+134
+00:07:15,530 --> 00:07:17,510
+A very famous and frequently used
+
+135
+00:07:17,510 --> 00:07:20,600
+formula for pricing various types of futures options
+
+136
+00:07:20,600 --> 00:07:23,400
+is called Black's model.
+
+137
+00:07:23,400 --> 00:07:27,040
+It's also frequently used for pricing commodity options.
+
+138
+00:07:27,040 --> 00:07:29,520
+In fact, one of its advantages in that context
+
+139
+00:07:29,520 --> 00:07:32,760
+is that by focusing on the forward price at expiration,
+
+140
+00:07:32,760 --> 00:07:35,640
+it eliminates the need to model the convenience yield
+
+141
+00:07:35,640 --> 00:07:39,090
+or carrying cost over the life of the options contract.
+
+142
+00:07:39,090 --> 00:07:41,520
+Some cautions, though, the formula
+
+143
+00:07:41,520 --> 00:07:43,290
+is for European options.
+
+144
+00:07:43,290 --> 00:07:45,570
+Hence, you shouldn't really rely on it
+
+145
+00:07:45,570 --> 00:07:47,700
+when the futures option is American,
+
+146
+00:07:47,700 --> 00:07:51,840
+and there's the possibility that early exercise will be optimal.
+
+147
+00:07:51,840 --> 00:07:54,240
+A further caution is that the formula will only
+
+148
+00:07:54,240 --> 00:07:57,540
+be appropriate for commodities whose forward price can
+
+149
+00:07:57,540 --> 00:08:02,520
+be reasonably modeled as being log-normally distributed.
+
+150
+00:08:02,520 --> 00:08:05,730
+We'll see later how it's used for fixed income options,
+
+151
+00:08:05,730 --> 00:08:09,170
+including pricing short-dated options on bonds and interest
+
+152
+00:08:09,170 --> 00:08:12,080
+rate caps and floors.
+
+153
+00:08:12,080 --> 00:08:14,450
+Well, if you look closely at Black's model, which
+
+154
+00:08:14,450 --> 00:08:17,710
+is shown here, you'll see that it's
+
+155
+00:08:17,710 --> 00:08:20,260
+equivalent to the model for pricing stock
+
+156
+00:08:20,260 --> 00:08:22,960
+options with a constant dividend yield
+
+157
+00:08:22,960 --> 00:08:25,780
+where the dividend yield term is set to be
+
+158
+00:08:25,780 --> 00:08:28,920
+equal to the risk-free rate.
+
+159
+00:08:28,920 --> 00:08:30,950
+The intuition behind that adjustment
+
+160
+00:08:30,950 --> 00:08:34,429
+has to do with the formula for the futures price, which
+
+161
+00:08:34,429 --> 00:08:38,659
+we know is the spot price multiplied by the future value
+
+162
+00:08:38,659 --> 00:08:40,500
+factor.
+
+163
+00:08:40,500 --> 00:08:44,490
+Then with the passage of time, the future value factor
+
+164
+00:08:44,490 --> 00:08:48,070
+is going to shrink at the rate, r.
+
+165
+00:08:48,070 --> 00:08:51,370
+That shrinkage has the same effect
+
+166
+00:08:51,370 --> 00:08:55,240
+as that of a dividend yield on the price of a stock.
+
+167
+00:08:55,240 --> 00:08:59,050
+Hence, it enters in the same way into the options pricing
+
+168
+00:08:59,050 --> 00:09:00,620
+formula.
+
+169
+00:09:00,620 --> 00:09:03,050
+Stepping back, I've introduced all
+
+170
+00:09:03,050 --> 00:09:05,030
+of these formulas for pricing options
+
+171
+00:09:05,030 --> 00:09:08,900
+on stock indices, currencies, and futures options
+
+172
+00:09:08,900 --> 00:09:11,330
+because it's useful for you to know
+
+173
+00:09:11,330 --> 00:09:15,840
+that they're available and quite straightforward to implement.
+
+174
+00:09:15,840 --> 00:09:17,610
+You can also use them for setting up
+
+175
+00:09:17,610 --> 00:09:20,970
+delta and delta gamma hedging strategies using
+
+176
+00:09:20,970 --> 00:09:25,640
+exactly the same logic as in the example we started with today.
+

@@ -1,0 +1,596 @@
+0
+00:00:00,000 --> 00:00:00,746
+
+
+1
+00:00:00,746 --> 00:00:05,070
+PROFESSOR: All right, let's move on to problem two.
+
+2
+00:00:05,070 --> 00:00:10,110
+Problem 2 states that your firm owns 1,000 shares of ABC stock
+
+3
+00:00:10,110 --> 00:00:14,700
+and is now seeking a loan using the stock as collateral.
+
+4
+00:00:14,700 --> 00:00:18,540
+The current market price of the stock is $80 per share.
+
+5
+00:00:18,540 --> 00:00:20,490
+And you have just been offered a loan
+
+6
+00:00:20,490 --> 00:00:24,510
+of $80,000, the full current value of the stock
+
+7
+00:00:24,510 --> 00:00:29,590
+at an interest rate of 25% per period.
+
+8
+00:00:29,590 --> 00:00:32,259
+At the end of each of the next two periods,
+
+9
+00:00:32,259 --> 00:00:36,190
+your firm will owe an interest payment of $20,000.
+
+10
+00:00:36,190 --> 00:00:40,250
+The first payment is due one period from now.
+
+11
+00:00:40,250 --> 00:00:43,970
+The principal on the loan is due three periods from now.
+
+12
+00:00:43,970 --> 00:00:46,130
+So at that time your firm will own
+
+13
+00:00:46,130 --> 00:00:51,220
+a total payment of $100,000.
+
+14
+00:00:51,220 --> 00:00:55,420
+The 1,000 shares of stock will serve as the sole collateral
+
+15
+00:00:55,420 --> 00:00:57,020
+for the loan.
+
+16
+00:00:57,020 --> 00:00:59,910
+If your firm defaults on any of its payments,
+
+17
+00:00:59,910 --> 00:01:02,900
+the lender will immediately take possession of the stock
+
+18
+00:01:02,900 --> 00:01:05,150
+but will have no further claim on any
+
+19
+00:01:05,150 --> 00:01:07,860
+of your firm's other assets.
+
+20
+00:01:07,860 --> 00:01:10,080
+A default on this special arrangement
+
+21
+00:01:10,080 --> 00:01:13,380
+will have no effect whatsoever on the other activities
+
+22
+00:01:13,380 --> 00:01:14,010
+of the firm.
+
+23
+00:01:14,010 --> 00:01:16,530
+
+
+24
+00:01:16,530 --> 00:01:20,940
+The APC stock pays no dividends, and over each period,
+
+25
+00:01:20,940 --> 00:01:25,980
+its value will either increase by 50% or decrease by 50%
+
+26
+00:01:25,980 --> 00:01:28,020
+with the risk neutral probability
+
+27
+00:01:28,020 --> 00:01:30,870
+of an up move equal to 60%.
+
+28
+00:01:30,870 --> 00:01:33,960
+Equivalently, the risk neutral probability of a down move
+
+29
+00:01:33,960 --> 00:01:36,960
+is equal to 40%.
+
+30
+00:01:36,960 --> 00:01:40,340
+The interest rate on default free, risk free loans
+
+31
+00:01:40,340 --> 00:01:43,290
+is 10% per period.
+
+32
+00:01:43,290 --> 00:01:47,790
+Is this loan an attractive opportunity for your firm?
+
+33
+00:01:47,790 --> 00:01:51,990
+First, consider the value of a default free bond
+
+34
+00:01:51,990 --> 00:01:56,490
+that has the same promise payments as the proposed loan.
+
+35
+00:01:56,490 --> 00:02:01,950
+Its value would be equal to the $20,000 interest payment one
+
+36
+00:02:01,950 --> 00:02:06,420
+period from now discounted at the 10% default free
+
+37
+00:02:06,420 --> 00:02:10,020
+or risk free interest rate plus the $20,000 interest
+
+38
+00:02:10,020 --> 00:02:12,540
+payment two periods from now discounted
+
+39
+00:02:12,540 --> 00:02:20,330
+at 10% plus the $100,000 face value of the default free bond
+
+40
+00:02:20,330 --> 00:02:27,320
+discounted at 10%, which is equal to $109,842, which
+
+41
+00:02:27,320 --> 00:02:30,830
+is substantially greater than the $80,000
+
+42
+00:02:30,830 --> 00:02:34,160
+that your firm would receive for undertaking the same promised
+
+43
+00:02:34,160 --> 00:02:37,180
+payments with the proposed loan.
+
+44
+00:02:37,180 --> 00:02:41,040
+However, your firm would also have a valuable option
+
+45
+00:02:41,040 --> 00:02:43,620
+to cancel the proposed loan at any time
+
+46
+00:02:43,620 --> 00:02:48,030
+by surrendering the underlying collateral, the ABC stock.
+
+47
+00:02:48,030 --> 00:02:51,360
+Defaulting in this way would be in the firm's interest
+
+48
+00:02:51,360 --> 00:02:54,510
+whenever the value of the remaining payments on the loan
+
+49
+00:02:54,510 --> 00:02:58,340
+exceeds the value of the collateral.
+
+50
+00:02:58,340 --> 00:03:01,760
+Thus, the proper value of the remaining payments
+
+51
+00:03:01,760 --> 00:03:05,090
+must reflect the fact that even if the current payment
+
+52
+00:03:05,090 --> 00:03:09,020
+on the loan is made, default may still occur on one or more
+
+53
+00:03:09,020 --> 00:03:12,030
+of the future payments.
+
+54
+00:03:12,030 --> 00:03:15,720
+Thus, the current value of the remaining payments of the loan
+
+55
+00:03:15,720 --> 00:03:19,770
+will depend on the value of the collateral.
+
+56
+00:03:19,770 --> 00:03:22,920
+Since we have a binomial model, the following diagram
+
+57
+00:03:22,920 --> 00:03:26,130
+shows the possible prices for the underlying collateral,
+
+58
+00:03:26,130 --> 00:03:30,720
+the 1,000 shares of ABC stock over the next three periods
+
+59
+00:03:30,720 --> 00:03:34,020
+along with the corresponding possible values of the loan
+
+60
+00:03:34,020 --> 00:03:36,900
+at its maturity date.
+
+61
+00:03:36,900 --> 00:03:40,100
+This is this last column on the right here.
+
+62
+00:03:40,100 --> 00:03:44,720
+The last three values in that column 90, 30, and 10 reflect
+
+63
+00:03:44,720 --> 00:03:48,170
+the fact that default will occur in those circumstances
+
+64
+00:03:48,170 --> 00:03:51,620
+because the value of the underlying collateral of 90,
+
+65
+00:03:51,620 --> 00:03:56,450
+30, and 10 is less than the face value of the loan of 100.
+
+66
+00:03:56,450 --> 00:03:58,940
+All values in the diagram are in thousands
+
+67
+00:03:58,940 --> 00:04:01,940
+of dollars for simplicity.
+
+68
+00:04:01,940 --> 00:04:04,970
+As always, with the binomial tree,
+
+69
+00:04:04,970 --> 00:04:08,890
+we solve the problem by working backwards.
+
+70
+00:04:08,890 --> 00:04:14,200
+Let V of S and n be the value of the current and future payments
+
+71
+00:04:14,200 --> 00:04:16,700
+on the loan in thousands of dollars
+
+72
+00:04:16,700 --> 00:04:18,550
+when the stock price is equal to S,
+
+73
+00:04:18,550 --> 00:04:23,730
+and there are end periods remaining until maturity.
+
+74
+00:04:23,730 --> 00:04:26,790
+Beginning with the n equals one case,
+
+75
+00:04:26,790 --> 00:04:32,000
+that is these three nodes here, we have the following.
+
+76
+00:04:32,000 --> 00:04:35,360
+The value of the current and future payments on the loans
+
+77
+00:04:35,360 --> 00:04:38,240
+in the node of the binomial tree when the stock
+
+78
+00:04:38,240 --> 00:04:40,230
+price is equal to 180.
+
+79
+00:04:40,230 --> 00:04:44,930
+And there's one period remaining, this node here,
+
+80
+00:04:44,930 --> 00:04:48,800
+is equal to the minimum of 180, the value
+
+81
+00:04:48,800 --> 00:04:52,550
+of the underlying collateral, and 20, the interest
+
+82
+00:04:52,550 --> 00:04:58,450
+payment in that period plus 60%, which
+
+83
+00:04:58,450 --> 00:05:03,190
+is the risk neutral probability of an up move times 100, which
+
+84
+00:05:03,190 --> 00:05:09,360
+is the value of the loan in the terminal node here
+
+85
+00:05:09,360 --> 00:05:13,950
+plus 40% risk neutral probability of a down move
+
+86
+00:05:13,950 --> 00:05:21,960
+times 90, the value of the loan in this terminal node here
+
+87
+00:05:21,960 --> 00:05:26,010
+discounted at the risk free rate of 10%, which
+
+88
+00:05:26,010 --> 00:05:30,880
+is equal to 107.27.
+
+89
+00:05:30,880 --> 00:05:34,270
+In the node of the binomial tree when the underlying stock is
+
+90
+00:05:34,270 --> 00:05:39,040
+equal to 60 with one period remaining,
+
+91
+00:05:39,040 --> 00:05:43,840
+this node here, the value of the current and future payments
+
+92
+00:05:43,840 --> 00:05:47,800
+on the loan is equal to the minimum of 60,
+
+93
+00:05:47,800 --> 00:05:49,630
+the value of the underlying collateral,
+
+94
+00:05:49,630 --> 00:05:56,920
+and 20, the interest payment plus 60% times now 90,
+
+95
+00:05:56,920 --> 00:06:03,500
+which is the value of the loan in this node here
+
+96
+00:06:03,500 --> 00:06:10,730
+plus 40% times 30, the value of the loan in this node here
+
+97
+00:06:10,730 --> 00:06:15,020
+discounted at 10%, which is equal to 60.
+
+98
+00:06:15,020 --> 00:06:16,790
+A similar calculation for the node
+
+99
+00:06:16,790 --> 00:06:19,550
+of the tree when the value of the underlying stock
+
+100
+00:06:19,550 --> 00:06:22,730
+is equal to 20 with one period remaining,
+
+101
+00:06:22,730 --> 00:06:26,150
+this node here, suggests that the value
+
+102
+00:06:26,150 --> 00:06:28,700
+of the current and future payments on the loan
+
+103
+00:06:28,700 --> 00:06:32,510
+at that node is equal to 20.
+
+104
+00:06:32,510 --> 00:06:35,110
+Thus, the optimal choice for the firm
+
+105
+00:06:35,110 --> 00:06:39,700
+is to default on the loan at the nodes where S equals 60 or 20
+
+106
+00:06:39,700 --> 00:06:44,760
+at n equals 1, these two here.
+
+107
+00:06:44,760 --> 00:06:47,310
+Now, we can do a similar calculation
+
+108
+00:06:47,310 --> 00:06:49,740
+for the n equals 2 case, that is when there
+
+109
+00:06:49,740 --> 00:06:54,880
+are two periods remaining until maturity, which corresponds
+
+110
+00:06:54,880 --> 00:06:58,450
+to these two nodes here on the binomial tree
+
+111
+00:06:58,450 --> 00:07:01,780
+and find that the value of the current and future payments
+
+112
+00:07:01,780 --> 00:07:05,200
+on the loan at the node of the tree where the stock price is
+
+113
+00:07:05,200 --> 00:07:09,230
+120 is equal to the minimum of 120,
+
+114
+00:07:09,230 --> 00:07:11,650
+value of the underlying collateral,
+
+115
+00:07:11,650 --> 00:07:16,300
+and 20, the interest payment plus 60% the risk neutral
+
+116
+00:07:16,300 --> 00:07:21,220
+probability of an up move times 107.27.
+
+117
+00:07:21,220 --> 00:07:23,950
+Which is the value of the current and future payments
+
+118
+00:07:23,950 --> 00:07:32,530
+on the loan at this node here, the up node from 120 plus 40%
+
+119
+00:07:32,530 --> 00:07:35,170
+the risk neutral probability of a down move
+
+120
+00:07:35,170 --> 00:07:38,740
+times 60 the value of the current and future payments
+
+121
+00:07:38,740 --> 00:07:46,460
+on the loan at this node here discounted
+
+122
+00:07:46,460 --> 00:07:53,040
+at the risk free rate of 10%, which is equal to 100.33.
+
+123
+00:07:53,040 --> 00:07:54,780
+A similar calculation for the node
+
+124
+00:07:54,780 --> 00:07:59,070
+of the tree where the underlying stock price is equal to 40
+
+125
+00:07:59,070 --> 00:08:02,520
+gives a value of 40.
+
+126
+00:08:02,520 --> 00:08:04,740
+Thus, the optimal choice for the firm
+
+127
+00:08:04,740 --> 00:08:08,430
+is to default on the loan at the node where S equals 40 at n
+
+128
+00:08:08,430 --> 00:08:14,500
+equals 2 since this is less than the face value of 100.
+
+129
+00:08:14,500 --> 00:08:17,170
+Finally, at the initial node of the tree,
+
+130
+00:08:17,170 --> 00:08:22,825
+that is when n equals 3 and S is equal to 80, this node here.
+
+131
+00:08:22,825 --> 00:08:25,650
+
+
+132
+00:08:25,650 --> 00:08:28,550
+The value of the current and future payments on the loan
+
+133
+00:08:28,550 --> 00:08:32,510
+is equal to the minimum of the underlying asset price of 80
+
+134
+00:08:32,510 --> 00:08:35,330
+plus the risk neutral probability of an up
+
+135
+00:08:35,330 --> 00:08:41,120
+move times the value of the current and future payments
+
+136
+00:08:41,120 --> 00:08:44,750
+on the loan in the subsequent up node, which we found
+
+137
+00:08:44,750 --> 00:08:49,340
+was 100.33, plus the risk neutral probability
+
+138
+00:08:49,340 --> 00:08:52,310
+of a down move times 40.
+
+139
+00:08:52,310 --> 00:08:54,230
+The value of the current and future payments
+
+140
+00:08:54,230 --> 00:08:57,050
+on the loan and the subsequent down node,
+
+141
+00:08:57,050 --> 00:09:00,380
+which we just found here, discounted at the risk
+
+142
+00:09:00,380 --> 00:09:09,800
+free rate of 10%, which is equal to 69.27, or $69,270.
+
+143
+00:09:09,800 --> 00:09:13,520
+So overall, the loan is actually an attractive opportunity
+
+144
+00:09:13,520 --> 00:09:14,960
+for your firm.
+
+145
+00:09:14,960 --> 00:09:18,800
+You have been offered $80,000 for a series
+
+146
+00:09:18,800 --> 00:09:21,170
+of contingent future payments that
+
+147
+00:09:21,170 --> 00:09:26,060
+has a current fair value of only $69,270.
+
+148
+00:09:26,060 --> 00:09:28,600
+And that's a really good deal.
+

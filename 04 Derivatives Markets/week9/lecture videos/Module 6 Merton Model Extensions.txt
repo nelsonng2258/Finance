@@ -1,0 +1,97 @@
+
+PROFESSOR: The Merton model captures
+some of the most important drivers of credit risk,
+including the volatility of the value of assets
+backing an obligation and how leveraged those assets are.
+An advantage over a simple statistical approach
+is that it links the probability and severity of default events,
+and provides a framework to understand
+how the cost of credit risk will evolve over time
+with market conditions.
+Nevertheless, Merton's analytical formulas
+rest on strong assumptions that are clearly
+violated in practice.
+In response, researchers have developed
+related models that avoid some of those shortcomings.
+Those models are typically solved
+numerically and implemented with binomial trees
+or using Monte Carlo simulation.
+Several of the variations deal with the issue
+that firms have complicated capital structures
+with a variety of maturities of debt
+and that when debt matures, it's typically
+rolled over into new debt.
+That includes early bankruptcy and stationary leverage.
+With early bankruptcy, there is the possibility
+of default at any time and default is typically
+assumed to be triggered by assets falling
+below some default boundary.
+Default is still a put option, but now it's
+treated as an American option.
+The assumption of stationary leverage
+is a way of setting a default boundary, which
+can be defined in various ways.
+Assuming stationary leverage incorporates
+the idea that debt tends to be rolled over rather than retired
+and, that as asset values change,
+leverage may be gradually adjusted towards some target
+leverage ratio.
+Modeling firm values as unobservable
+incorporates the possibility of surprise bankruptcies
+due to event risk, such as when embezzlement or fraud
+by top managers is revealed.
+An example of this was the bankruptcy
+of the energy company, Enron that
+was rated investment grade when it
+failed after dubious accounting practices were revealed.
+Technically, such events are often
+incorporated with a jump process that periodically causes asset
+values to fall discreetly.
+Finally, for highly leveraged firms
+such as large financial institutions,
+interest rate risk can be a driver of bankruptcy
+and that can be incorporated as a source of risk.
+The KMV model is a widely used extension of the Merton model
+that has been commercialized by Moody's.
+As in the original Merton model, equity value and equity
+volatility, which are inferred from market prices,
+are nonlinear functions of the unobservable value
+and volatility of firm assets.
+The two equations representing those relationships
+can be solved simultaneously to infer asset value and asset
+volatility given the other inputs.
+The main feature distinguishing it from the classic Merton
+model is that rather than using the face value of debt
+at maturity as a strike price, there's
+a default barrier that's based on a firm's observed capital
+structure.
+That default barrier --
+that can be called a "default point" --
+is based on a simple proprietary rule.
+For example, in an early technical document
+they suggested a good rule is that default occurs when assets
+fall below 70% of short-term liabilities,
+plus half of long-term book liabilities.
+The results of the KMV model are summarized by a measure they
+call "distance to default".
+The distance to default is the number of standard deviations
+the estimated market value currently
+is away from the default point.
+
+Compared to traditional credit ratings
+that fall into discrete buckets, it measures credit risk
+as a continuous variable.
+The distance to default doesn't directly
+reveal the probability of default
+because that would require also knowing the imputed volatility
+of assets.
+Moody's sells a product that maps
+distance to default into an expected frequency of default.
+As with other Merton style models, simple implementations
+of the KMV model underestimate the near-term likelihood
+of default because of the assumption
+that assets are following a continuous log-normal process.
+Incorporating random jumps in asset value that
+may be driven by plus on arrival times of low frequency
+adverse events, or making the default barrier stochastic
+have been shown to improve the performance of this model.

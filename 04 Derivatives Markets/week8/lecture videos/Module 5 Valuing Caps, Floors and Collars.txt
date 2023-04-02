@@ -1,0 +1,109 @@
+
+INSTRUCTOR: Options on floating rate securities
+include caps, collars, and floors.
+floating rate securities expose borrowers and lenders
+to uncertainty about the interest rate payments
+they'll have to make in the future
+or that they will receive.
+An interest rate cap limits the maximum rate that will be paid.
+An interest rate floor limits the minimum rate
+that will be paid.
+And an interest rate collar puts both an upper and lower bound
+on the rate that will be paid.
+That makes a collar a portfolio that
+contains a long cap and a short floor
+from the perspective of a borrower.
+These sorts of provisions are often
+embedded in loan contracts.
+For example, variable rate mortgages
+often have a yearly and lifetime cap
+on the amount by which the rate paid can increase.
+In such cases, the interest rate set in the loan contract
+reflects the value of the various provisions.
+Caps and floors can also be purchased
+in the over-the-counter market for an upfront fee
+based on some amount of notional principal
+but independent of any particular loan.
+Because the methods used to value caps and floors
+are similar, we'll just focus on caps.
+Typically, a floating rate security
+is tied to a common reference rate,
+like LIBOR or a short-term Treasury rate, or SOFR.
+There is also often a fixed spread
+that's paid on top of the floating rate.
+
+An interest rate cap is often described
+as a strip of call options on a variable interest rate.
+The separate elements of the cap,
+one for each interval between interest rate resets,
+are called caplets.
+The payoff on a cap depends on the underlying principal,
+the period length, and the difference between the floating
+rate at time t, called R sub t, which
+is based on the index plus any spread,
+and the cap rate, R sub x.
+As written here, the rates are given as annual percentage
+rates.
+For example, say you take out a 3-year floating rate
+loan with a principal of $100,000 and an interest rate
+that's paid semiannually and linked to six-month LIBOR plus
+50 basis points.
+The rate resets every six months, and it's capped at 7%.
+
+To explain the timing convention,
+the interest payment at the end of the first six months
+is based on the six-month LIBOR rate observed in the market
+on the loan origination date.
+And then the rate paid at the end of the first year
+is based on the six-month LIBOR rate in the market six months
+after you took out the loan, and so forth.
+For the cap, then, its payout at the end
+of each six-month period is the $100,000
+of principal times the time between resets
+of half a year times the maximum of the savings
+from the cap based on how much the interest
+rate is above the 7% cap and 0.
+You can see from this diagram why
+the payoff looks like a call option on the variable interest
+rate.
+You can also think of the payoff in opportunity cost terms
+as the amount of interest that you avoid
+paying because of the cap.
+A cap can be priced on a binomial tree, where the step
+length corresponds to the time period between interest rate
+resets.
+Let's look at an example that uses the same one-year interest
+rate tree and risk-neutral probabilities
+that we've been working with.
+Consider a three-year loan with principal value $100,000
+that's indexed to the one-year rates represented in this tree.
+We want to know what's the value of a 4.75% rate cap.
+The nodes here that are circled are
+those at which cap will be in the money
+because the rate exceeds the cap rate of 4.75%.
+So at time 1, the cap is effective on the up node
+and at time 2, it's operative at the up-up and at the up-down.
+
+Therefore, there are two caplets with positive values.
+It's important to be careful about the timing here.
+The interest rate is always paid one year after the rate is set,
+so the benefit is discounted back an additional year.
+For example, the cap set at time 1
+affects the interest payment made at time 2.
+The calculations shown here are equivalent to working backwards
+on the tree in the usual way, discounting the two
+possible outcomes of the next period
+by the current one-period rate.
+Here, though, all that discounting
+is collapsed into a single equation.
+You can verify that the answer is
+the same as with the longer-form calculations.
+Well, similarly, the value of the second caplet,
+which has a positive payoff on the top and middle nodes
+at time 2, is found to be $775.
+Notice that although the tree is recombining and interest rates,
+the present value of the protection
+on the up-down and down-up node is different
+because you're using different interest rates for discounting.
+The bottom line is that the value of the cap
+is the sum of the value of the two caplets, which totals $879.

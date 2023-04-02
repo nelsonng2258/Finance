@@ -1,0 +1,568 @@
+0
+00:00:00,000 --> 00:00:02,640
+PROFESSOR: The term exotic is an umbrella term
+
+1
+00:00:02,640 --> 00:00:05,250
+that can refer to any nonstandard option.
+
+2
+00:00:05,250 --> 00:00:07,980
+The possibilities are limitless.
+
+3
+00:00:07,980 --> 00:00:10,290
+Many exotics are simply constructed
+
+4
+00:00:10,290 --> 00:00:12,930
+by tweaking ordinary put and call options
+
+5
+00:00:12,930 --> 00:00:15,540
+to better meet a risk management objective
+
+6
+00:00:15,540 --> 00:00:17,970
+or to achieve a goal at a lower cost
+
+7
+00:00:17,970 --> 00:00:20,670
+than with using standard options.
+
+8
+00:00:20,670 --> 00:00:24,250
+Other exotics are much more complex.
+
+9
+00:00:24,250 --> 00:00:27,670
+Whereas many standard options are traded on exchanges,
+
+10
+00:00:27,670 --> 00:00:30,790
+exotic options typically are created and sold
+
+11
+00:00:30,790 --> 00:00:34,000
+by investment banks and professional money managers.
+
+12
+00:00:34,000 --> 00:00:37,210
+These writers have exotic options earn a commission
+
+13
+00:00:37,210 --> 00:00:40,600
+and they typically hedge their risk exposure, often
+
+14
+00:00:40,600 --> 00:00:43,660
+using the Delta or Delta Gamma Hedging Methods
+
+15
+00:00:43,660 --> 00:00:45,770
+that we studied earlier.
+
+16
+00:00:45,770 --> 00:00:49,310
+The goal here is not for you to memorize or derive
+
+17
+00:00:49,310 --> 00:00:51,740
+a large number of pricing formulas.
+
+18
+00:00:51,740 --> 00:00:55,190
+For those exotic options for which formulas exist,
+
+19
+00:00:55,190 --> 00:01:00,010
+that information can be easily found in books or on the web.
+
+20
+00:01:00,010 --> 00:01:02,320
+What I want to focus on instead as we
+
+21
+00:01:02,320 --> 00:01:04,989
+go through these examples is first,
+
+22
+00:01:04,989 --> 00:01:10,350
+what's the rationale for the use of a particular exotic option?
+
+23
+00:01:10,350 --> 00:01:14,580
+Second, can the exotic option be approximated by a portfolio
+
+24
+00:01:14,580 --> 00:01:16,800
+of ordinary options?
+
+25
+00:01:16,800 --> 00:01:19,050
+That sort of comparison is useful,
+
+26
+00:01:19,050 --> 00:01:23,430
+both for understanding what the option is intended to achieve,
+
+27
+00:01:23,430 --> 00:01:25,830
+and also how to price it.
+
+28
+00:01:25,830 --> 00:01:28,590
+In particular, those links can sometimes
+
+29
+00:01:28,590 --> 00:01:32,010
+show us how to modify the Black-Scholes-Merton equations
+
+30
+00:01:32,010 --> 00:01:34,500
+to price an exotic.
+
+31
+00:01:34,500 --> 00:01:37,440
+Third, is the exotic option cheap or expensive
+
+32
+00:01:37,440 --> 00:01:42,300
+relative to a standard option that achieves a similar goal?
+
+33
+00:01:42,300 --> 00:01:44,490
+That information is helpful in deciding
+
+34
+00:01:44,490 --> 00:01:46,140
+whether the difference in protection
+
+35
+00:01:46,140 --> 00:01:50,110
+offered by the exotic is worth the price difference.
+
+36
+00:01:50,110 --> 00:01:53,490
+And fourth, what are the general approaches for pricing them
+
+37
+00:01:53,490 --> 00:01:55,680
+when there isn't a formula available?
+
+38
+00:01:55,680 --> 00:01:57,960
+In answering that question, you'll
+
+39
+00:01:57,960 --> 00:01:59,940
+acquire a new and valuable skill,
+
+40
+00:01:59,940 --> 00:02:02,640
+which is to know the basics about how to price options
+
+41
+00:02:02,640 --> 00:02:07,150
+using Monte Carlo simulations.
+
+42
+00:02:07,150 --> 00:02:11,020
+The first stop on our tour of exotics is Bermuda.
+
+43
+00:02:11,020 --> 00:02:12,880
+Bermudian options falls somewhere
+
+44
+00:02:12,880 --> 00:02:15,040
+between American and European options
+
+45
+00:02:15,040 --> 00:02:18,610
+because that can be exercised on certain pre-specified dates
+
+46
+00:02:18,610 --> 00:02:21,110
+prior to expiration.
+
+47
+00:02:21,110 --> 00:02:23,000
+Now, if you look at Bermuda on a map,
+
+48
+00:02:23,000 --> 00:02:25,940
+you'll see it's in the Atlantic between America and Europe,
+
+49
+00:02:25,940 --> 00:02:28,960
+and that's how these options got their name.
+
+50
+00:02:28,960 --> 00:02:30,910
+As with any option, where there's
+
+51
+00:02:30,910 --> 00:02:33,760
+a choice to be made about when it should be exercised prior
+
+52
+00:02:33,760 --> 00:02:36,820
+to expiration, Bermudan options are often
+
+53
+00:02:36,820 --> 00:02:39,880
+valued by working backwards on a binomial tree.
+
+54
+00:02:39,880 --> 00:02:42,730
+That allows an analyst to simultaneously infer
+
+55
+00:02:42,730 --> 00:02:46,060
+the optimal exercise strategy and the value of the option
+
+56
+00:02:46,060 --> 00:02:49,120
+at each node using risk neutral pricing
+
+57
+00:02:49,120 --> 00:02:53,710
+or the equivalent replicating portfolio approach.
+
+58
+00:02:53,710 --> 00:02:56,470
+Bermudan options can be exotic in other dimensions
+
+59
+00:02:56,470 --> 00:02:59,770
+as well, such as having strike prices the change
+
+60
+00:02:59,770 --> 00:03:02,150
+over the life of the option.
+
+61
+00:03:02,150 --> 00:03:04,470
+An example is employee stock options,
+
+62
+00:03:04,470 --> 00:03:07,100
+which are sometimes reset to lower the strike price
+
+63
+00:03:07,100 --> 00:03:10,270
+when they fall far out of the money.
+
+64
+00:03:10,270 --> 00:03:13,450
+Callable corporate bonds often have an embedded Bermudan
+
+65
+00:03:13,450 --> 00:03:16,210
+option with a variable strike price.
+
+66
+00:03:16,210 --> 00:03:20,020
+Those bonds are callable after a call waiting period, which
+
+67
+00:03:20,020 --> 00:03:23,110
+gives investors some number of years of complete protection
+
+68
+00:03:23,110 --> 00:03:25,630
+against the bonds being called.
+
+69
+00:03:25,630 --> 00:03:28,750
+For example, a 10 year bond may have a 3 year call waiting
+
+70
+00:03:28,750 --> 00:03:32,770
+period, after which the bonds can be called at any time.
+
+71
+00:03:32,770 --> 00:03:35,680
+On top of that, there may be a declining call
+
+72
+00:03:35,680 --> 00:03:40,690
+price, which offers additional protection to bondholders.
+
+73
+00:03:40,690 --> 00:03:43,420
+Continuing the example, those same bonds
+
+74
+00:03:43,420 --> 00:03:49,060
+might be callable at 120% of par after 3 years, 110% of par
+
+75
+00:03:49,060 --> 00:03:54,260
+after 4 years, and then at 100% of par thereafter.
+
+76
+00:03:54,260 --> 00:03:56,240
+Corporate warrants, which are options
+
+77
+00:03:56,240 --> 00:03:58,850
+issued by a company on its own stock,
+
+78
+00:03:58,850 --> 00:04:02,120
+are often structured as Bermudan style securities.
+
+79
+00:04:02,120 --> 00:04:05,330
+
+
+80
+00:04:05,330 --> 00:04:09,020
+Binary options come in two distinct types, cash or nothing
+
+81
+00:04:09,020 --> 00:04:11,150
+options and asset or nothing options.
+
+82
+00:04:11,150 --> 00:04:14,810
+
+
+83
+00:04:14,810 --> 00:04:17,899
+A cash or nothing call option has a unit payoff
+
+84
+00:04:17,899 --> 00:04:21,500
+if the stock price exceeds the strike price, K at expiration,
+
+85
+00:04:21,500 --> 00:04:23,780
+and a 0 pay off otherwise.
+
+86
+00:04:23,780 --> 00:04:27,410
+Similarly, the cash or nothing put option
+
+87
+00:04:27,410 --> 00:04:30,290
+has a unit payoff if the stock price is less
+
+88
+00:04:30,290 --> 00:04:33,020
+than the strike price at expiration and a 0
+
+89
+00:04:33,020 --> 00:04:34,490
+pay off otherwise.
+
+90
+00:04:34,490 --> 00:04:37,130
+
+
+91
+00:04:37,130 --> 00:04:39,170
+Before looking at the pricing formulas,
+
+92
+00:04:39,170 --> 00:04:43,130
+I want to introduce the second type of binary option, an asset
+
+93
+00:04:43,130 --> 00:04:45,200
+or nothing option.
+
+94
+00:04:45,200 --> 00:04:48,740
+An asset or nothing call pays off the stock price
+
+95
+00:04:48,740 --> 00:04:53,300
+at expiration as sub capital T if that price exceeds
+
+96
+00:04:53,300 --> 00:04:57,020
+the strike price, K. An asset or nothing put
+
+97
+00:04:57,020 --> 00:04:59,430
+pays off the stock price at expiration,
+
+98
+00:04:59,430 --> 00:05:07,900
+ST, if that price is less than the strike price, K.
+
+99
+00:05:07,900 --> 00:05:09,640
+To understand the pricing formula,
+
+100
+00:05:09,640 --> 00:05:13,540
+it's useful to observe that a normal call option can
+
+101
+00:05:13,540 --> 00:05:16,660
+be described as a portfolio that's long
+
+102
+00:05:16,660 --> 00:05:20,950
+at asset or nothing call option, and short K cash or nothing
+
+103
+00:05:20,950 --> 00:05:23,000
+call options.
+
+104
+00:05:23,000 --> 00:05:26,540
+Similarly, a normal put option is a portfolio
+
+105
+00:05:26,540 --> 00:05:29,420
+that's long take cash or nothing put options
+
+106
+00:05:29,420 --> 00:05:32,600
+and short in asset or nothing put option.
+
+107
+00:05:32,600 --> 00:05:37,230
+That observation can be used to interpret the pricing formulas.
+
+108
+00:05:37,230 --> 00:05:39,720
+Note that the D1 and D2 in these equations
+
+109
+00:05:39,720 --> 00:05:41,520
+are defined in the same way as in
+
+110
+00:05:41,520 --> 00:05:44,940
+the Black-Scholes-Merton model with a constant dividend yield
+
+111
+00:05:44,940 --> 00:05:46,850
+delta.
+
+112
+00:05:46,850 --> 00:05:49,640
+For the asset or nothing call, the price
+
+113
+00:05:49,640 --> 00:05:51,263
+is identical to the first term in
+
+114
+00:05:51,263 --> 00:05:53,930
+the Black-Scholes-Merton written formula for the value of a call
+
+115
+00:05:53,930 --> 00:05:54,430
+option.
+
+116
+00:05:54,430 --> 00:05:56,960
+
+
+117
+00:05:56,960 --> 00:05:59,150
+Recall that this formula can be interpreted
+
+118
+00:05:59,150 --> 00:06:01,580
+as the present value of the expected stock
+
+119
+00:06:01,580 --> 00:06:05,120
+price conditional on the option expiring in the money
+
+120
+00:06:05,120 --> 00:06:08,240
+and that's the same thing as the value of an asset or nothing
+
+121
+00:06:08,240 --> 00:06:10,160
+call.
+
+122
+00:06:10,160 --> 00:06:14,240
+Now looking at the cash or nothing call, its price given
+
+123
+00:06:14,240 --> 00:06:18,050
+here, when multiplied by K, is the negative
+
+124
+00:06:18,050 --> 00:06:20,780
+of the second term in the Black-Scholes-Merton formula
+
+125
+00:06:20,780 --> 00:06:23,990
+for the value of a call option.
+
+126
+00:06:23,990 --> 00:06:26,530
+We also saw earlier that this expression
+
+127
+00:06:26,530 --> 00:06:29,080
+can be interpreted as the present value of the strike
+
+128
+00:06:29,080 --> 00:06:32,770
+price multiplied by the probability and of D2
+
+129
+00:06:32,770 --> 00:06:35,800
+of the option expiring in the money.
+
+130
+00:06:35,800 --> 00:06:38,950
+Hence, the present value of a unit payoff
+
+131
+00:06:38,950 --> 00:06:42,380
+is the discount factor multiplied
+
+132
+00:06:42,380 --> 00:06:45,455
+by the probability of the option being in the money.
+
+133
+00:06:45,455 --> 00:06:48,050
+
+
+134
+00:06:48,050 --> 00:06:50,560
+The same logic holds for binary put options.
+
+135
+00:06:50,560 --> 00:06:53,130
+
+
+136
+00:06:53,130 --> 00:06:55,770
+We can see then, that binary stock options are
+
+137
+00:06:55,770 --> 00:06:57,750
+a good example of exotic options that
+
+138
+00:06:57,750 --> 00:06:59,700
+can be valued by using components
+
+139
+00:06:59,700 --> 00:07:01,470
+of the Black-Scholes-Merton model
+
+140
+00:07:01,470 --> 00:07:05,750
+in recognizing their relation to standard options.
+
+141
+00:07:05,750 --> 00:07:07,000
+
+

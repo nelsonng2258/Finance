@@ -1,0 +1,440 @@
+0
+00:00:00,000 --> 00:00:01,612
+
+
+1
+00:00:01,612 --> 00:00:03,570
+INSTRUCTOR: Options on floating rate securities
+
+2
+00:00:03,570 --> 00:00:07,040
+include caps, collars, and floors.
+
+3
+00:00:07,040 --> 00:00:10,340
+floating rate securities expose borrowers and lenders
+
+4
+00:00:10,340 --> 00:00:12,950
+to uncertainty about the interest rate payments
+
+5
+00:00:12,950 --> 00:00:14,660
+they'll have to make in the future
+
+6
+00:00:14,660 --> 00:00:17,110
+or that they will receive.
+
+7
+00:00:17,110 --> 00:00:21,160
+An interest rate cap limits the maximum rate that will be paid.
+
+8
+00:00:21,160 --> 00:00:23,710
+An interest rate floor limits the minimum rate
+
+9
+00:00:23,710 --> 00:00:25,540
+that will be paid.
+
+10
+00:00:25,540 --> 00:00:29,410
+And an interest rate collar puts both an upper and lower bound
+
+11
+00:00:29,410 --> 00:00:31,660
+on the rate that will be paid.
+
+12
+00:00:31,660 --> 00:00:34,420
+That makes a collar a portfolio that
+
+13
+00:00:34,420 --> 00:00:37,450
+contains a long cap and a short floor
+
+14
+00:00:37,450 --> 00:00:40,780
+from the perspective of a borrower.
+
+15
+00:00:40,780 --> 00:00:42,850
+These sorts of provisions are often
+
+16
+00:00:42,850 --> 00:00:44,620
+embedded in loan contracts.
+
+17
+00:00:44,620 --> 00:00:47,650
+For example, variable rate mortgages
+
+18
+00:00:47,650 --> 00:00:50,020
+often have a yearly and lifetime cap
+
+19
+00:00:50,020 --> 00:00:53,890
+on the amount by which the rate paid can increase.
+
+20
+00:00:53,890 --> 00:00:58,000
+In such cases, the interest rate set in the loan contract
+
+21
+00:00:58,000 --> 00:01:02,640
+reflects the value of the various provisions.
+
+22
+00:01:02,640 --> 00:01:05,010
+Caps and floors can also be purchased
+
+23
+00:01:05,010 --> 00:01:08,280
+in the over-the-counter market for an upfront fee
+
+24
+00:01:08,280 --> 00:01:11,040
+based on some amount of notional principal
+
+25
+00:01:11,040 --> 00:01:15,800
+but independent of any particular loan.
+
+26
+00:01:15,800 --> 00:01:18,770
+Because the methods used to value caps and floors
+
+27
+00:01:18,770 --> 00:01:22,940
+are similar, we'll just focus on caps.
+
+28
+00:01:22,940 --> 00:01:25,130
+Typically, a floating rate security
+
+29
+00:01:25,130 --> 00:01:27,110
+is tied to a common reference rate,
+
+30
+00:01:27,110 --> 00:01:31,830
+like LIBOR or a short-term Treasury rate, or SOFR.
+
+31
+00:01:31,830 --> 00:01:34,050
+There is also often a fixed spread
+
+32
+00:01:34,050 --> 00:01:36,330
+that's paid on top of the floating rate.
+
+33
+00:01:36,330 --> 00:01:39,290
+
+
+34
+00:01:39,290 --> 00:01:41,540
+An interest rate cap is often described
+
+35
+00:01:41,540 --> 00:01:46,120
+as a strip of call options on a variable interest rate.
+
+36
+00:01:46,120 --> 00:01:48,040
+The separate elements of the cap,
+
+37
+00:01:48,040 --> 00:01:51,280
+one for each interval between interest rate resets,
+
+38
+00:01:51,280 --> 00:01:53,410
+are called caplets.
+
+39
+00:01:53,410 --> 00:01:57,190
+The payoff on a cap depends on the underlying principal,
+
+40
+00:01:57,190 --> 00:02:00,490
+the period length, and the difference between the floating
+
+41
+00:02:00,490 --> 00:02:04,210
+rate at time t, called R sub t, which
+
+42
+00:02:04,210 --> 00:02:06,970
+is based on the index plus any spread,
+
+43
+00:02:06,970 --> 00:02:09,970
+and the cap rate, R sub x.
+
+44
+00:02:09,970 --> 00:02:13,690
+As written here, the rates are given as annual percentage
+
+45
+00:02:13,690 --> 00:02:15,830
+rates.
+
+46
+00:02:15,830 --> 00:02:19,280
+For example, say you take out a 3-year floating rate
+
+47
+00:02:19,280 --> 00:02:23,570
+loan with a principal of $100,000 and an interest rate
+
+48
+00:02:23,570 --> 00:02:28,040
+that's paid semiannually and linked to six-month LIBOR plus
+
+49
+00:02:28,040 --> 00:02:30,810
+50 basis points.
+
+50
+00:02:30,810 --> 00:02:34,530
+The rate resets every six months, and it's capped at 7%.
+
+51
+00:02:34,530 --> 00:02:37,180
+
+
+52
+00:02:37,180 --> 00:02:39,280
+To explain the timing convention,
+
+53
+00:02:39,280 --> 00:02:42,520
+the interest payment at the end of the first six months
+
+54
+00:02:42,520 --> 00:02:46,120
+is based on the six-month LIBOR rate observed in the market
+
+55
+00:02:46,120 --> 00:02:48,310
+on the loan origination date.
+
+56
+00:02:48,310 --> 00:02:51,190
+And then the rate paid at the end of the first year
+
+57
+00:02:51,190 --> 00:02:55,270
+is based on the six-month LIBOR rate in the market six months
+
+58
+00:02:55,270 --> 00:02:59,540
+after you took out the loan, and so forth.
+
+59
+00:02:59,540 --> 00:03:02,120
+For the cap, then, its payout at the end
+
+60
+00:03:02,120 --> 00:03:05,570
+of each six-month period is the $100,000
+
+61
+00:03:05,570 --> 00:03:11,110
+of principal times the time between resets
+
+62
+00:03:11,110 --> 00:03:17,130
+of half a year times the maximum of the savings
+
+63
+00:03:17,130 --> 00:03:20,310
+from the cap based on how much the interest
+
+64
+00:03:20,310 --> 00:03:25,530
+rate is above the 7% cap and 0.
+
+65
+00:03:25,530 --> 00:03:29,150
+You can see from this diagram why
+
+66
+00:03:29,150 --> 00:03:32,690
+the payoff looks like a call option on the variable interest
+
+67
+00:03:32,690 --> 00:03:34,050
+rate.
+
+68
+00:03:34,050 --> 00:03:37,820
+You can also think of the payoff in opportunity cost terms
+
+69
+00:03:37,820 --> 00:03:40,340
+as the amount of interest that you avoid
+
+70
+00:03:40,340 --> 00:03:44,400
+paying because of the cap.
+
+71
+00:03:44,400 --> 00:03:47,370
+A cap can be priced on a binomial tree, where the step
+
+72
+00:03:47,370 --> 00:03:50,520
+length corresponds to the time period between interest rate
+
+73
+00:03:50,520 --> 00:03:51,750
+resets.
+
+74
+00:03:51,750 --> 00:03:55,050
+Let's look at an example that uses the same one-year interest
+
+75
+00:03:55,050 --> 00:03:57,480
+rate tree and risk-neutral probabilities
+
+76
+00:03:57,480 --> 00:04:00,000
+that we've been working with.
+
+77
+00:04:00,000 --> 00:04:04,230
+Consider a three-year loan with principal value $100,000
+
+78
+00:04:04,230 --> 00:04:09,830
+that's indexed to the one-year rates represented in this tree.
+
+79
+00:04:09,830 --> 00:04:15,930
+We want to know what's the value of a 4.75% rate cap.
+
+80
+00:04:15,930 --> 00:04:18,000
+The nodes here that are circled are
+
+81
+00:04:18,000 --> 00:04:20,100
+those at which cap will be in the money
+
+82
+00:04:20,100 --> 00:04:25,720
+because the rate exceeds the cap rate of 4.75%.
+
+83
+00:04:25,720 --> 00:04:31,340
+So at time 1, the cap is effective on the up node
+
+84
+00:04:31,340 --> 00:04:37,760
+and at time 2, it's operative at the up-up and at the up-down.
+
+85
+00:04:37,760 --> 00:04:40,970
+
+
+86
+00:04:40,970 --> 00:04:45,120
+Therefore, there are two caplets with positive values.
+
+87
+00:04:45,120 --> 00:04:47,690
+It's important to be careful about the timing here.
+
+88
+00:04:47,690 --> 00:04:51,210
+The interest rate is always paid one year after the rate is set,
+
+89
+00:04:51,210 --> 00:04:54,410
+so the benefit is discounted back an additional year.
+
+90
+00:04:54,410 --> 00:04:56,630
+For example, the cap set at time 1
+
+91
+00:04:56,630 --> 00:04:59,900
+affects the interest payment made at time 2.
+
+92
+00:04:59,900 --> 00:05:03,890
+The calculations shown here are equivalent to working backwards
+
+93
+00:05:03,890 --> 00:05:07,370
+on the tree in the usual way, discounting the two
+
+94
+00:05:07,370 --> 00:05:09,470
+possible outcomes of the next period
+
+95
+00:05:09,470 --> 00:05:12,530
+by the current one-period rate.
+
+96
+00:05:12,530 --> 00:05:14,360
+Here, though, all that discounting
+
+97
+00:05:14,360 --> 00:05:17,030
+is collapsed into a single equation.
+
+98
+00:05:17,030 --> 00:05:18,980
+You can verify that the answer is
+
+99
+00:05:18,980 --> 00:05:23,600
+the same as with the longer-form calculations.
+
+100
+00:05:23,600 --> 00:05:27,630
+Well, similarly, the value of the second caplet,
+
+101
+00:05:27,630 --> 00:05:32,430
+which has a positive payoff on the top and middle nodes
+
+102
+00:05:32,430 --> 00:05:38,690
+at time 2, is found to be $775.
+
+103
+00:05:38,690 --> 00:05:42,720
+Notice that although the tree is recombining and interest rates,
+
+104
+00:05:42,720 --> 00:05:44,870
+the present value of the protection
+
+105
+00:05:44,870 --> 00:05:49,280
+on the up-down and down-up node is different
+
+106
+00:05:49,280 --> 00:05:54,270
+because you're using different interest rates for discounting.
+
+107
+00:05:54,270 --> 00:05:56,520
+The bottom line is that the value of the cap
+
+108
+00:05:56,520 --> 00:06:02,180
+is the sum of the value of the two caplets, which totals $879.
+
+109
+00:06:02,180 --> 00:06:05,418
+
+

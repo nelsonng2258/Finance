@@ -1,0 +1,308 @@
+0
+00:00:00,000 --> 00:00:00,690
+
+
+1
+00:00:00,690 --> 00:00:03,420
+PROFESSOR: It's well-known that the lognormal model for stock
+
+2
+00:00:03,420 --> 00:00:06,000
+prices fails to accurately capture
+
+3
+00:00:06,000 --> 00:00:09,900
+the historical distribution of observed stock prices.
+
+4
+00:00:09,900 --> 00:00:14,760
+The empirical distribution has what's known as "fatter tails."
+
+5
+00:00:14,760 --> 00:00:18,720
+That is, there's a higher chance of very large negative returns
+
+6
+00:00:18,720 --> 00:00:22,320
+and also a higher chance of very high returns
+
+7
+00:00:22,320 --> 00:00:25,410
+than the best fit of a lognormal distribution to the data
+
+8
+00:00:25,410 --> 00:00:26,760
+would imply.
+
+9
+00:00:26,760 --> 00:00:30,850
+Remember also that, if prices are lognormally distributed,
+
+10
+00:00:30,850 --> 00:00:32,040
+then returns--
+
+11
+00:00:32,040 --> 00:00:36,140
+inclusive of dividends-- are normally distributed.
+
+12
+00:00:36,140 --> 00:00:40,100
+That fact is illustrated in the graph where the red bars are
+
+13
+00:00:40,100 --> 00:00:43,250
+from the histogram constructed from a stock market return
+
+14
+00:00:43,250 --> 00:00:44,790
+data.
+
+15
+00:00:44,790 --> 00:00:48,390
+The smooth graph is the fitted distribution of returns,
+
+16
+00:00:48,390 --> 00:00:50,940
+assuming a normal distribution.
+
+17
+00:00:50,940 --> 00:00:54,330
+You can see that the fitted distribution attributes
+
+18
+00:00:54,330 --> 00:00:56,790
+too low a probability to the tails
+
+19
+00:00:56,790 --> 00:00:58,830
+of the empirical distribution.
+
+20
+00:00:58,830 --> 00:01:01,680
+It's hard to tell from the previous graph exactly how
+
+21
+00:01:01,680 --> 00:01:04,530
+large the tail deviations are from what
+
+22
+00:01:04,530 --> 00:01:08,780
+would be expected if returns were normally distributed.
+
+23
+00:01:08,780 --> 00:01:11,240
+This interesting table is from an article
+
+24
+00:01:11,240 --> 00:01:13,730
+on the website Seeking Alpha.
+
+25
+00:01:13,730 --> 00:01:18,110
+It shows the number of expected versus realized occurrences
+
+26
+00:01:18,110 --> 00:01:20,630
+of daily stock market realizations
+
+27
+00:01:20,630 --> 00:01:23,930
+that are greater than 1 standard deviation, 2
+
+28
+00:01:23,930 --> 00:01:27,830
+standard deviations, et cetera, going all the way out
+
+29
+00:01:27,830 --> 00:01:31,240
+to 9 standard deviations.
+
+30
+00:01:31,240 --> 00:01:35,260
+It shows that there are 163 events that
+
+31
+00:01:35,260 --> 00:01:38,680
+exceeded 4 standard deviations based on the best
+
+32
+00:01:38,680 --> 00:01:42,340
+fit of a normal distribution versus the 1 event
+
+33
+00:01:42,340 --> 00:01:46,120
+the theory predicts would be that large.
+
+34
+00:01:46,120 --> 00:01:48,430
+Consistent then with the previous graph,
+
+35
+00:01:48,430 --> 00:01:50,860
+it also shows that the frequency of moves
+
+36
+00:01:50,860 --> 00:01:53,230
+that are less than 1 standard deviation
+
+37
+00:01:53,230 --> 00:01:57,770
+are more likely than is captured by a normal distribution.
+
+38
+00:01:57,770 --> 00:02:00,590
+These sorts of tabulations have led researchers
+
+39
+00:02:00,590 --> 00:02:02,930
+to consider fat-tailed distributions--
+
+40
+00:02:02,930 --> 00:02:05,120
+like the student's t-distribution
+
+41
+00:02:05,120 --> 00:02:08,120
+or the Laplace distribution-- as candidates
+
+42
+00:02:08,120 --> 00:02:10,250
+to better fit the data.
+
+43
+00:02:10,250 --> 00:02:12,230
+To what extent the value of the stock market
+
+44
+00:02:12,230 --> 00:02:14,690
+moves smoothly over time is a topic
+
+45
+00:02:14,690 --> 00:02:17,930
+of debate among academic economists.
+
+46
+00:02:17,930 --> 00:02:21,110
+Well, even if stock prices are in some theoretical sense
+
+47
+00:02:21,110 --> 00:02:23,870
+continuous, as a practical matter,
+
+48
+00:02:23,870 --> 00:02:26,540
+traders experience prices as having
+
+49
+00:02:26,540 --> 00:02:29,030
+sometimes significant jumps.
+
+50
+00:02:29,030 --> 00:02:31,430
+For example, there are periods when markets are closed--
+
+51
+00:02:31,430 --> 00:02:35,120
+such as overnight-- when price movements are unobservable
+
+52
+00:02:35,120 --> 00:02:36,950
+and by the time the markets reopen,
+
+53
+00:02:36,950 --> 00:02:39,830
+prices can be far different than they were at the previous day's
+
+54
+00:02:39,830 --> 00:02:41,120
+close.
+
+55
+00:02:41,120 --> 00:02:44,150
+And even as a theoretical matter, what moves
+
+56
+00:02:44,150 --> 00:02:46,640
+stock prices is new information.
+
+57
+00:02:46,640 --> 00:02:49,130
+If there is an announcement of an event that
+
+58
+00:02:49,130 --> 00:02:50,780
+affects the market broadly--
+
+59
+00:02:50,780 --> 00:02:53,060
+such as a surprise increase in inflation
+
+60
+00:02:53,060 --> 00:02:56,900
+or a fall in unemployment or a declaration of war--
+
+61
+00:02:56,900 --> 00:03:01,330
+those could all cause the index value to jump.
+
+62
+00:03:01,330 --> 00:03:04,810
+This graph plots high-frequency percentage price changes
+
+63
+00:03:04,810 --> 00:03:07,690
+for the US stock market over the same period
+
+64
+00:03:07,690 --> 00:03:09,760
+as shown in the previous graph.
+
+65
+00:03:09,760 --> 00:03:11,950
+Clearly, there are episodes that appear
+
+66
+00:03:11,950 --> 00:03:15,730
+to be jumps that range from about minus 20% to positive
+
+67
+00:03:15,730 --> 00:03:18,670
+15%.
+
+68
+00:03:18,670 --> 00:03:22,270
+For individual stocks, which trade far less frequently,
+
+69
+00:03:22,270 --> 00:03:24,760
+there can be many sources of new information
+
+70
+00:03:24,760 --> 00:03:26,500
+that significantly move the price
+
+71
+00:03:26,500 --> 00:03:28,420
+and thereby can create a jump.
+
+72
+00:03:28,420 --> 00:03:31,150
+You might expect that to happen, for instance, when
+
+73
+00:03:31,150 --> 00:03:33,250
+the company announces that it plans
+
+74
+00:03:33,250 --> 00:03:36,850
+on making a large acquisition or that it will itself
+
+75
+00:03:36,850 --> 00:03:39,500
+be acquired by another firm.
+
+76
+00:03:39,500 --> 00:03:40,000
+
+

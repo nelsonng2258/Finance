@@ -1,0 +1,141 @@
+PROFESSOR: The term exotic is an umbrella term
+that can refer to any nonstandard option.
+The possibilities are limitless.
+Many exotics are simply constructed
+by tweaking ordinary put and call options
+to better meet a risk management objective
+or to achieve a goal at a lower cost
+than with using standard options.
+Other exotics are much more complex.
+Whereas many standard options are traded on exchanges,
+exotic options typically are created and sold
+by investment banks and professional money managers.
+These writers have exotic options earn a commission
+and they typically hedge their risk exposure, often
+using the Delta or Delta Gamma Hedging Methods
+that we studied earlier.
+The goal here is not for you to memorize or derive
+a large number of pricing formulas.
+For those exotic options for which formulas exist,
+that information can be easily found in books or on the web.
+What I want to focus on instead as we
+go through these examples is first,
+what's the rationale for the use of a particular exotic option?
+Second, can the exotic option be approximated by a portfolio
+of ordinary options?
+That sort of comparison is useful,
+both for understanding what the option is intended to achieve,
+and also how to price it.
+In particular, those links can sometimes
+show us how to modify the Black-Scholes-Merton equations
+to price an exotic.
+Third, is the exotic option cheap or expensive
+relative to a standard option that achieves a similar goal?
+That information is helpful in deciding
+whether the difference in protection
+offered by the exotic is worth the price difference.
+And fourth, what are the general approaches for pricing them
+when there isn't a formula available?
+In answering that question, you'll
+acquire a new and valuable skill,
+which is to know the basics about how to price options
+using Monte Carlo simulations.
+The first stop on our tour of exotics is Bermuda.
+Bermudian options falls somewhere
+between American and European options
+because that can be exercised on certain pre-specified dates
+prior to expiration.
+Now, if you look at Bermuda on a map,
+you'll see it's in the Atlantic between America and Europe,
+and that's how these options got their name.
+As with any option, where there's
+a choice to be made about when it should be exercised prior
+to expiration, Bermudan options are often
+valued by working backwards on a binomial tree.
+That allows an analyst to simultaneously infer
+the optimal exercise strategy and the value of the option
+at each node using risk neutral pricing
+or the equivalent replicating portfolio approach.
+Bermudan options can be exotic in other dimensions
+as well, such as having strike prices the change
+over the life of the option.
+An example is employee stock options,
+which are sometimes reset to lower the strike price
+when they fall far out of the money.
+Callable corporate bonds often have an embedded Bermudan
+option with a variable strike price.
+Those bonds are callable after a call waiting period, which
+gives investors some number of years of complete protection
+against the bonds being called.
+For example, a 10 year bond may have a 3 year call waiting
+period, after which the bonds can be called at any time.
+On top of that, there may be a declining call
+price, which offers additional protection to bondholders.
+Continuing the example, those same bonds
+might be callable at 120% of par after 3 years, 110% of par
+after 4 years, and then at 100% of par thereafter.
+Corporate warrants, which are options
+issued by a company on its own stock,
+are often structured as Bermudan style securities.
+
+Binary options come in two distinct types, cash or nothing
+options and asset or nothing options.
+
+A cash or nothing call option has a unit payoff
+if the stock price exceeds the strike price, K at expiration,
+and a 0 pay off otherwise.
+Similarly, the cash or nothing put option
+has a unit payoff if the stock price is less
+than the strike price at expiration and a 0
+pay off otherwise.
+
+Before looking at the pricing formulas,
+I want to introduce the second type of binary option, an asset
+or nothing option.
+An asset or nothing call pays off the stock price
+at expiration as sub capital T if that price exceeds
+the strike price, K. An asset or nothing put
+pays off the stock price at expiration,
+ST, if that price is less than the strike price, K.
+To understand the pricing formula,
+it's useful to observe that a normal call option can
+be described as a portfolio that's long
+at asset or nothing call option, and short K cash or nothing
+call options.
+Similarly, a normal put option is a portfolio
+that's long take cash or nothing put options
+and short in asset or nothing put option.
+That observation can be used to interpret the pricing formulas.
+Note that the D1 and D2 in these equations
+are defined in the same way as in
+the Black-Scholes-Merton model with a constant dividend yield
+delta.
+For the asset or nothing call, the price
+is identical to the first term in
+the Black-Scholes-Merton written formula for the value of a call
+option.
+
+Recall that this formula can be interpreted
+as the present value of the expected stock
+price conditional on the option expiring in the money
+and that's the same thing as the value of an asset or nothing
+call.
+Now looking at the cash or nothing call, its price given
+here, when multiplied by K, is the negative
+of the second term in the Black-Scholes-Merton formula
+for the value of a call option.
+We also saw earlier that this expression
+can be interpreted as the present value of the strike
+price multiplied by the probability and of D2
+of the option expiring in the money.
+Hence, the present value of a unit payoff
+is the discount factor multiplied
+by the probability of the option being in the money.
+
+The same logic holds for binary put options.
+
+We can see then, that binary stock options are
+a good example of exotic options that
+can be valued by using components
+of the Black-Scholes-Merton model
+in recognizing their relation to standard options.

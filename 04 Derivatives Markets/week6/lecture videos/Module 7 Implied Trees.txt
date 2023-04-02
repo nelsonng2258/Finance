@@ -1,0 +1,103 @@
+
+PROFESSOR: Previously, we saw how
+to find options prices given a binomial tree representing
+stock price evolution.
+With implied trees, we start with some
+observed options prices and calibrate the stock price
+tree to be consistent with those prices.
+We can then use the tree to price other options.
+For example, consider a binomial tree
+calibrated to be consistent with the example we've been looking
+at for the S&P 500.
+We'll take the current index value to be 1502.4.
+Volatility will be 12.36.
+The risk free rate is 4.713.
+The dividend yield is 1.91.
+And the time to expiration of the option is 0.12.
+Consistent with these parameters,
+we would calibrate u to be e to the sigma root T, as usual.
+And we would get 1.0437 for that.
+d is 1 over u.
+And then the risk neutral probability
+is e to the risk free rate minus the dividend
+yield times the time to expiration minus d,
+over u minus d.
+That gives you a q* of 0.5286.
+Notice that the q* here looks a little different than it did
+in our case when the dividend yield was 0.
+Now we have to reduce the drift of the stock price by the fact
+that the dividend yield is there,
+as we've talked about before.
+Well, the price, then, of an option with a strike of 1,500,
+according to the model turns out to be 28.394.
+And that's higher than what we saw was the traded market
+price, which was 20.35.
+As shown by the calculations we just went over
+on the previous slide and using the tree
+based on historical volatility shown here,
+we get a price of the put of 28.394, which is
+higher than its market value.
+So instead of starting with historical volatility
+as the basis for calibrating the tree model,
+we can alter the binomial tree parameters
+to reproduce the observed market prices of the put option.
+On this slide, that procedure is described as choosing S1u,
+which will imply a new value for u, d and q*.
+You can think of choosing S1u as equivalent to choosing
+an implied volatility from the observed option price.
+In any case, you can solve for it using a computer program
+to solve for the option price, where
+you can iterate on S1u until you match the observed price.
+This slide shows the tree with the value of S1u, 1551.26,
+that results in the tree properly pricing the put option
+at its market value of 2035.
+Once we have the implied tree, we
+can use it to price other options.
+For instance, consider an option with a strike price of K
+equal to 1490, the same time to maturity of 0.12.
+The put price from the binomial tree for this option is 15.82.
+And if we compare that to the market price
+that we have in our table from earlier of 17.05,
+we see that it's much closer than had we
+tried to price it using our original tree, which
+would have implied a large error with a price
+prediction of 23.7.
+Well, obviously, you want to choose options
+in calibrating the tree with prices
+that you think are representative of the market.
+It's also possible, as you'll see in the recitation,
+to extend this idea to a multi-step tree.
+That provides the flexibility to treat the volatility
+as varying over different future time periods.
+That can capture the idea of mean reverting
+volatility or other assumptions about its expected time
+evolution.
+We've covered a lot of useful ground this week,
+and I hope you come away from it with a deeper
+understanding of the drivers of options prices
+and how they're modeled.
+We've seen that the Black-Scholes-Merton formula
+doesn't price options very accurately.
+Given the strong assumptions that it relies on,
+perhaps that's not too surprising.
+More accurate estimates of option value
+can be obtained by incorporating factors
+such as stochastic volatility, jumps, and fatter
+tailed distributions.
+Still, the Black-Scholes-Merton model
+is a very useful benchmark.
+It gives decent approximations to prices close to the money.
+And it typically is used for finding hedge ratios.
+If you look at the quotations for options
+at the CBOE and elsewhere, you'll
+see that the Black-Scholes-Merton model has
+become the industry standard for quoting options
+in terms of implied volatility.
+The BSM model is also used to construct implied volatility
+surfaces that provide a simple way
+to evaluate the relative value of options
+and to look for potential profit opportunities
+from temporary mispricing.
+The more complicated models do fit the data better,
+and you can use them for product pricing and trading strategies
+where more accuracy is important.

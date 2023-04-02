@@ -1,0 +1,524 @@
+0
+00:00:00,000 --> 00:00:02,640
+INSTRUCTOR: Now that we've gone over the most common types
+
+1
+00:00:02,640 --> 00:00:05,040
+of exotic options and some of the motivations
+
+2
+00:00:05,040 --> 00:00:08,340
+for trading them, we'll turn to the numerical methods that
+
+3
+00:00:08,340 --> 00:00:11,920
+are most frequently used for pricing.
+
+4
+00:00:11,920 --> 00:00:14,620
+We saw that for some of the exotic options
+
+5
+00:00:14,620 --> 00:00:16,780
+we looked at the formulas developed
+
+6
+00:00:16,780 --> 00:00:19,300
+to price them usually involve modifications
+
+7
+00:00:19,300 --> 00:00:23,320
+and extensions of the basic Black-Scholes-Merton model.
+
+8
+00:00:23,320 --> 00:00:26,350
+For the many exotics for which an analytical formula isn't
+
+9
+00:00:26,350 --> 00:00:30,010
+available, or when the underlying asset doesn't
+
+10
+00:00:30,010 --> 00:00:33,760
+satisfy the log normality and other assumptions needed,
+
+11
+00:00:33,760 --> 00:00:37,150
+numerical methods are used instead.
+
+12
+00:00:37,150 --> 00:00:40,080
+The two most common and related approaches
+
+13
+00:00:40,080 --> 00:00:43,650
+are binomial trees and Monte Carlo simulations.
+
+14
+00:00:43,650 --> 00:00:47,370
+With either method, we continue to rely on no arbitrage
+
+15
+00:00:47,370 --> 00:00:51,270
+logic that makes it possible to estimate the value of quite
+
+16
+00:00:51,270 --> 00:00:56,580
+complex derivative products with a good degree of confidence.
+
+17
+00:00:56,580 --> 00:00:59,460
+To understand the relation between risk neutral pricing
+
+18
+00:00:59,460 --> 00:01:02,970
+on binomial trees and Monte Carlo pricing on trees,
+
+19
+00:01:02,970 --> 00:01:06,090
+we'll start by reviewing the simple case of pricing
+
+20
+00:01:06,090 --> 00:01:09,660
+a standard call option on a non-dividend-paying stock
+
+21
+00:01:09,660 --> 00:01:12,060
+and a one-step tree.
+
+22
+00:01:12,060 --> 00:01:16,170
+Assume that the stock price is initially at $100.
+
+23
+00:01:16,170 --> 00:01:19,950
+The strike is out the money, also at $100.
+
+24
+00:01:19,950 --> 00:01:23,370
+The time to expiration is 1.
+
+25
+00:01:23,370 --> 00:01:25,800
+The risk-free rate is 2%.
+
+26
+00:01:25,800 --> 00:01:29,070
+And sigma, the volatility, is equal to 30%.
+
+27
+00:01:29,070 --> 00:01:31,620
+
+
+28
+00:01:31,620 --> 00:01:35,490
+The tree is calibrated with an up calculated
+
+29
+00:01:35,490 --> 00:01:39,150
+and e to the sigma root T, which is
+
+30
+00:01:39,150 --> 00:01:41,790
+the usual way we find the up.
+
+31
+00:01:41,790 --> 00:01:44,610
+And the down is 1/u.
+
+32
+00:01:44,610 --> 00:01:49,860
+So the up turns out to be 1.35, and that gets us
+
+33
+00:01:49,860 --> 00:01:55,650
+from the initial stock price to the stock price in the upstate.
+
+34
+00:01:55,650 --> 00:02:02,460
+And multiplying by 1/u gets us 74.082 in the down state.
+
+35
+00:02:02,460 --> 00:02:07,170
+So in the usual way, the call is in the money in the upstate,
+
+36
+00:02:07,170 --> 00:02:09,330
+not in the downstate.
+
+37
+00:02:09,330 --> 00:02:14,550
+We take the expected value discounted back to time 0.
+
+38
+00:02:14,550 --> 00:02:20,400
+And we find that the value of the call is 15.73.
+
+39
+00:02:20,400 --> 00:02:22,860
+Note that we can price any European derivative
+
+40
+00:02:22,860 --> 00:02:27,210
+of the stock in the same way, calculating its expected
+
+41
+00:02:27,210 --> 00:02:32,680
+payoff at expiration, using the risk-neutral probabilities,
+
+42
+00:02:32,680 --> 00:02:35,050
+and discounting back at the risk-free rate
+
+43
+00:02:35,050 --> 00:02:36,625
+to get it's time 0 value.
+
+44
+00:02:36,625 --> 00:02:40,070
+
+
+45
+00:02:40,070 --> 00:02:43,580
+An alternative way of computing the expected future payoff
+
+46
+00:02:43,580 --> 00:02:47,570
+is to simulate the up and down stock price movements.
+
+47
+00:02:47,570 --> 00:02:50,510
+For each simulation, the probability of an up
+
+48
+00:02:50,510 --> 00:02:53,000
+corresponds to the q star that was computed
+
+49
+00:02:53,000 --> 00:02:55,780
+based on the stock price tree.
+
+50
+00:02:55,780 --> 00:02:58,330
+To calculate whether a move is up or down,
+
+51
+00:02:58,330 --> 00:03:01,150
+we use a uniform random number generator.
+
+52
+00:03:01,150 --> 00:03:05,650
+In Excel, that built-in function is called RAND.
+
+53
+00:03:05,650 --> 00:03:08,530
+It generates a draw from a uniform distribution
+
+54
+00:03:08,530 --> 00:03:12,370
+that lies between 0 and 1.
+
+55
+00:03:12,370 --> 00:03:15,400
+We take a draw from the uniform distribution
+
+56
+00:03:15,400 --> 00:03:18,490
+N times, where each draw represents
+
+57
+00:03:18,490 --> 00:03:21,190
+the path taken on the tree, and N is
+
+58
+00:03:21,190 --> 00:03:25,110
+the number of simulated paths.
+
+59
+00:03:25,110 --> 00:03:29,100
+If the draw is less than q star, it represents an up move.
+
+60
+00:03:29,100 --> 00:03:33,420
+And the stock price outcome is S 1,u.
+
+61
+00:03:33,420 --> 00:03:35,730
+And if the draw is greater than q star,
+
+62
+00:03:35,730 --> 00:03:37,680
+it represents a down move.
+
+63
+00:03:37,680 --> 00:03:41,910
+And the stock price outcome is S 1, d.
+
+64
+00:03:41,910 --> 00:03:47,280
+Those values S 1,u you and S 1, d are the same as the ones we
+
+65
+00:03:47,280 --> 00:03:49,700
+computed for the tree.
+
+66
+00:03:49,700 --> 00:03:55,800
+Using many draws, this share of ups will approach q star.
+
+67
+00:03:55,800 --> 00:03:58,770
+For each simulation, we compute the payoffs
+
+68
+00:03:58,770 --> 00:04:01,590
+of the derivatives at time 1 based
+
+69
+00:04:01,590 --> 00:04:05,400
+on the outcomes of S. The value of the derivative security,
+
+70
+00:04:05,400 --> 00:04:08,730
+then, is the average of the present values of the payoffs
+
+71
+00:04:08,730 --> 00:04:10,460
+across the N simulations.
+
+72
+00:04:10,460 --> 00:04:13,090
+
+
+73
+00:04:13,090 --> 00:04:15,430
+The procedure I just described is most easily
+
+74
+00:04:15,430 --> 00:04:17,620
+understood with an example.
+
+75
+00:04:17,620 --> 00:04:21,290
+Using the risk-neutral probability of 0.4587
+
+76
+00:04:21,290 --> 00:04:23,200
+that we calculated for the example shown
+
+77
+00:04:23,200 --> 00:04:27,160
+on the binomial tree, this table shows one set of outcomes
+
+78
+00:04:27,160 --> 00:04:30,340
+from running 10 Monte Carlo simulations.
+
+79
+00:04:30,340 --> 00:04:35,200
+Each row represents the outcome of one Monte Carlo run.
+
+80
+00:04:35,200 --> 00:04:40,720
+The draws from RAND determine whether a move is up or down.
+
+81
+00:04:40,720 --> 00:04:43,540
+For example, the first one results
+
+82
+00:04:43,540 --> 00:04:48,710
+in the up price because the draw of 0.4573
+
+83
+00:04:48,710 --> 00:04:53,540
+is less than the q star of 0.4587.
+
+84
+00:04:53,540 --> 00:04:59,510
+The corresponding option payoff is 34.986.
+
+85
+00:04:59,510 --> 00:05:03,840
+And that will be the same any time there's an up.
+
+86
+00:05:03,840 --> 00:05:06,765
+And the payoff will be 0 whenever there's a down.
+
+87
+00:05:06,765 --> 00:05:09,290
+
+
+88
+00:05:09,290 --> 00:05:15,620
+Discounting the payoff to time 0 gives 34.293
+
+89
+00:05:15,620 --> 00:05:17,600
+as the present value of the payoff
+
+90
+00:05:17,600 --> 00:05:19,130
+whenever there's an up move.
+
+91
+00:05:19,130 --> 00:05:22,170
+
+
+92
+00:05:22,170 --> 00:05:28,110
+Then averaging across our 10 Monte Carlo runs,
+
+93
+00:05:28,110 --> 00:05:33,070
+the average of 17.147 is the estimate
+
+94
+00:05:33,070 --> 00:05:36,860
+for the value of the call option.
+
+95
+00:05:36,860 --> 00:05:41,600
+It turns out that this outcome is rather far from the 15.731
+
+96
+00:05:41,600 --> 00:05:45,350
+that we found using the tree.
+
+97
+00:05:45,350 --> 00:05:47,420
+That discrepancy is due to the fact
+
+98
+00:05:47,420 --> 00:05:51,290
+that the average number of ups isn't very accurately estimated
+
+99
+00:05:51,290 --> 00:05:53,570
+with just 10 simulations.
+
+100
+00:05:53,570 --> 00:05:57,050
+As N gets large, the two values will converge.
+
+101
+00:05:57,050 --> 00:06:01,190
+
+
+102
+00:06:01,190 --> 00:06:04,070
+Analysts relying on Monte Carlo simulation
+
+103
+00:06:04,070 --> 00:06:07,490
+need to assess how many simulation runs are necessary
+
+104
+00:06:07,490 --> 00:06:10,610
+in order to produce a sufficiently reliable estimate
+
+105
+00:06:10,610 --> 00:06:12,740
+of option value.
+
+106
+00:06:12,740 --> 00:06:15,140
+One's error tolerance can be expressed
+
+107
+00:06:15,140 --> 00:06:18,620
+in terms of an acceptable standard error on the estimated
+
+108
+00:06:18,620 --> 00:06:21,020
+option values.
+
+109
+00:06:21,020 --> 00:06:23,450
+The standard deviation of the estimates
+
+110
+00:06:23,450 --> 00:06:26,570
+is given by the formula here, assuming
+
+111
+00:06:26,570 --> 00:06:29,360
+that the random draws on each simulation path
+
+112
+00:06:29,360 --> 00:06:32,180
+are independent.
+
+113
+00:06:32,180 --> 00:06:34,220
+The important observation here is
+
+114
+00:06:34,220 --> 00:06:36,770
+that the standard deviation depends
+
+115
+00:06:36,770 --> 00:06:43,566
+on a factor of the square root of 1/N.
+
+116
+00:06:43,566 --> 00:06:47,010
+That means that the accuracy increases within N,
+
+117
+00:06:47,010 --> 00:06:50,730
+but as a decreasing rate as N gets large.
+
+118
+00:06:50,730 --> 00:06:52,980
+For example, the standard deviation
+
+119
+00:06:52,980 --> 00:06:55,410
+of 10 estimates in the previous example
+
+120
+00:06:55,410 --> 00:06:59,800
+was calculated to be 5.715.
+
+121
+00:06:59,800 --> 00:07:02,440
+A two-standard deviation confidence band
+
+122
+00:07:02,440 --> 00:07:09,250
+around the estimate, then, has a range of 5.7 to 28.6,
+
+123
+00:07:09,250 --> 00:07:13,550
+much too large to want to rely on that estimate.
+
+124
+00:07:13,550 --> 00:07:15,980
+In a rut of Monte Carlo simulations,
+
+125
+00:07:15,980 --> 00:07:21,740
+where I've increased N to 1,000, the sample estimate of 15.725
+
+126
+00:07:21,740 --> 00:07:25,220
+is much closer to the 15.731 that
+
+127
+00:07:25,220 --> 00:07:29,360
+was found with risk-neutral pricing on the binomial tree.
+
+128
+00:07:29,360 --> 00:07:33,200
+And the estimated two-standard deviation confidence band
+
+129
+00:07:33,200 --> 00:07:39,700
+is also much narrower with a range of 14.64 to 16.8.
+
+130
+00:07:39,700 --> 00:07:42,000
+
+

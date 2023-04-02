@@ -1,0 +1,232 @@
+0
+00:00:00,000 --> 00:00:00,552
+
+
+1
+00:00:00,552 --> 00:00:02,510
+PROFESSOR: Well, that wraps up the first topic.
+
+2
+00:00:02,510 --> 00:00:05,600
+Let's move on to the second topic of this recitation,
+
+3
+00:00:05,600 --> 00:00:07,970
+Black's model.
+
+4
+00:00:07,970 --> 00:00:10,130
+Recall from the Week 6 lecture that we
+
+5
+00:00:10,130 --> 00:00:14,360
+can price European options on futures contracts using
+
+6
+00:00:14,360 --> 00:00:15,620
+Black's model.
+
+7
+00:00:15,620 --> 00:00:17,990
+A version of the Black-Scholes-Merton model
+
+8
+00:00:17,990 --> 00:00:24,150
+that assumes that futures prices are log-normally distributed.
+
+9
+00:00:24,150 --> 00:00:28,220
+Let's see how we can use Black's model to price a European call
+
+10
+00:00:28,220 --> 00:00:29,645
+option on a bond.
+
+11
+00:00:29,645 --> 00:00:32,369
+
+
+12
+00:00:32,369 --> 00:00:34,170
+Let's assume that a European call
+
+13
+00:00:34,170 --> 00:00:36,840
+option with 10 months to expiration
+
+14
+00:00:36,840 --> 00:00:41,610
+is written on a bond with 9.75 years to maturity,
+
+15
+00:00:41,610 --> 00:00:48,780
+a face value of $1,000, and a semi-annual coupon of $50.
+
+16
+00:00:48,780 --> 00:00:52,110
+Furthermore, assume that the futures price of the bond
+
+17
+00:00:52,110 --> 00:00:58,950
+is $939.68, the strike price of the European call option
+
+18
+00:00:58,950 --> 00:01:02,640
+is $1,000, or the face value of the bond,
+
+19
+00:01:02,640 --> 00:01:05,730
+and the risk-free rate for the next 10 months is 10%.
+
+20
+00:01:05,730 --> 00:01:08,340
+
+
+21
+00:01:08,340 --> 00:01:14,030
+If the volatility of the futures bond price is 9% annually,
+
+22
+00:01:14,030 --> 00:01:16,550
+what would be the price of the call option
+
+23
+00:01:16,550 --> 00:01:18,960
+according to Black's model?
+
+24
+00:01:18,960 --> 00:01:21,560
+We'll begin by recalling that according
+
+25
+00:01:21,560 --> 00:01:24,980
+to Black's model, the price of a European call
+
+26
+00:01:24,980 --> 00:01:29,660
+option on a futures contract with strike price, K, futures
+
+27
+00:01:29,660 --> 00:01:35,480
+price, F, risk-free rate, r, and volatility of the futures
+
+28
+00:01:35,480 --> 00:01:41,570
+price, sigma, is equal to c, the price of the call option,
+
+29
+00:01:41,570 --> 00:01:46,340
+is equal to e to the negative r times T,
+
+30
+00:01:46,340 --> 00:01:50,720
+times the difference between the futures price F,
+
+31
+00:01:50,720 --> 00:01:56,150
+times N evaluated at d1, minus the strike price K,
+
+32
+00:01:56,150 --> 00:02:02,840
+times N evaluated at d2, where d1 and d2 are defined similarly
+
+33
+00:02:02,840 --> 00:02:06,710
+as in the Black-Scholes-Merton model, only this time instead
+
+34
+00:02:06,710 --> 00:02:10,500
+of the spot price of the underlying asset,
+
+35
+00:02:10,500 --> 00:02:15,580
+we have the futures price, F.
+
+36
+00:02:15,580 --> 00:02:19,000
+As noted in the Week 6 lecture, this pricing formula
+
+37
+00:02:19,000 --> 00:02:23,080
+for Black's model is identical to that of the European call
+
+38
+00:02:23,080 --> 00:02:26,890
+option on the stock according to the Black-Scholes-Merton model
+
+39
+00:02:26,890 --> 00:02:31,240
+except that as noted earlier, we substitute the futures price
+
+40
+00:02:31,240 --> 00:02:37,600
+F for the stock price and set the dividend yield
+
+41
+00:02:37,600 --> 00:02:40,270
+equal to the risk-free rate.
+
+42
+00:02:40,270 --> 00:02:44,430
+From here, solving the problem is pretty mechanical.
+
+43
+00:02:44,430 --> 00:02:49,950
+All we need to do is plug-in for the strike price K, $1,000,
+
+44
+00:02:49,950 --> 00:02:55,140
+for the futures price F, $939.68,
+
+45
+00:02:55,140 --> 00:03:01,330
+for the risk-free rate, r, 0.1 for 10%, for, sigma,
+
+46
+00:03:01,330 --> 00:03:07,240
+the volatility of the futures price, 0.09 or 9%,
+
+47
+00:03:07,240 --> 00:03:11,260
+and for T, the time to maturity, 10 divided
+
+48
+00:03:11,260 --> 00:03:16,690
+by 12 for 10 months, which is equal to 0.8333
+
+49
+00:03:16,690 --> 00:03:25,010
+into the expressions for d1, d2, and c, that we just derived.
+
+50
+00:03:25,010 --> 00:03:31,390
+Doing so, we can solve analytically for d1, d2, and c.
+
+51
+00:03:31,390 --> 00:03:35,530
+However, it's probably easier to just input the parameters
+
+52
+00:03:35,530 --> 00:03:38,560
+into the corresponding cells in the Black's model
+
+53
+00:03:38,560 --> 00:03:43,570
+tab of the BSM in Black's Model.xls spreadsheet.
+
+54
+00:03:43,570 --> 00:03:46,450
+This will allow us to find the price of the European call
+
+55
+00:03:46,450 --> 00:03:48,770
+option directly.
+
+56
+00:03:48,770 --> 00:03:52,990
+Doing so will yield a price of $9.49.
+
+57
+00:03:52,990 --> 00:03:55,000
+
+

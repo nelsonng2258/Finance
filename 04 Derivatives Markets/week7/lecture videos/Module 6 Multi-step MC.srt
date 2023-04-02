@@ -1,0 +1,436 @@
+0
+00:00:00,000 --> 00:00:03,060
+PROFESSOR: We know that the accuracy of option valuations
+
+1
+00:00:03,060 --> 00:00:05,490
+on binomial trees will be improved
+
+2
+00:00:05,490 --> 00:00:08,039
+by increasing the number of steps on the tree,
+
+3
+00:00:08,039 --> 00:00:09,840
+all else equal.
+
+4
+00:00:09,840 --> 00:00:13,650
+We also know that as we take the number of steps to infinity,
+
+5
+00:00:13,650 --> 00:00:15,750
+the stock price tree will converge
+
+6
+00:00:15,750 --> 00:00:19,050
+to give a lognormal distribution of stock prices, which
+
+7
+00:00:19,050 --> 00:00:23,840
+is the assumption underlying the Black-Scholes-Merton model.
+
+8
+00:00:23,840 --> 00:00:26,900
+The same will be true for Monte Carlo simulations
+
+9
+00:00:26,900 --> 00:00:31,550
+where, for a fixed expiration date, decreasing the step size
+
+10
+00:00:31,550 --> 00:00:35,090
+and adding more steps causes price estimates to become
+
+11
+00:00:35,090 --> 00:00:37,330
+more accurate.
+
+12
+00:00:37,330 --> 00:00:40,090
+For the next few slides, our running example
+
+13
+00:00:40,090 --> 00:00:42,910
+will be based on a standard put and call
+
+14
+00:00:42,910 --> 00:00:46,960
+option priced using 10 steps.
+
+15
+00:00:46,960 --> 00:00:49,450
+We'll compare the results using Monte Carlo
+
+16
+00:00:49,450 --> 00:00:51,490
+and a binomial tree.
+
+17
+00:00:51,490 --> 00:00:53,470
+We'll also compare the results to
+
+18
+00:00:53,470 --> 00:00:55,660
+the Black-Scholes-Merton price, which
+
+19
+00:00:55,660 --> 00:01:00,270
+is expected to provide the most accurate result.
+
+20
+00:01:00,270 --> 00:01:04,260
+In these calculations then, the physical expected return
+
+21
+00:01:04,260 --> 00:01:13,360
+on the stock is set to 10%, its volatility to 30%,
+
+22
+00:01:13,360 --> 00:01:18,250
+the risk free rate is 2%, and the initial stock price
+
+23
+00:01:18,250 --> 00:01:22,100
+is $100.
+
+24
+00:01:22,100 --> 00:01:25,750
+The strike price is also $100.
+
+25
+00:01:25,750 --> 00:01:31,300
+And as I just mentioned, we're assuming 10 steps
+
+26
+00:01:31,300 --> 00:01:32,905
+over a horizon of one year.
+
+27
+00:01:32,905 --> 00:01:35,850
+
+
+28
+00:01:35,850 --> 00:01:39,150
+Those inputs and the resulting outputs using the spreadsheet
+
+29
+00:01:39,150 --> 00:01:41,280
+program that you've already seen,
+
+30
+00:01:41,280 --> 00:01:48,190
+binomial.xls, produces the stock price tree here
+
+31
+00:01:48,190 --> 00:01:53,560
+and European call option tree here, set to value
+
+32
+00:01:53,560 --> 00:01:58,940
+a European call option, which has a value of 12.53
+
+33
+00:01:58,940 --> 00:02:00,560
+given these assumptions.
+
+34
+00:02:00,560 --> 00:02:04,080
+
+
+35
+00:02:04,080 --> 00:02:06,600
+It's fairly straightforward to modify the Monte Carlo
+
+36
+00:02:06,600 --> 00:02:11,220
+simulations to incorporate multiple steps along each path.
+
+37
+00:02:11,220 --> 00:02:15,750
+For each successive step, a draw from the uniform distribution
+
+38
+00:02:15,750 --> 00:02:19,740
+from rand is compared to q star to determine if the next step
+
+39
+00:02:19,740 --> 00:02:21,910
+will be an up or a down.
+
+40
+00:02:21,910 --> 00:02:25,200
+If an up step is indicated, then the previous value of the stock
+
+41
+00:02:25,200 --> 00:02:27,970
+price is multiplied by u.
+
+42
+00:02:27,970 --> 00:02:33,200
+And if a down step is indicated, it's multiplied by d.
+
+43
+00:02:33,200 --> 00:02:35,750
+The parameters q star, u, and d are
+
+44
+00:02:35,750 --> 00:02:39,020
+calculated as they were for the binomial tree.
+
+45
+00:02:39,020 --> 00:02:41,120
+And they can be read off of the spreadsheet
+
+46
+00:02:41,120 --> 00:02:44,350
+on the previous slide.
+
+47
+00:02:44,350 --> 00:02:46,800
+Well, for example, this table shows the results
+
+48
+00:02:46,800 --> 00:02:51,150
+of the first 10 of 1,000 Monte Carlo simulations, all
+
+49
+00:02:51,150 --> 00:02:55,020
+starting at a stock price of 100 and taking
+
+50
+00:02:55,020 --> 00:02:59,730
+steps of 1/10 of a year all the way out to one year, so
+
+51
+00:02:59,730 --> 00:03:02,290
+10 steps in a year.
+
+52
+00:03:02,290 --> 00:03:06,430
+In this first simulation, the draws from rand
+
+53
+00:03:06,430 --> 00:03:10,960
+told us there was a down, another down, then an
+
+54
+00:03:10,960 --> 00:03:14,560
+up, and up, and so forth.
+
+55
+00:03:14,560 --> 00:03:17,020
+On this simulation path, the outcome
+
+56
+00:03:17,020 --> 00:03:22,780
+for the stock price at the end of the year is 146.151.
+
+57
+00:03:22,780 --> 00:03:27,490
+The call is then in the money at that time by 46.151
+
+58
+00:03:27,490 --> 00:03:31,130
+and the put is out of the money.
+
+59
+00:03:31,130 --> 00:03:33,850
+The discounted values of those option payoffs
+
+60
+00:03:33,850 --> 00:03:36,610
+are reported in the first column for the put
+
+61
+00:03:36,610 --> 00:03:38,980
+and in the second column for the call.
+
+62
+00:03:38,980 --> 00:03:44,690
+
+
+63
+00:03:44,690 --> 00:03:47,210
+The results for nine more Monte Carlo simulation
+
+64
+00:03:47,210 --> 00:03:50,195
+runs are shown in these next nine rows.
+
+65
+00:03:50,195 --> 00:03:52,760
+
+
+66
+00:03:52,760 --> 00:03:57,590
+The equally weighted average of the discounted payoffs
+
+67
+00:03:57,590 --> 00:04:01,025
+are then the Monte Carlo estimates of the option values.
+
+68
+00:04:01,025 --> 00:04:03,930
+
+
+69
+00:04:03,930 --> 00:04:07,440
+The results for a 1,000 run Monte Carlo simulation
+
+70
+00:04:07,440 --> 00:04:10,680
+and the associated standard errors of the estimates
+
+71
+00:04:10,680 --> 00:04:12,885
+are summarized here on the top left.
+
+72
+00:04:12,885 --> 00:04:15,570
+
+
+73
+00:04:15,570 --> 00:04:17,940
+The Monte Carlo option price estimates
+
+74
+00:04:17,940 --> 00:04:21,250
+are close to those from the binomial tree.
+
+75
+00:04:21,250 --> 00:04:24,940
+For comparison, let's look at the call estimates.
+
+76
+00:04:24,940 --> 00:04:27,970
+The spreadsheet reports the call prices
+
+77
+00:04:27,970 --> 00:04:32,590
+estimated from the binomial tree and also from the Black-Scholes
+
+78
+00:04:32,590 --> 00:04:35,380
+formula.
+
+79
+00:04:35,380 --> 00:04:40,900
+The Monte Carlo estimate of the call value is 12.637.
+
+80
+00:04:40,900 --> 00:04:43,900
+The binomial tree gives 12.53.
+
+81
+00:04:43,900 --> 00:04:49,030
+And Black-Scholes gives 12.82.
+
+82
+00:04:49,030 --> 00:04:50,305
+These are all pretty close.
+
+83
+00:04:50,305 --> 00:04:53,280
+
+
+84
+00:04:53,280 --> 00:04:55,140
+Remember that the binomial estimate
+
+85
+00:04:55,140 --> 00:04:57,690
+will converge to the Black-Scholes-Merton estimate
+
+86
+00:04:57,690 --> 00:05:02,100
+as the number of steps gets very large in the tree.
+
+87
+00:05:02,100 --> 00:05:04,530
+It's also true that the Monte Carlo estimate
+
+88
+00:05:04,530 --> 00:05:07,260
+will converge the Black-Scholes-Merton estimate
+
+89
+00:05:07,260 --> 00:05:10,230
+both as the number of steps gets very large
+
+90
+00:05:10,230 --> 00:05:12,810
+and as the number of Monte Carlo simulations
+
+91
+00:05:12,810 --> 00:05:14,215
+also gets very large.
+
+92
+00:05:14,215 --> 00:05:17,790
+
+
+93
+00:05:17,790 --> 00:05:21,480
+We can plot the stock values as a function of the time step
+
+94
+00:05:21,480 --> 00:05:24,670
+from these simulated values.
+
+95
+00:05:24,670 --> 00:05:28,490
+Each path is represented here by a different color.
+
+96
+00:05:28,490 --> 00:05:30,430
+And the results look like the distribution
+
+97
+00:05:30,430 --> 00:05:35,470
+of paths through the binomial tree but with missing branches.
+
+98
+00:05:35,470 --> 00:05:37,960
+The branches that are most likely to be missing
+
+99
+00:05:37,960 --> 00:05:40,220
+are those with the lowest probability,
+
+100
+00:05:40,220 --> 00:05:45,310
+which means having mostly all ups or mostly all downs.
+
+101
+00:05:45,310 --> 00:05:47,710
+A larger number of stimulation paths
+
+102
+00:05:47,710 --> 00:05:52,240
+will tend to fill out those tails of the distribution.
+
+103
+00:05:52,240 --> 00:05:54,850
+A useful observation then is that for derivatives
+
+104
+00:05:54,850 --> 00:05:58,240
+whose values are very sensitive to the extreme tails
+
+105
+00:05:58,240 --> 00:06:01,810
+of the stock price distribution, such as deep out of the money
+
+106
+00:06:01,810 --> 00:06:05,530
+puts and calls, it becomes very important to use a large number
+
+107
+00:06:05,530 --> 00:06:08,460
+of Monte Carlo simulations.
+
+108
+00:06:08,460 --> 00:06:09,003
+
+

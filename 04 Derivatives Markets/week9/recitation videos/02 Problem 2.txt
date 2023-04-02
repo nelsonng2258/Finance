@@ -1,0 +1,149 @@
+
+PROFESSOR: All right, let's move on to problem two.
+Problem 2 states that your firm owns 1,000 shares of ABC stock
+and is now seeking a loan using the stock as collateral.
+The current market price of the stock is $80 per share.
+And you have just been offered a loan
+of $80,000, the full current value of the stock
+at an interest rate of 25% per period.
+At the end of each of the next two periods,
+your firm will owe an interest payment of $20,000.
+The first payment is due one period from now.
+The principal on the loan is due three periods from now.
+So at that time your firm will own
+a total payment of $100,000.
+The 1,000 shares of stock will serve as the sole collateral
+for the loan.
+If your firm defaults on any of its payments,
+the lender will immediately take possession of the stock
+but will have no further claim on any
+of your firm's other assets.
+A default on this special arrangement
+will have no effect whatsoever on the other activities
+of the firm.
+
+The APC stock pays no dividends, and over each period,
+its value will either increase by 50% or decrease by 50%
+with the risk neutral probability
+of an up move equal to 60%.
+Equivalently, the risk neutral probability of a down move
+is equal to 40%.
+The interest rate on default free, risk free loans
+is 10% per period.
+Is this loan an attractive opportunity for your firm?
+First, consider the value of a default free bond
+that has the same promise payments as the proposed loan.
+Its value would be equal to the $20,000 interest payment one
+period from now discounted at the 10% default free
+or risk free interest rate plus the $20,000 interest
+payment two periods from now discounted
+at 10% plus the $100,000 face value of the default free bond
+discounted at 10%, which is equal to $109,842, which
+is substantially greater than the $80,000
+that your firm would receive for undertaking the same promised
+payments with the proposed loan.
+However, your firm would also have a valuable option
+to cancel the proposed loan at any time
+by surrendering the underlying collateral, the ABC stock.
+Defaulting in this way would be in the firm's interest
+whenever the value of the remaining payments on the loan
+exceeds the value of the collateral.
+Thus, the proper value of the remaining payments
+must reflect the fact that even if the current payment
+on the loan is made, default may still occur on one or more
+of the future payments.
+Thus, the current value of the remaining payments of the loan
+will depend on the value of the collateral.
+Since we have a binomial model, the following diagram
+shows the possible prices for the underlying collateral,
+the 1,000 shares of ABC stock over the next three periods
+along with the corresponding possible values of the loan
+at its maturity date.
+This is this last column on the right here.
+The last three values in that column 90, 30, and 10 reflect
+the fact that default will occur in those circumstances
+because the value of the underlying collateral of 90,
+30, and 10 is less than the face value of the loan of 100.
+All values in the diagram are in thousands
+of dollars for simplicity.
+As always, with the binomial tree,
+we solve the problem by working backwards.
+Let V of S and n be the value of the current and future payments
+on the loan in thousands of dollars
+when the stock price is equal to S,
+and there are end periods remaining until maturity.
+Beginning with the n equals one case,
+that is these three nodes here, we have the following.
+The value of the current and future payments on the loans
+in the node of the binomial tree when the stock
+price is equal to 180.
+And there's one period remaining, this node here,
+is equal to the minimum of 180, the value
+of the underlying collateral, and 20, the interest
+payment in that period plus 60%, which
+is the risk neutral probability of an up move times 100, which
+is the value of the loan in the terminal node here
+plus 40% risk neutral probability of a down move
+times 90, the value of the loan in this terminal node here
+discounted at the risk free rate of 10%, which
+is equal to 107.27.
+In the node of the binomial tree when the underlying stock is
+equal to 60 with one period remaining,
+this node here, the value of the current and future payments
+on the loan is equal to the minimum of 60,
+the value of the underlying collateral,
+and 20, the interest payment plus 60% times now 90,
+which is the value of the loan in this node here
+plus 40% times 30, the value of the loan in this node here
+discounted at 10%, which is equal to 60.
+A similar calculation for the node
+of the tree when the value of the underlying stock
+is equal to 20 with one period remaining,
+this node here, suggests that the value
+of the current and future payments on the loan
+at that node is equal to 20.
+Thus, the optimal choice for the firm
+is to default on the loan at the nodes where S equals 60 or 20
+at n equals 1, these two here.
+Now, we can do a similar calculation
+for the n equals 2 case, that is when there
+are two periods remaining until maturity, which corresponds
+to these two nodes here on the binomial tree
+and find that the value of the current and future payments
+on the loan at the node of the tree where the stock price is
+120 is equal to the minimum of 120,
+value of the underlying collateral,
+and 20, the interest payment plus 60% the risk neutral
+probability of an up move times 107.27.
+Which is the value of the current and future payments
+on the loan at this node here, the up node from 120 plus 40%
+the risk neutral probability of a down move
+times 60 the value of the current and future payments
+on the loan at this node here discounted
+at the risk free rate of 10%, which is equal to 100.33.
+A similar calculation for the node
+of the tree where the underlying stock price is equal to 40
+gives a value of 40.
+Thus, the optimal choice for the firm
+is to default on the loan at the node where S equals 40 at n
+equals 2 since this is less than the face value of 100.
+Finally, at the initial node of the tree,
+that is when n equals 3 and S is equal to 80, this node here.
+
+The value of the current and future payments on the loan
+is equal to the minimum of the underlying asset price of 80
+plus the risk neutral probability of an up
+move times the value of the current and future payments
+on the loan in the subsequent up node, which we found
+was 100.33, plus the risk neutral probability
+of a down move times 40.
+The value of the current and future payments
+on the loan and the subsequent down node,
+which we just found here, discounted at the risk
+free rate of 10%, which is equal to 69.27, or $69,270.
+So overall, the loan is actually an attractive opportunity
+for your firm.
+You have been offered $80,000 for a series
+of contingent future payments that
+has a current fair value of only $69,270.
+And that's a really good deal.

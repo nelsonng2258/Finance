@@ -1,0 +1,172 @@
+
+PROFESSOR: The payoff on an Asian option
+is based on an average price over some period of time.
+That makes them fundamentally different from the options
+we've studied so far, because instead of depending
+on the value of an underlying asset at a point in time,
+the payoffs are path dependent.
+Asian options can be useful for a variety of reasons.
+For instance, they can provide an effective and less expensive
+hedge than a traditional option when a firm's profit depends
+only on the average price of a factor of production,
+like electricity or exchange rates over some time period.
+It also makes sense to base option payoffs
+on an average reference price in situations
+where the price at a particular point in time
+may be unreliable.
+That could happen because the price could
+be subject to short-term manipulation,
+or it could be prone to big swings
+in thin or illiquid markets.
+An example of a popular Asian option
+is embedded in convertible bonds that
+can be exchanged for some number of shares
+of the stock of a company at the bond's maturity.
+There, the conversion factor is often
+based on the average of the stock
+price over a period, for instance, 20 days,
+at the end of the bond's life.
+I mentioned that an Asian option can
+be less expensive than an otherwise
+similar standard option.
+Why is that?
+It's because the average price is much less volatile
+than the underlying price.
+Lower volatility translates to lower option value for both
+puts and calls.
+
+Asian options come in many varieties.
+One choice is whether to use a geometric or arithmetic
+average.
+Remember that an arithmetic average of a random variable
+is found by adding together the outcomes of N draws
+and then dividing by N. The geometric average
+is found by taking the product of those N draws
+and taking them to the 1 over N-th power.
+One can prove that the arithmetic average is
+greater than or equal to the geometric average,
+and the difference between them increases with the volatility
+of the random variable.
+With Asian options, the averaging
+can be applied to the asset price that
+determines the payoff relative to a fixed strike price K,
+or the averaging can be applied to the strike price
+that the current value of the asset
+is compared to at a potential exercise date.
+This table summarizes the calculation of the payoffs
+depending on whether the option is a put or a call,
+whether the averaging is geometric or arithmetic,
+and whether the averaging applies to the strike
+or to the asset price.
+Clearly, each of those choices will have an effect
+on the value of the option.
+
+Note, also, that the payoffs in this table
+assume the options are European, but they could also
+be American.
+And that choice, too, often will affect their value.
+
+In this example, we return to a common challenge for exporters,
+which is to figure out how to best manage the risk arising
+from revenues being in a different currency
+than production costs.
+Let's assume that a US firm called
+XYZ has exports that generate a certain monthly revenue of 100
+million euros.
+Those revenues are converted to dollars
+and repatriated at the end of each month.
+XYZ's operating costs are entirely in US dollars.
+Uncertainty about future exchange rates
+leaves it exposed to a weakening euro that
+could cause revenues in dollar terms to fall below its costs.
+
+We'll call the spot price of a euro
+in dollar terms x, where x is a random variable.
+Then in dollar terms, the value of revenues
+at the end of the year is also a random variable,
+and it's given by this equation here, based on the 100 million
+per month times whatever the exchange rate turns out to be
+and a future value factor.
+Ignoring the usual small effect of the future value factors
+over the horizon of just a year, the amount
+of euro exposure that XYZ wants to hedge
+can be described as 12 months of protection
+against its average exchange rate risk
+exposure over the year.
+An arithmetic average price option
+is a natural choice for a hedge that
+protects against the average value of the euro over the year
+weakening below some floor exchange rate K. Specifically,
+the firm can use an average price put option on the euro
+with a payoff equal to the maximum of 0
+and K minus the average exchange rate received over the 12
+months.
+Of course, an average price put option isn't the only way
+the exporter could hedge.
+It's worthwhile to compare the average price put
+option with some of the leading alternatives
+and to think about the relative costs and benefits.
+One possibility would simply be to buy 12 put
+options on the euro that all expire at the end of the year.
+A second possibility would be to use a basket of 12 monthly put
+options, each with the same strike price
+but with expiration dates of one month, two months,
+and so on out to 12 months.
+A final alternative would be to use a currency
+swap that exchanges euros for dollars.
+To make these comparisons more concrete,
+let's assume that the current exchange rate is $0.9 per euro,
+that the strike price in all cases where there's an option
+is at the money at 0.9, that the dollar risk-free rate is 6%
+and the euro risk-free rate is 3%,
+and finally that the volatility of the dollar-for-euro exchange
+rate is 10%.
+The results of plugging these assumptions
+into the various pricing formulas is shown here.
+The most expensive choice is the portfolio
+of 12 put options, each with a one-year expiration.
+That makes sense because it gives the firm a lot
+of upside from the 12 options.
+The basket of 12 options with consecutive monthly expiration
+dates is less expensive because the options
+have a positive theta, meaning that longer-maturity currency
+options are worth more than those with a shorter maturity.
+Turning to the two Asian option alternatives, one arithmetic
+and one geometric, both are significantly less expensive
+than the basket of 12 European puts.
+Here, we're seeing the effect of the averaging reducing
+the volatility of the price that determines the payoff, implying
+less upside for the firm but also a lower cost of hedging.
+The geometric put is slightly more expensive
+than the arithmetic put because the geometric average is lower
+than the arithmetic average.
+Finally, what about a currency swap?
+Remember that a new currency swap has a zero upfront
+cost because it's priced to have an equal value
+for both counterparties.
+It also leaves the firm with no upside.
+The swap is actually the only one
+of these alternatives that's a pure hedge in that it
+eliminates risk completely.
+Any of the options-based choices protects against the downside
+risk, but it also has a speculative element
+because it's a bet that the euro will
+depreciate against the dollar.
+I bet that some of you are wondering
+about how you'd estimate the values of these various options
+on your own.
+You've learned the formula for pricing
+standard European currency options,
+and you can use it to confirm the values for the 12
+one-year options and also for the basket of options
+that are reported here.
+Closed form approximation formulas
+for geometric Asian options can be found in textbooks
+based on Black's model.
+You're not responsible, though, for knowing that fairly
+complicated formula.
+For arithmetic average options, pricing
+is typically done using a binomial tree or Monte Carlo
+simulation.
+We'll go over how to price Asian options with these techniques
+later today.

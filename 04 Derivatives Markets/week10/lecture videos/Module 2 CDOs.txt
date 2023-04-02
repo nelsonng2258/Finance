@@ -1,0 +1,118 @@
+
+PROFESSOR: For securities like CDOs and CLOs,
+the main function of securitization
+is to diversify and restructure credit risk.
+We'll focus on CDOs since the considerations
+are similar for other credit-sensitive
+securitizations.
+It's common to describe CDOs as involving
+a waterfall of cash flows generated
+by the pool of underlying securities.
+The securitization allocates those cash flows
+to different tranches or classes of securities,
+starting with the most senior, going next
+to the junior, or mezzanine, classes,
+and finally going to the holders of the equity tranche
+if cash flows are sufficiently large.
+The width of the different tranches
+will depend on the riskiness of the underlying
+pool of debt securities.
+The riskier the securities, the larger
+the equity and mezzanine tranches
+relative to super senior tranche,
+which is intended to be very well protected from defaults.
+If the super senior tranche is set at 100%,
+it's safe to assume that the underlying debt pool will have
+a credit guarantee from a third party insurer,
+or from the government.
+The term notional here refers to the principal value
+of the loans in the pool.
+Two more definitions to be aware of, involving more exotic CDO
+structures, synthetic CDOs are constructed with reference
+to a pool of loans in a credit index.
+A CDO squared is a CDO backed by the cash flows
+from a pool of CDO securities rather than
+by the pooled cash flows of underlying debt securities.
+This diagram is an example of a typical CDO structure.
+Imagine that there are $100 million
+in principal of the bonds underlying the CDO.
+The average credit rating of those bonds is BBB.
+The CDOs structured with the super senior tranche having
+a notional principal of $70 million,
+the senior tranche getting the next $20,
+then the mezzanine tranche at $7,
+and equity with principal of $3 million.
+The actual cash flows that come in
+will go first to pay back the super senior securities, next,
+the senior securities, and so forth.
+Because it's extremely likely that
+the super senior securities will be repaid in full,
+they receive AAA rating.
+Rating agencies also judge the senior securities
+to be very unlikely to take losses and assign
+a rating of AA.
+The mezzanine securities receive a BBB rating,
+the same as on the original bonds,
+and the equity is unrated.
+It may seem at first like alchemy to you
+that a pool of BBB bonds could be restructured
+to create such a large portion of securities carrying a AA,
+or even a AAA, rating.
+The reason that's possible is, first,
+because the risk is being concentrated onto the mezzanine
+and particularly, onto the equity tranches.
+Second, the risk in a pool of bonds
+is lower than for individual bonds
+because of the diversification of the idiosyncratic default
+risk across bonds.
+Notice, too, that this looks a lot like the balance sheet
+of a firm with risky assets that has
+liabilities structured to consist
+of safe debt and risky equity.
+So there's nothing unusual about transferring asset risk along
+with a commensurate difference in expected return
+to leveraged equity holders.
+This reference I'm making to the capital structure of a firm
+is also intended to alert you to the fact
+that the Merton model, and extensions to it,
+can be used to price the claims arising from a CDO.
+This diagram summarizes the conclusions
+about the distribution of risk.
+The dark bars show the notional share
+of principle held by the different tranches,
+whereas the light bars represent the proportion of risk absorbed
+by each of the tranches.
+Most of the risk falls onto the equity tranche and some
+onto the mezzanine trusts, which here
+is shown as being further divided between more
+or less senior claims.
+Very little of the risk falls onto the senior or super senior
+tranches.
+Before turning to a numerical example,
+I want to say a few more words about the mechanisms used
+for credit risk transfer.
+In a CDO structure, the transfer of most of the credit risk
+is to the equity tranche, and that's described
+as overcollateralization.
+The idea is that the $100 in principle
+overcollateralized the rated securities issued
+against the pool, in this case, by $3.
+An alternative to overcollateralization
+is to obtain a guarantee from a credit enhancer.
+There are both private sector and public sector suppliers
+of credit enhancement.
+On the private sector side, insurance companies and banks
+sell protection in exchange for a premium,
+effectively selling credit default options,
+or credit default swaps.
+Often, governments also provide credit guarantees
+that substitute for the need for equity protection.
+That's common in the US residential mortgage market
+where Fannie Mae, Freddie Mac, and other federal agencies
+absorb the credit risk on most mortgages that are securitized.
+Credit enhancement can add value by allowing investors
+without credit expertise to feel comfortable
+buying these securities with credit risk.
+Credit enhancement also improves a securities credit
+rating and more highly-rated securities
+tend to be more liquid.

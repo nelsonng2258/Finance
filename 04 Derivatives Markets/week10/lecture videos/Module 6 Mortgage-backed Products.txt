@@ -1,0 +1,159 @@
+
+PROFESSOR: Let's take a look at some common MBS
+structures and the motivations behind creating them.
+
+Passthrough securities are the oldest and simplest structures
+for mortgage-backed securities.
+As their name suggests, these securities
+have cash flows that are distributed proportionally
+to the principal value of each security holder.
+The repayment of principal and accrued interest
+is generally guaranteed.
+The main benefit of this structure,
+relative to investing in home mortgages,
+is diversification of prepayment risk, which
+makes the securities less risky and easier
+to price, which in turn also makes them more liquid.
+This diagram gives a stylized example
+of the structure of a passthrough securitization.
+Here, each mortgage loan is assumed
+to have principal of $200,000, and the total pool
+has principal of $1 million based on having five loans.
+Each month, the borrowers make payments
+that consist of interest and principal that comes due.
+Plus, they may choose to prepay some principal.
+The pooled cash flows are then distributed
+to investors proportionately, or pro-rata,
+to their principal claim, which is reduced over time
+by principal repayments.
+Assuming there's a guarantee against default losses,
+from an investor perspective, a default
+has the same effect of prepayment.
+That is, default results in an immediate return of principal
+to investors that equals the balance of the defaulted loan.
+Collateralized mortgage obligations, or CMOs,
+have a wide variety of structures, some of which
+are listed on the slide.
+The strategy of issuers is to carve up the cash flows
+to appeal to a variety of investor clienteles.
+Some investors can tolerate more risk
+than others in the timing and size of the cash flows
+received.
+Some prefer shorter maturities, and some
+prefer longer maturities.
+Well, starting with sequential pay structures,
+those offer different average maturities
+in the different tranches.
+CMOs that include planned amortization,
+or targeted amortization classes, PACs and TACs,
+create securities with very predictable cash flows
+as long as prepayment rates stay within the range of upper
+and lower bounds that are specified in the contracts.
+Now, in order to provide that certainty
+to holders of TACs and PACs, other securities,
+which are called support classes,
+are structured to absorb the variation in prepayment rates
+within that range.
+They receive proportionally larger payments
+when prepayment rates are high and proportionally smaller
+payments when prepayment rates are low.
+In exchange for absorbing that risk,
+the yield on those support classes
+is typically higher than on PACs or TACs.
+Another type of restructuring is to break fixed rate payments
+into two pieces, a floater and an inverse floater.
+The sum of the cash flows on the floater and the inverse floater
+equal the fixed rate payment.
+The floater has a payment that's positively
+related to a short term rate like LIBOR,
+and the inverse floater receives a payment
+based on a fixed rate minus the short term rate.
+Inverse floaters can be attractive to investors
+that want to invest in securities with a very long
+effective duration, and floaters appeal to investors
+seeking shorter durations.
+
+You probably remember from your introductory finance courses
+that the Modigliani-Miller theorem for capital structures
+says that the weighted average yield on all
+of these securities should be based
+on the fair rate of return for the underlying mortgage assets.
+If that were literally true, there
+would be no point in creating these complicated structures
+because it wouldn't lower cost.
+Well, although the MM theorem is a good first approximation,
+and it's an important reminder that there shouldn't
+be any big, free lunches here, the overall cost
+of mortgage capital can be reduced
+by catering to different preferences
+across investors for liquidity, safety,
+and the timing of cash flows.
+This diagram provides a simple example of a sequential pay
+structure the pool has the same five underlying mortgage loans
+that we looked at in the last example
+with a total value of $1 million.
+Here, are the securities issued against those cash flows
+from the mortgages are structured into four
+tranches or classes, A, B, C, and Z.
+Each month, there are scheduled principal, scheduled interest,
+and prepayments.
+Rather than being distributed evenly across the security
+holders, the principle goes towards repaying the Class A
+securities until those securities are completely paid
+off.
+Then it goes to paying off Class B And so on down the stack.
+The interest that comes in each month
+is distributed proportionally to the remaining principal in each
+of the classes A, B, and C. The Z class, which is effectively
+an equity tranche, receives no payments until the A, B, and C
+securities are fully paid off, after which,
+it gets any accumulated interest and the remaining payments.
+In terms of effective duration, clearly,
+it's also ordered by class, being lowest for Class A
+and highest for Class Z. The amount of uncertainty
+in the timing of cash flows is also increasing across classes,
+with modest uncertainty for the A class and considerable
+uncertainty for the Z's.
+The reason for that is that the payments on the A class
+consist largely of scheduled principal and interest
+payments, which are quite predictable, whereas over time,
+the importance of volatile prepayments
+becomes the most important factor.
+IOs and POs are interest-only and principle-only securities.
+Like other MBS, they're derivatives on a pool
+of underlying mortgages.
+They're structured so that the holders of IO securities
+only get interest payments, and holders of PO securities
+only get principal payments.
+Beyond being split between principal and interest,
+IOs and POs may be further structured
+into PACs, TACs, and support classes,
+or into sequential or other structures.
+The effect of interest rate changes
+is quite different for IOs and POs.
+Let's start with IOs and consider
+a fall in interest rates.
+That has two effects.
+There's the usual present value effect
+that raises the value of the IO because future fixed payments
+are discounted at a lower rate.
+However, an offsetting effect is that lower rates speed up
+prepayment.
+Prepayment is very bad for an IO because when principal
+is no longer outstanding, no interest payments
+will be made on it.
+The effects of prepayment increases when rates fall
+means that at least over some range of interest rates,
+IOs may be expected to fall in value when rates fall.
+That means they have negative effective duration
+in that range, which may make them attractive to investors
+looking for securities with negative duration
+in a long position.
+For POs, the effect of prepayment is the opposite.
+It causes the return of principal
+to happen sooner, which increases
+the present value of PO claims.
+For POs, the usual discounting effect of interest rate changes
+works in the same direction as the prepayment effect, which,
+together, causes them to have a longer effective duration
+than the underlying mortgages.

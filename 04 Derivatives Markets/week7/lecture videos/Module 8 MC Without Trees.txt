@@ -1,0 +1,238 @@
+PROFESSOR: The examples we've looked at
+so far have restricted the Monte Carlo simulation paths
+to be the same as the possible paths through a binomial tree.
+However, there's no theoretical reason
+to limit Monte Carlo simulations to reproduce
+the outcomes on a tree.
+The main requirement for prices obtained by Monte Carlo
+simulations to be theoretically valid
+is that you need to make sure that the model satisfies
+the conditions for risk neutral pricing.
+Restricting Monte Carlo outcomes to mirror the outcomes
+on a tree is one way to ensure that dynamic replication
+or risk neutral pricing is being achieved.
+However, once we decide we can use
+risk neutral pricing with a model,
+we can simulate out any distribution.
+For example, with Monte Carlo, we
+can use the lognormal model for stock prices
+directly, which is consistent with the Black-Scholes
+written assumptions.
+As we'll see next, we can also use Monte Carlo
+for more complex situations where
+there are multiple sources of uncertainty.
+That need arises in many instances, including
+for valuing exchange options and for incorporating
+stochastic volatility in models such as the Heston model.
+
+This slide provides a recipe for computing paths
+of stock prices using Monte Carlo simulation
+when stock prices are assumed to be log-normally distributed.
+The time step is denoted by h.
+And starting from a stock price at time t,
+S sub t, on a given path, the stock price at time t plus h
+is given by this formula.
+The stock price on the next step here
+is the current stock price multiplied by a constant drift
+term plus a shock term based on a draw, epsilon,
+from a standard normal density.
+This is the drift, and this is the stochastic term
+based on epsilon.
+This method uses a risk neutral pricing approach.
+And the rate r in the drift term denotes the risk-free rate.
+Sigma is set to match the actual estimated
+volatility of the underlying stock estimated either
+using historical data or implied volatilities.
+Now, sigma enters this equation in two places.
+One is that it shows up as a correction
+to the drift in the term minus sigma squared over 2.
+And that's something that's a technical correction
+that you can read about in the whole textbook.
+The volatility is also incorporated through the term
+sigma times root h times epsilon, where again, h
+is the size of the time step and epsilon
+is a draw from a standard normal density.
+
+In Excel, you can draw a standard normal shock using two
+built-in functions--
+NORMINV combined with RAND.
+And the expression here, NORMINV of RAND comma 0 comma
+1, where 0 sets the mean to 0 and 1
+sets the standard deviation to 1.
+Well, it can be proven mathematically
+that the expected gross rate of return
+on the stock in this risk neutral representation,
+the expectation of S sub t plus h over S sub t,
+will, in fact, equal e to the risk-free rate times h
+as the number of simulations gets large.
+It's also true that as the number of Monte Carlo runs
+becomes large, the variance of the log of S sub t
+plus h over S sub t, which is the same thing as the variance
+of the return over an interval h,
+converges to sigma squared h.
+And so the variance of returns on an annualized basis
+converges to sigma squared, which is what we want.
+
+To illustrate what this looks like in practice,
+this graph shows the results of a few Monte Carlo
+simulations of 10-step paths.
+The outcomes are generated using the formula and procedure
+described on the previous slide.
+Monte Carlo is particularly useful
+when valuing a derivative that involves two
+or more stochastic processes.
+For example, this becomes important to value options that
+involve the relative prices or returns
+on two different stocks.
+Consider an option that pays the maximum between the return
+on Google and Apple stock over a time period cap T.
+The payoff can be written as shown here.
+To value the security, we need to model the distribution
+of the possible outcomes and discount the expected value
+back to time 0.
+We can do this using the risk neutral processes
+for each of the two stocks, which we'll call S and N,
+as we did before in the discussion of exchange options.
+Now, each Monte Carlo run involves simulating out
+the stock price path for S and N using the formula
+for the evolution of the lognormal stock price.
+
+Notice that the evolution of both
+is driven by draws from the standard normal density
+function, here denoted by epsilon 1 for S
+and by epsilon 2 for N.
+In this example, treating the returns
+on the two stocks as uncorrelated
+would be unrealistic.
+Google and Apple are both tech stocks,
+and their returns tend to have a positive correlation.
+Fortunately, there's an easy way to build
+in correlation numerically between epsilon 1
+and epsilon 2.
+That's to use this formula here.
+
+We choose epsilon 2 at each time step t
+by setting epsilon to a t equal to rho,
+the correlation between the two stocks,
+times epsilon 1 at time t plus the square root of 1 minus rho
+squared times epsilon hat at t, where epsilon hat is
+another independent draw from the standard normal density
+function.
+
+One can prove that epsilon 2 will
+have a mean of 0, a variance of 1,
+and the desired correlation rho, with epsilon 1 at each time.
+I've found this formula extremely useful in valuations
+I've done for various projects that involve
+complex contingent claims.
+I recommend that you commit to memory
+that this formula is available for you
+to use if you plan to work with derivatives.
+
+To give you an idea of the estimated magnitudes
+for exotic options involved in the comparison of returns
+on two different stocks, here's a numerical example.
+We'll assume that the annualized volatility for both
+of these stocks is 0.3, that the risk-free rate is 2%,
+and that the correlation between their returns is 0.7.
+A Monte Carlo simulation analysis
+implies that the option is worth about 1.134.
+The second example is to consider the type of exchange
+option that I described earlier, where the payoff depends on
+whether or not the return on one stock, S, for instance, Google,
+is higher than the return on a second stock, N,
+which could be Apple.
+The same Monte Carlo simulation implies
+that the value of this option is much lower at 0.1.
+That's consistent with what you should expect.
+A payoff that is positively related
+to the maximum of the two random variables
+is worth more than one that will depend
+on the difference between them when they have
+a large positive correlation.
+A final example is implementing the Heston model in order
+to use it to price options.
+In the last class, this model was
+introduced as a way of better incorporating the fact
+that, first, stock price volatility varies
+stochastically over time.
+And second, that implied volatility is found in the data
+to be systematically higher for options with low moneyness
+leading to a volatility smirk or smile.
+The equations here give the time paths using the Heston model
+for a stock price and for the volatility process that
+determines the variance.
+Recall that to get a smile or smirk,
+it's necessary to assume a negative correlation
+between the shocks driving the stock price and the shocks
+driving the volatility process that, in turn, enters
+into the price process.
+The graphs here show one sample path
+that comes out of a Monte Carlo simulation model for the stock
+price and also for the corresponding volatility
+process.
+Volatility tends to be higher when the stock price is lower,
+but the two series are not perfectly correlated.
+We've come to the end of this introduction
+to exotic options and the approaches that
+are used to value them.
+We've seen that to understand a new exotic option that you
+might encounter, the key questions you should start with
+include, what purpose or purposes does it serve?
+Can its payoffs be approximated or replicated
+by a portfolio of ordinary options?
+And what intuitively should be the key determinants
+of its value?
+
+We focused on the three main approaches
+for valuing exotic options using an analytic formula, often
+a variant of the Black-Scholes-Merton model,
+when that's available, binomial trees, and Monte
+Carlo simulation.
+I emphasized the binomial trees are particularly important when
+an option has an element of being American-style
+and a decision has to be made about the optimal time
+to exercise it.
+Working backwards on a tree that has ordered outcomes
+makes it possible to solve for value and the optimal strategy
+simultaneously.
+We also saw that risk neutral Monte Carlo simulation
+is a popular and versatile tool for pricing
+complex derivative securities.
+The basic process with Monte Carlo
+always involves three steps.
+First, simulate many risk neutral paths
+for the value of the underlying asset.
+Second, for each path, compute the discounted simulated payoff
+on the derivative of a security.
+And third, estimate the derivative price
+as the average of discounted payoffs
+across all of the paths.
+
+We saw that there are many derivatives that
+can be valued equally well with the binomial approach
+or with Monte Carlo simulations.
+In such cases, there are usually computational pros and cons
+to each alternative that will determine the best method.
+I emphasized that Monte Carlo simulation
+can be especially useful for valuing
+path-dependent securities, like Barrier options, Asian options,
+and Lookback options.
+For these types of options, it's possible, but more complicated,
+to value them using a binomial tree.
+We also saw that Monte Carlo is the logical choice for payoffs
+that rely on more than one stochastic factor,
+such as the maximum of two stock returns
+or the differences between them.
+Finally, Monte Carlo is often the best way
+to incorporate more general stochastic asset
+processes, such as those with stochastic volatility,
+stochastic interest rates, or jumps.
+There's certainly a lot to think about here.
+And the recitation and homework problems
+should be helpful in cementing the concepts
+and providing practice using them.
+Truly mastering this material will put you
+in a strong position to be able to understand and estimate
+the value of just about any sort of exotic derivatives
+that you might encounter in the future.

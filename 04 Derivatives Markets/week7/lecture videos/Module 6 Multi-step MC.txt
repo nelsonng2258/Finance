@@ -1,0 +1,108 @@
+PROFESSOR: We know that the accuracy of option valuations
+on binomial trees will be improved
+by increasing the number of steps on the tree,
+all else equal.
+We also know that as we take the number of steps to infinity,
+the stock price tree will converge
+to give a lognormal distribution of stock prices, which
+is the assumption underlying the Black-Scholes-Merton model.
+The same will be true for Monte Carlo simulations
+where, for a fixed expiration date, decreasing the step size
+and adding more steps causes price estimates to become
+more accurate.
+For the next few slides, our running example
+will be based on a standard put and call
+option priced using 10 steps.
+We'll compare the results using Monte Carlo
+and a binomial tree.
+We'll also compare the results to
+the Black-Scholes-Merton price, which
+is expected to provide the most accurate result.
+In these calculations then, the physical expected return
+on the stock is set to 10%, its volatility to 30%,
+the risk free rate is 2%, and the initial stock price
+is $100.
+The strike price is also $100.
+And as I just mentioned, we're assuming 10 steps
+over a horizon of one year.
+
+Those inputs and the resulting outputs using the spreadsheet
+program that you've already seen,
+binomial.xls, produces the stock price tree here
+and European call option tree here, set to value
+a European call option, which has a value of 12.53
+given these assumptions.
+
+It's fairly straightforward to modify the Monte Carlo
+simulations to incorporate multiple steps along each path.
+For each successive step, a draw from the uniform distribution
+from rand is compared to q star to determine if the next step
+will be an up or a down.
+If an up step is indicated, then the previous value of the stock
+price is multiplied by u.
+And if a down step is indicated, it's multiplied by d.
+The parameters q star, u, and d are
+calculated as they were for the binomial tree.
+And they can be read off of the spreadsheet
+on the previous slide.
+Well, for example, this table shows the results
+of the first 10 of 1,000 Monte Carlo simulations, all
+starting at a stock price of 100 and taking
+steps of 1/10 of a year all the way out to one year, so
+10 steps in a year.
+In this first simulation, the draws from rand
+told us there was a down, another down, then an
+up, and up, and so forth.
+On this simulation path, the outcome
+for the stock price at the end of the year is 146.151.
+The call is then in the money at that time by 46.151
+and the put is out of the money.
+The discounted values of those option payoffs
+are reported in the first column for the put
+and in the second column for the call.
+
+The results for nine more Monte Carlo simulation
+runs are shown in these next nine rows.
+
+The equally weighted average of the discounted payoffs
+are then the Monte Carlo estimates of the option values.
+
+The results for a 1,000 run Monte Carlo simulation
+and the associated standard errors of the estimates
+are summarized here on the top left.
+
+The Monte Carlo option price estimates
+are close to those from the binomial tree.
+For comparison, let's look at the call estimates.
+The spreadsheet reports the call prices
+estimated from the binomial tree and also from the Black-Scholes
+formula.
+The Monte Carlo estimate of the call value is 12.637.
+The binomial tree gives 12.53.
+And Black-Scholes gives 12.82.
+These are all pretty close.
+
+Remember that the binomial estimate
+will converge to the Black-Scholes-Merton estimate
+as the number of steps gets very large in the tree.
+It's also true that the Monte Carlo estimate
+will converge the Black-Scholes-Merton estimate
+both as the number of steps gets very large
+and as the number of Monte Carlo simulations
+also gets very large.
+
+We can plot the stock values as a function of the time step
+from these simulated values.
+Each path is represented here by a different color.
+And the results look like the distribution
+of paths through the binomial tree but with missing branches.
+The branches that are most likely to be missing
+are those with the lowest probability,
+which means having mostly all ups or mostly all downs.
+A larger number of stimulation paths
+will tend to fill out those tails of the distribution.
+A useful observation then is that for derivatives
+whose values are very sensitive to the extreme tails
+of the stock price distribution, such as deep out of the money
+puts and calls, it becomes very important to use a large number
+of Monte Carlo simulations.

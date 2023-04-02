@@ -1,0 +1,592 @@
+0
+00:00:00,000 --> 00:00:01,130
+
+
+1
+00:00:01,130 --> 00:00:03,650
+PROFESSOR: This example provides a quantitative illustration
+
+2
+00:00:03,650 --> 00:00:05,240
+of the effect of the assumed default
+
+3
+00:00:05,240 --> 00:00:07,880
+correlation on the pricing and yields of different CDO
+
+4
+00:00:07,880 --> 00:00:09,380
+tranches.
+
+5
+00:00:09,380 --> 00:00:13,040
+The simple CDO here is based on just two underlying nodes,
+
+6
+00:00:13,040 --> 00:00:16,460
+both zero coupon with one year maturities.
+
+7
+00:00:16,460 --> 00:00:19,590
+The first has a principal or face value of 100.
+
+8
+00:00:19,590 --> 00:00:24,350
+And in the event it defaults, the estimated recovery is $50.
+
+9
+00:00:24,350 --> 00:00:28,020
+It's priced at $95 in the market.
+
+10
+00:00:28,020 --> 00:00:31,520
+The second node has a principal or face value of $200.
+
+11
+00:00:31,520 --> 00:00:34,400
+And in the event of default, the expected recovery
+
+12
+00:00:34,400 --> 00:00:36,680
+is 40% or $80.
+
+13
+00:00:36,680 --> 00:00:38,600
+It's priced at 179.50.
+
+14
+00:00:38,600 --> 00:00:43,600
+
+
+15
+00:00:43,600 --> 00:00:46,900
+Let's assume that the one-year LIBOR rate is 2%
+
+16
+00:00:46,900 --> 00:00:50,170
+and that it represents the appropriate risk-free rate
+
+17
+00:00:50,170 --> 00:00:52,830
+for these calculations.
+
+18
+00:00:52,830 --> 00:00:56,470
+From this information, as a first step,
+
+19
+00:00:56,470 --> 00:00:59,290
+we can impute an implied risk-neutral probability
+
+20
+00:00:59,290 --> 00:01:03,430
+of default for each of the nodes from the equations here
+
+21
+00:01:03,430 --> 00:01:07,660
+equating the expected risk-neutral payoff discounted
+
+22
+00:01:07,660 --> 00:01:10,540
+at the risk-free rate to the observed market
+
+23
+00:01:10,540 --> 00:01:11,680
+price of each bond.
+
+24
+00:01:11,680 --> 00:01:15,990
+
+
+25
+00:01:15,990 --> 00:01:19,230
+Risk-neutral expected payoff discounted back
+
+26
+00:01:19,230 --> 00:01:24,520
+when period for node one implies a risk-neutral probability
+
+27
+00:01:24,520 --> 00:01:26,740
+of 6.2%.
+
+28
+00:01:26,740 --> 00:01:31,810
+And for node two, the imputed risk-neutral probability
+
+29
+00:01:31,810 --> 00:01:35,640
+is 14.1%.
+
+30
+00:01:35,640 --> 00:01:38,250
+These imputed default probabilities in themselves
+
+31
+00:01:38,250 --> 00:01:40,860
+imply nothing about the correlation between default
+
+32
+00:01:40,860 --> 00:01:42,240
+on the two nodes.
+
+33
+00:01:42,240 --> 00:01:45,030
+One way to incorporate the effect of correlation
+
+34
+00:01:45,030 --> 00:01:47,820
+is to make an assumption about the probability of defaults
+
+35
+00:01:47,820 --> 00:01:50,730
+occurring simultaneously.
+
+36
+00:01:50,730 --> 00:01:53,760
+Let's first assume that the joint probability of default
+
+37
+00:01:53,760 --> 00:01:56,180
+is 1%.
+
+38
+00:01:56,180 --> 00:01:58,460
+With that assumption, we can infer the probability
+
+39
+00:01:58,460 --> 00:02:01,430
+of every possible outcome.
+
+40
+00:02:01,430 --> 00:02:04,880
+One is that only the first node defaults.
+
+41
+00:02:04,880 --> 00:02:06,680
+That equals the probability that node
+
+42
+00:02:06,680 --> 00:02:09,229
+one defaults minus the probability that they
+
+43
+00:02:09,229 --> 00:02:14,840
+both default, which is 6.2% minus the 1% joint probability
+
+44
+00:02:14,840 --> 00:02:15,736
+or 5.2%.
+
+45
+00:02:15,736 --> 00:02:19,800
+
+
+46
+00:02:19,800 --> 00:02:23,520
+The second possibility is that only node two defaults.
+
+47
+00:02:23,520 --> 00:02:26,110
+That equals the probability that node
+
+48
+00:02:26,110 --> 00:02:29,910
+two defaults minus the joint probability, which
+
+49
+00:02:29,910 --> 00:02:35,720
+is 14.1% minus 1%, or 13.1%.
+
+50
+00:02:35,720 --> 00:02:40,370
+Again, the probability that they both default is 1%.
+
+51
+00:02:40,370 --> 00:02:44,960
+And now, the last possibility is that neither defaults.
+
+52
+00:02:44,960 --> 00:02:50,330
+And that's equal to 100% minus the probability
+
+53
+00:02:50,330 --> 00:02:53,630
+that there's any other combination of defaults,
+
+54
+00:02:53,630 --> 00:02:58,070
+and the result is that the probability of no default
+
+55
+00:02:58,070 --> 00:03:02,006
+is 80.7%.
+
+56
+00:03:02,006 --> 00:03:06,160
+Now, let's turn to the CDO structure.
+
+57
+00:03:06,160 --> 00:03:09,040
+The payoffs are divided into three tranches--
+
+58
+00:03:09,040 --> 00:03:13,750
+a senior tranche of 220 principal, a mezzanine tranche
+
+59
+00:03:13,750 --> 00:03:18,340
+of 60 principal, and a junior tranche of 20 principal.
+
+60
+00:03:18,340 --> 00:03:22,730
+
+
+61
+00:03:22,730 --> 00:03:25,640
+This table summarizes the payoffs and probabilities
+
+62
+00:03:25,640 --> 00:03:28,400
+and the calculation of implied prices and yields
+
+63
+00:03:28,400 --> 00:03:30,500
+for each of the tranches.
+
+64
+00:03:30,500 --> 00:03:33,950
+The four possible scenarios with their associated probabilities
+
+65
+00:03:33,950 --> 00:03:36,410
+and total payouts are shown on the left here.
+
+66
+00:03:36,410 --> 00:03:38,950
+
+
+67
+00:03:38,950 --> 00:03:41,470
+The next portion of the table reflects a waterfall
+
+68
+00:03:41,470 --> 00:03:44,560
+of the total payments, which go to the senior tranche
+
+69
+00:03:44,560 --> 00:03:47,470
+first, then to the mezzanine tranche
+
+70
+00:03:47,470 --> 00:03:53,620
+if payouts exceed $220, and finally, to the junior equity
+
+71
+00:03:53,620 --> 00:03:58,640
+tranche if payouts exceed $280.
+
+72
+00:03:58,640 --> 00:04:02,690
+For example, the senior tranche is paid in full
+
+73
+00:04:02,690 --> 00:04:07,325
+if there's no defaults or if only node one defaults.
+
+74
+00:04:07,325 --> 00:04:12,360
+
+
+75
+00:04:12,360 --> 00:04:15,990
+It receives a payment of 180 if only
+
+76
+00:04:15,990 --> 00:04:22,430
+node two defaults and a payment of 130 if both nodes default.
+
+77
+00:04:22,430 --> 00:04:26,780
+We can weight each of those outcomes by the probability
+
+78
+00:04:26,780 --> 00:04:31,370
+of that outcome to get an expected risk-neutral payout
+
+79
+00:04:31,370 --> 00:04:36,240
+of 213.80.
+
+80
+00:04:36,240 --> 00:04:43,430
+The junior tranche is only paid if no default occurs.
+
+81
+00:04:43,430 --> 00:04:48,290
+In which case, it gets 16.1 and that occurs with a probability
+
+82
+00:04:48,290 --> 00:04:50,000
+0.807.
+
+83
+00:04:50,000 --> 00:04:56,230
+So the expected payout is 16.10.
+
+84
+00:04:56,230 --> 00:04:59,560
+To get from those expected payouts to the price,
+
+85
+00:04:59,560 --> 00:05:02,650
+the prices are found by discounting
+
+86
+00:05:02,650 --> 00:05:06,280
+those risk-neutral expected payouts by the risk-free rate.
+
+87
+00:05:06,280 --> 00:05:13,500
+
+
+88
+00:05:13,500 --> 00:05:16,910
+The implied yield as an annual percentage rate
+
+89
+00:05:16,910 --> 00:05:20,210
+is found then as the ratio of the promised payment
+
+90
+00:05:20,210 --> 00:05:22,070
+to the price minus 1.
+
+91
+00:05:22,070 --> 00:05:27,000
+
+
+92
+00:05:27,000 --> 00:05:30,210
+The yield on the senior tranche is 2.9% higher
+
+93
+00:05:30,210 --> 00:05:33,390
+than the risk-free rate, which reflects that it will not be
+
+94
+00:05:33,390 --> 00:05:35,970
+fully repaid in some scenarios.
+
+95
+00:05:35,970 --> 00:05:38,580
+The yields on the mezzanine and junior tranches
+
+96
+00:05:38,580 --> 00:05:42,000
+are very high, because the expected payouts are much lower
+
+97
+00:05:42,000 --> 00:05:45,310
+than the promised payouts.
+
+98
+00:05:45,310 --> 00:05:48,190
+To see the effect of increasing the default correlation,
+
+99
+00:05:48,190 --> 00:05:50,890
+we can do the same analysis but under the assumption
+
+100
+00:05:50,890 --> 00:05:53,710
+of a higher probability that both nodes
+
+101
+00:05:53,710 --> 00:05:55,930
+will default at the same time.
+
+102
+00:05:55,930 --> 00:05:57,880
+Increasing that probability will also
+
+103
+00:05:57,880 --> 00:06:01,120
+increase the likelihood of no default, which we will expect
+
+104
+00:06:01,120 --> 00:06:02,920
+will help the junior tranche.
+
+105
+00:06:02,920 --> 00:06:05,740
+We also expect it will hurt the senior tranche
+
+106
+00:06:05,740 --> 00:06:09,220
+by increasing the size of the expected losses there.
+
+107
+00:06:09,220 --> 00:06:11,140
+Let's see what happens when we increase
+
+108
+00:06:11,140 --> 00:06:14,260
+the probability of both nodes defaulting simultaneously
+
+109
+00:06:14,260 --> 00:06:17,830
+from 1% to 3% and keep everything else
+
+110
+00:06:17,830 --> 00:06:19,420
+as it was before.
+
+111
+00:06:19,420 --> 00:06:22,090
+Recomputing the probability of every possible outcome
+
+112
+00:06:22,090 --> 00:06:24,970
+has the expected result that the probability
+
+113
+00:06:24,970 --> 00:06:27,190
+of both nodes defaulting is higher
+
+114
+00:06:27,190 --> 00:06:31,390
+and so is the probability of neither node defaulting.
+
+115
+00:06:31,390 --> 00:06:37,910
+The probability of just one node defaulting is lower.
+
+116
+00:06:37,910 --> 00:06:41,150
+This table redoes all of the previous calculations based
+
+117
+00:06:41,150 --> 00:06:46,370
+on the 3% joint probability of default. As we expected,
+
+118
+00:06:46,370 --> 00:06:49,460
+the estimated value of the junior tranche increases
+
+119
+00:06:49,460 --> 00:06:51,170
+and the value of the senior tranche
+
+120
+00:06:51,170 --> 00:06:54,590
+falls relative to when the correlation was lower
+
+121
+00:06:54,590 --> 00:06:58,720
+and the implied yields change commensurately.
+
+122
+00:06:58,720 --> 00:07:02,080
+Notice that, in this example, I simply made an assumption
+
+123
+00:07:02,080 --> 00:07:04,750
+about the joint probability of default.
+
+124
+00:07:04,750 --> 00:07:06,940
+There are a number of statistical approaches
+
+125
+00:07:06,940 --> 00:07:09,670
+that have been developed to estimate default correlations
+
+126
+00:07:09,670 --> 00:07:11,890
+that are discussed in the whole textbook
+
+127
+00:07:11,890 --> 00:07:15,750
+and also in other sources.
+
+128
+00:07:15,750 --> 00:07:17,490
+There are several takeaways I'd like
+
+129
+00:07:17,490 --> 00:07:19,510
+you to get from this analysis.
+
+130
+00:07:19,510 --> 00:07:22,650
+The first is that it's critical to take into account default
+
+131
+00:07:22,650 --> 00:07:27,030
+correlation and pricing CDOs or similar structures.
+
+132
+00:07:27,030 --> 00:07:29,670
+When we discussed credit risk last week,
+
+133
+00:07:29,670 --> 00:07:32,190
+we saw how defaults historically are
+
+134
+00:07:32,190 --> 00:07:34,650
+highly concentrated in recessions, which
+
+135
+00:07:34,650 --> 00:07:37,200
+means that, in fact, there is a positive default
+
+136
+00:07:37,200 --> 00:07:41,070
+correlation across bonds and other risky loans.
+
+137
+00:07:41,070 --> 00:07:44,550
+The second takeaway is that this may be one reason
+
+138
+00:07:44,550 --> 00:07:47,970
+that, during the financial crisis of 2008,
+
+139
+00:07:47,970 --> 00:07:50,670
+there were unanticipated losses by holders
+
+140
+00:07:50,670 --> 00:07:54,300
+of senior claims on mortgage-backed securities.
+
+141
+00:07:54,300 --> 00:07:56,800
+Apparently, many market participants,
+
+142
+00:07:56,800 --> 00:07:58,800
+including credit rating agencies,
+
+143
+00:07:58,800 --> 00:08:02,940
+hadn't taken into account the positive default correlation
+
+144
+00:08:02,940 --> 00:08:05,490
+that led their models to overestimate
+
+145
+00:08:05,490 --> 00:08:08,580
+the value and the safety of the senior tranches
+
+146
+00:08:08,580 --> 00:08:11,450
+of mortgage-backed securities.
+
+147
+00:08:11,450 --> 00:08:12,000
+
+

@@ -1,0 +1,528 @@
+0
+00:00:00,000 --> 00:00:01,660
+
+
+1
+00:00:01,660 --> 00:00:04,540
+PROFESSOR: We're about to embark on an extended example of how
+
+2
+00:00:04,540 --> 00:00:07,780
+to value risk-free bonds with embedded options using
+
+3
+00:00:07,780 --> 00:00:09,760
+binomial trees.
+
+4
+00:00:09,760 --> 00:00:12,430
+Our preliminary observation is that bonds
+
+5
+00:00:12,430 --> 00:00:16,000
+with embedded options can be decomposed into their component
+
+6
+00:00:16,000 --> 00:00:17,200
+parts.
+
+7
+00:00:17,200 --> 00:00:21,220
+By no arbitrage, the value of a callable bond
+
+8
+00:00:21,220 --> 00:00:23,740
+must be equal to the value of the underlying
+
+9
+00:00:23,740 --> 00:00:27,370
+non-callable bond, which is also called a straight bond,
+
+10
+00:00:27,370 --> 00:00:30,590
+less the value of the call option.
+
+11
+00:00:30,590 --> 00:00:32,720
+The call option reduces the bond's value
+
+12
+00:00:32,720 --> 00:00:35,420
+because it's to the advantage of the bond issuer,
+
+13
+00:00:35,420 --> 00:00:38,450
+causing bond buyers to pay less for the bond.
+
+14
+00:00:38,450 --> 00:00:41,060
+Similarly, the value of a puttable bond
+
+15
+00:00:41,060 --> 00:00:45,020
+is the value of the underlying straight bond plus the value
+
+16
+00:00:45,020 --> 00:00:46,490
+of the put option.
+
+17
+00:00:46,490 --> 00:00:49,010
+In that case, the bond is worth more,
+
+18
+00:00:49,010 --> 00:00:52,460
+because the put is a benefit to the bond buyer.
+
+19
+00:00:52,460 --> 00:00:54,860
+In general, we'd like our model of interest rates
+
+20
+00:00:54,860 --> 00:00:58,130
+to accurately price both the option-free bond
+
+21
+00:00:58,130 --> 00:01:01,560
+and the embedded options attached to it.
+
+22
+00:01:01,560 --> 00:01:03,690
+In this example we'll be looking at,
+
+23
+00:01:03,690 --> 00:01:06,900
+we'll use a binomial model to first price the bond
+
+24
+00:01:06,900 --> 00:01:09,600
+and the call option separately, and then
+
+25
+00:01:09,600 --> 00:01:14,850
+infer the value of the callable bond from the two pieces.
+
+26
+00:01:14,850 --> 00:01:18,510
+The two-step binomial tree shown here in one-year rates
+
+27
+00:01:18,510 --> 00:01:23,040
+with a risk-neutral probability of an up move of 0.5
+
+28
+00:01:23,040 --> 00:01:25,590
+will be the basis for pricing bonds and options
+
+29
+00:01:25,590 --> 00:01:28,400
+in the examples we'll look at.
+
+30
+00:01:28,400 --> 00:01:32,050
+Notice that at a time t node, the rates in the tree
+
+31
+00:01:32,050 --> 00:01:36,850
+are always used to discount cash flows arriving at time t + 1
+
+32
+00:01:36,850 --> 00:01:38,920
+back to time t.
+
+33
+00:01:38,920 --> 00:01:41,050
+Thus, this tree will be used to price bonds
+
+34
+00:01:41,050 --> 00:01:45,160
+with maturities of one, two, and three years.
+
+35
+00:01:45,160 --> 00:01:48,180
+We'll first focus on how to value bonds and options taking
+
+36
+00:01:48,180 --> 00:01:49,650
+the tree as given.
+
+37
+00:01:49,650 --> 00:01:51,540
+After that, we'll turn to how it was
+
+38
+00:01:51,540 --> 00:01:53,160
+calibrated using market data.
+
+39
+00:01:53,160 --> 00:01:56,050
+
+
+40
+00:01:56,050 --> 00:02:00,480
+We'll begin by using the tree to estimate the value of a 5.25%
+
+41
+00:02:00,480 --> 00:02:03,600
+coupon bond, making annual coupon payments
+
+42
+00:02:03,600 --> 00:02:05,820
+with no embedded options.
+
+43
+00:02:05,820 --> 00:02:09,150
+Starting at time t, the bond will always
+
+44
+00:02:09,150 --> 00:02:11,520
+pay off its principal value of 100
+
+45
+00:02:11,520 --> 00:02:20,670
+plus the final coupon of 5.25.
+
+46
+00:02:20,670 --> 00:02:24,000
+The value, V, then at each time two node
+
+47
+00:02:24,000 --> 00:02:30,180
+is found by discounting the expected value of 105.25
+
+48
+00:02:30,180 --> 00:02:34,420
+backed by the one-year interest rate at that node.
+
+49
+00:02:34,420 --> 00:02:41,230
+The value of 95.58 at the time two up-up node, for instance,
+
+50
+00:02:41,230 --> 00:02:46,180
+is discounting that payment of 105.25
+
+51
+00:02:46,180 --> 00:02:51,740
+back at the rate of 6.757.
+
+52
+00:02:51,740 --> 00:02:54,110
+Note that the values on the year 2 nodes
+
+53
+00:02:54,110 --> 00:02:57,680
+represent the remaining value after the year two
+
+54
+00:02:57,680 --> 00:03:01,740
+coupon has already been paid.
+
+55
+00:03:01,740 --> 00:03:04,550
+Now, to find the value at each time one node,
+
+56
+00:03:04,550 --> 00:03:07,520
+the risk-neutral expectation of the time two value
+
+57
+00:03:07,520 --> 00:03:11,900
+plus the time two coupon is discounted back to time one
+
+58
+00:03:11,900 --> 00:03:16,080
+at the time one interest rate.
+
+59
+00:03:16,080 --> 00:03:18,860
+The value on the time one down node, for instance,
+
+60
+00:03:18,860 --> 00:03:23,030
+is based on the expected value plus a coupon payment at time
+
+61
+00:03:23,030 --> 00:03:31,160
+two on the down-up node and on the down-down node discounted
+
+62
+00:03:31,160 --> 00:03:36,900
+at the time one interest rate of 4.074.
+
+63
+00:03:36,900 --> 00:03:40,350
+Continuing in this way all the way back to time zero
+
+64
+00:03:40,350 --> 00:03:47,560
+gives a value for the bond of 102.075.
+
+65
+00:03:47,560 --> 00:03:50,320
+A few observations here.
+
+66
+00:03:50,320 --> 00:03:53,230
+It's clear we didn't need a binomial model to estimate
+
+67
+00:03:53,230 --> 00:03:56,660
+the value of a risk-free bond with no embedded options --
+
+68
+00:03:56,660 --> 00:03:58,810
+we could have estimated its value directly
+
+69
+00:03:58,810 --> 00:04:02,230
+from the yield curve or equivalently from the prices
+
+70
+00:04:02,230 --> 00:04:04,190
+of comparable bonds.
+
+71
+00:04:04,190 --> 00:04:06,730
+However, we will need the tree to value bonds
+
+72
+00:04:06,730 --> 00:04:08,800
+with embedded options and, if we want
+
+73
+00:04:08,800 --> 00:04:11,320
+to have confidence in our tree as a pricing tool,
+
+74
+00:04:11,320 --> 00:04:13,240
+we want to be able to demonstrate
+
+75
+00:04:13,240 --> 00:04:15,370
+that the bond prices that it generates
+
+76
+00:04:15,370 --> 00:04:17,410
+are consistent with the yield curve.
+
+77
+00:04:17,410 --> 00:04:19,000
+We'll come back to this later, when
+
+78
+00:04:19,000 --> 00:04:23,560
+we discuss how to calibrate the tree in the first place.
+
+79
+00:04:23,560 --> 00:04:26,550
+Now, imagine the same bond is callable by the issuer
+
+80
+00:04:26,550 --> 00:04:30,000
+at the end of the second year, after the year two coupon has
+
+81
+00:04:30,000 --> 00:04:34,760
+been paid at a strike price of 99.50.
+
+82
+00:04:34,760 --> 00:04:37,280
+We can use the tree to value that call option,
+
+83
+00:04:37,280 --> 00:04:40,290
+again working backwards.
+
+84
+00:04:40,290 --> 00:04:44,400
+Comparing the 99.50 strike price with the values we found a time
+
+85
+00:04:44,400 --> 00:04:48,810
+two on each node, the call is out of the money on the up-up
+
+86
+00:04:48,810 --> 00:04:50,010
+node.
+
+87
+00:04:50,010 --> 00:04:56,130
+It's in the money by 0.232 on the up-down or down-up node,
+
+88
+00:04:56,130 --> 00:05:00,660
+and in the money by 1.19 on the down-down node.
+
+89
+00:05:00,660 --> 00:05:06,830
+
+
+90
+00:05:06,830 --> 00:05:09,860
+Notice that when using interest rate trees instead of price
+
+91
+00:05:09,860 --> 00:05:13,850
+trees, the calls have greater value on the lower branches,
+
+92
+00:05:13,850 --> 00:05:17,960
+because lower rates translate into higher bond values
+
+93
+00:05:17,960 --> 00:05:21,000
+and conversely for puts.
+
+94
+00:05:21,000 --> 00:05:24,600
+We can discount those payoffs working backwards on the tree
+
+95
+00:05:24,600 --> 00:05:27,300
+and at each node using the one-year rate on that node
+
+96
+00:05:27,300 --> 00:05:28,920
+for discounting.
+
+97
+00:05:28,920 --> 00:05:33,090
+For instance, at the time one up node, the value of the call
+
+98
+00:05:33,090 --> 00:05:38,010
+is 0.11 based on a probability of 0.5
+
+99
+00:05:38,010 --> 00:05:43,560
+that it will be worth 0.232 next period and a probability of 0.5
+
+100
+00:05:43,560 --> 00:05:47,340
+that it will be worth nothing and discounting that expected
+
+101
+00:05:47,340 --> 00:05:56,362
+value by 4.976%
+
+102
+00:05:56,362 --> 00:05:58,840
+Continuing again back to time zero,
+
+103
+00:05:58,840 --> 00:06:06,140
+we estimate that the value of the European call is 0.383.
+
+104
+00:06:06,140 --> 00:06:07,910
+Because the value of the call reduces
+
+105
+00:06:07,910 --> 00:06:09,410
+the value of the bond to the lender
+
+106
+00:06:09,410 --> 00:06:11,630
+by the value of the call option, we
+
+107
+00:06:11,630 --> 00:06:14,180
+estimate the value of the callable bond
+
+108
+00:06:14,180 --> 00:06:16,250
+as the value of the straight bond
+
+109
+00:06:16,250 --> 00:06:24,530
+minus the value of the call option which comes to 101.692.
+
+110
+00:06:24,530 --> 00:06:26,990
+The fact that embedded options affect bond prices
+
+111
+00:06:26,990 --> 00:06:29,210
+means they also affect yields.
+
+112
+00:06:29,210 --> 00:06:30,680
+Remember that the yield on a bond
+
+113
+00:06:30,680 --> 00:06:32,630
+is based on finding the single discount
+
+114
+00:06:32,630 --> 00:06:37,560
+rate that equates its price with its promised payments.
+
+115
+00:06:37,560 --> 00:06:41,940
+On the three-year 5.25% coupon bond with no embedded options,
+
+116
+00:06:41,940 --> 00:06:46,770
+our model implies that it would have a yield of 4.495
+
+117
+00:06:46,770 --> 00:06:51,770
+based on this equation here and solving for y.
+
+118
+00:06:51,770 --> 00:06:55,850
+When it's callable, because the price is lower,
+
+119
+00:06:55,850 --> 00:07:01,634
+the implied yield is higher at 4.633%.
+
+120
+00:07:01,634 --> 00:07:04,040
+This difference can loosely be described
+
+121
+00:07:04,040 --> 00:07:08,060
+as the issuer paying about 14 basis points for the call
+
+122
+00:07:08,060 --> 00:07:10,390
+option.
+
+123
+00:07:10,390 --> 00:07:13,980
+The final note here is that you may see the term
+
+124
+00:07:13,980 --> 00:07:16,660
+option-adjusted spread.
+
+125
+00:07:16,660 --> 00:07:19,060
+That describes an adjustment that's sometimes
+
+126
+00:07:19,060 --> 00:07:22,510
+made to yields that removes the effect of embedded put and call
+
+127
+00:07:22,510 --> 00:07:23,410
+options.
+
+128
+00:07:23,410 --> 00:07:26,230
+That sort of adjustment is used in creating indices
+
+129
+00:07:26,230 --> 00:07:28,750
+of bond yields, such as for corporate bonds
+
+130
+00:07:28,750 --> 00:07:31,290
+with triple B credit ratings.
+
+131
+00:07:31,290 --> 00:07:32,000
+
+

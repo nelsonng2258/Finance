@@ -1,0 +1,696 @@
+0
+00:00:00,000 --> 00:00:00,963
+
+
+1
+00:00:00,963 --> 00:00:02,380
+PROFESSOR: Up to this point, we've
+
+2
+00:00:02,380 --> 00:00:04,990
+taken the interest rate tree used to price the callable
+
+3
+00:00:04,990 --> 00:00:06,870
+bond as given.
+
+4
+00:00:06,870 --> 00:00:09,840
+Of course, in practice, analysts have to calibrate and test
+
+5
+00:00:09,840 --> 00:00:11,970
+their models against actual price data
+
+6
+00:00:11,970 --> 00:00:13,800
+to have enough confidence in the models
+
+7
+00:00:13,800 --> 00:00:17,220
+to use them to price derivative products sold to customers
+
+8
+00:00:17,220 --> 00:00:20,640
+or depend on the models in designing and executing
+
+9
+00:00:20,640 --> 00:00:22,740
+trading strategies.
+
+10
+00:00:22,740 --> 00:00:25,140
+The procedure for calibrating tree models
+
+11
+00:00:25,140 --> 00:00:27,210
+is typically iterative.
+
+12
+00:00:27,210 --> 00:00:31,650
+The first step is to fix some parameters at observed values
+
+13
+00:00:31,650 --> 00:00:33,990
+or assume values and then to guess
+
+14
+00:00:33,990 --> 00:00:35,760
+the value of other parameters that
+
+15
+00:00:35,760 --> 00:00:38,010
+are free variables in the calibration.
+
+16
+00:00:38,010 --> 00:00:40,990
+
+
+17
+00:00:40,990 --> 00:00:43,480
+Under those assumptions, the second step
+
+18
+00:00:43,480 --> 00:00:46,420
+is to calculate the value of a set of bonds and options
+
+19
+00:00:46,420 --> 00:00:48,985
+where market prices can be reliably observed.
+
+20
+00:00:48,985 --> 00:00:51,570
+
+
+21
+00:00:51,570 --> 00:00:54,780
+The third step is to compare the estimated prices
+
+22
+00:00:54,780 --> 00:00:57,710
+with the observed prices.
+
+23
+00:00:57,710 --> 00:01:00,380
+If the two sets of values differ,
+
+24
+00:01:00,380 --> 00:01:02,450
+then the free parameters need to be
+
+25
+00:01:02,450 --> 00:01:05,000
+modified in a direction that's expected
+
+26
+00:01:05,000 --> 00:01:08,090
+to reduce the divergence.
+
+27
+00:01:08,090 --> 00:01:11,000
+Those steps are repeated until the gap between the model
+
+28
+00:01:11,000 --> 00:01:13,880
+prediction and observed prices is judged
+
+29
+00:01:13,880 --> 00:01:16,250
+to be sufficiently small.
+
+30
+00:01:16,250 --> 00:01:19,070
+It will usually be impossible to bring the gap to 0,
+
+31
+00:01:19,070 --> 00:01:22,550
+because a simplified model can't capture all of the factors that
+
+32
+00:01:22,550 --> 00:01:24,630
+affect market values.
+
+33
+00:01:24,630 --> 00:01:27,560
+In that case, it makes sense to put more weight
+
+34
+00:01:27,560 --> 00:01:30,110
+on matching prices of securities or derivatives
+
+35
+00:01:30,110 --> 00:01:31,670
+that are most similar to the ones
+
+36
+00:01:31,670 --> 00:01:33,320
+that the model will be used to price.
+
+37
+00:01:33,320 --> 00:01:36,190
+
+
+38
+00:01:36,190 --> 00:01:38,800
+Let's go through an illustration of this sort of calibration
+
+39
+00:01:38,800 --> 00:01:40,120
+exercise.
+
+40
+00:01:40,120 --> 00:01:42,790
+It's based on a simple modeling approach that
+
+41
+00:01:42,790 --> 00:01:45,830
+was suggested by Frank Fabozzi.
+
+42
+00:01:45,830 --> 00:01:47,480
+Imagine that the current term structure
+
+43
+00:01:47,480 --> 00:01:49,430
+of interest rates or the yield curve
+
+44
+00:01:49,430 --> 00:01:51,860
+is given by the rates shown here.
+
+45
+00:01:51,860 --> 00:01:55,280
+The table also shows the implied one-year forward rates.
+
+46
+00:01:55,280 --> 00:01:58,010
+You should verify that the implied forward rates are
+
+47
+00:01:58,010 --> 00:01:59,900
+consistent with the spot rates.
+
+48
+00:01:59,900 --> 00:02:08,820
+For example, 1.035 compounded with 1.04523
+
+49
+00:02:08,820 --> 00:02:15,810
+is the same as 1.0401 squared.
+
+50
+00:02:15,810 --> 00:02:18,500
+All of these rates are simple annual percentage rates
+
+51
+00:02:18,500 --> 00:02:20,870
+like the ones we've been using.
+
+52
+00:02:20,870 --> 00:02:25,580
+With this term structure, a two-year 4% coupon bond prices
+
+53
+00:02:25,580 --> 00:02:31,890
+at par, as does a three-year 4.5% coupon bond.
+
+54
+00:02:31,890 --> 00:02:35,620
+
+
+55
+00:02:35,620 --> 00:02:38,230
+Our goal now is to construct a three-year interest rate
+
+56
+00:02:38,230 --> 00:02:40,810
+tree that produces bond prices that
+
+57
+00:02:40,810 --> 00:02:42,880
+are consistent with the yield data we just looked
+
+58
+00:02:42,880 --> 00:02:45,370
+at and also with an estimate of the percentage
+
+59
+00:02:45,370 --> 00:02:47,980
+volatility of the one-year rate.
+
+60
+00:02:47,980 --> 00:02:49,852
+Because we have more free variables
+
+61
+00:02:49,852 --> 00:02:52,060
+and we'll need to match the reference data that we're
+
+62
+00:02:52,060 --> 00:02:54,700
+using in this example, for convenience,
+
+63
+00:02:54,700 --> 00:02:56,410
+we'll fix the risk neutral probability
+
+64
+00:02:56,410 --> 00:02:59,460
+of an up move at 0.5.
+
+65
+00:02:59,460 --> 00:03:01,470
+Note that other models would assign
+
+66
+00:03:01,470 --> 00:03:03,510
+the risk neutral probabilities and the values
+
+67
+00:03:03,510 --> 00:03:05,200
+that each node differently.
+
+68
+00:03:05,200 --> 00:03:09,260
+What we're looking at is just one possibility.
+
+69
+00:03:09,260 --> 00:03:11,420
+Assume that recent historical data
+
+70
+00:03:11,420 --> 00:03:14,900
+implies a volatility of 0.1 estimated
+
+71
+00:03:14,900 --> 00:03:17,540
+on a continuous annual basis.
+
+72
+00:03:17,540 --> 00:03:20,120
+A standard way to implement that volatility
+
+73
+00:03:20,120 --> 00:03:23,060
+is to assume a two-standard-deviation vertical
+
+74
+00:03:23,060 --> 00:03:26,880
+distance between nodes at a point in time.
+
+75
+00:03:26,880 --> 00:03:33,440
+Then starting at RL on the tree that's pictured here,
+
+76
+00:03:33,440 --> 00:03:38,450
+RH is found by multiplying RL times e
+
+77
+00:03:38,450 --> 00:03:42,170
+to the 2 times the standard deviation, sigma.
+
+78
+00:03:42,170 --> 00:03:47,750
+To put numbers on it, if RL is 4.074,
+
+79
+00:03:47,750 --> 00:04:00,120
+then our H is 4.074 times e to the 2 times 0.1, or 4.976.
+
+80
+00:04:00,120 --> 00:04:02,250
+Given all of these assumptions, we're
+
+81
+00:04:02,250 --> 00:04:05,280
+left with the binomial tree in one-year rates
+
+82
+00:04:05,280 --> 00:04:08,280
+with only one free variable at each time step.
+
+83
+00:04:08,280 --> 00:04:11,160
+
+
+84
+00:04:11,160 --> 00:04:15,690
+That free variable is the lowest node at each year.
+
+85
+00:04:15,690 --> 00:04:17,880
+The nodes above it are determined
+
+86
+00:04:17,880 --> 00:04:20,985
+by the two standard deviations spacing that we've assumed.
+
+87
+00:04:20,985 --> 00:04:23,950
+
+
+88
+00:04:23,950 --> 00:04:28,730
+We also know R0 from the current one year rate.
+
+89
+00:04:28,730 --> 00:04:33,530
+We'll find the remaining values of the free rates R1 and R2
+
+90
+00:04:33,530 --> 00:04:40,440
+by iterating until this model prices bonds correctly.
+
+91
+00:04:40,440 --> 00:04:42,570
+Starting with a two-period case, we
+
+92
+00:04:42,570 --> 00:04:46,350
+take R0 equals 3.5%, reading it off
+
+93
+00:04:46,350 --> 00:04:48,570
+of the current term structure.
+
+94
+00:04:48,570 --> 00:04:51,270
+Let's guess that RL is 4.5%.
+
+95
+00:04:51,270 --> 00:04:57,210
+Then given our assumption of sigma equal to 0.1,
+
+96
+00:04:57,210 --> 00:05:06,230
+RH is 4.5 times e to the 2 times 0.1, or 5.496.
+
+97
+00:05:06,230 --> 00:05:09,320
+You may wonder why I chose in RL that's greater
+
+98
+00:05:09,320 --> 00:05:12,550
+than R0, the lower node.
+
+99
+00:05:12,550 --> 00:05:14,490
+The reason is that in the reference rates
+
+100
+00:05:14,490 --> 00:05:18,540
+we're trying to match the yield curve is upward sloping.
+
+101
+00:05:18,540 --> 00:05:21,330
+That initial guess of 4.5% is actually
+
+102
+00:05:21,330 --> 00:05:24,670
+less than the implied forward rate for that same time period,
+
+103
+00:05:24,670 --> 00:05:31,370
+which was calculated at 4.523%.
+
+104
+00:05:31,370 --> 00:05:33,710
+We can now use the first two periods of our guess
+
+105
+00:05:33,710 --> 00:05:39,330
+for the tree to price a two-year of 4% coupon bond.
+
+106
+00:05:39,330 --> 00:05:46,660
+So our tree was 3.5% going to 4.5%, or 5.496.
+
+107
+00:05:46,660 --> 00:05:51,020
+That procedure for pricing that two-year bond is shown here.
+
+108
+00:05:51,020 --> 00:05:57,082
+And it implies a price for the bond of 99.567.
+
+109
+00:05:57,082 --> 00:05:59,290
+Clearly, there's something wrong with the assumptions
+
+110
+00:05:59,290 --> 00:06:00,490
+I've made here.
+
+111
+00:06:00,490 --> 00:06:02,170
+To be consistent with the yield curve,
+
+112
+00:06:02,170 --> 00:06:05,470
+the bond must price at 100 its par value.
+
+113
+00:06:05,470 --> 00:06:11,050
+But the model suggests its price is 99.567.
+
+114
+00:06:11,050 --> 00:06:13,630
+Using the degree of freedom that we've
+
+115
+00:06:13,630 --> 00:06:17,200
+allowed ourselves, which is to vary R1, the interest
+
+116
+00:06:17,200 --> 00:06:19,270
+rate at the bottom node, we can look
+
+117
+00:06:19,270 --> 00:06:23,110
+for a value that generates the correct price for the bond.
+
+118
+00:06:23,110 --> 00:06:26,260
+For the implied bond price to be higher, clearly,
+
+119
+00:06:26,260 --> 00:06:28,270
+R1 needs to be lower.
+
+120
+00:06:28,270 --> 00:06:30,550
+Iterating on the choice of R1, you
+
+121
+00:06:30,550 --> 00:06:34,180
+can verify that setting it to 4.074
+
+122
+00:06:34,180 --> 00:06:37,760
+causes the tree to correctly price the two-year 4% coupon
+
+123
+00:06:37,760 --> 00:06:38,260
+bond.
+
+124
+00:06:38,260 --> 00:06:40,910
+
+
+125
+00:06:40,910 --> 00:06:42,860
+To extend the tree out another year,
+
+126
+00:06:42,860 --> 00:06:45,920
+we want to choose the lowest node on the tree, R2,
+
+127
+00:06:45,920 --> 00:06:49,250
+to match the known price of a three-year bond.
+
+128
+00:06:49,250 --> 00:06:53,070
+We do this holding R0 and R1 fixed
+
+129
+00:06:53,070 --> 00:06:55,580
+so that the model will continue to correctly price
+
+130
+00:06:55,580 --> 00:06:58,070
+one and two-year bonds.
+
+131
+00:06:58,070 --> 00:07:01,610
+This process is automated in an Excel spreadsheet
+
+132
+00:07:01,610 --> 00:07:03,560
+that you can download from the class materials
+
+133
+00:07:03,560 --> 00:07:05,930
+page called TreeFitterMM.xls.
+
+134
+00:07:05,930 --> 00:07:08,700
+
+
+135
+00:07:08,700 --> 00:07:12,450
+It's programmed in Visual Basic to create a binomial tree
+
+136
+00:07:12,450 --> 00:07:15,870
+that's consistent with the set of input prices for zero coupon
+
+137
+00:07:15,870 --> 00:07:20,400
+bonds, which represents the yield curve.
+
+138
+00:07:20,400 --> 00:07:22,050
+It can create a tree that's actually
+
+139
+00:07:22,050 --> 00:07:24,570
+more general than the one we've been looking at,
+
+140
+00:07:24,570 --> 00:07:27,120
+because it accommodates different volatility
+
+141
+00:07:27,120 --> 00:07:29,730
+assumption for each time step.
+
+142
+00:07:29,730 --> 00:07:33,270
+That allows you to incorporating time varying volatility
+
+143
+00:07:33,270 --> 00:07:37,170
+into the model, which is also referred to as the term
+
+144
+00:07:37,170 --> 00:07:39,210
+structure of volatility.
+
+145
+00:07:39,210 --> 00:07:42,660
+For instance, if volatility is temporarily elevated,
+
+146
+00:07:42,660 --> 00:07:46,080
+but expected to return to normal levels at a future time,
+
+147
+00:07:46,080 --> 00:07:49,440
+that can be reflected in the volatility structure
+
+148
+00:07:49,440 --> 00:07:51,800
+that you input.
+
+149
+00:07:51,800 --> 00:07:54,050
+The spreadsheet also allows for the tree
+
+150
+00:07:54,050 --> 00:07:56,120
+to be calibrated from the implied
+
+151
+00:07:56,120 --> 00:07:59,870
+volatilities from inputting options price data.
+
+152
+00:07:59,870 --> 00:08:03,200
+In that mode, which you won't be asked to use
+
+153
+00:08:03,200 --> 00:08:05,480
+but that you may be curious about,
+
+154
+00:08:05,480 --> 00:08:11,890
+the implied volatilities replace the assumed volatilities.
+
+155
+00:08:11,890 --> 00:08:14,020
+Speaking of implied volatilities,
+
+156
+00:08:14,020 --> 00:08:16,360
+this slide is a reminder that it's always
+
+157
+00:08:16,360 --> 00:08:18,580
+possible to convert an options pricing
+
+158
+00:08:18,580 --> 00:08:21,790
+model into a model that's used to estimate implied
+
+159
+00:08:21,790 --> 00:08:23,380
+volatilities.
+
+160
+00:08:23,380 --> 00:08:25,690
+That's true of binomial tree models
+
+161
+00:08:25,690 --> 00:08:29,930
+as well as for analytical models such as Black's model.
+
+162
+00:08:29,930 --> 00:08:33,710
+A typical options pricing model, whatever the underlying asset
+
+163
+00:08:33,710 --> 00:08:37,250
+that the option is written on, includes an assumption
+
+164
+00:08:37,250 --> 00:08:41,240
+about the volatility of that underlying variable.
+
+165
+00:08:41,240 --> 00:08:44,049
+In the case of models based on interest rates,
+
+166
+00:08:44,049 --> 00:08:47,500
+it's the volatility of those rates.
+
+167
+00:08:47,500 --> 00:08:51,460
+The assumption about volatility combined with the other inputs
+
+168
+00:08:51,460 --> 00:08:57,920
+and entered into a pricing model generates a theoretical options
+
+169
+00:08:57,920 --> 00:09:01,040
+price as an output.
+
+170
+00:09:01,040 --> 00:09:05,660
+By taking the same model, but inputting observed options
+
+171
+00:09:05,660 --> 00:09:12,100
+prices instead of volatilities, the output
+
+172
+00:09:12,100 --> 00:09:15,872
+will give you an implied volatility.
+
+173
+00:09:15,872 --> 00:09:16,372
+
+

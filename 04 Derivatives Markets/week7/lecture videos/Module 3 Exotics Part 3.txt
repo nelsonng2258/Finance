@@ -1,0 +1,170 @@
+PROFESSOR: Just as their name suggests,
+barrier options have features that
+depend on the underlying asset hitting a barrier value
+specified in the contract.
+Barrier put and call options fall
+into three broad categories.
+First, there's knock-out options that
+go out of existence if the underlying
+price hits a specified barrier.
+A down-and-out option is canceled when the price falls
+below a specified barrier.
+And an up-and-out option is canceled if the price
+rises above the barrier.
+Second, knock-in options are activated when
+a specified barrier is hit.
+A down-and-in knock-in in option is
+activated when the underlying price falls below the barrier.
+And up-and-in option is activated when the underlying
+price rises above the barrier.
+The third category, rebate options,
+make a fixed payment when a barrier
+is hit from above, a down rebate,
+or hit from below, an up rebate.
+We can ask how did the values of these options
+compare to the corresponding options without the barriers.
+Well, clearly these options are worth less
+because there are times when they're
+inoperative when a non-barrier option would
+have a positive payoff.
+As such, they offer a way to buy more limited protection focused
+on situations where the protection is
+most highly valued.
+These can be thought of as alternatives to buying out
+of the money traditional options.
+This graph shows an example of how a down-and-in option works.
+The strike price in this case is set above the barrier.
+
+Also, the stock price, at the time the option is written,
+is above both the strike price and the barrier.
+
+The option doesn't become active until the stock price
+hits the barrier from above.
+Along this particular path, that happens
+when it gets here, which is at about six months.
+The payoff on this path will depend
+on the asset price and the strike price
+at the expiration date.
+
+These barrier options must satisfy the parity conditions
+that are shown here.
+The relationships are intuitive and pretty easy to establish.
+For example, consider a portfolio
+consisting of an up-and-in call and an up-and-out call,
+both on the same underlying stock with the same strike
+price, the same barrier, and the same expiration date.
+As long as the underlying stock price stays below the barrier,
+then the up-and-out call is operative
+and the up-and-in call is inoperative.
+If it hits the barrier from below, things switch.
+The up-and-in option becomes operative
+and the up-and-out call option becomes inoperative,
+thus just one of the options is always in effect
+and the barrier doesn't really matter.
+The outcome is the same as with a standard call.
+As with other parity relationships,
+the formulas can be useful when you have a pricing
+formula for two of the options involved
+and want to infer the value of the third option.
+Now pricing these options typically
+involves a binomial tree or Monte Carlo simulation.
+And we'll get to those soon.
+But the example here shows the value
+of a variety of barrier currency put options.
+You can think of it as a continuation
+of the previous example we were looking
+at where the strike prices represent
+the dollar value of one euro.
+If you look at the outcomes closely,
+you can verify that the prices shown
+satisfy the parity relations.
+You should also be able to convince yourself
+that the qualitative pattern of prices relative to the two
+different option types, the different strikes,
+and the different barrier values all make sense.
+
+Lookback options have payoffs or strike prices
+that give the holder the benefit of perfect hindsight.
+That's because they depend on the most favorable outcome
+for the option holder over the life of the option.
+Lookback options can take a variety of forms.
+A floating lookback call has a payoff
+at maturity based on the difference
+between the underlying price at maturity
+and the minimum price of the underlying
+over the life of the option.
+A floating lookback put, similarly,
+has a payoff equal to the maximum price of the underlying
+over the life of the option minus the value
+of the underlying at expiration.
+Therefore, in both cases, it's the strike price
+that's floating.
+With a fixed lookback call, the strike price K is fixed
+but the payoff, if it's positive,
+will be based on the maximum price of the underlying
+over the life of the option.
+And with a fixed lookback put, again the strike price
+is fixed at K, but the payoff, if it's positive,
+depends on the minimum realized price
+over the life of the option.
+Not surprisingly, these options are
+relatively expensive because the payoffs are higher than
+on otherwise similar options.
+Analytical formulas are available to value them.
+And those assume a lognormal process for the underlying.
+They're also based on the statistical distributions
+of the maximum and minimum.
+It's also straightforward to value these options
+numerically.
+Another type of exotic options, shout options,
+are closely related to lookback options.
+Let me tell you a little bit about them.
+With a shout option, the holder has one opportunity
+to shout when the price reaches a level that will determine
+a floor payoff for the option.
+For example, imagine a shout call option
+that has a strike price of $25.
+And also imagine that the holder of the call shouts
+when the price of the underlying asset hits $30.
+Well, if the final asset price at expiration is less than $30,
+the holder receives the payoff of the $30
+that they shouted minus the $25 strike
+price, so a payoff of $5.
+If the stock price at expiration is greater than 30,
+the holder receives the excess of the asset
+price over the $25 strike price as they
+would on a regular call.
+A shout option is a bit cheaper than a lookback option
+because the shout, even under an optimal shouting strategy,
+may turn out to be less advantageous than the payoff
+you'd get with perfect foresight.
+
+A very popular type of exotic option contract
+is an exchange option.
+An exchange option has a payoff which
+depends on the amount by which the price of one asset,
+which we'll call S, exceeds the price of a second asset we'll
+call capital N. It's a way to make a bet on relative price
+movements without exposure to changes in prices that are
+common across both securities.
+For example, you might want to bet the stock price of Tesla
+will fall relative to that of Toyota
+but without having to take a stand on whether the price
+of auto manufacturers is likely to rise or fall
+over the life of the option.
+When both assets are assumed to be lognormally distributed
+and when the option is European, the valuation formula
+Bears some similarity to the Black-Scholes-Merton model
+with a second asset N in place of the strike price
+on a standard call option.
+The formula is given here.
+
+As one would expect, the solution
+depends on the variance of both assets
+and the correlation rho between them.
+The higher that correlation, the less valuable
+the option will be because the chance
+that the two prices will diverge becomes smaller.
+And as usual, the value depends on the dividend yields,
+which have to be taken into account because they
+affect the relative drift in the two asset prices.

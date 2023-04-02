@@ -1,0 +1,852 @@
+0
+00:00:00,000 --> 00:00:00,540
+
+
+1
+00:00:00,540 --> 00:00:04,410
+PROFESSOR: Without further ado, let's begin with problem 1.
+
+2
+00:00:04,410 --> 00:00:08,610
+Problem 1 has a long setup, so do bear with me.
+
+3
+00:00:08,610 --> 00:00:12,450
+A financial firm is offering a synthetic zero-coupon
+
+4
+00:00:12,450 --> 00:00:17,160
+puttable and convertible bond on the ABC Company.
+
+5
+00:00:17,160 --> 00:00:19,240
+It works in the following way.
+
+6
+00:00:19,240 --> 00:00:22,710
+First, the bond has a promised principal payment
+
+7
+00:00:22,710 --> 00:00:26,550
+of $1,000 three periods from now.
+
+8
+00:00:26,550 --> 00:00:29,670
+Second, at any time after the first period,
+
+9
+00:00:29,670 --> 00:00:31,290
+the holder of the bond could either
+
+10
+00:00:31,290 --> 00:00:34,230
+exchange it for one share of the ABC stock--
+
+11
+00:00:34,230 --> 00:00:36,180
+that's the convertible option--
+
+12
+00:00:36,180 --> 00:00:38,430
+or give it back to the securities firm
+
+13
+00:00:38,430 --> 00:00:41,160
+in return for a payment of $600.
+
+14
+00:00:41,160 --> 00:00:43,830
+That's the putable option.
+
+15
+00:00:43,830 --> 00:00:47,940
+The securities firm has set aside four shares of ABC stock
+
+16
+00:00:47,940 --> 00:00:51,810
+to serve as collateral for each synthetic convertible.
+
+17
+00:00:51,810 --> 00:00:54,570
+In particular, the firm can at any time
+
+18
+00:00:54,570 --> 00:00:57,540
+fulfill its entire obligation and be required
+
+19
+00:00:57,540 --> 00:00:59,910
+to make no other payments by giving
+
+20
+00:00:59,910 --> 00:01:03,660
+to the holder of the putable convertible full ownership
+
+21
+00:01:03,660 --> 00:01:07,150
+of the four shares of the stock.
+
+22
+00:01:07,150 --> 00:01:11,890
+Over each period, the total rate of return on holding ABC stock
+
+23
+00:01:11,890 --> 00:01:16,490
+will be either 100% or -50%.
+
+24
+00:01:16,490 --> 00:01:18,560
+At the end of each period, the stock
+
+25
+00:01:18,560 --> 00:01:22,610
+will pay one fifth of its pre-dividend value as a cash
+
+26
+00:01:22,610 --> 00:01:24,500
+dividend to the investor who held
+
+27
+00:01:24,500 --> 00:01:27,690
+the stock during that period.
+
+28
+00:01:27,690 --> 00:01:30,540
+The remaining 80% of the pre-dividend value
+
+29
+00:01:30,540 --> 00:01:34,230
+will then be the ex-dividend stock price at which one
+
+30
+00:01:34,230 --> 00:01:37,410
+can purchase stock to hold over the following period
+
+31
+00:01:37,410 --> 00:01:42,010
+or sell the stock received from either conversion or default.
+
+32
+00:01:42,010 --> 00:01:44,640
+In other words, over each period,
+
+33
+00:01:44,640 --> 00:01:48,930
+the ex-dividend stock price will either increase by 60%
+
+34
+00:01:48,930 --> 00:01:52,980
+or decrease by 60%, and that's important.
+
+35
+00:01:52,980 --> 00:01:55,860
+By reinvesting dividends, an investor
+
+36
+00:01:55,860 --> 00:01:58,470
+owning one share at the beginning of a period
+
+37
+00:01:58,470 --> 00:02:03,290
+will own 1.25 shares at the end of the period.
+
+38
+00:02:03,290 --> 00:02:06,890
+The current ex-dividend stock price is $1,000,
+
+39
+00:02:06,890 --> 00:02:10,949
+and the interest rate is 10% per period.
+
+40
+00:02:10,949 --> 00:02:13,890
+The quoted price of a synthetic putable convertible
+
+41
+00:02:13,890 --> 00:02:16,580
+is also $1,000.
+
+42
+00:02:16,580 --> 00:02:20,270
+If the financial firm fully hedges its position,
+
+43
+00:02:20,270 --> 00:02:24,560
+what will be its realized profit on each bond sold?
+
+44
+00:02:24,560 --> 00:02:28,520
+We're going to use a binomial tree risk-neutral pricing model
+
+45
+00:02:28,520 --> 00:02:30,830
+in order to solve this problem.
+
+46
+00:02:30,830 --> 00:02:33,140
+I know we threw a lot of information at you there,
+
+47
+00:02:33,140 --> 00:02:36,590
+so I've taken the liberty of describing the possible paths
+
+48
+00:02:36,590 --> 00:02:39,770
+for ABC stock over the next three periods
+
+49
+00:02:39,770 --> 00:02:42,500
+in the diagram on the slide.
+
+50
+00:02:42,500 --> 00:02:44,330
+How did I get these payoffs?
+
+51
+00:02:44,330 --> 00:02:47,930
+Well, recall that the stock price ex-dividend
+
+52
+00:02:47,930 --> 00:02:51,080
+will either increase by 60% or decrease
+
+53
+00:02:51,080 --> 00:02:53,465
+by 60% in consecutive periods.
+
+54
+00:02:53,465 --> 00:02:57,270
+
+
+55
+00:02:57,270 --> 00:02:58,890
+We'll explain in a little bit where
+
+56
+00:02:58,890 --> 00:03:03,750
+the payoffs on this final column come from but first, as always,
+
+57
+00:03:03,750 --> 00:03:07,350
+let's work backwards through the binomial tree.
+
+58
+00:03:07,350 --> 00:03:10,860
+In particular, if the stock price three periods from now--
+
+59
+00:03:10,860 --> 00:03:12,450
+that is, at the maturity date--
+
+60
+00:03:12,450 --> 00:03:18,090
+is either $4,096 or $1,024, then bondholders
+
+61
+00:03:18,090 --> 00:03:21,630
+will certainly choose to convert their bond to a stock,
+
+62
+00:03:21,630 --> 00:03:27,500
+as the principal payment of the bond is only $1,000.
+
+63
+00:03:27,500 --> 00:03:32,090
+If instead the stock price on the maturity date is $256,
+
+64
+00:03:32,090 --> 00:03:34,040
+then bondholders will neither choose
+
+65
+00:03:34,040 --> 00:03:37,220
+to convert the bond to a stock nor put it.
+
+66
+00:03:37,220 --> 00:03:38,870
+And the financial firm will instead
+
+67
+00:03:38,870 --> 00:03:44,390
+have to pay those bondholders the principal amount of $1,000.
+
+68
+00:03:44,390 --> 00:03:47,750
+Finally, if the stock price is $64,
+
+69
+00:03:47,750 --> 00:03:50,180
+the financial firm will settle its obligation
+
+70
+00:03:50,180 --> 00:03:52,190
+to the bondholders by giving them
+
+71
+00:03:52,190 --> 00:03:57,360
+the four shares of the stock held as the collateral.
+
+72
+00:03:57,360 --> 00:04:01,170
+The column to the right of the diagram on that binomial tree
+
+73
+00:04:01,170 --> 00:04:03,810
+reports the final payoffs to the bondholders
+
+74
+00:04:03,810 --> 00:04:06,840
+at each of the four nodes at the maturity date:
+
+75
+00:04:06,840 --> 00:04:17,500
+4,096, 1,024, 1,000, or 256.
+
+76
+00:04:17,500 --> 00:04:20,649
+Now that we found the value of the putable convertible
+
+77
+00:04:20,649 --> 00:04:23,620
+at the terminal nodes of the binomial tree,
+
+78
+00:04:23,620 --> 00:04:27,770
+what will be its value at all the other nodes of the tree?
+
+79
+00:04:27,770 --> 00:04:30,080
+Well, like we've seen before in this class,
+
+80
+00:04:30,080 --> 00:04:32,810
+we can find the value of the putable convertible
+
+81
+00:04:32,810 --> 00:04:35,840
+by applying the fundamental valuation equation
+
+82
+00:04:35,840 --> 00:04:39,380
+to obtain the value of the bond if it's held for one more
+
+83
+00:04:39,380 --> 00:04:41,560
+period on the tree.
+
+84
+00:04:41,560 --> 00:04:44,650
+This value must then be compared with the value generated
+
+85
+00:04:44,650 --> 00:04:47,530
+by immediate conversion, that is,
+
+86
+00:04:47,530 --> 00:04:51,220
+converting the bond to its stock, putting the bond,
+
+87
+00:04:51,220 --> 00:04:53,440
+or immediately forfeiting the collateral
+
+88
+00:04:53,440 --> 00:04:56,480
+by the financial firm.
+
+89
+00:04:56,480 --> 00:04:59,350
+The final value assigned at each node on the tree
+
+90
+00:04:59,350 --> 00:05:03,100
+must reflect the optimal behavior by both bondholders
+
+91
+00:05:03,100 --> 00:05:06,280
+and the financial firm relative to the choices
+
+92
+00:05:06,280 --> 00:05:09,560
+available to them at the time.
+
+93
+00:05:09,560 --> 00:05:12,320
+To be more specific, let's let V,
+
+94
+00:05:12,320 --> 00:05:16,430
+which is a function of S and n, be the value of the bond when
+
+95
+00:05:16,430 --> 00:05:21,840
+the stock price is S and there are n periods until maturity.
+
+96
+00:05:21,840 --> 00:05:24,120
+We can solve for the risk-neutral probability
+
+97
+00:05:24,120 --> 00:05:28,650
+of an up move, which we'll call q*, as follows.
+
+98
+00:05:28,650 --> 00:05:31,770
+1000, which is the initial price of the stock,
+
+99
+00:05:31,770 --> 00:05:38,610
+is equal to 2000 times q* plus 500 times 1 minus q* divided
+
+100
+00:05:38,610 --> 00:05:43,300
+by 1.1, which yields q* equals 0.4,
+
+101
+00:05:43,300 --> 00:05:47,820
+or 40% for the risk-neutral probability of an up move.
+
+102
+00:05:47,820 --> 00:05:53,520
+We got the numbers 2000 and 500 because, as you recall,
+
+103
+00:05:53,520 --> 00:05:56,670
+the total rate of return on holding the ABC stock
+
+104
+00:05:56,670 --> 00:06:01,215
+will be either 100% or -50% over each period.
+
+105
+00:06:01,215 --> 00:06:04,410
+
+
+106
+00:06:04,410 --> 00:06:07,290
+Dividing by 1.1 just reflects the fact
+
+107
+00:06:07,290 --> 00:06:11,070
+that the risk-free rate of interest is 10% each period.
+
+108
+00:06:11,070 --> 00:06:14,400
+Let's solve for the value of the putable convertible
+
+109
+00:06:14,400 --> 00:06:15,900
+when n equals 1.
+
+110
+00:06:15,900 --> 00:06:18,300
+That is, when there is one period remaining
+
+111
+00:06:18,300 --> 00:06:20,430
+until maturity.
+
+112
+00:06:20,430 --> 00:06:23,940
+In particular, on the binomial tree diagram,
+
+113
+00:06:23,940 --> 00:06:26,760
+we're looking at the three nodes corresponding to the stock
+
+114
+00:06:26,760 --> 00:06:36,960
+price of 2560, 640, and 160.
+
+115
+00:06:36,960 --> 00:06:39,630
+The value of the putable convertible
+
+116
+00:06:39,630 --> 00:06:44,850
+at the node when n equals 1 and the stock price is 2560
+
+117
+00:06:44,850 --> 00:06:48,370
+is given by the minimum of two different terms.
+
+118
+00:06:48,370 --> 00:06:51,180
+The first term is equal to four times the stock
+
+119
+00:06:51,180 --> 00:06:53,400
+price of that node, which would be
+
+120
+00:06:53,400 --> 00:06:56,670
+the payoff to the bondholders if the financial firm were
+
+121
+00:06:56,670 --> 00:06:59,620
+to default on its obligations.
+
+122
+00:06:59,620 --> 00:07:02,250
+The second term is itself the maximum
+
+123
+00:07:02,250 --> 00:07:04,600
+of three different terms.
+
+124
+00:07:04,600 --> 00:07:08,700
+The first, 2560, is the payoff to the bondholders
+
+125
+00:07:08,700 --> 00:07:12,370
+if they convert their bond to a stock.
+
+126
+00:07:12,370 --> 00:07:15,870
+The second, 600, is the payoff to the bondholders
+
+127
+00:07:15,870 --> 00:07:20,870
+if they put the bond and receive 600.
+
+128
+00:07:20,870 --> 00:07:23,690
+The third term is the payoff to the bondholders
+
+129
+00:07:23,690 --> 00:07:26,630
+if they keep the bond, which itself
+
+130
+00:07:26,630 --> 00:07:31,550
+is given by the fundamental valuation equation, which
+
+131
+00:07:31,550 --> 00:07:36,180
+is 0.4, the probability of an up move
+
+132
+00:07:36,180 --> 00:07:38,670
+in the risk-neutral measure, times the price
+
+133
+00:07:38,670 --> 00:07:44,520
+of the stock in the up node relative to the 2560 stock
+
+134
+00:07:44,520 --> 00:07:49,260
+node at time t equals 1, plus the risk-neutral probability
+
+135
+00:07:49,260 --> 00:07:52,380
+of a down move, times the price of a stock
+
+136
+00:07:52,380 --> 00:07:57,060
+in the subsequent down node of 1024,
+
+137
+00:07:57,060 --> 00:07:59,280
+discounted at the risk-free rate of 10%.
+
+138
+00:07:59,280 --> 00:08:02,260
+
+
+139
+00:08:02,260 --> 00:08:04,450
+Solving this minimization problem,
+
+140
+00:08:04,450 --> 00:08:08,080
+we see that the value of the putable convertible
+
+141
+00:08:08,080 --> 00:08:14,090
+is 2560 at n equals 1.
+
+142
+00:08:14,090 --> 00:08:17,390
+Similar calculations for the node when the stock price is
+
+143
+00:08:17,390 --> 00:08:21,650
+640 and n equals 1, and 160 at n equals 1,
+
+144
+00:08:21,650 --> 00:08:28,290
+yield a value of 917.82 and 600, respectively.
+
+145
+00:08:28,290 --> 00:08:31,640
+Thus, looking at the first node here,
+
+146
+00:08:31,640 --> 00:08:33,740
+we see that the bond will be converted
+
+147
+00:08:33,740 --> 00:08:38,510
+to a stock at the node of the tree where S equals 2560.
+
+148
+00:08:38,510 --> 00:08:42,409
+The put will be exercised when S equals 160,
+
+149
+00:08:42,409 --> 00:08:44,210
+this bottom node here.
+
+150
+00:08:44,210 --> 00:08:47,630
+And the bond will be neither converted nor put when
+
+151
+00:08:47,630 --> 00:08:51,930
+S equals 640, this node here.
+
+152
+00:08:51,930 --> 00:08:54,030
+We can follow a similar procedure
+
+153
+00:08:54,030 --> 00:08:58,170
+to find the value of the putable convertible when n equals 2.
+
+154
+00:08:58,170 --> 00:09:02,420
+That is, when there are two periods remaining to maturity.
+
+155
+00:09:02,420 --> 00:09:05,450
+On the binomial tree diagram, that
+
+156
+00:09:05,450 --> 00:09:08,330
+corresponds to the two nodes where the stock price is either
+
+157
+00:09:08,330 --> 00:09:13,470
+1600 or 400.
+
+158
+00:09:13,470 --> 00:09:16,560
+For the node when the stock price is equal to 1600,
+
+159
+00:09:16,560 --> 00:09:18,720
+the value of the putable convertible
+
+160
+00:09:18,720 --> 00:09:22,690
+will be equal to, again, the minimum of two terms.
+
+161
+00:09:22,690 --> 00:09:26,250
+The first term, four times 1600, is the payoff
+
+162
+00:09:26,250 --> 00:09:28,170
+to the bondholders if the firm is
+
+163
+00:09:28,170 --> 00:09:31,330
+unable to meet its obligations.
+
+164
+00:09:31,330 --> 00:09:35,010
+The second term is itself the maximum of three terms.
+
+165
+00:09:35,010 --> 00:09:37,920
+1600, which is the payoff to the bondholders
+
+166
+00:09:37,920 --> 00:09:41,190
+if they convert their bond to a stock at that node,
+
+167
+00:09:41,190 --> 00:09:44,130
+600, which is again the payoff to the bondholders
+
+168
+00:09:44,130 --> 00:09:48,070
+if they put the bond, and the last term,
+
+169
+00:09:48,070 --> 00:09:50,010
+which is given by the fundamental valuation
+
+170
+00:09:50,010 --> 00:09:54,780
+equation, which is equal to 0.4, the risk-neutral probability
+
+171
+00:09:54,780 --> 00:09:57,990
+of an up move to the subsequent node,
+
+172
+00:09:57,990 --> 00:10:03,090
+times the price of the stock in the subsequent up node of 2560,
+
+173
+00:10:03,090 --> 00:10:07,560
+plus 0.6, the risk-neutral probability of a down move,
+
+174
+00:10:07,560 --> 00:10:10,290
+times the value of the putable convertible
+
+175
+00:10:10,290 --> 00:10:12,810
+in the subsequent down node, which
+
+176
+00:10:12,810 --> 00:10:19,410
+we found on the previous slide to be equal to 917.82.
+
+177
+00:10:19,410 --> 00:10:21,450
+Discount that at the risk-free rate,
+
+178
+00:10:21,450 --> 00:10:24,300
+solve this minimization problem, and we
+
+179
+00:10:24,300 --> 00:10:27,090
+see that the value of the putable convertible,
+
+180
+00:10:27,090 --> 00:10:30,240
+at the node where the stock price is equal to 1600,
+
+181
+00:10:30,240 --> 00:10:34,350
+at n equals 2, is 1600.
+
+182
+00:10:34,350 --> 00:10:37,350
+A similar exercise can be used to find
+
+183
+00:10:37,350 --> 00:10:39,390
+the value of the putable convertible
+
+184
+00:10:39,390 --> 00:10:42,480
+at the node when the stock price is equal to 400 and n
+
+185
+00:10:42,480 --> 00:10:48,730
+equals 2, which is equal to 661.025.
+
+186
+00:10:48,730 --> 00:10:52,120
+Thus, the bond will be converted to a stock
+
+187
+00:10:52,120 --> 00:10:55,180
+at the node of the tree where S equals 1600,
+
+188
+00:10:55,180 --> 00:10:58,750
+this top node here, and the bond will neither be converted
+
+189
+00:10:58,750 --> 00:11:02,260
+nor put when the stock price is equal to 400,
+
+190
+00:11:02,260 --> 00:11:05,080
+this bottom node here.
+
+191
+00:11:05,080 --> 00:11:06,490
+OK, just one more step.
+
+192
+00:11:06,490 --> 00:11:10,670
+Remember, the initial price of the stock is equal to 1000.
+
+193
+00:11:10,670 --> 00:11:14,410
+So we can solve for the value of the putable convertible bond
+
+194
+00:11:14,410 --> 00:11:17,920
+at the initial node of the tree as follows.
+
+195
+00:11:17,920 --> 00:11:21,220
+The value of the putable convertible bond
+
+196
+00:11:21,220 --> 00:11:26,680
+is given by the fundamental valuation equation to be 0.4,
+
+197
+00:11:26,680 --> 00:11:33,930
+the risk-neutral probability of an up move, times 1600, which,
+
+198
+00:11:33,930 --> 00:11:35,970
+as we saw in the previous slide, is
+
+199
+00:11:35,970 --> 00:11:38,940
+the value of the putable convertible bond in the up
+
+200
+00:11:38,940 --> 00:11:44,550
+node at n equals 2, plus 0.6, risk-neutral probability
+
+201
+00:11:44,550 --> 00:11:49,810
+of a down move, times 660.025, which,
+
+202
+00:11:49,810 --> 00:11:51,750
+again, as we saw on the previous slide,
+
+203
+00:11:51,750 --> 00:11:54,540
+is the value of the putable convertible bond
+
+204
+00:11:54,540 --> 00:11:57,720
+in the down node at n equals 2.
+
+205
+00:11:57,720 --> 00:11:59,590
+Discount that the risk-free rate,
+
+206
+00:11:59,590 --> 00:12:03,390
+we get that the value of the putable convertible bond
+
+207
+00:12:03,390 --> 00:12:07,410
+is 942.3771.
+
+208
+00:12:07,410 --> 00:12:11,670
+In other words, if the financial firm fully hedges its position,
+
+209
+00:12:11,670 --> 00:12:14,100
+its realized profit on each bond sold
+
+210
+00:12:14,100 --> 00:12:19,860
+will be 1000 minus 942.3771, which
+
+211
+00:12:19,860 --> 00:12:23,120
+is roughly equal to $57.6229.
+
+212
+00:12:23,120 --> 00:12:27,000
+
+

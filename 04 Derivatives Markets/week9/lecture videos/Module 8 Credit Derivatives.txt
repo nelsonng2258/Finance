@@ -1,0 +1,224 @@
+
+PROFESSOR: We're now going to turn to standalone
+credit derivatives.
+Credit derivatives usually involve two counterparties:
+a protection buyer and a protection seller.
+The payoff depends on the behavior of a reference entity,
+for instance whether a guaranteed firm
+defaults on its debt.
+As with other derivative transactions,
+credit derivatives are considered a hedge
+when they offset the risk of a cash position.
+For example, a commercial bank that lends to Boeing
+might buy protection against a default
+by Boeing using a credit default swap, which
+reduces its net exposure to Boeing credit risk.
+If the protection seller has no other exposure to Boeing,
+it would be speculation that Boeing
+would be unlikely to default over the period covered
+by the protection.
+A credit default swap provides the protection buyer
+with a payment in the event of a default
+by a reference entity in exchange
+for making a periodic pre-specified payment
+to the protection seller.
+The periodic fee is a percentage of the notional principle
+upon which the insurance is based.
+If instead of paying a fee over time,
+the value of the protection is entirely paid for up front,
+then the contract is usually described
+as a guarantee or an option rather than as a swap.
+The reference asset or entity could be many things.
+It could be a particular loan or the bond of a corporation.
+It could be sovereign debt or a portfolio
+of risky bonds or even another derivatives contract.
+This schematic illustrates the transactions
+between the two counterparties.
+As you can see from the many details on the slide,
+there's a wide variety of CDS structures.
+I just want to highlight a few of these points.
+A CDS contract always has a fixed maturity
+and that need not match the maturity of the reference
+entity.
+For example, a bank may want protection against default
+on a five year loan it's made just for the first year.
+And after that, it prefers to take the credit risk
+rather than to pay for offloading it.
+A critical element of the CDS contract
+is a precise description of events that trigger a payout.
+The term "default", by itself, is too vague
+and standard legal language has evolved
+to describe different contingencies.
+Because the list of trigger events in the CDS contract
+may not include all eventualities that
+would cause a firm to experience financial distress,
+the contract might offer less than 100% protection.
+Importantly, the trigger events must
+be observable and verifiable.
+Otherwise whether payments are made
+can involve a lot of legal complications.
+A contract also specifies the type of settlement.
+With cash settlement, when there is a default event,
+the protection buyer receives the difference between what's
+owed and the market value of the reference asset at the time
+of the trigger event.
+With physical delivery, the protection buyer
+delivers the reference asset or assets to the protection seller
+and, in return, receives what's owed.
+Physical delivery avoids the need
+to find a market value when one is not readily available
+but it necessitates obtaining and delivering
+the asset, which may not be easy or even feasible in some cases.
+CDSes that are digitally settled involve a predetermined
+fixed payment if there's a trigger event.
+An organization that seeks to promulgate standards to ensure
+that the CDS market functions smoothly
+is called the International Swap Dealers Association or ISDA.
+A CDS contract can be based on a single firm or name
+as the reference entity.
+It can also be written on a basket of multiple firms
+or on a broader credit performance index
+for various regions.
+Index-based CDS are popular because of their liquidity
+and ease of obtaining the relevant information
+to determine payoffs.
+They're collectively referred to as CDX.
+CDS and indices are also frequently used as inputs
+into structured products such as synthetic collateralized debt
+obligations or nth to default bonds.
+Those are contracts we'll talk about more next time.
+Let's look more closely at the cash flows associated
+with a single name CDS and let's assume it's cash settled.
+The protection buyer pays a periodic premium called U
+on a notional principal amount of protection
+for a period of length T, say on $100
+face value of the underlying entity's debt.
+In the event that the underlying entity
+defaults on the debt at some time tau, which
+is less than or equal to the maturity date of the contract,
+and assuming the recovery amount is
+Y of tau for $100 of face value, then the protection buyer
+is made whole on the default date
+and receives a payment of 100 minus Y of tau.
+An analysis of a long-short portfolio
+that consists of a risky bond and a risk-free bond
+of equal value establishes that the premium rate on a credit
+default swap should be approximately
+equal to the credit spread on the risky bond.
+That's why the principle of no arbitrage.
+To see why, let's consider an example that's
+illustrated by this diagram.
+It shows that the cash flows associated
+with a long position in a risk-free bond
+with price, P and a short position
+in a risky bond with price, P results
+in net cash flows that are the same as on a credit default
+swap.
+Specifically, we assume that both bonds are priced at par
+and pay a periodic coupon rate.
+s is the dollar credit spread on the risky bond
+and r is the dollar risk-free rate.
+Assume too that default will only
+occur on the maturity date of the bond.
+The diagram shows that the net cash
+flow of this portfolio each period prior to maturity
+is minus s because the r's cancel out.
+At maturity, the net payoff is P minus the recovery rate.
+Those cash flows are identical to having
+a long position in a credit default
+swap on the bond with a premium rate equal to s.
+Now if the CDS rate, U, is higher than s,
+it's an arbitrage opportunity to write a CDS
+and create a long-short portfolio that
+hedges the associated risk.
+Conversely, if the CDS rate, U, were lower than s,
+there's an arbitrage opportunity involving
+a long position in the CDS, again hedging
+with a long-short portfolio.
+In practice, there are two main approaches used in CDS pricing.
+The first, which is preferred because it's more accurate,
+is to price CDS using an extension of the Burton model.
+The AWA example can be easily modified, for instance,
+to price CDS.
+The second approach follows the logic
+of the long-short portfolio, no arbitrage pricing,
+on the previous slide.
+However, there are a number of unrealistic assumptions
+that are needed to make that argument rigorous.
+And those are mentioned in the bullet points
+here in case you're interested in seeing them.
+Well, despite a long-short portfolio
+not truly being a perfect hedge for a CDS position,
+traders often looked for arbitrage opportunities
+between the CDS and cash markets by comparing CDS premiums
+with the yield spreads in the cash market
+and taking positions that will profit
+if the pricing between the cash and the CDS market converge.
+
+Multiname CDS is common.
+To see why, consider an investor who's
+holding a portfolio of defaultable bonds
+and wants to buy insurance against default
+losses on that portfolio.
+The investor could choose between buying
+an individual CDS for the bonds in the portfolio
+or purchasing insurance on the portfolio overall.
+Which do you think is more expensive?
+To answer this, think back to our discussion
+of exotic options.
+In particular, we determined that Asian options that
+have a payoff based on average outcomes
+are less expensive than otherwise similar options
+because averaging or diversification narrows
+the variance of outcomes.
+A portfolio of bonds diversifies credit risk
+relative to individual bond holdings
+and buying a CDS based on the default losses on a portfolio
+is typically then much less expensive
+than buying protection for each individual bond
+in the portfolio.
+An even less expensive form of protection
+is to limit it to events that involve
+some large number of defaults.
+That can be attractive when an investor
+has some tolerance for risk but wants protection
+against severe default events such as those that might occur
+during a financial crisis.
+An n-th to default basket default swap
+offers such protection, providing a payoff
+only after the n-th default occurs in a basket of reference
+securities.
+The premium paid for this protection
+depends on several factors.
+With a larger number of credits in the basket, all else equal,
+it's more likely that n will default.
+That raises the price of the insurance.
+The credit quality and anticipated recovery rates
+also influence pricing.
+Finally, and also very importantly,
+the distribution of the number of defaults
+is very sensitive to the pairwise correlation
+between the likelihood of default for the reference
+entities.
+We'll return to the effects of default correlation
+and how it affects pricing next week.
+This week you've learned a lot about how
+statistical and structural models are
+used to price credit risk.
+We started with a statistical approach,
+which derives default and recovery rates from data
+on borrower characteristics that include leverage ratios, credit
+ratings, tangible collateral, and so forth.
+We then turn to structural models,
+which infer default and recovery rates based
+on the stochastic structure of a borrower's assets
+and an assumed default barrier.
+Both approaches predict the effect of credit risk
+on the value of credit sensitive securities and derivatives.
+For defaultable bonds, both should produce similar answers
+if they're properly calibrated.
+However, I emphasize the structural approach
+because it's more flexible and it's much better
+suited for pricing more complex credit derivatives.
+In practice, hybrids of the two approaches
+often produce the most accurate results.

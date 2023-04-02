@@ -1,0 +1,147 @@
+
+PROFESSOR: This example provides a quantitative illustration
+of the effect of the assumed default
+correlation on the pricing and yields of different CDO
+tranches.
+The simple CDO here is based on just two underlying nodes,
+both zero coupon with one year maturities.
+The first has a principal or face value of 100.
+And in the event it defaults, the estimated recovery is $50.
+It's priced at $95 in the market.
+The second node has a principal or face value of $200.
+And in the event of default, the expected recovery
+is 40% or $80.
+It's priced at 179.50.
+
+Let's assume that the one-year LIBOR rate is 2%
+and that it represents the appropriate risk-free rate
+for these calculations.
+From this information, as a first step,
+we can impute an implied risk-neutral probability
+of default for each of the nodes from the equations here
+equating the expected risk-neutral payoff discounted
+at the risk-free rate to the observed market
+price of each bond.
+
+Risk-neutral expected payoff discounted back
+when period for node one implies a risk-neutral probability
+of 6.2%.
+And for node two, the imputed risk-neutral probability
+is 14.1%.
+These imputed default probabilities in themselves
+imply nothing about the correlation between default
+on the two nodes.
+One way to incorporate the effect of correlation
+is to make an assumption about the probability of defaults
+occurring simultaneously.
+Let's first assume that the joint probability of default
+is 1%.
+With that assumption, we can infer the probability
+of every possible outcome.
+One is that only the first node defaults.
+That equals the probability that node
+one defaults minus the probability that they
+both default, which is 6.2% minus the 1% joint probability
+or 5.2%.
+
+The second possibility is that only node two defaults.
+That equals the probability that node
+two defaults minus the joint probability, which
+is 14.1% minus 1%, or 13.1%.
+Again, the probability that they both default is 1%.
+And now, the last possibility is that neither defaults.
+And that's equal to 100% minus the probability
+that there's any other combination of defaults,
+and the result is that the probability of no default
+is 80.7%.
+Now, let's turn to the CDO structure.
+The payoffs are divided into three tranches--
+a senior tranche of 220 principal, a mezzanine tranche
+of 60 principal, and a junior tranche of 20 principal.
+
+This table summarizes the payoffs and probabilities
+and the calculation of implied prices and yields
+for each of the tranches.
+The four possible scenarios with their associated probabilities
+and total payouts are shown on the left here.
+
+The next portion of the table reflects a waterfall
+of the total payments, which go to the senior tranche
+first, then to the mezzanine tranche
+if payouts exceed $220, and finally, to the junior equity
+tranche if payouts exceed $280.
+For example, the senior tranche is paid in full
+if there's no defaults or if only node one defaults.
+
+It receives a payment of 180 if only
+node two defaults and a payment of 130 if both nodes default.
+We can weight each of those outcomes by the probability
+of that outcome to get an expected risk-neutral payout
+of 213.80.
+The junior tranche is only paid if no default occurs.
+In which case, it gets 16.1 and that occurs with a probability
+0.807.
+So the expected payout is 16.10.
+To get from those expected payouts to the price,
+the prices are found by discounting
+those risk-neutral expected payouts by the risk-free rate.
+
+The implied yield as an annual percentage rate
+is found then as the ratio of the promised payment
+to the price minus 1.
+
+The yield on the senior tranche is 2.9% higher
+than the risk-free rate, which reflects that it will not be
+fully repaid in some scenarios.
+The yields on the mezzanine and junior tranches
+are very high, because the expected payouts are much lower
+than the promised payouts.
+To see the effect of increasing the default correlation,
+we can do the same analysis but under the assumption
+of a higher probability that both nodes
+will default at the same time.
+Increasing that probability will also
+increase the likelihood of no default, which we will expect
+will help the junior tranche.
+We also expect it will hurt the senior tranche
+by increasing the size of the expected losses there.
+Let's see what happens when we increase
+the probability of both nodes defaulting simultaneously
+from 1% to 3% and keep everything else
+as it was before.
+Recomputing the probability of every possible outcome
+has the expected result that the probability
+of both nodes defaulting is higher
+and so is the probability of neither node defaulting.
+The probability of just one node defaulting is lower.
+This table redoes all of the previous calculations based
+on the 3% joint probability of default. As we expected,
+the estimated value of the junior tranche increases
+and the value of the senior tranche
+falls relative to when the correlation was lower
+and the implied yields change commensurately.
+Notice that, in this example, I simply made an assumption
+about the joint probability of default.
+There are a number of statistical approaches
+that have been developed to estimate default correlations
+that are discussed in the whole textbook
+and also in other sources.
+There are several takeaways I'd like
+you to get from this analysis.
+The first is that it's critical to take into account default
+correlation and pricing CDOs or similar structures.
+When we discussed credit risk last week,
+we saw how defaults historically are
+highly concentrated in recessions, which
+means that, in fact, there is a positive default
+correlation across bonds and other risky loans.
+The second takeaway is that this may be one reason
+that, during the financial crisis of 2008,
+there were unanticipated losses by holders
+of senior claims on mortgage-backed securities.
+Apparently, many market participants,
+including credit rating agencies,
+hadn't taken into account the positive default correlation
+that led their models to overestimate
+the value and the safety of the senior tranches
+of mortgage-backed securities.

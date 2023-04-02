@@ -1,0 +1,131 @@
+
+PROFESSOR: We're about to embark on an extended example of how
+to value risk-free bonds with embedded options using
+binomial trees.
+Our preliminary observation is that bonds
+with embedded options can be decomposed into their component
+parts.
+By no arbitrage, the value of a callable bond
+must be equal to the value of the underlying
+non-callable bond, which is also called a straight bond,
+less the value of the call option.
+The call option reduces the bond's value
+because it's to the advantage of the bond issuer,
+causing bond buyers to pay less for the bond.
+Similarly, the value of a puttable bond
+is the value of the underlying straight bond plus the value
+of the put option.
+In that case, the bond is worth more,
+because the put is a benefit to the bond buyer.
+In general, we'd like our model of interest rates
+to accurately price both the option-free bond
+and the embedded options attached to it.
+In this example we'll be looking at,
+we'll use a binomial model to first price the bond
+and the call option separately, and then
+infer the value of the callable bond from the two pieces.
+The two-step binomial tree shown here in one-year rates
+with a risk-neutral probability of an up move of 0.5
+will be the basis for pricing bonds and options
+in the examples we'll look at.
+Notice that at a time t node, the rates in the tree
+are always used to discount cash flows arriving at time t + 1
+back to time t.
+Thus, this tree will be used to price bonds
+with maturities of one, two, and three years.
+We'll first focus on how to value bonds and options taking
+the tree as given.
+After that, we'll turn to how it was
+calibrated using market data.
+
+We'll begin by using the tree to estimate the value of a 5.25%
+coupon bond, making annual coupon payments
+with no embedded options.
+Starting at time t, the bond will always
+pay off its principal value of 100
+plus the final coupon of 5.25.
+The value, V, then at each time two node
+is found by discounting the expected value of 105.25
+backed by the one-year interest rate at that node.
+The value of 95.58 at the time two up-up node, for instance,
+is discounting that payment of 105.25
+back at the rate of 6.757.
+Note that the values on the year 2 nodes
+represent the remaining value after the year two
+coupon has already been paid.
+Now, to find the value at each time one node,
+the risk-neutral expectation of the time two value
+plus the time two coupon is discounted back to time one
+at the time one interest rate.
+The value on the time one down node, for instance,
+is based on the expected value plus a coupon payment at time
+two on the down-up node and on the down-down node discounted
+at the time one interest rate of 4.074.
+Continuing in this way all the way back to time zero
+gives a value for the bond of 102.075.
+A few observations here.
+It's clear we didn't need a binomial model to estimate
+the value of a risk-free bond with no embedded options --
+we could have estimated its value directly
+from the yield curve or equivalently from the prices
+of comparable bonds.
+However, we will need the tree to value bonds
+with embedded options and, if we want
+to have confidence in our tree as a pricing tool,
+we want to be able to demonstrate
+that the bond prices that it generates
+are consistent with the yield curve.
+We'll come back to this later, when
+we discuss how to calibrate the tree in the first place.
+Now, imagine the same bond is callable by the issuer
+at the end of the second year, after the year two coupon has
+been paid at a strike price of 99.50.
+We can use the tree to value that call option,
+again working backwards.
+Comparing the 99.50 strike price with the values we found a time
+two on each node, the call is out of the money on the up-up
+node.
+It's in the money by 0.232 on the up-down or down-up node,
+and in the money by 1.19 on the down-down node.
+
+Notice that when using interest rate trees instead of price
+trees, the calls have greater value on the lower branches,
+because lower rates translate into higher bond values
+and conversely for puts.
+We can discount those payoffs working backwards on the tree
+and at each node using the one-year rate on that node
+for discounting.
+For instance, at the time one up node, the value of the call
+is 0.11 based on a probability of 0.5
+that it will be worth 0.232 next period and a probability of 0.5
+that it will be worth nothing and discounting that expected
+value by 4.976%
+Continuing again back to time zero,
+we estimate that the value of the European call is 0.383.
+Because the value of the call reduces
+the value of the bond to the lender
+by the value of the call option, we
+estimate the value of the callable bond
+as the value of the straight bond
+minus the value of the call option which comes to 101.692.
+The fact that embedded options affect bond prices
+means they also affect yields.
+Remember that the yield on a bond
+is based on finding the single discount
+rate that equates its price with its promised payments.
+On the three-year 5.25% coupon bond with no embedded options,
+our model implies that it would have a yield of 4.495
+based on this equation here and solving for y.
+When it's callable, because the price is lower,
+the implied yield is higher at 4.633%.
+This difference can loosely be described
+as the issuer paying about 14 basis points for the call
+option.
+The final note here is that you may see the term
+option-adjusted spread.
+That describes an adjustment that's sometimes
+made to yields that removes the effect of embedded put and call
+options.
+That sort of adjustment is used in creating indices
+of bond yields, such as for corporate bonds
+with triple B credit ratings.

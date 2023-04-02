@@ -1,0 +1,212 @@
+
+PROFESSOR: Without further ado, let's begin with problem 1.
+Problem 1 has a long setup, so do bear with me.
+A financial firm is offering a synthetic zero-coupon
+puttable and convertible bond on the ABC Company.
+It works in the following way.
+First, the bond has a promised principal payment
+of $1,000 three periods from now.
+Second, at any time after the first period,
+the holder of the bond could either
+exchange it for one share of the ABC stock--
+that's the convertible option--
+or give it back to the securities firm
+in return for a payment of $600.
+That's the putable option.
+The securities firm has set aside four shares of ABC stock
+to serve as collateral for each synthetic convertible.
+In particular, the firm can at any time
+fulfill its entire obligation and be required
+to make no other payments by giving
+to the holder of the putable convertible full ownership
+of the four shares of the stock.
+Over each period, the total rate of return on holding ABC stock
+will be either 100% or -50%.
+At the end of each period, the stock
+will pay one fifth of its pre-dividend value as a cash
+dividend to the investor who held
+the stock during that period.
+The remaining 80% of the pre-dividend value
+will then be the ex-dividend stock price at which one
+can purchase stock to hold over the following period
+or sell the stock received from either conversion or default.
+In other words, over each period,
+the ex-dividend stock price will either increase by 60%
+or decrease by 60%, and that's important.
+By reinvesting dividends, an investor
+owning one share at the beginning of a period
+will own 1.25 shares at the end of the period.
+The current ex-dividend stock price is $1,000,
+and the interest rate is 10% per period.
+The quoted price of a synthetic putable convertible
+is also $1,000.
+If the financial firm fully hedges its position,
+what will be its realized profit on each bond sold?
+We're going to use a binomial tree risk-neutral pricing model
+in order to solve this problem.
+I know we threw a lot of information at you there,
+so I've taken the liberty of describing the possible paths
+for ABC stock over the next three periods
+in the diagram on the slide.
+How did I get these payoffs?
+Well, recall that the stock price ex-dividend
+will either increase by 60% or decrease
+by 60% in consecutive periods.
+
+We'll explain in a little bit where
+the payoffs on this final column come from but first, as always,
+let's work backwards through the binomial tree.
+In particular, if the stock price three periods from now--
+that is, at the maturity date--
+is either $4,096 or $1,024, then bondholders
+will certainly choose to convert their bond to a stock,
+as the principal payment of the bond is only $1,000.
+If instead the stock price on the maturity date is $256,
+then bondholders will neither choose
+to convert the bond to a stock nor put it.
+And the financial firm will instead
+have to pay those bondholders the principal amount of $1,000.
+Finally, if the stock price is $64,
+the financial firm will settle its obligation
+to the bondholders by giving them
+the four shares of the stock held as the collateral.
+The column to the right of the diagram on that binomial tree
+reports the final payoffs to the bondholders
+at each of the four nodes at the maturity date:
+4,096, 1,024, 1,000, or 256.
+Now that we found the value of the putable convertible
+at the terminal nodes of the binomial tree,
+what will be its value at all the other nodes of the tree?
+Well, like we've seen before in this class,
+we can find the value of the putable convertible
+by applying the fundamental valuation equation
+to obtain the value of the bond if it's held for one more
+period on the tree.
+This value must then be compared with the value generated
+by immediate conversion, that is,
+converting the bond to its stock, putting the bond,
+or immediately forfeiting the collateral
+by the financial firm.
+The final value assigned at each node on the tree
+must reflect the optimal behavior by both bondholders
+and the financial firm relative to the choices
+available to them at the time.
+To be more specific, let's let V,
+which is a function of S and n, be the value of the bond when
+the stock price is S and there are n periods until maturity.
+We can solve for the risk-neutral probability
+of an up move, which we'll call q*, as follows.
+1000, which is the initial price of the stock,
+is equal to 2000 times q* plus 500 times 1 minus q* divided
+by 1.1, which yields q* equals 0.4,
+or 40% for the risk-neutral probability of an up move.
+We got the numbers 2000 and 500 because, as you recall,
+the total rate of return on holding the ABC stock
+will be either 100% or -50% over each period.
+
+Dividing by 1.1 just reflects the fact
+that the risk-free rate of interest is 10% each period.
+Let's solve for the value of the putable convertible
+when n equals 1.
+That is, when there is one period remaining
+until maturity.
+In particular, on the binomial tree diagram,
+we're looking at the three nodes corresponding to the stock
+price of 2560, 640, and 160.
+The value of the putable convertible
+at the node when n equals 1 and the stock price is 2560
+is given by the minimum of two different terms.
+The first term is equal to four times the stock
+price of that node, which would be
+the payoff to the bondholders if the financial firm were
+to default on its obligations.
+The second term is itself the maximum
+of three different terms.
+The first, 2560, is the payoff to the bondholders
+if they convert their bond to a stock.
+The second, 600, is the payoff to the bondholders
+if they put the bond and receive 600.
+The third term is the payoff to the bondholders
+if they keep the bond, which itself
+is given by the fundamental valuation equation, which
+is 0.4, the probability of an up move
+in the risk-neutral measure, times the price
+of the stock in the up node relative to the 2560 stock
+node at time t equals 1, plus the risk-neutral probability
+of a down move, times the price of a stock
+in the subsequent down node of 1024,
+discounted at the risk-free rate of 10%.
+
+Solving this minimization problem,
+we see that the value of the putable convertible
+is 2560 at n equals 1.
+Similar calculations for the node when the stock price is
+640 and n equals 1, and 160 at n equals 1,
+yield a value of 917.82 and 600, respectively.
+Thus, looking at the first node here,
+we see that the bond will be converted
+to a stock at the node of the tree where S equals 2560.
+The put will be exercised when S equals 160,
+this bottom node here.
+And the bond will be neither converted nor put when
+S equals 640, this node here.
+We can follow a similar procedure
+to find the value of the putable convertible when n equals 2.
+That is, when there are two periods remaining to maturity.
+On the binomial tree diagram, that
+corresponds to the two nodes where the stock price is either
+1600 or 400.
+For the node when the stock price is equal to 1600,
+the value of the putable convertible
+will be equal to, again, the minimum of two terms.
+The first term, four times 1600, is the payoff
+to the bondholders if the firm is
+unable to meet its obligations.
+The second term is itself the maximum of three terms.
+1600, which is the payoff to the bondholders
+if they convert their bond to a stock at that node,
+600, which is again the payoff to the bondholders
+if they put the bond, and the last term,
+which is given by the fundamental valuation
+equation, which is equal to 0.4, the risk-neutral probability
+of an up move to the subsequent node,
+times the price of the stock in the subsequent up node of 2560,
+plus 0.6, the risk-neutral probability of a down move,
+times the value of the putable convertible
+in the subsequent down node, which
+we found on the previous slide to be equal to 917.82.
+Discount that at the risk-free rate,
+solve this minimization problem, and we
+see that the value of the putable convertible,
+at the node where the stock price is equal to 1600,
+at n equals 2, is 1600.
+A similar exercise can be used to find
+the value of the putable convertible
+at the node when the stock price is equal to 400 and n
+equals 2, which is equal to 661.025.
+Thus, the bond will be converted to a stock
+at the node of the tree where S equals 1600,
+this top node here, and the bond will neither be converted
+nor put when the stock price is equal to 400,
+this bottom node here.
+OK, just one more step.
+Remember, the initial price of the stock is equal to 1000.
+So we can solve for the value of the putable convertible bond
+at the initial node of the tree as follows.
+The value of the putable convertible bond
+is given by the fundamental valuation equation to be 0.4,
+the risk-neutral probability of an up move, times 1600, which,
+as we saw in the previous slide, is
+the value of the putable convertible bond in the up
+node at n equals 2, plus 0.6, risk-neutral probability
+of a down move, times 660.025, which,
+again, as we saw on the previous slide,
+is the value of the putable convertible bond
+in the down node at n equals 2.
+Discount that the risk-free rate,
+we get that the value of the putable convertible bond
+is 942.3771.
+In other words, if the financial firm fully hedges its position,
+its realized profit on each bond sold
+will be 1000 minus 942.3771, which
+is roughly equal to $57.6229.

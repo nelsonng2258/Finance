@@ -1,0 +1,116 @@
+
+PROFESSOR: Topic two was brief, so let's finish the recitation
+by reviewing currency options.
+Currency options are actually conceptually quite
+similar to the options on stocks and futures
+that we've seen in lectures so far.
+A currency option gives the holder of the option
+the right, but not the obligation,
+to buy or sell a certain currency at a predetermined
+exchange rate on or before a specific date, maturity
+date of the option.
+Are there a Black-Scholes-Merton type formula
+analogous to those used to price call and put options
+on stocks for European currency options?
+We'll begin by recalling from the week five lecture
+that the Black-Scholes-Merton pricing
+formula for European call and put
+options on the stock with a known dividend yield, delta,
+are as follows.
+On the left hand side, we have the price of a European call
+option for a stock with a known dividend yield, delta,
+on the right hand side, the price of the put option with d1
+and d2 given as the usual formulas,
+except we have this adjustment and this term
+here for the dividend yield.
+The key to pricing currency options
+is to realize that foreign currency is
+analogous to a stock that pays a known dividend yield.
+In particular, the holder of the foreign currency
+will receive a dividend yield equal to the risk-free rate,
+rf, in the foreign currency.
+To keep the notation consistent, let's define
+S to be the spot exchange rate.
+In particular, S is the value of one unit of a foreign currency
+in terms of US dollars.
+Then the prices of the European call and put currency options
+are the exact same as those for a stock with a known dividend
+yield, except now we replace delta, the dividend yield,
+with the foreign risk-free rate, rf.
+On the left hand side, we have the price of a European call
+currency option, where if you notice,
+the dividend yield delta has been
+replaced with rf and the same thing for the put option.
+
+Both the domestic risk-free rate, r,
+and the foreign risk-free rate, rf,
+are for maturity, T, of the option here.
+As a concrete example, consider a six month European call
+option on the British pound.
+Suppose that the spot exchange rate, S, is 1.5,
+the strike price is also 1.5, the risk-free rate
+in the United States is 5% per annum,
+the risk-free rate in the United Kingdom is 7% per annum,
+and the pound to dollar exchange rate
+has a volatility of 12% per annum.
+What would be the price of the call option in dollars
+according to the equations above?
+Using the Black-Scholes-Merton tab of the BSM and Black's
+Model xls spreadsheet that we saw in topic one,
+we can calculate the price of the European call option
+with S, the spot exchange rate, equal to 1.5,
+K, the strike price, equal to 1.5,
+r, the domestic risk-free rate, equal to 5%,
+sigma, the volatility of the exchange rate, equal to 12%,
+and delta, which is our dividend yield, in this case,
+the foreign risk-free rate equal to 7%,
+and finally T, the maturity of the currency option,
+equal to 0.5 for six months.
+Plugging those input into the Black-Scholes-Merton
+calculator, we find a price of the currency call option
+to be $0.042.
+Finally, let's now assume that the six month forward exchange
+rate, F, between pounds and dollars
+is the same as the strike price, K, of the European call option.
+Armed with this information, what
+would be the price of a six month European
+put option on the pound?
+We actually don't need any other information
+in order to solve this problem.
+From put-call parity, note that we can relate European call
+and put prices on currency options as follows.
+On the left hand side, the price of a European call option
+plus the strike price of the option times the exponential
+of negative r times t, where r is the domestic risk-free rate,
+is equal to the put price plus the spot exchange
+rate times e to the negative rf T, where rf
+is the foreign risk-free rate.
+Back in the week one lecture, we learned
+the following very important relationship
+between the forward exchange rate, F, and the spot exchange
+rate, S. In particular, the forward exchange rate
+is equal to the spot exchange rate times the exponential
+of the difference between the domestic risk-free rate,
+r, and the foreign risk-free rate, rf,
+times T, the maturity of the option.
+Combining these two equations, we
+have that the price of the call option plus the strike price
+times e to negative rt, the left hand
+side of our put-call parity relationship
+on the top of the slide, is equal to the put price
+plus the forward exchange rate, F, times e to the negative rt.
+So we substitute for Se to the negative rfT
+using a relationship between the forward exchange rate
+and the spot exchange rate.
+Clearly from this equation here at the bottom of the slide,
+if K is equal to F, so if the strike price is
+equal to the forward price, c, the price of the call option,
+is equal to p, the price of the put option.
+So the price of the European put option
+is the same as the price of a European call option.
+This result is going to hold generically
+for options on any underlying asset, not just exchange rates,
+as long as the strike price is equal to the forward price.
+That concludes recitation six.
+Thank you everyone for coming, and I look forward
+to seeing you next week.

@@ -1,0 +1,173 @@
+
+PROFESSOR: Up to this point, we've
+taken the interest rate tree used to price the callable
+bond as given.
+Of course, in practice, analysts have to calibrate and test
+their models against actual price data
+to have enough confidence in the models
+to use them to price derivative products sold to customers
+or depend on the models in designing and executing
+trading strategies.
+The procedure for calibrating tree models
+is typically iterative.
+The first step is to fix some parameters at observed values
+or assume values and then to guess
+the value of other parameters that
+are free variables in the calibration.
+
+Under those assumptions, the second step
+is to calculate the value of a set of bonds and options
+where market prices can be reliably observed.
+
+The third step is to compare the estimated prices
+with the observed prices.
+If the two sets of values differ,
+then the free parameters need to be
+modified in a direction that's expected
+to reduce the divergence.
+Those steps are repeated until the gap between the model
+prediction and observed prices is judged
+to be sufficiently small.
+It will usually be impossible to bring the gap to 0,
+because a simplified model can't capture all of the factors that
+affect market values.
+In that case, it makes sense to put more weight
+on matching prices of securities or derivatives
+that are most similar to the ones
+that the model will be used to price.
+
+Let's go through an illustration of this sort of calibration
+exercise.
+It's based on a simple modeling approach that
+was suggested by Frank Fabozzi.
+Imagine that the current term structure
+of interest rates or the yield curve
+is given by the rates shown here.
+The table also shows the implied one-year forward rates.
+You should verify that the implied forward rates are
+consistent with the spot rates.
+For example, 1.035 compounded with 1.04523
+is the same as 1.0401 squared.
+All of these rates are simple annual percentage rates
+like the ones we've been using.
+With this term structure, a two-year 4% coupon bond prices
+at par, as does a three-year 4.5% coupon bond.
+
+Our goal now is to construct a three-year interest rate
+tree that produces bond prices that
+are consistent with the yield data we just looked
+at and also with an estimate of the percentage
+volatility of the one-year rate.
+Because we have more free variables
+and we'll need to match the reference data that we're
+using in this example, for convenience,
+we'll fix the risk neutral probability
+of an up move at 0.5.
+Note that other models would assign
+the risk neutral probabilities and the values
+that each node differently.
+What we're looking at is just one possibility.
+Assume that recent historical data
+implies a volatility of 0.1 estimated
+on a continuous annual basis.
+A standard way to implement that volatility
+is to assume a two-standard-deviation vertical
+distance between nodes at a point in time.
+Then starting at RL on the tree that's pictured here,
+RH is found by multiplying RL times e
+to the 2 times the standard deviation, sigma.
+To put numbers on it, if RL is 4.074,
+then our H is 4.074 times e to the 2 times 0.1, or 4.976.
+Given all of these assumptions, we're
+left with the binomial tree in one-year rates
+with only one free variable at each time step.
+
+That free variable is the lowest node at each year.
+The nodes above it are determined
+by the two standard deviations spacing that we've assumed.
+
+We also know R0 from the current one year rate.
+We'll find the remaining values of the free rates R1 and R2
+by iterating until this model prices bonds correctly.
+Starting with a two-period case, we
+take R0 equals 3.5%, reading it off
+of the current term structure.
+Let's guess that RL is 4.5%.
+Then given our assumption of sigma equal to 0.1,
+RH is 4.5 times e to the 2 times 0.1, or 5.496.
+You may wonder why I chose in RL that's greater
+than R0, the lower node.
+The reason is that in the reference rates
+we're trying to match the yield curve is upward sloping.
+That initial guess of 4.5% is actually
+less than the implied forward rate for that same time period,
+which was calculated at 4.523%.
+We can now use the first two periods of our guess
+for the tree to price a two-year of 4% coupon bond.
+So our tree was 3.5% going to 4.5%, or 5.496.
+That procedure for pricing that two-year bond is shown here.
+And it implies a price for the bond of 99.567.
+Clearly, there's something wrong with the assumptions
+I've made here.
+To be consistent with the yield curve,
+the bond must price at 100 its par value.
+But the model suggests its price is 99.567.
+Using the degree of freedom that we've
+allowed ourselves, which is to vary R1, the interest
+rate at the bottom node, we can look
+for a value that generates the correct price for the bond.
+For the implied bond price to be higher, clearly,
+R1 needs to be lower.
+Iterating on the choice of R1, you
+can verify that setting it to 4.074
+causes the tree to correctly price the two-year 4% coupon
+bond.
+
+To extend the tree out another year,
+we want to choose the lowest node on the tree, R2,
+to match the known price of a three-year bond.
+We do this holding R0 and R1 fixed
+so that the model will continue to correctly price
+one and two-year bonds.
+This process is automated in an Excel spreadsheet
+that you can download from the class materials
+page called TreeFitterMM.xls.
+
+It's programmed in Visual Basic to create a binomial tree
+that's consistent with the set of input prices for zero coupon
+bonds, which represents the yield curve.
+It can create a tree that's actually
+more general than the one we've been looking at,
+because it accommodates different volatility
+assumption for each time step.
+That allows you to incorporating time varying volatility
+into the model, which is also referred to as the term
+structure of volatility.
+For instance, if volatility is temporarily elevated,
+but expected to return to normal levels at a future time,
+that can be reflected in the volatility structure
+that you input.
+The spreadsheet also allows for the tree
+to be calibrated from the implied
+volatilities from inputting options price data.
+In that mode, which you won't be asked to use
+but that you may be curious about,
+the implied volatilities replace the assumed volatilities.
+Speaking of implied volatilities,
+this slide is a reminder that it's always
+possible to convert an options pricing
+model into a model that's used to estimate implied
+volatilities.
+That's true of binomial tree models
+as well as for analytical models such as Black's model.
+A typical options pricing model, whatever the underlying asset
+that the option is written on, includes an assumption
+about the volatility of that underlying variable.
+In the case of models based on interest rates,
+it's the volatility of those rates.
+The assumption about volatility combined with the other inputs
+and entered into a pricing model generates a theoretical options
+price as an output.
+By taking the same model, but inputting observed options
+prices instead of volatilities, the output
+will give you an implied volatility.

@@ -1,0 +1,716 @@
+0
+00:00:00,000 --> 00:00:01,958
+PROFESSOR: We've seen some of the problems that
+
+1
+00:00:01,958 --> 00:00:04,170
+can arise with delta hedging, namely,
+
+2
+00:00:04,170 --> 00:00:05,970
+that for the hedge to be effective,
+
+3
+00:00:05,970 --> 00:00:09,040
+we need to rebalance the portfolio frequently,
+
+4
+00:00:09,040 --> 00:00:12,420
+which is expensive because of transactions costs that include
+
+5
+00:00:12,420 --> 00:00:14,460
+the time it takes to make the trades,
+
+6
+00:00:14,460 --> 00:00:17,520
+and secondly, that the hedge can break down when there are
+
+7
+00:00:17,520 --> 00:00:19,740
+large changes in stock prices.
+
+8
+00:00:19,740 --> 00:00:23,310
+As we saw, it caused the failure of portfolio insurance
+
+9
+00:00:23,310 --> 00:00:26,610
+strategies when the stock market crashed.
+
+10
+00:00:26,610 --> 00:00:29,850
+Those problems can be alleviated, but not completely
+
+11
+00:00:29,850 --> 00:00:32,970
+avoided by delta-gamma hedging.
+
+12
+00:00:32,970 --> 00:00:36,750
+delta-gamma hedging involves adding to the hedge portfolio
+
+13
+00:00:36,750 --> 00:00:39,240
+a security with a positive gamma.
+
+14
+00:00:39,240 --> 00:00:42,780
+In the example here, we're using a long position
+
+15
+00:00:42,780 --> 00:00:46,030
+in a liquid short term traded option to do that.
+
+16
+00:00:46,030 --> 00:00:49,050
+We're choosing to use a short term traded option,
+
+17
+00:00:49,050 --> 00:00:52,170
+because they're highly liquid and readily available.
+
+18
+00:00:52,170 --> 00:00:54,510
+But other securities with a positive gamma
+
+19
+00:00:54,510 --> 00:00:57,430
+could have been used as well.
+
+20
+00:00:57,430 --> 00:01:00,550
+For an example of constructing the hedged position,
+
+21
+00:01:00,550 --> 00:01:05,019
+consider a portfolio we'll call I, which is short the cap
+
+22
+00:01:05,019 --> 00:01:08,290
+T dated call option, like the one that's embedded
+
+23
+00:01:08,290 --> 00:01:10,720
+in the capital protected note.
+
+24
+00:01:10,720 --> 00:01:16,510
+It's long, a fraction n in the stock index, which is currently
+
+25
+00:01:16,510 --> 00:01:21,400
+at s, and it's also long in the shorter dated call
+
+26
+00:01:21,400 --> 00:01:26,620
+option that matures the time t1 in an amount nc.
+
+27
+00:01:26,620 --> 00:01:30,310
+So the short position in the call
+
+28
+00:01:30,310 --> 00:01:35,020
+is being hedged by these two long positions.
+
+29
+00:01:35,020 --> 00:01:39,010
+As before, we'll hedge the sensitivity of I
+
+30
+00:01:39,010 --> 00:01:43,450
+to changes in the stock price, which first means delta hedging
+
+31
+00:01:43,450 --> 00:01:48,800
+by setting di ds equal to 0.
+
+32
+00:01:48,800 --> 00:01:50,600
+Now, though, we also want to hedge
+
+33
+00:01:50,600 --> 00:01:53,540
+against changes in delta, which we will
+
+34
+00:01:53,540 --> 00:01:55,760
+occur when stock prices change.
+
+35
+00:01:55,760 --> 00:01:58,610
+This implies also setting the second derivative
+
+36
+00:01:58,610 --> 00:01:59,780
+of the portfolio.
+
+37
+00:01:59,780 --> 00:02:03,740
+It's gamma equal to 0.
+
+38
+00:02:03,740 --> 00:02:06,350
+This graph is a reminder that the capital protected
+
+39
+00:02:06,350 --> 00:02:09,410
+note provided holders of that security with exposure
+
+40
+00:02:09,410 --> 00:02:12,470
+to the S&P 500, which was effectively
+
+41
+00:02:12,470 --> 00:02:14,420
+like what they would have been able to get
+
+42
+00:02:14,420 --> 00:02:18,230
+if they could buy a very long dated call option on the index.
+
+43
+00:02:18,230 --> 00:02:22,790
+The replicating portfolio used in a delta hedging strategy
+
+44
+00:02:22,790 --> 00:02:25,370
+locally protects the issuer of the capital
+
+45
+00:02:25,370 --> 00:02:29,450
+protected note, because its value changes
+
+46
+00:02:29,450 --> 00:02:33,590
+by the same amount for small changes in the S&P 500 index.
+
+47
+00:02:33,590 --> 00:02:37,940
+Here, initially, the index was at 10.
+
+48
+00:02:37,940 --> 00:02:40,880
+And the delta hedging strategy was set up,
+
+49
+00:02:40,880 --> 00:02:45,740
+so that for small stock price changes around 10,
+
+50
+00:02:45,740 --> 00:02:47,960
+the change in the replicating portfolio
+
+51
+00:02:47,960 --> 00:02:51,830
+would mirror the change in the value of the structured note.
+
+52
+00:02:51,830 --> 00:02:53,780
+Delta-gamma hedging requires setting
+
+53
+00:02:53,780 --> 00:02:56,750
+the first and second derivatives of our hedged portfolio
+
+54
+00:02:56,750 --> 00:03:00,800
+I to 0 with respect to the underlying stock value s.
+
+55
+00:03:00,800 --> 00:03:03,650
+The strategy also involves rebalancing the hedge
+
+56
+00:03:03,650 --> 00:03:04,590
+over time.
+
+57
+00:03:04,590 --> 00:03:06,800
+So differentiating the expression for I
+
+58
+00:03:06,800 --> 00:03:11,010
+once with respect to s, we get the delta of that portfolio,
+
+59
+00:03:11,010 --> 00:03:13,250
+which will set equal to 0.
+
+60
+00:03:13,250 --> 00:03:15,950
+And then differentiating it a second time,
+
+61
+00:03:15,950 --> 00:03:20,150
+we get the gamma or convexity of the portfolio, which we also
+
+62
+00:03:20,150 --> 00:03:22,820
+set equal to 0.
+
+63
+00:03:22,820 --> 00:03:28,320
+This gives us two linear equations and two unknowns,
+
+64
+00:03:28,320 --> 00:03:33,150
+the fraction of the stock, and the number
+
+65
+00:03:33,150 --> 00:03:37,830
+of short term call options, nc.
+
+66
+00:03:37,830 --> 00:03:41,580
+We can solve the second equation directly for nc.
+
+67
+00:03:41,580 --> 00:03:45,510
+It implies that nc is the ratio of the gamma of the option we
+
+68
+00:03:45,510 --> 00:03:49,380
+have a short position in and the gamma of the option we're
+
+69
+00:03:49,380 --> 00:03:52,890
+using to hedge the curvature.
+
+70
+00:03:52,890 --> 00:03:55,220
+This makes intuitive sense, that the larger
+
+71
+00:03:55,220 --> 00:03:58,250
+the gamma of the position being hedged relative to the option
+
+72
+00:03:58,250 --> 00:04:02,000
+we're using to hedge it, the larger the size of the hedge
+
+73
+00:04:02,000 --> 00:04:03,770
+position needs to be.
+
+74
+00:04:03,770 --> 00:04:07,220
+Well, once we know nc, we can solve
+
+75
+00:04:07,220 --> 00:04:13,830
+for n using first equation, and we get this expression for m.
+
+76
+00:04:13,830 --> 00:04:15,750
+Notice that the position in stocks
+
+77
+00:04:15,750 --> 00:04:18,329
+here is different than if we had only delta
+
+78
+00:04:18,329 --> 00:04:20,730
+hedged, and that's generally the case
+
+79
+00:04:20,730 --> 00:04:22,980
+when we do delta-gamma hedging.
+
+80
+00:04:22,980 --> 00:04:26,890
+In this case, the long position of the stock is smaller.
+
+81
+00:04:26,890 --> 00:04:29,400
+That's because part of the delta hedge
+
+82
+00:04:29,400 --> 00:04:32,310
+is being accomplished by the delta of the short term call
+
+83
+00:04:32,310 --> 00:04:36,510
+option, and in this case, that delta is positive.
+
+84
+00:04:36,510 --> 00:04:39,780
+We'll now apply this methodology to the capital protected
+
+85
+00:04:39,780 --> 00:04:43,500
+note example and see how much the strategy is
+
+86
+00:04:43,500 --> 00:04:46,680
+likely to improve over just delta hedging.
+
+87
+00:04:46,680 --> 00:04:51,210
+We calculated last time that the at the money short call
+
+88
+00:04:51,210 --> 00:04:55,500
+per unit of the index had a value of 1.7.
+
+89
+00:04:55,500 --> 00:04:58,170
+Plugging our assumptions into the BSM formulas
+
+90
+00:04:58,170 --> 00:05:04,740
+for the delta and gamma of this option, the gamma is 0.08,
+
+91
+00:05:04,740 --> 00:05:09,900
+and the delta is 0.5747.
+
+92
+00:05:09,900 --> 00:05:13,350
+Let's also imagine that we're going to use a one year call
+
+93
+00:05:13,350 --> 00:05:16,950
+option as part of the hedge, and let's
+
+94
+00:05:16,950 --> 00:05:19,530
+hold the other assumptions, of course, as before.
+
+95
+00:05:19,530 --> 00:05:25,860
+Well, we find that option we're using to hedge is worth 0.6443,
+
+96
+00:05:25,860 --> 00:05:29,940
+that it has a gamma of 0.2575, and that it
+
+97
+00:05:29,940 --> 00:05:33,090
+has a delta of 0.5512.
+
+98
+00:05:33,090 --> 00:05:35,850
+Putting this information into the equation
+
+99
+00:05:35,850 --> 00:05:39,090
+for the number of one year call options, nc,
+
+100
+00:05:39,090 --> 00:05:45,330
+we find that we need 0.3113 in that long call option position.
+
+101
+00:05:45,330 --> 00:05:48,930
+Turning to the position in the replicating portfolio
+
+102
+00:05:48,930 --> 00:05:54,780
+in the stock, we get n equals 0.4031.
+
+103
+00:05:54,780 --> 00:05:57,420
+And then, finally, we find the position
+
+104
+00:05:57,420 --> 00:06:00,240
+in bonds in the usual way, which is
+
+105
+00:06:00,240 --> 00:06:03,360
+to take the difference between the call option
+
+106
+00:06:03,360 --> 00:06:07,500
+and the value of the risky part of the hedge portfolio.
+
+107
+00:06:07,500 --> 00:06:10,260
+We find that we need a short position in bonds
+
+108
+00:06:10,260 --> 00:06:13,620
+equal to minus 2.53.
+
+109
+00:06:13,620 --> 00:06:16,260
+Just a few comments I want to add here.
+
+110
+00:06:16,260 --> 00:06:18,270
+You should loopback at last week's notes
+
+111
+00:06:18,270 --> 00:06:20,490
+and compare the replicating portfolio we just
+
+112
+00:06:20,490 --> 00:06:23,940
+derived with the one last week that employed a pure delta
+
+113
+00:06:23,940 --> 00:06:24,720
+hedge.
+
+114
+00:06:24,720 --> 00:06:27,990
+You'll see that this portfolio today involves a smaller
+
+115
+00:06:27,990 --> 00:06:31,170
+position in the stock index, because, again, the short term
+
+116
+00:06:31,170 --> 00:06:33,840
+call option contributes its positive delta
+
+117
+00:06:33,840 --> 00:06:35,980
+to the replicating portfolio.
+
+118
+00:06:35,980 --> 00:06:37,800
+Another option observation I want
+
+119
+00:06:37,800 --> 00:06:40,920
+to make that might not seem as obvious at first
+
+120
+00:06:40,920 --> 00:06:42,570
+is that you could have accomplished
+
+121
+00:06:42,570 --> 00:06:46,650
+the same delta-gamma hedge using a put option in place
+
+122
+00:06:46,650 --> 00:06:49,080
+of the short term call option and as the source
+
+123
+00:06:49,080 --> 00:06:50,760
+of positive convexity.
+
+124
+00:06:50,760 --> 00:06:52,890
+Note, though, that because the put option has
+
+125
+00:06:52,890 --> 00:06:55,440
+a negative delta, it would have implied
+
+126
+00:06:55,440 --> 00:06:58,285
+that the position in the stock in the replicating portfolio
+
+127
+00:06:58,285 --> 00:06:59,910
+would have actually been larger than it
+
+128
+00:06:59,910 --> 00:07:02,940
+would have been in the case of pure delta hedging.
+
+129
+00:07:02,940 --> 00:07:05,700
+In general, the choice of which option to use,
+
+130
+00:07:05,700 --> 00:07:08,070
+as we've seen for other strategies,
+
+131
+00:07:08,070 --> 00:07:12,480
+generally comes down to cost and liquidity.
+
+132
+00:07:12,480 --> 00:07:14,700
+Turning back to the diagram of the sensitivity
+
+133
+00:07:14,700 --> 00:07:16,980
+of the current value of the capital protected note
+
+134
+00:07:16,980 --> 00:07:20,100
+to the stock index value, we can compare it
+
+135
+00:07:20,100 --> 00:07:22,380
+to the sensitivity of the replicating portfolio
+
+136
+00:07:22,380 --> 00:07:26,610
+for a delta hedge and for a delta-gamma hedge.
+
+137
+00:07:26,610 --> 00:07:29,070
+The replicating portfolio for a delta hedge
+
+138
+00:07:29,070 --> 00:07:31,710
+as before as represented by the tangent line
+
+139
+00:07:31,710 --> 00:07:35,420
+at the current normalized index value of 10.
+
+140
+00:07:35,420 --> 00:07:37,400
+As we saw before, the delta hedge
+
+141
+00:07:37,400 --> 00:07:40,410
+tracks the price fairly well between, say,
+
+142
+00:07:40,410 --> 00:07:47,400
+an index value of nine and 11, so for about this region.
+
+143
+00:07:47,400 --> 00:07:49,470
+For larger stock price movements,
+
+144
+00:07:49,470 --> 00:07:54,110
+the tracking error starts to become significant.
+
+145
+00:07:54,110 --> 00:07:57,140
+The replicating portfolio for the delta-gamma hedge
+
+146
+00:07:57,140 --> 00:07:59,690
+is shown by the dotted line.
+
+147
+00:07:59,690 --> 00:08:01,760
+You can see that it more closely follows
+
+148
+00:08:01,760 --> 00:08:04,820
+the curvature of the value of the capital protected note
+
+149
+00:08:04,820 --> 00:08:07,700
+and provides pretty good protection for a significantly
+
+150
+00:08:07,700 --> 00:08:10,460
+wider range of stock price movements
+
+151
+00:08:10,460 --> 00:08:14,180
+approximately for stock prices between eight and 13.
+
+152
+00:08:14,180 --> 00:08:17,180
+This slide summarizes the key points.
+
+153
+00:08:17,180 --> 00:08:20,180
+The delta-gamma hedging strategy offers protection
+
+154
+00:08:20,180 --> 00:08:23,630
+against considerably larger swings in stock prices
+
+155
+00:08:23,630 --> 00:08:27,640
+and so allows for less frequent rebalancing.
+
+156
+00:08:27,640 --> 00:08:29,740
+In the example we just looked at,
+
+157
+00:08:29,740 --> 00:08:32,500
+it widened the region of stock prices, where the hedge was
+
+158
+00:08:32,500 --> 00:08:36,070
+effective from a range of about nine to 11
+
+159
+00:08:36,070 --> 00:08:39,179
+to a range of about eight to 13.
+
+160
+00:08:39,179 --> 00:08:42,090
+An advantage then of delta-gamma hedging
+
+161
+00:08:42,090 --> 00:08:45,030
+is that it can economize on transactions costs,
+
+162
+00:08:45,030 --> 00:08:48,390
+because it allows for less frequent portfolio rebalancing.
+
+163
+00:08:48,390 --> 00:08:51,810
+An offsetting factor, though, is that using options
+
+164
+00:08:51,810 --> 00:08:54,420
+as part of the hedge can be more expensive than just
+
+165
+00:08:54,420 --> 00:08:57,420
+trading in the stock for a delta hedging strategy.
+
+166
+00:08:57,420 --> 00:08:59,400
+The gamma hedge is also valuable,
+
+167
+00:08:59,400 --> 00:09:01,800
+because it protects better against jumps
+
+168
+00:09:01,800 --> 00:09:06,780
+in stock prices, which can cause delta hedges to fail badly.
+
+169
+00:09:06,780 --> 00:09:09,360
+A final observation is that the capital protected
+
+170
+00:09:09,360 --> 00:09:13,320
+note was marketed as a great way of achieving stock market
+
+171
+00:09:13,320 --> 00:09:16,020
+exposure, while protecting your principal.
+
+172
+00:09:16,020 --> 00:09:18,000
+In fact, the value of the capital
+
+173
+00:09:18,000 --> 00:09:20,940
+protected note will vary over time with the stock price
+
+174
+00:09:20,940 --> 00:09:25,620
+as the diagram shows and could easily fall below $10.
+
+175
+00:09:25,620 --> 00:09:28,530
+So while the capital protected note
+
+176
+00:09:28,530 --> 00:09:33,520
+does protect the initial capital at the horizon of seven years,
+
+177
+00:09:33,520 --> 00:09:37,500
+it doesn't really offer capital protection along the way.
+
+178
+00:09:37,500 --> 00:09:38,000
+
+

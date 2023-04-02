@@ -1,0 +1,488 @@
+0
+00:00:00,000 --> 00:00:01,727
+
+
+1
+00:00:01,727 --> 00:00:03,560
+PROFESSOR: There are many types of contracts
+
+2
+00:00:03,560 --> 00:00:07,190
+that involve credit risk, including loans to individuals
+
+3
+00:00:07,190 --> 00:00:10,820
+and small businesses, mortgages, sovereign debt,
+
+4
+00:00:10,820 --> 00:00:13,040
+and corporate debt.
+
+5
+00:00:13,040 --> 00:00:15,680
+Although the general principles that we'll be discussing
+
+6
+00:00:15,680 --> 00:00:18,740
+applied to all of these, the main emphasis
+
+7
+00:00:18,740 --> 00:00:20,900
+will be on models that are most directly
+
+8
+00:00:20,900 --> 00:00:22,910
+applicable to corporate debt.
+
+9
+00:00:22,910 --> 00:00:25,550
+So I want to start with a few general observations
+
+10
+00:00:25,550 --> 00:00:29,150
+about corporate debt and the nature of default risk.
+
+11
+00:00:29,150 --> 00:00:31,490
+The first has to do with credit ratings.
+
+12
+00:00:31,490 --> 00:00:33,920
+As you probably know, rating agencies
+
+13
+00:00:33,920 --> 00:00:36,080
+like Moody's, Standard & Poor's, and Fitch
+
+14
+00:00:36,080 --> 00:00:39,380
+assign ratings to corporate debt issues that give investors
+
+15
+00:00:39,380 --> 00:00:41,390
+some idea of the default risk that's
+
+16
+00:00:41,390 --> 00:00:46,730
+associated with a particular issuer or security.
+
+17
+00:00:46,730 --> 00:00:48,260
+There are many levels of ratings,
+
+18
+00:00:48,260 --> 00:00:52,820
+ranging from very safe triple-A rated securities down to D
+
+19
+00:00:52,820 --> 00:00:56,750
+rated securities that are in default.
+
+20
+00:00:56,750 --> 00:00:58,910
+A major distinction based on ratings
+
+21
+00:00:58,910 --> 00:01:01,880
+is the difference between investment grade
+
+22
+00:01:01,880 --> 00:01:04,769
+and below investment grade.
+
+23
+00:01:04,769 --> 00:01:06,720
+Below investment grade securities
+
+24
+00:01:06,720 --> 00:01:09,960
+are also described as speculative, high-yield,
+
+25
+00:01:09,960 --> 00:01:11,770
+or junk.
+
+26
+00:01:11,770 --> 00:01:14,200
+High-yield bonds historically have
+
+27
+00:01:14,200 --> 00:01:17,990
+had much higher default rates than investment grade bonds.
+
+28
+00:01:17,990 --> 00:01:21,010
+However, many high-yield bonds were originally
+
+29
+00:01:21,010 --> 00:01:25,000
+investment grade and they were downgraded as their issuers ran
+
+30
+00:01:25,000 --> 00:01:26,360
+into trouble.
+
+31
+00:01:26,360 --> 00:01:29,920
+These are the so-called fallen angels.
+
+32
+00:01:29,920 --> 00:01:32,260
+Hence buying an investment grade bond
+
+33
+00:01:32,260 --> 00:01:34,870
+isn't a guarantee that you won't eventually
+
+34
+00:01:34,870 --> 00:01:37,150
+experience default losses.
+
+35
+00:01:37,150 --> 00:01:40,450
+However, it's interesting that high-yield bonds have performed
+
+36
+00:01:40,450 --> 00:01:44,980
+well historically in the sense of having realized relatively
+
+37
+00:01:44,980 --> 00:01:48,130
+high risk adjusted returns.
+
+38
+00:01:48,130 --> 00:01:50,690
+Regarding the nature of default risk,
+
+39
+00:01:50,690 --> 00:01:52,570
+it's also important to understand
+
+40
+00:01:52,570 --> 00:01:55,270
+that only a small percentage of corporate bonds
+
+41
+00:01:55,270 --> 00:02:00,010
+will ever default. Nevertheless, bond prices are significantly
+
+42
+00:02:00,010 --> 00:02:03,730
+affected by the possibility that default losses will occur
+
+43
+00:02:03,730 --> 00:02:06,430
+and the fact that the likelihood of loss
+
+44
+00:02:06,430 --> 00:02:09,690
+vary significantly over time.
+
+45
+00:02:09,690 --> 00:02:13,230
+While default events are rare, rating changes
+
+46
+00:02:13,230 --> 00:02:15,060
+are much more frequent.
+
+47
+00:02:15,060 --> 00:02:17,850
+Those are a manifestation of default risk
+
+48
+00:02:17,850 --> 00:02:21,000
+and can be described as downgrade risk.
+
+49
+00:02:21,000 --> 00:02:24,060
+A bond that's downgraded when the market isn't expecting it
+
+50
+00:02:24,060 --> 00:02:27,600
+is likely to experience a price drop and conversely
+
+51
+00:02:27,600 --> 00:02:30,510
+for a bond that's upgraded.
+
+52
+00:02:30,510 --> 00:02:33,690
+There are variants of events that themselves don't directly
+
+53
+00:02:33,690 --> 00:02:36,600
+cause default but that can significantly
+
+54
+00:02:36,600 --> 00:02:38,340
+change its likelihood.
+
+55
+00:02:38,340 --> 00:02:40,890
+For instance, a legal ruling that significantly
+
+56
+00:02:40,890 --> 00:02:44,400
+changes the profitability of a corporation.
+
+57
+00:02:44,400 --> 00:02:48,510
+Liquidity, that is the ability to buy or sell a bond quickly
+
+58
+00:02:48,510 --> 00:02:52,290
+with minimal price impact, is typically lower
+
+59
+00:02:52,290 --> 00:02:56,160
+for riskier bonds, hence credit risk and liquidity
+
+60
+00:02:56,160 --> 00:03:00,140
+risk tend to be related.
+
+61
+00:03:00,140 --> 00:03:02,480
+Default and recovery rates are key statistics
+
+62
+00:03:02,480 --> 00:03:04,670
+used to quantify credit risk.
+
+63
+00:03:04,670 --> 00:03:06,860
+The default rate is the probability
+
+64
+00:03:06,860 --> 00:03:08,870
+that a default will occur.
+
+65
+00:03:08,870 --> 00:03:12,710
+It's usually stated on an annual basis.
+
+66
+00:03:12,710 --> 00:03:16,370
+What constitutes a default event depends on whose definition
+
+67
+00:03:16,370 --> 00:03:17,660
+is being used.
+
+68
+00:03:17,660 --> 00:03:20,480
+Rating agencies have stated criteria
+
+69
+00:03:20,480 --> 00:03:23,400
+for what determines a default and then
+
+70
+00:03:23,400 --> 00:03:25,650
+contracts like credit default swaps
+
+71
+00:03:25,650 --> 00:03:30,870
+also will specify what they treat as a default event.
+
+72
+00:03:30,870 --> 00:03:34,380
+Now, the recovery rate is the percentage of the amount owed,
+
+73
+00:03:34,380 --> 00:03:37,500
+usually principal plus any accrued interest,
+
+74
+00:03:37,500 --> 00:03:39,600
+that will be received by the creditor
+
+75
+00:03:39,600 --> 00:03:44,230
+in the event of a default. Recoveries
+
+76
+00:03:44,230 --> 00:03:46,730
+are calculated in various ways.
+
+77
+00:03:46,730 --> 00:03:51,280
+One approach is to estimate the present value of the cash that
+
+78
+00:03:51,280 --> 00:03:54,040
+will be eventually recovered, such as when
+
+79
+00:03:54,040 --> 00:03:57,560
+the remaining assets of the firm are liquidated.
+
+80
+00:03:57,560 --> 00:04:00,980
+Alternatively, sometimes the market price
+
+81
+00:04:00,980 --> 00:04:04,040
+of the bond right after default is announced
+
+82
+00:04:04,040 --> 00:04:08,840
+is used as a proxy for the present value of recoveries.
+
+83
+00:04:08,840 --> 00:04:14,630
+Note that the recovery rate is one minus the loss rate.
+
+84
+00:04:14,630 --> 00:04:21,285
+And the loss rate is also called the loss given default.
+
+85
+00:04:21,285 --> 00:04:23,990
+Default and recovery rates can vary significantly
+
+86
+00:04:23,990 --> 00:04:25,850
+over the life of a bond.
+
+87
+00:04:25,850 --> 00:04:29,450
+For example, a bond issued to build a nuclear power plant
+
+88
+00:04:29,450 --> 00:04:31,910
+may have a much higher probability of default
+
+89
+00:04:31,910 --> 00:04:35,780
+and a lower expected recovery rate during the first few years
+
+90
+00:04:35,780 --> 00:04:39,830
+it's outstanding and the plant is still under construction.
+
+91
+00:04:39,830 --> 00:04:43,280
+Once the reactor is up and running and producing revenues,
+
+92
+00:04:43,280 --> 00:04:47,210
+it's much less likely that there will be a default.
+
+93
+00:04:47,210 --> 00:04:49,850
+That sort of situation can also give rise
+
+94
+00:04:49,850 --> 00:04:51,950
+to what's called a term structure of default
+
+95
+00:04:51,950 --> 00:04:53,510
+and recovery rates.
+
+96
+00:04:53,510 --> 00:04:55,520
+In the model we're going to look at,
+
+97
+00:04:55,520 --> 00:04:58,250
+for simplicity, we'll assume that those rates are
+
+98
+00:04:58,250 --> 00:05:00,800
+held constant, but the model is easily
+
+99
+00:05:00,800 --> 00:05:03,590
+modified to incorporate a term structure of rates.
+
+100
+00:05:03,590 --> 00:05:06,460
+
+
+101
+00:05:06,460 --> 00:05:09,150
+This graph illustrates the magnitude of default rates
+
+102
+00:05:09,150 --> 00:05:12,180
+over time for investment grade, speculative grade,
+
+103
+00:05:12,180 --> 00:05:18,110
+and overall debt issuances for the period from 1981 to 2018.
+
+104
+00:05:18,110 --> 00:05:21,000
+I want to highlight several observations here.
+
+105
+00:05:21,000 --> 00:05:24,230
+First, there are clearly large fluctuations
+
+106
+00:05:24,230 --> 00:05:28,310
+in default rates over time with spikes during recessions.
+
+107
+00:05:28,310 --> 00:05:32,450
+Those fluctuations are driven by speculative grade debt.
+
+108
+00:05:32,450 --> 00:05:35,630
+As shown here, those spikes and default rates
+
+109
+00:05:35,630 --> 00:05:42,470
+occurred during the 1991, 2001, and 2008 recessions.
+
+110
+00:05:42,470 --> 00:05:45,230
+Second, even in recessions, default rates
+
+111
+00:05:45,230 --> 00:05:48,380
+are close to zero for investment grade debt.
+
+112
+00:05:48,380 --> 00:05:51,590
+The overall default rate is also quite low.
+
+113
+00:05:51,590 --> 00:05:54,680
+Over this time period, it only touched 4%
+
+114
+00:05:54,680 --> 00:05:59,900
+in the severe recession of 2008-2009 and for most periods
+
+115
+00:05:59,900 --> 00:06:02,760
+it's below 2%.
+
+116
+00:06:02,760 --> 00:06:05,940
+Importantly, the positive covariance
+
+117
+00:06:05,940 --> 00:06:09,060
+of default rates with the economic downturns imparts
+
+118
+00:06:09,060 --> 00:06:13,960
+market risk to corporate debt, hence risky corporate debt
+
+119
+00:06:13,960 --> 00:06:17,980
+has a positive beta and the cost of that market risk
+
+120
+00:06:17,980 --> 00:06:20,850
+is reflected in bond prices.
+
+121
+00:06:20,850 --> 00:06:23,000
+
+

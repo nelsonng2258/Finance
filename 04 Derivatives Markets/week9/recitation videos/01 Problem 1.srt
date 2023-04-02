@@ -1,0 +1,268 @@
+0
+00:00:00,000 --> 00:00:00,660
+
+
+1
+00:00:00,660 --> 00:00:05,300
+PROFESSOR: Without further ado, let's begin with problem one.
+
+2
+00:00:05,300 --> 00:00:09,410
+Problem one says to consider two 7% annual coupon
+
+3
+00:00:09,410 --> 00:00:13,610
+corporate bonds each with one year until maturity.
+
+4
+00:00:13,610 --> 00:00:18,790
+Both bonds are expected to default with a 20% probability.
+
+5
+00:00:18,790 --> 00:00:22,270
+Investors demand a risk adjusted expected return
+
+6
+00:00:22,270 --> 00:00:27,310
+of 4.5% on both bonds, and the only difference between the two
+
+7
+00:00:27,310 --> 00:00:30,370
+bonds is that, in the event of default,
+
+8
+00:00:30,370 --> 00:00:33,340
+the expected recovery rate on the first bond
+
+9
+00:00:33,340 --> 00:00:36,760
+is 75% whereas the expected recovery
+
+10
+00:00:36,760 --> 00:00:39,180
+rate on the second bond is 25%.
+
+11
+00:00:39,180 --> 00:00:42,080
+
+
+12
+00:00:42,080 --> 00:00:45,140
+Use this information to estimate the difference
+
+13
+00:00:45,140 --> 00:00:48,320
+in the quoted yields to maturity between the two bonds.
+
+14
+00:00:48,320 --> 00:00:51,660
+
+
+15
+00:00:51,660 --> 00:00:53,700
+Well, before we solve the problem,
+
+16
+00:00:53,700 --> 00:00:56,570
+let's first get some notation out of the way.
+
+17
+00:00:56,570 --> 00:01:00,560
+Let P sub 1 be the value of the first bond that
+
+18
+00:01:00,560 --> 00:01:03,890
+has the expected recovery rate of 75%,
+
+19
+00:01:03,890 --> 00:01:07,340
+and P sub 2 be the value of the second bond
+
+20
+00:01:07,340 --> 00:01:11,000
+with the expected recovery rate of 25%.
+
+21
+00:01:11,000 --> 00:01:13,400
+Assume that both bonds in this example
+
+22
+00:01:13,400 --> 00:01:16,940
+have a face value of 100.
+
+23
+00:01:16,940 --> 00:01:21,020
+Since there's one year until maturity on both bonds,
+
+24
+00:01:21,020 --> 00:01:25,850
+the holder of each bond will receive its face value of 100
+
+25
+00:01:25,850 --> 00:01:28,970
+plus a terminal coupon payment of 7
+
+26
+00:01:28,970 --> 00:01:33,770
+if the bond doesn't default, which occurs 100 minus 20,
+
+27
+00:01:33,770 --> 00:01:37,770
+which is equal to 80% of the time.
+
+28
+00:01:37,770 --> 00:01:40,880
+If the first bond defaults, then the holder of the bond will
+
+29
+00:01:40,880 --> 00:01:43,250
+receive 75% --
+
+30
+00:01:43,250 --> 00:01:45,050
+the expected recovery rate --
+
+31
+00:01:45,050 --> 00:01:49,910
+times the terminal payoff of 100 of the face value
+
+32
+00:01:49,910 --> 00:01:55,790
+plus the terminal coupon of 7, which is equal to 80.25.
+
+33
+00:01:55,790 --> 00:01:58,310
+On the other hand if the second bond defaults,
+
+34
+00:01:58,310 --> 00:02:01,610
+the holder of the bond will receive 25% --
+
+35
+00:02:01,610 --> 00:02:03,560
+it's expected recovery rate --
+
+36
+00:02:03,560 --> 00:02:09,419
+times 107, which is equal to 26.75.
+
+37
+00:02:09,419 --> 00:02:13,500
+Thus, we can solve for P1, the price of the first bond,
+
+38
+00:02:13,500 --> 00:02:20,130
+as 0.8, which is the probability that the bond doesn't default,
+
+39
+00:02:20,130 --> 00:02:25,440
+times 107, its terminal payoff, discounted at the risk adjusted
+
+40
+00:02:25,440 --> 00:02:32,400
+interest rate of 4.5%, plus 0.2, the probability
+
+41
+00:02:32,400 --> 00:02:36,120
+that the bond does default, times its expected recovery
+
+42
+00:02:36,120 --> 00:02:42,330
+rate of 75% times it's terminal payoff of 107,
+
+43
+00:02:42,330 --> 00:02:44,610
+also discounted at the risk adjusted
+
+44
+00:02:44,610 --> 00:02:52,800
+interest rate of 4.5%, which is equal to 97.273.
+
+45
+00:02:52,800 --> 00:02:56,100
+A similar calculation for the price of the second bond
+
+46
+00:02:56,100 --> 00:02:59,760
+yields a price of 87.033.
+
+47
+00:02:59,760 --> 00:03:02,580
+The only difference here is that now the expected recovery
+
+48
+00:03:02,580 --> 00:03:10,670
+rate if the bond does default is equal to 25% rather than 75%.
+
+49
+00:03:10,670 --> 00:03:14,060
+Finally, we can find the yield-to-maturity of each bond
+
+50
+00:03:14,060 --> 00:03:16,430
+as follows.
+
+51
+00:03:16,430 --> 00:03:19,550
+The yield-to-maturity, for instance on the first bond,
+
+52
+00:03:19,550 --> 00:03:22,160
+is the single interest rate that equates
+
+53
+00:03:22,160 --> 00:03:24,620
+the present value of the bond on the left hand
+
+54
+00:03:24,620 --> 00:03:27,760
+side with its price.
+
+55
+00:03:27,760 --> 00:03:30,400
+Solving the first equation for Y1,
+
+56
+00:03:30,400 --> 00:03:32,140
+we find that the yield to maturity
+
+57
+00:03:32,140 --> 00:03:35,890
+on the first bond that has the higher expected recovery rate
+
+58
+00:03:35,890 --> 00:03:38,330
+is 10%.
+
+59
+00:03:38,330 --> 00:03:40,230
+A similar calculation shows that the yield
+
+60
+00:03:40,230 --> 00:03:43,790
+to maturity on the second bond that has the lower recovery
+
+61
+00:03:43,790 --> 00:03:46,780
+rate is 22.94.
+
+62
+00:03:46,780 --> 00:03:52,690
+Thus, the difference between these two yields is 12.94.
+
+63
+00:03:52,690 --> 00:03:57,580
+Intuitively, the higher yield on the second bond,
+
+64
+00:03:57,580 --> 00:04:01,300
+that is, the bond with the lower recovery rate,
+
+65
+00:04:01,300 --> 00:04:04,500
+reflects its greater credit risk.
+
+66
+00:04:04,500 --> 00:04:05,000
+
+

@@ -1,0 +1,476 @@
+0
+00:00:00,000 --> 00:00:01,305
+
+
+1
+00:00:01,305 --> 00:00:04,350
+PROFESSOR: For securities like CDOs and CLOs,
+
+2
+00:00:04,350 --> 00:00:06,270
+the main function of securitization
+
+3
+00:00:06,270 --> 00:00:08,850
+is to diversify and restructure credit risk.
+
+4
+00:00:08,850 --> 00:00:11,850
+We'll focus on CDOs since the considerations
+
+5
+00:00:11,850 --> 00:00:13,860
+are similar for other credit-sensitive
+
+6
+00:00:13,860 --> 00:00:16,370
+securitizations.
+
+7
+00:00:16,370 --> 00:00:18,950
+It's common to describe CDOs as involving
+
+8
+00:00:18,950 --> 00:00:21,500
+a waterfall of cash flows generated
+
+9
+00:00:21,500 --> 00:00:24,230
+by the pool of underlying securities.
+
+10
+00:00:24,230 --> 00:00:26,810
+The securitization allocates those cash flows
+
+11
+00:00:26,810 --> 00:00:30,140
+to different tranches or classes of securities,
+
+12
+00:00:30,140 --> 00:00:32,509
+starting with the most senior, going next
+
+13
+00:00:32,509 --> 00:00:34,860
+to the junior, or mezzanine, classes,
+
+14
+00:00:34,860 --> 00:00:37,460
+and finally going to the holders of the equity tranche
+
+15
+00:00:37,460 --> 00:00:41,042
+if cash flows are sufficiently large.
+
+16
+00:00:41,042 --> 00:00:42,500
+The width of the different tranches
+
+17
+00:00:42,500 --> 00:00:44,600
+will depend on the riskiness of the underlying
+
+18
+00:00:44,600 --> 00:00:46,010
+pool of debt securities.
+
+19
+00:00:46,010 --> 00:00:48,410
+The riskier the securities, the larger
+
+20
+00:00:48,410 --> 00:00:50,090
+the equity and mezzanine tranches
+
+21
+00:00:50,090 --> 00:00:52,230
+relative to super senior tranche,
+
+22
+00:00:52,230 --> 00:00:55,640
+which is intended to be very well protected from defaults.
+
+23
+00:00:55,640 --> 00:00:59,150
+If the super senior tranche is set at 100%,
+
+24
+00:00:59,150 --> 00:01:02,450
+it's safe to assume that the underlying debt pool will have
+
+25
+00:01:02,450 --> 00:01:05,030
+a credit guarantee from a third party insurer,
+
+26
+00:01:05,030 --> 00:01:07,250
+or from the government.
+
+27
+00:01:07,250 --> 00:01:10,010
+The term notional here refers to the principal value
+
+28
+00:01:10,010 --> 00:01:11,870
+of the loans in the pool.
+
+29
+00:01:11,870 --> 00:01:15,590
+Two more definitions to be aware of, involving more exotic CDO
+
+30
+00:01:15,590 --> 00:01:20,090
+structures, synthetic CDOs are constructed with reference
+
+31
+00:01:20,090 --> 00:01:22,850
+to a pool of loans in a credit index.
+
+32
+00:01:22,850 --> 00:01:26,840
+A CDO squared is a CDO backed by the cash flows
+
+33
+00:01:26,840 --> 00:01:29,630
+from a pool of CDO securities rather than
+
+34
+00:01:29,630 --> 00:01:34,630
+by the pooled cash flows of underlying debt securities.
+
+35
+00:01:34,630 --> 00:01:38,520
+This diagram is an example of a typical CDO structure.
+
+36
+00:01:38,520 --> 00:01:40,260
+Imagine that there are $100 million
+
+37
+00:01:40,260 --> 00:01:43,200
+in principal of the bonds underlying the CDO.
+
+38
+00:01:43,200 --> 00:01:47,100
+The average credit rating of those bonds is BBB.
+
+39
+00:01:47,100 --> 00:01:50,220
+The CDOs structured with the super senior tranche having
+
+40
+00:01:50,220 --> 00:01:53,530
+a notional principal of $70 million,
+
+41
+00:01:53,530 --> 00:01:56,940
+the senior tranche getting the next $20,
+
+42
+00:01:56,940 --> 00:01:59,370
+then the mezzanine tranche at $7,
+
+43
+00:01:59,370 --> 00:02:03,190
+and equity with principal of $3 million.
+
+44
+00:02:03,190 --> 00:02:05,250
+The actual cash flows that come in
+
+45
+00:02:05,250 --> 00:02:08,729
+will go first to pay back the super senior securities, next,
+
+46
+00:02:08,729 --> 00:02:11,790
+the senior securities, and so forth.
+
+47
+00:02:11,790 --> 00:02:13,740
+Because it's extremely likely that
+
+48
+00:02:13,740 --> 00:02:16,620
+the super senior securities will be repaid in full,
+
+49
+00:02:16,620 --> 00:02:19,500
+they receive AAA rating.
+
+50
+00:02:19,500 --> 00:02:22,140
+Rating agencies also judge the senior securities
+
+51
+00:02:22,140 --> 00:02:24,960
+to be very unlikely to take losses and assign
+
+52
+00:02:24,960 --> 00:02:27,120
+a rating of AA.
+
+53
+00:02:27,120 --> 00:02:30,030
+The mezzanine securities receive a BBB rating,
+
+54
+00:02:30,030 --> 00:02:31,830
+the same as on the original bonds,
+
+55
+00:02:31,830 --> 00:02:34,560
+and the equity is unrated.
+
+56
+00:02:34,560 --> 00:02:36,870
+It may seem at first like alchemy to you
+
+57
+00:02:36,870 --> 00:02:39,960
+that a pool of BBB bonds could be restructured
+
+58
+00:02:39,960 --> 00:02:43,410
+to create such a large portion of securities carrying a AA,
+
+59
+00:02:43,410 --> 00:02:46,980
+or even a AAA, rating.
+
+60
+00:02:46,980 --> 00:02:49,170
+The reason that's possible is, first,
+
+61
+00:02:49,170 --> 00:02:53,100
+because the risk is being concentrated onto the mezzanine
+
+62
+00:02:53,100 --> 00:02:55,950
+and particularly, onto the equity tranches.
+
+63
+00:02:55,950 --> 00:02:58,080
+Second, the risk in a pool of bonds
+
+64
+00:02:58,080 --> 00:03:00,060
+is lower than for individual bonds
+
+65
+00:03:00,060 --> 00:03:03,210
+because of the diversification of the idiosyncratic default
+
+66
+00:03:03,210 --> 00:03:05,460
+risk across bonds.
+
+67
+00:03:05,460 --> 00:03:09,300
+Notice, too, that this looks a lot like the balance sheet
+
+68
+00:03:09,300 --> 00:03:12,300
+of a firm with risky assets that has
+
+69
+00:03:12,300 --> 00:03:14,610
+liabilities structured to consist
+
+70
+00:03:14,610 --> 00:03:16,930
+of safe debt and risky equity.
+
+71
+00:03:16,930 --> 00:03:20,670
+So there's nothing unusual about transferring asset risk along
+
+72
+00:03:20,670 --> 00:03:24,120
+with a commensurate difference in expected return
+
+73
+00:03:24,120 --> 00:03:26,770
+to leveraged equity holders.
+
+74
+00:03:26,770 --> 00:03:29,580
+This reference I'm making to the capital structure of a firm
+
+75
+00:03:29,580 --> 00:03:32,100
+is also intended to alert you to the fact
+
+76
+00:03:32,100 --> 00:03:34,620
+that the Merton model, and extensions to it,
+
+77
+00:03:34,620 --> 00:03:38,812
+can be used to price the claims arising from a CDO.
+
+78
+00:03:38,812 --> 00:03:41,330
+This diagram summarizes the conclusions
+
+79
+00:03:41,330 --> 00:03:43,340
+about the distribution of risk.
+
+80
+00:03:43,340 --> 00:03:45,200
+The dark bars show the notional share
+
+81
+00:03:45,200 --> 00:03:47,520
+of principle held by the different tranches,
+
+82
+00:03:47,520 --> 00:03:50,810
+whereas the light bars represent the proportion of risk absorbed
+
+83
+00:03:50,810 --> 00:03:53,100
+by each of the tranches.
+
+84
+00:03:53,100 --> 00:03:56,340
+Most of the risk falls onto the equity tranche and some
+
+85
+00:03:56,340 --> 00:03:58,530
+onto the mezzanine trusts, which here
+
+86
+00:03:58,530 --> 00:04:00,780
+is shown as being further divided between more
+
+87
+00:04:00,780 --> 00:04:02,550
+or less senior claims.
+
+88
+00:04:02,550 --> 00:04:05,850
+Very little of the risk falls onto the senior or super senior
+
+89
+00:04:05,850 --> 00:04:08,250
+tranches.
+
+90
+00:04:08,250 --> 00:04:10,770
+Before turning to a numerical example,
+
+91
+00:04:10,770 --> 00:04:13,500
+I want to say a few more words about the mechanisms used
+
+92
+00:04:13,500 --> 00:04:15,600
+for credit risk transfer.
+
+93
+00:04:15,600 --> 00:04:19,170
+In a CDO structure, the transfer of most of the credit risk
+
+94
+00:04:19,170 --> 00:04:22,770
+is to the equity tranche, and that's described
+
+95
+00:04:22,770 --> 00:04:25,740
+as overcollateralization.
+
+96
+00:04:25,740 --> 00:04:29,430
+The idea is that the $100 in principle
+
+97
+00:04:29,430 --> 00:04:32,280
+overcollateralized the rated securities issued
+
+98
+00:04:32,280 --> 00:04:36,420
+against the pool, in this case, by $3.
+
+99
+00:04:36,420 --> 00:04:39,150
+An alternative to overcollateralization
+
+100
+00:04:39,150 --> 00:04:43,020
+is to obtain a guarantee from a credit enhancer.
+
+101
+00:04:43,020 --> 00:04:46,740
+There are both private sector and public sector suppliers
+
+102
+00:04:46,740 --> 00:04:48,390
+of credit enhancement.
+
+103
+00:04:48,390 --> 00:04:51,870
+On the private sector side, insurance companies and banks
+
+104
+00:04:51,870 --> 00:04:54,900
+sell protection in exchange for a premium,
+
+105
+00:04:54,900 --> 00:04:57,750
+effectively selling credit default options,
+
+106
+00:04:57,750 --> 00:04:59,670
+or credit default swaps.
+
+107
+00:04:59,670 --> 00:05:02,460
+Often, governments also provide credit guarantees
+
+108
+00:05:02,460 --> 00:05:05,970
+that substitute for the need for equity protection.
+
+109
+00:05:05,970 --> 00:05:09,210
+That's common in the US residential mortgage market
+
+110
+00:05:09,210 --> 00:05:12,840
+where Fannie Mae, Freddie Mac, and other federal agencies
+
+111
+00:05:12,840 --> 00:05:16,530
+absorb the credit risk on most mortgages that are securitized.
+
+112
+00:05:16,530 --> 00:05:20,340
+Credit enhancement can add value by allowing investors
+
+113
+00:05:20,340 --> 00:05:24,180
+without credit expertise to feel comfortable
+
+114
+00:05:24,180 --> 00:05:27,040
+buying these securities with credit risk.
+
+115
+00:05:27,040 --> 00:05:30,150
+Credit enhancement also improves a securities credit
+
+116
+00:05:30,150 --> 00:05:33,180
+rating and more highly-rated securities
+
+117
+00:05:33,180 --> 00:05:35,500
+tend to be more liquid.
+
+118
+00:05:35,500 --> 00:05:36,000
+
+
