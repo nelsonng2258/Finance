@@ -1,0 +1,219 @@
+
+PROFESSOR: Ito processes are generalized Brownian motion,
+and Brownian motion is a continuous time random walk.
+We've looked at how to describe the evolution of a random walk
+in differential and in integral form,
+and now, let's consider an ensemble,
+a whole set of paths and random walks,
+like those you can see behind me.
+We start at a particular point, and each of these paths
+is an equally probable realization
+of what might happen.
+These are paths simulated on a computer,
+where I have taken the expression for an Ito process,
+discretized it, and in this case,
+we can see that, from the same data generating
+process with the same drift rate and volatility,
+some of our paths go up.
+Some of them go down.
+None of them are straight for any period of time.
+But if we think about this as time evolves, as we go from
+left to right, and we think of considering cross sections
+at a particular point in time, what does the distribution look
+like?
+What is the probability of a random walk
+appearing at a given distance from the origin?
+Well, from this picture, we can see a few things.
+First, we can see that the outcomes are indeed random,
+that whether we're up or down or where
+we are depends on which paths.
+So many, many outcomes are possible at any given
+point in time.
+We also can see that the width of the distribution
+grows over time, and there's no surprise.
+We know that the variance grows linearly,
+that the standard deviation grows
+with the square root of time, and that
+means that individual random walks tend to diffuse away
+from the origin.
+The longer time goes on, the greater chance
+they have of reaching a larger distance
+and the more improbable it is they're found near the origin,
+even though the center of the distribution
+remains the most probable place.
+So let's think about-- keep this picture in mind,
+of random walks.
+We want to think about, for a given
+point in time, what the distribution of outcomes
+that is.
+What the probability distribution function is?
+What's the likelihood, at a given point in time,
+that I end up here versus here versus right
+in the thick of things or right down here?
+And that, of course, is a function of time,
+but typically, we think, of course,
+of starting with initial conditions
+and letting time evolve forwards.
+What we're going to see and take advantage
+of is that, for a given initial condition,
+we can ask about probabilities of reaching future outcomes.
+The probability distribution functions
+we have, though, will be a function
+of the initial starting point, and the fact
+that it depends on both endpoints of our walk--
+the initial starting point and the uncertain future outcome--
+will be helpful for us for solving the Black-Scholes
+equation.
+So let's start with basics--
+give a random variable, mean mu, and variance sigma squared--
+which we write in this way.
+We say that x is drawn from a normal distribution of mean mu
+and variant sigma squared.
+We have the familiar Gaussian probability density function.
+p of x is a normalization factor, one of our square root
+to pi sigma squared.
+e to the minus x minus mu quantity squared--
+that tells us that the center of the peak
+is when the exponential vanishes,
+when x equals mu, divided by 2 sigma squared,
+which tells us-- which normalizes the distribution.
+Sigma is the width of the distribution,
+and that tells us that we can think
+about how far we are from the peak in units of sigma.
+If our distance from the peak in units of sigma
+is the same, when we change sigma,
+the probabilities will be identical.
+So that's for a single random variable.
+Now, a time dependence stochastic process,
+x sub t, which we've seen, which we've looked at,
+saying Ito process with constant coefficients mu and sigma,
+as a generalized arithmetic Brownian motion,
+has variants sigma squared t, and its got mean mu t.
+That is, the mean grows linearly with time.
+The variance grows also linearly with time.
+So what does that mean?
+That means xt, the end point, the distance we've
+traveled from the initial point, is a Gaussian distributed
+random variable.
+That's true for all time scales t, from dt infinitesimal
+to macroscopic time scales, and that
+means we know what the probability distribution is
+for the endpoints.
+We know the probability density function is the same as the one
+we had before, but where now, it's a function of t,
+and we put in t in the appropriate places.
+Mu gets replaced by mu t, and sigma
+squared get replaced by sigma squared t.
+And you can check that this is still appropriately normalized.
+But the picture is now quite different.
+This is what we saw on the previous slide.
+The peak of this distribution moves at speed t.
+If mu is a positive number, it moves to the right.
+If mu is a negative number, it moves to the left,
+and I've illustrated that up here behind me.
+So this might be the peak at one point.
+This is at a point mu t.
+And as time goes on, the peak moves to the right.
+These are subsequent time steps, and as the distribution
+moves to the right, we also see that, with the peak,
+sigma squared of t broadens out over time.
+So this probability distribution describes a time varying bell
+curve, the Gaussian shape.
+It moves to the right for positive mu at speed mu,
+and it broadens out with time.
+That also means that if we're to run time backwards, that as t
+gets smaller and approaches 0, that we would be moving
+in the opposite direction.
+That is, that the peaks get narrower--
+the curves get narrower and narrower
+and get more and more concentrated
+at a central value.
+So that's our Gaussian distribution.
+We've just applied it in a new way.
+We've seen it in many settings, and here's one more.
+You can check that this probability distribution
+function, p of xt, satisfies a differential equation called
+the Fokker-Planck equation, and I've written it here.
+Partial derivative with respect to t minus sigma
+squared over 2.
+Second partial with respect to x plus the mu
+dependent term mu, partial of p with respect to x.
+And you can check that by taking partial derivatives,
+and in fact, each of the partial derivatives
+is proportional to p itself because
+of the exponential nature here.
+And the prefactor doesn't change that, so all of the terms
+can be written as proportional to p.
+If you take the appropriate partials,
+substitute them into the equation,
+you'll see that this, in fact, is
+a differential equation for that probability density function.
+So just to recap--
+this probability density function
+measures the distribution.
+If we do this for a Monte Carlo simulation,
+the histogram at a given point in time
+would be one of these curves, and it
+would be an approximation to one of these curves.
+And as time goes on, the peaks move out,
+but in particular, the curve broadens.
+So that was for a random walk that began at the origin
+and went to a point xt.
+But now, suppose we're specific about starting
+at a particular point, x0 t0.
+And in this notation, you can read this
+as the probability to be at x big T
+at time big T given that we started at x0 at time t0.
+So it looks a little complicated.
+There are for arguments, but the first two
+are measuring the probability of being observed
+at this point in time, given that we
+started deterministically at point x0 and t0.
+Now, in this expression, this is just from time and space
+translation.
+Everything depends on t minus t0 and x minus x0.
+So this is the same expression that we wrote down
+before if you take the special case where x0 equals 0
+and where t0 equals 0.
+But it's interesting to note that, having written it down,
+even though big T and t0 have very
+different interpretations--
+one is where we observe a random variable.
+The other is where we begin our random walk.
+But time t0, we know exactly where we are.
+The distribution has to be concentrated at x0.
+Despite the fact that they have very different meanings,
+as a function, we can evaluate p both as a function
+of its first two arguments or as a function of its last two
+arguments.
+And if I think about it as a function of x0
+and t0 holding xt and big T fixed,
+then I find that it satisfies a different differential
+equation called a backward equation,
+and it's backward because we're looking
+at the wrong point in t.
+That is, this is asking a slightly different question.
+It's saying, if I wanted to observe the probability
+at a particular value at a particular ending point,
+how does that depend on where I start?
+The probability will change, obviously.
+The farther away I am, depending on the distance
+in time or in space, the smaller the probability will be.
+So it's a fair question to ask how this function depends
+on the two arguments x0 and t0.
+Because it's so similar, because everything depends only
+on differences, I can replace partial of p
+with respect to t by the negative of the partial p
+with respect to t0.
+And similarly, for the x derivatives, so
+this term changes sign.
+This term changes sign.
+This one would get 2 sign changes
+because there are two x0.
+So now, where before, we had two relative plus signs and one
+minus sign, all three of these signs
+are positive in this differential equation.
+In this equation, we haven't derived from anywhere else.
+All we're saying is, if we plug in this expression,
+this Gaussian curve into this differential equation,
+that the equation is satisfied.

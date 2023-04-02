@@ -1,0 +1,612 @@
+0
+00:00:00,000 --> 00:00:00,870
+
+
+1
+00:00:00,870 --> 00:00:03,764
+PROFESSOR: Let's look at how to compute option prices via Monte
+
+2
+00:00:03,764 --> 00:00:04,925
+Carlo methods.
+
+3
+00:00:04,925 --> 00:00:09,180
+So here's the rule for applying risk-neutral pricing.
+
+4
+00:00:09,180 --> 00:00:12,350
+The rule is to get the risk-neutral measure,
+
+5
+00:00:12,350 --> 00:00:16,650
+then we take the drift rate mu and we replace it by r.
+
+6
+00:00:16,650 --> 00:00:18,670
+Now, this is beyond the scope of the course,
+
+7
+00:00:18,670 --> 00:00:21,420
+but there's a larger subject about changes of variables
+
+8
+00:00:21,420 --> 00:00:23,910
+and changes of measures to ensure
+
+9
+00:00:23,910 --> 00:00:26,520
+that we have risk neutrality, and,
+
+10
+00:00:26,520 --> 00:00:30,490
+under the risk-neutral measure, that we don't have arbitrage.
+
+11
+00:00:30,490 --> 00:00:33,300
+So the origin of this is a no arbitrage argument.
+
+12
+00:00:33,300 --> 00:00:35,460
+The conclusion of that argument is
+
+13
+00:00:35,460 --> 00:00:38,820
+that all traded assets, in order to avoid arbitrage,
+
+14
+00:00:38,820 --> 00:00:41,400
+have to have discounted price processes that
+
+15
+00:00:41,400 --> 00:00:44,820
+are martingales that helps us construct the Q-measure.
+
+16
+00:00:44,820 --> 00:00:47,130
+But for our case, for a stock price,
+
+17
+00:00:47,130 --> 00:00:49,110
+it obeys the rule that I just said.
+
+18
+00:00:49,110 --> 00:00:51,450
+Everywhere where you see a mu, replace it
+
+19
+00:00:51,450 --> 00:00:53,790
+by r, use that is your measure.
+
+20
+00:00:53,790 --> 00:00:57,150
+Let's see how we do computations under that rule.
+
+21
+00:00:57,150 --> 00:01:02,560
+Well, we saw earlier that the value of an asset,
+
+22
+00:01:02,560 --> 00:01:07,450
+it's discounted value now, is equal to its expectation
+
+23
+00:01:07,450 --> 00:01:13,480
+under the Q-measure of the same random variable at expiration.
+
+24
+00:01:13,480 --> 00:01:16,960
+So for a call option that says the value of a call option
+
+25
+00:01:16,960 --> 00:01:22,330
+now is a discount factor times the expectation
+
+26
+00:01:22,330 --> 00:01:25,810
+under the Q-measure, under letting the paths evolve
+
+27
+00:01:25,810 --> 00:01:29,650
+according to Ito processes, but where we replace the drift rate
+
+28
+00:01:29,650 --> 00:01:32,110
+mu by the risk-free rate r.
+
+29
+00:01:32,110 --> 00:01:34,360
+And we take the expectation of what?
+
+30
+00:01:34,360 --> 00:01:35,350
+So that's the measure.
+
+31
+00:01:35,350 --> 00:01:36,620
+What's the function?
+
+32
+00:01:36,620 --> 00:01:39,140
+The function is the payoff at expiration,
+
+33
+00:01:39,140 --> 00:01:40,720
+which in the case of a call option
+
+34
+00:01:40,720 --> 00:01:45,520
+is the larger of S minus k, or 0.
+
+35
+00:01:45,520 --> 00:01:48,850
+So we make a translation to do Monte Carlo pricing
+
+36
+00:01:48,850 --> 00:01:52,510
+between exact probability measure averages
+
+37
+00:01:52,510 --> 00:01:54,490
+to compute exact expectations.
+
+38
+00:01:54,490 --> 00:01:57,340
+And we do numerical approximations.
+
+39
+00:01:57,340 --> 00:02:00,280
+So instead of an exact expectation,
+
+40
+00:02:00,280 --> 00:02:01,750
+we use the sum of our paths.
+
+41
+00:02:01,750 --> 00:02:03,100
+We're going to take an average.
+
+42
+00:02:03,100 --> 00:02:05,470
+We're going to generate an ensemble of paths.
+
+43
+00:02:05,470 --> 00:02:07,600
+They're all going to be equally probable.
+
+44
+00:02:07,600 --> 00:02:12,040
+We'll compute the terminal value for each path realization
+
+45
+00:02:12,040 --> 00:02:15,130
+of the derivative of a call option,
+
+46
+00:02:15,130 --> 00:02:17,530
+and then we'll just take an average of those values.
+
+47
+00:02:17,530 --> 00:02:21,550
+To get the Q-measure, we use r instead of mu.
+
+48
+00:02:21,550 --> 00:02:24,040
+For V sub T, what we're going to do
+
+49
+00:02:24,040 --> 00:02:25,540
+is we're going to generate paths,
+
+50
+00:02:25,540 --> 00:02:28,270
+and then we're going to read off the value in their final time
+
+51
+00:02:28,270 --> 00:02:28,900
+step.
+
+52
+00:02:28,900 --> 00:02:30,850
+And then the discounting factor is just
+
+53
+00:02:30,850 --> 00:02:33,730
+going to be an e to the minus r times the duration
+
+54
+00:02:33,730 --> 00:02:34,780
+that we have.
+
+55
+00:02:34,780 --> 00:02:38,830
+It can be generalized for cases where the interest rates might
+
+56
+00:02:38,830 --> 00:02:40,990
+be deterministic and time varying,
+
+57
+00:02:40,990 --> 00:02:43,540
+or even where they might be stochastic.
+
+58
+00:02:43,540 --> 00:02:45,400
+And if they were stochastic, they
+
+59
+00:02:45,400 --> 00:02:48,280
+need to stay inside the expectation value.
+
+60
+00:02:48,280 --> 00:02:50,350
+I've moved them in and out because I'm
+
+61
+00:02:50,350 --> 00:02:55,310
+assuming the case of constant interest rates.
+
+62
+00:02:55,310 --> 00:02:59,470
+So what we do is we generate an ensemble of risk-neutral paths.
+
+63
+00:02:59,470 --> 00:03:02,980
+We use a risk-free rate for the drift.
+
+64
+00:03:02,980 --> 00:03:05,770
+We use a random number generator so that all of these paths
+
+65
+00:03:05,770 --> 00:03:07,160
+are equally likely.
+
+66
+00:03:07,160 --> 00:03:09,070
+We look at the terminal values.
+
+67
+00:03:09,070 --> 00:03:12,040
+We compute the average of the terminal values,
+
+68
+00:03:12,040 --> 00:03:14,440
+and then we multiply times a discount factor e
+
+69
+00:03:14,440 --> 00:03:18,110
+to the minus rT for the length of time that's there.
+
+70
+00:03:18,110 --> 00:03:20,870
+The paths that we generate are the same
+
+71
+00:03:20,870 --> 00:03:23,150
+as we did earlier in the class, and we
+
+72
+00:03:23,150 --> 00:03:26,395
+get some ensemble of Monte Carlo paths, maybe 10,
+
+73
+00:03:26,395 --> 00:03:27,020
+as I've drawn--
+
+74
+00:03:27,020 --> 00:03:30,620
+10 or so, as I've drawn here, maybe 1,000, maybe 10,000,
+
+75
+00:03:30,620 --> 00:03:33,150
+maybe 10 million, depending on what
+
+76
+00:03:33,150 --> 00:03:36,290
+your patient's computational resources desired
+
+77
+00:03:36,290 --> 00:03:37,910
+levels of accuracy are.
+
+78
+00:03:37,910 --> 00:03:40,460
+But here are the kind of results we have.
+
+79
+00:03:40,460 --> 00:03:44,600
+If I pick particular values for S, for K, for mu,
+
+80
+00:03:44,600 --> 00:03:47,000
+for T for the risk-free rate, if I
+
+81
+00:03:47,000 --> 00:03:50,450
+take a simulation for a certain number of time
+
+82
+00:03:50,450 --> 00:03:54,560
+steps, a certain value dt, a certain number of paths,
+
+83
+00:03:54,560 --> 00:03:56,930
+I can write my function and see price
+
+84
+00:03:56,930 --> 00:03:58,980
+as a function of these arguments,
+
+85
+00:03:58,980 --> 00:04:01,370
+including the simulation parameters, number
+
+86
+00:04:01,370 --> 00:04:03,170
+of timestamps, number of paths.
+
+87
+00:04:03,170 --> 00:04:05,990
+And I'll get some numbers out in this particular case
+
+88
+00:04:05,990 --> 00:04:11,210
+where I ran a simulation, 16.9, 7.05.
+
+89
+00:04:11,210 --> 00:04:13,940
+Now I'll do a recitation, where we'll
+
+90
+00:04:13,940 --> 00:04:16,010
+discuss this in more detail.
+
+91
+00:04:16,010 --> 00:04:19,380
+But right now, we can compare that single run of a Monte
+
+92
+00:04:19,380 --> 00:04:23,840
+Carlo against the exact values from the Black-Scholes formula.
+
+93
+00:04:23,840 --> 00:04:25,400
+You certainly can take the values
+
+94
+00:04:25,400 --> 00:04:28,040
+that we solved for in terms of the five functions,
+
+95
+00:04:28,040 --> 00:04:30,710
+put it in r, and run a calculation just
+
+96
+00:04:30,710 --> 00:04:33,110
+in terms of the cumulative distribution functions.
+
+97
+00:04:33,110 --> 00:04:35,930
+Or you can take this library RQuantLib,
+
+98
+00:04:35,930 --> 00:04:38,360
+and it has functions already for the Black-Scholes
+
+99
+00:04:38,360 --> 00:04:41,850
+formulas for European options for calls and puts.
+
+100
+00:04:41,850 --> 00:04:47,270
+And here we find values that we get, 16.7, 7.2.
+
+101
+00:04:47,270 --> 00:04:50,000
+So first of all, we see we're generally in the ballpark.
+
+102
+00:04:50,000 --> 00:04:52,220
+It looks like we're doing something right.
+
+103
+00:04:52,220 --> 00:04:54,870
+Second, we see we didn't get the exact answer,
+
+104
+00:04:54,870 --> 00:04:58,140
+so we should ask is that economically significant.
+
+105
+00:04:58,140 --> 00:05:00,380
+How do we improve the accuracy?
+
+106
+00:05:00,380 --> 00:05:02,390
+Do we change the number of paths?
+
+107
+00:05:02,390 --> 00:05:04,370
+Do we change the number of time steps?
+
+108
+00:05:04,370 --> 00:05:06,710
+Do we need to change our formulation of the problem
+
+109
+00:05:06,710 --> 00:05:09,900
+that we discretized?
+
+110
+00:05:09,900 --> 00:05:14,520
+So one of the questions is, how do you adjust your algorithm
+
+111
+00:05:14,520 --> 00:05:18,780
+in order to improve the accuracy of your Monte Carlo option
+
+112
+00:05:18,780 --> 00:05:19,470
+pricer?
+
+113
+00:05:19,470 --> 00:05:22,090
+But the pricer itself couldn't be simpler.
+
+114
+00:05:22,090 --> 00:05:26,490
+We generate a bunch of paths, look at their terminal values,
+
+115
+00:05:26,490 --> 00:05:30,750
+just at the terminal values, take an average, discount it,
+
+116
+00:05:30,750 --> 00:05:31,890
+and we're done.
+
+117
+00:05:31,890 --> 00:05:35,370
+Very easy, no differential equations involved.
+
+118
+00:05:35,370 --> 00:05:38,205
+When we think about how these paths behave,
+
+119
+00:05:38,205 --> 00:05:42,760
+of course, the paths themselves are lognormally distributed,
+
+120
+00:05:42,760 --> 00:05:45,330
+but the shape of the distribution
+
+121
+00:05:45,330 --> 00:05:47,880
+is going to depend on the risk-neutral measure, therefore
+
+122
+00:05:47,880 --> 00:05:49,020
+in the risk-free rate.
+
+123
+00:05:49,020 --> 00:05:51,660
+It's going to be the same thing for every stock,
+
+124
+00:05:51,660 --> 00:05:55,500
+with the same volatility, regardless of what mu is.
+
+125
+00:05:55,500 --> 00:05:57,540
+So the option prices would be the same,
+
+126
+00:05:57,540 --> 00:05:59,370
+and the ensemble would be the same,
+
+127
+00:05:59,370 --> 00:06:02,370
+but will generate some set of sample paths
+
+128
+00:06:02,370 --> 00:06:04,200
+like the ones I showed you.
+
+129
+00:06:04,200 --> 00:06:06,220
+If we look at the--
+
+130
+00:06:06,220 --> 00:06:08,027
+and the derivative, because remember,
+
+131
+00:06:08,027 --> 00:06:10,110
+what we're going to do is not take the underlying,
+
+132
+00:06:10,110 --> 00:06:11,700
+but we're going to take the terminal
+
+133
+00:06:11,700 --> 00:06:14,500
+value of the derivative.
+
+134
+00:06:14,500 --> 00:06:19,150
+So if it's a call option, I take the greater of S minus K or 0,
+
+135
+00:06:19,150 --> 00:06:21,430
+and those paths look like this.
+
+136
+00:06:21,430 --> 00:06:23,850
+You notice it's cut off below at 0.
+
+137
+00:06:23,850 --> 00:06:26,520
+For all the paths that we're finishing
+
+138
+00:06:26,520 --> 00:06:30,060
+in positive territory above the strike price,
+
+139
+00:06:30,060 --> 00:06:31,950
+they're all going to be included here.
+
+140
+00:06:31,950 --> 00:06:36,450
+But an awful lot of paths that hit 0, and stay below 0,
+
+141
+00:06:36,450 --> 00:06:40,770
+or finish below 0 are going to be cut off at this point
+
+142
+00:06:40,770 --> 00:06:44,280
+because we don't see anything below 0 for the value of a call
+
+143
+00:06:44,280 --> 00:06:45,270
+option.
+
+144
+00:06:45,270 --> 00:06:48,420
+If I look at the histogram of the terminal values, what
+
+145
+00:06:48,420 --> 00:06:52,800
+I see is a giant spike at 0, a large fraction of the paths
+
+146
+00:06:52,800 --> 00:06:56,535
+never made it above the strike price, and then
+
+147
+00:06:56,535 --> 00:07:00,720
+a very asymmetric distribution that's decreasing
+
+148
+00:07:00,720 --> 00:07:02,280
+as a function of price.
+
+149
+00:07:02,280 --> 00:07:05,190
+No surprise there.
+
+150
+00:07:05,190 --> 00:07:07,050
+The higher the value that we would gain,
+
+151
+00:07:07,050 --> 00:07:10,350
+the farther away from the strike price we are, the less likely
+
+152
+00:07:10,350 --> 00:07:12,380
+it is to occur.
+

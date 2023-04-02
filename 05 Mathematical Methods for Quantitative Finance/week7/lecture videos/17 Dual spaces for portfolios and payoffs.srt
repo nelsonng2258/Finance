@@ -1,0 +1,836 @@
+0
+00:00:00,000 --> 00:00:00,892
+
+
+1
+00:00:00,892 --> 00:00:03,640
+PROFESSOR: So we've got two ways of computing prices.
+
+2
+00:00:03,640 --> 00:00:05,910
+One of them is in terms of market prices.
+
+3
+00:00:05,910 --> 00:00:07,980
+The other is in terms of state prices.
+
+4
+00:00:07,980 --> 00:00:09,780
+And I'd like to combine them by going back
+
+5
+00:00:09,780 --> 00:00:12,060
+to that diagram we drew earlier that
+
+6
+00:00:12,060 --> 00:00:14,520
+shows the algebraic notion of dual spaces
+
+7
+00:00:14,520 --> 00:00:18,380
+and take advantage of a couple of results from linear algebra.
+
+8
+00:00:18,380 --> 00:00:21,270
+So the idea is we want to relate the two.
+
+9
+00:00:21,270 --> 00:00:23,250
+And, when it comes time in practice,
+
+10
+00:00:23,250 --> 00:00:25,560
+you can use whichever one is convenient.
+
+11
+00:00:25,560 --> 00:00:28,350
+The market prices are convenient in that we know
+
+12
+00:00:28,350 --> 00:00:30,210
+what traded securities are.
+
+13
+00:00:30,210 --> 00:00:34,390
+And it's very easy to associate prices with securities.
+
+14
+00:00:34,390 --> 00:00:37,180
+And those prices might be observable on the market.
+
+15
+00:00:37,180 --> 00:00:39,000
+But what it doesn't tell us is necessarily
+
+16
+00:00:39,000 --> 00:00:40,920
+what the market structure is and what
+
+17
+00:00:40,920 --> 00:00:42,880
+could happen in different scenarios
+
+18
+00:00:42,880 --> 00:00:45,360
+so that we make sure that everything is consistent.
+
+19
+00:00:45,360 --> 00:00:48,360
+On the other hand, state prices are very easy.
+
+20
+00:00:48,360 --> 00:00:51,330
+There are no-- there are no extra pieces moving around.
+
+21
+00:00:51,330 --> 00:00:53,010
+Nothing else is hiding.
+
+22
+00:00:53,010 --> 00:00:55,530
+And the reason for that, the difference between the two,
+
+23
+00:00:55,530 --> 00:00:58,260
+is that we don't introduce extra states of the world that
+
+24
+00:00:58,260 --> 00:01:01,720
+aren't observed where we might introduce redundant securities.
+
+25
+00:01:01,720 --> 00:01:03,685
+So our initial assumption at the beginning,
+
+26
+00:01:03,685 --> 00:01:05,820
+when we started talking about linear algebra,
+
+27
+00:01:05,820 --> 00:01:09,090
+was that the states of the world were mutually exclusive,
+
+28
+00:01:09,090 --> 00:01:10,840
+and they're non-overlapping.
+
+29
+00:01:10,840 --> 00:01:13,380
+So that's really the reason why things
+
+30
+00:01:13,380 --> 00:01:17,380
+are simpler in state space, but you can use whatever is easier.
+
+31
+00:01:17,380 --> 00:01:21,060
+So I'd like to do some algebraic relationships
+
+32
+00:01:21,060 --> 00:01:22,290
+with a few pictures.
+
+33
+00:01:22,290 --> 00:01:24,360
+What we're going to come back to is the thing
+
+34
+00:01:24,360 --> 00:01:27,210
+about matrices where you can use whichever language is
+
+35
+00:01:27,210 --> 00:01:28,360
+more convenient.
+
+36
+00:01:28,360 --> 00:01:30,930
+We often find that, for doing pricing,
+
+37
+00:01:30,930 --> 00:01:33,810
+it's easier to compute in terms of observables in the market
+
+38
+00:01:33,810 --> 00:01:34,530
+prices.
+
+39
+00:01:34,530 --> 00:01:37,050
+For understanding market structure, restrictions,
+
+40
+00:01:37,050 --> 00:01:39,660
+and bounds, that's much more natural
+
+41
+00:01:39,660 --> 00:01:41,280
+in terms of state prices.
+
+42
+00:01:41,280 --> 00:01:43,530
+And, if we have a dual picture, it
+
+43
+00:01:43,530 --> 00:01:46,200
+means that we can freely move back and forth from one
+
+44
+00:01:46,200 --> 00:01:49,570
+to the other and get the advantages of both worlds.
+
+45
+00:01:49,570 --> 00:01:51,940
+So let's see how that looks.
+
+46
+00:01:51,940 --> 00:01:55,600
+So this duality picture means that we can do things
+
+47
+00:01:55,600 --> 00:01:56,950
+in two different ways.
+
+48
+00:01:56,950 --> 00:01:59,410
+And, although it's a little bit formal,
+
+49
+00:01:59,410 --> 00:02:02,030
+we can get our pricing relationship very,
+
+50
+00:02:02,030 --> 00:02:04,300
+very quickly by thinking about two different ways
+
+51
+00:02:04,300 --> 00:02:05,990
+of computing the same thing.
+
+52
+00:02:05,990 --> 00:02:08,650
+So, first of all, let's review what a dual space is.
+
+53
+00:02:08,650 --> 00:02:12,020
+A dual space is a set of functions on a vector space.
+
+54
+00:02:12,020 --> 00:02:15,520
+So let's begin with a vector space of portfolios.
+
+55
+00:02:15,520 --> 00:02:19,690
+And I can act on it with security prices.
+
+56
+00:02:19,690 --> 00:02:22,630
+And it's linear because the price of two portfolios
+
+57
+00:02:22,630 --> 00:02:25,730
+is the sum of the price of each of the portfolios.
+
+58
+00:02:25,730 --> 00:02:29,980
+So the way I act specifically is I turn S into a row vector.
+
+59
+00:02:29,980 --> 00:02:31,210
+I act on x.
+
+60
+00:02:31,210 --> 00:02:33,980
+And that gives me a scalar, which is the price.
+
+61
+00:02:33,980 --> 00:02:36,700
+But S acting on x1 plus x2 is S acting
+
+62
+00:02:36,700 --> 00:02:39,310
+on x1 plus S acting on x2.
+
+63
+00:02:39,310 --> 00:02:40,780
+Through our old friend linearity,
+
+64
+00:02:40,780 --> 00:02:42,320
+I get the same price.
+
+65
+00:02:42,320 --> 00:02:46,042
+Now, these are two different vector spaces, each of which
+
+66
+00:02:46,042 --> 00:02:47,500
+has the same dimension because I've
+
+67
+00:02:47,500 --> 00:02:49,420
+got one price per security.
+
+68
+00:02:49,420 --> 00:02:52,930
+But, although they're both Rn, they are different spaces.
+
+69
+00:02:52,930 --> 00:02:54,520
+And we saw they have different units.
+
+70
+00:02:54,520 --> 00:02:55,870
+One of them is in dollars.
+
+71
+00:02:55,870 --> 00:02:56,860
+The other is in shares.
+
+72
+00:02:56,860 --> 00:02:58,180
+You can't add them.
+
+73
+00:02:58,180 --> 00:03:00,520
+So, because we have two different Rn's, let's
+
+74
+00:03:00,520 --> 00:03:01,480
+give them names.
+
+75
+00:03:01,480 --> 00:03:05,860
+Let's call the lower one, our asset space, V. It's Rn.
+
+76
+00:03:05,860 --> 00:03:08,480
+But the upper space, the price space,
+
+77
+00:03:08,480 --> 00:03:12,190
+the set of market prices, we'll call V star for the dual space.
+
+78
+00:03:12,190 --> 00:03:13,780
+And it's also Rn.
+
+79
+00:03:13,780 --> 00:03:16,000
+So there are two different vector spaces
+
+80
+00:03:16,000 --> 00:03:17,380
+of the same dimension.
+
+81
+00:03:17,380 --> 00:03:19,670
+One of them acts on the other.
+
+82
+00:03:19,670 --> 00:03:22,430
+And this is called a dual space because it
+
+83
+00:03:22,430 --> 00:03:23,980
+has the same dimension.
+
+84
+00:03:23,980 --> 00:03:26,240
+Now, on the right-hand side of the diagram,
+
+85
+00:03:26,240 --> 00:03:28,810
+we have an analogous situation.
+
+86
+00:03:28,810 --> 00:03:30,490
+We have a set of payoffs.
+
+87
+00:03:30,490 --> 00:03:33,622
+These are a state space, which is S-dimensional.
+
+88
+00:03:33,622 --> 00:03:34,580
+Let's give that a name.
+
+89
+00:03:34,580 --> 00:03:37,370
+We'll call it W. And it's S-dimensional.
+
+90
+00:03:37,370 --> 00:03:39,790
+So, before, we could call that RS,
+
+91
+00:03:39,790 --> 00:03:43,540
+but let's call it W now because there's another RS.
+
+92
+00:03:43,540 --> 00:03:45,970
+There's another S dimensional vector space,
+
+93
+00:03:45,970 --> 00:03:47,620
+and that's W star.
+
+94
+00:03:47,620 --> 00:03:49,810
+It's a set of state prices, which
+
+95
+00:03:49,810 --> 00:03:55,270
+act on payoffs to give also values for portfolios
+
+96
+00:03:55,270 --> 00:03:57,550
+and, this time, portfolios that are defined not
+
+97
+00:03:57,550 --> 00:04:00,220
+by their security composition, but by their payoffs
+
+98
+00:04:00,220 --> 00:04:01,540
+in each state of the world.
+
+99
+00:04:01,540 --> 00:04:03,670
+And the way we do that calculation is we
+
+100
+00:04:03,670 --> 00:04:06,580
+take a vector in the space W star.
+
+101
+00:04:06,580 --> 00:04:08,650
+We turn it into a row vector by taking
+
+102
+00:04:08,650 --> 00:04:10,420
+its adjoint or its transpose.
+
+103
+00:04:10,420 --> 00:04:13,300
+And then we multiply it times the payoff vector b.
+
+104
+00:04:13,300 --> 00:04:15,620
+And these two things have to be the same.
+
+105
+00:04:15,620 --> 00:04:18,100
+So you can use whichever one you want,
+
+106
+00:04:18,100 --> 00:04:20,769
+but our pricing relationship tells us
+
+107
+00:04:20,769 --> 00:04:22,900
+how to connect the two.
+
+108
+00:04:22,900 --> 00:04:27,440
+So our pricing relationship, S equals A star psi,
+
+109
+00:04:27,440 --> 00:04:29,330
+we can think of in the following way.
+
+110
+00:04:29,330 --> 00:04:31,840
+We have our payoff matrix A, which
+
+111
+00:04:31,840 --> 00:04:35,590
+maps V to W, which I've written up here.
+
+112
+00:04:35,590 --> 00:04:38,200
+It takes portfolios into payoffs.
+
+113
+00:04:38,200 --> 00:04:41,170
+We have A star, which goes in the other direction,
+
+114
+00:04:41,170 --> 00:04:45,220
+it takes this dual space W star into V star.
+
+115
+00:04:45,220 --> 00:04:46,658
+It's a transpose matrix.
+
+116
+00:04:46,658 --> 00:04:47,950
+So the dimensions all work out.
+
+117
+00:04:47,950 --> 00:04:51,590
+It takes an S-dimensional space into an n-dimensional space.
+
+118
+00:04:51,590 --> 00:04:54,280
+And now we can compute our pricing
+
+119
+00:04:54,280 --> 00:04:58,240
+for a portfolio in terms of its payoffs in two different ways.
+
+120
+00:04:58,240 --> 00:05:00,350
+And we'd better get the same answer.
+
+121
+00:05:00,350 --> 00:05:03,190
+So let's see how that works in dual language.
+
+122
+00:05:03,190 --> 00:05:04,750
+To compute the price of a portfolio
+
+123
+00:05:04,750 --> 00:05:08,990
+on the left side of the diagram, I take S transpose times x.
+
+124
+00:05:08,990 --> 00:05:10,750
+On the right side of the diagram,
+
+125
+00:05:10,750 --> 00:05:14,410
+I would take psi star times b.
+
+126
+00:05:14,410 --> 00:05:18,430
+But suppose b is the image of A. Suppose b
+
+127
+00:05:18,430 --> 00:05:21,520
+is the payoff of a portfolio x.
+
+128
+00:05:21,520 --> 00:05:25,600
+Then I would take psi star acting on A times
+
+129
+00:05:25,600 --> 00:05:27,860
+x, which I can write out here.
+
+130
+00:05:27,860 --> 00:05:29,950
+So it must be the case that the row vector
+
+131
+00:05:29,950 --> 00:05:35,650
+S acting on x is the same thing as the row vector psi acting
+
+132
+00:05:35,650 --> 00:05:38,470
+on the product A times x.
+
+133
+00:05:38,470 --> 00:05:42,640
+Now, notice that psi star times A is just
+
+134
+00:05:42,640 --> 00:05:44,500
+the transpose of something.
+
+135
+00:05:44,500 --> 00:05:47,290
+And remember the rule for matrices.
+
+136
+00:05:47,290 --> 00:05:49,570
+The transpose of a product is a product
+
+137
+00:05:49,570 --> 00:05:52,330
+of the transposes in the reverse order.
+
+138
+00:05:52,330 --> 00:05:55,960
+And, also, the transpose of a transpose does nothing.
+
+139
+00:05:55,960 --> 00:06:00,400
+So we can write this as A star psi transpose.
+
+140
+00:06:00,400 --> 00:06:04,280
+If we apply that here, then we get this equation over here.
+
+141
+00:06:04,280 --> 00:06:07,390
+But then we recognize that A star psi
+
+142
+00:06:07,390 --> 00:06:11,710
+is exactly what we hoped to find in our pricing relationship.
+
+143
+00:06:11,710 --> 00:06:16,990
+And, in fact, we have this quantity, A star psi,
+
+144
+00:06:16,990 --> 00:06:18,400
+this quantity in parentheses.
+
+145
+00:06:18,400 --> 00:06:22,450
+When we take its transpose and we act on it a vector x,
+
+146
+00:06:22,450 --> 00:06:27,910
+we get the same thing as S, take its transpose, and act on x.
+
+147
+00:06:27,910 --> 00:06:31,520
+Because x is arbitrary in these two cases,
+
+148
+00:06:31,520 --> 00:06:33,400
+the only way this is going to hold
+
+149
+00:06:33,400 --> 00:06:37,330
+is if we can identify S with A star psi.
+
+150
+00:06:37,330 --> 00:06:39,640
+That's required for consistency.
+
+151
+00:06:39,640 --> 00:06:41,650
+We don't yet know whether they're unique,
+
+152
+00:06:41,650 --> 00:06:43,280
+but it is required.
+
+153
+00:06:43,280 --> 00:06:46,600
+This says that we can price a portfolio either in terms
+
+154
+00:06:46,600 --> 00:06:50,320
+of market prices or using the payoff matrix
+
+155
+00:06:50,320 --> 00:06:51,420
+in terms of state prices.
+
+156
+00:06:51,420 --> 00:06:54,300
+
+
+157
+00:06:54,300 --> 00:06:56,450
+Now, there are some special relationships
+
+158
+00:06:56,450 --> 00:06:58,880
+among these operators between their images
+
+159
+00:06:58,880 --> 00:07:00,170
+and their null spaces.
+
+160
+00:07:00,170 --> 00:07:02,160
+And let me just give you an example.
+
+161
+00:07:02,160 --> 00:07:04,320
+But here's the summary of the result.
+
+162
+00:07:04,320 --> 00:07:06,170
+We can say that anything in the kernel
+
+163
+00:07:06,170 --> 00:07:10,670
+of A star acting on anything of the image of A gives 0.
+
+164
+00:07:10,670 --> 00:07:12,570
+That's this annihilator operator.
+
+165
+00:07:12,570 --> 00:07:15,110
+You could think of it as being like orthogonality.
+
+166
+00:07:15,110 --> 00:07:18,230
+Or we also have the additional relationship
+
+167
+00:07:18,230 --> 00:07:22,610
+that anything in the image of A star acting on anything
+
+168
+00:07:22,610 --> 00:07:24,930
+in the kernel of A gives 0.
+
+169
+00:07:24,930 --> 00:07:26,730
+So let's see how that works.
+
+170
+00:07:26,730 --> 00:07:29,210
+Suppose we have an arbitrage portfolio.
+
+171
+00:07:29,210 --> 00:07:32,360
+That is an arbitrage portfolio is a portfolio that
+
+172
+00:07:32,360 --> 00:07:34,010
+has zero payoff.
+
+173
+00:07:34,010 --> 00:07:36,920
+A acting on x is equal to 0.
+
+174
+00:07:36,920 --> 00:07:38,210
+It has zero payoff.
+
+175
+00:07:38,210 --> 00:07:40,410
+It's what we call an arbitrage portfolio.
+
+176
+00:07:40,410 --> 00:07:43,130
+So saying it's the kernel of A is just a fancy name
+
+177
+00:07:43,130 --> 00:07:45,590
+for saying that Ax equals 0.
+
+178
+00:07:45,590 --> 00:07:48,630
+Now, suppose we act on it with a price vector,
+
+179
+00:07:48,630 --> 00:07:51,470
+but that price vector is in the image of A star.
+
+180
+00:07:51,470 --> 00:07:53,900
+Now, to be in the image of A star, that
+
+181
+00:07:53,900 --> 00:07:58,340
+means that we found some vector over here in W star,
+
+182
+00:07:58,340 --> 00:08:02,190
+acted on it with A star, and got a security price.
+
+183
+00:08:02,190 --> 00:08:06,170
+So that might not be all possible security prices,
+
+184
+00:08:06,170 --> 00:08:08,070
+but it certainly is some of them.
+
+185
+00:08:08,070 --> 00:08:10,970
+So to say that S is in the image of A star
+
+186
+00:08:10,970 --> 00:08:16,670
+means that S is A star acting on some psi for some vector that's
+
+187
+00:08:16,670 --> 00:08:17,310
+there.
+
+188
+00:08:17,310 --> 00:08:18,560
+It means there's at least one.
+
+189
+00:08:18,560 --> 00:08:20,160
+There could be more than one.
+
+190
+00:08:20,160 --> 00:08:22,370
+So suppose we have these two conditions.
+
+191
+00:08:22,370 --> 00:08:24,860
+And now let's let S act on x.
+
+192
+00:08:24,860 --> 00:08:26,170
+What do we have?
+
+193
+00:08:26,170 --> 00:08:27,770
+So we have an element of the image
+
+194
+00:08:27,770 --> 00:08:31,580
+of A star acting on an element of the kernel of A.
+
+195
+00:08:31,580 --> 00:08:35,210
+So S star acting on x is going to be-- because it's
+
+196
+00:08:35,210 --> 00:08:41,809
+in the image, S star is A star psi is S star acting on x.
+
+197
+00:08:41,809 --> 00:08:43,370
+Take the transposes.
+
+198
+00:08:43,370 --> 00:08:46,970
+That's going to be psi star A acting on x.
+
+199
+00:08:46,970 --> 00:08:49,890
+This matrix multiplication is associative.
+
+200
+00:08:49,890 --> 00:08:51,140
+So let's regroup.
+
+201
+00:08:51,140 --> 00:08:55,520
+Let's do a A times x first and then act on it with psi star.
+
+202
+00:08:55,520 --> 00:08:58,190
+A times x is equal to 0 by this condition
+
+203
+00:08:58,190 --> 00:09:00,260
+because it's an arbitrage portfolio.
+
+204
+00:09:00,260 --> 00:09:01,670
+And I get 0.
+
+205
+00:09:01,670 --> 00:09:06,080
+So fancy notation that relates these different subspaces,
+
+206
+00:09:06,080 --> 00:09:08,300
+but it's really just encapsulating
+
+207
+00:09:08,300 --> 00:09:10,820
+the basic rules of arbitrage when
+
+208
+00:09:10,820 --> 00:09:13,870
+we have redundant securities.
+

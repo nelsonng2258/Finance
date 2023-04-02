@@ -1,0 +1,106 @@
+
+PROFESSOR: What are state prices?
+We have a model which has, say, three states of the world.
+And we began by describing things
+in terms of natural basis vectors.
+We introduced one element of our-- one dimension
+of our vector space for each security we had.
+And what we'd like to do is do something
+in a corresponding way with respect to the payoff space.
+So we'd like to think about having one security or one
+portfolio that's associated with each possible state
+of the world.
+Now, to do that, we've talked about associating
+states of the world with different payoffs.
+So a natural thing that we could look for
+is a security or a portfolio that
+has unit payoff in each state of the world.
+Remember, we began with basis vectors
+where a unit vector in our n-dimensional space
+corresponded to one unit of a bond, one unit of a stock,
+one unit of a given security.
+So these securities are known as Arrow-Debreu securities.
+We'll call them AD securities for short.
+And they're not necessarily tradable securities.
+They're portfolios of tradable assets within our original set.
+So we'll call them securities, but they're really
+different portfolios.
+And they have the property, if they exist,
+that they are portfolios that have unit payoff so
+that A acting on x gives us either 1, 0, 0, 0, 1, 0, or so
+on, wherever we are.
+So, if we've got a marketplace where
+there are s such securities or portfolios,
+then the payoff matrix in terms of them
+would be the identity matrix.
+The first AD security would have payoff one in the first state,
+the second one in the second, and so on.
+And the payoff matrix would be diagonal.
+So that would obviously be a very convenient state
+of affairs.
+So, in terms of a general payoff matrix,
+the AD security could be replicated
+if we have some portfolio such that, when A acts on it,
+we get a unit vector, but this unit vector, remember, is
+in the target space, not in our original space.
+So it's in the space of payoffs.
+So, if A acting on x has the form of a unit vector
+where the payoffs are 0 in all of the states
+except they're 1 in one of the states,
+those help us form a basis for the space of payoffs.
+Now, if A is invertible, then things are pretty nice.
+Then we know what they are.
+If A is invertible, then I can immediately
+solve for the AD securities by taking A inverse acting on unit
+vectors in the target space.
+The prices of AD securities are called state prices.
+So we think about these vectors or portfolios, hypothetically,
+that have unit payoff.
+Because they've got a positive payoff,
+they should have a positive price associated with them.
+And, if we collect all of those different prices, the price
+of AD security 1, 2, 3, and so on into a vector with values
+that we'll call psi 1, psi 2, up through psi s,
+those prices are called state prices.
+By our rules for no arbitrage, they have to be positive.
+
+Let's take a look at an example.
+Suppose we have a payoff matrix, our old friend
+A, this 4 by 3 matrix.
+And suppose I consider these vectors, x1 and x2.
+Well, I'm on my way.
+A acting on x1 is equal to 1, 0, 0.
+If you take a look at that, we have unit payoff.
+If I take this column plus twice this column
+and I subtract this column, I'm left
+with unit payoff in the first state
+and 0 in the other two states.
+And you should check that.
+Similarly, for the second state, I
+can do it with this portfolio.
+If I have A acting on--
+excuse me, my pointer is lost.
+So A acting on the first portfolio gives this result.
+A acting on the second portfolio gives this result--
+0, 1, 0.
+So we can call x1 the first Arrow-Debreu security.
+It's really a portfolio in terms of our stocks and bonds
+and call options, but this portfolio
+has this important property that it has unit payoff in one state
+and zero payoff in the other states.
+So it's A acting on x is a basis vector in the space of payoffs.
+This gives us a basis vector with 1 in the second state
+and 0 in the other states.
+So what do you think?
+Can you find a vector x3 that satisfies the property
+that, when the payoff matrix acts
+on x3, which is a four-vector, it pays off 0, 0, 1?
+
+Let me give you a few choices to consider.
+So here's a question.
+What portfolio replicates the AD security for state 3?
+And here are four choices--
+a, b, c, and d.
+Take a look, and see which one of these possible portfolios
+could serve as our third AD security, which has
+unit payoff only in state 3.

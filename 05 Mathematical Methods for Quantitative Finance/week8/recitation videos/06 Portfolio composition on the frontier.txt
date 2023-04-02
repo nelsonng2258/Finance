@@ -1,0 +1,89 @@
+
+PROFESSOR: So this is our traditional risk return
+plot where we have risk on the x-axis, excess return
+on the y-axis, and we can see what's efficient.
+We can plot any portfolio on this graph,
+see how far it is from the efficient frontier.
+But one thing that we don't have insight into
+is how to reverse the mapping.
+After all, the portfolios here are
+in an eight-dimensional space.
+What do those portfolios look like?
+What are the portfolios on the efficient frontier?
+The red dots are basis vectors.
+Those are basic vectors, the direction of one
+of the assets projected down to this two-dimensional space.
+Can we see what's going on as we move
+along the efficient frontier?
+Sure we can.
+We've already solved that.
+That was one of the outputs of the optimizer.
+So let's take a look at running the next chunk of code,
+which is down here.
+And what we're going to do is let's run this and take a look
+at a plot.
+And what we're doing here is we're looking at a stacked bar
+plot because remember that the weights go between 0 and 1.
+So when we have short weights, a stacked bar plot
+is a terrible idea.
+But when the weights have to be between 0 and 1,
+it's a terrific idea because they add up to 1,
+and we have a good idea as to what the portfolio balance is.
+So what we're looking at is that as we move along
+the efficient frontier from our lowest return
+up to the highest return, we're asking what the portfolio
+composition looks like.
+What we see on the left-hand side of the picture
+is that we start with US bonds.
+If you want to have really low risk,
+you don't have any choice.
+There's just no room in the portfolio.
+For anything risky, it's going to dominate.
+As we start increasing, we get more and more--
+we go from the bonds.
+Pretty quickly, we go to euros, so we
+get a little bit more return.
+And that gradually decreases as those
+get crowded out as we move our way
+along the efficient frontier.
+What's growing?
+Well, take a look at US assets on the bottom.
+They're growing.
+So look at this again in vertical slices.
+As we move from left to right, we see that the US is growing.
+We see that Japan and France and all the countries
+are growing in different slices in different wedges.
+So as we move up the efficient frontier,
+we're having more risky assets, fewer riskless assets.
+And the reason we see some common things and these looks
+somewhat proportional is precisely because of the nature
+that we saw that when we're--
+that this is driven by certain linear combinations that
+work for balancing what the risk and return are,
+the kind of thing we saw in the unconstrained case.
+But then we hit a turning point.
+So as we keep moving up and as the return level gets higher,
+we finally need return that we just
+can't get except by being completely in the risky assets.
+So when we get up about 80% of the way across this graph,
+what we see is there's no more room even for euros,
+and we see that the riskiest assets are dominating.
+In this case, it's France and Japan
+because those are the two that have the highest return.
+So when we're at the far right-hand side of the graph,
+we're dominated by return.
+We have to invest in the riskiest assets.
+Otherwise, there's no way to satisfy the constraint--
+or excuse me, not necessarily the riskiest
+in the highest return assets.
+In this case, we have two of them
+because they're very, very closely connected
+in terms of their risk and return for where they sit.
+So the portfolio is including both of them
+instead of taking opposite positions
+as it did when the weights were completely unconstrained here.
+Because the weights have to be positive,
+it's looking for a little bit of correlation offset.
+But there we go.
+So this is interpolating between the lowest return, lowest risk
+side and the highest return side of the efficient frontier.

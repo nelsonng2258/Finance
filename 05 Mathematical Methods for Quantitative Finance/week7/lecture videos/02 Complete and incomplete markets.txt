@@ -1,0 +1,163 @@
+PROFESSOR: So, in general, we have portfolios
+that are represented as a vector of the quantities held
+for each security.
+Those are elements in Rn.
+And, when we act on it with A, we
+have a linear payoff for the simple reason
+that three stocks are worth three times more than one.
+500 bonds are worth 500 times more than a single bond.
+And the value of a bunch of stocks and bonds in a portfolio
+is equal to the value of the stocks
+plus the value of the bonds, perfect setting for linearity.
+It's really not very complicated.
+So we have a portfolio to represent
+the vector of quantities.
+And the payoff matrix acts to tell us what the payoff is.
+So, if I have this vector, which represents being short one
+bond, long two shares of stock, short two call
+options of strike 1 and 1/2, and short one call
+option of strike 1, what is the payoff of this portfolio?
+Well, the payoff of the portfolio
+is a linear combination of the payoffs
+of the individual assets.
+And we get it by doing matrix multiplication.
+And, if you check, you'll find that the payoff
+of that particular portfolio vector
+is 0 in the first state of the world,
+1 in the second state of the world,
+and 1 in the last state of the world.
+And, if you want, you can either do the matrix multiplication,
+or, in simple cases, you can notice
+that what matrix multiplication really does
+is it gives us a linear combination
+of the columns in the matrix.
+That is I'm taking minus 1 times this column
+plus 2 times this column minus twice
+this column minus this column.
+And, when I take that linear combination,
+it's the same thing as A times x, and I get this value.
+So it's very simple.
+Given a vector x, you want to know the payoff.
+You multiply with the matrix A. Do the matrix multiplication,
+and there's your payoff.
+What about going the other way around?
+Would you have been able to answer
+if I asked you, here's A, here's the payoff I'd like to get--
+0, 1, 1-- is there a portfolio that produces this payoff?
+So this is actually, in many ways,
+a fundamental question of the design
+of financial instruments, which is, if there's
+a demand for a particular kind of payoff,
+is it possible to construct a portfolio of instruments that
+are available in the marketplace that produces a desired payoff?
+In a complete market, the answer is yes.
+And, in incomplete market, the answer is no.
+
+So, in other words, what we're asking
+is how to solve a general linear equation.
+And this is the most basic problem in linear algebra.
+Suppose we have a payoff, a target, that we want
+that's given by a vector b.
+And we have a payoff matrix A. And we'd
+like to solve the equation Ax equals b.
+That is we'd like to find x, the portfolio, whose payoff is
+some given constant that we've prespecified b.
+So, as you know, in linear algebra,
+this could be one number of equations
+and some other number of variables.
+We have s equations and n variables in this case.
+And, depending on whether n is bigger or smaller or the same
+as s and depending on some other relationships,
+we might have a unique answer.
+We might have multiple answers.
+Or we might have none.
+So let's take the simplest case.
+If A is non-singular and there's a unique-- and n is equal to s,
+then there's a unique solution.
+If A is non-singular, we take the inverse.
+x is equal to A inverse b, and we're done.
+So what are the conditions required for that?
+Well, A has to be invertible.
+So the columns of A need to be independent.
+The rows do also.
+That means that the rank of A has to be full rank.
+In our example, we could be 3 by 3.
+The securities are not redundant.
+That is there's no linear relationship among the payoffs
+and the securities.
+We can't write one of the columns
+as a linear combination of the others.
+That's what it means for them to be independent.
+And we need the same number of securities
+as states, obviously, for the matrix
+to be square so it can be inverted.
+What if n equals s doesn't hold?
+Well, if n is less than s, if the number of securities
+is smaller than the number of states in our financial model,
+then, in general, there's not going to be any solution.
+So, for an arbitrary b, there may not be a solution.
+We just have more states than we have securities.
+There's no way that we can solve the problem in general.
+We might be able to solve it for some special cases.
+So there might be some special b's--
+that is vectors that lie in the image
+space of the linear transformation A--
+where there is a solution, but not for all possible b's.
+So we might have, for example, a two-dimensional subspace
+where there are certain payoffs that we could create,
+but not any possible payoff.
+On the other hand, what happens if we have more securities
+than we have states?
+Well, in that case, there might or might not be a solution.
+But, in any event, they're probably not
+unique because, if n is greater than s,
+then some vectors need to get mapped to 0.
+The target space is smaller than the initial space.
+And that space of vectors that can mapped to 0
+is known as the kernel or the null space.
+And one of the interesting things
+is, because A acting on an element of this null space
+is equal to 0, we can add--
+that means that an element of the null space or of the kernel
+has zero payoff.
+That means that we could add it to any portfolio
+and still have the same payoff.
+So these are our possibilities.
+We could have n equal to s, n less than s, or n greater
+than s.
+What really is going to matter, though, is
+the rank of the matrix.
+So market completeness is defined as follows.
+A complete market is one in which every possible payoff can
+be generated by some portfolio.
+One way to say that is that the image of A
+is the full space of payoffs.
+Another way to say it is that the rank of A is equal to s.
+That is that the vectors that can
+be reached by acting with A on something
+is equal to the dimension of the target space.
+And, equivalently, we could say that the linear transformation
+is onto or surjective.
+That means it covers the entire target space.
+And, if the market isn't complete,
+well, then it's incomplete.
+So an incomplete market is one in which
+there exists some payoffs that can't
+be generated by any portfolio.
+So that means that the image of A
+is smaller than the entire space of payoffs.
+So it's a proper subspace within the space of payoffs.
+In the example I gave before, it would
+be a space of lower dimensions.
+Equivalently, the rank of A is less than s,
+which is the number of independent states
+of the world.
+So, intuitively, we need for a complete market
+to have at least as many securities
+as there are states in the world.
+That might not be enough because, if we
+have a lot of securities, but the securities are really
+just similar to each other, then they
+may not generate anything new, but it's certainly necessary.
+And, if we have fewer securities than states, than
+we necessarily have an incomplete market.

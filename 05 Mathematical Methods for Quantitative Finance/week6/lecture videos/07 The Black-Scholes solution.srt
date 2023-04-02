@@ -1,0 +1,716 @@
+0
+00:00:00,000 --> 00:00:01,240
+
+
+1
+00:00:01,240 --> 00:00:03,490
+PROFESSOR: The quantity V satisfies a differential
+
+2
+00:00:03,490 --> 00:00:06,580
+equation that's very similar to the Black-Scholes equation.
+
+3
+00:00:06,580 --> 00:00:11,350
+The prefactor we put in front, the e to the minus rt minus t,
+
+4
+00:00:11,350 --> 00:00:15,310
+the discounting factor adds an extra term minus rV
+
+5
+00:00:15,310 --> 00:00:17,890
+when we take time partials with respect to it.
+
+6
+00:00:17,890 --> 00:00:19,880
+One partial acts on the prefactor,
+
+7
+00:00:19,880 --> 00:00:22,370
+the other partial acts on the function
+
+8
+00:00:22,370 --> 00:00:25,990
+V, and we can cancel out an overall prefactor
+
+9
+00:00:25,990 --> 00:00:27,070
+in the equation.
+
+10
+00:00:27,070 --> 00:00:29,200
+So the equation that's satisfied by V
+
+11
+00:00:29,200 --> 00:00:31,300
+looks very similar to Black-Scholes,
+
+12
+00:00:31,300 --> 00:00:32,920
+except there's a mu here.
+
+13
+00:00:32,920 --> 00:00:36,610
+And what we ought to have is an r where we see a mu.
+
+14
+00:00:36,610 --> 00:00:40,460
+Now, V would satisfy the Black-Scholes equation
+
+15
+00:00:40,460 --> 00:00:43,780
+if instead it were based on this Ito process.
+
+16
+00:00:43,780 --> 00:00:48,760
+dS equals rSdt plus sigma SdB.
+
+17
+00:00:48,760 --> 00:00:51,040
+That is, if we changed the drift rate
+
+18
+00:00:51,040 --> 00:00:54,410
+and replaced it by the risk-free rate,
+
+19
+00:00:54,410 --> 00:00:57,200
+then the equation would be Black-Scholes.
+
+20
+00:00:57,200 --> 00:00:58,870
+And what that means is that if we
+
+21
+00:00:58,870 --> 00:01:03,440
+want to solve the Black-Scholes equation, what we can do
+
+22
+00:01:03,440 --> 00:01:07,530
+is take the expression we wrote down for V, everywhere where
+
+23
+00:01:07,530 --> 00:01:10,130
+we see mu, cancel it out and replace it
+
+24
+00:01:10,130 --> 00:01:13,700
+by r, and that's going to satisfy this differential
+
+25
+00:01:13,700 --> 00:01:14,870
+equation.
+
+26
+00:01:14,870 --> 00:01:18,110
+Now, there's a reason for this that we're not driving here,
+
+27
+00:01:18,110 --> 00:01:23,870
+but you'll see it in the finance portion of the MicroMasters
+
+28
+00:01:23,870 --> 00:01:24,770
+course.
+
+29
+00:01:24,770 --> 00:01:28,760
+And what you'll see is that this is called risk-neutral pricing.
+
+30
+00:01:28,760 --> 00:01:31,490
+Risk neutral you can think of as meaning that there's
+
+31
+00:01:31,490 --> 00:01:33,980
+no particular compensation for risk,
+
+32
+00:01:33,980 --> 00:01:36,725
+that all assets under risk-neutral pricing
+
+33
+00:01:36,725 --> 00:01:39,140
+and under risk-neutral probabilities
+
+34
+00:01:39,140 --> 00:01:42,000
+grow at the risk-free rate.
+
+35
+00:01:42,000 --> 00:01:46,010
+So under this assumption that we're using the risk-neutral
+
+36
+00:01:46,010 --> 00:01:48,800
+measure, sometimes called Q-measure,
+
+37
+00:01:48,800 --> 00:01:54,320
+and that the Ito process evolves not with a real-world value mu,
+
+38
+00:01:54,320 --> 00:01:57,440
+but with this fictitious drift rate r--
+
+39
+00:01:57,440 --> 00:02:00,830
+under that set of assumptions, then we
+
+40
+00:02:00,830 --> 00:02:03,600
+can find a solution to the Black-Scholes equation.
+
+41
+00:02:03,600 --> 00:02:05,840
+And we know that the V that we wrote down before
+
+42
+00:02:05,840 --> 00:02:09,110
+solves that, provided we make that substitution.
+
+43
+00:02:09,110 --> 00:02:11,660
+And here is the relationship that we have
+
+44
+00:02:11,660 --> 00:02:13,550
+that V must satisfy.
+
+45
+00:02:13,550 --> 00:02:19,760
+The e to the minus rt times V at S of t at an earlier time
+
+46
+00:02:19,760 --> 00:02:24,410
+is equal to the expectation of e to the minus r big T
+
+47
+00:02:24,410 --> 00:02:28,340
+at a later time of the value of the function evaluated
+
+48
+00:02:28,340 --> 00:02:32,270
+at that later time, where this expectation is taken
+
+49
+00:02:32,270 --> 00:02:34,670
+by averaging over the probabilities
+
+50
+00:02:34,670 --> 00:02:38,630
+for all possible values of ST at future time
+
+51
+00:02:38,630 --> 00:02:42,950
+big T under the probability density that is not
+
+52
+00:02:42,950 --> 00:02:46,340
+the real-world one with mu, but the risk-neutral one
+
+53
+00:02:46,340 --> 00:02:49,250
+where r has replaced mu.
+
+54
+00:02:49,250 --> 00:02:53,130
+
+
+55
+00:02:53,130 --> 00:02:57,190
+So there are two ways that we can get Black-Scholes equations
+
+56
+00:02:57,190 --> 00:02:58,050
+doing this.
+
+57
+00:02:58,050 --> 00:03:00,090
+One of them is we can do the integral.
+
+58
+00:03:00,090 --> 00:03:02,670
+The other way is we can evaluate that expectation
+
+59
+00:03:02,670 --> 00:03:03,765
+that we wrote down.
+
+60
+00:03:03,765 --> 00:03:06,000
+So the Monte Carlo techniques, which
+
+61
+00:03:06,000 --> 00:03:09,150
+we'll see a little bit later, involve
+
+62
+00:03:09,150 --> 00:03:13,120
+taking that expected value and replacing it
+
+63
+00:03:13,120 --> 00:03:17,140
+by an arithmetical average instead of theoretically
+
+64
+00:03:17,140 --> 00:03:20,080
+computing the weighted average of all possible outcomes
+
+65
+00:03:20,080 --> 00:03:22,120
+for all possible price evolutions.
+
+66
+00:03:22,120 --> 00:03:25,360
+Under this risk-control measure, we'll compute a set of them,
+
+67
+00:03:25,360 --> 00:03:28,300
+a large number of them, and we'll take an average.
+
+68
+00:03:28,300 --> 00:03:32,000
+The other way is we just plug in and do some integrals.
+
+69
+00:03:32,000 --> 00:03:35,230
+That is, we already have the probability density functions,
+
+70
+00:03:35,230 --> 00:03:37,750
+so let's compute V from the integral formula
+
+71
+00:03:37,750 --> 00:03:39,080
+that we wrote down.
+
+72
+00:03:39,080 --> 00:03:42,820
+We can think of V as being an expectation over terminal
+
+73
+00:03:42,820 --> 00:03:43,690
+values.
+
+74
+00:03:43,690 --> 00:03:46,820
+But in the end, we just have some integrals to do.
+
+75
+00:03:46,820 --> 00:03:50,000
+So let's take a look at an example where, for instance,
+
+76
+00:03:50,000 --> 00:03:56,650
+we think of a call option with strike price K at time big T,
+
+77
+00:03:56,650 --> 00:03:58,780
+and we're at time little t currently.
+
+78
+00:03:58,780 --> 00:04:01,640
+Well, V of St in the present--
+
+79
+00:04:01,640 --> 00:04:03,100
+that should be a big S--
+
+80
+00:04:03,100 --> 00:04:06,580
+is going to be the probability density times the terminal
+
+81
+00:04:06,580 --> 00:04:07,730
+value.
+
+82
+00:04:07,730 --> 00:04:12,160
+And when we substitute in our definitions
+
+83
+00:04:12,160 --> 00:04:14,410
+for our specific payoff that we want,
+
+84
+00:04:14,410 --> 00:04:18,010
+we get this integral expression here, which we can do.
+
+85
+00:04:18,010 --> 00:04:20,019
+And we can take x and x prime, which
+
+86
+00:04:20,019 --> 00:04:22,720
+were logarithmic variables from our original change
+
+87
+00:04:22,720 --> 00:04:25,480
+in variables, and change them back and do the integral.
+
+88
+00:04:25,480 --> 00:04:29,970
+Or to be more explicit, we can write
+
+89
+00:04:29,970 --> 00:04:32,500
+this formula using our results.
+
+90
+00:04:32,500 --> 00:04:35,485
+So the full risk-neutral probability distribution
+
+91
+00:04:35,485 --> 00:04:39,540
+when we change back from logarithmic variables
+
+92
+00:04:39,540 --> 00:04:42,860
+to s where x was log s and we change back,
+
+93
+00:04:42,860 --> 00:04:45,040
+we have this expression down here
+
+94
+00:04:45,040 --> 00:04:47,300
+is just the probability density.
+
+95
+00:04:47,300 --> 00:04:49,470
+It looks pretty big and ugly, but that's because
+
+96
+00:04:49,470 --> 00:04:51,610
+of our changes of variables.
+
+97
+00:04:51,610 --> 00:04:53,610
+This really is everything that we
+
+98
+00:04:53,610 --> 00:04:57,270
+began with for the basic probability
+
+99
+00:04:57,270 --> 00:05:02,220
+density for a set of random walks
+
+100
+00:05:02,220 --> 00:05:04,440
+with a drift coefficient mu.
+
+101
+00:05:04,440 --> 00:05:07,390
+Now, this is a Gaussian probability density.
+
+102
+00:05:07,390 --> 00:05:09,330
+We're going to do a Gaussian integral.
+
+103
+00:05:09,330 --> 00:05:12,450
+This piece here is the exponential weighting
+
+104
+00:05:12,450 --> 00:05:14,340
+from the discounted present value.
+
+105
+00:05:14,340 --> 00:05:18,840
+And then for my payoff function, I'm going to put in S minus K.
+
+106
+00:05:18,840 --> 00:05:20,460
+And it's easier to do the integral
+
+107
+00:05:20,460 --> 00:05:22,470
+if we work in exponential variables
+
+108
+00:05:22,470 --> 00:05:25,320
+and try to have these logarithms inside the integral.
+
+109
+00:05:25,320 --> 00:05:27,840
+So a change of variables is helpful here.
+
+110
+00:05:27,840 --> 00:05:30,150
+We can go from this exact result.
+
+111
+00:05:30,150 --> 00:05:33,660
+By letting x equal log S, we have this.
+
+112
+00:05:33,660 --> 00:05:36,000
+Recognize this is in a Gaussian form.
+
+113
+00:05:36,000 --> 00:05:38,770
+And let's take a look at three features.
+
+114
+00:05:38,770 --> 00:05:41,680
+The first feature is like in our barrier case,
+
+115
+00:05:41,680 --> 00:05:43,260
+we have a lower limit of integration.
+
+116
+00:05:43,260 --> 00:05:46,260
+If the stock price is below K, there's no value,
+
+117
+00:05:46,260 --> 00:05:47,670
+there's no contribution.
+
+118
+00:05:47,670 --> 00:05:49,800
+The payoff function is 0.
+
+119
+00:05:49,800 --> 00:05:52,110
+If we're above the strike price, there are two.
+
+120
+00:05:52,110 --> 00:05:56,850
+Terms there's S minus K. So we can do two different intervals.
+
+121
+00:05:56,850 --> 00:05:58,710
+The second one is easy.
+
+122
+00:05:58,710 --> 00:06:00,190
+K is just a constant.
+
+123
+00:06:00,190 --> 00:06:01,320
+It comes outside.
+
+124
+00:06:01,320 --> 00:06:03,480
+And this is going to give us something in phi.
+
+125
+00:06:03,480 --> 00:06:06,870
+It's going to give us a cumulative distribution
+
+126
+00:06:06,870 --> 00:06:09,870
+function because I have just e to the minus x
+
+127
+00:06:09,870 --> 00:06:13,650
+squared over 2 in the appropriate units integrated
+
+128
+00:06:13,650 --> 00:06:15,000
+from something to infinity.
+
+129
+00:06:15,000 --> 00:06:16,500
+So that's going to give me something
+
+130
+00:06:16,500 --> 00:06:19,770
+in phi, where phi, as usual, is defined in this way.
+
+131
+00:06:19,770 --> 00:06:21,930
+And the other term is not much harder.
+
+132
+00:06:21,930 --> 00:06:23,940
+Because this is e to the x prime,
+
+133
+00:06:23,940 --> 00:06:27,240
+I complete the square in the exponent, do the integrals,
+
+134
+00:06:27,240 --> 00:06:30,870
+and I'll get another function phi.
+
+135
+00:06:30,870 --> 00:06:33,900
+So the result of plugging this in and changing back
+
+136
+00:06:33,900 --> 00:06:38,070
+the variables is we get the Black-Scholes solution, S times
+
+137
+00:06:38,070 --> 00:06:41,060
+phi evaluated at argument I'll call d plus.
+
+138
+00:06:41,060 --> 00:06:43,920
+In literature, these are often called d1 in d2.
+
+139
+00:06:43,920 --> 00:06:47,430
+I like to write them as d plus and d minus.
+
+140
+00:06:47,430 --> 00:06:51,480
+But I have one term in d plus minus the present value
+
+141
+00:06:51,480 --> 00:06:55,560
+of the strike price Ke to the minus r T minus t times
+
+142
+00:06:55,560 --> 00:06:57,340
+phi of d minus.
+
+143
+00:06:57,340 --> 00:06:59,580
+So the definition of d plus and d minus,
+
+144
+00:06:59,580 --> 00:07:01,170
+they really just come from changing
+
+145
+00:07:01,170 --> 00:07:03,420
+variables in the integral and looking
+
+146
+00:07:03,420 --> 00:07:05,010
+at the limits of integration.
+
+147
+00:07:05,010 --> 00:07:08,670
+In this case, d plus or minus is this first expression
+
+148
+00:07:08,670 --> 00:07:12,000
+plus or minus 1/2 sigma squared root of T.
+
+149
+00:07:12,000 --> 00:07:14,250
+And this first expression does have
+
+150
+00:07:14,250 --> 00:07:16,480
+an interesting interpretation.
+
+151
+00:07:16,480 --> 00:07:20,220
+So the logarithms are-- because it's
+
+152
+00:07:20,220 --> 00:07:23,130
+price changes and relative returns on stocks
+
+153
+00:07:23,130 --> 00:07:26,190
+that matter more than price levels, the ratio
+
+154
+00:07:26,190 --> 00:07:30,360
+that we see here is the ratio of the stock price
+
+155
+00:07:30,360 --> 00:07:33,630
+S, the current price, to the present value
+
+156
+00:07:33,630 --> 00:07:35,910
+of the strike price.
+
+157
+00:07:35,910 --> 00:07:38,610
+Or we could turn it around and ask about the forward value
+
+158
+00:07:38,610 --> 00:07:42,360
+of the stock price relative to the strike price, which would
+
+159
+00:07:42,360 --> 00:07:44,010
+be what we'd see at expiration.
+
+160
+00:07:44,010 --> 00:07:47,160
+So this numerator is a measure of how far
+
+161
+00:07:47,160 --> 00:07:49,500
+we are in or out of the money.
+
+162
+00:07:49,500 --> 00:07:51,870
+If S is larger than the denominator,
+
+163
+00:07:51,870 --> 00:07:54,960
+the logarithm is going to be the logarithm of a number that's
+
+164
+00:07:54,960 --> 00:07:56,130
+bigger than 1.
+
+165
+00:07:56,130 --> 00:08:00,838
+And if it's below, it will be the logarithm
+
+166
+00:08:00,838 --> 00:08:02,380
+of a number that's less than 1, which
+
+167
+00:08:02,380 --> 00:08:03,730
+will be a negative number.
+
+168
+00:08:03,730 --> 00:08:07,080
+And it'll be 0 if the function-- not if it's not the money,
+
+169
+00:08:07,080 --> 00:08:10,950
+not if S is equal to K, but if it's at the money forward
+
+170
+00:08:10,950 --> 00:08:14,790
+and if that ratio inside the logarithm should vanish.
+
+171
+00:08:14,790 --> 00:08:16,980
+So that's a measure of how far away
+
+172
+00:08:16,980 --> 00:08:19,860
+we are from the at the money forward value.
+
+173
+00:08:19,860 --> 00:08:22,320
+And the denominator, the sigma over square root
+
+174
+00:08:22,320 --> 00:08:25,680
+of T minus t, that's telling us how far the stock
+
+175
+00:08:25,680 --> 00:08:27,330
+price, or the log stock price more
+
+176
+00:08:27,330 --> 00:08:32,049
+precisely would be expected to diffuse given the volatility
+
+177
+00:08:32,049 --> 00:08:36,500
+sigma and the time remaining until expiration.
+
+178
+00:08:36,500 --> 00:08:37,000
+
+

@@ -1,0 +1,588 @@
+0
+00:00:00,000 --> 00:00:01,520
+
+
+1
+00:00:01,520 --> 00:00:05,270
+PROFESSOR: Now special case, if we let mu equal 0,
+
+2
+00:00:05,270 --> 00:00:07,430
+then that last term drops out.
+
+3
+00:00:07,430 --> 00:00:11,570
+If we let sigma equals 1, the three factor sigma
+
+4
+00:00:11,570 --> 00:00:15,110
+squared over 2 just becomes 1/2, and we
+
+5
+00:00:15,110 --> 00:00:18,150
+get the diffusion equation that we've already seen.
+
+6
+00:00:18,150 --> 00:00:21,440
+So the diffusion equation in its standardized form
+
+7
+00:00:21,440 --> 00:00:24,243
+is partial of p0, we'll call it.
+
+8
+00:00:24,243 --> 00:00:25,910
+We'll be thinking of a particular thing.
+
+9
+00:00:25,910 --> 00:00:29,600
+But in a general case, partial of p with respect to t
+
+10
+00:00:29,600 --> 00:00:33,440
+is 1/2 second partial of p with respect to z.
+
+11
+00:00:33,440 --> 00:00:35,150
+And there are no other constants here
+
+12
+00:00:35,150 --> 00:00:37,710
+just because I've set them to particular values.
+
+13
+00:00:37,710 --> 00:00:39,410
+Now this partial differential equation
+
+14
+00:00:39,410 --> 00:00:41,260
+has a lot of solutions.
+
+15
+00:00:41,260 --> 00:00:43,010
+But there's one that's very, very special,
+
+16
+00:00:43,010 --> 00:00:45,285
+and that's the standardized Gaussian.
+
+17
+00:00:45,285 --> 00:00:52,210
+p0 of z and t is equal to 1 over square root of t e to the minus
+
+18
+00:00:52,210 --> 00:00:54,850
+z squared over 2t.
+
+19
+00:00:54,850 --> 00:00:57,310
+And we'll see that the reason that this is special
+
+20
+00:00:57,310 --> 00:01:01,090
+is it will let us generate other solutions that
+
+21
+00:01:01,090 --> 00:01:03,010
+are of particular interest for finance
+
+22
+00:01:03,010 --> 00:01:06,010
+to the diffusion equation and some related equations.
+
+23
+00:01:06,010 --> 00:01:08,560
+But just taking it on its face, first
+
+24
+00:01:08,560 --> 00:01:10,270
+does it satisfy the equation?
+
+25
+00:01:10,270 --> 00:01:11,350
+Yep, it does.
+
+26
+00:01:11,350 --> 00:01:14,170
+It's special case, mu equals 0, sigma equals 1.
+
+27
+00:01:14,170 --> 00:01:16,713
+Take the partials, plug it in, try it out.
+
+28
+00:01:16,713 --> 00:01:18,880
+If you're stuck on the other one, do this one first.
+
+29
+00:01:18,880 --> 00:01:19,940
+It's a little bit easier.
+
+30
+00:01:19,940 --> 00:01:21,550
+There are fewer terms.
+
+31
+00:01:21,550 --> 00:01:23,030
+But this is just a special case.
+
+32
+00:01:23,030 --> 00:01:24,940
+So it satisfies the equation.
+
+33
+00:01:24,940 --> 00:01:27,460
+Second, how do we visualize it?
+
+34
+00:01:27,460 --> 00:01:29,740
+Well, this is a symmetric random walk.
+
+35
+00:01:29,740 --> 00:01:31,660
+The up and down probabilities are equal.
+
+36
+00:01:31,660 --> 00:01:36,560
+Mu is equal to 0, so it stays centered around the origin.
+
+37
+00:01:36,560 --> 00:01:40,180
+And as time goes on, the width still increases
+
+38
+00:01:40,180 --> 00:01:41,590
+and the curves get--
+
+39
+00:01:41,590 --> 00:01:44,770
+the peak gets lower and lower and the curves
+
+40
+00:01:44,770 --> 00:01:46,870
+get broader and broader over time.
+
+41
+00:01:46,870 --> 00:01:50,620
+If we run time backwards, as we go from large time
+
+42
+00:01:50,620 --> 00:01:53,530
+and approach t equals 0 from above, then
+
+43
+00:01:53,530 --> 00:01:56,470
+what we see is the peaks converge on the origin,
+
+44
+00:01:56,470 --> 00:01:58,060
+get narrower and narrower.
+
+45
+00:01:58,060 --> 00:02:00,920
+Because they're probability distributions, of course,
+
+46
+00:02:00,920 --> 00:02:03,610
+the area under the curve is always equal to 1.
+
+47
+00:02:03,610 --> 00:02:06,580
+Do note that this is only a solution to our equation
+
+48
+00:02:06,580 --> 00:02:10,789
+for positive values of t because we have this square root here,
+
+49
+00:02:10,789 --> 00:02:13,090
+and that would take us into the complex numbers, which
+
+50
+00:02:13,090 --> 00:02:15,700
+would be difficult to interpret as a probability.
+
+51
+00:02:15,700 --> 00:02:17,920
+So this is a special equation that
+
+52
+00:02:17,920 --> 00:02:20,650
+can be thought of as being concentrated
+
+53
+00:02:20,650 --> 00:02:24,670
+at the origin as t approaches 0 from above as we
+
+54
+00:02:24,670 --> 00:02:27,830
+run the clock backwards.
+
+55
+00:02:27,830 --> 00:02:30,320
+Now, this special solution can be used
+
+56
+00:02:30,320 --> 00:02:32,100
+to obtain the general solution.
+
+57
+00:02:32,100 --> 00:02:34,550
+I'd like to show you the formula,
+
+58
+00:02:34,550 --> 00:02:36,870
+and then we'll take a look at why it works.
+
+59
+00:02:36,870 --> 00:02:38,780
+So here's the formula.
+
+60
+00:02:38,780 --> 00:02:42,740
+If we've got some initial conditions, so at time 0,
+
+61
+00:02:42,740 --> 00:02:47,810
+we want a function p that at time 0 has some shape,
+
+62
+00:02:47,810 --> 00:02:48,840
+any shape you'd like.
+
+63
+00:02:48,840 --> 00:02:50,120
+Well, it can't be any shape.
+
+64
+00:02:50,120 --> 00:02:51,690
+It needs to be integrable.
+
+65
+00:02:51,690 --> 00:02:55,130
+So it needs to be somewhat reasonable, not grow too fast,
+
+66
+00:02:55,130 --> 00:02:58,100
+not have too many [? angularities ?]
+
+67
+00:02:58,100 --> 00:02:59,330
+or discontinuities.
+
+68
+00:02:59,330 --> 00:03:02,030
+But let's call that general function f.
+
+69
+00:03:02,030 --> 00:03:05,300
+So I'd like to have the solution to the diffusion equation
+
+70
+00:03:05,300 --> 00:03:09,650
+that, in addition, a t equals zero takes on a specified form.
+
+71
+00:03:09,650 --> 00:03:12,710
+And the answer to that, the general solution,
+
+72
+00:03:12,710 --> 00:03:15,290
+is to take our previous expression,
+
+73
+00:03:15,290 --> 00:03:17,960
+our special p0, our special Gaussian,
+
+74
+00:03:17,960 --> 00:03:23,390
+replace z by z minus w, multiply it times f of w,
+
+75
+00:03:23,390 --> 00:03:25,460
+and integrate over w.
+
+76
+00:03:25,460 --> 00:03:26,150
+And that's it.
+
+77
+00:03:26,150 --> 00:03:29,510
+So concretely, it's exactly this expression.
+
+78
+00:03:29,510 --> 00:03:31,310
+It's just a Gaussian integral.
+
+79
+00:03:31,310 --> 00:03:32,480
+You pick an f.
+
+80
+00:03:32,480 --> 00:03:33,320
+You plug it in.
+
+81
+00:03:33,320 --> 00:03:34,490
+You do an integration.
+
+82
+00:03:34,490 --> 00:03:35,710
+You get an expression.
+
+83
+00:03:35,710 --> 00:03:38,975
+And you can check by direct inspection
+
+84
+00:03:38,975 --> 00:03:41,400
+that it satisfies the equation.
+
+85
+00:03:41,400 --> 00:03:44,600
+For example, if you take f of z is z squared,
+
+86
+00:03:44,600 --> 00:03:47,930
+and you do this integral, you put in z squared,
+
+87
+00:03:47,930 --> 00:03:50,870
+make some changes of variables, you do the integral,
+
+88
+00:03:50,870 --> 00:03:54,380
+it's an ordinary Gaussian integral, definite integral,
+
+89
+00:03:54,380 --> 00:03:56,390
+from minus infinity to infinity, you
+
+90
+00:03:56,390 --> 00:03:58,130
+get the result because it's a function
+
+91
+00:03:58,130 --> 00:03:59,960
+that we integrate over w.
+
+92
+00:03:59,960 --> 00:04:02,420
+But the result is a function of z and t.
+
+93
+00:04:02,420 --> 00:04:05,510
+You get the answer z squared plus t.
+
+94
+00:04:05,510 --> 00:04:09,500
+And when t is equal to 0, we recover--
+
+95
+00:04:09,500 --> 00:04:13,550
+we recover the p of z and t at t equals 0 is z squared.
+
+96
+00:04:13,550 --> 00:04:15,740
+And it satisfies the differential equation,
+
+97
+00:04:15,740 --> 00:04:18,329
+as you can check.
+
+98
+00:04:18,329 --> 00:04:19,750
+How does it work?
+
+99
+00:04:19,750 --> 00:04:22,110
+Well, we need to do two things, check
+
+100
+00:04:22,110 --> 00:04:24,390
+that it satisfies the differential equation,
+
+101
+00:04:24,390 --> 00:04:26,563
+check that it satisfies the initial conditions.
+
+102
+00:04:26,563 --> 00:04:28,980
+The way that we check that it intensifies the differential
+
+103
+00:04:28,980 --> 00:04:31,470
+equation is to differentiate it, that is,
+
+104
+00:04:31,470 --> 00:04:34,380
+we take the differential operator of our diffusion
+
+105
+00:04:34,380 --> 00:04:37,930
+equation-- these operators-- which are linear operators,
+
+106
+00:04:37,930 --> 00:04:40,537
+and when they act on the function p of z,
+
+107
+00:04:40,537 --> 00:04:44,670
+t, we can move-- p of z, t is defined by an integral,
+
+108
+00:04:44,670 --> 00:04:47,430
+but the integral, of course, can be thought of as a sum.
+
+109
+00:04:47,430 --> 00:04:50,610
+It's a linear set of pieces for its arguments.
+
+110
+00:04:50,610 --> 00:04:52,350
+And if the integral is convergent,
+
+111
+00:04:52,350 --> 00:04:54,270
+I can move the differential operator
+
+112
+00:04:54,270 --> 00:04:58,440
+under the integral sign, where, because it depends on t and z,
+
+113
+00:04:58,440 --> 00:05:00,420
+it only acts on p0.
+
+114
+00:05:00,420 --> 00:05:02,340
+Everything else depends only on w.
+
+115
+00:05:02,340 --> 00:05:04,900
+And there no double w's in the differential operator.
+
+116
+00:05:04,900 --> 00:05:09,060
+So the differential operator in square brackets acts on p0,
+
+117
+00:05:09,060 --> 00:05:10,230
+and it gives 0.
+
+118
+00:05:10,230 --> 00:05:12,990
+So 0 times f of w is 0.
+
+119
+00:05:12,990 --> 00:05:17,250
+Integrating 0 minus infinity to infinity gives 0 again.
+
+120
+00:05:17,250 --> 00:05:21,480
+It satisfies the differential equation for any f.
+
+121
+00:05:21,480 --> 00:05:23,430
+This expression will work.
+
+122
+00:05:23,430 --> 00:05:26,200
+But does it satisfy the initial conditions?
+
+123
+00:05:26,200 --> 00:05:28,260
+So what we'd like to look at is what's
+
+124
+00:05:28,260 --> 00:05:31,020
+the limit as t goes to 0 from above
+
+125
+00:05:31,020 --> 00:05:34,110
+of that integral expression that we've seen,
+
+126
+00:05:34,110 --> 00:05:35,970
+that we've written down right here.
+
+127
+00:05:35,970 --> 00:05:41,850
+Well, we take the limit as t goes to 0 of our expression,
+
+128
+00:05:41,850 --> 00:05:45,420
+and we can substitute variables under the integral
+
+129
+00:05:45,420 --> 00:05:49,890
+if we define u to be w minus z over square root of t.
+
+130
+00:05:49,890 --> 00:05:53,550
+Then that takes out the z and the t dependents.
+
+131
+00:05:53,550 --> 00:05:57,060
+This becomes e to the minus u squared over 2.
+
+132
+00:05:57,060 --> 00:05:59,360
+The square root of t that we have here,
+
+133
+00:05:59,360 --> 00:06:04,260
+dw over square root of t, is going to be du.
+
+134
+00:06:04,260 --> 00:06:06,130
+So that's over here.
+
+135
+00:06:06,130 --> 00:06:08,280
+So the square root of t went away.
+
+136
+00:06:08,280 --> 00:06:11,760
+And the argument in f of w now gets shifted--
+
+137
+00:06:11,760 --> 00:06:13,170
+it becomes f of z--
+
+138
+00:06:13,170 --> 00:06:15,540
+plus u times square root of t.
+
+139
+00:06:15,540 --> 00:06:17,730
+If we're away from any singular points
+
+140
+00:06:17,730 --> 00:06:20,370
+in the function or discontinuities, then
+
+141
+00:06:20,370 --> 00:06:23,610
+as t goes to 0, this term vanishes.
+
+142
+00:06:23,610 --> 00:06:27,870
+I'm left with f of z, which is a constant with respect to u.
+
+143
+00:06:27,870 --> 00:06:30,450
+And the remaining integral is equal to 1.
+
+144
+00:06:30,450 --> 00:06:31,530
+It's a Gaussian interval.
+
+145
+00:06:31,530 --> 00:06:32,550
+It's normalized.
+
+146
+00:06:32,550 --> 00:06:38,210
+And I get f of z, which is the appropriate initial condition.
+

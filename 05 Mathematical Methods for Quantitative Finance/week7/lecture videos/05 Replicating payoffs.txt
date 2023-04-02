@@ -1,0 +1,175 @@
+
+PROFESSOR: Let's take a look at an example.
+So suppose I have this reduced payoff matrix.
+Suppose I have a world with three securities, and I have--
+so I have three securities represented
+by the first columns.
+Think of them as being our first three
+securities, a bond in column 1, a stock in column 2,
+and a call option on stock with strike price 1 and 1/2
+in column 3, but no fourth security.
+And I have three states of the world.
+So now my payoff matrix is 3 by 3.
+And suppose the payoff I'm interested in
+is 2, 1, 0, which, incidentally, was the column that we
+lopped off from our matrix.
+But suppose we asked a question.
+Can the K equals 1 call option, column b, the vector 2, 1,
+0, be replicated from the other three securities?
+So why don't you take a moment to think about that?
+See if you can come up with a three vector
+x such that A acting on x is equal to b.
+Or can you show that there's no such thing that exists?
+
+Well, A is invertible.
+So let's invert it.
+If we invert A, we can find it has this form.
+I did this numerically.
+Generally, you're not going to want
+to invert any matrix larger than 2 by 2 in your head.
+You should know how to do a 2 by 2 matrix in your head.
+But, in this case, here's A inverse.
+So, because A is invertible, we have a unique solution for x.
+So not only is there a solution for x.
+It's unique, and the solution is the portfolio
+minus 1, 1, which is equivalent to being
+long one share of stock and short one bond.
+And you can see that.
+Look at the second column here.
+Subtract the first column.
+And we get 2, 1, 0.
+So I take 3 minus 1 and 2 minus 1 and 1 minus 1.
+And that gives me this column.
+So you can see it by inspection, and the third column
+doesn't matter at all.
+
+Therefore, the fourth security in our original payoff matrix
+is redundant.
+So, in our original payoff matrix
+where we had four securities and three states of the world,
+because the fourth column, 2, 1, 0, can
+be written as a linear combination,
+because its payoff is equivalent to be long the stock and short
+the bond, it's a redundant security.
+We have an overcomplete market.
+Its payoffs is identical to a portfolio of basis assets.
+And that tells us that we have more securities than we need,
+and one of them is redundant.
+How about this example?
+Let's reduce things even further.
+Suppose I remove the call option.
+Can the K equals 1 call be replicated
+from two other securities?
+Well, this is a little bit different.
+We know that it can, but we also know that the matrix is not
+invertible in this case.
+In fact, the matrix is a 3 by 2 matrix.
+So it's not invertible because it isn't even square.
+There's no chance of inverting it.
+But a solution still exists.
+So this is what we said that, when we have a 3 by 2 matrix,
+we're taking two vectors into a three-dimensional space.
+There's no way that we can hit all possible three
+vectors and all possible payoffs,
+but we can hit some of them.
+And this is one of those lucky payoffs that we can hit.
+So, in this case, if we pick x to be the same portfolio, short
+a bond, long a stock, even though we have only two
+securities, we still can get this payoff,
+but there are some payoffs that we can't get.
+
+Another example, suppose we include in our security world
+the K equals 1 call.
+And now let's kick out the K equals 1 and 1/2 call and ask
+if it can be replicated from the other three securities.
+What do you think?
+Can you find a linear combination
+of these three securities that gives b as a payoff?
+
+Well, the rank of the matrix is 2.
+We know it's singular because we know
+the third column is a linear combination of the first two.
+We've already seen that.
+So A is not invertible.
+And, actually, this option can't be replicated.
+And this market then would be incomplete
+because there are payoffs, such as 1.5, 0.5, and 0, that do not
+have portfolios to create them.
+And that's true whether I include the stock and the bond,
+which are independent securities,
+or whether I add a redundant security.
+Obviously, adding the third column
+doesn't help me any because the third column just
+has the same information and the same possibilities
+as the first two since I'm already free to make portfolios
+from them.
+So, in this case, we've got an incomplete market where
+here's an example of a payoff that cannot be replicated
+by the other three securities.
+One of those three securities is linearly
+dependent on the others.
+That means that the rank is not full rank,
+and it's not invertible.
+If they were independent, if the matrix were invertible,
+then we'd have a unique solution.
+
+A complete market is one in which
+we can get any payout from a portfolio of our basis assets.
+So, in a complete market, the payoff matrix
+has rank equal to the number of states.
+In our example of a three-dimensional state
+space means that the matrix needs to have rank 3.
+If, in addition, we have three securities, or we have n
+equals s, then we don't have extra redundant securities.
+It means that we have a matrix of full rank.
+So, if n is equal to s--
+so it's a square matrix--
+and the rank is equal to the number of rows and columns,
+then there's an inverse.
+And then there's a unique solution for any b.
+And you might think that's the best possible case,
+but, actually, it's kind of boring because, in finance, we
+often like to find ways of constructing
+new instruments for which there might be a demand.
+And, sometimes, they are actually technically redundant,
+but there's an interesting market use for them.
+If n is bigger than s, though, and the matrix has rank s--
+so, if n is bigger than s, of course, the rank of the matrix
+can't be bigger than the smaller of the number of rows
+and columns.
+So, whether n is bigger or smaller than s,
+the rank of a matrix can't be more than the number of rows
+or the number of columns, whichever is smaller,
+but, if n is bigger than s and the matrix has rank s,
+then we have an overcomplete set of securities.
+We have a redundant set.
+What we can do is, to get a complete basis,
+we can pick any s securities that are linearly independent,
+have independent payoffs, and we can drop the extra ones.
+So, in our example before, in the case
+where we had the K equals 1 call option, we could drop that one
+and keep the other three, which are linearly independent.
+If we have more securities and more complicated matrices,
+we just need a set of vectors that span the space.
+So they can form a basis, provided
+that they span the space and they have rank s.
+And we can reduce things to a square matrix that
+produces all of the payoffs.
+So we have these properties for the rank of a matrix, which
+you should review if they're not familiar, that, first of all,
+that the rank of a matrix is equal to the rank
+of a transpose.
+And it's equal to the smaller-- it's
+less than or equal to the smaller
+of the number of the rows or columns that we have.
+And, if we have a product of two matrices,
+remember that, when we have linear transformations,
+we usually read them from right to left
+because that's the way in which they act on vectors.
+And, if one transformation reduces the size of the space,
+then that carries forward the rest of the way.
+So, in a product, the rank of a product
+is never going to be greater than the smaller of the rank
+of the two matrices.
+And, if I have a product of A times A transpose,
+that's going to be equal to the rank of A.

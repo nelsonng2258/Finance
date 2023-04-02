@@ -1,0 +1,58 @@
+
+PROFESSOR: So let's combine what we've seen.
+Suppose we're given a payoff matrix
+A. We're given market prices S. And we're given a target payoff
+b.
+What do we do?
+Well, we want to find all state price factors that
+satisfy our pricing equation.
+Are there any solutions?
+Is there a unique solution?
+Or are there multiple solutions?
+If there are no solutions to this equation,
+then this market structure permits arbitrage.
+If there's a unique solution, then it's a complete market.
+And, if there are multiple solutions,
+that means that it's an incomplete market.
+What we do is we then price the asset
+using all of the solutions.
+That is the target payoff b.
+We act on it with psi star.
+If there's one solution for psi, then it's easy,
+and we have a redundant asset.
+Psi is greater than 0, and we compute
+the price of the redundant asset as psi star b.
+Otherwise, we find that there's a full range of allowed prices
+that are all consistent with no arbitrage, provided that they
+correspond to state price vectors that
+have only positive values.
+
+For example, consider our incomplete market.
+So, if we have A is given by a stock and a bond,
+the prices are given by 1, 2, and we're
+asked for a specific target payoff,
+say, 1 and 1/2, 1/2, 0, which is,
+after all, the payoff of one of our original securities
+from our first slide in this week's material,
+then what can we say?
+Well, we know that psi is given by 0, 1, 0
+plus some multiple of the kernel.
+And, to be consistent, A star psi equal to S,
+we know that we need to have x is between 0 and 1/2.
+So what's the price that we can associate with this call
+option?
+Well, to price the call option, we compute
+psi star b for all allowed values of x.
+That tells us that we get, by acting with psi star b
+and applying linearity, it's equal to 1/2 plus x times 1/2.
+And that means that we get 1/2 of 1 plus x.
+Substituting in for the allowed values of x,
+we find that the allowed values of this call
+option in this incomplete market that is only a stock and a bond
+are between 1/2 and 3/4.
+So this is a new asset.
+It's not a redundant asset.
+There's no way to make it out of the existing securities.
+Nevertheless, arbitrage pricing set
+to bound based on the existing prices in the market
+that it can't violate under penalty of arbitrage.

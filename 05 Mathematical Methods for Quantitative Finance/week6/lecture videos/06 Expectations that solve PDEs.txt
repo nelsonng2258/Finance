@@ -1,0 +1,136 @@
+
+PROFESSOR: In looking at probability densities,
+we were asking a question about the likelihood
+of finding a random walk or possibly
+the value of financial asset at some time in the future
+under an uncertain set of probability assumptions.
+But we don't just need to ask about the value of the stock,
+or the value of an underlying, or the value of a random walk.
+We can ask about the value of functions
+of any of those things.
+So we can ask about more general future payoffs.
+We can ask about general derivatives.
+How they behave in the future if their function
+say of a random walking stock price.
+And we can compute not only the distributions,
+but some expectations.
+What we're going to see is these expectations satisfied
+differential equations.
+And the differential equations are going to be quite familiar.
+So let's go back now to our stock prices.
+If we remember, our standard model
+for a stock diffusion for geometric Brownian motion,
+it's given by this EDO process.
+dS is mu Sdt plus sigma SdB.
+And we know that by changing to logarithmic variables,
+that the logarithm of S is a random walk with the drift
+and a volatility coefficient.
+And therefore, it has a probability density.
+It's going to be a little bit more complicated
+because the logarithms.
+But it's an example of the logarithm.
+And S is an example of everything
+that we've looked at in looking at probability density
+functions that vary with time that solve the diffusion
+equation.
+So when there's a drift term, remember we have an extra part.
+The Fokker Planck equation or the backward equation.
+And the probability density in logarithmic variables,
+if we flip them back now to--
+if we go from log variables where
+log S represents a random walk back to our original S,
+and we create the analogous probability density,
+the probability of arriving at ST a time big T given
+that we started at price at this time T
+satisfies a differential equation.
+And that differential equation has all the plus sides.
+And it takes this form partial of p with respect
+to t plus a familiar pre-factor sigma S squared over 2.
+Second partial of p with respect to S
+squared plus an unfamiliar term with the mu with the drift
+coefficient times S partial of p with respect to S.
+It's familiar in our context of random walk probability
+densities.
+But it's not one that we saw when
+we derive the Black-Scholes equation, which you remember
+is independent of the value of the drift term mu.
+So here we have in terms of S variables
+the differential equations satisfied by the probability
+density or a stock that follows its standard EDO process.
+
+Now we can compute some expectation values.
+And we do this in the usual way where we take the probability
+weighted average.
+So suppose I have some function.
+It's a function of S sub T of the terminal values.
+And I'd like to compute its expectation at an earlier time
+t.
+Well, I compute that by taking my probability density.
+I multiply it times the function in question.
+I take the probability weighted average.
+I integrate over all the values ST. And that's my expectation.
+The kind of thing that we have in mind
+is going to be something like the payoff on a call option
+where big T represents the time when the option expires.
+So to compute an expectation, we compute this probability
+weighted average.
+We do the integral and we're done.
+Notice that inside the integral, the coordinates
+from the starting point big S and are just S and T
+are constants inside the integral.
+They don't do anything they're not integrated against.
+So the result is some function of the stock price and time.
+So the expected value where we're
+computing the expectation of some terminal values at time
+T is itself a function of the starting point S and T.
+And It satisfies the same differential equation as p.
+The equation that we wrote down on the previous slide.
+So f satisfies a differential equation.
+It also has interesting initial conditions.
+In the limit where little t goes to big T,
+we think this is arriving at the expected value.
+We can go through the same argument
+either by looking at the Gaussian form
+here, and changing variables in the interval.
+Or by using the delta function to say
+that when the big T goes to little t,
+the probability density approaches delta function.
+Either way we do it, we find it satisfies
+the initial conditions that this large value when
+little t goes to big T takes the expected result.
+No pun intended.
+f of S because this will be f of S evaluated
+at the terminal point S sub t where it's
+no longer random because we're evaluating at time big T what
+the value will be a time big T.
+Let's take things one step further.
+Let's think about f and compute its present value.
+So the present value is the discounting
+under the continuous risk free rate.
+It's e the minus RT of some quantity.
+That is, we think of the future values
+as being what their value would be
+if they earned compound interest at a rate r continuously
+compounded for a given period of time.
+The present value reverses that.
+It says let's find out the value now
+that would be required to get a given future value.
+So I'm going to define V to be the present value of F
+where I'm going to multiply it times the usual factor
+that we see in finance.
+e to the minus r times the amount
+of time left to expiration, which in this case
+is big T minus little t.
+Now what equation does V satisfy?
+e to the minus rT times F is just
+e minus rT minus t times the expectation.
+But remember we saw that f of St is just the terminal
+value of our function.
+So we can rewrite this as the present value
+of the expectation of V itself evaluated
+at the terminal value.
+That is to say that V anad S sub t at an initial time
+is equal to the discounted present value
+of the expectation of the terminal value.
+And this expectation, of course, is computed with probability
+density p.

@@ -1,0 +1,61 @@
+
+PROFESSOR: So the reason that the state prices
+can be valuable is because we can now characterize
+all possible payoffs in terms not just of security prices,
+but in terms of the values of the payoffs, which we know need
+to have positive state prices.
+So the state prices need to be positive
+because the payoffs of the elementary AD securities
+are positive.
+And, in a complete market, all of the payoffs
+can be replicated, and they all have a unique price.
+So we have positive state prices if and only
+if there's no arbitrage.
+If the prices are 0 or negative, then there's arbitrage.
+We can take some of the AD securities as basis assets,
+take those portfolios as basis assets in our original space.
+If we drop the set of redundant securities
+and we choose as a basis the AD securities,
+then we'd have a very simple description of our securities
+market.
+The payoff matrix would just be the identity.
+But we know, in any event, that the payoff--
+that the price for any positive payoff, vector b,
+is given by the linear combination of the state
+prices times the payoffs of those portfolios.
+So it's given by psi star b where
+psi is the vector of state prices
+and b is the vector of payoffs.
+So, in terms of the original assets,
+let's see how we can rewrite this.
+If we write this in terms of the first column of A--
+let's let the first column of A be denoted a1--
+then the price of it is given by the state price
+vector acting on its payoff.
+All right, so we take our first-- for example,
+in our original matrix A of 3, 2, 1,
+if we have a set of state prices,
+the state prices applied to the first column give a value S1,
+and that would be the market price of the security that
+corresponds to the payoff a1.
+Similarly, S2, the market price of a2,
+is related to the state prices by letting the state price
+vector act on the second column of the payoff matrix and so on.
+Now, if we group these together, we notice,
+if we form a column vector of these, of S1, S2, S3,
+we notice that we could write this as a matrix equation.
+That is we could say that the row vector S
+star is equal to psi star acting on the payoff matrix.
+Because this is a row vector, it acts in turn
+on each of the column vectors in A.
+Finally, we can use the rule that the transpose of a product
+is the product of the transposes in the opposite order.
+So the transpose of a row vector is a column vector.
+This gives us S. And the transpose
+of psi transpose A of a row vector times a matrix is--
+the transpose is going to be A transpose times psi where
+psi is a column vector.
+So now we have a relationship between market prices and state
+prices.
+The market prices are given in terms of the state prices
+by multiplying times the transpose of the payoff matrix.

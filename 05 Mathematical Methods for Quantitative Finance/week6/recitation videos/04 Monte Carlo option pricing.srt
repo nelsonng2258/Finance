@@ -1,0 +1,1440 @@
+0
+00:00:00,000 --> 00:00:01,090
+
+
+1
+00:00:01,090 --> 00:00:02,890
+PROFESSOR: Lecture, we saw two ways
+
+2
+00:00:02,890 --> 00:00:05,650
+of solving the Black-Scholes equation.
+
+3
+00:00:05,650 --> 00:00:08,020
+One of them was by doing integrals.
+
+4
+00:00:08,020 --> 00:00:10,960
+Where we had a kernel, a probability density function,
+
+5
+00:00:10,960 --> 00:00:13,780
+we could multiply times the desired payoff,
+
+6
+00:00:13,780 --> 00:00:16,058
+do the integral, and get a solution.
+
+7
+00:00:16,058 --> 00:00:18,100
+But I mentioned, then, that there was another way
+
+8
+00:00:18,100 --> 00:00:19,990
+that we could do it by using directly
+
+9
+00:00:19,990 --> 00:00:22,420
+the formula for expectations and the fact
+
+10
+00:00:22,420 --> 00:00:25,540
+that certain expected values satisfy differential
+
+11
+00:00:25,540 --> 00:00:27,790
+equations in general, and in particular,
+
+12
+00:00:27,790 --> 00:00:29,390
+the Black-Scholes equation.
+
+13
+00:00:29,390 --> 00:00:32,170
+So what I'd like to do is just show you a little bit more
+
+14
+00:00:32,170 --> 00:00:33,160
+in detail here.
+
+15
+00:00:33,160 --> 00:00:34,660
+But I'm not going to write the code.
+
+16
+00:00:34,660 --> 00:00:36,280
+I left that for you to do.
+
+17
+00:00:36,280 --> 00:00:38,530
+And the steps are pretty easy, though.
+
+18
+00:00:38,530 --> 00:00:40,570
+What I want to show you, I've written a function
+
+19
+00:00:40,570 --> 00:00:44,980
+here, MCprice, and behind me are a set of Monte Carlo paths
+
+20
+00:00:44,980 --> 00:00:47,290
+that I generated before you came in.
+
+21
+00:00:47,290 --> 00:00:50,478
+And I did this using code that's very similar to the code we did
+
+22
+00:00:50,478 --> 00:00:52,270
+at the beginning of the class when we first
+
+23
+00:00:52,270 --> 00:00:55,120
+talked about Monte Carlos, except that it's
+
+24
+00:00:55,120 --> 00:00:58,760
+been adapted for the specifics of an Ito process.
+
+25
+00:00:58,760 --> 00:01:00,470
+So what do I mean by that?
+
+26
+00:01:00,470 --> 00:01:11,390
+Well, we have-- our idea is going
+
+27
+00:01:11,390 --> 00:01:15,230
+to be to find the value of a derivative at time t
+
+28
+00:01:15,230 --> 00:01:22,090
+to be the present value in the time remaining to expiration
+
+29
+00:01:22,090 --> 00:01:28,420
+of the expected value of the function at expiration.
+
+30
+00:01:28,420 --> 00:01:31,940
+And we're going to replace this by an approximation.
+
+31
+00:01:31,940 --> 00:01:34,810
+So this is going to be computed as the average
+
+32
+00:01:34,810 --> 00:01:36,850
+over a bunch of Vs that could have come
+
+33
+00:01:36,850 --> 00:01:38,620
+under different realizations.
+
+34
+00:01:38,620 --> 00:01:41,230
+But we said that this was under the Q-measure.
+
+35
+00:01:41,230 --> 00:01:45,750
+So Q is economist speak.
+
+36
+00:01:45,750 --> 00:01:55,750
+Q-measure, or risk-neutral measure,
+
+37
+00:01:55,750 --> 00:02:00,310
+simply means that we're going to pick
+
+38
+00:02:00,310 --> 00:02:05,700
+a drift rate r, the risk-free rate,
+
+39
+00:02:05,700 --> 00:02:07,950
+to replace mu in our formulas.
+
+40
+00:02:07,950 --> 00:02:09,449
+Now, what is it we want to do?
+
+41
+00:02:09,449 --> 00:02:11,670
+We wanted to start with an underlying,
+
+42
+00:02:11,670 --> 00:02:14,760
+so we have an underlying price process.
+
+43
+00:02:14,760 --> 00:02:16,960
+And remember, we're going to discretize things.
+
+44
+00:02:16,960 --> 00:02:18,510
+So we want to do an approximation
+
+45
+00:02:18,510 --> 00:02:20,352
+to a continuous time world, but we're
+
+46
+00:02:20,352 --> 00:02:21,560
+going to go back to discrete.
+
+47
+00:02:21,560 --> 00:02:24,060
+So remember when we talked about discrete processes,
+
+48
+00:02:24,060 --> 00:02:28,960
+we said that we could define changes recursively
+
+49
+00:02:28,960 --> 00:02:32,170
+in terms of return, logarithmic returns,
+
+50
+00:02:32,170 --> 00:02:34,000
+over a given time period.
+
+51
+00:02:34,000 --> 00:02:35,950
+If we rewrite this, of course, this
+
+52
+00:02:35,950 --> 00:02:42,280
+is the same as saying that rt is the logarithm of St
+
+53
+00:02:42,280 --> 00:02:43,900
+over St minus 1.
+
+54
+00:02:43,900 --> 00:02:47,338
+And we didn't specify how far apart t and t minus 1 were,
+
+55
+00:02:47,338 --> 00:02:48,880
+and here we'll think of them as being
+
+56
+00:02:48,880 --> 00:02:53,920
+some small but finite distance dt, or delta t, if you prefer.
+
+57
+00:02:53,920 --> 00:02:57,070
+And you notice that this is the same thing as log
+
+58
+00:02:57,070 --> 00:03:01,810
+of St minus log of St minus 1.
+
+59
+00:03:01,810 --> 00:03:03,680
+Now, if you're a nitpicker, you would
+
+60
+00:03:03,680 --> 00:03:05,680
+say that you can't take a logarithm of something
+
+61
+00:03:05,680 --> 00:03:06,470
+with units.
+
+62
+00:03:06,470 --> 00:03:09,160
+So we could divide this by $1, let's say,
+
+63
+00:03:09,160 --> 00:03:10,450
+and just have it be--
+
+64
+00:03:10,450 --> 00:03:14,778
+I could divide this by, say, some S star equal to $1
+
+65
+00:03:14,778 --> 00:03:16,320
+just so that those are dimensionless,
+
+66
+00:03:16,320 --> 00:03:18,520
+and that obviously cancels out.
+
+67
+00:03:18,520 --> 00:03:20,520
+But the important point is that, in terms
+
+68
+00:03:20,520 --> 00:03:22,650
+of this dimensionless variable, this
+
+69
+00:03:22,650 --> 00:03:27,960
+is going to be what we mean by d of log S.
+
+70
+00:03:27,960 --> 00:03:33,630
+So this r over here is just the return over the time step.
+
+71
+00:03:33,630 --> 00:03:35,260
+That's not the risk-free rate.
+
+72
+00:03:35,260 --> 00:03:38,040
+So what we want is, we'd like to build up
+
+73
+00:03:38,040 --> 00:03:43,560
+a series of iterated values.
+
+74
+00:03:43,560 --> 00:03:49,590
+This is S minus 2, e to the rt plus rt minus 1,
+
+75
+00:03:49,590 --> 00:03:53,680
+and so on, so that we can say that St
+
+76
+00:03:53,680 --> 00:03:57,190
+is going to be equal to some initial S0 times e
+
+77
+00:03:57,190 --> 00:04:03,200
+to the sum r1 plus r2 plus all the way up to rt
+
+78
+00:04:03,200 --> 00:04:07,490
+where these rt's are things that themselves
+
+79
+00:04:07,490 --> 00:04:12,220
+are described by d of log S.
+
+80
+00:04:12,220 --> 00:04:14,180
+So what does d of log S look like?
+
+81
+00:04:14,180 --> 00:04:16,640
+Well, we know that S is an Ito process.
+
+82
+00:04:16,640 --> 00:04:19,149
+So what we need to do is consider
+
+83
+00:04:19,149 --> 00:04:33,230
+that if dS/S is given by the risk-free description
+
+84
+00:04:33,230 --> 00:04:38,345
+plus sigma dB, this is what we'd like to do to have our Monte
+
+85
+00:04:38,345 --> 00:04:45,231
+Carlo, but not dS/S, but we want to simulate
+
+86
+00:04:45,231 --> 00:04:50,930
+a sequence of random variables d of log S.
+
+87
+00:04:50,930 --> 00:04:55,140
+And you'll write out what this is in terms of dt
+
+88
+00:04:55,140 --> 00:04:57,540
+and what it is in terms of dB.
+
+89
+00:04:57,540 --> 00:05:01,800
+And then those will be in the same format that we had before.
+
+90
+00:05:01,800 --> 00:05:03,690
+But we need to get the coefficients right
+
+91
+00:05:03,690 --> 00:05:05,380
+to get the right answer.
+
+92
+00:05:05,380 --> 00:05:08,790
+So the idea is that we're going to generate
+
+93
+00:05:08,790 --> 00:05:12,210
+a particular sequence of random variables that
+
+94
+00:05:12,210 --> 00:05:15,135
+are consistent with the Ito process
+
+95
+00:05:15,135 --> 00:05:17,010
+that we have, but with the special drift rate
+
+96
+00:05:17,010 --> 00:05:19,500
+where the drift rate is given by the risk-free rate,
+
+97
+00:05:19,500 --> 00:05:21,660
+not the actual drift rate on the stock.
+
+98
+00:05:21,660 --> 00:05:25,140
+And then to compute our option values, what we're going to do
+
+99
+00:05:25,140 --> 00:05:27,030
+is at the end we're going to take--
+
+100
+00:05:27,030 --> 00:05:30,090
+well, put in a discount factor in front.
+
+101
+00:05:30,090 --> 00:05:31,860
+That's not too hard.
+
+102
+00:05:31,860 --> 00:05:34,470
+But our main idea is that we're going to,
+
+103
+00:05:34,470 --> 00:05:37,110
+instead of computing this mathematical expectation
+
+104
+00:05:37,110 --> 00:05:39,060
+by doing Gaussian integrals, we're
+
+105
+00:05:39,060 --> 00:05:43,970
+going to generate a whole bunch of price paths of S
+
+106
+00:05:43,970 --> 00:05:48,800
+and then compute V of S and just evaluate it at the endpoints.
+
+107
+00:05:48,800 --> 00:05:51,650
+So finally, it's going to look like e to the minus
+
+108
+00:05:51,650 --> 00:06:01,290
+r T minus t expectation of V evaluated at the final time
+
+109
+00:06:01,290 --> 00:06:05,070
+T and that final price ST.
+
+110
+00:06:05,070 --> 00:06:06,960
+So let's make that really concrete.
+
+111
+00:06:06,960 --> 00:06:08,783
+Let me just show you what the pieces are,
+
+112
+00:06:08,783 --> 00:06:10,200
+and then you'll put them together.
+
+113
+00:06:10,200 --> 00:06:13,960
+I promise you, it's not more than a page of code.
+
+114
+00:06:13,960 --> 00:06:16,910
+So if we take a look, what I've done
+
+115
+00:06:16,910 --> 00:06:18,800
+is I've generated a bunch of paths here.
+
+116
+00:06:18,800 --> 00:06:25,770
+And I've got my parameters already on the side.
+
+117
+00:06:25,770 --> 00:06:28,710
+Now, I have these parameters which are associated
+
+118
+00:06:28,710 --> 00:06:29,940
+with the stock price.
+
+119
+00:06:29,940 --> 00:06:33,540
+S0 is 100, mu is 5%, and sigma is 30%.
+
+120
+00:06:33,540 --> 00:06:37,250
+
+
+121
+00:06:37,250 --> 00:06:40,490
+I have these parameters associated
+
+122
+00:06:40,490 --> 00:06:43,740
+with the option itself.
+
+123
+00:06:43,740 --> 00:06:45,330
+So let's run those.
+
+124
+00:06:45,330 --> 00:06:47,180
+So I have the strike price is $100.
+
+125
+00:06:47,180 --> 00:06:48,680
+You can pick your value.
+
+126
+00:06:48,680 --> 00:06:50,360
+T is equal to 1 year.
+
+127
+00:06:50,360 --> 00:06:54,080
+One thing to watch out in R is R assumes that capital T stands
+
+128
+00:06:54,080 --> 00:06:55,670
+for true or false.
+
+129
+00:06:55,670 --> 00:06:57,687
+I always redefine it, but be careful.
+
+130
+00:06:57,687 --> 00:06:59,270
+You can pick a different letter if you
+
+131
+00:06:59,270 --> 00:07:03,500
+want because it's reserved until you overwrite it the way I did.
+
+132
+00:07:03,500 --> 00:07:05,820
+And I'll take a risk-free rate of 10%.
+
+133
+00:07:05,820 --> 00:07:07,730
+And then finally, I have a set of parameters
+
+134
+00:07:07,730 --> 00:07:10,160
+that are purely related to my simulation, where
+
+135
+00:07:10,160 --> 00:07:11,250
+I have two choices.
+
+136
+00:07:11,250 --> 00:07:12,980
+I can pick the number of time steps
+
+137
+00:07:12,980 --> 00:07:15,890
+into which I'm going to divide my macroscopic period here
+
+138
+00:07:15,890 --> 00:07:20,060
+of 1 year, and I have the number of paths in my simulation.
+
+139
+00:07:20,060 --> 00:07:22,610
+So I like to start with around 10,000,
+
+140
+00:07:22,610 --> 00:07:27,248
+the typical size of the error is close of the square root of NP.
+
+141
+00:07:27,248 --> 00:07:28,790
+So that's going to give me a starting
+
+142
+00:07:28,790 --> 00:07:33,470
+point with a ballpark in the area of around 1% errors.
+
+143
+00:07:33,470 --> 00:07:36,145
+But you should try it and see how things behave
+
+144
+00:07:36,145 --> 00:07:37,270
+when you take a look at it.
+
+145
+00:07:37,270 --> 00:07:39,060
+So let's run those parameters.
+
+146
+00:07:39,060 --> 00:07:42,200
+Now, take a look at the sample paths.
+
+147
+00:07:42,200 --> 00:07:44,790
+I've already run this expression on the right-hand side.
+
+148
+00:07:44,790 --> 00:07:47,900
+And you can see behind me a whole bunch of sample paths.
+
+149
+00:07:47,900 --> 00:07:51,320
+Now, these are all drawn from exactly the same distribution.
+
+150
+00:07:51,320 --> 00:07:56,930
+I haven't told you which process I have to generate them,
+
+151
+00:07:56,930 --> 00:07:57,890
+but you could guess.
+
+152
+00:07:57,890 --> 00:08:00,350
+And I haven't told you what random variable I'm using,
+
+153
+00:08:00,350 --> 00:08:01,820
+but I wrote everything out in terms
+
+154
+00:08:01,820 --> 00:08:04,445
+of a standardized random variable Z.
+
+155
+00:08:04,445 --> 00:08:07,100
+One of the questions you should look at when you try
+
+156
+00:08:07,100 --> 00:08:09,380
+is to ask how much of a difference does it make.
+
+157
+00:08:09,380 --> 00:08:12,770
+For example, if you take Z equals plus or minus 1,
+
+158
+00:08:12,770 --> 00:08:16,520
+or you take Z to be drawn from a normal distribution of mean 0
+
+159
+00:08:16,520 --> 00:08:18,470
+and variance 1, or you pick something
+
+160
+00:08:18,470 --> 00:08:20,690
+else an exponential variable, anything else that's
+
+161
+00:08:20,690 --> 00:08:22,910
+been rescaled, how much of a difference
+
+162
+00:08:22,910 --> 00:08:24,620
+does it make in your simulations?
+
+163
+00:08:24,620 --> 00:08:26,450
+And how does it depend, for example,
+
+164
+00:08:26,450 --> 00:08:29,780
+on the number of time steps before, say, the central limit
+
+165
+00:08:29,780 --> 00:08:32,840
+theorem kicks in, as we would expect it to do over
+
+166
+00:08:32,840 --> 00:08:36,799
+a long period of time, over, say, a few hundred steps?
+
+167
+00:08:36,799 --> 00:08:38,809
+It is worth noting that, if you add even
+
+168
+00:08:38,809 --> 00:08:42,320
+as few as six uniform random variables,
+
+169
+00:08:42,320 --> 00:08:46,400
+that you can get a fairly decent approximation to the Gaussian
+
+170
+00:08:46,400 --> 00:08:47,420
+distribution.
+
+171
+00:08:47,420 --> 00:08:49,160
+So here I've got a bunch of paths,
+
+172
+00:08:49,160 --> 00:08:51,080
+and you'll notice this gives me the stock
+
+173
+00:08:51,080 --> 00:08:52,580
+price all the way out.
+
+174
+00:08:52,580 --> 00:08:54,980
+And I've drawn only 10 of them, not 10,000,
+
+175
+00:08:54,980 --> 00:08:57,960
+because the graph would look rather a mess otherwise.
+
+176
+00:08:57,960 --> 00:08:58,760
+OK.
+
+177
+00:08:58,760 --> 00:09:01,340
+So that's what some of the paths look like.
+
+178
+00:09:01,340 --> 00:09:03,420
+What do the option values look like?
+
+179
+00:09:03,420 --> 00:09:08,000
+Well, remember, the value of a call option on a stock
+
+180
+00:09:08,000 --> 00:09:12,450
+is equal to the stock price minus the strike price.
+
+181
+00:09:12,450 --> 00:09:14,810
+So it's equal to the price minus 100
+
+182
+00:09:14,810 --> 00:09:17,480
+provided the price is above 100.
+
+183
+00:09:17,480 --> 00:09:20,160
+But it's equal to 0 below 100.
+
+184
+00:09:20,160 --> 00:09:26,810
+So if I take a look at my expression,
+
+185
+00:09:26,810 --> 00:09:31,250
+now looking at call values where I've computed in that way,
+
+186
+00:09:31,250 --> 00:09:32,700
+here's what they look like.
+
+187
+00:09:32,700 --> 00:09:35,678
+So you notice these price paths never go below 0.
+
+188
+00:09:35,678 --> 00:09:37,970
+They're not as big as the others because I've basically
+
+189
+00:09:37,970 --> 00:09:39,560
+subtracted off 100.
+
+190
+00:09:39,560 --> 00:09:41,810
+And a large number of them are really
+
+191
+00:09:41,810 --> 00:09:44,580
+invisible because they all hug the bottom of the curve.
+
+192
+00:09:44,580 --> 00:09:46,070
+But this is what I want.
+
+193
+00:09:46,070 --> 00:09:49,760
+So I went from my underlying S to my derivative V,
+
+194
+00:09:49,760 --> 00:09:51,500
+or in this case, I've called it C.
+
+195
+00:09:51,500 --> 00:09:54,440
+I've got another one called P for doing the put values.
+
+196
+00:09:54,440 --> 00:09:56,960
+And all that's left to do is to take
+
+197
+00:09:56,960 --> 00:10:00,650
+the average of the terminal values and discount it,
+
+198
+00:10:00,650 --> 00:10:02,220
+and then we're done.
+
+199
+00:10:02,220 --> 00:10:04,220
+But it might be interesting to see what happens,
+
+200
+00:10:04,220 --> 00:10:06,930
+because these are not evenly distributed.
+
+201
+00:10:06,930 --> 00:10:10,370
+So remember that the histogram for, let's say,
+
+202
+00:10:10,370 --> 00:10:13,770
+the terminal values of S--
+
+203
+00:10:13,770 --> 00:10:19,340
+so let's take the last time step, which would be Nt plus 1,
+
+204
+00:10:19,340 --> 00:10:23,960
+in this case 253, and if we look at a histogram of the values,
+
+205
+00:10:23,960 --> 00:10:25,400
+we see that we get something that
+
+206
+00:10:25,400 --> 00:10:28,760
+looks like a typical kind of log-normal distribution.
+
+207
+00:10:28,760 --> 00:10:32,023
+If I do the same thing in terms of the call values,
+
+208
+00:10:32,023 --> 00:10:33,440
+though, I'm going to get something
+
+209
+00:10:33,440 --> 00:10:35,726
+that's quite different.
+
+210
+00:10:35,726 --> 00:10:41,300
+Oops, let's try capital C, definitely case sensitive here.
+
+211
+00:10:41,300 --> 00:10:44,540
+And what I see is, I have a huge spike at 0.
+
+212
+00:10:44,540 --> 00:10:47,090
+A lot of my paths finish below the money,
+
+213
+00:10:47,090 --> 00:10:48,590
+and they don't contribute.
+
+214
+00:10:48,590 --> 00:10:51,770
+And then for the ones that do finish above the money,
+
+215
+00:10:51,770 --> 00:10:54,202
+they're actually decreasing more or less monotonically.
+
+216
+00:10:54,202 --> 00:10:55,910
+There are a couple bumps there, but those
+
+217
+00:10:55,910 --> 00:10:58,580
+are artifacts of the simulation and some of the bidding
+
+218
+00:10:58,580 --> 00:10:59,480
+in the histogram.
+
+219
+00:10:59,480 --> 00:11:00,650
+And that makes sense.
+
+220
+00:11:00,650 --> 00:11:03,470
+It makes sense because it's less and less likely
+
+221
+00:11:03,470 --> 00:11:06,710
+that a stock is going to greatly exceed the strike
+
+222
+00:11:06,710 --> 00:11:08,915
+price if it started at the strike price
+
+223
+00:11:08,915 --> 00:11:10,040
+and these are random walks.
+
+224
+00:11:10,040 --> 00:11:11,750
+The more likely thing is it's going
+
+225
+00:11:11,750 --> 00:11:15,080
+to be closer to the original value,
+
+226
+00:11:15,080 --> 00:11:17,180
+depending on what the drift rate is, in this case,
+
+227
+00:11:17,180 --> 00:11:18,890
+set by the risk-free rate r.
+
+228
+00:11:18,890 --> 00:11:21,800
+So that's part of what the distribution looks like.
+
+229
+00:11:21,800 --> 00:11:24,575
+This also tells us ways that you could make a much better Monte
+
+230
+00:11:24,575 --> 00:11:26,240
+Carlo than the one I've suggested.
+
+231
+00:11:26,240 --> 00:11:29,030
+Since a lot of the paths, a large chunk of them,
+
+232
+00:11:29,030 --> 00:11:34,130
+in this case almost 60% of the paths, finished with a value,
+
+233
+00:11:34,130 --> 00:11:37,610
+with a contribution of 0 to my final sum,
+
+234
+00:11:37,610 --> 00:11:41,540
+then perhaps we could find a way to spend less time simulating
+
+235
+00:11:41,540 --> 00:11:44,670
+paths that aren't going to contribute to the final answer.
+
+236
+00:11:44,670 --> 00:11:46,070
+So those are our steps.
+
+237
+00:11:46,070 --> 00:11:49,040
+We needed to first simulate the paths and the underlying.
+
+238
+00:11:49,040 --> 00:11:51,380
+Second, we take those and we compute
+
+239
+00:11:51,380 --> 00:11:54,950
+the value of the derivative over its entire trajectory.
+
+240
+00:11:54,950 --> 00:11:58,220
+The third step is we then take an arithmetic
+
+241
+00:11:58,220 --> 00:12:01,563
+average of the terminal values that are out here.
+
+242
+00:12:01,563 --> 00:12:03,230
+I showed you the histogram, but you just
+
+243
+00:12:03,230 --> 00:12:05,760
+need to compute an average of those values.
+
+244
+00:12:05,760 --> 00:12:08,300
+So they're either S minus K or they're 0.
+
+245
+00:12:08,300 --> 00:12:09,650
+We compute an average.
+
+246
+00:12:09,650 --> 00:12:11,750
+And then we have a discount factor in front.
+
+247
+00:12:11,750 --> 00:12:18,330
+And that's what goes into my function right here, MCprice.
+
+248
+00:12:18,330 --> 00:12:22,730
+So let's run it and see what we get when I run my function.
+
+249
+00:12:22,730 --> 00:12:24,783
+I have a function that gives me put and a call.
+
+250
+00:12:24,783 --> 00:12:27,200
+And I've enhanced this a little bit to give me an estimate
+
+251
+00:12:27,200 --> 00:12:30,410
+for standard errors as well by analyzing the dispersion
+
+252
+00:12:30,410 --> 00:12:31,770
+of the results that I have.
+
+253
+00:12:31,770 --> 00:12:33,780
+But let's focus on the first two numbers.
+
+254
+00:12:33,780 --> 00:12:36,200
+So I have that for my set of parameters,
+
+255
+00:12:36,200 --> 00:12:40,430
+the call value should be worth $16.65.
+
+256
+00:12:40,430 --> 00:12:45,020
+The put value should be worth $7.35.
+
+257
+00:12:45,020 --> 00:12:46,880
+So that's it, right?
+
+258
+00:12:46,880 --> 00:12:48,830
+Well, maybe.
+
+259
+00:12:48,830 --> 00:12:50,130
+Let's consider two things.
+
+260
+00:12:50,130 --> 00:12:53,820
+One of them is we can check with the exact results
+
+261
+00:12:53,820 --> 00:12:54,620
+from Black-Scholes.
+
+262
+00:12:54,620 --> 00:12:57,480
+This is an approximation method, after all.
+
+263
+00:12:57,480 --> 00:13:00,650
+So if we compare with the exact results for Black-Scholes,
+
+264
+00:13:00,650 --> 00:13:03,890
+one way that we can do it is with a library
+
+265
+00:13:03,890 --> 00:13:06,640
+called R Quantlab that includes functions.
+
+266
+00:13:06,640 --> 00:13:09,140
+Or you can code them up yourself just from the Black-Scholes
+
+267
+00:13:09,140 --> 00:13:10,820
+formula, very easy to do.
+
+268
+00:13:10,820 --> 00:13:12,440
+And what we find is for the call,
+
+269
+00:13:12,440 --> 00:13:19,760
+the exact value is $16.73 against our value of $16.65.
+
+270
+00:13:19,760 --> 00:13:22,470
+So is that close enough?
+
+271
+00:13:22,470 --> 00:13:24,320
+At least for a ballpark.
+
+272
+00:13:24,320 --> 00:13:26,060
+But one of the things to think about
+
+273
+00:13:26,060 --> 00:13:28,400
+is, what is it that would make the answer precise?
+
+274
+00:13:28,400 --> 00:13:33,110
+Or if I told you that you needed the answer to be within $0.10,
+
+275
+00:13:33,110 --> 00:13:36,980
+within $1, within a penny, would you know what to change
+
+276
+00:13:36,980 --> 00:13:40,570
+in the simulation to get it to sufficient accuracy?
+
+277
+00:13:40,570 --> 00:13:41,570
+How about the put value?
+
+278
+00:13:41,570 --> 00:13:43,700
+Well, $7.22.
+
+279
+00:13:43,700 --> 00:13:49,160
+It looks like the exact value is $7.35.
+
+280
+00:13:49,160 --> 00:13:52,850
+So it looks like our call option is a little high.
+
+281
+00:13:52,850 --> 00:13:57,360
+Our put option is a little bit low.
+
+282
+00:13:57,360 --> 00:13:59,030
+So-- excuse me.
+
+283
+00:13:59,030 --> 00:14:02,030
+Our call value is a little bit below the true value.
+
+284
+00:14:02,030 --> 00:14:04,973
+Our put value is a little bit above the true value.
+
+285
+00:14:04,973 --> 00:14:06,890
+And one of the things that you should consider
+
+286
+00:14:06,890 --> 00:14:08,900
+when you do this is whether or not,
+
+287
+00:14:08,900 --> 00:14:11,870
+if you're computing different contracts
+
+288
+00:14:11,870 --> 00:14:14,840
+on the same underlying, should you re-run the random numbers
+
+289
+00:14:14,840 --> 00:14:15,500
+or not?
+
+290
+00:14:15,500 --> 00:14:17,960
+Should you re-run the same simulations?
+
+291
+00:14:17,960 --> 00:14:20,390
+There are two arguments, and I'll let you think about it
+
+292
+00:14:20,390 --> 00:14:21,950
+and decide for yourself.
+
+293
+00:14:21,950 --> 00:14:24,333
+One of them is that the whole point of this
+
+294
+00:14:24,333 --> 00:14:26,000
+is the random numbers need to be random.
+
+295
+00:14:26,000 --> 00:14:27,030
+They can't be biased.
+
+296
+00:14:27,030 --> 00:14:28,760
+So of course, every new thing you do,
+
+297
+00:14:28,760 --> 00:14:30,830
+you should do a new draw of random numbers.
+
+298
+00:14:30,830 --> 00:14:34,190
+The other argument says no, there's only one underlying.
+
+299
+00:14:34,190 --> 00:14:38,240
+And although we might be biased in a particular ensemble
+
+300
+00:14:38,240 --> 00:14:40,490
+and a particular set of paths might not
+
+301
+00:14:40,490 --> 00:14:43,460
+be exactly representative of what could happen in S,
+
+302
+00:14:43,460 --> 00:14:45,800
+it's very important in the marketplace
+
+303
+00:14:45,800 --> 00:14:49,070
+that we price puts and calls consistently with each other
+
+304
+00:14:49,070 --> 00:14:51,060
+in order to avoid arbitrage.
+
+305
+00:14:51,060 --> 00:14:54,260
+So what we could do in that case is generate one set of paths
+
+306
+00:14:54,260 --> 00:14:57,440
+for the underlying and then use those to price
+
+307
+00:14:57,440 --> 00:15:02,240
+puts and calls, different options with different strikes
+
+308
+00:15:02,240 --> 00:15:03,680
+and the same maturity.
+
+309
+00:15:03,680 --> 00:15:05,660
+Or if we want different maturities,
+
+310
+00:15:05,660 --> 00:15:07,470
+we could go out to simulate paths out
+
+311
+00:15:07,470 --> 00:15:10,550
+to our longest maturity, but then use that same set of paths
+
+312
+00:15:10,550 --> 00:15:15,080
+to use a subset of those for things that would expire
+
+313
+00:15:15,080 --> 00:15:17,750
+potentially sooner.
+
+314
+00:15:17,750 --> 00:15:21,300
+
+
+315
+00:15:21,300 --> 00:15:24,390
+So finally, we might also remember that in addition
+
+316
+00:15:24,390 --> 00:15:26,880
+to comparing to the known true value--
+
+317
+00:15:26,880 --> 00:15:28,800
+and you should do that because now you've
+
+318
+00:15:28,800 --> 00:15:30,790
+got a great test case for your code.
+
+319
+00:15:30,790 --> 00:15:34,305
+You can check your code against the actual values.
+
+320
+00:15:34,305 --> 00:15:37,310
+So any numbers your pick, any parameters you want,
+
+321
+00:15:37,310 --> 00:15:39,360
+compare them to a Black-Scholes calculator.
+
+322
+00:15:39,360 --> 00:15:41,530
+And you'll know when you've got the right answer.
+
+323
+00:15:41,530 --> 00:15:44,780
+But remember, it is a random number generator.
+
+324
+00:15:44,780 --> 00:15:46,890
+So if I run my function again, I'm
+
+325
+00:15:46,890 --> 00:15:48,690
+going to get some different values.
+
+326
+00:15:48,690 --> 00:15:51,900
+This time I'm high, $16.85.
+
+327
+00:15:51,900 --> 00:15:54,150
+I run it again, $16.80.
+
+328
+00:15:54,150 --> 00:15:57,000
+So there's some scatter in the values I have.
+
+329
+00:15:57,000 --> 00:15:58,800
+You might think that I could compute
+
+330
+00:15:58,800 --> 00:16:00,330
+an average of these values.
+
+331
+00:16:00,330 --> 00:16:02,550
+One question I would ask you is, is there
+
+332
+00:16:02,550 --> 00:16:06,675
+any difference between averaging different runs of my Monte
+
+333
+00:16:06,675 --> 00:16:10,110
+Carlo pricer versus doing a single run with more
+
+334
+00:16:10,110 --> 00:16:12,270
+simulated paths inside it?
+
+335
+00:16:12,270 --> 00:16:14,470
+In any event, have fun with it.
+
+336
+00:16:14,470 --> 00:16:16,950
+This is your chance to do it and run a Monte Carlo
+
+337
+00:16:16,950 --> 00:16:20,760
+and see if you can reproduce the Black-Scholes results this way.
+
+338
+00:16:20,760 --> 00:16:23,990
+And keep in mind that this is not only an easy thing
+
+339
+00:16:23,990 --> 00:16:27,710
+to code and much easier than solving differential equations
+
+340
+00:16:27,710 --> 00:16:29,480
+or doing Gaussian integrals if you like
+
+341
+00:16:29,480 --> 00:16:31,040
+being around a computer at all.
+
+342
+00:16:31,040 --> 00:16:33,440
+You don't need to do it in R. You can do it in Python,
+
+343
+00:16:33,440 --> 00:16:35,480
+you can do it in Java, you can do it
+
+344
+00:16:35,480 --> 00:16:37,250
+in Visual Basic, anything you want.
+
+345
+00:16:37,250 --> 00:16:38,420
+And they've all been done.
+
+346
+00:16:38,420 --> 00:16:39,950
+They're all widely used.
+
+347
+00:16:39,950 --> 00:16:43,070
+But the other thing about the Monte Carlo method
+
+348
+00:16:43,070 --> 00:16:45,280
+is that it generalizes to cases where
+
+349
+00:16:45,280 --> 00:16:48,110
+we don't have closed form analytical solutions
+
+350
+00:16:48,110 --> 00:16:50,150
+to the partial differential equations.
+
+351
+00:16:50,150 --> 00:16:51,650
+So we might have a different process
+
+352
+00:16:51,650 --> 00:16:54,470
+for the underlying for which we don't have the closed form
+
+353
+00:16:54,470 --> 00:16:57,110
+answer, but we could still use this and put it
+
+354
+00:16:57,110 --> 00:16:58,110
+on the computer.
+
+355
+00:16:58,110 --> 00:17:00,350
+So it's always a good idea to take your algorithms,
+
+356
+00:17:00,350 --> 00:17:02,600
+to take your code, test them against known
+
+357
+00:17:02,600 --> 00:17:05,540
+cases like the pure Black-Scholes model,
+
+358
+00:17:05,540 --> 00:17:08,630
+and then you'll be ready to face more complicated problems that
+
+359
+00:17:08,630 --> 00:17:11,350
+show up in the real world.
+

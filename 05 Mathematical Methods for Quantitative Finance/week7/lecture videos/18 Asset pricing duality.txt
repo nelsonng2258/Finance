@@ -1,0 +1,125 @@
+
+PROFESSOR: Here's a concrete example.
+Suppose that we've got A is an incomplete--
+represents the payoffs in an incomplete market.
+I have a stock and I have a bond.
+And the image of A is only two dimensional.
+So image of A is two dimensional because I have two securities.
+It's less than s, which is equal to 3.
+So the rank of the matrix A is equal to 2.
+And we know that.
+We know the largest it could be is the smaller
+the number of its rows and columns.
+Because the two columns are independent,
+it's exactly equal to 2.
+So that image of A is a proper subspace of R3.
+It's only two dimensional.
+A star is the transpose, which we've seen before.
+We know it has a kernel, that is A star takes a three
+dimensional space into a two dimensional space.
+Its kernel is the vector 1 minus 2, 1.
+So suppose this-- this is a vector that lives in W star.
+It lives in our dual space.
+So if I come back here, it lives in this space over here.
+And now if I return, and I imagine that I take psi
+equals this vector, which is an element
+of the kernel of A star.
+This isn't a valid state price vector,
+but it does live in the space W star.
+So this is just some vector.
+We noticed it does have a negative element here.
+So this psi is an element of the kernel of A star.
+And let's suppose it's going to act on the image of A.
+So let's let b be the payoff of some portfolio.
+So pick your favorite portfolio x,
+act on it with the payoff matrix A, get its payoff b.
+What is its state price?
+Well, if we act with a state price that's
+in the kernel of A star acting on b,
+which is in the image of A, we can just do the computation.
+Psi star acting on b is the same thing as star acting on A times
+x.
+We regroup, because it's associative.
+That's the same thing as psi star A acting on x, which
+is A star psi acting on x.
+And that gives us 0.
+
+Because psi was in the kernel of A star, A star acting on psi
+is 0, therefore, this whole thing is 0.
+And that tells us that the price of this portfolio--
+
+or not the price, but if we act with psi star, which is not
+a valid state price vector.
+If we act with an element of the kernel of A star
+with the image of A, we get 0.
+So that helps us narrow things down.
+So, let's bring it together.
+We've got two different ways we can approach pricing.
+And they're not just equivalent, they're called dual.
+It's related to the dual prices, and they
+have to give the same answers.
+And you can use whichever one is more convenient.
+State pricing says that we compute the price of our target
+asset, the thing we might think about creating
+a particular set of payoffs in different states of the world
+by applying all of the allowed values of psi,
+all of the valid state price vectors
+which are consistent with our market structure.
+The price is uniquely determined if b
+is the payoff of a redundant asset,
+is we know that redundant assets should have prices
+that are uniquely determined.
+In equations, we would say that the price of our asset
+is given by--
+see if I can get the pointer back--
+
+there we go.
+It's given by psi acting on b.
+That is to say, the price we have
+is psi star b where psi is consistent with the pricing
+relationship, psi is in the dual space, and so all of its values
+are positive.
+So that's how we can do things in terms of state prices.
+We can also do replication pricing, which
+is what we started out with.
+And we don't have any state prices involved at all.
+You need to identify if it's a redundant asset, and if it is,
+we associate the value of the payoff with the value
+of the replicating portfolio.
+That's required to avoid arbitrage.
+Now, for non-redundant assets, we
+can frame the allowed prices as a bound on the asset
+prices that are subject to bounds
+above and below by taking a look at possible replicating
+portfolios.
+In the dual side, we know what our view is about what
+the allowed state prices are.
+They have to be positive.
+It's not quite as easy to find the price bounds
+in our replicating pricing world,
+but we do it by looking at the outside values where
+we can replicate the portfolio.
+We can find a minimum bound on the price
+by defining S min to be the largest price that we can
+observe for any portfolio that is strictly
+less for each of its components than the target payoff b.
+If that's the case, we know that this portfolio
+has to be strictly less than--
+or that the price of this portfolio
+has to be strictly greater than the price of this portfolio.
+And, similarly, we can look for a bound on the other side.
+So if we think back to our first example of stochastic dominance
+comparing a stock and bond, we think
+about having a degree of freedom that lets
+is very the portfolios so that we can move around and arrange
+to where we can see the crossover points between where
+we would exceed a payoff, or go below our lower payoff in one
+of our components.
+We can, with quite a bit more work,
+we can identify bounds for the prices.
+But either way in either picture,
+when we have non-redundant assets,
+their prices are not uniquely determined.
+But there are constraints to arbitrage.
+There are certain values that they're allowed to have
+and some values that they can't have.

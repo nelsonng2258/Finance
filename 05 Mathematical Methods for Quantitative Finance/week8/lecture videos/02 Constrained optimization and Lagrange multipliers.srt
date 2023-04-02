@@ -1,0 +1,1320 @@
+0
+00:00:00,000 --> 00:00:00,830
+
+
+1
+00:00:00,830 --> 00:00:02,580
+PROFESSOR: In the presence of constraints,
+
+2
+00:00:02,580 --> 00:00:05,307
+it's not enough to just find critical points.
+
+3
+00:00:05,307 --> 00:00:07,140
+Constraints are everywhere in the real world
+
+4
+00:00:07,140 --> 00:00:09,270
+and certainly in finance and economics.
+
+5
+00:00:09,270 --> 00:00:11,910
+We have finite resources that we need to allocate.
+
+6
+00:00:11,910 --> 00:00:13,240
+We have a finite budget.
+
+7
+00:00:13,240 --> 00:00:16,350
+We have a finite risk limit that we shouldn't exceed.
+
+8
+00:00:16,350 --> 00:00:18,900
+So we're often asked to solve problems
+
+9
+00:00:18,900 --> 00:00:23,490
+where we're looking for the best solution or a maximum value
+
+10
+00:00:23,490 --> 00:00:27,420
+of some scalar function subject to a constraint.
+
+11
+00:00:27,420 --> 00:00:29,978
+And those constraints can take different forms.
+
+12
+00:00:29,978 --> 00:00:31,020
+They might be equalities.
+
+13
+00:00:31,020 --> 00:00:32,145
+They might be inequalities.
+
+14
+00:00:32,145 --> 00:00:35,140
+They might involve one or multiple variables.
+
+15
+00:00:35,140 --> 00:00:37,710
+So let's start at the beginning with the Lagrange multiplier
+
+16
+00:00:37,710 --> 00:00:40,200
+method for solving equality constraints
+
+17
+00:00:40,200 --> 00:00:44,560
+in multidimensional optimization problems.
+
+18
+00:00:44,560 --> 00:00:46,900
+Here's a picture to help visualize things.
+
+19
+00:00:46,900 --> 00:00:49,530
+This is a contour map of the neighborhood
+
+20
+00:00:49,530 --> 00:00:52,380
+of Mount Washington showing its hiking trails.
+
+21
+00:00:52,380 --> 00:00:55,510
+Mount Washington is the tallest point in New England.
+
+22
+00:00:55,510 --> 00:00:59,880
+And, if I asked you to leave MIT and to find the tallest point
+
+23
+00:00:59,880 --> 00:01:02,430
+and you had a functional description of this,
+
+24
+00:01:02,430 --> 00:01:04,650
+you could certainly find lots of local extrema,
+
+25
+00:01:04,650 --> 00:01:08,790
+but the global maximum would be at 6,288 feet
+
+26
+00:01:08,790 --> 00:01:11,040
+right here at the top of Mount Washington.
+
+27
+00:01:11,040 --> 00:01:13,590
+But you notice there are lots of hiking trails around the top
+
+28
+00:01:13,590 --> 00:01:14,700
+of Mount Washington.
+
+29
+00:01:14,700 --> 00:01:16,750
+And there's even an auto road here,
+
+30
+00:01:16,750 --> 00:01:19,050
+and there's a railroad that goes down the backside.
+
+31
+00:01:19,050 --> 00:01:21,090
+But, if you were looking for a tranquil way,
+
+32
+00:01:21,090 --> 00:01:24,540
+you might, say, be over here at the Appalachian Mountain Club
+
+33
+00:01:24,540 --> 00:01:26,040
+Lake of the Clouds Hut.
+
+34
+00:01:26,040 --> 00:01:29,190
+And you'd like to hike over here to Tuckerman Ravine, which
+
+35
+00:01:29,190 --> 00:01:30,840
+descends rather steeply.
+
+36
+00:01:30,840 --> 00:01:32,490
+And you'd like to do it without going
+
+37
+00:01:32,490 --> 00:01:33,990
+through the summit at all.
+
+38
+00:01:33,990 --> 00:01:36,090
+Well, a question you certainly could ask
+
+39
+00:01:36,090 --> 00:01:39,660
+is, along a trail of my choice, say
+
+40
+00:01:39,660 --> 00:01:44,150
+this one, what's the highest point that I would reach along
+
+41
+00:01:44,150 --> 00:01:45,420
+the trail?
+
+42
+00:01:45,420 --> 00:01:47,750
+So the trail represents your constraint.
+
+43
+00:01:47,750 --> 00:01:50,360
+You're not free to go anywhere in latitude and longitude
+
+44
+00:01:50,360 --> 00:01:51,350
+on this map.
+
+45
+00:01:51,350 --> 00:01:52,580
+That's your constraint.
+
+46
+00:01:52,580 --> 00:01:55,670
+But we can ask, as you go along the trail, at every point,
+
+47
+00:01:55,670 --> 00:01:58,643
+you're definitely at some elevation above sea level.
+
+48
+00:01:58,643 --> 00:02:00,560
+And we could think of that as being a function
+
+49
+00:02:00,560 --> 00:02:03,530
+h of x, y where x and y give your latitude
+
+50
+00:02:03,530 --> 00:02:05,220
+and longitude for example.
+
+51
+00:02:05,220 --> 00:02:07,460
+And we could ask a very reasonable question.
+
+52
+00:02:07,460 --> 00:02:09,919
+If there are no cliffs here, even
+
+53
+00:02:09,919 --> 00:02:11,780
+though it descends steeply, and if you don't
+
+54
+00:02:11,780 --> 00:02:14,870
+fall into a crevasse, we could ask,
+
+55
+00:02:14,870 --> 00:02:16,880
+what was the highest point along that trail?
+
+56
+00:02:16,880 --> 00:02:19,160
+One of the things that we can see immediately
+
+57
+00:02:19,160 --> 00:02:21,470
+is, whatever it is, wherever the highest point
+
+58
+00:02:21,470 --> 00:02:23,360
+is along this path, it has nothing
+
+59
+00:02:23,360 --> 00:02:25,190
+to do with the global maximum.
+
+60
+00:02:25,190 --> 00:02:28,940
+It doesn't go anywhere near the summit of Mount Washington.
+
+61
+00:02:28,940 --> 00:02:33,560
+OK, so it's not enough to just take a function
+
+62
+00:02:33,560 --> 00:02:35,780
+and find its extrema because the answer
+
+63
+00:02:35,780 --> 00:02:39,140
+that we're looking for may not be anywhere nearby.
+
+64
+00:02:39,140 --> 00:02:42,277
+The answer to doing this is also--
+
+65
+00:02:42,277 --> 00:02:44,360
+let's think about this a little bit geometrically.
+
+66
+00:02:44,360 --> 00:02:46,910
+Imagine that we're ascending.
+
+67
+00:02:46,910 --> 00:02:50,390
+Say we're climbing through Tuckerman Ravine.
+
+68
+00:02:50,390 --> 00:02:51,840
+And we're going to go along here.
+
+69
+00:02:51,840 --> 00:02:52,790
+What does it mean?
+
+70
+00:02:52,790 --> 00:02:57,050
+As long as we're ascending, we are crossing contour lines.
+
+71
+00:02:57,050 --> 00:02:59,690
+Contour lines, remember, are level sets
+
+72
+00:02:59,690 --> 00:03:02,930
+where the altitude is constant, where our scalar function
+
+73
+00:03:02,930 --> 00:03:04,280
+h is constant.
+
+74
+00:03:04,280 --> 00:03:08,180
+What it means to reach an extremum along the path
+
+75
+00:03:08,180 --> 00:03:09,980
+or to reach a maximum along the path
+
+76
+00:03:09,980 --> 00:03:12,230
+is that you're no longer crossing contour lines.
+
+77
+00:03:12,230 --> 00:03:14,780
+That is your direction of travel,
+
+78
+00:03:14,780 --> 00:03:17,600
+the tangent along the path that you're taking,
+
+79
+00:03:17,600 --> 00:03:20,660
+is parallel to the contour lines themselves.
+
+80
+00:03:20,660 --> 00:03:22,340
+The point at which you reach a maximum
+
+81
+00:03:22,340 --> 00:03:24,110
+is when the direction of your trail
+
+82
+00:03:24,110 --> 00:03:27,830
+is along the direction of a contour line, at least
+
+83
+00:03:27,830 --> 00:03:28,820
+instantaneously.
+
+84
+00:03:28,820 --> 00:03:31,310
+In either direction going forward or backward,
+
+85
+00:03:31,310 --> 00:03:33,690
+you would be going down at a critical point.
+
+86
+00:03:33,690 --> 00:03:36,110
+So the geometrical condition we have
+
+87
+00:03:36,110 --> 00:03:39,710
+is that the direction of the path
+
+88
+00:03:39,710 --> 00:03:42,110
+should be tangent to the level sets.
+
+89
+00:03:42,110 --> 00:03:45,200
+And that we can state as a condition on the gradients
+
+90
+00:03:45,200 --> 00:03:47,780
+of the two functions, one describing the constraint
+
+91
+00:03:47,780 --> 00:03:50,360
+along the path and the other describing
+
+92
+00:03:50,360 --> 00:03:54,080
+the shape of the level sets of the function h
+
+93
+00:03:54,080 --> 00:03:55,260
+without the constraints.
+
+94
+00:03:55,260 --> 00:03:57,080
+And, when we overlay the two, we say
+
+95
+00:03:57,080 --> 00:03:58,830
+they need to be in the same direction.
+
+96
+00:03:58,830 --> 00:04:00,470
+And that's what the Lagrange multiplier
+
+97
+00:04:00,470 --> 00:04:01,610
+method is going to give us.
+
+98
+00:04:01,610 --> 00:04:04,320
+
+
+99
+00:04:04,320 --> 00:04:07,380
+So here is the Lagrange multiplier method.
+
+100
+00:04:07,380 --> 00:04:10,380
+What we're going to do is take our original unconstrained
+
+101
+00:04:10,380 --> 00:04:13,530
+function, h of x, y, and we're going
+
+102
+00:04:13,530 --> 00:04:16,800
+to construct a new function called the Lagrange function,
+
+103
+00:04:16,800 --> 00:04:19,050
+which is going to have one extra variable, which
+
+104
+00:04:19,050 --> 00:04:20,610
+is a variable called lambda.
+
+105
+00:04:20,610 --> 00:04:22,650
+And this extra variable lambda is known
+
+106
+00:04:22,650 --> 00:04:24,540
+as the Lagrange multiplier.
+
+107
+00:04:24,540 --> 00:04:26,190
+And the way I construct the function
+
+108
+00:04:26,190 --> 00:04:29,430
+is I take my original function, h of x, y,
+
+109
+00:04:29,430 --> 00:04:30,960
+and I subtract lambda--
+
+110
+00:04:30,960 --> 00:04:33,600
+it's linear lambda in this new variable--
+
+111
+00:04:33,600 --> 00:04:36,250
+times, in parentheses, I have my constraint.
+
+112
+00:04:36,250 --> 00:04:39,270
+So imagine that the constraint is given by some equation
+
+113
+00:04:39,270 --> 00:04:41,670
+in x and y, saying what they need to satisfy.
+
+114
+00:04:41,670 --> 00:04:43,780
+x and y is equal to some constant.
+
+115
+00:04:43,780 --> 00:04:46,500
+So all I've done is I've taken my original function
+
+116
+00:04:46,500 --> 00:04:50,480
+minus lambda times the constraint itself.
+
+117
+00:04:50,480 --> 00:04:53,950
+So the strategy here, in practical terms,
+
+118
+00:04:53,950 --> 00:04:58,480
+is to take a problem in two parts,
+
+119
+00:04:58,480 --> 00:05:01,420
+maximize the function subject to a constraint,
+
+120
+00:05:01,420 --> 00:05:04,940
+and turn it into a simpler problem in more variables.
+
+121
+00:05:04,940 --> 00:05:07,270
+So the problem in three variables,
+
+122
+00:05:07,270 --> 00:05:10,850
+with x, y, and lambda, is going to have no constraints.
+
+123
+00:05:10,850 --> 00:05:14,620
+So the idea is that we're going to take all three
+
+124
+00:05:14,620 --> 00:05:19,250
+partial derivatives now, set all three of them equal to 0.
+
+125
+00:05:19,250 --> 00:05:23,290
+That will impose the condition that the vectors--
+
+126
+00:05:23,290 --> 00:05:25,210
+that the direction of my constraint
+
+127
+00:05:25,210 --> 00:05:27,400
+is along the direction of the level sets.
+
+128
+00:05:27,400 --> 00:05:29,690
+And it's easy to solve.
+
+129
+00:05:29,690 --> 00:05:32,200
+So let's take a look at a couple of examples,
+
+130
+00:05:32,200 --> 00:05:34,240
+first in algebraic functions, and then we'll
+
+131
+00:05:34,240 --> 00:05:37,900
+see how this applies in finance, most notably, to the case
+
+132
+00:05:37,900 --> 00:05:40,060
+of portfolio optimization.
+
+133
+00:05:40,060 --> 00:05:44,980
+
+
+134
+00:05:44,980 --> 00:05:46,730
+The general method is this.
+
+135
+00:05:46,730 --> 00:05:50,410
+If we have multiple constraints, we introduce one constant
+
+136
+00:05:50,410 --> 00:05:54,460
+called the Lagrange multiplier per constraint.
+
+137
+00:05:54,460 --> 00:05:56,320
+We define the Lagrange function, which
+
+138
+00:05:56,320 --> 00:05:57,910
+is linear in the constraints.
+
+139
+00:05:57,910 --> 00:06:01,840
+It's got extra variables, one per Lagrange multiplier,
+
+140
+00:06:01,840 --> 00:06:04,000
+but it has a simpler solution.
+
+141
+00:06:04,000 --> 00:06:05,620
+We take the derivatives with respect
+
+142
+00:06:05,620 --> 00:06:07,700
+to each of the original variables.
+
+143
+00:06:07,700 --> 00:06:11,080
+And, of course, that gives us the original partial
+
+144
+00:06:11,080 --> 00:06:14,110
+derivatives we would have had plus something that's
+
+145
+00:06:14,110 --> 00:06:18,280
+linear in lambda or the other Lagrange multipliers.
+
+146
+00:06:18,280 --> 00:06:20,410
+And, when we take the derivative with respect
+
+147
+00:06:20,410 --> 00:06:23,000
+to the Lagrange multipliers, the equations
+
+148
+00:06:23,000 --> 00:06:25,390
+we get when we set those derivatives to 0
+
+149
+00:06:25,390 --> 00:06:27,860
+are just the constraint equations themselves.
+
+150
+00:06:27,860 --> 00:06:29,290
+So that's it.
+
+151
+00:06:29,290 --> 00:06:31,630
+Then we find the critical points,
+
+152
+00:06:31,630 --> 00:06:33,673
+and we can substitute them in and make
+
+153
+00:06:33,673 --> 00:06:34,840
+sure they solve the problem.
+
+154
+00:06:34,840 --> 00:06:39,100
+We can check second derivatives to make sure that, in fact, we
+
+155
+00:06:39,100 --> 00:06:42,190
+have a maximum and not a minimum or a point of inflection.
+
+156
+00:06:42,190 --> 00:06:45,352
+And, usually, not always, but in many problems,
+
+157
+00:06:45,352 --> 00:06:47,560
+it doesn't even matter what the Lagrange function is.
+
+158
+00:06:47,560 --> 00:06:51,220
+What we care is the location of the extremal value, not
+
+159
+00:06:51,220 --> 00:06:53,030
+the value itself.
+
+160
+00:06:53,030 --> 00:06:55,672
+So that's worth keeping in mind because it can simplify things.
+
+161
+00:06:55,672 --> 00:06:57,130
+So, for example, if we want to pick
+
+162
+00:06:57,130 --> 00:06:59,410
+a different form of the Lagrange function
+
+163
+00:06:59,410 --> 00:07:01,120
+that's easier to solve, but where
+
+164
+00:07:01,120 --> 00:07:03,960
+we know it has the same critical points, that's OK.
+
+165
+00:07:03,960 --> 00:07:05,630
+We can do that.
+
+166
+00:07:05,630 --> 00:07:07,930
+And, in fact, when it comes to the constraint,
+
+167
+00:07:07,930 --> 00:07:10,360
+we have a lot of freedom as to how we could change it
+
+168
+00:07:10,360 --> 00:07:13,390
+because, at the critical points, the constraint function is
+
+169
+00:07:13,390 --> 00:07:15,235
+going to vanish.
+
+170
+00:07:15,235 --> 00:07:17,110
+So let's take a look at a couple of examples.
+
+171
+00:07:17,110 --> 00:07:20,540
+
+
+172
+00:07:20,540 --> 00:07:23,620
+So here's a chance for you to do your own concept check.
+
+173
+00:07:23,620 --> 00:07:25,780
+And you can pause the video at this point.
+
+174
+00:07:25,780 --> 00:07:27,800
+And then we'll solve it together.
+
+175
+00:07:27,800 --> 00:07:28,960
+But here's the example.
+
+176
+00:07:28,960 --> 00:07:32,200
+Let's let h of x, y be the function x plus y.
+
+177
+00:07:32,200 --> 00:07:35,260
+And let's let the constraint be that the solutions,
+
+178
+00:07:35,260 --> 00:07:38,200
+the maximum, minimum, or extrema that we're looking for,
+
+179
+00:07:38,200 --> 00:07:41,280
+have to lie along a circle of radius r.
+
+180
+00:07:41,280 --> 00:07:42,385
+r here is just a radius.
+
+181
+00:07:42,385 --> 00:07:44,200
+It's not the risk-free rate.
+
+182
+00:07:44,200 --> 00:07:46,450
+So we construct our Lagrange function,
+
+183
+00:07:46,450 --> 00:07:50,080
+L of x, y, and lambda, to be our function h, x plus y,
+
+184
+00:07:50,080 --> 00:07:53,030
+minus lambda times the constraint.
+
+185
+00:07:53,030 --> 00:07:55,660
+So, if you'd like, pause the video.
+
+186
+00:07:55,660 --> 00:07:56,770
+See if you can solve it.
+
+187
+00:07:56,770 --> 00:07:58,872
+Find the critical points.
+
+188
+00:07:58,872 --> 00:08:01,330
+And then come back, and we'll take a look at this together.
+
+189
+00:08:01,330 --> 00:08:06,775
+
+
+190
+00:08:06,775 --> 00:08:09,940
+OK, so let's compute some derivatives together.
+
+191
+00:08:09,940 --> 00:08:12,370
+What we find is we take the first partial of L
+
+192
+00:08:12,370 --> 00:08:13,820
+with respect to x.
+
+193
+00:08:13,820 --> 00:08:16,180
+We get 1 minus 2 lambda.
+
+194
+00:08:16,180 --> 00:08:18,310
+Notice it's we have lambda here.
+
+195
+00:08:18,310 --> 00:08:20,650
+We're always going to have something linear in lambda
+
+196
+00:08:20,650 --> 00:08:23,470
+because this is left over, and the partial derivatives
+
+197
+00:08:23,470 --> 00:08:24,800
+act on the constraint.
+
+198
+00:08:24,800 --> 00:08:28,750
+So that tells us that x is 1 over 2 lambda.
+
+199
+00:08:28,750 --> 00:08:30,670
+I take the partial with respect to y.
+
+200
+00:08:30,670 --> 00:08:32,440
+My function is symmetric in x and y.
+
+201
+00:08:32,440 --> 00:08:35,450
+So, no surprise, I get that y is 1 over 2 lambda.
+
+202
+00:08:35,450 --> 00:08:38,110
+And now, because x and y are both equal to 1 over 2 lambda,
+
+203
+00:08:38,110 --> 00:08:39,400
+I can eliminate lambda.
+
+204
+00:08:39,400 --> 00:08:41,409
+And I see that x is equal to y.
+
+205
+00:08:41,409 --> 00:08:43,299
+So I'm almost done.
+
+206
+00:08:43,299 --> 00:08:45,040
+x is equal to y, but they also have
+
+207
+00:08:45,040 --> 00:08:47,680
+to lie along the constraint, which
+
+208
+00:08:47,680 --> 00:08:49,690
+means that the sum of their squares
+
+209
+00:08:49,690 --> 00:08:51,060
+has to be equal to r squared.
+
+210
+00:08:51,060 --> 00:08:54,820
+So, if I substitute x equals y into this constraint equation--
+
+211
+00:08:54,820 --> 00:08:56,470
+and notice the constraint equation
+
+212
+00:08:56,470 --> 00:08:59,500
+I get just by differentiating with respect to lambda.
+
+213
+00:08:59,500 --> 00:09:01,840
+There's no lambda in the original function h.
+
+214
+00:09:01,840 --> 00:09:05,290
+And there's a linear in lambda before the constraint.
+
+215
+00:09:05,290 --> 00:09:07,420
+So differentiating with respect to lambda just
+
+216
+00:09:07,420 --> 00:09:08,830
+gives me back my constraint.
+
+217
+00:09:08,830 --> 00:09:11,020
+It's exactly what I would have had before,
+
+218
+00:09:11,020 --> 00:09:13,450
+but, whereas, without the Lagrange multiplier method,
+
+219
+00:09:13,450 --> 00:09:16,720
+you might have tried to solve for y in terms of x--
+
+220
+00:09:16,720 --> 00:09:18,250
+you could have written y as being
+
+221
+00:09:18,250 --> 00:09:20,800
+plus or minus the square root of r squared minus x squared,
+
+222
+00:09:20,800 --> 00:09:23,650
+substituted it back into h, and then tried
+
+223
+00:09:23,650 --> 00:09:26,410
+to solve for that extremum.
+
+224
+00:09:26,410 --> 00:09:29,050
+You'd have had a more complicated function and fewer
+
+225
+00:09:29,050 --> 00:09:29,782
+variables.
+
+226
+00:09:29,782 --> 00:09:31,240
+Here we're going to keep everything
+
+227
+00:09:31,240 --> 00:09:33,370
+where all the variables start on equal footing.
+
+228
+00:09:33,370 --> 00:09:35,140
+We substitute into the constraint.
+
+229
+00:09:35,140 --> 00:09:36,820
+We find there are two solutions.
+
+230
+00:09:36,820 --> 00:09:39,190
+x and y are each equal to plus or minus r
+
+231
+00:09:39,190 --> 00:09:40,260
+over square root of 2.
+
+232
+00:09:40,260 --> 00:09:42,760
+Either they're both plus signs, or they're both minus signs.
+
+233
+00:09:42,760 --> 00:09:44,470
+And it's easy to check that either,
+
+234
+00:09:44,470 --> 00:09:47,020
+at 45 degrees in the first quadrant
+
+235
+00:09:47,020 --> 00:09:48,520
+or in the third quadrant, we have
+
+236
+00:09:48,520 --> 00:09:50,680
+two points on the circle, which represent
+
+237
+00:09:50,680 --> 00:09:53,620
+the maximum and the minimum values of x plus y.
+
+238
+00:09:53,620 --> 00:09:55,880
+And, if we substitute in the values,
+
+239
+00:09:55,880 --> 00:09:58,750
+these are the values, square root of 2 times r
+
+240
+00:09:58,750 --> 00:10:01,180
+or minus square root of 2r, OK?
+
+241
+00:10:01,180 --> 00:10:02,950
+So that one you might have guessed just
+
+242
+00:10:02,950 --> 00:10:05,650
+from symmetry of the problem, but this is the method.
+
+243
+00:10:05,650 --> 00:10:10,380
+It's really very easy, very straightforward.
+
+244
+00:10:10,380 --> 00:10:12,140
+Let's do another example.
+
+245
+00:10:12,140 --> 00:10:14,970
+Here, again, pause the video.
+
+246
+00:10:14,970 --> 00:10:16,400
+Take a look at doing this.
+
+247
+00:10:16,400 --> 00:10:19,190
+And then, after you've checked your own concepts
+
+248
+00:10:19,190 --> 00:10:21,900
+and your own math, come back and compare.
+
+249
+00:10:21,900 --> 00:10:24,470
+A couple of things to note, our function in this case
+
+250
+00:10:24,470 --> 00:10:27,510
+is a general quadratic form with a cross term.
+
+251
+00:10:27,510 --> 00:10:32,300
+So it may not be obvious immediately where the extrema
+
+252
+00:10:32,300 --> 00:10:35,930
+or whether they're maxima or minima or saddle points.
+
+253
+00:10:35,930 --> 00:10:38,360
+And we're going to look at this quadratic form,
+
+254
+00:10:38,360 --> 00:10:40,470
+instead of linear on our previous example,
+
+255
+00:10:40,470 --> 00:10:43,080
+and we're going to have it lie along the unit circle.
+
+256
+00:10:43,080 --> 00:10:45,920
+So, subject to the constraint that points lie along the unit
+
+257
+00:10:45,920 --> 00:10:49,070
+circle, we want to ask where are the maxima and minima
+
+258
+00:10:49,070 --> 00:10:52,100
+of the function h of x, y.
+
+259
+00:10:52,100 --> 00:10:54,440
+We construct a Lagrangian by taking
+
+260
+00:10:54,440 --> 00:10:58,080
+the quadratic form minus lambda times the constraint.
+
+261
+00:10:58,080 --> 00:10:59,660
+Now, one thing to consider as you're
+
+262
+00:10:59,660 --> 00:11:02,480
+doing this, a couple of things that don't matter, one of them
+
+263
+00:11:02,480 --> 00:11:04,130
+is the sign of lambda.
+
+264
+00:11:04,130 --> 00:11:06,380
+If you change lambda to minus lambda,
+
+265
+00:11:06,380 --> 00:11:09,110
+if you change, in fact, the sign of the constraint to 1
+
+266
+00:11:09,110 --> 00:11:11,570
+minus x squared minus y squared, you'll
+
+267
+00:11:11,570 --> 00:11:14,000
+get exactly the same result. And you should check that.
+
+268
+00:11:14,000 --> 00:11:16,007
+If you carry through the signs consistently,
+
+269
+00:11:16,007 --> 00:11:17,840
+you'll find that, when you eliminate lambda,
+
+270
+00:11:17,840 --> 00:11:19,910
+everything goes through exactly the same.
+
+271
+00:11:19,910 --> 00:11:23,000
+But it's also true that there are different ways
+
+272
+00:11:23,000 --> 00:11:25,970
+to write the constraint, and any of them would work.
+
+273
+00:11:25,970 --> 00:11:27,650
+So, for example, if I want x squared
+
+274
+00:11:27,650 --> 00:11:29,960
+plus y squared to equal 1, I could
+
+275
+00:11:29,960 --> 00:11:34,820
+take x squared plus y squared to the fourth power equal to 1.
+
+276
+00:11:34,820 --> 00:11:36,890
+Or I could take x squared plus y squared minus 1
+
+277
+00:11:36,890 --> 00:11:38,150
+to the 12th power.
+
+278
+00:11:38,150 --> 00:11:41,000
+Anything that imposes the constraint is going to work.
+
+279
+00:11:41,000 --> 00:11:43,340
+The idea is the coefficient of lambda,
+
+280
+00:11:43,340 --> 00:11:46,910
+when we have found our constrained solution,
+
+281
+00:11:46,910 --> 00:11:48,860
+the coefficient of lambda will vanish.
+
+282
+00:11:48,860 --> 00:11:53,000
+It vanishes only-- it will vanish on the solution.
+
+283
+00:11:53,000 --> 00:11:56,538
+There might be other roots to the equation that might be off
+
+284
+00:11:56,538 --> 00:11:57,830
+somewhere in the complex plane.
+
+285
+00:11:57,830 --> 00:11:59,330
+We're not going to worry about this,
+
+286
+00:11:59,330 --> 00:12:01,370
+but it is the case that, if it's a solution,
+
+287
+00:12:01,370 --> 00:12:03,350
+then the coefficient of lambda will vanish.
+
+288
+00:12:03,350 --> 00:12:06,650
+So this is another easy algebraic equation.
+
+289
+00:12:06,650 --> 00:12:07,670
+We take derivatives.
+
+290
+00:12:07,670 --> 00:12:10,158
+We'll have some simple linear equations to solve.
+
+291
+00:12:10,158 --> 00:12:11,450
+Why don't you go ahead and try?
+
+292
+00:12:11,450 --> 00:12:12,800
+Pause the video here.
+
+293
+00:12:12,800 --> 00:12:14,630
+Come back, and we'll take a look together.
+
+294
+00:12:14,630 --> 00:12:22,210
+
+
+295
+00:12:22,210 --> 00:12:24,320
+Last chance.
+
+296
+00:12:24,320 --> 00:12:27,210
+OK, let's take a look.
+
+297
+00:12:27,210 --> 00:12:29,040
+So we do partials.
+
+298
+00:12:29,040 --> 00:12:32,250
+So let's look at our partials of L. We have
+
+299
+00:12:32,250 --> 00:12:34,950
+16x plus 12y minus 2 lambda.
+
+300
+00:12:34,950 --> 00:12:36,720
+Notice that everything now, compared
+
+301
+00:12:36,720 --> 00:12:39,855
+to the previous example, is linear in x and y.
+
+302
+00:12:39,855 --> 00:12:42,780
+That last term is always linear in lambda.
+
+303
+00:12:42,780 --> 00:12:44,610
+I take the partial with respect to y.
+
+304
+00:12:44,610 --> 00:12:47,130
+And I have terms also in x and y--
+
+305
+00:12:47,130 --> 00:12:51,600
+12x plus 34y minus 2 lambda y equals 0.
+
+306
+00:12:51,600 --> 00:12:53,700
+And I have the constraint, which is
+
+307
+00:12:53,700 --> 00:12:56,850
+just x squared plus y squared has to be equal to 1.
+
+308
+00:12:56,850 --> 00:12:59,110
+So this has to be satisfied here.
+
+309
+00:12:59,110 --> 00:13:00,570
+So we've got these equations.
+
+310
+00:13:00,570 --> 00:13:03,750
+We can solve them for x and y and eliminate lambda.
+
+311
+00:13:03,750 --> 00:13:05,610
+We can eliminate lambda immediately
+
+312
+00:13:05,610 --> 00:13:07,590
+by taking the difference of these equations,
+
+313
+00:13:07,590 --> 00:13:10,140
+solve for x relative to y, and then get
+
+314
+00:13:10,140 --> 00:13:12,750
+the exact values for x and y in the unit circle
+
+315
+00:13:12,750 --> 00:13:14,170
+by solving this equation.
+
+316
+00:13:14,170 --> 00:13:17,190
+And what we find our two solutions, x and y,
+
+317
+00:13:17,190 --> 00:13:21,510
+are in the direction 1, 2--
+
+318
+00:13:21,510 --> 00:13:23,790
+and I've normalized this to be on the unit circle--
+
+319
+00:13:23,790 --> 00:13:25,980
+and in the direction minus 2, 1.
+
+320
+00:13:25,980 --> 00:13:29,250
+And, interestingly, those are, in normalized form,
+
+321
+00:13:29,250 --> 00:13:32,580
+the eigenvectors of the quadratic form that's
+
+322
+00:13:32,580 --> 00:13:36,930
+defined by the matrix, which we could have
+
+323
+00:13:36,930 --> 00:13:45,610
+written as Q is 8, 6, 6, 17.
+
+324
+00:13:45,610 --> 00:13:48,780
+So, if you compute the eigenvalues and eigenvectors
+
+325
+00:13:48,780 --> 00:13:51,930
+for this, you'll find 12 and 5 for the eigenvalues
+
+326
+00:13:51,930 --> 00:13:55,050
+and eigenvectors 1, 2 and minus 2, 5.
+
+327
+00:13:55,050 --> 00:13:56,670
+And, if we normalize the eigenvectors
+
+328
+00:13:56,670 --> 00:14:01,490
+to be of unit length, we get exactly the results shown here.
+
+329
+00:14:01,490 --> 00:14:02,000
+
+

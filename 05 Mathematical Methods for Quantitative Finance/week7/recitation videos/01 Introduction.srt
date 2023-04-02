@@ -1,0 +1,272 @@
+0
+00:00:00,000 --> 00:00:00,772
+
+
+1
+00:00:00,772 --> 00:00:02,230
+PAUL F. MENDE: This week's material
+
+2
+00:00:02,230 --> 00:00:06,340
+covers applications of linear algebra to asset pricing.
+
+3
+00:00:06,340 --> 00:00:09,190
+And they're really very close correspondences
+
+4
+00:00:09,190 --> 00:00:12,340
+between a lot basic notions of linear algebra
+
+5
+00:00:12,340 --> 00:00:15,268
+and those that are applied for the theory of asset pricing.
+
+6
+00:00:15,268 --> 00:00:17,810
+So I'd like to do something a little bit different this week.
+
+7
+00:00:17,810 --> 00:00:20,860
+What I'd like to do, is do a review of linear algebra,
+
+8
+00:00:20,860 --> 00:00:23,830
+and along the way, we'll comment on the different terminology
+
+9
+00:00:23,830 --> 00:00:26,710
+and show how it maps to material that was
+
+10
+00:00:26,710 --> 00:00:28,780
+covered in the basic lectures.
+
+11
+00:00:28,780 --> 00:00:32,770
+For people who need a refresher on linear algebra for this unit
+
+12
+00:00:32,770 --> 00:00:35,290
+and for upcoming things on optimization,
+
+13
+00:00:35,290 --> 00:00:38,590
+such as portfolio optimization, we have a lot of things
+
+14
+00:00:38,590 --> 00:00:39,940
+here from the basics.
+
+15
+00:00:39,940 --> 00:00:42,340
+But you won't learn all of linear algebra here;
+
+16
+00:00:42,340 --> 00:00:44,020
+this is really just to review.
+
+17
+00:00:44,020 --> 00:00:46,000
+There are a couple of references we've put out.
+
+18
+00:00:46,000 --> 00:00:48,940
+I recommend, a couple of books I recommend
+
+19
+00:00:48,940 --> 00:00:52,520
+and really anything you find online is probably great,
+
+20
+00:00:52,520 --> 00:00:55,480
+it's very standard subject, but it is
+
+21
+00:00:55,480 --> 00:00:56,840
+a prerequisite for the course.
+
+22
+00:00:56,840 --> 00:00:58,360
+However, if you want to brush up,
+
+23
+00:00:58,360 --> 00:01:01,460
+the book by Serge Lang, Introduction to Linear Algebra,
+
+24
+00:01:01,460 --> 00:01:03,130
+is very clear.
+
+25
+00:01:03,130 --> 00:01:07,510
+And the book by Sheldon Axler, Linear Algebra Done Right,
+
+26
+00:01:07,510 --> 00:01:10,240
+does set itself an ambitious goal.
+
+27
+00:01:10,240 --> 00:01:12,410
+You certainly don't need to read all of it,
+
+28
+00:01:12,410 --> 00:01:15,370
+but for the more mathematically minded,
+
+29
+00:01:15,370 --> 00:01:17,770
+you'll find it to be a very complete treatment.
+
+30
+00:01:17,770 --> 00:01:20,740
+But in particular, covers some things like dual spaces
+
+31
+00:01:20,740 --> 00:01:24,130
+that we discuss in the main lectures
+
+32
+00:01:24,130 --> 00:01:25,790
+that Lang doesn't cover.
+
+33
+00:01:25,790 --> 00:01:27,950
+So it's good on both those counts.
+
+34
+00:01:27,950 --> 00:01:30,760
+So we're going to cover this, but this subject
+
+35
+00:01:30,760 --> 00:01:32,260
+is a bit different.
+
+36
+00:01:32,260 --> 00:01:35,690
+And within the framework of this course,
+
+37
+00:01:35,690 --> 00:01:37,430
+it's going to be one unit.
+
+38
+00:01:37,430 --> 00:01:39,470
+Remember that this is a topics course.
+
+39
+00:01:39,470 --> 00:01:42,640
+These are methods that are used in different areas, not
+
+40
+00:01:42,640 --> 00:01:44,410
+necessarily as themselves.
+
+41
+00:01:44,410 --> 00:01:47,410
+But because you'll be seeing this in other courses,
+
+42
+00:01:47,410 --> 00:01:51,520
+in the Foundations of Finance, in Derivatives Pricing,
+
+43
+00:01:51,520 --> 00:01:53,260
+you'll see these ideas come up.
+
+44
+00:01:53,260 --> 00:01:56,200
+The idea of state prices, the idea of no arbitrage.
+
+45
+00:01:56,200 --> 00:01:59,030
+And often, they'll be in very specific contexts.
+
+46
+00:01:59,030 --> 00:02:01,600
+So what we've tried to do here, is give you
+
+47
+00:02:01,600 --> 00:02:03,940
+an algebraic foundation that is used
+
+48
+00:02:03,940 --> 00:02:05,320
+for more advanced treatments.
+
+49
+00:02:05,320 --> 00:02:07,428
+This is really just an introduction to that,
+
+50
+00:02:07,428 --> 00:02:09,220
+but it's so that you can think about what's
+
+51
+00:02:09,220 --> 00:02:11,380
+going on in a very general way.
+
+52
+00:02:11,380 --> 00:02:14,170
+At the same time, the problem sets
+
+53
+00:02:14,170 --> 00:02:17,210
+for this week are very simple.
+
+54
+00:02:17,210 --> 00:02:18,400
+They're not abstract at all.
+
+55
+00:02:18,400 --> 00:02:23,770
+They deal with numbers, small matrices you can do them
+
+56
+00:02:23,770 --> 00:02:27,100
+by hand, you can do them almost in your head,
+
+57
+00:02:27,100 --> 00:02:28,730
+you can put them on a computer.
+
+58
+00:02:28,730 --> 00:02:31,060
+So I don't think that we have a lot of detailed things,
+
+59
+00:02:31,060 --> 00:02:32,710
+like solving the diffusion equation
+
+60
+00:02:32,710 --> 00:02:35,650
+and Green's functions and binary value problems to worry about.
+
+61
+00:02:35,650 --> 00:02:37,930
+What I think we'll do instead, is take a look
+
+62
+00:02:37,930 --> 00:02:39,400
+at some of the basics.
+
+63
+00:02:39,400 --> 00:02:41,380
+And again, for the people who are
+
+64
+00:02:41,380 --> 00:02:45,790
+familiar with linear algebra, you'll
+
+65
+00:02:45,790 --> 00:02:48,190
+be able to make this identification along the way,
+
+66
+00:02:48,190 --> 00:02:50,120
+hopefully before I get there.
+
+67
+00:02:50,120 --> 00:02:52,920
+So let's get started.
+

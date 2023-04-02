@@ -1,0 +1,1068 @@
+0
+00:00:00,000 --> 00:00:01,030
+
+
+1
+00:00:01,030 --> 00:00:03,320
+PROFESSOR: Here's our first portfolio problem.
+
+2
+00:00:03,320 --> 00:00:06,880
+Let's find a minimum-variance portfolio.
+
+3
+00:00:06,880 --> 00:00:10,130
+So let's set up our Lagrange function as follows.
+
+4
+00:00:10,130 --> 00:00:12,560
+Let's take a look at a Lagrange function
+
+5
+00:00:12,560 --> 00:00:14,410
+that depends on a vector of weights.
+
+6
+00:00:14,410 --> 00:00:16,600
+And the function that I'd like to minimize
+
+7
+00:00:16,600 --> 00:00:17,890
+would be the variance.
+
+8
+00:00:17,890 --> 00:00:19,870
+And the variance, as we've seen, is given by w
+
+9
+00:00:19,870 --> 00:00:22,735
+transpose time the covariance matrix times w.
+
+10
+00:00:22,735 --> 00:00:25,570
+I'm throwing a 1/2 in front just to make it a little bit easier
+
+11
+00:00:25,570 --> 00:00:28,000
+when I take derivatives of a quadratic function
+
+12
+00:00:28,000 --> 00:00:31,690
+because I care more about the location of the extrema
+
+13
+00:00:31,690 --> 00:00:34,250
+than I do about the value of the Lagrange function.
+
+14
+00:00:34,250 --> 00:00:36,610
+So, if this is minimized, one half of it
+
+15
+00:00:36,610 --> 00:00:38,870
+is also minimized as well.
+
+16
+00:00:38,870 --> 00:00:40,540
+Over here, I have my constraint.
+
+17
+00:00:40,540 --> 00:00:43,130
+And, by the way, l is completely arbitrary.
+
+18
+00:00:43,130 --> 00:00:45,970
+So, if I divide it by 1/2 or multiply it by 3,
+
+19
+00:00:45,970 --> 00:00:47,920
+it's not going to change anything either.
+
+20
+00:00:47,920 --> 00:00:49,540
+The definition of this is arbitrary,
+
+21
+00:00:49,540 --> 00:00:52,370
+but, once we pick a definition for l, we need to leave it.
+
+22
+00:00:52,370 --> 00:00:56,170
+So here I've written in vector form the constraint
+
+23
+00:00:56,170 --> 00:00:58,060
+that these weights need to add up to 1.
+
+24
+00:00:58,060 --> 00:01:02,470
+And I've done this with a particular construction, which
+
+25
+00:01:02,470 --> 00:01:04,480
+is a little unfortunate in my opinion,
+
+26
+00:01:04,480 --> 00:01:07,055
+but it's in the literature in various places.
+
+27
+00:01:07,055 --> 00:01:08,680
+So I'm going to stick to this so you'll
+
+28
+00:01:08,680 --> 00:01:10,030
+recognize it if you see it.
+
+29
+00:01:10,030 --> 00:01:12,370
+We're going to use the Greek letter iota,
+
+30
+00:01:12,370 --> 00:01:14,830
+which looks like an i missing its dot,
+
+31
+00:01:14,830 --> 00:01:17,260
+to represent a vector of 1's.
+
+32
+00:01:17,260 --> 00:01:19,750
+So it's just 1, 1, 1, 1, 1 for the number of assets
+
+33
+00:01:19,750 --> 00:01:23,200
+I have, whether it's 2 or 30 or 500, OK?
+
+34
+00:01:23,200 --> 00:01:25,480
+So iota represents a vector of 1's.
+
+35
+00:01:25,480 --> 00:01:27,850
+And, of course, if I take its transpose,
+
+36
+00:01:27,850 --> 00:01:29,350
+it becomes a row vector.
+
+37
+00:01:29,350 --> 00:01:34,540
+And the row vector of 1's times a column vector of w1, w2, w3
+
+38
+00:01:34,540 --> 00:01:36,260
+just gives me the sum of the weights.
+
+39
+00:01:36,260 --> 00:01:40,660
+So the sum of the weights is given by iota transpose w.
+
+40
+00:01:40,660 --> 00:01:43,150
+And that needs to be equal to 1.
+
+41
+00:01:43,150 --> 00:01:45,940
+So I've written the constraint in this form times the Lagrange
+
+42
+00:01:45,940 --> 00:01:46,900
+multiplier.
+
+43
+00:01:46,900 --> 00:01:49,210
+Remember, we expect the Lagrange multiplier method
+
+44
+00:01:49,210 --> 00:01:52,510
+in any number of dimensions to enforce the constraint.
+
+45
+00:01:52,510 --> 00:01:55,270
+The equation of the partial with respect to l
+
+46
+00:01:55,270 --> 00:01:58,570
+is equal to 0 is going to tell us the constraint needs
+
+47
+00:01:58,570 --> 00:01:59,810
+to be satisfied.
+
+48
+00:01:59,810 --> 00:02:02,350
+So l is my Lagrange multiplier.
+
+49
+00:02:02,350 --> 00:02:03,890
+Iota is a constant.
+
+50
+00:02:03,890 --> 00:02:05,350
+It's just a vector of 1's.
+
+51
+00:02:05,350 --> 00:02:07,660
+And C is the covariance matrix, which
+
+52
+00:02:07,660 --> 00:02:09,430
+we're assuming to be given.
+
+53
+00:02:09,430 --> 00:02:11,500
+So this is an interesting idea.
+
+54
+00:02:11,500 --> 00:02:14,120
+We want to solve the minimum-variance portfolio.
+
+55
+00:02:14,120 --> 00:02:15,500
+And why do we need a constraint?
+
+56
+00:02:15,500 --> 00:02:17,170
+Well, if we didn't have the constraint,
+
+57
+00:02:17,170 --> 00:02:20,702
+the minimum variance would be don't invest.
+
+58
+00:02:20,702 --> 00:02:22,660
+If you keep all your money under your mattress,
+
+59
+00:02:22,660 --> 00:02:24,010
+there's no risk at all.
+
+60
+00:02:24,010 --> 00:02:26,320
+You'd definitely have minimum variance.
+
+61
+00:02:26,320 --> 00:02:27,970
+Now, you might ask, why would you
+
+62
+00:02:27,970 --> 00:02:30,790
+want to find the minimum-variance portfolio?
+
+63
+00:02:30,790 --> 00:02:34,900
+It sounds useful, but this is all about risk and nothing
+
+64
+00:02:34,900 --> 00:02:36,080
+about return.
+
+65
+00:02:36,080 --> 00:02:39,020
+So, if there were no return on these assets,
+
+66
+00:02:39,020 --> 00:02:40,750
+it's not at all clear why you would
+
+67
+00:02:40,750 --> 00:02:43,210
+want to have a minimum-variance portfolio.
+
+68
+00:02:43,210 --> 00:02:45,070
+Why are you investing if there's no benefit
+
+69
+00:02:45,070 --> 00:02:46,520
+for taking this risk?
+
+70
+00:02:46,520 --> 00:02:48,940
+If you are forced to invest and you're
+
+71
+00:02:48,940 --> 00:02:53,170
+forced to have your weight vector fully deployed
+
+72
+00:02:53,170 --> 00:02:55,450
+in risky assets, then this will be
+
+73
+00:02:55,450 --> 00:02:57,190
+the minimum-variance portfolio.
+
+74
+00:02:57,190 --> 00:02:59,050
+But this isn't just a mathematical thing.
+
+75
+00:02:59,050 --> 00:03:01,240
+People do this, and there are funds
+
+76
+00:03:01,240 --> 00:03:03,910
+that trade based on this idea of minimum variance.
+
+77
+00:03:03,910 --> 00:03:05,050
+Why do they do it?
+
+78
+00:03:05,050 --> 00:03:08,630
+Well, one idea is that we're leaving out the return.
+
+79
+00:03:08,630 --> 00:03:10,870
+So we could say, well, people obviously
+
+80
+00:03:10,870 --> 00:03:12,670
+expect to earn a return.
+
+81
+00:03:12,670 --> 00:03:15,580
+What assumption implicitly about returns
+
+82
+00:03:15,580 --> 00:03:17,140
+would lead to this case?
+
+83
+00:03:17,140 --> 00:03:18,640
+One of them would be, if you thought
+
+84
+00:03:18,640 --> 00:03:21,460
+the average return on assets was 0,
+
+85
+00:03:21,460 --> 00:03:23,590
+then maybe you shouldn't be investing at all.
+
+86
+00:03:23,590 --> 00:03:25,660
+Another case would be where you thought that you
+
+87
+00:03:25,660 --> 00:03:26,890
+couldn't tell anything.
+
+88
+00:03:26,890 --> 00:03:29,080
+You thought that they're positive on average,
+
+89
+00:03:29,080 --> 00:03:31,540
+but you don't have any skill in predicting them.
+
+90
+00:03:31,540 --> 00:03:33,340
+That would at least be coherent.
+
+91
+00:03:33,340 --> 00:03:34,790
+And, finally, you might say, well,
+
+92
+00:03:34,790 --> 00:03:37,390
+I do have an estimate for the expected returns,
+
+93
+00:03:37,390 --> 00:03:40,330
+but I'm going to make the same estimate for all the returns.
+
+94
+00:03:40,330 --> 00:03:43,843
+And, in that case, this comes out just as a special case.
+
+95
+00:03:43,843 --> 00:03:45,760
+But let's just take it as given and look at it
+
+96
+00:03:45,760 --> 00:03:48,050
+as a mathematical exercise for a moment.
+
+97
+00:03:48,050 --> 00:03:49,390
+So we have a constraint.
+
+98
+00:03:49,390 --> 00:03:51,190
+We need to be fully invested.
+
+99
+00:03:51,190 --> 00:03:53,380
+The sum of the w's needs to be equal to 1.
+
+100
+00:03:53,380 --> 00:03:55,870
+Subject to that constraint, given
+
+101
+00:03:55,870 --> 00:03:58,360
+a set of variances and covariances,
+
+102
+00:03:58,360 --> 00:04:01,580
+how do we find the portfolio that has minimum variance?
+
+103
+00:04:01,580 --> 00:04:04,700
+Remember, this is in a very high-dimensional vector space.
+
+104
+00:04:04,700 --> 00:04:08,960
+So w could be 500 components if we're in the S&P 500.
+
+105
+00:04:08,960 --> 00:04:10,670
+It could have thousands of components
+
+106
+00:04:10,670 --> 00:04:11,920
+if we're in the US markets.
+
+107
+00:04:11,920 --> 00:04:13,795
+It could have tens of thousands of components
+
+108
+00:04:13,795 --> 00:04:15,440
+if we're in global markets.
+
+109
+00:04:15,440 --> 00:04:17,769
+So, in this very, very high-dimensional space,
+
+110
+00:04:17,769 --> 00:04:19,310
+we're looking for this.
+
+111
+00:04:19,310 --> 00:04:21,730
+So, for any given vector, we plug it in,
+
+112
+00:04:21,730 --> 00:04:23,680
+and we get a number for the variance.
+
+113
+00:04:23,680 --> 00:04:26,860
+And we have this single number that we need to extremize.
+
+114
+00:04:26,860 --> 00:04:28,630
+We want to find the minimum value
+
+115
+00:04:28,630 --> 00:04:31,480
+over all of the possible vectors in this very
+
+116
+00:04:31,480 --> 00:04:33,970
+large-dimensional space.
+
+117
+00:04:33,970 --> 00:04:34,900
+Let's go.
+
+118
+00:04:34,900 --> 00:04:37,660
+So what we'd like to do is differentiate with respect
+
+119
+00:04:37,660 --> 00:04:41,170
+to each of the variables, each of the w sub i's.
+
+120
+00:04:41,170 --> 00:04:45,130
+So, for each component, we take a partial derivative,
+
+121
+00:04:45,130 --> 00:04:48,790
+and we set it equal to 0, plus we have one partial derivative
+
+122
+00:04:48,790 --> 00:04:52,247
+that we set equal to 0 through the Lagrange multiplier.
+
+123
+00:04:52,247 --> 00:04:54,580
+And, if you'd like, you can write this out in components
+
+124
+00:04:54,580 --> 00:04:57,510
+and do it as well.
+
+125
+00:04:57,510 --> 00:05:00,020
+Now, as we vary the weights, remember
+
+126
+00:05:00,020 --> 00:05:03,740
+that we have a quadratic form in the weights w.
+
+127
+00:05:03,740 --> 00:05:05,720
+So, as I vary the weights with respect
+
+128
+00:05:05,720 --> 00:05:08,540
+to a particular w sub i, I'm going
+
+129
+00:05:08,540 --> 00:05:10,730
+to have a whole bunch of terms, depending
+
+130
+00:05:10,730 --> 00:05:13,650
+on all the cross terms and the diagonal terms itself.
+
+131
+00:05:13,650 --> 00:05:16,070
+So, if I vary with respect to, say, w1,
+
+132
+00:05:16,070 --> 00:05:19,040
+I'm going to have C1,1, but I'm also going to have C1,2 times
+
+133
+00:05:19,040 --> 00:05:23,730
+w2 and C1,3 times w3 and all possible combinations.
+
+134
+00:05:23,730 --> 00:05:27,115
+So I can write this as a sum over all values j
+
+135
+00:05:27,115 --> 00:05:32,622
+in the portfolio times the matrix element Cij wj minus l.
+
+136
+00:05:32,622 --> 00:05:34,580
+And I'm going to write this in matrix notation.
+
+137
+00:05:34,580 --> 00:05:37,250
+Even though, iota, they're all 1's, I'm
+
+138
+00:05:37,250 --> 00:05:39,220
+going to write it as iota sub i.
+
+139
+00:05:39,220 --> 00:05:41,540
+And the reason is that then I can write this--
+
+140
+00:05:41,540 --> 00:05:45,210
+I can recognize this as being a vector equation.
+
+141
+00:05:45,210 --> 00:05:47,510
+So this right-hand side is the same
+
+142
+00:05:47,510 --> 00:05:49,790
+as the component of the equation that
+
+143
+00:05:49,790 --> 00:05:55,790
+says that C acting on the vector w
+
+144
+00:05:55,790 --> 00:06:02,840
+is equal to the vector iota times l.
+
+145
+00:06:02,840 --> 00:06:04,960
+So how do I solve that?
+
+146
+00:06:04,960 --> 00:06:08,690
+Let's just multiply in the left and right sides by C inverse.
+
+147
+00:06:08,690 --> 00:06:10,630
+And we get this solution here.
+
+148
+00:06:10,630 --> 00:06:15,010
+w is C inverse times iota times some constant l.
+
+149
+00:06:15,010 --> 00:06:17,920
+In fact, right now, we know almost all we need to know.
+
+150
+00:06:17,920 --> 00:06:21,160
+We know that the weights are proportional to the inverse
+
+151
+00:06:21,160 --> 00:06:24,940
+covariance matrix times the vector of 1's.
+
+152
+00:06:24,940 --> 00:06:27,790
+So, to fix the proportionality constant,
+
+153
+00:06:27,790 --> 00:06:29,980
+well, we can do it the fancy way.
+
+154
+00:06:29,980 --> 00:06:33,370
+We can take i transpose and multiply it on the left,
+
+155
+00:06:33,370 --> 00:06:35,110
+a row vector times w.
+
+156
+00:06:35,110 --> 00:06:39,760
+That gives us l time iota transpose C inverse iota.
+
+157
+00:06:39,760 --> 00:06:41,320
+And set that equal to 1.
+
+158
+00:06:41,320 --> 00:06:42,520
+And solve for it.
+
+159
+00:06:42,520 --> 00:06:48,547
+So l is going to be 1 over iota transpose C inverse iota.
+
+160
+00:06:48,547 --> 00:06:51,130
+These things, these expressions, we'll see a few more of them.
+
+161
+00:06:51,130 --> 00:06:52,993
+They look complicated, but, keep in mind,
+
+162
+00:06:52,993 --> 00:06:54,160
+they're really just scalars.
+
+163
+00:06:54,160 --> 00:06:55,242
+They're just numbers.
+
+164
+00:06:55,242 --> 00:06:56,950
+So they don't have any variables in them.
+
+165
+00:06:56,950 --> 00:07:01,580
+It's row vector times a square matrix times a column vector,
+
+166
+00:07:01,580 --> 00:07:03,830
+so a symmetric matrix also.
+
+167
+00:07:03,830 --> 00:07:05,840
+So these are just numbers.
+
+168
+00:07:05,840 --> 00:07:08,650
+So we've got a solution so that the w
+
+169
+00:07:08,650 --> 00:07:10,450
+for the minimum-variance portfolio
+
+170
+00:07:10,450 --> 00:07:13,938
+is going to be C inverse iota divided by this constant.
+
+171
+00:07:13,938 --> 00:07:15,730
+And now we can see what this constant does.
+
+172
+00:07:15,730 --> 00:07:17,980
+We really just divided by the sum of the weights.
+
+173
+00:07:17,980 --> 00:07:20,300
+And that means that the weights add up to 1.
+
+174
+00:07:20,300 --> 00:07:22,030
+And you can see that because, if you
+
+175
+00:07:22,030 --> 00:07:26,860
+act on this expression on the left by an iota transpose,
+
+176
+00:07:26,860 --> 00:07:29,570
+the numerator and denominator become the same.
+
+177
+00:07:29,570 --> 00:07:33,610
+And we get that it's equal to 1.
+
+178
+00:07:33,610 --> 00:07:36,730
+What does that mean in financial terms?
+
+179
+00:07:36,730 --> 00:07:41,740
+Well, consider a special case where the covariance matrix
+
+180
+00:07:41,740 --> 00:07:43,000
+is diagonal.
+
+181
+00:07:43,000 --> 00:07:46,070
+So suppose that all the assets are independent of each other,
+
+182
+00:07:46,070 --> 00:07:48,470
+but they each have their own variance.
+
+183
+00:07:48,470 --> 00:07:50,260
+So the covariance matrix in that case
+
+184
+00:07:50,260 --> 00:07:52,060
+has the variances down the diagonal,
+
+185
+00:07:52,060 --> 00:07:54,470
+sigma 1 squared, sigma 2 squared, sigma 3 squared,
+
+186
+00:07:54,470 --> 00:07:55,160
+and so on.
+
+187
+00:07:55,160 --> 00:07:59,290
+And, in this case, C inverse times iota
+
+188
+00:07:59,290 --> 00:08:02,290
+tells us that all of the weights in the minimum-variance
+
+189
+00:08:02,290 --> 00:08:05,950
+portfolio are going to be proportional to 1
+
+190
+00:08:05,950 --> 00:08:07,370
+over the variance.
+
+191
+00:08:07,370 --> 00:08:21,140
+So, special case, Cij diagonal, and we
+
+192
+00:08:21,140 --> 00:08:28,370
+get that wi is proportional to 1 over sigma i squared.
+
+193
+00:08:28,370 --> 00:08:29,990
+What that says is something actually
+
+194
+00:08:29,990 --> 00:08:31,200
+that's kind of reasonable.
+
+195
+00:08:31,200 --> 00:08:33,620
+That is that the riskier an asset is,
+
+196
+00:08:33,620 --> 00:08:36,650
+the larger its sigma squared is, the less weight I
+
+197
+00:08:36,650 --> 00:08:38,580
+should have in the portfolio.
+
+198
+00:08:38,580 --> 00:08:42,080
+So we might have typically thought, in capital terms,
+
+199
+00:08:42,080 --> 00:08:44,960
+of an equal-weighted portfolio as being
+
+200
+00:08:44,960 --> 00:08:48,090
+equal capital associated with each of the assets.
+
+201
+00:08:48,090 --> 00:08:50,420
+But, if the assets have different levels of riskiness
+
+202
+00:08:50,420 --> 00:08:52,790
+and especially if we're not considering return,
+
+203
+00:08:52,790 --> 00:08:54,860
+then we might want to think about things
+
+204
+00:08:54,860 --> 00:08:56,670
+from a risk perspective.
+
+205
+00:08:56,670 --> 00:08:59,180
+And, instead of allocating equal capital,
+
+206
+00:08:59,180 --> 00:09:01,520
+we might want to allocate equal risk.
+
+207
+00:09:01,520 --> 00:09:04,940
+That is the risk is a measure of how much we might gain or lose.
+
+208
+00:09:04,940 --> 00:09:07,910
+So putting equal amounts of capital on a very risky
+
+209
+00:09:07,910 --> 00:09:11,090
+and a very low-risk asset are quite different activities.
+
+210
+00:09:11,090 --> 00:09:13,790
+Under this solution for the global minimum-variance
+
+211
+00:09:13,790 --> 00:09:17,000
+portfolio, under the special case where the assets are
+
+212
+00:09:17,000 --> 00:09:19,970
+uncorrelated, qualitatively, what this solution is telling
+
+213
+00:09:19,970 --> 00:09:23,360
+us is adjust your exposures to equalize
+
+214
+00:09:23,360 --> 00:09:26,900
+the risk exposure, rather than the capital exposure,
+
+215
+00:09:26,900 --> 00:09:29,338
+in the different assets.
+
+216
+00:09:29,338 --> 00:09:31,130
+Let's take a look at one numerical example.
+
+217
+00:09:31,130 --> 00:09:34,610
+
+
+218
+00:09:34,610 --> 00:09:38,070
+So here's a numerical example of the minimum-variance solution.
+
+219
+00:09:38,070 --> 00:09:40,590
+I've taken from CRSP, which is a research
+
+220
+00:09:40,590 --> 00:09:47,630
+database of historical equity returns, a set of about
+
+221
+00:09:47,630 --> 00:09:50,450
+700 stocks over a period of many years.
+
+222
+00:09:50,450 --> 00:09:53,720
+I've estimated the covariance matrix from historical data.
+
+223
+00:09:53,720 --> 00:09:56,645
+And I've put it in R to compute the quantities
+
+224
+00:09:56,645 --> 00:09:58,400
+that we wrote down before.
+
+225
+00:09:58,400 --> 00:10:03,050
+In R, the function solve is to invert a matrix
+
+226
+00:10:03,050 --> 00:10:06,320
+because it's thinking of solving systems of linear equations.
+
+227
+00:10:06,320 --> 00:10:09,620
+And matrix operations are sandwiched
+
+228
+00:10:09,620 --> 00:10:10,800
+between percent signs.
+
+229
+00:10:10,800 --> 00:10:15,560
+So percent star percent means do matrix multiplication.
+
+230
+00:10:15,560 --> 00:10:19,380
+And a t of a vector means take its transpose.
+
+231
+00:10:19,380 --> 00:10:23,450
+So this is just, in R speak, implementing what
+
+232
+00:10:23,450 --> 00:10:25,100
+we had before in our data set.
+
+233
+00:10:25,100 --> 00:10:26,600
+And what we find is we get a vector.
+
+234
+00:10:26,600 --> 00:10:30,950
+We got a 690-component vector whose components sum to 1
+
+235
+00:10:30,950 --> 00:10:33,560
+that tells us where the minimum-variance solution is.
+
+236
+00:10:33,560 --> 00:10:34,790
+Notice something interesting.
+
+237
+00:10:34,790 --> 00:10:37,160
+I've ordered them from smallest to biggest.
+
+238
+00:10:37,160 --> 00:10:40,460
+690, there's no natural ordering amongst stocks,
+
+239
+00:10:40,460 --> 00:10:42,740
+but I can order them according to the weights
+
+240
+00:10:42,740 --> 00:10:44,010
+in this solution.
+
+241
+00:10:44,010 --> 00:10:46,910
+And what I find is some of them are negative, and some of them
+
+242
+00:10:46,910 --> 00:10:47,910
+are positive.
+
+243
+00:10:47,910 --> 00:10:51,650
+So the minimum-variance solution is a long-short portfolio.
+
+244
+00:10:51,650 --> 00:10:55,340
+The weights add up to 1, but that's a net weight, not
+
+245
+00:10:55,340 --> 00:10:56,120
+the gross weight.
+
+246
+00:10:56,120 --> 00:10:59,330
+Some of the weights over here are negative numbers
+
+247
+00:10:59,330 --> 00:11:00,950
+because I didn't constrain them.
+
+248
+00:11:00,950 --> 00:11:01,790
+I didn't need to--
+
+249
+00:11:01,790 --> 00:11:04,950
+I didn't say that they had to be positive values.
+
+250
+00:11:04,950 --> 00:11:06,860
+So, if you were interested in implementing
+
+251
+00:11:06,860 --> 00:11:08,330
+this in this case--
+
+252
+00:11:08,330 --> 00:11:10,310
+and this is not atypical-- you would
+
+253
+00:11:10,310 --> 00:11:12,177
+have to hold short positions.
+
+254
+00:11:12,177 --> 00:11:13,260
+What about an upper bound?
+
+255
+00:11:13,260 --> 00:11:17,960
+Well, I didn't hit anything equal to or greater than 1.
+
+256
+00:11:17,960 --> 00:11:21,110
+The largest value I have looks like it's about 3 and 1/2%
+
+257
+00:11:21,110 --> 00:11:22,880
+in any one asset.
+
+258
+00:11:22,880 --> 00:11:24,450
+I'm not evenly balanced.
+
+259
+00:11:24,450 --> 00:11:27,890
+I have about 300 stocks short, about 400 stocks long.
+
+260
+00:11:27,890 --> 00:11:30,890
+But it does satisfy my constraints.
+
+261
+00:11:30,890 --> 00:11:33,260
+It is the minimum-variance portfolio
+
+262
+00:11:33,260 --> 00:11:36,350
+for this particular covariance matrix that we have.
+
+263
+00:11:36,350 --> 00:11:39,830
+And the solution requires, in this case,
+
+264
+00:11:39,830 --> 00:11:43,430
+that the w's, which were only constrained by the budget,
+
+265
+00:11:43,430 --> 00:11:47,500
+involve both positive and negative values.
+
+266
+00:11:47,500 --> 00:11:48,000
+
+

@@ -1,0 +1,220 @@
+
+PROFESSOR: When we optimize a portfolio of assets,
+what we'd like to do is think about finding
+an optimal trade-off of risk and return.
+What do we have as a constraint?
+Well, typically, we have a budget constraint.
+We've got some amount of capital,
+and we can assign weights to different risky assets,
+let's say.
+Let's call those weights w sub i for the weight, the fraction
+of capital invested in asset i.
+And, depending on what choices I make,
+I'll earn a different return and have different levels of risk.
+So, if we think of w as being a control variable that we're
+free to choose, but it's subject to a constraint,
+a budget constraint, where the sum of the weights
+need to equal 1, we can ask the question about how do we
+maximize return, how do we minimize risk,
+provided that we've got appropriate measures
+for both of them.
+And then we can do this using the Lagrange multiplier method.
+So we might think of the risk as being
+related to the variance of the portfolio.
+And the variance of the portfolio
+for a weighted set of returns, as we've seen before,
+is a quadratic form.
+And here I've written it in vector notation.
+It's w transpose times the covariance matrix, which
+is the covariance matrix where the elements Cij are
+the covariance between the returns on asset i and asset j,
+times w again.
+So it's quadratic in the w's, but
+with lots of off-diagonal terms, potentially,
+where the assets have correlations among themselves.
+And the expected returns are just the weighted average
+of the vector of expected returns
+on the individual assets.
+So C and mu correspond to the covariance and expected returns
+on the individual assets.
+Sigma squared p and mu p, the p stands for portfolio.
+Those are based on a linear combination.
+And w is the set of linear weighting factors
+that we get to choose.
+I will take mu to be excess returns in excess
+of the risk-free rate so that we don't have a little minus r sub
+f's to subtract off everywhere.
+At least for the people who have taken finance courses,
+you know that we always need to look at things
+relative to the risk-free rate.
+So this would be a problem that sounds
+great for constraint optimization for the Lagrange
+multiplier method.
+What do we know about these different components?
+Well, one thing that we know is that the covariance matrix can
+be expanded out in terms of a quadratic sum,
+in terms of diagonal terms that involve
+only the variance of the individual assets
+and that involve cross terms.
+Notice that, in this expression, every time there's
+a w that appears, it's always multiplied by a sigma.
+So I have w1 sigma 1 quantity squared.
+And here I might have w1 sigma 1 w2 sigma 2.
+Those always appear together.
+Rho ij is the correlation matrix.
+So the covariance matrix is symmetric.
+And it's symmetric because the variance and covariance
+between asset i and asset j is the same as between j and i.
+So it's obviously symmetric.
+It's positive definite.
+And it's positive-definite.
+We know that it's positive because the variance is
+obtained by taking the expectation
+of a positive quantity.
+So it must be positive.
+And that means that, no matter what w's we put in there,
+we're always going to get a positive quantity.
+So this is a positive-definite matrix.
+And that means that all of its eigenvalues are positive.
+Now, we know that it can't be-- it has to be non-negative.
+How do we know it's strictly positive?
+Well, for the covariance matrix to have a zero eigenvalue,
+that would mean that it's a singular matrix
+and that it's not invertible.
+And one reason that that could happen
+is that we either have risk-free assets, which
+have no correlation to anything else,
+or that we have linearly dependent data sets.
+Whenever there's a matrix where multiple rows or columns are
+linearly dependent, the matrix is less than full rank.
+It's not invertible.
+And it has zero eigenvalues.
+So we're going to specifically exclude those cases.
+So we're going to assume that all of the assets
+are linearly independent.
+And that means that our matrix is
+going to be positive-definite.
+It's going to be symmetric.
+And it's going to be invertible.
+That also means that we could use
+it to define a quadratic form on the vector space of weights w
+if we wanted to think more broadly.
+And we can use that to come up with kind
+of a geometric picture of risk that we won't need
+for our portfolio optimization, but, in this language,
+we can think of looking at comparing
+two different portfolios that are described by weight factors
+w and w prime and say their inner product in this space
+is related to the w transpose times C times w prime.
+This is the inner product here.
+And this vanishes.
+We would say these two portfolios
+are orthogonal if they are uncorrelated.
+So that's just a convenient thing
+that you could keep in mind for other applications,
+but not required for portfolio variance.
+And in a very simple, concrete case, we could get some data,
+and we can visualize what we mean by an optimal portfolio
+just by crunching some numbers without doing
+this kind of algebra at all.
+Here's an example.
+Suppose I look at historical data,
+and I take time series returns for a couple of assets,
+in this case, the S&P 500 index, which
+I've denoted by ticker symbol SPX,
+and the gold ETF, the Exchange-Traded Fund whose
+value is based on the deposits of gold.
+And I wanted to know, what would be an optimal portfolio
+to hold consisting of these two assets?
+So what I can do is I can look at the time
+series of historical returns.
+And, as a function of the weight vectors,
+I can compute what the portfolio returns were.
+So I can say suppose I did a portfolio that
+was 50-50, that was 90-10, that was 10-90, that was 40-60.
+So, for each possible relative weighting of the two
+where the weights have to add up to 1,
+I can compute what the time series of returns was.
+Now, there's really only one number
+that matters, relative weight of the two,
+because they satisfy a budget constraint.
+The two numbers have to add up to 1.
+So I can think of this as being a function
+of a single variable, the relative weight,
+say, of gold versus equities in this portfolio.
+And I do want to be careful in thinking about this averaging
+that, since I'm constructing my views based on past time
+series, if I talk about, say, a 50-50 portfolio, if I'm just
+going to take a 50-50 average of the two time series of returns,
+that would mean that's not a buy-and-hold portfolio.
+It implies that, in every time period,
+say every month, that I'm rebalancing the portfolio back
+to 50-50 so that that is indeed the portfolio return.
+So, subject to those provisos, you can do the calculation.
+And, if you do it, you get, for each value from, say,
+0-100 to 100-0, if we're weighting between the two,
+we could compute what the time series of returns is.
+And then we could plot some objective function.
+Perhaps, it's the Sharpe ratio, which is the expected return,
+or the expected excess return above the risk-free rate,
+divided by the standard deviation of the returns.
+That's a scalar quantity that gets larger
+when there are higher returns or when the risk is lower.
+There are other functions we could consider instead,
+but here I've plotted an example of Sharpe
+ratio versus the fraction of gold that's in my portfolio.
+And, just looking at this picture,
+we can see that the Sharpe ratio gets better and better as I
+increase gold up to a certain point, and then it goes down.
+So this is fairly typical of what we might see.
+And, obviously, the goal of optimization
+would be to find this point.
+This would be the optimal Sharpe ratio.
+It's a particular choice of objective function
+and not uniquely determined.
+But, for that choice of objective function,
+this would be the maximum value.
+Now, for a different choice of function,
+the maximum might be somewhere else.
+If I looked at a different data set
+over a different period of time, the values
+might move because maybe the return samples
+I have are not representative.
+Maybe the return processes are not stationary.
+And there are a couple of other things
+that we know could happen based on what
+we know about functions, even of a single variable.
+There might be multiple extrema.
+Could there be more than one maximum?
+Could the maximum be at the endpoints?
+Could it be either at 0 or 1?
+Maybe the function is monotonically
+increasing or decreasing.
+And another possibility that's important financially
+is, could there be extrema that are outside
+of the obvious budget area?
+I looked between 0% and 100%.
+But if the weight--
+if we continued this curve, suppose
+it was increasing from the beginning and up to here,
+and then it continued, and it peaked somewhere out here,
+say at a value of 130% in gold and minus 30 in equities,
+let's say.
+That would correspond to a maximum which isn't achievable
+if the w's need to be positive or bounded between 0 and 1,
+but it would correspond to something
+we could conceivably do in a levered portfolio
+where we borrow money to be able to invest more money than we
+initially have in our account and where
+we take short positions that would be represented
+by negative weights.
+So here, in the picture I've drawn,
+we have an obvious solution that lies--
+it satisfies the budget constraint,
+and it lies in a range where w is between 0 and 1
+without imposing any additional rules on bounds.
+So it's an interior extremum point.
+So that's just a visualization.
+Next, we'd like to take a look at applying
+this systematically for portfolios that may
+have many more than two assets.

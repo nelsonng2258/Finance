@@ -1,0 +1,83 @@
+
+PROFESSOR: Take a look at portfolio optimization
+on the computer.
+We'll take a look at some data.
+We'll run some calculations of the efficient frontier.
+And then, we'll compare the different versions
+of constrained optimizations that we've talked about,
+one of them where we use the exact closed form result where
+we have equality constraints and the other using
+techniques of quadratic programming
+when inequality constraints are present.
+So the exact results that are obtained by the Lagrangian
+multiplier method work well if we've
+got a fixed number of equality constraints.
+But a budget constraint might have some risk constraints.
+For example, we might want to have a market-neutral portfolio
+where some of the market betas as measured, say, by kappas
+and betas and to 0.
+We might want to set an industry exposure to a particular level.
+But typically, what we're doing is either
+we're targeting an objective like a budget,
+or we're targeting a constraint to manage risk or exposures
+such as a long-short portfolio or with an industry constraint.
+And those work terrifically well because we can
+have any number of constraints.
+There's a couple of caveats for the closed form.
+Number one, we want to have more assets
+or more degrees of freedom than we do constraints.
+And second, the constraints generally
+need to be independent of each other.
+There can be degenerate cases.
+And finally, the constraints need
+to be consistent with each other.
+It's possible to write down constraints that cannot
+simultaneously be satisfied.
+But usually, it's a fairly straightforward problem.
+Now, when we do that for equality constraints,
+there's nothing that bounds the range
+of the weights in the solution.
+They could be anything.
+The w's that we get for a portfolio could
+be any real number, and that means
+they don't lie between 0 and 1 where we typically
+think of the weight of capital allocation within a portfolio.
+Now, we can generalize.
+Certainly for negative weights, we
+can think of those short positions.
+They're effectively the case where a short position as we
+sell some securities short and we
+require bringing back that number of securities
+to get to 0.
+And it functions to a pretty good approximation
+as treating it like a negative number.
+What about w bigger than 1?
+That's a levered position.
+We borrow money.
+Usually, we'll assume for financial assumptions we
+borrow at the risk-free rate.
+And we can buy more than the amount of capital
+that we initially have present.
+So that's OK.
+But even then, there are practical real-world
+limitations.
+We could get to a w of 1 and 1/2, a w of 2, a w of 10
+if we're highly leveraged.
+We can't get to a w of 50 million.
+No one's going to give you that much credit or me.
+So we do want to know if things lie within a reasonable amount.
+And in fact, this is true in general
+of constrained problems.
+We always want to know for a solution
+to a constrained optimization problem,
+are the constraints binding?
+After all, it could be that we find
+a solution that is not pinned at one edge or the other.
+In the case of equality constraints,
+we force them to bind.
+But in the case of inequality constraints,
+we might be at a maximum or you might
+be somewhere in the interior region
+where those constraints don't actually
+come into play for the particular values,
+the parameters, that we have to work with.

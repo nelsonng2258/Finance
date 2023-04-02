@@ -1,0 +1,232 @@
+0
+00:00:00,000 --> 00:00:00,848
+
+
+1
+00:00:00,848 --> 00:00:02,390
+PROFESSOR: So the answer in this case
+
+2
+00:00:02,390 --> 00:00:08,010
+is yes, provided that S2 is bigger than S1.
+
+3
+00:00:08,010 --> 00:00:11,100
+In that case, we'll have a positive price
+
+4
+00:00:11,100 --> 00:00:12,220
+for this portfolio.
+
+5
+00:00:12,220 --> 00:00:13,590
+And there's no contradiction.
+
+6
+00:00:13,590 --> 00:00:16,980
+The problem here was that the stock stochastically
+
+7
+00:00:16,980 --> 00:00:19,170
+dominates the bond we say in technical terms.
+
+8
+00:00:19,170 --> 00:00:21,600
+Or, in common sense, the stock is always
+
+9
+00:00:21,600 --> 00:00:24,580
+better than or equal to the bond in each state of the world.
+
+10
+00:00:24,580 --> 00:00:27,540
+No matter what the possible outcome is,
+
+11
+00:00:27,540 --> 00:00:30,195
+the stock is as good or better.
+
+12
+00:00:30,195 --> 00:00:33,910
+It has a payoff equal to or greater than that of the bond.
+
+13
+00:00:33,910 --> 00:00:36,060
+So its price must be higher.
+
+14
+00:00:36,060 --> 00:00:37,590
+That's a very easy case to consider.
+
+15
+00:00:37,590 --> 00:00:40,270
+
+
+16
+00:00:40,270 --> 00:00:44,680
+Type II arbitrage, in contrast to type I arbitrage,
+
+17
+00:00:44,680 --> 00:00:47,573
+is a case where there are redundant assets.
+
+18
+00:00:47,573 --> 00:00:49,240
+And, in this case, that means that there
+
+19
+00:00:49,240 --> 00:00:53,440
+are non-trivial solutions to the payoff matrix equation,
+
+20
+00:00:53,440 --> 00:00:55,150
+Ax equals 0.
+
+21
+00:00:55,150 --> 00:00:58,690
+That means that A is less than the rank S.
+
+22
+00:00:58,690 --> 00:01:02,650
+And it means that there's a non-trivial kernel
+
+23
+00:01:02,650 --> 00:01:04,190
+to the matrix A.
+
+24
+00:01:04,190 --> 00:01:07,570
+So type II arbitrage says that, if there's
+
+25
+00:01:07,570 --> 00:01:12,560
+a portfolio with zero payoff, then it has a non-zero price.
+
+26
+00:01:12,560 --> 00:01:15,010
+So our previous example, in type I,
+
+27
+00:01:15,010 --> 00:01:17,330
+we could get something for nothing.
+
+28
+00:01:17,330 --> 00:01:20,450
+And, in this case, you get nothing for something.
+
+29
+00:01:20,450 --> 00:01:25,240
+So all that's required for type II arbitrage
+
+30
+00:01:25,240 --> 00:01:28,960
+is that a portfolio that has zero payoff
+
+31
+00:01:28,960 --> 00:01:30,292
+has a non-zero price.
+
+32
+00:01:30,292 --> 00:01:31,750
+And we don't even care whether it's
+
+33
+00:01:31,750 --> 00:01:33,730
+a positive or a negative price because we
+
+34
+00:01:33,730 --> 00:01:36,160
+could go long or short, whichever sign we
+
+35
+00:01:36,160 --> 00:01:38,120
+need to make money for free.
+
+36
+00:01:38,120 --> 00:01:40,900
+That is we're going to collect money
+
+37
+00:01:40,900 --> 00:01:45,550
+by selling a portfolio that has no payoffs at all.
+
+38
+00:01:45,550 --> 00:01:47,410
+And we can get money in the present.
+
+39
+00:01:47,410 --> 00:01:49,750
+Again, that's the kind of thing that shouldn't really
+
+40
+00:01:49,750 --> 00:01:51,280
+be allowed in a well functioning,
+
+41
+00:01:51,280 --> 00:01:53,390
+properly set up security market.
+
+42
+00:01:53,390 --> 00:01:55,520
+So let's take a look at an example.
+
+43
+00:01:55,520 --> 00:01:57,700
+In this case, let's go back to our original payoff
+
+44
+00:01:57,700 --> 00:02:01,780
+matrix example A. And let's consider this portfolio--
+
+45
+00:02:01,780 --> 00:02:05,500
+1, 2, 1, 5-- so one bond, two shares
+
+46
+00:02:05,500 --> 00:02:08,620
+of stock, and six call options of the different strikes.
+
+47
+00:02:08,620 --> 00:02:12,040
+And consider-- so that's my pricing vector.
+
+48
+00:02:12,040 --> 00:02:14,470
+And then consider this particular portfolio.
+
+49
+00:02:14,470 --> 00:02:16,960
+Well, A acting on this portfolio,
+
+50
+00:02:16,960 --> 00:02:19,820
+because the last security is a redundant security,
+
+51
+00:02:19,820 --> 00:02:23,860
+this has zero payoff, but it has a non-zero price.
+
+52
+00:02:23,860 --> 00:02:26,110
+That means it permits arbitrage.
+
+53
+00:02:26,110 --> 00:02:28,930
+What we expect to have to avoid arbitrage
+
+54
+00:02:28,930 --> 00:02:33,040
+is that, if the payoff is zero, the price must be zero.
+
+55
+00:02:33,040 --> 00:02:37,600
+Violating that is type II arbitrage.
+
+56
+00:02:37,600 --> 00:02:42,690
+So can we change the prices so that we could avoid arbitrage
+
+57
+00:02:42,690 --> 00:02:44,780
+in this market?
+

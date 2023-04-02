@@ -1,0 +1,76 @@
+
+PROFESSOR: What about security prices?
+So far, we just talked about payoffs, future payoffs
+for securities.
+What about the prices?
+And why do we talk about payoffs instead of returns
+on securities, how we usually think about it?
+Well, for prices, let's represent them by a vector S.
+And what's the dimension of the space?
+Well, it's going to be n.
+There's going to be one price for each security in our space.
+And, if we want to compute the market value of a portfolio,
+we use the standard rule for computing the market
+value of any portfolio.
+We take the quantity of securities, x
+sub i of security of type i.
+We multiply times the price.
+And we sum over the portfolio.
+We can write this in matrix notation
+as a row vector times a column vector.
+Or we can flip it around the other way.
+So think of S is related to the adjoint, which can
+be written with a transpose.
+It can be written with a star sometimes.
+But this just means that we're taking S, turning it
+into a row vector, and multiplying
+times a column vector x.
+It's another way of saying we're just
+taking the linear sum of each component of S
+times each component of x.
+The key thing here is, first, we have one price per security
+in our portfolio and, second, that the pricing
+we can think of as a linear operation on portfolio vectors.
+And I can write it like this as S acting on the vector
+x, which gives us a real number, which
+would be the market value.
+Now, in setups where we're thinking about applications
+in derivative pricing, we often talk about future payoffs.
+And, later on, we don't talk about the return on a security
+because we sometimes are going to talk
+about arbitrage portfolios and portfolios that
+might have zero value.
+And, if they have non-zero payoffs on the future,
+then they would have infinite return
+if we're dividing by something.
+So we're going to talk about payoffs because those
+are positive numbers that we're going to have in the future.
+And, generally, they're going to be
+non-zero values for securities, but we're not
+having any denominators.
+So we're only going to keep the numerators.
+So we've seen that we have a vector space of portfolios,
+so of dimension, in our starting example, of 4.
+We have a vector space of prices,
+which is the same dimension, but it's not the same vector space.
+Remember, in a vector space, you can add vectors,
+but prices are measured in dollars.
+The portfolio space, they're measured
+in shares or numbers or quantities of bonds.
+And you can't add $10 per share, the value of S, to 15 shares.
+You can multiply them and get something,
+which dollars per share times shares
+gives you something in dollars, but you
+can't add them together.
+So these are two quantities, which
+are both vectors, S and x.
+We can multiply them in this way to get a scalar.
+But, even though they're of the same dimension,
+we don't add them.
+They're actually in different vector spaces,
+which are called dual spaces.
+One of them is dual to the other if it has the same dimension
+and it acts linearly.
+That's why, in this picture, we can
+think of prices as acting on portfolios to give us
+market values.

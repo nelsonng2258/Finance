@@ -1,0 +1,266 @@
+
+PROFESSOR: Here's our first portfolio problem.
+Let's find a minimum-variance portfolio.
+So let's set up our Lagrange function as follows.
+Let's take a look at a Lagrange function
+that depends on a vector of weights.
+And the function that I'd like to minimize
+would be the variance.
+And the variance, as we've seen, is given by w
+transpose time the covariance matrix times w.
+I'm throwing a 1/2 in front just to make it a little bit easier
+when I take derivatives of a quadratic function
+because I care more about the location of the extrema
+than I do about the value of the Lagrange function.
+So, if this is minimized, one half of it
+is also minimized as well.
+Over here, I have my constraint.
+And, by the way, l is completely arbitrary.
+So, if I divide it by 1/2 or multiply it by 3,
+it's not going to change anything either.
+The definition of this is arbitrary,
+but, once we pick a definition for l, we need to leave it.
+So here I've written in vector form the constraint
+that these weights need to add up to 1.
+And I've done this with a particular construction, which
+is a little unfortunate in my opinion,
+but it's in the literature in various places.
+So I'm going to stick to this so you'll
+recognize it if you see it.
+We're going to use the Greek letter iota,
+which looks like an i missing its dot,
+to represent a vector of 1's.
+So it's just 1, 1, 1, 1, 1 for the number of assets
+I have, whether it's 2 or 30 or 500, OK?
+So iota represents a vector of 1's.
+And, of course, if I take its transpose,
+it becomes a row vector.
+And the row vector of 1's times a column vector of w1, w2, w3
+just gives me the sum of the weights.
+So the sum of the weights is given by iota transpose w.
+And that needs to be equal to 1.
+So I've written the constraint in this form times the Lagrange
+multiplier.
+Remember, we expect the Lagrange multiplier method
+in any number of dimensions to enforce the constraint.
+The equation of the partial with respect to l
+is equal to 0 is going to tell us the constraint needs
+to be satisfied.
+So l is my Lagrange multiplier.
+Iota is a constant.
+It's just a vector of 1's.
+And C is the covariance matrix, which
+we're assuming to be given.
+So this is an interesting idea.
+We want to solve the minimum-variance portfolio.
+And why do we need a constraint?
+Well, if we didn't have the constraint,
+the minimum variance would be don't invest.
+If you keep all your money under your mattress,
+there's no risk at all.
+You'd definitely have minimum variance.
+Now, you might ask, why would you
+want to find the minimum-variance portfolio?
+It sounds useful, but this is all about risk and nothing
+about return.
+So, if there were no return on these assets,
+it's not at all clear why you would
+want to have a minimum-variance portfolio.
+Why are you investing if there's no benefit
+for taking this risk?
+If you are forced to invest and you're
+forced to have your weight vector fully deployed
+in risky assets, then this will be
+the minimum-variance portfolio.
+But this isn't just a mathematical thing.
+People do this, and there are funds
+that trade based on this idea of minimum variance.
+Why do they do it?
+Well, one idea is that we're leaving out the return.
+So we could say, well, people obviously
+expect to earn a return.
+What assumption implicitly about returns
+would lead to this case?
+One of them would be, if you thought
+the average return on assets was 0,
+then maybe you shouldn't be investing at all.
+Another case would be where you thought that you
+couldn't tell anything.
+You thought that they're positive on average,
+but you don't have any skill in predicting them.
+That would at least be coherent.
+And, finally, you might say, well,
+I do have an estimate for the expected returns,
+but I'm going to make the same estimate for all the returns.
+And, in that case, this comes out just as a special case.
+But let's just take it as given and look at it
+as a mathematical exercise for a moment.
+So we have a constraint.
+We need to be fully invested.
+The sum of the w's needs to be equal to 1.
+Subject to that constraint, given
+a set of variances and covariances,
+how do we find the portfolio that has minimum variance?
+Remember, this is in a very high-dimensional vector space.
+So w could be 500 components if we're in the S&P 500.
+It could have thousands of components
+if we're in the US markets.
+It could have tens of thousands of components
+if we're in global markets.
+So, in this very, very high-dimensional space,
+we're looking for this.
+So, for any given vector, we plug it in,
+and we get a number for the variance.
+And we have this single number that we need to extremize.
+We want to find the minimum value
+over all of the possible vectors in this very
+large-dimensional space.
+Let's go.
+So what we'd like to do is differentiate with respect
+to each of the variables, each of the w sub i's.
+So, for each component, we take a partial derivative,
+and we set it equal to 0, plus we have one partial derivative
+that we set equal to 0 through the Lagrange multiplier.
+And, if you'd like, you can write this out in components
+and do it as well.
+Now, as we vary the weights, remember
+that we have a quadratic form in the weights w.
+So, as I vary the weights with respect
+to a particular w sub i, I'm going
+to have a whole bunch of terms, depending
+on all the cross terms and the diagonal terms itself.
+So, if I vary with respect to, say, w1,
+I'm going to have C1,1, but I'm also going to have C1,2 times
+w2 and C1,3 times w3 and all possible combinations.
+So I can write this as a sum over all values j
+in the portfolio times the matrix element Cij wj minus l.
+And I'm going to write this in matrix notation.
+Even though, iota, they're all 1's, I'm
+going to write it as iota sub i.
+And the reason is that then I can write this--
+I can recognize this as being a vector equation.
+So this right-hand side is the same
+as the component of the equation that
+says that C acting on the vector w
+is equal to the vector iota times l.
+So how do I solve that?
+Let's just multiply in the left and right sides by C inverse.
+And we get this solution here.
+w is C inverse times iota times some constant l.
+In fact, right now, we know almost all we need to know.
+We know that the weights are proportional to the inverse
+covariance matrix times the vector of 1's.
+So, to fix the proportionality constant,
+well, we can do it the fancy way.
+We can take i transpose and multiply it on the left,
+a row vector times w.
+That gives us l time iota transpose C inverse iota.
+And set that equal to 1.
+And solve for it.
+So l is going to be 1 over iota transpose C inverse iota.
+These things, these expressions, we'll see a few more of them.
+They look complicated, but, keep in mind,
+they're really just scalars.
+They're just numbers.
+So they don't have any variables in them.
+It's row vector times a square matrix times a column vector,
+so a symmetric matrix also.
+So these are just numbers.
+So we've got a solution so that the w
+for the minimum-variance portfolio
+is going to be C inverse iota divided by this constant.
+And now we can see what this constant does.
+We really just divided by the sum of the weights.
+And that means that the weights add up to 1.
+And you can see that because, if you
+act on this expression on the left by an iota transpose,
+the numerator and denominator become the same.
+And we get that it's equal to 1.
+What does that mean in financial terms?
+Well, consider a special case where the covariance matrix
+is diagonal.
+So suppose that all the assets are independent of each other,
+but they each have their own variance.
+So the covariance matrix in that case
+has the variances down the diagonal,
+sigma 1 squared, sigma 2 squared, sigma 3 squared,
+and so on.
+And, in this case, C inverse times iota
+tells us that all of the weights in the minimum-variance
+portfolio are going to be proportional to 1
+over the variance.
+So, special case, Cij diagonal, and we
+get that wi is proportional to 1 over sigma i squared.
+What that says is something actually
+that's kind of reasonable.
+That is that the riskier an asset is,
+the larger its sigma squared is, the less weight I
+should have in the portfolio.
+So we might have typically thought, in capital terms,
+of an equal-weighted portfolio as being
+equal capital associated with each of the assets.
+But, if the assets have different levels of riskiness
+and especially if we're not considering return,
+then we might want to think about things
+from a risk perspective.
+And, instead of allocating equal capital,
+we might want to allocate equal risk.
+That is the risk is a measure of how much we might gain or lose.
+So putting equal amounts of capital on a very risky
+and a very low-risk asset are quite different activities.
+Under this solution for the global minimum-variance
+portfolio, under the special case where the assets are
+uncorrelated, qualitatively, what this solution is telling
+us is adjust your exposures to equalize
+the risk exposure, rather than the capital exposure,
+in the different assets.
+Let's take a look at one numerical example.
+
+So here's a numerical example of the minimum-variance solution.
+I've taken from CRSP, which is a research
+database of historical equity returns, a set of about
+700 stocks over a period of many years.
+I've estimated the covariance matrix from historical data.
+And I've put it in R to compute the quantities
+that we wrote down before.
+In R, the function solve is to invert a matrix
+because it's thinking of solving systems of linear equations.
+And matrix operations are sandwiched
+between percent signs.
+So percent star percent means do matrix multiplication.
+And a t of a vector means take its transpose.
+So this is just, in R speak, implementing what
+we had before in our data set.
+And what we find is we get a vector.
+We got a 690-component vector whose components sum to 1
+that tells us where the minimum-variance solution is.
+Notice something interesting.
+I've ordered them from smallest to biggest.
+690, there's no natural ordering amongst stocks,
+but I can order them according to the weights
+in this solution.
+And what I find is some of them are negative, and some of them
+are positive.
+So the minimum-variance solution is a long-short portfolio.
+The weights add up to 1, but that's a net weight, not
+the gross weight.
+Some of the weights over here are negative numbers
+because I didn't constrain them.
+I didn't need to--
+I didn't say that they had to be positive values.
+So, if you were interested in implementing
+this in this case--
+and this is not atypical-- you would
+have to hold short positions.
+What about an upper bound?
+Well, I didn't hit anything equal to or greater than 1.
+The largest value I have looks like it's about 3 and 1/2%
+in any one asset.
+I'm not evenly balanced.
+I have about 300 stocks short, about 400 stocks long.
+But it does satisfy my constraints.
+It is the minimum-variance portfolio
+for this particular covariance matrix that we have.
+And the solution requires, in this case,
+that the w's, which were only constrained by the budget,
+involve both positive and negative values.

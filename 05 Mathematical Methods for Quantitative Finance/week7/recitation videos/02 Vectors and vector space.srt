@@ -1,0 +1,1316 @@
+0
+00:00:00,000 --> 00:00:00,658
+
+
+1
+00:00:00,658 --> 00:00:02,200
+PROFESSOR: Here's a warm-up exercise.
+
+2
+00:00:02,200 --> 00:00:04,610
+For each of these sets of equations,
+
+3
+00:00:04,610 --> 00:00:06,400
+how many solutions are there?
+
+4
+00:00:06,400 --> 00:00:07,690
+I don't care what they are.
+
+5
+00:00:07,690 --> 00:00:10,360
+I just want you to find out how many there are.
+
+6
+00:00:10,360 --> 00:00:13,330
+Now, this is a typical problem in linear algebra,
+
+7
+00:00:13,330 --> 00:00:19,305
+and it has a close connection to what we looked at in lectures
+
+8
+00:00:19,305 --> 00:00:20,930
+this week in asset pricing, where we're
+
+9
+00:00:20,930 --> 00:00:22,970
+looking at market structure.
+
+10
+00:00:22,970 --> 00:00:26,150
+And we ask, are markets complete?
+
+11
+00:00:26,150 --> 00:00:28,460
+How many different kinds of coverage
+
+12
+00:00:28,460 --> 00:00:31,730
+can we get to describe risks that
+
+13
+00:00:31,730 --> 00:00:34,490
+might happen in different possible states of the world,
+
+14
+00:00:34,490 --> 00:00:36,530
+to describe rewards and payoffs that
+
+15
+00:00:36,530 --> 00:00:38,710
+might happen in different states of the world?
+
+16
+00:00:38,710 --> 00:00:42,480
+We want to know, is it possible to cover everything?
+
+17
+00:00:42,480 --> 00:00:45,110
+And if it is possible to cover everything,
+
+18
+00:00:45,110 --> 00:00:47,100
+is our a solution unique?
+
+19
+00:00:47,100 --> 00:00:50,338
+If it's not possible to cover everything, what's missing?
+
+20
+00:00:50,338 --> 00:00:51,380
+What are the constraints?
+
+21
+00:00:51,380 --> 00:00:52,460
+What can we do?
+
+22
+00:00:52,460 --> 00:00:54,140
+If there are additional things that we
+
+23
+00:00:54,140 --> 00:00:58,040
+could do to complete a market, are those completions unique?
+
+24
+00:00:58,040 --> 00:00:59,990
+And we invert solutions.
+
+25
+00:00:59,990 --> 00:01:01,430
+We're given an answer.
+
+26
+00:01:01,430 --> 00:01:04,250
+We go back to the original problem.
+
+27
+00:01:04,250 --> 00:01:07,550
+These are all things that you've actually
+
+28
+00:01:07,550 --> 00:01:09,860
+seen in other guises for a long time,
+
+29
+00:01:09,860 --> 00:01:12,108
+solving equations as simple as this.
+
+30
+00:01:12,108 --> 00:01:14,150
+But what I'm going to do is go through the basics
+
+31
+00:01:14,150 --> 00:01:16,550
+of linear algebra as a review.
+
+32
+00:01:16,550 --> 00:01:19,190
+And I hope you've seen the lectures,
+
+33
+00:01:19,190 --> 00:01:22,250
+but if you're coming here first for linear algebra review,
+
+34
+00:01:22,250 --> 00:01:24,800
+you go back to the lectures, come back here again--
+
+35
+00:01:24,800 --> 00:01:28,460
+either way you do it, I hope you make
+
+36
+00:01:28,460 --> 00:01:30,140
+the connection between the two.
+
+37
+00:01:30,140 --> 00:01:32,930
+And certainly, feel free to skip parts, or speed it up
+
+38
+00:01:32,930 --> 00:01:36,080
+to 1 and 1/2 or twice speed if it helps it go by faster.
+
+39
+00:01:36,080 --> 00:01:38,870
+
+
+40
+00:01:38,870 --> 00:01:42,270
+Vectors are elements in something called a vector
+
+41
+00:01:42,270 --> 00:01:42,770
+space.
+
+42
+00:01:42,770 --> 00:01:45,980
+And the key idea is not that they're columns of numbers.
+
+43
+00:01:45,980 --> 00:01:48,080
+The key idea is that they're objects
+
+44
+00:01:48,080 --> 00:01:50,965
+that can be added to get other objects of the same type.
+
+45
+00:01:50,965 --> 00:01:52,340
+And of course, we've been dealing
+
+46
+00:01:52,340 --> 00:01:54,600
+with that throughout the entire course,
+
+47
+00:01:54,600 --> 00:01:56,420
+not as columns of numbers, but we've
+
+48
+00:01:56,420 --> 00:01:59,220
+been looking at functions, where we add two functions,
+
+49
+00:01:59,220 --> 00:02:01,190
+for example, and we get another function.
+
+50
+00:02:01,190 --> 00:02:05,850
+If it obeys rules of addition and scalar multiplication,
+
+51
+00:02:05,850 --> 00:02:08,699
+and it's closed under those operations,
+
+52
+00:02:08,699 --> 00:02:13,420
+then we can think about this as a vector space.
+
+53
+00:02:13,420 --> 00:02:15,520
+There are properties of vector addition.
+
+54
+00:02:15,520 --> 00:02:18,860
+And this is not just for little arrows pointing in the plane.
+
+55
+00:02:18,860 --> 00:02:21,140
+This is true for any mathematical objects
+
+56
+00:02:21,140 --> 00:02:22,360
+that obey these properties.
+
+57
+00:02:22,360 --> 00:02:24,110
+We can call it a vector space.
+
+58
+00:02:24,110 --> 00:02:25,480
+It's commutative.
+
+59
+00:02:25,480 --> 00:02:30,190
+V plus w is the same thing as w plus v. It's associative.
+
+60
+00:02:30,190 --> 00:02:33,180
+You can do the addition in any order you'd like.
+
+61
+00:02:33,180 --> 00:02:40,252
+It has an identity, in this case, an additive identity
+
+62
+00:02:40,252 --> 00:02:41,630
+that we call 0.
+
+63
+00:02:41,630 --> 00:02:44,990
+And importantly, it has an additive inverse
+
+64
+00:02:44,990 --> 00:02:48,020
+that we can have a negative, and we can go the other way.
+
+65
+00:02:48,020 --> 00:02:51,500
+Now, one of the things that we saw in our example
+
+66
+00:02:51,500 --> 00:02:54,710
+during the lecture is that we can represent portfolio space
+
+67
+00:02:54,710 --> 00:02:57,060
+as being a set of vectors.
+
+68
+00:02:57,060 --> 00:02:58,820
+But do they form a vector space?
+
+69
+00:02:58,820 --> 00:03:02,360
+One of the requirements is that there be, for example, a 0.
+
+70
+00:03:02,360 --> 00:03:03,360
+Is there?
+
+71
+00:03:03,360 --> 00:03:03,920
+Well, yeah.
+
+72
+00:03:03,920 --> 00:03:05,450
+You could have an empty portfolio.
+
+73
+00:03:05,450 --> 00:03:08,120
+You would add it to a portfolio, you would get nothing.
+
+74
+00:03:08,120 --> 00:03:10,550
+What about v plus w and w plus v?
+
+75
+00:03:10,550 --> 00:03:11,210
+Sure.
+
+76
+00:03:11,210 --> 00:03:13,670
+If you've got 100 shares of Coca-Cola stock
+
+77
+00:03:13,670 --> 00:03:15,200
+and 100 shares of Caterpillar, it
+
+78
+00:03:15,200 --> 00:03:16,970
+doesn't matter which way you add them.
+
+79
+00:03:16,970 --> 00:03:19,130
+They add up either way.
+
+80
+00:03:19,130 --> 00:03:20,420
+You can commute.
+
+81
+00:03:20,420 --> 00:03:22,310
+What about the additive inverse?
+
+82
+00:03:22,310 --> 00:03:24,560
+That's a bit tricky.
+
+83
+00:03:24,560 --> 00:03:27,570
+How do we have the opposite of a portfolio?
+
+84
+00:03:27,570 --> 00:03:30,440
+Well, the way we usually think about it is a simple answer.
+
+85
+00:03:30,440 --> 00:03:33,320
+And this is approximation to reality,
+
+86
+00:03:33,320 --> 00:03:35,510
+but definitely not the way real-world trading
+
+87
+00:03:35,510 --> 00:03:36,920
+exactly works.
+
+88
+00:03:36,920 --> 00:03:39,800
+We can think about short positions in a security
+
+89
+00:03:39,800 --> 00:03:44,300
+as being like owning a negative quantity of that security.
+
+90
+00:03:44,300 --> 00:03:47,060
+That says that if we have short positions,
+
+91
+00:03:47,060 --> 00:03:50,570
+we think that a short portfolio is identified
+
+92
+00:03:50,570 --> 00:03:53,900
+with a long portfolio because the long portfolio are
+
+93
+00:03:53,900 --> 00:03:58,010
+the stocks you would need to buy to cover a short position.
+
+94
+00:03:58,010 --> 00:04:00,480
+A short position, just as a reminder,
+
+95
+00:04:00,480 --> 00:04:03,370
+is when you borrow stock and you sell it,
+
+96
+00:04:03,370 --> 00:04:06,680
+but you have an obligation to replace the stock to the owner.
+
+97
+00:04:06,680 --> 00:04:08,030
+So there's a natural fit.
+
+98
+00:04:08,030 --> 00:04:11,690
+We can pick it out the additive inverse and the vector
+
+99
+00:04:11,690 --> 00:04:15,470
+as saying, what's the vector we need to add to get back to 0?
+
+100
+00:04:15,470 --> 00:04:19,370
+In the case of a financial portfolio of securities,
+
+101
+00:04:19,370 --> 00:04:21,050
+say that it is held short, we could
+
+102
+00:04:21,050 --> 00:04:25,640
+say, what's the portfolio that we would need to cover
+
+103
+00:04:25,640 --> 00:04:26,840
+a set of short positions?
+
+104
+00:04:26,840 --> 00:04:29,210
+That would be a minus of a minus v. That
+
+105
+00:04:29,210 --> 00:04:31,880
+would be v. We could say, what are the trades that we
+
+106
+00:04:31,880 --> 00:04:35,420
+need to do in order to liquidate a portfolio?
+
+107
+00:04:35,420 --> 00:04:40,820
+That might be a signed portfolio with negative signs
+
+108
+00:04:40,820 --> 00:04:42,650
+for responding to required sales.
+
+109
+00:04:42,650 --> 00:04:45,260
+And that would say that, if we have a portfolio,
+
+110
+00:04:45,260 --> 00:04:47,393
+the additive inverse is the portfolio
+
+111
+00:04:47,393 --> 00:04:48,560
+that you would need to sell.
+
+112
+00:04:48,560 --> 00:04:51,830
+You would need to take a negative relative position
+
+113
+00:04:51,830 --> 00:04:53,300
+in order to get to 0.
+
+114
+00:04:53,300 --> 00:04:55,000
+Those all have correspondences.
+
+115
+00:04:55,000 --> 00:04:58,640
+That's what we saw for portfolios in portfolio space
+
+116
+00:04:58,640 --> 00:05:00,860
+during the lecture this week.
+
+117
+00:05:00,860 --> 00:05:03,350
+Now, the scalars form a field--
+
+118
+00:05:03,350 --> 00:05:06,050
+and here, we use real numbers, not complex numbers.
+
+119
+00:05:06,050 --> 00:05:07,200
+And why is that important?
+
+120
+00:05:07,200 --> 00:05:09,860
+Well, first of all, there are properties that we have.
+
+121
+00:05:09,860 --> 00:05:13,140
+The a times b, we can associate it either way,
+
+122
+00:05:13,140 --> 00:05:15,320
+so we can multiply by a scalar--
+
+123
+00:05:15,320 --> 00:05:17,870
+with two scalars first or the vector first.
+
+124
+00:05:17,870 --> 00:05:22,880
+We have a distributive law for either multiplication
+
+125
+00:05:22,880 --> 00:05:26,490
+by scalars or multiplication--
+
+126
+00:05:26,490 --> 00:05:30,020
+so a scalar times a sum of vectors or a sum
+
+127
+00:05:30,020 --> 00:05:31,530
+of scalars times the vector.
+
+128
+00:05:31,530 --> 00:05:33,230
+Either way, we have these simple laws.
+
+129
+00:05:33,230 --> 00:05:37,040
+And there's a scalar identity, as well, which is the number 1.
+
+130
+00:05:37,040 --> 00:05:38,070
+So that's fine.
+
+131
+00:05:38,070 --> 00:05:40,970
+But where we run into an issue is that,
+
+132
+00:05:40,970 --> 00:05:43,252
+if we're thinking about portfolio space--
+
+133
+00:05:43,252 --> 00:05:44,960
+and there are lots of other vector spaces
+
+134
+00:05:44,960 --> 00:05:46,130
+that we use in finance.
+
+135
+00:05:46,130 --> 00:05:48,710
+But if we think specifically of a portfolio space,
+
+136
+00:05:48,710 --> 00:05:52,550
+and we think about our typical example of a set of stocks,
+
+137
+00:05:52,550 --> 00:05:56,120
+stocks can only be held in integer quantities.
+
+138
+00:05:56,120 --> 00:05:58,340
+And that doesn't form a field.
+
+139
+00:05:58,340 --> 00:06:00,410
+There are lots of these buzzwords that are here.
+
+140
+00:06:00,410 --> 00:06:02,390
+And we'll get to touch on some of them,
+
+141
+00:06:02,390 --> 00:06:05,800
+but certainly not all of them.
+
+142
+00:06:05,800 --> 00:06:08,100
+Let's look at some notions from linear algebra,
+
+143
+00:06:08,100 --> 00:06:10,950
+like linear dependence, basis, dimension,
+
+144
+00:06:10,950 --> 00:06:13,080
+different kinds of linear accommodation,
+
+145
+00:06:13,080 --> 00:06:14,880
+and have a direct application of what
+
+146
+00:06:14,880 --> 00:06:18,890
+we saw in the structure of financial markets.
+
+147
+00:06:18,890 --> 00:06:21,080
+A linear combination of vectors is
+
+148
+00:06:21,080 --> 00:06:23,660
+a sum of the vectors where we can multiply each vector
+
+149
+00:06:23,660 --> 00:06:25,070
+by an arbitrary scalar.
+
+150
+00:06:25,070 --> 00:06:27,860
+We saw an example of that in building a portfolio.
+
+151
+00:06:27,860 --> 00:06:31,860
+If you have a portfolio with 100 shares of stock a
+
+152
+00:06:31,860 --> 00:06:34,220
+and 200 shares of stock b, that's
+
+153
+00:06:34,220 --> 00:06:39,470
+the same as a single portfolio with components, say,
+
+154
+00:06:39,470 --> 00:06:40,970
+100 and 200.
+
+155
+00:06:40,970 --> 00:06:47,450
+Or it could be 100 times a portfolio with a single share
+
+156
+00:06:47,450 --> 00:06:50,270
+of stock plus 200 times the portfolio
+
+157
+00:06:50,270 --> 00:06:52,220
+with a single share of stock b.
+
+158
+00:06:52,220 --> 00:06:54,470
+So we can multiply things by constants.
+
+159
+00:06:54,470 --> 00:06:55,700
+We can add them together.
+
+160
+00:06:55,700 --> 00:06:57,360
+And that's a linear combination.
+
+161
+00:06:57,360 --> 00:07:00,380
+And that's an action that we can take on portfolios.
+
+162
+00:07:00,380 --> 00:07:01,770
+Very natural.
+
+163
+00:07:01,770 --> 00:07:06,380
+Now, a set of vectors is said to be linearly dependent if there
+
+164
+00:07:06,380 --> 00:07:08,780
+are a set of non-zero constants so that we
+
+165
+00:07:08,780 --> 00:07:11,120
+can write an equation like this where
+
+166
+00:07:11,120 --> 00:07:12,890
+we can set this equal to 0.
+
+167
+00:07:12,890 --> 00:07:14,750
+And of course, what that really means
+
+168
+00:07:14,750 --> 00:07:17,780
+is that we can solve for one of the vectors
+
+169
+00:07:17,780 --> 00:07:20,600
+in terms of the other vectors in the set.
+
+170
+00:07:20,600 --> 00:07:23,570
+That's what we mean by a redundant security.
+
+171
+00:07:23,570 --> 00:07:27,410
+We mean that its payoff could be reproduced by some combination
+
+172
+00:07:27,410 --> 00:07:28,730
+of other securities.
+
+173
+00:07:28,730 --> 00:07:31,040
+Simple example in the introduction I think I gave
+
+174
+00:07:31,040 --> 00:07:35,180
+was a trivial example, not even with column vectors
+
+175
+00:07:35,180 --> 00:07:36,620
+in a high-dimensional space.
+
+176
+00:07:36,620 --> 00:07:41,210
+If you have a $5 bill, a $10 bill, and a of $20 bills,
+
+177
+00:07:41,210 --> 00:07:43,070
+you can trade them off for one another.
+
+178
+00:07:43,070 --> 00:07:47,430
+You can replicate the payoff of one with the others.
+
+179
+00:07:47,430 --> 00:07:51,140
+However, we do need to be careful about the divisibility.
+
+180
+00:07:51,140 --> 00:07:54,470
+Assuming that we have constants, we
+
+181
+00:07:54,470 --> 00:07:57,680
+can show, though, that there are relationships.
+
+182
+00:07:57,680 --> 00:08:02,210
+For example, we could say that 4 $5 bills minus
+
+183
+00:08:02,210 --> 00:08:04,880
+& $20 bill is equal to 0.
+
+184
+00:08:04,880 --> 00:08:06,530
+And that would show that those are--
+
+185
+00:08:06,530 --> 00:08:10,430
+that's sufficient to show that those are linearly dependent.
+
+186
+00:08:10,430 --> 00:08:13,130
+And it's a pretty obvious notion.
+
+187
+00:08:13,130 --> 00:08:14,480
+This is the formal notion.
+
+188
+00:08:14,480 --> 00:08:16,790
+And then, if we can't do that, we
+
+189
+00:08:16,790 --> 00:08:19,560
+say that the vectors are linearly independent.
+
+190
+00:08:19,560 --> 00:08:21,000
+And this is really important.
+
+191
+00:08:21,000 --> 00:08:24,440
+It means that they describe different kinds of things.
+
+192
+00:08:24,440 --> 00:08:26,840
+An example in our portfolios would
+
+193
+00:08:26,840 --> 00:08:30,630
+be, in terms of our basic portfolio space,
+
+194
+00:08:30,630 --> 00:08:32,750
+if we have two different stocks--
+
+195
+00:08:32,750 --> 00:08:35,000
+they describe different things, that they describe
+
+196
+00:08:35,000 --> 00:08:36,650
+completely different payoffs--
+
+197
+00:08:36,650 --> 00:08:38,870
+they are independent of each other.
+
+198
+00:08:38,870 --> 00:08:41,510
+
+
+199
+00:08:41,510 --> 00:08:44,600
+Linear dependence means that we can write one of the vectors
+
+200
+00:08:44,600 --> 00:08:45,830
+in terms of the others.
+
+201
+00:08:45,830 --> 00:08:47,900
+And in the case of our payoff matrix,
+
+202
+00:08:47,900 --> 00:08:52,280
+that means that we can write the payoff of one kind of security
+
+203
+00:08:52,280 --> 00:08:55,580
+in terms of another set of securities.
+
+204
+00:08:55,580 --> 00:08:58,160
+And that means that we could build a portfolio that
+
+205
+00:08:58,160 --> 00:08:59,802
+has exactly the same payoff.
+
+206
+00:08:59,802 --> 00:09:01,260
+And that means, in a certain sense,
+
+207
+00:09:01,260 --> 00:09:03,510
+you don't really need the first one.
+
+208
+00:09:03,510 --> 00:09:06,290
+Now, we might have it for lots of reasons, in the same way
+
+209
+00:09:06,290 --> 00:09:09,110
+that the existence of $1 bills doesn't mean that we
+
+210
+00:09:09,110 --> 00:09:11,150
+don't find $50 and $100 bills.
+
+211
+00:09:11,150 --> 00:09:12,420
+Of course we do.
+
+212
+00:09:12,420 --> 00:09:14,880
+They're there for lots of different reasons.
+
+213
+00:09:14,880 --> 00:09:17,040
+And the same thing is true in financial markets.
+
+214
+00:09:17,040 --> 00:09:19,640
+In fact, when it comes to derivative pricing,
+
+215
+00:09:19,640 --> 00:09:24,890
+there's an entire, enormous market of securities
+
+216
+00:09:24,890 --> 00:09:27,200
+that arguably are all redundant.
+
+217
+00:09:27,200 --> 00:09:29,060
+And yet there's an enormous demand for them,
+
+218
+00:09:29,060 --> 00:09:30,980
+and enormous trading activity, and they
+
+219
+00:09:30,980 --> 00:09:35,570
+perform very important functions in the economy.
+
+220
+00:09:35,570 --> 00:09:37,580
+When it comes just back to independence,
+
+221
+00:09:37,580 --> 00:09:39,830
+we have a very simple question, though, which is not,
+
+222
+00:09:39,830 --> 00:09:41,150
+how useful is it?
+
+223
+00:09:41,150 --> 00:09:42,950
+It's just, can you do this?
+
+224
+00:09:42,950 --> 00:09:44,550
+Can you write this equation?
+
+225
+00:09:44,550 --> 00:09:46,220
+And if you can, great.
+
+226
+00:09:46,220 --> 00:09:48,620
+Now, it says we really have one less degree of freedom.
+
+227
+00:09:48,620 --> 00:09:51,830
+In this example, it says v1 can be expressed
+
+228
+00:09:51,830 --> 00:09:52,950
+in terms of the others.
+
+229
+00:09:52,950 --> 00:09:55,620
+Now, there is a technical point here to make,
+
+230
+00:09:55,620 --> 00:09:58,160
+which is that we're dividing by a1,
+
+231
+00:09:58,160 --> 00:10:00,830
+and we do need to make sure that actually
+
+232
+00:10:00,830 --> 00:10:06,150
+leads to closure within our chosen field of scalars.
+
+233
+00:10:06,150 --> 00:10:09,110
+And if they're integers, the answer is actually no.
+
+234
+00:10:09,110 --> 00:10:12,350
+You can find a lot of things where this is not necessarily
+
+235
+00:10:12,350 --> 00:10:14,690
+going to work for different financial securities.
+
+236
+00:10:14,690 --> 00:10:18,140
+But it turns out that, in usual quantities that are done,
+
+237
+00:10:18,140 --> 00:10:19,940
+this tends to be pretty small.
+
+238
+00:10:19,940 --> 00:10:21,740
+And this is actually a good approximation,
+
+239
+00:10:21,740 --> 00:10:22,880
+but you do have to check.
+
+240
+00:10:22,880 --> 00:10:24,860
+Because either things are linearly independent
+
+241
+00:10:24,860 --> 00:10:25,490
+or they're not.
+
+242
+00:10:25,490 --> 00:10:28,970
+You can't be a little bit dependent.
+
+243
+00:10:28,970 --> 00:10:31,760
+From a mathematical point of view, there's a bright line.
+
+244
+00:10:31,760 --> 00:10:34,260
+From an applications point of view,
+
+245
+00:10:34,260 --> 00:10:36,230
+it requires judgment of the modeler.
+
+246
+00:10:36,230 --> 00:10:37,550
+And that's you.
+
+247
+00:10:37,550 --> 00:10:41,240
+That's why this is a course in mathematical methods
+
+248
+00:10:41,240 --> 00:10:42,320
+that are used.
+
+249
+00:10:42,320 --> 00:10:44,630
+We're going through the mathematical rules.
+
+250
+00:10:44,630 --> 00:10:47,720
+But how they get applied will depend.
+
+251
+00:10:47,720 --> 00:10:50,660
+Because in most real-world financial settings,
+
+252
+00:10:50,660 --> 00:10:53,270
+the assumptions the pure mathematics
+
+253
+00:10:53,270 --> 00:10:55,280
+are almost never satisfied, which means,
+
+254
+00:10:55,280 --> 00:10:57,440
+technically, we can't use any of the results.
+
+255
+00:10:57,440 --> 00:10:59,180
+And you'll need to use your judgment
+
+256
+00:10:59,180 --> 00:11:04,238
+to see when it might nevertheless be OK to do so.
+
+257
+00:11:04,238 --> 00:11:05,780
+There's an infinite number of factors
+
+258
+00:11:05,780 --> 00:11:07,820
+we can multiply by all of these constants,
+
+259
+00:11:07,820 --> 00:11:10,280
+but does that really mean that everything is infinite?
+
+260
+00:11:10,280 --> 00:11:11,480
+No, it doesn't.
+
+261
+00:11:11,480 --> 00:11:14,400
+If we start with a finite set of vectors,
+
+262
+00:11:14,400 --> 00:11:16,130
+we can use them to generate a vector
+
+263
+00:11:16,130 --> 00:11:19,160
+space just by taking all possible linear combinations
+
+264
+00:11:19,160 --> 00:11:19,700
+of them.
+
+265
+00:11:19,700 --> 00:11:21,492
+Then it's pretty clear that, even though we
+
+266
+00:11:21,492 --> 00:11:24,860
+could multiply times an infinite number of scalars
+
+267
+00:11:24,860 --> 00:11:26,780
+and get an infinite number of vectors,
+
+268
+00:11:26,780 --> 00:11:29,660
+everything is generated by a finite set.
+
+269
+00:11:29,660 --> 00:11:33,060
+We say that set spans the vector space.
+
+270
+00:11:33,060 --> 00:11:35,030
+And we call the vector-- we can say
+
+271
+00:11:35,030 --> 00:11:39,630
+that the vector space is the span of this set of vectors.
+
+272
+00:11:39,630 --> 00:11:41,990
+So it's true, by construction, that it's
+
+273
+00:11:41,990 --> 00:11:47,170
+closed under addition and scalar multiplication.
+
+274
+00:11:47,170 --> 00:11:50,320
+Now if, in addition to spanning the vector space,
+
+275
+00:11:50,320 --> 00:11:52,970
+the vectors are linearly independent,
+
+276
+00:11:52,970 --> 00:11:57,910
+then we say they form a basis for V. The basis isn't unique,
+
+277
+00:11:57,910 --> 00:12:03,400
+but it does mean it's the smallest number of vectors
+
+278
+00:12:03,400 --> 00:12:06,257
+that we have to have in order to describe everything
+
+279
+00:12:06,257 --> 00:12:07,090
+in the vector space.
+
+280
+00:12:07,090 --> 00:12:12,100
+And we call that number the dimension of the vector space.
+
+281
+00:12:12,100 --> 00:12:15,910
+Given a basis, we have a way to describe every vector
+
+282
+00:12:15,910 --> 00:12:17,020
+in the vector space.
+
+283
+00:12:17,020 --> 00:12:20,080
+It's a linear combination in terms of the basis vectors.
+
+284
+00:12:20,080 --> 00:12:22,060
+And this expression is unique.
+
+285
+00:12:22,060 --> 00:12:24,940
+And this leads us to our usual coordinate system.
+
+286
+00:12:24,940 --> 00:12:26,700
+Because we think of our column vectors
+
+287
+00:12:26,700 --> 00:12:29,230
+as being coordinates with respect to a basis.
+
+288
+00:12:29,230 --> 00:12:32,035
+If I have basis vectors u1, u2, u3,
+
+289
+00:12:32,035 --> 00:12:35,080
+and I take all possible linear combinations,
+
+290
+00:12:35,080 --> 00:12:39,640
+well I could write that-- so I have c1 times u1, c2 times u2,
+
+291
+00:12:39,640 --> 00:12:41,920
+and so on for any set of c's.
+
+292
+00:12:41,920 --> 00:12:44,470
+Our usual notation is we have these unit
+
+293
+00:12:44,470 --> 00:12:46,300
+vectors, these unit basis vectors,
+
+294
+00:12:46,300 --> 00:12:51,110
+1, 0, 0, 0, 0, 1, 0, 0, 0, and so on.
+
+295
+00:12:51,110 --> 00:12:53,380
+And we see that if we apply this rule,
+
+296
+00:12:53,380 --> 00:12:55,120
+we get our usual notation-- that we
+
+297
+00:12:55,120 --> 00:12:57,370
+get a column vector of numbers.
+
+298
+00:12:57,370 --> 00:13:02,290
+In the case of our classic payoff matrix,
+
+299
+00:13:02,290 --> 00:13:04,480
+we're looking at this in terms of columns,
+
+300
+00:13:04,480 --> 00:13:07,120
+we can think of the basis vectors as corresponding
+
+301
+00:13:07,120 --> 00:13:09,190
+to the arrow to our securities.
+
+302
+00:13:09,190 --> 00:13:13,180
+That is, they are the unit payoffs
+
+303
+00:13:13,180 --> 00:13:15,100
+in state 1 of the world, state 2 of the world,
+
+304
+00:13:15,100 --> 00:13:16,120
+state 3 of the world.
+
+305
+00:13:16,120 --> 00:13:18,430
+And we can take linear combinations.
+
+306
+00:13:18,430 --> 00:13:21,940
+If you want to end up with a vector that pays off 1, 2, 3,
+
+307
+00:13:21,940 --> 00:13:25,000
+it's 1 times the vector 1, 0, 0 plus twice
+
+308
+00:13:25,000 --> 00:13:29,440
+the vector 0, 1, 0, plus 3 times the vector 0, 0, 1.
+
+309
+00:13:29,440 --> 00:13:32,611
+So that gives us our usual notation.
+
+310
+00:13:32,611 --> 00:13:35,900
+Subspace of a vector space is a vector space
+
+311
+00:13:35,900 --> 00:13:39,060
+that's a subset of V. Now, that means
+
+312
+00:13:39,060 --> 00:13:41,760
+it has to be a vector space on its own.
+
+313
+00:13:41,760 --> 00:13:44,550
+And the span of a subset of basic factors of V
+
+314
+00:13:44,550 --> 00:13:47,580
+defines the subspace of V. If we take
+
+315
+00:13:47,580 --> 00:13:50,080
+a set of linearly independent vectors
+
+316
+00:13:50,080 --> 00:13:54,300
+that's smaller than the dimension of the space, then
+
+317
+00:13:54,300 --> 00:13:54,925
+we--
+
+318
+00:13:54,925 --> 00:13:57,090
+span is going to define a subspace.
+
+319
+00:13:57,090 --> 00:13:58,830
+We can always define something smaller.
+
+320
+00:13:58,830 --> 00:14:01,050
+You can think of a plane as a subspace
+
+321
+00:14:01,050 --> 00:14:02,700
+of three-dimensional space.
+
+322
+00:14:02,700 --> 00:14:06,810
+You can take a group of independent assets
+
+323
+00:14:06,810 --> 00:14:10,440
+less than everything and talk about what they span.
+
+324
+00:14:10,440 --> 00:14:12,810
+Because we're looking at everything generated
+
+325
+00:14:12,810 --> 00:14:15,930
+by a particular subset of basis vectors,
+
+326
+00:14:15,930 --> 00:14:17,690
+it has to be a vector space.
+
+327
+00:14:17,690 --> 00:14:20,500
+And we can take a look at the consequences.
+
+328
+00:14:20,500 --> 00:14:21,000
+
+

@@ -1,0 +1,292 @@
+
+PROFESSOR: OK, now, let's include return.
+After all, that's what most investors are interested in.
+We'd like to take some risk in order to earn some return.
+So how much return can we get?
+How little risk?
+And is there any limit to what's feasible?
+What's the best that we could do if we
+were willing to look at different classes
+of trade-offs?
+So what we're going to do is we're
+going to find a solution that will tell us
+all possible portfolios that we could
+get with different combinations of risk and return.
+Now, from the foundations of finance
+and from maybe common sense, there
+are a couple of things that we all
+ought to be able to agree on.
+And that is that, if we're rational investors,
+anyone taking a given level of risk
+should prefer more return to less return.
+And, for a given level of return,
+investors should prefer to have less risk rather than more
+risk.
+But what we don't have any universal solution to
+is trade-offs where we need to take
+extra risk to get extra return.
+So let's see what we can solve simply in terms of the things
+that we know are required.
+So let's generalize our Lagrange function that we did from
+our minimum-variance case to include--
+in addition to our variance that we want to minimize,
+our budget that we want to constrain,
+let's also have a constraint on the return.
+So let's set the portfolio to have a certain required
+level of return.
+So think of mu p as being a constant that we fix.
+I'd like my portfolio to have 6% annualized return
+or 10% annualized return.
+So the question we're going to ask
+is, for a given level of return that we're
+demanding, what is the portfolio that
+has the least amount of risk?
+That's something that we should all agree,
+for this constrained problem, would be a good thing.
+Of all the portfolios that have the given return,
+we should all want to hold the one that
+has the least amount of risk.
+Now, this isn't the unique formulation of the problem,
+but this is the one that's got the easiest mathematics.
+So, in the structure of the problem,
+we've added one extra term to our previous example.
+Because we have two constraints, we
+have to Lagrange multipliers, now called l and m.
+The structure still is quadratic in the variance.
+It's linear in w and the constraints.
+And the solution is going to look very similar.
+There's just a little bit more algebra to eliminate
+two Lagrange multipliers instead of one.
+
+We vary the weights, as we did before,
+by taking the partial derivatives with respect
+to each of the components or each
+of the weights in our portfolio.
+So the partial of my Lagrange function
+with respect to weight wi is going
+to be the sum over j of Cij wj.
+This is just the i-th component of the matrix product
+sigma times the vector w minus Lagrange multiplier l
+times the i-th component of the vector of 1's minus
+m times the i-th component of the vector
+of expected excess returns.
+We solve for the weights in exactly the same way.
+We have one term that's linear in w,
+two that are w independent.
+We move those to the right-hand side.
+We multiply both sides of the equation by C inverse
+because we know that C inverse--
+that C is invertible.
+And we have our solution that here
+is w in terms of C inverse times,
+instead of just one thing, two different things.
+Now, we'd be done, but we still have these unknown Lagrange
+multipliers.
+So that's a little annoying.
+We don't quite-- we're not quite done yet.
+We need to solve for the Lagrange multipliers,
+eliminate them, and then see what we can find in terms of w.
+And then, finally, we will substitute back in
+and see what the variance of the portfolio
+is that we can get for the minimum-variance portfolio
+as a function now of our selected constrained return, mu
+sub p.
+So we eliminate the Lagrange multipliers,
+as we did before, by solving the constraints.
+So the sum of the weights is equal to 1.
+If I take i transpose and I multiply it times the equation
+above--
+hold on one second.
+We've got a small problem with our notation.
+The omegas here should be C's.
+I will update this in the handouts later on.
+I was changing my own notation.
+So we'll use C for covariance.
+These should be C's.
+
+And we're just solving for the constraints.
+So the point is I have l here and here.
+I have m here and here.
+And we want to solve for l and m.
+These things in parentheses that we have here,
+these are just constants.
+So they look like complicated matrix expressions,
+but they're just numbers.
+So I can write this as a little matrix problem where
+I can say that I've got some linear combination of l and m
+times a matrix with those coefficients I've highlighted
+is equal to some constants 1 and mu p.
+And then, to solve for l and m, I'm
+just going to invert the problem.
+So, to be clear, I construct a matrix M that's a 2
+by 2 matrix of this form, a, b, b,
+c, where a and b are these things now with C's properly
+and not omegas.
+And I can solve that by taking an inverse, which
+is easy to do.
+The inverse of this symmetric matrix, of a 2 by 2 matrix,
+is easy to take.
+And then we can eliminate the Lagrange multipliers
+and obtain, finally, the variance
+as a function of the return.
+So, when we do that, there are two things we've achieved.
+One of them is we have an expression for our w's.
+And the other is now we have a relationship between sigma,
+or sigma squared, but between sigma and mu sub
+p between risk and return.
+So the result is that we get the minimum-variance portfolio
+for a given level of return.
+And this is actually a hyperbola in space.
+So we can write this out in terms of sigma squared
+and some bunch of constants.
+These are the things that were in that matrix M
+that I wrote down before.
+But it's sigma squared depends on mu p squared minus something
+times mu p plus a constant.
+When I plot this in terms of mu and sigma,
+I get a hyperbola that's known as the efficient frontier.
+And, asymptotically, we can check that this becomes linear,
+that these become proportional, because, as mu p goes
+to infinity, it dominates the last two terms.
+And I'm left with sigma p squared
+is proportional to mu p.
+
+In pictures, we get a hyperbola.
+And it's conventional to draw things this way,
+for historical reasons, where we draw
+the standard deviation on the x-axis,
+and we draw the return on the y-axis.
+So the lines that I've shown in this example,
+these are numerical examples from the previous data set,
+but taken over two different time periods.
+So the red and the blue lines just correspond
+to different input data sets.
+What we see in both cases is this shape, this hyperbola.
+And the idea is that every point along the hyperbola
+is a solution to our equation for a given level of return.
+So, if I were looking for a return
+at this level in these units, I would move across.
+And I would say that anything to the left of this point
+is not feasible.
+Anything to the right is, but it's not desirable.
+So all of the points over here are
+portfolios that have the same return, but higher risk.
+Of all the portfolios of this level of return, as I move,
+I can go lower and lower and lower, but then this is it.
+I can't get lower than this.
+And, similarly, pick a different level of return,
+and all of these are higher until I get across here.
+And that's the minimum-variance portfolio
+for a given level of return.
+Now, if we think about this in the other direction,
+if we think about transposing it,
+if we say, for a given level of risk,
+what portfolio would I want, well, I'd
+want the portfolio with the highest level of return.
+I'm also on the interior region of this curve.
+So I would say, these portfolios of this level of risk,
+I would want the highest return.
+And that would be up here.
+Now, you notice that these curves, being hyperbolas,
+do turn around.
+And these are not functions, strictly speaking,
+because there are two values on the curve for values
+of a given level of risk.
+There are two levels of return.
+But the negative ones, the lower part,
+is financially uninteresting.
+We don't consider it a solution to the problem.
+For a given level of risk, we know
+that everyone is going to pick the upper value rather
+than the lower one.
+So, typically, we're going to discard everything down here
+for the lower portion.
+And the part that matters is this interior region
+inside the curve.
+Now, the problem we've solved is a single-period optimization
+problem.
+We've assumed that everything is stationary.
+We've assumed that our covariance matrix, which we've
+estimated from historical returns, is both accurate
+and unchanging over time.
+If those things aren't true, then the results change.
+So, over a 10-year period, you might not be surprised
+that, in a different 10-year period,
+the realized covariance is going to be different.
+And, perhaps, the past decade of realized covariance
+might not be the best predictor for the next 10 years
+of realized covariance, but it is a common starting point
+to do.
+But, clearly, for our optimization problem,
+we've taken as one of the inputs a view as
+to what the future covariance matrix should be.
+If we change that input, we're going to change the output.
+The efficient frontier is going to move.
+Similarly, for our estimates of expected return,
+if we change them, if they're historical estimates
+and we either need to update them because of changing market
+conditions or, simply, we believe market conditions are
+the same, but we've taken a different data set
+to estimate them, if the inputs change,
+the outputs will change.
+One of the challenges for applications in the real world
+is that these changes typically are not negligible.
+They're often very, very big.
+And, furthermore, the results can
+be extremely sensitive to very small changes
+in some of the inputs.
+So it does raise questions about the stability of the result,
+as well as relying on important and difficult
+statistical challenges like how to best estimate
+the parameters.
+Algebraically, though, we do have a clear notion
+that's worth keeping in mind, despite
+the practical difficulties.
+There is a feasible set.
+And there is-- even if we can't accurately find it,
+there is something that's the best portfolio, that
+has the best return for a given risk.
+And, furthermore, we can map out where it is and divide the risk
+return space into those portfolios that are achievable
+and those that aren't.
+Remember that we started from a very high-dimensional vector
+space of possible portfolios where we've got
+one component for every asset.
+And we're plotting all of those high-dimensional portfolios
+on a single two-dimensional plot.
+That picture isn't easily invertible,
+at least not in your head.
+That is two neighboring points, two points that
+appear to be close on this plot, might be very, very different
+portfolios.
+We don't know that.
+So we might ask, how do we move toward the efficient frontier?
+Are we close even if we're not exactly on it?
+Those would be good things to know.
+One thing that is interesting, though,
+the immediate consequence of our solution,
+is that everything that's strictly
+on the portfolio-- on the efficient frontier
+has a very simple algebraic description.
+We wrote down that, before we eliminated our Lagrange
+multipliers, that w was C inverse acting
+on a linear combination of two vectors,
+the iota vector of 1's and the vector of excess returns.
+And what that means is that these, C inverse on iota
+and C inverse acting on mu, are two very special portfolios.
+It says that every portfolio on the efficient frontier,
+every portfolio that has an optimal trade-off of risk
+and return, is a linear combination
+of two special portfolios called characteristic portfolios that
+are given with weights that are given by the Lagrange
+multipliers.
+And there's financial interpretation
+of those two portfolios.
+C inverse acting on iota, as we've seen,
+is the global minimum-variance portfolio.
+It's the portfolio we would get if we minimized risk
+without regard to return.
+The second portfolio, the one with respect to mu,
+is the portfolio of the maximum Sharpe ratio.
+And, by taking linear combinations of those two,
+we sweep out that entire curve.

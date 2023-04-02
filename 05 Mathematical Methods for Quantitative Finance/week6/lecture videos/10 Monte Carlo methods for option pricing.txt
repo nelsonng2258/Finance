@@ -1,0 +1,153 @@
+
+PROFESSOR: Let's look at how to compute option prices via Monte
+Carlo methods.
+So here's the rule for applying risk-neutral pricing.
+The rule is to get the risk-neutral measure,
+then we take the drift rate mu and we replace it by r.
+Now, this is beyond the scope of the course,
+but there's a larger subject about changes of variables
+and changes of measures to ensure
+that we have risk neutrality, and,
+under the risk-neutral measure, that we don't have arbitrage.
+So the origin of this is a no arbitrage argument.
+The conclusion of that argument is
+that all traded assets, in order to avoid arbitrage,
+have to have discounted price processes that
+are martingales that helps us construct the Q-measure.
+But for our case, for a stock price,
+it obeys the rule that I just said.
+Everywhere where you see a mu, replace it
+by r, use that is your measure.
+Let's see how we do computations under that rule.
+Well, we saw earlier that the value of an asset,
+it's discounted value now, is equal to its expectation
+under the Q-measure of the same random variable at expiration.
+So for a call option that says the value of a call option
+now is a discount factor times the expectation
+under the Q-measure, under letting the paths evolve
+according to Ito processes, but where we replace the drift rate
+mu by the risk-free rate r.
+And we take the expectation of what?
+So that's the measure.
+What's the function?
+The function is the payoff at expiration,
+which in the case of a call option
+is the larger of S minus k, or 0.
+So we make a translation to do Monte Carlo pricing
+between exact probability measure averages
+to compute exact expectations.
+And we do numerical approximations.
+So instead of an exact expectation,
+we use the sum of our paths.
+We're going to take an average.
+We're going to generate an ensemble of paths.
+They're all going to be equally probable.
+We'll compute the terminal value for each path realization
+of the derivative of a call option,
+and then we'll just take an average of those values.
+To get the Q-measure, we use r instead of mu.
+For V sub T, what we're going to do
+is we're going to generate paths,
+and then we're going to read off the value in their final time
+step.
+And then the discounting factor is just
+going to be an e to the minus r times the duration
+that we have.
+It can be generalized for cases where the interest rates might
+be deterministic and time varying,
+or even where they might be stochastic.
+And if they were stochastic, they
+need to stay inside the expectation value.
+I've moved them in and out because I'm
+assuming the case of constant interest rates.
+So what we do is we generate an ensemble of risk-neutral paths.
+We use a risk-free rate for the drift.
+We use a random number generator so that all of these paths
+are equally likely.
+We look at the terminal values.
+We compute the average of the terminal values,
+and then we multiply times a discount factor e
+to the minus rT for the length of time that's there.
+The paths that we generate are the same
+as we did earlier in the class, and we
+get some ensemble of Monte Carlo paths, maybe 10,
+as I've drawn--
+10 or so, as I've drawn here, maybe 1,000, maybe 10,000,
+maybe 10 million, depending on what
+your patient's computational resources desired
+levels of accuracy are.
+But here are the kind of results we have.
+If I pick particular values for S, for K, for mu,
+for T for the risk-free rate, if I
+take a simulation for a certain number of time
+steps, a certain value dt, a certain number of paths,
+I can write my function and see price
+as a function of these arguments,
+including the simulation parameters, number
+of timestamps, number of paths.
+And I'll get some numbers out in this particular case
+where I ran a simulation, 16.9, 7.05.
+Now I'll do a recitation, where we'll
+discuss this in more detail.
+But right now, we can compare that single run of a Monte
+Carlo against the exact values from the Black-Scholes formula.
+You certainly can take the values
+that we solved for in terms of the five functions,
+put it in r, and run a calculation just
+in terms of the cumulative distribution functions.
+Or you can take this library RQuantLib,
+and it has functions already for the Black-Scholes
+formulas for European options for calls and puts.
+And here we find values that we get, 16.7, 7.2.
+So first of all, we see we're generally in the ballpark.
+It looks like we're doing something right.
+Second, we see we didn't get the exact answer,
+so we should ask is that economically significant.
+How do we improve the accuracy?
+Do we change the number of paths?
+Do we change the number of time steps?
+Do we need to change our formulation of the problem
+that we discretized?
+So one of the questions is, how do you adjust your algorithm
+in order to improve the accuracy of your Monte Carlo option
+pricer?
+But the pricer itself couldn't be simpler.
+We generate a bunch of paths, look at their terminal values,
+just at the terminal values, take an average, discount it,
+and we're done.
+Very easy, no differential equations involved.
+When we think about how these paths behave,
+of course, the paths themselves are lognormally distributed,
+but the shape of the distribution
+is going to depend on the risk-neutral measure, therefore
+in the risk-free rate.
+It's going to be the same thing for every stock,
+with the same volatility, regardless of what mu is.
+So the option prices would be the same,
+and the ensemble would be the same,
+but will generate some set of sample paths
+like the ones I showed you.
+If we look at the--
+and the derivative, because remember,
+what we're going to do is not take the underlying,
+but we're going to take the terminal
+value of the derivative.
+So if it's a call option, I take the greater of S minus K or 0,
+and those paths look like this.
+You notice it's cut off below at 0.
+For all the paths that we're finishing
+in positive territory above the strike price,
+they're all going to be included here.
+But an awful lot of paths that hit 0, and stay below 0,
+or finish below 0 are going to be cut off at this point
+because we don't see anything below 0 for the value of a call
+option.
+If I look at the histogram of the terminal values, what
+I see is a giant spike at 0, a large fraction of the paths
+never made it above the strike price, and then
+a very asymmetric distribution that's decreasing
+as a function of price.
+No surprise there.
+The higher the value that we would gain,
+the farther away from the strike price we are, the less likely
+it is to occur.

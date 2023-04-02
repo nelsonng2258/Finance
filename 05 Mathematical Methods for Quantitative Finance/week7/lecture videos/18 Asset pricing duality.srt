@@ -1,0 +1,500 @@
+0
+00:00:00,000 --> 00:00:00,990
+
+
+1
+00:00:00,990 --> 00:00:03,310
+PROFESSOR: Here's a concrete example.
+
+2
+00:00:03,310 --> 00:00:07,020
+Suppose that we've got A is an incomplete--
+
+3
+00:00:07,020 --> 00:00:09,630
+represents the payoffs in an incomplete market.
+
+4
+00:00:09,630 --> 00:00:11,670
+I have a stock and I have a bond.
+
+5
+00:00:11,670 --> 00:00:14,920
+And the image of A is only two dimensional.
+
+6
+00:00:14,920 --> 00:00:19,530
+So image of A is two dimensional because I have two securities.
+
+7
+00:00:19,530 --> 00:00:22,920
+It's less than s, which is equal to 3.
+
+8
+00:00:22,920 --> 00:00:25,830
+So the rank of the matrix A is equal to 2.
+
+9
+00:00:25,830 --> 00:00:26,790
+And we know that.
+
+10
+00:00:26,790 --> 00:00:29,310
+We know the largest it could be is the smaller
+
+11
+00:00:29,310 --> 00:00:31,020
+the number of its rows and columns.
+
+12
+00:00:31,020 --> 00:00:32,970
+Because the two columns are independent,
+
+13
+00:00:32,970 --> 00:00:34,770
+it's exactly equal to 2.
+
+14
+00:00:34,770 --> 00:00:40,080
+So that image of A is a proper subspace of R3.
+
+15
+00:00:40,080 --> 00:00:41,670
+It's only two dimensional.
+
+16
+00:00:41,670 --> 00:00:46,150
+A star is the transpose, which we've seen before.
+
+17
+00:00:46,150 --> 00:00:49,890
+We know it has a kernel, that is A star takes a three
+
+18
+00:00:49,890 --> 00:00:52,500
+dimensional space into a two dimensional space.
+
+19
+00:00:52,500 --> 00:00:56,520
+Its kernel is the vector 1 minus 2, 1.
+
+20
+00:00:56,520 --> 00:01:01,770
+So suppose this-- this is a vector that lives in W star.
+
+21
+00:01:01,770 --> 00:01:04,360
+It lives in our dual space.
+
+22
+00:01:04,360 --> 00:01:09,170
+So if I come back here, it lives in this space over here.
+
+23
+00:01:09,170 --> 00:01:16,540
+And now if I return, and I imagine that I take psi
+
+24
+00:01:16,540 --> 00:01:18,670
+equals this vector, which is an element
+
+25
+00:01:18,670 --> 00:01:20,380
+of the kernel of A star.
+
+26
+00:01:20,380 --> 00:01:22,460
+This isn't a valid state price vector,
+
+27
+00:01:22,460 --> 00:01:24,620
+but it does live in the space W star.
+
+28
+00:01:24,620 --> 00:01:26,260
+So this is just some vector.
+
+29
+00:01:26,260 --> 00:01:28,640
+We noticed it does have a negative element here.
+
+30
+00:01:28,640 --> 00:01:33,310
+So this psi is an element of the kernel of A star.
+
+31
+00:01:33,310 --> 00:01:37,360
+And let's suppose it's going to act on the image of A.
+
+32
+00:01:37,360 --> 00:01:41,560
+So let's let b be the payoff of some portfolio.
+
+33
+00:01:41,560 --> 00:01:44,260
+So pick your favorite portfolio x,
+
+34
+00:01:44,260 --> 00:01:49,030
+act on it with the payoff matrix A, get its payoff b.
+
+35
+00:01:49,030 --> 00:01:50,770
+What is its state price?
+
+36
+00:01:50,770 --> 00:01:53,890
+Well, if we act with a state price that's
+
+37
+00:01:53,890 --> 00:01:57,130
+in the kernel of A star acting on b,
+
+38
+00:01:57,130 --> 00:02:00,490
+which is in the image of A, we can just do the computation.
+
+39
+00:02:00,490 --> 00:02:05,590
+Psi star acting on b is the same thing as star acting on A times
+
+40
+00:02:05,590 --> 00:02:06,460
+x.
+
+41
+00:02:06,460 --> 00:02:08,949
+We regroup, because it's associative.
+
+42
+00:02:08,949 --> 00:02:14,820
+That's the same thing as psi star A acting on x, which
+
+43
+00:02:14,820 --> 00:02:18,660
+is A star psi acting on x.
+
+44
+00:02:18,660 --> 00:02:20,790
+And that gives us 0.
+
+45
+00:02:20,790 --> 00:02:23,870
+
+
+46
+00:02:23,870 --> 00:02:28,210
+Because psi was in the kernel of A star, A star acting on psi
+
+47
+00:02:28,210 --> 00:02:31,190
+is 0, therefore, this whole thing is 0.
+
+48
+00:02:31,190 --> 00:02:36,260
+And that tells us that the price of this portfolio--
+
+49
+00:02:36,260 --> 00:02:39,459
+
+
+50
+00:02:39,459 --> 00:02:42,160
+or not the price, but if we act with psi star, which is not
+
+51
+00:02:42,160 --> 00:02:43,870
+a valid state price vector.
+
+52
+00:02:43,870 --> 00:02:47,110
+If we act with an element of the kernel of A star
+
+53
+00:02:47,110 --> 00:02:49,570
+with the image of A, we get 0.
+
+54
+00:02:49,570 --> 00:02:53,510
+So that helps us narrow things down.
+
+55
+00:02:53,510 --> 00:02:55,300
+So, let's bring it together.
+
+56
+00:02:55,300 --> 00:02:57,830
+We've got two different ways we can approach pricing.
+
+57
+00:02:57,830 --> 00:03:00,050
+And they're not just equivalent, they're called dual.
+
+58
+00:03:00,050 --> 00:03:02,330
+It's related to the dual prices, and they
+
+59
+00:03:02,330 --> 00:03:03,680
+have to give the same answers.
+
+60
+00:03:03,680 --> 00:03:06,440
+And you can use whichever one is more convenient.
+
+61
+00:03:06,440 --> 00:03:11,090
+State pricing says that we compute the price of our target
+
+62
+00:03:11,090 --> 00:03:13,340
+asset, the thing we might think about creating
+
+63
+00:03:13,340 --> 00:03:17,210
+a particular set of payoffs in different states of the world
+
+64
+00:03:17,210 --> 00:03:19,910
+by applying all of the allowed values of psi,
+
+65
+00:03:19,910 --> 00:03:22,280
+all of the valid state price vectors
+
+66
+00:03:22,280 --> 00:03:24,830
+which are consistent with our market structure.
+
+67
+00:03:24,830 --> 00:03:27,440
+The price is uniquely determined if b
+
+68
+00:03:27,440 --> 00:03:29,870
+is the payoff of a redundant asset,
+
+69
+00:03:29,870 --> 00:03:33,020
+is we know that redundant assets should have prices
+
+70
+00:03:33,020 --> 00:03:34,670
+that are uniquely determined.
+
+71
+00:03:34,670 --> 00:03:38,360
+In equations, we would say that the price of our asset
+
+72
+00:03:38,360 --> 00:03:41,100
+is given by--
+
+73
+00:03:41,100 --> 00:03:42,690
+see if I can get the pointer back--
+
+74
+00:03:42,690 --> 00:03:45,420
+
+
+75
+00:03:45,420 --> 00:03:46,560
+there we go.
+
+76
+00:03:46,560 --> 00:03:48,930
+It's given by psi acting on b.
+
+77
+00:03:48,930 --> 00:03:51,450
+That is to say, the price we have
+
+78
+00:03:51,450 --> 00:03:55,590
+is psi star b where psi is consistent with the pricing
+
+79
+00:03:55,590 --> 00:04:01,560
+relationship, psi is in the dual space, and so all of its values
+
+80
+00:04:01,560 --> 00:04:02,650
+are positive.
+
+81
+00:04:02,650 --> 00:04:06,030
+So that's how we can do things in terms of state prices.
+
+82
+00:04:06,030 --> 00:04:08,490
+We can also do replication pricing, which
+
+83
+00:04:08,490 --> 00:04:09,780
+is what we started out with.
+
+84
+00:04:09,780 --> 00:04:12,820
+And we don't have any state prices involved at all.
+
+85
+00:04:12,820 --> 00:04:16,860
+You need to identify if it's a redundant asset, and if it is,
+
+86
+00:04:16,860 --> 00:04:21,390
+we associate the value of the payoff with the value
+
+87
+00:04:21,390 --> 00:04:23,310
+of the replicating portfolio.
+
+88
+00:04:23,310 --> 00:04:28,150
+That's required to avoid arbitrage.
+
+89
+00:04:28,150 --> 00:04:30,750
+Now, for non-redundant assets, we
+
+90
+00:04:30,750 --> 00:04:34,320
+can frame the allowed prices as a bound on the asset
+
+91
+00:04:34,320 --> 00:04:37,110
+prices that are subject to bounds
+
+92
+00:04:37,110 --> 00:04:41,220
+above and below by taking a look at possible replicating
+
+93
+00:04:41,220 --> 00:04:42,390
+portfolios.
+
+94
+00:04:42,390 --> 00:04:46,620
+In the dual side, we know what our view is about what
+
+95
+00:04:46,620 --> 00:04:48,090
+the allowed state prices are.
+
+96
+00:04:48,090 --> 00:04:49,490
+They have to be positive.
+
+97
+00:04:49,490 --> 00:04:52,410
+It's not quite as easy to find the price bounds
+
+98
+00:04:52,410 --> 00:04:55,380
+in our replicating pricing world,
+
+99
+00:04:55,380 --> 00:04:59,040
+but we do it by looking at the outside values where
+
+100
+00:04:59,040 --> 00:05:01,060
+we can replicate the portfolio.
+
+101
+00:05:01,060 --> 00:05:03,270
+We can find a minimum bound on the price
+
+102
+00:05:03,270 --> 00:05:07,080
+by defining S min to be the largest price that we can
+
+103
+00:05:07,080 --> 00:05:10,770
+observe for any portfolio that is strictly
+
+104
+00:05:10,770 --> 00:05:14,310
+less for each of its components than the target payoff b.
+
+105
+00:05:14,310 --> 00:05:17,340
+If that's the case, we know that this portfolio
+
+106
+00:05:17,340 --> 00:05:20,490
+has to be strictly less than--
+
+107
+00:05:20,490 --> 00:05:22,710
+or that the price of this portfolio
+
+108
+00:05:22,710 --> 00:05:26,490
+has to be strictly greater than the price of this portfolio.
+
+109
+00:05:26,490 --> 00:05:29,830
+And, similarly, we can look for a bound on the other side.
+
+110
+00:05:29,830 --> 00:05:32,910
+So if we think back to our first example of stochastic dominance
+
+111
+00:05:32,910 --> 00:05:34,770
+comparing a stock and bond, we think
+
+112
+00:05:34,770 --> 00:05:36,810
+about having a degree of freedom that lets
+
+113
+00:05:36,810 --> 00:05:40,800
+is very the portfolios so that we can move around and arrange
+
+114
+00:05:40,800 --> 00:05:44,010
+to where we can see the crossover points between where
+
+115
+00:05:44,010 --> 00:05:47,730
+we would exceed a payoff, or go below our lower payoff in one
+
+116
+00:05:47,730 --> 00:05:48,870
+of our components.
+
+117
+00:05:48,870 --> 00:05:51,090
+We can, with quite a bit more work,
+
+118
+00:05:51,090 --> 00:05:53,400
+we can identify bounds for the prices.
+
+119
+00:05:53,400 --> 00:05:55,440
+But either way in either picture,
+
+120
+00:05:55,440 --> 00:05:57,750
+when we have non-redundant assets,
+
+121
+00:05:57,750 --> 00:06:00,070
+their prices are not uniquely determined.
+
+122
+00:06:00,070 --> 00:06:02,640
+But there are constraints to arbitrage.
+
+123
+00:06:02,640 --> 00:06:05,100
+There are certain values that they're allowed to have
+
+124
+00:06:05,100 --> 00:06:08,570
+and some values that they can't have.
+

@@ -1,0 +1,147 @@
+
+PROFESSOR: Now special case, if we let mu equal 0,
+then that last term drops out.
+If we let sigma equals 1, the three factor sigma
+squared over 2 just becomes 1/2, and we
+get the diffusion equation that we've already seen.
+So the diffusion equation in its standardized form
+is partial of p0, we'll call it.
+We'll be thinking of a particular thing.
+But in a general case, partial of p with respect to t
+is 1/2 second partial of p with respect to z.
+And there are no other constants here
+just because I've set them to particular values.
+Now this partial differential equation
+has a lot of solutions.
+But there's one that's very, very special,
+and that's the standardized Gaussian.
+p0 of z and t is equal to 1 over square root of t e to the minus
+z squared over 2t.
+And we'll see that the reason that this is special
+is it will let us generate other solutions that
+are of particular interest for finance
+to the diffusion equation and some related equations.
+But just taking it on its face, first
+does it satisfy the equation?
+Yep, it does.
+It's special case, mu equals 0, sigma equals 1.
+Take the partials, plug it in, try it out.
+If you're stuck on the other one, do this one first.
+It's a little bit easier.
+There are fewer terms.
+But this is just a special case.
+So it satisfies the equation.
+Second, how do we visualize it?
+Well, this is a symmetric random walk.
+The up and down probabilities are equal.
+Mu is equal to 0, so it stays centered around the origin.
+And as time goes on, the width still increases
+and the curves get--
+the peak gets lower and lower and the curves
+get broader and broader over time.
+If we run time backwards, as we go from large time
+and approach t equals 0 from above, then
+what we see is the peaks converge on the origin,
+get narrower and narrower.
+Because they're probability distributions, of course,
+the area under the curve is always equal to 1.
+Do note that this is only a solution to our equation
+for positive values of t because we have this square root here,
+and that would take us into the complex numbers, which
+would be difficult to interpret as a probability.
+So this is a special equation that
+can be thought of as being concentrated
+at the origin as t approaches 0 from above as we
+run the clock backwards.
+Now, this special solution can be used
+to obtain the general solution.
+I'd like to show you the formula,
+and then we'll take a look at why it works.
+So here's the formula.
+If we've got some initial conditions, so at time 0,
+we want a function p that at time 0 has some shape,
+any shape you'd like.
+Well, it can't be any shape.
+It needs to be integrable.
+So it needs to be somewhat reasonable, not grow too fast,
+not have too many [? angularities ?]
+or discontinuities.
+But let's call that general function f.
+So I'd like to have the solution to the diffusion equation
+that, in addition, a t equals zero takes on a specified form.
+And the answer to that, the general solution,
+is to take our previous expression,
+our special p0, our special Gaussian,
+replace z by z minus w, multiply it times f of w,
+and integrate over w.
+And that's it.
+So concretely, it's exactly this expression.
+It's just a Gaussian integral.
+You pick an f.
+You plug it in.
+You do an integration.
+You get an expression.
+And you can check by direct inspection
+that it satisfies the equation.
+For example, if you take f of z is z squared,
+and you do this integral, you put in z squared,
+make some changes of variables, you do the integral,
+it's an ordinary Gaussian integral, definite integral,
+from minus infinity to infinity, you
+get the result because it's a function
+that we integrate over w.
+But the result is a function of z and t.
+You get the answer z squared plus t.
+And when t is equal to 0, we recover--
+we recover the p of z and t at t equals 0 is z squared.
+And it satisfies the differential equation,
+as you can check.
+How does it work?
+Well, we need to do two things, check
+that it satisfies the differential equation,
+check that it satisfies the initial conditions.
+The way that we check that it intensifies the differential
+equation is to differentiate it, that is,
+we take the differential operator of our diffusion
+equation-- these operators-- which are linear operators,
+and when they act on the function p of z,
+t, we can move-- p of z, t is defined by an integral,
+but the integral, of course, can be thought of as a sum.
+It's a linear set of pieces for its arguments.
+And if the integral is convergent,
+I can move the differential operator
+under the integral sign, where, because it depends on t and z,
+it only acts on p0.
+Everything else depends only on w.
+And there no double w's in the differential operator.
+So the differential operator in square brackets acts on p0,
+and it gives 0.
+So 0 times f of w is 0.
+Integrating 0 minus infinity to infinity gives 0 again.
+It satisfies the differential equation for any f.
+This expression will work.
+But does it satisfy the initial conditions?
+So what we'd like to look at is what's
+the limit as t goes to 0 from above
+of that integral expression that we've seen,
+that we've written down right here.
+Well, we take the limit as t goes to 0 of our expression,
+and we can substitute variables under the integral
+if we define u to be w minus z over square root of t.
+Then that takes out the z and the t dependents.
+This becomes e to the minus u squared over 2.
+The square root of t that we have here,
+dw over square root of t, is going to be du.
+So that's over here.
+So the square root of t went away.
+And the argument in f of w now gets shifted--
+it becomes f of z--
+plus u times square root of t.
+If we're away from any singular points
+in the function or discontinuities, then
+as t goes to 0, this term vanishes.
+I'm left with f of z, which is a constant with respect to u.
+And the remaining integral is equal to 1.
+It's a Gaussian interval.
+It's normalized.
+And I get f of z, which is the appropriate initial condition.

@@ -1,0 +1,544 @@
+0
+00:00:00,000 --> 00:00:01,160
+
+
+1
+00:00:01,160 --> 00:00:03,380
+PROFESSOR: In looking at probability densities,
+
+2
+00:00:03,380 --> 00:00:06,350
+we were asking a question about the likelihood
+
+3
+00:00:06,350 --> 00:00:08,990
+of finding a random walk or possibly
+
+4
+00:00:08,990 --> 00:00:12,560
+the value of financial asset at some time in the future
+
+5
+00:00:12,560 --> 00:00:17,730
+under an uncertain set of probability assumptions.
+
+6
+00:00:17,730 --> 00:00:20,590
+But we don't just need to ask about the value of the stock,
+
+7
+00:00:20,590 --> 00:00:23,780
+or the value of an underlying, or the value of a random walk.
+
+8
+00:00:23,780 --> 00:00:26,710
+We can ask about the value of functions
+
+9
+00:00:26,710 --> 00:00:28,550
+of any of those things.
+
+10
+00:00:28,550 --> 00:00:32,800
+So we can ask about more general future payoffs.
+
+11
+00:00:32,800 --> 00:00:35,590
+We can ask about general derivatives.
+
+12
+00:00:35,590 --> 00:00:38,170
+How they behave in the future if their function
+
+13
+00:00:38,170 --> 00:00:41,180
+say of a random walking stock price.
+
+14
+00:00:41,180 --> 00:00:44,050
+And we can compute not only the distributions,
+
+15
+00:00:44,050 --> 00:00:46,150
+but some expectations.
+
+16
+00:00:46,150 --> 00:00:49,930
+What we're going to see is these expectations satisfied
+
+17
+00:00:49,930 --> 00:00:52,090
+differential equations.
+
+18
+00:00:52,090 --> 00:00:55,790
+And the differential equations are going to be quite familiar.
+
+19
+00:00:55,790 --> 00:00:58,670
+So let's go back now to our stock prices.
+
+20
+00:00:58,670 --> 00:01:02,140
+If we remember, our standard model
+
+21
+00:01:02,140 --> 00:01:05,710
+for a stock diffusion for geometric Brownian motion,
+
+22
+00:01:05,710 --> 00:01:07,930
+it's given by this EDO process.
+
+23
+00:01:07,930 --> 00:01:11,950
+dS is mu Sdt plus sigma SdB.
+
+24
+00:01:11,950 --> 00:01:15,670
+And we know that by changing to logarithmic variables,
+
+25
+00:01:15,670 --> 00:01:20,890
+that the logarithm of S is a random walk with the drift
+
+26
+00:01:20,890 --> 00:01:25,090
+and a volatility coefficient.
+
+27
+00:01:25,090 --> 00:01:27,523
+And therefore, it has a probability density.
+
+28
+00:01:27,523 --> 00:01:29,440
+It's going to be a little bit more complicated
+
+29
+00:01:29,440 --> 00:01:30,910
+because the logarithms.
+
+30
+00:01:30,910 --> 00:01:32,770
+But it's an example of the logarithm.
+
+31
+00:01:32,770 --> 00:01:34,420
+And S is an example of everything
+
+32
+00:01:34,420 --> 00:01:37,750
+that we've looked at in looking at probability density
+
+33
+00:01:37,750 --> 00:01:41,890
+functions that vary with time that solve the diffusion
+
+34
+00:01:41,890 --> 00:01:42,950
+equation.
+
+35
+00:01:42,950 --> 00:01:46,750
+So when there's a drift term, remember we have an extra part.
+
+36
+00:01:46,750 --> 00:01:49,570
+The Fokker Planck equation or the backward equation.
+
+37
+00:01:49,570 --> 00:01:53,320
+And the probability density in logarithmic variables,
+
+38
+00:01:53,320 --> 00:01:55,720
+if we flip them back now to--
+
+39
+00:01:55,720 --> 00:01:58,570
+if we go from log variables where
+
+40
+00:01:58,570 --> 00:02:02,020
+log S represents a random walk back to our original S,
+
+41
+00:02:02,020 --> 00:02:05,410
+and we create the analogous probability density,
+
+42
+00:02:05,410 --> 00:02:10,509
+the probability of arriving at ST a time big T given
+
+43
+00:02:10,509 --> 00:02:14,260
+that we started at price at this time T
+
+44
+00:02:14,260 --> 00:02:16,660
+satisfies a differential equation.
+
+45
+00:02:16,660 --> 00:02:20,110
+And that differential equation has all the plus sides.
+
+46
+00:02:20,110 --> 00:02:22,540
+And it takes this form partial of p with respect
+
+47
+00:02:22,540 --> 00:02:27,100
+to t plus a familiar pre-factor sigma S squared over 2.
+
+48
+00:02:27,100 --> 00:02:28,990
+Second partial of p with respect to S
+
+49
+00:02:28,990 --> 00:02:33,130
+squared plus an unfamiliar term with the mu with the drift
+
+50
+00:02:33,130 --> 00:02:36,730
+coefficient times S partial of p with respect to S.
+
+51
+00:02:36,730 --> 00:02:39,430
+It's familiar in our context of random walk probability
+
+52
+00:02:39,430 --> 00:02:40,270
+densities.
+
+53
+00:02:40,270 --> 00:02:41,770
+But it's not one that we saw when
+
+54
+00:02:41,770 --> 00:02:44,830
+we derive the Black-Scholes equation, which you remember
+
+55
+00:02:44,830 --> 00:02:49,360
+is independent of the value of the drift term mu.
+
+56
+00:02:49,360 --> 00:02:52,450
+So here we have in terms of S variables
+
+57
+00:02:52,450 --> 00:02:55,600
+the differential equations satisfied by the probability
+
+58
+00:02:55,600 --> 00:02:59,215
+density or a stock that follows its standard EDO process.
+
+59
+00:02:59,215 --> 00:03:03,510
+
+
+60
+00:03:03,510 --> 00:03:06,360
+Now we can compute some expectation values.
+
+61
+00:03:06,360 --> 00:03:10,920
+And we do this in the usual way where we take the probability
+
+62
+00:03:10,920 --> 00:03:11,830
+weighted average.
+
+63
+00:03:11,830 --> 00:03:14,050
+So suppose I have some function.
+
+64
+00:03:14,050 --> 00:03:16,980
+It's a function of S sub T of the terminal values.
+
+65
+00:03:16,980 --> 00:03:20,190
+And I'd like to compute its expectation at an earlier time
+
+66
+00:03:20,190 --> 00:03:21,060
+t.
+
+67
+00:03:21,060 --> 00:03:24,870
+Well, I compute that by taking my probability density.
+
+68
+00:03:24,870 --> 00:03:27,570
+I multiply it times the function in question.
+
+69
+00:03:27,570 --> 00:03:30,120
+I take the probability weighted average.
+
+70
+00:03:30,120 --> 00:03:34,890
+I integrate over all the values ST. And that's my expectation.
+
+71
+00:03:34,890 --> 00:03:36,960
+The kind of thing that we have in mind
+
+72
+00:03:36,960 --> 00:03:41,400
+is going to be something like the payoff on a call option
+
+73
+00:03:41,400 --> 00:03:45,040
+where big T represents the time when the option expires.
+
+74
+00:03:45,040 --> 00:03:48,540
+So to compute an expectation, we compute this probability
+
+75
+00:03:48,540 --> 00:03:49,720
+weighted average.
+
+76
+00:03:49,720 --> 00:03:51,300
+We do the integral and we're done.
+
+77
+00:03:51,300 --> 00:03:54,060
+Notice that inside the integral, the coordinates
+
+78
+00:03:54,060 --> 00:03:58,860
+from the starting point big S and are just S and T
+
+79
+00:03:58,860 --> 00:04:00,720
+are constants inside the integral.
+
+80
+00:04:00,720 --> 00:04:03,400
+They don't do anything they're not integrated against.
+
+81
+00:04:03,400 --> 00:04:08,830
+So the result is some function of the stock price and time.
+
+82
+00:04:08,830 --> 00:04:12,730
+So the expected value where we're
+
+83
+00:04:12,730 --> 00:04:16,045
+computing the expectation of some terminal values at time
+
+84
+00:04:16,045 --> 00:04:20,298
+T is itself a function of the starting point S and T.
+
+85
+00:04:20,298 --> 00:04:23,620
+And It satisfies the same differential equation as p.
+
+86
+00:04:23,620 --> 00:04:26,840
+The equation that we wrote down on the previous slide.
+
+87
+00:04:26,840 --> 00:04:29,830
+So f satisfies a differential equation.
+
+88
+00:04:29,830 --> 00:04:32,440
+It also has interesting initial conditions.
+
+89
+00:04:32,440 --> 00:04:35,380
+In the limit where little t goes to big T,
+
+90
+00:04:35,380 --> 00:04:39,610
+we think this is arriving at the expected value.
+
+91
+00:04:39,610 --> 00:04:41,560
+We can go through the same argument
+
+92
+00:04:41,560 --> 00:04:43,990
+either by looking at the Gaussian form
+
+93
+00:04:43,990 --> 00:04:46,690
+here, and changing variables in the interval.
+
+94
+00:04:46,690 --> 00:04:49,420
+Or by using the delta function to say
+
+95
+00:04:49,420 --> 00:04:53,530
+that when the big T goes to little t,
+
+96
+00:04:53,530 --> 00:04:56,300
+the probability density approaches delta function.
+
+97
+00:04:56,300 --> 00:04:58,900
+Either way we do it, we find it satisfies
+
+98
+00:04:58,900 --> 00:05:04,450
+the initial conditions that this large value when
+
+99
+00:05:04,450 --> 00:05:08,590
+little t goes to big T takes the expected result.
+
+100
+00:05:08,590 --> 00:05:10,030
+No pun intended.
+
+101
+00:05:10,030 --> 00:05:12,820
+f of S because this will be f of S evaluated
+
+102
+00:05:12,820 --> 00:05:16,030
+at the terminal point S sub t where it's
+
+103
+00:05:16,030 --> 00:05:21,640
+no longer random because we're evaluating at time big T what
+
+104
+00:05:21,640 --> 00:05:26,440
+the value will be a time big T.
+
+105
+00:05:26,440 --> 00:05:29,300
+Let's take things one step further.
+
+106
+00:05:29,300 --> 00:05:33,650
+Let's think about f and compute its present value.
+
+107
+00:05:33,650 --> 00:05:37,690
+So the present value is the discounting
+
+108
+00:05:37,690 --> 00:05:40,270
+under the continuous risk free rate.
+
+109
+00:05:40,270 --> 00:05:43,030
+It's e the minus RT of some quantity.
+
+110
+00:05:43,030 --> 00:05:46,330
+That is, we think of the future values
+
+111
+00:05:46,330 --> 00:05:48,130
+as being what their value would be
+
+112
+00:05:48,130 --> 00:05:51,610
+if they earned compound interest at a rate r continuously
+
+113
+00:05:51,610 --> 00:05:53,890
+compounded for a given period of time.
+
+114
+00:05:53,890 --> 00:05:56,650
+The present value reverses that.
+
+115
+00:05:56,650 --> 00:05:58,660
+It says let's find out the value now
+
+116
+00:05:58,660 --> 00:06:01,940
+that would be required to get a given future value.
+
+117
+00:06:01,940 --> 00:06:06,220
+So I'm going to define V to be the present value of F
+
+118
+00:06:06,220 --> 00:06:09,040
+where I'm going to multiply it times the usual factor
+
+119
+00:06:09,040 --> 00:06:10,360
+that we see in finance.
+
+120
+00:06:10,360 --> 00:06:12,520
+e to the minus r times the amount
+
+121
+00:06:12,520 --> 00:06:15,280
+of time left to expiration, which in this case
+
+122
+00:06:15,280 --> 00:06:17,440
+is big T minus little t.
+
+123
+00:06:17,440 --> 00:06:22,840
+Now what equation does V satisfy?
+
+124
+00:06:22,840 --> 00:06:26,080
+e to the minus rT times F is just
+
+125
+00:06:26,080 --> 00:06:29,200
+e minus rT minus t times the expectation.
+
+126
+00:06:29,200 --> 00:06:33,100
+But remember we saw that f of St is just the terminal
+
+127
+00:06:33,100 --> 00:06:35,030
+value of our function.
+
+128
+00:06:35,030 --> 00:06:38,440
+So we can rewrite this as the present value
+
+129
+00:06:38,440 --> 00:06:43,570
+of the expectation of V itself evaluated
+
+130
+00:06:43,570 --> 00:06:44,920
+at the terminal value.
+
+131
+00:06:44,920 --> 00:06:49,990
+That is to say that V anad S sub t at an initial time
+
+132
+00:06:49,990 --> 00:06:53,410
+is equal to the discounted present value
+
+133
+00:06:53,410 --> 00:06:57,070
+of the expectation of the terminal value.
+
+134
+00:06:57,070 --> 00:07:00,490
+And this expectation, of course, is computed with probability
+
+135
+00:07:00,490 --> 00:07:03,570
+density p.
+

@@ -1,0 +1,68 @@
+
+PAUL F. MENDE: This week's material
+covers applications of linear algebra to asset pricing.
+And they're really very close correspondences
+between a lot basic notions of linear algebra
+and those that are applied for the theory of asset pricing.
+So I'd like to do something a little bit different this week.
+What I'd like to do, is do a review of linear algebra,
+and along the way, we'll comment on the different terminology
+and show how it maps to material that was
+covered in the basic lectures.
+For people who need a refresher on linear algebra for this unit
+and for upcoming things on optimization,
+such as portfolio optimization, we have a lot of things
+here from the basics.
+But you won't learn all of linear algebra here;
+this is really just to review.
+There are a couple of references we've put out.
+I recommend, a couple of books I recommend
+and really anything you find online is probably great,
+it's very standard subject, but it is
+a prerequisite for the course.
+However, if you want to brush up,
+the book by Serge Lang, Introduction to Linear Algebra,
+is very clear.
+And the book by Sheldon Axler, Linear Algebra Done Right,
+does set itself an ambitious goal.
+You certainly don't need to read all of it,
+but for the more mathematically minded,
+you'll find it to be a very complete treatment.
+But in particular, covers some things like dual spaces
+that we discuss in the main lectures
+that Lang doesn't cover.
+So it's good on both those counts.
+So we're going to cover this, but this subject
+is a bit different.
+And within the framework of this course,
+it's going to be one unit.
+Remember that this is a topics course.
+These are methods that are used in different areas, not
+necessarily as themselves.
+But because you'll be seeing this in other courses,
+in the Foundations of Finance, in Derivatives Pricing,
+you'll see these ideas come up.
+The idea of state prices, the idea of no arbitrage.
+And often, they'll be in very specific contexts.
+So what we've tried to do here, is give you
+an algebraic foundation that is used
+for more advanced treatments.
+This is really just an introduction to that,
+but it's so that you can think about what's
+going on in a very general way.
+At the same time, the problem sets
+for this week are very simple.
+They're not abstract at all.
+They deal with numbers, small matrices you can do them
+by hand, you can do them almost in your head,
+you can put them on a computer.
+So I don't think that we have a lot of detailed things,
+like solving the diffusion equation
+and Green's functions and binary value problems to worry about.
+What I think we'll do instead, is take a look
+at some of the basics.
+And again, for the people who are
+familiar with linear algebra, you'll
+be able to make this identification along the way,
+hopefully before I get there.
+So let's get started.

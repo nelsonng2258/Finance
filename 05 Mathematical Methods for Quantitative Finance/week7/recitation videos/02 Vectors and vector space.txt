@@ -1,0 +1,328 @@
+
+PROFESSOR: Here's a warm-up exercise.
+For each of these sets of equations,
+how many solutions are there?
+I don't care what they are.
+I just want you to find out how many there are.
+Now, this is a typical problem in linear algebra,
+and it has a close connection to what we looked at in lectures
+this week in asset pricing, where we're
+looking at market structure.
+And we ask, are markets complete?
+How many different kinds of coverage
+can we get to describe risks that
+might happen in different possible states of the world,
+to describe rewards and payoffs that
+might happen in different states of the world?
+We want to know, is it possible to cover everything?
+And if it is possible to cover everything,
+is our a solution unique?
+If it's not possible to cover everything, what's missing?
+What are the constraints?
+What can we do?
+If there are additional things that we
+could do to complete a market, are those completions unique?
+And we invert solutions.
+We're given an answer.
+We go back to the original problem.
+These are all things that you've actually
+seen in other guises for a long time,
+solving equations as simple as this.
+But what I'm going to do is go through the basics
+of linear algebra as a review.
+And I hope you've seen the lectures,
+but if you're coming here first for linear algebra review,
+you go back to the lectures, come back here again--
+either way you do it, I hope you make
+the connection between the two.
+And certainly, feel free to skip parts, or speed it up
+to 1 and 1/2 or twice speed if it helps it go by faster.
+
+Vectors are elements in something called a vector
+space.
+And the key idea is not that they're columns of numbers.
+The key idea is that they're objects
+that can be added to get other objects of the same type.
+And of course, we've been dealing
+with that throughout the entire course,
+not as columns of numbers, but we've
+been looking at functions, where we add two functions,
+for example, and we get another function.
+If it obeys rules of addition and scalar multiplication,
+and it's closed under those operations,
+then we can think about this as a vector space.
+There are properties of vector addition.
+And this is not just for little arrows pointing in the plane.
+This is true for any mathematical objects
+that obey these properties.
+We can call it a vector space.
+It's commutative.
+V plus w is the same thing as w plus v. It's associative.
+You can do the addition in any order you'd like.
+It has an identity, in this case, an additive identity
+that we call 0.
+And importantly, it has an additive inverse
+that we can have a negative, and we can go the other way.
+Now, one of the things that we saw in our example
+during the lecture is that we can represent portfolio space
+as being a set of vectors.
+But do they form a vector space?
+One of the requirements is that there be, for example, a 0.
+Is there?
+Well, yeah.
+You could have an empty portfolio.
+You would add it to a portfolio, you would get nothing.
+What about v plus w and w plus v?
+Sure.
+If you've got 100 shares of Coca-Cola stock
+and 100 shares of Caterpillar, it
+doesn't matter which way you add them.
+They add up either way.
+You can commute.
+What about the additive inverse?
+That's a bit tricky.
+How do we have the opposite of a portfolio?
+Well, the way we usually think about it is a simple answer.
+And this is approximation to reality,
+but definitely not the way real-world trading
+exactly works.
+We can think about short positions in a security
+as being like owning a negative quantity of that security.
+That says that if we have short positions,
+we think that a short portfolio is identified
+with a long portfolio because the long portfolio are
+the stocks you would need to buy to cover a short position.
+A short position, just as a reminder,
+is when you borrow stock and you sell it,
+but you have an obligation to replace the stock to the owner.
+So there's a natural fit.
+We can pick it out the additive inverse and the vector
+as saying, what's the vector we need to add to get back to 0?
+In the case of a financial portfolio of securities,
+say that it is held short, we could
+say, what's the portfolio that we would need to cover
+a set of short positions?
+That would be a minus of a minus v. That
+would be v. We could say, what are the trades that we
+need to do in order to liquidate a portfolio?
+That might be a signed portfolio with negative signs
+for responding to required sales.
+And that would say that, if we have a portfolio,
+the additive inverse is the portfolio
+that you would need to sell.
+You would need to take a negative relative position
+in order to get to 0.
+Those all have correspondences.
+That's what we saw for portfolios in portfolio space
+during the lecture this week.
+Now, the scalars form a field--
+and here, we use real numbers, not complex numbers.
+And why is that important?
+Well, first of all, there are properties that we have.
+The a times b, we can associate it either way,
+so we can multiply by a scalar--
+with two scalars first or the vector first.
+We have a distributive law for either multiplication
+by scalars or multiplication--
+so a scalar times a sum of vectors or a sum
+of scalars times the vector.
+Either way, we have these simple laws.
+And there's a scalar identity, as well, which is the number 1.
+So that's fine.
+But where we run into an issue is that,
+if we're thinking about portfolio space--
+and there are lots of other vector spaces
+that we use in finance.
+But if we think specifically of a portfolio space,
+and we think about our typical example of a set of stocks,
+stocks can only be held in integer quantities.
+And that doesn't form a field.
+There are lots of these buzzwords that are here.
+And we'll get to touch on some of them,
+but certainly not all of them.
+Let's look at some notions from linear algebra,
+like linear dependence, basis, dimension,
+different kinds of linear accommodation,
+and have a direct application of what
+we saw in the structure of financial markets.
+A linear combination of vectors is
+a sum of the vectors where we can multiply each vector
+by an arbitrary scalar.
+We saw an example of that in building a portfolio.
+If you have a portfolio with 100 shares of stock a
+and 200 shares of stock b, that's
+the same as a single portfolio with components, say,
+100 and 200.
+Or it could be 100 times a portfolio with a single share
+of stock plus 200 times the portfolio
+with a single share of stock b.
+So we can multiply things by constants.
+We can add them together.
+And that's a linear combination.
+And that's an action that we can take on portfolios.
+Very natural.
+Now, a set of vectors is said to be linearly dependent if there
+are a set of non-zero constants so that we
+can write an equation like this where
+we can set this equal to 0.
+And of course, what that really means
+is that we can solve for one of the vectors
+in terms of the other vectors in the set.
+That's what we mean by a redundant security.
+We mean that its payoff could be reproduced by some combination
+of other securities.
+Simple example in the introduction I think I gave
+was a trivial example, not even with column vectors
+in a high-dimensional space.
+If you have a $5 bill, a $10 bill, and a of $20 bills,
+you can trade them off for one another.
+You can replicate the payoff of one with the others.
+However, we do need to be careful about the divisibility.
+Assuming that we have constants, we
+can show, though, that there are relationships.
+For example, we could say that 4 $5 bills minus
+& $20 bill is equal to 0.
+And that would show that those are--
+that's sufficient to show that those are linearly dependent.
+And it's a pretty obvious notion.
+This is the formal notion.
+And then, if we can't do that, we
+say that the vectors are linearly independent.
+And this is really important.
+It means that they describe different kinds of things.
+An example in our portfolios would
+be, in terms of our basic portfolio space,
+if we have two different stocks--
+they describe different things, that they describe
+completely different payoffs--
+they are independent of each other.
+
+Linear dependence means that we can write one of the vectors
+in terms of the others.
+And in the case of our payoff matrix,
+that means that we can write the payoff of one kind of security
+in terms of another set of securities.
+And that means that we could build a portfolio that
+has exactly the same payoff.
+And that means, in a certain sense,
+you don't really need the first one.
+Now, we might have it for lots of reasons, in the same way
+that the existence of $1 bills doesn't mean that we
+don't find $50 and $100 bills.
+Of course we do.
+They're there for lots of different reasons.
+And the same thing is true in financial markets.
+In fact, when it comes to derivative pricing,
+there's an entire, enormous market of securities
+that arguably are all redundant.
+And yet there's an enormous demand for them,
+and enormous trading activity, and they
+perform very important functions in the economy.
+When it comes just back to independence,
+we have a very simple question, though, which is not,
+how useful is it?
+It's just, can you do this?
+Can you write this equation?
+And if you can, great.
+Now, it says we really have one less degree of freedom.
+In this example, it says v1 can be expressed
+in terms of the others.
+Now, there is a technical point here to make,
+which is that we're dividing by a1,
+and we do need to make sure that actually
+leads to closure within our chosen field of scalars.
+And if they're integers, the answer is actually no.
+You can find a lot of things where this is not necessarily
+going to work for different financial securities.
+But it turns out that, in usual quantities that are done,
+this tends to be pretty small.
+And this is actually a good approximation,
+but you do have to check.
+Because either things are linearly independent
+or they're not.
+You can't be a little bit dependent.
+From a mathematical point of view, there's a bright line.
+From an applications point of view,
+it requires judgment of the modeler.
+And that's you.
+That's why this is a course in mathematical methods
+that are used.
+We're going through the mathematical rules.
+But how they get applied will depend.
+Because in most real-world financial settings,
+the assumptions the pure mathematics
+are almost never satisfied, which means,
+technically, we can't use any of the results.
+And you'll need to use your judgment
+to see when it might nevertheless be OK to do so.
+There's an infinite number of factors
+we can multiply by all of these constants,
+but does that really mean that everything is infinite?
+No, it doesn't.
+If we start with a finite set of vectors,
+we can use them to generate a vector
+space just by taking all possible linear combinations
+of them.
+Then it's pretty clear that, even though we
+could multiply times an infinite number of scalars
+and get an infinite number of vectors,
+everything is generated by a finite set.
+We say that set spans the vector space.
+And we call the vector-- we can say
+that the vector space is the span of this set of vectors.
+So it's true, by construction, that it's
+closed under addition and scalar multiplication.
+Now if, in addition to spanning the vector space,
+the vectors are linearly independent,
+then we say they form a basis for V. The basis isn't unique,
+but it does mean it's the smallest number of vectors
+that we have to have in order to describe everything
+in the vector space.
+And we call that number the dimension of the vector space.
+Given a basis, we have a way to describe every vector
+in the vector space.
+It's a linear combination in terms of the basis vectors.
+And this expression is unique.
+And this leads us to our usual coordinate system.
+Because we think of our column vectors
+as being coordinates with respect to a basis.
+If I have basis vectors u1, u2, u3,
+and I take all possible linear combinations,
+well I could write that-- so I have c1 times u1, c2 times u2,
+and so on for any set of c's.
+Our usual notation is we have these unit
+vectors, these unit basis vectors,
+1, 0, 0, 0, 0, 1, 0, 0, 0, and so on.
+And we see that if we apply this rule,
+we get our usual notation-- that we
+get a column vector of numbers.
+In the case of our classic payoff matrix,
+we're looking at this in terms of columns,
+we can think of the basis vectors as corresponding
+to the arrow to our securities.
+That is, they are the unit payoffs
+in state 1 of the world, state 2 of the world,
+state 3 of the world.
+And we can take linear combinations.
+If you want to end up with a vector that pays off 1, 2, 3,
+it's 1 times the vector 1, 0, 0 plus twice
+the vector 0, 1, 0, plus 3 times the vector 0, 0, 1.
+So that gives us our usual notation.
+Subspace of a vector space is a vector space
+that's a subset of V. Now, that means
+it has to be a vector space on its own.
+And the span of a subset of basic factors of V
+defines the subspace of V. If we take
+a set of linearly independent vectors
+that's smaller than the dimension of the space, then
+we--
+span is going to define a subspace.
+We can always define something smaller.
+You can think of a plane as a subspace
+of three-dimensional space.
+You can take a group of independent assets
+less than everything and talk about what they span.
+Because we're looking at everything generated
+by a particular subset of basis vectors,
+it has to be a vector space.
+And we can take a look at the consequences.

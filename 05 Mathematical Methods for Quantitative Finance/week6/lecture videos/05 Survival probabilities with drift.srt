@@ -1,0 +1,832 @@
+0
+00:00:00,000 --> 00:00:01,520
+
+
+1
+00:00:01,520 --> 00:00:03,350
+PROFESSOR: If there is a drift term,
+
+2
+00:00:03,350 --> 00:00:05,870
+then things change, and we can't really
+
+3
+00:00:05,870 --> 00:00:08,119
+use our symmetry argument.
+
+4
+00:00:08,119 --> 00:00:10,160
+We can't use the method of images.
+
+5
+00:00:10,160 --> 00:00:12,350
+And in fact, in our discrete case,
+
+6
+00:00:12,350 --> 00:00:15,130
+if our up and down probabilities were different,
+
+7
+00:00:15,130 --> 00:00:16,880
+that argument wouldn't have worked at all.
+
+8
+00:00:16,880 --> 00:00:19,093
+We could count the paths the same way,
+
+9
+00:00:19,093 --> 00:00:21,260
+but the weighting factors would have been different.
+
+10
+00:00:21,260 --> 00:00:24,270
+And we would have needed to adjust the weighting part,
+
+11
+00:00:24,270 --> 00:00:27,140
+even though the combinatorics would have been the same.
+
+12
+00:00:27,140 --> 00:00:31,130
+But we don't need to go that far to tweak our solution
+
+13
+00:00:31,130 --> 00:00:32,868
+to get a correct value.
+
+14
+00:00:32,868 --> 00:00:34,410
+And we'll do what we did in two ways.
+
+15
+00:00:34,410 --> 00:00:37,130
+The first thing is to notice that our boundary condition is
+
+16
+00:00:37,130 --> 00:00:38,010
+the same.
+
+17
+00:00:38,010 --> 00:00:40,640
+We want to have that the probabilities should
+
+18
+00:00:40,640 --> 00:00:43,370
+vanish whenever it z is equal to z star.
+
+19
+00:00:43,370 --> 00:00:45,420
+That's just the nature of the boundary.
+
+20
+00:00:45,420 --> 00:00:47,150
+So that's OK.
+
+21
+00:00:47,150 --> 00:00:50,360
+We know that if we have a linear combination of two
+
+22
+00:00:50,360 --> 00:00:53,660
+solutions to the diffusion equation, by linearity
+
+23
+00:00:53,660 --> 00:00:55,260
+it's also a solution.
+
+24
+00:00:55,260 --> 00:00:57,570
+So let's not toss our solutions away.
+
+25
+00:00:57,570 --> 00:01:00,620
+Let's see if maybe instead of just taking the difference,
+
+26
+00:01:00,620 --> 00:01:03,200
+if a different weighted average of the two
+
+27
+00:01:03,200 --> 00:01:04,769
+might be able to work.
+
+28
+00:01:04,769 --> 00:01:07,580
+So what we're going to do is we're going to make a guess.
+
+29
+00:01:07,580 --> 00:01:09,590
+We'll put in a particular form.
+
+30
+00:01:09,590 --> 00:01:11,690
+We'll see what would be required by that form.
+
+31
+00:01:11,690 --> 00:01:13,190
+And then we'll see if we can come up
+
+32
+00:01:13,190 --> 00:01:14,790
+with a general solution.
+
+33
+00:01:14,790 --> 00:01:16,880
+So the form I'm going to try is I'm
+
+34
+00:01:16,880 --> 00:01:19,280
+going to suppose that all I need to do
+
+35
+00:01:19,280 --> 00:01:23,210
+is multiply by some constant C. And the constant C would
+
+36
+00:01:23,210 --> 00:01:25,760
+be equal to 1 if mu were equal to 0,
+
+37
+00:01:25,760 --> 00:01:26,962
+but I don't know what it is.
+
+38
+00:01:26,962 --> 00:01:28,670
+It's going to be some function of mu that
+
+39
+00:01:28,670 --> 00:01:34,040
+vanishes when-- or that goes to 1 when mu is equal to 0.
+
+40
+00:01:34,040 --> 00:01:36,980
+So it certainly satisfies the differential equation.
+
+41
+00:01:36,980 --> 00:01:37,910
+That's great.
+
+42
+00:01:37,910 --> 00:01:40,130
+What happens when z equals z star?
+
+43
+00:01:40,130 --> 00:01:42,630
+Well, I want to set it equal to 0.
+
+44
+00:01:42,630 --> 00:01:45,050
+So if I put in that condition, and I
+
+45
+00:01:45,050 --> 00:01:49,580
+require that this expression be equal to 0 and z equal z star,
+
+46
+00:01:49,580 --> 00:01:52,410
+I can solve for C. OK.
+
+47
+00:01:52,410 --> 00:01:54,180
+Just by dividing, I have this expression
+
+48
+00:01:54,180 --> 00:01:56,280
+in parentheses is equal to 0.
+
+49
+00:01:56,280 --> 00:01:59,910
+That means I have the ratio of these two exponentials.
+
+50
+00:01:59,910 --> 00:02:03,240
+And I find that C is equal to e to the minus 2
+
+51
+00:02:03,240 --> 00:02:07,180
+mu z0 minus z star over sigma squared.
+
+52
+00:02:07,180 --> 00:02:09,990
+So if mu is equal to 0, it checks the condition
+
+53
+00:02:09,990 --> 00:02:10,860
+that we needed.
+
+54
+00:02:10,860 --> 00:02:12,420
+C is equal to 1.
+
+55
+00:02:12,420 --> 00:02:15,180
+So this satisfies our differential equation
+
+56
+00:02:15,180 --> 00:02:17,310
+because it's the difference of solutions,
+
+57
+00:02:17,310 --> 00:02:19,830
+and it satisfies our boundary conditions
+
+58
+00:02:19,830 --> 00:02:25,680
+because, by construction, when z is equal to z star,
+
+59
+00:02:25,680 --> 00:02:30,190
+the function vanishes, the two terms cancel each other out.
+
+60
+00:02:30,190 --> 00:02:34,950
+Now, suppose we want to know our survival probability at a given
+
+61
+00:02:34,950 --> 00:02:39,240
+point in time, that is, not to get to a particular terminal
+
+62
+00:02:39,240 --> 00:02:43,110
+point z, but to finish anywhere above the boundary.
+
+63
+00:02:43,110 --> 00:02:46,410
+Well, I have the probability density.
+
+64
+00:02:46,410 --> 00:02:51,330
+ps of z and t dz tells me the probability in time t
+
+65
+00:02:51,330 --> 00:02:55,950
+that I'll have reached some point between z and z plus dz.
+
+66
+00:02:55,950 --> 00:03:00,180
+Let's integrate it over all z, but only those z's that
+
+67
+00:03:00,180 --> 00:03:02,230
+are above the boundary.
+
+68
+00:03:02,230 --> 00:03:07,120
+Well, our integrand is going to be a Gaussian type exponential
+
+69
+00:03:07,120 --> 00:03:12,280
+with a Gaussian prefactor, and with some cut off
+
+70
+00:03:12,280 --> 00:03:13,915
+on the integral.
+
+71
+00:03:13,915 --> 00:03:15,790
+And that means that we can express everything
+
+72
+00:03:15,790 --> 00:03:19,420
+in terms of a cumulative distribution function
+
+73
+00:03:19,420 --> 00:03:20,440
+from the Gaussian.
+
+74
+00:03:20,440 --> 00:03:22,960
+And I'm going to note that by the function phi.
+
+75
+00:03:22,960 --> 00:03:25,330
+And it shows up all over the place.
+
+76
+00:03:25,330 --> 00:03:27,160
+Whenever we're dealing with Gaussians,
+
+77
+00:03:27,160 --> 00:03:30,580
+phi is defined to be the definite integral from
+
+78
+00:03:30,580 --> 00:03:36,175
+minus infinity to x of the Gaussian kernel 1
+
+79
+00:03:36,175 --> 00:03:39,550
+over square root of 2 pi e to the minus x squared over 2.
+
+80
+00:03:39,550 --> 00:03:41,700
+So I'm integrating, but only up to x.
+
+81
+00:03:41,700 --> 00:03:46,480
+It has a nice symmetry property for phi of minus x.
+
+82
+00:03:46,480 --> 00:03:49,300
+And you can get that to change the limits of integration.
+
+83
+00:03:49,300 --> 00:03:51,910
+And the result that we get when we do the integral is I
+
+84
+00:03:51,910 --> 00:03:55,330
+get two terms, both in phi.
+
+85
+00:03:55,330 --> 00:03:57,520
+I have phi here with this argument.
+
+86
+00:03:57,520 --> 00:04:00,040
+And I have another phi here with a different argument.
+
+87
+00:04:00,040 --> 00:04:02,720
+And I have a little exponential prefactor.
+
+88
+00:04:02,720 --> 00:04:04,690
+So this is my solution.
+
+89
+00:04:04,690 --> 00:04:07,660
+You notice that it depends on time.
+
+90
+00:04:07,660 --> 00:04:09,423
+It depends on my starting point.
+
+91
+00:04:09,423 --> 00:04:11,590
+It depends, in fact, not just on the starting point,
+
+92
+00:04:11,590 --> 00:04:14,320
+but it depends on z0 minus z.
+
+93
+00:04:14,320 --> 00:04:18,700
+That is, it depends on how far away I am from the barrier
+
+94
+00:04:18,700 --> 00:04:20,019
+initially.
+
+95
+00:04:20,019 --> 00:04:23,710
+If mu is a positive number, then on average--
+
+96
+00:04:23,710 --> 00:04:25,990
+or a negative number, actually, for that matter--
+
+97
+00:04:25,990 --> 00:04:29,330
+then this thing in the numerator is, on average,
+
+98
+00:04:29,330 --> 00:04:32,740
+how far I expect what my expected location is,
+
+99
+00:04:32,740 --> 00:04:34,510
+how far away am I going to be.
+
+100
+00:04:34,510 --> 00:04:37,417
+If mu is big, then this increases over time,
+
+101
+00:04:37,417 --> 00:04:39,250
+and it means I'm getting farther and farther
+
+102
+00:04:39,250 --> 00:04:41,560
+away from the barrier.
+
+103
+00:04:41,560 --> 00:04:44,290
+And this denominator square root of sigma
+
+104
+00:04:44,290 --> 00:04:47,110
+squared t gives me a measure as to how much diffusion
+
+105
+00:04:47,110 --> 00:04:48,910
+I typically would expect in time t.
+
+106
+00:04:48,910 --> 00:04:51,940
+
+
+107
+00:04:51,940 --> 00:04:54,790
+Now, let's think of places where we might apply this.
+
+108
+00:04:54,790 --> 00:04:57,610
+
+
+109
+00:04:57,610 --> 00:05:01,200
+Suppose we want to think about the probability of default
+
+110
+00:05:01,200 --> 00:05:02,940
+or a firm.
+
+111
+00:05:02,940 --> 00:05:05,430
+And the default could be that the firm runs out of money
+
+112
+00:05:05,430 --> 00:05:08,560
+and that the equity goes to 0, or it could be a trigger point.
+
+113
+00:05:08,560 --> 00:05:10,560
+There could be some particular financial term
+
+114
+00:05:10,560 --> 00:05:12,780
+that's a covenant in a bond, let's say.
+
+115
+00:05:12,780 --> 00:05:14,220
+But let's keep things simple.
+
+116
+00:05:14,220 --> 00:05:18,120
+Let's picture a firm that's represented by debt and equity.
+
+117
+00:05:18,120 --> 00:05:22,310
+So its resources our D plus E. That's the value of the firm.
+
+118
+00:05:22,310 --> 00:05:24,750
+z, we'll that be the firm value.
+
+119
+00:05:24,750 --> 00:05:28,110
+We'll let z star be the case when the equity goes to 0, when
+
+120
+00:05:28,110 --> 00:05:30,150
+the shareholders are wiped out, and we're
+
+121
+00:05:30,150 --> 00:05:32,910
+on the borderline where the value of the firm
+
+122
+00:05:32,910 --> 00:05:35,160
+might be less than the outstanding debt that's owned.
+
+123
+00:05:35,160 --> 00:05:36,540
+So that's z star.
+
+124
+00:05:36,540 --> 00:05:38,160
+Certainly, we don't want the value
+
+125
+00:05:38,160 --> 00:05:40,320
+of our firm to go below z star.
+
+126
+00:05:40,320 --> 00:05:42,280
+What's the probability of that happening?
+
+127
+00:05:42,280 --> 00:05:44,490
+Well, let's start with the current value
+
+128
+00:05:44,490 --> 00:05:47,310
+z0 to be the firm value, and let's assume that we've
+
+129
+00:05:47,310 --> 00:05:49,020
+got some positive equity.
+
+130
+00:05:49,020 --> 00:05:50,970
+Then we know how to solve the problem.
+
+131
+00:05:50,970 --> 00:05:53,940
+That's the survival probability that we just computed.
+
+132
+00:05:53,940 --> 00:05:55,980
+It says, in a given amount of time,
+
+133
+00:05:55,980 --> 00:05:59,623
+what's the probability that you don't default?
+
+134
+00:05:59,623 --> 00:06:02,040
+And that's-- now we can think about what that's a function
+
+135
+00:06:02,040 --> 00:06:02,540
+of.
+
+136
+00:06:02,540 --> 00:06:06,030
+Well, it depends on the rate of growth of the firm, mu.
+
+137
+00:06:06,030 --> 00:06:11,580
+It depends on the capital reserves, on z0 minus z star.
+
+138
+00:06:11,580 --> 00:06:14,470
+That's how much initial capital we have.
+
+139
+00:06:14,470 --> 00:06:17,340
+So by having a good capital buffer--
+
+140
+00:06:17,340 --> 00:06:18,720
+and you can check this--
+
+141
+00:06:18,720 --> 00:06:20,940
+the larger the capital buffer is,
+
+142
+00:06:20,940 --> 00:06:22,800
+the higher the survival probability
+
+143
+00:06:22,800 --> 00:06:24,860
+is, which certainly makes sense.
+
+144
+00:06:24,860 --> 00:06:27,360
+But we could turn this around and think of this as something
+
+145
+00:06:27,360 --> 00:06:28,440
+to solve for.
+
+146
+00:06:28,440 --> 00:06:31,080
+If you're raising money for your startup,
+
+147
+00:06:31,080 --> 00:06:33,690
+instead of just seeing how much money you can get,
+
+148
+00:06:33,690 --> 00:06:37,120
+or who's offering you the best terms,
+
+149
+00:06:37,120 --> 00:06:39,450
+or what might be the return that they're demanding,
+
+150
+00:06:39,450 --> 00:06:42,390
+you might ask a very personal question close
+
+151
+00:06:42,390 --> 00:06:45,360
+to the heart, which is, what are the chances of my business
+
+152
+00:06:45,360 --> 00:06:46,530
+surviving?
+
+153
+00:06:46,530 --> 00:06:48,240
+How does it depend on the capital?
+
+154
+00:06:48,240 --> 00:06:51,420
+And if I want to minimize my default probability,
+
+155
+00:06:51,420 --> 00:06:53,970
+if I want to minimize my extinction
+
+156
+00:06:53,970 --> 00:06:57,180
+probability for a business, how much capital do I need?
+
+157
+00:06:57,180 --> 00:07:00,990
+That is, we can solve what the capital resources are
+
+158
+00:07:00,990 --> 00:07:05,710
+to achieve a particular probability level for default.
+
+159
+00:07:05,710 --> 00:07:08,040
+We can also think about two different things
+
+160
+00:07:08,040 --> 00:07:09,390
+that both contribute.
+
+161
+00:07:09,390 --> 00:07:12,030
+One of them is how much initial capital we have,
+
+162
+00:07:12,030 --> 00:07:14,700
+and the other is what the rate of growth of the firm is.
+
+163
+00:07:14,700 --> 00:07:16,523
+Obviously, for a slow growth rate,
+
+164
+00:07:16,523 --> 00:07:17,940
+we're going to be mostly dependent
+
+165
+00:07:17,940 --> 00:07:19,260
+on the initial buffer.
+
+166
+00:07:19,260 --> 00:07:21,600
+If it's expected to have a high growth rate,
+
+167
+00:07:21,600 --> 00:07:23,950
+then that might not be as important.
+
+168
+00:07:23,950 --> 00:07:28,080
+This also shows up in a slightly different version in a number
+
+169
+00:07:28,080 --> 00:07:29,580
+of insurance problems.
+
+170
+00:07:29,580 --> 00:07:31,380
+We have some capital base.
+
+171
+00:07:31,380 --> 00:07:34,440
+We have a possibility of claim premiums
+
+172
+00:07:34,440 --> 00:07:37,270
+that, usually, we would model is a jump process,
+
+173
+00:07:37,270 --> 00:07:38,790
+not a diffusion process.
+
+174
+00:07:38,790 --> 00:07:43,272
+But we do need to balance that against the rate of growth,
+
+175
+00:07:43,272 --> 00:07:44,730
+the rate of income through premiums
+
+176
+00:07:44,730 --> 00:07:46,105
+that might be needed, ultimately,
+
+177
+00:07:46,105 --> 00:07:49,320
+to offset negative fluctuations that would show up.
+
+178
+00:07:49,320 --> 00:07:53,700
+So we can think about this as representing real events
+
+179
+00:07:53,700 --> 00:07:55,590
+for things that might happen, represented
+
+180
+00:07:55,590 --> 00:07:58,530
+by a boundary, the likelihood of a particular event.
+
+181
+00:07:58,530 --> 00:08:00,780
+And it's not something we can formulate in advance,
+
+182
+00:08:00,780 --> 00:08:04,120
+and saying this happens at a particular time,
+
+183
+00:08:04,120 --> 00:08:06,000
+so this could have happened anywhere.
+
+184
+00:08:06,000 --> 00:08:08,130
+And this helps us answer the question,
+
+185
+00:08:08,130 --> 00:08:10,200
+a somewhat path-dependent question,
+
+186
+00:08:10,200 --> 00:08:12,570
+without getting into the paths.
+
+187
+00:08:12,570 --> 00:08:14,970
+What's the probability to get from A to B
+
+188
+00:08:14,970 --> 00:08:19,680
+without hitting some event, in this case a barrier,
+
+189
+00:08:19,680 --> 00:08:22,090
+along the way?
+
+190
+00:08:22,090 --> 00:08:24,960
+Here's a numerical example of this problem you can find
+
+191
+00:08:24,960 --> 00:08:27,480
+worked out in detail in the book Fixed Income Finance
+
+192
+00:08:27,480 --> 00:08:29,220
+by Wise and Bhansali.
+
+193
+00:08:29,220 --> 00:08:34,169
+And they take the example where mu is 1%, sigma is 25%,
+
+194
+00:08:34,169 --> 00:08:37,230
+and the z0 minus z is a half.
+
+195
+00:08:37,230 --> 00:08:41,610
+And we can see how the survival probability evolves over time.
+
+196
+00:08:41,610 --> 00:08:44,500
+And, as we would expect, the longer we wait,
+
+197
+00:08:44,500 --> 00:08:47,370
+the more it goes down because you have more and more chances
+
+198
+00:08:47,370 --> 00:08:48,990
+for something bad to happen.
+
+199
+00:08:48,990 --> 00:08:51,990
+And we can see that we have this initial behavior here,
+
+200
+00:08:51,990 --> 00:08:54,370
+and then it drops off over time.
+
+201
+00:08:54,370 --> 00:08:57,000
+And here we look at the point where it reaches 50%.
+
+202
+00:08:57,000 --> 00:08:59,280
+At the end of 10 years, you can go back
+
+203
+00:08:59,280 --> 00:09:02,370
+and rerun the numbers using that closed form expression
+
+204
+00:09:02,370 --> 00:09:05,590
+to see how things behave with the different growth rate.
+
+205
+00:09:05,590 --> 00:09:07,930
+How does that change the survival probabilities?
+
+206
+00:09:07,930 --> 00:09:11,070
+How does that compare to changing the initial capital
+
+207
+00:09:11,070 --> 00:09:12,620
+buffer?
+

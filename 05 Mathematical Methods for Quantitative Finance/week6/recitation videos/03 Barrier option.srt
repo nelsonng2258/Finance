@@ -1,0 +1,944 @@
+0
+00:00:00,000 --> 00:00:01,450
+
+
+1
+00:00:01,450 --> 00:00:03,850
+Here's an exercise for a barrier option
+
+2
+00:00:03,850 --> 00:00:07,180
+that involves solving a differential equation using
+
+3
+00:00:07,180 --> 00:00:09,460
+the method of images, or reflection,
+
+4
+00:00:09,460 --> 00:00:13,360
+and the notion of trying to make an inspired guess for a trial
+
+5
+00:00:13,360 --> 00:00:14,170
+function.
+
+6
+00:00:14,170 --> 00:00:16,400
+Let's see if we can put it all together.
+
+7
+00:00:16,400 --> 00:00:17,590
+So here's the problem.
+
+8
+00:00:17,590 --> 00:00:21,460
+The problem is to find the value the European down-and-out call
+
+9
+00:00:21,460 --> 00:00:22,540
+option.
+
+10
+00:00:22,540 --> 00:00:26,320
+And this is an example that was given in Robert Martin's
+
+11
+00:00:26,320 --> 00:00:29,050
+original paper on option pricing that came out at the same time
+
+12
+00:00:29,050 --> 00:00:30,730
+as Black and Scholes, and he gave
+
+13
+00:00:30,730 --> 00:00:33,010
+this example of this option.
+
+14
+00:00:33,010 --> 00:00:37,630
+So it has a strike price K, it has time to expiration T,
+
+15
+00:00:37,630 --> 00:00:39,910
+it satisfies geometric Brownian motion,
+
+16
+00:00:39,910 --> 00:00:41,740
+so it has an Ito process.
+
+17
+00:00:41,740 --> 00:00:46,690
+dS over S is mu dt plus sigma dB with mu and sigma constant.
+
+18
+00:00:46,690 --> 00:00:49,780
+There's a knock-out barrier at X,
+
+19
+00:00:49,780 --> 00:00:52,030
+which we'll take to be below the strike price.
+
+20
+00:00:52,030 --> 00:00:54,760
+And the idea is that this is an option that
+
+21
+00:00:54,760 --> 00:00:57,970
+looks like an ordinary call option
+
+22
+00:00:57,970 --> 00:01:03,130
+until or unless the stock price hits the value of the barrier.
+
+23
+00:01:03,130 --> 00:01:07,310
+If it hits the barrier, it's done, and it becomes worthless.
+
+24
+00:01:07,310 --> 00:01:08,470
+Why do such things exist?
+
+25
+00:01:08,470 --> 00:01:10,580
+Well, they're cheaper than other options.
+
+26
+00:01:10,580 --> 00:01:13,600
+So there might be particular risks that it's tailored to.
+
+27
+00:01:13,600 --> 00:01:16,000
+There might be particular conditions where someone's
+
+28
+00:01:16,000 --> 00:01:18,910
+hedging a risk, and they figure under certain circumstances,
+
+29
+00:01:18,910 --> 00:01:19,970
+they might not need it.
+
+30
+00:01:19,970 --> 00:01:22,030
+But in any event, there's this option.
+
+31
+00:01:22,030 --> 00:01:24,670
+And there's an interesting complementarity
+
+32
+00:01:24,670 --> 00:01:29,230
+with another option, the knock-in option where
+
+33
+00:01:29,230 --> 00:01:31,160
+a knock-in option does the opposite.
+
+34
+00:01:31,160 --> 00:01:32,800
+It begins worthless.
+
+35
+00:01:32,800 --> 00:01:36,370
+But if the strike price hits the barrier, the specified barrier
+
+36
+00:01:36,370 --> 00:01:39,310
+in a specified way, then it comes to life,
+
+37
+00:01:39,310 --> 00:01:42,760
+and it becomes just like an ordinary vanilla option.
+
+38
+00:01:42,760 --> 00:01:44,220
+And it doesn't matter subsequently
+
+39
+00:01:44,220 --> 00:01:45,970
+what happens if it hits the barrier again.
+
+40
+00:01:45,970 --> 00:01:48,910
+Once it's alive, it stays alive.
+
+41
+00:01:48,910 --> 00:01:50,950
+So this is our setup.
+
+42
+00:01:50,950 --> 00:01:52,480
+And what can we do?
+
+43
+00:01:52,480 --> 00:01:54,940
+So why don't you take a few minutes to think about it,
+
+44
+00:01:54,940 --> 00:01:56,905
+and then we can work through it together.
+
+45
+00:01:56,905 --> 00:02:14,670
+
+
+46
+00:02:14,670 --> 00:02:16,930
+OK, let's look at it together.
+
+47
+00:02:16,930 --> 00:02:19,320
+So I've taken a risk-free rate equal to 0
+
+48
+00:02:19,320 --> 00:02:21,990
+to simplify the math, because this is a math example,
+
+49
+00:02:21,990 --> 00:02:23,320
+and it'll be a lot easier.
+
+50
+00:02:23,320 --> 00:02:26,940
+The Black-Scholes equation will go from four terms down to two.
+
+51
+00:02:26,940 --> 00:02:30,360
+So this is not a realistic solution that you could trade.
+
+52
+00:02:30,360 --> 00:02:32,790
+Although these days, with interest rates so low,
+
+53
+00:02:32,790 --> 00:02:35,290
+it might not be a bad approximation.
+
+54
+00:02:35,290 --> 00:02:37,890
+However, we're making a mathematical simplification
+
+55
+00:02:37,890 --> 00:02:40,470
+just for the purposes of doing our example here.
+
+56
+00:02:40,470 --> 00:02:42,560
+This is not the right financial equation.
+
+57
+00:02:42,560 --> 00:02:46,620
+So we're just setting r equal to 0 to simplify the math, OK?
+
+58
+00:02:46,620 --> 00:02:50,340
+So the idea is we want to think about what we saw in lecture
+
+59
+00:02:50,340 --> 00:02:55,770
+about how the diffusion and the random walk property of stock
+
+60
+00:02:55,770 --> 00:03:02,820
+prices looks like the behavior that we saw in the diffusion
+
+61
+00:03:02,820 --> 00:03:04,530
+equation where we saw that we could deal
+
+62
+00:03:04,530 --> 00:03:06,660
+with barriers by a method of images,
+
+63
+00:03:06,660 --> 00:03:09,220
+by looking at reflected points.
+
+64
+00:03:09,220 --> 00:03:12,000
+So we might think, we might have an idea
+
+65
+00:03:12,000 --> 00:03:15,450
+that we could try to take a look at the ordinary solution
+
+66
+00:03:15,450 --> 00:03:17,220
+to the Black-Scholes equation.
+
+67
+00:03:17,220 --> 00:03:18,930
+Let's say, so can we relate--
+
+68
+00:03:18,930 --> 00:03:26,710
+let's ask, can we relate the usual solution--
+
+69
+00:03:26,710 --> 00:03:34,030
+let me call it C of S,t to something at an image price--
+
+70
+00:03:34,030 --> 00:03:44,610
+let's call it-- let's say to option value
+
+71
+00:03:44,610 --> 00:03:48,805
+at the reflected price or the image price.
+
+72
+00:03:48,805 --> 00:03:50,180
+Now, how are we going to find it?
+
+73
+00:03:50,180 --> 00:03:52,130
+Well, let's just try doing the usual thing.
+
+74
+00:03:52,130 --> 00:03:55,690
+We know that S should be thought of as a logarithmic variable.
+
+75
+00:03:55,690 --> 00:03:58,590
+We know that we want the same distance below as above.
+
+76
+00:03:58,590 --> 00:04:02,360
+So we might take a look at, for example,
+
+77
+00:04:02,360 --> 00:04:06,770
+trying an image price of the form--
+
+78
+00:04:06,770 --> 00:04:20,380
+let me call it log S tilde to be 2 log X minus log S. So
+
+79
+00:04:20,380 --> 00:04:24,260
+that way, they're equally spaced above or below the barrier.
+
+80
+00:04:24,260 --> 00:04:27,120
+So if C is the value of the option-- that is,
+
+81
+00:04:27,120 --> 00:04:29,950
+it's the function that's a Black-Scholes function that we
+
+82
+00:04:29,950 --> 00:04:32,900
+have, it looks like we might be able to write things in terms
+
+83
+00:04:32,900 --> 00:04:33,400
+of--
+
+84
+00:04:33,400 --> 00:04:38,570
+
+
+85
+00:04:38,570 --> 00:04:46,580
+so that is, could we have C of S, t minus C
+
+86
+00:04:46,580 --> 00:04:52,940
+of X squared over S and t?
+
+87
+00:04:52,940 --> 00:04:54,480
+Now you notice what happens.
+
+88
+00:04:54,480 --> 00:04:58,252
+So I've re--exponentiated, and we can see that this satisfies
+
+89
+00:04:58,252 --> 00:04:59,210
+the boundary condition.
+
+90
+00:04:59,210 --> 00:05:02,360
+Because if S is equal to X, the two terms cancel.
+
+91
+00:05:02,360 --> 00:05:05,030
+If the first term has an X, is equal to X,
+
+92
+00:05:05,030 --> 00:05:07,460
+the second term has X squared over X,
+
+93
+00:05:07,460 --> 00:05:09,030
+the two terms would cancel.
+
+94
+00:05:09,030 --> 00:05:10,400
+So this is great.
+
+95
+00:05:10,400 --> 00:05:12,177
+It satisfies the boundary condition.
+
+96
+00:05:12,177 --> 00:05:14,510
+The problem is it doesn't quite satisfy the differential
+
+97
+00:05:14,510 --> 00:05:15,510
+equation.
+
+98
+00:05:15,510 --> 00:05:18,270
+So it's close, but we're not quite there.
+
+99
+00:05:18,270 --> 00:05:20,570
+So what we're going to do is let's try--
+
+100
+00:05:20,570 --> 00:05:29,875
+so unfortunately, not a solution.
+
+101
+00:05:29,875 --> 00:05:37,900
+
+
+102
+00:05:37,900 --> 00:05:39,600
+So let's try something different.
+
+103
+00:05:39,600 --> 00:05:42,395
+Let's not give up too quickly just yet.
+
+104
+00:05:42,395 --> 00:05:57,010
+So let's try the form S over X to some power--
+
+105
+00:05:57,010 --> 00:06:05,870
+let's say, alpha-- times C of X squared over S times t.
+
+106
+00:06:05,870 --> 00:06:07,290
+What's our motivation for this?
+
+107
+00:06:07,290 --> 00:06:10,010
+Well, if we can do it, we can solve it.
+
+108
+00:06:10,010 --> 00:06:11,780
+We know that the Black-Scholes equation
+
+109
+00:06:11,780 --> 00:06:14,930
+is homogeneous in the powers of S.
+
+110
+00:06:14,930 --> 00:06:16,727
+I've written X as a constant.
+
+111
+00:06:16,727 --> 00:06:18,560
+But rather than just writing S to the alpha,
+
+112
+00:06:18,560 --> 00:06:20,660
+I'm writing it as S over X to the alpha.
+
+113
+00:06:20,660 --> 00:06:22,730
+Now it's automatically clear when
+
+114
+00:06:22,730 --> 00:06:25,340
+S equals X, that pre-factor is equal to 1,
+
+115
+00:06:25,340 --> 00:06:27,510
+and my usual equation goes through.
+
+116
+00:06:27,510 --> 00:06:28,580
+So this is a guess.
+
+117
+00:06:28,580 --> 00:06:30,740
+We're going to try it out and see where it leads.
+
+118
+00:06:30,740 --> 00:06:32,918
+And if we do it well, and we're lucky,
+
+119
+00:06:32,918 --> 00:06:33,960
+we'll have a good answer.
+
+120
+00:06:33,960 --> 00:06:35,690
+If not, it's back to the drawing board.
+
+121
+00:06:35,690 --> 00:06:37,380
+But let's give it a try.
+
+122
+00:06:37,380 --> 00:06:38,420
+So what shall we do?
+
+123
+00:06:38,420 --> 00:06:40,980
+Let's compute some partial derivatives, shall we?
+
+124
+00:06:40,980 --> 00:06:43,710
+So we have-- let's give this a name.
+
+125
+00:06:43,710 --> 00:06:49,980
+Let's call this f of S and t.
+
+126
+00:06:49,980 --> 00:06:53,140
+Obviously, it also depends on X and the other parameters.
+
+127
+00:06:53,140 --> 00:06:53,925
+So let's compute.
+
+128
+00:06:53,925 --> 00:06:59,010
+
+
+129
+00:06:59,010 --> 00:07:03,390
+Partial of f with respect to t is
+
+130
+00:07:03,390 --> 00:07:10,100
+going to be S over X to the alpha partial of C
+
+131
+00:07:10,100 --> 00:07:11,520
+with respect to t.
+
+132
+00:07:11,520 --> 00:07:13,100
+That was easy, because the pre-factor
+
+133
+00:07:13,100 --> 00:07:15,120
+doesn't have any t's in it.
+
+134
+00:07:15,120 --> 00:07:20,850
+First, partial with respect to us is going to be--
+
+135
+00:07:20,850 --> 00:07:24,900
+I'm going to be able to pull out a factor of this
+
+136
+00:07:24,900 --> 00:07:26,920
+from my final answer.
+
+137
+00:07:26,920 --> 00:07:32,020
+This is going to be alpha over S times C.
+
+138
+00:07:32,020 --> 00:07:35,050
+And that comes from differentiating with respect
+
+139
+00:07:35,050 --> 00:07:36,340
+to the pre-factor.
+
+140
+00:07:36,340 --> 00:07:42,940
+S to the alpha goes as alpha S to the S minus 1-- excuse
+
+141
+00:07:42,940 --> 00:07:45,850
+me, S to the alpha, the derivative,
+
+142
+00:07:45,850 --> 00:07:48,580
+it's alpha S to the alpha minus 1.
+
+143
+00:07:48,580 --> 00:07:52,070
+So I've written that as S to the alpha.
+
+144
+00:07:52,070 --> 00:07:54,890
+And the minus 1 is down here, just so I can pull out
+
+145
+00:07:54,890 --> 00:07:56,520
+that common pre-factor.
+
+146
+00:07:56,520 --> 00:07:58,520
+And then I differentiate C, and I
+
+147
+00:07:58,520 --> 00:08:01,845
+need to worry about the X squared over S in its argument.
+
+148
+00:08:01,845 --> 00:08:03,470
+So I'm going to get another term, which
+
+149
+00:08:03,470 --> 00:08:15,215
+will be minus X squared over S squared times C prime dC dS.
+
+150
+00:08:15,215 --> 00:08:18,540
+
+
+151
+00:08:18,540 --> 00:08:20,890
+And now if we compute the second derivative,
+
+152
+00:08:20,890 --> 00:08:22,780
+we get a somewhat messier expression,
+
+153
+00:08:22,780 --> 00:08:25,205
+but all will become clear shortly.
+
+154
+00:08:25,205 --> 00:08:28,050
+
+
+155
+00:08:28,050 --> 00:08:32,924
+S over X raised to the alpha times--
+
+156
+00:08:32,924 --> 00:08:34,299
+now we're taking two derivatives,
+
+157
+00:08:34,299 --> 00:08:36,688
+so we're taking the derivative of the expression above.
+
+158
+00:08:36,688 --> 00:08:38,730
+We're going to get one term is going to be alpha,
+
+159
+00:08:38,730 --> 00:08:43,470
+alpha minus 1 over S squared times C. I'm
+
+160
+00:08:43,470 --> 00:08:48,320
+going to get acting on the X squared over S squared.
+
+161
+00:08:48,320 --> 00:08:50,070
+That's going to give me a term, which will
+
+162
+00:08:50,070 --> 00:08:54,180
+be plus 2 times alpha minus 1.
+
+163
+00:08:54,180 --> 00:08:59,770
+
+
+164
+00:08:59,770 --> 00:09:01,660
+Rather, this is acting on the alpha minus S.
+
+165
+00:09:01,660 --> 00:09:02,890
+This is the cross-term.
+
+166
+00:09:02,890 --> 00:09:11,950
+The middle term is minus X squared over S squared times dC
+
+167
+00:09:11,950 --> 00:09:21,650
+dS plus one more term, finally, minus X squared over S squared,
+
+168
+00:09:21,650 --> 00:09:29,630
+squared, times second partial of C with respect to dS squared.
+
+169
+00:09:29,630 --> 00:09:30,660
+So let's take a look.
+
+170
+00:09:30,660 --> 00:09:32,520
+These are our three partial derivatives.
+
+171
+00:09:32,520 --> 00:09:35,250
+And remember, we're looking for the Black-Scholes equation
+
+172
+00:09:35,250 --> 00:09:37,470
+when we set the interest rate equal to 0.
+
+173
+00:09:37,470 --> 00:09:39,970
+And that means that there's no first derivative term.
+
+174
+00:09:39,970 --> 00:09:42,480
+So this term here won't be present.
+
+175
+00:09:42,480 --> 00:09:45,870
+We really just need to worry about this term and this one.
+
+176
+00:09:45,870 --> 00:09:47,310
+Now, notice something interesting
+
+177
+00:09:47,310 --> 00:09:48,960
+about this final expression.
+
+178
+00:09:48,960 --> 00:09:50,860
+Look at the alpha independence of it.
+
+179
+00:09:50,860 --> 00:09:54,570
+There's something we might guess is a lucky choice for alpha
+
+180
+00:09:54,570 --> 00:09:56,370
+or an inspired choice for alpha.
+
+181
+00:09:56,370 --> 00:09:57,930
+How about alpha equals 1?
+
+182
+00:09:57,930 --> 00:10:02,610
+If alpha equals 1, this part vanishes, this part vanishes,
+
+183
+00:10:02,610 --> 00:10:04,610
+and the coefficient looks very simple.
+
+184
+00:10:04,610 --> 00:10:08,360
+
+
+185
+00:10:08,360 --> 00:10:18,240
+So if we choose alpha equals 1 for our trial solution,
+
+186
+00:10:18,240 --> 00:10:23,300
+then we get the equation partial of f with respect
+
+187
+00:10:23,300 --> 00:10:30,970
+to t plus sigma S squared over 2 second partial
+
+188
+00:10:30,970 --> 00:10:34,090
+of f with respect to squared--
+
+189
+00:10:34,090 --> 00:10:41,210
+is going to be S over X to the alpha, which is equal to 1,
+
+190
+00:10:41,210 --> 00:10:50,770
+times partial of C with respect to t plus sigma S tilde
+
+191
+00:10:50,770 --> 00:10:54,440
+squared over 2.
+
+192
+00:10:54,440 --> 00:10:58,580
+And actually, I should have put in tildes before.
+
+193
+00:10:58,580 --> 00:11:00,160
+Apologies.
+
+194
+00:11:00,160 --> 00:11:02,580
+Tilde.
+
+195
+00:11:02,580 --> 00:11:06,800
+And here for our derivatives, tilde,
+
+196
+00:11:06,800 --> 00:11:12,430
+where we're taking these derivatives and a tilde here.
+
+197
+00:11:12,430 --> 00:11:17,670
+So now we have that our expression for f
+
+198
+00:11:17,670 --> 00:11:20,910
+gives us something in terms of the transformed variable,
+
+199
+00:11:20,910 --> 00:11:22,750
+our expression here.
+
+200
+00:11:22,750 --> 00:11:24,270
+And we know that that's equal to 0,
+
+201
+00:11:24,270 --> 00:11:27,040
+because that satisfies the Black-Scholes equation.
+
+202
+00:11:27,040 --> 00:11:34,000
+So therefore, we have the value of the down-and-out call
+
+203
+00:11:34,000 --> 00:11:41,250
+option, down-and-out call.
+
+204
+00:11:41,250 --> 00:11:42,360
+That's this form.
+
+205
+00:11:42,360 --> 00:11:50,760
+C of down-and-out S and t is just
+
+206
+00:11:50,760 --> 00:12:03,010
+C of t minus S over X C of S squared over S, t.
+
+207
+00:12:03,010 --> 00:12:06,280
+That is, the derivatives we had above with respect to tilde
+
+208
+00:12:06,280 --> 00:12:09,250
+are derivatives with respect to the first argument of the call
+
+209
+00:12:09,250 --> 00:12:10,850
+function.
+
+210
+00:12:10,850 --> 00:12:19,760
+So this is for S greater than or equal to the barrier X
+
+211
+00:12:19,760 --> 00:12:29,060
+and equal to 0 for S less than or equal to X.
+
+212
+00:12:29,060 --> 00:12:30,630
+And that's our solution.
+
+213
+00:12:30,630 --> 00:12:33,860
+So what we did is we took our notion
+
+214
+00:12:33,860 --> 00:12:37,430
+that the call option formula solves Black-Scholes equation.
+
+215
+00:12:37,430 --> 00:12:38,570
+We had a barrier.
+
+216
+00:12:38,570 --> 00:12:41,480
+We found that we could satisfy the barrier conditions
+
+217
+00:12:41,480 --> 00:12:45,650
+by using method of images by looking at a point below.
+
+218
+00:12:45,650 --> 00:12:47,540
+We constructed something that was close,
+
+219
+00:12:47,540 --> 00:12:50,480
+by looking at that argument X squared of S. That's
+
+220
+00:12:50,480 --> 00:12:52,200
+in logarithmic variables.
+
+221
+00:12:52,200 --> 00:12:54,860
+That's the equivalent to looking above and below the barrier
+
+222
+00:12:54,860 --> 00:12:56,510
+by an equal reflected amount.
+
+223
+00:12:56,510 --> 00:12:58,970
+We saw that we needed another pre-factor, just as
+
+224
+00:12:58,970 --> 00:13:01,400
+in our discussion of the survival probabilities.
+
+225
+00:13:01,400 --> 00:13:03,090
+We put in a guess for it.
+
+226
+00:13:03,090 --> 00:13:05,090
+We solved for our particular parameter,
+
+227
+00:13:05,090 --> 00:13:06,800
+alpha, that was in the coefficient.
+
+228
+00:13:06,800 --> 00:13:09,140
+We get a final result that gives us
+
+229
+00:13:09,140 --> 00:13:11,420
+the value of the option above the barrier
+
+230
+00:13:11,420 --> 00:13:12,800
+and 0 below the barrier.
+
+231
+00:13:12,800 --> 00:13:14,810
+And in fact, expanding this out, you'll
+
+232
+00:13:14,810 --> 00:13:17,300
+see that it looks very much like the expression
+
+233
+00:13:17,300 --> 00:13:20,430
+that we had for the survival probabilities.
+
+234
+00:13:20,430 --> 00:13:21,975
+And there we go.
+
+235
+00:13:21,975 --> 00:13:22,475
+
+

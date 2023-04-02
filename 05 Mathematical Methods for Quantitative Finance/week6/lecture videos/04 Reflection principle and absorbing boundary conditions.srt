@@ -1,0 +1,740 @@
+0
+00:00:00,000 --> 00:00:00,625
+
+
+1
+00:00:00,625 --> 00:00:02,500
+PROFESSOR: We talked about initial conditions
+
+2
+00:00:02,500 --> 00:00:05,410
+for the diffusion equation, but more broadly
+
+3
+00:00:05,410 --> 00:00:08,080
+differential equations can be formulated
+
+4
+00:00:08,080 --> 00:00:10,210
+with boundary conditions that could appear
+
+5
+00:00:10,210 --> 00:00:11,830
+at different points in time.
+
+6
+00:00:11,830 --> 00:00:15,010
+Or they could be conditioned on the spatial variables
+
+7
+00:00:15,010 --> 00:00:16,219
+that we have.
+
+8
+00:00:16,219 --> 00:00:20,380
+So I'd like to talk about a few examples of boundary problems.
+
+9
+00:00:20,380 --> 00:00:25,180
+And a couple of tricks that are helpful in their solution.
+
+10
+00:00:25,180 --> 00:00:27,640
+The first trick that we'll take a look at
+
+11
+00:00:27,640 --> 00:00:29,860
+is called the method of images.
+
+12
+00:00:29,860 --> 00:00:32,409
+And the idea is that suppose we wanted
+
+13
+00:00:32,409 --> 00:00:35,050
+to take a look at the probability of getting
+
+14
+00:00:35,050 --> 00:00:40,240
+from point A over here to point B at this end.
+
+15
+00:00:40,240 --> 00:00:42,560
+If we just wanted to get from point A to point B,
+
+16
+00:00:42,560 --> 00:00:44,650
+and we're taking, say random walks
+
+17
+00:00:44,650 --> 00:00:47,570
+or going up and down by 1 unit, we know how to do that.
+
+18
+00:00:47,570 --> 00:00:48,970
+It's just combinatorics.
+
+19
+00:00:48,970 --> 00:00:52,150
+We count all the ways that we can get all the possible steps
+
+20
+00:00:52,150 --> 00:00:53,380
+to take us there.
+
+21
+00:00:53,380 --> 00:00:55,120
+But suppose I had a condition, and I
+
+22
+00:00:55,120 --> 00:00:59,410
+say I want you to get from A to B without crossing this line.
+
+23
+00:00:59,410 --> 00:01:01,840
+So here I've got this is 6.
+
+24
+00:01:01,840 --> 00:01:05,110
+I want to get to 8 in a certain number of time steps.
+
+25
+00:01:05,110 --> 00:01:09,070
+But I want to do it without ever crossing this boundary at 5.
+
+26
+00:01:09,070 --> 00:01:11,830
+That makes the counting much more complicated.
+
+27
+00:01:11,830 --> 00:01:15,010
+And in the continuous time case, which we want to get to,
+
+28
+00:01:15,010 --> 00:01:16,180
+makes it impossible.
+
+29
+00:01:16,180 --> 00:01:18,130
+How are we going to count the paths?
+
+30
+00:01:18,130 --> 00:01:19,660
+Well there are two things that we
+
+31
+00:01:19,660 --> 00:01:22,870
+can do to get away from counting the work in this case
+
+32
+00:01:22,870 --> 00:01:25,600
+and they generalize nicely to continuous time.
+
+33
+00:01:25,600 --> 00:01:28,810
+The first thing is we'll think about stating things
+
+34
+00:01:28,810 --> 00:01:31,280
+relative to the boundary.
+
+35
+00:01:31,280 --> 00:01:34,540
+We'll think about what it means to hit the boundary.
+
+36
+00:01:34,540 --> 00:01:36,940
+And the second thing we'll do is we'll
+
+37
+00:01:36,940 --> 00:01:39,790
+use an artificial construction that
+
+38
+00:01:39,790 --> 00:01:43,210
+will look at the mirror image of some parts
+
+39
+00:01:43,210 --> 00:01:45,203
+of our path in the boundary.
+
+40
+00:01:45,203 --> 00:01:46,870
+So let's take a look at this first case.
+
+41
+00:01:46,870 --> 00:01:49,060
+Suppose that if I want to get from point A
+
+42
+00:01:49,060 --> 00:01:53,890
+to point B without hitting C, I imagine that if I hit point C,
+
+43
+00:01:53,890 --> 00:01:55,010
+I'm dead.
+
+44
+00:01:55,010 --> 00:01:58,280
+So I want to know what the probability is to get there.
+
+45
+00:01:58,280 --> 00:02:00,977
+And we'll call that a survival probability.
+
+46
+00:02:00,977 --> 00:02:02,560
+How do I get from one place to another
+
+47
+00:02:02,560 --> 00:02:04,570
+without hitting an intermediate condition?
+
+48
+00:02:04,570 --> 00:02:06,370
+And it's something we've already talked
+
+49
+00:02:06,370 --> 00:02:08,680
+about in the context of Gambler's Ruin
+
+50
+00:02:08,680 --> 00:02:10,720
+where we hit a boundary and the game is over.
+
+51
+00:02:10,720 --> 00:02:13,360
+And we've looked at a number of discrete problems
+
+52
+00:02:13,360 --> 00:02:15,970
+where if there's a particular draw down
+
+53
+00:02:15,970 --> 00:02:18,970
+in a financial balance, then that
+
+54
+00:02:18,970 --> 00:02:21,100
+affects the outcome in which probabilities
+
+55
+00:02:21,100 --> 00:02:22,880
+contribute to a final answer.
+
+56
+00:02:22,880 --> 00:02:25,970
+So here we've got another version of the same thing.
+
+57
+00:02:25,970 --> 00:02:27,580
+But here's our approach to solving it.
+
+58
+00:02:27,580 --> 00:02:29,122
+What we're going to do is we're going
+
+59
+00:02:29,122 --> 00:02:31,090
+to say that, first of all, some paths will
+
+60
+00:02:31,090 --> 00:02:33,670
+go from A to B without ever hitting the boundary.
+
+61
+00:02:33,670 --> 00:02:36,470
+But there are some that do hit the boundary.
+
+62
+00:02:36,470 --> 00:02:40,000
+What we could do is instead of just counting the ones that
+
+63
+00:02:40,000 --> 00:02:43,720
+don't hit the boundary, we could count them all
+
+64
+00:02:43,720 --> 00:02:46,780
+and then subtract the ones that hit the boundary.
+
+65
+00:02:46,780 --> 00:02:48,050
+How do we do that?
+
+66
+00:02:48,050 --> 00:02:50,980
+Well, the way we can characterize all the paths that
+
+67
+00:02:50,980 --> 00:02:56,170
+hit the boundary is to notice that if they hit the boundary
+
+68
+00:02:56,170 --> 00:02:58,510
+one or more than one time, then they definitely
+
+69
+00:02:58,510 --> 00:03:00,040
+hit it at least once.
+
+70
+00:03:00,040 --> 00:03:03,180
+What I do is look at this blue path behind me.
+
+71
+00:03:03,180 --> 00:03:06,340
+What I do is I take a look at the first place where
+
+72
+00:03:06,340 --> 00:03:07,400
+it hits the boundary.
+
+73
+00:03:07,400 --> 00:03:09,850
+So I look at this blue path that starts above.
+
+74
+00:03:09,850 --> 00:03:11,770
+It hits the boundary here.
+
+75
+00:03:11,770 --> 00:03:13,360
+Then it goes below and above.
+
+76
+00:03:13,360 --> 00:03:14,980
+It hits it a second time.
+
+77
+00:03:14,980 --> 00:03:16,420
+It bounces around.
+
+78
+00:03:16,420 --> 00:03:20,680
+And finally it arrives at point B. So what I'm going to do
+
+79
+00:03:20,680 --> 00:03:23,500
+is I'm going to focus on this first crossing point.
+
+80
+00:03:23,500 --> 00:03:27,670
+This first place where it touches our barrier.
+
+81
+00:03:27,670 --> 00:03:30,430
+And around this point, I'm going to draw a mirror image.
+
+82
+00:03:30,430 --> 00:03:32,150
+And that's this red line.
+
+83
+00:03:32,150 --> 00:03:34,420
+So you notice that this red line is
+
+84
+00:03:34,420 --> 00:03:38,660
+this segment of the blue line reflected in the barrier.
+
+85
+00:03:38,660 --> 00:03:41,240
+So if this is one unit above the barrier,
+
+86
+00:03:41,240 --> 00:03:43,720
+this starts one unit below the barrier.
+
+87
+00:03:43,720 --> 00:03:46,390
+Everything after the first passage point
+
+88
+00:03:46,390 --> 00:03:48,290
+continues the same.
+
+89
+00:03:48,290 --> 00:03:51,070
+So these paths are in one to one correspondence.
+
+90
+00:03:51,070 --> 00:03:55,360
+For every path starting at A that gets to B
+
+91
+00:03:55,360 --> 00:03:58,510
+and hits the boundary, there is exactly
+
+92
+00:03:58,510 --> 00:04:02,500
+one path that starts at an image point below the boundary
+
+93
+00:04:02,500 --> 00:04:05,870
+and also finishes at B.
+
+94
+00:04:05,870 --> 00:04:07,710
+How many such plans are there?
+
+95
+00:04:07,710 --> 00:04:10,010
+Well that's an easy thing to count
+
+96
+00:04:10,010 --> 00:04:11,990
+because those are unrestricted.
+
+97
+00:04:11,990 --> 00:04:14,570
+Because every path where I've done
+
+98
+00:04:14,570 --> 00:04:17,899
+this reflection trick starts below the barrier.
+
+99
+00:04:17,899 --> 00:04:20,000
+And they all finish above the barrier.
+
+100
+00:04:20,000 --> 00:04:22,800
+They necessarily cross the barrier.
+
+101
+00:04:22,800 --> 00:04:26,090
+So the barrier is no restriction in the counting of these paths.
+
+102
+00:04:26,090 --> 00:04:28,550
+They all cross it if you want for free just
+
+103
+00:04:28,550 --> 00:04:31,340
+by virtue of where they're starting and endpoints are.
+
+104
+00:04:31,340 --> 00:04:33,080
+So if I want to compute the barrier,
+
+105
+00:04:33,080 --> 00:04:34,910
+now I have an easy rule.
+
+106
+00:04:34,910 --> 00:04:40,010
+I compute the probability to get from A to B unrestricted,
+
+107
+00:04:40,010 --> 00:04:43,550
+and I subtract the probability to get from the mirror
+
+108
+00:04:43,550 --> 00:04:46,940
+point, this fictitious point below the boundary, where
+
+109
+00:04:46,940 --> 00:04:48,440
+I never could be because otherwise I
+
+110
+00:04:48,440 --> 00:04:52,550
+would already by definition be out of the game.
+
+111
+00:04:52,550 --> 00:04:54,230
+We would be dead.
+
+112
+00:04:54,230 --> 00:04:57,140
+But to go from this fictitious point up to here.
+
+113
+00:04:57,140 --> 00:05:00,080
+And I subtract that probability, and that gives me
+
+114
+00:05:00,080 --> 00:05:02,600
+the survival probability.
+
+115
+00:05:02,600 --> 00:05:07,490
+Now this generalizes nicely for continuous time processes.
+
+116
+00:05:07,490 --> 00:05:09,050
+And it leads us to an interesting way
+
+117
+00:05:09,050 --> 00:05:14,730
+to think about boundary values for differential equations.
+
+118
+00:05:14,730 --> 00:05:17,330
+So in terms of our diffusion equation,
+
+119
+00:05:17,330 --> 00:05:20,090
+suppose we have a barrier at z star.
+
+120
+00:05:20,090 --> 00:05:24,140
+We start at some point z0 that has to be above z star.
+
+121
+00:05:24,140 --> 00:05:26,930
+Again, if we're at the barrier or below,
+
+122
+00:05:26,930 --> 00:05:29,480
+and where our survival probabilities is already
+
+123
+00:05:29,480 --> 00:05:32,430
+0 like our Gambler's Ruin problem,
+
+124
+00:05:32,430 --> 00:05:34,470
+the first thing I can do is I can say,
+
+125
+00:05:34,470 --> 00:05:36,950
+let's look at the unrestricted probability
+
+126
+00:05:36,950 --> 00:05:42,710
+to get from z0 to anywhere in time t.
+
+127
+00:05:42,710 --> 00:05:45,590
+And while I just measure my distance from z0
+
+128
+00:05:45,590 --> 00:05:48,050
+and z minus z0 in time t.
+
+129
+00:05:48,050 --> 00:05:51,320
+And that's given by p0.
+
+130
+00:05:51,320 --> 00:05:56,510
+I'd like to subtract the mirror image that is the probability
+
+131
+00:05:56,510 --> 00:06:01,800
+to get from the mirror point, which is 2z star minus z0.
+
+132
+00:06:01,800 --> 00:06:03,820
+And I want to subtract that probability.
+
+133
+00:06:03,820 --> 00:06:06,120
+Well, that's just the same p0 function.
+
+134
+00:06:06,120 --> 00:06:10,620
+p0 of z minus its origin, its starting point,
+
+135
+00:06:10,620 --> 00:06:13,410
+to z star minus z0, t.
+
+136
+00:06:13,410 --> 00:06:15,930
+And if I combine those two expressions,
+
+137
+00:06:15,930 --> 00:06:18,240
+I get this result right--
+
+138
+00:06:18,240 --> 00:06:19,260
+excuse me.
+
+139
+00:06:19,260 --> 00:06:21,540
+I get this result right here, which
+
+140
+00:06:21,540 --> 00:06:24,180
+you will notice is not a probability density.
+
+141
+00:06:24,180 --> 00:06:25,140
+And it shouldn't be.
+
+142
+00:06:25,140 --> 00:06:28,080
+It doesn't normalize to 1 because the longer time
+
+143
+00:06:28,080 --> 00:06:30,090
+goes on, the more chance there is
+
+144
+00:06:30,090 --> 00:06:32,550
+that we will have hit the boundary the less chance
+
+145
+00:06:32,550 --> 00:06:34,470
+there is that we will survive.
+
+146
+00:06:34,470 --> 00:06:36,690
+It certainly should be a positive quantity.
+
+147
+00:06:36,690 --> 00:06:38,640
+And you can check that it is.
+
+148
+00:06:38,640 --> 00:06:40,890
+Here's its most interesting property.
+
+149
+00:06:40,890 --> 00:06:45,840
+It obeys the property that when z is equal to z star,
+
+150
+00:06:45,840 --> 00:06:46,860
+it vanishes.
+
+151
+00:06:46,860 --> 00:06:49,450
+The two terms cancel each other out.
+
+152
+00:06:49,450 --> 00:06:51,840
+That's exactly what should happen.
+
+153
+00:06:51,840 --> 00:06:56,040
+z equals z star at any point t means
+
+154
+00:06:56,040 --> 00:06:59,288
+that we're at the boundary where we no longer survive.
+
+155
+00:06:59,288 --> 00:07:01,080
+So we could have started from the beginning
+
+156
+00:07:01,080 --> 00:07:04,020
+and said this is our boundary value on the problem.
+
+157
+00:07:04,020 --> 00:07:07,200
+We are looking for a function ps of z
+
+158
+00:07:07,200 --> 00:07:10,890
+and t that satisfies the diffusion equation such
+
+159
+00:07:10,890 --> 00:07:15,630
+that whenever it's evaluated and star any time t,
+
+160
+00:07:15,630 --> 00:07:17,010
+it's equal to 0.
+
+161
+00:07:17,010 --> 00:07:20,310
+That's an example of a boundary where in this case
+
+162
+00:07:20,310 --> 00:07:23,070
+a kind of barrier which we can't cross.
+
+163
+00:07:23,070 --> 00:07:26,070
+Now of course that solution is only a solution for t
+
+164
+00:07:26,070 --> 00:07:27,150
+greater than 0.
+
+165
+00:07:27,150 --> 00:07:29,880
+And it's only a solution above the barrier for z
+
+166
+00:07:29,880 --> 00:07:31,440
+greater than z star.
+
+167
+00:07:31,440 --> 00:07:34,200
+You'll notice that this expression here we've
+
+168
+00:07:34,200 --> 00:07:36,930
+written down doesn't exist for negative times.
+
+169
+00:07:36,930 --> 00:07:38,700
+That's OK because the square root.
+
+170
+00:07:38,700 --> 00:07:41,520
+But it does exist for all values of z that
+
+171
+00:07:41,520 --> 00:07:43,230
+is this expression makes sense.
+
+172
+00:07:43,230 --> 00:07:45,750
+But it doesn't really solve our differential equation
+
+173
+00:07:45,750 --> 00:07:49,950
+because if z were below z star, the probability has already
+
+174
+00:07:49,950 --> 00:07:52,740
+gone to 0, and we wouldn't want to get something negative.
+
+175
+00:07:52,740 --> 00:07:55,770
+The complete solution to this boundary value problem
+
+176
+00:07:55,770 --> 00:08:01,830
+is that the probability to survive to z and t
+
+177
+00:08:01,830 --> 00:08:03,810
+is given by 1 over the square root of 2 pi
+
+178
+00:08:03,810 --> 00:08:06,300
+t times this expression.
+
+179
+00:08:06,300 --> 00:08:10,890
+Minus the Gaussian exponential with the distance
+
+180
+00:08:10,890 --> 00:08:12,580
+measured from the image charge.
+
+181
+00:08:12,580 --> 00:08:16,530
+But if z is below is z star or equal, then the value is 0.
+
+182
+00:08:16,530 --> 00:08:19,050
+
+
+183
+00:08:19,050 --> 00:08:23,190
+Now this was for a symmetric random walk
+
+184
+00:08:23,190 --> 00:08:25,430
+where there was no drifter.
+

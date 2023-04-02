@@ -1,0 +1,321 @@
+
+PROFESSOR: So let's look systematically
+at systems of linear equations and see
+how we can classify them.
+And what you'll see is that this matches closely
+with the kind of classification we
+looked at in the structure of financial markets.
+Are they complete?
+Or are they incomplete?
+What's the rank of the payoff matrix?
+Are there unique solutions?
+Are there redundant securities?
+So in general, there are different kinds
+of systems of linear equations.
+And we have cases where we have either homogeneous
+or inhomogeneous equations.
+So in the first case, we have an inhomogeneous equation
+of the form that we looked at when
+we tried to solve a matrix times a vector equals
+a fixed constant, b.
+And the question to solve is, can we find a solution v such
+that when acted on by M, we get the particular target--
+actually, the payoff vector-- b.
+Now, there's special case when b is equal to 0.
+We have what's called a homogeneous equation,
+because every term in it has a v. 0 is
+0 times v. And in this case, we're asking,
+is v in the kernel?
+And the reason that that's important
+is that if we have a solution to the second equation,
+and acting on b is equal to 0, then
+we can add any multiple of that to the solution
+in the first equation, and get another equation.
+So in general, we've got s equations wit n unknowns,
+and we want to know when we have a solution.
+And roughly what we expect to find
+is that it depends on whether we have
+the same number of equations as unknowns,
+whether we have more unknowns, or whether we have fewer.
+So what we'd roughly expect it that if s and n are equal,
+if we have as many equations as unknowns,
+that there should be a unique solution.
+And if we've got more equations than we do variables,
+then we're not going to find any solutions at all.
+Or generally, that system would be overdetermined
+and overconstrained.
+And if we have fewer equations than variables,
+we'd expect there to be infinitely many solutions.
+So that intuition is correct, but it's not
+enough to count the variables.
+We need to look at the rank.
+We need to ask about the number of independent equations,
+and the number of independent rows and columns
+in our linear transformation.
+So the exact situation depends on the dimension
+of the image of the kernel.
+And remember, those are related through the Fundamental Theorem
+of Linear Transformations.
+So let's go through some cases.
+First of all, suppose that s is equal to n.
+So we have the same number of equations as unknowns.
+The matrix M is square.
+And then there are two subcases.
+We saw that the matrix might be invertible.
+Or even if it's square, it might not be invertible.
+Invertible means that all the rows and columns
+are linearly independent.
+In a securities market, it means that there
+are as many securities as there are states with payoffs
+in the world, and that none of the securities
+is redundant, that none can be written in terms of the others.
+In that case, we have a unique way to replicate the payoff.
+Not only can we find a solution, that solution is unique
+and we get it by inverting the matrix.
+So it's invertible, easy, multiplying left and right here
+by an inverse, we get a solution.
+Now, the determinant of M is 0, if the matrix is not
+invertible, if there is a linear dependence among the rows
+or columns, then we don't have a unique solution.
+But what we do have is a nonzero kernel.
+So there's going to be some nontrivial vector that's
+taken in to 0 by the action of the matrix.
+Now, if we look at that in terms of the Fundamental Theorem
+of Linear Transformations, we can
+see that this tells us that the dimension of the image of M
+has to be the rank, and that's going to be n--
+the dimension of our security space or our original space--
+minus the dimension of the kernel.
+And that's going to be smaller, because our assumption is
+that this number is bigger than 0.
+So subtracting a number bigger than 0 leads
+to a number smaller than n.
+And that's going to be equal to s.
+So we end up with the case where in effect, n, the rank,
+is going to be less than s.
+So what that means is that we've got some vectors b for which
+there won't be a solution.
+There's some vectors that we can reach.
+There's certain cases where we can solve the equation.
+But we can't solve it for every possible vector,
+only for a subset of the vectors.
+And the size of the subset depends
+on the size of the kernel of M. The bigger the kernel of M is,
+the smaller the image of M is.
+
+So let's look at how to do this in R.
+And I'll let you run these commands.
+These are just simple things that you
+can run in the command line.
+It's mostly about the case where we have a nonsingular
+matrix that we just looked at.
+So here's a system of linear equations.
+These are three equations, three unknowns.
+The matrix is nonsingular.
+The function solve(M) inverts the matrix.
+If we say solve(M,b), it gives us the unique solution.
+And it's set up in R. I've constructed a matrix.
+I've written down a vector, b.
+I asked to solve for v. And here I get my answer
+in decimal form, or in happier notation,
+we can just say v is minus 1/3, 2/3, 0.
+And you can check that that satisfies the equations above.
+What we also found, though, of course,
+is it's a unique solution.
+So we know that there are no others,
+because of our properties of M.
+Now, what about the case where we have a square matrix
+but it's singular?
+So this is the other system we looked at earlier.
+So in this case, I have the nine down here.
+Rows and columns are linearly dependent.
+And there's a technique for solving these equations,
+as well, numerically.
+So we can use this function qr to get a particular solution,
+if it exists.
+So what we do is, I construct a new matrix.
+This is M1, in this case.
+b is going to be the same vector that we had before,
+and we'd like to solve it.
+So if we try to solve using our previous method,
+we get an error message.
+And it tells us, guess what?
+Matrix is probably singular, determinant's probably 0.
+But if we use qr.solve, then we get a warning message
+that the matrix is singular, but we nevertheless
+can get a solution.
+So the solution that we have, the particular solution
+that we have, depends on how we do it.
+Because remember, if we have a particular solution,
+if there's a b, it does hit the particular b in question,
+it's not uniquely determined, because we could
+add any element of the kernel.
+So you can check the kernel of z is this factor.
+As I said, the central column is the sum
+of the first and third columns.
+So that's what z tells us.
+And v, here's my particular choice, 0, 0, 1/3.
+You can check that that satisfies the equation
+that we need.
+When I look in R, it found a different solution.
+So this one is not as pretty as mine is,
+but it's equally valid.
+How do we know that?
+Two different ways.
+Number one, we can act on it with M
+and verify that it satisfies the equation.
+Or, number two, we can take the difference between the results
+and find out if they differ by an element of the kernel.
+Now, suppose that we've got more equations than unknowns.
+Then in general, there aren't going to be any solutions,
+or there won't be solutions for at least some values of b.
+But again, we need to be careful about not just counting
+variables, we need n equations, we need
+to ask if they're independent.
+After all, if I've got two more equations than unknowns,
+but those equations are the same equation
+or they're multiples of the same equation, that doesn't really
+count.
+So we get at that through looking at the rank.
+So what's going on in this case is
+we've got a smaller space going into a bigger one.
+So we can't hit everything.
+If we start with a three dimensional space
+and we map it into a four dimensional space,
+the most we can hope to hit is a three dimensional subspace.
+There's always going to be something left over.
+If we look at this in terms of our Fundamental Theorem
+of Linear Transformations and we write this out,
+we can see that the dimension of the image
+has to be less than the entire size of the space.
+But intuitively, it's because we're taking a small space
+and putting it into a bigger one.
+So there's no general solution.
+That means that there's at least a lot--
+an infinite number of factors that we can't solve for.
+But we might happen to find a specific one, depending
+on the particular b that we have.
+If it's within the image, then we can find a solution.
+So here's an example in R. Let's take a look
+at four equations and two unknowns.
+So in this case, qr.solve will give us a particular solution,
+if it exists.
+But we need to check, because it will sometimes output
+things that aren't solutions.
+So we need to check by substitution.
+And in this case, there is a solution
+for this particular set of coefficients,
+this b on the right hand side, there is a solution.
+And you can check that it's 3, minus 2.
+But we do need to check that, because it's possible
+that we could get something different.
+And I have an example of that over here,
+where we have a good answer.
+And then a case where if I change this 5 into a 6, which
+I've done over here numerically, I
+get R also gives me an answer.
+And if you substituted it and you find guess what,
+it doesn't solve the equation.
+So there's a specific algorithm in qr.solve which does generate
+an output, even when it shouldn't.
+So it's on you to check and make sure that it actually works.
+
+Finally, let's take a look at case 3.
+When there are more unknowns than equations,
+than there are multiple solutions.
+This time, we've got a big space going into a smaller one.
+So think about our first example.
+We've got four securities going into a three dimensional space.
+Maybe I've got 10 going into a three dimensional space.
+So if the space is genuinely larger,
+we have a really big space going into a smaller one,
+then some vectors have to get mapped to 0.
+If we again look at our dimension formula
+from the Fundamental Theorem of Linear Transformations, what
+we can see is that the dimension of the kernel
+has to be bigger than 0.
+Now, if the dimension of the kernel is bigger than 0,
+that means that any solutions that we do find are not unique.
+It means there's an infinite number of them.
+So what it means is if we can find a set of basis factors
+for the kernel, say it's one dimensional,
+say it's three dimensional, we can
+add any linear combination of basis vectors in the kernel
+to any particular solution and get another solution.
+So it's a particular kind of infinity.
+We have an infinite number of solutions
+because we can add a finite dimensional vector
+space to it, which is equal to the dimension of the kernel.
+So if the kernel is one dimensional,
+we have an infinite number of solutions,
+but we have a one parameter family for that solutions.
+If the kernel is two dimensional,
+we have a two parameter family of solutions.
+So there are two independent parameters, each of which
+could take an infinity of values,
+but it's not just anything goes.
+
+Here's an example in R. Let's take
+a look at the transpose of the previous matrix, why not?
+In this case, we've got two equations and four unknowns.
+Before, we had four equations and two unknowns.
+So here's the system of linear equations we'd like to solve.
+The qr.solve function does give us a particular solution
+that we can work with.
+But now we also need to solve the kernel.
+Now if we do that and we solve for the kernel numerically,
+again, there's not a unique way to write it down.
+There are all kinds of different choices
+you can make for basis factors.
+And when we do it by hand, we tend to take easy things.
+These are the ones that I found.
+And I like them, because they've got integer entries
+and they've got a bunch of zeros.
+That makes it easy to check, and they look nice.
+However, if you do it in R, you can get something like this.
+Which, it turns out, there's a zero entry.
+It's equally valid, but it looks a little bit messier.
+However, they span the same space.
+And given any particular solution,
+such as this one, whether we find it
+by I, which is easier to do for this set of equations,
+or if we find it numerically by applying qr.solve,
+once we have that particular solution,
+we have a two parameter family general solution.
+We can add some constant times this basis factor
+plus the other constants this basis factor.
+Or, if you prefer to use these two vectors as a basis,
+we get the same thing.
+This kernel function is not built into R.
+There's an example of it I can show you.
+We can take a look with the definition of kernel
+by taking a look at adapting the eigenvalue function.
+This turns out to give us a nice view of the kernel, because we
+transfer this into a problem where we can think
+of the kernel being related to the eigenvectors
+of a different linear transformation.
+So the basis might be inconvenient,
+but if they're not 2 by 2 matrices or 2 by 4 or 4
+by 2 matrices, where you can look at it,
+squint a little bit, and guess what the kernel is,
+you may need to resort to numerical methods
+or to other algorithms, and that's completely fine
+in larger case.
+It's really except for small cases,
+you wouldn't want to do that.
+But conceptually, the idea is exactly the same.
+So what we've done is we've classified different kinds,
+different categories of systems of linear equations,
+and their solutions.
+And we've seen that these correspond
+to the different cases that we want that,
+when we examined questions of market completeness--
+is s bigger or smaller than n?
+What's the rank the payoff matrix?
+When we looked at whether there are solutions--
+what's the image of the payoff matrix?
+What's the kernel of the payoff matrix?
+Are there redundant securities?
+These are all encompassed by the same questions
+that we asked whenever we want to solve any simple system
+of linear equations.

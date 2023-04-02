@@ -1,0 +1,448 @@
+0
+00:00:00,000 --> 00:00:01,332
+
+
+1
+00:00:01,332 --> 00:00:03,540
+PROFESSOR: Let's look a bit more about option pricing
+
+2
+00:00:03,540 --> 00:00:06,150
+in the presence of boundaries and barriers.
+
+3
+00:00:06,150 --> 00:00:10,590
+So we've seen that usually in a partial differential
+
+4
+00:00:10,590 --> 00:00:14,550
+equation where a derivative value is somewhat universal,
+
+5
+00:00:14,550 --> 00:00:17,370
+it really depends on what the underlying is
+
+6
+00:00:17,370 --> 00:00:20,460
+and the relationship between the risk factors and the underlying
+
+7
+00:00:20,460 --> 00:00:22,320
+and the derivative.
+
+8
+00:00:22,320 --> 00:00:24,322
+But the boundary conditions matter a lot,
+
+9
+00:00:24,322 --> 00:00:26,280
+and they determine what kind of option we have.
+
+10
+00:00:26,280 --> 00:00:28,920
+So we have vanilla options, puts and calls,
+
+11
+00:00:28,920 --> 00:00:32,380
+with our traditional payoffs above or below a strike price.
+
+12
+00:00:32,380 --> 00:00:35,370
+But there are all kinds of other options, usually called
+
+13
+00:00:35,370 --> 00:00:38,400
+exotic options if they're not vanilla options.
+
+14
+00:00:38,400 --> 00:00:41,280
+And they may depend on other conditions that
+
+15
+00:00:41,280 --> 00:00:46,110
+could happen in time, they could depend on the path of s,
+
+16
+00:00:46,110 --> 00:00:49,680
+and they might involve looking at specific events or even
+
+17
+00:00:49,680 --> 00:00:52,080
+their lookback options, whose value depends
+
+18
+00:00:52,080 --> 00:00:54,780
+on the entire past trajectory of s.
+
+19
+00:00:54,780 --> 00:00:57,190
+For example, it could depend on the maximum that
+
+20
+00:00:57,190 --> 00:01:00,120
+s during its lifetime, which would not
+
+21
+00:01:00,120 --> 00:01:02,310
+be known until expiration.
+
+22
+00:01:02,310 --> 00:01:05,190
+So let's take a look at an example here called
+
+23
+00:01:05,190 --> 00:01:06,090
+a trigger option.
+
+24
+00:01:06,090 --> 00:01:12,150
+So I'd like to assume that s is given by a usual geometric
+
+25
+00:01:12,150 --> 00:01:13,230
+Brownian motion.
+
+26
+00:01:13,230 --> 00:01:16,110
+And this trigger option gives the owner
+
+27
+00:01:16,110 --> 00:01:18,480
+the right, but not the obligation,
+
+28
+00:01:18,480 --> 00:01:22,000
+to buy the underlying stock at a strike price K
+
+29
+00:01:22,000 --> 00:01:26,070
+if the stock value exceeds another value called
+
+30
+00:01:26,070 --> 00:01:29,140
+the trigger X at expiration.
+
+31
+00:01:29,140 --> 00:01:32,340
+So the underlying follows the Ito process, dS over s
+
+32
+00:01:32,340 --> 00:01:35,160
+equals mu dt plus sigma dB.
+
+33
+00:01:35,160 --> 00:01:40,930
+What PDE does the option satisfy, and what's its price?
+
+34
+00:01:40,930 --> 00:01:42,840
+So let me give you one hint, which
+
+35
+00:01:42,840 --> 00:01:46,620
+is what you might want to do is sketch the option payoff.
+
+36
+00:01:46,620 --> 00:01:48,420
+And you could even ask, could this
+
+37
+00:01:48,420 --> 00:01:51,602
+be replicated by another series of contracts?
+
+38
+00:01:51,602 --> 00:01:53,310
+So you might consider that we're thinking
+
+39
+00:01:53,310 --> 00:01:58,770
+about-- the generic call option would have a payoff
+
+40
+00:01:58,770 --> 00:02:01,880
+function that looks like this.
+
+41
+00:02:01,880 --> 00:02:05,325
+A function that had a strike price at X
+
+42
+00:02:05,325 --> 00:02:06,950
+would have a payoff function that looks
+
+43
+00:02:06,950 --> 00:02:08,960
+like this if it were a call.
+
+44
+00:02:08,960 --> 00:02:10,910
+But this one is a little bit different.
+
+45
+00:02:10,910 --> 00:02:14,510
+The payoff is the payoff above K,
+
+46
+00:02:14,510 --> 00:02:18,860
+but only if the price exceeds X. So
+
+47
+00:02:18,860 --> 00:02:22,140
+take a moment to see if you can map it out and draw a picture.
+
+48
+00:02:22,140 --> 00:02:25,100
+And if you can solve the equation, even better.
+
+49
+00:02:25,100 --> 00:02:26,470
+I'll be back in just a moment.
+
+50
+00:02:26,470 --> 00:02:39,943
+
+
+51
+00:02:39,943 --> 00:02:42,290
+So first, the payoff.
+
+52
+00:02:42,290 --> 00:02:46,810
+The payoff should-- let's draw this in red, I guess.
+
+53
+00:02:46,810 --> 00:02:54,670
+So the payoff is going to be 0 until we get X.
+
+54
+00:02:54,670 --> 00:02:57,190
+Because if we're below X, we don't get anything.
+
+55
+00:02:57,190 --> 00:03:01,000
+And from that point forward, the payoff
+
+56
+00:03:01,000 --> 00:03:09,240
+is the same we would have had here, that we would have had
+
+57
+00:03:09,240 --> 00:03:13,960
+for the ordinary call option.
+
+58
+00:03:13,960 --> 00:03:22,890
+So one way to say this is that the payoff is
+
+59
+00:03:22,890 --> 00:03:30,390
+equal to the payoff for ST greater than x
+
+60
+00:03:30,390 --> 00:03:38,350
+is going to be ST minus K, but only for ST greater than x.
+
+61
+00:03:38,350 --> 00:03:40,270
+Well, another way we can write that
+
+62
+00:03:40,270 --> 00:03:51,900
+is we can say that ST minus K is equal to ST minus X plus X
+
+63
+00:03:51,900 --> 00:03:57,850
+minus K. So that is to say, the first part,
+
+64
+00:03:57,850 --> 00:04:01,920
+ST minus X would be the payoff if the strike price
+
+65
+00:04:01,920 --> 00:04:07,590
+were equal to X. That is, that would be this payoff function.
+
+66
+00:04:07,590 --> 00:04:09,690
+But that would be a little bit too low, right?
+
+67
+00:04:09,690 --> 00:04:12,390
+We have an extra piece that we're missing here.
+
+68
+00:04:12,390 --> 00:04:17,940
+And that distance, because this has slope 1, is X minus K.
+
+69
+00:04:17,940 --> 00:04:20,459
+And that says that if we're below, we get nothing.
+
+70
+00:04:20,459 --> 00:04:24,040
+But if we're above, we get X minus K units.
+
+71
+00:04:24,040 --> 00:04:28,650
+Hmm, that sounds like a digital option or a binary option.
+
+72
+00:04:28,650 --> 00:04:32,230
+So that says that we could replicate.
+
+73
+00:04:32,230 --> 00:04:34,530
+So this can be replicated--
+
+74
+00:04:34,530 --> 00:04:37,450
+
+
+75
+00:04:37,450 --> 00:04:44,900
+the payoff can be replicated with an option
+
+76
+00:04:44,900 --> 00:05:08,872
+of strike X plus X minus K binary options of strike K.
+
+77
+00:05:08,872 --> 00:05:10,140
+Oops, sorry.
+
+78
+00:05:10,140 --> 00:05:12,210
+I didn't mean to block that out.
+
+79
+00:05:12,210 --> 00:05:16,030
+So the solution is just going to be the sum,
+
+80
+00:05:16,030 --> 00:05:18,140
+and we've computed those in class.
+
+81
+00:05:18,140 --> 00:05:20,380
+So we can write down the Black-Scholes solution
+
+82
+00:05:20,380 --> 00:05:24,830
+plus the solution to the binary part.
+
+83
+00:05:24,830 --> 00:05:29,500
+So our answer is that the value of our derivative V
+
+84
+00:05:29,500 --> 00:05:37,090
+is going to be S times phi of T plus minus X
+
+85
+00:05:37,090 --> 00:05:49,400
+e to the minus RT times phi of d minus plus X
+
+86
+00:05:49,400 --> 00:05:54,080
+minus K times the solution for a binary option,
+
+87
+00:05:54,080 --> 00:05:59,440
+e to the minus RT phi of d minus.
+
+88
+00:05:59,440 --> 00:06:02,740
+I've taken little t to be equal to 0 for our current time,
+
+89
+00:06:02,740 --> 00:06:05,020
+and big T is the time to maturity.
+
+90
+00:06:05,020 --> 00:06:07,270
+And then you notice there's a small cancellation
+
+91
+00:06:07,270 --> 00:06:08,870
+between these two terms.
+
+92
+00:06:08,870 --> 00:06:18,800
+So this is equal to S phi of T plus minus K e
+
+93
+00:06:18,800 --> 00:06:24,890
+to the minus RT phi of t minus--
+
+94
+00:06:24,890 --> 00:06:26,600
+where we need to make sure that we
+
+95
+00:06:26,600 --> 00:06:30,230
+use a d plus and a d minus that are appropriate for the strike
+
+96
+00:06:30,230 --> 00:06:36,380
+price X. So where d plus minus are
+
+97
+00:06:36,380 --> 00:06:45,450
+equal to the log of S over X e to the minus RT divided
+
+98
+00:06:45,450 --> 00:06:53,400
+by sigma square root of T plus or minus 1/2 sigma squared
+
+99
+00:06:53,400 --> 00:06:56,010
+of T. And as usual, phi represents
+
+100
+00:06:56,010 --> 00:06:59,440
+the Gaussian cumulative distribution function.
+
+101
+00:06:59,440 --> 00:07:01,680
+Now, the lesson here is that we look
+
+102
+00:07:01,680 --> 00:07:05,610
+at what the payoff is, we check the boundary conditions.
+
+103
+00:07:05,610 --> 00:07:08,880
+And wherever possible, we use our existing solutions
+
+104
+00:07:08,880 --> 00:07:11,610
+to Black-Scholes to combine them in a way--
+
+105
+00:07:11,610 --> 00:07:14,190
+because we know that we can always
+
+106
+00:07:14,190 --> 00:07:15,900
+take a linear combination of solutions
+
+107
+00:07:15,900 --> 00:07:17,400
+to the partial differential equation
+
+108
+00:07:17,400 --> 00:07:20,460
+to get another solution to the partial differential equation.
+
+109
+00:07:20,460 --> 00:07:22,980
+What we need is to be able to match the boundary conditions.
+
+110
+00:07:22,980 --> 00:07:26,020
+And this equation matches the boundary conditions,
+
+111
+00:07:26,020 --> 00:07:30,500
+which are the specified payoff at expiration.
+

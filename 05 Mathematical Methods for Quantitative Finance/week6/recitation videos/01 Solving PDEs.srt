@@ -1,0 +1,996 @@
+0
+00:00:00,000 --> 00:00:00,707
+
+
+1
+00:00:00,707 --> 00:00:03,290
+PROFESSOR: One common approach to solving partial differential
+
+2
+00:00:03,290 --> 00:00:05,390
+equations is to make an educated guess
+
+3
+00:00:05,390 --> 00:00:08,222
+as to the form of the correct answer and see where it leads.
+
+4
+00:00:08,222 --> 00:00:09,680
+Now, this is a little bit different
+
+5
+00:00:09,680 --> 00:00:12,210
+from the special example that we had before,
+
+6
+00:00:12,210 --> 00:00:15,420
+where the example appeared full blown out of thin air,
+
+7
+00:00:15,420 --> 00:00:18,020
+we checked that at it worked, it satisfied the equations,
+
+8
+00:00:18,020 --> 00:00:19,018
+and we were done.
+
+9
+00:00:19,018 --> 00:00:21,560
+What do we do when we face other differential equations where
+
+10
+00:00:21,560 --> 00:00:23,660
+we're not given an answer completely?
+
+11
+00:00:23,660 --> 00:00:26,150
+Well, what we do is we look for the structure.
+
+12
+00:00:26,150 --> 00:00:28,940
+And this is one trick that works in many cases,
+
+13
+00:00:28,940 --> 00:00:31,040
+but by no means all, but it does come up
+
+14
+00:00:31,040 --> 00:00:32,670
+in some of our recent discussions.
+
+15
+00:00:32,670 --> 00:00:34,850
+So I thought we'd do a couple of examples together.
+
+16
+00:00:34,850 --> 00:00:37,280
+One of the methods is to try a form
+
+17
+00:00:37,280 --> 00:00:40,550
+where we might have a simple form where
+
+18
+00:00:40,550 --> 00:00:44,720
+the trial function, sometimes called ansatz,
+
+19
+00:00:44,720 --> 00:00:46,765
+factorizes into two forms.
+
+20
+00:00:46,765 --> 00:00:48,140
+So for example, suppose we didn't
+
+21
+00:00:48,140 --> 00:00:50,240
+know about that exponential solution.
+
+22
+00:00:50,240 --> 00:00:53,900
+We had this equation, we noticed that it has two terms-- one's
+
+23
+00:00:53,900 --> 00:00:56,360
+in t, one is in z.
+
+24
+00:00:56,360 --> 00:00:58,230
+The coefficients are constant.
+
+25
+00:00:58,230 --> 00:01:02,770
+So suppose we try a function.
+
+26
+00:01:02,770 --> 00:01:08,640
+Let's try a function of the form p of z and t
+
+27
+00:01:08,640 --> 00:01:16,240
+is f of z g of t, where f and z are unknown functions,
+
+28
+00:01:16,240 --> 00:01:19,460
+but they're each a function of a single variable.
+
+29
+00:01:19,460 --> 00:01:22,700
+So our goal is to see if we can simplify things.
+
+30
+00:01:22,700 --> 00:01:24,430
+This is a much simpler structure.
+
+31
+00:01:24,430 --> 00:01:28,600
+We can get individual equations for f and g, each of which
+
+32
+00:01:28,600 --> 00:01:31,060
+is an ordinary differential equation, not
+
+33
+00:01:31,060 --> 00:01:32,870
+a partial differential equation.
+
+34
+00:01:32,870 --> 00:01:35,000
+And then we impose boundary conditions,
+
+35
+00:01:35,000 --> 00:01:36,760
+which might give us the answer right away,
+
+36
+00:01:36,760 --> 00:01:40,060
+or it might require taking a superposition of solutions
+
+37
+00:01:40,060 --> 00:01:42,820
+using linearity-- that is, to take
+
+38
+00:01:42,820 --> 00:01:45,400
+different solutions of the same general form
+
+39
+00:01:45,400 --> 00:01:46,910
+and adding them together.
+
+40
+00:01:46,910 --> 00:01:49,310
+So let's take a look in this particular example.
+
+41
+00:01:49,310 --> 00:01:52,660
+If I turn the crank, get we compute
+
+42
+00:01:52,660 --> 00:01:53,880
+the partial derivatives.
+
+43
+00:01:53,880 --> 00:01:57,460
+Partial derivative of p with respect to t
+
+44
+00:01:57,460 --> 00:02:02,830
+is f of z is going to be constant times derivative of g.
+
+45
+00:02:02,830 --> 00:02:05,320
+And the second partial derivative
+
+46
+00:02:05,320 --> 00:02:09,979
+of p with respect to z squared is going
+
+47
+00:02:09,979 --> 00:02:13,310
+to be f double prime of z--
+
+48
+00:02:13,310 --> 00:02:16,100
+just a second derivative of the function f--
+
+49
+00:02:16,100 --> 00:02:18,350
+times g of z.
+
+50
+00:02:18,350 --> 00:02:22,200
+So now if we plug these into our differential equation,
+
+51
+00:02:22,200 --> 00:02:22,890
+what do we get?
+
+52
+00:02:22,890 --> 00:02:32,770
+Well, we get that f times g prime
+
+53
+00:02:32,770 --> 00:02:38,770
+has to be equal to 1/2 f double prime times g.
+
+54
+00:02:38,770 --> 00:02:43,650
+And let's divide the whole thing through by fg--
+
+55
+00:02:43,650 --> 00:02:45,900
+by p, that is--
+
+56
+00:02:45,900 --> 00:02:46,530
+by fg.
+
+57
+00:02:46,530 --> 00:02:49,070
+
+
+58
+00:02:49,070 --> 00:02:55,270
+If we take this, we can rewrite things in this form.
+
+59
+00:02:55,270 --> 00:03:04,920
+Then we have g prime of t divided by g of t is 1/2
+
+60
+00:03:04,920 --> 00:03:11,880
+f double prime of z divided by f of z.
+
+61
+00:03:11,880 --> 00:03:14,640
+So this follows just from our differential equation.
+
+62
+00:03:14,640 --> 00:03:18,210
+We took the original equation, we substituted
+
+63
+00:03:18,210 --> 00:03:21,690
+in this specific form, we get this expression,
+
+64
+00:03:21,690 --> 00:03:26,010
+fg prime is 1/2 f double prime g.
+
+65
+00:03:26,010 --> 00:03:29,100
+We divide through by f and g to simplify things.
+
+66
+00:03:29,100 --> 00:03:32,820
+And you notice what happens here in this expression,
+
+67
+00:03:32,820 --> 00:03:36,390
+I have on the left side, I have g prime over g.
+
+68
+00:03:36,390 --> 00:03:38,400
+They're both functions of t only.
+
+69
+00:03:38,400 --> 00:03:40,020
+That's why I did the division.
+
+70
+00:03:40,020 --> 00:03:44,430
+On the right-hand side, those are functions of z only.
+
+71
+00:03:44,430 --> 00:03:47,940
+So how can I have a function of t equals a function of z
+
+72
+00:03:47,940 --> 00:03:50,640
+for all values of t and z?
+
+73
+00:03:50,640 --> 00:03:53,600
+Can't really work unless they're both constant.
+
+74
+00:03:53,600 --> 00:03:56,190
+So we're going to do is we're going to set them both equal
+
+75
+00:03:56,190 --> 00:03:57,460
+to a constant.
+
+76
+00:03:57,460 --> 00:04:00,450
+And that will give us one differential equation for g,
+
+77
+00:04:00,450 --> 00:04:02,910
+another one for f, and then when we solve them,
+
+78
+00:04:02,910 --> 00:04:06,540
+we can multiply f and g together, and we're done.
+
+79
+00:04:06,540 --> 00:04:10,990
+So let's call this constant, let's say we'll give it a name.
+
+80
+00:04:10,990 --> 00:04:13,090
+Let's call this lambda.
+
+81
+00:04:13,090 --> 00:04:15,820
+And now we have two differential equations.
+
+82
+00:04:15,820 --> 00:04:25,430
+So I've got g prime of t is equal to lambda g of t.
+
+83
+00:04:25,430 --> 00:04:26,950
+That's an easy equation to solve.
+
+84
+00:04:26,950 --> 00:04:28,600
+That's just an exponential.
+
+85
+00:04:28,600 --> 00:04:31,720
+g of t is equal to some constant--
+
+86
+00:04:31,720 --> 00:04:36,340
+let me call c0 e to the minus lambda t.
+
+87
+00:04:36,340 --> 00:04:39,730
+That's our first equation for g, and we're done.
+
+88
+00:04:39,730 --> 00:04:41,460
+What about f?
+
+89
+00:04:41,460 --> 00:04:43,210
+Just as easy.
+
+90
+00:04:43,210 --> 00:04:51,130
+f double prime of z is going to be equal to 2--
+
+91
+00:04:51,130 --> 00:04:54,730
+from the 1/2 in the diffusion equation-- times lambda times
+
+92
+00:04:54,730 --> 00:04:56,270
+f of z.
+
+93
+00:04:56,270 --> 00:04:58,540
+So I've got 2 lambda instead of lambda,
+
+94
+00:04:58,540 --> 00:05:00,490
+and I have 2 derivatives with respect
+
+95
+00:05:00,490 --> 00:05:03,340
+to z instead of one derivative with respect to t,
+
+96
+00:05:03,340 --> 00:05:05,080
+but the equation is very similar.
+
+97
+00:05:05,080 --> 00:05:11,920
+And its solution is f of z has two possible terms, two
+
+98
+00:05:11,920 --> 00:05:14,950
+constants of integration, c1 times
+
+99
+00:05:14,950 --> 00:05:20,740
+e to the square root of 2 lambda t
+
+100
+00:05:20,740 --> 00:05:33,550
+plus c2 times e to the minus square root of 2 lambda t.
+
+101
+00:05:33,550 --> 00:05:36,430
+Now, if lambda were a negative number, then
+
+102
+00:05:36,430 --> 00:05:38,410
+this would have been sines and cosines.
+
+103
+00:05:38,410 --> 00:05:40,558
+Now we don't need to worry about the square root.
+
+104
+00:05:40,558 --> 00:05:42,850
+We would have something times sine plus something times
+
+105
+00:05:42,850 --> 00:05:46,400
+cosine with an arbitrary linear combination of the two.
+
+106
+00:05:46,400 --> 00:05:51,040
+So e0, c1, c2, they're constants of integration.
+
+107
+00:05:51,040 --> 00:05:54,850
+Any linear combination of the terms f of z, g of t
+
+108
+00:05:54,850 --> 00:05:57,690
+will satisfy the conditions.
+
+109
+00:05:57,690 --> 00:06:06,920
+So we can take p of z, t can be f of z g of t.
+
+110
+00:06:06,920 --> 00:06:09,430
+And if we have multiple such terms,
+
+111
+00:06:09,430 --> 00:06:11,193
+we can take a sum over them.
+
+112
+00:06:11,193 --> 00:06:13,360
+And that will automatically satisfy the differential
+
+113
+00:06:13,360 --> 00:06:15,040
+equation, and then we're done.
+
+114
+00:06:15,040 --> 00:06:17,200
+So let's consider an exercise.
+
+115
+00:06:17,200 --> 00:06:21,950
+
+
+116
+00:06:21,950 --> 00:06:24,730
+So let's try a particular form of the solution--
+
+117
+00:06:24,730 --> 00:06:30,130
+in this case, a function not of t times a function of y.
+
+118
+00:06:30,130 --> 00:06:35,290
+But let's try something of this form, where we let v of t and y
+
+119
+00:06:35,290 --> 00:06:40,120
+of the form that it's the exponential of something that's
+
+120
+00:06:40,120 --> 00:06:44,320
+linear in y, so that we can see that it might recover this
+
+121
+00:06:44,320 --> 00:06:47,350
+as a special case when t goes to 0.
+
+122
+00:06:47,350 --> 00:06:53,410
+And where f and g are functions of time alone,
+
+123
+00:06:53,410 --> 00:06:56,350
+and all of the y dependence is here
+
+124
+00:06:56,350 --> 00:07:00,910
+in this exponential to the minus y times f and g.
+
+125
+00:07:00,910 --> 00:07:03,730
+So please take a moment now, try it again.
+
+126
+00:07:03,730 --> 00:07:06,280
+Or if that's what you've already got, hang on.
+
+127
+00:07:06,280 --> 00:07:07,720
+And then we'll take a look through
+
+128
+00:07:07,720 --> 00:07:09,910
+and what happens when we substitute this
+
+129
+00:07:09,910 --> 00:07:10,675
+into our equation.
+
+130
+00:07:10,675 --> 00:07:19,000
+
+
+131
+00:07:19,000 --> 00:07:20,290
+OK, have you got it?
+
+132
+00:07:20,290 --> 00:07:21,850
+Well, what we're going to do is let's
+
+133
+00:07:21,850 --> 00:07:24,850
+compute partial derivatives and then substitute
+
+134
+00:07:24,850 --> 00:07:27,670
+into the equation and see if we can get simplified
+
+135
+00:07:27,670 --> 00:07:30,550
+equations for f and g.
+
+136
+00:07:30,550 --> 00:07:32,000
+Shall we?
+
+137
+00:07:32,000 --> 00:07:34,660
+So computing partial derivatives,
+
+138
+00:07:34,660 --> 00:07:39,940
+we have that partial of V with respect
+
+139
+00:07:39,940 --> 00:07:44,650
+to t in this form is going to be partial--
+
+140
+00:07:44,650 --> 00:07:48,210
+excuse me, it's going to be a regular derivative.
+
+141
+00:07:48,210 --> 00:08:00,160
+It's going to be df dt minus y dg dt acting on V.
+
+142
+00:08:00,160 --> 00:08:01,760
+And the reason for this is because
+
+143
+00:08:01,760 --> 00:08:03,080
+of the exponential form.
+
+144
+00:08:03,080 --> 00:08:04,970
+You remember in our diffusion example,
+
+145
+00:08:04,970 --> 00:08:08,810
+we divided through by e.
+
+146
+00:08:08,810 --> 00:08:11,660
+Here it's helpful if we have a form where everything ends up
+
+147
+00:08:11,660 --> 00:08:13,830
+being proportional in the different terms.
+
+148
+00:08:13,830 --> 00:08:17,300
+So taking derivatives with respect to time, I have this.
+
+149
+00:08:17,300 --> 00:08:18,900
+What about the space derivatives?
+
+150
+00:08:18,900 --> 00:08:25,690
+Well, I have partial of V with respect to y
+
+151
+00:08:25,690 --> 00:08:29,890
+is going to be minus g times V and
+
+152
+00:08:29,890 --> 00:08:34,299
+the second partial derivative of V with respect to y squared.
+
+153
+00:08:34,299 --> 00:08:37,990
+Because remember y, we're linear in the exponent.
+
+154
+00:08:37,990 --> 00:08:44,440
+This is going to be g squared of V. Minus g times minus g
+
+155
+00:08:44,440 --> 00:08:46,160
+just gives us g squared.
+
+156
+00:08:46,160 --> 00:08:48,560
+So now if we take these partial derivatives
+
+157
+00:08:48,560 --> 00:08:51,590
+and we substitute into our original differential equation,
+
+158
+00:08:51,590 --> 00:08:53,500
+what do we get?
+
+159
+00:08:53,500 --> 00:09:04,270
+We get that it's going to have V times
+
+160
+00:09:04,270 --> 00:09:14,670
+df dt minus y dg dt plus 1/2 sigma
+
+161
+00:09:14,670 --> 00:09:27,010
+squared g squared plus alpha yg is equal to 0.
+
+162
+00:09:27,010 --> 00:09:27,910
+Let's rewrite that.
+
+163
+00:09:27,910 --> 00:09:32,170
+Let's notice that we've got terms that are linear in y,
+
+164
+00:09:32,170 --> 00:09:35,470
+like this one and this one, and the others have no explicit
+
+165
+00:09:35,470 --> 00:09:36,220
+y's.
+
+166
+00:09:36,220 --> 00:09:38,770
+So let's group them in terms of those that are linear in y
+
+167
+00:09:38,770 --> 00:09:40,700
+and those that are constants.
+
+168
+00:09:40,700 --> 00:09:44,050
+And we can divide by V-- we're assuming that V is non-zero.
+
+169
+00:09:44,050 --> 00:09:46,850
+After all, we've assumed it's in exponential form.
+
+170
+00:09:46,850 --> 00:09:57,340
+So now we would have df dt plus 1/2 sigma squared
+
+171
+00:09:57,340 --> 00:10:06,700
+g squared plus y times alpha g minus dg dt.
+
+172
+00:10:06,700 --> 00:10:09,480
+
+
+173
+00:10:09,480 --> 00:10:12,350
+And this has to be equal to 0.
+
+174
+00:10:12,350 --> 00:10:15,330
+Well, how can this be equal to 0?
+
+175
+00:10:15,330 --> 00:10:19,030
+It has to be equal to 0 for all t and for all y.
+
+176
+00:10:19,030 --> 00:10:22,590
+So the coefficient of y has to be equal to 0.
+
+177
+00:10:22,590 --> 00:10:26,400
+And then the constant term, this first term in parentheses,
+
+178
+00:10:26,400 --> 00:10:28,660
+has to be equal to 0 separately.
+
+179
+00:10:28,660 --> 00:10:33,960
+So now we have two equations for df dt and for dg dt.
+
+180
+00:10:33,960 --> 00:10:38,430
+Let's do the second one first, because this term has only g's.
+
+181
+00:10:38,430 --> 00:10:41,970
+This one here has a partial of f with respect to t,
+
+182
+00:10:41,970 --> 00:10:44,430
+and it's going to depend on the value of g.
+
+183
+00:10:44,430 --> 00:10:46,020
+We don't know what g is yet.
+
+184
+00:10:46,020 --> 00:10:48,030
+So why don't we solve g by solving
+
+185
+00:10:48,030 --> 00:10:51,060
+this equation, plug g in over here,
+
+186
+00:10:51,060 --> 00:10:53,250
+and then we can solve for f?
+
+187
+00:10:53,250 --> 00:10:56,460
+So these equations are pretty easy.
+
+188
+00:10:56,460 --> 00:10:58,350
+Let's take a look.
+
+189
+00:10:58,350 --> 00:11:02,130
+So taking the g equation first, we're
+
+190
+00:11:02,130 --> 00:11:11,780
+going to have that dg dt is going to be equal to alpha g.
+
+191
+00:11:11,780 --> 00:11:17,480
+And that tells us that g of t is going to be some constant
+
+192
+00:11:17,480 --> 00:11:19,910
+times e to the alpha t.
+
+193
+00:11:19,910 --> 00:11:22,370
+And now remember what our initial conditions were.
+
+194
+00:11:22,370 --> 00:11:29,400
+Our initial conditions said that at time 0,
+
+195
+00:11:29,400 --> 00:11:32,430
+the function should be e to the minus y.
+
+196
+00:11:32,430 --> 00:11:41,070
+That means that g of t should be equal to 1
+
+197
+00:11:41,070 --> 00:11:45,420
+when t is equal to 0, and f of t should be equal to 0
+
+198
+00:11:45,420 --> 00:11:47,130
+when t is equal to 0.
+
+199
+00:11:47,130 --> 00:11:49,960
+So let me just add that up here for discussion
+
+200
+00:11:49,960 --> 00:11:51,570
+and to remind us.
+
+201
+00:11:51,570 --> 00:12:04,240
+This implies f of 0 equals 0, and g of 0
+
+202
+00:12:04,240 --> 00:12:07,250
+has to be equal to 1.
+
+203
+00:12:07,250 --> 00:12:09,810
+So now let's take a look at our special form.
+
+204
+00:12:09,810 --> 00:12:11,280
+And we can see that that's easy.
+
+205
+00:12:11,280 --> 00:12:13,430
+That means that c has to be equal to 1.
+
+206
+00:12:13,430 --> 00:12:22,470
+So this says the g of t is just going to be e to the alpha t.
+
+207
+00:12:22,470 --> 00:12:25,290
+And when t is equal to 0, g is equal to 1.
+
+208
+00:12:25,290 --> 00:12:26,555
+And we're done.
+
+209
+00:12:26,555 --> 00:12:28,680
+Now, let's look at the differential equation for f.
+
+210
+00:12:28,680 --> 00:12:31,390
+
+
+211
+00:12:31,390 --> 00:12:37,000
+Well, we have df dt is going to be equal to minus sigma squared
+
+212
+00:12:37,000 --> 00:12:38,870
+over 2g squared.
+
+213
+00:12:38,870 --> 00:12:41,290
+But we know what g is, we just solved for it.
+
+214
+00:12:41,290 --> 00:12:46,480
+So this is going to be minus sigma squared over 2 e
+
+215
+00:12:46,480 --> 00:12:53,440
+to the 2 alpha t, so I've just put in the explicit form of g
+
+216
+00:12:53,440 --> 00:12:54,920
+squared.
+
+217
+00:12:54,920 --> 00:12:57,760
+And if we want to solve that, that's easy also.
+
+218
+00:12:57,760 --> 00:13:01,930
+If the derivative of f is an exponential, then f
+
+219
+00:13:01,930 --> 00:13:03,130
+is an exponential.
+
+220
+00:13:03,130 --> 00:13:06,610
+We just need to get the constant right.
+
+221
+00:13:06,610 --> 00:13:08,960
+So we're going to have a constant of integration.
+
+222
+00:13:08,960 --> 00:13:14,680
+So this tells us that f is going to be equal to minus--
+
+223
+00:13:14,680 --> 00:13:21,700
+excuse me-- minus sigma squared over 4 alpha e
+
+224
+00:13:21,700 --> 00:13:26,600
+to the 2 alpha t plus a constant.
+
+225
+00:13:26,600 --> 00:13:32,860
+And then f of 0 equals 0 gives us
+
+226
+00:13:32,860 --> 00:13:38,770
+our final form, that f of t, that's to be equal to sigma
+
+227
+00:13:38,770 --> 00:13:46,540
+squared over 4 alpha times 1 minus e to the 2 alpha t.
+
+228
+00:13:46,540 --> 00:13:47,980
+And you can check.
+
+229
+00:13:47,980 --> 00:13:52,190
+When t goes to 0, this exponential goes to 1.
+
+230
+00:13:52,190 --> 00:13:56,060
+1 minus 1 gives 0, and f of t of 0 zero.
+
+231
+00:13:56,060 --> 00:13:58,340
+Now finally, we've got our solution
+
+232
+00:13:58,340 --> 00:13:59,730
+to the original equation.
+
+233
+00:13:59,730 --> 00:14:13,860
+So therefore, the solution is V of y and-- or I guess part of t
+
+234
+00:14:13,860 --> 00:14:14,360
+and y--
+
+235
+00:14:14,360 --> 00:14:16,940
+
+
+236
+00:14:16,940 --> 00:14:19,010
+either way, we know what it is-- is
+
+237
+00:14:19,010 --> 00:14:24,980
+going to be the exponential of sigma squared over
+
+238
+00:14:24,980 --> 00:14:36,260
+4 alpha times 1 minus e to the 2 alpha t minus y times
+
+239
+00:14:36,260 --> 00:14:39,030
+e to the alpha t.
+
+240
+00:14:39,030 --> 00:14:40,020
+And that's it.
+
+241
+00:14:40,020 --> 00:14:43,650
+So it's an exponential with exponentials in the exponent,
+
+242
+00:14:43,650 --> 00:14:46,590
+but it solves our differential equation, as you can check.
+
+243
+00:14:46,590 --> 00:14:48,120
+You can go back to the beginning.
+
+244
+00:14:48,120 --> 00:14:50,610
+It has the desired form that we wanted.
+
+245
+00:14:50,610 --> 00:14:53,100
+And because it satisfies the appropriate boundary
+
+246
+00:14:53,100 --> 00:14:55,710
+conditions, we know that it's the right answer
+
+247
+00:14:55,710 --> 00:14:58,040
+that we were looking for.
+
+248
+00:14:58,040 --> 00:14:59,000
+
+

@@ -1,0 +1,880 @@
+0
+00:00:00,000 --> 00:00:01,180
+
+
+1
+00:00:01,180 --> 00:00:04,000
+PROFESSOR: Ito processes are generalized Brownian motion,
+
+2
+00:00:04,000 --> 00:00:07,780
+and Brownian motion is a continuous time random walk.
+
+3
+00:00:07,780 --> 00:00:10,840
+We've looked at how to describe the evolution of a random walk
+
+4
+00:00:10,840 --> 00:00:13,550
+in differential and in integral form,
+
+5
+00:00:13,550 --> 00:00:15,880
+and now, let's consider an ensemble,
+
+6
+00:00:15,880 --> 00:00:19,090
+a whole set of paths and random walks,
+
+7
+00:00:19,090 --> 00:00:21,220
+like those you can see behind me.
+
+8
+00:00:21,220 --> 00:00:24,670
+We start at a particular point, and each of these paths
+
+9
+00:00:24,670 --> 00:00:27,430
+is an equally probable realization
+
+10
+00:00:27,430 --> 00:00:28,900
+of what might happen.
+
+11
+00:00:28,900 --> 00:00:30,880
+These are paths simulated on a computer,
+
+12
+00:00:30,880 --> 00:00:34,180
+where I have taken the expression for an Ito process,
+
+13
+00:00:34,180 --> 00:00:37,220
+discretized it, and in this case,
+
+14
+00:00:37,220 --> 00:00:39,400
+we can see that, from the same data generating
+
+15
+00:00:39,400 --> 00:00:42,550
+process with the same drift rate and volatility,
+
+16
+00:00:42,550 --> 00:00:44,560
+some of our paths go up.
+
+17
+00:00:44,560 --> 00:00:46,310
+Some of them go down.
+
+18
+00:00:46,310 --> 00:00:51,230
+None of them are straight for any period of time.
+
+19
+00:00:51,230 --> 00:00:54,400
+But if we think about this as time evolves, as we go from
+
+20
+00:00:54,400 --> 00:00:57,910
+left to right, and we think of considering cross sections
+
+21
+00:00:57,910 --> 00:01:02,410
+at a particular point in time, what does the distribution look
+
+22
+00:01:02,410 --> 00:01:03,010
+like?
+
+23
+00:01:03,010 --> 00:01:05,830
+What is the probability of a random walk
+
+24
+00:01:05,830 --> 00:01:08,960
+appearing at a given distance from the origin?
+
+25
+00:01:08,960 --> 00:01:11,540
+Well, from this picture, we can see a few things.
+
+26
+00:01:11,540 --> 00:01:15,910
+First, we can see that the outcomes are indeed random,
+
+27
+00:01:15,910 --> 00:01:17,590
+that whether we're up or down or where
+
+28
+00:01:17,590 --> 00:01:19,630
+we are depends on which paths.
+
+29
+00:01:19,630 --> 00:01:22,420
+So many, many outcomes are possible at any given
+
+30
+00:01:22,420 --> 00:01:23,710
+point in time.
+
+31
+00:01:23,710 --> 00:01:27,100
+We also can see that the width of the distribution
+
+32
+00:01:27,100 --> 00:01:29,710
+grows over time, and there's no surprise.
+
+33
+00:01:29,710 --> 00:01:31,635
+We know that the variance grows linearly,
+
+34
+00:01:31,635 --> 00:01:33,010
+that the standard deviation grows
+
+35
+00:01:33,010 --> 00:01:35,200
+with the square root of time, and that
+
+36
+00:01:35,200 --> 00:01:39,100
+means that individual random walks tend to diffuse away
+
+37
+00:01:39,100 --> 00:01:40,210
+from the origin.
+
+38
+00:01:40,210 --> 00:01:42,850
+The longer time goes on, the greater chance
+
+39
+00:01:42,850 --> 00:01:45,790
+they have of reaching a larger distance
+
+40
+00:01:45,790 --> 00:01:49,570
+and the more improbable it is they're found near the origin,
+
+41
+00:01:49,570 --> 00:01:52,240
+even though the center of the distribution
+
+42
+00:01:52,240 --> 00:01:55,100
+remains the most probable place.
+
+43
+00:01:55,100 --> 00:01:57,880
+So let's think about-- keep this picture in mind,
+
+44
+00:01:57,880 --> 00:02:00,010
+of random walks.
+
+45
+00:02:00,010 --> 00:02:01,840
+We want to think about, for a given
+
+46
+00:02:01,840 --> 00:02:05,240
+point in time, what the distribution of outcomes
+
+47
+00:02:05,240 --> 00:02:05,740
+that is.
+
+48
+00:02:05,740 --> 00:02:08,350
+What the probability distribution function is?
+
+49
+00:02:08,350 --> 00:02:11,170
+What's the likelihood, at a given point in time,
+
+50
+00:02:11,170 --> 00:02:13,780
+that I end up here versus here versus right
+
+51
+00:02:13,780 --> 00:02:16,750
+in the thick of things or right down here?
+
+52
+00:02:16,750 --> 00:02:19,810
+And that, of course, is a function of time,
+
+53
+00:02:19,810 --> 00:02:22,570
+but typically, we think, of course,
+
+54
+00:02:22,570 --> 00:02:24,760
+of starting with initial conditions
+
+55
+00:02:24,760 --> 00:02:26,950
+and letting time evolve forwards.
+
+56
+00:02:26,950 --> 00:02:28,900
+What we're going to see and take advantage
+
+57
+00:02:28,900 --> 00:02:31,540
+of is that, for a given initial condition,
+
+58
+00:02:31,540 --> 00:02:35,120
+we can ask about probabilities of reaching future outcomes.
+
+59
+00:02:35,120 --> 00:02:37,000
+The probability distribution functions
+
+60
+00:02:37,000 --> 00:02:38,770
+we have, though, will be a function
+
+61
+00:02:38,770 --> 00:02:40,930
+of the initial starting point, and the fact
+
+62
+00:02:40,930 --> 00:02:43,540
+that it depends on both endpoints of our walk--
+
+63
+00:02:43,540 --> 00:02:47,380
+the initial starting point and the uncertain future outcome--
+
+64
+00:02:47,380 --> 00:02:50,170
+will be helpful for us for solving the Black-Scholes
+
+65
+00:02:50,170 --> 00:02:52,790
+equation.
+
+66
+00:02:52,790 --> 00:02:56,681
+So let's start with basics--
+
+67
+00:02:56,681 --> 00:03:01,310
+give a random variable, mean mu, and variance sigma squared--
+
+68
+00:03:01,310 --> 00:03:02,530
+which we write in this way.
+
+69
+00:03:02,530 --> 00:03:05,950
+We say that x is drawn from a normal distribution of mean mu
+
+70
+00:03:05,950 --> 00:03:07,450
+and variant sigma squared.
+
+71
+00:03:07,450 --> 00:03:11,350
+We have the familiar Gaussian probability density function.
+
+72
+00:03:11,350 --> 00:03:14,740
+p of x is a normalization factor, one of our square root
+
+73
+00:03:14,740 --> 00:03:15,940
+to pi sigma squared.
+
+74
+00:03:15,940 --> 00:03:19,270
+e to the minus x minus mu quantity squared--
+
+75
+00:03:19,270 --> 00:03:21,760
+that tells us that the center of the peak
+
+76
+00:03:21,760 --> 00:03:23,650
+is when the exponential vanishes,
+
+77
+00:03:23,650 --> 00:03:28,280
+when x equals mu, divided by 2 sigma squared,
+
+78
+00:03:28,280 --> 00:03:31,990
+which tells us-- which normalizes the distribution.
+
+79
+00:03:31,990 --> 00:03:33,820
+Sigma is the width of the distribution,
+
+80
+00:03:33,820 --> 00:03:35,560
+and that tells us that we can think
+
+81
+00:03:35,560 --> 00:03:39,430
+about how far we are from the peak in units of sigma.
+
+82
+00:03:39,430 --> 00:03:42,010
+If our distance from the peak in units of sigma
+
+83
+00:03:42,010 --> 00:03:44,380
+is the same, when we change sigma,
+
+84
+00:03:44,380 --> 00:03:48,190
+the probabilities will be identical.
+
+85
+00:03:48,190 --> 00:03:50,650
+So that's for a single random variable.
+
+86
+00:03:50,650 --> 00:03:54,240
+Now, a time dependence stochastic process,
+
+87
+00:03:54,240 --> 00:03:58,520
+x sub t, which we've seen, which we've looked at,
+
+88
+00:03:58,520 --> 00:04:04,730
+saying Ito process with constant coefficients mu and sigma,
+
+89
+00:04:04,730 --> 00:04:09,590
+as a generalized arithmetic Brownian motion,
+
+90
+00:04:09,590 --> 00:04:14,810
+has variants sigma squared t, and its got mean mu t.
+
+91
+00:04:14,810 --> 00:04:17,240
+That is, the mean grows linearly with time.
+
+92
+00:04:17,240 --> 00:04:21,192
+The variance grows also linearly with time.
+
+93
+00:04:21,192 --> 00:04:22,150
+So what does that mean?
+
+94
+00:04:22,150 --> 00:04:25,730
+That means xt, the end point, the distance we've
+
+95
+00:04:25,730 --> 00:04:28,910
+traveled from the initial point, is a Gaussian distributed
+
+96
+00:04:28,910 --> 00:04:29,990
+random variable.
+
+97
+00:04:29,990 --> 00:04:34,280
+That's true for all time scales t, from dt infinitesimal
+
+98
+00:04:34,280 --> 00:04:36,290
+to macroscopic time scales, and that
+
+99
+00:04:36,290 --> 00:04:38,660
+means we know what the probability distribution is
+
+100
+00:04:38,660 --> 00:04:39,770
+for the endpoints.
+
+101
+00:04:39,770 --> 00:04:46,340
+We know the probability density function is the same as the one
+
+102
+00:04:46,340 --> 00:04:49,250
+we had before, but where now, it's a function of t,
+
+103
+00:04:49,250 --> 00:04:51,590
+and we put in t in the appropriate places.
+
+104
+00:04:51,590 --> 00:04:54,500
+Mu gets replaced by mu t, and sigma
+
+105
+00:04:54,500 --> 00:04:57,110
+squared get replaced by sigma squared t.
+
+106
+00:04:57,110 --> 00:05:00,320
+And you can check that this is still appropriately normalized.
+
+107
+00:05:00,320 --> 00:05:02,640
+But the picture is now quite different.
+
+108
+00:05:02,640 --> 00:05:06,395
+This is what we saw on the previous slide.
+
+109
+00:05:06,395 --> 00:05:10,450
+The peak of this distribution moves at speed t.
+
+110
+00:05:10,450 --> 00:05:13,100
+If mu is a positive number, it moves to the right.
+
+111
+00:05:13,100 --> 00:05:16,110
+If mu is a negative number, it moves to the left,
+
+112
+00:05:16,110 --> 00:05:20,160
+and I've illustrated that up here behind me.
+
+113
+00:05:20,160 --> 00:05:22,430
+So this might be the peak at one point.
+
+114
+00:05:22,430 --> 00:05:24,470
+This is at a point mu t.
+
+115
+00:05:24,470 --> 00:05:28,040
+And as time goes on, the peak moves to the right.
+
+116
+00:05:28,040 --> 00:05:31,670
+These are subsequent time steps, and as the distribution
+
+117
+00:05:31,670 --> 00:05:35,090
+moves to the right, we also see that, with the peak,
+
+118
+00:05:35,090 --> 00:05:38,640
+sigma squared of t broadens out over time.
+
+119
+00:05:38,640 --> 00:05:43,580
+So this probability distribution describes a time varying bell
+
+120
+00:05:43,580 --> 00:05:45,530
+curve, the Gaussian shape.
+
+121
+00:05:45,530 --> 00:05:49,520
+It moves to the right for positive mu at speed mu,
+
+122
+00:05:49,520 --> 00:05:52,190
+and it broadens out with time.
+
+123
+00:05:52,190 --> 00:05:56,390
+That also means that if we're to run time backwards, that as t
+
+124
+00:05:56,390 --> 00:05:59,960
+gets smaller and approaches 0, that we would be moving
+
+125
+00:05:59,960 --> 00:06:01,610
+in the opposite direction.
+
+126
+00:06:01,610 --> 00:06:04,430
+That is, that the peaks get narrower--
+
+127
+00:06:04,430 --> 00:06:07,580
+the curves get narrower and narrower
+
+128
+00:06:07,580 --> 00:06:09,470
+and get more and more concentrated
+
+129
+00:06:09,470 --> 00:06:11,460
+at a central value.
+
+130
+00:06:11,460 --> 00:06:13,370
+So that's our Gaussian distribution.
+
+131
+00:06:13,370 --> 00:06:15,230
+We've just applied it in a new way.
+
+132
+00:06:15,230 --> 00:06:18,080
+We've seen it in many settings, and here's one more.
+
+133
+00:06:18,080 --> 00:06:21,200
+You can check that this probability distribution
+
+134
+00:06:21,200 --> 00:06:24,890
+function, p of xt, satisfies a differential equation called
+
+135
+00:06:24,890 --> 00:06:27,290
+the Fokker-Planck equation, and I've written it here.
+
+136
+00:06:27,290 --> 00:06:30,440
+Partial derivative with respect to t minus sigma
+
+137
+00:06:30,440 --> 00:06:31,670
+squared over 2.
+
+138
+00:06:31,670 --> 00:06:34,850
+Second partial with respect to x plus the mu
+
+139
+00:06:34,850 --> 00:06:38,360
+dependent term mu, partial of p with respect to x.
+
+140
+00:06:38,360 --> 00:06:41,270
+And you can check that by taking partial derivatives,
+
+141
+00:06:41,270 --> 00:06:43,640
+and in fact, each of the partial derivatives
+
+142
+00:06:43,640 --> 00:06:45,950
+is proportional to p itself because
+
+143
+00:06:45,950 --> 00:06:47,810
+of the exponential nature here.
+
+144
+00:06:47,810 --> 00:06:51,410
+And the prefactor doesn't change that, so all of the terms
+
+145
+00:06:51,410 --> 00:06:53,300
+can be written as proportional to p.
+
+146
+00:06:53,300 --> 00:06:55,100
+If you take the appropriate partials,
+
+147
+00:06:55,100 --> 00:06:57,080
+substitute them into the equation,
+
+148
+00:06:57,080 --> 00:06:58,700
+you'll see that this, in fact, is
+
+149
+00:06:58,700 --> 00:07:03,360
+a differential equation for that probability density function.
+
+150
+00:07:03,360 --> 00:07:04,580
+So just to recap--
+
+151
+00:07:04,580 --> 00:07:06,950
+this probability density function
+
+152
+00:07:06,950 --> 00:07:10,400
+measures the distribution.
+
+153
+00:07:10,400 --> 00:07:13,710
+If we do this for a Monte Carlo simulation,
+
+154
+00:07:13,710 --> 00:07:16,940
+the histogram at a given point in time
+
+155
+00:07:16,940 --> 00:07:20,538
+would be one of these curves, and it
+
+156
+00:07:20,538 --> 00:07:22,580
+would be an approximation to one of these curves.
+
+157
+00:07:22,580 --> 00:07:24,920
+And as time goes on, the peaks move out,
+
+158
+00:07:24,920 --> 00:07:30,500
+but in particular, the curve broadens.
+
+159
+00:07:30,500 --> 00:07:35,150
+So that was for a random walk that began at the origin
+
+160
+00:07:35,150 --> 00:07:37,790
+and went to a point xt.
+
+161
+00:07:37,790 --> 00:07:40,910
+But now, suppose we're specific about starting
+
+162
+00:07:40,910 --> 00:07:45,890
+at a particular point, x0 t0.
+
+163
+00:07:45,890 --> 00:07:48,350
+And in this notation, you can read this
+
+164
+00:07:48,350 --> 00:07:50,930
+as the probability to be at x big T
+
+165
+00:07:50,930 --> 00:07:56,960
+at time big T given that we started at x0 at time t0.
+
+166
+00:07:56,960 --> 00:07:58,550
+So it looks a little complicated.
+
+167
+00:07:58,550 --> 00:08:01,130
+There are for arguments, but the first two
+
+168
+00:08:01,130 --> 00:08:05,930
+are measuring the probability of being observed
+
+169
+00:08:05,930 --> 00:08:08,300
+at this point in time, given that we
+
+170
+00:08:08,300 --> 00:08:12,860
+started deterministically at point x0 and t0.
+
+171
+00:08:12,860 --> 00:08:16,790
+Now, in this expression, this is just from time and space
+
+172
+00:08:16,790 --> 00:08:17,690
+translation.
+
+173
+00:08:17,690 --> 00:08:22,488
+Everything depends on t minus t0 and x minus x0.
+
+174
+00:08:22,488 --> 00:08:24,530
+So this is the same expression that we wrote down
+
+175
+00:08:24,530 --> 00:08:28,430
+before if you take the special case where x0 equals 0
+
+176
+00:08:28,430 --> 00:08:30,650
+and where t0 equals 0.
+
+177
+00:08:30,650 --> 00:08:35,070
+But it's interesting to note that, having written it down,
+
+178
+00:08:35,070 --> 00:08:37,880
+even though big T and t0 have very
+
+179
+00:08:37,880 --> 00:08:39,809
+different interpretations--
+
+180
+00:08:39,809 --> 00:08:41,570
+one is where we observe a random variable.
+
+181
+00:08:41,570 --> 00:08:43,640
+The other is where we begin our random walk.
+
+182
+00:08:43,640 --> 00:08:46,940
+But time t0, we know exactly where we are.
+
+183
+00:08:46,940 --> 00:08:49,850
+The distribution has to be concentrated at x0.
+
+184
+00:08:49,850 --> 00:08:52,370
+Despite the fact that they have very different meanings,
+
+185
+00:08:52,370 --> 00:08:56,420
+as a function, we can evaluate p both as a function
+
+186
+00:08:56,420 --> 00:09:00,170
+of its first two arguments or as a function of its last two
+
+187
+00:09:00,170 --> 00:09:00,980
+arguments.
+
+188
+00:09:00,980 --> 00:09:03,710
+And if I think about it as a function of x0
+
+189
+00:09:03,710 --> 00:09:09,440
+and t0 holding xt and big T fixed,
+
+190
+00:09:09,440 --> 00:09:11,930
+then I find that it satisfies a different differential
+
+191
+00:09:11,930 --> 00:09:14,720
+equation called a backward equation,
+
+192
+00:09:14,720 --> 00:09:16,820
+and it's backward because we're looking
+
+193
+00:09:16,820 --> 00:09:18,590
+at the wrong point in t.
+
+194
+00:09:18,590 --> 00:09:21,560
+That is, this is asking a slightly different question.
+
+195
+00:09:21,560 --> 00:09:25,100
+It's saying, if I wanted to observe the probability
+
+196
+00:09:25,100 --> 00:09:28,700
+at a particular value at a particular ending point,
+
+197
+00:09:28,700 --> 00:09:30,890
+how does that depend on where I start?
+
+198
+00:09:30,890 --> 00:09:32,840
+The probability will change, obviously.
+
+199
+00:09:32,840 --> 00:09:35,840
+The farther away I am, depending on the distance
+
+200
+00:09:35,840 --> 00:09:39,830
+in time or in space, the smaller the probability will be.
+
+201
+00:09:39,830 --> 00:09:43,310
+So it's a fair question to ask how this function depends
+
+202
+00:09:43,310 --> 00:09:46,130
+on the two arguments x0 and t0.
+
+203
+00:09:46,130 --> 00:09:49,730
+Because it's so similar, because everything depends only
+
+204
+00:09:49,730 --> 00:09:53,120
+on differences, I can replace partial of p
+
+205
+00:09:53,120 --> 00:09:56,240
+with respect to t by the negative of the partial p
+
+206
+00:09:56,240 --> 00:09:57,590
+with respect to t0.
+
+207
+00:09:57,590 --> 00:09:59,990
+And similarly, for the x derivatives, so
+
+208
+00:09:59,990 --> 00:10:01,760
+this term changes sign.
+
+209
+00:10:01,760 --> 00:10:03,020
+This term changes sign.
+
+210
+00:10:03,020 --> 00:10:05,150
+This one would get 2 sign changes
+
+211
+00:10:05,150 --> 00:10:06,410
+because there are two x0.
+
+212
+00:10:06,410 --> 00:10:10,190
+So now, where before, we had two relative plus signs and one
+
+213
+00:10:10,190 --> 00:10:12,890
+minus sign, all three of these signs
+
+214
+00:10:12,890 --> 00:10:15,740
+are positive in this differential equation.
+
+215
+00:10:15,740 --> 00:10:18,290
+In this equation, we haven't derived from anywhere else.
+
+216
+00:10:18,290 --> 00:10:22,070
+All we're saying is, if we plug in this expression,
+
+217
+00:10:22,070 --> 00:10:25,130
+this Gaussian curve into this differential equation,
+
+218
+00:10:25,130 --> 00:10:28,180
+that the equation is satisfied.
+
+219
+00:10:28,180 --> 00:10:29,000
+
+

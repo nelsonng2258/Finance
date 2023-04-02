@@ -1,0 +1,788 @@
+0
+00:00:00,000 --> 00:00:01,220
+
+
+1
+00:00:01,220 --> 00:00:03,200
+PROFESSOR: In optimization, critical points
+
+2
+00:00:03,200 --> 00:00:05,240
+are often critical.
+
+3
+00:00:05,240 --> 00:00:08,060
+We have a function that may be a scalar
+
+4
+00:00:08,060 --> 00:00:09,880
+function of multiple variables.
+
+5
+00:00:09,880 --> 00:00:13,010
+We'd like to find its largest value in one
+
+6
+00:00:13,010 --> 00:00:14,720
+of the necessary conditions.
+
+7
+00:00:14,720 --> 00:00:18,590
+It may be that the partial derivatives with respect
+
+8
+00:00:18,590 --> 00:00:20,000
+to the variables vanish.
+
+9
+00:00:20,000 --> 00:00:22,650
+We also need to check possible boundary terms.
+
+10
+00:00:22,650 --> 00:00:26,930
+So let's take a look at critical points or continuous functions,
+
+11
+00:00:26,930 --> 00:00:31,950
+multiple variables, and see how we can classify them,
+
+12
+00:00:31,950 --> 00:00:33,620
+so we can keep that in mind as we
+
+13
+00:00:33,620 --> 00:00:36,990
+look at financial applications.
+
+14
+00:00:36,990 --> 00:00:38,850
+For a function of a single variable,
+
+15
+00:00:38,850 --> 00:00:42,690
+critical points are places where the first derivative vanishes.
+
+16
+00:00:42,690 --> 00:00:48,120
+Consider the Taylor expansion for a continuous function.
+
+17
+00:00:48,120 --> 00:00:51,510
+I have f of x expanding around a point x0,
+
+18
+00:00:51,510 --> 00:00:54,600
+and I have a linear term times the first derivative
+
+19
+00:00:54,600 --> 00:00:57,100
+plus a quadratic times the second derivative
+
+20
+00:00:57,100 --> 00:00:59,990
+evaluated at a point and so on for higher term.
+
+21
+00:00:59,990 --> 00:01:02,440
+Now, if the first derivative varnishes,
+
+22
+00:01:02,440 --> 00:01:06,150
+then I have the special result. If I move the f of x0
+
+23
+00:01:06,150 --> 00:01:08,070
+to the other side, I have that the amount
+
+24
+00:01:08,070 --> 00:01:11,820
+by which f differs from the value at point f0
+
+25
+00:01:11,820 --> 00:01:13,080
+is a parabola.
+
+26
+00:01:13,080 --> 00:01:17,460
+It looks like a quadratic term in the vicinity of x0
+
+27
+00:01:17,460 --> 00:01:20,310
+when x minus x0 is small and the higher order
+
+28
+00:01:20,310 --> 00:01:22,500
+terms x minus x0 cubed, to the fourth,
+
+29
+00:01:22,500 --> 00:01:25,500
+and so on are small compared to the term that we keep.
+
+30
+00:01:25,500 --> 00:01:28,650
+Now, we need to check that the second derivative, in fact,
+
+31
+00:01:28,650 --> 00:01:29,730
+is not vanishing.
+
+32
+00:01:29,730 --> 00:01:31,290
+For the generic case, it will be.
+
+33
+00:01:31,290 --> 00:01:34,230
+If it vanishes, then we go to the next higher order term.
+
+34
+00:01:34,230 --> 00:01:37,770
+This is typical unless there's either a very accidental reason
+
+35
+00:01:37,770 --> 00:01:40,890
+why it vanishes where there's a particular symmetry.
+
+36
+00:01:40,890 --> 00:01:45,000
+Now, in higher dimensions this parabola,
+
+37
+00:01:45,000 --> 00:01:47,820
+which might be concave or convex depending
+
+38
+00:01:47,820 --> 00:01:50,760
+on the sign of f double prime, is
+
+39
+00:01:50,760 --> 00:01:52,540
+described by a quadratic form.
+
+40
+00:01:52,540 --> 00:01:58,080
+It's described by the matrix of second partial derivatives.
+
+41
+00:01:58,080 --> 00:02:00,320
+So for a function of several variables,
+
+42
+00:02:00,320 --> 00:02:04,280
+Taylor's theorem tells us that for a scalar function
+
+43
+00:02:04,280 --> 00:02:08,509
+in the neighborhood of a vector point, a fixed point x0,
+
+44
+00:02:08,509 --> 00:02:10,220
+that we can do an expansion.
+
+45
+00:02:10,220 --> 00:02:14,000
+f of x is being the gradient of f
+
+46
+00:02:14,000 --> 00:02:18,560
+times the difference between x and x0 as a vector quantity.
+
+47
+00:02:18,560 --> 00:02:21,450
+That's a leading order term plus a second-order term
+
+48
+00:02:21,450 --> 00:02:23,150
+plus cubic terms and so on.
+
+49
+00:02:23,150 --> 00:02:25,640
+And the second-order term is of particular interest.
+
+50
+00:02:25,640 --> 00:02:28,610
+It's a vector, this difference vector x minus x0
+
+51
+00:02:28,610 --> 00:02:32,960
+transpose times Q times the same vector on the right-hand side
+
+52
+00:02:32,960 --> 00:02:34,790
+with a 1/2 in front.
+
+53
+00:02:34,790 --> 00:02:37,910
+And this Q defines a quadratic form.
+
+54
+00:02:37,910 --> 00:02:40,880
+This is just a matrix of second partial derivatives.
+
+55
+00:02:40,880 --> 00:02:43,460
+You can write it out in terms of components if you'd like.
+
+56
+00:02:43,460 --> 00:02:46,250
+And f is the gradient function, and this
+
+57
+00:02:46,250 --> 00:02:48,510
+varnishes at a critical point.
+
+58
+00:02:48,510 --> 00:02:50,360
+So when the gradient of f vanishes,
+
+59
+00:02:50,360 --> 00:02:52,610
+which means that all of the first derivatives
+
+60
+00:02:52,610 --> 00:02:54,770
+vanish, not just one of them or two of them--
+
+61
+00:02:54,770 --> 00:02:59,840
+when they all vanish and when x minus x0 is small in magnitude,
+
+62
+00:02:59,840 --> 00:03:03,050
+then we can approximate the deviation of the function
+
+63
+00:03:03,050 --> 00:03:07,080
+from a particular point by this quadratic behavior.
+
+64
+00:03:07,080 --> 00:03:10,340
+So this quadratic behavior, as in the single-variable case,
+
+65
+00:03:10,340 --> 00:03:11,480
+is somewhat universal.
+
+66
+00:03:11,480 --> 00:03:15,500
+It's worth studying because every function, unless Q
+
+67
+00:03:15,500 --> 00:03:18,650
+vanishes for some particular reason,
+
+68
+00:03:18,650 --> 00:03:21,050
+is going to have this form when we're sufficiently
+
+69
+00:03:21,050 --> 00:03:22,340
+close in the neighborhood.
+
+70
+00:03:22,340 --> 00:03:24,530
+So there are more possibilities than two,
+
+71
+00:03:24,530 --> 00:03:26,420
+just the two signs of f double prime
+
+72
+00:03:26,420 --> 00:03:28,670
+in the single-variable case, and we can take a look
+
+73
+00:03:28,670 --> 00:03:29,840
+at how they're classified.
+
+74
+00:03:29,840 --> 00:03:33,450
+
+
+75
+00:03:33,450 --> 00:03:37,650
+The eigenvalues determine the type of critical point we have.
+
+76
+00:03:37,650 --> 00:03:40,900
+If the eigenvalues of Q are all positive,
+
+77
+00:03:40,900 --> 00:03:43,530
+the function is convex up and then the critical point
+
+78
+00:03:43,530 --> 00:03:44,490
+is a minimum.
+
+79
+00:03:44,490 --> 00:03:47,200
+If the eigenvalues of Q are all negative,
+
+80
+00:03:47,200 --> 00:03:51,000
+the function is concave and the critical point is the maximum.
+
+81
+00:03:51,000 --> 00:03:53,920
+If Q has both positive and negative values,
+
+82
+00:03:53,920 --> 00:03:55,530
+then it's called a saddle point.
+
+83
+00:03:55,530 --> 00:03:58,080
+There are some maximum in one direction.
+
+84
+00:03:58,080 --> 00:04:00,100
+It's a minimum in some other direction.
+
+85
+00:04:00,100 --> 00:04:02,400
+And if any of the eigenvalues are 0,
+
+86
+00:04:02,400 --> 00:04:05,100
+they define flat directions where the function is neither
+
+87
+00:04:05,100 --> 00:04:06,910
+increasing or decreasing.
+
+88
+00:04:06,910 --> 00:04:09,540
+Now, the reason we talk about the eigenvalues
+
+89
+00:04:09,540 --> 00:04:12,420
+is because the eigenvectors determine,
+
+90
+00:04:12,420 --> 00:04:15,930
+really, the axes of orientation, and the eigenvalues
+
+91
+00:04:15,930 --> 00:04:18,660
+tell us how things vary along those directions.
+
+92
+00:04:18,660 --> 00:04:20,850
+Because Q is a symmetric matrix--
+
+93
+00:04:20,850 --> 00:04:23,550
+remember, the order of partial derivatives doesn't matter--
+
+94
+00:04:23,550 --> 00:04:26,980
+the eigenvectors are going to be orthogonal.
+
+95
+00:04:26,980 --> 00:04:29,970
+So the general cases we might get
+
+96
+00:04:29,970 --> 00:04:32,520
+with all kinds of mixed partials really
+
+97
+00:04:32,520 --> 00:04:35,220
+are set of cases if we think of diagonalizing
+
+98
+00:04:35,220 --> 00:04:39,450
+and having orthogonal indices--
+
+99
+00:04:39,450 --> 00:04:44,640
+or excuse me, and having orthogonal axes, then
+
+100
+00:04:44,640 --> 00:04:48,840
+the eigenvalues whether they're positive or negative
+
+101
+00:04:48,840 --> 00:04:50,430
+along different directions tell us
+
+102
+00:04:50,430 --> 00:04:52,080
+whether in that particular direction
+
+103
+00:04:52,080 --> 00:04:54,420
+along that particular axis the shape of the curve
+
+104
+00:04:54,420 --> 00:04:57,720
+is like a parabola, it's convex up, convex down,
+
+105
+00:04:57,720 --> 00:05:00,240
+or if it's a flat direction.
+
+106
+00:05:00,240 --> 00:05:03,640
+We can take a look at a few examples.
+
+107
+00:05:03,640 --> 00:05:07,070
+So let's look at a few examples of functions of two variables.
+
+108
+00:05:07,070 --> 00:05:11,070
+So I can plot them on the screen in projected three dimensions.
+
+109
+00:05:11,070 --> 00:05:12,960
+Let's consider a function f.
+
+110
+00:05:12,960 --> 00:05:14,880
+It's a function of x and y.
+
+111
+00:05:14,880 --> 00:05:18,000
+So for example, suppose I have this function. f of xy
+
+112
+00:05:18,000 --> 00:05:21,400
+is x times e to the minus x squared plus y squared.
+
+113
+00:05:21,400 --> 00:05:23,430
+And I think of z, the z-coordinate,
+
+114
+00:05:23,430 --> 00:05:25,680
+as being the height of this plot,
+
+115
+00:05:25,680 --> 00:05:27,810
+and this is one way, a prospective plot.
+
+116
+00:05:27,810 --> 00:05:31,080
+And I've given you code in R so that you can run this and get
+
+117
+00:05:31,080 --> 00:05:32,610
+this pretty picture yourself.
+
+118
+00:05:32,610 --> 00:05:34,290
+But where do we see critical points?
+
+119
+00:05:34,290 --> 00:05:36,060
+Well, the critical points that we see
+
+120
+00:05:36,060 --> 00:05:40,210
+are local maximum here, a local minimum here.
+
+121
+00:05:40,210 --> 00:05:42,660
+And in fact, if this is what we've got,
+
+122
+00:05:42,660 --> 00:05:46,770
+these are global max and global min as well.
+
+123
+00:05:46,770 --> 00:05:51,710
+They're places where the first derivatives vanish.
+
+124
+00:05:51,710 --> 00:05:55,520
+We can also visualize this in terms of a contour plot, where
+
+125
+00:05:55,520 --> 00:05:57,350
+we see-- in a contour plot, we see
+
+126
+00:05:57,350 --> 00:06:00,980
+lines of constant value of f drawn together.
+
+127
+00:06:00,980 --> 00:06:03,500
+We notice-- now, of course, contour lines
+
+128
+00:06:03,500 --> 00:06:06,860
+never cross because we can't have two different values
+
+129
+00:06:06,860 --> 00:06:08,035
+at the same place.
+
+130
+00:06:08,035 --> 00:06:09,410
+But we can see over here, there's
+
+131
+00:06:09,410 --> 00:06:11,400
+a height scale on the right-hand side.
+
+132
+00:06:11,400 --> 00:06:13,700
+So white is high.
+
+133
+00:06:13,700 --> 00:06:14,600
+Black is low.
+
+134
+00:06:14,600 --> 00:06:16,700
+But otherwise, you see an interesting symmetry
+
+135
+00:06:16,700 --> 00:06:21,750
+on the left and right parts of the graph.
+
+136
+00:06:21,750 --> 00:06:25,400
+So here's a function that typifies
+
+137
+00:06:25,400 --> 00:06:29,430
+the kind of classic example where we have a minimum value.
+
+138
+00:06:29,430 --> 00:06:33,440
+This is just instead of a parabola, it's circular.
+
+139
+00:06:33,440 --> 00:06:34,730
+It's a paraboloid.
+
+140
+00:06:34,730 --> 00:06:38,060
+x squared plus y squared, so the minimum value is obviously
+
+141
+00:06:38,060 --> 00:06:40,965
+the origin where its value is 0 and everywhere else it's
+
+142
+00:06:40,965 --> 00:06:41,465
+greater.
+
+143
+00:06:41,465 --> 00:06:45,870
+
+
+144
+00:06:45,870 --> 00:06:47,520
+Here's a 3D plot.
+
+145
+00:06:47,520 --> 00:06:51,510
+We noticed that with this particular description,
+
+146
+00:06:51,510 --> 00:06:53,970
+the function is rotationally symmetric.
+
+147
+00:06:53,970 --> 00:06:56,800
+If I'd put in different coefficients for x and y,
+
+148
+00:06:56,800 --> 00:06:59,610
+then the axes would have-- the circles
+
+149
+00:06:59,610 --> 00:07:01,080
+would have been ellipses.
+
+150
+00:07:01,080 --> 00:07:03,870
+And if it had been those axes were then rotated along
+
+151
+00:07:03,870 --> 00:07:05,910
+some other direction, the quadratic form
+
+152
+00:07:05,910 --> 00:07:09,000
+might have a cross term as well, a term in xy.
+
+153
+00:07:09,000 --> 00:07:11,568
+But geometrically, it's the same idea of what's going on.
+
+154
+00:07:11,568 --> 00:07:12,610
+There's a single minimum.
+
+155
+00:07:12,610 --> 00:07:15,960
+There's some contours around it.
+
+156
+00:07:15,960 --> 00:07:17,470
+This is an example of the function,
+
+157
+00:07:17,470 --> 00:07:18,690
+which has a saddle point.
+
+158
+00:07:18,690 --> 00:07:22,960
+Here, I have f of x is x squared minus 4y squared.
+
+159
+00:07:22,960 --> 00:07:26,010
+So you notice that not only is the sign of the x term
+
+160
+00:07:26,010 --> 00:07:28,050
+and the y term different, but the coefficient
+
+161
+00:07:28,050 --> 00:07:32,430
+is as well so that the speed of change or the rate of curvature
+
+162
+00:07:32,430 --> 00:07:34,750
+can be different in the two different directions.
+
+163
+00:07:34,750 --> 00:07:37,980
+So if I move along the x direction, I'm increasing.
+
+164
+00:07:37,980 --> 00:07:43,200
+If I move along the y direction for the origin, I'm decreasing.
+
+165
+00:07:43,200 --> 00:07:46,870
+Here's a contour plot of the same thing.
+
+166
+00:07:46,870 --> 00:07:55,720
+Now here's an interesting case where we have a flat direction,
+
+167
+00:07:55,720 --> 00:07:57,620
+and we also have a mistake in the equation.
+
+168
+00:07:57,620 --> 00:08:01,060
+So that should just be f of x equals--
+
+169
+00:08:01,060 --> 00:08:03,100
+f of x and y equals y squared.
+
+170
+00:08:03,100 --> 00:08:06,520
+So you notice that because there's no y dependence,
+
+171
+00:08:06,520 --> 00:08:08,350
+the function has a symmetry.
+
+172
+00:08:08,350 --> 00:08:09,760
+I can translate in y.
+
+173
+00:08:09,760 --> 00:08:11,230
+I can take any value.
+
+174
+00:08:11,230 --> 00:08:13,930
+And that means that as I move in the y direction,
+
+175
+00:08:13,930 --> 00:08:18,100
+not only is the direction flat, but every cross section,
+
+176
+00:08:18,100 --> 00:08:21,550
+the x dependence at any given point y in that valley,
+
+177
+00:08:21,550 --> 00:08:23,150
+is exactly the same.
+
+178
+00:08:23,150 --> 00:08:26,350
+So this is an example where we have a flat direction,
+
+179
+00:08:26,350 --> 00:08:28,460
+and it's due to asymmetry in the problem.
+
+180
+00:08:28,460 --> 00:08:30,880
+And in this case, one of the eigenvalues
+
+181
+00:08:30,880 --> 00:08:33,909
+of our quadratic form Q, our matrix of second derivatives,
+
+182
+00:08:33,909 --> 00:08:36,580
+is going to be 0.
+
+183
+00:08:36,580 --> 00:08:39,880
+This is a case where, like the other one,
+
+184
+00:08:39,880 --> 00:08:42,880
+I have a flat direction along the y equal 0.
+
+185
+00:08:42,880 --> 00:08:45,850
+But unlike the other one, it's not symmetric.
+
+186
+00:08:45,850 --> 00:08:47,860
+It's not translationally symmetric.
+
+187
+00:08:47,860 --> 00:08:50,980
+And you can see that as I move along the y-axis
+
+188
+00:08:50,980 --> 00:08:53,620
+for different values of y, the cross section,
+
+189
+00:08:53,620 --> 00:08:56,650
+the cross-sectional curvature, as I move in the x direction
+
+190
+00:08:56,650 --> 00:08:57,620
+changes.
+
+191
+00:08:57,620 --> 00:09:01,190
+So in one perpendicular direction, I'm completely flat.
+
+192
+00:09:01,190 --> 00:09:02,980
+But in the other direction, there
+
+193
+00:09:02,980 --> 00:09:06,460
+are changes that are seen once I move in the perpendicular
+
+194
+00:09:06,460 --> 00:09:08,770
+direction.
+
+195
+00:09:08,770 --> 00:09:13,500
+And here's a picture of the same thing shown as a contour plot.
+
+196
+00:09:13,500 --> 00:09:14,000
+
+

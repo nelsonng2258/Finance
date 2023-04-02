@@ -1,0 +1,360 @@
+
+PROFESSOR: Lecture, we saw two ways
+of solving the Black-Scholes equation.
+One of them was by doing integrals.
+Where we had a kernel, a probability density function,
+we could multiply times the desired payoff,
+do the integral, and get a solution.
+But I mentioned, then, that there was another way
+that we could do it by using directly
+the formula for expectations and the fact
+that certain expected values satisfy differential
+equations in general, and in particular,
+the Black-Scholes equation.
+So what I'd like to do is just show you a little bit more
+in detail here.
+But I'm not going to write the code.
+I left that for you to do.
+And the steps are pretty easy, though.
+What I want to show you, I've written a function
+here, MCprice, and behind me are a set of Monte Carlo paths
+that I generated before you came in.
+And I did this using code that's very similar to the code we did
+at the beginning of the class when we first
+talked about Monte Carlos, except that it's
+been adapted for the specifics of an Ito process.
+So what do I mean by that?
+Well, we have-- our idea is going
+to be to find the value of a derivative at time t
+to be the present value in the time remaining to expiration
+of the expected value of the function at expiration.
+And we're going to replace this by an approximation.
+So this is going to be computed as the average
+over a bunch of Vs that could have come
+under different realizations.
+But we said that this was under the Q-measure.
+So Q is economist speak.
+Q-measure, or risk-neutral measure,
+simply means that we're going to pick
+a drift rate r, the risk-free rate,
+to replace mu in our formulas.
+Now, what is it we want to do?
+We wanted to start with an underlying,
+so we have an underlying price process.
+And remember, we're going to discretize things.
+So we want to do an approximation
+to a continuous time world, but we're
+going to go back to discrete.
+So remember when we talked about discrete processes,
+we said that we could define changes recursively
+in terms of return, logarithmic returns,
+over a given time period.
+If we rewrite this, of course, this
+is the same as saying that rt is the logarithm of St
+over St minus 1.
+And we didn't specify how far apart t and t minus 1 were,
+and here we'll think of them as being
+some small but finite distance dt, or delta t, if you prefer.
+And you notice that this is the same thing as log
+of St minus log of St minus 1.
+Now, if you're a nitpicker, you would
+say that you can't take a logarithm of something
+with units.
+So we could divide this by $1, let's say,
+and just have it be--
+I could divide this by, say, some S star equal to $1
+just so that those are dimensionless,
+and that obviously cancels out.
+But the important point is that, in terms
+of this dimensionless variable, this
+is going to be what we mean by d of log S.
+So this r over here is just the return over the time step.
+That's not the risk-free rate.
+So what we want is, we'd like to build up
+a series of iterated values.
+This is S minus 2, e to the rt plus rt minus 1,
+and so on, so that we can say that St
+is going to be equal to some initial S0 times e
+to the sum r1 plus r2 plus all the way up to rt
+where these rt's are things that themselves
+are described by d of log S.
+So what does d of log S look like?
+Well, we know that S is an Ito process.
+So what we need to do is consider
+that if dS/S is given by the risk-free description
+plus sigma dB, this is what we'd like to do to have our Monte
+Carlo, but not dS/S, but we want to simulate
+a sequence of random variables d of log S.
+And you'll write out what this is in terms of dt
+and what it is in terms of dB.
+And then those will be in the same format that we had before.
+But we need to get the coefficients right
+to get the right answer.
+So the idea is that we're going to generate
+a particular sequence of random variables that
+are consistent with the Ito process
+that we have, but with the special drift rate
+where the drift rate is given by the risk-free rate,
+not the actual drift rate on the stock.
+And then to compute our option values, what we're going to do
+is at the end we're going to take--
+well, put in a discount factor in front.
+That's not too hard.
+But our main idea is that we're going to,
+instead of computing this mathematical expectation
+by doing Gaussian integrals, we're
+going to generate a whole bunch of price paths of S
+and then compute V of S and just evaluate it at the endpoints.
+So finally, it's going to look like e to the minus
+r T minus t expectation of V evaluated at the final time
+T and that final price ST.
+So let's make that really concrete.
+Let me just show you what the pieces are,
+and then you'll put them together.
+I promise you, it's not more than a page of code.
+So if we take a look, what I've done
+is I've generated a bunch of paths here.
+And I've got my parameters already on the side.
+Now, I have these parameters which are associated
+with the stock price.
+S0 is 100, mu is 5%, and sigma is 30%.
+
+I have these parameters associated
+with the option itself.
+So let's run those.
+So I have the strike price is $100.
+You can pick your value.
+T is equal to 1 year.
+One thing to watch out in R is R assumes that capital T stands
+for true or false.
+I always redefine it, but be careful.
+You can pick a different letter if you
+want because it's reserved until you overwrite it the way I did.
+And I'll take a risk-free rate of 10%.
+And then finally, I have a set of parameters
+that are purely related to my simulation, where
+I have two choices.
+I can pick the number of time steps
+into which I'm going to divide my macroscopic period here
+of 1 year, and I have the number of paths in my simulation.
+So I like to start with around 10,000,
+the typical size of the error is close of the square root of NP.
+So that's going to give me a starting
+point with a ballpark in the area of around 1% errors.
+But you should try it and see how things behave
+when you take a look at it.
+So let's run those parameters.
+Now, take a look at the sample paths.
+I've already run this expression on the right-hand side.
+And you can see behind me a whole bunch of sample paths.
+Now, these are all drawn from exactly the same distribution.
+I haven't told you which process I have to generate them,
+but you could guess.
+And I haven't told you what random variable I'm using,
+but I wrote everything out in terms
+of a standardized random variable Z.
+One of the questions you should look at when you try
+is to ask how much of a difference does it make.
+For example, if you take Z equals plus or minus 1,
+or you take Z to be drawn from a normal distribution of mean 0
+and variance 1, or you pick something
+else an exponential variable, anything else that's
+been rescaled, how much of a difference
+does it make in your simulations?
+And how does it depend, for example,
+on the number of time steps before, say, the central limit
+theorem kicks in, as we would expect it to do over
+a long period of time, over, say, a few hundred steps?
+It is worth noting that, if you add even
+as few as six uniform random variables,
+that you can get a fairly decent approximation to the Gaussian
+distribution.
+So here I've got a bunch of paths,
+and you'll notice this gives me the stock
+price all the way out.
+And I've drawn only 10 of them, not 10,000,
+because the graph would look rather a mess otherwise.
+OK.
+So that's what some of the paths look like.
+What do the option values look like?
+Well, remember, the value of a call option on a stock
+is equal to the stock price minus the strike price.
+So it's equal to the price minus 100
+provided the price is above 100.
+But it's equal to 0 below 100.
+So if I take a look at my expression,
+now looking at call values where I've computed in that way,
+here's what they look like.
+So you notice these price paths never go below 0.
+They're not as big as the others because I've basically
+subtracted off 100.
+And a large number of them are really
+invisible because they all hug the bottom of the curve.
+But this is what I want.
+So I went from my underlying S to my derivative V,
+or in this case, I've called it C.
+I've got another one called P for doing the put values.
+And all that's left to do is to take
+the average of the terminal values and discount it,
+and then we're done.
+But it might be interesting to see what happens,
+because these are not evenly distributed.
+So remember that the histogram for, let's say,
+the terminal values of S--
+so let's take the last time step, which would be Nt plus 1,
+in this case 253, and if we look at a histogram of the values,
+we see that we get something that
+looks like a typical kind of log-normal distribution.
+If I do the same thing in terms of the call values,
+though, I'm going to get something
+that's quite different.
+Oops, let's try capital C, definitely case sensitive here.
+And what I see is, I have a huge spike at 0.
+A lot of my paths finish below the money,
+and they don't contribute.
+And then for the ones that do finish above the money,
+they're actually decreasing more or less monotonically.
+There are a couple bumps there, but those
+are artifacts of the simulation and some of the bidding
+in the histogram.
+And that makes sense.
+It makes sense because it's less and less likely
+that a stock is going to greatly exceed the strike
+price if it started at the strike price
+and these are random walks.
+The more likely thing is it's going
+to be closer to the original value,
+depending on what the drift rate is, in this case,
+set by the risk-free rate r.
+So that's part of what the distribution looks like.
+This also tells us ways that you could make a much better Monte
+Carlo than the one I've suggested.
+Since a lot of the paths, a large chunk of them,
+in this case almost 60% of the paths, finished with a value,
+with a contribution of 0 to my final sum,
+then perhaps we could find a way to spend less time simulating
+paths that aren't going to contribute to the final answer.
+So those are our steps.
+We needed to first simulate the paths and the underlying.
+Second, we take those and we compute
+the value of the derivative over its entire trajectory.
+The third step is we then take an arithmetic
+average of the terminal values that are out here.
+I showed you the histogram, but you just
+need to compute an average of those values.
+So they're either S minus K or they're 0.
+We compute an average.
+And then we have a discount factor in front.
+And that's what goes into my function right here, MCprice.
+So let's run it and see what we get when I run my function.
+I have a function that gives me put and a call.
+And I've enhanced this a little bit to give me an estimate
+for standard errors as well by analyzing the dispersion
+of the results that I have.
+But let's focus on the first two numbers.
+So I have that for my set of parameters,
+the call value should be worth $16.65.
+The put value should be worth $7.35.
+So that's it, right?
+Well, maybe.
+Let's consider two things.
+One of them is we can check with the exact results
+from Black-Scholes.
+This is an approximation method, after all.
+So if we compare with the exact results for Black-Scholes,
+one way that we can do it is with a library
+called R Quantlab that includes functions.
+Or you can code them up yourself just from the Black-Scholes
+formula, very easy to do.
+And what we find is for the call,
+the exact value is $16.73 against our value of $16.65.
+So is that close enough?
+At least for a ballpark.
+But one of the things to think about
+is, what is it that would make the answer precise?
+Or if I told you that you needed the answer to be within $0.10,
+within $1, within a penny, would you know what to change
+in the simulation to get it to sufficient accuracy?
+How about the put value?
+Well, $7.22.
+It looks like the exact value is $7.35.
+So it looks like our call option is a little high.
+Our put option is a little bit low.
+So-- excuse me.
+Our call value is a little bit below the true value.
+Our put value is a little bit above the true value.
+And one of the things that you should consider
+when you do this is whether or not,
+if you're computing different contracts
+on the same underlying, should you re-run the random numbers
+or not?
+Should you re-run the same simulations?
+There are two arguments, and I'll let you think about it
+and decide for yourself.
+One of them is that the whole point of this
+is the random numbers need to be random.
+They can't be biased.
+So of course, every new thing you do,
+you should do a new draw of random numbers.
+The other argument says no, there's only one underlying.
+And although we might be biased in a particular ensemble
+and a particular set of paths might not
+be exactly representative of what could happen in S,
+it's very important in the marketplace
+that we price puts and calls consistently with each other
+in order to avoid arbitrage.
+So what we could do in that case is generate one set of paths
+for the underlying and then use those to price
+puts and calls, different options with different strikes
+and the same maturity.
+Or if we want different maturities,
+we could go out to simulate paths out
+to our longest maturity, but then use that same set of paths
+to use a subset of those for things that would expire
+potentially sooner.
+
+So finally, we might also remember that in addition
+to comparing to the known true value--
+and you should do that because now you've
+got a great test case for your code.
+You can check your code against the actual values.
+So any numbers your pick, any parameters you want,
+compare them to a Black-Scholes calculator.
+And you'll know when you've got the right answer.
+But remember, it is a random number generator.
+So if I run my function again, I'm
+going to get some different values.
+This time I'm high, $16.85.
+I run it again, $16.80.
+So there's some scatter in the values I have.
+You might think that I could compute
+an average of these values.
+One question I would ask you is, is there
+any difference between averaging different runs of my Monte
+Carlo pricer versus doing a single run with more
+simulated paths inside it?
+In any event, have fun with it.
+This is your chance to do it and run a Monte Carlo
+and see if you can reproduce the Black-Scholes results this way.
+And keep in mind that this is not only an easy thing
+to code and much easier than solving differential equations
+or doing Gaussian integrals if you like
+being around a computer at all.
+You don't need to do it in R. You can do it in Python,
+you can do it in Java, you can do it
+in Visual Basic, anything you want.
+And they've all been done.
+They're all widely used.
+But the other thing about the Monte Carlo method
+is that it generalizes to cases where
+we don't have closed form analytical solutions
+to the partial differential equations.
+So we might have a different process
+for the underlying for which we don't have the closed form
+answer, but we could still use this and put it
+on the computer.
+So it's always a good idea to take your algorithms,
+to take your code, test them against known
+cases like the pure Black-Scholes model,
+and then you'll be ready to face more complicated problems that
+show up in the real world.

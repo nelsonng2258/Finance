@@ -1,0 +1,228 @@
+0
+00:00:00,000 --> 00:00:01,280
+
+
+1
+00:00:01,280 --> 00:00:03,440
+PROFESSOR: So what did you find?
+
+2
+00:00:03,440 --> 00:00:06,230
+You could either act with A on each of these vectors
+
+3
+00:00:06,230 --> 00:00:09,200
+and see what you get and see if you match the required payoff,
+
+4
+00:00:09,200 --> 00:00:12,740
+0, 0, 1, or you could throw it on a computer
+
+5
+00:00:12,740 --> 00:00:15,770
+and look at solving this system of linear equations.
+
+6
+00:00:15,770 --> 00:00:20,150
+For example, in R, we can use the function qr.solve,
+
+7
+00:00:20,150 --> 00:00:22,760
+which will help us solve non-square systems
+
+8
+00:00:22,760 --> 00:00:24,170
+of linear equations.
+
+9
+00:00:24,170 --> 00:00:26,750
+Here's A. Here's our target function.
+
+10
+00:00:26,750 --> 00:00:31,820
+And this finds a vector x3 such that A acting on x3
+
+11
+00:00:31,820 --> 00:00:35,555
+is e3, 0, 0, 1.
+
+12
+00:00:35,555 --> 00:00:36,555
+And here's the solution.
+
+13
+00:00:36,555 --> 00:00:39,770
+And you notice this was one of the multiple-choice answers
+
+14
+00:00:39,770 --> 00:00:41,070
+that we had.
+
+15
+00:00:41,070 --> 00:00:42,920
+But, if that's not the one you got,
+
+16
+00:00:42,920 --> 00:00:45,810
+don't worry too quickly because it was a little bit of a trick
+
+17
+00:00:45,810 --> 00:00:46,310
+question.
+
+18
+00:00:46,310 --> 00:00:47,960
+There was more than one answer.
+
+19
+00:00:47,960 --> 00:00:53,630
+Because there's a non-zero kernel in our matrix A,
+
+20
+00:00:53,630 --> 00:00:56,000
+we could add any multiple of this
+
+21
+00:00:56,000 --> 00:00:59,570
+to any vector that does work as an AD security
+
+22
+00:00:59,570 --> 00:01:00,527
+and get another one.
+
+23
+00:01:00,527 --> 00:01:02,360
+And you'll see that one of the other choices
+
+24
+00:01:02,360 --> 00:01:05,330
+I gave you also works as well because it
+
+25
+00:01:05,330 --> 00:01:12,290
+differs by an element of the kernel of A.
+
+26
+00:01:12,290 --> 00:01:16,610
+So suppose we want to find the price of an AD security.
+
+27
+00:01:16,610 --> 00:01:21,090
+Well, first, we want to apply rules of no arbitrage.
+
+28
+00:01:21,090 --> 00:01:23,960
+So let's set the bond price equal to 1.
+
+29
+00:01:23,960 --> 00:01:25,940
+And then, in those terms, the rest
+
+30
+00:01:25,940 --> 00:01:30,450
+of the bond prices, S2, S3, S4, are independent variables.
+
+31
+00:01:30,450 --> 00:01:31,850
+So now we have--
+
+32
+00:01:31,850 --> 00:01:35,040
+we'd like to impose that there's no type II arbitrage.
+
+33
+00:01:35,040 --> 00:01:39,350
+So we'd like the market price of our x tilde of our arbitrage
+
+34
+00:01:39,350 --> 00:01:40,910
+portfolio to be 0.
+
+35
+00:01:40,910 --> 00:01:44,150
+And that tells us that we have this relationship
+
+36
+00:01:44,150 --> 00:01:47,030
+among the remaining prices that S4
+
+37
+00:01:47,030 --> 00:01:50,510
+has to be equal to S2 minus S1.
+
+38
+00:01:50,510 --> 00:01:55,220
+So we use no arbitrage to fix the price of asset 4, which
+
+39
+00:01:55,220 --> 00:01:57,450
+was our second call option.
+
+40
+00:01:57,450 --> 00:01:58,910
+So what do we do?
+
+41
+00:01:58,910 --> 00:02:05,110
+We start with basis assets and our payoff matrix A.
+
+42
+00:02:05,110 --> 00:02:08,139
+We're given a set of prices in the market.
+
+43
+00:02:08,139 --> 00:02:10,570
+And maybe we can fix one of them.
+
+44
+00:02:10,570 --> 00:02:13,420
+We're given a redundant security, x
+
+45
+00:02:13,420 --> 00:02:17,510
+tilde, which is because our market is overcomplete.
+
+46
+00:02:17,510 --> 00:02:20,740
+So then its price is given by the linear price
+
+47
+00:02:20,740 --> 00:02:23,110
+of the replicating portfolio.
+
+48
+00:02:23,110 --> 00:02:25,360
+And, having fixed that, we can then
+
+49
+00:02:25,360 --> 00:02:27,410
+determine the price of everything else,
+
+50
+00:02:27,410 --> 00:02:31,150
+including now our third AD--
+
+51
+00:02:31,150 --> 00:02:35,770
+our first AD security over here because now we know what S4 is.
+
+52
+00:02:35,770 --> 00:02:39,490
+S4 is now fixed at S2 minus S1.
+
+53
+00:02:39,490 --> 00:02:43,780
+And we can compute in terms of now two, not
+
+54
+00:02:43,780 --> 00:02:45,640
+four independent prices.
+
+55
+00:02:45,640 --> 00:02:49,390
+We can compute the value, the market price,
+
+56
+00:02:49,390 --> 00:02:56,400
+of this AD security as 1 minus S2 plus 2 S3.
+

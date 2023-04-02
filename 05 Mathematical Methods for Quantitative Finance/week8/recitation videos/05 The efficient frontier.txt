@@ -1,0 +1,91 @@
+
+PROFESSOR: We'll apply it to our global asset allocation
+problem.
+And let's pick 100 points, let's say,
+and we're going to run this chunk of code right here.
+And we're going to do 100 points on the efficient frontier.
+We're going to run our function.
+It's the mvef as a function of the covariance,
+the historical expected returns, and our number of points.
+We'll put this in an object we'll call big MVEF for lack
+of imagination.
+You can plot the results either using the base R plot
+commander.
+Here, I've done it using ggplot to get
+something that's a little bit more nicely formatted.
+And there are a couple other things
+that are nice about ggplot.
+One of them is it really respects
+the structure of the data when we've got more complex,
+related data.
+And at the practical level, it lets us layer and add things
+to build more complex plots if we
+want to put several graphs on the same page,
+where the base R command doesn't do that as elegantly.
+So our first command here is we're
+defining this object because we're going to use it again,
+mvef.plot.
+The ".plots" is just a naming convention,
+and what we're doing is we're telling it,
+plot these xy things and put some labels out there.
+So what do we get?
+We get something that looks qualitatively
+like the hyperbolas we saw.
+There's a curve.
+But it's obviously not a hyperbola because it bends.
+Instead of going asymptotically straight,
+it has a non-conic curve.
+It's got a kink in there, and it ends.
+It stops at a point, which is the highest
+return in our data set.
+And similarly, it stops down here at the bottom.
+But there it is.
+We've solved.
+So these points here represent the portfolios
+subject to the constraints that have
+the maximum level of return for a given the level of risk.
+Or the exact problem that we solved,
+they've got the minimum risk for a given level of return.
+Everything in the graph that is below and to the right
+is feasible but not optimal.
+Everything that is above and to the left
+would require violating one of the constraints.
+Now, how do we compare this to the unconstrained problem?
+Well, let's take a look at that.
+So let's look at running this chunk of code.
+Remember that we defined A, B, C to be the numbers that we
+did in lecture for looking at the exact problem
+without inequality constraints, so we can do it.
+And remember that we solved explicitly
+for a function of-- sigma p was a quadratic function of mu sub
+p.
+So let's solve for this here, and let's
+plot the results together.
+And that gives us the blue line.
+And in addition, I plotted the red dots
+are the original assets in our data set.
+So what we can see is that blue line is indeed a hyperbola.
+We've cut it off at the same upper level of mu sub p,
+so it's commensurate so it doesn't run off the page.
+We see that there's a region between the blue
+and the black lines.
+That's what we give up by imposing our constraints.
+The things between the blue and the black lines
+are risk-return combinations that
+are not allowed with our inequality constraints, that
+would be allowed, that would not violate a budget constraint,
+but they do violate one of the inequality constraints.
+So that's the cost of not taking short positions.
+That's the cost of not using leverage.
+This is the area between the two curves
+is how much more return we could have gotten per unit of risk
+or how much risk reduction we could have gotten, particularly
+with the short positions, that generate
+a synthetic negative correlation, how much less risk
+we could have taken for a given level of return.
+So the blue line is computed analytically,
+and that's our Lagrange multiplier method.
+The black line or the black set of dots connected by a curve
+through them is the numerical result of quadratic programming
+that we've done by running this algorithm
+and running it through the computer.

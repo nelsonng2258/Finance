@@ -1,0 +1,1588 @@
+0
+00:00:00,000 --> 00:00:01,300
+
+
+1
+00:00:01,300 --> 00:00:04,570
+PROFESSOR: Now, linear transformations are functions,
+
+2
+00:00:04,570 --> 00:00:07,990
+sometimes called mappings, that go from one vector space
+
+3
+00:00:07,990 --> 00:00:10,090
+to another.
+
+4
+00:00:10,090 --> 00:00:13,030
+And they can be completely different dimensions.
+
+5
+00:00:13,030 --> 00:00:15,760
+The key property is one we've been using since the beginning.
+
+6
+00:00:15,760 --> 00:00:17,080
+It's linearity.
+
+7
+00:00:17,080 --> 00:00:18,020
+And here it is.
+
+8
+00:00:18,020 --> 00:00:21,500
+So we've been doing linear transformations all along,
+
+9
+00:00:21,500 --> 00:00:22,850
+without calling them that.
+
+10
+00:00:22,850 --> 00:00:25,870
+So if I have a mapping which says that T takes me
+
+11
+00:00:25,870 --> 00:00:29,680
+from vector space V to vector space W,
+
+12
+00:00:29,680 --> 00:00:33,325
+then that means that something of the form T acting on V
+
+13
+00:00:33,325 --> 00:00:37,420
+is a vector in the space W. Linearity
+
+14
+00:00:37,420 --> 00:00:40,720
+means that when the operator acts on this sum,
+
+15
+00:00:40,720 --> 00:00:42,700
+it's the sum of the operator acting
+
+16
+00:00:42,700 --> 00:00:44,270
+on the individual elements.
+
+17
+00:00:44,270 --> 00:00:47,710
+And when we take the transformation acting
+
+18
+00:00:47,710 --> 00:00:51,770
+on scalar times our vector, we can bring the scalar out
+
+19
+00:00:51,770 --> 00:00:52,270
+in front.
+
+20
+00:00:52,270 --> 00:00:55,600
+It's a scalar times the operation acting on the vector.
+
+21
+00:00:55,600 --> 00:00:57,760
+So this simple property of linearity,
+
+22
+00:00:57,760 --> 00:01:01,390
+for example, that we've been using with expectations
+
+23
+00:01:01,390 --> 00:01:04,629
+is described by the actions on the vectors of the vector
+
+24
+00:01:04,629 --> 00:01:05,360
+space.
+
+25
+00:01:05,360 --> 00:01:09,040
+So if we know how it behaves on the basis vector,
+
+26
+00:01:09,040 --> 00:01:13,580
+by using linearity we know how it behaves on anything.
+
+27
+00:01:13,580 --> 00:01:17,540
+So consider a transformation acting on an arbitrary vector.
+
+28
+00:01:17,540 --> 00:01:21,690
+And we can express it as a linear combination.
+
+29
+00:01:21,690 --> 00:01:24,710
+So T is acting on V. V we could write
+
+30
+00:01:24,710 --> 00:01:26,600
+in terms of the basis vectors.
+
+31
+00:01:26,600 --> 00:01:29,120
+Applying linearity, we can write this
+
+32
+00:01:29,120 --> 00:01:32,990
+as the constants times T acting on each of the basis vectors.
+
+33
+00:01:32,990 --> 00:01:36,770
+And if we know how T acts on each basis vector,
+
+34
+00:01:36,770 --> 00:01:40,640
+then we know how it would act on any vector.
+
+35
+00:01:40,640 --> 00:01:42,570
+And we just recombine the results.
+
+36
+00:01:42,570 --> 00:01:47,000
+So in our payoff analogy, the payoff on a portfolio
+
+37
+00:01:47,000 --> 00:01:49,830
+is the sum of the payoffs of the individual securities.
+
+38
+00:01:49,830 --> 00:01:52,640
+And in fact, it doesn't matter how big your portfolio is.
+
+39
+00:01:52,640 --> 00:01:55,940
+The only thing we need to know are the individual payoffs.
+
+40
+00:01:55,940 --> 00:01:59,450
+And then we know how the payoff works
+
+41
+00:01:59,450 --> 00:02:00,740
+for anything more general.
+
+42
+00:02:00,740 --> 00:02:02,660
+And what this says is we really just
+
+43
+00:02:02,660 --> 00:02:06,020
+add up multiples of the columns that
+
+44
+00:02:06,020 --> 00:02:07,618
+correspond to the individual things
+
+45
+00:02:07,618 --> 00:02:08,660
+that we're interested in.
+
+46
+00:02:08,660 --> 00:02:12,140
+
+
+47
+00:02:12,140 --> 00:02:14,380
+So that brings us to matrix notation.
+
+48
+00:02:14,380 --> 00:02:17,530
+If we combine these columns, we can form them
+
+49
+00:02:17,530 --> 00:02:19,700
+into something that looks like a matrix.
+
+50
+00:02:19,700 --> 00:02:22,570
+So we construct the columns to be the output
+
+51
+00:02:22,570 --> 00:02:24,370
+of T acting on something.
+
+52
+00:02:24,370 --> 00:02:27,970
+And I've written T as an abstract linear transformation.
+
+53
+00:02:27,970 --> 00:02:30,970
+And M is the matrix, a concrete set of numbers
+
+54
+00:02:30,970 --> 00:02:32,380
+that we can write down.
+
+55
+00:02:32,380 --> 00:02:35,440
+And that's important when we're thinking
+
+56
+00:02:35,440 --> 00:02:38,680
+about bases and change of basis from one to another,
+
+57
+00:02:38,680 --> 00:02:39,963
+and things more abstractly.
+
+58
+00:02:39,963 --> 00:02:42,130
+That's not going to be very important for what we're
+
+59
+00:02:42,130 --> 00:02:45,340
+doing now, so we can closely identify the matrix
+
+60
+00:02:45,340 --> 00:02:47,170
+with the transformation itself.
+
+61
+00:02:47,170 --> 00:02:48,790
+But they are two separate things.
+
+62
+00:02:48,790 --> 00:02:52,480
+It requires a particular bases to write down a matrix
+
+63
+00:02:52,480 --> 00:02:54,310
+with respect to that basis.
+
+64
+00:02:54,310 --> 00:02:56,650
+To change basis, your transformation
+
+65
+00:02:56,650 --> 00:02:59,890
+is the same transformation, but it gets a different matrix.
+
+66
+00:02:59,890 --> 00:03:03,910
+So the matrix M depends on the choice that we have.
+
+67
+00:03:03,910 --> 00:03:10,390
+And then when M acts on a column vector of the original space,
+
+68
+00:03:10,390 --> 00:03:12,870
+the result is going to be a linear combination
+
+69
+00:03:12,870 --> 00:03:15,490
+of the columns of M.
+
+70
+00:03:15,490 --> 00:03:16,930
+And we've seen this.
+
+71
+00:03:16,930 --> 00:03:19,060
+If we have a portfolio that consisted
+
+72
+00:03:19,060 --> 00:03:23,650
+of the stock and a bond, and we multiplied it by the matrix A,
+
+73
+00:03:23,650 --> 00:03:24,530
+what did we get?
+
+74
+00:03:24,530 --> 00:03:26,830
+We just got the sum of the first two columns,
+
+75
+00:03:26,830 --> 00:03:28,730
+which intuitively is what we'd expect.
+
+76
+00:03:28,730 --> 00:03:31,090
+It's the sum of the payoffs of the security--
+
+77
+00:03:31,090 --> 00:03:32,540
+individual securities.
+
+78
+00:03:32,540 --> 00:03:36,160
+So this does for us the rules of matrix multiplication
+
+79
+00:03:36,160 --> 00:03:39,610
+that might seem kind of weird when you first run into them.
+
+80
+00:03:39,610 --> 00:03:41,890
+They correspond to a very natural way
+
+81
+00:03:41,890 --> 00:03:45,610
+of adding up payoffs, adding up securities, and adding up
+
+82
+00:03:45,610 --> 00:03:47,030
+money.
+
+83
+00:03:47,030 --> 00:03:51,410
+So in component notation, if we write M acting on--
+
+84
+00:03:51,410 --> 00:03:55,000
+so I've got this complicated matrix M with elements mij.
+
+85
+00:03:55,000 --> 00:03:56,950
+I act on a column vector.
+
+86
+00:03:56,950 --> 00:03:58,930
+And the rules of matrix multiplication
+
+87
+00:03:58,930 --> 00:04:02,290
+tell me that I get a column--
+
+88
+00:04:02,290 --> 00:04:09,920
+excuse me, that I get a column vector over here, which
+
+89
+00:04:09,920 --> 00:04:11,670
+is of different dimension.
+
+90
+00:04:11,670 --> 00:04:14,280
+And we write-- in matrix notation,
+
+91
+00:04:14,280 --> 00:04:16,339
+we can write this with summation convention.
+
+92
+00:04:16,339 --> 00:04:18,950
+It would be sum over j of mij hold
+
+93
+00:04:18,950 --> 00:04:21,800
+at the i-th component of the result, which
+
+94
+00:04:21,800 --> 00:04:25,310
+is, say, the second one here, could be i.
+
+95
+00:04:25,310 --> 00:04:28,740
+We hold i fixed, and we sum over the second column,
+
+96
+00:04:28,740 --> 00:04:38,680
+which is everything that we have here for the matching j's.
+
+97
+00:04:38,680 --> 00:04:43,270
+So if we take i to be a particular number 1 through s,
+
+98
+00:04:43,270 --> 00:04:45,970
+where s is the number of rows that we have,
+
+99
+00:04:45,970 --> 00:04:50,030
+and we ask about the i-th one-- say, how do I get, for example,
+
+100
+00:04:50,030 --> 00:04:53,560
+the second row over here--
+
+101
+00:04:53,560 --> 00:04:56,020
+I get it by taking--
+
+102
+00:04:56,020 --> 00:05:01,770
+by holding the I fixed.
+
+103
+00:05:01,770 --> 00:05:04,660
+So that would be corresponding to this second row.
+
+104
+00:05:04,660 --> 00:05:09,010
+And I take each element of the second row times each element
+
+105
+00:05:09,010 --> 00:05:10,270
+of this vector.
+
+106
+00:05:10,270 --> 00:05:12,410
+You notice they have the same number,
+
+107
+00:05:12,410 --> 00:05:14,470
+and that's what gives me this formula here.
+
+108
+00:05:14,470 --> 00:05:16,510
+But really, the simple thing that's going on
+
+109
+00:05:16,510 --> 00:05:18,940
+is when we do matrix multiplication,
+
+110
+00:05:18,940 --> 00:05:22,820
+we're just taking linear combinations of the columns.
+
+111
+00:05:22,820 --> 00:05:25,550
+These rules simplify if we're in the case of two dimensions.
+
+112
+00:05:25,550 --> 00:05:27,620
+And in particular, if we have square matrices,
+
+113
+00:05:27,620 --> 00:05:31,040
+we can think of this as transformations in the plane.
+
+114
+00:05:31,040 --> 00:05:33,800
+We can look at what happens if we iterate transformations
+
+115
+00:05:33,800 --> 00:05:35,090
+on the same space.
+
+116
+00:05:35,090 --> 00:05:38,570
+More generally, we can define matrix multiplication
+
+117
+00:05:38,570 --> 00:05:41,930
+where I go from one vector space V to another space W
+
+118
+00:05:41,930 --> 00:05:43,700
+to yet another vector space.
+
+119
+00:05:43,700 --> 00:05:46,790
+And we get that the action of successive linear
+
+120
+00:05:46,790 --> 00:05:49,940
+transformations is itself a linear transformation.
+
+121
+00:05:49,940 --> 00:05:53,390
+The product of two matrices is itself a matrix.
+
+122
+00:05:53,390 --> 00:05:57,380
+And we have these rules that are complicated to write down.
+
+123
+00:05:57,380 --> 00:05:59,570
+But in principle, it's just telling us
+
+124
+00:05:59,570 --> 00:06:02,330
+that if we want to get from V to W to X,
+
+125
+00:06:02,330 --> 00:06:05,540
+we could go straight from V to X by looking at this combined
+
+126
+00:06:05,540 --> 00:06:06,540
+matrix.
+
+127
+00:06:06,540 --> 00:06:10,190
+Now, the important among the properties of matrix
+
+128
+00:06:10,190 --> 00:06:13,100
+multiplication are that they're associative,
+
+129
+00:06:13,100 --> 00:06:14,090
+they're distributive.
+
+130
+00:06:14,090 --> 00:06:16,790
+But famously, they are not commutative.
+
+131
+00:06:16,790 --> 00:06:18,110
+You can't change the order.
+
+132
+00:06:18,110 --> 00:06:21,020
+And in particular, not only if you get a number,
+
+133
+00:06:21,020 --> 00:06:23,510
+but if the vector spaces have different dimension,
+
+134
+00:06:23,510 --> 00:06:25,640
+this doesn't even make any sense.
+
+135
+00:06:25,640 --> 00:06:28,280
+In our example, we're really going to be looking typically
+
+136
+00:06:28,280 --> 00:06:29,900
+at two vector spaces--
+
+137
+00:06:29,900 --> 00:06:32,930
+one in the world of security markets, where we've
+
+138
+00:06:32,930 --> 00:06:36,240
+got a set of securities that we identify we
+
+139
+00:06:36,240 --> 00:06:38,780
+have a basis vector for each traded security,
+
+140
+00:06:38,780 --> 00:06:40,820
+and on the other hand we have state space
+
+141
+00:06:40,820 --> 00:06:42,680
+that has to do with states of the world,
+
+142
+00:06:42,680 --> 00:06:45,830
+possibly in the future, without regard
+
+143
+00:06:45,830 --> 00:06:50,210
+to what finance people are doing and constructing securities.
+
+144
+00:06:50,210 --> 00:06:52,640
+We're going from one to the other and then back.
+
+145
+00:06:52,640 --> 00:06:56,910
+But if we wanted to do multiple hops across multiple spaces,
+
+146
+00:06:56,910 --> 00:07:00,070
+this is the way in which we would do it.
+
+147
+00:07:00,070 --> 00:07:02,310
+And there are two very important spaces
+
+148
+00:07:02,310 --> 00:07:04,350
+that we're going to use extensively.
+
+149
+00:07:04,350 --> 00:07:07,710
+And these are subspaces of a linear transformation.
+
+150
+00:07:07,710 --> 00:07:10,260
+They're called the image and the kernel.
+
+151
+00:07:10,260 --> 00:07:14,340
+And so the image of a linear transformation
+
+152
+00:07:14,340 --> 00:07:16,470
+is the set of everything that you can
+
+153
+00:07:16,470 --> 00:07:19,470
+reach by acting on it with--
+
+154
+00:07:19,470 --> 00:07:24,000
+by acting with t on all of the possible vectors in the vector
+
+155
+00:07:24,000 --> 00:07:24,790
+space.
+
+156
+00:07:24,790 --> 00:07:28,170
+So in our example, we said, what are all the possible payoffs
+
+157
+00:07:28,170 --> 00:07:30,960
+we could generate with a given set of securities?
+
+158
+00:07:30,960 --> 00:07:32,020
+Can I get everything?
+
+159
+00:07:32,020 --> 00:07:33,570
+Do I get less than everything?
+
+160
+00:07:33,570 --> 00:07:40,200
+Whatever it is, the span of the image that we have
+
+161
+00:07:40,200 --> 00:07:41,560
+generates everything.
+
+162
+00:07:41,560 --> 00:07:43,770
+So what we say is, specifically, the image
+
+163
+00:07:43,770 --> 00:07:48,540
+are all the vectors W that are T acting on something
+
+164
+00:07:48,540 --> 00:07:49,900
+in our vector space.
+
+165
+00:07:49,900 --> 00:07:54,210
+So this would be the payoff of all possible portfolios,
+
+166
+00:07:54,210 --> 00:07:57,510
+because these V's are linear combinations of our basis
+
+167
+00:07:57,510 --> 00:07:58,290
+assets.
+
+168
+00:07:58,290 --> 00:08:01,290
+And this says that the image of a linear transformation
+
+169
+00:08:01,290 --> 00:08:04,660
+are all the payoffs that can possibly be generated.
+
+170
+00:08:04,660 --> 00:08:07,900
+So it could be the entire target space W.
+
+171
+00:08:07,900 --> 00:08:10,830
+But often, it's going to be less.
+
+172
+00:08:10,830 --> 00:08:13,440
+So this tells us what we can reach,
+
+173
+00:08:13,440 --> 00:08:16,350
+what's reachable with a linear transformation,
+
+174
+00:08:16,350 --> 00:08:19,590
+when it acts on everything in our original space.
+
+175
+00:08:19,590 --> 00:08:22,140
+The kernel of a linear transformation
+
+176
+00:08:22,140 --> 00:08:25,650
+is a subset not of the target space W,
+
+177
+00:08:25,650 --> 00:08:28,590
+it's a subset of our original space V.
+
+178
+00:08:28,590 --> 00:08:31,080
+And it's all the vectors that get mapped
+
+179
+00:08:31,080 --> 00:08:32,669
+into the zero vector.
+
+180
+00:08:32,669 --> 00:08:35,370
+And sometimes, we say that it's annihilated
+
+181
+00:08:35,370 --> 00:08:37,620
+by the linear transformation T.
+
+182
+00:08:37,620 --> 00:08:40,169
+So the kernel of a linear transformation
+
+183
+00:08:40,169 --> 00:08:43,544
+is the set of all vectors that are taken into 0.
+
+184
+00:08:43,544 --> 00:08:46,370
+
+
+185
+00:08:46,370 --> 00:08:49,310
+This is going to be-- and this we've seen in lecture--
+
+186
+00:08:49,310 --> 00:08:52,160
+essential to defining one kind of arbitrage.
+
+187
+00:08:52,160 --> 00:08:55,850
+Because this would mean that the payoff on an--
+
+188
+00:08:55,850 --> 00:08:57,620
+obviously, this is a special case.
+
+189
+00:08:57,620 --> 00:09:00,050
+Zero always gets taken into zero.
+
+190
+00:09:00,050 --> 00:09:02,180
+But what does this mean in a financial context?
+
+191
+00:09:02,180 --> 00:09:04,580
+What's a concrete financial example?
+
+192
+00:09:04,580 --> 00:09:06,410
+It's an arbitrage portfolio, where
+
+193
+00:09:06,410 --> 00:09:08,240
+we have redundant securities.
+
+194
+00:09:08,240 --> 00:09:12,560
+That is, if I can construct a set of securities--
+
+195
+00:09:12,560 --> 00:09:15,260
+not just an empty portfolio, but actual securities,
+
+196
+00:09:15,260 --> 00:09:16,970
+long and short positions-- and if it
+
+197
+00:09:16,970 --> 00:09:20,540
+had zero payoff, that's an example of something that's
+
+198
+00:09:20,540 --> 00:09:21,740
+in the kernel.
+
+199
+00:09:21,740 --> 00:09:24,845
+It's a non-zero vector, it has zero payoff.
+
+200
+00:09:24,845 --> 00:09:29,170
+
+
+201
+00:09:29,170 --> 00:09:32,070
+So one more concept that's very important
+
+202
+00:09:32,070 --> 00:09:34,500
+is the rank of a linear transformation.
+
+203
+00:09:34,500 --> 00:09:36,660
+And that's the dimension of the image.
+
+204
+00:09:36,660 --> 00:09:39,900
+And that tells us how many linearly independent columns
+
+205
+00:09:39,900 --> 00:09:40,960
+are in the matrix.
+
+206
+00:09:40,960 --> 00:09:44,010
+That's why we inspect our payoff matrices,
+
+207
+00:09:44,010 --> 00:09:46,800
+see how many columns are there.
+
+208
+00:09:46,800 --> 00:09:49,830
+we can know by inspection or by more sophisticated techniques,
+
+209
+00:09:49,830 --> 00:09:52,770
+how many columns are there that are linearly independent.
+
+210
+00:09:52,770 --> 00:09:56,100
+That tells us how many dimensions there
+
+211
+00:09:56,100 --> 00:09:58,480
+have to be in the target space.
+
+212
+00:09:58,480 --> 00:10:00,900
+So the rank of a linear transformation
+
+213
+00:10:00,900 --> 00:10:02,020
+is very important.
+
+214
+00:10:02,020 --> 00:10:05,130
+And we've seen the rank of the payoff matrix
+
+215
+00:10:05,130 --> 00:10:07,410
+is essential for telling us whether markets
+
+216
+00:10:07,410 --> 00:10:11,850
+are complete or incomplete, and in certain cases,
+
+217
+00:10:11,850 --> 00:10:14,040
+about the number of redundant securities
+
+218
+00:10:14,040 --> 00:10:16,320
+they may have to be present.
+
+219
+00:10:16,320 --> 00:10:19,500
+The fundamental theorem of linear transformations
+
+220
+00:10:19,500 --> 00:10:23,670
+is a rule about the dimensions of these important spaces.
+
+221
+00:10:23,670 --> 00:10:27,270
+It says that the dimension of our original space
+
+222
+00:10:27,270 --> 00:10:31,080
+is equal to the dimension of the image plus the dimension
+
+223
+00:10:31,080 --> 00:10:32,710
+of the kernel.
+
+224
+00:10:32,710 --> 00:10:35,340
+So what that says is the dimension of the image,
+
+225
+00:10:35,340 --> 00:10:39,360
+remember, is the number of independent securities
+
+226
+00:10:39,360 --> 00:10:42,150
+that we have that have payoffs that can't
+
+227
+00:10:42,150 --> 00:10:43,980
+be replicated from each other.
+
+228
+00:10:43,980 --> 00:10:45,930
+And the dimension of the kernel is
+
+229
+00:10:45,930 --> 00:10:49,770
+going to be the number of redundant assets that we have--
+
+230
+00:10:49,770 --> 00:10:52,170
+the number of assets that are left over that
+
+231
+00:10:52,170 --> 00:10:55,020
+aren't giving us genuinely new payoff.
+
+232
+00:10:55,020 --> 00:10:57,670
+The division between them is not unique,
+
+233
+00:10:57,670 --> 00:11:02,250
+but this fundamental theorem is an important rule,
+
+234
+00:11:02,250 --> 00:11:05,130
+and it holds no matter how we choose to divide things up.
+
+235
+00:11:05,130 --> 00:11:08,760
+It's really a property of the relationship between these two
+
+236
+00:11:08,760 --> 00:11:11,550
+spaces under the action of a particular linear
+
+237
+00:11:11,550 --> 00:11:12,720
+transformation.
+
+238
+00:11:12,720 --> 00:11:14,950
+Of course, there are some special cases.
+
+239
+00:11:14,950 --> 00:11:17,790
+So if the kernel's empty, if everything
+
+240
+00:11:17,790 --> 00:11:20,640
+gets taken into a new vector, then the rank
+
+241
+00:11:20,640 --> 00:11:24,450
+of the transformation is equal to the dimension of the space
+
+242
+00:11:24,450 --> 00:11:28,230
+V. And if V and W have the same dimension,
+
+243
+00:11:28,230 --> 00:11:30,600
+and we say the matrix is of full rank,
+
+244
+00:11:30,600 --> 00:11:33,250
+then the linear transformation is inevitable.
+
+245
+00:11:33,250 --> 00:11:36,750
+It's a one-to-one mapping from space V to space W.
+
+246
+00:11:36,750 --> 00:11:38,010
+Everything--
+
+247
+00:11:38,010 --> 00:11:42,420
+we can reach every point in W by some vector in V.
+
+248
+00:11:42,420 --> 00:11:44,370
+And from any point, we can always
+
+249
+00:11:44,370 --> 00:11:48,960
+find the vector V that got us there.
+
+250
+00:11:48,960 --> 00:11:53,580
+Now, it's easy to do operations with matrices on a computer.
+
+251
+00:11:53,580 --> 00:11:55,637
+For two-by-two matrices, you can and should
+
+252
+00:11:55,637 --> 00:11:56,970
+be able to do them in your head.
+
+253
+00:11:56,970 --> 00:11:59,112
+But for anything bigger than two by two,
+
+254
+00:11:59,112 --> 00:12:00,570
+you probably should use a computer,
+
+255
+00:12:00,570 --> 00:12:03,570
+because the rules for doing matrix multiplication
+
+256
+00:12:03,570 --> 00:12:06,060
+are very complicated, rules for doing things
+
+257
+00:12:06,060 --> 00:12:09,100
+like determinants which apply if you have square matrices
+
+258
+00:12:09,100 --> 00:12:11,580
+are even more complicated, and the rules
+
+259
+00:12:11,580 --> 00:12:15,930
+for doing inversions of matrices are even more complicated,
+
+260
+00:12:15,930 --> 00:12:18,420
+and the rules for solving for linear independence
+
+261
+00:12:18,420 --> 00:12:21,390
+of a bunch of sets if you have non-square matrices
+
+262
+00:12:21,390 --> 00:12:23,530
+are even more complicated than that.
+
+263
+00:12:23,530 --> 00:12:25,720
+So it's a good idea to try things out.
+
+264
+00:12:25,720 --> 00:12:27,960
+You can do this in R, which we've been using,
+
+265
+00:12:27,960 --> 00:12:31,560
+or you can pick a programming environment of your choice.
+
+266
+00:12:31,560 --> 00:12:36,270
+But we want to distinguish operations of linear algebra
+
+267
+00:12:36,270 --> 00:12:39,360
+from those that are commonly done in lots of computing
+
+268
+00:12:39,360 --> 00:12:42,690
+environments, including R, where the typical thing is
+
+269
+00:12:42,690 --> 00:12:45,870
+if you have two lists, two things that would look
+
+270
+00:12:45,870 --> 00:12:48,240
+like vectors, and if you multiply them together,
+
+271
+00:12:48,240 --> 00:12:51,030
+or two matrices, what it does by default
+
+272
+00:12:51,030 --> 00:12:53,010
+is it multiplies them pointwise.
+
+273
+00:12:53,010 --> 00:12:58,970
+And that's not even an operation of linear algebra in general.
+
+274
+00:12:58,970 --> 00:13:02,080
+So what we do is we need a different notation.
+
+275
+00:13:02,080 --> 00:13:02,740
+But that's OK.
+
+276
+00:13:02,740 --> 00:13:05,120
+And it's going to depend on the different languages.
+
+277
+00:13:05,120 --> 00:13:10,180
+So in R, A times B, instead of the star operator,
+
+278
+00:13:10,180 --> 00:13:12,640
+it's sandwiched between percent signs.
+
+279
+00:13:12,640 --> 00:13:15,580
+Very easy and obvious to remember.
+
+280
+00:13:15,580 --> 00:13:18,700
+Percent start percent, A times B,
+
+281
+00:13:18,700 --> 00:13:22,810
+that's the notation for matrix multiplication of A times B.
+
+282
+00:13:22,810 --> 00:13:25,930
+If you want the square, you can take, say, A times A.
+
+283
+00:13:25,930 --> 00:13:30,280
+But what you don't do is A times B that's not a matrix product.
+
+284
+00:13:30,280 --> 00:13:34,360
+That just takes A and B, If they're the same size, not even
+
+285
+00:13:34,360 --> 00:13:35,900
+if they're square, and multiplies
+
+286
+00:13:35,900 --> 00:13:38,320
+them element by element.
+
+287
+00:13:38,320 --> 00:13:40,510
+And things-- there are operations
+
+288
+00:13:40,510 --> 00:13:43,270
+we can define, like exponentials of matrices
+
+289
+00:13:43,270 --> 00:13:44,830
+if the matrices are square.
+
+290
+00:13:44,830 --> 00:13:47,980
+But most of the functions by default don't do that.
+
+291
+00:13:47,980 --> 00:13:50,740
+In this case in R, the exponential of the matrix
+
+292
+00:13:50,740 --> 00:13:53,380
+is going to be the matrix of the exponential
+
+293
+00:13:53,380 --> 00:13:56,090
+of the individual matrix element.
+
+294
+00:13:56,090 --> 00:13:58,660
+So in addition to that, you need to be aware
+
+295
+00:13:58,660 --> 00:14:01,690
+of a whole bunch of limitations, because they're in computers.
+
+296
+00:14:01,690 --> 00:14:04,378
+So it's easy to get nonsense coming out.
+
+297
+00:14:04,378 --> 00:14:05,920
+And what you have to do this you have
+
+298
+00:14:05,920 --> 00:14:08,530
+to check your answers to make sure they're OK.
+
+299
+00:14:08,530 --> 00:14:11,650
+Remember that we're dealing with real numbers computers.
+
+300
+00:14:11,650 --> 00:14:12,680
+Can't do real numbers.
+
+301
+00:14:12,680 --> 00:14:14,530
+They do discrete approximations.
+
+302
+00:14:14,530 --> 00:14:16,012
+So there can be rounding issues.
+
+303
+00:14:16,012 --> 00:14:17,470
+There could be issues of stability.
+
+304
+00:14:17,470 --> 00:14:21,850
+A determinant that's close to 0 is not the same as one
+
+305
+00:14:21,850 --> 00:14:22,630
+that is 0.
+
+306
+00:14:22,630 --> 00:14:25,060
+But for the computer, it might not be able to tell.
+
+307
+00:14:25,060 --> 00:14:29,080
+And we might have two vectors that are either linearly
+
+308
+00:14:29,080 --> 00:14:30,970
+dependent or they're not, they're parallel
+
+309
+00:14:30,970 --> 00:14:33,070
+or they're not, but the computer might not
+
+310
+00:14:33,070 --> 00:14:35,440
+be able to tell to within machine precision.
+
+311
+00:14:35,440 --> 00:14:40,030
+So you need to go back and forth between the computational tool
+
+312
+00:14:40,030 --> 00:14:43,130
+and checking that things actually work and make sense.
+
+313
+00:14:43,130 --> 00:14:45,190
+So here's an example of what we could do.
+
+314
+00:14:45,190 --> 00:14:48,095
+Suppose we have a linear system of equations.
+
+315
+00:14:48,095 --> 00:14:50,470
+So here's a system of equations like the one I wrote down
+
+316
+00:14:50,470 --> 00:14:53,840
+at the beginning-- three equations, three unknowns.
+
+317
+00:14:53,840 --> 00:14:55,660
+We can write this in matrix form.
+
+318
+00:14:55,660 --> 00:14:57,850
+Using the rules of matrix multiplication,
+
+319
+00:14:57,850 --> 00:15:02,500
+I can write this as M times v equal to b, where I define v
+
+320
+00:15:02,500 --> 00:15:04,120
+to be the vector x, y, z--
+
+321
+00:15:04,120 --> 00:15:05,590
+those are three coordinates.
+
+322
+00:15:05,590 --> 00:15:08,470
+I define b to be a constant.
+
+323
+00:15:08,470 --> 00:15:11,410
+This would be like our payoff vector is B.
+
+324
+00:15:11,410 --> 00:15:13,480
+So here it's 3, 6, 9.
+
+325
+00:15:13,480 --> 00:15:15,700
+And I have a bunch of coefficients in front
+
+326
+00:15:15,700 --> 00:15:18,400
+that are all the coefficients in these equations.
+
+327
+00:15:18,400 --> 00:15:20,350
+And by organizing them in this way--
+
+328
+00:15:20,350 --> 00:15:24,460
+1, 2, 3, show up here as 1, 2, 3, 4, 5,
+
+329
+00:15:24,460 --> 00:15:28,520
+6 get multiplied times x, y, z to give us this expression,
+
+330
+00:15:28,520 --> 00:15:31,940
+we can encapsulate this set of equations.
+
+331
+00:15:31,940 --> 00:15:34,750
+In this matrix notation.
+
+332
+00:15:34,750 --> 00:15:35,830
+How do we solve it?
+
+333
+00:15:35,830 --> 00:15:39,700
+Well, M times v equals b, we'd like
+
+334
+00:15:39,700 --> 00:15:43,340
+to write v as b divided by M. We can't quite do that.
+
+335
+00:15:43,340 --> 00:15:44,780
+We can't just divide by a matrix.
+
+336
+00:15:44,780 --> 00:15:47,892
+But we can do the next best thing if M is invertible.
+
+337
+00:15:47,892 --> 00:15:49,600
+We'd like to have something that we could
+
+338
+00:15:49,600 --> 00:15:53,620
+write as v is M inverse b.
+
+339
+00:15:53,620 --> 00:15:55,520
+Can we do it?
+
+340
+00:15:55,520 --> 00:16:00,080
+So we can define a matrix in R as saying a matrix,
+
+341
+00:16:00,080 --> 00:16:01,810
+here's the list of numbers.
+
+342
+00:16:01,810 --> 00:16:04,660
+We tell it that we want there to be three rows.
+
+343
+00:16:04,660 --> 00:16:06,820
+And it will organize things like this--
+
+344
+00:16:06,820 --> 00:16:09,340
+1, 2, 3, 4, 5, 6, 7, 8, 9.
+
+345
+00:16:09,340 --> 00:16:11,260
+The command to invert a matrix in R
+
+346
+00:16:11,260 --> 00:16:12,940
+is called solve, because it thinks
+
+347
+00:16:12,940 --> 00:16:15,430
+we want to solve this system of linear equations.
+
+348
+00:16:15,430 --> 00:16:18,220
+And if we say solve, we get a problem.
+
+349
+00:16:18,220 --> 00:16:19,960
+Here is an error message--
+
+350
+00:16:19,960 --> 00:16:23,710
+computationally singular reciprocal condition
+
+351
+00:16:23,710 --> 00:16:26,920
+10 to the minus 18, which sounds awfully close to 0.
+
+352
+00:16:26,920 --> 00:16:29,650
+And the problem is that's the number we get--
+
+353
+00:16:29,650 --> 00:16:32,900
+something of that order-- if we look at the determinant.
+
+354
+00:16:32,900 --> 00:16:38,170
+The determinant is actually really close to 0.
+
+355
+00:16:38,170 --> 00:16:40,690
+And the reason for it should be pretty obvious now
+
+356
+00:16:40,690 --> 00:16:41,980
+if we take a look at it.
+
+357
+00:16:41,980 --> 00:16:46,660
+The determinant is 0, that would arise if the rows or columns
+
+358
+00:16:46,660 --> 00:16:49,900
+were linearly dependent.
+
+359
+00:16:49,900 --> 00:16:53,590
+Notice that the middle column is the average of the first
+
+360
+00:16:53,590 --> 00:16:55,100
+and the third column.
+
+361
+00:16:55,100 --> 00:16:57,580
+So this column plus this column add up
+
+362
+00:16:57,580 --> 00:16:59,650
+to twice the middle column.
+
+363
+00:16:59,650 --> 00:17:01,720
+That means the determinant is 0.
+
+364
+00:17:01,720 --> 00:17:06,000
+That means that an inverse doesn't exist.
+
+365
+00:17:06,000 --> 00:17:06,990
+Suppose I tweak it.
+
+366
+00:17:06,990 --> 00:17:10,140
+And suppose I change this number from a 9 to a 10.
+
+367
+00:17:10,140 --> 00:17:11,910
+Now, actually, we're golden.
+
+368
+00:17:11,910 --> 00:17:14,430
+So now we have something that is invertible.
+
+369
+00:17:14,430 --> 00:17:16,710
+All three columns are independent.
+
+370
+00:17:16,710 --> 00:17:17,990
+And we can invert it.
+
+371
+00:17:17,990 --> 00:17:21,450
+So what we'd like to do is find the v such
+
+372
+00:17:21,450 --> 00:17:30,070
+that when we act with M on the left, we get this vector.
+
+373
+00:17:30,070 --> 00:17:33,850
+If we do that in R, I've got M defined here,
+
+374
+00:17:33,850 --> 00:17:36,500
+I have b defined here.
+
+375
+00:17:36,500 --> 00:17:38,260
+The determinant is minus 3.
+
+376
+00:17:38,260 --> 00:17:40,540
+That's safely away from 0.
+
+377
+00:17:40,540 --> 00:17:45,610
+And if I define M inverse to be the inverse matrix,
+
+378
+00:17:45,610 --> 00:17:46,940
+I get a bunch of numbers.
+
+379
+00:17:46,940 --> 00:17:48,880
+And you might suspect that these could
+
+380
+00:17:48,880 --> 00:17:51,130
+be done as fractions, not as decimals,
+
+381
+00:17:51,130 --> 00:17:52,540
+and you would be right.
+
+382
+00:17:52,540 --> 00:17:56,320
+And then we can take M inverse multiplied times b,
+
+383
+00:17:56,320 --> 00:17:58,540
+and we get this vector here, which
+
+384
+00:17:58,540 --> 00:18:04,145
+looks like minus 1, 2, 1.776 times 10 to the minus 15.
+
+385
+00:18:04,145 --> 00:18:05,020
+Hmm.
+
+386
+00:18:05,020 --> 00:18:08,860
+Looks to me kind of like minus 1, 2, 0.
+
+387
+00:18:08,860 --> 00:18:11,285
+And if we check, we find out, actually,
+
+388
+00:18:11,285 --> 00:18:12,535
+that that's also the equation.
+
+389
+00:18:12,535 --> 00:18:17,100
+
+
+390
+00:18:17,100 --> 00:18:20,210
+You can see that here, because minus 1, 2, 0,
+
+391
+00:18:20,210 --> 00:18:22,910
+it says take twice the second column
+
+392
+00:18:22,910 --> 00:18:24,780
+and subtract the first column.
+
+393
+00:18:24,780 --> 00:18:27,875
+So 4 minus 1 is 3.
+
+394
+00:18:27,875 --> 00:18:30,410
+10 minus 4 is 6.
+
+395
+00:18:30,410 --> 00:18:33,920
+And 16 minus 7 gives us 9.
+
+396
+00:18:33,920 --> 00:18:35,830
+So we're good.
+

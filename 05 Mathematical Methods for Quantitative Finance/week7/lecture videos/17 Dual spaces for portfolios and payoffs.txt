@@ -1,0 +1,209 @@
+
+PROFESSOR: So we've got two ways of computing prices.
+One of them is in terms of market prices.
+The other is in terms of state prices.
+And I'd like to combine them by going back
+to that diagram we drew earlier that
+shows the algebraic notion of dual spaces
+and take advantage of a couple of results from linear algebra.
+So the idea is we want to relate the two.
+And, when it comes time in practice,
+you can use whichever one is convenient.
+The market prices are convenient in that we know
+what traded securities are.
+And it's very easy to associate prices with securities.
+And those prices might be observable on the market.
+But what it doesn't tell us is necessarily
+what the market structure is and what
+could happen in different scenarios
+so that we make sure that everything is consistent.
+On the other hand, state prices are very easy.
+There are no-- there are no extra pieces moving around.
+Nothing else is hiding.
+And the reason for that, the difference between the two,
+is that we don't introduce extra states of the world that
+aren't observed where we might introduce redundant securities.
+So our initial assumption at the beginning,
+when we started talking about linear algebra,
+was that the states of the world were mutually exclusive,
+and they're non-overlapping.
+So that's really the reason why things
+are simpler in state space, but you can use whatever is easier.
+So I'd like to do some algebraic relationships
+with a few pictures.
+What we're going to come back to is the thing
+about matrices where you can use whichever language is
+more convenient.
+We often find that, for doing pricing,
+it's easier to compute in terms of observables in the market
+prices.
+For understanding market structure, restrictions,
+and bounds, that's much more natural
+in terms of state prices.
+And, if we have a dual picture, it
+means that we can freely move back and forth from one
+to the other and get the advantages of both worlds.
+So let's see how that looks.
+So this duality picture means that we can do things
+in two different ways.
+And, although it's a little bit formal,
+we can get our pricing relationship very,
+very quickly by thinking about two different ways
+of computing the same thing.
+So, first of all, let's review what a dual space is.
+A dual space is a set of functions on a vector space.
+So let's begin with a vector space of portfolios.
+And I can act on it with security prices.
+And it's linear because the price of two portfolios
+is the sum of the price of each of the portfolios.
+So the way I act specifically is I turn S into a row vector.
+I act on x.
+And that gives me a scalar, which is the price.
+But S acting on x1 plus x2 is S acting
+on x1 plus S acting on x2.
+Through our old friend linearity,
+I get the same price.
+Now, these are two different vector spaces, each of which
+has the same dimension because I've
+got one price per security.
+But, although they're both Rn, they are different spaces.
+And we saw they have different units.
+One of them is in dollars.
+The other is in shares.
+You can't add them.
+So, because we have two different Rn's, let's
+give them names.
+Let's call the lower one, our asset space, V. It's Rn.
+But the upper space, the price space,
+the set of market prices, we'll call V star for the dual space.
+And it's also Rn.
+So there are two different vector spaces
+of the same dimension.
+One of them acts on the other.
+And this is called a dual space because it
+has the same dimension.
+Now, on the right-hand side of the diagram,
+we have an analogous situation.
+We have a set of payoffs.
+These are a state space, which is S-dimensional.
+Let's give that a name.
+We'll call it W. And it's S-dimensional.
+So, before, we could call that RS,
+but let's call it W now because there's another RS.
+There's another S dimensional vector space,
+and that's W star.
+It's a set of state prices, which
+act on payoffs to give also values for portfolios
+and, this time, portfolios that are defined not
+by their security composition, but by their payoffs
+in each state of the world.
+And the way we do that calculation is we
+take a vector in the space W star.
+We turn it into a row vector by taking
+its adjoint or its transpose.
+And then we multiply it times the payoff vector b.
+And these two things have to be the same.
+So you can use whichever one you want,
+but our pricing relationship tells us
+how to connect the two.
+So our pricing relationship, S equals A star psi,
+we can think of in the following way.
+We have our payoff matrix A, which
+maps V to W, which I've written up here.
+It takes portfolios into payoffs.
+We have A star, which goes in the other direction,
+it takes this dual space W star into V star.
+It's a transpose matrix.
+So the dimensions all work out.
+It takes an S-dimensional space into an n-dimensional space.
+And now we can compute our pricing
+for a portfolio in terms of its payoffs in two different ways.
+And we'd better get the same answer.
+So let's see how that works in dual language.
+To compute the price of a portfolio
+on the left side of the diagram, I take S transpose times x.
+On the right side of the diagram,
+I would take psi star times b.
+But suppose b is the image of A. Suppose b
+is the payoff of a portfolio x.
+Then I would take psi star acting on A times
+x, which I can write out here.
+So it must be the case that the row vector
+S acting on x is the same thing as the row vector psi acting
+on the product A times x.
+Now, notice that psi star times A is just
+the transpose of something.
+And remember the rule for matrices.
+The transpose of a product is a product
+of the transposes in the reverse order.
+And, also, the transpose of a transpose does nothing.
+So we can write this as A star psi transpose.
+If we apply that here, then we get this equation over here.
+But then we recognize that A star psi
+is exactly what we hoped to find in our pricing relationship.
+And, in fact, we have this quantity, A star psi,
+this quantity in parentheses.
+When we take its transpose and we act on it a vector x,
+we get the same thing as S, take its transpose, and act on x.
+Because x is arbitrary in these two cases,
+the only way this is going to hold
+is if we can identify S with A star psi.
+That's required for consistency.
+We don't yet know whether they're unique,
+but it is required.
+This says that we can price a portfolio either in terms
+of market prices or using the payoff matrix
+in terms of state prices.
+
+Now, there are some special relationships
+among these operators between their images
+and their null spaces.
+And let me just give you an example.
+But here's the summary of the result.
+We can say that anything in the kernel
+of A star acting on anything of the image of A gives 0.
+That's this annihilator operator.
+You could think of it as being like orthogonality.
+Or we also have the additional relationship
+that anything in the image of A star acting on anything
+in the kernel of A gives 0.
+So let's see how that works.
+Suppose we have an arbitrage portfolio.
+That is an arbitrage portfolio is a portfolio that
+has zero payoff.
+A acting on x is equal to 0.
+It has zero payoff.
+It's what we call an arbitrage portfolio.
+So saying it's the kernel of A is just a fancy name
+for saying that Ax equals 0.
+Now, suppose we act on it with a price vector,
+but that price vector is in the image of A star.
+Now, to be in the image of A star, that
+means that we found some vector over here in W star,
+acted on it with A star, and got a security price.
+So that might not be all possible security prices,
+but it certainly is some of them.
+So to say that S is in the image of A star
+means that S is A star acting on some psi for some vector that's
+there.
+It means there's at least one.
+There could be more than one.
+So suppose we have these two conditions.
+And now let's let S act on x.
+What do we have?
+So we have an element of the image
+of A star acting on an element of the kernel of A.
+So S star acting on x is going to be-- because it's
+in the image, S star is A star psi is S star acting on x.
+Take the transposes.
+That's going to be psi star A acting on x.
+This matrix multiplication is associative.
+So let's regroup.
+Let's do a A times x first and then act on it with psi star.
+A times x is equal to 0 by this condition
+because it's an arbitrage portfolio.
+And I get 0.
+So fancy notation that relates these different subspaces,
+but it's really just encapsulating
+the basic rules of arbitrage when
+we have redundant securities.

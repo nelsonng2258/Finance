@@ -1,0 +1,1288 @@
+0
+00:00:00,000 --> 00:00:01,060
+
+
+1
+00:00:01,060 --> 00:00:03,430
+PROFESSOR: So let's look systematically
+
+2
+00:00:03,430 --> 00:00:06,220
+at systems of linear equations and see
+
+3
+00:00:06,220 --> 00:00:07,630
+how we can classify them.
+
+4
+00:00:07,630 --> 00:00:10,480
+And what you'll see is that this matches closely
+
+5
+00:00:10,480 --> 00:00:12,160
+with the kind of classification we
+
+6
+00:00:12,160 --> 00:00:14,620
+looked at in the structure of financial markets.
+
+7
+00:00:14,620 --> 00:00:15,760
+Are they complete?
+
+8
+00:00:15,760 --> 00:00:17,200
+Or are they incomplete?
+
+9
+00:00:17,200 --> 00:00:19,390
+What's the rank of the payoff matrix?
+
+10
+00:00:19,390 --> 00:00:21,400
+Are there unique solutions?
+
+11
+00:00:21,400 --> 00:00:24,420
+Are there redundant securities?
+
+12
+00:00:24,420 --> 00:00:27,730
+So in general, there are different kinds
+
+13
+00:00:27,730 --> 00:00:29,560
+of systems of linear equations.
+
+14
+00:00:29,560 --> 00:00:33,250
+And we have cases where we have either homogeneous
+
+15
+00:00:33,250 --> 00:00:35,090
+or inhomogeneous equations.
+
+16
+00:00:35,090 --> 00:00:41,320
+So in the first case, we have an inhomogeneous equation
+
+17
+00:00:41,320 --> 00:00:42,910
+of the form that we looked at when
+
+18
+00:00:42,910 --> 00:00:45,790
+we tried to solve a matrix times a vector equals
+
+19
+00:00:45,790 --> 00:00:47,530
+a fixed constant, b.
+
+20
+00:00:47,530 --> 00:00:51,690
+And the question to solve is, can we find a solution v such
+
+21
+00:00:51,690 --> 00:00:55,640
+that when acted on by M, we get the particular target--
+
+22
+00:00:55,640 --> 00:00:58,600
+actually, the payoff vector-- b.
+
+23
+00:00:58,600 --> 00:01:01,225
+Now, there's special case when b is equal to 0.
+
+24
+00:01:01,225 --> 00:01:03,100
+We have what's called a homogeneous equation,
+
+25
+00:01:03,100 --> 00:01:06,670
+because every term in it has a v. 0 is
+
+26
+00:01:06,670 --> 00:01:10,870
+0 times v. And in this case, we're asking,
+
+27
+00:01:10,870 --> 00:01:12,085
+is v in the kernel?
+
+28
+00:01:12,085 --> 00:01:14,200
+And the reason that that's important
+
+29
+00:01:14,200 --> 00:01:17,140
+is that if we have a solution to the second equation,
+
+30
+00:01:17,140 --> 00:01:19,570
+and acting on b is equal to 0, then
+
+31
+00:01:19,570 --> 00:01:24,080
+we can add any multiple of that to the solution
+
+32
+00:01:24,080 --> 00:01:26,990
+in the first equation, and get another equation.
+
+33
+00:01:26,990 --> 00:01:31,660
+So in general, we've got s equations wit n unknowns,
+
+34
+00:01:31,660 --> 00:01:33,640
+and we want to know when we have a solution.
+
+35
+00:01:33,640 --> 00:01:35,848
+And roughly what we expect to find
+
+36
+00:01:35,848 --> 00:01:37,390
+is that it depends on whether we have
+
+37
+00:01:37,390 --> 00:01:39,570
+the same number of equations as unknowns,
+
+38
+00:01:39,570 --> 00:01:42,040
+whether we have more unknowns, or whether we have fewer.
+
+39
+00:01:42,040 --> 00:01:45,220
+So what we'd roughly expect it that if s and n are equal,
+
+40
+00:01:45,220 --> 00:01:47,230
+if we have as many equations as unknowns,
+
+41
+00:01:47,230 --> 00:01:49,120
+that there should be a unique solution.
+
+42
+00:01:49,120 --> 00:01:55,510
+And if we've got more equations than we do variables,
+
+43
+00:01:55,510 --> 00:01:57,668
+then we're not going to find any solutions at all.
+
+44
+00:01:57,668 --> 00:01:59,710
+Or generally, that system would be overdetermined
+
+45
+00:01:59,710 --> 00:02:00,543
+and overconstrained.
+
+46
+00:02:00,543 --> 00:02:03,170
+And if we have fewer equations than variables,
+
+47
+00:02:03,170 --> 00:02:05,750
+we'd expect there to be infinitely many solutions.
+
+48
+00:02:05,750 --> 00:02:09,310
+So that intuition is correct, but it's not
+
+49
+00:02:09,310 --> 00:02:10,600
+enough to count the variables.
+
+50
+00:02:10,600 --> 00:02:11,860
+We need to look at the rank.
+
+51
+00:02:11,860 --> 00:02:16,150
+We need to ask about the number of independent equations,
+
+52
+00:02:16,150 --> 00:02:18,880
+and the number of independent rows and columns
+
+53
+00:02:18,880 --> 00:02:20,800
+in our linear transformation.
+
+54
+00:02:20,800 --> 00:02:23,510
+So the exact situation depends on the dimension
+
+55
+00:02:23,510 --> 00:02:24,820
+of the image of the kernel.
+
+56
+00:02:24,820 --> 00:02:28,397
+And remember, those are related through the Fundamental Theorem
+
+57
+00:02:28,397 --> 00:02:31,930
+of Linear Transformations.
+
+58
+00:02:31,930 --> 00:02:33,550
+So let's go through some cases.
+
+59
+00:02:33,550 --> 00:02:37,050
+First of all, suppose that s is equal to n.
+
+60
+00:02:37,050 --> 00:02:39,700
+So we have the same number of equations as unknowns.
+
+61
+00:02:39,700 --> 00:02:41,400
+The matrix M is square.
+
+62
+00:02:41,400 --> 00:02:42,810
+And then there are two subcases.
+
+63
+00:02:42,810 --> 00:02:45,000
+We saw that the matrix might be invertible.
+
+64
+00:02:45,000 --> 00:02:47,730
+Or even if it's square, it might not be invertible.
+
+65
+00:02:47,730 --> 00:02:50,310
+Invertible means that all the rows and columns
+
+66
+00:02:50,310 --> 00:02:52,020
+are linearly independent.
+
+67
+00:02:52,020 --> 00:02:54,340
+In a securities market, it means that there
+
+68
+00:02:54,340 --> 00:02:58,260
+are as many securities as there are states with payoffs
+
+69
+00:02:58,260 --> 00:03:00,915
+in the world, and that none of the securities
+
+70
+00:03:00,915 --> 00:03:04,410
+is redundant, that none can be written in terms of the others.
+
+71
+00:03:04,410 --> 00:03:07,710
+In that case, we have a unique way to replicate the payoff.
+
+72
+00:03:07,710 --> 00:03:11,160
+Not only can we find a solution, that solution is unique
+
+73
+00:03:11,160 --> 00:03:14,950
+and we get it by inverting the matrix.
+
+74
+00:03:14,950 --> 00:03:18,930
+So it's invertible, easy, multiplying left and right here
+
+75
+00:03:18,930 --> 00:03:21,580
+by an inverse, we get a solution.
+
+76
+00:03:21,580 --> 00:03:26,820
+Now, the determinant of M is 0, if the matrix is not
+
+77
+00:03:26,820 --> 00:03:30,300
+invertible, if there is a linear dependence among the rows
+
+78
+00:03:30,300 --> 00:03:34,180
+or columns, then we don't have a unique solution.
+
+79
+00:03:34,180 --> 00:03:37,440
+But what we do have is a nonzero kernel.
+
+80
+00:03:37,440 --> 00:03:40,860
+So there's going to be some nontrivial vector that's
+
+81
+00:03:40,860 --> 00:03:43,570
+taken in to 0 by the action of the matrix.
+
+82
+00:03:43,570 --> 00:03:46,080
+Now, if we look at that in terms of the Fundamental Theorem
+
+83
+00:03:46,080 --> 00:03:49,140
+of Linear Transformations, we can
+
+84
+00:03:49,140 --> 00:03:53,370
+see that this tells us that the dimension of the image of M
+
+85
+00:03:53,370 --> 00:03:56,640
+has to be the rank, and that's going to be n--
+
+86
+00:03:56,640 --> 00:03:59,850
+the dimension of our security space or our original space--
+
+87
+00:03:59,850 --> 00:04:01,765
+minus the dimension of the kernel.
+
+88
+00:04:01,765 --> 00:04:04,140
+And that's going to be smaller, because our assumption is
+
+89
+00:04:04,140 --> 00:04:06,150
+that this number is bigger than 0.
+
+90
+00:04:06,150 --> 00:04:08,190
+So subtracting a number bigger than 0 leads
+
+91
+00:04:08,190 --> 00:04:10,350
+to a number smaller than n.
+
+92
+00:04:10,350 --> 00:04:14,500
+And that's going to be equal to s.
+
+93
+00:04:14,500 --> 00:04:19,290
+So we end up with the case where in effect, n, the rank,
+
+94
+00:04:19,290 --> 00:04:20,640
+is going to be less than s.
+
+95
+00:04:20,640 --> 00:04:24,450
+So what that means is that we've got some vectors b for which
+
+96
+00:04:24,450 --> 00:04:25,770
+there won't be a solution.
+
+97
+00:04:25,770 --> 00:04:27,780
+There's some vectors that we can reach.
+
+98
+00:04:27,780 --> 00:04:30,360
+There's certain cases where we can solve the equation.
+
+99
+00:04:30,360 --> 00:04:33,150
+But we can't solve it for every possible vector,
+
+100
+00:04:33,150 --> 00:04:35,220
+only for a subset of the vectors.
+
+101
+00:04:35,220 --> 00:04:37,380
+And the size of the subset depends
+
+102
+00:04:37,380 --> 00:04:40,860
+on the size of the kernel of M. The bigger the kernel of M is,
+
+103
+00:04:40,860 --> 00:04:43,020
+the smaller the image of M is.
+
+104
+00:04:43,020 --> 00:04:46,220
+
+
+105
+00:04:46,220 --> 00:04:48,220
+So let's look at how to do this in R.
+
+106
+00:04:48,220 --> 00:04:50,068
+And I'll let you run these commands.
+
+107
+00:04:50,068 --> 00:04:51,610
+These are just simple things that you
+
+108
+00:04:51,610 --> 00:04:53,010
+can run in the command line.
+
+109
+00:04:53,010 --> 00:04:55,510
+It's mostly about the case where we have a nonsingular
+
+110
+00:04:55,510 --> 00:04:57,400
+matrix that we just looked at.
+
+111
+00:04:57,400 --> 00:04:59,810
+So here's a system of linear equations.
+
+112
+00:04:59,810 --> 00:05:02,260
+These are three equations, three unknowns.
+
+113
+00:05:02,260 --> 00:05:04,660
+The matrix is nonsingular.
+
+114
+00:05:04,660 --> 00:05:08,080
+The function solve(M) inverts the matrix.
+
+115
+00:05:08,080 --> 00:05:11,950
+If we say solve(M,b), it gives us the unique solution.
+
+116
+00:05:11,950 --> 00:05:15,130
+And it's set up in R. I've constructed a matrix.
+
+117
+00:05:15,130 --> 00:05:17,020
+I've written down a vector, b.
+
+118
+00:05:17,020 --> 00:05:20,095
+I asked to solve for v. And here I get my answer
+
+119
+00:05:20,095 --> 00:05:24,160
+in decimal form, or in happier notation,
+
+120
+00:05:24,160 --> 00:05:27,110
+we can just say v is minus 1/3, 2/3, 0.
+
+121
+00:05:27,110 --> 00:05:31,600
+And you can check that that satisfies the equations above.
+
+122
+00:05:31,600 --> 00:05:33,730
+What we also found, though, of course,
+
+123
+00:05:33,730 --> 00:05:35,210
+is it's a unique solution.
+
+124
+00:05:35,210 --> 00:05:36,970
+So we know that there are no others,
+
+125
+00:05:36,970 --> 00:05:42,020
+because of our properties of M.
+
+126
+00:05:42,020 --> 00:05:45,440
+Now, what about the case where we have a square matrix
+
+127
+00:05:45,440 --> 00:05:46,520
+but it's singular?
+
+128
+00:05:46,520 --> 00:05:49,140
+So this is the other system we looked at earlier.
+
+129
+00:05:49,140 --> 00:05:51,950
+So in this case, I have the nine down here.
+
+130
+00:05:51,950 --> 00:05:55,040
+Rows and columns are linearly dependent.
+
+131
+00:05:55,040 --> 00:05:57,410
+And there's a technique for solving these equations,
+
+132
+00:05:57,410 --> 00:05:58,820
+as well, numerically.
+
+133
+00:05:58,820 --> 00:06:05,280
+So we can use this function qr to get a particular solution,
+
+134
+00:06:05,280 --> 00:06:06,750
+if it exists.
+
+135
+00:06:06,750 --> 00:06:10,050
+So what we do is, I construct a new matrix.
+
+136
+00:06:10,050 --> 00:06:11,960
+This is M1, in this case.
+
+137
+00:06:11,960 --> 00:06:14,420
+b is going to be the same vector that we had before,
+
+138
+00:06:14,420 --> 00:06:15,960
+and we'd like to solve it.
+
+139
+00:06:15,960 --> 00:06:18,680
+So if we try to solve using our previous method,
+
+140
+00:06:18,680 --> 00:06:19,890
+we get an error message.
+
+141
+00:06:19,890 --> 00:06:21,920
+And it tells us, guess what?
+
+142
+00:06:21,920 --> 00:06:25,070
+Matrix is probably singular, determinant's probably 0.
+
+143
+00:06:25,070 --> 00:06:31,040
+But if we use qr.solve, then we get a warning message
+
+144
+00:06:31,040 --> 00:06:35,090
+that the matrix is singular, but we nevertheless
+
+145
+00:06:35,090 --> 00:06:36,510
+can get a solution.
+
+146
+00:06:36,510 --> 00:06:41,780
+So the solution that we have, the particular solution
+
+147
+00:06:41,780 --> 00:06:44,840
+that we have, depends on how we do it.
+
+148
+00:06:44,840 --> 00:06:47,720
+Because remember, if we have a particular solution,
+
+149
+00:06:47,720 --> 00:06:52,220
+if there's a b, it does hit the particular b in question,
+
+150
+00:06:52,220 --> 00:06:54,500
+it's not uniquely determined, because we could
+
+151
+00:06:54,500 --> 00:06:56,910
+add any element of the kernel.
+
+152
+00:06:56,910 --> 00:07:00,590
+So you can check the kernel of z is this factor.
+
+153
+00:07:00,590 --> 00:07:06,650
+As I said, the central column is the sum
+
+154
+00:07:06,650 --> 00:07:08,580
+of the first and third columns.
+
+155
+00:07:08,580 --> 00:07:10,040
+So that's what z tells us.
+
+156
+00:07:10,040 --> 00:07:14,840
+And v, here's my particular choice, 0, 0, 1/3.
+
+157
+00:07:14,840 --> 00:07:18,500
+You can check that that satisfies the equation
+
+158
+00:07:18,500 --> 00:07:19,460
+that we need.
+
+159
+00:07:19,460 --> 00:07:21,620
+When I look in R, it found a different solution.
+
+160
+00:07:21,620 --> 00:07:24,800
+So this one is not as pretty as mine is,
+
+161
+00:07:24,800 --> 00:07:26,670
+but it's equally valid.
+
+162
+00:07:26,670 --> 00:07:27,770
+How do we know that?
+
+163
+00:07:27,770 --> 00:07:28,800
+Two different ways.
+
+164
+00:07:28,800 --> 00:07:31,610
+Number one, we can act on it with M
+
+165
+00:07:31,610 --> 00:07:34,850
+and verify that it satisfies the equation.
+
+166
+00:07:34,850 --> 00:07:41,030
+Or, number two, we can take the difference between the results
+
+167
+00:07:41,030 --> 00:07:49,120
+and find out if they differ by an element of the kernel.
+
+168
+00:07:49,120 --> 00:07:52,620
+Now, suppose that we've got more equations than unknowns.
+
+169
+00:07:52,620 --> 00:07:55,230
+Then in general, there aren't going to be any solutions,
+
+170
+00:07:55,230 --> 00:07:59,410
+or there won't be solutions for at least some values of b.
+
+171
+00:07:59,410 --> 00:08:02,760
+But again, we need to be careful about not just counting
+
+172
+00:08:02,760 --> 00:08:04,730
+variables, we need n equations, we need
+
+173
+00:08:04,730 --> 00:08:05,980
+to ask if they're independent.
+
+174
+00:08:05,980 --> 00:08:10,710
+After all, if I've got two more equations than unknowns,
+
+175
+00:08:10,710 --> 00:08:13,497
+but those equations are the same equation
+
+176
+00:08:13,497 --> 00:08:16,080
+or they're multiples of the same equation, that doesn't really
+
+177
+00:08:16,080 --> 00:08:16,800
+count.
+
+178
+00:08:16,800 --> 00:08:20,970
+So we get at that through looking at the rank.
+
+179
+00:08:20,970 --> 00:08:22,920
+So what's going on in this case is
+
+180
+00:08:22,920 --> 00:08:25,440
+we've got a smaller space going into a bigger one.
+
+181
+00:08:25,440 --> 00:08:27,030
+So we can't hit everything.
+
+182
+00:08:27,030 --> 00:08:29,370
+If we start with a three dimensional space
+
+183
+00:08:29,370 --> 00:08:31,680
+and we map it into a four dimensional space,
+
+184
+00:08:31,680 --> 00:08:34,860
+the most we can hope to hit is a three dimensional subspace.
+
+185
+00:08:34,860 --> 00:08:37,530
+There's always going to be something left over.
+
+186
+00:08:37,530 --> 00:08:39,870
+If we look at this in terms of our Fundamental Theorem
+
+187
+00:08:39,870 --> 00:08:43,240
+of Linear Transformations and we write this out,
+
+188
+00:08:43,240 --> 00:08:45,840
+we can see that the dimension of the image
+
+189
+00:08:45,840 --> 00:08:49,380
+has to be less than the entire size of the space.
+
+190
+00:08:49,380 --> 00:08:52,200
+But intuitively, it's because we're taking a small space
+
+191
+00:08:52,200 --> 00:08:54,030
+and putting it into a bigger one.
+
+192
+00:08:54,030 --> 00:08:55,920
+So there's no general solution.
+
+193
+00:08:55,920 --> 00:08:58,230
+That means that there's at least a lot--
+
+194
+00:08:58,230 --> 00:09:02,190
+an infinite number of factors that we can't solve for.
+
+195
+00:09:02,190 --> 00:09:06,720
+But we might happen to find a specific one, depending
+
+196
+00:09:06,720 --> 00:09:08,940
+on the particular b that we have.
+
+197
+00:09:08,940 --> 00:09:16,840
+If it's within the image, then we can find a solution.
+
+198
+00:09:16,840 --> 00:09:19,870
+So here's an example in R. Let's take a look
+
+199
+00:09:19,870 --> 00:09:22,670
+at four equations and two unknowns.
+
+200
+00:09:22,670 --> 00:09:27,320
+So in this case, qr.solve will give us a particular solution,
+
+201
+00:09:27,320 --> 00:09:28,330
+if it exists.
+
+202
+00:09:28,330 --> 00:09:31,180
+But we need to check, because it will sometimes output
+
+203
+00:09:31,180 --> 00:09:32,940
+things that aren't solutions.
+
+204
+00:09:32,940 --> 00:09:35,410
+So we need to check by substitution.
+
+205
+00:09:35,410 --> 00:09:37,600
+And in this case, there is a solution
+
+206
+00:09:37,600 --> 00:09:40,060
+for this particular set of coefficients,
+
+207
+00:09:40,060 --> 00:09:42,940
+this b on the right hand side, there is a solution.
+
+208
+00:09:42,940 --> 00:09:46,600
+And you can check that it's 3, minus 2.
+
+209
+00:09:46,600 --> 00:09:48,947
+But we do need to check that, because it's possible
+
+210
+00:09:48,947 --> 00:09:50,530
+that we could get something different.
+
+211
+00:09:50,530 --> 00:09:52,900
+And I have an example of that over here,
+
+212
+00:09:52,900 --> 00:09:54,620
+where we have a good answer.
+
+213
+00:09:54,620 --> 00:10:00,100
+And then a case where if I change this 5 into a 6, which
+
+214
+00:10:00,100 --> 00:10:01,960
+I've done over here numerically, I
+
+215
+00:10:01,960 --> 00:10:04,760
+get R also gives me an answer.
+
+216
+00:10:04,760 --> 00:10:07,010
+And if you substituted it and you find guess what,
+
+217
+00:10:07,010 --> 00:10:08,270
+it doesn't solve the equation.
+
+218
+00:10:08,270 --> 00:10:12,910
+So there's a specific algorithm in qr.solve which does generate
+
+219
+00:10:12,910 --> 00:10:14,780
+an output, even when it shouldn't.
+
+220
+00:10:14,780 --> 00:10:18,520
+So it's on you to check and make sure that it actually works.
+
+221
+00:10:18,520 --> 00:10:22,120
+
+
+222
+00:10:22,120 --> 00:10:24,700
+Finally, let's take a look at case 3.
+
+223
+00:10:24,700 --> 00:10:27,250
+When there are more unknowns than equations,
+
+224
+00:10:27,250 --> 00:10:29,380
+than there are multiple solutions.
+
+225
+00:10:29,380 --> 00:10:32,830
+This time, we've got a big space going into a smaller one.
+
+226
+00:10:32,830 --> 00:10:34,500
+So think about our first example.
+
+227
+00:10:34,500 --> 00:10:38,080
+We've got four securities going into a three dimensional space.
+
+228
+00:10:38,080 --> 00:10:41,120
+Maybe I've got 10 going into a three dimensional space.
+
+229
+00:10:41,120 --> 00:10:45,040
+So if the space is genuinely larger,
+
+230
+00:10:45,040 --> 00:10:47,770
+we have a really big space going into a smaller one,
+
+231
+00:10:47,770 --> 00:10:50,740
+then some vectors have to get mapped to 0.
+
+232
+00:10:50,740 --> 00:10:52,640
+If we again look at our dimension formula
+
+233
+00:10:52,640 --> 00:10:55,300
+from the Fundamental Theorem of Linear Transformations, what
+
+234
+00:10:55,300 --> 00:10:57,730
+we can see is that the dimension of the kernel
+
+235
+00:10:57,730 --> 00:11:00,310
+has to be bigger than 0.
+
+236
+00:11:00,310 --> 00:11:04,330
+Now, if the dimension of the kernel is bigger than 0,
+
+237
+00:11:04,330 --> 00:11:08,740
+that means that any solutions that we do find are not unique.
+
+238
+00:11:08,740 --> 00:11:10,670
+It means there's an infinite number of them.
+
+239
+00:11:10,670 --> 00:11:15,250
+So what it means is if we can find a set of basis factors
+
+240
+00:11:15,250 --> 00:11:17,215
+for the kernel, say it's one dimensional,
+
+241
+00:11:17,215 --> 00:11:19,210
+say it's three dimensional, we can
+
+242
+00:11:19,210 --> 00:11:22,900
+add any linear combination of basis vectors in the kernel
+
+243
+00:11:22,900 --> 00:11:25,940
+to any particular solution and get another solution.
+
+244
+00:11:25,940 --> 00:11:29,000
+So it's a particular kind of infinity.
+
+245
+00:11:29,000 --> 00:11:33,250
+We have an infinite number of solutions
+
+246
+00:11:33,250 --> 00:11:37,630
+because we can add a finite dimensional vector
+
+247
+00:11:37,630 --> 00:11:40,670
+space to it, which is equal to the dimension of the kernel.
+
+248
+00:11:40,670 --> 00:11:42,970
+So if the kernel is one dimensional,
+
+249
+00:11:42,970 --> 00:11:44,840
+we have an infinite number of solutions,
+
+250
+00:11:44,840 --> 00:11:48,370
+but we have a one parameter family for that solutions.
+
+251
+00:11:48,370 --> 00:11:50,050
+If the kernel is two dimensional,
+
+252
+00:11:50,050 --> 00:11:52,870
+we have a two parameter family of solutions.
+
+253
+00:11:52,870 --> 00:11:55,120
+So there are two independent parameters, each of which
+
+254
+00:11:55,120 --> 00:11:56,890
+could take an infinity of values,
+
+255
+00:11:56,890 --> 00:11:59,620
+but it's not just anything goes.
+
+256
+00:11:59,620 --> 00:12:02,810
+
+
+257
+00:12:02,810 --> 00:12:05,300
+Here's an example in R. Let's take
+
+258
+00:12:05,300 --> 00:12:08,270
+a look at the transpose of the previous matrix, why not?
+
+259
+00:12:08,270 --> 00:12:11,990
+In this case, we've got two equations and four unknowns.
+
+260
+00:12:11,990 --> 00:12:14,160
+Before, we had four equations and two unknowns.
+
+261
+00:12:14,160 --> 00:12:17,420
+So here's the system of linear equations we'd like to solve.
+
+262
+00:12:17,420 --> 00:12:21,500
+The qr.solve function does give us a particular solution
+
+263
+00:12:21,500 --> 00:12:22,620
+that we can work with.
+
+264
+00:12:22,620 --> 00:12:24,710
+But now we also need to solve the kernel.
+
+265
+00:12:24,710 --> 00:12:29,240
+Now if we do that and we solve for the kernel numerically,
+
+266
+00:12:29,240 --> 00:12:31,503
+again, there's not a unique way to write it down.
+
+267
+00:12:31,503 --> 00:12:33,170
+There are all kinds of different choices
+
+268
+00:12:33,170 --> 00:12:34,920
+you can make for basis factors.
+
+269
+00:12:34,920 --> 00:12:39,420
+And when we do it by hand, we tend to take easy things.
+
+270
+00:12:39,420 --> 00:12:41,030
+These are the ones that I found.
+
+271
+00:12:41,030 --> 00:12:43,580
+And I like them, because they've got integer entries
+
+272
+00:12:43,580 --> 00:12:45,380
+and they've got a bunch of zeros.
+
+273
+00:12:45,380 --> 00:12:47,660
+That makes it easy to check, and they look nice.
+
+274
+00:12:47,660 --> 00:12:50,700
+However, if you do it in R, you can get something like this.
+
+275
+00:12:50,700 --> 00:12:52,580
+Which, it turns out, there's a zero entry.
+
+276
+00:12:52,580 --> 00:12:55,970
+It's equally valid, but it looks a little bit messier.
+
+277
+00:12:55,970 --> 00:12:58,670
+However, they span the same space.
+
+278
+00:12:58,670 --> 00:13:01,670
+And given any particular solution,
+
+279
+00:13:01,670 --> 00:13:03,500
+such as this one, whether we find it
+
+280
+00:13:03,500 --> 00:13:06,560
+by I, which is easier to do for this set of equations,
+
+281
+00:13:06,560 --> 00:13:11,120
+or if we find it numerically by applying qr.solve,
+
+282
+00:13:11,120 --> 00:13:13,700
+once we have that particular solution,
+
+283
+00:13:13,700 --> 00:13:17,060
+we have a two parameter family general solution.
+
+284
+00:13:17,060 --> 00:13:21,450
+We can add some constant times this basis factor
+
+285
+00:13:21,450 --> 00:13:23,750
+plus the other constants this basis factor.
+
+286
+00:13:23,750 --> 00:13:27,020
+Or, if you prefer to use these two vectors as a basis,
+
+287
+00:13:27,020 --> 00:13:29,220
+we get the same thing.
+
+288
+00:13:29,220 --> 00:13:32,540
+This kernel function is not built into R.
+
+289
+00:13:32,540 --> 00:13:36,250
+There's an example of it I can show you.
+
+290
+00:13:36,250 --> 00:13:41,490
+We can take a look with the definition of kernel
+
+291
+00:13:41,490 --> 00:13:45,830
+by taking a look at adapting the eigenvalue function.
+
+292
+00:13:45,830 --> 00:13:49,000
+This turns out to give us a nice view of the kernel, because we
+
+293
+00:13:49,000 --> 00:13:51,060
+transfer this into a problem where we can think
+
+294
+00:13:51,060 --> 00:13:54,870
+of the kernel being related to the eigenvectors
+
+295
+00:13:54,870 --> 00:13:59,540
+of a different linear transformation.
+
+296
+00:13:59,540 --> 00:14:01,600
+So the basis might be inconvenient,
+
+297
+00:14:01,600 --> 00:14:05,260
+but if they're not 2 by 2 matrices or 2 by 4 or 4
+
+298
+00:14:05,260 --> 00:14:07,630
+by 2 matrices, where you can look at it,
+
+299
+00:14:07,630 --> 00:14:10,090
+squint a little bit, and guess what the kernel is,
+
+300
+00:14:10,090 --> 00:14:12,190
+you may need to resort to numerical methods
+
+301
+00:14:12,190 --> 00:14:14,800
+or to other algorithms, and that's completely fine
+
+302
+00:14:14,800 --> 00:14:15,550
+in larger case.
+
+303
+00:14:15,550 --> 00:14:17,270
+It's really except for small cases,
+
+304
+00:14:17,270 --> 00:14:18,530
+you wouldn't want to do that.
+
+305
+00:14:18,530 --> 00:14:21,620
+But conceptually, the idea is exactly the same.
+
+306
+00:14:21,620 --> 00:14:24,820
+So what we've done is we've classified different kinds,
+
+307
+00:14:24,820 --> 00:14:27,880
+different categories of systems of linear equations,
+
+308
+00:14:27,880 --> 00:14:29,080
+and their solutions.
+
+309
+00:14:29,080 --> 00:14:30,850
+And we've seen that these correspond
+
+310
+00:14:30,850 --> 00:14:32,890
+to the different cases that we want that,
+
+311
+00:14:32,890 --> 00:14:36,950
+when we examined questions of market completeness--
+
+312
+00:14:36,950 --> 00:14:38,980
+is s bigger or smaller than n?
+
+313
+00:14:38,980 --> 00:14:40,870
+What's the rank the payoff matrix?
+
+314
+00:14:40,870 --> 00:14:43,000
+When we looked at whether there are solutions--
+
+315
+00:14:43,000 --> 00:14:45,790
+what's the image of the payoff matrix?
+
+316
+00:14:45,790 --> 00:14:47,800
+What's the kernel of the payoff matrix?
+
+317
+00:14:47,800 --> 00:14:49,570
+Are there redundant securities?
+
+318
+00:14:49,570 --> 00:14:52,450
+These are all encompassed by the same questions
+
+319
+00:14:52,450 --> 00:14:56,380
+that we asked whenever we want to solve any simple system
+
+320
+00:14:56,380 --> 00:14:59,250
+of linear equations.
+
+321
+00:14:59,250 --> 00:15:00,000
+
+

@@ -1,0 +1,232 @@
+
+PROFESSOR: Can we find the efficient frontier in practice?
+The optimizations would be absolutely optimal
+if we knew the exact value of the inputs
+and we knew that the returns were generated
+in exactly the way these models predict,
+but neither of those things is true.
+Let's take the inputs first of all.
+Even if we knew the exact data-generating process,
+the parameters we need to estimate
+from historical data using statistical techniques,
+or we need other forecasting techniques
+to predict what the future excess returns will be.
+Given that they're drawn from some distribution,
+getting the parameters and fitting
+those from the limited and noisy data we have can be tricky.
+We also have the issue that the data-generating process,
+if there is such a thing, is not stable over infinite periods
+of time.
+Here, we've got attention.
+We'd like to use longer and longer historical periods.
+If we can to get better statistics.
+But the longer we go, the less likely
+it is that a given covariance matrix really
+held that would be a good basis for forecasting the future.
+So in practice, it's quite challenging
+to get good estimates for what the inputs are even
+under the assumption that there's
+a fixed data-generating process that we know what it is
+and that the time series are stationary.
+And probably none of those things is true.
+But let's take a look.
+We can at least see how big the estimation side is
+by making the assumption that everything is held fixed
+and that we know how the noise is generated.
+Let's do it via Monte Carlo.
+We've already seen how these techniques can
+be used to get visualizations of the evolution
+of random processes.
+We've seen how Monte Carlo techniques
+can be used to approximate the prices of options.
+And now let's use it to simulate a whole bunch
+of different scenarios.
+So this kind of scenario analysis
+is quite a typical application of Monte Carlo techniques
+as well.
+What are we going to do?
+Well, here's the idea.
+Let's assume that the data that we have,
+the code that we've been working with,
+the covariance matrix, the expected returns--
+let's suppose that those are actually the truth.
+That's the way the world really works.
+But let's forget that we know where they came from.
+Let's pretend we don't know what their actual values are.
+Let's suppose that what we have to look at is historical data.
+We're going to simulate it.
+But what we're looking at is realizations
+of data that are drawn from a probability distribution
+with a particular covariance and with a particular set
+of expected returns.
+And we're going to do that a whole bunch of different times.
+So here's the setup.
+There's a true data-generating process.
+We're going to generate a whole bunch
+of decade-long simulations.
+Each one is going to be a possible outcome that we could
+have had, data that we could be looking
+at by which we need to estimate what the true values are.
+And we don't get the true values.
+There's no answer in the back of the book here.
+What we need to do is we're charged with making investment
+decisions.
+So what we're going to do is each time we
+get a chunk of simulated historical data,
+we're going to act on it.
+We're going to try to infer the most likely values for what
+the covariance matrix and the expected excess returns are.
+We will find where we think the efficient frontier should be,
+and that will be a set of portfolios.
+But then each of those portfolios,
+we're going to plot on the risk and return graph,
+not against where we thought it's risk and return would be,
+but where they actually are based on the true values.
+So this is all under some almost perfect--
+this is like the best case we could possibly have.
+There is a stable data-generating process.
+Everything is stationary.
+We know what the model is.
+We just don't know the parameters.
+So this is all-- any uncertainties
+we see, any imprecision we see all comes from the parameter
+estimation side.
+None of it comes from this other more challenging problems
+like our markets changing with time.
+Can we use historical estimates from the past?
+Are they good predictors of the future?
+Do we need something else?
+This is our baseline.
+So let's see how well we can do that.
+So what we're going to do is write a function
+to do mean variance.
+We'll call mvmc for "mean variance Monte Carlo."
+And let's take a look at what it consists of.
+So here's our code, our mean variance Monte Carlo,
+and I've defined a function which has a similar function
+call.
+It takes a covariance matrix.
+It takes a vector of expected returns and a bunch of points.
+So let's run this to define the function.
+And what we're going to do is generate a simulated covariance
+matrix.
+Now, the data that we started with
+was based on the simulation's monthly returns.
+It could be anything.
+There's a standard technique for generating
+correlated random variables that are normally distributed,
+which we're going to use here.
+And that's to use this Cholesky decomposition, which basically
+takes the square root of the covariance matrix,
+and we'll sandwich it and reconstruct something.
+So you can take a look.
+This is a standard technique that you can look up
+for generating jointly normal correlated random variables,
+and what we're going to do is we're
+going to generate a bunch of simulated time series
+with those parameters.
+So what happens is we're using this
+for generating normal random numbers.
+The parameters are going to be the mu inputs that we have
+and the covariance matrix that we have.
+So this tells us that we're going to generate things
+from a random distribution whose parameters are the ones
+that we're setting to be exactly the ones that we started with.
+But of course, because it's a random sample,
+we're going to get different actual values.
+Then, for each set of simulated historical data,
+we're going to run our computation of where
+the efficient frontier is.
+So what we'll do is we'll do a loop.
+And for each one, we're going to run an efficient frontier.
+We'll do that a whole bunch of times,
+and then we'll plot them and see how it looks.
+So the rest of this is pretty much the same
+that we saw before, and we're going
+to output this into something we'll call mvmc.
+
+It's going to have sigma p on the efficient frontier
+as a function of mu sub p, the grid of points
+that we work with, and we'll put the weights as well for what's
+on the efficient frontier.
+So let's see how it looks, shall we?
+Let's do 100 simulations.
+You can run the code and do more.
+And what we're going to do is generate a bunch of points.
+So we'll have this for loop over simulations.
+So within this for loop, we're going to run our mean variance
+Monte Carlo.
+Because it's going to overwrite the variables each time, let's
+pull out the ones we want.
+So sigma_sim will be our--
+in this case, for step n in our for loop.
+This will be the n-th set of sigma variables
+on our efficient frontier plot.
+Remember that we're having pairs of mus and sigmas,
+and the ensemble of them for giving in
+is going to sweep out the curve.
+And here are the corresponding mus,
+the points that we held fixed as we build up
+our efficient frontier.
+And that's it.
+So we're going to run this loop, and then we're
+going to plot it.
+So let's take a look and see what we get.
+
+Oh, boy.
+So the blue line is our unconstrained efficient
+frontier.
+The black line that's the envelope
+curve of all these red dots, that's
+the true efficient frontier under the constraints
+with the inequality constraints we've been talking about.
+So the blue line and the black line
+are exactly the ones that we saw above.
+What are the red dots?
+Well, each line of red dots that you see
+is the output of one of our 100 simulations.
+Using our best historical estimates and our best
+techniques of optimizing based on a given
+set of inputs that we had, this is where we think--
+these are things that we thought were on the efficient frontier
+plotted against where they really truly are.
+So we don't plot their locations based on what
+we thought the values were.
+This is based on where they actually were.
+And of course, in the real world, we couldn't do that.
+So this is absolutely a best case.
+We would just find out when the investment returns came in
+and we found that a particular portfolio landed far away
+from the efficient frontier.
+And you can see that these red points are not all
+clustered really close to the efficient frontier.
+It might be what you would expect.
+Some of them are very, very far away.
+Of course, a lot of them are close, and we could get lucky.
+But if we were to end up with a point far away,
+we might say, well, what happened?
+How did that happen?
+I thought we were doing something that was optimal.
+And in this case, we did.
+We did everything right, and we still
+ended up with the red points.
+So it's a challenging thing to see how to do it in practice.
+There are many things that are going on.
+What you might think of as being the simplest one,
+doing statistical estimation even
+in a case where we know exactly how everything works,
+leads to portfolios being all over the place.
+So we do need to deal with that.
+We do need to deal with the possibility the market
+structures are changing over time.
+We do need to think about alternative ways of using data
+for forecasting future risk and return,
+and we need to think about the optimization we have.
+Not only in a pure world, does it
+give us something that is truly the best?
+But is it something that actually
+is going to be robust and useful when we apply it
+in the financial markets or in other decision-making settings?
+Try it out on your own with this notebook.
+Run it, tweak the parameters, go get your own data
+sets, and have some fun.

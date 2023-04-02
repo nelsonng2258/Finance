@@ -1,0 +1,208 @@
+
+PROFESSOR: If there is a drift term,
+then things change, and we can't really
+use our symmetry argument.
+We can't use the method of images.
+And in fact, in our discrete case,
+if our up and down probabilities were different,
+that argument wouldn't have worked at all.
+We could count the paths the same way,
+but the weighting factors would have been different.
+And we would have needed to adjust the weighting part,
+even though the combinatorics would have been the same.
+But we don't need to go that far to tweak our solution
+to get a correct value.
+And we'll do what we did in two ways.
+The first thing is to notice that our boundary condition is
+the same.
+We want to have that the probabilities should
+vanish whenever it z is equal to z star.
+That's just the nature of the boundary.
+So that's OK.
+We know that if we have a linear combination of two
+solutions to the diffusion equation, by linearity
+it's also a solution.
+So let's not toss our solutions away.
+Let's see if maybe instead of just taking the difference,
+if a different weighted average of the two
+might be able to work.
+So what we're going to do is we're going to make a guess.
+We'll put in a particular form.
+We'll see what would be required by that form.
+And then we'll see if we can come up
+with a general solution.
+So the form I'm going to try is I'm
+going to suppose that all I need to do
+is multiply by some constant C. And the constant C would
+be equal to 1 if mu were equal to 0,
+but I don't know what it is.
+It's going to be some function of mu that
+vanishes when-- or that goes to 1 when mu is equal to 0.
+So it certainly satisfies the differential equation.
+That's great.
+What happens when z equals z star?
+Well, I want to set it equal to 0.
+So if I put in that condition, and I
+require that this expression be equal to 0 and z equal z star,
+I can solve for C. OK.
+Just by dividing, I have this expression
+in parentheses is equal to 0.
+That means I have the ratio of these two exponentials.
+And I find that C is equal to e to the minus 2
+mu z0 minus z star over sigma squared.
+So if mu is equal to 0, it checks the condition
+that we needed.
+C is equal to 1.
+So this satisfies our differential equation
+because it's the difference of solutions,
+and it satisfies our boundary conditions
+because, by construction, when z is equal to z star,
+the function vanishes, the two terms cancel each other out.
+Now, suppose we want to know our survival probability at a given
+point in time, that is, not to get to a particular terminal
+point z, but to finish anywhere above the boundary.
+Well, I have the probability density.
+ps of z and t dz tells me the probability in time t
+that I'll have reached some point between z and z plus dz.
+Let's integrate it over all z, but only those z's that
+are above the boundary.
+Well, our integrand is going to be a Gaussian type exponential
+with a Gaussian prefactor, and with some cut off
+on the integral.
+And that means that we can express everything
+in terms of a cumulative distribution function
+from the Gaussian.
+And I'm going to note that by the function phi.
+And it shows up all over the place.
+Whenever we're dealing with Gaussians,
+phi is defined to be the definite integral from
+minus infinity to x of the Gaussian kernel 1
+over square root of 2 pi e to the minus x squared over 2.
+So I'm integrating, but only up to x.
+It has a nice symmetry property for phi of minus x.
+And you can get that to change the limits of integration.
+And the result that we get when we do the integral is I
+get two terms, both in phi.
+I have phi here with this argument.
+And I have another phi here with a different argument.
+And I have a little exponential prefactor.
+So this is my solution.
+You notice that it depends on time.
+It depends on my starting point.
+It depends, in fact, not just on the starting point,
+but it depends on z0 minus z.
+That is, it depends on how far away I am from the barrier
+initially.
+If mu is a positive number, then on average--
+or a negative number, actually, for that matter--
+then this thing in the numerator is, on average,
+how far I expect what my expected location is,
+how far away am I going to be.
+If mu is big, then this increases over time,
+and it means I'm getting farther and farther
+away from the barrier.
+And this denominator square root of sigma
+squared t gives me a measure as to how much diffusion
+I typically would expect in time t.
+
+Now, let's think of places where we might apply this.
+
+Suppose we want to think about the probability of default
+or a firm.
+And the default could be that the firm runs out of money
+and that the equity goes to 0, or it could be a trigger point.
+There could be some particular financial term
+that's a covenant in a bond, let's say.
+But let's keep things simple.
+Let's picture a firm that's represented by debt and equity.
+So its resources our D plus E. That's the value of the firm.
+z, we'll that be the firm value.
+We'll let z star be the case when the equity goes to 0, when
+the shareholders are wiped out, and we're
+on the borderline where the value of the firm
+might be less than the outstanding debt that's owned.
+So that's z star.
+Certainly, we don't want the value
+of our firm to go below z star.
+What's the probability of that happening?
+Well, let's start with the current value
+z0 to be the firm value, and let's assume that we've
+got some positive equity.
+Then we know how to solve the problem.
+That's the survival probability that we just computed.
+It says, in a given amount of time,
+what's the probability that you don't default?
+And that's-- now we can think about what that's a function
+of.
+Well, it depends on the rate of growth of the firm, mu.
+It depends on the capital reserves, on z0 minus z star.
+That's how much initial capital we have.
+So by having a good capital buffer--
+and you can check this--
+the larger the capital buffer is,
+the higher the survival probability
+is, which certainly makes sense.
+But we could turn this around and think of this as something
+to solve for.
+If you're raising money for your startup,
+instead of just seeing how much money you can get,
+or who's offering you the best terms,
+or what might be the return that they're demanding,
+you might ask a very personal question close
+to the heart, which is, what are the chances of my business
+surviving?
+How does it depend on the capital?
+And if I want to minimize my default probability,
+if I want to minimize my extinction
+probability for a business, how much capital do I need?
+That is, we can solve what the capital resources are
+to achieve a particular probability level for default.
+We can also think about two different things
+that both contribute.
+One of them is how much initial capital we have,
+and the other is what the rate of growth of the firm is.
+Obviously, for a slow growth rate,
+we're going to be mostly dependent
+on the initial buffer.
+If it's expected to have a high growth rate,
+then that might not be as important.
+This also shows up in a slightly different version in a number
+of insurance problems.
+We have some capital base.
+We have a possibility of claim premiums
+that, usually, we would model is a jump process,
+not a diffusion process.
+But we do need to balance that against the rate of growth,
+the rate of income through premiums
+that might be needed, ultimately,
+to offset negative fluctuations that would show up.
+So we can think about this as representing real events
+for things that might happen, represented
+by a boundary, the likelihood of a particular event.
+And it's not something we can formulate in advance,
+and saying this happens at a particular time,
+so this could have happened anywhere.
+And this helps us answer the question,
+a somewhat path-dependent question,
+without getting into the paths.
+What's the probability to get from A to B
+without hitting some event, in this case a barrier,
+along the way?
+Here's a numerical example of this problem you can find
+worked out in detail in the book Fixed Income Finance
+by Wise and Bhansali.
+And they take the example where mu is 1%, sigma is 25%,
+and the z0 minus z is a half.
+And we can see how the survival probability evolves over time.
+And, as we would expect, the longer we wait,
+the more it goes down because you have more and more chances
+for something bad to happen.
+And we can see that we have this initial behavior here,
+and then it drops off over time.
+And here we look at the point where it reaches 50%.
+At the end of 10 years, you can go back
+and rerun the numbers using that closed form expression
+to see how things behave with the different growth rate.
+How does that change the survival probabilities?
+How does that compare to changing the initial capital
+buffer?

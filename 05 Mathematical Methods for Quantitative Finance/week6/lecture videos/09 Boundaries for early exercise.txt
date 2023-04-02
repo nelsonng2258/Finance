@@ -1,0 +1,159 @@
+
+PROFESSOR: Another example of boundary conditions
+in our differential equations is looking
+at the exercise conditions.
+More American options.
+The European option is an option that
+can only be exercised at its expiration date.
+An American option is one that can
+be exercised at the discretion of the holder
+of a long position.
+The option any time up until exercise.
+So the owner has to choose whether or not
+to exercise early.
+And if to exercise when or under what conditions.
+And we can't apply our previous formulas really held
+for European exercise because those
+covered the entire domain.
+But once an option holder exercises his or her option,
+that option is no longer there.
+And the solution would no longer be valid.
+So we have a different kind of boundary condition.
+Now this is actually a fairly complicated subject.
+We're going to look at one very, very special example.
+And that's going to be to consider
+an option that never expires.
+And we'll consider a put option.
+So the put option is something that pays off
+if the value goes down.
+If value is below the strike price.
+And the amount that it pays off is
+equal to the amount by which is below the strike price.
+Basically, the put option gives you the right, but not
+the obligation to sell at price K.
+So you would never do that if the price were above K.
+You would sell at the market price.
+But if the price drops low, then you
+might choose to exercise and sell at K.
+If the price goes to 0, obviously you
+might as well exercise it early because that's
+the maximum amount of money you can get.
+The stock price never can go below 0.
+The maximum value you can ever get is K.
+So if the price were to hit 0, you would certainly exercise.
+But it might be the case and if the price
+gets sufficiently low, you would exercise as well.
+So let's see if that might be the case.
+The interesting thing about the perpetual option
+is because it never expires the value is time independent.
+So this is a way to get an equation that's
+simpler than the partial differential equations.
+It's going to be an ordinary differential equation.
+So the value can only depend on the stock price.
+It doesn't matter if it's been bouncing around for an hour
+or for a year.
+The value only depends on what the current stock
+price is because the time never ever enters into the problem.
+So the equation we have is very simplified Black-Scholes
+where V depends only on S. And we drop the time derivative.
+So this is the equation that we have
+that's for any time independent contract that satisfies
+the Black-Scholes equation.
+Now this equation in order to solve it,
+we're going to try a particular form.
+We're going to look for an inspired guess.
+See if we get lucky.
+See if it might work.
+And if it does, what conditions are
+there so that we can get any arbitrary parameters exactly
+right.
+So the guess that we're going to try here is to try a power law.
+And the motivation for that guess
+is to notice this is homogeneous in its weight in S.
+This doesn't have any S this is just a V. This
+has an S in the numerator.
+One in the denominator.
+This has 2 in the numerator.
+2 in the denominator.
+So let's see what happens.
+If I take V of S as S to some power,
+if I differentiate it I'm going to get s to the alpha--
+I'm going to get alpha S to the alpha minus 1.
+I multiply by S. And now I've got S to the alpha again.
+If I take two derivatives, I'm going
+to end up with something-- or actually specifically alpha
+times alpha minus 1.
+S to the alpha minus 2.
+I multiply S squared, I'm going to get us to the alpha again.
+So if I do that, I divide through by S to the alpha.
+I get an equation or alpha for these coefficients
+that come from these equations.
+And then it's a quadratic equation in alpha.
+So I solve the quadratic equation.
+And I find there are two possible values.
+a equals 1 or minus 2r over sigma squared.
+Now a equals 1 would have been easy to guess.
+a equals 1 says that the value is S.
+And the stock price itself always satisfies
+the Black-Scholes equation.
+But we also know that that can't be part of the solution
+because it grows as S grows to infinity.
+And the value of a put should be a decreasing function
+in the stock price.
+So that can't be part of the solution.
+What about the other one?
+Well, assuming that interest rates are positive,
+and volatility of course, is positive we're
+going to get S to the minus 2r over sigma squared.
+So our solution has to be something of this form.
+There's a overall proportionality constant.
+But the S dependence has to be power law in S decreasing.
+And that will satisfy this differential equation.
+
+We might choose to exercise the price is sufficiently low.
+And when we exercise, the value of the option
+will be equal to its exercise price.
+Because otherwise there would be an arbitrage opportunity value
+where higher or lower.
+Though at the exercise point, we have
+that whatever it is S hat, that the value of the option
+is going to be K minus S hat.
+And that lets us rewrite our form in terms of we've
+just traded one unknown for another unknown.
+In this case S hat.
+Now the way that we can think about the value
+is that the person holding the long position
+who has the choice as to whether to exercise
+or not might choose to maximize his or her value.
+The person with the short position
+has to assume that because that's sort of the worst case.
+If the person who holds the option
+doesn't take advantage of an exploration opportunity,
+that's good.
+That's extra value.
+But that isn't something that you'd
+want to count on if you were managing risk,
+and you were in the business of writing options.
+So let's assume that the option holder will try
+to optimize maximize its value.
+And we can compute by differentiating with respect
+to this parameter that's a choice.
+This S hat.
+And see what maximizes the value.
+And then that will pin down what our final value for the option
+is.
+So the first part of this is something that
+showed up on a problem set.
+This part completes the problem.
+You can try it out first before you look at these formulas.
+But otherwise, if you're looking at them now,
+and you want to see how it goes to finish things up,
+we see that the first partial setting it to 0
+gives us the solution for S hat.
+We can check that this is a maximum and not a minimum
+by looking at second derivatives.
+And then if we substitute S hat into the expression
+above, we finally get this result for the value
+of the American option in terms of S and K.
+The parameters sigma and r.
+And obviously time doesn't appear in the problem.

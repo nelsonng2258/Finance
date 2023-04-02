@@ -1,0 +1,248 @@
+
+PROFESSOR: One common approach to solving partial differential
+equations is to make an educated guess
+as to the form of the correct answer and see where it leads.
+Now, this is a little bit different
+from the special example that we had before,
+where the example appeared full blown out of thin air,
+we checked that at it worked, it satisfied the equations,
+and we were done.
+What do we do when we face other differential equations where
+we're not given an answer completely?
+Well, what we do is we look for the structure.
+And this is one trick that works in many cases,
+but by no means all, but it does come up
+in some of our recent discussions.
+So I thought we'd do a couple of examples together.
+One of the methods is to try a form
+where we might have a simple form where
+the trial function, sometimes called ansatz,
+factorizes into two forms.
+So for example, suppose we didn't
+know about that exponential solution.
+We had this equation, we noticed that it has two terms-- one's
+in t, one is in z.
+The coefficients are constant.
+So suppose we try a function.
+Let's try a function of the form p of z and t
+is f of z g of t, where f and z are unknown functions,
+but they're each a function of a single variable.
+So our goal is to see if we can simplify things.
+This is a much simpler structure.
+We can get individual equations for f and g, each of which
+is an ordinary differential equation, not
+a partial differential equation.
+And then we impose boundary conditions,
+which might give us the answer right away,
+or it might require taking a superposition of solutions
+using linearity-- that is, to take
+different solutions of the same general form
+and adding them together.
+So let's take a look in this particular example.
+If I turn the crank, get we compute
+the partial derivatives.
+Partial derivative of p with respect to t
+is f of z is going to be constant times derivative of g.
+And the second partial derivative
+of p with respect to z squared is going
+to be f double prime of z--
+just a second derivative of the function f--
+times g of z.
+So now if we plug these into our differential equation,
+what do we get?
+Well, we get that f times g prime
+has to be equal to 1/2 f double prime times g.
+And let's divide the whole thing through by fg--
+by p, that is--
+by fg.
+
+If we take this, we can rewrite things in this form.
+Then we have g prime of t divided by g of t is 1/2
+f double prime of z divided by f of z.
+So this follows just from our differential equation.
+We took the original equation, we substituted
+in this specific form, we get this expression,
+fg prime is 1/2 f double prime g.
+We divide through by f and g to simplify things.
+And you notice what happens here in this expression,
+I have on the left side, I have g prime over g.
+They're both functions of t only.
+That's why I did the division.
+On the right-hand side, those are functions of z only.
+So how can I have a function of t equals a function of z
+for all values of t and z?
+Can't really work unless they're both constant.
+So we're going to do is we're going to set them both equal
+to a constant.
+And that will give us one differential equation for g,
+another one for f, and then when we solve them,
+we can multiply f and g together, and we're done.
+So let's call this constant, let's say we'll give it a name.
+Let's call this lambda.
+And now we have two differential equations.
+So I've got g prime of t is equal to lambda g of t.
+That's an easy equation to solve.
+That's just an exponential.
+g of t is equal to some constant--
+let me call c0 e to the minus lambda t.
+That's our first equation for g, and we're done.
+What about f?
+Just as easy.
+f double prime of z is going to be equal to 2--
+from the 1/2 in the diffusion equation-- times lambda times
+f of z.
+So I've got 2 lambda instead of lambda,
+and I have 2 derivatives with respect
+to z instead of one derivative with respect to t,
+but the equation is very similar.
+And its solution is f of z has two possible terms, two
+constants of integration, c1 times
+e to the square root of 2 lambda t
+plus c2 times e to the minus square root of 2 lambda t.
+Now, if lambda were a negative number, then
+this would have been sines and cosines.
+Now we don't need to worry about the square root.
+We would have something times sine plus something times
+cosine with an arbitrary linear combination of the two.
+So e0, c1, c2, they're constants of integration.
+Any linear combination of the terms f of z, g of t
+will satisfy the conditions.
+So we can take p of z, t can be f of z g of t.
+And if we have multiple such terms,
+we can take a sum over them.
+And that will automatically satisfy the differential
+equation, and then we're done.
+So let's consider an exercise.
+
+So let's try a particular form of the solution--
+in this case, a function not of t times a function of y.
+But let's try something of this form, where we let v of t and y
+of the form that it's the exponential of something that's
+linear in y, so that we can see that it might recover this
+as a special case when t goes to 0.
+And where f and g are functions of time alone,
+and all of the y dependence is here
+in this exponential to the minus y times f and g.
+So please take a moment now, try it again.
+Or if that's what you've already got, hang on.
+And then we'll take a look through
+and what happens when we substitute this
+into our equation.
+
+OK, have you got it?
+Well, what we're going to do is let's
+compute partial derivatives and then substitute
+into the equation and see if we can get simplified
+equations for f and g.
+Shall we?
+So computing partial derivatives,
+we have that partial of V with respect
+to t in this form is going to be partial--
+excuse me, it's going to be a regular derivative.
+It's going to be df dt minus y dg dt acting on V.
+And the reason for this is because
+of the exponential form.
+You remember in our diffusion example,
+we divided through by e.
+Here it's helpful if we have a form where everything ends up
+being proportional in the different terms.
+So taking derivatives with respect to time, I have this.
+What about the space derivatives?
+Well, I have partial of V with respect to y
+is going to be minus g times V and
+the second partial derivative of V with respect to y squared.
+Because remember y, we're linear in the exponent.
+This is going to be g squared of V. Minus g times minus g
+just gives us g squared.
+So now if we take these partial derivatives
+and we substitute into our original differential equation,
+what do we get?
+We get that it's going to have V times
+df dt minus y dg dt plus 1/2 sigma
+squared g squared plus alpha yg is equal to 0.
+Let's rewrite that.
+Let's notice that we've got terms that are linear in y,
+like this one and this one, and the others have no explicit
+y's.
+So let's group them in terms of those that are linear in y
+and those that are constants.
+And we can divide by V-- we're assuming that V is non-zero.
+After all, we've assumed it's in exponential form.
+So now we would have df dt plus 1/2 sigma squared
+g squared plus y times alpha g minus dg dt.
+
+And this has to be equal to 0.
+Well, how can this be equal to 0?
+It has to be equal to 0 for all t and for all y.
+So the coefficient of y has to be equal to 0.
+And then the constant term, this first term in parentheses,
+has to be equal to 0 separately.
+So now we have two equations for df dt and for dg dt.
+Let's do the second one first, because this term has only g's.
+This one here has a partial of f with respect to t,
+and it's going to depend on the value of g.
+We don't know what g is yet.
+So why don't we solve g by solving
+this equation, plug g in over here,
+and then we can solve for f?
+So these equations are pretty easy.
+Let's take a look.
+So taking the g equation first, we're
+going to have that dg dt is going to be equal to alpha g.
+And that tells us that g of t is going to be some constant
+times e to the alpha t.
+And now remember what our initial conditions were.
+Our initial conditions said that at time 0,
+the function should be e to the minus y.
+That means that g of t should be equal to 1
+when t is equal to 0, and f of t should be equal to 0
+when t is equal to 0.
+So let me just add that up here for discussion
+and to remind us.
+This implies f of 0 equals 0, and g of 0
+has to be equal to 1.
+So now let's take a look at our special form.
+And we can see that that's easy.
+That means that c has to be equal to 1.
+So this says the g of t is just going to be e to the alpha t.
+And when t is equal to 0, g is equal to 1.
+And we're done.
+Now, let's look at the differential equation for f.
+
+Well, we have df dt is going to be equal to minus sigma squared
+over 2g squared.
+But we know what g is, we just solved for it.
+So this is going to be minus sigma squared over 2 e
+to the 2 alpha t, so I've just put in the explicit form of g
+squared.
+And if we want to solve that, that's easy also.
+If the derivative of f is an exponential, then f
+is an exponential.
+We just need to get the constant right.
+So we're going to have a constant of integration.
+So this tells us that f is going to be equal to minus--
+excuse me-- minus sigma squared over 4 alpha e
+to the 2 alpha t plus a constant.
+And then f of 0 equals 0 gives us
+our final form, that f of t, that's to be equal to sigma
+squared over 4 alpha times 1 minus e to the 2 alpha t.
+And you can check.
+When t goes to 0, this exponential goes to 1.
+1 minus 1 gives 0, and f of t of 0 zero.
+Now finally, we've got our solution
+to the original equation.
+So therefore, the solution is V of y and-- or I guess part of t
+and y--
+
+either way, we know what it is-- is
+going to be the exponential of sigma squared over
+4 alpha times 1 minus e to the 2 alpha t minus y times
+e to the alpha t.
+And that's it.
+So it's an exponential with exponentials in the exponent,
+but it solves our differential equation, as you can check.
+You can go back to the beginning.
+It has the desired form that we wanted.
+And because it satisfies the appropriate boundary
+conditions, we know that it's the right answer
+that we were looking for.

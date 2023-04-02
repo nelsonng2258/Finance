@@ -1,0 +1,78 @@
+
+PROFESSOR: In an incomplete market,
+there can be multiple solutions psi.
+So, for example, consider an incomplete market,
+which has two securities, a bond and a stock.
+So there are three states, only two securities.
+Market is incomplete.
+What are we going to do?
+Well, suppose we're given the prices of the securities.
+And suppose they're $1 for the bond and $2 for the stock.
+The matrix A transpose that tells us
+how to get from state prices to security
+prices, the transposed matrix, is this 2 by 3 matrix, 1, 1, 1,
+3, 2, 1.
+We notice we can read off a solution
+right away because the middle column here is 1, 2.
+That's what we're looking for for S.
+So, if A star, this transposed matrix,
+were to act on the three vector, 0, 1,
+0, that would solve our equation.
+So that's obviously a solution for the state price vector psi.
+But it's not good because it could allow arbitrage.
+Remember that every element in the state price vector
+has to be positive.
+None of its elements can be 0.
+If they were 0, that would allow arbitrage.
+But it's OK because there's one thing
+that we haven't included yet, which
+is that A star has a kernel.
+Because A is a 2 by 3 matrix, there is some vector--
+there's some three vector--
+that gets taken into 0 because we're
+mapping a three-dimensional space
+into a two-dimensional space.
+And we can see what that vector is.
+It's just 1, minus 2, 1.
+That is, if you double the middle column,
+it's equal to the sum of the first and the third columns.
+So, if you act with A star on this vector, you get 0.
+That means that we can add to 0, 1, 0 any multiple--
+let's multiply by x--
+of that vector.
+Now, we want to choose x so that each component of psi
+is a positive number.
+So psi being strictly positive requires first
+that x be strictly positive because
+the first and third components are going to be equal to x.
+And the middle component is going
+to be equal to 1 minus 2x.
+And that sets an upper bound on x,
+which says that x has to be between 0 and 1/2.
+And that tells us what the allowed state price
+vectors are.
+There are an infinite number of them
+because x can be anywhere in this range.
+Does that always work?
+No.
+Suppose the state price-- suppose the market price
+vector had been 1, 1.
+Then there's arbitrage.
+We saw that earlier.
+There's stochastic dominance.
+There's not going to be any solution for psi.
+And suppose, on the other hand, S
+is equal to 1, 3, which is the first column.
+So then we might try to write down this equation.
+We could say that psi-- we try the same trick as before.
+Because 1, 3 is the first column of A transpose,
+we could say psi has to 1, 0, 0 plus some multiple
+of the kernel, plus some multiple of 1, minus 2, 0.
+But there isn't any value of x for which that's going to work.
+The first-- the second component that says we're
+going to have minus 2x, that tells us that x
+has to be strictly negative.
+The third component is going to be equal to x.
+That says x has to be strictly positive.
+x cannot be both positive and negative at the same time.
+Therefore, there's no solution for any value of x.

@@ -1,0 +1,329 @@
+
+PROFESSOR: In the presence of constraints,
+it's not enough to just find critical points.
+Constraints are everywhere in the real world
+and certainly in finance and economics.
+We have finite resources that we need to allocate.
+We have a finite budget.
+We have a finite risk limit that we shouldn't exceed.
+So we're often asked to solve problems
+where we're looking for the best solution or a maximum value
+of some scalar function subject to a constraint.
+And those constraints can take different forms.
+They might be equalities.
+They might be inequalities.
+They might involve one or multiple variables.
+So let's start at the beginning with the Lagrange multiplier
+method for solving equality constraints
+in multidimensional optimization problems.
+Here's a picture to help visualize things.
+This is a contour map of the neighborhood
+of Mount Washington showing its hiking trails.
+Mount Washington is the tallest point in New England.
+And, if I asked you to leave MIT and to find the tallest point
+and you had a functional description of this,
+you could certainly find lots of local extrema,
+but the global maximum would be at 6,288 feet
+right here at the top of Mount Washington.
+But you notice there are lots of hiking trails around the top
+of Mount Washington.
+And there's even an auto road here,
+and there's a railroad that goes down the backside.
+But, if you were looking for a tranquil way,
+you might, say, be over here at the Appalachian Mountain Club
+Lake of the Clouds Hut.
+And you'd like to hike over here to Tuckerman Ravine, which
+descends rather steeply.
+And you'd like to do it without going
+through the summit at all.
+Well, a question you certainly could ask
+is, along a trail of my choice, say
+this one, what's the highest point that I would reach along
+the trail?
+So the trail represents your constraint.
+You're not free to go anywhere in latitude and longitude
+on this map.
+That's your constraint.
+But we can ask, as you go along the trail, at every point,
+you're definitely at some elevation above sea level.
+And we could think of that as being a function
+h of x, y where x and y give your latitude
+and longitude for example.
+And we could ask a very reasonable question.
+If there are no cliffs here, even
+though it descends steeply, and if you don't
+fall into a crevasse, we could ask,
+what was the highest point along that trail?
+One of the things that we can see immediately
+is, whatever it is, wherever the highest point
+is along this path, it has nothing
+to do with the global maximum.
+It doesn't go anywhere near the summit of Mount Washington.
+OK, so it's not enough to just take a function
+and find its extrema because the answer
+that we're looking for may not be anywhere nearby.
+The answer to doing this is also--
+let's think about this a little bit geometrically.
+Imagine that we're ascending.
+Say we're climbing through Tuckerman Ravine.
+And we're going to go along here.
+What does it mean?
+As long as we're ascending, we are crossing contour lines.
+Contour lines, remember, are level sets
+where the altitude is constant, where our scalar function
+h is constant.
+What it means to reach an extremum along the path
+or to reach a maximum along the path
+is that you're no longer crossing contour lines.
+That is your direction of travel,
+the tangent along the path that you're taking,
+is parallel to the contour lines themselves.
+The point at which you reach a maximum
+is when the direction of your trail
+is along the direction of a contour line, at least
+instantaneously.
+In either direction going forward or backward,
+you would be going down at a critical point.
+So the geometrical condition we have
+is that the direction of the path
+should be tangent to the level sets.
+And that we can state as a condition on the gradients
+of the two functions, one describing the constraint
+along the path and the other describing
+the shape of the level sets of the function h
+without the constraints.
+And, when we overlay the two, we say
+they need to be in the same direction.
+And that's what the Lagrange multiplier
+method is going to give us.
+
+So here is the Lagrange multiplier method.
+What we're going to do is take our original unconstrained
+function, h of x, y, and we're going
+to construct a new function called the Lagrange function,
+which is going to have one extra variable, which
+is a variable called lambda.
+And this extra variable lambda is known
+as the Lagrange multiplier.
+And the way I construct the function
+is I take my original function, h of x, y,
+and I subtract lambda--
+it's linear lambda in this new variable--
+times, in parentheses, I have my constraint.
+So imagine that the constraint is given by some equation
+in x and y, saying what they need to satisfy.
+x and y is equal to some constant.
+So all I've done is I've taken my original function
+minus lambda times the constraint itself.
+So the strategy here, in practical terms,
+is to take a problem in two parts,
+maximize the function subject to a constraint,
+and turn it into a simpler problem in more variables.
+So the problem in three variables,
+with x, y, and lambda, is going to have no constraints.
+So the idea is that we're going to take all three
+partial derivatives now, set all three of them equal to 0.
+That will impose the condition that the vectors--
+that the direction of my constraint
+is along the direction of the level sets.
+And it's easy to solve.
+So let's take a look at a couple of examples,
+first in algebraic functions, and then we'll
+see how this applies in finance, most notably, to the case
+of portfolio optimization.
+
+The general method is this.
+If we have multiple constraints, we introduce one constant
+called the Lagrange multiplier per constraint.
+We define the Lagrange function, which
+is linear in the constraints.
+It's got extra variables, one per Lagrange multiplier,
+but it has a simpler solution.
+We take the derivatives with respect
+to each of the original variables.
+And, of course, that gives us the original partial
+derivatives we would have had plus something that's
+linear in lambda or the other Lagrange multipliers.
+And, when we take the derivative with respect
+to the Lagrange multipliers, the equations
+we get when we set those derivatives to 0
+are just the constraint equations themselves.
+So that's it.
+Then we find the critical points,
+and we can substitute them in and make
+sure they solve the problem.
+We can check second derivatives to make sure that, in fact, we
+have a maximum and not a minimum or a point of inflection.
+And, usually, not always, but in many problems,
+it doesn't even matter what the Lagrange function is.
+What we care is the location of the extremal value, not
+the value itself.
+So that's worth keeping in mind because it can simplify things.
+So, for example, if we want to pick
+a different form of the Lagrange function
+that's easier to solve, but where
+we know it has the same critical points, that's OK.
+We can do that.
+And, in fact, when it comes to the constraint,
+we have a lot of freedom as to how we could change it
+because, at the critical points, the constraint function is
+going to vanish.
+So let's take a look at a couple of examples.
+
+So here's a chance for you to do your own concept check.
+And you can pause the video at this point.
+And then we'll solve it together.
+But here's the example.
+Let's let h of x, y be the function x plus y.
+And let's let the constraint be that the solutions,
+the maximum, minimum, or extrema that we're looking for,
+have to lie along a circle of radius r.
+r here is just a radius.
+It's not the risk-free rate.
+So we construct our Lagrange function,
+L of x, y, and lambda, to be our function h, x plus y,
+minus lambda times the constraint.
+So, if you'd like, pause the video.
+See if you can solve it.
+Find the critical points.
+And then come back, and we'll take a look at this together.
+
+OK, so let's compute some derivatives together.
+What we find is we take the first partial of L
+with respect to x.
+We get 1 minus 2 lambda.
+Notice it's we have lambda here.
+We're always going to have something linear in lambda
+because this is left over, and the partial derivatives
+act on the constraint.
+So that tells us that x is 1 over 2 lambda.
+I take the partial with respect to y.
+My function is symmetric in x and y.
+So, no surprise, I get that y is 1 over 2 lambda.
+And now, because x and y are both equal to 1 over 2 lambda,
+I can eliminate lambda.
+And I see that x is equal to y.
+So I'm almost done.
+x is equal to y, but they also have
+to lie along the constraint, which
+means that the sum of their squares
+has to be equal to r squared.
+So, if I substitute x equals y into this constraint equation--
+and notice the constraint equation
+I get just by differentiating with respect to lambda.
+There's no lambda in the original function h.
+And there's a linear in lambda before the constraint.
+So differentiating with respect to lambda just
+gives me back my constraint.
+It's exactly what I would have had before,
+but, whereas, without the Lagrange multiplier method,
+you might have tried to solve for y in terms of x--
+you could have written y as being
+plus or minus the square root of r squared minus x squared,
+substituted it back into h, and then tried
+to solve for that extremum.
+You'd have had a more complicated function and fewer
+variables.
+Here we're going to keep everything
+where all the variables start on equal footing.
+We substitute into the constraint.
+We find there are two solutions.
+x and y are each equal to plus or minus r
+over square root of 2.
+Either they're both plus signs, or they're both minus signs.
+And it's easy to check that either,
+at 45 degrees in the first quadrant
+or in the third quadrant, we have
+two points on the circle, which represent
+the maximum and the minimum values of x plus y.
+And, if we substitute in the values,
+these are the values, square root of 2 times r
+or minus square root of 2r, OK?
+So that one you might have guessed just
+from symmetry of the problem, but this is the method.
+It's really very easy, very straightforward.
+Let's do another example.
+Here, again, pause the video.
+Take a look at doing this.
+And then, after you've checked your own concepts
+and your own math, come back and compare.
+A couple of things to note, our function in this case
+is a general quadratic form with a cross term.
+So it may not be obvious immediately where the extrema
+or whether they're maxima or minima or saddle points.
+And we're going to look at this quadratic form,
+instead of linear on our previous example,
+and we're going to have it lie along the unit circle.
+So, subject to the constraint that points lie along the unit
+circle, we want to ask where are the maxima and minima
+of the function h of x, y.
+We construct a Lagrangian by taking
+the quadratic form minus lambda times the constraint.
+Now, one thing to consider as you're
+doing this, a couple of things that don't matter, one of them
+is the sign of lambda.
+If you change lambda to minus lambda,
+if you change, in fact, the sign of the constraint to 1
+minus x squared minus y squared, you'll
+get exactly the same result. And you should check that.
+If you carry through the signs consistently,
+you'll find that, when you eliminate lambda,
+everything goes through exactly the same.
+But it's also true that there are different ways
+to write the constraint, and any of them would work.
+So, for example, if I want x squared
+plus y squared to equal 1, I could
+take x squared plus y squared to the fourth power equal to 1.
+Or I could take x squared plus y squared minus 1
+to the 12th power.
+Anything that imposes the constraint is going to work.
+The idea is the coefficient of lambda,
+when we have found our constrained solution,
+the coefficient of lambda will vanish.
+It vanishes only-- it will vanish on the solution.
+There might be other roots to the equation that might be off
+somewhere in the complex plane.
+We're not going to worry about this,
+but it is the case that, if it's a solution,
+then the coefficient of lambda will vanish.
+So this is another easy algebraic equation.
+We take derivatives.
+We'll have some simple linear equations to solve.
+Why don't you go ahead and try?
+Pause the video here.
+Come back, and we'll take a look together.
+
+Last chance.
+OK, let's take a look.
+So we do partials.
+So let's look at our partials of L. We have
+16x plus 12y minus 2 lambda.
+Notice that everything now, compared
+to the previous example, is linear in x and y.
+That last term is always linear in lambda.
+I take the partial with respect to y.
+And I have terms also in x and y--
+12x plus 34y minus 2 lambda y equals 0.
+And I have the constraint, which is
+just x squared plus y squared has to be equal to 1.
+So this has to be satisfied here.
+So we've got these equations.
+We can solve them for x and y and eliminate lambda.
+We can eliminate lambda immediately
+by taking the difference of these equations,
+solve for x relative to y, and then get
+the exact values for x and y in the unit circle
+by solving this equation.
+And what we find our two solutions, x and y,
+are in the direction 1, 2--
+and I've normalized this to be on the unit circle--
+and in the direction minus 2, 1.
+And, interestingly, those are, in normalized form,
+the eigenvectors of the quadratic form that's
+defined by the matrix, which we could have
+written as Q is 8, 6, 6, 17.
+So, if you compute the eigenvalues and eigenvectors
+for this, you'll find 12 and 5 for the eigenvalues
+and eigenvectors 1, 2 and minus 2, 5.
+And, if we normalize the eigenvectors
+to be of unit length, we get exactly the results shown here.

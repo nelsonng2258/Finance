@@ -1,0 +1,316 @@
+0
+00:00:00,000 --> 00:00:01,090
+
+
+1
+00:00:01,090 --> 00:00:03,640
+PROFESSOR: The fundamental theorem of asset pricing
+
+2
+00:00:03,640 --> 00:00:07,150
+characterizes no arbitrage conditions in a marketplace.
+
+3
+00:00:07,150 --> 00:00:10,480
+It says that there is no arbitrage in a market if
+
+4
+00:00:10,480 --> 00:00:14,530
+and only if there exists a state price vector whose components
+
+5
+00:00:14,530 --> 00:00:18,520
+are strictly positive, and it's consistent with the market
+
+6
+00:00:18,520 --> 00:00:21,010
+prices, through our pricing relationship,
+
+7
+00:00:21,010 --> 00:00:25,540
+that we can get the security prices by A transpose acting
+
+8
+00:00:25,540 --> 00:00:28,150
+on the state price vector, all of whose components
+
+9
+00:00:28,150 --> 00:00:29,330
+are positive.
+
+10
+00:00:29,330 --> 00:00:31,630
+Now, it has an if and only if component.
+
+11
+00:00:31,630 --> 00:00:33,178
+And one direction is easy.
+
+12
+00:00:33,178 --> 00:00:34,720
+And that's the one we're going to do.
+
+13
+00:00:34,720 --> 00:00:36,100
+The other direction is hard.
+
+14
+00:00:36,100 --> 00:00:39,093
+It involves a theorem about separating hyperplanes.
+
+15
+00:00:39,093 --> 00:00:41,510
+And I'll leave it to you to take a look at the literature.
+
+16
+00:00:41,510 --> 00:00:43,360
+But, this one, we can use what we've done,
+
+17
+00:00:43,360 --> 00:00:45,280
+and it's very easy to show.
+
+18
+00:00:45,280 --> 00:00:47,100
+Let's see how it goes.
+
+19
+00:00:47,100 --> 00:00:49,480
+We have type I and type II arbitrage,
+
+20
+00:00:49,480 --> 00:00:51,680
+and we'd like to exclude them both.
+
+21
+00:00:51,680 --> 00:00:54,700
+So, first, let's look at the absence of type I arbitrage.
+
+22
+00:00:54,700 --> 00:00:59,020
+Suppose that I've got a portfolio with a payoff that's
+
+23
+00:00:59,020 --> 00:00:59,980
+greater than 0.
+
+24
+00:00:59,980 --> 00:01:01,510
+Remember what we mean here.
+
+25
+00:01:01,510 --> 00:01:04,930
+We mean that it has to have no non-negative payoffs,
+
+26
+00:01:04,930 --> 00:01:07,210
+and at least one of the components of b
+
+27
+00:01:07,210 --> 00:01:08,870
+has to be positive.
+
+28
+00:01:08,870 --> 00:01:14,200
+So our statement of no type I arbitrage
+
+29
+00:01:14,200 --> 00:01:17,140
+is that, if we have a positive payoff,
+
+30
+00:01:17,140 --> 00:01:20,470
+if we have this condition, then the price of this portfolio
+
+31
+00:01:20,470 --> 00:01:22,030
+must be strictly positive.
+
+32
+00:01:22,030 --> 00:01:23,320
+It can't be 0.
+
+33
+00:01:23,320 --> 00:01:24,770
+It can't be negative.
+
+34
+00:01:24,770 --> 00:01:26,650
+We can't get something for nothing.
+
+35
+00:01:26,650 --> 00:01:27,820
+So how do we show this?
+
+36
+00:01:27,820 --> 00:01:29,980
+Well, let's compute the price.
+
+37
+00:01:29,980 --> 00:01:32,950
+S star x is the price.
+
+38
+00:01:32,950 --> 00:01:35,620
+That's equal, via our pricing relationship,
+
+39
+00:01:35,620 --> 00:01:39,460
+to psi star A, acting on the portfolio x.
+
+40
+00:01:39,460 --> 00:01:42,880
+We can use associativity of our matrices.
+
+41
+00:01:42,880 --> 00:01:47,350
+That's the same as psi star acting on A times x.
+
+42
+00:01:47,350 --> 00:01:51,520
+But that Ax is the payoff of our portfolio b.
+
+43
+00:01:51,520 --> 00:01:56,500
+And that psi star b, because psi has only positive components,
+
+44
+00:01:56,500 --> 00:01:59,230
+and b has at least one positive component
+
+45
+00:01:59,230 --> 00:02:01,360
+and no negative components, this is
+
+46
+00:02:01,360 --> 00:02:04,720
+going to be the sum of positive numbers or 0.
+
+47
+00:02:04,720 --> 00:02:08,229
+And, therefore, it has to be greater than 0.
+
+48
+00:02:08,229 --> 00:02:11,150
+Done, one line.
+
+49
+00:02:11,150 --> 00:02:14,420
+Absence of type II arbitrage, suppose that we
+
+50
+00:02:14,420 --> 00:02:16,370
+have an arbitrage portfolio.
+
+51
+00:02:16,370 --> 00:02:20,640
+That is, suppose I have a portfolio that's non-zero.
+
+52
+00:02:20,640 --> 00:02:23,100
+So I do have securities in my portfolio.
+
+53
+00:02:23,100 --> 00:02:26,450
+But they're combined in such a way that the payoff is 0.
+
+54
+00:02:26,450 --> 00:02:29,630
+One way we do that is by having a security
+
+55
+00:02:29,630 --> 00:02:34,110
+held long and other securities that replicate it held short.
+
+56
+00:02:34,110 --> 00:02:36,200
+We saw that in the example of replicating
+
+57
+00:02:36,200 --> 00:02:39,690
+an option in terms of other securities in the portfolio.
+
+58
+00:02:39,690 --> 00:02:43,190
+So, if I have a non-trivial portfolio that has a zero
+
+59
+00:02:43,190 --> 00:02:44,030
+payoff--
+
+60
+00:02:44,030 --> 00:02:46,190
+that happens when we have a redundant asset
+
+61
+00:02:46,190 --> 00:02:48,860
+in our marketplace-- then the absence of type
+
+62
+00:02:48,860 --> 00:02:53,240
+II arbitrage says, if you've got an arbitrage portfolio,
+
+63
+00:02:53,240 --> 00:02:55,880
+then its price must be 0.
+
+64
+00:02:55,880 --> 00:02:59,660
+In other words, the value of redundant assets
+
+65
+00:02:59,660 --> 00:03:03,440
+needs to be uniquely determined by independent assets
+
+66
+00:03:03,440 --> 00:03:04,740
+in the marketplace.
+
+67
+00:03:04,740 --> 00:03:06,740
+So that's what we require.
+
+68
+00:03:06,740 --> 00:03:08,060
+How do we show it?
+
+69
+00:03:08,060 --> 00:03:09,590
+Let's compute the price.
+
+70
+00:03:09,590 --> 00:03:13,760
+S star x, the value of the arbitrage portfolio,
+
+71
+00:03:13,760 --> 00:03:17,930
+is going to be given by psi star A acting on x,
+
+72
+00:03:17,930 --> 00:03:20,600
+but A times x is 0.
+
+73
+00:03:20,600 --> 00:03:22,790
+And, therefore, it's equal to 0.
+
+74
+00:03:22,790 --> 00:03:26,240
+So that's shown one direction of the fundamental theorem
+
+75
+00:03:26,240 --> 00:03:28,850
+of asset pricing and how we can be sure
+
+76
+00:03:28,850 --> 00:03:32,270
+that we have consistent prices in the marketplace that don't
+
+77
+00:03:32,270 --> 00:03:36,230
+allow arbitrage, even when markets are incomplete
+
+78
+00:03:36,230 --> 00:03:39,940
+or when there are redundant securities.
+

@@ -1,0 +1,187 @@
+
+PROFESSOR: Now, it's customary and of incredible practical
+importance for risk management to take a look at a couple
+of related quantities, having solved the Black-Scholes
+equation and found the Black-Scholes formula in puts--
+for calls, which we wrote down in puts,
+which are very similar.
+The first thing is the famous delta,
+which we used as part of our hedging argument.
+So we know that delta is defined as the partial of V
+with respect to S. Now that we have a closed form
+expression for V, we can take the derivatives,
+and we can compute.
+And we find these values, that the delta for a call
+is phi of d plus, where the argument is
+the previous one that we wrote down,
+phi of minus d plus for a put.
+And there's a relationship between the two deltas
+for puts and calls that follows from a relationship
+that you'll see in the foundations of finance,
+that put-call parity tells us that the value
+of a call minus the value of a put
+is always equal to the stock price minus the present value
+of the strike price.
+So if we differentiate this once with respect to S,
+we get the delta of the call minus the delta of the put
+is equal to 1.
+If we take two derivatives, we find out
+the gamma, the second derivative of an option value with respect
+to stock price, is the same for both puts and calls.
+And the vega is the value of the option with respect to sigma.
+And this is a little bit different from the others
+because sigma isn't a dynamical variable.
+It's not a variable at all.
+It's just a parameter.
+We don't usually think about differentiating with respect
+to parameters.
+But it is important in thinking about the solution
+because it tells us about the sensitivity to changes
+and levels of volatility.
+If sigma were non-constant, our derivation for Black-Scholes
+would not hold, at least not the way we did it.
+We'd need to generalize it a bit.
+But if we are holding options, we
+might be interested in what would happen to their value
+if, say, there were, I don't know,
+a global pandemic and everyone's understanding of risk change.
+And while the volatility is constant,
+it jumped to a new level, or it moved a small amount
+to a new level.
+That would be one reason where it
+would be helpful to know what the sensitivity of the value
+is with respect to a change in sigma.
+Now, in addition to puts and calls,
+that are vanilla options, our approach
+lets us solve for any payoff at all.
+Remember, we could put any terminal function
+V or any general function f into our equation.
+We can have any payout we want at time big T,
+and all we need to do is do an integral to get that equation.
+So that's why this is much more powerful than just having
+a bunch of formulas that we can look up in a book or online
+for different categories for solutions to Black-Scholes.
+If you would like to generate a particular payoff,
+you know how to do it.
+Write down what you would like the function
+to look like at expiration.
+Do the interval.
+That will tell you what the value of the option should be.
+Here's one example that's even easier
+than doing a put or a call.
+It's a binary, or sometimes called the digital option, that
+doesn't pay off proportionally.
+It's like a bet.
+Either it pays off or it doesn't.
+So if the strike price finishes above K, you get $1.
+If it finishes below, you get nothing.
+And if we plug that in the integrand is even easier.
+It's either 1 or 0.
+The only effect of this is to cut off
+the lower limit of integration in S of big T
+at the strike price.
+And we do the integral, and no surprise,
+we end up with a Gaussian cumulative distribution
+function phi with an appropriate argument.
+So this is the value.
+There's only one term, not two.
+And you notice that it is not multiplied times an S or a K
+because it doesn't have units of--
+scale of the stock price.
+It just pays $1 in that limit.
+Now, this is directly related to-- because it depends on phi,
+and we talked about how we can think about d, it's related,
+as you might expect, to the probability
+of finishing in the money.
+After all, a fair bet would be--
+would pay off based on what the probability of winning is.
+That ought to be what the value is.
+But that's not quite what's going on here
+because, in fact, the probability distribution
+that we're using to compute, the probability distribution
+inside our integrals is the risk-neutral distribution.
+So even if we knew the return on our underlying mu,
+we wouldn't use it.
+And this is a little bit counterintuitive.
+So the value of the payoff is not
+related to the probability of finishing in the money.
+It is related to the probability of finishing
+in the money under the risk-neutral distribution,
+but that could be wildly different
+in the real-world probability of finishing in the money.
+Why is that?
+Well, our normal gambling intuition
+says that we have all these different, uncertain outcomes,
+and we start by asking what would be fair.
+And the expected value is their typical definition
+of what's fair.
+But in the case of these options,
+where the derivatives and the underlying have the same
+stochastic driver-- they're based on related Ito
+processes--
+we can eliminate risk, as we've seen.
+There is no risk at all.
+So the value needs to be such that it avoids arbitrage.
+If you know the arbitrage value, and someone comes up
+with a different value through other arguments that
+don't take into account the possibility of eliminating
+risk, you've got a great opportunity to make a trade.
+
+Here's another example of an exotic option with no strike
+price involved at all, and a different technique
+where we don't need to do the same kind of integrals
+because we don't have a complicated payoff.
+The payoff that we have, in fact,
+is-- we're going to assume that the payoff is
+as S squared and some appropriate unit.
+So let's say that we measure S in dollars,
+and at expiration, you get S squared dollars,
+whatever that might be.
+So how are we going to compute that?
+Well, we want to think about what the evolution is
+and about what the expectation is,
+and we want to apply our result that the value of an option
+is the discounted present value of the expectation
+of the terminal value under the risk-neutral measure.
+So let's take those words and those formulas for expectations
+and put them into play.
+And what we see is, first of all,
+that log X is just twice as log S.
+We know that log S is a Brownian motion-- an arithmetic,
+not a lognormal Brownian motion, because we've taken logarithm.
+So we know what d of log S is.
+And d of log X is just twice d of log S.
+So that means that a time t, where we can let t be zero,
+it's going to be the initial value
+S squared times e to twice mu minus sigma
+squared over 2 times t plus--
+because it's a random walk, because log S is a random walk
+and log X is some random walk, we're
+going to represent this as plus sigma squared
+root of t times Z.
+So here's my 2, and going from X--
+excuse me, going from S to X, this
+is what we normally would have gotten by integrating our log
+S. And because it's a square, we just
+end up with the factor of 2.
+Going to the risk-neutral measure means that we take mu,
+and we just replace it by r.
+That's our heuristic, and it really works.
+So we take mu, we replace it by r,
+and then we need to compute the expectation with respect
+to the Gaussian probability distribution.
+Again, what I've called Q-measure means don't use mu.
+Where you see mu, write r.
+So we'd like to do some Gaussian integrals of this expression,
+where we replace u by r.
+And then we recognize Z as being a Gaussian variable.
+We do the expectations, and what we're
+left with is an expression with r minus sigma squared over
+2 times T e to the 2 sigma squared T,
+and then when we take its discounted present value
+e to the minus rT, we get this final result,
+that the value of the option is going to be
+the current value squared.
+And let's let T be the--
+so we're at time T equals zero right now times e
+to the rT plus sigma squared T.

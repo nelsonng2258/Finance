@@ -1,0 +1,79 @@
+
+PROFESSOR: The fundamental theorem of asset pricing
+characterizes no arbitrage conditions in a marketplace.
+It says that there is no arbitrage in a market if
+and only if there exists a state price vector whose components
+are strictly positive, and it's consistent with the market
+prices, through our pricing relationship,
+that we can get the security prices by A transpose acting
+on the state price vector, all of whose components
+are positive.
+Now, it has an if and only if component.
+And one direction is easy.
+And that's the one we're going to do.
+The other direction is hard.
+It involves a theorem about separating hyperplanes.
+And I'll leave it to you to take a look at the literature.
+But, this one, we can use what we've done,
+and it's very easy to show.
+Let's see how it goes.
+We have type I and type II arbitrage,
+and we'd like to exclude them both.
+So, first, let's look at the absence of type I arbitrage.
+Suppose that I've got a portfolio with a payoff that's
+greater than 0.
+Remember what we mean here.
+We mean that it has to have no non-negative payoffs,
+and at least one of the components of b
+has to be positive.
+So our statement of no type I arbitrage
+is that, if we have a positive payoff,
+if we have this condition, then the price of this portfolio
+must be strictly positive.
+It can't be 0.
+It can't be negative.
+We can't get something for nothing.
+So how do we show this?
+Well, let's compute the price.
+S star x is the price.
+That's equal, via our pricing relationship,
+to psi star A, acting on the portfolio x.
+We can use associativity of our matrices.
+That's the same as psi star acting on A times x.
+But that Ax is the payoff of our portfolio b.
+And that psi star b, because psi has only positive components,
+and b has at least one positive component
+and no negative components, this is
+going to be the sum of positive numbers or 0.
+And, therefore, it has to be greater than 0.
+Done, one line.
+Absence of type II arbitrage, suppose that we
+have an arbitrage portfolio.
+That is, suppose I have a portfolio that's non-zero.
+So I do have securities in my portfolio.
+But they're combined in such a way that the payoff is 0.
+One way we do that is by having a security
+held long and other securities that replicate it held short.
+We saw that in the example of replicating
+an option in terms of other securities in the portfolio.
+So, if I have a non-trivial portfolio that has a zero
+payoff--
+that happens when we have a redundant asset
+in our marketplace-- then the absence of type
+II arbitrage says, if you've got an arbitrage portfolio,
+then its price must be 0.
+In other words, the value of redundant assets
+needs to be uniquely determined by independent assets
+in the marketplace.
+So that's what we require.
+How do we show it?
+Let's compute the price.
+S star x, the value of the arbitrage portfolio,
+is going to be given by psi star A acting on x,
+but A times x is 0.
+And, therefore, it's equal to 0.
+So that's shown one direction of the fundamental theorem
+of asset pricing and how we can be sure
+that we have consistent prices in the marketplace that don't
+allow arbitrage, even when markets are incomplete
+or when there are redundant securities.

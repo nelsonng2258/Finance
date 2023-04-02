@@ -1,0 +1,87 @@
+
+PROFESSOR: Let's talk about arbitrage.
+And I'm going to talk about two kinds of arbitrage.
+And we'll call them type I and type II.
+What's type I arbitrage?
+So type I arbitrage says you pay nothing now,
+and you get something later.
+So type I arbitrage is something for nothing.
+The idea is that, right now, the value of a portfolio
+is either 0 or it's negative.
+Negative value means that, when you buy it,
+you get a negative amount of money.
+That means you get paid to own this portfolio.
+So suppose I have a portfolio.
+So I have a marketplace where the prices are given.
+They're given by us.
+I pick a portfolio x.
+And suppose that there exists a portfolio such that S acting
+on x gives a value that's negative, that's less than
+or equal to 0.
+Let's say it's negative, or it's equal to 0.
+And suppose, later on, that there's
+a non-negative-- there are only non-negative payoffs,
+and at least one payoff is 0.
+So if it's purely equal-- if it's the zero vector,
+that would be trivial.
+But, otherwise, what we want to have is, in the future,
+some states could have a zero payoff,
+but there's at least one state in the future that's positive.
+And none of the future states are negative.
+So, in this case, this would be terrific.
+This is no risk.
+I either pay nothing, or I get paid.
+And there's no way I can lose in the future.
+So basic common sense and finance theory
+say that this kind of thing shouldn't
+exist in the marketplace.
+If it did, people would exploit it,
+and it would disappear very quickly.
+Therefore, it's going to serve on a constraint about the kinds
+of market structures and pricing relationships
+that we might observe.
+So the notation here, I do want to point out
+one thing, which is not standard in linear algebra.
+Most of what we do will be.
+But, normally, we don't write vector inequalities like this.
+So, in this case, here's precisely what I mean.
+What I mean is that this holds for all the components, OK?
+So each of the components has this inequality.
+Some of the components can be 0.
+None of them can be negative.
+But I'm also going, when I write this,
+to require that at least one component is positive.
+And, since there's no other notation for it,
+I'm going to steal this one and torture it slightly
+for our purposes.
+But common sense and our ideas about arbitrage
+should tell you what we mean.
+And the case where everything is 0
+is certainly going to be a trivial case.
+So this is type I arbitrage, something
+for nothing with no risk.
+Let's try an example.
+Suppose I have a securities market
+with two securities, a stock and a bond,
+and there are three states of the world.
+And the prices are given by the vector S equals 1, 1.
+And I look at the portfolio that's
+short a bond and long a stock.
+Then S acting on x, the market value of the portfolio,
+is 0 because they have equal prices,
+and I'm long one and short the other.
+And the payoff matrix acting on x is 2, 1, 0.
+And that's what we said would constitute an arbitrage.
+The value of the portfolio is 0 or negative.
+In this case, it's 0.
+And the payoffs are non-negative, and at least one
+of them is positive.
+Now, what if we were to change the prices?
+This is for this particular set of prices.
+Can we say something about prices
+that would prevent arbitrage from occurring?
+So consider this.
+Can arbitrage be avoided in this example?
+Three choices-- yes if S2 is greater than 1,
+yes if S1 is less than 0--
+less than 1, or no, arbitrage can't be avoided at all.

@@ -1,0 +1,404 @@
+0
+00:00:00,000 --> 00:00:01,060
+
+
+1
+00:00:01,060 --> 00:00:03,580
+PROFESSOR: Now that we have our data, let's optimize.
+
+2
+00:00:03,580 --> 00:00:07,610
+So let's start with the minimum variance portfolio.
+
+3
+00:00:07,610 --> 00:00:10,070
+That was the simplest optimization we had.
+
+4
+00:00:10,070 --> 00:00:12,950
+There's only one constraint, the budget constraint.
+
+5
+00:00:12,950 --> 00:00:17,223
+So we have a covariance matrix, we have our expected returns
+
+6
+00:00:17,223 --> 00:00:19,390
+which we're going to ignore because they don't enter
+
+7
+00:00:19,390 --> 00:00:21,640
+into the problem, and what we'd like
+
+8
+00:00:21,640 --> 00:00:26,210
+to do is solve for the minimum variance portfolio.
+
+9
+00:00:26,210 --> 00:00:31,180
+So if we do that, remember that we had a very simple solution,
+
+10
+00:00:31,180 --> 00:00:36,830
+that the minimum variance portfolio is
+
+11
+00:00:36,830 --> 00:00:40,220
+proportional to c inverse iota.
+
+12
+00:00:40,220 --> 00:00:44,100
+So we're going to run this chunk of code here.
+
+13
+00:00:44,100 --> 00:00:50,330
+And what this does is here's c inverse times iota, and then
+
+14
+00:00:50,330 --> 00:00:52,190
+remember that we have it normalized
+
+15
+00:00:52,190 --> 00:00:53,810
+so that the weights sum to 1.
+
+16
+00:00:53,810 --> 00:00:57,530
+One way we could do it was by looking at the--
+
+17
+00:00:57,530 --> 00:01:01,880
+dividing by transpose iota inverse covariance iota,
+
+18
+00:01:01,880 --> 00:01:04,370
+but I like to think of this sometimes in a little bit
+
+19
+00:01:04,370 --> 00:01:05,930
+more practical terms.
+
+20
+00:01:05,930 --> 00:01:07,970
+These are weights.
+
+21
+00:01:07,970 --> 00:01:09,050
+They need sum to 1.
+
+22
+00:01:09,050 --> 00:01:11,840
+So let's sum them and normalize them
+
+23
+00:01:11,840 --> 00:01:13,340
+so that they sum to 1 by dividing
+
+24
+00:01:13,340 --> 00:01:14,960
+by the sum of the raw weights.
+
+25
+00:01:14,960 --> 00:01:17,480
+So we know that these are proportional first
+
+26
+00:01:17,480 --> 00:01:19,850
+to the inverse covariance matrix times iota.
+
+27
+00:01:19,850 --> 00:01:22,850
+As we said in the special cases like a diagonal covariance
+
+28
+00:01:22,850 --> 00:01:25,700
+matrix, it says the exposure is going
+
+29
+00:01:25,700 --> 00:01:29,930
+to be inversely proportional to the variance, which makes sense
+
+30
+00:01:29,930 --> 00:01:32,977
+at least qualitatively that the riskier an asset is,
+
+31
+00:01:32,977 --> 00:01:34,560
+the less exposure we're going to have.
+
+32
+00:01:34,560 --> 00:01:36,860
+And this is typical of the way that we
+
+33
+00:01:36,860 --> 00:01:40,370
+think about risk and portfolio construction,
+
+34
+00:01:40,370 --> 00:01:42,590
+that the amount of capital we have
+
+35
+00:01:42,590 --> 00:01:45,710
+isn't actually the first thing we think about.
+
+36
+00:01:45,710 --> 00:01:48,163
+We often think about how much risk exposure
+
+37
+00:01:48,163 --> 00:01:49,580
+we have because that's going to be
+
+38
+00:01:49,580 --> 00:01:51,200
+the basis for getting return.
+
+39
+00:01:51,200 --> 00:01:55,400
+And we're often, in financial institutions, not necessarily
+
+40
+00:01:55,400 --> 00:01:58,100
+constrained by our budget because we can borrow.
+
+41
+00:01:58,100 --> 00:02:00,740
+We can use the balance sheet of an organization perhaps.
+
+42
+00:02:00,740 --> 00:02:03,380
+We still need to be accountable for our capital usage.
+
+43
+00:02:03,380 --> 00:02:06,980
+But when it comes to looking at potential investments,
+
+44
+00:02:06,980 --> 00:02:10,910
+we want to make sure that we get a high return per unit of risk,
+
+45
+00:02:10,910 --> 00:02:13,850
+not just a high return per unit of capital, which would not
+
+46
+00:02:13,850 --> 00:02:16,920
+distinguish between the return on two investments
+
+47
+00:02:16,920 --> 00:02:18,410
+a very different risk.
+
+48
+00:02:18,410 --> 00:02:20,030
+Now, the other interesting portfolio
+
+49
+00:02:20,030 --> 00:02:22,110
+we might as well plot while we're here,
+
+50
+00:02:22,110 --> 00:02:26,870
+which is the portfolio of maximum Sharpe ratio, which
+
+51
+00:02:26,870 --> 00:02:29,570
+is c inverse times mu.
+
+52
+00:02:29,570 --> 00:02:32,510
+And what we saw in solving the problem where
+
+53
+00:02:32,510 --> 00:02:35,540
+we had both a budget constraint and an expected return
+
+54
+00:02:35,540 --> 00:02:38,530
+constraint was that any portfolio
+
+55
+00:02:38,530 --> 00:02:40,280
+in the efficient frontier could be written
+
+56
+00:02:40,280 --> 00:02:43,760
+as a linear combination of two portfolios,
+
+57
+00:02:43,760 --> 00:02:46,230
+sometimes called characteristic portfolios.
+
+58
+00:02:46,230 --> 00:02:49,010
+One of them was the global minimum variance portfolio,
+
+59
+00:02:49,010 --> 00:02:52,350
+and it's associated with this particular vector
+
+60
+00:02:52,350 --> 00:02:54,770
+iota, a vector of 1's that corresponds to the budget
+
+61
+00:02:54,770 --> 00:02:55,580
+constraint.
+
+62
+00:02:55,580 --> 00:02:57,860
+The other one is associated with the vector
+
+63
+00:02:57,860 --> 00:03:00,230
+of expected excess returns, and that's
+
+64
+00:03:00,230 --> 00:03:03,680
+c inverse mu or it's a portfolio proportional to c inverse mu.
+
+65
+00:03:03,680 --> 00:03:06,810
+So by taking linear combinations of those two portfolios,
+
+66
+00:03:06,810 --> 00:03:09,510
+we can reach everything on the efficient frontier.
+
+67
+00:03:09,510 --> 00:03:10,955
+So we solve for them.
+
+68
+00:03:10,955 --> 00:03:11,580
+What do we get?
+
+69
+00:03:11,580 --> 00:03:14,520
+We get a bunch of numbers, and here are the numbers.
+
+70
+00:03:14,520 --> 00:03:17,240
+So we've got a column vector, and we can look up
+
+71
+00:03:17,240 --> 00:03:18,380
+which assets are which.
+
+72
+00:03:18,380 --> 00:03:21,890
+But it's pretty clear that these numbers are unconstrained.
+
+73
+00:03:21,890 --> 00:03:24,290
+Some of the numbers here are negative.
+
+74
+00:03:24,290 --> 00:03:26,070
+They correspond to short positions.
+
+75
+00:03:26,070 --> 00:03:27,650
+Some of them are big.
+
+76
+00:03:27,650 --> 00:03:29,480
+They correspond to long positions.
+
+77
+00:03:29,480 --> 00:03:34,190
+Take a look at the bottom two columns that we have here.
+
+78
+00:03:34,190 --> 00:03:36,380
+These were the ones of France and Japan,
+
+79
+00:03:36,380 --> 00:03:40,400
+and this says the optimal thing to do
+
+80
+00:03:40,400 --> 00:03:44,330
+is to go short one of them 60%, a huge position,
+
+81
+00:03:44,330 --> 00:03:50,195
+and go long the other one 1.7 and similar kinds of numbers
+
+82
+00:03:50,195 --> 00:03:50,945
+for both of these.
+
+83
+00:03:50,945 --> 00:03:52,610
+So these are very, very big numbers.
+
+84
+00:03:52,610 --> 00:03:58,670
+They're not the kinds of things a typically prudent asset
+
+85
+00:03:58,670 --> 00:04:02,250
+allocator would do, even though here they're optimal.
+
+86
+00:04:02,250 --> 00:04:04,310
+This looks like extremely large positions,
+
+87
+00:04:04,310 --> 00:04:09,350
+very large short positions, very highly levered long positions.
+
+88
+00:04:09,350 --> 00:04:15,580
+
+
+89
+00:04:15,580 --> 00:04:18,070
+We can also look at a bar plot.
+
+90
+00:04:18,070 --> 00:04:20,380
+Taking a look just at rank order is often
+
+91
+00:04:20,380 --> 00:04:23,050
+a helpful overview for a portfolio
+
+92
+00:04:23,050 --> 00:04:24,760
+just to see where things stand.
+
+93
+00:04:24,760 --> 00:04:26,990
+And if we look for this portfolio,
+
+94
+00:04:26,990 --> 00:04:28,510
+you see, say, for the mu portfolio.
+
+95
+00:04:28,510 --> 00:04:31,460
+You can do the same thing for the iota portfolio.
+
+96
+00:04:31,460 --> 00:04:34,200
+We see that the weights to go from negative to positive
+
+97
+00:04:34,200 --> 00:04:35,950
+and that most of the weights in the middle
+
+98
+00:04:35,950 --> 00:04:38,470
+actually are not going to have as big an influence as two
+
+99
+00:04:38,470 --> 00:04:42,060
+gigantic weights on the top and the bottom.
+
+100
+00:04:42,060 --> 00:04:43,000
+
+

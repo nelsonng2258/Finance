@@ -1,0 +1,185 @@
+
+PROFESSOR: We talked about initial conditions
+for the diffusion equation, but more broadly
+differential equations can be formulated
+with boundary conditions that could appear
+at different points in time.
+Or they could be conditioned on the spatial variables
+that we have.
+So I'd like to talk about a few examples of boundary problems.
+And a couple of tricks that are helpful in their solution.
+The first trick that we'll take a look at
+is called the method of images.
+And the idea is that suppose we wanted
+to take a look at the probability of getting
+from point A over here to point B at this end.
+If we just wanted to get from point A to point B,
+and we're taking, say random walks
+or going up and down by 1 unit, we know how to do that.
+It's just combinatorics.
+We count all the ways that we can get all the possible steps
+to take us there.
+But suppose I had a condition, and I
+say I want you to get from A to B without crossing this line.
+So here I've got this is 6.
+I want to get to 8 in a certain number of time steps.
+But I want to do it without ever crossing this boundary at 5.
+That makes the counting much more complicated.
+And in the continuous time case, which we want to get to,
+makes it impossible.
+How are we going to count the paths?
+Well there are two things that we
+can do to get away from counting the work in this case
+and they generalize nicely to continuous time.
+The first thing is we'll think about stating things
+relative to the boundary.
+We'll think about what it means to hit the boundary.
+And the second thing we'll do is we'll
+use an artificial construction that
+will look at the mirror image of some parts
+of our path in the boundary.
+So let's take a look at this first case.
+Suppose that if I want to get from point A
+to point B without hitting C, I imagine that if I hit point C,
+I'm dead.
+So I want to know what the probability is to get there.
+And we'll call that a survival probability.
+How do I get from one place to another
+without hitting an intermediate condition?
+And it's something we've already talked
+about in the context of Gambler's Ruin
+where we hit a boundary and the game is over.
+And we've looked at a number of discrete problems
+where if there's a particular draw down
+in a financial balance, then that
+affects the outcome in which probabilities
+contribute to a final answer.
+So here we've got another version of the same thing.
+But here's our approach to solving it.
+What we're going to do is we're going
+to say that, first of all, some paths will
+go from A to B without ever hitting the boundary.
+But there are some that do hit the boundary.
+What we could do is instead of just counting the ones that
+don't hit the boundary, we could count them all
+and then subtract the ones that hit the boundary.
+How do we do that?
+Well, the way we can characterize all the paths that
+hit the boundary is to notice that if they hit the boundary
+one or more than one time, then they definitely
+hit it at least once.
+What I do is look at this blue path behind me.
+What I do is I take a look at the first place where
+it hits the boundary.
+So I look at this blue path that starts above.
+It hits the boundary here.
+Then it goes below and above.
+It hits it a second time.
+It bounces around.
+And finally it arrives at point B. So what I'm going to do
+is I'm going to focus on this first crossing point.
+This first place where it touches our barrier.
+And around this point, I'm going to draw a mirror image.
+And that's this red line.
+So you notice that this red line is
+this segment of the blue line reflected in the barrier.
+So if this is one unit above the barrier,
+this starts one unit below the barrier.
+Everything after the first passage point
+continues the same.
+So these paths are in one to one correspondence.
+For every path starting at A that gets to B
+and hits the boundary, there is exactly
+one path that starts at an image point below the boundary
+and also finishes at B.
+How many such plans are there?
+Well that's an easy thing to count
+because those are unrestricted.
+Because every path where I've done
+this reflection trick starts below the barrier.
+And they all finish above the barrier.
+They necessarily cross the barrier.
+So the barrier is no restriction in the counting of these paths.
+They all cross it if you want for free just
+by virtue of where they're starting and endpoints are.
+So if I want to compute the barrier,
+now I have an easy rule.
+I compute the probability to get from A to B unrestricted,
+and I subtract the probability to get from the mirror
+point, this fictitious point below the boundary, where
+I never could be because otherwise I
+would already by definition be out of the game.
+We would be dead.
+But to go from this fictitious point up to here.
+And I subtract that probability, and that gives me
+the survival probability.
+Now this generalizes nicely for continuous time processes.
+And it leads us to an interesting way
+to think about boundary values for differential equations.
+So in terms of our diffusion equation,
+suppose we have a barrier at z star.
+We start at some point z0 that has to be above z star.
+Again, if we're at the barrier or below,
+and where our survival probabilities is already
+0 like our Gambler's Ruin problem,
+the first thing I can do is I can say,
+let's look at the unrestricted probability
+to get from z0 to anywhere in time t.
+And while I just measure my distance from z0
+and z minus z0 in time t.
+And that's given by p0.
+I'd like to subtract the mirror image that is the probability
+to get from the mirror point, which is 2z star minus z0.
+And I want to subtract that probability.
+Well, that's just the same p0 function.
+p0 of z minus its origin, its starting point,
+to z star minus z0, t.
+And if I combine those two expressions,
+I get this result right--
+excuse me.
+I get this result right here, which
+you will notice is not a probability density.
+And it shouldn't be.
+It doesn't normalize to 1 because the longer time
+goes on, the more chance there is
+that we will have hit the boundary the less chance
+there is that we will survive.
+It certainly should be a positive quantity.
+And you can check that it is.
+Here's its most interesting property.
+It obeys the property that when z is equal to z star,
+it vanishes.
+The two terms cancel each other out.
+That's exactly what should happen.
+z equals z star at any point t means
+that we're at the boundary where we no longer survive.
+So we could have started from the beginning
+and said this is our boundary value on the problem.
+We are looking for a function ps of z
+and t that satisfies the diffusion equation such
+that whenever it's evaluated and star any time t,
+it's equal to 0.
+That's an example of a boundary where in this case
+a kind of barrier which we can't cross.
+Now of course that solution is only a solution for t
+greater than 0.
+And it's only a solution above the barrier for z
+greater than z star.
+You'll notice that this expression here we've
+written down doesn't exist for negative times.
+That's OK because the square root.
+But it does exist for all values of z that
+is this expression makes sense.
+But it doesn't really solve our differential equation
+because if z were below z star, the probability has already
+gone to 0, and we wouldn't want to get something negative.
+The complete solution to this boundary value problem
+is that the probability to survive to z and t
+is given by 1 over the square root of 2 pi
+t times this expression.
+Minus the Gaussian exponential with the distance
+measured from the image charge.
+But if z is below is z star or equal, then the value is 0.
+
+Now this was for a symmetric random walk
+where there was no drifter.

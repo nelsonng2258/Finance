@@ -1,0 +1,229 @@
+PROFESSOR: So the portfolios that
+show up when we're using only equality constraints
+have these issues where the weights are unbounded
+and they could be anywhere.
+They might happen to be at small, reasonable-looking
+values.
+But there's no guarantee of that,
+and it's interesting to see what happens when we
+impose inequality constraints.
+For one thing, we often have to.
+Those are just the rules of the game--
+the financial constraints, the investment mandate
+doesn't permit us to use the discretion
+to do something that mathematically
+appears to be optimal.
+But it also raises an interesting perspective,
+which is if these constraints do become binding,
+how much are we giving up?
+What is the cost of our distance from true optimality if we were
+to remove those constraints?
+After all, if we really had confidence
+and we really knew where we were,
+we might advocate for lifting the constraints
+if we could show that the benefit was great
+and, in fact, that we had a better risk-adjusted return,
+possibly even lower risk, by relaxing the constraints.
+We're thinking about this not only,
+how do I get an answer if I've got tighter constraints,
+but what does it mean?
+How does it compare?
+What am I giving up?
+How can I look at a perspective on this and thinking
+about the set of all possible investment
+portfolios one might have?
+And of course, we're talking very concretely
+about portfolio optimization, but this applies
+to many, many other kinds--
+the lessons apply to many, many other kinds
+of constraint optimization.
+So let's take a look at what happens.
+And what we want to do is let's start
+by imposing the most typical kind of constraint,
+which is the "no short, no leverage" rule.
+That is, the weights have to be strictly bounded
+between 0 and 1.
+So we might want them to be smaller.
+You can take the code and rerun that.
+Let's just apply that fairly loose constraint.
+But we already expect that it'll be binding in this case
+because we saw that minimum variance portfolio already,
+which is going to have highly-leveraged leveraged
+positions and short positions.
+So the way we do this is using the technique
+of quadratic programming, and you can read about it
+in the Help files.
+The function in R is called "solve.QP" from this library.
+And let me show you the code, and you'll
+want to read the code in conjunction
+with the documentation.
+But let's take a look.
+So the inputs to this sample program that we have
+are going to include a covariance matrix.
+They're going to include a vector of expected returns.
+And they're going to include a couple of things
+we want to pay attention to.
+I mean, that's what we need coming in.
+We want to know how many points we're going to compute.
+But we want to pay attention to the minimum and maximum values
+of mu because if we're not allowing our portfolios to be
+leveraged, then the highest possible return we could get,
+our mu sub p, is going to be the biggest return among our assets
+because the highest return we could get without leverage
+is putting all our eggs in one basket.
+We find the portfolio that's got the highest return,
+and there's only one way to get it,
+which is putting hundreds of our assets there.
+Similarly at the other end, minimum variance portfolio,
+it's going to be--
+depending on the covariance, we may find something
+at this special point on here.
+So we always want to look at identifying special points
+whether they're symmetries or whether they're endpoints.
+But let's just prepare our data and take a look
+at what's going to happen.
+So we're going to require the quadratic programming.
+We put that inside the function in case
+you didn't load it beforehand.
+It doesn't really matter that much.
+We're going to define Nu, the size of our universe,
+to be the number of points we have.
+We know in this example it's going to be 8.
+We define a Iota to be a vector of 1s of equal length.
+And we define Zero, just for convenience
+below, to be a vector of the same length just filled 0s.
+Now, I'm going to define a constraint,
+a little fudge parameter called epsilon.
+And the idea is that we want to avoid rounding errors.
+And because we're going to take a look starting at the lowest
+possible return and incrementing our way all the way up
+to the highest return in the portfolio,
+if we're off by a little bit, we might
+end up with an unfeasible constraint,
+or infeasible constraint.
+That is, if we're off by a little bit in our rounding
+and we ask for a portfolio that has a return just even
+a tiny amount more than the largest expected
+return in our input set, there won't be a solution.
+So what we'll do is we'll just nudge the endpoints
+down a little bit.
+And you can set this parameter to be anything you'd like.
+This level seems to work OK.
+Now, the documentation is dense.
+They've packed a lot into one thing,
+and I'll let you look at the code in the construction.
+But this is what goes into it.
+There are a whole bunch of constraints
+that are simultaneously going into the program,
+and they're all formulated in terms of specifying, putting
+the-- coding the data into a matrix and into a vector.
+So what are the constraints?
+Let's just talk about them.
+And as I said, you can read the documentation,
+and you can look at this particular setup
+where it's implemented in one case.
+Then, you can do your own.
+We've got a budget constraint, so the weights
+have to sum to 1.
+We have a return constraint because what we're going to do
+is we're going to solve the problem,
+find the minimum variance for a given level of mu,
+and then we're going to look at varying mu all the way up
+to our maximum value of mu.
+We have a lower bound on our individual weights,
+and we have an upper bound on the individual weights.
+And those are just for individual components.
+Now, it's possible to add additional rules as well,
+such as constraints on linear combinations for the weights
+that I mentioned in our introduction.
+So this thing, the A matrix here as defined--
+cbind in R is a function that binds columns.
+It takes columns and creates a bigger object.
+So this is just the conventions required for the program.
+This is not a particularly interesting
+mathematical object.
+So it has one column with the Iotas,
+the second column with the mus, and these other things
+that are here.
+And as I said, you can check that.
+Now, the next thing we want to do
+are we want to set up the endpoints.
+And here, we're defining mu_min and mu_max,
+and these are just ways of taking a look, at making sure
+that we nudge the endpoints a little bit
+by an amount that's proportional to the range that's here.
+So these are just some reasonable values.
+You could set them in different ways.
+Then, we're going to set up for three things
+that we want to have.
+We're going to have the sigma_p will
+be the standard deviation of the optimal portfolio
+of a particular value of mu sub p.
+We're going to walk through a range of mu sub p's.
+So in this line we generate that.
+This is using the sequence command in R.
+It just generate a list of numbers.
+It generates an array.
+And you can find similar things in Python and other languages,
+or you can build it yourself because we're
+going to use that in the for loop in just a moment.
+And then, w is going to be where we're
+going to put the weights because, remember,
+we usually are looking for the location of the extrema.
+But we also can find the value of the extrema.
+So when it comes to the efficient return frontier,
+it's a little bit of an exception.
+We usually are looking at a dimensional plot.
+We're not thinking of the 8- or 500-dimensional space
+that we started with, but we can capture everything.
+So these variables are defined sigma and w
+as placeholders where we're going to put the results.
+So what do we do?
+We're going to run through a for loop,
+and we're going to go through for each of the points
+that we have here.
+These are increments, so we'll count our way up in steps mu.
+This b vector is defined in the documentation.
+It's going to involve a 1 for one of the constraints.
+And here, with changes in each pass through for loop,
+it's going to be the mu sub p that we're solving for.
+Remember, that's how we did analytically
+our original problem.
+We fixed the mu sub p.
+Then, we minimized the variance subject to the constraint
+that the portfolio return be equal to that given mu sub p.
+And then, our results are a function of mu sub p.
+Here, what we're going to do is just compute
+for a bunch of discrete mu sub p's
+and then capture all the data.
+Here is the line.
+This is the work horse that does the actual calculations.
+So this is solve.QP.
+It takes these inputs, the covariance matrix,
+and a bunch of constant parameters
+that we have that have all been defined.
+And what are the outputs?
+So we put them into an object called opt,
+and there are two things that we want.
+One of them is opt, the value part of it,
+which is picking this off.
+We use the notation "opt$value" because opt is a complex object
+and it has different pieces.
+The amount that we have for the opt value
+is the value at the location of the maximum
+of the original function, which is 1/2 w transposed cw.
+We're interested in sigma, so we multiply by 2
+and take the square root.
+That gives us our standard deviation
+in the appropriate units.
+And we want the weights, and that's
+what's called "solution."
+And we're going to put them into this array w, into this matrix.
+And then finally, we're going to report everything,
+and we're going to put it into this variable called
+mvef for mean variance efficient frontier.
+And we set up a data frame where we
+bring these objects together.
+We've got the portfolio returns, the associated mu sub p's
+for which we solve the problem, and the weights.
+So let's see what the results look like.

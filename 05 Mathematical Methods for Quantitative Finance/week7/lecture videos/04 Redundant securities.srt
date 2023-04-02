@@ -1,0 +1,436 @@
+0
+00:00:00,000 --> 00:00:01,380
+
+
+1
+00:00:01,380 --> 00:00:04,220
+PROFESSOR: Now, I mentioned before
+
+2
+00:00:04,220 --> 00:00:07,430
+that we might have securities that aren't independent.
+
+3
+00:00:07,430 --> 00:00:09,590
+We might have more securities than there
+
+4
+00:00:09,590 --> 00:00:10,940
+are states of the world.
+
+5
+00:00:10,940 --> 00:00:13,790
+And we might have securities that actually are not
+
+6
+00:00:13,790 --> 00:00:17,120
+really needed, that are equivalent to other securities.
+
+7
+00:00:17,120 --> 00:00:18,770
+And, at first glance, we might think
+
+8
+00:00:18,770 --> 00:00:20,360
+that that would be superfluous.
+
+9
+00:00:20,360 --> 00:00:22,460
+But we do it all the time.
+
+10
+00:00:22,460 --> 00:00:25,850
+Just because we have $1 bills in the American economy,
+
+11
+00:00:25,850 --> 00:00:27,750
+$5 bills are superfluous.
+
+12
+00:00:27,750 --> 00:00:29,720
+You can make a 5 out of five 1's.
+
+13
+00:00:29,720 --> 00:00:31,970
+And you can make a 20 out of four 5's.
+
+14
+00:00:31,970 --> 00:00:33,890
+But we do have these different instruments
+
+15
+00:00:33,890 --> 00:00:35,210
+because they're convenient.
+
+16
+00:00:35,210 --> 00:00:38,110
+Now, there are no arbitrage relationships among them.
+
+17
+00:00:38,110 --> 00:00:40,190
+You would be hard pressed to find someone who's
+
+18
+00:00:40,190 --> 00:00:41,960
+going to trade you at a different rate
+
+19
+00:00:41,960 --> 00:00:45,170
+$5 bills for $10 bills than the expected
+
+20
+00:00:45,170 --> 00:00:48,330
+ratio between their face values.
+
+21
+00:00:48,330 --> 00:00:51,890
+But, when we're talking about instruments that are risky,
+
+22
+00:00:51,890 --> 00:00:54,740
+unlike risk-free instruments like dollar bills,
+
+23
+00:00:54,740 --> 00:00:58,190
+the answer isn't always so obvious.
+
+24
+00:00:58,190 --> 00:01:02,660
+And markets do have a lot of room for extra instruments.
+
+25
+00:01:02,660 --> 00:01:05,010
+And we'll see that these are really valuable.
+
+26
+00:01:05,010 --> 00:01:07,670
+So we have a notion from our study
+
+27
+00:01:07,670 --> 00:01:12,710
+of options that options in a certain sense
+
+28
+00:01:12,710 --> 00:01:15,920
+are different instruments than stocks
+
+29
+00:01:15,920 --> 00:01:17,820
+because they have different payoffs.
+
+30
+00:01:17,820 --> 00:01:21,800
+On the other hand, because they can be dynamically hedged
+
+31
+00:01:21,800 --> 00:01:26,210
+using stocks, there's a sense in which the payoff in an option
+
+32
+00:01:26,210 --> 00:01:29,030
+can be replicated, albeit dynamically,
+
+33
+00:01:29,030 --> 00:01:32,130
+by a portfolio of stock.
+
+34
+00:01:32,130 --> 00:01:33,510
+So how do we look at this?
+
+35
+00:01:33,510 --> 00:01:35,330
+Well, let's take a look at our world, which
+
+36
+00:01:35,330 --> 00:01:36,810
+is not very dynamic.
+
+37
+00:01:36,810 --> 00:01:38,220
+It's only got one period.
+
+38
+00:01:38,220 --> 00:01:40,470
+So the structure is going to be a lot simpler.
+
+39
+00:01:40,470 --> 00:01:42,440
+So in complete and incomplete markets,
+
+40
+00:01:42,440 --> 00:01:44,600
+we could have redundant securities.
+
+41
+00:01:44,600 --> 00:01:48,530
+And that occurs when securities or sets of securities
+
+42
+00:01:48,530 --> 00:01:51,650
+have payoffs that are linearly dependent.
+
+43
+00:01:51,650 --> 00:01:54,470
+We often say that that means that one or more
+
+44
+00:01:54,470 --> 00:01:56,450
+securities have payoffs that can be
+
+45
+00:01:56,450 --> 00:01:59,420
+replicated by a portfolio of other securities.
+
+46
+00:01:59,420 --> 00:02:02,600
+And really, if one portfolio can replicate another,
+
+47
+00:02:02,600 --> 00:02:06,080
+we usually can turn it around in either direction.
+
+48
+00:02:06,080 --> 00:02:08,780
+Mathematically, that's equivalent of saying
+
+49
+00:02:08,780 --> 00:02:11,810
+that the kernel or the null space of A is non-empty,
+
+50
+00:02:11,810 --> 00:02:14,410
+or the dimension of the kernel of A is bigger than 0
+
+51
+00:02:14,410 --> 00:02:16,340
+if you want.
+
+52
+00:02:16,340 --> 00:02:18,830
+That means that there are portfolios
+
+53
+00:02:18,830 --> 00:02:22,280
+that have zero payoff because, if we take
+
+54
+00:02:22,280 --> 00:02:25,280
+that portfolio, a portfolio of zero payoffs,
+
+55
+00:02:25,280 --> 00:02:28,760
+we add it to some portfolio that has a payoff that we want.
+
+56
+00:02:28,760 --> 00:02:32,510
+The resulting portfolio is a different portfolio
+
+57
+00:02:32,510 --> 00:02:34,120
+with the same payoff.
+
+58
+00:02:34,120 --> 00:02:35,840
+That's what we mean by redundant.
+
+59
+00:02:35,840 --> 00:02:38,540
+Redundant means there are multiple portfolios that
+
+60
+00:02:38,540 --> 00:02:39,920
+have the same payoff.
+
+61
+00:02:39,920 --> 00:02:44,570
+Now, in this case, we know that the kernel of a linear operator
+
+62
+00:02:44,570 --> 00:02:47,010
+is itself a vector space.
+
+63
+00:02:47,010 --> 00:02:50,630
+So, obviously, if I add some element of the kernel,
+
+64
+00:02:50,630 --> 00:02:54,920
+I could add some multiple of the kernel as well.
+
+65
+00:02:54,920 --> 00:02:56,880
+If we want to look at this on the blackboard,
+
+66
+00:02:56,880 --> 00:03:03,390
+suppose that we have a portfolio that
+
+67
+00:03:03,390 --> 00:03:06,300
+is equal to a given target.
+
+68
+00:03:06,300 --> 00:03:08,370
+So x is our portfolio.
+
+69
+00:03:08,370 --> 00:03:09,720
+b is our payoff.
+
+70
+00:03:09,720 --> 00:03:11,490
+A is the payoff matrix.
+
+71
+00:03:11,490 --> 00:03:20,770
+And suppose that z is an element of the kernel of A.
+
+72
+00:03:20,770 --> 00:03:22,990
+Mathematically, that just means--
+
+73
+00:03:22,990 --> 00:03:27,490
+all I'm saying is that A acting on z is equal to 0.
+
+74
+00:03:27,490 --> 00:03:30,710
+And it means I'm always leaving out the trivial case where
+
+75
+00:03:30,710 --> 00:03:33,310
+z is a non-zero vector.
+
+76
+00:03:33,310 --> 00:03:36,280
+So, if A acting on z is equal to 0,
+
+77
+00:03:36,280 --> 00:03:38,170
+what happens to the portfolio?
+
+78
+00:03:38,170 --> 00:03:40,460
+Suppose I consider the portfolio--
+
+79
+00:03:40,460 --> 00:03:42,910
+let's call at x prime--
+
+80
+00:03:42,910 --> 00:03:49,630
+to be x plus an arbitrary constant times z.
+
+81
+00:03:49,630 --> 00:03:53,910
+Well, the payoff on x prime is A acting
+
+82
+00:03:53,910 --> 00:04:00,120
+on x prime, which is A acting on x
+
+83
+00:04:00,120 --> 00:04:07,140
+plus cz, which, by linearity, is A acting on x
+
+84
+00:04:07,140 --> 00:04:11,970
+plus c times A acting on z.
+
+85
+00:04:11,970 --> 00:04:14,760
+The first term is equal to b.
+
+86
+00:04:14,760 --> 00:04:18,000
+And the second term is equal to 0 because A acting on 0
+
+87
+00:04:18,000 --> 00:04:19,649
+is equal to 0.
+
+88
+00:04:19,649 --> 00:04:24,090
+So we see that, if I have a non-zero z,
+
+89
+00:04:24,090 --> 00:04:27,390
+I have a one-parameter family of solutions,
+
+90
+00:04:27,390 --> 00:04:31,710
+of redundant securities of portfolios, all of which
+
+91
+00:04:31,710 --> 00:04:34,700
+have the same payoff.
+
+92
+00:04:34,700 --> 00:04:37,720
+So, if redundant securities exist,
+
+93
+00:04:37,720 --> 00:04:40,780
+then we don't have a unique association between portfolios.
+
+94
+00:04:40,780 --> 00:04:42,880
+The payoff is not one to one.
+
+95
+00:04:42,880 --> 00:04:46,420
+But, for a given portfolio, for a given x, we know what b is.
+
+96
+00:04:46,420 --> 00:04:47,560
+We act with A on x.
+
+97
+00:04:47,560 --> 00:04:50,720
+We get a definite answer by doing matrix multiplication.
+
+98
+00:04:50,720 --> 00:04:53,530
+But, for a given payoff b, there might
+
+99
+00:04:53,530 --> 00:04:56,570
+be more than one portfolio that solves the equation.
+
+100
+00:04:56,570 --> 00:04:58,720
+So, just as I showed you on the blackboard,
+
+101
+00:04:58,720 --> 00:05:00,340
+we can take any solution.
+
+102
+00:05:00,340 --> 00:05:03,730
+We can add to it a multiple of any arbitrage portfolio.
+
+103
+00:05:03,730 --> 00:05:06,810
+And it's going to have the same payoff.
+
+104
+00:05:06,810 --> 00:05:10,250
+Now, in an incomplete market, the existence of solutions
+
+105
+00:05:10,250 --> 00:05:10,940
+depends on b.
+
+106
+00:05:10,940 --> 00:05:13,080
+So there might be no solutions at all.
+
+107
+00:05:13,080 --> 00:05:16,550
+But, if there is a portfolio that has a solution,
+
+108
+00:05:16,550 --> 00:05:20,050
+then there's going to be an infinite number of solutions.
+

@@ -1,0 +1,884 @@
+0
+00:00:00,000 --> 00:00:01,690
+
+
+1
+00:00:01,690 --> 00:00:05,040
+PROFESSOR: When we optimize a portfolio of assets,
+
+2
+00:00:05,040 --> 00:00:06,990
+what we'd like to do is think about finding
+
+3
+00:00:06,990 --> 00:00:10,037
+an optimal trade-off of risk and return.
+
+4
+00:00:10,037 --> 00:00:11,370
+What do we have as a constraint?
+
+5
+00:00:11,370 --> 00:00:13,680
+Well, typically, we have a budget constraint.
+
+6
+00:00:13,680 --> 00:00:15,390
+We've got some amount of capital,
+
+7
+00:00:15,390 --> 00:00:18,030
+and we can assign weights to different risky assets,
+
+8
+00:00:18,030 --> 00:00:19,080
+let's say.
+
+9
+00:00:19,080 --> 00:00:22,050
+Let's call those weights w sub i for the weight, the fraction
+
+10
+00:00:22,050 --> 00:00:24,180
+of capital invested in asset i.
+
+11
+00:00:24,180 --> 00:00:27,240
+And, depending on what choices I make,
+
+12
+00:00:27,240 --> 00:00:31,240
+I'll earn a different return and have different levels of risk.
+
+13
+00:00:31,240 --> 00:00:34,980
+So, if we think of w as being a control variable that we're
+
+14
+00:00:34,980 --> 00:00:38,070
+free to choose, but it's subject to a constraint,
+
+15
+00:00:38,070 --> 00:00:40,680
+a budget constraint, where the sum of the weights
+
+16
+00:00:40,680 --> 00:00:45,030
+need to equal 1, we can ask the question about how do we
+
+17
+00:00:45,030 --> 00:00:49,170
+maximize return, how do we minimize risk,
+
+18
+00:00:49,170 --> 00:00:51,360
+provided that we've got appropriate measures
+
+19
+00:00:51,360 --> 00:00:52,480
+for both of them.
+
+20
+00:00:52,480 --> 00:00:55,570
+And then we can do this using the Lagrange multiplier method.
+
+21
+00:00:55,570 --> 00:00:57,900
+So we might think of the risk as being
+
+22
+00:00:57,900 --> 00:01:01,325
+related to the variance of the portfolio.
+
+23
+00:01:01,325 --> 00:01:02,700
+And the variance of the portfolio
+
+24
+00:01:02,700 --> 00:01:05,379
+for a weighted set of returns, as we've seen before,
+
+25
+00:01:05,379 --> 00:01:06,390
+is a quadratic form.
+
+26
+00:01:06,390 --> 00:01:08,550
+And here I've written it in vector notation.
+
+27
+00:01:08,550 --> 00:01:12,120
+It's w transpose times the covariance matrix, which
+
+28
+00:01:12,120 --> 00:01:15,540
+is the covariance matrix where the elements Cij are
+
+29
+00:01:15,540 --> 00:01:20,250
+the covariance between the returns on asset i and asset j,
+
+30
+00:01:20,250 --> 00:01:21,330
+times w again.
+
+31
+00:01:21,330 --> 00:01:25,110
+So it's quadratic in the w's, but
+
+32
+00:01:25,110 --> 00:01:27,060
+with lots of off-diagonal terms, potentially,
+
+33
+00:01:27,060 --> 00:01:29,400
+where the assets have correlations among themselves.
+
+34
+00:01:29,400 --> 00:01:32,700
+And the expected returns are just the weighted average
+
+35
+00:01:32,700 --> 00:01:34,800
+of the vector of expected returns
+
+36
+00:01:34,800 --> 00:01:37,000
+on the individual assets.
+
+37
+00:01:37,000 --> 00:01:42,600
+So C and mu correspond to the covariance and expected returns
+
+38
+00:01:42,600 --> 00:01:44,340
+on the individual assets.
+
+39
+00:01:44,340 --> 00:01:48,870
+Sigma squared p and mu p, the p stands for portfolio.
+
+40
+00:01:48,870 --> 00:01:51,030
+Those are based on a linear combination.
+
+41
+00:01:51,030 --> 00:01:53,820
+And w is the set of linear weighting factors
+
+42
+00:01:53,820 --> 00:01:55,210
+that we get to choose.
+
+43
+00:01:55,210 --> 00:01:58,170
+I will take mu to be excess returns in excess
+
+44
+00:01:58,170 --> 00:02:01,515
+of the risk-free rate so that we don't have a little minus r sub
+
+45
+00:02:01,515 --> 00:02:03,210
+f's to subtract off everywhere.
+
+46
+00:02:03,210 --> 00:02:06,960
+At least for the people who have taken finance courses,
+
+47
+00:02:06,960 --> 00:02:09,210
+you know that we always need to look at things
+
+48
+00:02:09,210 --> 00:02:10,990
+relative to the risk-free rate.
+
+49
+00:02:10,990 --> 00:02:13,470
+So this would be a problem that sounds
+
+50
+00:02:13,470 --> 00:02:16,980
+great for constraint optimization for the Lagrange
+
+51
+00:02:16,980 --> 00:02:18,300
+multiplier method.
+
+52
+00:02:18,300 --> 00:02:20,910
+What do we know about these different components?
+
+53
+00:02:20,910 --> 00:02:25,380
+Well, one thing that we know is that the covariance matrix can
+
+54
+00:02:25,380 --> 00:02:30,720
+be expanded out in terms of a quadratic sum,
+
+55
+00:02:30,720 --> 00:02:33,630
+in terms of diagonal terms that involve
+
+56
+00:02:33,630 --> 00:02:36,030
+only the variance of the individual assets
+
+57
+00:02:36,030 --> 00:02:39,450
+and that involve cross terms.
+
+58
+00:02:39,450 --> 00:02:42,030
+Notice that, in this expression, every time there's
+
+59
+00:02:42,030 --> 00:02:45,510
+a w that appears, it's always multiplied by a sigma.
+
+60
+00:02:45,510 --> 00:02:48,640
+So I have w1 sigma 1 quantity squared.
+
+61
+00:02:48,640 --> 00:02:51,900
+And here I might have w1 sigma 1 w2 sigma 2.
+
+62
+00:02:51,900 --> 00:02:53,400
+Those always appear together.
+
+63
+00:02:53,400 --> 00:02:57,220
+Rho ij is the correlation matrix.
+
+64
+00:02:57,220 --> 00:03:00,270
+So the covariance matrix is symmetric.
+
+65
+00:03:00,270 --> 00:03:05,550
+And it's symmetric because the variance and covariance
+
+66
+00:03:05,550 --> 00:03:08,940
+between asset i and asset j is the same as between j and i.
+
+67
+00:03:08,940 --> 00:03:10,650
+So it's obviously symmetric.
+
+68
+00:03:10,650 --> 00:03:12,480
+It's positive definite.
+
+69
+00:03:12,480 --> 00:03:13,800
+And it's positive-definite.
+
+70
+00:03:13,800 --> 00:03:18,180
+We know that it's positive because the variance is
+
+71
+00:03:18,180 --> 00:03:19,920
+obtained by taking the expectation
+
+72
+00:03:19,920 --> 00:03:21,280
+of a positive quantity.
+
+73
+00:03:21,280 --> 00:03:22,710
+So it must be positive.
+
+74
+00:03:22,710 --> 00:03:25,830
+And that means that, no matter what w's we put in there,
+
+75
+00:03:25,830 --> 00:03:28,630
+we're always going to get a positive quantity.
+
+76
+00:03:28,630 --> 00:03:31,660
+So this is a positive-definite matrix.
+
+77
+00:03:31,660 --> 00:03:34,400
+And that means that all of its eigenvalues are positive.
+
+78
+00:03:34,400 --> 00:03:37,090
+Now, we know that it can't be-- it has to be non-negative.
+
+79
+00:03:37,090 --> 00:03:38,760
+How do we know it's strictly positive?
+
+80
+00:03:38,760 --> 00:03:44,010
+Well, for the covariance matrix to have a zero eigenvalue,
+
+81
+00:03:44,010 --> 00:03:46,365
+that would mean that it's a singular matrix
+
+82
+00:03:46,365 --> 00:03:48,390
+and that it's not invertible.
+
+83
+00:03:48,390 --> 00:03:50,190
+And one reason that that could happen
+
+84
+00:03:50,190 --> 00:03:52,860
+is that we either have risk-free assets, which
+
+85
+00:03:52,860 --> 00:03:55,110
+have no correlation to anything else,
+
+86
+00:03:55,110 --> 00:03:57,810
+or that we have linearly dependent data sets.
+
+87
+00:03:57,810 --> 00:04:01,380
+Whenever there's a matrix where multiple rows or columns are
+
+88
+00:04:01,380 --> 00:04:04,410
+linearly dependent, the matrix is less than full rank.
+
+89
+00:04:04,410 --> 00:04:05,580
+It's not invertible.
+
+90
+00:04:05,580 --> 00:04:07,420
+And it has zero eigenvalues.
+
+91
+00:04:07,420 --> 00:04:10,450
+So we're going to specifically exclude those cases.
+
+92
+00:04:10,450 --> 00:04:13,350
+So we're going to assume that all of the assets
+
+93
+00:04:13,350 --> 00:04:15,870
+are linearly independent.
+
+94
+00:04:15,870 --> 00:04:17,490
+And that means that our matrix is
+
+95
+00:04:17,490 --> 00:04:19,140
+going to be positive-definite.
+
+96
+00:04:19,140 --> 00:04:20,490
+It's going to be symmetric.
+
+97
+00:04:20,490 --> 00:04:22,620
+And it's going to be invertible.
+
+98
+00:04:22,620 --> 00:04:24,180
+That also means that we could use
+
+99
+00:04:24,180 --> 00:04:29,160
+it to define a quadratic form on the vector space of weights w
+
+100
+00:04:29,160 --> 00:04:31,450
+if we wanted to think more broadly.
+
+101
+00:04:31,450 --> 00:04:33,450
+And we can use that to come up with kind
+
+102
+00:04:33,450 --> 00:04:35,700
+of a geometric picture of risk that we won't need
+
+103
+00:04:35,700 --> 00:04:38,850
+for our portfolio optimization, but, in this language,
+
+104
+00:04:38,850 --> 00:04:40,470
+we can think of looking at comparing
+
+105
+00:04:40,470 --> 00:04:44,940
+two different portfolios that are described by weight factors
+
+106
+00:04:44,940 --> 00:04:48,780
+w and w prime and say their inner product in this space
+
+107
+00:04:48,780 --> 00:04:55,230
+is related to the w transpose times C times w prime.
+
+108
+00:04:55,230 --> 00:04:56,760
+This is the inner product here.
+
+109
+00:04:56,760 --> 00:04:58,050
+And this vanishes.
+
+110
+00:04:58,050 --> 00:04:59,700
+We would say these two portfolios
+
+111
+00:04:59,700 --> 00:05:03,255
+are orthogonal if they are uncorrelated.
+
+112
+00:05:03,255 --> 00:05:04,630
+So that's just a convenient thing
+
+113
+00:05:04,630 --> 00:05:07,000
+that you could keep in mind for other applications,
+
+114
+00:05:07,000 --> 00:05:09,610
+but not required for portfolio variance.
+
+115
+00:05:09,610 --> 00:05:12,940
+And in a very simple, concrete case, we could get some data,
+
+116
+00:05:12,940 --> 00:05:16,450
+and we can visualize what we mean by an optimal portfolio
+
+117
+00:05:16,450 --> 00:05:18,670
+just by crunching some numbers without doing
+
+118
+00:05:18,670 --> 00:05:20,590
+this kind of algebra at all.
+
+119
+00:05:20,590 --> 00:05:22,310
+Here's an example.
+
+120
+00:05:22,310 --> 00:05:24,400
+Suppose I look at historical data,
+
+121
+00:05:24,400 --> 00:05:26,845
+and I take time series returns for a couple of assets,
+
+122
+00:05:26,845 --> 00:05:30,040
+in this case, the S&P 500 index, which
+
+123
+00:05:30,040 --> 00:05:32,380
+I've denoted by ticker symbol SPX,
+
+124
+00:05:32,380 --> 00:05:35,920
+and the gold ETF, the Exchange-Traded Fund whose
+
+125
+00:05:35,920 --> 00:05:38,590
+value is based on the deposits of gold.
+
+126
+00:05:38,590 --> 00:05:41,620
+And I wanted to know, what would be an optimal portfolio
+
+127
+00:05:41,620 --> 00:05:44,000
+to hold consisting of these two assets?
+
+128
+00:05:44,000 --> 00:05:46,480
+So what I can do is I can look at the time
+
+129
+00:05:46,480 --> 00:05:48,260
+series of historical returns.
+
+130
+00:05:48,260 --> 00:05:50,470
+And, as a function of the weight vectors,
+
+131
+00:05:50,470 --> 00:05:53,200
+I can compute what the portfolio returns were.
+
+132
+00:05:53,200 --> 00:05:55,390
+So I can say suppose I did a portfolio that
+
+133
+00:05:55,390 --> 00:06:00,380
+was 50-50, that was 90-10, that was 10-90, that was 40-60.
+
+134
+00:06:00,380 --> 00:06:03,220
+So, for each possible relative weighting of the two
+
+135
+00:06:03,220 --> 00:06:04,960
+where the weights have to add up to 1,
+
+136
+00:06:04,960 --> 00:06:08,710
+I can compute what the time series of returns was.
+
+137
+00:06:08,710 --> 00:06:10,660
+Now, there's really only one number
+
+138
+00:06:10,660 --> 00:06:12,640
+that matters, relative weight of the two,
+
+139
+00:06:12,640 --> 00:06:14,920
+because they satisfy a budget constraint.
+
+140
+00:06:14,920 --> 00:06:16,660
+The two numbers have to add up to 1.
+
+141
+00:06:16,660 --> 00:06:19,030
+So I can think of this as being a function
+
+142
+00:06:19,030 --> 00:06:21,480
+of a single variable, the relative weight,
+
+143
+00:06:21,480 --> 00:06:27,880
+say, of gold versus equities in this portfolio.
+
+144
+00:06:27,880 --> 00:06:31,540
+And I do want to be careful in thinking about this averaging
+
+145
+00:06:31,540 --> 00:06:35,710
+that, since I'm constructing my views based on past time
+
+146
+00:06:35,710 --> 00:06:39,850
+series, if I talk about, say, a 50-50 portfolio, if I'm just
+
+147
+00:06:39,850 --> 00:06:43,660
+going to take a 50-50 average of the two time series of returns,
+
+148
+00:06:43,660 --> 00:06:46,117
+that would mean that's not a buy-and-hold portfolio.
+
+149
+00:06:46,117 --> 00:06:47,700
+It implies that, in every time period,
+
+150
+00:06:47,700 --> 00:06:50,620
+say every month, that I'm rebalancing the portfolio back
+
+151
+00:06:50,620 --> 00:06:55,370
+to 50-50 so that that is indeed the portfolio return.
+
+152
+00:06:55,370 --> 00:06:58,460
+So, subject to those provisos, you can do the calculation.
+
+153
+00:06:58,460 --> 00:07:02,790
+And, if you do it, you get, for each value from, say,
+
+154
+00:07:02,790 --> 00:07:06,540
+0-100 to 100-0, if we're weighting between the two,
+
+155
+00:07:06,540 --> 00:07:09,030
+we could compute what the time series of returns is.
+
+156
+00:07:09,030 --> 00:07:11,430
+And then we could plot some objective function.
+
+157
+00:07:11,430 --> 00:07:15,520
+Perhaps, it's the Sharpe ratio, which is the expected return,
+
+158
+00:07:15,520 --> 00:07:18,540
+or the expected excess return above the risk-free rate,
+
+159
+00:07:18,540 --> 00:07:21,840
+divided by the standard deviation of the returns.
+
+160
+00:07:21,840 --> 00:07:23,910
+That's a scalar quantity that gets larger
+
+161
+00:07:23,910 --> 00:07:27,060
+when there are higher returns or when the risk is lower.
+
+162
+00:07:27,060 --> 00:07:29,250
+There are other functions we could consider instead,
+
+163
+00:07:29,250 --> 00:07:31,950
+but here I've plotted an example of Sharpe
+
+164
+00:07:31,950 --> 00:07:36,870
+ratio versus the fraction of gold that's in my portfolio.
+
+165
+00:07:36,870 --> 00:07:38,620
+And, just looking at this picture,
+
+166
+00:07:38,620 --> 00:07:41,820
+we can see that the Sharpe ratio gets better and better as I
+
+167
+00:07:41,820 --> 00:07:45,250
+increase gold up to a certain point, and then it goes down.
+
+168
+00:07:45,250 --> 00:07:47,730
+So this is fairly typical of what we might see.
+
+169
+00:07:47,730 --> 00:07:50,400
+And, obviously, the goal of optimization
+
+170
+00:07:50,400 --> 00:07:51,610
+would be to find this point.
+
+171
+00:07:51,610 --> 00:07:54,030
+This would be the optimal Sharpe ratio.
+
+172
+00:07:54,030 --> 00:07:56,270
+It's a particular choice of objective function
+
+173
+00:07:56,270 --> 00:07:58,290
+and not uniquely determined.
+
+174
+00:07:58,290 --> 00:08:01,470
+But, for that choice of objective function,
+
+175
+00:08:01,470 --> 00:08:03,310
+this would be the maximum value.
+
+176
+00:08:03,310 --> 00:08:05,430
+Now, for a different choice of function,
+
+177
+00:08:05,430 --> 00:08:07,420
+the maximum might be somewhere else.
+
+178
+00:08:07,420 --> 00:08:09,090
+If I looked at a different data set
+
+179
+00:08:09,090 --> 00:08:11,520
+over a different period of time, the values
+
+180
+00:08:11,520 --> 00:08:13,890
+might move because maybe the return samples
+
+181
+00:08:13,890 --> 00:08:15,390
+I have are not representative.
+
+182
+00:08:15,390 --> 00:08:17,767
+Maybe the return processes are not stationary.
+
+183
+00:08:17,767 --> 00:08:19,350
+And there are a couple of other things
+
+184
+00:08:19,350 --> 00:08:21,180
+that we know could happen based on what
+
+185
+00:08:21,180 --> 00:08:24,240
+we know about functions, even of a single variable.
+
+186
+00:08:24,240 --> 00:08:26,490
+There might be multiple extrema.
+
+187
+00:08:26,490 --> 00:08:30,180
+Could there be more than one maximum?
+
+188
+00:08:30,180 --> 00:08:32,370
+Could the maximum be at the endpoints?
+
+189
+00:08:32,370 --> 00:08:33,900
+Could it be either at 0 or 1?
+
+190
+00:08:33,900 --> 00:08:35,520
+Maybe the function is monotonically
+
+191
+00:08:35,520 --> 00:08:37,260
+increasing or decreasing.
+
+192
+00:08:37,260 --> 00:08:40,530
+And another possibility that's important financially
+
+193
+00:08:40,530 --> 00:08:43,830
+is, could there be extrema that are outside
+
+194
+00:08:43,830 --> 00:08:45,780
+of the obvious budget area?
+
+195
+00:08:45,780 --> 00:08:47,805
+I looked between 0% and 100%.
+
+196
+00:08:47,805 --> 00:08:49,200
+But if the weight--
+
+197
+00:08:49,200 --> 00:08:51,690
+if we continued this curve, suppose
+
+198
+00:08:51,690 --> 00:08:56,010
+it was increasing from the beginning and up to here,
+
+199
+00:08:56,010 --> 00:08:59,100
+and then it continued, and it peaked somewhere out here,
+
+200
+00:08:59,100 --> 00:09:04,530
+say at a value of 130% in gold and minus 30 in equities,
+
+201
+00:09:04,530 --> 00:09:05,610
+let's say.
+
+202
+00:09:05,610 --> 00:09:09,480
+That would correspond to a maximum which isn't achievable
+
+203
+00:09:09,480 --> 00:09:12,960
+if the w's need to be positive or bounded between 0 and 1,
+
+204
+00:09:12,960 --> 00:09:14,580
+but it would correspond to something
+
+205
+00:09:14,580 --> 00:09:17,640
+we could conceivably do in a levered portfolio
+
+206
+00:09:17,640 --> 00:09:22,080
+where we borrow money to be able to invest more money than we
+
+207
+00:09:22,080 --> 00:09:24,150
+initially have in our account and where
+
+208
+00:09:24,150 --> 00:09:26,580
+we take short positions that would be represented
+
+209
+00:09:26,580 --> 00:09:27,790
+by negative weights.
+
+210
+00:09:27,790 --> 00:09:29,610
+So here, in the picture I've drawn,
+
+211
+00:09:29,610 --> 00:09:32,310
+we have an obvious solution that lies--
+
+212
+00:09:32,310 --> 00:09:34,050
+it satisfies the budget constraint,
+
+213
+00:09:34,050 --> 00:09:37,470
+and it lies in a range where w is between 0 and 1
+
+214
+00:09:37,470 --> 00:09:40,810
+without imposing any additional rules on bounds.
+
+215
+00:09:40,810 --> 00:09:44,290
+So it's an interior extremum point.
+
+216
+00:09:44,290 --> 00:09:46,700
+So that's just a visualization.
+
+217
+00:09:46,700 --> 00:09:48,450
+Next, we'd like to take a look at applying
+
+218
+00:09:48,450 --> 00:09:51,360
+this systematically for portfolios that may
+
+219
+00:09:51,360 --> 00:09:54,680
+have many more than two assets.
+
+220
+00:09:54,680 --> 00:09:56,000
+
+

@@ -1,0 +1,1036 @@
+0
+00:00:00,000 --> 00:00:01,390
+
+
+1
+00:00:01,390 --> 00:00:04,030
+PROFESSOR: So in practice, we almost always
+
+2
+00:00:04,030 --> 00:00:06,250
+have to deal with inequality constraints
+
+3
+00:00:06,250 --> 00:00:09,460
+to keep allocations that are just unreasonable.
+
+4
+00:00:09,460 --> 00:00:12,220
+Typically, for Long-only managers,
+
+5
+00:00:12,220 --> 00:00:15,100
+we say that weights should be between zero and one,
+
+6
+00:00:15,100 --> 00:00:17,350
+but they really have to be much less than one.
+
+7
+00:00:17,350 --> 00:00:20,590
+Any responsible manager is not going to be undiversified,
+
+8
+00:00:20,590 --> 00:00:23,260
+put all of his or her eggs in one basket.
+
+9
+00:00:23,260 --> 00:00:26,350
+So we'll often see things where the weights may be constrained
+
+10
+00:00:26,350 --> 00:00:31,040
+to be, say, between zero and 5%, zero and 10%,
+
+11
+00:00:31,040 --> 00:00:32,890
+depending on the liquidity the assets.
+
+12
+00:00:32,890 --> 00:00:34,600
+Could be zero and 1%.
+
+13
+00:00:34,600 --> 00:00:38,500
+And the zero lower bound would be for a Long-only manager
+
+14
+00:00:38,500 --> 00:00:41,980
+where they're not permitted to short securities.
+
+15
+00:00:41,980 --> 00:00:46,300
+So these are cases that quadratic programming handles
+
+16
+00:00:46,300 --> 00:00:46,840
+perfectly.
+
+17
+00:00:46,840 --> 00:00:50,320
+So we can add in addition to equality constraints,
+
+18
+00:00:50,320 --> 00:00:52,990
+we can add any number of inequality constraints.
+
+19
+00:00:52,990 --> 00:00:54,700
+And those inequality constraints can
+
+20
+00:00:54,700 --> 00:00:58,060
+be framed either at the level of individual weights,
+
+21
+00:00:58,060 --> 00:01:00,520
+individual components within the weight vector,
+
+22
+00:01:00,520 --> 00:01:03,640
+or linear combinations of them which is useful
+
+23
+00:01:03,640 --> 00:01:07,450
+if we want to say, for example, that our weight, our exposure
+
+24
+00:01:07,450 --> 00:01:11,470
+to a particular industry in the economy, our exposure
+
+25
+00:01:11,470 --> 00:01:15,640
+to a particular country in an international portfolio
+
+26
+00:01:15,640 --> 00:01:18,620
+needs to be bounded by a certain amount.
+
+27
+00:01:18,620 --> 00:01:21,160
+And then we take a linear competition of certain assets
+
+28
+00:01:21,160 --> 00:01:23,902
+and say that that bound lies only in that case.
+
+29
+00:01:23,902 --> 00:01:25,360
+So these are all things that we can
+
+30
+00:01:25,360 --> 00:01:31,580
+do using quadratic programming.
+
+31
+00:01:31,580 --> 00:01:34,090
+So let's set up a few things on the computer,
+
+32
+00:01:34,090 --> 00:01:37,660
+and this R Notebook is going to be available to download along
+
+33
+00:01:37,660 --> 00:01:40,270
+with the data file that you can use for rerunning
+
+34
+00:01:40,270 --> 00:01:41,120
+these simulations.
+
+35
+00:01:41,120 --> 00:01:43,780
+And then what I'd encourage you to do is go get your own data,
+
+36
+00:01:43,780 --> 00:01:45,670
+build your own covariance matrix,
+
+37
+00:01:45,670 --> 00:01:49,330
+make your own estimations of risk and return, and run this.
+
+38
+00:01:49,330 --> 00:01:51,940
+Or take a look at your own personal portfolio
+
+39
+00:01:51,940 --> 00:01:55,150
+or your retirement portfolio and run this and see
+
+40
+00:01:55,150 --> 00:01:59,840
+is your investment portfolio efficient.
+
+41
+00:01:59,840 --> 00:02:02,110
+So what are the things we need to do computationally?
+
+42
+00:02:02,110 --> 00:02:04,270
+Well, the nice thing about this R Notebook
+
+43
+00:02:04,270 --> 00:02:07,010
+is it contains both code and text.
+
+44
+00:02:07,010 --> 00:02:09,220
+So when you download it and you run it,
+
+45
+00:02:09,220 --> 00:02:13,570
+you can turn it into a nice pretty PDF HTML
+
+46
+00:02:13,570 --> 00:02:16,090
+file you can take a look at, but we're
+
+47
+00:02:16,090 --> 00:02:19,412
+going to look at it in code view here.
+
+48
+00:02:19,412 --> 00:02:21,370
+And what I'm going to do is I'm going to start,
+
+49
+00:02:21,370 --> 00:02:22,700
+you can set this up anyway.
+
+50
+00:02:22,700 --> 00:02:24,880
+And I hope these colors show up on the video.
+
+51
+00:02:24,880 --> 00:02:29,290
+But this background color here in gray is a block of code.
+
+52
+00:02:29,290 --> 00:02:32,320
+And the code are commands in R.
+
+53
+00:02:32,320 --> 00:02:35,230
+And the lines that begin with the pound sign,
+
+54
+00:02:35,230 --> 00:02:36,250
+these are comments.
+
+55
+00:02:36,250 --> 00:02:40,270
+The libraries are loaded once, so these libraries
+
+56
+00:02:40,270 --> 00:02:43,570
+such as quadprog for quadratic programming,
+
+57
+00:02:43,570 --> 00:02:47,260
+they need to be downloaded from CRAN from the R archive.
+
+58
+00:02:47,260 --> 00:02:50,770
+You can do that with the install.packages command.
+
+59
+00:02:50,770 --> 00:02:52,510
+And you'd need to put the name in quotes
+
+60
+00:02:52,510 --> 00:02:54,160
+for installed.packages.
+
+61
+00:02:54,160 --> 00:02:56,420
+Library loads the package.
+
+62
+00:02:56,420 --> 00:02:58,660
+It's not the packages command, don't ask me why.
+
+63
+00:02:58,660 --> 00:03:00,010
+It doesn't use quotes.
+
+64
+00:03:00,010 --> 00:03:02,380
+But the install.packages you do once then
+
+65
+00:03:02,380 --> 00:03:03,618
+it's on your computer.
+
+66
+00:03:03,618 --> 00:03:06,160
+And you can see which packages are installed in your computer
+
+67
+00:03:06,160 --> 00:03:08,410
+by looking at the Packages tab over on the right
+
+68
+00:03:08,410 --> 00:03:11,050
+and see which ones are here and which ones are loaded
+
+69
+00:03:11,050 --> 00:03:13,190
+at a given point in time.
+
+70
+00:03:13,190 --> 00:03:20,320
+And you can load them, and then they'll be available to use.
+
+71
+00:03:20,320 --> 00:03:21,430
+Here are a few others.
+
+72
+00:03:21,430 --> 00:03:24,760
+I'm not sure if we use all of these today for this,
+
+73
+00:03:24,760 --> 00:03:26,710
+but none of them is bad to have.
+
+74
+00:03:26,710 --> 00:03:30,010
+You have a reshape command for changing and arranging data.
+
+75
+00:03:30,010 --> 00:03:34,300
+The tidyverse command is useful as is actually tidyquant,
+
+76
+00:03:34,300 --> 00:03:36,670
+and I think we've seen it already in the course,
+
+77
+00:03:36,670 --> 00:03:39,610
+for a bunch of data handling commands that
+
+78
+00:03:39,610 --> 00:03:41,740
+give logical structure to data that
+
+79
+00:03:41,740 --> 00:03:43,630
+have different kinds of relationships.
+
+80
+00:03:43,630 --> 00:03:48,850
+ggplot is a package that does prettier and more sophisticated
+
+81
+00:03:48,850 --> 00:03:51,350
+plots than the base R package.
+
+82
+00:03:51,350 --> 00:03:53,500
+And in the code, I think I've got
+
+83
+00:03:53,500 --> 00:03:57,220
+some done both ways, the base R command and the ggplot.
+
+84
+00:03:57,220 --> 00:04:00,280
+If you take a look in your RStudio,
+
+85
+00:04:00,280 --> 00:04:02,320
+I think in the Help file, you will
+
+86
+00:04:02,320 --> 00:04:05,500
+find that there is a set of cheat sheets,
+
+87
+00:04:05,500 --> 00:04:08,920
+and you will find a bunch of things, including--
+
+88
+00:04:08,920 --> 00:04:10,502
+I'm not sure if ggplot is on here.
+
+89
+00:04:10,502 --> 00:04:12,460
+It may be, but there are a bunch of things here
+
+90
+00:04:12,460 --> 00:04:14,590
+that are very useful and you can find more.
+
+91
+00:04:14,590 --> 00:04:17,018
+Yes, there is a ggplot one right there.
+
+92
+00:04:17,018 --> 00:04:19,060
+So you can take a look at that and download that,
+
+93
+00:04:19,060 --> 00:04:22,850
+see some of the commands, look at examples.
+
+94
+00:04:22,850 --> 00:04:26,350
+So we're going to get all this stuff and run this code walk,
+
+95
+00:04:26,350 --> 00:04:29,168
+and we'll be ready to go.
+
+96
+00:04:29,168 --> 00:04:31,210
+One of the things that we have is this data file,
+
+97
+00:04:31,210 --> 00:04:35,080
+and this data file is taken from an example given
+
+98
+00:04:35,080 --> 00:04:38,020
+in book by Richard Micheaux called
+
+99
+00:04:38,020 --> 00:04:42,640
+efficient asset management which I encourage
+
+100
+00:04:42,640 --> 00:04:44,930
+you to take a look at.
+
+101
+00:04:44,930 --> 00:04:47,140
+We've got here just some data that he
+
+102
+00:04:47,140 --> 00:04:48,280
+took from historical data.
+
+103
+00:04:48,280 --> 00:04:51,230
+And as I said, you can get your own.
+
+104
+00:04:51,230 --> 00:04:54,680
+So these are a bunch of country indices.
+
+105
+00:04:54,680 --> 00:04:57,910
+And we have the correlation in each country with each other
+
+106
+00:04:57,910 --> 00:04:59,660
+over on the left-hand side.
+
+107
+00:04:59,660 --> 00:05:03,020
+Then we have a couple of other assets.
+
+108
+00:05:03,020 --> 00:05:06,070
+And then we have for each asset, its expected mean
+
+109
+00:05:06,070 --> 00:05:08,300
+and its expected standard deviation.
+
+110
+00:05:08,300 --> 00:05:10,300
+Now, the true estimation of those
+
+111
+00:05:10,300 --> 00:05:11,980
+is very, very tricky business.
+
+112
+00:05:11,980 --> 00:05:15,760
+Here, these are taken by doing estimates from history
+
+113
+00:05:15,760 --> 00:05:17,620
+and assuming that the future is going
+
+114
+00:05:17,620 --> 00:05:21,220
+to be like the past, which is always a problematic way to go.
+
+115
+00:05:21,220 --> 00:05:22,420
+But it doesn't matter.
+
+116
+00:05:22,420 --> 00:05:25,330
+The assumption is you provide the inputs,
+
+117
+00:05:25,330 --> 00:05:27,560
+the algorithms tell you what to do next.
+
+118
+00:05:27,560 --> 00:05:30,970
+So we've got a clear separation of responsibility.
+
+119
+00:05:30,970 --> 00:05:33,865
+Your job is to make estimates for the future--
+
+120
+00:05:33,865 --> 00:05:38,840
+co-variances, correlations, and expected returns.
+
+121
+00:05:38,840 --> 00:05:41,140
+So we've run that.
+
+122
+00:05:41,140 --> 00:05:44,640
+And what we'd like to do then is construct some of the objects
+
+123
+00:05:44,640 --> 00:05:45,570
+that we saw.
+
+124
+00:05:45,570 --> 00:05:48,510
+So here what we're going to do is we're going to pull out,
+
+125
+00:05:48,510 --> 00:05:51,000
+first, the appropriate columns to make a correlation
+
+126
+00:05:51,000 --> 00:05:56,610
+matrix to have a vector of standard deviations.
+
+127
+00:05:56,610 --> 00:06:00,570
+Mu is going to be the vector of expected excess returns
+
+128
+00:06:00,570 --> 00:06:03,780
+and iota is going to be the vector of ones.
+
+129
+00:06:03,780 --> 00:06:06,810
+There are eight because, in this example, we have eight assets.
+
+130
+00:06:06,810 --> 00:06:10,200
+The covariance matrix here is constructed
+
+131
+00:06:10,200 --> 00:06:16,020
+as the correlation matrix with the diagonal matrix of sigmas
+
+132
+00:06:16,020 --> 00:06:18,210
+of the volatility is on the left and on the right,
+
+133
+00:06:18,210 --> 00:06:20,070
+and that generates exactly what we expect
+
+134
+00:06:20,070 --> 00:06:23,940
+for the covariance matrix the element CIJ, our sigma
+
+135
+00:06:23,940 --> 00:06:25,860
+i sigma j times rho_ij.
+
+136
+00:06:25,860 --> 00:06:29,190
+And then, the thing that we really need in all our formulas
+
+137
+00:06:29,190 --> 00:06:31,230
+is the inverse covariance matrix.
+
+138
+00:06:31,230 --> 00:06:34,020
+And in R, that's given by the solve command
+
+139
+00:06:34,020 --> 00:06:35,790
+because it's also used for solving
+
+140
+00:06:35,790 --> 00:06:38,760
+systems of simultaneous linear equations.
+
+141
+00:06:38,760 --> 00:06:42,990
+We have a few constants that came out of our algebra
+
+142
+00:06:42,990 --> 00:06:48,060
+for looking at solving the Lagrange multiplier
+
+143
+00:06:48,060 --> 00:06:52,260
+problem, which we call a, b, and c, maybe lower case.
+
+144
+00:06:52,260 --> 00:06:58,350
+But in any event, we have these as matrix operations in R.
+
+145
+00:06:58,350 --> 00:07:02,400
+Matrix operations are formed by having a percent sign,
+
+146
+00:07:02,400 --> 00:07:06,630
+so % star % is matrix multiplication.
+
+147
+00:07:06,630 --> 00:07:08,880
+The t operator is a transpose.
+
+148
+00:07:08,880 --> 00:07:15,180
+So here we have iota transpose times c inverse times iota.
+
+149
+00:07:15,180 --> 00:07:17,860
+And we're converting this to as.numeric
+
+150
+00:07:17,860 --> 00:07:22,230
+to take it away because the classes of objects and the data
+
+151
+00:07:22,230 --> 00:07:23,970
+typing that are implicit sometimes
+
+152
+00:07:23,970 --> 00:07:26,433
+don't work well in some of the subsequent operations.
+
+153
+00:07:26,433 --> 00:07:28,350
+So it doesn't hurt to force things to the form
+
+154
+00:07:28,350 --> 00:07:29,760
+that you want them to.
+
+155
+00:07:29,760 --> 00:07:31,870
+They may not be elegant, it may not be necessary,
+
+156
+00:07:31,870 --> 00:07:32,958
+but this works for me.
+
+157
+00:07:32,958 --> 00:07:34,500
+And I'm pretty sure I've tested this,
+
+158
+00:07:34,500 --> 00:07:35,760
+it will work for you, too.
+
+159
+00:07:35,760 --> 00:07:38,340
+But, by all means, feel free to do better.
+
+160
+00:07:38,340 --> 00:07:41,023
+So I'm going to run this whole block, and what I want to do
+
+161
+00:07:41,023 --> 00:07:42,690
+is I want to look at a couple of things.
+
+162
+00:07:42,690 --> 00:07:44,940
+What I've done is we've defined parameters--
+
+163
+00:07:44,940 --> 00:07:47,100
+the correlation, the covariance matrix, the means,
+
+164
+00:07:47,100 --> 00:07:48,847
+the standard deviations, those are
+
+165
+00:07:48,847 --> 00:07:51,180
+things we're going to need for our optimization problem.
+
+166
+00:07:51,180 --> 00:07:52,620
+Those are our inputs.
+
+167
+00:07:52,620 --> 00:07:54,150
+But let's take a look at them first
+
+168
+00:07:54,150 --> 00:07:55,930
+from a business perspective.
+
+169
+00:07:55,930 --> 00:07:57,480
+So what do we see in the data?
+
+170
+00:07:57,480 --> 00:07:59,970
+Well, if we look at the data, here
+
+171
+00:07:59,970 --> 00:08:04,350
+is a correlation plot of each country and asset
+
+172
+00:08:04,350 --> 00:08:05,550
+with every other one.
+
+173
+00:08:05,550 --> 00:08:07,620
+So a correlation matrix is symmetric,
+
+174
+00:08:07,620 --> 00:08:09,730
+so we only need to see half of it.
+
+175
+00:08:09,730 --> 00:08:13,920
+In this form-- and this is using a package in R called coreplot,
+
+176
+00:08:13,920 --> 00:08:17,410
+this correlation plot shows for each pair,
+
+177
+00:08:17,410 --> 00:08:20,640
+for example, Canada with Germany, a dot here
+
+178
+00:08:20,640 --> 00:08:23,640
+whose size is the magnitude of the correlation
+
+179
+00:08:23,640 --> 00:08:26,740
+and whose color is given on this scale on the right-hand side.
+
+180
+00:08:26,740 --> 00:08:29,220
+So dark blue is a correlation of one,
+
+181
+00:08:29,220 --> 00:08:30,720
+and we see that along the diagonal
+
+182
+00:08:30,720 --> 00:08:32,940
+because a correlation of anything with itself,
+
+183
+00:08:32,940 --> 00:08:34,440
+by definition, is one.
+
+184
+00:08:34,440 --> 00:08:39,500
+And for the other values, we see different magnitudes.
+
+185
+00:08:39,500 --> 00:08:41,280
+And notice that are all positive,
+
+186
+00:08:41,280 --> 00:08:42,659
+and this is fairly typical.
+
+187
+00:08:42,659 --> 00:08:45,630
+It's hard to find assets that are negatively
+
+188
+00:08:45,630 --> 00:08:47,110
+correlated with each other.
+
+189
+00:08:47,110 --> 00:08:50,490
+And when you can, you should pay close attention to them
+
+190
+00:08:50,490 --> 00:08:55,050
+because they let you lower risk and, in general,
+
+191
+00:08:55,050 --> 00:08:57,930
+let you take bigger positions for the same level of risk
+
+192
+00:08:57,930 --> 00:08:59,340
+and earn more return.
+
+193
+00:08:59,340 --> 00:09:01,530
+It depends on the balance of risk and return.
+
+194
+00:09:01,530 --> 00:09:04,920
+In any event, our method is agnostic about that.
+
+195
+00:09:04,920 --> 00:09:07,710
+You could put in any valid covariance matrix.
+
+196
+00:09:07,710 --> 00:09:09,210
+One thing to be aware of when you're
+
+197
+00:09:09,210 --> 00:09:10,950
+getting numerical estimates, if you're
+
+198
+00:09:10,950 --> 00:09:14,760
+tempted to approximate things from historical series
+
+199
+00:09:14,760 --> 00:09:17,880
+where the time series for the data might be different,
+
+200
+00:09:17,880 --> 00:09:20,400
+maybe we have more data available for one market than
+
+201
+00:09:20,400 --> 00:09:22,740
+for another, we need to make sure it's
+
+202
+00:09:22,740 --> 00:09:25,890
+very easy to get pairwise estimates for the correlations
+
+203
+00:09:25,890 --> 00:09:29,340
+by looking between any pair of what their longest
+
+204
+00:09:29,340 --> 00:09:30,265
+common period is.
+
+205
+00:09:30,265 --> 00:09:32,140
+And that's a typical way that we might do it.
+
+206
+00:09:32,140 --> 00:09:33,900
+And R has a bunch of features for how
+
+207
+00:09:33,900 --> 00:09:36,250
+to deal with missing data and doing a covariance matrix.
+
+208
+00:09:36,250 --> 00:09:38,740
+You can look at Help pages for that.
+
+209
+00:09:38,740 --> 00:09:41,340
+However, there's an important overall property
+
+210
+00:09:41,340 --> 00:09:44,310
+that could get lost if we do things pairwise,
+
+211
+00:09:44,310 --> 00:09:49,680
+and that's the covariance matrix must be positive definite.
+
+212
+00:09:49,680 --> 00:09:51,750
+The positive definiteness follows--
+
+213
+00:09:51,750 --> 00:09:53,640
+or at least positive semidefinite.
+
+214
+00:09:53,640 --> 00:09:55,650
+The positive definiteness follows
+
+215
+00:09:55,650 --> 00:09:59,430
+because it comes from the expectation of a square.
+
+216
+00:09:59,430 --> 00:10:01,500
+It has to be positive definite.
+
+217
+00:10:01,500 --> 00:10:04,170
+It really has to-- it can't be positive semidefinite,
+
+218
+00:10:04,170 --> 00:10:06,900
+it shouldn't have singularities or zeros,
+
+219
+00:10:06,900 --> 00:10:11,430
+those would be a sign that we included some redundant assets.
+
+220
+00:10:11,430 --> 00:10:13,500
+You might think here the US bonds that
+
+221
+00:10:13,500 --> 00:10:17,020
+are included would be uncorrelated with everything,
+
+222
+00:10:17,020 --> 00:10:19,980
+but of course, interest rates are not completely fixed.
+
+223
+00:10:19,980 --> 00:10:21,570
+There is risk in US bonds.
+
+224
+00:10:21,570 --> 00:10:24,370
+There's interest rate risk, even if there's not default risk.
+
+225
+00:10:24,370 --> 00:10:28,110
+So the correlation is not zero with other risky assets.
+
+226
+00:10:28,110 --> 00:10:29,970
+But we can't have something that's strictly
+
+227
+00:10:29,970 --> 00:10:31,950
+constant in the conference matrix,
+
+228
+00:10:31,950 --> 00:10:34,110
+we wouldn't be allowed to invert it.
+
+229
+00:10:34,110 --> 00:10:37,680
+So that's our data in terms of how things are correlated.
+
+230
+00:10:37,680 --> 00:10:40,180
+What about the risk and return of these different assets?
+
+231
+00:10:40,180 --> 00:10:42,540
+Let's take look at that.
+
+232
+00:10:42,540 --> 00:10:46,730
+So here's a plot where we have conventional terms.
+
+233
+00:10:46,730 --> 00:10:48,990
+We have risk on the x-axis.
+
+234
+00:10:48,990 --> 00:10:51,530
+We have excess return along the y-axis.
+
+235
+00:10:51,530 --> 00:10:53,720
+And each of the assets that we're investing in,
+
+236
+00:10:53,720 --> 00:10:57,380
+the market for each country, is plotted on this risk return
+
+237
+00:10:57,380 --> 00:10:58,470
+diagram.
+
+238
+00:10:58,470 --> 00:11:00,410
+So we see in the lower left, we've
+
+239
+00:11:00,410 --> 00:11:03,380
+got very low risk, very low return assets,
+
+240
+00:11:03,380 --> 00:11:06,170
+currencies and government bonds.
+
+241
+00:11:06,170 --> 00:11:10,250
+And during this particular time period where this is estimated,
+
+242
+00:11:10,250 --> 00:11:14,540
+we have a bunch of very high risk, high return assets moving
+
+243
+00:11:14,540 --> 00:11:16,142
+as we move toward the upper right.
+
+244
+00:11:16,142 --> 00:11:17,600
+And we see, generally, the behavior
+
+245
+00:11:17,600 --> 00:11:19,950
+that we would expect, that to get higher returns,
+
+246
+00:11:19,950 --> 00:11:23,380
+you need to take higher amounts of risk.
+
+247
+00:11:23,380 --> 00:11:26,330
+The one interesting thing in this numerical example
+
+248
+00:11:26,330 --> 00:11:29,930
+is that France and Japan are so close in their values
+
+249
+00:11:29,930 --> 00:11:32,210
+that, actually, they're difficult to resolve
+
+250
+00:11:32,210 --> 00:11:34,973
+at the screen and the data labels have taken over.
+
+251
+00:11:34,973 --> 00:11:36,390
+So you should look at the numbers.
+
+252
+00:11:36,390 --> 00:11:38,420
+And in fact, the fact that they're
+
+253
+00:11:38,420 --> 00:11:41,630
+so close, to a certain degree, fakes out
+
+254
+00:11:41,630 --> 00:11:43,020
+the optimizer a little bit.
+
+255
+00:11:43,020 --> 00:11:45,410
+So it's not a good state of affairs,
+
+256
+00:11:45,410 --> 00:11:47,720
+and it leads to some numerical instabilities
+
+257
+00:11:47,720 --> 00:11:50,350
+that we want to be aware of.
+
+258
+00:11:50,350 --> 00:11:51,040
+
+

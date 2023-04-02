@@ -1,0 +1,258 @@
+
+PROFESSOR: So in practice, we almost always
+have to deal with inequality constraints
+to keep allocations that are just unreasonable.
+Typically, for Long-only managers,
+we say that weights should be between zero and one,
+but they really have to be much less than one.
+Any responsible manager is not going to be undiversified,
+put all of his or her eggs in one basket.
+So we'll often see things where the weights may be constrained
+to be, say, between zero and 5%, zero and 10%,
+depending on the liquidity the assets.
+Could be zero and 1%.
+And the zero lower bound would be for a Long-only manager
+where they're not permitted to short securities.
+So these are cases that quadratic programming handles
+perfectly.
+So we can add in addition to equality constraints,
+we can add any number of inequality constraints.
+And those inequality constraints can
+be framed either at the level of individual weights,
+individual components within the weight vector,
+or linear combinations of them which is useful
+if we want to say, for example, that our weight, our exposure
+to a particular industry in the economy, our exposure
+to a particular country in an international portfolio
+needs to be bounded by a certain amount.
+And then we take a linear competition of certain assets
+and say that that bound lies only in that case.
+So these are all things that we can
+do using quadratic programming.
+So let's set up a few things on the computer,
+and this R Notebook is going to be available to download along
+with the data file that you can use for rerunning
+these simulations.
+And then what I'd encourage you to do is go get your own data,
+build your own covariance matrix,
+make your own estimations of risk and return, and run this.
+Or take a look at your own personal portfolio
+or your retirement portfolio and run this and see
+is your investment portfolio efficient.
+So what are the things we need to do computationally?
+Well, the nice thing about this R Notebook
+is it contains both code and text.
+So when you download it and you run it,
+you can turn it into a nice pretty PDF HTML
+file you can take a look at, but we're
+going to look at it in code view here.
+And what I'm going to do is I'm going to start,
+you can set this up anyway.
+And I hope these colors show up on the video.
+But this background color here in gray is a block of code.
+And the code are commands in R.
+And the lines that begin with the pound sign,
+these are comments.
+The libraries are loaded once, so these libraries
+such as quadprog for quadratic programming,
+they need to be downloaded from CRAN from the R archive.
+You can do that with the install.packages command.
+And you'd need to put the name in quotes
+for installed.packages.
+Library loads the package.
+It's not the packages command, don't ask me why.
+It doesn't use quotes.
+But the install.packages you do once then
+it's on your computer.
+And you can see which packages are installed in your computer
+by looking at the Packages tab over on the right
+and see which ones are here and which ones are loaded
+at a given point in time.
+And you can load them, and then they'll be available to use.
+Here are a few others.
+I'm not sure if we use all of these today for this,
+but none of them is bad to have.
+You have a reshape command for changing and arranging data.
+The tidyverse command is useful as is actually tidyquant,
+and I think we've seen it already in the course,
+for a bunch of data handling commands that
+give logical structure to data that
+have different kinds of relationships.
+ggplot is a package that does prettier and more sophisticated
+plots than the base R package.
+And in the code, I think I've got
+some done both ways, the base R command and the ggplot.
+If you take a look in your RStudio,
+I think in the Help file, you will
+find that there is a set of cheat sheets,
+and you will find a bunch of things, including--
+I'm not sure if ggplot is on here.
+It may be, but there are a bunch of things here
+that are very useful and you can find more.
+Yes, there is a ggplot one right there.
+So you can take a look at that and download that,
+see some of the commands, look at examples.
+So we're going to get all this stuff and run this code walk,
+and we'll be ready to go.
+One of the things that we have is this data file,
+and this data file is taken from an example given
+in book by Richard Micheaux called
+efficient asset management which I encourage
+you to take a look at.
+We've got here just some data that he
+took from historical data.
+And as I said, you can get your own.
+So these are a bunch of country indices.
+And we have the correlation in each country with each other
+over on the left-hand side.
+Then we have a couple of other assets.
+And then we have for each asset, its expected mean
+and its expected standard deviation.
+Now, the true estimation of those
+is very, very tricky business.
+Here, these are taken by doing estimates from history
+and assuming that the future is going
+to be like the past, which is always a problematic way to go.
+But it doesn't matter.
+The assumption is you provide the inputs,
+the algorithms tell you what to do next.
+So we've got a clear separation of responsibility.
+Your job is to make estimates for the future--
+co-variances, correlations, and expected returns.
+So we've run that.
+And what we'd like to do then is construct some of the objects
+that we saw.
+So here what we're going to do is we're going to pull out,
+first, the appropriate columns to make a correlation
+matrix to have a vector of standard deviations.
+Mu is going to be the vector of expected excess returns
+and iota is going to be the vector of ones.
+There are eight because, in this example, we have eight assets.
+The covariance matrix here is constructed
+as the correlation matrix with the diagonal matrix of sigmas
+of the volatility is on the left and on the right,
+and that generates exactly what we expect
+for the covariance matrix the element CIJ, our sigma
+i sigma j times rho_ij.
+And then, the thing that we really need in all our formulas
+is the inverse covariance matrix.
+And in R, that's given by the solve command
+because it's also used for solving
+systems of simultaneous linear equations.
+We have a few constants that came out of our algebra
+for looking at solving the Lagrange multiplier
+problem, which we call a, b, and c, maybe lower case.
+But in any event, we have these as matrix operations in R.
+Matrix operations are formed by having a percent sign,
+so % star % is matrix multiplication.
+The t operator is a transpose.
+So here we have iota transpose times c inverse times iota.
+And we're converting this to as.numeric
+to take it away because the classes of objects and the data
+typing that are implicit sometimes
+don't work well in some of the subsequent operations.
+So it doesn't hurt to force things to the form
+that you want them to.
+They may not be elegant, it may not be necessary,
+but this works for me.
+And I'm pretty sure I've tested this,
+it will work for you, too.
+But, by all means, feel free to do better.
+So I'm going to run this whole block, and what I want to do
+is I want to look at a couple of things.
+What I've done is we've defined parameters--
+the correlation, the covariance matrix, the means,
+the standard deviations, those are
+things we're going to need for our optimization problem.
+Those are our inputs.
+But let's take a look at them first
+from a business perspective.
+So what do we see in the data?
+Well, if we look at the data, here
+is a correlation plot of each country and asset
+with every other one.
+So a correlation matrix is symmetric,
+so we only need to see half of it.
+In this form-- and this is using a package in R called coreplot,
+this correlation plot shows for each pair,
+for example, Canada with Germany, a dot here
+whose size is the magnitude of the correlation
+and whose color is given on this scale on the right-hand side.
+So dark blue is a correlation of one,
+and we see that along the diagonal
+because a correlation of anything with itself,
+by definition, is one.
+And for the other values, we see different magnitudes.
+And notice that are all positive,
+and this is fairly typical.
+It's hard to find assets that are negatively
+correlated with each other.
+And when you can, you should pay close attention to them
+because they let you lower risk and, in general,
+let you take bigger positions for the same level of risk
+and earn more return.
+It depends on the balance of risk and return.
+In any event, our method is agnostic about that.
+You could put in any valid covariance matrix.
+One thing to be aware of when you're
+getting numerical estimates, if you're
+tempted to approximate things from historical series
+where the time series for the data might be different,
+maybe we have more data available for one market than
+for another, we need to make sure it's
+very easy to get pairwise estimates for the correlations
+by looking between any pair of what their longest
+common period is.
+And that's a typical way that we might do it.
+And R has a bunch of features for how
+to deal with missing data and doing a covariance matrix.
+You can look at Help pages for that.
+However, there's an important overall property
+that could get lost if we do things pairwise,
+and that's the covariance matrix must be positive definite.
+The positive definiteness follows--
+or at least positive semidefinite.
+The positive definiteness follows
+because it comes from the expectation of a square.
+It has to be positive definite.
+It really has to-- it can't be positive semidefinite,
+it shouldn't have singularities or zeros,
+those would be a sign that we included some redundant assets.
+You might think here the US bonds that
+are included would be uncorrelated with everything,
+but of course, interest rates are not completely fixed.
+There is risk in US bonds.
+There's interest rate risk, even if there's not default risk.
+So the correlation is not zero with other risky assets.
+But we can't have something that's strictly
+constant in the conference matrix,
+we wouldn't be allowed to invert it.
+So that's our data in terms of how things are correlated.
+What about the risk and return of these different assets?
+Let's take look at that.
+So here's a plot where we have conventional terms.
+We have risk on the x-axis.
+We have excess return along the y-axis.
+And each of the assets that we're investing in,
+the market for each country, is plotted on this risk return
+diagram.
+So we see in the lower left, we've
+got very low risk, very low return assets,
+currencies and government bonds.
+And during this particular time period where this is estimated,
+we have a bunch of very high risk, high return assets moving
+as we move toward the upper right.
+And we see, generally, the behavior
+that we would expect, that to get higher returns,
+you need to take higher amounts of risk.
+The one interesting thing in this numerical example
+is that France and Japan are so close in their values
+that, actually, they're difficult to resolve
+at the screen and the data labels have taken over.
+So you should look at the numbers.
+And in fact, the fact that they're
+so close, to a certain degree, fakes out
+the optimizer a little bit.
+So it's not a good state of affairs,
+and it leads to some numerical instabilities
+that we want to be aware of.

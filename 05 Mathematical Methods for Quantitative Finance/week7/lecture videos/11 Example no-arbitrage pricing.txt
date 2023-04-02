@@ -1,0 +1,57 @@
+
+PROFESSOR: So what did you find?
+You could either act with A on each of these vectors
+and see what you get and see if you match the required payoff,
+0, 0, 1, or you could throw it on a computer
+and look at solving this system of linear equations.
+For example, in R, we can use the function qr.solve,
+which will help us solve non-square systems
+of linear equations.
+Here's A. Here's our target function.
+And this finds a vector x3 such that A acting on x3
+is e3, 0, 0, 1.
+And here's the solution.
+And you notice this was one of the multiple-choice answers
+that we had.
+But, if that's not the one you got,
+don't worry too quickly because it was a little bit of a trick
+question.
+There was more than one answer.
+Because there's a non-zero kernel in our matrix A,
+we could add any multiple of this
+to any vector that does work as an AD security
+and get another one.
+And you'll see that one of the other choices
+I gave you also works as well because it
+differs by an element of the kernel of A.
+So suppose we want to find the price of an AD security.
+Well, first, we want to apply rules of no arbitrage.
+So let's set the bond price equal to 1.
+And then, in those terms, the rest
+of the bond prices, S2, S3, S4, are independent variables.
+So now we have--
+we'd like to impose that there's no type II arbitrage.
+So we'd like the market price of our x tilde of our arbitrage
+portfolio to be 0.
+And that tells us that we have this relationship
+among the remaining prices that S4
+has to be equal to S2 minus S1.
+So we use no arbitrage to fix the price of asset 4, which
+was our second call option.
+So what do we do?
+We start with basis assets and our payoff matrix A.
+We're given a set of prices in the market.
+And maybe we can fix one of them.
+We're given a redundant security, x
+tilde, which is because our market is overcomplete.
+So then its price is given by the linear price
+of the replicating portfolio.
+And, having fixed that, we can then
+determine the price of everything else,
+including now our third AD--
+our first AD security over here because now we know what S4 is.
+S4 is now fixed at S2 minus S1.
+And we can compute in terms of now two, not
+four independent prices.
+We can compute the value, the market price,
+of this AD security as 1 minus S2 plus 2 S3.

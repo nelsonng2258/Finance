@@ -1,0 +1,636 @@
+0
+00:00:00,000 --> 00:00:00,898
+
+
+1
+00:00:00,898 --> 00:00:02,940
+PROFESSOR: Another example of boundary conditions
+
+2
+00:00:02,940 --> 00:00:04,890
+in our differential equations is looking
+
+3
+00:00:04,890 --> 00:00:07,350
+at the exercise conditions.
+
+4
+00:00:07,350 --> 00:00:09,060
+More American options.
+
+5
+00:00:09,060 --> 00:00:12,030
+The European option is an option that
+
+6
+00:00:12,030 --> 00:00:16,320
+can only be exercised at its expiration date.
+
+7
+00:00:16,320 --> 00:00:19,260
+An American option is one that can
+
+8
+00:00:19,260 --> 00:00:24,640
+be exercised at the discretion of the holder
+
+9
+00:00:24,640 --> 00:00:25,450
+of a long position.
+
+10
+00:00:25,450 --> 00:00:29,420
+The option any time up until exercise.
+
+11
+00:00:29,420 --> 00:00:32,439
+So the owner has to choose whether or not
+
+12
+00:00:32,439 --> 00:00:33,940
+to exercise early.
+
+13
+00:00:33,940 --> 00:00:37,690
+And if to exercise when or under what conditions.
+
+14
+00:00:37,690 --> 00:00:43,060
+And we can't apply our previous formulas really held
+
+15
+00:00:43,060 --> 00:00:45,880
+for European exercise because those
+
+16
+00:00:45,880 --> 00:00:47,260
+covered the entire domain.
+
+17
+00:00:47,260 --> 00:00:52,780
+But once an option holder exercises his or her option,
+
+18
+00:00:52,780 --> 00:00:54,490
+that option is no longer there.
+
+19
+00:00:54,490 --> 00:00:57,020
+And the solution would no longer be valid.
+
+20
+00:00:57,020 --> 00:00:59,320
+So we have a different kind of boundary condition.
+
+21
+00:00:59,320 --> 00:01:02,920
+Now this is actually a fairly complicated subject.
+
+22
+00:01:02,920 --> 00:01:05,710
+We're going to look at one very, very special example.
+
+23
+00:01:05,710 --> 00:01:07,180
+And that's going to be to consider
+
+24
+00:01:07,180 --> 00:01:09,160
+an option that never expires.
+
+25
+00:01:09,160 --> 00:01:11,390
+And we'll consider a put option.
+
+26
+00:01:11,390 --> 00:01:15,550
+So the put option is something that pays off
+
+27
+00:01:15,550 --> 00:01:17,170
+if the value goes down.
+
+28
+00:01:17,170 --> 00:01:19,630
+If value is below the strike price.
+
+29
+00:01:19,630 --> 00:01:21,340
+And the amount that it pays off is
+
+30
+00:01:21,340 --> 00:01:23,980
+equal to the amount by which is below the strike price.
+
+31
+00:01:23,980 --> 00:01:27,340
+Basically, the put option gives you the right, but not
+
+32
+00:01:27,340 --> 00:01:30,200
+the obligation to sell at price K.
+
+33
+00:01:30,200 --> 00:01:32,740
+So you would never do that if the price were above K.
+
+34
+00:01:32,740 --> 00:01:34,430
+You would sell at the market price.
+
+35
+00:01:34,430 --> 00:01:36,910
+But if the price drops low, then you
+
+36
+00:01:36,910 --> 00:01:39,790
+might choose to exercise and sell at K.
+
+37
+00:01:39,790 --> 00:01:44,110
+If the price goes to 0, obviously you
+
+38
+00:01:44,110 --> 00:01:46,480
+might as well exercise it early because that's
+
+39
+00:01:46,480 --> 00:01:48,850
+the maximum amount of money you can get.
+
+40
+00:01:48,850 --> 00:01:51,370
+The stock price never can go below 0.
+
+41
+00:01:51,370 --> 00:01:54,250
+The maximum value you can ever get is K.
+
+42
+00:01:54,250 --> 00:01:58,210
+So if the price were to hit 0, you would certainly exercise.
+
+43
+00:01:58,210 --> 00:02:00,100
+But it might be the case and if the price
+
+44
+00:02:00,100 --> 00:02:03,590
+gets sufficiently low, you would exercise as well.
+
+45
+00:02:03,590 --> 00:02:06,200
+So let's see if that might be the case.
+
+46
+00:02:06,200 --> 00:02:08,259
+The interesting thing about the perpetual option
+
+47
+00:02:08,259 --> 00:02:12,380
+is because it never expires the value is time independent.
+
+48
+00:02:12,380 --> 00:02:14,770
+So this is a way to get an equation that's
+
+49
+00:02:14,770 --> 00:02:17,110
+simpler than the partial differential equations.
+
+50
+00:02:17,110 --> 00:02:19,700
+It's going to be an ordinary differential equation.
+
+51
+00:02:19,700 --> 00:02:21,970
+So the value can only depend on the stock price.
+
+52
+00:02:21,970 --> 00:02:25,840
+It doesn't matter if it's been bouncing around for an hour
+
+53
+00:02:25,840 --> 00:02:27,040
+or for a year.
+
+54
+00:02:27,040 --> 00:02:29,470
+The value only depends on what the current stock
+
+55
+00:02:29,470 --> 00:02:35,180
+price is because the time never ever enters into the problem.
+
+56
+00:02:35,180 --> 00:02:38,530
+So the equation we have is very simplified Black-Scholes
+
+57
+00:02:38,530 --> 00:02:42,290
+where V depends only on S. And we drop the time derivative.
+
+58
+00:02:42,290 --> 00:02:44,470
+So this is the equation that we have
+
+59
+00:02:44,470 --> 00:02:50,380
+that's for any time independent contract that satisfies
+
+60
+00:02:50,380 --> 00:02:52,060
+the Black-Scholes equation.
+
+61
+00:02:52,060 --> 00:02:55,090
+Now this equation in order to solve it,
+
+62
+00:02:55,090 --> 00:02:57,710
+we're going to try a particular form.
+
+63
+00:02:57,710 --> 00:02:59,800
+We're going to look for an inspired guess.
+
+64
+00:02:59,800 --> 00:03:01,600
+See if we get lucky.
+
+65
+00:03:01,600 --> 00:03:02,870
+See if it might work.
+
+66
+00:03:02,870 --> 00:03:04,660
+And if it does, what conditions are
+
+67
+00:03:04,660 --> 00:03:08,380
+there so that we can get any arbitrary parameters exactly
+
+68
+00:03:08,380 --> 00:03:08,980
+right.
+
+69
+00:03:08,980 --> 00:03:12,760
+So the guess that we're going to try here is to try a power law.
+
+70
+00:03:12,760 --> 00:03:14,620
+And the motivation for that guess
+
+71
+00:03:14,620 --> 00:03:19,210
+is to notice this is homogeneous in its weight in S.
+
+72
+00:03:19,210 --> 00:03:22,090
+This doesn't have any S this is just a V. This
+
+73
+00:03:22,090 --> 00:03:23,470
+has an S in the numerator.
+
+74
+00:03:23,470 --> 00:03:25,003
+One in the denominator.
+
+75
+00:03:25,003 --> 00:03:26,170
+This has 2 in the numerator.
+
+76
+00:03:26,170 --> 00:03:27,650
+2 in the denominator.
+
+77
+00:03:27,650 --> 00:03:28,900
+So let's see what happens.
+
+78
+00:03:28,900 --> 00:03:33,640
+If I take V of S as S to some power,
+
+79
+00:03:33,640 --> 00:03:36,520
+if I differentiate it I'm going to get s to the alpha--
+
+80
+00:03:36,520 --> 00:03:39,040
+I'm going to get alpha S to the alpha minus 1.
+
+81
+00:03:39,040 --> 00:03:43,210
+I multiply by S. And now I've got S to the alpha again.
+
+82
+00:03:43,210 --> 00:03:45,310
+If I take two derivatives, I'm going
+
+83
+00:03:45,310 --> 00:03:48,370
+to end up with something-- or actually specifically alpha
+
+84
+00:03:48,370 --> 00:03:49,810
+times alpha minus 1.
+
+85
+00:03:49,810 --> 00:03:52,540
+S to the alpha minus 2.
+
+86
+00:03:52,540 --> 00:03:56,470
+I multiply S squared, I'm going to get us to the alpha again.
+
+87
+00:03:56,470 --> 00:04:00,430
+So if I do that, I divide through by S to the alpha.
+
+88
+00:04:00,430 --> 00:04:04,270
+I get an equation or alpha for these coefficients
+
+89
+00:04:04,270 --> 00:04:05,810
+that come from these equations.
+
+90
+00:04:05,810 --> 00:04:08,210
+And then it's a quadratic equation in alpha.
+
+91
+00:04:08,210 --> 00:04:10,870
+So I solve the quadratic equation.
+
+92
+00:04:10,870 --> 00:04:13,000
+And I find there are two possible values.
+
+93
+00:04:13,000 --> 00:04:17,650
+a equals 1 or minus 2r over sigma squared.
+
+94
+00:04:17,650 --> 00:04:19,899
+Now a equals 1 would have been easy to guess.
+
+95
+00:04:19,899 --> 00:04:22,210
+a equals 1 says that the value is S.
+
+96
+00:04:22,210 --> 00:04:25,180
+And the stock price itself always satisfies
+
+97
+00:04:25,180 --> 00:04:26,740
+the Black-Scholes equation.
+
+98
+00:04:26,740 --> 00:04:29,470
+But we also know that that can't be part of the solution
+
+99
+00:04:29,470 --> 00:04:32,470
+because it grows as S grows to infinity.
+
+100
+00:04:32,470 --> 00:04:35,350
+And the value of a put should be a decreasing function
+
+101
+00:04:35,350 --> 00:04:36,500
+in the stock price.
+
+102
+00:04:36,500 --> 00:04:38,448
+So that can't be part of the solution.
+
+103
+00:04:38,448 --> 00:04:39,490
+What about the other one?
+
+104
+00:04:39,490 --> 00:04:42,880
+Well, assuming that interest rates are positive,
+
+105
+00:04:42,880 --> 00:04:45,280
+and volatility of course, is positive we're
+
+106
+00:04:45,280 --> 00:04:49,070
+going to get S to the minus 2r over sigma squared.
+
+107
+00:04:49,070 --> 00:04:52,160
+So our solution has to be something of this form.
+
+108
+00:04:52,160 --> 00:04:54,640
+There's a overall proportionality constant.
+
+109
+00:04:54,640 --> 00:04:59,020
+But the S dependence has to be power law in S decreasing.
+
+110
+00:04:59,020 --> 00:05:01,300
+And that will satisfy this differential equation.
+
+111
+00:05:01,300 --> 00:05:04,260
+
+
+112
+00:05:04,260 --> 00:05:08,310
+We might choose to exercise the price is sufficiently low.
+
+113
+00:05:08,310 --> 00:05:11,550
+And when we exercise, the value of the option
+
+114
+00:05:11,550 --> 00:05:13,800
+will be equal to its exercise price.
+
+115
+00:05:13,800 --> 00:05:17,370
+Because otherwise there would be an arbitrage opportunity value
+
+116
+00:05:17,370 --> 00:05:19,360
+where higher or lower.
+
+117
+00:05:19,360 --> 00:05:22,200
+Though at the exercise point, we have
+
+118
+00:05:22,200 --> 00:05:25,860
+that whatever it is S hat, that the value of the option
+
+119
+00:05:25,860 --> 00:05:28,050
+is going to be K minus S hat.
+
+120
+00:05:28,050 --> 00:05:31,680
+And that lets us rewrite our form in terms of we've
+
+121
+00:05:31,680 --> 00:05:34,530
+just traded one unknown for another unknown.
+
+122
+00:05:34,530 --> 00:05:36,880
+In this case S hat.
+
+123
+00:05:36,880 --> 00:05:41,410
+Now the way that we can think about the value
+
+124
+00:05:41,410 --> 00:05:44,260
+is that the person holding the long position
+
+125
+00:05:44,260 --> 00:05:46,630
+who has the choice as to whether to exercise
+
+126
+00:05:46,630 --> 00:05:50,980
+or not might choose to maximize his or her value.
+
+127
+00:05:50,980 --> 00:05:52,750
+The person with the short position
+
+128
+00:05:52,750 --> 00:05:57,460
+has to assume that because that's sort of the worst case.
+
+129
+00:05:57,460 --> 00:05:59,350
+If the person who holds the option
+
+130
+00:05:59,350 --> 00:06:02,590
+doesn't take advantage of an exploration opportunity,
+
+131
+00:06:02,590 --> 00:06:03,190
+that's good.
+
+132
+00:06:03,190 --> 00:06:04,312
+That's extra value.
+
+133
+00:06:04,312 --> 00:06:05,770
+But that isn't something that you'd
+
+134
+00:06:05,770 --> 00:06:07,810
+want to count on if you were managing risk,
+
+135
+00:06:07,810 --> 00:06:10,070
+and you were in the business of writing options.
+
+136
+00:06:10,070 --> 00:06:14,500
+So let's assume that the option holder will try
+
+137
+00:06:14,500 --> 00:06:16,990
+to optimize maximize its value.
+
+138
+00:06:16,990 --> 00:06:20,680
+And we can compute by differentiating with respect
+
+139
+00:06:20,680 --> 00:06:23,930
+to this parameter that's a choice.
+
+140
+00:06:23,930 --> 00:06:25,030
+This S hat.
+
+141
+00:06:25,030 --> 00:06:27,610
+And see what maximizes the value.
+
+142
+00:06:27,610 --> 00:06:31,330
+And then that will pin down what our final value for the option
+
+143
+00:06:31,330 --> 00:06:31,960
+is.
+
+144
+00:06:31,960 --> 00:06:34,300
+So the first part of this is something that
+
+145
+00:06:34,300 --> 00:06:36,190
+showed up on a problem set.
+
+146
+00:06:36,190 --> 00:06:38,500
+This part completes the problem.
+
+147
+00:06:38,500 --> 00:06:42,055
+You can try it out first before you look at these formulas.
+
+148
+00:06:42,055 --> 00:06:43,930
+But otherwise, if you're looking at them now,
+
+149
+00:06:43,930 --> 00:06:46,510
+and you want to see how it goes to finish things up,
+
+150
+00:06:46,510 --> 00:06:51,070
+we see that the first partial setting it to 0
+
+151
+00:06:51,070 --> 00:06:53,290
+gives us the solution for S hat.
+
+152
+00:06:53,290 --> 00:06:55,960
+We can check that this is a maximum and not a minimum
+
+153
+00:06:55,960 --> 00:06:57,760
+by looking at second derivatives.
+
+154
+00:06:57,760 --> 00:07:00,700
+And then if we substitute S hat into the expression
+
+155
+00:07:00,700 --> 00:07:05,140
+above, we finally get this result for the value
+
+156
+00:07:05,140 --> 00:07:10,000
+of the American option in terms of S and K.
+
+157
+00:07:10,000 --> 00:07:12,790
+The parameters sigma and r.
+
+158
+00:07:12,790 --> 00:07:17,550
+And obviously time doesn't appear in the problem.
+

@@ -1,0 +1,191 @@
+
+PROFESSOR: Let's talk about the structure of financial markets
+and when markets are complete, incomplete, or overcomplete.
+We've seen a variety of instruments
+in different settings.
+We've seen stocks, we've seen bonds,
+we've seen derivatives such as options.
+Let's take a look at the kinds of instruments
+can exist within a marketplace, what kinds of relationships
+there might be among them, and what kinds of openings
+there are for financial innovation.
+So the tools to do that are going
+to be basic linear algebra.
+And we're going to take a starting example
+to get us warmed up to the subject is a simple model
+for a one-period market.
+So there's going to be an initial time,
+we'll call it to equal 0.
+And there's one step ahead in the future.
+We're going to look at a small number of securities,
+and we're going to see what we can say
+and how we can characterize the relationships among them.
+This model, which we're only going to introduce,
+can be developed into a multi-period model, which
+can lead to things like the binomial tree model,
+and bring us full circle back to things
+like the models of continuous time
+finance that we've been studying earlier.
+However, with an appreciation about the kinds
+of relationships that might be available
+and that might be required among the different instruments
+in the marketplace.
+So here's our simple model.
+Let's take a look.
+So our first model is going to be
+a one-period model where there are two times, time 0 and time
+1.
+And we're going to have four securities in this market.
+So let's take a look at what they are, and then we'll
+see how we can model this using simple concepts
+from linear algebra.
+So the securities that we have are
+going to be a bond, a stock, and two call options,
+call option with strike 1.5 dollars,
+and a call option with strike price of $1.
+There are going to be three states of the world.
+We're going to imagine the states of the world
+as being three possible outcomes.
+They might be a good economy, a bad economy, and a pandemic,
+or some terrible economy.
+So let's just give the names 1, 2, and 3.
+This could be any number.
+We're keeping it small to make it so the algebra
+you can almost do in your head, and the slides
+can fit on one page.
+This could be any number of discrete states.
+We're assuming that they are mutually exclusive
+and that they cover all the possibilities.
+So the probability up in each state adds up to 1.
+So we'll assign a probability 1/2, 1/6, and 1/3.
+One of the fascinating things that we're about to see
+is that these probabilities, the real world probabilities
+of appearing in these different states,
+don't matter at all for the pricing relationships
+that we're going to explore.
+So what about each of the options?
+Well, we would like to know how much it's worth in the future.
+We're going to assume that the price now is fixed.
+We're not going to say yet what it is.
+We'll get to that in a bit.
+But we're going to ask what the future value is going to be,
+and this is known as the payoff.
+So the payoff for a risk-free bond
+is going to be defined as $1 in the future.
+What makes it risk-free is not that it's $1,
+it's that the outcome doesn't depend on what state
+of the world we're in.
+The stock, on the other hand, is going to be a risky asset.
+The amount that it's worth depends on which state
+we're in.
+It could be worth $3.
+It could be worth $2.
+It could be worth $1.
+It might even be worth less than the value of the bond.
+The call option, however, is determined
+based on the value of the stock because it's
+a call option on that stock.
+So, if the strike price is 1 and a half dollars
+and the stock price finishes in one period at $3,
+then it's worth 1 and a half dollars
+because we could exercise it immediately
+to buy stock for 1 and a half dollars, sell it for 3,
+and capture a value of 1 and a half.
+Similarly, if the stock price is $2,
+we could buy at 1 and a a half, sell at $2,
+make it a profit of $0.50.
+But the value is 0 in the lowest state of the world
+because we're not going to buy a stock for $1.50 if the market
+price is $1.
+Our second option, the call option
+with a strike price of $1, is worth $2
+in this state of the world, $1 in this state of the world,
+and 0, again, if the market price exceeds
+the value of the call option.
+You can extend this with puts, with other options
+of other strikes, and so on.
+So, what did we leave out?
+Well, this is very-- first of all,
+we only have three states of the world.
+We've left out a lot of possibilities
+that these values might have.
+We're assuming that we can buy or sell these freely,
+and that we can hold any quantity that we'd
+like to have.
+But we're going to start with this idealized market
+where there are no market frictions.
+And we're going to see what these relationships
+among the future payoffs imply about these instruments.
+So let's group these numbers together the payoffs
+that are received for each security
+in each state of the world, an object we're going
+to call the payoff matrix.
+So let there be n different securities
+and s states of the world.
+In our example n is equal to 4, s is equal to 3.
+And we're going to represent the payoffs
+for each security at our fixed time in the future
+as being a column vector of length s.
+And we're going to collect them in the form of a payoff matrix.
+So the payoff matrix is a mapping from Rn to Rs.
+So Rn, where we've got four different securities,
+tells us which securities we have.
+And for each security, we're going
+to see what it's payoffs are.
+And there are three possibilities
+for the payoffs, Rs.
+So in our example where n is 4 and s
+is 3 and the numbers of the ones I
+showed you on the previous table,
+this would be the payoff matrix.
+The first column represents the payoff of the risk-free bond.
+In states 1, 2, and 3, it receives $1.
+So how would we represent that as a vector
+in our initial space Rn?
+Well, we could represent that by a vector, say, that is x--
+I may not be consistent in keeping arrows
+over all of my vectors--
+is 1, 0, 0, 0 because I have one bond in the first position.
+And that corresponds to my first column.
+If I take the matrix A acting on the vector x, I get--
+because this is a unit vector--
+I get the first column, so I would get 1, 1, 1.
+If I change my vector, for example,
+I look at a vector corresponding to a single share of stock,
+let's call this x2, that would be represented by 0, 1, 0, 0.
+And A acting on x2 gives 3, 2, 1.
+What if I have a mixed portfolio with stocks and bonds?
+Well, suppose I have a vector.
+Let's call it x.
+And say that it's equal to qB, qs, 0, 0,
+where qB is the number of bonds I have and qs
+is the number of stocks that I have,
+then the payoff Ax is obviously going to be qB times 1,
+1, 1, plus qs times 3, 2, 1.
+That is to say, portfolios form a vector space.
+So I can write x as being qB times the first basis vector
+plus--
+
+plus I have a jumpy pen--
+
+qs times 0, 1, 0, 0.
+And remember that this is a linear algebra.
+So a matrix multiplication applies
+to the rules of linearity.
+So I can say that A times x in this case
+is going to be A acting on qB, qs, 0, 0,
+which is A acting on qB times 1, 0, 0, 0 plus qs times 0, 1, 0,
+0.
+And, by our usual rules of linearity,
+this is going to be qB times A of 1, 0, 0, 0 plus qs
+of A acting on 0, 1, 0, 0.
+And then we get the result that I wrote down before.
+Remember that A acting on the first basis vector
+gives us the first column of the matrix.
+A acting on the second basis vector
+gives us the second column and so on.
+So we're finally left with our value
+is going to be qB plus 3 qs in the first state of the world,
+qB plus 2 qs in the second state of the world,
+and qB plus qs in the third state
+of the world for our portfolio with qB bonds and qs stocks.

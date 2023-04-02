@@ -1,0 +1,193 @@
+
+PROFESSOR: The results we've looked at
+can be generalized in two ways.
+One of them is by including more linear constraints of the kind
+we had, and that's easy.
+We add more Lagrange multipliers.
+So we might have a rule that in addition
+to a return constraint and a budget constraint,
+we might want to limit certain risk exposures.
+We might want to limit the portfolio
+data, which is its sensitivity to the overall market.
+We might want to target a particular industry exposure
+or foreign country exposure, or we
+might want to neutralize them.
+If we're allowing a long-short portfolio,
+we might say that our net exposure to a given country
+should be equal to 0.
+So in all those cases, we just had one more Lagrange
+multiplier, and we solve the same thing.
+It's just the algebra gets a little bit more complex.
+Another kind of constraint that's
+important in investment management
+and many practical problems are inequality constraints,
+and the Lagrange multiplayer method will not handle these.
+In this case, we need to proceed with numerical solutions
+and a technique called quadratic programming.
+The idea of inequality constraint
+is we might want, for example as I hinted before, we might have
+a mandate where we're not allowed to short positions
+and we need all our w's to be equal to 0.
+The Lagrange multiplier method has no guarantee
+that the solutions will end up with positive values of w.
+They could be anywhere in the vector space
+and not in half the vector space or a quadrant of the vector
+space where all the w's are positive.
+And we might have a constraint on an upper bound.
+We might not be allowed to use leverage,
+which would say that the individual weights all
+need to be less than 1.
+We might have more binding or tighter constraints,
+where a typical investment manager isn't allowed
+to put all of his or her eggs in one basket
+or even a lot of them.
+There might be a rule that says, the weight invested
+in a particular asset or asset class can't exceed, say, 5%
+or 10% or 1%.
+So there might be some limit that's well inside the 0 and 1
+range, and it could be applied at the level
+of an individual weight or it could
+be applied to a sum portfolio, which would correspond
+to some linear combination of weights being constrained
+with some upper or lower bound.
+So when we have this kind of thing,
+the Lagrange multiplier method might give us
+a method where the constraints are satisfied,
+these inequalities.
+But it's not guaranteed to do so.
+And in general, we need to use this technique called
+quadratic programming.
+The quadratic here comes from the fact
+that our objective function is quadratic,
+and our constraints being linear means that we can always
+find solutions.
+And we're not going to derive this.
+We'll have some references for it,
+and you can take a look if you're
+interested in the algorithms.
+But you'll find packages for doing this numerically,
+and we'll take a look at some numerical examples as well.
+Qualitatively, the important thing
+is that we're always going to be by adding extra constraints.
+The more constraints we have, the smaller
+our efficient frontier becomes, the smaller
+our feasible set of portfolios becomes.
+The constraints in the best case are non-binding,
+and then we have no change.
+But the constraints can only make things worse.
+They can only remove, if they are binding,
+portfolios that otherwise would have been feasible
+and have them not be feasible.
+So we would expect the feasible space
+to shrink when we solve for the inequality constraints,
+and we'd expect the constrained optimization problem to give us
+something that's smaller and that is not necessarily
+the solution to the original constraint maximization.
+Now, there are lots of other investment constraints
+we could have--
+position size, leverage size, factor exposure,
+different balances for long-short neutrality.
+We could be long-short in weights.
+We could be equal beta, long and short.
+We could have other factor exposures.
+There are many other techniques.
+There's a broad variety of them that
+can be handled in quadratic programming.
+There's a package in R called quadprog
+and a function called solve.QP you can take a look at,
+and you can take a look at our code examples as well.
+What we find is typically something like this.
+This is just an example of an asset allocation problem.
+Suppose I start with eight assets,
+and I've got their means and their covariances.
+I have their mu vector, expected excess returns,
+and I have their covariance matrix c.
+And here are the individual assets
+with their individual risk and return.
+I haven't plotted what the correlations are among them,
+but these are down here.
+And if I compute from that mu and sigma what
+the unconstrained efficient frontier is,
+I find this hyperbola that's shown here on the black line.
+So everything that's feasible is on that interior
+of the black line.
+When we include a long-only constraint
+and a no-levergage constraint-- so we'll
+have a budget constraint, and we'll
+want to maximize our return or minimize the risk for a given
+level of return.
+And in addition, if we impose that the weights have
+to be strictly between--
+they have to be greater than or equal to 0 and less than
+or equal to 1, they can't be negative,
+they can't be greater than 1, they can't be short,
+they can't be leverage positions,
+then we find the blue line as being the set of solutions.
+And this is the efficient frontier,
+and the feasible portfolios are the interior region.
+So these are the-- everything inside here
+is a feasible portfolio, and the points that are optimal
+are the points that are on the blue line.
+Everything above and to the left on this graph is not reachable.
+We cannot get returns that have lower risk for the same level
+of return than the ones in our solution to our optimal
+equation.
+We cannot get returns that have--
+portfolios that have higher return for given risk or that
+have lower risk for a given return.
+That excludes the region above and to the left
+of the blue curve.
+But we can see what we've lost in applying the constraints
+and limiting the weights to be strictly between 0 and 1,
+that we've lost the area that's the difference
+between the black curve and the blue curve.
+Those are portfolios that we might
+have had that aren't here.
+So it's always an interesting idea when to ask,
+are constraints binding?
+And if the constraints are binding,
+what does it cost to have those constraints?
+What would happen if we loosen the constraints?
+The optimal solution would move.
+Where would it move to?
+Are we close?
+Are we giving up a lot by imposing
+these constraints or not?
+
+So we do have these things that are set for constraints.
+We typically think about solving and finding
+an optimal portfolio, but there are
+a couple of things that we might also keep in mind.
+One of them is that if you're going
+to optimize your portfolio, you're
+highly dependent on the inputs.
+You might want to know how sensitive your results are
+to those inputs.
+That is, if you were to change them a little bit,
+if you had estimation errors in your returns
+or in your covariance matrix, would you
+move just a little bit all along the way?
+Would you move along the efficient frontier?
+Or would you end up somewhere else completely?
+Conversely, even if you're not an optimizer,
+you've just got some equal weighted portfolio,
+or you're following an index--
+you've got some country index--
+it's of interest even if you haven't optimized
+to ask where your portfolio would lie along this risk
+and return plot.
+Is it close to the efficient frontier?
+And for example, that's an even--
+an equal-weighted portfolio with even allocations of capital
+to all of the assets.
+That's an easy thing to explain to investors.
+If you find that it's reasonably close to the frontier anyways,
+then you're not sensitive to any of these estimation problems.
+That would be good to know.
+On the other hand, if you're far away,
+now you can use this picture to make a compelling case for why
+a careful analysis and constraint optimization
+solution for an asset allocation or a general portfolio
+optimization problem gives benefit for the investor
+in terms of increasing the expected return,
+decreasing the expected risk, or both.

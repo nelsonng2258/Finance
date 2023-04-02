@@ -1,0 +1,312 @@
+0
+00:00:00,000 --> 00:00:01,162
+
+
+1
+00:00:01,162 --> 00:00:02,620
+PROFESSOR: In an incomplete market,
+
+2
+00:00:02,620 --> 00:00:04,760
+there can be multiple solutions psi.
+
+3
+00:00:04,760 --> 00:00:07,220
+So, for example, consider an incomplete market,
+
+4
+00:00:07,220 --> 00:00:09,590
+which has two securities, a bond and a stock.
+
+5
+00:00:09,590 --> 00:00:11,830
+So there are three states, only two securities.
+
+6
+00:00:11,830 --> 00:00:13,210
+Market is incomplete.
+
+7
+00:00:13,210 --> 00:00:14,420
+What are we going to do?
+
+8
+00:00:14,420 --> 00:00:17,080
+Well, suppose we're given the prices of the securities.
+
+9
+00:00:17,080 --> 00:00:22,420
+And suppose they're $1 for the bond and $2 for the stock.
+
+10
+00:00:22,420 --> 00:00:25,300
+The matrix A transpose that tells us
+
+11
+00:00:25,300 --> 00:00:28,120
+how to get from state prices to security
+
+12
+00:00:28,120 --> 00:00:33,190
+prices, the transposed matrix, is this 2 by 3 matrix, 1, 1, 1,
+
+13
+00:00:33,190 --> 00:00:34,330
+3, 2, 1.
+
+14
+00:00:34,330 --> 00:00:36,010
+We notice we can read off a solution
+
+15
+00:00:36,010 --> 00:00:40,210
+right away because the middle column here is 1, 2.
+
+16
+00:00:40,210 --> 00:00:42,470
+That's what we're looking for for S.
+
+17
+00:00:42,470 --> 00:00:45,250
+So, if A star, this transposed matrix,
+
+18
+00:00:45,250 --> 00:00:47,260
+were to act on the three vector, 0, 1,
+
+19
+00:00:47,260 --> 00:00:49,410
+0, that would solve our equation.
+
+20
+00:00:49,410 --> 00:00:53,440
+So that's obviously a solution for the state price vector psi.
+
+21
+00:00:53,440 --> 00:00:56,590
+But it's not good because it could allow arbitrage.
+
+22
+00:00:56,590 --> 00:00:59,560
+Remember that every element in the state price vector
+
+23
+00:00:59,560 --> 00:01:00,800
+has to be positive.
+
+24
+00:01:00,800 --> 00:01:02,860
+None of its elements can be 0.
+
+25
+00:01:02,860 --> 00:01:05,379
+If they were 0, that would allow arbitrage.
+
+26
+00:01:05,379 --> 00:01:08,110
+But it's OK because there's one thing
+
+27
+00:01:08,110 --> 00:01:09,970
+that we haven't included yet, which
+
+28
+00:01:09,970 --> 00:01:12,220
+is that A star has a kernel.
+
+29
+00:01:12,220 --> 00:01:16,990
+Because A is a 2 by 3 matrix, there is some vector--
+
+30
+00:01:16,990 --> 00:01:18,610
+there's some three vector--
+
+31
+00:01:18,610 --> 00:01:20,650
+that gets taken into 0 because we're
+
+32
+00:01:20,650 --> 00:01:22,540
+mapping a three-dimensional space
+
+33
+00:01:22,540 --> 00:01:24,380
+into a two-dimensional space.
+
+34
+00:01:24,380 --> 00:01:26,200
+And we can see what that vector is.
+
+35
+00:01:26,200 --> 00:01:28,570
+It's just 1, minus 2, 1.
+
+36
+00:01:28,570 --> 00:01:30,640
+That is, if you double the middle column,
+
+37
+00:01:30,640 --> 00:01:33,410
+it's equal to the sum of the first and the third columns.
+
+38
+00:01:33,410 --> 00:01:36,610
+So, if you act with A star on this vector, you get 0.
+
+39
+00:01:36,610 --> 00:01:41,740
+That means that we can add to 0, 1, 0 any multiple--
+
+40
+00:01:41,740 --> 00:01:43,390
+let's multiply by x--
+
+41
+00:01:43,390 --> 00:01:45,100
+of that vector.
+
+42
+00:01:45,100 --> 00:01:50,980
+Now, we want to choose x so that each component of psi
+
+43
+00:01:50,980 --> 00:01:52,880
+is a positive number.
+
+44
+00:01:52,880 --> 00:01:56,830
+So psi being strictly positive requires first
+
+45
+00:01:56,830 --> 00:01:58,750
+that x be strictly positive because
+
+46
+00:01:58,750 --> 00:02:01,990
+the first and third components are going to be equal to x.
+
+47
+00:02:01,990 --> 00:02:03,820
+And the middle component is going
+
+48
+00:02:03,820 --> 00:02:05,800
+to be equal to 1 minus 2x.
+
+49
+00:02:05,800 --> 00:02:08,060
+And that sets an upper bound on x,
+
+50
+00:02:08,060 --> 00:02:12,850
+which says that x has to be between 0 and 1/2.
+
+51
+00:02:12,850 --> 00:02:16,420
+And that tells us what the allowed state price
+
+52
+00:02:16,420 --> 00:02:17,290
+vectors are.
+
+53
+00:02:17,290 --> 00:02:18,790
+There are an infinite number of them
+
+54
+00:02:18,790 --> 00:02:23,080
+because x can be anywhere in this range.
+
+55
+00:02:23,080 --> 00:02:24,730
+Does that always work?
+
+56
+00:02:24,730 --> 00:02:25,630
+No.
+
+57
+00:02:25,630 --> 00:02:28,750
+Suppose the state price-- suppose the market price
+
+58
+00:02:28,750 --> 00:02:30,370
+vector had been 1, 1.
+
+59
+00:02:30,370 --> 00:02:31,420
+Then there's arbitrage.
+
+60
+00:02:31,420 --> 00:02:32,350
+We saw that earlier.
+
+61
+00:02:32,350 --> 00:02:33,850
+There's stochastic dominance.
+
+62
+00:02:33,850 --> 00:02:35,980
+There's not going to be any solution for psi.
+
+63
+00:02:35,980 --> 00:02:37,780
+And suppose, on the other hand, S
+
+64
+00:02:37,780 --> 00:02:41,960
+is equal to 1, 3, which is the first column.
+
+65
+00:02:41,960 --> 00:02:44,520
+So then we might try to write down this equation.
+
+66
+00:02:44,520 --> 00:02:47,500
+We could say that psi-- we try the same trick as before.
+
+67
+00:02:47,500 --> 00:02:51,650
+Because 1, 3 is the first column of A transpose,
+
+68
+00:02:51,650 --> 00:02:55,450
+we could say psi has to 1, 0, 0 plus some multiple
+
+69
+00:02:55,450 --> 00:02:59,110
+of the kernel, plus some multiple of 1, minus 2, 0.
+
+70
+00:02:59,110 --> 00:03:02,530
+But there isn't any value of x for which that's going to work.
+
+71
+00:03:02,530 --> 00:03:06,100
+The first-- the second component that says we're
+
+72
+00:03:06,100 --> 00:03:08,380
+going to have minus 2x, that tells us that x
+
+73
+00:03:08,380 --> 00:03:09,860
+has to be strictly negative.
+
+74
+00:03:09,860 --> 00:03:11,860
+The third component is going to be equal to x.
+
+75
+00:03:11,860 --> 00:03:14,050
+That says x has to be strictly positive.
+
+76
+00:03:14,050 --> 00:03:17,480
+x cannot be both positive and negative at the same time.
+
+77
+00:03:17,480 --> 00:03:22,980
+Therefore, there's no solution for any value of x.
+

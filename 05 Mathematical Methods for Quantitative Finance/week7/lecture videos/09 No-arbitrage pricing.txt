@@ -1,0 +1,103 @@
+
+PROFESSOR: The answer is yes, provided
+that the pricing relationships are
+consistent with the redundant securities.
+That is, since the fourth security
+can be thought of as a linear combination of the first two,
+its price should be consistent with that.
+So, if the value of the fourth security,
+the k equals 1 call option, is the price
+of the stock minus the price of the bond
+and it can be replicated by owning one share of the stock
+and shorting one bond, then S times x,
+the market value of the portfolio, of any portfolio,
+is going to be consistent.
+And the market value of this portfolio is going to be 0.
+So we have a rule.
+We have a law.
+And it's called the law of one price.
+The law of one price says that different portfolios
+that have the same payoff have to have the same price.
+That ensures an absence of arbitrage.
+And it does mean that there are unique prices for securities
+in the market.
+Prices are linear.
+So we have a linear combination of assets in a portfolio.
+And, for valuing the portfolio, the market value
+is going to be a linear combination of prices.
+In mathematical terms and algebraic terms,
+we would say that, if the payoffs are the same--
+if I have two portfolios, x1 and x2,
+the payoffs are the same if A acting on x1 is A acting on x2.
+That says the two portfolios have the same payoff.
+Then S acting on x1 and S acting on x2 have be equal.
+Notice that this equation involves a row vector
+S acting on the vector--
+on the vector x.
+This is a matrix equation acting.
+And this needs to hold for both vectors.
+Now, we can rewrite this.
+And we can subtract the A x2 from this equation,
+and we can write this on the left
+by saying that A acting on the difference
+vector between x1 and x2 is 0.
+Well, A acting on a vector that gives 0
+says that x1 minus x2 is in the kernel of A.
+It's a non-zero vector that is taken into 0 by the payoff
+matrix.
+It's an arbitrage portfolio.
+If x1 equals x2, then this is trivial.
+So we're always considering the non-trivial case.
+That means-- again, doing the same trick,
+subtracting on the second equation, that
+means that the price of the arbitrage portfolio, x1
+minus x2, has to be 0.
+That's the law of one price.
+We avoid arbitrage by saying that non-zero portfolios that
+have zero payoffs must have zero price.
+And that's required by the absence of type II arbitrage.
+Now, we can use no-arbitrage pricing among the basis assets
+to price any other asset with any portfolio.
+And there are two ways that we might think about pricing.
+We might think about relative and absolute pricing.
+And, in this picture, like our derivative pricing models
+that we looked at in continuous time,
+we're thinking about relative pricing
+of one asset relative to another or relative to a set of assets.
+So no-arbitrage pricing tells us about relationships
+that exist among assets given prices
+of a certain set of assets.
+If there are other assets that are not independent,
+their prices need to be uniquely determined.
+That's different from absolute pricing where
+we say what the price of a stock should
+be based on reading its balance sheet,
+its earnings report, and so on, a bunch of external variables.
+Here we're looking at self-consistent relationships
+among securities that exist in a market.
+And we don't have any view necessarily about how
+that ties in to external observables
+or values in the real world.
+
+So we have the law of one price.
+And, using this, we can ask whether a given
+model of a marketplace is arbitrage free or not.
+Furthermore, we can impose this as a constraint.
+If we're thinking about building models
+or we're thinking about introducing new securities
+and designing new kinds of financial products,
+we want to make sure that it's arbitrage free.
+Certainly, if we're selling products,
+we don't want to be the ones getting arbitraged.
+We can take advantage of an arbitrage
+with other participants.
+That might be of interest, but, normally, we
+would assume that everyone has the same insights,
+the same information, and the same access.
+And a sensible starting point and really a fairly
+minimum requirement on any marketplace
+is that it should be arbitrage free.
+But this does give us constraints
+on what might be present in the marketplace.
+So this is going to lead us to the fundamental theorem
+of asset pricing, at least in our simple, one-period model.

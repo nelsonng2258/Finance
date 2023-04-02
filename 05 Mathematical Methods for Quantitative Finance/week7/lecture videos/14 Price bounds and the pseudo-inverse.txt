@@ -1,0 +1,185 @@
+
+PROFESSOR: Our basic pricing relationship
+between security prices and state prices
+is that s is equal to A transpose psi, or A star psi.
+This is the adjoint.
+So A is a payoff matrix where we n securities,
+and market securities in the world.
+There are s states of the world that are independent.
+We can associate a market price with each of the n securities.
+We associate a state price, and there
+may be a different number of them, one state
+price for each state of the world,
+1, 2, 3, 4, up through s.
+So the relationship that we expect
+is that the prices to be consistent
+need to satisfy that s is equal to A star psi.
+And there's no arbitrage if and only if the state price
+vector is strictly positive.
+So we need the state prices to be positive
+because each state price corresponds
+to some portfolio that has a payoff that is either positive,
+in fact, it specifically positive in one state
+of the world and 0 in others.
+So the state prices must be greater than 0 in order
+to avoid type 2 arbitrage.
+And they must obey this relationship
+to be consistent with the security prices.
+Because the payoff matrix takes securities into payoffs,
+and therefore A star is what relates
+how we relate security--
+excuse me-- state prices back to security prices.
+So we've seen this for complete markets.
+And in incomplete markets, there could be multiple solutions.
+There could be an infinite number of solutions for psi.
+So if there's at least one solution where psi is always
+greater than 0, then we're guaranteed
+that there's no arbitrage.
+If all the solutions have psi less than or equal to 0,
+then there will be arbitrage in the marketplace.
+So it's helpful to diagram these relationships
+in terms of dual spaces.
+So I talked before about the left-hand side of the diagram.
+He said that we have one vector space of portfolios.
+And in our starting example, this was of dimension four.
+We had four securities.
+And we could construct portfolios
+that are linear combinations of quantities of securities.
+So each element of a vector in this space
+represent how many of each kind of security we have.
+There's another space of identical dimension
+of security prices.
+And, in this case, there's one price
+associated with each security.
+Now, we have a vector, excuse me,
+we have a matrix A, the payoff matrix, that maps portfolios,
+it acts on portfolios.
+It's a linear transformation, and it produces eigenvectors
+of a different dimension, which I've drawn over here
+in this other vector space, that's the space of payoffs
+of some different dimension s.
+So A acting on x gives us a payoff b.
+If we want to know the price of a portfolio x,
+we act on it with the security price
+vector s by taking a row vector of s times a column vector x.
+And now we see we can do exactly the same thing
+in terms of payoffs.
+If I've got a payoff matrix b, maybe I know the portfolio it
+came from, maybe I don't.
+But if I've got a payoff matrix b,
+then I know what its price has to be
+by acting with state prices.
+So the state prices might take a row vector.
+I act on the payoffs b as a column vector.
+And that also gives me the price,
+and those prices need to match.
+In order for that to hold it has to be the A transpose, which
+is the matrix which takes me from state
+prices back to security prices has
+to give us a relationship that s is equal to A star psi.
+And then we'll have a consistent set of pricing relationships.
+Why do we bother going through all this?
+Because we know what no arbitrage looks
+like on the right side of the diagram.
+We don't know necessarily what it
+looks like on the left side of the diagram.
+Because that's just however the marketplace
+happened to be described, whatever the securities
+are, options, bonds, stocks, many different states
+of the world.
+But the right-hand side is very clear.
+The right-hand side, there's one state for--
+there's one dimension for each state of the world.
+The state prices have to be positive.
+We have a natural association of what the basis vectors are,
+and therefore we can build up any payoff
+or linear combinations and immediately determine
+no arbitrage prices.
+
+Here's an example.
+Suppose we're given market with payoff matrix
+A and a particular price vector s.
+So is there arbitrage in this market?
+Well, A is an invertible, but there
+is a pseudo-inversion, which is a standard construction
+in linear algebra.
+And let me just show you how it works.
+That if we construct this quantity,
+AA transpose inverse times A, this
+satisfies the interesting property
+that if I multiply by A transpose
+on the right-hand side as I do over here,
+I get the identity matrix.
+It's a 3-by-3 identity matrix.
+It's not a 4-by-4, which would be the normal invertible case.
+So it's not exactly invertible, but the pseudo-inverse
+can act on a particular subspace.
+And you can check that that's true here.
+In terms of the pseudo-inverse, now I
+have a chance of taking a look and finding a solution
+for the state price vector.
+If I take a look, if I act with the pseudo-inverse,
+this 3-by-4 matrix, and I act on the state price
+s, then I get this vector, which has positive numbers, which
+is a good sign.
+And how do we check?
+Well, we can check that this satisfies the pricing equation
+by acting on the left with A transpose.
+And A transpose acting on the left, acting on psi,
+gives us our original pricing vector.
+So that's the sense in which M is a pseudo-inverse.
+Because if we multiply on the right by A star,
+it gives us this identity.
+And this helps us in this case solve for what the state price
+vectors are.
+We find that the state price vectors are positive,
+and therefore there's no arbitrage.
+
+What other prices are allowed?
+Well, that was a particular value.
+Suppose I let the third security price vary, and I let it be x.
+So, in that case, we can use our pseudo-inverse
+to solve this problem, as well.
+We have psi is equal to n acting on s, the prices.
+And now we notice that it has this form.
+Now, it's going to depend on x, it's
+a set of linear combinations.
+But now we need to impose the condition.
+Before, for a particular value of x
+that I had on the previous slide, it just checked.
+And all the state prices were positive.
+But now the state prices are a function of x.
+We need to check, we need to enforce
+that all of these components of this matrix--
+excuse me, of this vector, be positive.
+So let's do that.
+2x minus 1 has to be greater than 0.
+That implies it has to be bigger than a 1/2.
+Minus 4x plus 3 is 3 greater than 0.
+That tells us that x has to be less than 3/4.
+So we have that x is between a 1/2 and 3/4.
+And we noticed the third condition
+is the same as the first condition.
+It doesn't give us anything new.
+So if x is anywhere between a 1/2 and 3/4,
+that's an allowed security price that will not allow arbitrage.
+So if x is equal to 0.7, we would get a state price
+vector 0.4, 0.2, 0.4.
+All of those values are positive, and we're OK.
+We're in good shape.
+There's no arbitrage.
+Suppose we let another price vary.
+So we had one price fixed, the first price of the bond fixed
+so we could scale things.
+We had the fourth price fixed by no arbitrage,
+I have type two arbitrage.
+We let the third price vary, now let's let the final price vary.
+Now we've got two parameters to solve for, x and y.
+And we have a range of prices.
+And for each value of x and y we have a different possible state
+price vector, which will be given
+by this linear combination of assets.
+And now we need to ask, what values of x and y
+keep us from having arbitrage?
+That's in terms of state prices, and will automatically
+tell us what are the allowed prices in the marketplace.

@@ -1,0 +1,424 @@
+0
+00:00:00,000 --> 00:00:01,220
+
+
+1
+00:00:01,220 --> 00:00:04,340
+PROFESSOR: What are state prices?
+
+2
+00:00:04,340 --> 00:00:08,090
+We have a model which has, say, three states of the world.
+
+3
+00:00:08,090 --> 00:00:09,920
+And we began by describing things
+
+4
+00:00:09,920 --> 00:00:12,230
+in terms of natural basis vectors.
+
+5
+00:00:12,230 --> 00:00:15,710
+We introduced one element of our-- one dimension
+
+6
+00:00:15,710 --> 00:00:18,590
+of our vector space for each security we had.
+
+7
+00:00:18,590 --> 00:00:20,390
+And what we'd like to do is do something
+
+8
+00:00:20,390 --> 00:00:24,360
+in a corresponding way with respect to the payoff space.
+
+9
+00:00:24,360 --> 00:00:27,590
+So we'd like to think about having one security or one
+
+10
+00:00:27,590 --> 00:00:31,370
+portfolio that's associated with each possible state
+
+11
+00:00:31,370 --> 00:00:32,750
+of the world.
+
+12
+00:00:32,750 --> 00:00:39,320
+Now, to do that, we've talked about associating
+
+13
+00:00:39,320 --> 00:00:41,900
+states of the world with different payoffs.
+
+14
+00:00:41,900 --> 00:00:44,240
+So a natural thing that we could look for
+
+15
+00:00:44,240 --> 00:00:46,850
+is a security or a portfolio that
+
+16
+00:00:46,850 --> 00:00:49,890
+has unit payoff in each state of the world.
+
+17
+00:00:49,890 --> 00:00:52,220
+Remember, we began with basis vectors
+
+18
+00:00:52,220 --> 00:00:55,220
+where a unit vector in our n-dimensional space
+
+19
+00:00:55,220 --> 00:00:59,150
+corresponded to one unit of a bond, one unit of a stock,
+
+20
+00:00:59,150 --> 00:01:01,410
+one unit of a given security.
+
+21
+00:01:01,410 --> 00:01:05,060
+So these securities are known as Arrow-Debreu securities.
+
+22
+00:01:05,060 --> 00:01:07,520
+We'll call them AD securities for short.
+
+23
+00:01:07,520 --> 00:01:10,010
+And they're not necessarily tradable securities.
+
+24
+00:01:10,010 --> 00:01:14,430
+They're portfolios of tradable assets within our original set.
+
+25
+00:01:14,430 --> 00:01:16,610
+So we'll call them securities, but they're really
+
+26
+00:01:16,610 --> 00:01:17,960
+different portfolios.
+
+27
+00:01:17,960 --> 00:01:20,540
+And they have the property, if they exist,
+
+28
+00:01:20,540 --> 00:01:25,280
+that they are portfolios that have unit payoff so
+
+29
+00:01:25,280 --> 00:01:31,460
+that A acting on x gives us either 1, 0, 0, 0, 1, 0, or so
+
+30
+00:01:31,460 --> 00:01:32,820
+on, wherever we are.
+
+31
+00:01:32,820 --> 00:01:35,090
+So, if we've got a marketplace where
+
+32
+00:01:35,090 --> 00:01:38,330
+there are s such securities or portfolios,
+
+33
+00:01:38,330 --> 00:01:40,580
+then the payoff matrix in terms of them
+
+34
+00:01:40,580 --> 00:01:42,410
+would be the identity matrix.
+
+35
+00:01:42,410 --> 00:01:45,920
+The first AD security would have payoff one in the first state,
+
+36
+00:01:45,920 --> 00:01:48,020
+the second one in the second, and so on.
+
+37
+00:01:48,020 --> 00:01:50,190
+And the payoff matrix would be diagonal.
+
+38
+00:01:50,190 --> 00:01:53,180
+So that would obviously be a very convenient state
+
+39
+00:01:53,180 --> 00:01:55,330
+of affairs.
+
+40
+00:01:55,330 --> 00:01:57,900
+So, in terms of a general payoff matrix,
+
+41
+00:01:57,900 --> 00:02:00,870
+the AD security could be replicated
+
+42
+00:02:00,870 --> 00:02:05,497
+if we have some portfolio such that, when A acts on it,
+
+43
+00:02:05,497 --> 00:02:07,830
+we get a unit vector, but this unit vector, remember, is
+
+44
+00:02:07,830 --> 00:02:10,270
+in the target space, not in our original space.
+
+45
+00:02:10,270 --> 00:02:12,120
+So it's in the space of payoffs.
+
+46
+00:02:12,120 --> 00:02:15,900
+So, if A acting on x has the form of a unit vector
+
+47
+00:02:15,900 --> 00:02:19,080
+where the payoffs are 0 in all of the states
+
+48
+00:02:19,080 --> 00:02:21,870
+except they're 1 in one of the states,
+
+49
+00:02:21,870 --> 00:02:27,060
+those help us form a basis for the space of payoffs.
+
+50
+00:02:27,060 --> 00:02:29,700
+Now, if A is invertible, then things are pretty nice.
+
+51
+00:02:29,700 --> 00:02:30,960
+Then we know what they are.
+
+52
+00:02:30,960 --> 00:02:33,330
+If A is invertible, then I can immediately
+
+53
+00:02:33,330 --> 00:02:37,500
+solve for the AD securities by taking A inverse acting on unit
+
+54
+00:02:37,500 --> 00:02:40,410
+vectors in the target space.
+
+55
+00:02:40,410 --> 00:02:45,700
+The prices of AD securities are called state prices.
+
+56
+00:02:45,700 --> 00:02:49,350
+So we think about these vectors or portfolios, hypothetically,
+
+57
+00:02:49,350 --> 00:02:51,210
+that have unit payoff.
+
+58
+00:02:51,210 --> 00:02:53,340
+Because they've got a positive payoff,
+
+59
+00:02:53,340 --> 00:02:56,230
+they should have a positive price associated with them.
+
+60
+00:02:56,230 --> 00:02:59,070
+And, if we collect all of those different prices, the price
+
+61
+00:02:59,070 --> 00:03:03,960
+of AD security 1, 2, 3, and so on into a vector with values
+
+62
+00:03:03,960 --> 00:03:07,920
+that we'll call psi 1, psi 2, up through psi s,
+
+63
+00:03:07,920 --> 00:03:10,830
+those prices are called state prices.
+
+64
+00:03:10,830 --> 00:03:14,820
+By our rules for no arbitrage, they have to be positive.
+
+65
+00:03:14,820 --> 00:03:17,430
+
+
+66
+00:03:17,430 --> 00:03:20,750
+Let's take a look at an example.
+
+67
+00:03:20,750 --> 00:03:24,640
+Suppose we have a payoff matrix, our old friend
+
+68
+00:03:24,640 --> 00:03:26,710
+A, this 4 by 3 matrix.
+
+69
+00:03:26,710 --> 00:03:30,880
+And suppose I consider these vectors, x1 and x2.
+
+70
+00:03:30,880 --> 00:03:32,860
+Well, I'm on my way.
+
+71
+00:03:32,860 --> 00:03:36,520
+A acting on x1 is equal to 1, 0, 0.
+
+72
+00:03:36,520 --> 00:03:39,220
+If you take a look at that, we have unit payoff.
+
+73
+00:03:39,220 --> 00:03:42,970
+If I take this column plus twice this column
+
+74
+00:03:42,970 --> 00:03:45,160
+and I subtract this column, I'm left
+
+75
+00:03:45,160 --> 00:03:47,620
+with unit payoff in the first state
+
+76
+00:03:47,620 --> 00:03:49,750
+and 0 in the other two states.
+
+77
+00:03:49,750 --> 00:03:51,790
+And you should check that.
+
+78
+00:03:51,790 --> 00:03:54,580
+Similarly, for the second state, I
+
+79
+00:03:54,580 --> 00:03:56,440
+can do it with this portfolio.
+
+80
+00:03:56,440 --> 00:03:58,690
+If I have A acting on--
+
+81
+00:03:58,690 --> 00:04:00,830
+excuse me, my pointer is lost.
+
+82
+00:04:00,830 --> 00:04:05,000
+So A acting on the first portfolio gives this result.
+
+83
+00:04:05,000 --> 00:04:09,550
+A acting on the second portfolio gives this result--
+
+84
+00:04:09,550 --> 00:04:11,080
+0, 1, 0.
+
+85
+00:04:11,080 --> 00:04:15,340
+So we can call x1 the first Arrow-Debreu security.
+
+86
+00:04:15,340 --> 00:04:18,310
+It's really a portfolio in terms of our stocks and bonds
+
+87
+00:04:18,310 --> 00:04:20,709
+and call options, but this portfolio
+
+88
+00:04:20,709 --> 00:04:25,960
+has this important property that it has unit payoff in one state
+
+89
+00:04:25,960 --> 00:04:27,950
+and zero payoff in the other states.
+
+90
+00:04:27,950 --> 00:04:32,860
+So it's A acting on x is a basis vector in the space of payoffs.
+
+91
+00:04:32,860 --> 00:04:39,570
+This gives us a basis vector with 1 in the second state
+
+92
+00:04:39,570 --> 00:04:41,470
+and 0 in the other states.
+
+93
+00:04:41,470 --> 00:04:43,020
+So what do you think?
+
+94
+00:04:43,020 --> 00:04:47,670
+Can you find a vector x3 that satisfies the property
+
+95
+00:04:47,670 --> 00:04:50,220
+that, when the payoff matrix acts
+
+96
+00:04:50,220 --> 00:04:56,280
+on x3, which is a four-vector, it pays off 0, 0, 1?
+
+97
+00:04:56,280 --> 00:04:59,630
+
+
+98
+00:04:59,630 --> 00:05:02,280
+Let me give you a few choices to consider.
+
+99
+00:05:02,280 --> 00:05:04,160
+So here's a question.
+
+100
+00:05:04,160 --> 00:05:08,720
+What portfolio replicates the AD security for state 3?
+
+101
+00:05:08,720 --> 00:05:11,300
+And here are four choices--
+
+102
+00:05:11,300 --> 00:05:13,700
+a, b, c, and d.
+
+103
+00:05:13,700 --> 00:05:17,510
+Take a look, and see which one of these possible portfolios
+
+104
+00:05:17,510 --> 00:05:21,500
+could serve as our third AD security, which has
+
+105
+00:05:21,500 --> 00:05:25,600
+unit payoff only in state 3.
+

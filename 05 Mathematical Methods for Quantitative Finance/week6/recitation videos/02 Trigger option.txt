@@ -1,0 +1,112 @@
+
+PROFESSOR: Let's look a bit more about option pricing
+in the presence of boundaries and barriers.
+So we've seen that usually in a partial differential
+equation where a derivative value is somewhat universal,
+it really depends on what the underlying is
+and the relationship between the risk factors and the underlying
+and the derivative.
+But the boundary conditions matter a lot,
+and they determine what kind of option we have.
+So we have vanilla options, puts and calls,
+with our traditional payoffs above or below a strike price.
+But there are all kinds of other options, usually called
+exotic options if they're not vanilla options.
+And they may depend on other conditions that
+could happen in time, they could depend on the path of s,
+and they might involve looking at specific events or even
+their lookback options, whose value depends
+on the entire past trajectory of s.
+For example, it could depend on the maximum that
+s during its lifetime, which would not
+be known until expiration.
+So let's take a look at an example here called
+a trigger option.
+So I'd like to assume that s is given by a usual geometric
+Brownian motion.
+And this trigger option gives the owner
+the right, but not the obligation,
+to buy the underlying stock at a strike price K
+if the stock value exceeds another value called
+the trigger X at expiration.
+So the underlying follows the Ito process, dS over s
+equals mu dt plus sigma dB.
+What PDE does the option satisfy, and what's its price?
+So let me give you one hint, which
+is what you might want to do is sketch the option payoff.
+And you could even ask, could this
+be replicated by another series of contracts?
+So you might consider that we're thinking
+about-- the generic call option would have a payoff
+function that looks like this.
+A function that had a strike price at X
+would have a payoff function that looks
+like this if it were a call.
+But this one is a little bit different.
+The payoff is the payoff above K,
+but only if the price exceeds X. So
+take a moment to see if you can map it out and draw a picture.
+And if you can solve the equation, even better.
+I'll be back in just a moment.
+
+So first, the payoff.
+The payoff should-- let's draw this in red, I guess.
+So the payoff is going to be 0 until we get X.
+Because if we're below X, we don't get anything.
+And from that point forward, the payoff
+is the same we would have had here, that we would have had
+for the ordinary call option.
+So one way to say this is that the payoff is
+equal to the payoff for ST greater than x
+is going to be ST minus K, but only for ST greater than x.
+Well, another way we can write that
+is we can say that ST minus K is equal to ST minus X plus X
+minus K. So that is to say, the first part,
+ST minus X would be the payoff if the strike price
+were equal to X. That is, that would be this payoff function.
+But that would be a little bit too low, right?
+We have an extra piece that we're missing here.
+And that distance, because this has slope 1, is X minus K.
+And that says that if we're below, we get nothing.
+But if we're above, we get X minus K units.
+Hmm, that sounds like a digital option or a binary option.
+So that says that we could replicate.
+So this can be replicated--
+
+the payoff can be replicated with an option
+of strike X plus X minus K binary options of strike K.
+Oops, sorry.
+I didn't mean to block that out.
+So the solution is just going to be the sum,
+and we've computed those in class.
+So we can write down the Black-Scholes solution
+plus the solution to the binary part.
+So our answer is that the value of our derivative V
+is going to be S times phi of T plus minus X
+e to the minus RT times phi of d minus plus X
+minus K times the solution for a binary option,
+e to the minus RT phi of d minus.
+I've taken little t to be equal to 0 for our current time,
+and big T is the time to maturity.
+And then you notice there's a small cancellation
+between these two terms.
+So this is equal to S phi of T plus minus K e
+to the minus RT phi of t minus--
+where we need to make sure that we
+use a d plus and a d minus that are appropriate for the strike
+price X. So where d plus minus are
+equal to the log of S over X e to the minus RT divided
+by sigma square root of T plus or minus 1/2 sigma squared
+of T. And as usual, phi represents
+the Gaussian cumulative distribution function.
+Now, the lesson here is that we look
+at what the payoff is, we check the boundary conditions.
+And wherever possible, we use our existing solutions
+to Black-Scholes to combine them in a way--
+because we know that we can always
+take a linear combination of solutions
+to the partial differential equation
+to get another solution to the partial differential equation.
+What we need is to be able to match the boundary conditions.
+And this equation matches the boundary conditions,
+which are the specified payoff at expiration.

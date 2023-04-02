@@ -1,0 +1,118 @@
+
+PROFESSOR: The generalization of Ito's lemma
+to multiple variables is straightforward.
+And we won't go through the same derivation here.
+We'd just like to tell you the result
+and show you a couple examples.
+If we have multiple variables X, then we
+can imagine that each of them is an Ito process,
+with the difference that the coefficient functions could
+depend on any of the other variables.
+So the generalization is that I let
+i run from 1 through, say, n.
+And for each dXi, each of the coefficient functions ai or bi
+can depend on time, plus all of the other X's.
+Now, this is dt.
+There's only a single time.
+But I'm introducing a Brownian motion
+dBi for each possible process.
+Now, some applications of this are
+where we might have multiple assets,
+like a whole bunch of stocks in a portfolio or in an index.
+We might have a factor model where
+we try to describe the market in terms
+of a small number of factors.
+If it were the capital asset pricing model, or CAPM,
+we might try to describe many stocks in terms
+of a single stochastic driver.
+If it were a factor model, we might
+try to describe the covariant structure observed
+among multiple stocks with a small number of factors
+and have a covariance matrix that's
+perhaps of less than full rank.
+So all those cases would be examples where we
+would have multiple variables.
+And when we have multiple variables,
+the only thing we need to be concerned about
+is the possibility that they might be correlated.
+So the first terms in our multidimensional Ito's lemma
+are the same that we saw before.
+We have partial of F with respect to dt.
+For each of the X's, we have an independent term,
+partial of F with respect to X times dX,
+which is its own Ito process for X1, X2, X3.
+And the diagonal terms here when i is equal to j,
+row ij, the correlation between i and j is equal to 1.
+And this gives us our usual Ito term.
+But there are a whole lot of extra terms
+that can arise if the Brownian motions are
+correlated with each other.
+And there's a simple heuristic which
+generalizes what we did before.
+So in the diagonal cases, dB squared,
+dBi squared, dB1 squared, or dB2 2
+squared, and so on gets replaced by a dt.
+In dX1 squared, it's replaced by b1 squared dt, same as we
+had before, ordinary Ito.
+But if b1 and b2 have correlation rho 12,
+then the product of these two differentials
+is going to be, in probability, equivalent
+to replacing it by row ij dt.
+So that gives us this full term, where
+what used to be a single second partial derivative with respect
+to X is now replaced by a matrix of second partial derivatives
+where they're multiplied times the correlation
+coefficients times the b factors for each of those weights.
+For example, suppose I've got two stochastic variables
+and I have F as their product X1 X2.
+I apply Ito's lemma, and I see that I get X1 dX2 plus X2
+dX1 plus dX1 times dX2.
+And I haven't yet said what either of those Ito processes
+are for X1 or X2, but we already can
+simplify by dividing through by F in this case.
+So if I divide through by X1 X2, I get a very simple form.
+dF over F is dX1 over X1 plus dX2 over X2 plus their product.
+Now, suppose we apply that for a specific case.
+Say we have geometric Brownian motion,
+so suppose for X1 and X2 that both of them have dXi over Xi
+is an individual mu dt plus an individualized sigma dB,
+then I would have the dF over F is
+going to be mu 1 plus mu 2, the sum of the drift rates,
+plus an Ito term plus two Brownian terms, sigma 1, sigma
+2.
+If rho 12 goes to 0, this ends up just
+being the sum the two Ito processes directly.
+
+Suppose we take the ratio, so I take X1 over X2.
+Well, if we go through and apply the same rules
+and divide through by F, we find a somewhat more complicated
+expression.
+Ratios are a little bit harder to differentiate, so that's OK.
+But let's take a look at this special case,
+and we'll see a little bit of a paradox that's
+here that you can think about.
+If the coefficient in rho 12 is zero,
+so the two processes are uncorrelated,
+then we have this expression.
+We don't need to worry about the minus sign here.
+You might be a little bit worried
+that there's a minus sign in front of the drift term,
+but remember, it depends only on sigma squared,
+so the minus sign makes no difference.
+It's not as though there is risk canceling out between these two
+in the event where they're uncorrelated.
+On the other hand, suppose mu 1 equals mu 2,
+the drift rates are equal.
+This term is strictly positive.
+It depends on sigma 1 squared as the asset in the Ito
+process, the stochastic process, in the denominator divided
+by X1 squared.
+So in the event the mu 1 equals mu 2,
+these terms vanish, the coefficient is positive,
+and we have a positive drift term.
+Now, the question is, how could that be the case?
+Because if I applied this to X1 over X2
+and I let F measure the growth rate of X1 relative to X2,
+how can that be positive at the same time
+that the growth rate of X2 relative to X1
+is also positive?

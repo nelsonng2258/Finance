@@ -1,0 +1,79 @@
+
+PROFESSOR: What can we say about non-redundant assets?
+Well, suppose we've got a market with three states,
+and we have only one security.
+So it's a very simple payoff matrix in this case.
+It's just a single column.
+And let's give that column a name.
+Let's call it a1.
+And the price vector is just going
+to be a number because there's only one security.
+And let's suppose that the market price is 2.
+And let's ask if we've got another payoff.
+Let's pick something, 1, 1, 2, which certainly is not
+a multiple of 1, 2, 3.
+Now, let's take a look at what constraints we have
+and what we can say about prices.
+What can we say about the price of the payoff
+b, which is not in the marketplace?
+So, remember, b would represent if there were a new security
+to be created.
+If you were to go out and create a new instrument
+and you wanted to sell it in a marketplace
+where the only instrument that existed
+before was an instrument that had payoffs 1, 2, 3 and you
+want to have an instrument that's payoff 1, 1, 2,
+you'd certainly like to make sure it avoids arbitrage.
+How could you do that?
+Well, we do it by comparison with the existing marketplace.
+So notice that, because a1 stochastically dominates
+b, that because, in every state, each element is
+bigger or less than--
+excuse me, bigger or greater than the corresponding elements
+over here, then we must have that S1
+has to be greater than a price that
+would be associated with Sb.
+So, if this were to be traded or if we
+were to consider this combination of payoffs,
+the price associated with it must be less than S1.
+But we can also get a bound on the other side.
+Notice that, if I take one half of a1, then all of my values
+are less than those in b.
+And, therefore, Sb has to be greater than half
+of the price of S1.
+So we can say that, in this case,
+Sb must be between 1 and 2.
+It can't be equal because there would be an arbitrage.
+But Sb is allowed to exist in a range avoiding arbitrage
+somewhere between 1 and 2.
+If the market had been complete, then we
+would have had unique prices, but, in an incomplete market,
+we get price inequalities for what
+might be allowed if there were to be
+new securities with new payoffs that
+don't correspond to linear combinations of existing
+securities.
+Let's generalize things a little bit more
+and look a little bit more systematically
+at how we get those results, apart
+from doing it by inspection.
+So we've got our vector a1, which
+is 1, 2, 3, which is part of our payoff matrix.
+We have a price vector, and we have a target payoff vector.
+So let's construct the general linear combination, b
+minus lambda a, for arbitrary lambda.
+Well, what we'd like to do is consider the potential points
+of interest where the entries change sign.
+
+That will give us the points where
+we have stochastic dominance and constraints when
+all of the remaining signs go positive or negative.
+So, if we do this, we can find out that, as we vary lambda,
+for lambda equal to 1, which was our first case,
+we find that's the turning point where one of the elements
+goes to 0 and the others go negative.
+At lambda equals 1/2, two of the elements go positive,
+and one goes to 0.
+And lambda equals 2/3 is not as interesting
+because, although we set one of them to 0,
+the other two securities in this portfolio have opposite sign.

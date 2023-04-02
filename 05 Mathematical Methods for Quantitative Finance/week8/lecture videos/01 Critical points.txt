@@ -1,0 +1,196 @@
+
+PROFESSOR: In optimization, critical points
+are often critical.
+We have a function that may be a scalar
+function of multiple variables.
+We'd like to find its largest value in one
+of the necessary conditions.
+It may be that the partial derivatives with respect
+to the variables vanish.
+We also need to check possible boundary terms.
+So let's take a look at critical points or continuous functions,
+multiple variables, and see how we can classify them,
+so we can keep that in mind as we
+look at financial applications.
+For a function of a single variable,
+critical points are places where the first derivative vanishes.
+Consider the Taylor expansion for a continuous function.
+I have f of x expanding around a point x0,
+and I have a linear term times the first derivative
+plus a quadratic times the second derivative
+evaluated at a point and so on for higher term.
+Now, if the first derivative varnishes,
+then I have the special result. If I move the f of x0
+to the other side, I have that the amount
+by which f differs from the value at point f0
+is a parabola.
+It looks like a quadratic term in the vicinity of x0
+when x minus x0 is small and the higher order
+terms x minus x0 cubed, to the fourth,
+and so on are small compared to the term that we keep.
+Now, we need to check that the second derivative, in fact,
+is not vanishing.
+For the generic case, it will be.
+If it vanishes, then we go to the next higher order term.
+This is typical unless there's either a very accidental reason
+why it vanishes where there's a particular symmetry.
+Now, in higher dimensions this parabola,
+which might be concave or convex depending
+on the sign of f double prime, is
+described by a quadratic form.
+It's described by the matrix of second partial derivatives.
+So for a function of several variables,
+Taylor's theorem tells us that for a scalar function
+in the neighborhood of a vector point, a fixed point x0,
+that we can do an expansion.
+f of x is being the gradient of f
+times the difference between x and x0 as a vector quantity.
+That's a leading order term plus a second-order term
+plus cubic terms and so on.
+And the second-order term is of particular interest.
+It's a vector, this difference vector x minus x0
+transpose times Q times the same vector on the right-hand side
+with a 1/2 in front.
+And this Q defines a quadratic form.
+This is just a matrix of second partial derivatives.
+You can write it out in terms of components if you'd like.
+And f is the gradient function, and this
+varnishes at a critical point.
+So when the gradient of f vanishes,
+which means that all of the first derivatives
+vanish, not just one of them or two of them--
+when they all vanish and when x minus x0 is small in magnitude,
+then we can approximate the deviation of the function
+from a particular point by this quadratic behavior.
+So this quadratic behavior, as in the single-variable case,
+is somewhat universal.
+It's worth studying because every function, unless Q
+vanishes for some particular reason,
+is going to have this form when we're sufficiently
+close in the neighborhood.
+So there are more possibilities than two,
+just the two signs of f double prime
+in the single-variable case, and we can take a look
+at how they're classified.
+
+The eigenvalues determine the type of critical point we have.
+If the eigenvalues of Q are all positive,
+the function is convex up and then the critical point
+is a minimum.
+If the eigenvalues of Q are all negative,
+the function is concave and the critical point is the maximum.
+If Q has both positive and negative values,
+then it's called a saddle point.
+There are some maximum in one direction.
+It's a minimum in some other direction.
+And if any of the eigenvalues are 0,
+they define flat directions where the function is neither
+increasing or decreasing.
+Now, the reason we talk about the eigenvalues
+is because the eigenvectors determine,
+really, the axes of orientation, and the eigenvalues
+tell us how things vary along those directions.
+Because Q is a symmetric matrix--
+remember, the order of partial derivatives doesn't matter--
+the eigenvectors are going to be orthogonal.
+So the general cases we might get
+with all kinds of mixed partials really
+are set of cases if we think of diagonalizing
+and having orthogonal indices--
+or excuse me, and having orthogonal axes, then
+the eigenvalues whether they're positive or negative
+along different directions tell us
+whether in that particular direction
+along that particular axis the shape of the curve
+is like a parabola, it's convex up, convex down,
+or if it's a flat direction.
+We can take a look at a few examples.
+So let's look at a few examples of functions of two variables.
+So I can plot them on the screen in projected three dimensions.
+Let's consider a function f.
+It's a function of x and y.
+So for example, suppose I have this function. f of xy
+is x times e to the minus x squared plus y squared.
+And I think of z, the z-coordinate,
+as being the height of this plot,
+and this is one way, a prospective plot.
+And I've given you code in R so that you can run this and get
+this pretty picture yourself.
+But where do we see critical points?
+Well, the critical points that we see
+are local maximum here, a local minimum here.
+And in fact, if this is what we've got,
+these are global max and global min as well.
+They're places where the first derivatives vanish.
+We can also visualize this in terms of a contour plot, where
+we see-- in a contour plot, we see
+lines of constant value of f drawn together.
+We notice-- now, of course, contour lines
+never cross because we can't have two different values
+at the same place.
+But we can see over here, there's
+a height scale on the right-hand side.
+So white is high.
+Black is low.
+But otherwise, you see an interesting symmetry
+on the left and right parts of the graph.
+So here's a function that typifies
+the kind of classic example where we have a minimum value.
+This is just instead of a parabola, it's circular.
+It's a paraboloid.
+x squared plus y squared, so the minimum value is obviously
+the origin where its value is 0 and everywhere else it's
+greater.
+
+Here's a 3D plot.
+We noticed that with this particular description,
+the function is rotationally symmetric.
+If I'd put in different coefficients for x and y,
+then the axes would have-- the circles
+would have been ellipses.
+And if it had been those axes were then rotated along
+some other direction, the quadratic form
+might have a cross term as well, a term in xy.
+But geometrically, it's the same idea of what's going on.
+There's a single minimum.
+There's some contours around it.
+This is an example of the function,
+which has a saddle point.
+Here, I have f of x is x squared minus 4y squared.
+So you notice that not only is the sign of the x term
+and the y term different, but the coefficient
+is as well so that the speed of change or the rate of curvature
+can be different in the two different directions.
+So if I move along the x direction, I'm increasing.
+If I move along the y direction for the origin, I'm decreasing.
+Here's a contour plot of the same thing.
+Now here's an interesting case where we have a flat direction,
+and we also have a mistake in the equation.
+So that should just be f of x equals--
+f of x and y equals y squared.
+So you notice that because there's no y dependence,
+the function has a symmetry.
+I can translate in y.
+I can take any value.
+And that means that as I move in the y direction,
+not only is the direction flat, but every cross section,
+the x dependence at any given point y in that valley,
+is exactly the same.
+So this is an example where we have a flat direction,
+and it's due to asymmetry in the problem.
+And in this case, one of the eigenvalues
+of our quadratic form Q, our matrix of second derivatives,
+is going to be 0.
+This is a case where, like the other one,
+I have a flat direction along the y equal 0.
+But unlike the other one, it's not symmetric.
+It's not translationally symmetric.
+And you can see that as I move along the y-axis
+for different values of y, the cross section,
+the cross-sectional curvature, as I move in the x direction
+changes.
+So in one perpendicular direction, I'm completely flat.
+But in the other direction, there
+are changes that are seen once I move in the perpendicular
+direction.
+And here's a picture of the same thing shown as a contour plot.

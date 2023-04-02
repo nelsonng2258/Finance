@@ -1,0 +1,397 @@
+
+PROFESSOR: Now, linear transformations are functions,
+sometimes called mappings, that go from one vector space
+to another.
+And they can be completely different dimensions.
+The key property is one we've been using since the beginning.
+It's linearity.
+And here it is.
+So we've been doing linear transformations all along,
+without calling them that.
+So if I have a mapping which says that T takes me
+from vector space V to vector space W,
+then that means that something of the form T acting on V
+is a vector in the space W. Linearity
+means that when the operator acts on this sum,
+it's the sum of the operator acting
+on the individual elements.
+And when we take the transformation acting
+on scalar times our vector, we can bring the scalar out
+in front.
+It's a scalar times the operation acting on the vector.
+So this simple property of linearity,
+for example, that we've been using with expectations
+is described by the actions on the vectors of the vector
+space.
+So if we know how it behaves on the basis vector,
+by using linearity we know how it behaves on anything.
+So consider a transformation acting on an arbitrary vector.
+And we can express it as a linear combination.
+So T is acting on V. V we could write
+in terms of the basis vectors.
+Applying linearity, we can write this
+as the constants times T acting on each of the basis vectors.
+And if we know how T acts on each basis vector,
+then we know how it would act on any vector.
+And we just recombine the results.
+So in our payoff analogy, the payoff on a portfolio
+is the sum of the payoffs of the individual securities.
+And in fact, it doesn't matter how big your portfolio is.
+The only thing we need to know are the individual payoffs.
+And then we know how the payoff works
+for anything more general.
+And what this says is we really just
+add up multiples of the columns that
+correspond to the individual things
+that we're interested in.
+
+So that brings us to matrix notation.
+If we combine these columns, we can form them
+into something that looks like a matrix.
+So we construct the columns to be the output
+of T acting on something.
+And I've written T as an abstract linear transformation.
+And M is the matrix, a concrete set of numbers
+that we can write down.
+And that's important when we're thinking
+about bases and change of basis from one to another,
+and things more abstractly.
+That's not going to be very important for what we're
+doing now, so we can closely identify the matrix
+with the transformation itself.
+But they are two separate things.
+It requires a particular bases to write down a matrix
+with respect to that basis.
+To change basis, your transformation
+is the same transformation, but it gets a different matrix.
+So the matrix M depends on the choice that we have.
+And then when M acts on a column vector of the original space,
+the result is going to be a linear combination
+of the columns of M.
+And we've seen this.
+If we have a portfolio that consisted
+of the stock and a bond, and we multiplied it by the matrix A,
+what did we get?
+We just got the sum of the first two columns,
+which intuitively is what we'd expect.
+It's the sum of the payoffs of the security--
+individual securities.
+So this does for us the rules of matrix multiplication
+that might seem kind of weird when you first run into them.
+They correspond to a very natural way
+of adding up payoffs, adding up securities, and adding up
+money.
+So in component notation, if we write M acting on--
+so I've got this complicated matrix M with elements mij.
+I act on a column vector.
+And the rules of matrix multiplication
+tell me that I get a column--
+excuse me, that I get a column vector over here, which
+is of different dimension.
+And we write-- in matrix notation,
+we can write this with summation convention.
+It would be sum over j of mij hold
+at the i-th component of the result, which
+is, say, the second one here, could be i.
+We hold i fixed, and we sum over the second column,
+which is everything that we have here for the matching j's.
+So if we take i to be a particular number 1 through s,
+where s is the number of rows that we have,
+and we ask about the i-th one-- say, how do I get, for example,
+the second row over here--
+I get it by taking--
+by holding the I fixed.
+So that would be corresponding to this second row.
+And I take each element of the second row times each element
+of this vector.
+You notice they have the same number,
+and that's what gives me this formula here.
+But really, the simple thing that's going on
+is when we do matrix multiplication,
+we're just taking linear combinations of the columns.
+These rules simplify if we're in the case of two dimensions.
+And in particular, if we have square matrices,
+we can think of this as transformations in the plane.
+We can look at what happens if we iterate transformations
+on the same space.
+More generally, we can define matrix multiplication
+where I go from one vector space V to another space W
+to yet another vector space.
+And we get that the action of successive linear
+transformations is itself a linear transformation.
+The product of two matrices is itself a matrix.
+And we have these rules that are complicated to write down.
+But in principle, it's just telling us
+that if we want to get from V to W to X,
+we could go straight from V to X by looking at this combined
+matrix.
+Now, the important among the properties of matrix
+multiplication are that they're associative,
+they're distributive.
+But famously, they are not commutative.
+You can't change the order.
+And in particular, not only if you get a number,
+but if the vector spaces have different dimension,
+this doesn't even make any sense.
+In our example, we're really going to be looking typically
+at two vector spaces--
+one in the world of security markets, where we've
+got a set of securities that we identify we
+have a basis vector for each traded security,
+and on the other hand we have state space
+that has to do with states of the world,
+possibly in the future, without regard
+to what finance people are doing and constructing securities.
+We're going from one to the other and then back.
+But if we wanted to do multiple hops across multiple spaces,
+this is the way in which we would do it.
+And there are two very important spaces
+that we're going to use extensively.
+And these are subspaces of a linear transformation.
+They're called the image and the kernel.
+And so the image of a linear transformation
+is the set of everything that you can
+reach by acting on it with--
+by acting with t on all of the possible vectors in the vector
+space.
+So in our example, we said, what are all the possible payoffs
+we could generate with a given set of securities?
+Can I get everything?
+Do I get less than everything?
+Whatever it is, the span of the image that we have
+generates everything.
+So what we say is, specifically, the image
+are all the vectors W that are T acting on something
+in our vector space.
+So this would be the payoff of all possible portfolios,
+because these V's are linear combinations of our basis
+assets.
+And this says that the image of a linear transformation
+are all the payoffs that can possibly be generated.
+So it could be the entire target space W.
+But often, it's going to be less.
+So this tells us what we can reach,
+what's reachable with a linear transformation,
+when it acts on everything in our original space.
+The kernel of a linear transformation
+is a subset not of the target space W,
+it's a subset of our original space V.
+And it's all the vectors that get mapped
+into the zero vector.
+And sometimes, we say that it's annihilated
+by the linear transformation T.
+So the kernel of a linear transformation
+is the set of all vectors that are taken into 0.
+
+This is going to be-- and this we've seen in lecture--
+essential to defining one kind of arbitrage.
+Because this would mean that the payoff on an--
+obviously, this is a special case.
+Zero always gets taken into zero.
+But what does this mean in a financial context?
+What's a concrete financial example?
+It's an arbitrage portfolio, where
+we have redundant securities.
+That is, if I can construct a set of securities--
+not just an empty portfolio, but actual securities,
+long and short positions-- and if it
+had zero payoff, that's an example of something that's
+in the kernel.
+It's a non-zero vector, it has zero payoff.
+
+So one more concept that's very important
+is the rank of a linear transformation.
+And that's the dimension of the image.
+And that tells us how many linearly independent columns
+are in the matrix.
+That's why we inspect our payoff matrices,
+see how many columns are there.
+we can know by inspection or by more sophisticated techniques,
+how many columns are there that are linearly independent.
+That tells us how many dimensions there
+have to be in the target space.
+So the rank of a linear transformation
+is very important.
+And we've seen the rank of the payoff matrix
+is essential for telling us whether markets
+are complete or incomplete, and in certain cases,
+about the number of redundant securities
+they may have to be present.
+The fundamental theorem of linear transformations
+is a rule about the dimensions of these important spaces.
+It says that the dimension of our original space
+is equal to the dimension of the image plus the dimension
+of the kernel.
+So what that says is the dimension of the image,
+remember, is the number of independent securities
+that we have that have payoffs that can't
+be replicated from each other.
+And the dimension of the kernel is
+going to be the number of redundant assets that we have--
+the number of assets that are left over that
+aren't giving us genuinely new payoff.
+The division between them is not unique,
+but this fundamental theorem is an important rule,
+and it holds no matter how we choose to divide things up.
+It's really a property of the relationship between these two
+spaces under the action of a particular linear
+transformation.
+Of course, there are some special cases.
+So if the kernel's empty, if everything
+gets taken into a new vector, then the rank
+of the transformation is equal to the dimension of the space
+V. And if V and W have the same dimension,
+and we say the matrix is of full rank,
+then the linear transformation is inevitable.
+It's a one-to-one mapping from space V to space W.
+Everything--
+we can reach every point in W by some vector in V.
+And from any point, we can always
+find the vector V that got us there.
+Now, it's easy to do operations with matrices on a computer.
+For two-by-two matrices, you can and should
+be able to do them in your head.
+But for anything bigger than two by two,
+you probably should use a computer,
+because the rules for doing matrix multiplication
+are very complicated, rules for doing things
+like determinants which apply if you have square matrices
+are even more complicated, and the rules
+for doing inversions of matrices are even more complicated,
+and the rules for solving for linear independence
+of a bunch of sets if you have non-square matrices
+are even more complicated than that.
+So it's a good idea to try things out.
+You can do this in R, which we've been using,
+or you can pick a programming environment of your choice.
+But we want to distinguish operations of linear algebra
+from those that are commonly done in lots of computing
+environments, including R, where the typical thing is
+if you have two lists, two things that would look
+like vectors, and if you multiply them together,
+or two matrices, what it does by default
+is it multiplies them pointwise.
+And that's not even an operation of linear algebra in general.
+So what we do is we need a different notation.
+But that's OK.
+And it's going to depend on the different languages.
+So in R, A times B, instead of the star operator,
+it's sandwiched between percent signs.
+Very easy and obvious to remember.
+Percent start percent, A times B,
+that's the notation for matrix multiplication of A times B.
+If you want the square, you can take, say, A times A.
+But what you don't do is A times B that's not a matrix product.
+That just takes A and B, If they're the same size, not even
+if they're square, and multiplies
+them element by element.
+And things-- there are operations
+we can define, like exponentials of matrices
+if the matrices are square.
+But most of the functions by default don't do that.
+In this case in R, the exponential of the matrix
+is going to be the matrix of the exponential
+of the individual matrix element.
+So in addition to that, you need to be aware
+of a whole bunch of limitations, because they're in computers.
+So it's easy to get nonsense coming out.
+And what you have to do this you have
+to check your answers to make sure they're OK.
+Remember that we're dealing with real numbers computers.
+Can't do real numbers.
+They do discrete approximations.
+So there can be rounding issues.
+There could be issues of stability.
+A determinant that's close to 0 is not the same as one
+that is 0.
+But for the computer, it might not be able to tell.
+And we might have two vectors that are either linearly
+dependent or they're not, they're parallel
+or they're not, but the computer might not
+be able to tell to within machine precision.
+So you need to go back and forth between the computational tool
+and checking that things actually work and make sense.
+So here's an example of what we could do.
+Suppose we have a linear system of equations.
+So here's a system of equations like the one I wrote down
+at the beginning-- three equations, three unknowns.
+We can write this in matrix form.
+Using the rules of matrix multiplication,
+I can write this as M times v equal to b, where I define v
+to be the vector x, y, z--
+those are three coordinates.
+I define b to be a constant.
+This would be like our payoff vector is B.
+So here it's 3, 6, 9.
+And I have a bunch of coefficients in front
+that are all the coefficients in these equations.
+And by organizing them in this way--
+1, 2, 3, show up here as 1, 2, 3, 4, 5,
+6 get multiplied times x, y, z to give us this expression,
+we can encapsulate this set of equations.
+In this matrix notation.
+How do we solve it?
+Well, M times v equals b, we'd like
+to write v as b divided by M. We can't quite do that.
+We can't just divide by a matrix.
+But we can do the next best thing if M is invertible.
+We'd like to have something that we could
+write as v is M inverse b.
+Can we do it?
+So we can define a matrix in R as saying a matrix,
+here's the list of numbers.
+We tell it that we want there to be three rows.
+And it will organize things like this--
+1, 2, 3, 4, 5, 6, 7, 8, 9.
+The command to invert a matrix in R
+is called solve, because it thinks
+we want to solve this system of linear equations.
+And if we say solve, we get a problem.
+Here is an error message--
+computationally singular reciprocal condition
+10 to the minus 18, which sounds awfully close to 0.
+And the problem is that's the number we get--
+something of that order-- if we look at the determinant.
+The determinant is actually really close to 0.
+And the reason for it should be pretty obvious now
+if we take a look at it.
+The determinant is 0, that would arise if the rows or columns
+were linearly dependent.
+Notice that the middle column is the average of the first
+and the third column.
+So this column plus this column add up
+to twice the middle column.
+That means the determinant is 0.
+That means that an inverse doesn't exist.
+Suppose I tweak it.
+And suppose I change this number from a 9 to a 10.
+Now, actually, we're golden.
+So now we have something that is invertible.
+All three columns are independent.
+And we can invert it.
+So what we'd like to do is find the v such
+that when we act with M on the left, we get this vector.
+If we do that in R, I've got M defined here,
+I have b defined here.
+The determinant is minus 3.
+That's safely away from 0.
+And if I define M inverse to be the inverse matrix,
+I get a bunch of numbers.
+And you might suspect that these could
+be done as fractions, not as decimals,
+and you would be right.
+And then we can take M inverse multiplied times b,
+and we get this vector here, which
+looks like minus 1, 2, 1.776 times 10 to the minus 15.
+Hmm.
+Looks to me kind of like minus 1, 2, 0.
+And if we check, we find out, actually,
+that that's also the equation.
+
+You can see that here, because minus 1, 2, 0,
+it says take twice the second column
+and subtract the first column.
+So 4 minus 1 is 3.
+10 minus 4 is 6.
+And 16 minus 7 gives us 9.
+So we're good.

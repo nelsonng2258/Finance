@@ -1,0 +1,109 @@
+
+PROFESSOR: Now, I mentioned before
+that we might have securities that aren't independent.
+We might have more securities than there
+are states of the world.
+And we might have securities that actually are not
+really needed, that are equivalent to other securities.
+And, at first glance, we might think
+that that would be superfluous.
+But we do it all the time.
+Just because we have $1 bills in the American economy,
+$5 bills are superfluous.
+You can make a 5 out of five 1's.
+And you can make a 20 out of four 5's.
+But we do have these different instruments
+because they're convenient.
+Now, there are no arbitrage relationships among them.
+You would be hard pressed to find someone who's
+going to trade you at a different rate
+$5 bills for $10 bills than the expected
+ratio between their face values.
+But, when we're talking about instruments that are risky,
+unlike risk-free instruments like dollar bills,
+the answer isn't always so obvious.
+And markets do have a lot of room for extra instruments.
+And we'll see that these are really valuable.
+So we have a notion from our study
+of options that options in a certain sense
+are different instruments than stocks
+because they have different payoffs.
+On the other hand, because they can be dynamically hedged
+using stocks, there's a sense in which the payoff in an option
+can be replicated, albeit dynamically,
+by a portfolio of stock.
+So how do we look at this?
+Well, let's take a look at our world, which
+is not very dynamic.
+It's only got one period.
+So the structure is going to be a lot simpler.
+So in complete and incomplete markets,
+we could have redundant securities.
+And that occurs when securities or sets of securities
+have payoffs that are linearly dependent.
+We often say that that means that one or more
+securities have payoffs that can be
+replicated by a portfolio of other securities.
+And really, if one portfolio can replicate another,
+we usually can turn it around in either direction.
+Mathematically, that's equivalent of saying
+that the kernel or the null space of A is non-empty,
+or the dimension of the kernel of A is bigger than 0
+if you want.
+That means that there are portfolios
+that have zero payoff because, if we take
+that portfolio, a portfolio of zero payoffs,
+we add it to some portfolio that has a payoff that we want.
+The resulting portfolio is a different portfolio
+with the same payoff.
+That's what we mean by redundant.
+Redundant means there are multiple portfolios that
+have the same payoff.
+Now, in this case, we know that the kernel of a linear operator
+is itself a vector space.
+So, obviously, if I add some element of the kernel,
+I could add some multiple of the kernel as well.
+If we want to look at this on the blackboard,
+suppose that we have a portfolio that
+is equal to a given target.
+So x is our portfolio.
+b is our payoff.
+A is the payoff matrix.
+And suppose that z is an element of the kernel of A.
+Mathematically, that just means--
+all I'm saying is that A acting on z is equal to 0.
+And it means I'm always leaving out the trivial case where
+z is a non-zero vector.
+So, if A acting on z is equal to 0,
+what happens to the portfolio?
+Suppose I consider the portfolio--
+let's call at x prime--
+to be x plus an arbitrary constant times z.
+Well, the payoff on x prime is A acting
+on x prime, which is A acting on x
+plus cz, which, by linearity, is A acting on x
+plus c times A acting on z.
+The first term is equal to b.
+And the second term is equal to 0 because A acting on 0
+is equal to 0.
+So we see that, if I have a non-zero z,
+I have a one-parameter family of solutions,
+of redundant securities of portfolios, all of which
+have the same payoff.
+So, if redundant securities exist,
+then we don't have a unique association between portfolios.
+The payoff is not one to one.
+But, for a given portfolio, for a given x, we know what b is.
+We act with A on x.
+We get a definite answer by doing matrix multiplication.
+But, for a given payoff b, there might
+be more than one portfolio that solves the equation.
+So, just as I showed you on the blackboard,
+we can take any solution.
+We can add to it a multiple of any arbitrage portfolio.
+And it's going to have the same payoff.
+Now, in an incomplete market, the existence of solutions
+depends on b.
+So there might be no solutions at all.
+But, if there is a portfolio that has a solution,
+then there's going to be an infinite number of solutions.

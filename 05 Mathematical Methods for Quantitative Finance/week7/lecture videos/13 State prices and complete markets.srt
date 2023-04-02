@@ -1,0 +1,244 @@
+0
+00:00:00,000 --> 00:00:00,880
+
+
+1
+00:00:00,880 --> 00:00:05,110
+PROFESSOR: So the reason that the state prices
+
+2
+00:00:05,110 --> 00:00:08,890
+can be valuable is because we can now characterize
+
+3
+00:00:08,890 --> 00:00:13,150
+all possible payoffs in terms not just of security prices,
+
+4
+00:00:13,150 --> 00:00:15,910
+but in terms of the values of the payoffs, which we know need
+
+5
+00:00:15,910 --> 00:00:17,900
+to have positive state prices.
+
+6
+00:00:17,900 --> 00:00:20,410
+So the state prices need to be positive
+
+7
+00:00:20,410 --> 00:00:24,820
+because the payoffs of the elementary AD securities
+
+8
+00:00:24,820 --> 00:00:25,750
+are positive.
+
+9
+00:00:25,750 --> 00:00:28,060
+And, in a complete market, all of the payoffs
+
+10
+00:00:28,060 --> 00:00:31,220
+can be replicated, and they all have a unique price.
+
+11
+00:00:31,220 --> 00:00:34,390
+So we have positive state prices if and only
+
+12
+00:00:34,390 --> 00:00:35,710
+if there's no arbitrage.
+
+13
+00:00:35,710 --> 00:00:39,550
+If the prices are 0 or negative, then there's arbitrage.
+
+14
+00:00:39,550 --> 00:00:42,880
+We can take some of the AD securities as basis assets,
+
+15
+00:00:42,880 --> 00:00:46,600
+take those portfolios as basis assets in our original space.
+
+16
+00:00:46,600 --> 00:00:51,100
+If we drop the set of redundant securities
+
+17
+00:00:51,100 --> 00:00:53,813
+and we choose as a basis the AD securities,
+
+18
+00:00:53,813 --> 00:00:56,230
+then we'd have a very simple description of our securities
+
+19
+00:00:56,230 --> 00:00:56,730
+market.
+
+20
+00:00:56,730 --> 00:00:59,590
+The payoff matrix would just be the identity.
+
+21
+00:00:59,590 --> 00:01:02,620
+But we know, in any event, that the payoff--
+
+22
+00:01:02,620 --> 00:01:07,120
+that the price for any positive payoff, vector b,
+
+23
+00:01:07,120 --> 00:01:10,010
+is given by the linear combination of the state
+
+24
+00:01:10,010 --> 00:01:13,910
+prices times the payoffs of those portfolios.
+
+25
+00:01:13,910 --> 00:01:16,690
+So it's given by psi star b where
+
+26
+00:01:16,690 --> 00:01:18,790
+psi is the vector of state prices
+
+27
+00:01:18,790 --> 00:01:21,040
+and b is the vector of payoffs.
+
+28
+00:01:21,040 --> 00:01:24,460
+So, in terms of the original assets,
+
+29
+00:01:24,460 --> 00:01:26,680
+let's see how we can rewrite this.
+
+30
+00:01:26,680 --> 00:01:30,490
+If we write this in terms of the first column of A--
+
+31
+00:01:30,490 --> 00:01:33,400
+let's let the first column of A be denoted a1--
+
+32
+00:01:33,400 --> 00:01:36,580
+then the price of it is given by the state price
+
+33
+00:01:36,580 --> 00:01:39,520
+vector acting on its payoff.
+
+34
+00:01:39,520 --> 00:01:41,590
+All right, so we take our first-- for example,
+
+35
+00:01:41,590 --> 00:01:44,680
+in our original matrix A of 3, 2, 1,
+
+36
+00:01:44,680 --> 00:01:47,020
+if we have a set of state prices,
+
+37
+00:01:47,020 --> 00:01:52,030
+the state prices applied to the first column give a value S1,
+
+38
+00:01:52,030 --> 00:01:57,240
+and that would be the market price of the security that
+
+39
+00:01:57,240 --> 00:01:59,370
+corresponds to the payoff a1.
+
+40
+00:01:59,370 --> 00:02:03,300
+Similarly, S2, the market price of a2,
+
+41
+00:02:03,300 --> 00:02:06,360
+is related to the state prices by letting the state price
+
+42
+00:02:06,360 --> 00:02:10,650
+vector act on the second column of the payoff matrix and so on.
+
+43
+00:02:10,650 --> 00:02:13,860
+Now, if we group these together, we notice,
+
+44
+00:02:13,860 --> 00:02:17,970
+if we form a column vector of these, of S1, S2, S3,
+
+45
+00:02:17,970 --> 00:02:21,150
+we notice that we could write this as a matrix equation.
+
+46
+00:02:21,150 --> 00:02:23,590
+That is we could say that the row vector S
+
+47
+00:02:23,590 --> 00:02:29,160
+star is equal to psi star acting on the payoff matrix.
+
+48
+00:02:29,160 --> 00:02:31,590
+Because this is a row vector, it acts in turn
+
+49
+00:02:31,590 --> 00:02:34,080
+on each of the column vectors in A.
+
+50
+00:02:34,080 --> 00:02:38,550
+Finally, we can use the rule that the transpose of a product
+
+51
+00:02:38,550 --> 00:02:41,770
+is the product of the transposes in the opposite order.
+
+52
+00:02:41,770 --> 00:02:44,970
+So the transpose of a row vector is a column vector.
+
+53
+00:02:44,970 --> 00:02:47,820
+This gives us S. And the transpose
+
+54
+00:02:47,820 --> 00:02:53,400
+of psi transpose A of a row vector times a matrix is--
+
+55
+00:02:53,400 --> 00:02:57,420
+the transpose is going to be A transpose times psi where
+
+56
+00:02:57,420 --> 00:02:59,170
+psi is a column vector.
+
+57
+00:02:59,170 --> 00:03:03,240
+So now we have a relationship between market prices and state
+
+58
+00:03:03,240 --> 00:03:04,140
+prices.
+
+59
+00:03:04,140 --> 00:03:08,100
+The market prices are given in terms of the state prices
+
+60
+00:03:08,100 --> 00:03:13,400
+by multiplying times the transpose of the payoff matrix.
+

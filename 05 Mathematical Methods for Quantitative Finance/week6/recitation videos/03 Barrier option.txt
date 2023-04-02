@@ -1,0 +1,235 @@
+
+Here's an exercise for a barrier option
+that involves solving a differential equation using
+the method of images, or reflection,
+and the notion of trying to make an inspired guess for a trial
+function.
+Let's see if we can put it all together.
+So here's the problem.
+The problem is to find the value the European down-and-out call
+option.
+And this is an example that was given in Robert Martin's
+original paper on option pricing that came out at the same time
+as Black and Scholes, and he gave
+this example of this option.
+So it has a strike price K, it has time to expiration T,
+it satisfies geometric Brownian motion,
+so it has an Ito process.
+dS over S is mu dt plus sigma dB with mu and sigma constant.
+There's a knock-out barrier at X,
+which we'll take to be below the strike price.
+And the idea is that this is an option that
+looks like an ordinary call option
+until or unless the stock price hits the value of the barrier.
+If it hits the barrier, it's done, and it becomes worthless.
+Why do such things exist?
+Well, they're cheaper than other options.
+So there might be particular risks that it's tailored to.
+There might be particular conditions where someone's
+hedging a risk, and they figure under certain circumstances,
+they might not need it.
+But in any event, there's this option.
+And there's an interesting complementarity
+with another option, the knock-in option where
+a knock-in option does the opposite.
+It begins worthless.
+But if the strike price hits the barrier, the specified barrier
+in a specified way, then it comes to life,
+and it becomes just like an ordinary vanilla option.
+And it doesn't matter subsequently
+what happens if it hits the barrier again.
+Once it's alive, it stays alive.
+So this is our setup.
+And what can we do?
+So why don't you take a few minutes to think about it,
+and then we can work through it together.
+
+OK, let's look at it together.
+So I've taken a risk-free rate equal to 0
+to simplify the math, because this is a math example,
+and it'll be a lot easier.
+The Black-Scholes equation will go from four terms down to two.
+So this is not a realistic solution that you could trade.
+Although these days, with interest rates so low,
+it might not be a bad approximation.
+However, we're making a mathematical simplification
+just for the purposes of doing our example here.
+This is not the right financial equation.
+So we're just setting r equal to 0 to simplify the math, OK?
+So the idea is we want to think about what we saw in lecture
+about how the diffusion and the random walk property of stock
+prices looks like the behavior that we saw in the diffusion
+equation where we saw that we could deal
+with barriers by a method of images,
+by looking at reflected points.
+So we might think, we might have an idea
+that we could try to take a look at the ordinary solution
+to the Black-Scholes equation.
+Let's say, so can we relate--
+let's ask, can we relate the usual solution--
+let me call it C of S,t to something at an image price--
+let's call it-- let's say to option value
+at the reflected price or the image price.
+Now, how are we going to find it?
+Well, let's just try doing the usual thing.
+We know that S should be thought of as a logarithmic variable.
+We know that we want the same distance below as above.
+So we might take a look at, for example,
+trying an image price of the form--
+let me call it log S tilde to be 2 log X minus log S. So
+that way, they're equally spaced above or below the barrier.
+So if C is the value of the option-- that is,
+it's the function that's a Black-Scholes function that we
+have, it looks like we might be able to write things in terms
+of--
+
+so that is, could we have C of S, t minus C
+of X squared over S and t?
+Now you notice what happens.
+So I've re--exponentiated, and we can see that this satisfies
+the boundary condition.
+Because if S is equal to X, the two terms cancel.
+If the first term has an X, is equal to X,
+the second term has X squared over X,
+the two terms would cancel.
+So this is great.
+It satisfies the boundary condition.
+The problem is it doesn't quite satisfy the differential
+equation.
+So it's close, but we're not quite there.
+So what we're going to do is let's try--
+so unfortunately, not a solution.
+
+So let's try something different.
+Let's not give up too quickly just yet.
+So let's try the form S over X to some power--
+let's say, alpha-- times C of X squared over S times t.
+What's our motivation for this?
+Well, if we can do it, we can solve it.
+We know that the Black-Scholes equation
+is homogeneous in the powers of S.
+I've written X as a constant.
+But rather than just writing S to the alpha,
+I'm writing it as S over X to the alpha.
+Now it's automatically clear when
+S equals X, that pre-factor is equal to 1,
+and my usual equation goes through.
+So this is a guess.
+We're going to try it out and see where it leads.
+And if we do it well, and we're lucky,
+we'll have a good answer.
+If not, it's back to the drawing board.
+But let's give it a try.
+So what shall we do?
+Let's compute some partial derivatives, shall we?
+So we have-- let's give this a name.
+Let's call this f of S and t.
+Obviously, it also depends on X and the other parameters.
+So let's compute.
+
+Partial of f with respect to t is
+going to be S over X to the alpha partial of C
+with respect to t.
+That was easy, because the pre-factor
+doesn't have any t's in it.
+First, partial with respect to us is going to be--
+I'm going to be able to pull out a factor of this
+from my final answer.
+This is going to be alpha over S times C.
+And that comes from differentiating with respect
+to the pre-factor.
+S to the alpha goes as alpha S to the S minus 1-- excuse
+me, S to the alpha, the derivative,
+it's alpha S to the alpha minus 1.
+So I've written that as S to the alpha.
+And the minus 1 is down here, just so I can pull out
+that common pre-factor.
+And then I differentiate C, and I
+need to worry about the X squared over S in its argument.
+So I'm going to get another term, which
+will be minus X squared over S squared times C prime dC dS.
+
+And now if we compute the second derivative,
+we get a somewhat messier expression,
+but all will become clear shortly.
+
+S over X raised to the alpha times--
+now we're taking two derivatives,
+so we're taking the derivative of the expression above.
+We're going to get one term is going to be alpha,
+alpha minus 1 over S squared times C. I'm
+going to get acting on the X squared over S squared.
+That's going to give me a term, which will
+be plus 2 times alpha minus 1.
+
+Rather, this is acting on the alpha minus S.
+This is the cross-term.
+The middle term is minus X squared over S squared times dC
+dS plus one more term, finally, minus X squared over S squared,
+squared, times second partial of C with respect to dS squared.
+So let's take a look.
+These are our three partial derivatives.
+And remember, we're looking for the Black-Scholes equation
+when we set the interest rate equal to 0.
+And that means that there's no first derivative term.
+So this term here won't be present.
+We really just need to worry about this term and this one.
+Now, notice something interesting
+about this final expression.
+Look at the alpha independence of it.
+There's something we might guess is a lucky choice for alpha
+or an inspired choice for alpha.
+How about alpha equals 1?
+If alpha equals 1, this part vanishes, this part vanishes,
+and the coefficient looks very simple.
+
+So if we choose alpha equals 1 for our trial solution,
+then we get the equation partial of f with respect
+to t plus sigma S squared over 2 second partial
+of f with respect to squared--
+is going to be S over X to the alpha, which is equal to 1,
+times partial of C with respect to t plus sigma S tilde
+squared over 2.
+And actually, I should have put in tildes before.
+Apologies.
+Tilde.
+And here for our derivatives, tilde,
+where we're taking these derivatives and a tilde here.
+So now we have that our expression for f
+gives us something in terms of the transformed variable,
+our expression here.
+And we know that that's equal to 0,
+because that satisfies the Black-Scholes equation.
+So therefore, we have the value of the down-and-out call
+option, down-and-out call.
+That's this form.
+C of down-and-out S and t is just
+C of t minus S over X C of S squared over S, t.
+That is, the derivatives we had above with respect to tilde
+are derivatives with respect to the first argument of the call
+function.
+So this is for S greater than or equal to the barrier X
+and equal to 0 for S less than or equal to X.
+And that's our solution.
+So what we did is we took our notion
+that the call option formula solves Black-Scholes equation.
+We had a barrier.
+We found that we could satisfy the barrier conditions
+by using method of images by looking at a point below.
+We constructed something that was close,
+by looking at that argument X squared of S. That's
+in logarithmic variables.
+That's the equivalent to looking above and below the barrier
+by an equal reflected amount.
+We saw that we needed another pre-factor, just as
+in our discussion of the survival probabilities.
+We put in a guess for it.
+We solved for our particular parameter,
+alpha, that was in the coefficient.
+We get a final result that gives us
+the value of the option above the barrier
+and 0 below the barrier.
+And in fact, expanding this out, you'll
+see that it looks very much like the expression
+that we had for the survival probabilities.
+And there we go.

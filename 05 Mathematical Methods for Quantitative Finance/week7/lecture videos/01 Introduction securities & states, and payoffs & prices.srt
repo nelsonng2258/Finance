@@ -1,0 +1,764 @@
+0
+00:00:00,000 --> 00:00:00,780
+
+
+1
+00:00:00,780 --> 00:00:03,550
+PROFESSOR: Let's talk about the structure of financial markets
+
+2
+00:00:03,550 --> 00:00:07,380
+and when markets are complete, incomplete, or overcomplete.
+
+3
+00:00:07,380 --> 00:00:09,133
+We've seen a variety of instruments
+
+4
+00:00:09,133 --> 00:00:10,050
+in different settings.
+
+5
+00:00:10,050 --> 00:00:11,860
+We've seen stocks, we've seen bonds,
+
+6
+00:00:11,860 --> 00:00:14,610
+we've seen derivatives such as options.
+
+7
+00:00:14,610 --> 00:00:16,680
+Let's take a look at the kinds of instruments
+
+8
+00:00:16,680 --> 00:00:20,040
+can exist within a marketplace, what kinds of relationships
+
+9
+00:00:20,040 --> 00:00:24,880
+there might be among them, and what kinds of openings
+
+10
+00:00:24,880 --> 00:00:27,630
+there are for financial innovation.
+
+11
+00:00:27,630 --> 00:00:29,130
+So the tools to do that are going
+
+12
+00:00:29,130 --> 00:00:30,900
+to be basic linear algebra.
+
+13
+00:00:30,900 --> 00:00:34,050
+And we're going to take a starting example
+
+14
+00:00:34,050 --> 00:00:38,355
+to get us warmed up to the subject is a simple model
+
+15
+00:00:38,355 --> 00:00:40,300
+for a one-period market.
+
+16
+00:00:40,300 --> 00:00:43,058
+So there's going to be an initial time,
+
+17
+00:00:43,058 --> 00:00:44,100
+we'll call it to equal 0.
+
+18
+00:00:44,100 --> 00:00:46,320
+And there's one step ahead in the future.
+
+19
+00:00:46,320 --> 00:00:48,607
+We're going to look at a small number of securities,
+
+20
+00:00:48,607 --> 00:00:50,190
+and we're going to see what we can say
+
+21
+00:00:50,190 --> 00:00:53,880
+and how we can characterize the relationships among them.
+
+22
+00:00:53,880 --> 00:00:56,640
+This model, which we're only going to introduce,
+
+23
+00:00:56,640 --> 00:00:59,250
+can be developed into a multi-period model, which
+
+24
+00:00:59,250 --> 00:01:01,830
+can lead to things like the binomial tree model,
+
+25
+00:01:01,830 --> 00:01:04,500
+and bring us full circle back to things
+
+26
+00:01:04,500 --> 00:01:06,390
+like the models of continuous time
+
+27
+00:01:06,390 --> 00:01:09,100
+finance that we've been studying earlier.
+
+28
+00:01:09,100 --> 00:01:11,790
+However, with an appreciation about the kinds
+
+29
+00:01:11,790 --> 00:01:14,160
+of relationships that might be available
+
+30
+00:01:14,160 --> 00:01:16,815
+and that might be required among the different instruments
+
+31
+00:01:16,815 --> 00:01:19,060
+in the marketplace.
+
+32
+00:01:19,060 --> 00:01:21,370
+So here's our simple model.
+
+33
+00:01:21,370 --> 00:01:24,230
+Let's take a look.
+
+34
+00:01:24,230 --> 00:01:26,140
+So our first model is going to be
+
+35
+00:01:26,140 --> 00:01:30,190
+a one-period model where there are two times, time 0 and time
+
+36
+00:01:30,190 --> 00:01:31,000
+1.
+
+37
+00:01:31,000 --> 00:01:35,092
+And we're going to have four securities in this market.
+
+38
+00:01:35,092 --> 00:01:37,300
+So let's take a look at what they are, and then we'll
+
+39
+00:01:37,300 --> 00:01:40,120
+see how we can model this using simple concepts
+
+40
+00:01:40,120 --> 00:01:42,020
+from linear algebra.
+
+41
+00:01:42,020 --> 00:01:44,650
+So the securities that we have are
+
+42
+00:01:44,650 --> 00:01:50,470
+going to be a bond, a stock, and two call options,
+
+43
+00:01:50,470 --> 00:01:53,860
+call option with strike 1.5 dollars,
+
+44
+00:01:53,860 --> 00:01:56,800
+and a call option with strike price of $1.
+
+45
+00:01:56,800 --> 00:01:59,150
+There are going to be three states of the world.
+
+46
+00:01:59,150 --> 00:02:01,180
+We're going to imagine the states of the world
+
+47
+00:02:01,180 --> 00:02:03,760
+as being three possible outcomes.
+
+48
+00:02:03,760 --> 00:02:07,750
+They might be a good economy, a bad economy, and a pandemic,
+
+49
+00:02:07,750 --> 00:02:09,410
+or some terrible economy.
+
+50
+00:02:09,410 --> 00:02:11,960
+So let's just give the names 1, 2, and 3.
+
+51
+00:02:11,960 --> 00:02:13,030
+This could be any number.
+
+52
+00:02:13,030 --> 00:02:15,200
+We're keeping it small to make it so the algebra
+
+53
+00:02:15,200 --> 00:02:17,440
+you can almost do in your head, and the slides
+
+54
+00:02:17,440 --> 00:02:18,840
+can fit on one page.
+
+55
+00:02:18,840 --> 00:02:21,460
+This could be any number of discrete states.
+
+56
+00:02:21,460 --> 00:02:23,860
+We're assuming that they are mutually exclusive
+
+57
+00:02:23,860 --> 00:02:25,940
+and that they cover all the possibilities.
+
+58
+00:02:25,940 --> 00:02:28,870
+So the probability up in each state adds up to 1.
+
+59
+00:02:28,870 --> 00:02:32,830
+So we'll assign a probability 1/2, 1/6, and 1/3.
+
+60
+00:02:32,830 --> 00:02:35,290
+One of the fascinating things that we're about to see
+
+61
+00:02:35,290 --> 00:02:38,710
+is that these probabilities, the real world probabilities
+
+62
+00:02:38,710 --> 00:02:40,600
+of appearing in these different states,
+
+63
+00:02:40,600 --> 00:02:44,020
+don't matter at all for the pricing relationships
+
+64
+00:02:44,020 --> 00:02:46,490
+that we're going to explore.
+
+65
+00:02:46,490 --> 00:02:48,070
+So what about each of the options?
+
+66
+00:02:48,070 --> 00:02:53,500
+Well, we would like to know how much it's worth in the future.
+
+67
+00:02:53,500 --> 00:02:55,640
+We're going to assume that the price now is fixed.
+
+68
+00:02:55,640 --> 00:02:57,223
+We're not going to say yet what it is.
+
+69
+00:02:57,223 --> 00:02:58,370
+We'll get to that in a bit.
+
+70
+00:02:58,370 --> 00:03:01,300
+But we're going to ask what the future value is going to be,
+
+71
+00:03:01,300 --> 00:03:03,470
+and this is known as the payoff.
+
+72
+00:03:03,470 --> 00:03:06,400
+So the payoff for a risk-free bond
+
+73
+00:03:06,400 --> 00:03:09,220
+is going to be defined as $1 in the future.
+
+74
+00:03:09,220 --> 00:03:12,040
+What makes it risk-free is not that it's $1,
+
+75
+00:03:12,040 --> 00:03:14,320
+it's that the outcome doesn't depend on what state
+
+76
+00:03:14,320 --> 00:03:15,670
+of the world we're in.
+
+77
+00:03:15,670 --> 00:03:18,850
+The stock, on the other hand, is going to be a risky asset.
+
+78
+00:03:18,850 --> 00:03:21,130
+The amount that it's worth depends on which state
+
+79
+00:03:21,130 --> 00:03:21,850
+we're in.
+
+80
+00:03:21,850 --> 00:03:22,960
+It could be worth $3.
+
+81
+00:03:22,960 --> 00:03:23,980
+It could be worth $2.
+
+82
+00:03:23,980 --> 00:03:25,540
+It could be worth $1.
+
+83
+00:03:25,540 --> 00:03:30,040
+It might even be worth less than the value of the bond.
+
+84
+00:03:30,040 --> 00:03:32,230
+The call option, however, is determined
+
+85
+00:03:32,230 --> 00:03:35,110
+based on the value of the stock because it's
+
+86
+00:03:35,110 --> 00:03:37,280
+a call option on that stock.
+
+87
+00:03:37,280 --> 00:03:40,180
+So, if the strike price is 1 and a half dollars
+
+88
+00:03:40,180 --> 00:03:44,140
+and the stock price finishes in one period at $3,
+
+89
+00:03:44,140 --> 00:03:45,910
+then it's worth 1 and a half dollars
+
+90
+00:03:45,910 --> 00:03:48,310
+because we could exercise it immediately
+
+91
+00:03:48,310 --> 00:03:51,880
+to buy stock for 1 and a half dollars, sell it for 3,
+
+92
+00:03:51,880 --> 00:03:54,460
+and capture a value of 1 and a half.
+
+93
+00:03:54,460 --> 00:03:57,880
+Similarly, if the stock price is $2,
+
+94
+00:03:57,880 --> 00:04:00,640
+we could buy at 1 and a a half, sell at $2,
+
+95
+00:04:00,640 --> 00:04:02,860
+make it a profit of $0.50.
+
+96
+00:04:02,860 --> 00:04:05,110
+But the value is 0 in the lowest state of the world
+
+97
+00:04:05,110 --> 00:04:08,140
+because we're not going to buy a stock for $1.50 if the market
+
+98
+00:04:08,140 --> 00:04:09,820
+price is $1.
+
+99
+00:04:09,820 --> 00:04:12,220
+Our second option, the call option
+
+100
+00:04:12,220 --> 00:04:15,250
+with a strike price of $1, is worth $2
+
+101
+00:04:15,250 --> 00:04:18,399
+in this state of the world, $1 in this state of the world,
+
+102
+00:04:18,399 --> 00:04:21,970
+and 0, again, if the market price exceeds
+
+103
+00:04:21,970 --> 00:04:23,940
+the value of the call option.
+
+104
+00:04:23,940 --> 00:04:26,290
+You can extend this with puts, with other options
+
+105
+00:04:26,290 --> 00:04:28,960
+of other strikes, and so on.
+
+106
+00:04:28,960 --> 00:04:30,643
+So, what did we leave out?
+
+107
+00:04:30,643 --> 00:04:32,060
+Well, this is very-- first of all,
+
+108
+00:04:32,060 --> 00:04:33,880
+we only have three states of the world.
+
+109
+00:04:33,880 --> 00:04:35,750
+We've left out a lot of possibilities
+
+110
+00:04:35,750 --> 00:04:37,480
+that these values might have.
+
+111
+00:04:37,480 --> 00:04:40,840
+We're assuming that we can buy or sell these freely,
+
+112
+00:04:40,840 --> 00:04:42,850
+and that we can hold any quantity that we'd
+
+113
+00:04:42,850 --> 00:04:43,930
+like to have.
+
+114
+00:04:43,930 --> 00:04:46,660
+But we're going to start with this idealized market
+
+115
+00:04:46,660 --> 00:04:48,240
+where there are no market frictions.
+
+116
+00:04:48,240 --> 00:04:50,740
+And we're going to see what these relationships
+
+117
+00:04:50,740 --> 00:04:56,330
+among the future payoffs imply about these instruments.
+
+118
+00:04:56,330 --> 00:05:00,430
+So let's group these numbers together the payoffs
+
+119
+00:05:00,430 --> 00:05:02,590
+that are received for each security
+
+120
+00:05:02,590 --> 00:05:05,050
+in each state of the world, an object we're going
+
+121
+00:05:05,050 --> 00:05:07,700
+to call the payoff matrix.
+
+122
+00:05:07,700 --> 00:05:10,600
+So let there be n different securities
+
+123
+00:05:10,600 --> 00:05:12,680
+and s states of the world.
+
+124
+00:05:12,680 --> 00:05:16,660
+In our example n is equal to 4, s is equal to 3.
+
+125
+00:05:16,660 --> 00:05:18,640
+And we're going to represent the payoffs
+
+126
+00:05:18,640 --> 00:05:22,000
+for each security at our fixed time in the future
+
+127
+00:05:22,000 --> 00:05:23,785
+as being a column vector of length s.
+
+128
+00:05:23,785 --> 00:05:26,410
+And we're going to collect them in the form of a payoff matrix.
+
+129
+00:05:26,410 --> 00:05:31,340
+So the payoff matrix is a mapping from Rn to Rs.
+
+130
+00:05:31,340 --> 00:05:35,230
+So Rn, where we've got four different securities,
+
+131
+00:05:35,230 --> 00:05:37,730
+tells us which securities we have.
+
+132
+00:05:37,730 --> 00:05:39,940
+And for each security, we're going
+
+133
+00:05:39,940 --> 00:05:42,790
+to see what it's payoffs are.
+
+134
+00:05:42,790 --> 00:05:44,260
+And there are three possibilities
+
+135
+00:05:44,260 --> 00:05:46,180
+for the payoffs, Rs.
+
+136
+00:05:46,180 --> 00:05:48,813
+So in our example where n is 4 and s
+
+137
+00:05:48,813 --> 00:05:50,230
+is 3 and the numbers of the ones I
+
+138
+00:05:50,230 --> 00:05:51,850
+showed you on the previous table,
+
+139
+00:05:51,850 --> 00:05:53,620
+this would be the payoff matrix.
+
+140
+00:05:53,620 --> 00:05:57,850
+The first column represents the payoff of the risk-free bond.
+
+141
+00:05:57,850 --> 00:06:02,110
+In states 1, 2, and 3, it receives $1.
+
+142
+00:06:02,110 --> 00:06:05,110
+So how would we represent that as a vector
+
+143
+00:06:05,110 --> 00:06:09,100
+in our initial space Rn?
+
+144
+00:06:09,100 --> 00:06:15,130
+Well, we could represent that by a vector, say, that is x--
+
+145
+00:06:15,130 --> 00:06:17,440
+I may not be consistent in keeping arrows
+
+146
+00:06:17,440 --> 00:06:18,970
+over all of my vectors--
+
+147
+00:06:18,970 --> 00:06:24,880
+is 1, 0, 0, 0 because I have one bond in the first position.
+
+148
+00:06:24,880 --> 00:06:27,250
+And that corresponds to my first column.
+
+149
+00:06:27,250 --> 00:06:33,130
+If I take the matrix A acting on the vector x, I get--
+
+150
+00:06:33,130 --> 00:06:34,810
+because this is a unit vector--
+
+151
+00:06:34,810 --> 00:06:39,880
+I get the first column, so I would get 1, 1, 1.
+
+152
+00:06:39,880 --> 00:06:42,040
+If I change my vector, for example,
+
+153
+00:06:42,040 --> 00:06:45,220
+I look at a vector corresponding to a single share of stock,
+
+154
+00:06:45,220 --> 00:06:52,980
+let's call this x2, that would be represented by 0, 1, 0, 0.
+
+155
+00:06:52,980 --> 00:07:02,310
+And A acting on x2 gives 3, 2, 1.
+
+156
+00:07:02,310 --> 00:07:06,660
+What if I have a mixed portfolio with stocks and bonds?
+
+157
+00:07:06,660 --> 00:07:09,240
+Well, suppose I have a vector.
+
+158
+00:07:09,240 --> 00:07:12,540
+Let's call it x.
+
+159
+00:07:12,540 --> 00:07:22,630
+And say that it's equal to qB, qs, 0, 0,
+
+160
+00:07:22,630 --> 00:07:26,230
+where qB is the number of bonds I have and qs
+
+161
+00:07:26,230 --> 00:07:28,300
+is the number of stocks that I have,
+
+162
+00:07:28,300 --> 00:07:36,610
+then the payoff Ax is obviously going to be qB times 1,
+
+163
+00:07:36,610 --> 00:07:43,810
+1, 1, plus qs times 3, 2, 1.
+
+164
+00:07:43,810 --> 00:07:48,410
+That is to say, portfolios form a vector space.
+
+165
+00:07:48,410 --> 00:07:57,840
+So I can write x as being qB times the first basis vector
+
+166
+00:07:57,840 --> 00:07:58,340
+plus--
+
+167
+00:07:58,340 --> 00:08:04,620
+
+
+168
+00:08:04,620 --> 00:08:06,270
+plus I have a jumpy pen--
+
+169
+00:08:06,270 --> 00:08:09,950
+
+
+170
+00:08:09,950 --> 00:08:15,770
+qs times 0, 1, 0, 0.
+
+171
+00:08:15,770 --> 00:08:18,480
+And remember that this is a linear algebra.
+
+172
+00:08:18,480 --> 00:08:20,900
+So a matrix multiplication applies
+
+173
+00:08:20,900 --> 00:08:22,590
+to the rules of linearity.
+
+174
+00:08:22,590 --> 00:08:27,330
+So I can say that A times x in this case
+
+175
+00:08:27,330 --> 00:08:36,039
+is going to be A acting on qB, qs, 0, 0,
+
+176
+00:08:36,039 --> 00:08:47,910
+which is A acting on qB times 1, 0, 0, 0 plus qs times 0, 1, 0,
+
+177
+00:08:47,910 --> 00:08:50,090
+0.
+
+178
+00:08:50,090 --> 00:08:52,610
+And, by our usual rules of linearity,
+
+179
+00:08:52,610 --> 00:09:03,310
+this is going to be qB times A of 1, 0, 0, 0 plus qs
+
+180
+00:09:03,310 --> 00:09:06,850
+of A acting on 0, 1, 0, 0.
+
+181
+00:09:06,850 --> 00:09:09,280
+And then we get the result that I wrote down before.
+
+182
+00:09:09,280 --> 00:09:12,550
+Remember that A acting on the first basis vector
+
+183
+00:09:12,550 --> 00:09:14,930
+gives us the first column of the matrix.
+
+184
+00:09:14,930 --> 00:09:17,320
+A acting on the second basis vector
+
+185
+00:09:17,320 --> 00:09:20,150
+gives us the second column and so on.
+
+186
+00:09:20,150 --> 00:09:23,680
+So we're finally left with our value
+
+187
+00:09:23,680 --> 00:09:30,970
+is going to be qB plus 3 qs in the first state of the world,
+
+188
+00:09:30,970 --> 00:09:36,790
+qB plus 2 qs in the second state of the world,
+
+189
+00:09:36,790 --> 00:09:41,560
+and qB plus qs in the third state
+
+190
+00:09:41,560 --> 00:09:49,290
+of the world for our portfolio with qB bonds and qs stocks.
+

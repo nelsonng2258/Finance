@@ -1,0 +1,928 @@
+0
+00:00:00,000 --> 00:00:01,050
+
+
+1
+00:00:01,050 --> 00:00:04,680
+PROFESSOR: Can we find the efficient frontier in practice?
+
+2
+00:00:04,680 --> 00:00:08,280
+The optimizations would be absolutely optimal
+
+3
+00:00:08,280 --> 00:00:11,340
+if we knew the exact value of the inputs
+
+4
+00:00:11,340 --> 00:00:13,950
+and we knew that the returns were generated
+
+5
+00:00:13,950 --> 00:00:18,000
+in exactly the way these models predict,
+
+6
+00:00:18,000 --> 00:00:20,170
+but neither of those things is true.
+
+7
+00:00:20,170 --> 00:00:22,860
+Let's take the inputs first of all.
+
+8
+00:00:22,860 --> 00:00:26,130
+Even if we knew the exact data-generating process,
+
+9
+00:00:26,130 --> 00:00:28,050
+the parameters we need to estimate
+
+10
+00:00:28,050 --> 00:00:32,610
+from historical data using statistical techniques,
+
+11
+00:00:32,610 --> 00:00:34,950
+or we need other forecasting techniques
+
+12
+00:00:34,950 --> 00:00:38,250
+to predict what the future excess returns will be.
+
+13
+00:00:38,250 --> 00:00:40,350
+Given that they're drawn from some distribution,
+
+14
+00:00:40,350 --> 00:00:42,630
+getting the parameters and fitting
+
+15
+00:00:42,630 --> 00:00:47,530
+those from the limited and noisy data we have can be tricky.
+
+16
+00:00:47,530 --> 00:00:50,400
+We also have the issue that the data-generating process,
+
+17
+00:00:50,400 --> 00:00:54,960
+if there is such a thing, is not stable over infinite periods
+
+18
+00:00:54,960 --> 00:00:56,430
+of time.
+
+19
+00:00:56,430 --> 00:00:57,930
+Here, we've got attention.
+
+20
+00:00:57,930 --> 00:01:00,910
+We'd like to use longer and longer historical periods.
+
+21
+00:01:00,910 --> 00:01:03,270
+If we can to get better statistics.
+
+22
+00:01:03,270 --> 00:01:05,370
+But the longer we go, the less likely
+
+23
+00:01:05,370 --> 00:01:08,520
+it is that a given covariance matrix really
+
+24
+00:01:08,520 --> 00:01:12,220
+held that would be a good basis for forecasting the future.
+
+25
+00:01:12,220 --> 00:01:15,360
+So in practice, it's quite challenging
+
+26
+00:01:15,360 --> 00:01:18,540
+to get good estimates for what the inputs are even
+
+27
+00:01:18,540 --> 00:01:20,190
+under the assumption that there's
+
+28
+00:01:20,190 --> 00:01:23,640
+a fixed data-generating process that we know what it is
+
+29
+00:01:23,640 --> 00:01:29,160
+and that the time series are stationary.
+
+30
+00:01:29,160 --> 00:01:32,430
+And probably none of those things is true.
+
+31
+00:01:32,430 --> 00:01:33,550
+But let's take a look.
+
+32
+00:01:33,550 --> 00:01:36,600
+We can at least see how big the estimation side is
+
+33
+00:01:36,600 --> 00:01:40,680
+by making the assumption that everything is held fixed
+
+34
+00:01:40,680 --> 00:01:44,010
+and that we know how the noise is generated.
+
+35
+00:01:44,010 --> 00:01:45,428
+Let's do it via Monte Carlo.
+
+36
+00:01:45,428 --> 00:01:47,220
+We've already seen how these techniques can
+
+37
+00:01:47,220 --> 00:01:50,460
+be used to get visualizations of the evolution
+
+38
+00:01:50,460 --> 00:01:51,840
+of random processes.
+
+39
+00:01:51,840 --> 00:01:53,430
+We've seen how Monte Carlo techniques
+
+40
+00:01:53,430 --> 00:01:57,550
+can be used to approximate the prices of options.
+
+41
+00:01:57,550 --> 00:01:59,700
+And now let's use it to simulate a whole bunch
+
+42
+00:01:59,700 --> 00:02:01,480
+of different scenarios.
+
+43
+00:02:01,480 --> 00:02:03,150
+So this kind of scenario analysis
+
+44
+00:02:03,150 --> 00:02:05,820
+is quite a typical application of Monte Carlo techniques
+
+45
+00:02:05,820 --> 00:02:07,139
+as well.
+
+46
+00:02:07,139 --> 00:02:08,139
+What are we going to do?
+
+47
+00:02:08,139 --> 00:02:09,789
+Well, here's the idea.
+
+48
+00:02:09,789 --> 00:02:11,857
+Let's assume that the data that we have,
+
+49
+00:02:11,857 --> 00:02:13,440
+the code that we've been working with,
+
+50
+00:02:13,440 --> 00:02:16,410
+the covariance matrix, the expected returns--
+
+51
+00:02:16,410 --> 00:02:18,840
+let's suppose that those are actually the truth.
+
+52
+00:02:18,840 --> 00:02:21,010
+That's the way the world really works.
+
+53
+00:02:21,010 --> 00:02:23,860
+But let's forget that we know where they came from.
+
+54
+00:02:23,860 --> 00:02:26,310
+Let's pretend we don't know what their actual values are.
+
+55
+00:02:26,310 --> 00:02:31,980
+Let's suppose that what we have to look at is historical data.
+
+56
+00:02:31,980 --> 00:02:33,430
+We're going to simulate it.
+
+57
+00:02:33,430 --> 00:02:36,030
+But what we're looking at is realizations
+
+58
+00:02:36,030 --> 00:02:40,230
+of data that are drawn from a probability distribution
+
+59
+00:02:40,230 --> 00:02:44,970
+with a particular covariance and with a particular set
+
+60
+00:02:44,970 --> 00:02:46,650
+of expected returns.
+
+61
+00:02:46,650 --> 00:02:49,150
+And we're going to do that a whole bunch of different times.
+
+62
+00:02:49,150 --> 00:02:50,580
+So here's the setup.
+
+63
+00:02:50,580 --> 00:02:52,950
+There's a true data-generating process.
+
+64
+00:02:52,950 --> 00:02:55,170
+We're going to generate a whole bunch
+
+65
+00:02:55,170 --> 00:02:57,750
+of decade-long simulations.
+
+66
+00:02:57,750 --> 00:03:01,440
+Each one is going to be a possible outcome that we could
+
+67
+00:03:01,440 --> 00:03:03,690
+have had, data that we could be looking
+
+68
+00:03:03,690 --> 00:03:07,140
+at by which we need to estimate what the true values are.
+
+69
+00:03:07,140 --> 00:03:08,962
+And we don't get the true values.
+
+70
+00:03:08,962 --> 00:03:10,920
+There's no answer in the back of the book here.
+
+71
+00:03:10,920 --> 00:03:13,650
+What we need to do is we're charged with making investment
+
+72
+00:03:13,650 --> 00:03:14,620
+decisions.
+
+73
+00:03:14,620 --> 00:03:16,560
+So what we're going to do is each time we
+
+74
+00:03:16,560 --> 00:03:20,700
+get a chunk of simulated historical data,
+
+75
+00:03:20,700 --> 00:03:22,020
+we're going to act on it.
+
+76
+00:03:22,020 --> 00:03:26,940
+We're going to try to infer the most likely values for what
+
+77
+00:03:26,940 --> 00:03:35,000
+the covariance matrix and the expected excess returns are.
+
+78
+00:03:35,000 --> 00:03:40,640
+We will find where we think the efficient frontier should be,
+
+79
+00:03:40,640 --> 00:03:42,860
+and that will be a set of portfolios.
+
+80
+00:03:42,860 --> 00:03:44,780
+But then each of those portfolios,
+
+81
+00:03:44,780 --> 00:03:47,120
+we're going to plot on the risk and return graph,
+
+82
+00:03:47,120 --> 00:03:50,360
+not against where we thought it's risk and return would be,
+
+83
+00:03:50,360 --> 00:03:54,420
+but where they actually are based on the true values.
+
+84
+00:03:54,420 --> 00:03:57,810
+So this is all under some almost perfect--
+
+85
+00:03:57,810 --> 00:04:00,680
+this is like the best case we could possibly have.
+
+86
+00:04:00,680 --> 00:04:03,920
+There is a stable data-generating process.
+
+87
+00:04:03,920 --> 00:04:06,200
+Everything is stationary.
+
+88
+00:04:06,200 --> 00:04:07,850
+We know what the model is.
+
+89
+00:04:07,850 --> 00:04:09,900
+We just don't know the parameters.
+
+90
+00:04:09,900 --> 00:04:12,500
+So this is all-- any uncertainties
+
+91
+00:04:12,500 --> 00:04:16,940
+we see, any imprecision we see all comes from the parameter
+
+92
+00:04:16,940 --> 00:04:18,320
+estimation side.
+
+93
+00:04:18,320 --> 00:04:20,959
+None of it comes from this other more challenging problems
+
+94
+00:04:20,959 --> 00:04:23,190
+like our markets changing with time.
+
+95
+00:04:23,190 --> 00:04:25,515
+Can we use historical estimates from the past?
+
+96
+00:04:25,515 --> 00:04:27,140
+Are they good predictors of the future?
+
+97
+00:04:27,140 --> 00:04:28,590
+Do we need something else?
+
+98
+00:04:28,590 --> 00:04:30,210
+This is our baseline.
+
+99
+00:04:30,210 --> 00:04:33,710
+So let's see how well we can do that.
+
+100
+00:04:33,710 --> 00:04:36,200
+So what we're going to do is write a function
+
+101
+00:04:36,200 --> 00:04:37,680
+to do mean variance.
+
+102
+00:04:37,680 --> 00:04:41,300
+We'll call mvmc for "mean variance Monte Carlo."
+
+103
+00:04:41,300 --> 00:04:45,900
+And let's take a look at what it consists of.
+
+104
+00:04:45,900 --> 00:04:48,960
+So here's our code, our mean variance Monte Carlo,
+
+105
+00:04:48,960 --> 00:04:51,670
+and I've defined a function which has a similar function
+
+106
+00:04:51,670 --> 00:04:52,170
+call.
+
+107
+00:04:52,170 --> 00:04:53,700
+It takes a covariance matrix.
+
+108
+00:04:53,700 --> 00:04:57,040
+It takes a vector of expected returns and a bunch of points.
+
+109
+00:04:57,040 --> 00:04:59,380
+So let's run this to define the function.
+
+110
+00:04:59,380 --> 00:05:02,510
+And what we're going to do is generate a simulated covariance
+
+111
+00:05:02,510 --> 00:05:03,010
+matrix.
+
+112
+00:05:03,010 --> 00:05:04,590
+Now, the data that we started with
+
+113
+00:05:04,590 --> 00:05:07,300
+was based on the simulation's monthly returns.
+
+114
+00:05:07,300 --> 00:05:09,000
+It could be anything.
+
+115
+00:05:09,000 --> 00:05:11,310
+There's a standard technique for generating
+
+116
+00:05:11,310 --> 00:05:14,920
+correlated random variables that are normally distributed,
+
+117
+00:05:14,920 --> 00:05:16,510
+which we're going to use here.
+
+118
+00:05:16,510 --> 00:05:21,990
+And that's to use this Cholesky decomposition, which basically
+
+119
+00:05:21,990 --> 00:05:24,420
+takes the square root of the covariance matrix,
+
+120
+00:05:24,420 --> 00:05:27,100
+and we'll sandwich it and reconstruct something.
+
+121
+00:05:27,100 --> 00:05:28,080
+So you can take a look.
+
+122
+00:05:28,080 --> 00:05:30,630
+This is a standard technique that you can look up
+
+123
+00:05:30,630 --> 00:05:38,400
+for generating jointly normal correlated random variables,
+
+124
+00:05:38,400 --> 00:05:39,990
+and what we're going to do is we're
+
+125
+00:05:39,990 --> 00:05:43,200
+going to generate a bunch of simulated time series
+
+126
+00:05:43,200 --> 00:05:44,922
+with those parameters.
+
+127
+00:05:44,922 --> 00:05:46,380
+So what happens is we're using this
+
+128
+00:05:46,380 --> 00:05:48,390
+for generating normal random numbers.
+
+129
+00:05:48,390 --> 00:05:52,020
+The parameters are going to be the mu inputs that we have
+
+130
+00:05:52,020 --> 00:05:55,270
+and the covariance matrix that we have.
+
+131
+00:05:55,270 --> 00:05:58,440
+So this tells us that we're going to generate things
+
+132
+00:05:58,440 --> 00:06:01,740
+from a random distribution whose parameters are the ones
+
+133
+00:06:01,740 --> 00:06:05,190
+that we're setting to be exactly the ones that we started with.
+
+134
+00:06:05,190 --> 00:06:07,410
+But of course, because it's a random sample,
+
+135
+00:06:07,410 --> 00:06:09,520
+we're going to get different actual values.
+
+136
+00:06:09,520 --> 00:06:14,970
+Then, for each set of simulated historical data,
+
+137
+00:06:14,970 --> 00:06:17,190
+we're going to run our computation of where
+
+138
+00:06:17,190 --> 00:06:18,700
+the efficient frontier is.
+
+139
+00:06:18,700 --> 00:06:20,440
+So what we'll do is we'll do a loop.
+
+140
+00:06:20,440 --> 00:06:24,060
+And for each one, we're going to run an efficient frontier.
+
+141
+00:06:24,060 --> 00:06:25,740
+We'll do that a whole bunch of times,
+
+142
+00:06:25,740 --> 00:06:29,010
+and then we'll plot them and see how it looks.
+
+143
+00:06:29,010 --> 00:06:30,990
+So the rest of this is pretty much the same
+
+144
+00:06:30,990 --> 00:06:32,970
+that we saw before, and we're going
+
+145
+00:06:32,970 --> 00:06:36,300
+to output this into something we'll call mvmc.
+
+146
+00:06:36,300 --> 00:06:42,150
+
+
+147
+00:06:42,150 --> 00:06:45,300
+It's going to have sigma p on the efficient frontier
+
+148
+00:06:45,300 --> 00:06:47,670
+as a function of mu sub p, the grid of points
+
+149
+00:06:47,670 --> 00:06:52,200
+that we work with, and we'll put the weights as well for what's
+
+150
+00:06:52,200 --> 00:06:53,950
+on the efficient frontier.
+
+151
+00:06:53,950 --> 00:06:56,800
+So let's see how it looks, shall we?
+
+152
+00:06:56,800 --> 00:06:58,770
+Let's do 100 simulations.
+
+153
+00:06:58,770 --> 00:07:01,540
+You can run the code and do more.
+
+154
+00:07:01,540 --> 00:07:04,810
+And what we're going to do is generate a bunch of points.
+
+155
+00:07:04,810 --> 00:07:07,690
+So we'll have this for loop over simulations.
+
+156
+00:07:07,690 --> 00:07:11,520
+So within this for loop, we're going to run our mean variance
+
+157
+00:07:11,520 --> 00:07:12,327
+Monte Carlo.
+
+158
+00:07:12,327 --> 00:07:14,910
+Because it's going to overwrite the variables each time, let's
+
+159
+00:07:14,910 --> 00:07:16,690
+pull out the ones we want.
+
+160
+00:07:16,690 --> 00:07:20,346
+So sigma_sim will be our--
+
+161
+00:07:20,346 --> 00:07:23,710
+in this case, for step n in our for loop.
+
+162
+00:07:23,710 --> 00:07:27,420
+This will be the n-th set of sigma variables
+
+163
+00:07:27,420 --> 00:07:29,170
+on our efficient frontier plot.
+
+164
+00:07:29,170 --> 00:07:31,800
+Remember that we're having pairs of mus and sigmas,
+
+165
+00:07:31,800 --> 00:07:33,960
+and the ensemble of them for giving in
+
+166
+00:07:33,960 --> 00:07:36,010
+is going to sweep out the curve.
+
+167
+00:07:36,010 --> 00:07:37,920
+And here are the corresponding mus,
+
+168
+00:07:37,920 --> 00:07:40,020
+the points that we held fixed as we build up
+
+169
+00:07:40,020 --> 00:07:41,250
+our efficient frontier.
+
+170
+00:07:41,250 --> 00:07:42,390
+And that's it.
+
+171
+00:07:42,390 --> 00:07:44,430
+So we're going to run this loop, and then we're
+
+172
+00:07:44,430 --> 00:07:45,580
+going to plot it.
+
+173
+00:07:45,580 --> 00:07:47,790
+So let's take a look and see what we get.
+
+174
+00:07:47,790 --> 00:07:55,210
+
+
+175
+00:07:55,210 --> 00:07:56,740
+Oh, boy.
+
+176
+00:07:56,740 --> 00:08:00,310
+So the blue line is our unconstrained efficient
+
+177
+00:08:00,310 --> 00:08:01,480
+frontier.
+
+178
+00:08:01,480 --> 00:08:03,670
+The black line that's the envelope
+
+179
+00:08:03,670 --> 00:08:05,980
+curve of all these red dots, that's
+
+180
+00:08:05,980 --> 00:08:10,210
+the true efficient frontier under the constraints
+
+181
+00:08:10,210 --> 00:08:12,740
+with the inequality constraints we've been talking about.
+
+182
+00:08:12,740 --> 00:08:14,230
+So the blue line and the black line
+
+183
+00:08:14,230 --> 00:08:17,830
+are exactly the ones that we saw above.
+
+184
+00:08:17,830 --> 00:08:18,790
+What are the red dots?
+
+185
+00:08:18,790 --> 00:08:23,020
+Well, each line of red dots that you see
+
+186
+00:08:23,020 --> 00:08:27,700
+is the output of one of our 100 simulations.
+
+187
+00:08:27,700 --> 00:08:31,360
+Using our best historical estimates and our best
+
+188
+00:08:31,360 --> 00:08:33,880
+techniques of optimizing based on a given
+
+189
+00:08:33,880 --> 00:08:37,630
+set of inputs that we had, this is where we think--
+
+190
+00:08:37,630 --> 00:08:40,960
+these are things that we thought were on the efficient frontier
+
+191
+00:08:40,960 --> 00:08:44,150
+plotted against where they really truly are.
+
+192
+00:08:44,150 --> 00:08:47,380
+So we don't plot their locations based on what
+
+193
+00:08:47,380 --> 00:08:49,150
+we thought the values were.
+
+194
+00:08:49,150 --> 00:08:51,130
+This is based on where they actually were.
+
+195
+00:08:51,130 --> 00:08:54,180
+And of course, in the real world, we couldn't do that.
+
+196
+00:08:54,180 --> 00:08:56,720
+So this is absolutely a best case.
+
+197
+00:08:56,720 --> 00:08:59,350
+We would just find out when the investment returns came in
+
+198
+00:08:59,350 --> 00:09:04,273
+and we found that a particular portfolio landed far away
+
+199
+00:09:04,273 --> 00:09:05,440
+from the efficient frontier.
+
+200
+00:09:05,440 --> 00:09:08,110
+And you can see that these red points are not all
+
+201
+00:09:08,110 --> 00:09:10,750
+clustered really close to the efficient frontier.
+
+202
+00:09:10,750 --> 00:09:12,190
+It might be what you would expect.
+
+203
+00:09:12,190 --> 00:09:14,050
+Some of them are very, very far away.
+
+204
+00:09:14,050 --> 00:09:16,630
+Of course, a lot of them are close, and we could get lucky.
+
+205
+00:09:16,630 --> 00:09:19,150
+But if we were to end up with a point far away,
+
+206
+00:09:19,150 --> 00:09:20,890
+we might say, well, what happened?
+
+207
+00:09:20,890 --> 00:09:21,970
+How did that happen?
+
+208
+00:09:21,970 --> 00:09:24,250
+I thought we were doing something that was optimal.
+
+209
+00:09:24,250 --> 00:09:25,480
+And in this case, we did.
+
+210
+00:09:25,480 --> 00:09:27,430
+We did everything right, and we still
+
+211
+00:09:27,430 --> 00:09:29,330
+ended up with the red points.
+
+212
+00:09:29,330 --> 00:09:32,620
+So it's a challenging thing to see how to do it in practice.
+
+213
+00:09:32,620 --> 00:09:35,590
+There are many things that are going on.
+
+214
+00:09:35,590 --> 00:09:37,930
+What you might think of as being the simplest one,
+
+215
+00:09:37,930 --> 00:09:40,300
+doing statistical estimation even
+
+216
+00:09:40,300 --> 00:09:43,300
+in a case where we know exactly how everything works,
+
+217
+00:09:43,300 --> 00:09:46,550
+leads to portfolios being all over the place.
+
+218
+00:09:46,550 --> 00:09:48,340
+So we do need to deal with that.
+
+219
+00:09:48,340 --> 00:09:50,830
+We do need to deal with the possibility the market
+
+220
+00:09:50,830 --> 00:09:52,660
+structures are changing over time.
+
+221
+00:09:52,660 --> 00:09:55,630
+We do need to think about alternative ways of using data
+
+222
+00:09:55,630 --> 00:09:58,510
+for forecasting future risk and return,
+
+223
+00:09:58,510 --> 00:10:01,600
+and we need to think about the optimization we have.
+
+224
+00:10:01,600 --> 00:10:03,910
+Not only in a pure world, does it
+
+225
+00:10:03,910 --> 00:10:06,040
+give us something that is truly the best?
+
+226
+00:10:06,040 --> 00:10:07,690
+But is it something that actually
+
+227
+00:10:07,690 --> 00:10:11,830
+is going to be robust and useful when we apply it
+
+228
+00:10:11,830 --> 00:10:17,460
+in the financial markets or in other decision-making settings?
+
+229
+00:10:17,460 --> 00:10:20,190
+Try it out on your own with this notebook.
+
+230
+00:10:20,190 --> 00:10:23,040
+Run it, tweak the parameters, go get your own data
+
+231
+00:10:23,040 --> 00:10:25,640
+sets, and have some fun.
+

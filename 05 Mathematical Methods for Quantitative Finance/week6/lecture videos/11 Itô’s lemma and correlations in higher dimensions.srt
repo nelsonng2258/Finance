@@ -1,0 +1,476 @@
+0
+00:00:00,000 --> 00:00:01,430
+
+
+1
+00:00:01,430 --> 00:00:03,770
+PROFESSOR: The generalization of Ito's lemma
+
+2
+00:00:03,770 --> 00:00:05,850
+to multiple variables is straightforward.
+
+3
+00:00:05,850 --> 00:00:08,150
+And we won't go through the same derivation here.
+
+4
+00:00:08,150 --> 00:00:09,890
+We'd just like to tell you the result
+
+5
+00:00:09,890 --> 00:00:11,900
+and show you a couple examples.
+
+6
+00:00:11,900 --> 00:00:15,980
+If we have multiple variables X, then we
+
+7
+00:00:15,980 --> 00:00:18,950
+can imagine that each of them is an Ito process,
+
+8
+00:00:18,950 --> 00:00:22,070
+with the difference that the coefficient functions could
+
+9
+00:00:22,070 --> 00:00:24,210
+depend on any of the other variables.
+
+10
+00:00:24,210 --> 00:00:27,110
+So the generalization is that I let
+
+11
+00:00:27,110 --> 00:00:29,860
+i run from 1 through, say, n.
+
+12
+00:00:29,860 --> 00:00:35,840
+And for each dXi, each of the coefficient functions ai or bi
+
+13
+00:00:35,840 --> 00:00:39,740
+can depend on time, plus all of the other X's.
+
+14
+00:00:39,740 --> 00:00:41,750
+Now, this is dt.
+
+15
+00:00:41,750 --> 00:00:43,520
+There's only a single time.
+
+16
+00:00:43,520 --> 00:00:46,280
+But I'm introducing a Brownian motion
+
+17
+00:00:46,280 --> 00:00:50,690
+dBi for each possible process.
+
+18
+00:00:50,690 --> 00:00:52,670
+Now, some applications of this are
+
+19
+00:00:52,670 --> 00:00:54,590
+where we might have multiple assets,
+
+20
+00:00:54,590 --> 00:00:58,280
+like a whole bunch of stocks in a portfolio or in an index.
+
+21
+00:00:58,280 --> 00:01:02,300
+We might have a factor model where
+
+22
+00:01:02,300 --> 00:01:04,879
+we try to describe the market in terms
+
+23
+00:01:04,879 --> 00:01:06,380
+of a small number of factors.
+
+24
+00:01:06,380 --> 00:01:09,200
+If it were the capital asset pricing model, or CAPM,
+
+25
+00:01:09,200 --> 00:01:12,260
+we might try to describe many stocks in terms
+
+26
+00:01:12,260 --> 00:01:14,360
+of a single stochastic driver.
+
+27
+00:01:14,360 --> 00:01:17,180
+If it were a factor model, we might
+
+28
+00:01:17,180 --> 00:01:19,820
+try to describe the covariant structure observed
+
+29
+00:01:19,820 --> 00:01:23,300
+among multiple stocks with a small number of factors
+
+30
+00:01:23,300 --> 00:01:25,100
+and have a covariance matrix that's
+
+31
+00:01:25,100 --> 00:01:27,290
+perhaps of less than full rank.
+
+32
+00:01:27,290 --> 00:01:30,380
+So all those cases would be examples where we
+
+33
+00:01:30,380 --> 00:01:35,840
+would have multiple variables.
+
+34
+00:01:35,840 --> 00:01:38,960
+And when we have multiple variables,
+
+35
+00:01:38,960 --> 00:01:41,150
+the only thing we need to be concerned about
+
+36
+00:01:41,150 --> 00:01:44,310
+is the possibility that they might be correlated.
+
+37
+00:01:44,310 --> 00:01:47,870
+So the first terms in our multidimensional Ito's lemma
+
+38
+00:01:47,870 --> 00:01:49,830
+are the same that we saw before.
+
+39
+00:01:49,830 --> 00:01:52,730
+We have partial of F with respect to dt.
+
+40
+00:01:52,730 --> 00:01:55,520
+For each of the X's, we have an independent term,
+
+41
+00:01:55,520 --> 00:01:58,710
+partial of F with respect to X times dX,
+
+42
+00:01:58,710 --> 00:02:02,240
+which is its own Ito process for X1, X2, X3.
+
+43
+00:02:02,240 --> 00:02:05,535
+And the diagonal terms here when i is equal to j,
+
+44
+00:02:05,535 --> 00:02:09,740
+row ij, the correlation between i and j is equal to 1.
+
+45
+00:02:09,740 --> 00:02:11,930
+And this gives us our usual Ito term.
+
+46
+00:02:11,930 --> 00:02:14,300
+But there are a whole lot of extra terms
+
+47
+00:02:14,300 --> 00:02:17,270
+that can arise if the Brownian motions are
+
+48
+00:02:17,270 --> 00:02:19,050
+correlated with each other.
+
+49
+00:02:19,050 --> 00:02:20,720
+And there's a simple heuristic which
+
+50
+00:02:20,720 --> 00:02:23,220
+generalizes what we did before.
+
+51
+00:02:23,220 --> 00:02:26,570
+So in the diagonal cases, dB squared,
+
+52
+00:02:26,570 --> 00:02:29,030
+dBi squared, dB1 squared, or dB2 2
+
+53
+00:02:29,030 --> 00:02:32,210
+squared, and so on gets replaced by a dt.
+
+54
+00:02:32,210 --> 00:02:37,970
+In dX1 squared, it's replaced by b1 squared dt, same as we
+
+55
+00:02:37,970 --> 00:02:40,250
+had before, ordinary Ito.
+
+56
+00:02:40,250 --> 00:02:45,320
+But if b1 and b2 have correlation rho 12,
+
+57
+00:02:45,320 --> 00:02:48,920
+then the product of these two differentials
+
+58
+00:02:48,920 --> 00:02:52,610
+is going to be, in probability, equivalent
+
+59
+00:02:52,610 --> 00:02:56,120
+to replacing it by row ij dt.
+
+60
+00:02:56,120 --> 00:02:58,430
+So that gives us this full term, where
+
+61
+00:02:58,430 --> 00:03:01,970
+what used to be a single second partial derivative with respect
+
+62
+00:03:01,970 --> 00:03:07,550
+to X is now replaced by a matrix of second partial derivatives
+
+63
+00:03:07,550 --> 00:03:10,010
+where they're multiplied times the correlation
+
+64
+00:03:10,010 --> 00:03:16,600
+coefficients times the b factors for each of those weights.
+
+65
+00:03:16,600 --> 00:03:19,840
+For example, suppose I've got two stochastic variables
+
+66
+00:03:19,840 --> 00:03:23,650
+and I have F as their product X1 X2.
+
+67
+00:03:23,650 --> 00:03:29,410
+I apply Ito's lemma, and I see that I get X1 dX2 plus X2
+
+68
+00:03:29,410 --> 00:03:33,670
+dX1 plus dX1 times dX2.
+
+69
+00:03:33,670 --> 00:03:37,420
+And I haven't yet said what either of those Ito processes
+
+70
+00:03:37,420 --> 00:03:41,380
+are for X1 or X2, but we already can
+
+71
+00:03:41,380 --> 00:03:44,930
+simplify by dividing through by F in this case.
+
+72
+00:03:44,930 --> 00:03:49,570
+So if I divide through by X1 X2, I get a very simple form.
+
+73
+00:03:49,570 --> 00:03:57,170
+dF over F is dX1 over X1 plus dX2 over X2 plus their product.
+
+74
+00:03:57,170 --> 00:04:00,040
+Now, suppose we apply that for a specific case.
+
+75
+00:04:00,040 --> 00:04:02,050
+Say we have geometric Brownian motion,
+
+76
+00:04:02,050 --> 00:04:08,770
+so suppose for X1 and X2 that both of them have dXi over Xi
+
+77
+00:04:08,770 --> 00:04:13,870
+is an individual mu dt plus an individualized sigma dB,
+
+78
+00:04:13,870 --> 00:04:16,690
+then I would have the dF over F is
+
+79
+00:04:16,690 --> 00:04:21,220
+going to be mu 1 plus mu 2, the sum of the drift rates,
+
+80
+00:04:21,220 --> 00:04:27,490
+plus an Ito term plus two Brownian terms, sigma 1, sigma
+
+81
+00:04:27,490 --> 00:04:28,270
+2.
+
+82
+00:04:28,270 --> 00:04:31,750
+If rho 12 goes to 0, this ends up just
+
+83
+00:04:31,750 --> 00:04:34,780
+being the sum the two Ito processes directly.
+
+84
+00:04:34,780 --> 00:04:37,460
+
+
+85
+00:04:37,460 --> 00:04:41,630
+Suppose we take the ratio, so I take X1 over X2.
+
+86
+00:04:41,630 --> 00:04:45,320
+Well, if we go through and apply the same rules
+
+87
+00:04:45,320 --> 00:04:49,940
+and divide through by F, we find a somewhat more complicated
+
+88
+00:04:49,940 --> 00:04:50,570
+expression.
+
+89
+00:04:50,570 --> 00:04:54,118
+Ratios are a little bit harder to differentiate, so that's OK.
+
+90
+00:04:54,118 --> 00:04:55,910
+But let's take a look at this special case,
+
+91
+00:04:55,910 --> 00:04:57,827
+and we'll see a little bit of a paradox that's
+
+92
+00:04:57,827 --> 00:04:59,810
+here that you can think about.
+
+93
+00:04:59,810 --> 00:05:05,180
+If the coefficient in rho 12 is zero,
+
+94
+00:05:05,180 --> 00:05:08,520
+so the two processes are uncorrelated,
+
+95
+00:05:08,520 --> 00:05:10,338
+then we have this expression.
+
+96
+00:05:10,338 --> 00:05:12,380
+We don't need to worry about the minus sign here.
+
+97
+00:05:12,380 --> 00:05:13,755
+You might be a little bit worried
+
+98
+00:05:13,755 --> 00:05:16,760
+that there's a minus sign in front of the drift term,
+
+99
+00:05:16,760 --> 00:05:20,100
+but remember, it depends only on sigma squared,
+
+100
+00:05:20,100 --> 00:05:21,740
+so the minus sign makes no difference.
+
+101
+00:05:21,740 --> 00:05:25,280
+It's not as though there is risk canceling out between these two
+
+102
+00:05:25,280 --> 00:05:28,100
+in the event where they're uncorrelated.
+
+103
+00:05:28,100 --> 00:05:31,070
+On the other hand, suppose mu 1 equals mu 2,
+
+104
+00:05:31,070 --> 00:05:32,360
+the drift rates are equal.
+
+105
+00:05:32,360 --> 00:05:35,390
+This term is strictly positive.
+
+106
+00:05:35,390 --> 00:05:41,852
+It depends on sigma 1 squared as the asset in the Ito
+
+107
+00:05:41,852 --> 00:05:45,350
+process, the stochastic process, in the denominator divided
+
+108
+00:05:45,350 --> 00:05:46,740
+by X1 squared.
+
+109
+00:05:46,740 --> 00:05:49,910
+So in the event the mu 1 equals mu 2,
+
+110
+00:05:49,910 --> 00:05:53,280
+these terms vanish, the coefficient is positive,
+
+111
+00:05:53,280 --> 00:05:55,520
+and we have a positive drift term.
+
+112
+00:05:55,520 --> 00:06:00,490
+Now, the question is, how could that be the case?
+
+113
+00:06:00,490 --> 00:06:04,750
+Because if I applied this to X1 over X2
+
+114
+00:06:04,750 --> 00:06:09,700
+and I let F measure the growth rate of X1 relative to X2,
+
+115
+00:06:09,700 --> 00:06:12,220
+how can that be positive at the same time
+
+116
+00:06:12,220 --> 00:06:15,820
+that the growth rate of X2 relative to X1
+
+117
+00:06:15,820 --> 00:06:18,330
+is also positive?
+
+118
+00:06:18,330 --> 00:06:19,115
+
+

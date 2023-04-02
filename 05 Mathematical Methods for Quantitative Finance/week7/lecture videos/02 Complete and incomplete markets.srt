@@ -1,0 +1,652 @@
+0
+00:00:00,000 --> 00:00:03,390
+PROFESSOR: So, in general, we have portfolios
+
+1
+00:00:03,390 --> 00:00:06,120
+that are represented as a vector of the quantities held
+
+2
+00:00:06,120 --> 00:00:07,530
+for each security.
+
+3
+00:00:07,530 --> 00:00:09,670
+Those are elements in Rn.
+
+4
+00:00:09,670 --> 00:00:11,970
+And, when we act on it with A, we
+
+5
+00:00:11,970 --> 00:00:14,910
+have a linear payoff for the simple reason
+
+6
+00:00:14,910 --> 00:00:18,330
+that three stocks are worth three times more than one.
+
+7
+00:00:18,330 --> 00:00:21,990
+500 bonds are worth 500 times more than a single bond.
+
+8
+00:00:21,990 --> 00:00:25,590
+And the value of a bunch of stocks and bonds in a portfolio
+
+9
+00:00:25,590 --> 00:00:27,240
+is equal to the value of the stocks
+
+10
+00:00:27,240 --> 00:00:30,990
+plus the value of the bonds, perfect setting for linearity.
+
+11
+00:00:30,990 --> 00:00:33,100
+It's really not very complicated.
+
+12
+00:00:33,100 --> 00:00:35,490
+So we have a portfolio to represent
+
+13
+00:00:35,490 --> 00:00:36,690
+the vector of quantities.
+
+14
+00:00:36,690 --> 00:00:41,230
+And the payoff matrix acts to tell us what the payoff is.
+
+15
+00:00:41,230 --> 00:00:46,320
+So, if I have this vector, which represents being short one
+
+16
+00:00:46,320 --> 00:00:50,250
+bond, long two shares of stock, short two call
+
+17
+00:00:50,250 --> 00:00:53,790
+options of strike 1 and 1/2, and short one call
+
+18
+00:00:53,790 --> 00:00:58,770
+option of strike 1, what is the payoff of this portfolio?
+
+19
+00:00:58,770 --> 00:01:00,690
+Well, the payoff of the portfolio
+
+20
+00:01:00,690 --> 00:01:03,450
+is a linear combination of the payoffs
+
+21
+00:01:03,450 --> 00:01:04,950
+of the individual assets.
+
+22
+00:01:04,950 --> 00:01:07,863
+And we get it by doing matrix multiplication.
+
+23
+00:01:07,863 --> 00:01:09,780
+And, if you check, you'll find that the payoff
+
+24
+00:01:09,780 --> 00:01:11,970
+of that particular portfolio vector
+
+25
+00:01:11,970 --> 00:01:13,920
+is 0 in the first state of the world,
+
+26
+00:01:13,920 --> 00:01:15,660
+1 in the second state of the world,
+
+27
+00:01:15,660 --> 00:01:17,500
+and 1 in the last state of the world.
+
+28
+00:01:17,500 --> 00:01:20,220
+And, if you want, you can either do the matrix multiplication,
+
+29
+00:01:20,220 --> 00:01:22,290
+or, in simple cases, you can notice
+
+30
+00:01:22,290 --> 00:01:24,810
+that what matrix multiplication really does
+
+31
+00:01:24,810 --> 00:01:26,490
+is it gives us a linear combination
+
+32
+00:01:26,490 --> 00:01:27,810
+of the columns in the matrix.
+
+33
+00:01:27,810 --> 00:01:31,590
+That is I'm taking minus 1 times this column
+
+34
+00:01:31,590 --> 00:01:34,410
+plus 2 times this column minus twice
+
+35
+00:01:34,410 --> 00:01:36,910
+this column minus this column.
+
+36
+00:01:36,910 --> 00:01:38,730
+And, when I take that linear combination,
+
+37
+00:01:38,730 --> 00:01:42,100
+it's the same thing as A times x, and I get this value.
+
+38
+00:01:42,100 --> 00:01:43,680
+So it's very simple.
+
+39
+00:01:43,680 --> 00:01:46,680
+Given a vector x, you want to know the payoff.
+
+40
+00:01:46,680 --> 00:01:50,700
+You multiply with the matrix A. Do the matrix multiplication,
+
+41
+00:01:50,700 --> 00:01:52,750
+and there's your payoff.
+
+42
+00:01:52,750 --> 00:01:55,058
+What about going the other way around?
+
+43
+00:01:55,058 --> 00:01:56,475
+Would you have been able to answer
+
+44
+00:01:56,475 --> 00:02:02,940
+if I asked you, here's A, here's the payoff I'd like to get--
+
+45
+00:02:02,940 --> 00:02:08,539
+0, 1, 1-- is there a portfolio that produces this payoff?
+
+46
+00:02:08,539 --> 00:02:10,199
+So this is actually, in many ways,
+
+47
+00:02:10,199 --> 00:02:12,570
+a fundamental question of the design
+
+48
+00:02:12,570 --> 00:02:14,760
+of financial instruments, which is, if there's
+
+49
+00:02:14,760 --> 00:02:17,490
+a demand for a particular kind of payoff,
+
+50
+00:02:17,490 --> 00:02:21,330
+is it possible to construct a portfolio of instruments that
+
+51
+00:02:21,330 --> 00:02:26,060
+are available in the marketplace that produces a desired payoff?
+
+52
+00:02:26,060 --> 00:02:28,370
+In a complete market, the answer is yes.
+
+53
+00:02:28,370 --> 00:02:30,770
+And, in incomplete market, the answer is no.
+
+54
+00:02:30,770 --> 00:02:33,390
+
+
+55
+00:02:33,390 --> 00:02:35,840
+So, in other words, what we're asking
+
+56
+00:02:35,840 --> 00:02:37,960
+is how to solve a general linear equation.
+
+57
+00:02:37,960 --> 00:02:41,210
+And this is the most basic problem in linear algebra.
+
+58
+00:02:41,210 --> 00:02:45,140
+Suppose we have a payoff, a target, that we want
+
+59
+00:02:45,140 --> 00:02:47,390
+that's given by a vector b.
+
+60
+00:02:47,390 --> 00:02:50,210
+And we have a payoff matrix A. And we'd
+
+61
+00:02:50,210 --> 00:02:52,940
+like to solve the equation Ax equals b.
+
+62
+00:02:52,940 --> 00:02:57,800
+That is we'd like to find x, the portfolio, whose payoff is
+
+63
+00:02:57,800 --> 00:03:01,340
+some given constant that we've prespecified b.
+
+64
+00:03:01,340 --> 00:03:03,930
+So, as you know, in linear algebra,
+
+65
+00:03:03,930 --> 00:03:07,290
+this could be one number of equations
+
+66
+00:03:07,290 --> 00:03:09,170
+and some other number of variables.
+
+67
+00:03:09,170 --> 00:03:13,430
+We have s equations and n variables in this case.
+
+68
+00:03:13,430 --> 00:03:17,870
+And, depending on whether n is bigger or smaller or the same
+
+69
+00:03:17,870 --> 00:03:20,840
+as s and depending on some other relationships,
+
+70
+00:03:20,840 --> 00:03:22,180
+we might have a unique answer.
+
+71
+00:03:22,180 --> 00:03:23,720
+We might have multiple answers.
+
+72
+00:03:23,720 --> 00:03:25,220
+Or we might have none.
+
+73
+00:03:25,220 --> 00:03:27,200
+So let's take the simplest case.
+
+74
+00:03:27,200 --> 00:03:31,938
+If A is non-singular and there's a unique-- and n is equal to s,
+
+75
+00:03:31,938 --> 00:03:33,230
+then there's a unique solution.
+
+76
+00:03:33,230 --> 00:03:35,510
+If A is non-singular, we take the inverse.
+
+77
+00:03:35,510 --> 00:03:38,690
+x is equal to A inverse b, and we're done.
+
+78
+00:03:38,690 --> 00:03:40,620
+So what are the conditions required for that?
+
+79
+00:03:40,620 --> 00:03:42,230
+Well, A has to be invertible.
+
+80
+00:03:42,230 --> 00:03:45,260
+So the columns of A need to be independent.
+
+81
+00:03:45,260 --> 00:03:46,790
+The rows do also.
+
+82
+00:03:46,790 --> 00:03:49,640
+That means that the rank of A has to be full rank.
+
+83
+00:03:49,640 --> 00:03:52,880
+In our example, we could be 3 by 3.
+
+84
+00:03:52,880 --> 00:03:54,800
+The securities are not redundant.
+
+85
+00:03:54,800 --> 00:03:58,610
+That is there's no linear relationship among the payoffs
+
+86
+00:03:58,610 --> 00:03:59,780
+and the securities.
+
+87
+00:03:59,780 --> 00:04:01,767
+We can't write one of the columns
+
+88
+00:04:01,767 --> 00:04:03,350
+as a linear combination of the others.
+
+89
+00:04:03,350 --> 00:04:05,300
+That's what it means for them to be independent.
+
+90
+00:04:05,300 --> 00:04:07,008
+And we need the same number of securities
+
+91
+00:04:07,008 --> 00:04:08,780
+as states, obviously, for the matrix
+
+92
+00:04:08,780 --> 00:04:11,300
+to be square so it can be inverted.
+
+93
+00:04:11,300 --> 00:04:13,070
+What if n equals s doesn't hold?
+
+94
+00:04:13,070 --> 00:04:18,079
+Well, if n is less than s, if the number of securities
+
+95
+00:04:18,079 --> 00:04:21,709
+is smaller than the number of states in our financial model,
+
+96
+00:04:21,709 --> 00:04:24,240
+then, in general, there's not going to be any solution.
+
+97
+00:04:24,240 --> 00:04:28,850
+So, for an arbitrary b, there may not be a solution.
+
+98
+00:04:28,850 --> 00:04:32,180
+We just have more states than we have securities.
+
+99
+00:04:32,180 --> 00:04:34,890
+There's no way that we can solve the problem in general.
+
+100
+00:04:34,890 --> 00:04:37,260
+We might be able to solve it for some special cases.
+
+101
+00:04:37,260 --> 00:04:39,320
+So there might be some special b's--
+
+102
+00:04:39,320 --> 00:04:41,780
+that is vectors that lie in the image
+
+103
+00:04:41,780 --> 00:04:44,270
+space of the linear transformation A--
+
+104
+00:04:44,270 --> 00:04:48,170
+where there is a solution, but not for all possible b's.
+
+105
+00:04:48,170 --> 00:04:51,470
+So we might have, for example, a two-dimensional subspace
+
+106
+00:04:51,470 --> 00:04:54,350
+where there are certain payoffs that we could create,
+
+107
+00:04:54,350 --> 00:04:57,050
+but not any possible payoff.
+
+108
+00:04:57,050 --> 00:05:00,260
+On the other hand, what happens if we have more securities
+
+109
+00:05:00,260 --> 00:05:01,320
+than we have states?
+
+110
+00:05:01,320 --> 00:05:03,900
+Well, in that case, there might or might not be a solution.
+
+111
+00:05:03,900 --> 00:05:05,600
+But, in any event, they're probably not
+
+112
+00:05:05,600 --> 00:05:07,880
+unique because, if n is greater than s,
+
+113
+00:05:07,880 --> 00:05:11,570
+then some vectors need to get mapped to 0.
+
+114
+00:05:11,570 --> 00:05:14,600
+The target space is smaller than the initial space.
+
+115
+00:05:14,600 --> 00:05:16,940
+And that space of vectors that can mapped to 0
+
+116
+00:05:16,940 --> 00:05:19,700
+is known as the kernel or the null space.
+
+117
+00:05:19,700 --> 00:05:21,110
+And one of the interesting things
+
+118
+00:05:21,110 --> 00:05:24,920
+is, because A acting on an element of this null space
+
+119
+00:05:24,920 --> 00:05:27,530
+is equal to 0, we can add--
+
+120
+00:05:27,530 --> 00:05:30,920
+that means that an element of the null space or of the kernel
+
+121
+00:05:30,920 --> 00:05:32,520
+has zero payoff.
+
+122
+00:05:32,520 --> 00:05:35,480
+That means that we could add it to any portfolio
+
+123
+00:05:35,480 --> 00:05:38,520
+and still have the same payoff.
+
+124
+00:05:38,520 --> 00:05:40,460
+So these are our possibilities.
+
+125
+00:05:40,460 --> 00:05:43,220
+We could have n equal to s, n less than s, or n greater
+
+126
+00:05:43,220 --> 00:05:43,910
+than s.
+
+127
+00:05:43,910 --> 00:05:45,860
+What really is going to matter, though, is
+
+128
+00:05:45,860 --> 00:05:48,960
+the rank of the matrix.
+
+129
+00:05:48,960 --> 00:05:52,470
+So market completeness is defined as follows.
+
+130
+00:05:52,470 --> 00:05:56,790
+A complete market is one in which every possible payoff can
+
+131
+00:05:56,790 --> 00:05:59,480
+be generated by some portfolio.
+
+132
+00:05:59,480 --> 00:06:01,760
+One way to say that is that the image of A
+
+133
+00:06:01,760 --> 00:06:04,160
+is the full space of payoffs.
+
+134
+00:06:04,160 --> 00:06:07,580
+Another way to say it is that the rank of A is equal to s.
+
+135
+00:06:07,580 --> 00:06:12,260
+That is that the vectors that can
+
+136
+00:06:12,260 --> 00:06:14,690
+be reached by acting with A on something
+
+137
+00:06:14,690 --> 00:06:17,090
+is equal to the dimension of the target space.
+
+138
+00:06:17,090 --> 00:06:19,880
+And, equivalently, we could say that the linear transformation
+
+139
+00:06:19,880 --> 00:06:21,800
+is onto or surjective.
+
+140
+00:06:21,800 --> 00:06:25,033
+That means it covers the entire target space.
+
+141
+00:06:25,033 --> 00:06:26,450
+And, if the market isn't complete,
+
+142
+00:06:26,450 --> 00:06:28,310
+well, then it's incomplete.
+
+143
+00:06:28,310 --> 00:06:30,530
+So an incomplete market is one in which
+
+144
+00:06:30,530 --> 00:06:33,410
+there exists some payoffs that can't
+
+145
+00:06:33,410 --> 00:06:36,120
+be generated by any portfolio.
+
+146
+00:06:36,120 --> 00:06:38,510
+So that means that the image of A
+
+147
+00:06:38,510 --> 00:06:42,050
+is smaller than the entire space of payoffs.
+
+148
+00:06:42,050 --> 00:06:45,207
+So it's a proper subspace within the space of payoffs.
+
+149
+00:06:45,207 --> 00:06:46,790
+In the example I gave before, it would
+
+150
+00:06:46,790 --> 00:06:49,100
+be a space of lower dimensions.
+
+151
+00:06:49,100 --> 00:06:52,762
+Equivalently, the rank of A is less than s,
+
+152
+00:06:52,762 --> 00:06:54,470
+which is the number of independent states
+
+153
+00:06:54,470 --> 00:06:55,260
+of the world.
+
+154
+00:06:55,260 --> 00:06:58,580
+So, intuitively, we need for a complete market
+
+155
+00:06:58,580 --> 00:07:01,010
+to have at least as many securities
+
+156
+00:07:01,010 --> 00:07:02,840
+as there are states in the world.
+
+157
+00:07:02,840 --> 00:07:05,000
+That might not be enough because, if we
+
+158
+00:07:05,000 --> 00:07:07,580
+have a lot of securities, but the securities are really
+
+159
+00:07:07,580 --> 00:07:11,000
+just similar to each other, then they
+
+160
+00:07:11,000 --> 00:07:14,270
+may not generate anything new, but it's certainly necessary.
+
+161
+00:07:14,270 --> 00:07:16,790
+And, if we have fewer securities than states, than
+
+162
+00:07:16,790 --> 00:07:20,470
+we necessarily have an incomplete market.
+

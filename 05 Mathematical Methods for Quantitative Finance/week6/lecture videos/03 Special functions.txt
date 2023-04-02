@@ -1,0 +1,121 @@
+
+PROFESSOR: There are a few functions
+that help summarize some of the results.
+We won't need these for everything we're doing,
+but they are convenient to keep in mind
+and you will see them certainly in the literature.
+The first thing I'd like you to do
+is take a look at this picture that typically we
+see when representing the payoff for a call option
+at expiration.
+If we have a stock of price S and the strike price
+at price K, the price at which the option can be exercised,
+we only exercise if the price is above, say, K is 100,
+S is $120, that means that we can buy a stock for $100
+and sell it for $120 and our profit would be S minus K.
+Or if S is below the strike price,
+we wouldn't exercise it at all.
+That would be a money-losing proposition.
+And the value is 0.
+So this is typically shown in a graph
+like this, where it's flat for low values
+and then it increases linearly above.
+We can rewrite that in terms of the absolute value function
+in a simple way, which you can check.
+It's 1/2 of the absolute value of S minus K plus S minus K. So
+if S is above K, this doubles.
+And if S is below K the absolute value flips the sign of this
+and we get 0.
+The reason I wrote it that way is if I'd like to take--
+consider taking the derivative of this function,
+it's a lot easier in the absolute value form.
+And if you look at the picture, you can see what we have.
+The left for S below K, the slope is 0, the line is flat.
+For S above K, the slope has line--
+the line has slope 1.
+So the first derivative of that function has a name.
+It's called the theta function, or the heavy side function,
+or the step function.
+And its equ-- value is equal to 1 if S is bigger than K.
+And it's equal to 0 if S is less than K. And the value at 0
+depends slightly on how we define it,
+either 0 or sometimes a 1/2.
+We take it as the limiting case.
+But in any event away from the point 0,
+we see that it has this shape.
+What do you think its derivative is?
+Well, its derivative is 0.
+That is the curve is flat on the left and flat on the right.
+It's flat everywhere except at the origin where
+the slope changes infinitely in an infinitesimal period of time
+or in a 0 point of time.
+And, in fact, this defines--
+this-- we can represent something
+called the Dirac delta function that
+has the peculiar property that its 0 everywhere except when
+its argument vanishes.
+There it's equal to infinity.
+But the area under its curve, which
+is infinitely high and of 0 width, is equal to 1.
+Now, it sounds strange.
+But, in fact, one way to represent the delta function
+is as the limit of our friend, our special solution
+to the diffusion equation-- this Gaussian in the limit
+where t goes to 0.
+Now, we've seen that to get our special solution
+and initial conditions that we can
+take a limit of an integral-- change
+variables inside the integral.
+But sometimes we might want to take the limit directly.
+And if we want to do so, this delta function notation--
+thinking of this as the limit of the Gaussian,
+it has these properties where its integral is equal to 1--
+gives us a result sometimes more directly.
+The properties that the delta function
+has that are worth keeping in mind are the following.
+We usually don't look at it on its own.
+In fact, properly speaking, we can only look at it
+in an integral integrated in--
+against another function.
+So one way that we see it is if I
+take delta of x against f of x, gives me f of 0.
+And this is sometimes called a generalized function
+or a functional, which is something that takes functions
+and maps them to real numbers.
+So, in this case, this takes the function f of x.
+And although I've written as an integral,
+I get the value at a particular point.
+The point is not always 0.
+The point is wherever the argument of the delta function
+vanishes.
+So if it's delta of x minus y times
+f of x, that gives me f of y.
+And that is also--
+gives us a way that you'll sometimes
+see for summarizing the rule about the initial conditions
+for our integral form of our general solution
+to our partial differential equation.
+
+If we have inhomogeneous equations where
+we have something that doesn't depend
+on our variable of interest on the right hand side,
+then we can use these functions to generate general solutions
+as well.
+Although the results are a little bit more complicated,
+I've written them down here.
+And we're not going to be doing that right now,
+but you will see them in the same discussions
+of partial differential equations that we've had.
+So you can know the functions that we're looking
+at, the Green's functions-- this exponential--
+this special Gaussian exponential form is of general
+use and it lets us generate overall time-dependent
+solutions where we might have a differential equation with
+some, for example--
+that doesn't depend on p on the right hand side,
+but is some function of z and t on the right hand side.
+And if I ask not what function p sets as equal to 0,
+but what gives me a solution for an arbitrary h,
+then these integral expressions, using my special function here,
+let me generate a solution by doing an integral
+where I have an arbitrary function h.

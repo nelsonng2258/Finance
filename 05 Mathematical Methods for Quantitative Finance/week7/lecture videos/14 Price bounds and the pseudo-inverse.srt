@@ -1,0 +1,740 @@
+0
+00:00:00,000 --> 00:00:01,150
+
+
+1
+00:00:01,150 --> 00:00:03,400
+PROFESSOR: Our basic pricing relationship
+
+2
+00:00:03,400 --> 00:00:06,430
+between security prices and state prices
+
+3
+00:00:06,430 --> 00:00:11,230
+is that s is equal to A transpose psi, or A star psi.
+
+4
+00:00:11,230 --> 00:00:12,710
+This is the adjoint.
+
+5
+00:00:12,710 --> 00:00:16,059
+So A is a payoff matrix where we n securities,
+
+6
+00:00:16,059 --> 00:00:18,490
+and market securities in the world.
+
+7
+00:00:18,490 --> 00:00:22,730
+There are s states of the world that are independent.
+
+8
+00:00:22,730 --> 00:00:26,140
+We can associate a market price with each of the n securities.
+
+9
+00:00:26,140 --> 00:00:27,910
+We associate a state price, and there
+
+10
+00:00:27,910 --> 00:00:30,220
+may be a different number of them, one state
+
+11
+00:00:30,220 --> 00:00:32,049
+price for each state of the world,
+
+12
+00:00:32,049 --> 00:00:34,720
+1, 2, 3, 4, up through s.
+
+13
+00:00:34,720 --> 00:00:36,430
+So the relationship that we expect
+
+14
+00:00:36,430 --> 00:00:39,160
+is that the prices to be consistent
+
+15
+00:00:39,160 --> 00:00:43,420
+need to satisfy that s is equal to A star psi.
+
+16
+00:00:43,420 --> 00:00:47,680
+And there's no arbitrage if and only if the state price
+
+17
+00:00:47,680 --> 00:00:49,880
+vector is strictly positive.
+
+18
+00:00:49,880 --> 00:00:52,720
+So we need the state prices to be positive
+
+19
+00:00:52,720 --> 00:00:55,510
+because each state price corresponds
+
+20
+00:00:55,510 --> 00:01:01,390
+to some portfolio that has a payoff that is either positive,
+
+21
+00:01:01,390 --> 00:01:03,430
+in fact, it specifically positive in one state
+
+22
+00:01:03,430 --> 00:01:05,150
+of the world and 0 in others.
+
+23
+00:01:05,150 --> 00:01:08,770
+So the state prices must be greater than 0 in order
+
+24
+00:01:08,770 --> 00:01:10,690
+to avoid type 2 arbitrage.
+
+25
+00:01:10,690 --> 00:01:12,730
+And they must obey this relationship
+
+26
+00:01:12,730 --> 00:01:15,190
+to be consistent with the security prices.
+
+27
+00:01:15,190 --> 00:01:19,930
+Because the payoff matrix takes securities into payoffs,
+
+28
+00:01:19,930 --> 00:01:22,900
+and therefore A star is what relates
+
+29
+00:01:22,900 --> 00:01:25,870
+how we relate security--
+
+30
+00:01:25,870 --> 00:01:29,630
+excuse me-- state prices back to security prices.
+
+31
+00:01:29,630 --> 00:01:31,990
+So we've seen this for complete markets.
+
+32
+00:01:31,990 --> 00:01:36,040
+And in incomplete markets, there could be multiple solutions.
+
+33
+00:01:36,040 --> 00:01:38,590
+There could be an infinite number of solutions for psi.
+
+34
+00:01:38,590 --> 00:01:42,580
+So if there's at least one solution where psi is always
+
+35
+00:01:42,580 --> 00:01:44,890
+greater than 0, then we're guaranteed
+
+36
+00:01:44,890 --> 00:01:46,360
+that there's no arbitrage.
+
+37
+00:01:46,360 --> 00:01:50,380
+If all the solutions have psi less than or equal to 0,
+
+38
+00:01:50,380 --> 00:01:54,620
+then there will be arbitrage in the marketplace.
+
+39
+00:01:54,620 --> 00:01:57,100
+So it's helpful to diagram these relationships
+
+40
+00:01:57,100 --> 00:01:59,140
+in terms of dual spaces.
+
+41
+00:01:59,140 --> 00:02:02,400
+So I talked before about the left-hand side of the diagram.
+
+42
+00:02:02,400 --> 00:02:05,560
+He said that we have one vector space of portfolios.
+
+43
+00:02:05,560 --> 00:02:08,440
+And in our starting example, this was of dimension four.
+
+44
+00:02:08,440 --> 00:02:10,150
+We had four securities.
+
+45
+00:02:10,150 --> 00:02:12,130
+And we could construct portfolios
+
+46
+00:02:12,130 --> 00:02:15,710
+that are linear combinations of quantities of securities.
+
+47
+00:02:15,710 --> 00:02:18,970
+So each element of a vector in this space
+
+48
+00:02:18,970 --> 00:02:22,570
+represent how many of each kind of security we have.
+
+49
+00:02:22,570 --> 00:02:25,570
+There's another space of identical dimension
+
+50
+00:02:25,570 --> 00:02:27,260
+of security prices.
+
+51
+00:02:27,260 --> 00:02:29,410
+And, in this case, there's one price
+
+52
+00:02:29,410 --> 00:02:31,750
+associated with each security.
+
+53
+00:02:31,750 --> 00:02:33,820
+Now, we have a vector, excuse me,
+
+54
+00:02:33,820 --> 00:02:38,650
+we have a matrix A, the payoff matrix, that maps portfolios,
+
+55
+00:02:38,650 --> 00:02:40,750
+it acts on portfolios.
+
+56
+00:02:40,750 --> 00:02:43,930
+It's a linear transformation, and it produces eigenvectors
+
+57
+00:02:43,930 --> 00:02:46,240
+of a different dimension, which I've drawn over here
+
+58
+00:02:46,240 --> 00:02:49,600
+in this other vector space, that's the space of payoffs
+
+59
+00:02:49,600 --> 00:02:51,790
+of some different dimension s.
+
+60
+00:02:51,790 --> 00:02:57,490
+So A acting on x gives us a payoff b.
+
+61
+00:02:57,490 --> 00:03:00,610
+If we want to know the price of a portfolio x,
+
+62
+00:03:00,610 --> 00:03:03,040
+we act on it with the security price
+
+63
+00:03:03,040 --> 00:03:07,840
+vector s by taking a row vector of s times a column vector x.
+
+64
+00:03:07,840 --> 00:03:10,330
+And now we see we can do exactly the same thing
+
+65
+00:03:10,330 --> 00:03:11,690
+in terms of payoffs.
+
+66
+00:03:11,690 --> 00:03:16,210
+If I've got a payoff matrix b, maybe I know the portfolio it
+
+67
+00:03:16,210 --> 00:03:17,650
+came from, maybe I don't.
+
+68
+00:03:17,650 --> 00:03:20,080
+But if I've got a payoff matrix b,
+
+69
+00:03:20,080 --> 00:03:22,360
+then I know what its price has to be
+
+70
+00:03:22,360 --> 00:03:24,380
+by acting with state prices.
+
+71
+00:03:24,380 --> 00:03:26,870
+So the state prices might take a row vector.
+
+72
+00:03:26,870 --> 00:03:29,410
+I act on the payoffs b as a column vector.
+
+73
+00:03:29,410 --> 00:03:31,450
+And that also gives me the price,
+
+74
+00:03:31,450 --> 00:03:33,280
+and those prices need to match.
+
+75
+00:03:33,280 --> 00:03:37,000
+In order for that to hold it has to be the A transpose, which
+
+76
+00:03:37,000 --> 00:03:39,550
+is the matrix which takes me from state
+
+77
+00:03:39,550 --> 00:03:42,790
+prices back to security prices has
+
+78
+00:03:42,790 --> 00:03:47,170
+to give us a relationship that s is equal to A star psi.
+
+79
+00:03:47,170 --> 00:03:50,200
+And then we'll have a consistent set of pricing relationships.
+
+80
+00:03:50,200 --> 00:03:52,240
+Why do we bother going through all this?
+
+81
+00:03:52,240 --> 00:03:54,250
+Because we know what no arbitrage looks
+
+82
+00:03:54,250 --> 00:03:56,360
+like on the right side of the diagram.
+
+83
+00:03:56,360 --> 00:03:57,850
+We don't know necessarily what it
+
+84
+00:03:57,850 --> 00:03:59,710
+looks like on the left side of the diagram.
+
+85
+00:03:59,710 --> 00:04:01,502
+Because that's just however the marketplace
+
+86
+00:04:01,502 --> 00:04:03,580
+happened to be described, whatever the securities
+
+87
+00:04:03,580 --> 00:04:07,090
+are, options, bonds, stocks, many different states
+
+88
+00:04:07,090 --> 00:04:07,780
+of the world.
+
+89
+00:04:07,780 --> 00:04:09,790
+But the right-hand side is very clear.
+
+90
+00:04:09,790 --> 00:04:12,220
+The right-hand side, there's one state for--
+
+91
+00:04:12,220 --> 00:04:15,100
+there's one dimension for each state of the world.
+
+92
+00:04:15,100 --> 00:04:17,350
+The state prices have to be positive.
+
+93
+00:04:17,350 --> 00:04:20,470
+We have a natural association of what the basis vectors are,
+
+94
+00:04:20,470 --> 00:04:22,860
+and therefore we can build up any payoff
+
+95
+00:04:22,860 --> 00:04:25,570
+or linear combinations and immediately determine
+
+96
+00:04:25,570 --> 00:04:26,665
+no arbitrage prices.
+
+97
+00:04:26,665 --> 00:04:30,340
+
+
+98
+00:04:30,340 --> 00:04:32,020
+Here's an example.
+
+99
+00:04:32,020 --> 00:04:36,700
+Suppose we're given market with payoff matrix
+
+100
+00:04:36,700 --> 00:04:40,890
+A and a particular price vector s.
+
+101
+00:04:40,890 --> 00:04:45,160
+So is there arbitrage in this market?
+
+102
+00:04:45,160 --> 00:04:48,300
+Well, A is an invertible, but there
+
+103
+00:04:48,300 --> 00:04:51,390
+is a pseudo-inversion, which is a standard construction
+
+104
+00:04:51,390 --> 00:04:52,800
+in linear algebra.
+
+105
+00:04:52,800 --> 00:04:54,810
+And let me just show you how it works.
+
+106
+00:04:54,810 --> 00:04:57,390
+That if we construct this quantity,
+
+107
+00:04:57,390 --> 00:05:01,830
+AA transpose inverse times A, this
+
+108
+00:05:01,830 --> 00:05:03,720
+satisfies the interesting property
+
+109
+00:05:03,720 --> 00:05:06,570
+that if I multiply by A transpose
+
+110
+00:05:06,570 --> 00:05:09,540
+on the right-hand side as I do over here,
+
+111
+00:05:09,540 --> 00:05:11,460
+I get the identity matrix.
+
+112
+00:05:11,460 --> 00:05:13,470
+It's a 3-by-3 identity matrix.
+
+113
+00:05:13,470 --> 00:05:17,440
+It's not a 4-by-4, which would be the normal invertible case.
+
+114
+00:05:17,440 --> 00:05:21,000
+So it's not exactly invertible, but the pseudo-inverse
+
+115
+00:05:21,000 --> 00:05:22,920
+can act on a particular subspace.
+
+116
+00:05:22,920 --> 00:05:25,740
+And you can check that that's true here.
+
+117
+00:05:25,740 --> 00:05:28,290
+In terms of the pseudo-inverse, now I
+
+118
+00:05:28,290 --> 00:05:31,410
+have a chance of taking a look and finding a solution
+
+119
+00:05:31,410 --> 00:05:32,980
+for the state price vector.
+
+120
+00:05:32,980 --> 00:05:36,030
+If I take a look, if I act with the pseudo-inverse,
+
+121
+00:05:36,030 --> 00:05:40,350
+this 3-by-4 matrix, and I act on the state price
+
+122
+00:05:40,350 --> 00:05:44,580
+s, then I get this vector, which has positive numbers, which
+
+123
+00:05:44,580 --> 00:05:46,000
+is a good sign.
+
+124
+00:05:46,000 --> 00:05:47,440
+And how do we check?
+
+125
+00:05:47,440 --> 00:05:50,790
+Well, we can check that this satisfies the pricing equation
+
+126
+00:05:50,790 --> 00:05:54,090
+by acting on the left with A transpose.
+
+127
+00:05:54,090 --> 00:05:58,230
+And A transpose acting on the left, acting on psi,
+
+128
+00:05:58,230 --> 00:06:01,110
+gives us our original pricing vector.
+
+129
+00:06:01,110 --> 00:06:04,620
+So that's the sense in which M is a pseudo-inverse.
+
+130
+00:06:04,620 --> 00:06:08,070
+Because if we multiply on the right by A star,
+
+131
+00:06:08,070 --> 00:06:10,140
+it gives us this identity.
+
+132
+00:06:10,140 --> 00:06:14,820
+And this helps us in this case solve for what the state price
+
+133
+00:06:14,820 --> 00:06:15,720
+vectors are.
+
+134
+00:06:15,720 --> 00:06:18,390
+We find that the state price vectors are positive,
+
+135
+00:06:18,390 --> 00:06:20,490
+and therefore there's no arbitrage.
+
+136
+00:06:20,490 --> 00:06:23,800
+
+
+137
+00:06:23,800 --> 00:06:25,210
+What other prices are allowed?
+
+138
+00:06:25,210 --> 00:06:27,470
+Well, that was a particular value.
+
+139
+00:06:27,470 --> 00:06:32,590
+Suppose I let the third security price vary, and I let it be x.
+
+140
+00:06:32,590 --> 00:06:36,340
+So, in that case, we can use our pseudo-inverse
+
+141
+00:06:36,340 --> 00:06:38,170
+to solve this problem, as well.
+
+142
+00:06:38,170 --> 00:06:42,020
+We have psi is equal to n acting on s, the prices.
+
+143
+00:06:42,020 --> 00:06:44,630
+And now we notice that it has this form.
+
+144
+00:06:44,630 --> 00:06:46,810
+Now, it's going to depend on x, it's
+
+145
+00:06:46,810 --> 00:06:48,370
+a set of linear combinations.
+
+146
+00:06:48,370 --> 00:06:50,860
+But now we need to impose the condition.
+
+147
+00:06:50,860 --> 00:06:53,050
+Before, for a particular value of x
+
+148
+00:06:53,050 --> 00:06:55,510
+that I had on the previous slide, it just checked.
+
+149
+00:06:55,510 --> 00:06:57,600
+And all the state prices were positive.
+
+150
+00:06:57,600 --> 00:06:59,980
+But now the state prices are a function of x.
+
+151
+00:06:59,980 --> 00:07:02,470
+We need to check, we need to enforce
+
+152
+00:07:02,470 --> 00:07:05,290
+that all of these components of this matrix--
+
+153
+00:07:05,290 --> 00:07:08,120
+excuse me, of this vector, be positive.
+
+154
+00:07:08,120 --> 00:07:09,250
+So let's do that.
+
+155
+00:07:09,250 --> 00:07:11,980
+2x minus 1 has to be greater than 0.
+
+156
+00:07:11,980 --> 00:07:14,800
+That implies it has to be bigger than a 1/2.
+
+157
+00:07:14,800 --> 00:07:17,870
+Minus 4x plus 3 is 3 greater than 0.
+
+158
+00:07:17,870 --> 00:07:21,200
+That tells us that x has to be less than 3/4.
+
+159
+00:07:21,200 --> 00:07:24,340
+So we have that x is between a 1/2 and 3/4.
+
+160
+00:07:24,340 --> 00:07:26,122
+And we noticed the third condition
+
+161
+00:07:26,122 --> 00:07:27,580
+is the same as the first condition.
+
+162
+00:07:27,580 --> 00:07:29,320
+It doesn't give us anything new.
+
+163
+00:07:29,320 --> 00:07:32,890
+So if x is anywhere between a 1/2 and 3/4,
+
+164
+00:07:32,890 --> 00:07:37,730
+that's an allowed security price that will not allow arbitrage.
+
+165
+00:07:37,730 --> 00:07:42,860
+So if x is equal to 0.7, we would get a state price
+
+166
+00:07:42,860 --> 00:07:45,320
+vector 0.4, 0.2, 0.4.
+
+167
+00:07:45,320 --> 00:07:48,530
+All of those values are positive, and we're OK.
+
+168
+00:07:48,530 --> 00:07:49,770
+We're in good shape.
+
+169
+00:07:49,770 --> 00:07:52,890
+There's no arbitrage.
+
+170
+00:07:52,890 --> 00:07:55,990
+Suppose we let another price vary.
+
+171
+00:07:55,990 --> 00:08:01,000
+So we had one price fixed, the first price of the bond fixed
+
+172
+00:08:01,000 --> 00:08:02,430
+so we could scale things.
+
+173
+00:08:02,430 --> 00:08:05,180
+We had the fourth price fixed by no arbitrage,
+
+174
+00:08:05,180 --> 00:08:06,720
+I have type two arbitrage.
+
+175
+00:08:06,720 --> 00:08:09,940
+We let the third price vary, now let's let the final price vary.
+
+176
+00:08:09,940 --> 00:08:13,620
+Now we've got two parameters to solve for, x and y.
+
+177
+00:08:13,620 --> 00:08:15,420
+And we have a range of prices.
+
+178
+00:08:15,420 --> 00:08:19,320
+And for each value of x and y we have a different possible state
+
+179
+00:08:19,320 --> 00:08:21,450
+price vector, which will be given
+
+180
+00:08:21,450 --> 00:08:23,880
+by this linear combination of assets.
+
+181
+00:08:23,880 --> 00:08:27,510
+And now we need to ask, what values of x and y
+
+182
+00:08:27,510 --> 00:08:29,830
+keep us from having arbitrage?
+
+183
+00:08:29,830 --> 00:08:32,700
+That's in terms of state prices, and will automatically
+
+184
+00:08:32,700 --> 00:08:37,260
+tell us what are the allowed prices in the marketplace.
+

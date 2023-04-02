@@ -1,0 +1,178 @@
+
+PROFESSOR: The quantity V satisfies a differential
+equation that's very similar to the Black-Scholes equation.
+The prefactor we put in front, the e to the minus rt minus t,
+the discounting factor adds an extra term minus rV
+when we take time partials with respect to it.
+One partial acts on the prefactor,
+the other partial acts on the function
+V, and we can cancel out an overall prefactor
+in the equation.
+So the equation that's satisfied by V
+looks very similar to Black-Scholes,
+except there's a mu here.
+And what we ought to have is an r where we see a mu.
+Now, V would satisfy the Black-Scholes equation
+if instead it were based on this Ito process.
+dS equals rSdt plus sigma SdB.
+That is, if we changed the drift rate
+and replaced it by the risk-free rate,
+then the equation would be Black-Scholes.
+And what that means is that if we
+want to solve the Black-Scholes equation, what we can do
+is take the expression we wrote down for V, everywhere where
+we see mu, cancel it out and replace it
+by r, and that's going to satisfy this differential
+equation.
+Now, there's a reason for this that we're not driving here,
+but you'll see it in the finance portion of the MicroMasters
+course.
+And what you'll see is that this is called risk-neutral pricing.
+Risk neutral you can think of as meaning that there's
+no particular compensation for risk,
+that all assets under risk-neutral pricing
+and under risk-neutral probabilities
+grow at the risk-free rate.
+So under this assumption that we're using the risk-neutral
+measure, sometimes called Q-measure,
+and that the Ito process evolves not with a real-world value mu,
+but with this fictitious drift rate r--
+under that set of assumptions, then we
+can find a solution to the Black-Scholes equation.
+And we know that the V that we wrote down before
+solves that, provided we make that substitution.
+And here is the relationship that we have
+that V must satisfy.
+The e to the minus rt times V at S of t at an earlier time
+is equal to the expectation of e to the minus r big T
+at a later time of the value of the function evaluated
+at that later time, where this expectation is taken
+by averaging over the probabilities
+for all possible values of ST at future time
+big T under the probability density that is not
+the real-world one with mu, but the risk-neutral one
+where r has replaced mu.
+
+So there are two ways that we can get Black-Scholes equations
+doing this.
+One of them is we can do the integral.
+The other way is we can evaluate that expectation
+that we wrote down.
+So the Monte Carlo techniques, which
+we'll see a little bit later, involve
+taking that expected value and replacing it
+by an arithmetical average instead of theoretically
+computing the weighted average of all possible outcomes
+for all possible price evolutions.
+Under this risk-control measure, we'll compute a set of them,
+a large number of them, and we'll take an average.
+The other way is we just plug in and do some integrals.
+That is, we already have the probability density functions,
+so let's compute V from the integral formula
+that we wrote down.
+We can think of V as being an expectation over terminal
+values.
+But in the end, we just have some integrals to do.
+So let's take a look at an example where, for instance,
+we think of a call option with strike price K at time big T,
+and we're at time little t currently.
+Well, V of St in the present--
+that should be a big S--
+is going to be the probability density times the terminal
+value.
+And when we substitute in our definitions
+for our specific payoff that we want,
+we get this integral expression here, which we can do.
+And we can take x and x prime, which
+were logarithmic variables from our original change
+in variables, and change them back and do the integral.
+Or to be more explicit, we can write
+this formula using our results.
+So the full risk-neutral probability distribution
+when we change back from logarithmic variables
+to s where x was log s and we change back,
+we have this expression down here
+is just the probability density.
+It looks pretty big and ugly, but that's because
+of our changes of variables.
+This really is everything that we
+began with for the basic probability
+density for a set of random walks
+with a drift coefficient mu.
+Now, this is a Gaussian probability density.
+We're going to do a Gaussian integral.
+This piece here is the exponential weighting
+from the discounted present value.
+And then for my payoff function, I'm going to put in S minus K.
+And it's easier to do the integral
+if we work in exponential variables
+and try to have these logarithms inside the integral.
+So a change of variables is helpful here.
+We can go from this exact result.
+By letting x equal log S, we have this.
+Recognize this is in a Gaussian form.
+And let's take a look at three features.
+The first feature is like in our barrier case,
+we have a lower limit of integration.
+If the stock price is below K, there's no value,
+there's no contribution.
+The payoff function is 0.
+If we're above the strike price, there are two.
+Terms there's S minus K. So we can do two different intervals.
+The second one is easy.
+K is just a constant.
+It comes outside.
+And this is going to give us something in phi.
+It's going to give us a cumulative distribution
+function because I have just e to the minus x
+squared over 2 in the appropriate units integrated
+from something to infinity.
+So that's going to give me something
+in phi, where phi, as usual, is defined in this way.
+And the other term is not much harder.
+Because this is e to the x prime,
+I complete the square in the exponent, do the integrals,
+and I'll get another function phi.
+So the result of plugging this in and changing back
+the variables is we get the Black-Scholes solution, S times
+phi evaluated at argument I'll call d plus.
+In literature, these are often called d1 in d2.
+I like to write them as d plus and d minus.
+But I have one term in d plus minus the present value
+of the strike price Ke to the minus r T minus t times
+phi of d minus.
+So the definition of d plus and d minus,
+they really just come from changing
+variables in the integral and looking
+at the limits of integration.
+In this case, d plus or minus is this first expression
+plus or minus 1/2 sigma squared root of T.
+And this first expression does have
+an interesting interpretation.
+So the logarithms are-- because it's
+price changes and relative returns on stocks
+that matter more than price levels, the ratio
+that we see here is the ratio of the stock price
+S, the current price, to the present value
+of the strike price.
+Or we could turn it around and ask about the forward value
+of the stock price relative to the strike price, which would
+be what we'd see at expiration.
+So this numerator is a measure of how far
+we are in or out of the money.
+If S is larger than the denominator,
+the logarithm is going to be the logarithm of a number that's
+bigger than 1.
+And if it's below, it will be the logarithm
+of a number that's less than 1, which
+will be a negative number.
+And it'll be 0 if the function-- not if it's not the money,
+not if S is equal to K, but if it's at the money forward
+and if that ratio inside the logarithm should vanish.
+So that's a measure of how far away
+we are from the at the money forward value.
+And the denominator, the sigma over square root
+of T minus t, that's telling us how far the stock
+price, or the log stock price more
+precisely would be expected to diffuse given the volatility
+sigma and the time remaining until expiration.

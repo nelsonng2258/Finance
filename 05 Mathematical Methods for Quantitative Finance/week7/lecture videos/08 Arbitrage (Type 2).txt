@@ -1,0 +1,58 @@
+
+PROFESSOR: So the answer in this case
+is yes, provided that S2 is bigger than S1.
+In that case, we'll have a positive price
+for this portfolio.
+And there's no contradiction.
+The problem here was that the stock stochastically
+dominates the bond we say in technical terms.
+Or, in common sense, the stock is always
+better than or equal to the bond in each state of the world.
+No matter what the possible outcome is,
+the stock is as good or better.
+It has a payoff equal to or greater than that of the bond.
+So its price must be higher.
+That's a very easy case to consider.
+
+Type II arbitrage, in contrast to type I arbitrage,
+is a case where there are redundant assets.
+And, in this case, that means that there
+are non-trivial solutions to the payoff matrix equation,
+Ax equals 0.
+That means that A is less than the rank S.
+And it means that there's a non-trivial kernel
+to the matrix A.
+So type II arbitrage says that, if there's
+a portfolio with zero payoff, then it has a non-zero price.
+So our previous example, in type I,
+we could get something for nothing.
+And, in this case, you get nothing for something.
+So all that's required for type II arbitrage
+is that a portfolio that has zero payoff
+has a non-zero price.
+And we don't even care whether it's
+a positive or a negative price because we
+could go long or short, whichever sign we
+need to make money for free.
+That is we're going to collect money
+by selling a portfolio that has no payoffs at all.
+And we can get money in the present.
+Again, that's the kind of thing that shouldn't really
+be allowed in a well functioning,
+properly set up security market.
+So let's take a look at an example.
+In this case, let's go back to our original payoff
+matrix example A. And let's consider this portfolio--
+1, 2, 1, 5-- so one bond, two shares
+of stock, and six call options of the different strikes.
+And consider-- so that's my pricing vector.
+And then consider this particular portfolio.
+Well, A acting on this portfolio,
+because the last security is a redundant security,
+this has zero payoff, but it has a non-zero price.
+That means it permits arbitrage.
+What we expect to have to avoid arbitrage
+is that, if the payoff is zero, the price must be zero.
+Violating that is type II arbitrage.
+So can we change the prices so that we could avoid arbitrage
+in this market?
