@@ -1,0 +1,121 @@
+PROFESSOR: Now that we've reviewed risk-neutral pricing,
+let's close the recitation by reviewing
+dynamic replication or the replicating portfolio approach.
+As discussed by Professor Lucas in the week 4 lecture,
+the replicating portfolio approach to pricing an option
+should imply the exact same price
+as the risk-neutral pricing approach that we just reviewed.
+In a multi-period setting, however,
+constructing the replicating portfolio
+may be a cumbersome procedure.
+As an example, consider a stock price
+that evolves according to the binomial tree below.
+At time T equals 0, the stock price is $50.
+At time T equals 1, the stock price
+is $70 in the up node and $35 in the down node.
+And now we add a third period, time T
+equals 2, where the stock price is $100 in the up-up node,
+50 in either the up-down or the down-up node,
+or 25 in the down-down node.
+Using the replicating portfolio approach,
+we can price a call option with maturity,
+T equals 2 and strike price, K equals $50 in five steps.
+In the first step, determine the payoffs
+from the call option at each node of the tree at t
+equals 2, that is, working backwards.
+Well, let C2,uu be the payoff of the call option in the up-up
+node at time T equals 2, C2,ud which is the same as C2,du be
+the payoffs in the up-down and down-up nodes,
+and C2,dd be the payoff in the down-down node.
+Since the strike price of the call option is $50,
+the payoff of the call option in the up-up node is $50.
+In the up-down or down-up node, it's $0.
+And similarly, in the down-down node, it's also $0.
+In step 2, we can find the position delta
+to invest in stocks in our replicating portfolio
+at each node of the tree at T equals 1.
+At T equals 1, the delta in the up node, which is Delta 1,u,
+is equal to the difference between the payoff of the call
+option in the up-up node and the payoff of the call option
+in the up-down node, divided by the price of the stock at time
+T equals 2 in the up-up node and the price of the stock at time
+T equals 2 in the up-down node, which is equal to 50 minus 0
+divided by 100 minus 50, which is equal to 1 in the up node.
+So we invest all of our replicating portfolio in stocks
+at time T equals 1 in the up node.
+A similar calculation for delta at time T
+equals 1 in the down node shows that our delta is
+equal to 0 in the down node.
+So we invest none of our portfolio in stocks
+in the down node at time T equals 1.
+In step 3, we can find the amount
+of risk-free bonds in our replicating portfolio
+at each node of the tree at time T equals 1.
+We'll recall from the week 4 lecture notes
+that once we know the deltas at time T equals 1 in both the
+up node and the down node, it's very easy
+to compute the amount of risk-free bonds
+that we invest in.
+For example, in the up node at time T equals 1,
+the number of risk-free bonds that we purchase is
+equal to the negative of the exponential
+of the negative risk-free rate times the sum of the negative
+of the value of the call option at time
+T equals 2 in the up-up node plus the delta at time T
+equals 1 in the up node times the stock price at time T
+equals 2 in the up-up node.
+This is like the dollar size of our position
+in the stock at time T equals 1 in the up node, which, overall,
+equals negative 44.7917 in the up node at time T equals 1.
+That is a short position of 44.7917 units
+in the risk-free bond at time T equals 1 in the up node,
+and a similar calculation shows that we
+invest nothing in risk-free bonds in the down node at time
+T equals 1.
+In step 4, we can find the value of a replicating portfolio
+at each node of the tree at time T
+equals 1, which, by no-arbitrage, is also
+the value of the call option at each node.
+Well, the value of the replicating portfolio
+slash call option at time T equals
+1, for instance for the up node, is just
+the sum of the value of our stock portfolio at time
+T equals 1 plus the value of our bond portfolio at time
+T equals 1 in the up node, which is equal to 25.2083.
+A similar calculation for the down node
+shows that the value of the replicating portfolio or call
+option in the down node at time T equals 1 is equal to $0.
+There were certainly a lot of equations
+to keep track of in the first four steps.
+So an easy way of summarizing what we've done so far
+is to replicate the binomial tree.
+But now, in addition to the value
+of the stock at each node, I've also
+included the delta of the replicating portfolio
+at each node, the value of the investment
+in the risk-free bonds at each node,
+and, finally, the value of the call option or replicating
+portfolio at each node at both T equals 1 and T equals 2.
+In our fifth and final step, we simply repeat steps 2
+through 4 for the T equals 0 node.
+In other words, we find the delta
+of our replicating portfolio for the T equals 0 node,
+we find our investment in risk-free bonds
+of our replicating portfolio for the T equals 0 node,
+and we find the value of our replicating portfolio for the T
+equals 0 node, equivalently, the value of our call option,
+by using the fact that the value of the call option at time T
+equals 1 in the up node is equal to 25.2083 and is equal to 0
+in the down node at time T equals 1.
+The binomial tree below summarizes step 5.
+In particular, the delta at time T equals 0 is equal to 0.7202.
+The investment in risk-free bonds at time T
+equals 0 is equal to negative 22.5824.
+That is, we short 22.5824 of risk-free bonds
+in a replicating portfolio.
+And the value of a replicating portfolio at time T
+equals 0, equivalently, the value of our call option,
+is equal to 13.4294.
+Well, that wraps up week 4 recitation.
+Thank you everyone for coming, and I look forward
+to seeing all of you next week.

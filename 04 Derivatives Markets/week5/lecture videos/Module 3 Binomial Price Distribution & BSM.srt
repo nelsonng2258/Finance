@@ -1,0 +1,380 @@
+0
+00:00:00,000 --> 00:00:01,992
+
+
+1
+00:00:01,992 --> 00:00:03,660
+PROFESSOR: To see the relationship
+
+2
+00:00:03,660 --> 00:00:06,600
+between the binomial model and the Black-Scholes-Merton model,
+
+3
+00:00:06,600 --> 00:00:09,930
+it's necessary to understand the probability distribution
+
+4
+00:00:09,930 --> 00:00:13,560
+of stock prices at the terminal time, cap T, implied
+
+5
+00:00:13,560 --> 00:00:16,280
+by the binomial model.
+
+6
+00:00:16,280 --> 00:00:18,350
+Clearly, for some of the nodes there
+
+7
+00:00:18,350 --> 00:00:21,260
+are many different paths through the tree that land there.
+
+8
+00:00:21,260 --> 00:00:24,050
+And for others, there are few, or even just one way,
+
+9
+00:00:24,050 --> 00:00:26,400
+to get there.
+
+10
+00:00:26,400 --> 00:00:28,710
+There are n + 1 nodes at maturity
+
+11
+00:00:28,710 --> 00:00:35,100
+on an n-step tree, indexed by j equals 0 through n.
+
+12
+00:00:35,100 --> 00:00:38,790
+The top node can be reached only along the path
+
+13
+00:00:38,790 --> 00:00:41,640
+where there are n ups, and no downs.
+
+14
+00:00:41,640 --> 00:00:50,720
+So if n were equal to 3, we would have n up, up, up
+
+15
+00:00:50,720 --> 00:00:52,450
+and that would be the only way to keep
+
+16
+00:00:52,450 --> 00:00:53,590
+on going up in the tree.
+
+17
+00:00:53,590 --> 00:00:56,230
+
+
+18
+00:00:56,230 --> 00:01:00,800
+The next node down can be reached in several ways.
+
+19
+00:01:00,800 --> 00:01:06,490
+It can be reached with any path with two ups and one down.
+
+20
+00:01:06,490 --> 00:01:19,330
+So we could go down, up, up, or we could go up, down, up,
+
+21
+00:01:19,330 --> 00:01:27,290
+or we could go up, up, down, and get to this node.
+
+22
+00:01:27,290 --> 00:01:29,600
+Continuing in this way, the bottom node
+
+23
+00:01:29,600 --> 00:01:33,750
+can only be reached, again, in one way, with three downs:
+
+24
+00:01:33,750 --> 00:01:36,110
+down, down, down.
+
+25
+00:01:36,110 --> 00:01:39,770
+
+
+26
+00:01:39,770 --> 00:01:43,040
+The mathematical formula that summarizes that information
+
+27
+00:01:43,040 --> 00:01:45,860
+on the risk-neutral probability of reaching each node j,
+
+28
+00:01:45,860 --> 00:01:49,625
+at time cap T, is given by the formula that we have here.
+
+29
+00:01:49,625 --> 00:01:53,100
+
+
+30
+00:01:53,100 --> 00:01:57,360
+The inputs are the risk-neutral probability of an up,
+
+31
+00:01:57,360 --> 00:02:03,800
+q* and the number of nodes on the tree.
+
+32
+00:02:03,800 --> 00:02:08,120
+The exclamation points stand for factorials,
+
+33
+00:02:08,120 --> 00:02:10,669
+which are the product of a sequence of increasing
+
+34
+00:02:10,669 --> 00:02:11,690
+integers.
+
+35
+00:02:11,690 --> 00:02:17,570
+For example, 3 factorial is 1 times 2 times 3.
+
+36
+00:02:17,570 --> 00:02:22,580
+By convention, 0 factorial equals 1.
+
+37
+00:02:22,580 --> 00:02:24,740
+Some of you may recognize this formula
+
+38
+00:02:24,740 --> 00:02:27,245
+as arising directly from the binomial theorem.
+
+39
+00:02:27,245 --> 00:02:30,380
+
+
+40
+00:02:30,380 --> 00:02:33,890
+The trees down here has the complete set of stock price
+
+41
+00:02:33,890 --> 00:02:37,730
+outcomes and the associated probabilities at the final time
+
+42
+00:02:37,730 --> 00:02:40,160
+on a three-step tree.
+
+43
+00:02:40,160 --> 00:02:43,020
+It also shows the formulas, in this case,
+
+44
+00:02:43,020 --> 00:02:47,930
+that generate the probabilities at the top two nodes.
+
+45
+00:02:47,930 --> 00:02:50,900
+As a number of steps gets large, one
+
+46
+00:02:50,900 --> 00:02:54,110
+can prove that the distribution of stock price outcomes
+
+47
+00:02:54,110 --> 00:02:58,270
+converges to a log-normal distribution.
+
+48
+00:02:58,270 --> 00:03:01,150
+This graph plots the probability distribution
+
+49
+00:03:01,150 --> 00:03:06,330
+for the stock price on a tree with 250 steps,
+
+50
+00:03:06,330 --> 00:03:11,610
+T equals 1, and an initial stock price of 100.
+
+51
+00:03:11,610 --> 00:03:15,360
+The possible stock price outcomes are on the x-axis,
+
+52
+00:03:15,360 --> 00:03:17,670
+and the probabilities of those different outcomes
+
+53
+00:03:17,670 --> 00:03:18,420
+are on the y-axis.
+
+54
+00:03:18,420 --> 00:03:21,110
+
+
+55
+00:03:21,110 --> 00:03:25,820
+If we take the log of each of those 250 price observations
+
+56
+00:03:25,820 --> 00:03:29,720
+and plot the outcomes against the probability of each,
+
+57
+00:03:29,720 --> 00:03:32,900
+we get the figure shown here.
+
+58
+00:03:32,900 --> 00:03:35,180
+It's possible to prove mathematically
+
+59
+00:03:35,180 --> 00:03:37,920
+that in the limit as n goes to infinity,
+
+60
+00:03:37,920 --> 00:03:40,220
+this is the normal density function,
+
+61
+00:03:40,220 --> 00:03:44,120
+with mean and standard deviations at time cap T,
+
+62
+00:03:44,120 --> 00:03:47,100
+given by these equations.
+
+63
+00:03:47,100 --> 00:03:53,130
+We have the mean, and we have the standard deviation.
+
+64
+00:03:53,130 --> 00:03:56,400
+You can see that the results from the binomial tree
+
+65
+00:03:56,400 --> 00:04:01,830
+are indistinguishable, with 250 steps, from those calculated
+
+66
+00:04:01,830 --> 00:04:04,395
+using the formula for the normal density directly.
+
+67
+00:04:04,395 --> 00:04:09,290
+
+
+68
+00:04:09,290 --> 00:04:12,260
+What we can conclude from this graphical analysis
+
+69
+00:04:12,260 --> 00:04:14,210
+is that the probability distribution
+
+70
+00:04:14,210 --> 00:04:16,910
+of the log of the stock price at time cap T,
+
+71
+00:04:16,910 --> 00:04:19,700
+implied by the binomial tree, is the same
+
+72
+00:04:19,700 --> 00:04:22,480
+as the normal distribution.
+
+73
+00:04:22,480 --> 00:04:25,540
+We also know that we can price a call option in the usual
+
+74
+00:04:25,540 --> 00:04:30,070
+risk-neutral way, which is actually equivalent to finding
+
+75
+00:04:30,070 --> 00:04:33,640
+the risk-neutral probability of each terminal node --
+
+76
+00:04:33,640 --> 00:04:37,320
+which we'll call capital Q* --
+
+77
+00:04:37,320 --> 00:04:43,280
+using that probability weight for the payoff on that node,
+
+78
+00:04:43,280 --> 00:04:47,615
+and discounting it back to time 0 at the risk-free rate.
+
+79
+00:04:47,615 --> 00:04:50,210
+
+
+80
+00:04:50,210 --> 00:04:54,240
+I want to turn back to the fact that, in the limit,
+
+81
+00:04:54,240 --> 00:04:58,700
+S sub T is log-normally distributed.
+
+82
+00:04:58,700 --> 00:05:04,840
+We'll call f of S sub T the log-normal distribution of T,
+
+83
+00:05:04,840 --> 00:05:12,180
+with mean mu of T, and standard deviation, sigma of T.
+
+84
+00:05:12,180 --> 00:05:16,410
+In the limit, the formula for the value of the call option,
+
+85
+00:05:16,410 --> 00:05:22,260
+based on the summation in the first equation here,
+
+86
+00:05:22,260 --> 00:05:26,610
+converges to the integral we've written down here.
+
+87
+00:05:26,610 --> 00:05:29,670
+
+
+88
+00:05:29,670 --> 00:05:35,300
+It turns out that the bottom integral is mathematically
+
+89
+00:05:35,300 --> 00:05:37,910
+equivalent to the Black-Scholes-Merton formula
+
+90
+00:05:37,910 --> 00:05:41,690
+for pricing a European call option.
+
+91
+00:05:41,690 --> 00:05:44,510
+Therefore, we've informally shown that the binomial tree
+
+92
+00:05:44,510 --> 00:05:47,450
+model converges to the Black-Scholes-Merton model
+
+93
+00:05:47,450 --> 00:05:51,610
+as the number of steps on the tree goes to infinity.
+
+94
+00:05:51,610 --> 00:05:53,000
+
+

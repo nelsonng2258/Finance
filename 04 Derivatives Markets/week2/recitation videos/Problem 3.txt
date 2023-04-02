@@ -1,0 +1,184 @@
+
+PROFESSOR: Now that we've had an example of a futures contract,
+let's finish up the recitation with one final problem
+about swaps.
+In this case, we have a currency swap with a remaining
+life of 15 months.
+The swap involves exchanging interest
+at 10% on 20 million pounds for interest
+at 6% on $30 million US dollars once a year.
+The term structure of risk-free interest rates in the United
+Kingdom is flat at 7%, and the term structure
+of risk-free rates in the United States is flat at 4%.
+Both of these interest rates are with annual compounding.
+The current exchange rate is 1.55 dollars
+per pound sterling.
+In part A we are asked, what is the value
+of the swap to the party paying sterling,
+equivalently receiving dollars?
+Well, before we begin solving this question,
+we should first note that the swap involves
+exchanging the sterling interest of 20 times 10%, which
+equals 2 million pounds for the dollar
+interest of $30 times 6%, which equals $1.8 million.
+And of course, with any currency swap,
+the principal amounts are also exchanged
+at the swap's terminal date.
+So there's an easy way to solve this question,
+and there's a hard way to solve this question.
+I thought in part A, we would start with the easy way
+to solve this question-- the so-called bond valuation
+method.
+The key here is to notice that the cash flows of the swap
+are identical to those of a coupon bond.
+The value of the sterling bond underlying the swap
+is as follows.
+It's the sum of the 2 million pounds of interest received
+three months into the 15 month period discounted
+at the constant 7% interest rate, plus the sum of the 2
+million pounds interest plus the 20 million
+pound principal amount received 15 months later,
+discounted at the 7% constant risk-free rate,
+which is equal to 22.182 million pounds.
+Similarly, the value of the dollar bond underlying the swap
+is also the sum of two terms.
+In the first term, we have $1.8 million interest,
+received 3 months into the 15 month period,
+discounted at the 4% constant risk-free rate.
+And the second term, we have the $1.8 million
+interest received 15 months later, plus the $30 million
+principal amount also received 15 months later,
+both discounted at the 4% constant risk-free rate, which
+gives us a total of $32.061 million.
+Thus, the value of the swap to the party
+paying sterling and receiving dollars--
+which will be a number in dollars--
+is the difference between the value of the dollar bond
+underlying the swap--
+$32.061 million-- minus the value of the sterling bond
+underlying the swap adjusted for the risk-free rate.
+So the 22.182 million pounds times the exchange rate
+of 1.55 dollars per pound.
+The difference between these two quantities
+is negative 2.321 million.
+Thus, the value of the swap to the party paying sterling
+is a negative amount--
+negative 2.321 million dollars.
+In part B, we're asked, what is the value
+to the party paying dollars and receiving sterling?
+Now, the easy way to answer this question is to notice that
+since the cash flows here are reversed--
+it's just the opposite leg of the swap--
+the value of the swap to the party paying dollars
+is the negative of the value to the party paying sterling.
+And the negative of negative $2.321 million
+is simply $2.321 million.
+Now, the harder method for solving this question
+that I alluded to above, is to view this swap as a portfolio
+of forward contracts.
+Now, how do we solve this using the hard method of viewing
+the swap as a sequence of forward contracts?
+Well, first to be consistent with part A,
+we will value the swap to the party paying sterling
+and receiving dollars.
+So we should get an answer that's
+very similar to part A. The first step is to note,
+that since we're given annual interest rates,
+and we need continuously compounded interest
+rates in order to calculate the forward exchange
+rates 3 and 15 months from now, we
+can convert our annual interest rates into continuously
+compounded interest rates by taking the natural log of 1
+plus the annual interest rate expresses a decimal.
+So for instance, for the continuously compounded
+interest rate in sterling, we take
+1 plus the 7% annual interest rate in sterling.
+And the natural log of that is 6.766% per annum.
+And similarly, the 4% annually compounded
+interest rate in dollars expresses a decimal plus 1.
+And take the natural log of that gives us 3.922% per annum.
+So we have these two continuously compounded
+interest rates.
+What we need now is to find the forward exchange rates-- that
+is the exchange rates in the future, 3 months and 15 months.
+Well, the 3 month forward exchange rate
+is equal to the current exchange rate, which is $1.55 per pound,
+times the exponential of the difference in the continuously
+compounded interest rates in dollars--
+3.922% expressed as a decimal--
+and in sterling-- 6.766% expressed as a decimal--
+times an adjustment for 3 months in the future--
+3 over 12, which is equal to 1.539.
+Pretty close, but slightly below our current exchange
+rate of 1.55.
+Similarly, the 15 month forward exchange rate
+is equal to the current exchange rate of dollars per pounds,
+multiplied by the exponential of the difference
+in the continuously compounded dollar and Sterling interest
+rates.
+But now, our adjustment is 15 over 12 for the discounting,
+since this is the forward exchange
+rate 15 months in the future.
+That foreign exchange rate is 1.4959--
+significantly less than the current exchange
+rate of $1.55 per pound.
+Now, given that we have the 3 month and 15 month forward
+exchange rates, we can find the values
+of the two forward contracts corresponding
+to the exchange of fixed interests
+for the party paying sterling and receiving dollars
+as follows.
+In the first equation, we have the difference
+between the $1.8 million in fixed interest received
+in 3 months, minus 2 times the 3 month forward exchange
+rate of 1.539, discounted at the dollar
+continuously compounded interest rate of 3.922% multiplied by 3
+over 12, which is equal to a negative $1.256 million.
+Now, the value of the forward contract corresponding
+to the exchange of interest for the party paying sterling in 15
+months is again $1.8 million, minus 2,
+times the foreign exchange rate for 15 months 1.4959,
+times the exponential of negative 0.3922,
+again discounting at the 3.922% continuously compounded dollar
+interest rate, times 15 over 12--
+since we're now 15 months into the future, again,
+so that's the 15 over 12 term--
+which gives us a total value of negative $1.1347 million.
+Now that we've found the value of the two forward contracts
+corresponding to the exchange of fixed interest in 3 and 15
+months according to the perspective of the party that
+is paying sterling and receiving dollars,
+we can find the value of the forward contract corresponding
+to the exchange of principals as follows.
+For then the perspective of the party that
+is paying sterling and receiving dollars,
+it's equal to the difference between the $30 million
+principal and the 20 million pounds principal,
+adjusted for the forward exchange rate 15 months
+from now of 1.4959 dollars per pound,
+discounted by the exponential of negative 0.3922--
+remember, that's the decimal form
+of the continuously compounded dollar interest rate--
+times 15 over 12, for the fact that the exchange of principals
+occurs at the terminal date of the swap 15
+months in the future, which gives us
+a total amount of $0.0787 million
+for the value of the forward contract
+corresponding to the exchange of principals.
+So the total value of the swap according to the party
+paying sterling is going to be the sum of three
+different forward contracts: the two forward contracts
+corresponding to the exchange of interest
+in 3 months and 15 months that we found here--
+the negative $1.2656 million, and negative $1.1347 million,--
+plus the value of the forward contract corresponding
+to the exchange of principals at the end of 15 months, which
+is $0.0787 million, which gives us a total of negative $2.322
+million.
+Which, if you'll recall from part A,
+according to some rounding errors,
+is very close to that which we obtained using the bond
+valuation method.
+So that wraps up recitation two.
+Thank you all for attending and I look forward
+to seeing you next week.

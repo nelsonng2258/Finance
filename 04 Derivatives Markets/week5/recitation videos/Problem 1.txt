@@ -1,0 +1,190 @@
+
+J. R. SCOTT: Hello, everyone.
+And welcome to the fifth recitation of 15.4.35x.
+In this recitation, we'll be reviewing two topics.
+In the first topic, we'll see how
+we can use the binomial model to numerically calculate the delta
+and gamma of a call option.
+In the second topic, we'll see how
+we can use the binomial model to price
+a more exotic option than the European call
+and put options that we've seen in class thus far.
+Without further ado, let's begin with the first topic.
+Recall from the week five lecture
+that the so-called Greeks delta, gamma, theta.
+rho, and vega are widely used measures
+of the sensitivity of an option's price
+to various factors.
+In particular, delta measures the sensitivity
+of an option's value to changes in the price
+of the underlying security.
+According to the Black-Scholes-Merton model,
+the delta of a European option on a non-dividend paying stock
+has the following analytical expression:
+delta, which is the first derivative of the option's
+price, with respect to the price of the underlying stock,
+is equal to n of d1 for calls and negative n
+of negative d1 for puts.
+Where p is the option's price, n is the cumulative density
+function of a standard normally distributed random variable,
+and d1 is as defined in the Black-Scholes-Merton formula
+is a log of the price of the stock, divided
+by the strike price, plus the risk free rate, plus one
+half the volatility of the stock,
+times the time to maturity, minus the current period,
+divided by the volatility, sigma, times the square root
+of T minus t.
+It is true more generally and not
+just for the Black-Scholes-Merton model
+that call options will have positive deltas,
+while put options will have negative deltas.
+OK.
+But what if we want to compute the delta of an option
+without invoking the assumptions of the Black-Scholes-Merton
+model.
+In the week five lecture, we saw how
+to calculate the price of a European call option
+numerically using the binomial tree
+simulator in the BinomialTree.xls spreadsheet.
+By varying the price of the underlying stock
+and recalculating the option price using the binomial tree
+simulator, we can numerically approximate the derivative dP
+over dS using the following formula : dP over dS,
+the delta of the option, is approximately equal to the new
+option price using the binomial tree simulator after varying
+the price of the underlying stock,
+minus the original option price, divided by the new stock price,
+minus the original stock price.
+As an example, let's use the BinomialTree.xls spreadsheet
+to find the price of a European call option
+on a stock with the following parameters:
+note that these are the same parameters that you
+saw in the week five lecture.
+Mu, the expected return on the stock, is equal to 0.1 or 10%.
+Sigma, the volatility of the stock, is equal to 0.3 or 30%.
+The risk free rate, r, is equal to 2%.
+The dividend yield is 0%.
+The original value of the underlying stock is 100.
+The strike price of the European call option is 100.
+The time to maturity is 0.1.
+And the number of intervals is equal to 10.
+After inputting all of these parameters on the left hand
+side here of the table below, you
+should find that the price of the European call option,
+according to the binomial model, is 3.787.
+According to the binomial tree simulator,
+we see that the price of the underlying
+stock in the up node at step i equals 1, s1 one superscript u
+is equal to 103.045, this cell on the spreadsheet.
+Similarly, the price of the underlying stock.
+in the down node at i equals 1 is S1 superscript
+d, which is equal to 97.045, this cell on the spreadsheet.
+The price of the call option at each step in node
+is displayed in the table below.
+In particular, the price of the European call option
+in the up mode at step i equals 1 is c1 superscript
+u, which is equal to 5.381.
+The price of the European call option in the down node at step
+i equals 1 is c sub 1 superscript
+d, which is equal to 2.221.
+We can plug-in S1 superscript u and S1 superscript d
+into the numerator of equation one and c1 superscript u
+and c1 superscript d into the denominator of equation one,
+in order to numerically approximate delta as follows:
+delta or dP over dS, is approximately
+equal to the difference in the value of the European call
+option in the up node at step one in the value
+of the European call option in the down node at step 1,
+divided by the value of the underlying stock in the up
+node at step 1, minus the value of the underlying
+stock in the down node at step one, which
+is equal to 5.381 minus 2.221, divided by 103.045,
+minus 97.045,
+which gives us an approximate delta of 0.527.
+The one thing to notice here is that this
+is the exact same output as that reported
+by the BinomialTree.xls spreadsheet
+in the delta binomial cell, this cell here.
+
+Essentially, the binomial tree simulator in the spreadsheet
+calculates the delta of an option using
+the u and d implied by the parameterization provided,
+where u is equal to the exponential of sigma,
+the volatility, times the square root of h, where
+h is the length of the interval, T the maturity,
+divided by n, the number of intervals.
+Since d equals 1 over u, that is the percentage
+increase in the stock is equal to the percentage
+decrease in the stock, this numerical approximation
+is akin to a symmetric difference quotient.
+Alternatively, you could numerically approximate delta
+by using a baseline parameterization,
+like the one we have above for the binomial tree
+to get these so-called original stock and option
+prices in equation one and then vary the stock price
+by a given amount in a single direction,
+for example, a 6% increase, to get the new stock
+and option prices.
+As opposed to the symmetric difference quotient
+that the binomial tree spreadsheet is providing,
+this would be more akin to a one-sided difference quotient.
+Now that we've seen how to numerically
+approximate the delta of an option using
+the binomial model, can we do the same thing
+for the other Greeks?
+Well, as discussed in the week five lecture,
+gamma measures the sensitivity of delta,
+changes in the price of the underlying security.
+According to the Black-Scholes-Merton model,
+the gamma of a European option, either a put or a call,
+on a non dividend paying stock has
+the following analytical expression:
+gamma, which is the second derivative of the options
+price, with respect to the price of the underlying stock,
+is itself equal to the first derivative of the options
+delta, with respect to the price of the underlying stock, which
+is equal to the derivative of the cumulative distribution
+function of a standard normally distributed range
+of variable n of d1, divided by the price of the underlying
+stock, times its volatility, sigma,
+multiplied by the square root of its time to maturity, T,
+where the first derivative of the cumulative distribution
+function for a standard normal random variable
+is given in this expression here:
+mathematically, gamma measures the curvature of an options
+price, with respect to the price of the underlying security.
+Can we numerically approximate gamma
+like we just did for delta?
+The answer unsurprisingly is, of course.
+The only difference now is that our numerical approximation
+formula has in its numerator the difference
+between the new value of the options delta after changing
+the underlying stock price, minus the original value
+of the options delta, divided by the difference
+between the new stock price and the original stock price.
+Whereas before, we had the difference
+between the new price of the option,
+minus the original price of the option.
+For example, let's assume the same parameterization
+for the European call option as above,
+in particular with a current underlying stock price
+S0 of 100.
+Using the BinomialTree.xls spreadsheet,
+we can calculate the delta for a symmetric 3% increase and 3%
+decrease in the stock price.
+In particular, for the 3% increase,
+we plug-in S0 equals 100, times 1.03,
+which equals 103 and find the delta of the call option
+to be 0.647.
+For the 3% decrease, we plug-in S0 equals 100, times 0.97,
+which equals 97 and find the delta of the call option
+to be 0.401.
+Finally, we just apply equation two, but now
+with the original values of delta and the stock price,
+these two values here corresponding to the 3%
+decrease case and the new values of delta and the stock price,
+these two values here, corresponding
+to the 3% increase case.
+Overall, we have that the gamma of the call option
+is approximately equal to 0.647 minus 0.401,
+divided by 103, minus 97, which is equal to 0.041.

@@ -1,0 +1,352 @@
+0
+00:00:00,000 --> 00:00:01,580
+
+
+1
+00:00:01,580 --> 00:00:03,590
+PROFESSOR: A classic use of payoff diagrams
+
+2
+00:00:03,590 --> 00:00:06,410
+is to provide a simple proof of the famous put-call parity
+
+3
+00:00:06,410 --> 00:00:07,700
+relationship.
+
+4
+00:00:07,700 --> 00:00:11,660
+That relationship says that the value of a portfolio consisting
+
+5
+00:00:11,660 --> 00:00:15,350
+of a long put in a short call both with the same strike
+
+6
+00:00:15,350 --> 00:00:18,530
+price K is equal to the present value
+
+7
+00:00:18,530 --> 00:00:22,790
+of a short forward contract with a forward price K.
+
+8
+00:00:22,790 --> 00:00:24,980
+It's important to keep in mind that the options
+
+9
+00:00:24,980 --> 00:00:27,560
+in forward contracts refer to the same stock
+
+10
+00:00:27,560 --> 00:00:30,560
+and the derivative contracts all have the same expiration
+
+11
+00:00:30,560 --> 00:00:33,340
+date, T.
+
+12
+00:00:33,340 --> 00:00:35,710
+The additional notation that you see here
+
+13
+00:00:35,710 --> 00:00:38,920
+is that put refers to the price of the put and hence,
+
+14
+00:00:38,920 --> 00:00:39,940
+its premium.
+
+15
+00:00:39,940 --> 00:00:42,520
+Call is the call price or the call premium
+
+16
+00:00:42,520 --> 00:00:45,800
+and are as the usual risk-free rate.
+
+17
+00:00:45,800 --> 00:00:49,090
+Recall that the value of the short position in an existing
+
+18
+00:00:49,090 --> 00:00:52,900
+forward contract with forward price K, by no arbitrage,
+
+19
+00:00:52,900 --> 00:00:56,290
+has to be the present value of the difference between K
+
+20
+00:00:56,290 --> 00:01:00,570
+at the current forward price for the contract in the market.
+
+21
+00:01:00,570 --> 00:01:02,640
+Now to prove that equation must hold,
+
+22
+00:01:02,640 --> 00:01:06,840
+we start by establishing that the two sides of the equation
+
+23
+00:01:06,840 --> 00:01:09,990
+have the same payoffs for every possible value of the stock
+
+24
+00:01:09,990 --> 00:01:14,070
+price at time T. We show this graphically,
+
+25
+00:01:14,070 --> 00:01:23,450
+adding together along put and a short call
+
+26
+00:01:23,450 --> 00:01:26,810
+and seeing that the sum is the same
+
+27
+00:01:26,810 --> 00:01:28,330
+as a short forward contract.
+
+28
+00:01:28,330 --> 00:01:31,580
+
+
+29
+00:01:31,580 --> 00:01:34,010
+Next we applied the idea of no-arbitrage
+
+30
+00:01:34,010 --> 00:01:35,960
+to observe that if the two positions have
+
+31
+00:01:35,960 --> 00:01:38,900
+identical payoffs in every future state of the world,
+
+32
+00:01:38,900 --> 00:01:42,150
+they must have identical prices today.
+
+33
+00:01:42,150 --> 00:01:44,550
+That observation leads immediately
+
+34
+00:01:44,550 --> 00:01:47,610
+to the put-call parity equation that's written again
+
+35
+00:01:47,610 --> 00:01:50,620
+at the bottom of the slide.
+
+36
+00:01:50,620 --> 00:01:52,360
+The put-call parity relationship is
+
+37
+00:01:52,360 --> 00:01:54,670
+famous because of its practical importance
+
+38
+00:01:54,670 --> 00:01:56,500
+in a variety of situations.
+
+39
+00:01:56,500 --> 00:01:58,000
+It can be used by traders looking
+
+40
+00:01:58,000 --> 00:02:00,400
+to profit from pricing inconsistencies
+
+41
+00:02:00,400 --> 00:02:02,710
+between the securities involved.
+
+42
+00:02:02,710 --> 00:02:04,750
+It can also be used to quickly find
+
+43
+00:02:04,750 --> 00:02:07,960
+the price of a put given the pricing formula for a call
+
+44
+00:02:07,960 --> 00:02:10,190
+or vice versa.
+
+45
+00:02:10,190 --> 00:02:12,430
+It also highlights that many positions
+
+46
+00:02:12,430 --> 00:02:16,760
+can be described either in terms of puts or in terms of calls
+
+47
+00:02:16,760 --> 00:02:19,390
+that having these multiple ways of looking at things
+
+48
+00:02:19,390 --> 00:02:21,970
+is very helpful in understanding the risk
+
+49
+00:02:21,970 --> 00:02:24,190
+characteristics of a position.
+
+50
+00:02:24,190 --> 00:02:27,010
+For example, we'll use put-call parity
+
+51
+00:02:27,010 --> 00:02:30,070
+to help understand the risk dynamics of levered firms
+
+52
+00:02:30,070 --> 00:02:33,190
+and also of risky corporate debt.
+
+53
+00:02:33,190 --> 00:02:35,230
+You can use a put-call parity equation
+
+54
+00:02:35,230 --> 00:02:37,750
+like any other algebraic equation,
+
+55
+00:02:37,750 --> 00:02:40,060
+for example, rearranging it to solve
+
+56
+00:02:40,060 --> 00:02:42,490
+for the value of a call in terms of the value
+
+57
+00:02:42,490 --> 00:02:44,920
+of a put at a forward contract.
+
+58
+00:02:44,920 --> 00:02:47,800
+Or you can solve it for a put in terms of a value
+
+59
+00:02:47,800 --> 00:02:49,990
+call in a forward contract.
+
+60
+00:02:49,990 --> 00:02:53,860
+Negative values denote short positions and positive values
+
+61
+00:02:53,860 --> 00:02:56,500
+denote long positions.
+
+62
+00:02:56,500 --> 00:03:00,720
+The first line here rearranges the equation
+
+63
+00:03:00,720 --> 00:03:02,730
+to solve for the value of a put.
+
+64
+00:03:02,730 --> 00:03:06,160
+
+
+65
+00:03:06,160 --> 00:03:08,650
+Then using our pricing formula from
+
+66
+00:03:08,650 --> 00:03:11,200
+before for a forward contract, we
+
+67
+00:03:11,200 --> 00:03:15,550
+can substitute out the current forward price f sub 0 t
+
+68
+00:03:15,550 --> 00:03:20,050
+and replace it with the future value of the current stock
+
+69
+00:03:20,050 --> 00:03:21,415
+price as zero.
+
+70
+00:03:21,415 --> 00:03:30,080
+
+
+71
+00:03:30,080 --> 00:03:34,310
+The last line then expresses the put call parity relationship
+
+72
+00:03:34,310 --> 00:03:38,750
+in terms of put, a call, the current stock price
+
+73
+00:03:38,750 --> 00:03:41,300
+at the present value of the exercise price
+
+74
+00:03:41,300 --> 00:03:47,910
+K. It's quite common to see this equation in this form.
+
+75
+00:03:47,910 --> 00:03:50,250
+To give a numerical example, say you
+
+76
+00:03:50,250 --> 00:03:55,920
+have a stock selling for $100, a risk free rate of 5%
+
+77
+00:03:55,920 --> 00:04:02,190
+and an at the money call option priced at $10.45.
+
+78
+00:04:02,190 --> 00:04:05,700
+Then it must be the case that a put option on the stock that
+
+79
+00:04:05,700 --> 00:04:09,990
+expires in one year and also has a strike price of 100
+
+80
+00:04:09,990 --> 00:04:15,460
+sells for $5.57 It's a good exercise for you to think
+
+81
+00:04:15,460 --> 00:04:17,649
+about the trades you'd have to make
+
+82
+00:04:17,649 --> 00:04:21,880
+to realize a risk free profit if instead this put
+
+83
+00:04:21,880 --> 00:04:23,500
+was priced differently.
+
+84
+00:04:23,500 --> 00:04:26,020
+Say it was selling for $6.
+
+85
+00:04:26,020 --> 00:04:28,990
+Think about what portfolio you would buy
+
+86
+00:04:28,990 --> 00:04:34,140
+and what you would sell in order to realize an arbitrage profit.
+
+87
+00:04:34,140 --> 00:04:35,007
+
+

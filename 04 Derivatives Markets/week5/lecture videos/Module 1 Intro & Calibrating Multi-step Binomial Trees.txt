@@ -1,0 +1,108 @@
+PROFESSOR: To make it easy to numerically price derivatives
+under realistic assumptions about the distribution
+of future stock prices.
+For simplicity, and because it can often
+provide a good approximation, stock returns
+are frequently modeled as having a constant expected return, mu,
+and a constant volatility, sigma.
+That is, over a small interval of time h,
+the expected gross rate of return
+on the stock is e to the mu times h.
+
+The variance of the gross return is the expectation
+of the squared deviations from the mean return, which we'll
+write as sigma squared times h, where sigma squared represents
+the annualized variance on a continuous basis.
+This specification for variance assumes
+the returns are independently and identically
+distributed over time.
+Say now that we want to price an option
+with a maturity of capital T.
+We can chop the interval from 0 to T
+into n equally sized subintervals.
+Each interval has a size h of T over n.
+And i times h represents calendar time on the tree.
+To keep the calibration simple, it's standard
+to restrict the evolution of the stock prices on the tree
+so that starting at a node s sub i, at time step i plus 1,
+the up node is s i times u, and the down node
+is s i times d, where d and u are constant.
+The probability of an up is q, and the down, of course,
+is 1 minus q, where q is also a constant.
+Note that q represents here a true, or physical,
+or actual probability.
+With these restrictions, we have three free variables
+to match to the known expected return and the known variants.
+The equations here, then, represent the expected return
+and variance in terms of those three free variables,
+u, d, and q.
+
+Since we have one more free variable
+than we have equations to satisfy,
+we use that extra degree of freedom
+to further simplify the tree by assuming
+that u is equal to 1 over d.
+
+Now, with those three equations and a little bit of algebra,
+we can solve for u, d, and q as a function of sigma and mu.
+
+The results will also depend on the step size, h.
+
+It's straightforward, then, to program a spreadsheet
+to create a tree that's consistent
+with these assumptions and a given set of inputs.
+The spreadsheet, called binomialtree.xls,
+is on the course materials web page.
+It's programmed to create a stock price
+tree using this procedure.
+And it also computes the prices of European put and call
+options.
+The spreadsheet was used to create the examples we'll
+look at on the next few slides.
+You'll also need to use it to solve
+some of the homework problems.
+And it will be available for you to use on the exam.
+The procedure that we just discussed also
+works for dividend-paying stocks,
+but the stock price process has to be slightly modified
+to account for the fact that part of the total return
+is in the form of a dividend.
+JR will go over that in the recitation.
+The binomialtree.xls spreadsheet is
+programmed to incorporate the constant dividend yield.
+
+Of the inputs and outputs from the spreadsheet
+binomialtree.xls and the picture of the resulting stock price
+tree, the lighter shaded cells are inputs,
+and the darker cells are outputs.
+Inputs needed for the tree include
+mu, the expected return on the stock,
+sigma, the volatility of the stock, r, the risk-free rate,
+div, the dividend yield, s0, the initial stock price, and then
+capital T, the time horizon for the tree in years,
+and n, the number of steps in the tree.
+Turning to the outputs used to calculate the stock price tree,
+the time step h is defined as cap T over n,
+as we defined it before.
+The other outputs associated with building the tree
+are u, d, and q.
+Those are calculated using the formulas on the previous slide.
+We'll talk about the option inputs
+and outputs in a few minutes.
+But first, let's look at the stock price tree
+that we get from these assumptions.
+Each column represents a time step starting at 0,
+going out to n, and it's indexed by i.
+Each row is a node number, and that's indexed by j.
+Each entry in the tree is a stock price node.
+The up move from any node is recorded
+in the same row but one column to the right,
+while a down move is recorded in the next row
+and also one column to the right.
+For example, we start with the input stock price of 100
+at time 0.
+
+The up takes the 100, multiplies it by u, of 1.030455,
+and gives us 103.045 as the up node at the next step.
+When we multiply by d, which is 1 over u,
+we get the down step, which brings us to a price of 97.045.

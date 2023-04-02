@@ -1,0 +1,102 @@
+PROFESSOR: Finally, let's review the last problem, Problem 3.
+Problem 3 states that you are a manager
+of a hedge fund that specializes in the fixed income market.
+The fund's portfolio currently consists
+of these three positions in which all yields are
+bond equivalent yields, which, if you recall from Problem 1,
+are annual yields that assume semi-annual coupon payments.
+The first position is a short position
+in $150,000 face value of a 7-year 2.8% coupon
+bond with semi-annual coupon payments
+that is priced to yield 3.95%.
+The second position is a long position
+in $350,000 face value of a 3-year 2.25% coupon
+bond with, again, semi-annual payments
+but is now priced to yield 2.75%.
+The third and final position is a long position in $425,000
+face value of a 14-year 4.6% coupon
+bond with semi-annual payments and is priced to yield 4.125%.
+As a portfolio manager, you decide
+to delta-hedge the interest rate exposure of your fund's
+portfolio using a 3-year interest rate swap.
+The swap specifies a semi-annual exchange of 6-month LIBOR
+for a fixed payment of 3.5%, paid semi-annually.
+That is a fixed payment of 1.75% every 6 months.
+The current 6-month LIBOR rate is 1.4%.
+As a warm-up, Part A simply asks whether we
+would want to be a fixed or a floating rate
+payor in the swap?
+Well, you don't actually have to do any calculations to answer
+this question.
+It's pretty clear from the sizes of our long positions
+and short positions that on net, we
+will be receiving fixed payments from our portfolio.
+In other words, we are long duration
+and in order to delta-hedge the interest rate
+risk to our fund's equity, we want
+to be a fixed rate payor, equivalently, a floating rate
+receiver in the swap.
+
+Now, let's assume that you calculate
+the dollar duration of your portfolio to be $4,743,387.
+Part B is simply asking--
+what would be the notional principal
+of the swap, in which we are a fixed rate payor, that
+delta-hedges our portfolio?
+The first thing to recall here is that an interest rate swap
+is equivalent to a long position in a fixed rate bond,
+in a short position in a floating rate bond,
+or vice versa, depending on whether or not
+we are a fixed rate payor or a floating rate
+payor in the swap.
+Both positions, the long position
+and the short position, are initially priced at par.
+To find the notional principal of the swap,
+we first need to find the modified
+durations of the fixed and floating legs of the swap.
+To find the modified duration of the fixed leg of the swap,
+we can use the convexity.xls calculator
+that we used in Problem 1.
+Recall that the problem statement
+says that the swap specifies a semi-annual exchange
+of 6-month LIBOR for a fixed payment of 3.5% paid
+semi-annually.
+Thus, in our convexity.xls calculator,
+we can substitute in the appropriate parameters
+for a semi-annual fixed payment of 3.5% and three years
+to maturity, and find that the modified
+duration of the fixed leg of the swap is 2.8245 years.
+What about the modified duration of the floating
+leg of the swap?
+Well recall, called that the Macaulay duration
+of the floating leg of the swap is
+equal to the time to the next reset.
+In this case, since there are 6 months until the next reset,
+the Macaulay duration will be, in years, 0.5.
+Thus, the modified duration of the floating leg of the swap
+is equal to 0.5 divided by 1 plus 0.014,
+which is the current 6-month LIBOR
+rate of 1.4%, divided by 2 to express it as a 6-month rate.
+That equals 0.4965 years, which is
+the modified duration of the floating leg of the swap.
+The last step, in order to find the notional principal
+of the swap, is to equate the hedge ratios, or dollar
+durations, of our portfolio with that of the swap.
+In the equation shown, the left-hand side
+is the hedge ratio, or dollar duration
+of our portfolio, which was given to be $4,743,387.
+The hedge ratio, or dollar duration, of our swap
+is equal to the notional principal
+of the swap in dollars--
+which I denoted by S--
+times the difference between the modified duration
+of the fixed leg of the swap and the modified duration
+of the floating leg of the swap.
+It's fixed minus floating here because, as in Part A,
+we determined that we wanted to be a fixed rate
+payor, equivalently a floating rate receiver, in the swap.
+Solving for S, you should find that the notional principal
+of the swap is $2,037,560.
+Well, that's it for Problem 3.
+Thank you for attending this week's recitation.
+And I look forward to seeing all of you next week.

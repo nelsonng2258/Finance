@@ -1,0 +1,232 @@
+0
+00:00:00,000 --> 00:00:01,350
+
+
+1
+00:00:01,350 --> 00:00:04,019
+We can easily extend our two step example
+
+2
+00:00:04,019 --> 00:00:07,800
+to an arbitrarily large number of steps on a tree.
+
+3
+00:00:07,800 --> 00:00:11,100
+That extension allows us to more accurately capture
+
+4
+00:00:11,100 --> 00:00:13,320
+the distribution of future stock prices
+
+5
+00:00:13,320 --> 00:00:17,370
+and the corresponding option payoffs.
+
+6
+00:00:17,370 --> 00:00:20,730
+In the subscript pairs here, ij, we'll
+
+7
+00:00:20,730 --> 00:00:23,850
+let i denote the time period and j denote
+
+8
+00:00:23,850 --> 00:00:29,310
+the node with the highest node labeled as node one.
+
+9
+00:00:29,310 --> 00:00:31,530
+Using risk neutral probabilities,
+
+10
+00:00:31,530 --> 00:00:35,280
+we can solve backwards for the value of any European style
+
+11
+00:00:35,280 --> 00:00:38,490
+derivative as we did in the two period case
+
+12
+00:00:38,490 --> 00:00:42,930
+discounting pairwise expected values one period ahead back
+
+13
+00:00:42,930 --> 00:00:44,990
+to the current node.
+
+14
+00:00:44,990 --> 00:00:48,380
+The procedure is similar for American style derivatives
+
+15
+00:00:48,380 --> 00:00:50,750
+except that at each node, we also
+
+16
+00:00:50,750 --> 00:00:54,050
+have to check whether or not we want to early exercise.
+
+17
+00:00:54,050 --> 00:00:58,250
+When early exercise is optimal, the value at that node
+
+18
+00:00:58,250 --> 00:01:00,300
+reflects that choice.
+
+19
+00:01:00,300 --> 00:01:02,210
+And it can affect the value as we work
+
+20
+00:01:02,210 --> 00:01:05,050
+backwards through the tree.
+
+21
+00:01:05,050 --> 00:01:07,930
+We'll return to multi-step trees and how they're
+
+22
+00:01:07,930 --> 00:01:10,870
+calibrated in the next lecture and also
+
+23
+00:01:10,870 --> 00:01:14,560
+use them to explain one way to derive the Black-Scholes Merton
+
+24
+00:01:14,560 --> 00:01:17,670
+options pricing formula.
+
+25
+00:01:17,670 --> 00:01:21,000
+I've been using risk-neutral pricing in most of the examples
+
+26
+00:01:21,000 --> 00:01:25,980
+here for its simplicity but I want to again emphasize
+
+27
+00:01:25,980 --> 00:01:28,680
+that we would have come to the same answers using
+
+28
+00:01:28,680 --> 00:01:33,910
+the formulas for creating a replicating portfolio.
+
+29
+00:01:33,910 --> 00:01:38,410
+It's important to remember that risk-neutral pricing does not
+
+30
+00:01:38,410 --> 00:01:40,810
+mean that people are risk-neutral
+
+31
+00:01:40,810 --> 00:01:43,870
+or that they don't care about the considerable risk
+
+32
+00:01:43,870 --> 00:01:47,290
+of options, which is a reflection of the fact
+
+33
+00:01:47,290 --> 00:01:50,380
+that there are equivalent to a leveraged position
+
+34
+00:01:50,380 --> 00:01:53,990
+in the risky underlying stock.
+
+35
+00:01:53,990 --> 00:01:57,440
+Risk-neutral pricing works by replacing
+
+36
+00:01:57,440 --> 00:02:01,040
+the cost of risk in our usual discount rate
+
+37
+00:02:01,040 --> 00:02:06,140
+with an adjustment in the risk-neutral probabilities.
+
+38
+00:02:06,140 --> 00:02:09,800
+That adjustment means that the risk-neutral probabilities
+
+39
+00:02:09,800 --> 00:02:13,190
+have information, not just about the probability
+
+40
+00:02:13,190 --> 00:02:17,570
+of different outcomes, but also about the price of risk
+
+41
+00:02:17,570 --> 00:02:21,290
+associated with those outcomes.
+
+42
+00:02:21,290 --> 00:02:26,660
+For a stock price tree, the risk-neutral probability, q*,
+
+43
+00:02:26,660 --> 00:02:30,800
+will turn out to be less than the physical probability, q,
+
+44
+00:02:30,800 --> 00:02:34,520
+which has the effect of putting more weight on lower stock
+
+45
+00:02:34,520 --> 00:02:39,590
+price realizations reflecting that the true discount rate is
+
+46
+00:02:39,590 --> 00:02:43,410
+higher than the risk-free rate.
+
+47
+00:02:43,410 --> 00:02:45,650
+Finally, binomial pricing has been
+
+48
+00:02:45,650 --> 00:02:48,290
+shown to work for pricing American options
+
+49
+00:02:48,290 --> 00:02:51,140
+where exercise decisions today will
+
+50
+00:02:51,140 --> 00:02:53,420
+depend on what we think those decisions will
+
+51
+00:02:53,420 --> 00:02:55,960
+be in the future.
+
+52
+00:02:55,960 --> 00:02:58,260
+There's no simple alternative to using
+
+53
+00:02:58,260 --> 00:03:01,980
+backward induction on trees for pricing American options.
+
+54
+00:03:01,980 --> 00:03:05,640
+And luckily, as we extend the tree to many steps,
+
+55
+00:03:05,640 --> 00:03:08,310
+a binomial approach can often produce
+
+56
+00:03:08,310 --> 00:03:12,080
+a very accurate estimate of a derivatives value.
+
+57
+00:03:12,080 --> 00:03:14,000
+
+

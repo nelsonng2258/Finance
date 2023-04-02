@@ -1,0 +1,217 @@
+INSTRUCTOR: In this segment, we'll
+take a look at some of the most popular trading strategies
+involving put and call options that you
+can use to manage risk exposures in your own portfolio
+and on behalf of your firm or for your clients.
+A simple and effective way to retain the upside risk
+on an individual stock or other security
+and to limit the downside is with a protective put.
+The strategy simply involves buying a put option
+on the stock that you want protection for.
+The payoff diagram here shows the combination
+of the put option in the stock, so it assumes
+you already are long the stock.
+
+Here's the payoff on the put option.
+
+Here's the payoff on the stock.
+And now if you vertically add the payoffs and the put
+in the stock, you get the total payoff, equal to the red line.
+
+This the strike price on the put option
+provides the floor then on the payoff
+on the stock over the horizon T of the option.
+The more protection that you want, the higher
+is strike price you would choose on the put.
+As you'd expect, a higher strike price
+means paying a higher premium so in choosing
+the level of protection, there's a trade off
+between getting more protection at a higher price and less
+protection at a lower price.
+This is a good place to stop and compare
+the protection from a protective put
+with that of a short forward or futures contract.
+For example, a fund manager may be
+concerned about protecting the fall
+in the price of a particular stock, currently priced in S.
+It could hedge that risk by selling
+shorter forward contract on the stock, which
+would have a forward price K, which we know
+will be equal to the future value of the current spot
+price, S. Doing that entirely eliminates the stock price
+risk between now and the expiration
+date of the forward contract.
+
+The firm eliminates the downside but it also loses the upside.
+It costs nothing to enter into this position upfront.
+Alternatively, the fund manager could buy a put option
+with a strike price of K. As we just discussed,
+that would guarantee a minimum payoff of K
+and leave the firm with the upside
+if the stock is worth more than that.
+That's a better outcome but it comes with an upfront cost
+of the option premium.
+You can think of the second option as equivalent
+to an insurance contract, where you
+pay a premium to be protected against losses
+but you always keep the gains.
+Relatedly, put options are the basis
+for all strategies that are marketed
+as portfolio insurance.
+There's no right answer to the question of which
+of these strategies is better.
+The strategy of using a forward contract
+will be preferred if the goal is to eliminate all risk.
+Using a put option is better if you're
+willing to pay the premium for the benefit of keeping
+the upside.
+Another popular strategy is called a covered call.
+This strategy involves writing a call option that
+puts a cap on price appreciation for a stock or stock index
+that you already own.
+You're long the stock and short the call.
+And the sum of the two positions is, again, the red line.
+
+Why would anyone want to limit the upside pay off
+on their portfolio?
+Well, of course, no one wants to limit their upside
+but what attracts investors to covered calls
+is the income from writing the call options.
+If you think that the price appreciation is likely to be
+slower in the future --
+for instance, you think returns on the S&P 500 would be more
+modest than most investors expect they will be --
+you may prefer to give up the upside in exchange
+for the certain option premium.
+And even more pessimistic strategy
+is called a bear spread.
+A bear spread is a position that, like a put option,
+benefits the long side when the stock price falls.
+Unlike a put option, the potential gain
+is capped at a fixed value.
+As for a covered call, the reason to cap the gain
+is to reduce the net cost of taking
+the position with the premium income from the short side.
+
+Setting up a bear spread involves selling a put option
+with a strike price of K1 and, at the same time,
+taking a long position in a second
+put option with a strike price of K2.
+
+The sum of the long and short put options
+gives the red payoff line.
+
+The specific example here centers it
+at the current stock price of $100
+and chooses K1 equal to 80 and K2 to equal to 120.
+Since your long one option and short another,
+you might wonder if this position
+costs money or makes money.
+The answer is that it has to cost money
+because for all possible future realizations of the stock
+price, the payoff is positive or 0.
+The other indication that this position must cost money
+is that, all else equal, a put option with a higher strike
+price will be worth more than a put option that's
+otherwise similar but with a lower strike price.
+If, instead, you wanted to make an optimistic bet
+about a stock's prospects, you could enter into a bull spread.
+A bull spread has a positive payoff
+when the underlying stock price exceeds some value,
+and that payoff is capped.
+
+As with the bear spread, the reason for the cap
+is to reduce the net cost of getting the desired.
+Risk exposure this strategy involves a long position
+in a call option with a strike price, K1 and a short position
+in a second call option with a strike price of K2
+to greater than K1.
+
+The sum of the two call options creates
+the payoff shown here in red.
+
+As with the other positions we've
+looked at with only positive payoffs,
+remember that entering this position
+comes at a cost, which is the difference
+between the premiums on the long and short call options.
+In the recitation, JR will show you
+how to set up the same position using
+put options and a risk-free bond and the idea
+of put-call parity.
+A butterfly spread has a positive payoff
+over some range of time T stock price realizations.
+Its tent-shaped payoff is like the wings of a butterfly,
+and that's how it got its name.
+
+That's what the payoff looks like.
+Creating a butterfly spread involves four call options
+with three different strike prices and a combination
+of long and short positions.
+First, there's going to be a long call with strike price K0.
+
+Next, there's two short calls with a strike price of K1,
+where K1 centers your position.
+You can think of each short call option as looking like this.
+
+So we have two of these short call options.
+And then, when we add them together,
+we get the sum of the two short calls.
+Also, you can think of these short calls
+as flattening out the original long call position we had,
+starting at K1.
+So the first of those short calls
+takes us from an upward sloping line to a flat line
+and the second short call brings us to a downward slope
+on the sum of the positions.
+Then, finally, we're going to take
+another long position in a call with a strike price of K2.
+
+And that last position then is going
+to flatten out the downward slope that would have continued
+if we didn't add it to this, and now we
+have another flat segment.
+
+Clearly, this butterfly spread allows
+you to make a very precise bet about where the stock price
+will be on the expiration date.
+What's great about these butterfly spreads is
+that you can use them to create just about any payoff pattern
+you can think of.
+And you can have a larger or smaller position
+by scaling things up or down.
+Next, let's look at a straddle.
+A straddle centered at the current stock price
+is a bet on high-priced volatility.
+As you can see, the gain increases
+the further the stock price moves away
+from its current value.
+A straddle is created quite simply with a long put
+and a long call, both with a strike
+price equal to the current stock price.
+Notice that on this slide, I'm showing a profit diagram
+instead of a payoff diagram.
+The profit for each option is the payoff shifted down
+by the premium paid.
+We can add the profits vertically,
+just as we do on payoff diagrams,
+to get the red line, which is the net profit.
+The profit diagram makes it clear
+that unless the volatility is sufficiently high,
+the profit will turn out to be negative.
+You probably can also see there's
+a slight asymmetry between the premium
+as it's drawn for the put and call options
+with the same strike price.
+In general, the premium for the call will be higher.
+And that's something you can also
+prove using put-call parity.
+The last strategy we'll look at it's called a strangle.
+Like a straddle, a strangle is also a bet on high volatility
+and consists of one long put and one long call.
+What's different is that the strike price, K0 on the put,
+is lower than the strike price, K1 on the call.
+That creates a larger region where the profit is negative
+but the largest possible loss is somewhat smaller.
+You'll get some more practice with these various positions
+in the recitation and also in some of the homework questions.

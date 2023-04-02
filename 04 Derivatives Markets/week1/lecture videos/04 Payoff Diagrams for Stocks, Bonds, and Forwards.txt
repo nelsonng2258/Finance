@@ -1,0 +1,86 @@
+PROFESSOR: We can now turn back to payoff diagrams
+as a way to understand why a long position
+in a forward contract is like a highly-leveraged position
+in the underlying asset.
+For this example, let's consider a forward contract
+on a share of stock which locks in a forward price of $65
+to buy a share.
+We'll construct a portfolio of the underlying
+stock and a risk-free, zero-coupon bond that
+has payoffs that are identical to our forward contract.
+Let's start with the bond.
+The first path diagram here is the payoff
+on a zero-coupon bond with a face
+value of $65 that matures on the same day
+as the forward contract on the stock
+that we want to compare it with.
+
+The payoff on a long position in the bond
+is $65 no matter what the value of the underlying stock
+is on the expiration or maturity date of the contract.
+Hence, the payoff diagram shows a horizontal line at $65.
+
+For a short position in the bond,
+the payoff is also invariant to the stock price.
+The seller of the bond on a short position
+is out the face value of the $65 no matter
+what happens to the price of the underlying stock.
+Hence, the payoff diagram shows a horizontal line at minus $65.
+
+Now let's look at the payoff diagram
+for long and short positions in the underlying stock.
+If you own the stock, its value on the expiration date
+of the forward contract is whatever the stock price
+is on that same day.
+Hence, the payoff increases one-for-one with the stock
+price as in the top diagram.
+And as for the bond, a short position
+in the stock on a payoff diagram flips
+the outcomes over the x-axis.
+A short position involves a loss of the value on the expiration
+date equal to the price of the stock that day.
+Hence, the payoff decreases one-for-one
+with the stock price as in the lower diagram here.
+Let's consider the payoff on a long forward contract
+in the stock with a forward price of $65.
+We know that the payoff at expiration
+will be the difference between the stock
+price on that date minus the $65 paid in the forward contract.
+The payoff, therefore, increases linearly and one-for-one
+in the price of the stock starting at minus $65
+if the stock price is $0.
+
+And, finally, let's compare the payoff diagram
+on the forward contract to the one for a portfolio that's
+long one share of the stock and short a zero-coupon bond
+with a face value of $65 that matures
+on the same date as the forward contract.
+The payoff on that portfolio is found by vertically adding
+the payoffs we found earlier.
+The short bond always has a payoff of minus $65.
+And the stock value increases one-for-one in the stock price.
+The result is plotted on the bottom diagram.
+We can see that no matter what happens to the underlying stock
+price, the payoff on the forward contract
+will be identical to the payoff on the portfolio consisting
+of a share of the stock and the short bond.
+This can be described, then, as a highly-leveraged position
+in the stock because shorting a bond
+is borrowing and the borrowed money
+is used to help fund the stock purchase.
+In other words, a so-called leveraged position
+is one that is funded in part by borrowing.
+This equivalence between a forward contract
+and its replicating portfolio will also
+be key to pricing forward contracts.
+The bottom line is that long forward contracts
+allow market participants to take highly-leveraged positions
+in the risky underlying asset with little
+or no money down, even if they couldn't do so directly
+by borrowing and buying the risky asset.
+A similar analysis implies that forward short positions
+are equivalent to lending and going
+short in the underlying asset.
+This provides short risk exposure
+to an underlying asset, either to hedge or to speculate, again
+with no money down.

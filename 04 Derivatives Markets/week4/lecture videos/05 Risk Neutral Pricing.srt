@@ -1,0 +1,472 @@
+0
+00:00:00,000 --> 00:00:02,500
+
+
+1
+00:00:02,500 --> 00:00:04,950
+INSTRUCTOR: Let's turn to the important topic
+
+2
+00:00:04,950 --> 00:00:08,240
+of risk-neutral pricing.
+
+3
+00:00:08,240 --> 00:00:10,340
+If you look back to the general approach
+
+4
+00:00:10,340 --> 00:00:12,290
+for finding a replicating portfolio
+
+5
+00:00:12,290 --> 00:00:15,500
+to price an option on slide 32, you'll
+
+6
+00:00:15,500 --> 00:00:17,570
+see that none of the formulas involve
+
+7
+00:00:17,570 --> 00:00:21,440
+the true probability, q, of the stock price going up at time 1
+
+8
+00:00:21,440 --> 00:00:24,040
+on the binomial tree.
+
+9
+00:00:24,040 --> 00:00:25,960
+The natural question is whether this
+
+10
+00:00:25,960 --> 00:00:29,260
+means that those actual probabilities really
+
+11
+00:00:29,260 --> 00:00:32,320
+don't affect option prices.
+
+12
+00:00:32,320 --> 00:00:35,210
+The answer is yes and no.
+
+13
+00:00:35,210 --> 00:00:38,600
+Mechanically, we don't need the probabilities
+
+14
+00:00:38,600 --> 00:00:40,790
+because we valued options by matching
+
+15
+00:00:40,790 --> 00:00:44,360
+the payoffs of the options and the replicating portfolios
+
+16
+00:00:44,360 --> 00:00:47,060
+in each of the possible future states of the world
+
+17
+00:00:47,060 --> 00:00:49,580
+individually, using the information
+
+18
+00:00:49,580 --> 00:00:52,745
+in the binomial tree about stock prices and the risk free rate.
+
+19
+00:00:52,745 --> 00:00:57,160
+
+
+20
+00:00:57,160 --> 00:01:00,270
+However, the physical probability, q
+
+21
+00:01:00,270 --> 00:01:05,069
+determines future stock prices and their volatility.
+
+22
+00:01:05,069 --> 00:01:08,470
+Given a risk adjusted discount rate for the stock,
+
+23
+00:01:08,470 --> 00:01:12,340
+it also determines the current stock price.
+
+24
+00:01:12,340 --> 00:01:14,440
+Hence, the current stock price reflects
+
+25
+00:01:14,440 --> 00:01:19,910
+the probability distribution of future stock prices.
+
+26
+00:01:19,910 --> 00:01:25,870
+Now since option values depend on the current stock price, S0,
+
+27
+00:01:25,870 --> 00:01:29,860
+the probability does in fact influence the option value
+
+28
+00:01:29,860 --> 00:01:32,170
+but it only does so indirectly.
+
+29
+00:01:32,170 --> 00:01:38,710
+
+
+30
+00:01:38,710 --> 00:01:40,810
+The fact that there's no direct dependence
+
+31
+00:01:40,810 --> 00:01:43,840
+on the physical probability, q is the basis
+
+32
+00:01:43,840 --> 00:01:48,040
+for being able to use the trick of risk-neutral pricing
+
+33
+00:01:48,040 --> 00:01:51,400
+as an alternative to finding the replicating portfolio.
+
+34
+00:01:51,400 --> 00:01:54,150
+
+
+35
+00:01:54,150 --> 00:01:57,210
+Risk-neutral pricing is a mathematical alternative
+
+36
+00:01:57,210 --> 00:02:00,690
+to a replicating portfolio approach to pricing options
+
+37
+00:02:00,690 --> 00:02:03,900
+that's often simpler to work with.
+
+38
+00:02:03,900 --> 00:02:07,320
+Because the true or physical probability, q,
+
+39
+00:02:07,320 --> 00:02:11,280
+of an up step in the tree is not used in the pricing formulas
+
+40
+00:02:11,280 --> 00:02:14,250
+based on portfolio replication, we're
+
+41
+00:02:14,250 --> 00:02:18,270
+free to replace that probability with the so-called risk-neutral
+
+42
+00:02:18,270 --> 00:02:20,120
+probability.
+
+43
+00:02:20,120 --> 00:02:22,850
+The risk-neutral probability is chosen
+
+44
+00:02:22,850 --> 00:02:26,330
+to be as if we live in a risk-neutral world
+
+45
+00:02:26,330 --> 00:02:30,410
+where all cash flows are discounted at a risk-free rate,
+
+46
+00:02:30,410 --> 00:02:34,400
+including those for risky stocks and derivative securities
+
+47
+00:02:34,400 --> 00:02:37,800
+like options and futures.
+
+48
+00:02:37,800 --> 00:02:39,750
+That is, we can find the risk-neutral neutral
+
+49
+00:02:39,750 --> 00:02:43,860
+probability, which we'll call q*,
+
+50
+00:02:43,860 --> 00:02:48,720
+by solving for it in a formula that equates the stock price
+
+51
+00:02:48,720 --> 00:02:52,590
+with the present value of the time 1 cash flows on the stock,
+
+52
+00:02:52,590 --> 00:02:56,230
+discounted at the risk free rate.
+
+53
+00:02:56,230 --> 00:02:59,200
+For instance, doing this in our last example
+
+54
+00:02:59,200 --> 00:03:02,920
+would replace the true discount rate of 19%
+
+55
+00:03:02,920 --> 00:03:04,540
+with the risk free rate of 11%.
+
+56
+00:03:04,540 --> 00:03:07,060
+
+
+57
+00:03:07,060 --> 00:03:10,000
+There still is actually a risk adjustment,
+
+58
+00:03:10,000 --> 00:03:13,210
+but it's accomplished through the distorted probability
+
+59
+00:03:13,210 --> 00:03:19,000
+weights by using q* instead of q.
+
+60
+00:03:19,000 --> 00:03:22,310
+Here's the present value calculation.
+
+61
+00:03:22,310 --> 00:03:29,920
+And now we can rearrange that formula and solve for q*
+
+62
+00:03:29,920 --> 00:03:33,370
+in terms of the stock prices on all of the nodes
+
+63
+00:03:33,370 --> 00:03:36,145
+of our binomial tree and the risk-free rate.
+
+64
+00:03:36,145 --> 00:03:39,530
+
+
+65
+00:03:39,530 --> 00:03:43,540
+We can represent the time 0 stock price as the expectation
+
+66
+00:03:43,540 --> 00:03:47,470
+of the discounted future payoffs on the stock,
+
+67
+00:03:47,470 --> 00:03:50,770
+but under the risk-neutral expectation operator,
+
+68
+00:03:50,770 --> 00:03:55,810
+E* that uses risk-neutral probabilities in place
+
+69
+00:03:55,810 --> 00:03:56,875
+of the physical ones.
+
+70
+00:03:56,875 --> 00:03:59,410
+
+
+71
+00:03:59,410 --> 00:04:01,060
+The advantage of this approach is
+
+72
+00:04:01,060 --> 00:04:04,180
+that we can now price any derivative security on a stock
+
+73
+00:04:04,180 --> 00:04:07,690
+by calculating the derivative's expected payoff
+
+74
+00:04:07,690 --> 00:04:10,240
+using risk-neutral probabilities in place
+
+75
+00:04:10,240 --> 00:04:12,700
+of physical probabilities, and discounting
+
+76
+00:04:12,700 --> 00:04:14,380
+at the risk free rate.
+
+77
+00:04:14,380 --> 00:04:18,500
+That idea is summarized by formula one here.
+
+78
+00:04:18,500 --> 00:04:21,620
+Going back to our previous example where the stock price
+
+79
+00:04:21,620 --> 00:04:26,240
+is 50 at time 0, and either 70 or 35 in one period,
+
+80
+00:04:26,240 --> 00:04:29,000
+and with the risk free rate of 11%,
+
+81
+00:04:29,000 --> 00:04:34,040
+we can solve for q* using the formula we derived for it.
+
+82
+00:04:34,040 --> 00:04:36,740
+
+
+83
+00:04:36,740 --> 00:04:41,300
+We know that the call option has a payoff of 20 on the up node
+
+84
+00:04:41,300 --> 00:04:44,520
+and is worth 0 on the down node.
+
+85
+00:04:44,520 --> 00:04:46,980
+We can now find its price by finding
+
+86
+00:04:46,980 --> 00:04:51,210
+the risk-neutral expectation of the option's value at time 1,
+
+87
+00:04:51,210 --> 00:04:54,510
+and discounting it back at the risk free rate to time 0.
+
+88
+00:04:54,510 --> 00:04:58,140
+
+
+89
+00:04:58,140 --> 00:05:00,360
+The result is exactly the same as what
+
+90
+00:05:00,360 --> 00:05:03,840
+we calculated with the replicating portfolio approach.
+
+91
+00:05:03,840 --> 00:05:08,610
+The call is worth 10.6547.
+
+92
+00:05:08,610 --> 00:05:10,860
+Now if you ever find a small difference
+
+93
+00:05:10,860 --> 00:05:15,100
+when you compare your answers between the two approaches,
+
+94
+00:05:15,100 --> 00:05:18,060
+it will be due to rounding error in your calculations,
+
+95
+00:05:18,060 --> 00:05:20,970
+not any true difference in the answers.
+
+96
+00:05:20,970 --> 00:05:23,130
+Mathematically, the two approaches
+
+97
+00:05:23,130 --> 00:05:26,500
+are completely equivalent.
+
+98
+00:05:26,500 --> 00:05:28,540
+Here's a recipe that summarizes what
+
+99
+00:05:28,540 --> 00:05:31,330
+we've learned about risk neutral pricing of European style
+
+100
+00:05:31,330 --> 00:05:33,820
+derivatives on a binomial tree.
+
+101
+00:05:33,820 --> 00:05:36,700
+We start by assuming counter factually
+
+102
+00:05:36,700 --> 00:05:39,280
+that prices are determined by discounting
+
+103
+00:05:39,280 --> 00:05:41,240
+at a risk-free rate.
+
+104
+00:05:41,240 --> 00:05:44,500
+This is often described as assuming a fictional world
+
+105
+00:05:44,500 --> 00:05:47,630
+where people are risk-neutral Then
+
+106
+00:05:47,630 --> 00:05:49,940
+based on the model of the evolution of stock
+
+107
+00:05:49,940 --> 00:05:52,370
+prices and the risk free rate, we
+
+108
+00:05:52,370 --> 00:05:55,990
+infer the risk-neutral probabilities.
+
+109
+00:05:55,990 --> 00:05:57,880
+We can then use these probabilities
+
+110
+00:05:57,880 --> 00:06:00,430
+to compute the price of any derivative security
+
+111
+00:06:00,430 --> 00:06:04,540
+based on taking the risk-neutral expectation of the payoffs,
+
+112
+00:06:04,540 --> 00:06:07,910
+and discounting at the risk-free rate.
+
+113
+00:06:07,910 --> 00:06:11,620
+This recipe is easily extended to the multi-step trees that
+
+114
+00:06:11,620 --> 00:06:15,340
+will start to look at next, and to other approaches to pricing,
+
+115
+00:06:15,340 --> 00:06:17,590
+including Monte Carlo methods, that we'll
+
+116
+00:06:17,590 --> 00:06:20,280
+be touching on in a few weeks.
+
+117
+00:06:20,280 --> 00:06:22,484
+
+

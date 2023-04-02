@@ -1,0 +1,195 @@
+
+PROFESSOR: The final category of swaps
+I want to introduce you to are called
+total rate of return swaps.
+These total rate of return swaps are a versatile tool to gain
+or offload customized risk exposure to just about
+any asset you can imagine.
+They're particularly popular tools
+for hedge funds wanting to gain leveraged risk
+exposures to assets that might be illiquid or hard to obtain
+directly.
+In a total rate of return swap, on each payment date,
+the total rate of return payer must pay the receiver
+the entire return on the notional value of the reference
+asset since the last reset or payment date.
+This includes any interest or dividend payments, and also
+any capital gain or loss.
+The total return can therefore be negative.
+And in exchange for that total rate of return,
+the receiver pays an interest rate, usually based
+on a floating reference rate such as LIBOR or SOFR.
+And there may be a spread over that reference rate.
+As with most swaps, usually only the net amount is transferred.
+
+As with other swaps, total rate of return swaps
+have a fixed maturity date.
+That maturity date might not be equal to the reference asset,
+and therefore the swaps allow flexibility
+in length of the exposure to the reference asset
+without requiring any transaction
+involving the asset itself.
+The reference asset, as I mentioned before,
+could be just about anything where returns
+are observable and verifiable.
+They could be bonds, loans, emerging market equities,
+sovereign debt, mortgage backed securities, equities,
+commodities, and so forth.
+Note too that the payer need not own the reference asset.
+If the payer does own the asset, the swap
+offloads the risk onto the receiver and serves as a hedge.
+When the payer doesn't own the reference asset,
+the swap is effectively a speculative short position
+on the asset, a bet that the total return
+will be less than the interest rate paid in the contract.
+
+As a quick comprehension check, let's consider the example
+of a total rate of return swap with notional principle
+of $10 million where the receiver pays LIBOR flat.
+Assume that the reference asset earned negative 10%
+over the period since the last reset date,
+and that the LIBOR rate on the last reset date was 4.5%.
+What's the net cash flow on the swap?
+
+The answer is that the total rate of return payer
+pays minus 10% and receives 4.5%.
+Paying minus 10% is the same as receiving 10%.
+So in total, the total rate of return payer receives 14.5%.
+The total rate of return receiver loses 14.5%.
+The swap is zero-sum.
+
+Total rate of return swap pricing
+is surprisingly straightforward, because we
+can break down the swap into pieces
+that are each easy to price.
+From the payer's perspective, initially and at the beginning
+of every subsequent reset date, the swap
+is equivalent to a short position in the risky reference
+asset, and the long position in a floating rate
+bond, in amounts equal to the notional principle.
+From the receiver's perspective, it's
+like being long in a risky reference asset and short
+in the floating rate bond, both again of equal value.
+This implies that the net value of the swap
+is always zero at a reset date.
+Between reset dates, the value will
+fluctuate with changes in the present value of the reference
+asset and with the present value of the floating rate bond.
+
+It's useful to understand a little bit more
+about the ways in which these contracts are commonly used.
+Let's start with the motivations of total rate
+of return receivers.
+These are often hedge funds seeking exposures
+to an asset class that may be illiquid or otherwise
+difficult to access directly.
+Financial institutions may also use these swaps
+to obtain a particular risk exposure
+that they prefer to keep off their balance sheets.
+Generally, indirect exposure through a swap contract
+may be less costly in terms of administrative and transactions
+costs.
+For example, imagine a hedge fund manager
+that would like to gain exposure to equities in an emerging
+market.
+But that market may have strict capital controls
+and very weak protection for foreign investors.
+Through a total rate of return swap,
+the manager can benefit from the expected gains from the risk
+exposure while avoiding the costs and risks
+of physical ownership.
+A feature that makes total rate of return swaps
+attractive, particularly to hedge funds, but also sometimes
+dangerous, is the very high leverage
+implicit in these contracts.
+As for other derivatives, the implicit leverage
+is reduced when capital is required to ensure performance,
+as we'll see in the next example.
+It's easiest to understand the implicit leverage
+in a total rate of return swap from the perspective
+of the receiver with an example.
+Imagine that Hedge Fund A here is the total rate of return
+receiver where the underlying asset has an expected
+annual rate of return of 8.3%.
+
+The current one year LIBOR rate is 5.8%,
+implying that the spread over LIBOR on the risky reference
+asset is 2.5%.
+
+The total rate of return payer receives
+LIBOR plus a spread of 1%, indicated here with a spread
+to LIBOR of 1%.
+
+The expected net spread over LIBOR for the receiver
+then is 8.3% minus 1% minus 5.8%, or 1.5%.
+
+Let's further assume that the hedge fund
+has to put up 5% of the notional principal and collateral, which
+from its perspective ties up that amount of its own equity
+capital.
+Then the implicit leverage is 100 to 5, or 20 to 1.
+
+The collateral also earns interest
+for the receiver while it's being held,
+which is assumed here to be at the LIBOR rate of 5.8%.
+
+Under those assumptions, the net expected return
+is a very high 35.8%.
+That estimate comes from the equation on the slide,
+showing in the first term the expected total rate of return
+on the reference asset of 8.3%, the interest payment
+on the swap based on LIBOR plus 1%, or 6.8%,
+and the LIBOR return on the collateral.
+The reason that the total return is so high
+is that it's based on the notional principle of 100,
+but the equity tied up is just the collateral of 5 per 100.
+This is then a highly leveraged position and a very risky one.
+If the return on the reference asset
+turns out to be lower than expected,
+losses could turn out to be very large.
+The second and third column of the table
+confirmed that it's the leverage that creates
+the high expected return.
+If Hedge Fund B faces the same terms,
+except that a collateral of 10% is required,
+then the net expected return is 20.8% rather than
+35.8 doing the same algebra.
+And of course, for a cash investor
+in the same asset with no leverage,
+the expected return is 8.3%.
+
+Finally, let's consider the possible motivations
+of a total rate of return payer.
+We've seen that the payer's position involves
+a short position in the reference asset.
+If the payer has a long cash position in that same asset,
+the swap hedges that exposure.
+Of course, an alternative way to hedge that cash exposure would
+be to just liquidate the asset but an outright sale
+could be undesirable for various reasons, such as high selling
+costs or tax consequences.
+Well, for an entity that doesn't own the reference asset
+but believes its price is likely to drop,
+the total rate of return swap offers a way
+to take a short position.
+If the price decline is expected to be temporary,
+the maturity of the swap can be easily matched to that belief.
+
+Being a payer in a total rate of return swap
+is also very useful if an outright short position
+is prohibited, either by policy or regulation,
+or if it's hard to borrow an asset in order to short it.
+Some of these scenarios that I've just described amount
+to an accounting or regulatory arbitrage that's
+using a derivative to get around a rule or regulation.
+Whether such opportunities actually exist
+is not assured, as regulators are
+aware of these sorts of loopholes
+and often try to close them down.
+
+In any case, we've seen that a total rate of return swap
+is a powerful tool for customizing and managing
+risk exposures.
+As with other swap products, most users
+are financial institutions or large financial firms,
+rather than individual investors.

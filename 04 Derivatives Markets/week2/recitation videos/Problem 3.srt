@@ -1,0 +1,736 @@
+0
+00:00:00,000 --> 00:00:00,660
+
+
+1
+00:00:00,660 --> 00:00:03,540
+PROFESSOR: Now that we've had an example of a futures contract,
+
+2
+00:00:03,540 --> 00:00:06,510
+let's finish up the recitation with one final problem
+
+3
+00:00:06,510 --> 00:00:09,240
+about swaps.
+
+4
+00:00:09,240 --> 00:00:12,150
+In this case, we have a currency swap with a remaining
+
+5
+00:00:12,150 --> 00:00:14,340
+life of 15 months.
+
+6
+00:00:14,340 --> 00:00:16,230
+The swap involves exchanging interest
+
+7
+00:00:16,230 --> 00:00:20,130
+at 10% on 20 million pounds for interest
+
+8
+00:00:20,130 --> 00:00:25,290
+at 6% on $30 million US dollars once a year.
+
+9
+00:00:25,290 --> 00:00:27,900
+The term structure of risk-free interest rates in the United
+
+10
+00:00:27,900 --> 00:00:31,590
+Kingdom is flat at 7%, and the term structure
+
+11
+00:00:31,590 --> 00:00:35,640
+of risk-free rates in the United States is flat at 4%.
+
+12
+00:00:35,640 --> 00:00:39,510
+Both of these interest rates are with annual compounding.
+
+13
+00:00:39,510 --> 00:00:42,720
+The current exchange rate is 1.55 dollars
+
+14
+00:00:42,720 --> 00:00:46,020
+per pound sterling.
+
+15
+00:00:46,020 --> 00:00:48,660
+In part A we are asked, what is the value
+
+16
+00:00:48,660 --> 00:00:51,660
+of the swap to the party paying sterling,
+
+17
+00:00:51,660 --> 00:00:55,750
+equivalently receiving dollars?
+
+18
+00:00:55,750 --> 00:00:58,750
+Well, before we begin solving this question,
+
+19
+00:00:58,750 --> 00:01:00,750
+we should first note that the swap involves
+
+20
+00:01:00,750 --> 00:01:05,670
+exchanging the sterling interest of 20 times 10%, which
+
+21
+00:01:05,670 --> 00:01:09,150
+equals 2 million pounds for the dollar
+
+22
+00:01:09,150 --> 00:01:13,620
+interest of $30 times 6%, which equals $1.8 million.
+
+23
+00:01:13,620 --> 00:01:17,880
+And of course, with any currency swap,
+
+24
+00:01:17,880 --> 00:01:20,490
+the principal amounts are also exchanged
+
+25
+00:01:20,490 --> 00:01:22,950
+at the swap's terminal date.
+
+26
+00:01:22,950 --> 00:01:25,260
+So there's an easy way to solve this question,
+
+27
+00:01:25,260 --> 00:01:27,660
+and there's a hard way to solve this question.
+
+28
+00:01:27,660 --> 00:01:30,300
+I thought in part A, we would start with the easy way
+
+29
+00:01:30,300 --> 00:01:33,210
+to solve this question-- the so-called bond valuation
+
+30
+00:01:33,210 --> 00:01:34,590
+method.
+
+31
+00:01:34,590 --> 00:01:37,890
+The key here is to notice that the cash flows of the swap
+
+32
+00:01:37,890 --> 00:01:41,520
+are identical to those of a coupon bond.
+
+33
+00:01:41,520 --> 00:01:45,150
+The value of the sterling bond underlying the swap
+
+34
+00:01:45,150 --> 00:01:46,990
+is as follows.
+
+35
+00:01:46,990 --> 00:01:51,090
+It's the sum of the 2 million pounds of interest received
+
+36
+00:01:51,090 --> 00:01:55,080
+three months into the 15 month period discounted
+
+37
+00:01:55,080 --> 00:01:59,940
+at the constant 7% interest rate, plus the sum of the 2
+
+38
+00:01:59,940 --> 00:02:02,970
+million pounds interest plus the 20 million
+
+39
+00:02:02,970 --> 00:02:06,960
+pound principal amount received 15 months later,
+
+40
+00:02:06,960 --> 00:02:10,960
+discounted at the 7% constant risk-free rate,
+
+41
+00:02:10,960 --> 00:02:15,990
+which is equal to 22.182 million pounds.
+
+42
+00:02:15,990 --> 00:02:20,400
+Similarly, the value of the dollar bond underlying the swap
+
+43
+00:02:20,400 --> 00:02:22,920
+is also the sum of two terms.
+
+44
+00:02:22,920 --> 00:02:27,240
+In the first term, we have $1.8 million interest,
+
+45
+00:02:27,240 --> 00:02:30,570
+received 3 months into the 15 month period,
+
+46
+00:02:30,570 --> 00:02:34,650
+discounted at the 4% constant risk-free rate.
+
+47
+00:02:34,650 --> 00:02:37,950
+And the second term, we have the $1.8 million
+
+48
+00:02:37,950 --> 00:02:43,050
+interest received 15 months later, plus the $30 million
+
+49
+00:02:43,050 --> 00:02:46,620
+principal amount also received 15 months later,
+
+50
+00:02:46,620 --> 00:02:50,790
+both discounted at the 4% constant risk-free rate, which
+
+51
+00:02:50,790 --> 00:02:54,600
+gives us a total of $32.061 million.
+
+52
+00:02:54,600 --> 00:02:59,640
+Thus, the value of the swap to the party
+
+53
+00:02:59,640 --> 00:03:03,000
+paying sterling and receiving dollars--
+
+54
+00:03:03,000 --> 00:03:05,180
+which will be a number in dollars--
+
+55
+00:03:05,180 --> 00:03:08,910
+is the difference between the value of the dollar bond
+
+56
+00:03:08,910 --> 00:03:10,200
+underlying the swap--
+
+57
+00:03:10,200 --> 00:03:17,040
+$32.061 million-- minus the value of the sterling bond
+
+58
+00:03:17,040 --> 00:03:20,680
+underlying the swap adjusted for the risk-free rate.
+
+59
+00:03:20,680 --> 00:03:26,460
+So the 22.182 million pounds times the exchange rate
+
+60
+00:03:26,460 --> 00:03:30,060
+of 1.55 dollars per pound.
+
+61
+00:03:30,060 --> 00:03:32,220
+The difference between these two quantities
+
+62
+00:03:32,220 --> 00:03:35,940
+is negative 2.321 million.
+
+63
+00:03:35,940 --> 00:03:39,960
+Thus, the value of the swap to the party paying sterling
+
+64
+00:03:39,960 --> 00:03:41,340
+is a negative amount--
+
+65
+00:03:41,340 --> 00:03:46,000
+negative 2.321 million dollars.
+
+66
+00:03:46,000 --> 00:03:48,900
+In part B, we're asked, what is the value
+
+67
+00:03:48,900 --> 00:03:53,910
+to the party paying dollars and receiving sterling?
+
+68
+00:03:53,910 --> 00:03:56,880
+Now, the easy way to answer this question is to notice that
+
+69
+00:03:56,880 --> 00:03:59,430
+since the cash flows here are reversed--
+
+70
+00:03:59,430 --> 00:04:01,950
+it's just the opposite leg of the swap--
+
+71
+00:04:01,950 --> 00:04:04,260
+the value of the swap to the party paying dollars
+
+72
+00:04:04,260 --> 00:04:09,300
+is the negative of the value to the party paying sterling.
+
+73
+00:04:09,300 --> 00:04:12,720
+And the negative of negative $2.321 million
+
+74
+00:04:12,720 --> 00:04:17,470
+is simply $2.321 million.
+
+75
+00:04:17,470 --> 00:04:19,829
+Now, the harder method for solving this question
+
+76
+00:04:19,829 --> 00:04:25,350
+that I alluded to above, is to view this swap as a portfolio
+
+77
+00:04:25,350 --> 00:04:27,030
+of forward contracts.
+
+78
+00:04:27,030 --> 00:04:31,230
+Now, how do we solve this using the hard method of viewing
+
+79
+00:04:31,230 --> 00:04:34,890
+the swap as a sequence of forward contracts?
+
+80
+00:04:34,890 --> 00:04:37,380
+Well, first to be consistent with part A,
+
+81
+00:04:37,380 --> 00:04:40,530
+we will value the swap to the party paying sterling
+
+82
+00:04:40,530 --> 00:04:42,635
+and receiving dollars.
+
+83
+00:04:42,635 --> 00:04:44,010
+So we should get an answer that's
+
+84
+00:04:44,010 --> 00:04:47,700
+very similar to part A. The first step is to note,
+
+85
+00:04:47,700 --> 00:04:50,680
+that since we're given annual interest rates,
+
+86
+00:04:50,680 --> 00:04:52,980
+and we need continuously compounded interest
+
+87
+00:04:52,980 --> 00:04:55,590
+rates in order to calculate the forward exchange
+
+88
+00:04:55,590 --> 00:04:58,860
+rates 3 and 15 months from now, we
+
+89
+00:04:58,860 --> 00:05:02,270
+can convert our annual interest rates into continuously
+
+90
+00:05:02,270 --> 00:05:06,470
+compounded interest rates by taking the natural log of 1
+
+91
+00:05:06,470 --> 00:05:11,880
+plus the annual interest rate expresses a decimal.
+
+92
+00:05:11,880 --> 00:05:14,840
+So for instance, for the continuously compounded
+
+93
+00:05:14,840 --> 00:05:17,000
+interest rate in sterling, we take
+
+94
+00:05:17,000 --> 00:05:21,860
+1 plus the 7% annual interest rate in sterling.
+
+95
+00:05:21,860 --> 00:05:27,050
+And the natural log of that is 6.766% per annum.
+
+96
+00:05:27,050 --> 00:05:32,360
+And similarly, the 4% annually compounded
+
+97
+00:05:32,360 --> 00:05:36,620
+interest rate in dollars expresses a decimal plus 1.
+
+98
+00:05:36,620 --> 00:05:44,060
+And take the natural log of that gives us 3.922% per annum.
+
+99
+00:05:44,060 --> 00:05:46,430
+So we have these two continuously compounded
+
+100
+00:05:46,430 --> 00:05:47,450
+interest rates.
+
+101
+00:05:47,450 --> 00:05:50,900
+What we need now is to find the forward exchange rates-- that
+
+102
+00:05:50,900 --> 00:05:56,480
+is the exchange rates in the future, 3 months and 15 months.
+
+103
+00:05:56,480 --> 00:05:58,520
+Well, the 3 month forward exchange rate
+
+104
+00:05:58,520 --> 00:06:04,400
+is equal to the current exchange rate, which is $1.55 per pound,
+
+105
+00:06:04,400 --> 00:06:07,880
+times the exponential of the difference in the continuously
+
+106
+00:06:07,880 --> 00:06:10,760
+compounded interest rates in dollars--
+
+107
+00:06:10,760 --> 00:06:14,460
+3.922% expressed as a decimal--
+
+108
+00:06:14,460 --> 00:06:19,490
+and in sterling-- 6.766% expressed as a decimal--
+
+109
+00:06:19,490 --> 00:06:22,610
+times an adjustment for 3 months in the future--
+
+110
+00:06:22,610 --> 00:06:27,320
+3 over 12, which is equal to 1.539.
+
+111
+00:06:27,320 --> 00:06:30,050
+Pretty close, but slightly below our current exchange
+
+112
+00:06:30,050 --> 00:06:32,600
+rate of 1.55.
+
+113
+00:06:32,600 --> 00:06:35,600
+Similarly, the 15 month forward exchange rate
+
+114
+00:06:35,600 --> 00:06:39,380
+is equal to the current exchange rate of dollars per pounds,
+
+115
+00:06:39,380 --> 00:06:42,800
+multiplied by the exponential of the difference
+
+116
+00:06:42,800 --> 00:06:47,420
+in the continuously compounded dollar and Sterling interest
+
+117
+00:06:47,420 --> 00:06:48,690
+rates.
+
+118
+00:06:48,690 --> 00:06:52,693
+But now, our adjustment is 15 over 12 for the discounting,
+
+119
+00:06:52,693 --> 00:06:54,110
+since this is the forward exchange
+
+120
+00:06:54,110 --> 00:06:57,080
+rate 15 months in the future.
+
+121
+00:06:57,080 --> 00:07:00,710
+That foreign exchange rate is 1.4959--
+
+122
+00:07:00,710 --> 00:07:02,630
+significantly less than the current exchange
+
+123
+00:07:02,630 --> 00:07:07,880
+rate of $1.55 per pound.
+
+124
+00:07:07,880 --> 00:07:12,070
+Now, given that we have the 3 month and 15 month forward
+
+125
+00:07:12,070 --> 00:07:14,650
+exchange rates, we can find the values
+
+126
+00:07:14,650 --> 00:07:17,200
+of the two forward contracts corresponding
+
+127
+00:07:17,200 --> 00:07:19,930
+to the exchange of fixed interests
+
+128
+00:07:19,930 --> 00:07:23,140
+for the party paying sterling and receiving dollars
+
+129
+00:07:23,140 --> 00:07:24,490
+as follows.
+
+130
+00:07:24,490 --> 00:07:26,800
+In the first equation, we have the difference
+
+131
+00:07:26,800 --> 00:07:31,690
+between the $1.8 million in fixed interest received
+
+132
+00:07:31,690 --> 00:07:36,730
+in 3 months, minus 2 times the 3 month forward exchange
+
+133
+00:07:36,730 --> 00:07:43,780
+rate of 1.539, discounted at the dollar
+
+134
+00:07:43,780 --> 00:07:49,990
+continuously compounded interest rate of 3.922% multiplied by 3
+
+135
+00:07:49,990 --> 00:07:56,860
+over 12, which is equal to a negative $1.256 million.
+
+136
+00:07:56,860 --> 00:07:59,560
+Now, the value of the forward contract corresponding
+
+137
+00:07:59,560 --> 00:08:03,660
+to the exchange of interest for the party paying sterling in 15
+
+138
+00:08:03,660 --> 00:08:08,830
+months is again $1.8 million, minus 2,
+
+139
+00:08:08,830 --> 00:08:14,590
+times the foreign exchange rate for 15 months 1.4959,
+
+140
+00:08:14,590 --> 00:08:19,780
+times the exponential of negative 0.3922,
+
+141
+00:08:19,780 --> 00:08:25,990
+again discounting at the 3.922% continuously compounded dollar
+
+142
+00:08:25,990 --> 00:08:29,030
+interest rate, times 15 over 12--
+
+143
+00:08:29,030 --> 00:08:34,510
+since we're now 15 months into the future, again,
+
+144
+00:08:34,510 --> 00:08:36,470
+so that's the 15 over 12 term--
+
+145
+00:08:36,470 --> 00:08:43,299
+which gives us a total value of negative $1.1347 million.
+
+146
+00:08:43,299 --> 00:08:46,150
+Now that we've found the value of the two forward contracts
+
+147
+00:08:46,150 --> 00:08:50,260
+corresponding to the exchange of fixed interest in 3 and 15
+
+148
+00:08:50,260 --> 00:08:52,990
+months according to the perspective of the party that
+
+149
+00:08:52,990 --> 00:08:56,290
+is paying sterling and receiving dollars,
+
+150
+00:08:56,290 --> 00:08:59,410
+we can find the value of the forward contract corresponding
+
+151
+00:08:59,410 --> 00:09:03,250
+to the exchange of principals as follows.
+
+152
+00:09:03,250 --> 00:09:05,950
+For then the perspective of the party that
+
+153
+00:09:05,950 --> 00:09:08,500
+is paying sterling and receiving dollars,
+
+154
+00:09:08,500 --> 00:09:11,510
+it's equal to the difference between the $30 million
+
+155
+00:09:11,510 --> 00:09:17,290
+principal and the 20 million pounds principal,
+
+156
+00:09:17,290 --> 00:09:20,260
+adjusted for the forward exchange rate 15 months
+
+157
+00:09:20,260 --> 00:09:25,960
+from now of 1.4959 dollars per pound,
+
+158
+00:09:25,960 --> 00:09:31,450
+discounted by the exponential of negative 0.3922--
+
+159
+00:09:31,450 --> 00:09:33,610
+remember, that's the decimal form
+
+160
+00:09:33,610 --> 00:09:37,930
+of the continuously compounded dollar interest rate--
+
+161
+00:09:37,930 --> 00:09:43,180
+times 15 over 12, for the fact that the exchange of principals
+
+162
+00:09:43,180 --> 00:09:45,340
+occurs at the terminal date of the swap 15
+
+163
+00:09:45,340 --> 00:09:47,440
+months in the future, which gives us
+
+164
+00:09:47,440 --> 00:09:52,240
+a total amount of $0.0787 million
+
+165
+00:09:52,240 --> 00:09:54,970
+for the value of the forward contract
+
+166
+00:09:54,970 --> 00:09:58,310
+corresponding to the exchange of principals.
+
+167
+00:09:58,310 --> 00:10:02,230
+So the total value of the swap according to the party
+
+168
+00:10:02,230 --> 00:10:04,840
+paying sterling is going to be the sum of three
+
+169
+00:10:04,840 --> 00:10:07,990
+different forward contracts: the two forward contracts
+
+170
+00:10:07,990 --> 00:10:10,180
+corresponding to the exchange of interest
+
+171
+00:10:10,180 --> 00:10:14,500
+in 3 months and 15 months that we found here--
+
+172
+00:10:14,500 --> 00:10:20,740
+the negative $1.2656 million, and negative $1.1347 million,--
+
+173
+00:10:20,740 --> 00:10:25,600
+plus the value of the forward contract corresponding
+
+174
+00:10:25,600 --> 00:10:28,990
+to the exchange of principals at the end of 15 months, which
+
+175
+00:10:28,990 --> 00:10:36,200
+is $0.0787 million, which gives us a total of negative $2.322
+
+176
+00:10:36,200 --> 00:10:37,300
+million.
+
+177
+00:10:37,300 --> 00:10:40,750
+Which, if you'll recall from part A,
+
+178
+00:10:40,750 --> 00:10:43,900
+according to some rounding errors,
+
+179
+00:10:43,900 --> 00:10:47,140
+is very close to that which we obtained using the bond
+
+180
+00:10:47,140 --> 00:10:50,440
+valuation method.
+
+181
+00:10:50,440 --> 00:10:52,813
+So that wraps up recitation two.
+
+182
+00:10:52,813 --> 00:10:54,730
+Thank you all for attending and I look forward
+
+183
+00:10:54,730 --> 00:10:57,030
+to seeing you next week.
+

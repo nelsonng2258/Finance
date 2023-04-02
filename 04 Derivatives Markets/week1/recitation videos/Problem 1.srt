@@ -1,0 +1,348 @@
+0
+00:00:00,000 --> 00:00:00,790
+
+
+1
+00:00:00,790 --> 00:00:04,090
+PROFESSOR: Hello everyone, and welcome to the first recitation
+
+2
+00:00:04,090 --> 00:00:06,550
+of 15.435x.
+
+3
+00:00:06,550 --> 00:00:09,730
+My name is JR Scott, and I'm a PhD candidate
+
+4
+00:00:09,730 --> 00:00:13,570
+in finance at the MIT Sloan School of Management.
+
+5
+00:00:13,570 --> 00:00:16,149
+I'll be writing the recitations for this course.
+
+6
+00:00:16,149 --> 00:00:18,160
+In our first recitation, we'll be
+
+7
+00:00:18,160 --> 00:00:20,740
+reviewing some of the mechanics of forward contracts.
+
+8
+00:00:20,740 --> 00:00:24,410
+Without further ado, let's begin the recitation.
+
+9
+00:00:24,410 --> 00:00:27,560
+The recitation consists of three practice problems.
+
+10
+00:00:27,560 --> 00:00:30,380
+Problems will roughly increase in order of difficulty,
+
+11
+00:00:30,380 --> 00:00:33,230
+and I hope with each problem you gain a better understanding
+
+12
+00:00:33,230 --> 00:00:37,040
+of how forward contracts work.
+
+13
+00:00:37,040 --> 00:00:40,550
+In the first problem, it's stated that Southern California
+
+14
+00:00:40,550 --> 00:00:44,930
+Edison or SCE, will need to buy 200,000 barrels of oil
+
+15
+00:00:44,930 --> 00:00:48,980
+in 10 days, and it is worried about fuel costs rising.
+
+16
+00:00:48,980 --> 00:00:53,300
+Suppose SCE goes long 200 oil forward contracts of the April
+
+17
+00:00:53,300 --> 00:00:54,080
+contract --
+
+18
+00:00:54,080 --> 00:00:55,670
+it is currently March --
+
+19
+00:00:55,670 --> 00:00:59,510
+each for 1,000 barrels of oil at the current forward price
+
+20
+00:00:59,510 --> 00:01:01,520
+of $50 per barrel.
+
+21
+00:01:01,520 --> 00:01:03,800
+Suppose forward prices change each day
+
+22
+00:01:03,800 --> 00:01:07,690
+as follows in the table below.
+
+23
+00:01:07,690 --> 00:01:11,500
+In Part A, we are asked what is the mark-to-market profit
+
+24
+00:01:11,500 --> 00:01:16,450
+or loss in dollars the SCE will have on each state?
+
+25
+00:01:16,450 --> 00:01:20,960
+To me, the best way to begin is to define some notation.
+
+26
+00:01:20,960 --> 00:01:25,300
+So let's define F sub T to be the forward price for day T
+
+27
+00:01:25,300 --> 00:01:27,760
+and, N to be the number of barrels of oil
+
+28
+00:01:27,760 --> 00:01:30,240
+in each forward contract.
+
+29
+00:01:30,240 --> 00:01:33,060
+Thus the mark-to-market profit or loss,
+
+30
+00:01:33,060 --> 00:01:36,960
+P/L on each forward contract on date T
+
+31
+00:01:36,960 --> 00:01:42,060
+is equal to N times the difference between FT and FT
+
+32
+00:01:42,060 --> 00:01:45,300
+minus 1, where FT minus 1 is the forward price
+
+33
+00:01:45,300 --> 00:01:48,300
+on the previous day for a long position.
+
+34
+00:01:48,300 --> 00:01:54,150
+And N times FT minus 1 minus FT for short position.
+
+35
+00:01:54,150 --> 00:01:57,570
+Now armed with that notation, and letting F sub 0
+
+36
+00:01:57,570 --> 00:02:00,960
+to be the current forward price of $50,
+
+37
+00:02:00,960 --> 00:02:06,570
+since SCE has a long position in 204 contracts with a size of N
+
+38
+00:02:06,570 --> 00:02:09,360
+equals 1,000 barrels for each contract.
+
+39
+00:02:09,360 --> 00:02:13,050
+We can define SCE's profit or loss on day one
+
+40
+00:02:13,050 --> 00:02:19,050
+to be 200 times N times the difference between F1 and F0,
+
+41
+00:02:19,050 --> 00:02:21,990
+which, after plugging in values, equals
+
+42
+00:02:21,990 --> 00:02:27,900
+200 times 1,000 times 49.75 minus 50,
+
+43
+00:02:27,900 --> 00:02:31,470
+which is equal to negative $50,000.
+
+44
+00:02:31,470 --> 00:02:35,100
+In other words SCE makes a mark-to-market loss
+
+45
+00:02:35,100 --> 00:02:40,230
+of $50,000 on day one.
+
+46
+00:02:40,230 --> 00:02:44,100
+Similarly on day two, SCE's profit or loss
+
+47
+00:02:44,100 --> 00:02:49,500
+is 200 times N times F2 minus F1,
+
+48
+00:02:49,500 --> 00:02:54,000
+which, using the values for F2 and F1 from the initial table,
+
+49
+00:02:54,000 --> 00:03:01,440
+is equal to 200 times 1,000 times 47.25 minus 49.75,
+
+50
+00:03:01,440 --> 00:03:05,840
+which is equal to negative $500,000.
+
+51
+00:03:05,840 --> 00:03:09,680
+Thus we can iterate the above calculation for days 3
+
+52
+00:03:09,680 --> 00:03:13,550
+through 10 just substituting in the appropriate forward prices
+
+53
+00:03:13,550 --> 00:03:17,480
+into the formula and we can calculate SCE's daily profit
+
+54
+00:03:17,480 --> 00:03:22,270
+or loss, which is displayed in the table below.
+
+55
+00:03:22,270 --> 00:03:29,700
+Part B asks what is SCE's total profit or loss after 10 days?
+
+56
+00:03:29,700 --> 00:03:31,440
+What we're called at SCE's profit
+
+57
+00:03:31,440 --> 00:03:34,740
+or loss on its long position in each forward contract
+
+58
+00:03:34,740 --> 00:03:40,110
+on the first day, is equal to N times F1 minus F0,
+
+59
+00:03:40,110 --> 00:03:45,580
+and on the second day is equal to N times F2 minus F1.
+
+60
+00:03:45,580 --> 00:03:49,690
+If we sum these two quantities, we see SCE's profit or loss
+
+61
+00:03:49,690 --> 00:03:55,390
+after two days, is equal to N times F2 minus F0.
+
+62
+00:03:55,390 --> 00:03:58,070
+
+
+63
+00:03:58,070 --> 00:04:01,550
+If we iterate this logic forward all the way to day 10,
+
+64
+00:04:01,550 --> 00:04:05,570
+we see that SCE's profit or loss on each forward contract
+
+65
+00:04:05,570 --> 00:04:09,380
+after 10 days, is given by N times
+
+66
+00:04:09,380 --> 00:04:11,930
+the forward price of day 10, minus
+
+67
+00:04:11,930 --> 00:04:15,170
+the initial forward price, which is F0.
+
+68
+00:04:15,170 --> 00:04:20,390
+Thus SCE's total profit or loss on its long position in 204
+
+69
+00:04:20,390 --> 00:04:28,070
+contracts after 10 days is, 200 times N times F10 minus F0,
+
+70
+00:04:28,070 --> 00:04:31,910
+which is equal to 200 times 1,000 times the difference
+
+71
+00:04:31,910 --> 00:04:40,310
+between 52.50 and 50, which is $500,000.
+
+72
+00:04:40,310 --> 00:04:44,120
+In the last part of problem one, Part C, we are asked,
+
+73
+00:04:44,120 --> 00:04:49,517
+explain why this may not be a perfect hedge for SCE.
+
+74
+00:04:49,517 --> 00:04:51,100
+Now I can think of a couple of reasons
+
+75
+00:04:51,100 --> 00:04:53,440
+why the strategy may not be a perfect hedge,
+
+76
+00:04:53,440 --> 00:04:56,560
+and I encourage you to think of some others on your own.
+
+77
+00:04:56,560 --> 00:04:59,470
+The first one is that the interest earned on the margin
+
+78
+00:04:59,470 --> 00:05:02,230
+account was not included in the calculations
+
+79
+00:05:02,230 --> 00:05:06,590
+that we did and will actually affect SCE's payoff.
+
+80
+00:05:06,590 --> 00:05:09,620
+The second one -- and this sounds pretty obvious --
+
+81
+00:05:09,620 --> 00:05:12,080
+is that not all oil is the same.
+
+82
+00:05:12,080 --> 00:05:15,170
+Oil prices differ based on quality and location,
+
+83
+00:05:15,170 --> 00:05:17,990
+so that the reference price in this forward contract
+
+84
+00:05:17,990 --> 00:05:21,710
+may not be perfectly correlated with the cash purchase price
+
+85
+00:05:21,710 --> 00:05:24,500
+that Southern California Edison faces.
+
+86
+00:05:24,500 --> 00:05:25,000
+
+

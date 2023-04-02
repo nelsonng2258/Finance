@@ -1,0 +1,162 @@
+
+PROFESSOR: One of the most common uses of swaps
+is by financial institutions that
+want to hedge the maturity mismatch between the asset
+and liability sides of their balance sheet.
+We'll consider the example of Southwest Savings Bank.
+This is one of my favorite examples
+for illustrating the importance of interest rate
+risk for banks, how swaps and futures are alternative ways
+to hedge against it, and how swap contracts have been
+engineered and evolved over time to better help
+banks address these goals.
+Like many savings banks, Southwest
+can fund its investment relatively inexpensively using
+short term deposit funding.
+Depositors like the safety and liquidity
+of holding their money in a bank.
+Thus, deposits make up the majority of its liabilities.
+It also has some equity that serves
+as a buffer against fluctuations in the value of its assets.
+On the asset side of the balance sheet,
+it specializes in funding mortgages,
+which let's assume have a maturity of 10 years.
+
+Well, let's imagine that the managers of Southwest
+decide to invest $1 million into new 10 year mortgages funded
+with three month time deposits.
+Say the mortgages carry a 10% interest rate,
+and the three month time deposits earn 8%.
+For the first three months, the bank
+has locked in an attractive 2% spread
+between the mortgage rate it earns
+and the deposit rate it pays.
+Clearly, though, this is a very risky balance sheet.
+The risk can be understood by considering the future cash
+flows.
+If interest rates rise, the mortgages
+will continue to pay 10%, but the new deposits
+will carry a higher rate, possibly exceeding the 10%
+earned on the mortgages.
+The risk can also be understood as having an immediate effect
+in terms of the market value or present value of the balance
+sheet.
+That is, if rates rise, the market value of the 10 year
+mortgages will fall considerably more
+than the market value of the three month time deposits.
+That means that an increase in interest rates
+will erode the value of equity, potentially
+causing financial distress or causing the bank
+to be in violation of regulatory capital requirements.
+There are several ways to hedge this risk exposure.
+We'll compare two popular approaches: futures contracts
+and interest rate swaps.
+
+Hedging with a strip of short term interest rate futures
+is one way to offset Southwest's interest rate risk exposure.
+Active short term interest rate futures contract currently
+include the three month LIBOR and three month SOFR contracts.
+Looking at the information in this table,
+the quoted price is used to find the forward interest
+rate that can be locked in.
+The annualized rate is just 100 minus the quoted price.
+So if the price is given as 92, the rate is 8%.
+
+Well, to lock in future borrowing rates
+beyond the first three months covered by the initial time
+deposits, the bank would short a sequence of contracts,
+sizing the position to minimize the risk with a hedge ratio.
+The short position generates gains
+proportional to the increase in rates
+offsetting the future higher interest
+rates in the cash market and the losses that they generate.
+Specifically, if the contract is based
+on a principal amount of $1 million,
+the bank would short one of each of these contracts.
+While this strategy can provide a decent hedge,
+it has some drawbacks.
+One is that it involves a large number of contracts.
+The second is that liquidity tends to decline rapidly
+for longer dated contracts, as can be seen from the declining
+open interest.
+That reduced liquidity may increase the cost of the hedge.
+Hedging mortgages is also complicated by the fact
+that they may be prepaid.
+And there is considerable uncertainty
+about what that rate of prepayment will be.
+That uncertainty will degrade the effectiveness of the hedge,
+because it's likely that the hedge will turn out
+to be too big or too small.
+
+An alternative is for Southwest to hedge using
+a 10 year interest rate swap.
+Southwest would enter as the fixed rate payer, using
+the income received from the mortgages
+to cover its swap payout obligations.
+It would be the floating rate receiver
+and would use the income from the swap to pay its depositors.
+It's protected from rising deposit rates by the increasing
+swap income from the floating payments it receives.
+Specifically, imagine that it enters
+into a 10 year swap that matches the maturity of the mortgages.
+As the fixed rate payer, it pays a rate
+that was determined competitively
+in the swap market, as we discussed earlier.
+The floating rate is indexed to LIBOR, a common index
+rate for swaps, and the payment frequency
+is set to be semi-annual, which is also
+a common frequency for plain vanilla interest rate swaps.
+
+Both the strip of short futures and the interest rate swap
+would serve to protect the bank from rising interest rates.
+However, the swap contract has a few advantages over futures.
+There's only one swap contract.
+It covers the entire 10 year period, avoiding illiquidity
+and long dated futures, and the more flexible timing
+means that the contract can better match the maturity
+dates of the time deposits.
+However, this plain vanilla swap is still not a perfect hedge
+for Southwest.
+Whereas the notional principle of the swap is constant,
+the mortgage principal will decline over time
+with amortization.
+There's likely to be a mismatch between the timing of mortgage
+payments that are received monthly
+and the swap payments that are made semi-annually.
+The rate paid to depositors may not track the LIBOR reference
+rate in the swap.
+The uncertainty about prepayment speeds
+means the bank is likely to be over- or under-hedged
+in the future.
+
+All of these problems can be addressed with customized swaps
+that use financial engineering to provide users
+with a more reliable hedge.
+Amortizing swaps are based on a notional principle balance
+that declines over time.
+In this case, the amortization schedule
+can be set to match the normal mortgage amortization schedule.
+Basis swaps are an exchange of payments
+where each side is based on a different reference index.
+A basis swap could be used to hedge
+the timing difference between the mortgage cash inflows
+and the swap fixed rate outflows.
+Another basis swap could be used to hedge
+the difference between the deposit rates and the LIBOR
+rates.
+Finally, the prepayment risk could be hedged
+with the use of a swaption.
+A swaption is an option embedded in a swap contract.
+Type of swaption that would help Southwest in this situation
+would allow it to cancel the swap
+at any time of its choosing, thereby
+allowing it to take off the hedge if the mortgages are
+prepaid.
+While each of these custom features
+makes for a much better hedge, but it
+adds to the cost of the hedge.
+Depending on its risk tolerance, Southwest
+might prefer the partial protection offered
+by a plain vanilla interest rate swap,
+or it may choose to add some of these other features
+to improve the quality of its hedge.

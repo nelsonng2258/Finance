@@ -1,0 +1,175 @@
+
+J. R. SCOTT: Hello everyone and welcome to the third recitation
+of 15.435x.
+In this recitation, we'll be reviewing
+three problems related to duration, convexity, and delta
+hedging.
+Without further ado, let's begin with problem 1.
+Problem 1 asks us to consider a 2-year bond with a coupon
+rate of 4%, annual payments, and is
+priced at $98 per $100 face value
+for an effective annual yield of 5.077%.
+In Part A, we are asked to calculate the modified
+duration of this bond.
+Sounds easy, right?
+Well, the first thing to notice here
+is that the yield we are given is an effective annual yield.
+What does that mean?
+A bond's effective annual yield is a simple interest rate
+earned on the bond over a year, taking into account all
+compounding opportunities.
+In order to use the convexity calculator provided
+by Professor Lucas to find the bond's modified duration,
+we first need to convert this effective annual yield, or EAY,
+into a bond equivalent yield.
+A bond equivalent yield is the single interest rate
+that equates the price of a bond to the present value
+of its future cash flows, assuming
+semi-annual compounding.
+This is the most frequent notation in which
+you will see yields quoted.
+Now, the simple conversion for an effective annual yield
+into a bond equivalent yield is to use
+the formula in equation 1.
+In particular, the effective annual yield
+is equal to 1 plus the bond equivalent yield divided
+by 2 squared minus 1, where y subscript
+ea is the effective annual yield,
+and y subscript be is the bond equivalent yield.
+Plugging in 5.077% for the effective annual yield
+into equation 1, we can solve for the bond equivalent yield
+to be 5.014%--
+close, but slightly smaller than the effective annual yield.
+Now, given that we have the bond equivalent yield,
+we can find the modified duration of the bond
+by inputting the following parameters
+into the convexity.xls calculator.
+In particular, N, which is the maturity in years of the bond,
+is set to be 2.
+The frequency for the coupon payments
+is set to be 1, since we have annual coupon payments.
+The coupon rate is 4%.
+The face value of the bond at maturity
+we will normalize to be $100, and the yield on the bond
+equivalent basis is 5.014%.
+When you calculate both the convexity and the duration,
+you'll find that the Macaulay duration is 1.96 years,
+and the modified duration, which is what this question was
+asking us, is 1.866 years.
+In Part B, we are asked to use the modified duration
+that we calculated in part a to estimate
+the new price of the bond if the bond's effective annual yield
+increases to 6.5%.
+Do you expect the actual price of the bond
+to be higher or lower than your estimate here?
+
+The first thing we need to do is to recall
+that we can approximate the dollar price
+change in a bond for a given change in its yield using
+the following expression, which I have numbered equation 2.
+On the left-hand side, dP is the change in the price of a bond.
+On the right-hand side, DM is the modified duration
+of the bond, P is the bond's price,
+and dy is the change in the yield of a bond.
+Effectively, this approximation relates
+the change in the price of the bond to its modified duration.
+Now, plugging in the modified duration of 1.866 years
+for the bond that we calculated in Part A,
+the change in the yield of 6.5% minus 5.077%,
+which is equal to 1.423%, and the bond's price of $98,
+we see that dP, the change in the bond's price is negative
+$2.60.
+In other words, the new price of the bond after the increase
+in yield is $95.40.
+Now, do we expect the actual change in the bond's price
+to be higher or lower than the one obtained
+using the approximation in equation 2?
+Recall that we can improve our approximation
+by including the impact of convexity, that
+is, the second derivative of a bond's price with respect
+to its yield.
+The approximation that includes both duration and convexity
+can be written as follows in equation 3.
+This equation is very similar to equation 2.
+Notice that the first term on the right-hand side is the same
+as that is in equation 2 but now we have this an additional term
+--
+this convexity term, which is equal to 1/2 times the bond's
+convexity, which I denote by C sub 0,
+times the bond's price, times the square
+of the change in yield, dy.
+Since a long position in a non-callable bond,
+like the one in this example, has positive convexity,
+the second term on the right-hand side
+will be positive, and the actual change in price
+will be lower than the one obtained
+using the approximation in equation 2
+that includes only duration.
+More generally, positive convexity
+means that duration will underestimate
+the price increase that results from a drop in the yield
+and overestimate the price decrease
+from an increase in the yield.
+In the last part, Part C, we are asked
+to imagine that we want to immunize a liability that
+comes due in 3 and 1/2 years.
+If you want to invest in an immunizing portfolio that
+consists of both the 2-year coupon bond in part a
+and one of the following three bonds,
+which bond would you choose?
+Now, assume here that all coupons are paid annually.
+The first option is a 3.5-year, 6.25% coupon bond with
+an effective annual yield of 5.5%.
+The second option is a 10-year, 3.9% coupon
+bond with an effective annual yield of 4.9%.
+And the third option is a 3.5-year,
+zero coupon bond with an effective annual yield
+of 4.65%.
+First, what is immunization?
+Well, immunization is the procedure
+of matching the durations of our assets
+and our liabilities in order to minimize interest rate
+risk, fluctuations in prices that come from changes
+in interest rates over time.
+The question is asking us, which bond
+should we choose to combine with our 2-year bond
+in order to immunize our liability that
+has a duration of 3.5 years?
+In other words, which combination of the 2-year bond
+and one of these three bonds will have a duration that
+approximately matches the 3.5-year duration
+of our liability?
+Well, using the same convexity.xls calculator
+that we used in Part A, we can find the modified durations
+of each of the three bonds to be,
+for the first bond, 3.24 years, for the second bond, 8 years,
+and for the third bond 3.34 years.
+The first thing to notice right off the bat is that
+the 3.5-year coupon bond is not suitable for our immunization
+portfolio because it has a modified duration of less than
+3.5 years, such that any combination with the 2-year
+coupon bond, which itself has a modified duration of 1.866
+years, would have too short a duration to immunize
+our liability.
+The second thing to notice is that the 3.5-year zero coupon
+bond is feasible but almost all of our immunizing portfolio
+would have to be invested in this bond.
+Why?
+Well, we know that the Macaulay duration of a zero coupon bond
+is equal to its time to maturity, or in this case, 3.5
+years.
+Well, that exactly matches the duration of our liability
+that we're trying to immunize, which means that almost 100%
+of our portfolio would have to be invested in the zero coupon
+bond.
+A better option is a combination of our 2-year and 10-year
+coupon bond.
+For suitable portfolio shares, it not only
+immunizes our liability, but it'll also
+have a higher yield and higher convexity than an immunizing
+portfolio that includes the 3.5 year zero coupon bond.
+Intuitively, the way that we know that it has a higher
+convexity is to realize that the payoffs of this 2-year
+and 10-year portfolio are more spread out, like a barbell,
+than the bullet payoff of a simple 3.5-year zero coupon
+bond.

@@ -1,0 +1,94 @@
+
+PROFESSOR: To see the relationship
+between the binomial model and the Black-Scholes-Merton model,
+it's necessary to understand the probability distribution
+of stock prices at the terminal time, cap T, implied
+by the binomial model.
+Clearly, for some of the nodes there
+are many different paths through the tree that land there.
+And for others, there are few, or even just one way,
+to get there.
+There are n + 1 nodes at maturity
+on an n-step tree, indexed by j equals 0 through n.
+The top node can be reached only along the path
+where there are n ups, and no downs.
+So if n were equal to 3, we would have n up, up, up
+and that would be the only way to keep
+on going up in the tree.
+
+The next node down can be reached in several ways.
+It can be reached with any path with two ups and one down.
+So we could go down, up, up, or we could go up, down, up,
+or we could go up, up, down, and get to this node.
+Continuing in this way, the bottom node
+can only be reached, again, in one way, with three downs:
+down, down, down.
+
+The mathematical formula that summarizes that information
+on the risk-neutral probability of reaching each node j,
+at time cap T, is given by the formula that we have here.
+
+The inputs are the risk-neutral probability of an up,
+q* and the number of nodes on the tree.
+The exclamation points stand for factorials,
+which are the product of a sequence of increasing
+integers.
+For example, 3 factorial is 1 times 2 times 3.
+By convention, 0 factorial equals 1.
+Some of you may recognize this formula
+as arising directly from the binomial theorem.
+
+The trees down here has the complete set of stock price
+outcomes and the associated probabilities at the final time
+on a three-step tree.
+It also shows the formulas, in this case,
+that generate the probabilities at the top two nodes.
+As a number of steps gets large, one
+can prove that the distribution of stock price outcomes
+converges to a log-normal distribution.
+This graph plots the probability distribution
+for the stock price on a tree with 250 steps,
+T equals 1, and an initial stock price of 100.
+The possible stock price outcomes are on the x-axis,
+and the probabilities of those different outcomes
+are on the y-axis.
+
+If we take the log of each of those 250 price observations
+and plot the outcomes against the probability of each,
+we get the figure shown here.
+It's possible to prove mathematically
+that in the limit as n goes to infinity,
+this is the normal density function,
+with mean and standard deviations at time cap T,
+given by these equations.
+We have the mean, and we have the standard deviation.
+You can see that the results from the binomial tree
+are indistinguishable, with 250 steps, from those calculated
+using the formula for the normal density directly.
+
+What we can conclude from this graphical analysis
+is that the probability distribution
+of the log of the stock price at time cap T,
+implied by the binomial tree, is the same
+as the normal distribution.
+We also know that we can price a call option in the usual
+risk-neutral way, which is actually equivalent to finding
+the risk-neutral probability of each terminal node --
+which we'll call capital Q* --
+using that probability weight for the payoff on that node,
+and discounting it back to time 0 at the risk-free rate.
+
+I want to turn back to the fact that, in the limit,
+S sub T is log-normally distributed.
+We'll call f of S sub T the log-normal distribution of T,
+with mean mu of T, and standard deviation, sigma of T.
+In the limit, the formula for the value of the call option,
+based on the summation in the first equation here,
+converges to the integral we've written down here.
+
+It turns out that the bottom integral is mathematically
+equivalent to the Black-Scholes-Merton formula
+for pricing a European call option.
+Therefore, we've informally shown that the binomial tree
+model converges to the Black-Scholes-Merton model
+as the number of steps on the tree goes to infinity.

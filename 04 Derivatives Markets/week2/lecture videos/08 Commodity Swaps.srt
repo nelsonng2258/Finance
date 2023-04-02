@@ -1,0 +1,388 @@
+0
+00:00:00,000 --> 00:00:01,176
+
+
+1
+00:00:01,176 --> 00:00:03,700
+PROFESSOR: Commodity swaps are another useful tool
+
+2
+00:00:03,700 --> 00:00:05,350
+for risk management.
+
+3
+00:00:05,350 --> 00:00:08,650
+A commodity swap is an agreement to periodically exchange
+
+4
+00:00:08,650 --> 00:00:13,060
+a pre-specified fixed payment for a payment linked
+
+5
+00:00:13,060 --> 00:00:16,520
+to the current market price of a commodity.
+
+6
+00:00:16,520 --> 00:00:19,820
+That makes these swaps equivalent to a portfolio
+
+7
+00:00:19,820 --> 00:00:22,100
+of commodity forward contracts, each
+
+8
+00:00:22,100 --> 00:00:24,290
+with the same forward price.
+
+9
+00:00:24,290 --> 00:00:26,480
+These agreements are usually cash-settled,
+
+10
+00:00:26,480 --> 00:00:31,500
+although a contract could specify physical delivery.
+
+11
+00:00:31,500 --> 00:00:34,410
+Because oil is an important input into many products,
+
+12
+00:00:34,410 --> 00:00:36,870
+and because its price can be very volatile,
+
+13
+00:00:36,870 --> 00:00:42,420
+commodity swaps based on oil prices are quite common.
+
+14
+00:00:42,420 --> 00:00:44,040
+Let's consider a company that will
+
+15
+00:00:44,040 --> 00:00:48,990
+need to buy 100,000 barrels of oil in one and two years.
+
+16
+00:00:48,990 --> 00:00:52,080
+We know that there's active forwards in the futures markets
+
+17
+00:00:52,080 --> 00:00:55,290
+in oil, and let's assume that in those markets today,
+
+18
+00:00:55,290 --> 00:00:57,630
+we can see that the forward price of oil
+
+19
+00:00:57,630 --> 00:01:01,890
+is $110 per barrel for delivery in one year,
+
+20
+00:01:01,890 --> 00:01:06,720
+and it's $111 per barrel for delivery in two years.
+
+21
+00:01:06,720 --> 00:01:10,470
+Also, let's assume that the one and two year interest rates
+
+22
+00:01:10,470 --> 00:01:15,150
+are 6% and 6.5% respectively, both on a simple interest rate
+
+23
+00:01:15,150 --> 00:01:17,210
+basis.
+
+24
+00:01:17,210 --> 00:01:18,890
+From this information, then we know
+
+25
+00:01:18,890 --> 00:01:21,590
+that using forwards or futures the company can lock
+
+26
+00:01:21,590 --> 00:01:25,550
+in a purchase price per barrel needed over the next two years,
+
+27
+00:01:25,550 --> 00:01:31,380
+for a present value cost of $201.638.
+
+28
+00:01:31,380 --> 00:01:34,440
+That comes from discounting the first year price we lock in
+
+29
+00:01:34,440 --> 00:01:37,980
+per barrel at the one year 6% rate,
+
+30
+00:01:37,980 --> 00:01:40,740
+and the two year price we said we could lock in
+
+31
+00:01:40,740 --> 00:01:43,560
+at the 6.5% rate.
+
+32
+00:01:43,560 --> 00:01:46,320
+Using the now familiar no-arbitrage reasoning
+
+33
+00:01:46,320 --> 00:01:48,540
+that a swap must lock in prices that
+
+34
+00:01:48,540 --> 00:01:52,140
+are consistent in present value terms with what can be locked
+
+35
+00:01:52,140 --> 00:01:56,130
+in forward contracts, and recognizing
+
+36
+00:01:56,130 --> 00:02:00,480
+that a swap typically calls for level fixed payments,
+
+37
+00:02:00,480 --> 00:02:04,815
+we can solve for x in this equation to get the swap rate.
+
+38
+00:02:04,815 --> 00:02:09,120
+
+
+39
+00:02:09,120 --> 00:02:13,080
+You can verify the two year no-arbitrage swap
+
+40
+00:02:13,080 --> 00:02:18,840
+price per barrel is $110.483.
+
+41
+00:02:18,840 --> 00:02:20,970
+This example is also a convenient setup
+
+42
+00:02:20,970 --> 00:02:24,280
+to demonstrate that swaps are equivalent to a package
+
+43
+00:02:24,280 --> 00:02:27,060
+in forward contracts coupled with borrowing and lending
+
+44
+00:02:27,060 --> 00:02:28,990
+money.
+
+45
+00:02:28,990 --> 00:02:33,550
+Consider the swap price of $110.483 per barrel,
+
+46
+00:02:33,550 --> 00:02:35,710
+versus the forward prices, which we saw
+
+47
+00:02:35,710 --> 00:02:38,260
+were $110 for delivery in one year
+
+48
+00:02:38,260 --> 00:02:42,900
+and $111 for delivery in two years per barrel.
+
+49
+00:02:42,900 --> 00:02:45,690
+Relative to this forward curve, we're
+
+50
+00:02:45,690 --> 00:02:50,130
+overpaying $0.483 at the end of the first year,
+
+51
+00:02:50,130 --> 00:02:56,710
+and we're underpaying $0.571 at the end of the second year.
+
+52
+00:02:56,710 --> 00:02:59,710
+Thus, by entering into the swap, we're
+
+53
+00:02:59,710 --> 00:03:02,380
+effectively lending the counterparty money
+
+54
+00:03:02,380 --> 00:03:06,330
+for one year, starting at the end of the first year.
+
+55
+00:03:06,330 --> 00:03:09,900
+The implied interest rate on this implicit loan
+
+56
+00:03:09,900 --> 00:03:18,900
+is the 0.517 divided by 0.483, minus 1, which gives us 7%.
+
+57
+00:03:18,900 --> 00:03:21,730
+
+
+58
+00:03:21,730 --> 00:03:25,600
+We also had the information that the one and two year
+
+59
+00:03:25,600 --> 00:03:31,690
+zero coupon bond yields were 6% and 6.5% respectively.
+
+60
+00:03:31,690 --> 00:03:33,910
+You can calculate the implied forward rate
+
+61
+00:03:33,910 --> 00:03:37,330
+from this information between years 1 and 2,
+
+62
+00:03:37,330 --> 00:03:41,620
+and you'll find that it's also 7%.
+
+63
+00:03:41,620 --> 00:03:45,180
+You should verify that for yourself.
+
+64
+00:03:45,180 --> 00:03:47,250
+This highlights a general property
+
+65
+00:03:47,250 --> 00:03:51,270
+with swaps, which is that fairly priced swaps have embedded
+
+66
+00:03:51,270 --> 00:03:55,440
+borrowing and lending rates equal to the implied forward
+
+67
+00:03:55,440 --> 00:03:58,590
+rates and the yield curve.
+
+68
+00:03:58,590 --> 00:04:01,500
+Consistency of forward and swap contract
+
+69
+00:04:01,500 --> 00:04:04,650
+prices with implied forward rates in the yield curve
+
+70
+00:04:04,650 --> 00:04:07,170
+is another no-arbitrage relationship
+
+71
+00:04:07,170 --> 00:04:10,830
+that must always hold, at least within transaction's cost
+
+72
+00:04:10,830 --> 00:04:12,970
+bounds.
+
+73
+00:04:12,970 --> 00:04:15,580
+This oil swap example is also a good place
+
+74
+00:04:15,580 --> 00:04:19,029
+to pause and confirm that physical settlement of a swap
+
+75
+00:04:19,029 --> 00:04:22,660
+contract is equivalent to financial settlement paired
+
+76
+00:04:22,660 --> 00:04:26,080
+with particular cash transactions.
+
+77
+00:04:26,080 --> 00:04:31,340
+With physical settlement on each payment date, in this example,
+
+78
+00:04:31,340 --> 00:04:35,990
+the specified quantity of oil is exchanged for the fixed swap
+
+79
+00:04:35,990 --> 00:04:36,490
+price.
+
+80
+00:04:36,490 --> 00:04:39,940
+
+
+81
+00:04:39,940 --> 00:04:45,220
+The buyer receives the oil and pays $110.483 per barrel
+
+82
+00:04:45,220 --> 00:04:47,650
+under the contract.
+
+83
+00:04:47,650 --> 00:04:50,580
+Now with financial settlement, the amount
+
+84
+00:04:50,580 --> 00:04:53,970
+of cash received by the oil buyer in the swap
+
+85
+00:04:53,970 --> 00:04:56,460
+will be the difference between the spot
+
+86
+00:04:56,460 --> 00:05:00,120
+price at an exchange date, which is stochastic,
+
+87
+00:05:00,120 --> 00:05:01,785
+and the fixed swap price.
+
+88
+00:05:01,785 --> 00:05:06,760
+
+
+89
+00:05:06,760 --> 00:05:11,350
+The oil buyer can then go and buy the oil on the same day
+
+90
+00:05:11,350 --> 00:05:18,040
+in the spot market, paying the spot price.
+
+91
+00:05:18,040 --> 00:05:21,370
+The gain or loss on the swap just
+
+92
+00:05:21,370 --> 00:05:24,640
+offsets the difference between the spot price of oil
+
+93
+00:05:24,640 --> 00:05:27,010
+and the fixed swap price.
+
+94
+00:05:27,010 --> 00:05:32,890
+And on net, the oil buyer winds up paying $110.482 per barrel
+
+95
+00:05:32,890 --> 00:05:35,460
+on each payment date.
+
+96
+00:05:35,460 --> 00:05:41,000
+
+

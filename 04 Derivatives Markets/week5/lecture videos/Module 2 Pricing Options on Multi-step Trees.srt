@@ -1,0 +1,340 @@
+0
+00:00:00,000 --> 00:00:01,783
+
+
+1
+00:00:01,783 --> 00:00:04,200
+PROFESSOR: We'll continue to use the general procedure you
+
+2
+00:00:04,200 --> 00:00:07,620
+learned last week to price derivatives on a binomial tree,
+
+3
+00:00:07,620 --> 00:00:10,080
+but now we can write the risk neutral probability
+
+4
+00:00:10,080 --> 00:00:15,510
+of an up move q star in terms of u, d, r, and h.
+
+5
+00:00:15,510 --> 00:00:17,340
+In fact, it's straightforward to prove
+
+6
+00:00:17,340 --> 00:00:20,460
+that q star will equal the ratio shown here
+
+7
+00:00:20,460 --> 00:00:24,020
+on a non-dividend-paying stock.
+
+8
+00:00:24,020 --> 00:00:27,050
+You can verify that it comes from solving for q star
+
+9
+00:00:27,050 --> 00:00:30,050
+as we did last week based on the equation that
+
+10
+00:00:30,050 --> 00:00:33,350
+sets the current stock price equal to the discounted
+
+11
+00:00:33,350 --> 00:00:35,990
+value of the risk neutral expectation of the stock
+
+12
+00:00:35,990 --> 00:00:39,020
+price on the next time step discounted back
+
+13
+00:00:39,020 --> 00:00:41,750
+at the risk-free rate.
+
+14
+00:00:41,750 --> 00:00:46,330
+Well, once we have the price tree and q star,
+
+15
+00:00:46,330 --> 00:00:50,170
+we can price any European style derivative as before
+
+16
+00:00:50,170 --> 00:00:53,830
+by evaluating the payoff at the terminal time t
+
+17
+00:00:53,830 --> 00:00:56,440
+and working backwards.
+
+18
+00:00:56,440 --> 00:01:00,250
+Then at each time step and on each node,
+
+19
+00:01:00,250 --> 00:01:03,820
+we can calculate the risk neutral expectation
+
+20
+00:01:03,820 --> 00:01:07,640
+of the derivative value on the next step
+
+21
+00:01:07,640 --> 00:01:12,140
+and discount it back to get the value of the derivative
+
+22
+00:01:12,140 --> 00:01:13,490
+at the node we're looking at.
+
+23
+00:01:13,490 --> 00:01:16,390
+
+
+24
+00:01:16,390 --> 00:01:18,000
+For instance, for call options, we
+
+25
+00:01:18,000 --> 00:01:21,510
+start at the n-th time step, which is the last one,
+
+26
+00:01:21,510 --> 00:01:25,170
+and compute the payoff at each of the j nodes
+
+27
+00:01:25,170 --> 00:01:27,975
+from the familiar equation for the payoff on a call.
+
+28
+00:01:27,975 --> 00:01:31,310
+
+
+29
+00:01:31,310 --> 00:01:34,940
+We then can work backwards to find the call value at time i
+
+30
+00:01:34,940 --> 00:01:37,910
+and know j calculating the risk neutral
+
+31
+00:01:37,910 --> 00:01:42,680
+expected value at time i plus 1 based on the risk
+
+32
+00:01:42,680 --> 00:01:46,490
+neutral probability and discounting back
+
+33
+00:01:46,490 --> 00:01:52,030
+over the time interval h at the risk-free rate.
+
+34
+00:01:52,030 --> 00:01:55,570
+Going back to the inputs in the binomial tree spreadsheet,
+
+35
+00:01:55,570 --> 00:01:58,810
+we can specify the strike price of the option.
+
+36
+00:01:58,810 --> 00:02:01,180
+In this example, we'll assume the strike
+
+37
+00:02:01,180 --> 00:02:04,540
+price is set equal to 100.
+
+38
+00:02:04,540 --> 00:02:07,130
+There's also an indicator variable,
+
+39
+00:02:07,130 --> 00:02:09,699
+which we set to 1 to indicate that we're
+
+40
+00:02:09,699 --> 00:02:11,410
+looking for a call price.
+
+41
+00:02:11,410 --> 00:02:13,150
+If that's sent to any other value,
+
+42
+00:02:13,150 --> 00:02:16,435
+the spreadsheet will treat the option as a put option.
+
+43
+00:02:16,435 --> 00:02:19,200
+
+
+44
+00:02:19,200 --> 00:02:22,710
+We need to set the time horizon capital
+
+45
+00:02:22,710 --> 00:02:26,490
+T to be the expiration date of the option, which
+
+46
+00:02:26,490 --> 00:02:28,545
+we'll take to be 0.1% here.
+
+47
+00:02:28,545 --> 00:02:31,210
+
+
+48
+00:02:31,210 --> 00:02:35,770
+The output then also includes the risk neutral probability q
+
+49
+00:02:35,770 --> 00:02:39,060
+star, the same as the stock price
+
+50
+00:02:39,060 --> 00:02:45,210
+tree we saw before based on an n of 10 steps between time 0
+
+51
+00:02:45,210 --> 00:02:49,440
+and time capped t of 0.1.
+
+52
+00:02:49,440 --> 00:02:51,600
+Then the value of the option at each node
+
+53
+00:02:51,600 --> 00:02:54,990
+is represented on the lower tree and calculated
+
+54
+00:02:54,990 --> 00:02:56,970
+by working backwards.
+
+55
+00:02:56,970 --> 00:03:00,690
+For example, at the time 0.1 node,
+
+56
+00:03:00,690 --> 00:03:05,350
+where the stock price is $112.75,
+
+57
+00:03:05,350 --> 00:03:11,950
+the payoff on the call option is $12.75.
+
+58
+00:03:11,950 --> 00:03:19,250
+The time 0 node gives the call option value of 3.787.
+
+59
+00:03:19,250 --> 00:03:22,430
+That value is also recorded at the top
+
+60
+00:03:22,430 --> 00:03:28,070
+of the spreadsheet, along with the delta of the call option,
+
+61
+00:03:28,070 --> 00:03:28,891
+[AUDIO OUT].
+
+62
+00:03:28,891 --> 00:03:31,540
+
+
+63
+00:03:31,540 --> 00:03:34,090
+The calculations here are based on the same input,
+
+64
+00:03:34,090 --> 00:03:36,400
+except for the number of steps on the trees
+
+65
+00:03:36,400 --> 00:03:40,120
+has been increased from 10 to 250.
+
+66
+00:03:40,120 --> 00:03:43,300
+Clearly, there's too many numbers in a 250-step tree
+
+67
+00:03:43,300 --> 00:03:44,960
+to show on a single slide.
+
+68
+00:03:44,960 --> 00:03:47,530
+So what's pictured here is a truncation
+
+69
+00:03:47,530 --> 00:03:52,410
+showing only the first 10 steps for the stock price tree
+
+70
+00:03:52,410 --> 00:03:57,100
+and also for the call price tree.
+
+71
+00:03:57,100 --> 00:03:59,740
+Notice that with the change in the number of steps
+
+72
+00:03:59,740 --> 00:04:05,920
+and all else the same as before, the output parameters u, d, q,
+
+73
+00:04:05,920 --> 00:04:10,510
+and q star all have to change too.
+
+74
+00:04:10,510 --> 00:04:14,470
+Those changes capture the lower stock price variation
+
+75
+00:04:14,470 --> 00:04:17,890
+and smaller effective discounting over each shorter
+
+76
+00:04:17,890 --> 00:04:21,550
+time interval between nodes.
+
+77
+00:04:21,550 --> 00:04:27,450
+The estimated call price now is 3.876.
+
+78
+00:04:27,450 --> 00:04:29,940
+That's quite close to the previous and less
+
+79
+00:04:29,940 --> 00:04:34,530
+precisely estimated price of 3.787, which was
+
+80
+00:04:34,530 --> 00:04:37,200
+based on only using 10 steps.
+
+81
+00:04:37,200 --> 00:04:40,080
+As we're about to discuss, the limit
+
+82
+00:04:40,080 --> 00:04:42,120
+taking the number of steps to infinity
+
+83
+00:04:42,120 --> 00:04:46,350
+gives the Black-Scholes-Merton price, which is 3.88.
+
+84
+00:04:46,350 --> 00:04:51,320
+With 250 steps, we get essentially the same answer.
+

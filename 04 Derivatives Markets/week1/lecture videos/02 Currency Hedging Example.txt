@@ -1,0 +1,121 @@
+
+INSTRUCTOR: Let's look at an example of how forward currency
+contracts are often used to hedge against exchange rate
+risk.
+Imagine that a US firm has sold a piece of equipment
+to a German client, and the firm has
+agreed to accept the payment of 5 million euros
+to be paid in six months.
+At time t when the agreement is made,
+the exchange rate is $1.2673 USD per euro.
+What's the risk for the US firm?
+Well, clearly, there's exchange rate risk
+because over the next six months,
+euros could depreciate relative to the dollar.
+The unhedged dollar value of the payment in six months
+will be 5 million euros times whatever the exchange
+rate turns out to be in six months, which
+is a random variable.
+
+To hedge this exposure, the firm can
+enter into a forward contract with a bank
+to sell the euros forward.
+In that contract, say that the firm
+agrees to deliver 5 million euros in six months in exchange
+for dollars at a pre-specified exchange
+rate of $1.28 per euro.
+That position can be described as the firm being short
+the euro forward.
+At the expiration date in six months,
+the profit or loss on the forward contract
+with the bank in dollars is $5 million times
+the forward rate locked in minus the spot exchange rate
+in six months of dollars per euros.
+
+The firm also receives the 5 million
+euro payment from its client, which
+has dollar value of 5 million euros multiplied by the spot
+exchange rate in six months.
+Putting the two transactions together,
+the effect of the spot exchange rate in six months cancels out,
+and the firm has locked in a dollar payment of $6.4 million
+based on the forward rate of 1.28.
+This is a good example for reviewing payoff diagrams,
+which are often used as a tool to understand
+the full range of possible outcomes
+from decisions that involve a combination of derivatives
+and other investments whose payoff also depends
+on the value of a common underlying asset.
+In a payoff diagram, the x-axis is a variable
+that represents the value of the underlying asset
+at some future point in time.
+In this example, it represents the future spot exchange rate
+of dollars per euro in six months.
+The y-axis on a payoff diagram is the profit or loss
+from a position or combination of positions
+represented on the diagram.
+The payoff here is denominated in dollars.
+So the top diagram describes the original exposure,
+which is based on the value of the receivable of 5
+million euros in six months in dollar terms.
+If euros are worthless at that time,
+then the payoff will be 0.
+As the exchange rate rises, the dollar payoff
+rises linearly with it.
+
+Now let's turn to the payoff on this short forward position
+in euros.
+From the formula we have for profit or loss,
+at a spot exchange rate of $1.28 per euro,
+the forward rate we assumed was set in the contract,
+the payoff will be 0.
+
+For spot exchange rates above 1.28,
+the forward contract entails a loss and vice
+versa for spot exchange rates below 1.28.
+For a position that has multiple components that all depend
+on the same underlying variable, we
+can always find the net payoff by vertically
+adding the component payoffs on a payoff diagram.
+In this case, adding together the payoffs
+on the original exposure with the payoffs
+on the forward contract at each point on the x-axis
+generates the net payoff illustrated
+in the hedged position diagram.
+
+The forward contract gains or losses
+exactly offset the losses or gains on the original exposure,
+leaving the firm with a certain dollar payoff of $6.4 million
+that we calculated algebraically on the previous slide.
+
+Well, you might wonder what could go wrong here.
+Is this payoff really 100% safe?
+The answer is that it is as long as all of the contracts
+are actually honored.
+However, if the German client defaults,
+the firm is still obligated to make good
+on its forward contract.
+And it would lose money on the forward contract
+if the dollar were to appreciate.
+In general, it's impossible to know
+when someone entering a forward contract
+or some other derivative position
+is hedging or speculating without having
+some additional information.
+A derivatives position functions as a hedge
+when it offsets the risk of another position
+in an investor's portfolio, as when the exporter here
+was going to be long euros from the sale of the goods.
+It's speculation when there's no offsetting exposure.
+Speculators serve an important function in derivatives markets
+by helping to make it possible for hedgers
+to protect themselves even when there aren't enough
+other hedgers with an opposite exposure
+to take the other sides of the contract.
+The diagram shown here is again the payoff
+on a short forward contract in euros.
+Taken alone, it represents a speculative bet
+that the value of euro will fall against the dollar.
+As we'll see next, this is effectively
+the short side of a highly-levered position
+in euros.

@@ -1,0 +1,215 @@
+
+PROFESSOR: That concludes the first topic.
+Now let's see how we can use the binomial model
+to price an exotic option.
+In the week five lecture, we saw how the binomial model
+can be used to price European call and put options.
+However, the binomial model is far more powerful.
+And it can also be used to price more, quote,
+"exotic" options with very complex payment structures.
+For example, assume that a firm has
+decided to offer a new type of exotic equity option.
+The expiration date of the option is two periods from now.
+And the option is not initially specified
+to either be a put or a call.
+Instead, the owner of the option makes this choice
+after one period.
+Once the choice is made the option
+could be exercised at any time, just like an American option.
+For example, if after one period the owner
+chose for the new exotic option to be a put,
+it would at that time become identical
+to an ordinary American put option with the one period
+remaining until expiration.
+A customer is asked for a quote for an option
+of this type on FA Inc. stock that has a strike price of 100.
+The current price of FA Inc. stock is 100 per share.
+In over each period, the stock price
+evolves as shown in the tree diagram below.
+The risk neutral probability of an up move in this case,
+is 0.5.
+The stock doesn't pay any dividends.
+And the interest rate is 10% per period.
+What is the lowest price the firm
+could charge for the option and still break even?
+Let's begin by first defining some notation.
+Let C of S comma n and P of S comma n
+be the values of American call and put options respectively,
+when the underlying stock price is S
+and there are n periods remaining until maturity.
+As always, we begin to answer these questions
+by finding the payoffs of both call
+and put options at each node by moving
+backwards through the tree.
+Two periods from now, that is when
+n, the number of periods remaining until maturity,
+equals zero, the payoff of a call option
+will be 256 minus the strike price of 100, which
+equals 156 in the up-up node.
+This node here.
+
+0 in either the up-down or down-up node.
+This one here, and also 0 in the down-down node.
+This one here.
+Similarly, the payoff of a put option
+will be 0 in the up-up node.
+100 minus 96, which is equal to 4,
+in the up-down or down-up nodes.
+And 100 minus 36, which equals 64, in the down-down node.
+What would be the values of the call
+and put options in each node one period from now--
+that is, when n equals 1--
+given the payoffs in each node at n
+equals 0 that we just calculated,
+the risk neutral probability of an up move of 0.5,
+and an interest rate of 10% per period?
+Let's begin by assuming that we are in the up node at n equals
+1, and the stock price is 160.
+On the tree diagram, we are in this node here.
+
+If we choose to exercise the call option at this node--
+remember this is an American call option--
+then its payoff will be 160 minus the strike price of 100,
+which is equal to 60.
+Alternatively, if we choose to wait to exercise the call
+option in the next period, that is at n equals 0,
+then the value of the call option
+is equal to the risk neutral probability of an up
+move of 0.5 times 156--
+that's the payoff of the call option in the up-up node at n
+equals 0--
+plus 0.5 times 0, which is the payoff of the call
+option in the up-down node at n equals 0.
+Discount that at the risk-free rate of 10%--
+so divide by 1.1--
+and we get 70.9091.
+Thus, the value of the call option in the up node at n
+equals 1, which we call C of 160, 1, is the maximum of 60--
+that is the payoff if we choose to exercise the call
+option at this node--
+and the payoff from waiting.
+The maximum of these two values is 70.9091.
+A similar calculation for the put option at the up node at n
+equals 1, you'll see value of P of 160,
+1, which is equal to the maximum of the difference
+between the strike price of 100 and the price of the stock
+of 160, and the probability of an up move in a risk
+neutral sense, times the payoff in the up-up mode
+on the put option of 0, plus the probability of an up move
+in a risk neutral sense, times the payoff of the put option
+in the up-down node discounted at the risk-free rate of 10%,
+which is the maximum of negative 60
+and 1.8182, which is equal to 1.8182.
+Now let's assume that we are in the down node at n equals 1,
+and the stock price is 60.
+So on the payoff diagram we are at this node here.
+
+If we choose to exercise the call option at this node,
+then its payoff will be the difference
+between the stock price of 60 and the strike
+price of the option of 100, which is equal to negative 40.
+Alternatively, if we choose to wait to exercise this call
+option in the next period at n equals 0,
+then the value of the call option
+is equal to the risk neutral probability of an up
+move of 0.5 times the payoff of the call
+option in the down-up node of 0, plus the risk
+neutral probability of a down move of 0.5 times the payoff
+of the call option in the down-down node of 0,
+which discounted at the risk free rate of 10%
+is equal to zero.
+Thus, the value of the call option in the down node at n
+equals 1 is C of 60, 1, which is the maximum of negative 40,
+has the payoff if we choose to exercise the call
+option at this node and the payoff
+from waiting to exercise the call option of 0,
+which is equal to zero.
+A similar calculation for the put option,
+you'll see value of P of 60, 1, which
+is the maximum of the difference between the strike
+price of the put option of 100 and the price
+of the stock at the down node at n equals 1 of 60,
+and the probability of an up move in the risk
+neutral sense of 0.5 times the payoff of the put option
+in the down-up mode at n equals 1, 4 plus the risk
+neutral probability of a down move of 0.5 times the payoff
+in the put option in the down-down node at n
+equals 0 of 64 discounted at the risk free rate of 10%,
+which is equal to the maximum of 40 and 30.9091,
+which is equal to 40.
+A lot of numbers are floating around here.
+So to summarize, the values of the call and put options at n
+equals 1, that is one period from the initiation
+of the option, are as follows.
+
+The value of the call option in the up mode at n
+equals 1 is 70.9091.
+The value of the put option in the up node n
+equals 1 is equal to 1.8182.
+The value of the call option in the down node at n
+equals 1 is 0.
+And the value of the put option in the down node at n
+equals 1 is equal to 40.
+Now armed with that information, we can determine two things.
+First, whether or not the buyer of the option
+will choose for the option to be a put
+or a call option at each node at n equals 1.
+And second, whether or not the buyer
+will exercise the put or call option early at n equals 1,
+or wait until n equals 0 to exercise the option.
+First, let's consider the down node at n
+equals 1 when the stock price falls to 60.
+By comparing the value of the call
+option in the down node at n equals 1 and the put option,
+we see that the put option is the better choice.
+Thus, the buyer will choose for the option
+to be a put at the down node at n equals 1.
+Second, we could see that the put
+will be exercised immediately.
+This comes from the calculation for the value of the put option
+in the down node at n equals 1, which
+was comparing the value of early exercise
+of the put option of 40 and the value of waiting,
+which was 30.9091.
+Since the value of early exercise
+is greater than the value of waiting,
+we know that the buyer will choose for the put option
+to be exercised immediately.
+Now let's consider the case that the stock price instead
+goes up to 160 in the up node at n equals 1.
+When comparing the value of the call option
+and the put option in this node, we
+see that the call option is a better bet.
+So the buyer will choose for the option in this node
+to be a call.
+Second, we could tell that the call will
+be held until its expiration, because
+in the up node n equals 1 when the stock price is 160,
+the value of exercising the call option at that node
+is 60, whereas the value of waiting to exercise the call
+option is 70.9091.
+Thus, it makes sense for the buyer
+to hold the call until its expiration.
+
+Finally, given the optimal exercise policy detailed above,
+we can find the current value of the option, that
+is the value at n equals 2, by discounting the expected
+payoffs from exercising the put option in the down node at n
+equals 1 and holding the call option
+in the up node at n equals 1.
+The current value of the option is given by the expression
+below.
+The risk neutral probability of an up move
+of 0.5 times the value of the call
+option in the up node that n equals
+1, which is equal to 70.9091, plus the risk
+neutral probability of a down move at n
+equals 1 times the value of a put
+option at the down node at n equals 1, which is equal to 40,
+discounted at the risk-free rate of interest,
+which is equal to 50.4132.
+So the value of our option at initiation of the payoff
+diagram is equal to 50.4132.
+Well that concludes recitation five.
+Thank you everyone for coming.
+And I look forward to seeing you next week.

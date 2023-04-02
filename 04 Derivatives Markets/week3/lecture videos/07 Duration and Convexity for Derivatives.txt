@@ -1,0 +1,157 @@
+
+PROFESSOR: It's often more convenient and less
+expensive to execute delta and gamma hedging
+strategies using derivatives rather than taking
+an offsetting position in the cash market.
+The logic of hedging with derivatives
+is exactly the same as in the example we just saw.
+The interest rate sensitivity of the position being hedged
+is offset as closely as possible by creating a derivatives
+position with an offsetting exposure,
+and ideally one where the relative convexity works
+in your favor.
+So now all you need to learn to be able to set up an interest
+rate hedge using the sorts of forwards, futures, and swap
+contracts for interest rates that we've discussed
+is how to find the duration and convexity of those contracts.
+For delta and gamma hedging strategies,
+we saw that the relevant duration
+concept is dollar duration.
+It's straightforward to find the dollar
+duration of a forward or futures contract
+where the underlying asset is a bond or a portfolio of fixed
+income securities.
+In that case, the dollar duration
+is the product of two terms, first,
+the modified or effective duration of the bonds
+specified in the contract and second, the prepaid forward
+or futures price of the bond specified in the contract.
+Recall, too, that the prepaid forward or futures
+price is just the present value of the purchase price specified
+in the forward or futures contract.
+You'll see a detailed example of how to apply
+this in the recitation.
+
+This slide summarizes the standard procedure
+for using a futures contract for delta hedging interest rate
+risk.
+As we've discussed before, futures
+are an attractive tool for hedging because
+of their high liquidity, low transactions costs,
+rapid speed of execution, and safety from counterparty risk.
+There's relatively few types of fixed income futures contracts
+relative to the essentially infinite variety of positions
+that traders or financial institutions
+might want to hedge.
+Fortunately, with strategies based on hedge ratios,
+any mismatch in the underlying durations
+of the long or short positions are
+compensated for by adjusting the size of the hedge.
+The first step, then, is to estimate the price sensitivity
+of the exposure you want to hedge
+with its hedge ratio, which we know
+is the product of minus its value
+times its modified or effective duration.
+Remember that modified an effective duration
+are the same things for bonds with safe cash flows,
+but they'll differ when they're embedded options in the bond.
+And in that case, effective duration
+is the relevant measure you should use.
+
+The second step is to determine the hedge ratio for the futures
+contract.
+
+The third step is to take a position in the futures
+contracts such that the hedge ratio of the cash position
+matches the hedge ratio of the futures position.
+
+If the cash exposure is a net long position,
+the futures position will be a short one and vice versa.
+Delta hedging strategies also are frequently
+executed using interest rate swaps.
+To find the dollar duration of an interest rate swap,
+we use two facts we've already learned.
+The first is that from the perspective of the fixed rate
+receiver.
+At the inception of the swap, it's
+equivalent to a portfolio consisting
+of a long position and a fixed rate bond
+and a short position at a floating rate bond, both priced
+to the identical par value.
+The second fact is that the dollar duration of a portfolio
+is the sum of the dollar duration of its component
+parts.
+There's one more fact you need to know,
+which is that for a pure floating rate bond,
+its effective duration is the time
+until its next reset date divided by 1 over 1
+plus y over k.
+That's because it was, as we saw last time,
+the price on every reset date is fixed at par.
+For the fixed rate bond, the modified or effective duration
+can be found in the usual way.
+Putting these pieces together, for the fixed rate receiver,
+the dollar duration of the swap minus the derivative of price
+with respect to the yield is equal to the value of the fixed
+rate side of the swap times its modified or effective duration
+minus the current value of the floating
+side of the swap times its effective duration.
+Of course, the duration of the swap from the floating rate
+receiver's perspective is just the negative
+what it is for the fixed rate receiver.
+Let's apply this approach to a concrete example.
+Consider a new five-year interest rate
+swap offering a fixed rate quoted
+at 6% with semi-annual payments and a floating
+rate of six-month LIBOR with a notional principal
+of $1 million.
+Assume that the current six-month LIBOR is also 6%.
+So 3% is earned over the next six months.
+With this information, we can find the dollar duration
+from the perspective of each counterparty, both
+the fixed and floating rate payers.
+Using the duration and convexity calculator,
+a five-year fixed-rate bond with a 6% coupon that's
+paid semi-annually and selling it par
+has a modified duration of 4.265 years.
+The effective duration of the floating rate side
+is based on the six months till the next reset date divided
+by 1 plus y over 2, so divided by 1.03,
+which gives an effective duration of 0.485 years.
+The difference, then, is 3.78 years.
+Hence the dollar duration of the swap
+from the perspective of the fixed rate receiver
+is 3.78 times 1 million, or 3.78 million.
+The floating rate receiver's position
+is just the negative of the fixed rate receiver's position.
+And so the dollar duration there is minus 3.78 million.
+A potential advantage of hedging with swaps
+is the wide variety of durations and convexities
+that are available.
+Importantly, there's liquidity at longer durations
+than there is in many other markets.
+We've really covered a lot of important ground this week.
+Here are some key takeaways.
+The imperative for financial institutions
+to manage their interest rate risk
+has given rise to the largest derivative markets
+in the world.
+And duration- and convexity-based or delta gamma
+approaches are at the core of most of the hedging strategies
+that use these instruments.
+A big strength of these strategies
+is their flexibility.
+There are so many ways to achieve a similar amount
+of protection from risk.
+We've seen that effective hedges can
+be implemented in the cash markets
+or with a variety of derivatives.
+The choice between the different options
+comes down to transactions costs, availability,
+and risk tolerance.
+To provide some practice setting up
+delta hedges with derivatives, in the recitation this week,
+you'll revisit the security dealers risk
+exposure in example 3.5 and go over
+how she can hedge it with a bond futures contract
+and also using an interest rate swap.

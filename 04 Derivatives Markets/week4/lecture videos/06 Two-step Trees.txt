@@ -1,0 +1,82 @@
+
+PROFESSOR: Clearly, it's impossible to accurately model
+the future distribution of stock prices
+or derivative payoffs using a two-point distribution
+and we wouldn't expect that model
+to do a good job of pricing derivatives.
+Luckily, we can extend the ideas we've
+developed for one-step trees to trees
+with an arbitrarily large number of steps and by doing so,
+capture the distribution of outcomes much more accurately.
+The general idea of how to do pricing
+on a multi-step binomial tree can be most easily understood
+using a two-step tree.
+In the tree here, we've started with the original tree
+from our last example and extended it out
+one more period.
+If at time 1, for instance, the stock price
+is at the up node at 70, we're going
+to assume that it will be either 100 or 50 the next period.
+Starting at the down node at time 1,
+where the stock price equals 35, we'll now assume that at time 2
+it will go up to 50 or down to 25.
+
+For now, we're taking this tree as given but,
+as I mentioned before, in practice we would calibrate it
+based on a statistical analysis of the underlying stock
+returns.
+Also notice that we chose the outcomes
+starting at 70 at time 1 and going down and also
+the outcome starting at 35 and going up to be identical.
+
+Restricting the evolution of stock prices
+to ensure that this is the case creates what's
+called a recombining tree.
+That restriction is typically imposed because it greatly
+simplifies calculations but it's not absolutely necessary.
+We'll now use this tree to price a European call
+option with a strike price of 50 that expires at time 2.
+We'll continue to assume a risk-free rate
+of 11% per period on a continuous basis.
+
+We'll price the option working backwards on the tree
+to find its value on every node.
+Starting at time 2, the option is only
+in the money at the top on the up-up node
+where the payoff is the stock price of 100
+minus the $50 strike price so the payoff on the call option
+is 50.
+
+The middle node has a stock price of 50
+and there is no gain from exercising the option.
+And at the bottom node, the call option is clearly
+out-of-the-money.
+Now at each time 1 node we can compute the option value as we
+did with the one-step tree, by first finding the risk-neutral
+probability of an up-move, q*, based on the one-period subtree
+and then applying the probabilities to the option
+payoffs of 50 in the up state and 0 in the down-state at time
+2.
+
+This is our subtree and we're going
+to find the call option at time 1 in the up state
+by discounting these two payoffs weighted by the risk
+neutral probability.
+Well, that yields the call price at time 1
+on the up node C1u of 25.2083.
+In the same way on the time 1 down node,
+we can find the call option value
+by looking at the one-step subproblem.
+
+On that node we don't have to do any math
+because if the payoffs at time 2 are all 0,
+we know the value of the call option at time 1
+will also be 0.
+Now going back the last step to time 0 and again solving
+the one-step subproblem, we find a q* at time 0 of 0.5947.
+Apply it to the call option at time 1
+in the up state to get the expected
+time 1 value of the call option, and then
+we discount it back at the risk-free rate,
+and we come to the conclusion that the call
+option is worth 13.4294.

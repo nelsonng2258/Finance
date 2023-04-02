@@ -1,0 +1,404 @@
+0
+00:00:00,000 --> 00:00:00,583
+
+
+1
+00:00:00,583 --> 00:00:02,750
+J R SCOTT: Hello, everyone and welcome to the second
+
+2
+00:00:02,750 --> 00:00:05,750
+recitation of 15.435x.
+
+3
+00:00:05,750 --> 00:00:08,119
+In this recitation, we'll be reviewing
+
+4
+00:00:08,119 --> 00:00:12,110
+futures contracts and swaps.
+
+5
+00:00:12,110 --> 00:00:14,880
+The recitation will consist of three problems.
+
+6
+00:00:14,880 --> 00:00:16,850
+In the first problem, we'll see how
+
+7
+00:00:16,850 --> 00:00:19,250
+two companies with different borrowing rates
+
+8
+00:00:19,250 --> 00:00:22,310
+can mutually benefit from a swap.
+
+9
+00:00:22,310 --> 00:00:24,860
+In the second problem, we'll see how a futures
+
+10
+00:00:24,860 --> 00:00:29,840
+contract can be used for hedging as well as speculation motives.
+
+11
+00:00:29,840 --> 00:00:32,840
+And in the third problem, we'll review some of the mechanics
+
+12
+00:00:32,840 --> 00:00:36,710
+and pricing of currency swaps.
+
+13
+00:00:36,710 --> 00:00:39,080
+Without further ado, let's begin.
+
+14
+00:00:39,080 --> 00:00:44,120
+Problem 1-- company A, a British manufacturer,
+
+15
+00:00:44,120 --> 00:00:47,960
+wishes to borrow US dollars at a fixed rate of interest.
+
+16
+00:00:47,960 --> 00:00:52,700
+Company B, a US multinational, wishes to borrow sterling
+
+17
+00:00:52,700 --> 00:00:54,670
+at a fixed rate of interest.
+
+18
+00:00:54,670 --> 00:00:56,420
+They've been quoted the following interest
+
+19
+00:00:56,420 --> 00:01:00,500
+rates per annum, adjusted for differential tax rates.
+
+20
+00:01:00,500 --> 00:01:06,860
+Company A can borrow in pounds at 11% and in dollars at 7%.
+
+21
+00:01:06,860 --> 00:01:10,730
+Company B can borrow in pounds at 10.6%
+
+22
+00:01:10,730 --> 00:01:14,090
+and in dollars at 6.2%.
+
+23
+00:01:14,090 --> 00:01:17,810
+Design a swap that will net a financial institution, acting
+
+24
+00:01:17,810 --> 00:01:21,380
+as an intermediary, 10 basis points per annum,
+
+25
+00:01:21,380 --> 00:01:24,680
+and will produce a gain of 15 basis points per annum
+
+26
+00:01:24,680 --> 00:01:27,290
+for each of the two companies, relative to what
+
+27
+00:01:27,290 --> 00:01:28,940
+they would pay borrowing directly
+
+28
+00:01:28,940 --> 00:01:32,090
+in their preferred currencies.
+
+29
+00:01:32,090 --> 00:01:34,640
+The first thing to note is that company A
+
+30
+00:01:34,640 --> 00:01:37,970
+has a relative advantage when borrowing in pounds.
+
+31
+00:01:37,970 --> 00:01:40,340
+Although it costs company a 40 basis points
+
+32
+00:01:40,340 --> 00:01:43,760
+more to borrow in pounds relative to company B,
+
+33
+00:01:43,760 --> 00:01:46,430
+it costs company a 80 basis points more
+
+34
+00:01:46,430 --> 00:01:48,140
+to borrow in dollars.
+
+35
+00:01:48,140 --> 00:01:51,560
+Symmetrically, company B has a relative advantage
+
+36
+00:01:51,560 --> 00:01:53,600
+when borrowing in dollars.
+
+37
+00:01:53,600 --> 00:01:57,230
+I like to think of this setup like an international trade.
+
+38
+00:01:57,230 --> 00:02:01,340
+For company B, it has an absolute advantage in borrowing
+
+39
+00:02:01,340 --> 00:02:04,640
+in both sterling and in dollars, although company
+
+40
+00:02:04,640 --> 00:02:07,340
+has a relative advantage, sometimes
+
+41
+00:02:07,340 --> 00:02:11,270
+called a comparative advantage, when borrowing in pounds.
+
+42
+00:02:11,270 --> 00:02:13,940
+This fact leads us to say that there
+
+43
+00:02:13,940 --> 00:02:16,160
+is an opportunity for both companies
+
+44
+00:02:16,160 --> 00:02:18,140
+to lower their borrowing costs using
+
+45
+00:02:18,140 --> 00:02:21,260
+a fixed-for-fixed currency swap.
+
+46
+00:02:21,260 --> 00:02:23,150
+This question is asking us how exactly
+
+47
+00:02:23,150 --> 00:02:25,760
+the swap should be structured.
+
+48
+00:02:25,760 --> 00:02:28,310
+Let's assume that both company A and company
+
+49
+00:02:28,310 --> 00:02:32,030
+B want to borrow the same principal amount, which we I'll
+
+50
+00:02:32,030 --> 00:02:37,820
+denote capital P, in dollars, and capital P-star in pounds.
+
+51
+00:02:37,820 --> 00:02:39,980
+Let's assume that company A initially
+
+52
+00:02:39,980 --> 00:02:45,230
+borrows P-star in pounds at an interest rate of 11%.
+
+53
+00:02:45,230 --> 00:02:50,360
+In the swap, the intermediary is going to exchange P-star for P
+
+54
+00:02:50,360 --> 00:02:54,170
+at the spot exchange rate between pounds and dollars.
+
+55
+00:02:54,170 --> 00:02:56,480
+Since we're on an annual basis, the swap
+
+56
+00:02:56,480 --> 00:02:59,120
+can be structured so that every year, company
+
+57
+00:02:59,120 --> 00:03:02,270
+A pays a fixed interest rate on the principal, P,
+
+58
+00:03:02,270 --> 00:03:06,050
+to the intermediary in dollars, and receives a fixed interest
+
+59
+00:03:06,050 --> 00:03:10,010
+rate on the principal, P-star in pounds.
+
+60
+00:03:10,010 --> 00:03:12,560
+To finance its loan, company A needs
+
+61
+00:03:12,560 --> 00:03:17,540
+to receive at least a fixed interest rate of 11% in pounds.
+
+62
+00:03:17,540 --> 00:03:20,720
+Since company A wants to borrow in US dollars,
+
+63
+00:03:20,720 --> 00:03:22,520
+it will pay an interest rate that
+
+64
+00:03:22,520 --> 00:03:26,240
+is 15 basis points less than the 7% interest
+
+65
+00:03:26,240 --> 00:03:30,690
+rate it could have paid without the swap, or 6.85%.
+
+66
+00:03:30,690 --> 00:03:32,915
+What about company B?
+
+67
+00:03:32,915 --> 00:03:35,720
+Company B initially borrows P in dollars
+
+68
+00:03:35,720 --> 00:03:39,410
+at an interest rate of 6.2%.
+
+69
+00:03:39,410 --> 00:03:42,650
+In the currency swap, the intermediary exchanges
+
+70
+00:03:42,650 --> 00:03:47,060
+P for P-star at the spot exchange rate.
+
+71
+00:03:47,060 --> 00:03:50,030
+Each year, company B pays a fixed interest rate
+
+72
+00:03:50,030 --> 00:03:54,410
+on the principal, P-star to the intermediary in pounds
+
+73
+00:03:54,410 --> 00:03:56,120
+and receives a fixed interest rate
+
+74
+00:03:56,120 --> 00:03:59,780
+on the principal P, in dollars.
+
+75
+00:03:59,780 --> 00:04:02,420
+To finance its loan, company B needs
+
+76
+00:04:02,420 --> 00:04:07,691
+to receive a fixed interest rate of at least 6.2% in dollars.
+
+77
+00:04:07,691 --> 00:04:10,460
+Since company B wants to borrow in pounds,
+
+78
+00:04:10,460 --> 00:04:12,170
+it will pay an interest rate that
+
+79
+00:04:12,170 --> 00:04:16,430
+is 15 basis points less than the 10.6% interest
+
+80
+00:04:16,430 --> 00:04:20,120
+rate it could have paid without the swap or 10.45%.
+
+81
+00:04:20,120 --> 00:04:23,900
+At the terminal date of the currency swap,
+
+82
+00:04:23,900 --> 00:04:26,900
+the principal is exchanged again.
+
+83
+00:04:26,900 --> 00:04:30,110
+The intermediary is going to earn a spread of 10 basis
+
+84
+00:04:30,110 --> 00:04:32,240
+points on the swap.
+
+85
+00:04:32,240 --> 00:04:35,300
+The spread is partly compensation for the exchange
+
+86
+00:04:35,300 --> 00:04:38,150
+rate risk faced by the intermediary
+
+87
+00:04:38,150 --> 00:04:39,830
+but in principle, the intermediary
+
+88
+00:04:39,830 --> 00:04:43,430
+could always hedge this risk using forward contracts.
+
+89
+00:04:43,430 --> 00:04:46,100
+The more important risk is counterparty risk,
+
+90
+00:04:46,100 --> 00:04:49,760
+the risk that either company A or company B fails
+
+91
+00:04:49,760 --> 00:04:52,580
+to meet its obligations.
+
+92
+00:04:52,580 --> 00:04:57,877
+The diagram below summarizes the cash flows of the swap.
+
+93
+00:04:57,877 --> 00:04:59,460
+The kind of an important thing to note
+
+94
+00:04:59,460 --> 00:05:02,250
+here is that at initiation, the principal
+
+95
+00:05:02,250 --> 00:05:05,730
+amounts P and P-star flow in the opposite direction
+
+96
+00:05:05,730 --> 00:05:07,260
+of the arrows.
+
+97
+00:05:07,260 --> 00:05:10,020
+Interest payments flow in the same direction as the arrows
+
+98
+00:05:10,020 --> 00:05:13,380
+during the life of the swap and the principal amounts also
+
+99
+00:05:13,380 --> 00:05:15,390
+flow in the same direction as the arrows
+
+100
+00:05:15,390 --> 00:05:18,140
+at the terminal date of the swap.
+

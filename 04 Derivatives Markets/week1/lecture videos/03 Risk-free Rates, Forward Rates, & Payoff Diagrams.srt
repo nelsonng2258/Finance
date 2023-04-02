@@ -1,0 +1,464 @@
+0
+00:00:00,000 --> 00:00:01,950
+PROFESSOR: Let's spend a few minutes reviewing
+
+1
+00:00:01,950 --> 00:00:04,860
+the idea of risk-free interest rates and the yield curve,
+
+2
+00:00:04,860 --> 00:00:07,590
+since they're central to pricing forward contracts
+
+3
+00:00:07,590 --> 00:00:09,720
+and other derivatives.
+
+4
+00:00:09,720 --> 00:00:12,370
+A risk-free bond promises future payments that
+
+5
+00:00:12,370 --> 00:00:14,200
+are free from default risk.
+
+6
+00:00:14,200 --> 00:00:19,410
+Its price is the present value of those promised payments.
+
+7
+00:00:19,410 --> 00:00:21,660
+An important type of bond for our purpose
+
+8
+00:00:21,660 --> 00:00:25,530
+here is a zero-coupon, also called a pure discount bond,
+
+9
+00:00:25,530 --> 00:00:28,350
+that promises a single payment at maturity
+
+10
+00:00:28,350 --> 00:00:30,690
+equal to its face value.
+
+11
+00:00:30,690 --> 00:00:32,700
+Here we call that face value capital
+
+12
+00:00:32,700 --> 00:00:39,860
+Z. Given the market price of a zero-coupon bond, p, its face
+
+13
+00:00:39,860 --> 00:00:45,800
+value, Z, the maturity date, capital T,
+
+14
+00:00:45,800 --> 00:00:50,590
+we can infer the risk-free interest rate, or yield,
+
+15
+00:00:50,590 --> 00:00:52,410
+from the formula on the slide.
+
+16
+00:00:52,410 --> 00:00:56,200
+
+
+17
+00:00:56,200 --> 00:00:59,980
+In this representation, the interest rate, r sub T,
+
+18
+00:00:59,980 --> 00:01:02,680
+is stated on a continuous basis.
+
+19
+00:01:02,680 --> 00:01:05,860
+That's a common way rates are represented in derivatives
+
+20
+00:01:05,860 --> 00:01:07,750
+pricing formulas.
+
+21
+00:01:07,750 --> 00:01:10,870
+However, in other markets, such as bond markets,
+
+22
+00:01:10,870 --> 00:01:15,550
+yields are often stated on an annual, semiannual, monthly,
+
+23
+00:01:15,550 --> 00:01:17,020
+even daily basis.
+
+24
+00:01:17,020 --> 00:01:19,150
+And we'll use those alternatives in some
+
+25
+00:01:19,150 --> 00:01:20,650
+of the examples we look at.
+
+26
+00:01:20,650 --> 00:01:23,645
+
+
+27
+00:01:23,645 --> 00:01:25,020
+Notice that if you know the price
+
+28
+00:01:25,020 --> 00:01:28,910
+of the bond and its promised payments
+
+29
+00:01:28,910 --> 00:01:33,920
+and its time to maturity, then you can infer the yield.
+
+30
+00:01:33,920 --> 00:01:38,380
+And if you know the yield, the promised payments, and the time
+
+31
+00:01:38,380 --> 00:01:41,720
+to maturity, you can infer the price.
+
+32
+00:01:41,720 --> 00:01:46,320
+The price and the yield contain the same information.
+
+33
+00:01:46,320 --> 00:01:49,080
+In terms of the underlying economics of the situation,
+
+34
+00:01:49,080 --> 00:01:51,990
+you should think of the forces of supply and demand
+
+35
+00:01:51,990 --> 00:01:54,930
+determining the risk-free interest rate or the price
+
+36
+00:01:54,930 --> 00:01:59,860
+for every zero-coupon bond for every possible maturity.
+
+37
+00:01:59,860 --> 00:02:02,980
+I want to turn back and say a few more words also
+
+38
+00:02:02,980 --> 00:02:06,580
+about the Treasury spot yield curve.
+
+39
+00:02:06,580 --> 00:02:08,340
+The yield curve, which is also known
+
+40
+00:02:08,340 --> 00:02:10,169
+as the term structure of interest rates,
+
+41
+00:02:10,169 --> 00:02:15,870
+is the relationship between bond yields and bond maturities.
+
+42
+00:02:15,870 --> 00:02:18,150
+In practice, the risk-free yield curve
+
+43
+00:02:18,150 --> 00:02:21,540
+is often calculated from the market prices of US Treasury
+
+44
+00:02:21,540 --> 00:02:23,040
+securities.
+
+45
+00:02:23,040 --> 00:02:25,170
+Since there may be no maturing Treasury
+
+46
+00:02:25,170 --> 00:02:28,390
+security on a particular future date,
+
+47
+00:02:28,390 --> 00:02:33,510
+the spot rates for that date have to be interpolated.
+
+48
+00:02:33,510 --> 00:02:35,730
+Finally, it's important to understand
+
+49
+00:02:35,730 --> 00:02:39,390
+that bonds like Treasury bonds, whose promised cash flows are
+
+50
+00:02:39,390 --> 00:02:41,490
+free from default risk, still entail
+
+51
+00:02:41,490 --> 00:02:44,910
+significant risk for investors because the bond's market
+
+52
+00:02:44,910 --> 00:02:48,390
+price will change over time as market interest rates change.
+
+53
+00:02:48,390 --> 00:02:52,110
+Hedging bond price risk is a very popular use
+
+54
+00:02:52,110 --> 00:02:54,780
+of derivatives contracts, and in particular,
+
+55
+00:02:54,780 --> 00:02:56,205
+forwards, futures, and swaps.
+
+56
+00:02:56,205 --> 00:03:00,340
+
+
+57
+00:03:00,340 --> 00:03:02,650
+Forward contract prices for bonds
+
+58
+00:03:02,650 --> 00:03:04,240
+and other fixed-income securities
+
+59
+00:03:04,240 --> 00:03:06,190
+are closely tied to the yield curve,
+
+60
+00:03:06,190 --> 00:03:08,650
+and in particular, to the implied forward rates
+
+61
+00:03:08,650 --> 00:03:10,550
+in the yield curve.
+
+62
+00:03:10,550 --> 00:03:13,190
+We'll see why in more detail next week.
+
+63
+00:03:13,190 --> 00:03:18,350
+But for now, let's review the idea of implied forward rates.
+
+64
+00:03:18,350 --> 00:03:20,480
+We just saw that, in general, the price
+
+65
+00:03:20,480 --> 00:03:24,680
+today of a zero-coupon bond maturing at time T2
+
+66
+00:03:24,680 --> 00:03:29,450
+is found by discounting the face value, Z, that's paid at T2,
+
+67
+00:03:29,450 --> 00:03:33,065
+buy the yield to maturity, r sub T2.
+
+68
+00:03:33,065 --> 00:03:38,410
+
+
+69
+00:03:38,410 --> 00:03:40,780
+As we'll see soon, a no-arbitrage argument
+
+70
+00:03:40,780 --> 00:03:43,120
+ties down the forward price for this bond
+
+71
+00:03:43,120 --> 00:03:47,910
+for delivery at time T1.
+
+72
+00:03:47,910 --> 00:03:52,350
+The forward price is just the future value of the time zero
+
+73
+00:03:52,350 --> 00:03:57,240
+bond price as of T1 computed using the current yield,
+
+74
+00:03:57,240 --> 00:03:58,275
+r sub T1.
+
+75
+00:03:58,275 --> 00:04:01,880
+
+
+76
+00:04:01,880 --> 00:04:08,810
+Now, substituting for the bond price into the forward price,
+
+77
+00:04:08,810 --> 00:04:16,010
+we can express the forward price in terms of the yields, r of T1
+
+78
+00:04:16,010 --> 00:04:19,249
+and r of T2, in the current yield curve.
+
+79
+00:04:19,249 --> 00:04:24,150
+
+
+80
+00:04:24,150 --> 00:04:26,480
+Now let's turn to forward rates.
+
+81
+00:04:26,480 --> 00:04:30,800
+Implicit in forward prices are forward rates.
+
+82
+00:04:30,800 --> 00:04:32,930
+A forward rate is the interest rate
+
+83
+00:04:32,930 --> 00:04:37,670
+locked in a forward contract on the underlying security.
+
+84
+00:04:37,670 --> 00:04:40,370
+In this example, the forward contract
+
+85
+00:04:40,370 --> 00:04:43,160
+is for delivery of a zero-coupon bond
+
+86
+00:04:43,160 --> 00:04:48,560
+at time T1 that matures at time T2.
+
+87
+00:04:48,560 --> 00:04:53,540
+So at T1, it will have remaining life, T2 minus T1.
+
+88
+00:04:53,540 --> 00:04:56,680
+
+
+89
+00:04:56,680 --> 00:04:59,710
+The implied forward rate is defined
+
+90
+00:04:59,710 --> 00:05:03,220
+as the yield that equates the present value of the cash
+
+91
+00:05:03,220 --> 00:05:07,155
+flow on the bond at T2 with the forward price paid at T1.
+
+92
+00:05:07,155 --> 00:05:11,810
+
+
+93
+00:05:11,810 --> 00:05:18,280
+Equating our two equations for the forward price
+
+94
+00:05:18,280 --> 00:05:23,360
+and solving for the implied forward rate by rearranging,
+
+95
+00:05:23,360 --> 00:05:26,470
+we come up with this important formula
+
+96
+00:05:26,470 --> 00:05:28,150
+for the implied forward rate.
+
+97
+00:05:28,150 --> 00:05:30,790
+
+
+98
+00:05:30,790 --> 00:05:33,970
+Contracts based on forward rates, which
+
+99
+00:05:33,970 --> 00:05:37,600
+include bond market futures contracts, short-term interest
+
+100
+00:05:37,600 --> 00:05:40,300
+rate contracts and interest rate swaps,
+
+101
+00:05:40,300 --> 00:05:43,570
+all are based on this fundamental formula relating
+
+102
+00:05:43,570 --> 00:05:46,060
+forward rates for any future time interval
+
+103
+00:05:46,060 --> 00:05:47,095
+to the yield curve.
+
+104
+00:05:47,095 --> 00:05:50,600
+
+
+105
+00:05:50,600 --> 00:05:54,830
+Beyond pricing forward contracts on fixed-income securities,
+
+106
+00:05:54,830 --> 00:05:58,010
+the standard formulas used for derivative pricing
+
+107
+00:05:58,010 --> 00:06:01,640
+depend on the assumption that market participants
+
+108
+00:06:01,640 --> 00:06:04,910
+can borrow or lend at a risk-free rate,
+
+109
+00:06:04,910 --> 00:06:08,120
+or at least very close to it.
+
+110
+00:06:08,120 --> 00:06:11,510
+In practice, market participants can accomplish
+
+111
+00:06:11,510 --> 00:06:14,480
+risk-free borrowing and lending by buying and selling
+
+112
+00:06:14,480 --> 00:06:19,400
+Treasury securities or by using collateralized borrowing
+
+113
+00:06:19,400 --> 00:06:22,190
+and lending, often with repurchase agreements,
+
+114
+00:06:22,190 --> 00:06:26,170
+also known as RPs or repos.
+
+115
+00:06:26,170 --> 00:06:28,000
+
+

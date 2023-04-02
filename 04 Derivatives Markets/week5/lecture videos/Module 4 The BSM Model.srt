@@ -1,0 +1,1176 @@
+0
+00:00:00,000 --> 00:00:01,640
+
+
+1
+00:00:01,640 --> 00:00:04,250
+PROFESSOR: A rigorous derivation of the basic Black-Scholes
+
+2
+00:00:04,250 --> 00:00:07,290
+model relies on the assumptions listed here.
+
+3
+00:00:07,290 --> 00:00:11,430
+First, financial markets are frictionless.
+
+4
+00:00:11,430 --> 00:00:16,560
+That means no taxes on trading or transactions costs,
+
+5
+00:00:16,560 --> 00:00:19,110
+that assets are perfectly divisible,
+
+6
+00:00:19,110 --> 00:00:23,610
+and there are no restrictions on short sales.
+
+7
+00:00:23,610 --> 00:00:28,430
+Second, interest rates for risk-free borrowing and lending
+
+8
+00:00:28,430 --> 00:00:30,000
+are equal and constant.
+
+9
+00:00:30,000 --> 00:00:32,680
+
+
+10
+00:00:32,680 --> 00:00:35,320
+Third, the stock pays no dividends
+
+11
+00:00:35,320 --> 00:00:37,540
+over the life of the option.
+
+12
+00:00:37,540 --> 00:00:41,320
+Note that this assumption is quite easily relaxed.
+
+13
+00:00:41,320 --> 00:00:47,460
+And fourth, stock prices conform to the log-normal model.
+
+14
+00:00:47,460 --> 00:00:50,100
+That model assumes that stock prices follow
+
+15
+00:00:50,100 --> 00:00:53,340
+a continuous path, importantly with no jumps,
+
+16
+00:00:53,340 --> 00:00:58,040
+and that the mean and variance of the log return are constant.
+
+17
+00:00:58,040 --> 00:01:02,180
+Furthermore, the log return over any period of time
+
+18
+00:01:02,180 --> 00:01:06,780
+is independent of the log return over any other period of time
+
+19
+00:01:06,780 --> 00:01:10,070
+and that log return is normally distributed.
+
+20
+00:01:10,070 --> 00:01:13,280
+Knowing these assumptions is important not just
+
+21
+00:01:13,280 --> 00:01:15,080
+to understand the theory.
+
+22
+00:01:15,080 --> 00:01:17,540
+It's important for the practical reason
+
+23
+00:01:17,540 --> 00:01:20,450
+that when the assumptions don't hold, such as when
+
+24
+00:01:20,450 --> 00:01:22,460
+short selling the asset or borrowing
+
+25
+00:01:22,460 --> 00:01:25,940
+is expensive or impossible, using the formula
+
+26
+00:01:25,940 --> 00:01:29,090
+to evaluate options prices may lead you
+
+27
+00:01:29,090 --> 00:01:32,450
+to an inaccurate conclusion about the value.
+
+28
+00:01:32,450 --> 00:01:35,930
+In such cases, the model has to be modified
+
+29
+00:01:35,930 --> 00:01:37,835
+or a different model has to be used.
+
+30
+00:01:37,835 --> 00:01:40,870
+
+
+31
+00:01:40,870 --> 00:01:44,620
+In their original analyses, Black and Scholes and,
+
+32
+00:01:44,620 --> 00:01:47,770
+separately, Merton showed that under these assumptions,
+
+33
+00:01:47,770 --> 00:01:49,690
+the return on the stock option could
+
+34
+00:01:49,690 --> 00:01:53,620
+be replicated with a portfolio consisting of precisely chosen
+
+35
+00:01:53,620 --> 00:01:58,190
+quantities of the underlying stock and a risk-free bond.
+
+36
+00:01:58,190 --> 00:02:00,500
+To find the call option price, they
+
+37
+00:02:00,500 --> 00:02:02,990
+used the same sort of argument that we went through
+
+38
+00:02:02,990 --> 00:02:04,880
+in the binomial case.
+
+39
+00:02:04,880 --> 00:02:09,530
+Namely that if two portfolios have exactly the same payoffs
+
+40
+00:02:09,530 --> 00:02:11,510
+in every future state of the world,
+
+41
+00:02:11,510 --> 00:02:14,810
+they must have the same value today.
+
+42
+00:02:14,810 --> 00:02:17,840
+For a European call option, they show
+
+43
+00:02:17,840 --> 00:02:20,300
+that the replicating portfolio always
+
+44
+00:02:20,300 --> 00:02:24,200
+involves a long position or a positive fraction
+
+45
+00:02:24,200 --> 00:02:27,260
+of the underlying stock and a short position
+
+46
+00:02:27,260 --> 00:02:30,320
+in the risk-free bond.
+
+47
+00:02:30,320 --> 00:02:33,500
+The fraction of stock in the replicating portfolio
+
+48
+00:02:33,500 --> 00:02:35,840
+is set at each point in time so that it
+
+49
+00:02:35,840 --> 00:02:38,570
+equals the partial derivative of the call option
+
+50
+00:02:38,570 --> 00:02:43,340
+value with respect to the stock price, the delta
+
+51
+00:02:43,340 --> 00:02:44,720
+in this equation here.
+
+52
+00:02:44,720 --> 00:02:50,170
+
+
+53
+00:02:50,170 --> 00:02:52,090
+Since that sensitivity --
+
+54
+00:02:52,090 --> 00:02:55,630
+delta -- is constantly changing with remaining maturity
+
+55
+00:02:55,630 --> 00:02:59,570
+of the option and with the price of the stock,
+
+56
+00:02:59,570 --> 00:03:03,520
+the number of shares of stock in the replicating portfolio has
+
+57
+00:03:03,520 --> 00:03:07,330
+to be constantly adjusted as well.
+
+58
+00:03:07,330 --> 00:03:11,520
+Similarly for a put option, the hedge ratio or delta
+
+59
+00:03:11,520 --> 00:03:17,010
+for the put is the sensitivity of the put value to changes
+
+60
+00:03:17,010 --> 00:03:20,580
+in the underlying stock price.
+
+61
+00:03:20,580 --> 00:03:25,500
+As this relation is negative, it implies a short position
+
+62
+00:03:25,500 --> 00:03:29,890
+in stocks in the replicating portfolio.
+
+63
+00:03:29,890 --> 00:03:31,990
+An interesting historical note is
+
+64
+00:03:31,990 --> 00:03:34,600
+that even though the publication of Bob Merton's version
+
+65
+00:03:34,600 --> 00:03:37,990
+of the result was in 1974, a year
+
+66
+00:03:37,990 --> 00:03:41,260
+after that of Black and Scholes, Merton actually
+
+67
+00:03:41,260 --> 00:03:43,480
+finished his proof first.
+
+68
+00:03:43,480 --> 00:03:46,780
+The gentleman that he is, he kindly waited for his friends
+
+69
+00:03:46,780 --> 00:03:49,750
+Fischer Black and Myron Scholes to finish their version
+
+70
+00:03:49,750 --> 00:03:53,910
+before submitting his result to a journal.
+
+71
+00:03:53,910 --> 00:03:56,880
+It's helpful to see graphically the idea of using delta
+
+72
+00:03:56,880 --> 00:03:59,430
+to construct a replicating portfolio.
+
+73
+00:03:59,430 --> 00:04:01,320
+Here, the situation is illustrated
+
+74
+00:04:01,320 --> 00:04:04,650
+for a put option when the current stock price is at 100,
+
+75
+00:04:04,650 --> 00:04:07,950
+and the strike price is fixed at 100.
+
+76
+00:04:07,950 --> 00:04:11,610
+The x-axis is the underlying stock price,
+
+77
+00:04:11,610 --> 00:04:17,440
+and the y-axis is the value of the put option, which
+
+78
+00:04:17,440 --> 00:04:20,769
+is shown by the blue curve, or the value
+
+79
+00:04:20,769 --> 00:04:24,190
+of the replicating portfolio, which is
+
+80
+00:04:24,190 --> 00:04:27,860
+going to be this tangent line.
+
+81
+00:04:27,860 --> 00:04:30,970
+Notice that the current value of the put option
+
+82
+00:04:30,970 --> 00:04:34,690
+has a shape that's quite similar to the payoff at expiration
+
+83
+00:04:34,690 --> 00:04:37,000
+of the put option, but the relationship
+
+84
+00:04:37,000 --> 00:04:40,010
+is a smooth curve rather than a kinked line.
+
+85
+00:04:40,010 --> 00:04:42,370
+That's because prior to expiration,
+
+86
+00:04:42,370 --> 00:04:45,670
+there's no sharp difference between the value on each side
+
+87
+00:04:45,670 --> 00:04:46,960
+of the strike price.
+
+88
+00:04:46,960 --> 00:04:49,400
+If the put option is slightly out of the money,
+
+89
+00:04:49,400 --> 00:04:54,470
+it could end up in the money and vice versa.
+
+90
+00:04:54,470 --> 00:04:57,550
+Now the replicating portfolio is structured
+
+91
+00:04:57,550 --> 00:05:01,120
+to have the same sensitivity to changes in the stock prices
+
+92
+00:05:01,120 --> 00:05:03,940
+as does the put option.
+
+93
+00:05:03,940 --> 00:05:07,375
+That means choosing a delta or share
+
+94
+00:05:07,375 --> 00:05:11,080
+of stocks based on the slope of the put option value curve
+
+95
+00:05:11,080 --> 00:05:13,090
+at the current stock price, which
+
+96
+00:05:13,090 --> 00:05:17,170
+is given by this tangent line.
+
+97
+00:05:17,170 --> 00:05:22,080
+So we're looking at the current stock price,
+
+98
+00:05:22,080 --> 00:05:26,310
+and we want a portfolio with the same sensitivity
+
+99
+00:05:26,310 --> 00:05:30,960
+locally to changes in the stock price as what
+
+100
+00:05:30,960 --> 00:05:34,490
+we have with the put option.
+
+101
+00:05:34,490 --> 00:05:38,242
+You can see here that for small changes in the stock price,
+
+102
+00:05:38,242 --> 00:05:39,950
+the value of the put option and the value
+
+103
+00:05:39,950 --> 00:05:44,120
+of the replicating portfolio will, in fact, move together.
+
+104
+00:05:44,120 --> 00:05:51,940
+But for larger changes in price, the two will start to diverge.
+
+105
+00:05:51,940 --> 00:05:55,320
+
+
+106
+00:05:55,320 --> 00:05:58,280
+This should remind you of the analysis we did earlier
+
+107
+00:05:58,280 --> 00:06:00,080
+when we were discussing delta gamma
+
+108
+00:06:00,080 --> 00:06:03,890
+hedging for a bond or fixed income derivative product.
+
+109
+00:06:03,890 --> 00:06:07,370
+The principle -- the delta comes from the slope of a tangent
+
+110
+00:06:07,370 --> 00:06:08,210
+line --
+
+111
+00:06:08,210 --> 00:06:12,260
+is exactly the same in both analyses.
+
+112
+00:06:12,260 --> 00:06:15,800
+There's one difference that you should keep in mind though.
+
+113
+00:06:15,800 --> 00:06:21,290
+With stock options, the x-axis is the underlying stock price.
+
+114
+00:06:21,290 --> 00:06:24,410
+In our earlier analysis of fixed-income derivatives,
+
+115
+00:06:24,410 --> 00:06:27,410
+the x-axis was the level of interest rates
+
+116
+00:06:27,410 --> 00:06:29,840
+rather than of bond prices.
+
+117
+00:06:29,840 --> 00:06:33,810
+We'll see later in the class why this difference arises.
+
+118
+00:06:33,810 --> 00:06:36,710
+But I want to emphasize here that the basic logic
+
+119
+00:06:36,710 --> 00:06:38,930
+of both analysis is identical.
+
+120
+00:06:38,930 --> 00:06:41,800
+
+
+121
+00:06:41,800 --> 00:06:44,610
+There are five inputs into the original Black-Scholes-Merton
+
+122
+00:06:44,610 --> 00:06:51,810
+formula: the current stock price, the exercise price,
+
+123
+00:06:51,810 --> 00:06:55,540
+the remaining time to expiration,
+
+124
+00:06:55,540 --> 00:07:00,770
+the risk-free rate, and the annualized standard deviation
+
+125
+00:07:00,770 --> 00:07:03,410
+of log stock returns.
+
+126
+00:07:03,410 --> 00:07:06,320
+The most commonly used version of the formula
+
+127
+00:07:06,320 --> 00:07:08,390
+also incorporates the possibility
+
+128
+00:07:08,390 --> 00:07:10,760
+of a constant dividend yield, which
+
+129
+00:07:10,760 --> 00:07:15,590
+is often noted as little delta.
+
+130
+00:07:15,590 --> 00:07:20,030
+So here, we finally have it: the Black-Scholes-Merton options
+
+131
+00:07:20,030 --> 00:07:21,440
+pricing model.
+
+132
+00:07:21,440 --> 00:07:24,150
+Fanfare, please!
+
+133
+00:07:24,150 --> 00:07:27,650
+[TRUMPET FANFARE]
+
+134
+00:07:27,650 --> 00:07:36,180
+
+
+135
+00:07:36,180 --> 00:07:39,120
+This equation says that the value of a European call
+
+136
+00:07:39,120 --> 00:07:45,030
+option, given the five inputs, is the stock price multiplied
+
+137
+00:07:45,030 --> 00:07:49,590
+by N of d1 minus the present value of the strike
+
+138
+00:07:49,590 --> 00:07:53,900
+price multiplied by N of d2.
+
+139
+00:07:53,900 --> 00:07:56,630
+N represents the cumulative density function
+
+140
+00:07:56,630 --> 00:08:00,760
+of a standard normal random variable.
+
+141
+00:08:00,760 --> 00:08:04,920
+The inputs d1 and d2 are both functions
+
+142
+00:08:04,920 --> 00:08:08,600
+of our five basic inputs.
+
+143
+00:08:08,600 --> 00:08:11,990
+The value of the corresponding put option
+
+144
+00:08:11,990 --> 00:08:14,400
+is given by this equation.
+
+145
+00:08:14,400 --> 00:08:17,840
+It's found using Put-Call Parity.
+
+146
+00:08:17,840 --> 00:08:20,900
+As with the binomial model, the actual expected return
+
+147
+00:08:20,900 --> 00:08:24,230
+on the stock doesn't enter into our pricing formula.
+
+148
+00:08:24,230 --> 00:08:26,060
+It's reflected indirectly, though,
+
+149
+00:08:26,060 --> 00:08:28,710
+through the current stock price.
+
+150
+00:08:28,710 --> 00:08:31,010
+Now to implement these pricing formulas,
+
+151
+00:08:31,010 --> 00:08:34,280
+there's a spreadsheet available with the course materials
+
+152
+00:08:34,280 --> 00:08:37,700
+called BSMandBlacksmodel.xls.
+
+153
+00:08:37,700 --> 00:08:40,940
+You can use it for the homework and for the exam.
+
+154
+00:08:40,940 --> 00:08:43,309
+It uses a built-in function to solve
+
+155
+00:08:43,309 --> 00:08:47,000
+for the values of the cumulative standard normal distribution.
+
+156
+00:08:47,000 --> 00:08:50,070
+
+
+157
+00:08:50,070 --> 00:08:52,320
+The example here shows that using the model
+
+158
+00:08:52,320 --> 00:08:55,860
+is quite straightforward once you've identified the inputs.
+
+159
+00:08:55,860 --> 00:08:58,740
+The calculation is for an at-the-money option
+
+160
+00:08:58,740 --> 00:09:02,730
+with a current stock price and strike price of 100.
+
+161
+00:09:02,730 --> 00:09:07,350
+The interest rate is 5%, and the maturity is one year.
+
+162
+00:09:07,350 --> 00:09:10,200
+The return volatility on a continuous annual basis
+
+163
+00:09:10,200 --> 00:09:14,220
+is 30%, which is quite typical for stocks in the United
+
+164
+00:09:14,220 --> 00:09:16,110
+States.
+
+165
+00:09:16,110 --> 00:09:19,950
+Plugging in those values, you can calculate d1 or d2,
+
+166
+00:09:19,950 --> 00:09:22,560
+or your spreadsheet can do it for you.
+
+167
+00:09:22,560 --> 00:09:26,760
+Then you can calculate the values N of d1 and N of d2
+
+168
+00:09:26,760 --> 00:09:30,240
+using the formula for the cumulative normal distribution
+
+169
+00:09:30,240 --> 00:09:34,590
+or, again, using the spreadsheet that's programmed in Excel.
+
+170
+00:09:34,590 --> 00:09:40,880
+The implied value of the call option is 14.2312.
+
+171
+00:09:40,880 --> 00:09:43,160
+To find the value of a put option,
+
+172
+00:09:43,160 --> 00:09:48,710
+you need to N of negative d1 and N of negative d2.
+
+173
+00:09:48,710 --> 00:09:51,140
+You could solve for those directly.
+
+174
+00:09:51,140 --> 00:09:54,020
+But since we've already found the values of N of d1
+
+175
+00:09:54,020 --> 00:09:57,890
+and N of d2, it's simpler to just remember
+
+176
+00:09:57,890 --> 00:10:04,190
+that N of minus d1 is equal to 1 minus N of d1
+
+177
+00:10:04,190 --> 00:10:08,240
+and similarly for d2.
+
+178
+00:10:08,240 --> 00:10:10,160
+Plugging these inputs into the formula
+
+179
+00:10:10,160 --> 00:10:12,470
+for the value of a put option, you
+
+180
+00:10:12,470 --> 00:10:18,800
+can verify that it's worth 9.3542.
+
+181
+00:10:18,800 --> 00:10:22,070
+It's not difficult to extend the Black-Scholes-Merton logic
+
+182
+00:10:22,070 --> 00:10:25,070
+to the situation where the stock pays a known dividend
+
+183
+00:10:25,070 --> 00:10:27,920
+or has a known dividend yield.
+
+184
+00:10:27,920 --> 00:10:30,320
+In the case of a known dividend payment expected
+
+185
+00:10:30,320 --> 00:10:34,140
+to arrive before the option expiration date,
+
+186
+00:10:34,140 --> 00:10:36,560
+the original formula used to price puts and calls
+
+187
+00:10:36,560 --> 00:10:39,110
+can be used with just an adjustment
+
+188
+00:10:39,110 --> 00:10:42,810
+to the original stock price.
+
+189
+00:10:42,810 --> 00:10:45,810
+Specifically, the stock price is adjusted down
+
+190
+00:10:45,810 --> 00:10:49,220
+by the present value of the dividends paid.
+
+191
+00:10:49,220 --> 00:10:52,130
+That pulls the future distribution of stock prices
+
+192
+00:10:52,130 --> 00:10:56,090
+down, realistically reflecting that when a dividend is paid,
+
+193
+00:10:56,090 --> 00:10:58,430
+the value of future cash flows drops
+
+194
+00:10:58,430 --> 00:10:59,690
+by the amount of the dividend.
+
+195
+00:10:59,690 --> 00:11:03,960
+
+
+196
+00:11:03,960 --> 00:11:07,610
+Now the case of a constant dividend yield
+
+197
+00:11:07,610 --> 00:11:12,410
+is more realistic for stock indices.
+
+198
+00:11:12,410 --> 00:11:14,870
+There, too, the future appreciation
+
+199
+00:11:14,870 --> 00:11:17,060
+of the value of the index is reduced
+
+200
+00:11:17,060 --> 00:11:19,890
+by the dividends that are paid.
+
+201
+00:11:19,890 --> 00:11:23,850
+The adjustments shown here have the same effect
+
+202
+00:11:23,850 --> 00:11:26,640
+of lowering the entire distribution of future stock
+
+203
+00:11:26,640 --> 00:11:29,280
+prices, consistent with the dividends
+
+204
+00:11:29,280 --> 00:11:32,235
+pulling down the remaining value of the underlying stocks.
+
+205
+00:11:32,235 --> 00:11:35,730
+
+
+206
+00:11:35,730 --> 00:11:38,910
+I want to provide some further interpretation of the BSM model
+
+207
+00:11:38,910 --> 00:11:40,650
+that will be useful a little while later
+
+208
+00:11:40,650 --> 00:11:44,280
+when we're discussing dynamic delta hedging strategies.
+
+209
+00:11:44,280 --> 00:11:47,820
+The fundamental idea behind BSM is that the value of the option
+
+210
+00:11:47,820 --> 00:11:51,030
+is the same as that of the replicating portfolio of stocks
+
+211
+00:11:51,030 --> 00:11:52,780
+and bonds.
+
+212
+00:11:52,780 --> 00:11:56,070
+N of d1 is the fraction of a share of stock
+
+213
+00:11:56,070 --> 00:11:59,880
+we would hold in the replicating portfolio for a call option.
+
+214
+00:11:59,880 --> 00:12:02,940
+It equates the sensitivity of the replicating portfolio
+
+215
+00:12:02,940 --> 00:12:09,050
+value to stock price changes with those of the option.
+
+216
+00:12:09,050 --> 00:12:11,450
+It's conceptually equivalent to the Delta
+
+217
+00:12:11,450 --> 00:12:14,270
+we solved for when we found the replicating portfolio
+
+218
+00:12:14,270 --> 00:12:16,620
+in a binomial model.
+
+219
+00:12:16,620 --> 00:12:20,150
+The general concept is the same in both cases.
+
+220
+00:12:20,150 --> 00:12:23,360
+Delta always represents the first-order sensitivity
+
+221
+00:12:23,360 --> 00:12:25,850
+of the value of an option to the change
+
+222
+00:12:25,850 --> 00:12:30,800
+in the value of the underlying-- in this case, a stock.
+
+223
+00:12:30,800 --> 00:12:33,500
+The Delta, then, of a call option
+
+224
+00:12:33,500 --> 00:12:36,200
+is the partial derivative of the value of the call
+
+225
+00:12:36,200 --> 00:12:40,720
+option with respect to the underlying stock price
+
+226
+00:12:40,720 --> 00:12:45,300
+and so in the BSM model, this is given by N of d1.
+
+227
+00:12:45,300 --> 00:12:49,710
+
+
+228
+00:12:49,710 --> 00:12:53,460
+N of d1 is always positive because this
+
+229
+00:12:53,460 --> 00:12:55,770
+is a cumulative distribution, which
+
+230
+00:12:55,770 --> 00:12:57,690
+always lies between 0 and 1.
+
+231
+00:12:57,690 --> 00:13:00,630
+
+
+232
+00:13:00,630 --> 00:13:04,620
+The Delta of a put option is also a partial derivative
+
+233
+00:13:04,620 --> 00:13:10,030
+of the value of the option with respect to the underlying stock
+
+234
+00:13:10,030 --> 00:13:12,310
+and in the Black-Scholes-Merton model,
+
+235
+00:13:12,310 --> 00:13:17,750
+it's given by minus N of minus d1.
+
+236
+00:13:17,750 --> 00:13:20,300
+This is always less than 0 because we
+
+237
+00:13:20,300 --> 00:13:25,300
+have a minus sign multiplying a positive function.
+
+238
+00:13:25,300 --> 00:13:27,670
+There's also an analog between BSM
+
+239
+00:13:27,670 --> 00:13:30,130
+and the binomial model for the amount of borrowing
+
+240
+00:13:30,130 --> 00:13:33,150
+in the replicating portfolio.
+
+241
+00:13:33,150 --> 00:13:36,840
+Borrowing is given in the BSM model for a call option
+
+242
+00:13:36,840 --> 00:13:42,270
+by the term here, the strike price discounted and multiplied
+
+243
+00:13:42,270 --> 00:13:42,900
+by N of d2.
+
+244
+00:13:42,900 --> 00:13:46,150
+
+
+245
+00:13:46,150 --> 00:13:49,620
+The value of the call option then
+
+246
+00:13:49,620 --> 00:13:53,850
+equals the value of the replicating portfolio,
+
+247
+00:13:53,850 --> 00:13:59,390
+delta times S minus the amount of borrowing, which
+
+248
+00:13:59,390 --> 00:14:03,380
+is represented in the Black-Scholes-Merton formula
+
+249
+00:14:03,380 --> 00:14:08,180
+by N of d1 times S for Delta times S,
+
+250
+00:14:08,180 --> 00:14:12,380
+and the discounted value of the strike price times N of d2
+
+251
+00:14:12,380 --> 00:14:16,210
+represents the amount of borrowing.
+
+252
+00:14:16,210 --> 00:14:18,820
+Finally, I want to say a few words about the different ways
+
+253
+00:14:18,820 --> 00:14:20,950
+to derive the Black-Scholes-Merton model
+
+254
+00:14:20,950 --> 00:14:25,520
+and a fun story about how it first became so famous.
+
+255
+00:14:25,520 --> 00:14:28,550
+We looked at one of the ways that the BSM formula
+
+256
+00:14:28,550 --> 00:14:32,880
+can be derived, which is as the limit of the binomial model.
+
+257
+00:14:32,880 --> 00:14:35,940
+It can also be found in two other related ways.
+
+258
+00:14:35,940 --> 00:14:39,380
+One is by solving a partial differential equation that
+
+259
+00:14:39,380 --> 00:14:42,860
+comes out of the replicating portfolio approach directly
+
+260
+00:14:42,860 --> 00:14:45,470
+and the condition of no arbitrage.
+
+261
+00:14:45,470 --> 00:14:48,440
+The other is using risk-neutral pricing.
+
+262
+00:14:48,440 --> 00:14:50,750
+All, of course, give the same result
+
+263
+00:14:50,750 --> 00:14:54,510
+and are useful for developing intuition about the model.
+
+264
+00:14:54,510 --> 00:14:57,470
+You can find these derivations in Hull or online.
+
+265
+00:14:57,470 --> 00:15:02,900
+But in the interest of time, we won't go into them here.
+
+266
+00:15:02,900 --> 00:15:05,540
+A natural question you might have at this point
+
+267
+00:15:05,540 --> 00:15:08,930
+is whether BSM really works, given all the assumptions
+
+268
+00:15:08,930 --> 00:15:11,060
+that are required.
+
+269
+00:15:11,060 --> 00:15:12,860
+The answer is that it works pretty well
+
+270
+00:15:12,860 --> 00:15:16,910
+in many circumstances and it is the most common model
+
+271
+00:15:16,910 --> 00:15:18,450
+used in hedging strategies.
+
+272
+00:15:18,450 --> 00:15:20,980
+
+
+273
+00:15:20,980 --> 00:15:24,760
+A great story that speaks to the value of the model is this --
+
+274
+00:15:24,760 --> 00:15:28,060
+before Black, Scholes, and Merton derived the model,
+
+275
+00:15:28,060 --> 00:15:31,270
+stock options were being actively traded on the Chicago
+
+276
+00:15:31,270 --> 00:15:33,580
+Board Options Exchange.
+
+277
+00:15:33,580 --> 00:15:37,390
+Black and Scholes decided to try out their theory there
+
+278
+00:15:37,390 --> 00:15:40,780
+and started trading based on it.
+
+279
+00:15:40,780 --> 00:15:44,170
+If they found a stock option price that was too low based
+
+280
+00:15:44,170 --> 00:15:46,930
+on the model, they bought the option,
+
+281
+00:15:46,930 --> 00:15:49,090
+and they hedged the position by shorting
+
+282
+00:15:49,090 --> 00:15:52,930
+the replicating portfolio, and vise versa of the option price
+
+283
+00:15:52,930 --> 00:15:55,080
+was too high.
+
+284
+00:15:55,080 --> 00:15:59,010
+Apparently, the other traders initially just ignored them,
+
+285
+00:15:59,010 --> 00:16:01,170
+figuring they would lose a lot of money
+
+286
+00:16:01,170 --> 00:16:05,130
+and then retreat to their comfortable university jobs.
+
+287
+00:16:05,130 --> 00:16:07,980
+But it soon became very clear that Black and Scholes
+
+288
+00:16:07,980 --> 00:16:10,920
+were making a lot of money trading on their model.
+
+289
+00:16:10,920 --> 00:16:13,260
+Soon, other traders followed.
+
+290
+00:16:13,260 --> 00:16:16,020
+And pricing and options markets was forever
+
+291
+00:16:16,020 --> 00:16:18,540
+altered by the knowledge that options
+
+292
+00:16:18,540 --> 00:16:23,420
+could be priced scientifically using no arbitrage logic.
+
+293
+00:16:23,420 --> 00:16:25,002
+
+

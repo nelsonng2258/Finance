@@ -1,0 +1,916 @@
+0
+00:00:00,000 --> 00:00:00,593
+
+
+1
+00:00:00,593 --> 00:00:02,260
+PROFESSOR: With all of that for context,
+
+2
+00:00:02,260 --> 00:00:04,670
+we're ready to turn to some of the most frequently used
+
+3
+00:00:04,670 --> 00:00:06,680
+duration measures.
+
+4
+00:00:06,680 --> 00:00:10,160
+The oldest measure of duration, known as Macaulay Duration
+
+5
+00:00:10,160 --> 00:00:13,520
+after the man who invented it, represents the elasticity
+
+6
+00:00:13,520 --> 00:00:16,309
+of a bond price with respect to its yield.
+
+7
+00:00:16,309 --> 00:00:19,310
+In economics and finance, an elasticity
+
+8
+00:00:19,310 --> 00:00:22,310
+is the percentage change in one variable--
+
+9
+00:00:22,310 --> 00:00:26,180
+in this case, the price of a bond or a portfolio of bonds
+
+10
+00:00:26,180 --> 00:00:29,930
+with respect to the percentage change in a second variable;
+
+11
+00:00:29,930 --> 00:00:33,140
+in this case, the yield to maturity.
+
+12
+00:00:33,140 --> 00:00:38,270
+Notice that the expression here is multiplied by a minus sign.
+
+13
+00:00:38,270 --> 00:00:42,440
+That's in order to define the duration as a positive quantity
+
+14
+00:00:42,440 --> 00:00:45,440
+when the derivative of price with respect to yield
+
+15
+00:00:45,440 --> 00:00:49,250
+is negative, as is typical for bond prices, which
+
+16
+00:00:49,250 --> 00:00:52,120
+move inversely to yields.
+
+17
+00:00:52,120 --> 00:00:54,490
+This equation represents the idea
+
+18
+00:00:54,490 --> 00:00:57,670
+in terms of derivatives of bond price with respect
+
+19
+00:00:57,670 --> 00:01:02,920
+to its yield, normalized by this expression
+
+20
+00:01:02,920 --> 00:01:05,440
+on the right-hand side, which puts
+
+21
+00:01:05,440 --> 00:01:07,810
+everything in percentage terms.
+
+22
+00:01:07,810 --> 00:01:13,300
+That is, we have the percentage change in price with respect
+
+23
+00:01:13,300 --> 00:01:17,560
+to the percentage change in yield.
+
+24
+00:01:17,560 --> 00:01:21,430
+Because a bond's price sensitivity changes over time
+
+25
+00:01:21,430 --> 00:01:23,510
+as its remaining maturity shrinks
+
+26
+00:01:23,510 --> 00:01:26,200
+and as market interest rate conditions change,
+
+27
+00:01:26,200 --> 00:01:29,690
+duration is a property of a bond or portfolio,
+
+28
+00:01:29,690 --> 00:01:31,330
+the point in time.
+
+29
+00:01:31,330 --> 00:01:34,920
+And it changes over time.
+
+30
+00:01:34,920 --> 00:01:38,060
+Now, Macaulay applied this to our familiar equation
+
+31
+00:01:38,060 --> 00:01:41,570
+for the price of a bond as the present discounted value
+
+32
+00:01:41,570 --> 00:01:44,210
+of its promised cash flows by taking
+
+33
+00:01:44,210 --> 00:01:48,450
+the derivative with respect to the yield to maturity.
+
+34
+00:01:48,450 --> 00:01:50,370
+The result of Macaulay's calculation
+
+35
+00:01:50,370 --> 00:01:53,740
+is the top formula here.
+
+36
+00:01:53,740 --> 00:01:57,430
+To explain the notation briefly, the yield Y
+
+37
+00:01:57,430 --> 00:02:00,640
+is stated as an annual percentage rate and k
+
+38
+00:02:00,640 --> 00:02:04,370
+is the number of assumed compounding periods per year.
+
+39
+00:02:04,370 --> 00:02:08,800
+The total number of periods, capital T, when divided by k,
+
+40
+00:02:08,800 --> 00:02:11,740
+gives the life of the bond in years.
+
+41
+00:02:11,740 --> 00:02:14,020
+This representation allows for bonds
+
+42
+00:02:14,020 --> 00:02:17,590
+with payments on a daily, monthly, quarterly, annual,
+
+43
+00:02:17,590 --> 00:02:20,600
+and so forth basis.
+
+44
+00:02:20,600 --> 00:02:23,760
+The derivation of the formula is optional for you
+
+45
+00:02:23,760 --> 00:02:25,580
+but it's included in the appendix
+
+46
+00:02:25,580 --> 00:02:29,970
+section of these slides in case you want to take a look.
+
+47
+00:02:29,970 --> 00:02:33,930
+Now, the top formula can be rewritten to a more intuitively
+
+48
+00:02:33,930 --> 00:02:35,580
+interpretable form.
+
+49
+00:02:35,580 --> 00:02:38,970
+That's in this highlighted equation here.
+
+50
+00:02:38,970 --> 00:02:42,300
+It says that the Macaulay Duration turns out
+
+51
+00:02:42,300 --> 00:02:45,540
+to be a weighted average of the arrival time of the promised
+
+52
+00:02:45,540 --> 00:02:49,530
+cash flows, where the weights are present value weights.
+
+53
+00:02:49,530 --> 00:02:52,440
+That is, the present value of cash flows
+
+54
+00:02:52,440 --> 00:02:54,930
+arriving at a point in time divided
+
+55
+00:02:54,930 --> 00:02:59,890
+by the total present value or price of the bond
+
+56
+00:02:59,890 --> 00:03:03,550
+So here, we have the fraction of the present value arriving
+
+57
+00:03:03,550 --> 00:03:07,290
+in the first period, the fraction
+
+58
+00:03:07,290 --> 00:03:09,720
+arriving in the second period, and so
+
+59
+00:03:09,720 --> 00:03:13,680
+forth of the last period, each waiting
+
+60
+00:03:13,680 --> 00:03:16,065
+their respective arrival time.
+
+61
+00:03:16,065 --> 00:03:19,140
+
+
+62
+00:03:19,140 --> 00:03:21,680
+Let's now reconsider the four bonds we looked at
+
+63
+00:03:21,680 --> 00:03:24,110
+to compare their price sensitivity to interest rate
+
+64
+00:03:24,110 --> 00:03:27,020
+changes in Example 3.1.
+
+65
+00:03:27,020 --> 00:03:30,990
+We can calculate the Macaulay Duration for each of them.
+
+66
+00:03:30,990 --> 00:03:33,225
+Since duration is a measure of price sensitivity
+
+67
+00:03:33,225 --> 00:03:36,210
+to yield changes, we'd expect the durations
+
+68
+00:03:36,210 --> 00:03:39,360
+to have the same ordering as the price sensitivities
+
+69
+00:03:39,360 --> 00:03:42,480
+we found when we recomputed the prices following a yield
+
+70
+00:03:42,480 --> 00:03:45,130
+change in the original example.
+
+71
+00:03:45,130 --> 00:03:46,980
+If you look back at that, you'll see
+
+72
+00:03:46,980 --> 00:03:49,320
+that's exactly what we find.
+
+73
+00:03:49,320 --> 00:03:52,050
+This is a good time to introduce you to a handy spreadsheet tool
+
+74
+00:03:52,050 --> 00:03:54,480
+on the class web page that allows you to calculate
+
+75
+00:03:54,480 --> 00:03:56,790
+durations and convexity for a coupon
+
+76
+00:03:56,790 --> 00:04:00,960
+bond with either an annual or semi-annual coupon payment.
+
+77
+00:04:00,960 --> 00:04:03,810
+It's called duration and convexity calculator.
+
+78
+00:04:03,810 --> 00:04:05,820
+You might want to open it and follow along
+
+79
+00:04:05,820 --> 00:04:08,600
+as we go through this example.
+
+80
+00:04:08,600 --> 00:04:10,120
+Let's take the first bond.
+
+81
+00:04:10,120 --> 00:04:13,450
+That has a 9% annual coupon with semi-annual payments.
+
+82
+00:04:13,450 --> 00:04:17,350
+So 4.5% of the face value is paid every 6 months.
+
+83
+00:04:17,350 --> 00:04:19,750
+Its maturity is 5 years, and it's
+
+84
+00:04:19,750 --> 00:04:22,810
+priced to yield 9% on a bond equivalent basis, which
+
+85
+00:04:22,810 --> 00:04:24,760
+means the discount rate is also taken
+
+86
+00:04:24,760 --> 00:04:27,700
+to be semi-annual at 4.5%.
+
+87
+00:04:27,700 --> 00:04:29,920
+Enter this information into the spreadsheet,
+
+88
+00:04:29,920 --> 00:04:34,690
+and then hit Duration to get the Macaulay Duration.
+
+89
+00:04:34,690 --> 00:04:36,960
+So we have a maturity of 5 years.
+
+90
+00:04:36,960 --> 00:04:39,660
+
+
+91
+00:04:39,660 --> 00:04:45,080
+2 represents the semi-annual compounding opportunities.
+
+92
+00:04:45,080 --> 00:04:48,650
+The coupon rate is 9%.
+
+93
+00:04:48,650 --> 00:04:51,780
+We never need to change the face value.
+
+94
+00:04:51,780 --> 00:04:55,850
+And we have the yield at 9%.
+
+95
+00:04:55,850 --> 00:05:03,010
+Hitting Duration, we find a Macaulay Duration of 4.134.
+
+96
+00:05:03,010 --> 00:05:04,690
+You can see this spreadsheet also
+
+97
+00:05:04,690 --> 00:05:07,690
+calculates modified duration and convexity, which
+
+98
+00:05:07,690 --> 00:05:09,490
+we'll return to shortly.
+
+99
+00:05:09,490 --> 00:05:11,920
+To get the convexity, you also need
+
+100
+00:05:11,920 --> 00:05:14,860
+to hit the Convexity button, which for this bond,
+
+101
+00:05:14,860 --> 00:05:19,490
+turns out to be 19.45.
+
+102
+00:05:19,490 --> 00:05:21,620
+I also want to use the Macaulay Duration
+
+103
+00:05:21,620 --> 00:05:25,010
+formula to go back and provide a more intuitive understanding
+
+104
+00:05:25,010 --> 00:05:27,890
+of what drives the price sensitivity of coupon bonds
+
+105
+00:05:27,890 --> 00:05:31,130
+that don't contain options, such as default or prepayment
+
+106
+00:05:31,130 --> 00:05:32,820
+options.
+
+107
+00:05:32,820 --> 00:05:35,520
+The formula says that the duration
+
+108
+00:05:35,520 --> 00:05:38,910
+is a present value weighted average of cash flow arrival
+
+109
+00:05:38,910 --> 00:05:40,530
+times.
+
+110
+00:05:40,530 --> 00:05:43,240
+Again, here k is a number of payments per year.
+
+111
+00:05:43,240 --> 00:05:46,000
+And capital T is the number of periods.
+
+112
+00:05:46,000 --> 00:05:49,350
+For example, if T equals 2 and k equals 4,
+
+113
+00:05:49,350 --> 00:05:53,490
+there's a cash flow every quarter for 2 years.
+
+114
+00:05:53,490 --> 00:05:56,550
+Clearly, the duration must be less than or equal to the time
+
+115
+00:05:56,550 --> 00:06:01,880
+to maturity since no cash flows arrive after maturity.
+
+116
+00:06:01,880 --> 00:06:04,730
+The maximum duration is the maturity,
+
+117
+00:06:04,730 --> 00:06:07,640
+and that will be the case for a zero coupon bond
+
+118
+00:06:07,640 --> 00:06:13,080
+where 100% of the cash flows arrive on the maturity date.
+
+119
+00:06:13,080 --> 00:06:15,780
+All else equal, a higher coupon rate
+
+120
+00:06:15,780 --> 00:06:18,030
+reduces the duration, because it causes
+
+121
+00:06:18,030 --> 00:06:23,710
+a higher percentage of the total cash flows to arrive earlier.
+
+122
+00:06:23,710 --> 00:06:26,310
+Finally, the effect of higher market yields
+
+123
+00:06:26,310 --> 00:06:29,250
+is also via the present value weights.
+
+124
+00:06:29,250 --> 00:06:32,640
+As market yields increase, the present value
+
+125
+00:06:32,640 --> 00:06:36,060
+of the more distant payments gets smaller relative
+
+126
+00:06:36,060 --> 00:06:38,880
+to the value of the payments arriving sooner.
+
+127
+00:06:38,880 --> 00:06:42,150
+That puts a higher proportion of the total present value
+
+128
+00:06:42,150 --> 00:06:44,700
+on the earlier payments, pulling down
+
+129
+00:06:44,700 --> 00:06:47,310
+the weighted average arrival time of the cash flows
+
+130
+00:06:47,310 --> 00:06:48,570
+and shortening the duration.
+
+131
+00:06:48,570 --> 00:06:51,490
+
+
+132
+00:06:51,490 --> 00:06:54,250
+Going back to the more general representation of Macaulay
+
+133
+00:06:54,250 --> 00:06:56,380
+Duration on slide 12 --
+
+134
+00:06:56,380 --> 00:06:59,420
+it's also copied here, --
+
+135
+00:06:59,420 --> 00:07:02,900
+this formula can be rearranged to express the percentage
+
+136
+00:07:02,900 --> 00:07:06,110
+change in the price of a bond as the product
+
+137
+00:07:06,110 --> 00:07:08,780
+of minus its duration and the change
+
+138
+00:07:08,780 --> 00:07:13,280
+in its yield normalized by the factor 1 over 1 plus Y over k.
+
+139
+00:07:13,280 --> 00:07:17,220
+
+
+140
+00:07:17,220 --> 00:07:19,500
+Because we use this formula so often,
+
+141
+00:07:19,500 --> 00:07:23,010
+it's convenient to roll up that normalization factor
+
+142
+00:07:23,010 --> 00:07:25,410
+into the duration measure itself.
+
+143
+00:07:25,410 --> 00:07:30,740
+That duration measure is called modified duration.
+
+144
+00:07:30,740 --> 00:07:34,310
+With this definition, we now have a very simple formula
+
+145
+00:07:34,310 --> 00:07:36,200
+to approximate the percentage price
+
+146
+00:07:36,200 --> 00:07:39,590
+change of a bond when there's a small change in its yield.
+
+147
+00:07:39,590 --> 00:07:43,160
+It's simply the modified duration multiplied
+
+148
+00:07:43,160 --> 00:07:44,630
+by that change in the yield.
+
+149
+00:07:44,630 --> 00:07:47,680
+
+
+150
+00:07:47,680 --> 00:07:49,900
+Some version of this equation is the basis
+
+151
+00:07:49,900 --> 00:07:52,300
+for all duration-based hedging strategies
+
+152
+00:07:52,300 --> 00:07:55,600
+for fixed income securities and their related derivatives.
+
+153
+00:07:55,600 --> 00:07:58,710
+
+
+154
+00:07:58,710 --> 00:08:01,620
+Let's see how while this duration-based approximation
+
+155
+00:08:01,620 --> 00:08:04,890
+works by looking at an example.
+
+156
+00:08:04,890 --> 00:08:07,080
+As you can check with the duration and convexity
+
+157
+00:08:07,080 --> 00:08:11,250
+calculator, a 20-year 5% coupon bond
+
+158
+00:08:11,250 --> 00:08:16,500
+with semi-annual coupon payments that's priced to yield 9%
+
+159
+00:08:16,500 --> 00:08:21,210
+has a modified duration of 10.4.
+
+160
+00:08:21,210 --> 00:08:24,870
+The predicted price change, if yields increase
+
+161
+00:08:24,870 --> 00:08:31,080
+from the 9% to 9.1%, according to the duration approximation
+
+162
+00:08:31,080 --> 00:08:36,000
+formula, is minus the modified duration
+
+163
+00:08:36,000 --> 00:08:40,860
+times the change in yield, which gives us an approximate price
+
+164
+00:08:40,860 --> 00:08:45,860
+change of minus 1.04%.
+
+165
+00:08:45,860 --> 00:08:48,350
+The actual price change can be found
+
+166
+00:08:48,350 --> 00:08:50,930
+by recalculating the price of the bond,
+
+167
+00:08:50,930 --> 00:08:57,490
+assuming a discount rate of 9.1% in place of the original 9%.
+
+168
+00:08:57,490 --> 00:09:02,620
+The actual price change is minus 1.03%.
+
+169
+00:09:02,620 --> 00:09:07,980
+The approximation is very accurate in this case.
+
+170
+00:09:07,980 --> 00:09:13,710
+Now let's consider a large yield change from 9% to 11%.
+
+171
+00:09:13,710 --> 00:09:17,760
+In that case, the duration approximation formula
+
+172
+00:09:17,760 --> 00:09:22,740
+implies a fall in price of 20.8%.
+
+173
+00:09:22,740 --> 00:09:25,980
+Again calculating the actual price change,
+
+174
+00:09:25,980 --> 00:09:28,650
+the price only drops by 17.94%.
+
+175
+00:09:28,650 --> 00:09:33,330
+We can see that with this large yield change,
+
+176
+00:09:33,330 --> 00:09:37,310
+the approximation is quite poor.
+
+177
+00:09:37,310 --> 00:09:40,250
+A general conclusion is that approximations
+
+178
+00:09:40,250 --> 00:09:43,220
+to price changes based just on duration
+
+179
+00:09:43,220 --> 00:09:47,420
+work well when there are small changes in yields, but not so
+
+180
+00:09:47,420 --> 00:09:50,120
+well for larger changes.
+
+181
+00:09:50,120 --> 00:09:51,920
+This will matter for the effectiveness
+
+182
+00:09:51,920 --> 00:09:53,720
+of hedging strategies.
+
+183
+00:09:53,720 --> 00:09:57,050
+Duration-based hedges only offer good protection
+
+184
+00:09:57,050 --> 00:09:59,510
+if rate changes are modest and they
+
+185
+00:09:59,510 --> 00:10:04,710
+have to be adjusted over time as yields change.
+
+186
+00:10:04,710 --> 00:10:08,160
+A useful way to understand why a duration-based approximation
+
+187
+00:10:08,160 --> 00:10:11,550
+of price changes works well for small changes in yields
+
+188
+00:10:11,550 --> 00:10:13,830
+is to look at the relationship between the price
+
+189
+00:10:13,830 --> 00:10:15,690
+and yield graphically.
+
+190
+00:10:15,690 --> 00:10:20,530
+This diagram plots price against yield for a typical bond.
+
+191
+00:10:20,530 --> 00:10:23,560
+It's labeled to the actual price curve
+
+192
+00:10:23,560 --> 00:10:27,430
+and has the characteristic shape that we saw before.
+
+193
+00:10:27,430 --> 00:10:32,725
+As yields rise, price declines but at a decreasing rate.
+
+194
+00:10:32,725 --> 00:10:36,420
+
+
+195
+00:10:36,420 --> 00:10:39,360
+We know the duration is related to the derivative of the bond
+
+196
+00:10:39,360 --> 00:10:42,180
+price with respect to its yield.
+
+197
+00:10:42,180 --> 00:10:45,720
+Graphically, that means that it's related to the slope
+
+198
+00:10:45,720 --> 00:10:48,660
+of the tangent line to the actual price curve
+
+199
+00:10:48,660 --> 00:10:51,390
+at the current yield, which is denoted by Y*.
+
+200
+00:10:51,390 --> 00:10:58,950
+
+
+201
+00:10:58,950 --> 00:11:01,730
+The duration approximation of the price change
+
+202
+00:11:01,730 --> 00:11:04,610
+slides up or down that tangent line.
+
+203
+00:11:04,610 --> 00:11:08,360
+For small changes in yield, the actual price change
+
+204
+00:11:08,360 --> 00:11:11,030
+gets close to the tangent line approximation.
+
+205
+00:11:11,030 --> 00:11:15,980
+
+
+206
+00:11:15,980 --> 00:11:18,740
+For a large change in yield, there's
+
+207
+00:11:18,740 --> 00:11:22,160
+a large gap between the tangent line and the actual price
+
+208
+00:11:22,160 --> 00:11:25,550
+curve, and the approximation is inaccurate.
+
+209
+00:11:25,550 --> 00:11:34,930
+
+
+210
+00:11:34,930 --> 00:11:38,330
+Notice too that the slope of the tangent line,
+
+211
+00:11:38,330 --> 00:11:41,860
+and hence the bond's duration, changes with the yield --
+
+212
+00:11:41,860 --> 00:11:44,680
+as the yield gets higher, the line flattens.
+
+213
+00:11:44,680 --> 00:11:49,500
+
+
+214
+00:11:49,500 --> 00:11:51,570
+A flatter slope means shorter duration.
+
+215
+00:11:51,570 --> 00:11:54,380
+
+
+216
+00:11:54,380 --> 00:11:57,340
+Finally, what about the duration of a short position?
+
+217
+00:11:57,340 --> 00:11:59,950
+We know that a short position flips the sign
+
+218
+00:11:59,950 --> 00:12:01,900
+of all of the cash flows.
+
+219
+00:12:01,900 --> 00:12:04,120
+That flipped the actual price curve
+
+220
+00:12:04,120 --> 00:12:07,510
+over the x-axis in this diagram, and flipped
+
+221
+00:12:07,510 --> 00:12:10,090
+the side of the tangent line.
+
+222
+00:12:10,090 --> 00:12:14,440
+For example, a bond that, in a long position,
+
+223
+00:12:14,440 --> 00:12:19,570
+has a duration of 4 years, has a duration of minus 4 years
+
+224
+00:12:19,570 --> 00:12:22,920
+from the perspective of a short position.
+
+225
+00:12:22,920 --> 00:12:24,780
+A good exercise is for you to try
+
+226
+00:12:24,780 --> 00:12:27,480
+drawing the graph for the short position that
+
+227
+00:12:27,480 --> 00:12:31,310
+corresponds to this graph for a long position.
+
+228
+00:12:31,310 --> 00:12:34,000
+
+

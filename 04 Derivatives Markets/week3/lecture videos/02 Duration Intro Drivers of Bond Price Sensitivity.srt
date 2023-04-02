@@ -1,0 +1,484 @@
+0
+00:00:00,000 --> 00:00:01,453
+
+
+1
+00:00:01,453 --> 00:00:03,370
+PROFESSOR: Before digging into the definitions
+
+2
+00:00:03,370 --> 00:00:07,322
+and interpretations of duration and convexity,
+
+3
+00:00:07,322 --> 00:00:08,780
+it's important to take another look
+
+4
+00:00:08,780 --> 00:00:12,080
+at the more general equation relating the price of a bond
+
+5
+00:00:12,080 --> 00:00:16,870
+with multiple cash flows to its yield to maturity.
+
+6
+00:00:16,870 --> 00:00:20,730
+The yield to maturity is the single interest rate
+
+7
+00:00:20,730 --> 00:00:24,090
+that equates the price of the bond
+
+8
+00:00:24,090 --> 00:00:26,850
+to the present value of its promised payments.
+
+9
+00:00:26,850 --> 00:00:37,420
+
+
+10
+00:00:37,420 --> 00:00:39,070
+The price and the yield to maturity
+
+11
+00:00:39,070 --> 00:00:42,080
+contain the same information.
+
+12
+00:00:42,080 --> 00:00:47,260
+Given one and the cash flows, you can solve for the other.
+
+13
+00:00:47,260 --> 00:00:52,090
+There are built-in functions in Excel to do these calculations.
+
+14
+00:00:52,090 --> 00:00:55,030
+Two that are very useful for coupon bonds
+
+15
+00:00:55,030 --> 00:00:59,890
+are the PV function and the Rate function.
+
+16
+00:00:59,890 --> 00:01:03,100
+Both are well-documented in Excel.
+
+17
+00:01:03,100 --> 00:01:05,590
+I've posted a sample spreadsheet that
+
+18
+00:01:05,590 --> 00:01:10,890
+illustrates the use of these and related functions.
+
+19
+00:01:10,890 --> 00:01:13,580
+A few things to note.
+
+20
+00:01:13,580 --> 00:01:17,350
+First, the relationship between the price of a coupon bond
+
+21
+00:01:17,350 --> 00:01:22,460
+and its yield to maturity is a convex function.
+
+22
+00:01:22,460 --> 00:01:24,800
+When we look at duration and convexity,
+
+23
+00:01:24,800 --> 00:01:29,975
+we'll often plot price against yield in a graph like this.
+
+24
+00:01:29,975 --> 00:01:35,590
+
+
+25
+00:01:35,590 --> 00:01:39,250
+The yield to maturity abstracts from the spot yield
+
+26
+00:01:39,250 --> 00:01:43,840
+curve, which has more precise information about market rates.
+
+27
+00:01:43,840 --> 00:01:46,880
+Remember that to find the yield to maturity,
+
+28
+00:01:46,880 --> 00:01:50,230
+we apply a single discount rate to all future cash
+
+29
+00:01:50,230 --> 00:01:54,210
+flows regardless of their arrival time.
+
+30
+00:01:54,210 --> 00:01:56,420
+By contrast, the spot yield curve
+
+31
+00:01:56,420 --> 00:01:58,220
+captures the fact that the market
+
+32
+00:01:58,220 --> 00:02:00,500
+assigns a potentially different discount
+
+33
+00:02:00,500 --> 00:02:05,950
+rate to cash flows arriving at every different maturity.
+
+34
+00:02:05,950 --> 00:02:09,280
+You should think of the bond prices observed in markets
+
+35
+00:02:09,280 --> 00:02:13,570
+as reflecting the more detailed information in the spot yield
+
+36
+00:02:13,570 --> 00:02:14,770
+curve.
+
+37
+00:02:14,770 --> 00:02:16,780
+That has to be true or else there
+
+38
+00:02:16,780 --> 00:02:19,270
+would be an arbitrage opportunity.
+
+39
+00:02:19,270 --> 00:02:22,270
+However, the yield to maturity is an approximation
+
+40
+00:02:22,270 --> 00:02:26,470
+that's useful in its simplicity of having only one dimension.
+
+41
+00:02:26,470 --> 00:02:28,960
+Most of the duration and convexity measures
+
+42
+00:02:28,960 --> 00:02:31,540
+we will focus on do use this yield
+
+43
+00:02:31,540 --> 00:02:35,690
+to maturity approximation as a relevant rate.
+
+44
+00:02:35,690 --> 00:02:39,730
+However, there are some duration and convexity concepts,
+
+45
+00:02:39,730 --> 00:02:43,150
+notably, Fisher-Weil and key rate durations,
+
+46
+00:02:43,150 --> 00:02:46,280
+that take into account the complexity of the spot yield
+
+47
+00:02:46,280 --> 00:02:46,780
+curve.
+
+48
+00:02:46,780 --> 00:02:51,820
+
+
+49
+00:02:51,820 --> 00:02:55,660
+Duration and convexity together answer the question,
+
+50
+00:02:55,660 --> 00:02:59,050
+approximately how much will a security's price change
+
+51
+00:02:59,050 --> 00:03:02,460
+for a small change in its yield?
+
+52
+00:03:02,460 --> 00:03:04,950
+In very general terms, you can think
+
+53
+00:03:04,950 --> 00:03:08,580
+of the price of any interest sensitive security
+
+54
+00:03:08,580 --> 00:03:13,290
+as a function of its yield and other characteristics that
+
+55
+00:03:13,290 --> 00:03:15,810
+affect its price, like its liquidity,
+
+56
+00:03:15,810 --> 00:03:19,860
+any embedded options, default risk, and so forth.
+
+57
+00:03:19,860 --> 00:03:23,430
+We'll let f represent this function
+
+58
+00:03:23,430 --> 00:03:26,505
+without being specific about the form that it takes.
+
+59
+00:03:26,505 --> 00:03:29,680
+
+
+60
+00:03:29,680 --> 00:03:32,200
+Duration measures are all related
+
+61
+00:03:32,200 --> 00:03:36,220
+to the first partial derivative of the price with respect
+
+62
+00:03:36,220 --> 00:03:39,370
+to yield, answering the question, what's
+
+63
+00:03:39,370 --> 00:03:44,940
+the first order effect on price of a small change in yield?
+
+64
+00:03:44,940 --> 00:03:47,490
+Convexity measures are all related
+
+65
+00:03:47,490 --> 00:03:50,578
+to the second derivative of the price with respect
+
+66
+00:03:50,578 --> 00:03:51,120
+to the yield.
+
+67
+00:03:51,120 --> 00:03:53,670
+
+
+68
+00:03:53,670 --> 00:03:56,730
+Importantly, these metrics apply not only
+
+69
+00:03:56,730 --> 00:03:59,380
+to bonds and other fixed income securities,
+
+70
+00:03:59,380 --> 00:04:01,440
+but also, to derivative contracts
+
+71
+00:04:01,440 --> 00:04:05,430
+like interest rate, swaps, and futures that are also
+
+72
+00:04:05,430 --> 00:04:07,680
+interest rate sensitive.
+
+73
+00:04:07,680 --> 00:04:10,680
+Understanding duration and convexity in this way
+
+74
+00:04:10,680 --> 00:04:14,490
+is directly relevant to the risk management strategies
+
+75
+00:04:14,490 --> 00:04:17,010
+based on these metrics.
+
+76
+00:04:17,010 --> 00:04:19,740
+There are three main factors that affect the bond or bond
+
+77
+00:04:19,740 --> 00:04:23,040
+portfolio's price sensitivity to yield changes:
+
+78
+00:04:23,040 --> 00:04:27,750
+remaining maturity, coupon rate, and the general level
+
+79
+00:04:27,750 --> 00:04:30,690
+of market interest rates.
+
+80
+00:04:30,690 --> 00:04:33,350
+Duration increases with maturity and it
+
+81
+00:04:33,350 --> 00:04:37,155
+decreases with coupon rates and the level of market interest
+
+82
+00:04:37,155 --> 00:04:37,655
+rates.
+
+83
+00:04:37,655 --> 00:04:40,380
+
+
+84
+00:04:40,380 --> 00:04:42,960
+This example provides a quantitative sense
+
+85
+00:04:42,960 --> 00:04:46,950
+of the relative importance of maturity and coupon rates
+
+86
+00:04:46,950 --> 00:04:49,610
+on price sensitivity.
+
+87
+00:04:49,610 --> 00:04:53,120
+It's based on comparisons of four bonds,
+
+88
+00:04:53,120 --> 00:04:56,450
+two with maturities of 20 years, and two
+
+89
+00:04:56,450 --> 00:04:58,940
+with maturities of five years.
+
+90
+00:04:58,940 --> 00:05:01,920
+For each maturity, there are two bonds,
+
+91
+00:05:01,920 --> 00:05:05,180
+one with a coupon rate at 9%, and two
+
+92
+00:05:05,180 --> 00:05:08,460
+with a coupon rate of 5%.
+
+93
+00:05:08,460 --> 00:05:13,500
+It's assumed that each are originally priced to yield 9%.
+
+94
+00:05:13,500 --> 00:05:17,850
+The table shows, for a range of decreases and increases
+
+95
+00:05:17,850 --> 00:05:20,490
+in the market yield, the percentage
+
+96
+00:05:20,490 --> 00:05:25,860
+change in the price of the bond relative to its price
+
+97
+00:05:25,860 --> 00:05:28,940
+when yields are at 9%.
+
+98
+00:05:28,940 --> 00:05:33,890
+Each row of the table represents a particular yield change.
+
+99
+00:05:33,890 --> 00:05:38,900
+For example, the highlighted row shows the percentage price
+
+100
+00:05:38,900 --> 00:05:47,340
+change for each bond when rates go from 9% down to 8%.
+
+101
+00:05:47,340 --> 00:05:50,880
+Comparing across maturities, we can
+
+102
+00:05:50,880 --> 00:05:55,560
+see that the percentage price increase is much larger
+
+103
+00:05:55,560 --> 00:06:00,690
+for the 20-year bonds than for the five-year bonds, holding
+
+104
+00:06:00,690 --> 00:06:04,430
+coupon rates fixed in each case.
+
+105
+00:06:04,430 --> 00:06:07,690
+Now, comparing across coupon rates,
+
+106
+00:06:07,690 --> 00:06:12,430
+the percentage price increase is smaller for the higher coupon
+
+107
+00:06:12,430 --> 00:06:16,950
+rate bond holding maturities fixed.
+
+108
+00:06:16,950 --> 00:06:20,100
+Both of these regularities are true in general,
+
+109
+00:06:20,100 --> 00:06:22,230
+although the magnitudes will vary
+
+110
+00:06:22,230 --> 00:06:26,360
+with the bond characteristics and with market rates.
+
+111
+00:06:26,360 --> 00:06:30,230
+Notice, too, that the changes are not symmetric, say,
+
+112
+00:06:30,230 --> 00:06:36,350
+for a 1% increase in rates versus a 1% decrease.
+
+113
+00:06:36,350 --> 00:06:39,200
+The larger absolute magnitude of the changes when
+
+114
+00:06:39,200 --> 00:06:43,330
+rates fall than when they rise, all else equal,
+
+115
+00:06:43,330 --> 00:06:47,690
+is related to the positive convexity of the bonds.
+
+116
+00:06:47,690 --> 00:06:51,270
+We'll confirm that shortly.
+
+117
+00:06:51,270 --> 00:06:54,870
+If you'd like to see how this example was calculated,
+
+118
+00:06:54,870 --> 00:06:59,820
+the Excel file I'm showing here has the calculations embedded
+
+119
+00:06:59,820 --> 00:07:02,902
+and you can download it and take a look.
+
+120
+00:07:02,902 --> 00:07:03,402
+
+

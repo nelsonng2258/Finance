@@ -1,0 +1,704 @@
+0
+00:00:00,000 --> 00:00:00,752
+
+
+1
+00:00:00,752 --> 00:00:04,280
+J. R. SCOTT: Hello everyone and welcome to the third recitation
+
+2
+00:00:04,280 --> 00:00:07,530
+of 15.435x.
+
+3
+00:00:07,530 --> 00:00:09,720
+In this recitation, we'll be reviewing
+
+4
+00:00:09,720 --> 00:00:14,250
+three problems related to duration, convexity, and delta
+
+5
+00:00:14,250 --> 00:00:16,050
+hedging.
+
+6
+00:00:16,050 --> 00:00:20,350
+Without further ado, let's begin with problem 1.
+
+7
+00:00:20,350 --> 00:00:23,830
+Problem 1 asks us to consider a 2-year bond with a coupon
+
+8
+00:00:23,830 --> 00:00:27,130
+rate of 4%, annual payments, and is
+
+9
+00:00:27,130 --> 00:00:31,030
+priced at $98 per $100 face value
+
+10
+00:00:31,030 --> 00:00:36,408
+for an effective annual yield of 5.077%.
+
+11
+00:00:36,408 --> 00:00:39,320
+In Part A, we are asked to calculate the modified
+
+12
+00:00:39,320 --> 00:00:41,750
+duration of this bond.
+
+13
+00:00:41,750 --> 00:00:43,430
+Sounds easy, right?
+
+14
+00:00:43,430 --> 00:00:44,930
+Well, the first thing to notice here
+
+15
+00:00:44,930 --> 00:00:49,040
+is that the yield we are given is an effective annual yield.
+
+16
+00:00:49,040 --> 00:00:50,980
+What does that mean?
+
+17
+00:00:50,980 --> 00:00:54,340
+A bond's effective annual yield is a simple interest rate
+
+18
+00:00:54,340 --> 00:00:57,790
+earned on the bond over a year, taking into account all
+
+19
+00:00:57,790 --> 00:01:00,490
+compounding opportunities.
+
+20
+00:01:00,490 --> 00:01:03,160
+In order to use the convexity calculator provided
+
+21
+00:01:03,160 --> 00:01:07,210
+by Professor Lucas to find the bond's modified duration,
+
+22
+00:01:07,210 --> 00:01:11,860
+we first need to convert this effective annual yield, or EAY,
+
+23
+00:01:11,860 --> 00:01:15,410
+into a bond equivalent yield.
+
+24
+00:01:15,410 --> 00:01:18,770
+A bond equivalent yield is the single interest rate
+
+25
+00:01:18,770 --> 00:01:21,920
+that equates the price of a bond to the present value
+
+26
+00:01:21,920 --> 00:01:24,410
+of its future cash flows, assuming
+
+27
+00:01:24,410 --> 00:01:26,880
+semi-annual compounding.
+
+28
+00:01:26,880 --> 00:01:28,950
+This is the most frequent notation in which
+
+29
+00:01:28,950 --> 00:01:31,950
+you will see yields quoted.
+
+30
+00:01:31,950 --> 00:01:36,450
+Now, the simple conversion for an effective annual yield
+
+31
+00:01:36,450 --> 00:01:39,210
+into a bond equivalent yield is to use
+
+32
+00:01:39,210 --> 00:01:42,210
+the formula in equation 1.
+
+33
+00:01:42,210 --> 00:01:45,450
+In particular, the effective annual yield
+
+34
+00:01:45,450 --> 00:01:49,500
+is equal to 1 plus the bond equivalent yield divided
+
+35
+00:01:49,500 --> 00:01:54,510
+by 2 squared minus 1, where y subscript
+
+36
+00:01:54,510 --> 00:01:57,120
+ea is the effective annual yield,
+
+37
+00:01:57,120 --> 00:02:02,640
+and y subscript be is the bond equivalent yield.
+
+38
+00:02:02,640 --> 00:02:07,950
+Plugging in 5.077% for the effective annual yield
+
+39
+00:02:07,950 --> 00:02:12,270
+into equation 1, we can solve for the bond equivalent yield
+
+40
+00:02:12,270 --> 00:02:15,330
+to be 5.014%--
+
+41
+00:02:15,330 --> 00:02:20,180
+close, but slightly smaller than the effective annual yield.
+
+42
+00:02:20,180 --> 00:02:22,850
+Now, given that we have the bond equivalent yield,
+
+43
+00:02:22,850 --> 00:02:25,640
+we can find the modified duration of the bond
+
+44
+00:02:25,640 --> 00:02:28,100
+by inputting the following parameters
+
+45
+00:02:28,100 --> 00:02:32,690
+into the convexity.xls calculator.
+
+46
+00:02:32,690 --> 00:02:37,160
+In particular, N, which is the maturity in years of the bond,
+
+47
+00:02:37,160 --> 00:02:39,330
+is set to be 2.
+
+48
+00:02:39,330 --> 00:02:41,520
+The frequency for the coupon payments
+
+49
+00:02:41,520 --> 00:02:45,630
+is set to be 1, since we have annual coupon payments.
+
+50
+00:02:45,630 --> 00:02:48,480
+The coupon rate is 4%.
+
+51
+00:02:48,480 --> 00:02:51,150
+The face value of the bond at maturity
+
+52
+00:02:51,150 --> 00:02:54,660
+we will normalize to be $100, and the yield on the bond
+
+53
+00:02:54,660 --> 00:03:00,380
+equivalent basis is 5.014%.
+
+54
+00:03:00,380 --> 00:03:02,930
+When you calculate both the convexity and the duration,
+
+55
+00:03:02,930 --> 00:03:07,070
+you'll find that the Macaulay duration is 1.96 years,
+
+56
+00:03:07,070 --> 00:03:09,950
+and the modified duration, which is what this question was
+
+57
+00:03:09,950 --> 00:03:15,280
+asking us, is 1.866 years.
+
+58
+00:03:15,280 --> 00:03:18,640
+In Part B, we are asked to use the modified duration
+
+59
+00:03:18,640 --> 00:03:21,430
+that we calculated in part a to estimate
+
+60
+00:03:21,430 --> 00:03:25,330
+the new price of the bond if the bond's effective annual yield
+
+61
+00:03:25,330 --> 00:03:28,470
+increases to 6.5%.
+
+62
+00:03:28,470 --> 00:03:30,990
+Do you expect the actual price of the bond
+
+63
+00:03:30,990 --> 00:03:33,540
+to be higher or lower than your estimate here?
+
+64
+00:03:33,540 --> 00:03:36,190
+
+
+65
+00:03:36,190 --> 00:03:38,740
+The first thing we need to do is to recall
+
+66
+00:03:38,740 --> 00:03:40,990
+that we can approximate the dollar price
+
+67
+00:03:40,990 --> 00:03:44,710
+change in a bond for a given change in its yield using
+
+68
+00:03:44,710 --> 00:03:49,020
+the following expression, which I have numbered equation 2.
+
+69
+00:03:49,020 --> 00:03:54,150
+On the left-hand side, dP is the change in the price of a bond.
+
+70
+00:03:54,150 --> 00:03:58,080
+On the right-hand side, DM is the modified duration
+
+71
+00:03:58,080 --> 00:04:01,740
+of the bond, P is the bond's price,
+
+72
+00:04:01,740 --> 00:04:05,640
+and dy is the change in the yield of a bond.
+
+73
+00:04:05,640 --> 00:04:08,760
+Effectively, this approximation relates
+
+74
+00:04:08,760 --> 00:04:14,100
+the change in the price of the bond to its modified duration.
+
+75
+00:04:14,100 --> 00:04:19,260
+Now, plugging in the modified duration of 1.866 years
+
+76
+00:04:19,260 --> 00:04:23,510
+for the bond that we calculated in Part A,
+
+77
+00:04:23,510 --> 00:04:28,880
+the change in the yield of 6.5% minus 5.077%,
+
+78
+00:04:28,880 --> 00:04:36,380
+which is equal to 1.423%, and the bond's price of $98,
+
+79
+00:04:36,380 --> 00:04:40,910
+we see that dP, the change in the bond's price is negative
+
+80
+00:04:40,910 --> 00:04:43,310
+$2.60.
+
+81
+00:04:43,310 --> 00:04:46,850
+In other words, the new price of the bond after the increase
+
+82
+00:04:46,850 --> 00:04:52,250
+in yield is $95.40.
+
+83
+00:04:52,250 --> 00:04:56,120
+Now, do we expect the actual change in the bond's price
+
+84
+00:04:56,120 --> 00:04:59,000
+to be higher or lower than the one obtained
+
+85
+00:04:59,000 --> 00:05:02,980
+using the approximation in equation 2?
+
+86
+00:05:02,980 --> 00:05:05,320
+Recall that we can improve our approximation
+
+87
+00:05:05,320 --> 00:05:08,290
+by including the impact of convexity, that
+
+88
+00:05:08,290 --> 00:05:11,740
+is, the second derivative of a bond's price with respect
+
+89
+00:05:11,740 --> 00:05:13,680
+to its yield.
+
+90
+00:05:13,680 --> 00:05:17,580
+The approximation that includes both duration and convexity
+
+91
+00:05:17,580 --> 00:05:21,010
+can be written as follows in equation 3.
+
+92
+00:05:21,010 --> 00:05:24,070
+This equation is very similar to equation 2.
+
+93
+00:05:24,070 --> 00:05:27,460
+Notice that the first term on the right-hand side is the same
+
+94
+00:05:27,460 --> 00:05:31,040
+as that is in equation 2 but now we have this an additional term
+
+95
+00:05:31,040 --> 00:05:31,540
+--
+
+96
+00:05:31,540 --> 00:05:36,100
+this convexity term, which is equal to 1/2 times the bond's
+
+97
+00:05:36,100 --> 00:05:39,730
+convexity, which I denote by C sub 0,
+
+98
+00:05:39,730 --> 00:05:42,760
+times the bond's price, times the square
+
+99
+00:05:42,760 --> 00:05:46,470
+of the change in yield, dy.
+
+100
+00:05:46,470 --> 00:05:49,650
+Since a long position in a non-callable bond,
+
+101
+00:05:49,650 --> 00:05:54,000
+like the one in this example, has positive convexity,
+
+102
+00:05:54,000 --> 00:05:55,860
+the second term on the right-hand side
+
+103
+00:05:55,860 --> 00:05:59,550
+will be positive, and the actual change in price
+
+104
+00:05:59,550 --> 00:06:01,860
+will be lower than the one obtained
+
+105
+00:06:01,860 --> 00:06:04,440
+using the approximation in equation 2
+
+106
+00:06:04,440 --> 00:06:07,660
+that includes only duration.
+
+107
+00:06:07,660 --> 00:06:10,150
+More generally, positive convexity
+
+108
+00:06:10,150 --> 00:06:12,730
+means that duration will underestimate
+
+109
+00:06:12,730 --> 00:06:16,270
+the price increase that results from a drop in the yield
+
+110
+00:06:16,270 --> 00:06:19,120
+and overestimate the price decrease
+
+111
+00:06:19,120 --> 00:06:22,690
+from an increase in the yield.
+
+112
+00:06:22,690 --> 00:06:25,720
+In the last part, Part C, we are asked
+
+113
+00:06:25,720 --> 00:06:29,170
+to imagine that we want to immunize a liability that
+
+114
+00:06:29,170 --> 00:06:32,620
+comes due in 3 and 1/2 years.
+
+115
+00:06:32,620 --> 00:06:36,010
+If you want to invest in an immunizing portfolio that
+
+116
+00:06:36,010 --> 00:06:39,490
+consists of both the 2-year coupon bond in part a
+
+117
+00:06:39,490 --> 00:06:41,870
+and one of the following three bonds,
+
+118
+00:06:41,870 --> 00:06:44,050
+which bond would you choose?
+
+119
+00:06:44,050 --> 00:06:47,540
+Now, assume here that all coupons are paid annually.
+
+120
+00:06:47,540 --> 00:06:53,420
+The first option is a 3.5-year, 6.25% coupon bond with
+
+121
+00:06:53,420 --> 00:06:57,080
+an effective annual yield of 5.5%.
+
+122
+00:06:57,080 --> 00:07:00,770
+The second option is a 10-year, 3.9% coupon
+
+123
+00:07:00,770 --> 00:07:05,120
+bond with an effective annual yield of 4.9%.
+
+124
+00:07:05,120 --> 00:07:08,210
+And the third option is a 3.5-year,
+
+125
+00:07:08,210 --> 00:07:11,780
+zero coupon bond with an effective annual yield
+
+126
+00:07:11,780 --> 00:07:15,525
+of 4.65%.
+
+127
+00:07:15,525 --> 00:07:18,660
+First, what is immunization?
+
+128
+00:07:18,660 --> 00:07:21,210
+Well, immunization is the procedure
+
+129
+00:07:21,210 --> 00:07:24,330
+of matching the durations of our assets
+
+130
+00:07:24,330 --> 00:07:27,960
+and our liabilities in order to minimize interest rate
+
+131
+00:07:27,960 --> 00:07:31,620
+risk, fluctuations in prices that come from changes
+
+132
+00:07:31,620 --> 00:07:34,340
+in interest rates over time.
+
+133
+00:07:34,340 --> 00:07:36,580
+The question is asking us, which bond
+
+134
+00:07:36,580 --> 00:07:39,430
+should we choose to combine with our 2-year bond
+
+135
+00:07:39,430 --> 00:07:42,250
+in order to immunize our liability that
+
+136
+00:07:42,250 --> 00:07:45,410
+has a duration of 3.5 years?
+
+137
+00:07:45,410 --> 00:07:49,150
+In other words, which combination of the 2-year bond
+
+138
+00:07:49,150 --> 00:07:52,690
+and one of these three bonds will have a duration that
+
+139
+00:07:52,690 --> 00:07:55,840
+approximately matches the 3.5-year duration
+
+140
+00:07:55,840 --> 00:07:58,630
+of our liability?
+
+141
+00:07:58,630 --> 00:08:01,930
+Well, using the same convexity.xls calculator
+
+142
+00:08:01,930 --> 00:08:06,130
+that we used in Part A, we can find the modified durations
+
+143
+00:08:06,130 --> 00:08:08,260
+of each of the three bonds to be,
+
+144
+00:08:08,260 --> 00:08:14,870
+for the first bond, 3.24 years, for the second bond, 8 years,
+
+145
+00:08:14,870 --> 00:08:20,130
+and for the third bond 3.34 years.
+
+146
+00:08:20,130 --> 00:08:22,670
+The first thing to notice right off the bat is that
+
+147
+00:08:22,670 --> 00:08:26,840
+the 3.5-year coupon bond is not suitable for our immunization
+
+148
+00:08:26,840 --> 00:08:30,530
+portfolio because it has a modified duration of less than
+
+149
+00:08:30,530 --> 00:08:35,090
+3.5 years, such that any combination with the 2-year
+
+150
+00:08:35,090 --> 00:08:39,950
+coupon bond, which itself has a modified duration of 1.866
+
+151
+00:08:39,950 --> 00:08:43,280
+years, would have too short a duration to immunize
+
+152
+00:08:43,280 --> 00:08:45,960
+our liability.
+
+153
+00:08:45,960 --> 00:08:49,460
+The second thing to notice is that the 3.5-year zero coupon
+
+154
+00:08:49,460 --> 00:08:54,050
+bond is feasible but almost all of our immunizing portfolio
+
+155
+00:08:54,050 --> 00:08:56,570
+would have to be invested in this bond.
+
+156
+00:08:56,570 --> 00:08:57,560
+Why?
+
+157
+00:08:57,560 --> 00:09:02,090
+Well, we know that the Macaulay duration of a zero coupon bond
+
+158
+00:09:02,090 --> 00:09:05,810
+is equal to its time to maturity, or in this case, 3.5
+
+159
+00:09:05,810 --> 00:09:06,920
+years.
+
+160
+00:09:06,920 --> 00:09:10,220
+Well, that exactly matches the duration of our liability
+
+161
+00:09:10,220 --> 00:09:14,030
+that we're trying to immunize, which means that almost 100%
+
+162
+00:09:14,030 --> 00:09:17,540
+of our portfolio would have to be invested in the zero coupon
+
+163
+00:09:17,540 --> 00:09:19,470
+bond.
+
+164
+00:09:19,470 --> 00:09:23,790
+A better option is a combination of our 2-year and 10-year
+
+165
+00:09:23,790 --> 00:09:25,550
+coupon bond.
+
+166
+00:09:25,550 --> 00:09:28,370
+For suitable portfolio shares, it not only
+
+167
+00:09:28,370 --> 00:09:31,070
+immunizes our liability, but it'll also
+
+168
+00:09:31,070 --> 00:09:35,210
+have a higher yield and higher convexity than an immunizing
+
+169
+00:09:35,210 --> 00:09:39,870
+portfolio that includes the 3.5 year zero coupon bond.
+
+170
+00:09:39,870 --> 00:09:43,320
+Intuitively, the way that we know that it has a higher
+
+171
+00:09:43,320 --> 00:09:47,370
+convexity is to realize that the payoffs of this 2-year
+
+172
+00:09:47,370 --> 00:09:51,690
+and 10-year portfolio are more spread out, like a barbell,
+
+173
+00:09:51,690 --> 00:09:56,160
+than the bullet payoff of a simple 3.5-year zero coupon
+
+174
+00:09:56,160 --> 00:09:57,500
+bond.
+
+175
+00:09:57,500 --> 00:09:58,000
+
+

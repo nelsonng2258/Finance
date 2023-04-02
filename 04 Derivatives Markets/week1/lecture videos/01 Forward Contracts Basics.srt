@@ -1,0 +1,460 @@
+0
+00:00:00,000 --> 00:00:03,030
+PROFESSOR: Forward contracts are the most widely used tools
+
+1
+00:00:03,030 --> 00:00:05,520
+for risk management in the world.
+
+2
+00:00:05,520 --> 00:00:09,270
+Notice that the term risk management encompasses
+
+3
+00:00:09,270 --> 00:00:12,420
+the idea of hedging or reducing risk,
+
+4
+00:00:12,420 --> 00:00:15,090
+such as when a farmer uses a forward contract
+
+5
+00:00:15,090 --> 00:00:17,670
+to lock in the selling price of his wheat.
+
+6
+00:00:17,670 --> 00:00:19,740
+But the term risk management also
+
+7
+00:00:19,740 --> 00:00:22,740
+encompasses speculative trades, such as when
+
+8
+00:00:22,740 --> 00:00:24,900
+the buy side of that forward contract
+
+9
+00:00:24,900 --> 00:00:27,960
+doesn't plan to use the wheat but instead is
+
+10
+00:00:27,960 --> 00:00:30,720
+taking a calculated risk that the price of the wheat
+
+11
+00:00:30,720 --> 00:00:33,360
+will exceed the forward price paid.
+
+12
+00:00:33,360 --> 00:00:36,990
+Other derivative contracts, such as futures and swaps,
+
+13
+00:00:36,990 --> 00:00:39,930
+are particular types of forward contracts.
+
+14
+00:00:39,930 --> 00:00:42,850
+We'll talk about those next week.
+
+15
+00:00:42,850 --> 00:00:44,760
+Let's start with a precise definition
+
+16
+00:00:44,760 --> 00:00:46,860
+of a forward contract.
+
+17
+00:00:46,860 --> 00:00:48,960
+A forward contract is an agreement
+
+18
+00:00:48,960 --> 00:00:54,240
+between two counterparties to trade a pre-specified amount
+
+19
+00:00:54,240 --> 00:00:58,500
+of goods or securities at a pre-specified future date,
+
+20
+00:00:58,500 --> 00:01:03,960
+which we'll call capital T, for a pre-specified forward price,
+
+21
+00:01:03,960 --> 00:01:08,830
+capital F subzero, where 0 denotes that the time is now.
+
+22
+00:01:08,830 --> 00:01:12,250
+It's free to enter a forward contract initially.
+
+23
+00:01:12,250 --> 00:01:16,350
+However, to ensure that both sides meet their obligations,
+
+24
+00:01:16,350 --> 00:01:19,200
+collateral often has to be posted.
+
+25
+00:01:19,200 --> 00:01:22,620
+Sometimes forward contracts call for a payment
+
+26
+00:01:22,620 --> 00:01:26,010
+up front instead of a contract expiration.
+
+27
+00:01:26,010 --> 00:01:30,030
+That's called a prepaid forward contract.
+
+28
+00:01:30,030 --> 00:01:32,730
+The price in a prepaid forward contract
+
+29
+00:01:32,730 --> 00:01:36,030
+is just the present value of the regular forward price,
+
+30
+00:01:36,030 --> 00:01:39,640
+but otherwise, the two types of contracts are identical.
+
+31
+00:01:39,640 --> 00:01:41,190
+I'm mentioning this because we'll
+
+32
+00:01:41,190 --> 00:01:43,950
+see that the prepaid price is mathematically
+
+33
+00:01:43,950 --> 00:01:46,320
+quite useful in some hedging applications
+
+34
+00:01:46,320 --> 00:01:47,730
+that we'll look at.
+
+35
+00:01:47,730 --> 00:01:51,780
+The key observation that's used for pricing forward contracts
+
+36
+00:01:51,780 --> 00:01:55,380
+is that the pre-specified forward price of 0
+
+37
+00:01:55,380 --> 00:01:58,500
+must be set to ensure that the value of the contract
+
+38
+00:01:58,500 --> 00:02:01,260
+is 0 from the perspective of both counterparties
+
+39
+00:02:01,260 --> 00:02:03,220
+at inception.
+
+40
+00:02:03,220 --> 00:02:05,410
+This has to be the case, since it's
+
+41
+00:02:05,410 --> 00:02:08,110
+free to enter the contract.
+
+42
+00:02:08,110 --> 00:02:11,110
+Some important terminology is that the buyer
+
+43
+00:02:11,110 --> 00:02:13,330
+of the asset in the forward contract
+
+44
+00:02:13,330 --> 00:02:15,730
+is on the long side of the contract.
+
+45
+00:02:15,730 --> 00:02:19,410
+The buyer has taken a long position.
+
+46
+00:02:19,410 --> 00:02:22,560
+On the other side, the seller is on the short side
+
+47
+00:02:22,560 --> 00:02:27,330
+of the contract and is said to be short the contract.
+
+48
+00:02:27,330 --> 00:02:30,670
+Two other important features--
+
+49
+00:02:30,670 --> 00:02:33,550
+first, most forward contracts trade
+
+50
+00:02:33,550 --> 00:02:36,730
+over the counter, which means through privately
+
+51
+00:02:36,730 --> 00:02:40,060
+arranged trades rather than on an exchange.
+
+52
+00:02:40,060 --> 00:02:43,000
+Brokers and dealers often serve as intermediaries,
+
+53
+00:02:43,000 --> 00:02:45,490
+matching sellers with buyers.
+
+54
+00:02:45,490 --> 00:02:46,270
+OK.
+
+55
+00:02:46,270 --> 00:02:48,370
+Importantly, forward contracts can
+
+56
+00:02:48,370 --> 00:02:51,550
+involve the physical delivery of the underlying asset
+
+57
+00:02:51,550 --> 00:02:53,680
+or they can be cash settled.
+
+58
+00:02:53,680 --> 00:02:56,620
+With physical delivery, as it sounds,
+
+59
+00:02:56,620 --> 00:02:59,680
+the underlying asset is delivered to the buyer
+
+60
+00:02:59,680 --> 00:03:02,980
+by the seller in exchange for the forward price.
+
+61
+00:03:02,980 --> 00:03:05,860
+Cash settlement, which involves a payment linked
+
+62
+00:03:05,860 --> 00:03:08,320
+to the current price of the underlying commodity,
+
+63
+00:03:08,320 --> 00:03:11,140
+is convenient in cases where physical delivery
+
+64
+00:03:11,140 --> 00:03:13,730
+is costly or complicated.
+
+65
+00:03:13,730 --> 00:03:16,240
+For example, imagine the difficulty
+
+66
+00:03:16,240 --> 00:03:20,260
+of having to deliver all 500 stocks in the right proportions
+
+67
+00:03:20,260 --> 00:03:23,230
+on an S&P 500 forward contract.
+
+68
+00:03:23,230 --> 00:03:26,110
+Such contracts are typically cash settled
+
+69
+00:03:26,110 --> 00:03:28,210
+to avoid those complications.
+
+70
+00:03:28,210 --> 00:03:30,820
+We will see that the financial value of the contract
+
+71
+00:03:30,820 --> 00:03:35,050
+is the same with either physical or with cash settlement.
+
+72
+00:03:35,050 --> 00:03:36,700
+It's fairly straightforward to find
+
+73
+00:03:36,700 --> 00:03:41,890
+the profit or loss on a forward contract at expiration.
+
+74
+00:03:41,890 --> 00:03:46,660
+In general, we'll call s sub T the spot
+
+75
+00:03:46,660 --> 00:03:50,230
+price, or current market price, of the underlying asset
+
+76
+00:03:50,230 --> 00:03:53,830
+in the contract at time little t.
+
+77
+00:03:53,830 --> 00:03:58,195
+Assume, too, that the contract covers n units of the asset.
+
+78
+00:03:58,195 --> 00:04:00,820
+
+
+79
+00:04:00,820 --> 00:04:04,330
+The payoff will depend on the number of units
+
+80
+00:04:04,330 --> 00:04:08,440
+and on the difference between the current spot price
+
+81
+00:04:08,440 --> 00:04:12,810
+and the forward price locked in on the contract.
+
+82
+00:04:12,810 --> 00:04:15,470
+Let's look at this from the perspective of the long side
+
+83
+00:04:15,470 --> 00:04:17,779
+of the contract.
+
+84
+00:04:17,779 --> 00:04:23,960
+The long earns the spot price minus the forward price
+
+85
+00:04:23,960 --> 00:04:27,500
+on n units of the asset.
+
+86
+00:04:27,500 --> 00:04:32,970
+That corresponds to the long ping of sub-0 per unit,
+
+87
+00:04:32,970 --> 00:04:36,830
+and then receiving the n assets via the forward contract,
+
+88
+00:04:36,830 --> 00:04:41,030
+and then turning around and selling the assets at the spot
+
+89
+00:04:41,030 --> 00:04:46,320
+price s capital T in the spot market.
+
+90
+00:04:46,320 --> 00:04:49,110
+Clearly, the profit or loss to the short side
+
+91
+00:04:49,110 --> 00:04:51,450
+is just the negative of the profit or loss
+
+92
+00:04:51,450 --> 00:04:52,870
+to the long side.
+
+93
+00:04:52,870 --> 00:04:57,660
+The contract is always zero-sum between them.
+
+94
+00:04:57,660 --> 00:05:01,660
+The questions in this box are a useful check
+
+95
+00:05:01,660 --> 00:05:05,650
+on your basic understanding of how forward contracts work,
+
+96
+00:05:05,650 --> 00:05:08,680
+the payoffs to both sides, and why
+
+97
+00:05:08,680 --> 00:05:12,490
+the contract can create value for users even though they
+
+98
+00:05:12,490 --> 00:05:14,600
+are zero-sum.
+
+99
+00:05:14,600 --> 00:05:18,620
+In the recitation, JR will discuss these answers with you,
+
+100
+00:05:18,620 --> 00:05:20,930
+but it's a good exercise to think about them
+
+101
+00:05:20,930 --> 00:05:25,230
+and discuss them with your fellow students beforehand.
+
+102
+00:05:25,230 --> 00:05:27,240
+This figure summarizes the timing
+
+103
+00:05:27,240 --> 00:05:30,910
+of cash flows and payoffs that we've been talking about.
+
+104
+00:05:30,910 --> 00:05:33,940
+The forward price is agreed to between the long and short
+
+105
+00:05:33,940 --> 00:05:37,560
+sides of the contract at time 0.
+
+106
+00:05:37,560 --> 00:05:40,040
+No money changes hands, but either
+
+107
+00:05:40,040 --> 00:05:42,600
+or both counterparties may have to post collateral
+
+108
+00:05:42,600 --> 00:05:47,650
+to protect against default. At contract expiration,
+
+109
+00:05:47,650 --> 00:05:50,890
+the profit or loss per unit of the underlying
+
+110
+00:05:50,890 --> 00:05:54,100
+depends on the difference between the forward price set
+
+111
+00:05:54,100 --> 00:05:59,200
+and the contract and the current spot price.
+
+112
+00:05:59,200 --> 00:06:03,340
+The payoff is zero-sum between the long side of the contract
+
+113
+00:06:03,340 --> 00:06:05,790
+and the short side of the contract.
+
+114
+00:06:05,790 --> 00:06:08,000
+
+

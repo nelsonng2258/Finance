@@ -1,0 +1,127 @@
+
+PROFESSOR: How good is the protection provided
+by a delta hedging strategy?
+Well, the answer will depend on a number of factors that
+include the frequency of rebalancing,
+the stability of the parameters, and, particularly,
+the accuracy of the volatility estimate,
+and whether or not there's large jumps in stock prices.
+Theoretically, rebalancing would occur
+continuously but that would be prohibitively
+expensive to execute and, in practice,
+there's always a trade off between how often the hedge is
+adjusted and the cost of making those adjustments.
+A practical answer, though, to the question,
+is that such strategies work well enough
+to make it profitable for many financial institutions
+to offer products like capital protected notes
+to their clients.
+For an example of where dynamic delta hedging worked well
+in practice, here we're looking at the year 2000
+and comparing the value of a replicating portfolio
+for a put option on the S&P 500 with the Black-Scholes-Merton
+price for the same put option.
+The top panel shows the evolution
+of stock prices over that year, which fluctuated considerably,
+and towards the end of the year, were mostly falling.
+The middle panel shows how the corresponding delta
+for the put option changed.
+As we know, the delta is always negative
+and as the stock price falls, the put
+moves further into the money, which
+increases the size of the short position on the stock index.
+The bottom panel plots the Black-Scholes-Merton price
+for the put option and also the value
+of the replicating portfolio.
+As we'd expect, those values rise as stock prices
+fall and vice versa.
+The fact, though, that the two lines track each other
+so closely means that the replicating portfolio strategy
+is providing an effective hedge, even though rebalancing is not
+occurring continuously.
+To see why delta hedging doesn't always work,
+we'll look at portfolio insurance and its track record
+during the time of the 1987 stock market crash.
+Portfolio insurance has some similarities
+to the capital protected notes we've just been discussing.
+Creating portfolio insurance by using dynamic trading
+strategies is an idea created and marketed
+by Berkeley professors, Hayne Leland and Mark Rubinstein
+and their friend, John O'Brien.
+Their work created a still popular but sometimes
+controversial way to achieve protection against losses
+in the stock market, while still retaining some of the upside.
+The strategy became very controversial,
+because it was initially blamed for causing, or at least making
+worse, the 1987 stock market crash.
+However, investigations into that allegation
+concluded that these strategies were probably not to blame.
+Various forms of portfolio insurance
+were developed around that time.
+And they could be implemented in a variety of ways.
+One was with the sale of out-of-the-money put options
+that limited investor losses on the market.
+The willingness by investors, using the strategy
+to take some losses, is like taking
+a deductible and an insurance policy that
+lowers its premium cost.
+The most significant development in this period
+was that of perpetual insurance, which appealed to long horizon
+investors like pension funds that
+got only limited value out of protection that
+just lasts a few years.
+Perpetual insurance is like having a renewable American put
+option that never expires.
+That insurance allows the investor or the insured
+to exercise its option at any time in the future.
+Portfolio insurance seemed to be working very well,
+but then came the October 1987 stock market crash.
+To see how and why portfolio insurance failed
+during the 1987 market crash, we'll
+again compare the value of a put option on the S&P 500
+with a replicating portfolio for that same option
+over the same period.
+The top panel shows the evolution of stock prices,
+now for the year 1987.
+The market was generally rising until the crash on October 19,
+when it fell precipitously by 23% in one day,
+and remained at that lower level for most
+of the rest of the year.
+The middle panel shows that with the rising market earlier
+in the year, the Delta of a put option that's originally
+at the money rises toward 0 over time,
+as the put option goes further and further out-of-the-money.
+With the market crash, there's a huge downward jump in Delta,
+meaning that a substantial short position is required
+in the replicating portfolio.
+Turning to the bottom panel, it's
+comparing the evolution of the Black-Scholes-Merton put value
+with that of the replicating portfolio over time.
+You can see that the two track well earlier in the year
+when stock prices moved smoothly over time.
+But at the time of the crash, the two values diverged.
+The replicating portfolio value fell relative
+to the Black-Scholes-Merton put value.
+You can think of what happened in terms of the short position
+in the replicating portfolio becoming
+too small at the time of the crash, and hence,
+benefiting too little from the drop in stock prices.
+That drop in the value of the replicating portfolio
+meant that portfolio insurance strategies
+failed to protect investors against losses
+in the face of the crash in stock prices
+exactly the time when the insurance was most needed.
+This real world episode illustrates
+in practice what we learned in theory,
+delta hedging strategies only work
+well when stock price movements are pretty smooth
+and when there's no large jumps.
+When there are large jumps in stock prices,
+it's impossible to rebalance fast enough
+to eliminate all the risk.
+Next week, we'll start by seeing how to modify the hedging
+strategy by incorporating Delta Gamma hedging, which
+leads to a more robust hedge.
+We'll also look more closely at modeling volatility
+and at some of the other popular options pricing models.
+See you then.

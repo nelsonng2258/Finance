@@ -1,0 +1,293 @@
+
+PROFESSOR: A rigorous derivation of the basic Black-Scholes
+model relies on the assumptions listed here.
+First, financial markets are frictionless.
+That means no taxes on trading or transactions costs,
+that assets are perfectly divisible,
+and there are no restrictions on short sales.
+Second, interest rates for risk-free borrowing and lending
+are equal and constant.
+
+Third, the stock pays no dividends
+over the life of the option.
+Note that this assumption is quite easily relaxed.
+And fourth, stock prices conform to the log-normal model.
+That model assumes that stock prices follow
+a continuous path, importantly with no jumps,
+and that the mean and variance of the log return are constant.
+Furthermore, the log return over any period of time
+is independent of the log return over any other period of time
+and that log return is normally distributed.
+Knowing these assumptions is important not just
+to understand the theory.
+It's important for the practical reason
+that when the assumptions don't hold, such as when
+short selling the asset or borrowing
+is expensive or impossible, using the formula
+to evaluate options prices may lead you
+to an inaccurate conclusion about the value.
+In such cases, the model has to be modified
+or a different model has to be used.
+
+In their original analyses, Black and Scholes and,
+separately, Merton showed that under these assumptions,
+the return on the stock option could
+be replicated with a portfolio consisting of precisely chosen
+quantities of the underlying stock and a risk-free bond.
+To find the call option price, they
+used the same sort of argument that we went through
+in the binomial case.
+Namely that if two portfolios have exactly the same payoffs
+in every future state of the world,
+they must have the same value today.
+For a European call option, they show
+that the replicating portfolio always
+involves a long position or a positive fraction
+of the underlying stock and a short position
+in the risk-free bond.
+The fraction of stock in the replicating portfolio
+is set at each point in time so that it
+equals the partial derivative of the call option
+value with respect to the stock price, the delta
+in this equation here.
+
+Since that sensitivity --
+delta -- is constantly changing with remaining maturity
+of the option and with the price of the stock,
+the number of shares of stock in the replicating portfolio has
+to be constantly adjusted as well.
+Similarly for a put option, the hedge ratio or delta
+for the put is the sensitivity of the put value to changes
+in the underlying stock price.
+As this relation is negative, it implies a short position
+in stocks in the replicating portfolio.
+An interesting historical note is
+that even though the publication of Bob Merton's version
+of the result was in 1974, a year
+after that of Black and Scholes, Merton actually
+finished his proof first.
+The gentleman that he is, he kindly waited for his friends
+Fischer Black and Myron Scholes to finish their version
+before submitting his result to a journal.
+It's helpful to see graphically the idea of using delta
+to construct a replicating portfolio.
+Here, the situation is illustrated
+for a put option when the current stock price is at 100,
+and the strike price is fixed at 100.
+The x-axis is the underlying stock price,
+and the y-axis is the value of the put option, which
+is shown by the blue curve, or the value
+of the replicating portfolio, which is
+going to be this tangent line.
+Notice that the current value of the put option
+has a shape that's quite similar to the payoff at expiration
+of the put option, but the relationship
+is a smooth curve rather than a kinked line.
+That's because prior to expiration,
+there's no sharp difference between the value on each side
+of the strike price.
+If the put option is slightly out of the money,
+it could end up in the money and vice versa.
+Now the replicating portfolio is structured
+to have the same sensitivity to changes in the stock prices
+as does the put option.
+That means choosing a delta or share
+of stocks based on the slope of the put option value curve
+at the current stock price, which
+is given by this tangent line.
+So we're looking at the current stock price,
+and we want a portfolio with the same sensitivity
+locally to changes in the stock price as what
+we have with the put option.
+You can see here that for small changes in the stock price,
+the value of the put option and the value
+of the replicating portfolio will, in fact, move together.
+But for larger changes in price, the two will start to diverge.
+
+This should remind you of the analysis we did earlier
+when we were discussing delta gamma
+hedging for a bond or fixed income derivative product.
+The principle -- the delta comes from the slope of a tangent
+line --
+is exactly the same in both analyses.
+There's one difference that you should keep in mind though.
+With stock options, the x-axis is the underlying stock price.
+In our earlier analysis of fixed-income derivatives,
+the x-axis was the level of interest rates
+rather than of bond prices.
+We'll see later in the class why this difference arises.
+But I want to emphasize here that the basic logic
+of both analysis is identical.
+
+There are five inputs into the original Black-Scholes-Merton
+formula: the current stock price, the exercise price,
+the remaining time to expiration,
+the risk-free rate, and the annualized standard deviation
+of log stock returns.
+The most commonly used version of the formula
+also incorporates the possibility
+of a constant dividend yield, which
+is often noted as little delta.
+So here, we finally have it: the Black-Scholes-Merton options
+pricing model.
+Fanfare, please!
+[TRUMPET FANFARE]
+
+This equation says that the value of a European call
+option, given the five inputs, is the stock price multiplied
+by N of d1 minus the present value of the strike
+price multiplied by N of d2.
+N represents the cumulative density function
+of a standard normal random variable.
+The inputs d1 and d2 are both functions
+of our five basic inputs.
+The value of the corresponding put option
+is given by this equation.
+It's found using Put-Call Parity.
+As with the binomial model, the actual expected return
+on the stock doesn't enter into our pricing formula.
+It's reflected indirectly, though,
+through the current stock price.
+Now to implement these pricing formulas,
+there's a spreadsheet available with the course materials
+called BSMandBlacksmodel.xls.
+You can use it for the homework and for the exam.
+It uses a built-in function to solve
+for the values of the cumulative standard normal distribution.
+
+The example here shows that using the model
+is quite straightforward once you've identified the inputs.
+The calculation is for an at-the-money option
+with a current stock price and strike price of 100.
+The interest rate is 5%, and the maturity is one year.
+The return volatility on a continuous annual basis
+is 30%, which is quite typical for stocks in the United
+States.
+Plugging in those values, you can calculate d1 or d2,
+or your spreadsheet can do it for you.
+Then you can calculate the values N of d1 and N of d2
+using the formula for the cumulative normal distribution
+or, again, using the spreadsheet that's programmed in Excel.
+The implied value of the call option is 14.2312.
+To find the value of a put option,
+you need to N of negative d1 and N of negative d2.
+You could solve for those directly.
+But since we've already found the values of N of d1
+and N of d2, it's simpler to just remember
+that N of minus d1 is equal to 1 minus N of d1
+and similarly for d2.
+Plugging these inputs into the formula
+for the value of a put option, you
+can verify that it's worth 9.3542.
+It's not difficult to extend the Black-Scholes-Merton logic
+to the situation where the stock pays a known dividend
+or has a known dividend yield.
+In the case of a known dividend payment expected
+to arrive before the option expiration date,
+the original formula used to price puts and calls
+can be used with just an adjustment
+to the original stock price.
+Specifically, the stock price is adjusted down
+by the present value of the dividends paid.
+That pulls the future distribution of stock prices
+down, realistically reflecting that when a dividend is paid,
+the value of future cash flows drops
+by the amount of the dividend.
+
+Now the case of a constant dividend yield
+is more realistic for stock indices.
+There, too, the future appreciation
+of the value of the index is reduced
+by the dividends that are paid.
+The adjustments shown here have the same effect
+of lowering the entire distribution of future stock
+prices, consistent with the dividends
+pulling down the remaining value of the underlying stocks.
+
+I want to provide some further interpretation of the BSM model
+that will be useful a little while later
+when we're discussing dynamic delta hedging strategies.
+The fundamental idea behind BSM is that the value of the option
+is the same as that of the replicating portfolio of stocks
+and bonds.
+N of d1 is the fraction of a share of stock
+we would hold in the replicating portfolio for a call option.
+It equates the sensitivity of the replicating portfolio
+value to stock price changes with those of the option.
+It's conceptually equivalent to the Delta
+we solved for when we found the replicating portfolio
+in a binomial model.
+The general concept is the same in both cases.
+Delta always represents the first-order sensitivity
+of the value of an option to the change
+in the value of the underlying-- in this case, a stock.
+The Delta, then, of a call option
+is the partial derivative of the value of the call
+option with respect to the underlying stock price
+and so in the BSM model, this is given by N of d1.
+
+N of d1 is always positive because this
+is a cumulative distribution, which
+always lies between 0 and 1.
+
+The Delta of a put option is also a partial derivative
+of the value of the option with respect to the underlying stock
+and in the Black-Scholes-Merton model,
+it's given by minus N of minus d1.
+This is always less than 0 because we
+have a minus sign multiplying a positive function.
+There's also an analog between BSM
+and the binomial model for the amount of borrowing
+in the replicating portfolio.
+Borrowing is given in the BSM model for a call option
+by the term here, the strike price discounted and multiplied
+by N of d2.
+
+The value of the call option then
+equals the value of the replicating portfolio,
+delta times S minus the amount of borrowing, which
+is represented in the Black-Scholes-Merton formula
+by N of d1 times S for Delta times S,
+and the discounted value of the strike price times N of d2
+represents the amount of borrowing.
+Finally, I want to say a few words about the different ways
+to derive the Black-Scholes-Merton model
+and a fun story about how it first became so famous.
+We looked at one of the ways that the BSM formula
+can be derived, which is as the limit of the binomial model.
+It can also be found in two other related ways.
+One is by solving a partial differential equation that
+comes out of the replicating portfolio approach directly
+and the condition of no arbitrage.
+The other is using risk-neutral pricing.
+All, of course, give the same result
+and are useful for developing intuition about the model.
+You can find these derivations in Hull or online.
+But in the interest of time, we won't go into them here.
+A natural question you might have at this point
+is whether BSM really works, given all the assumptions
+that are required.
+The answer is that it works pretty well
+in many circumstances and it is the most common model
+used in hedging strategies.
+
+A great story that speaks to the value of the model is this --
+before Black, Scholes, and Merton derived the model,
+stock options were being actively traded on the Chicago
+Board Options Exchange.
+Black and Scholes decided to try out their theory there
+and started trading based on it.
+If they found a stock option price that was too low based
+on the model, they bought the option,
+and they hedged the position by shorting
+the replicating portfolio, and vise versa of the option price
+was too high.
+Apparently, the other traders initially just ignored them,
+figuring they would lose a lot of money
+and then retreat to their comfortable university jobs.
+But it soon became very clear that Black and Scholes
+were making a lot of money trading on their model.
+Soon, other traders followed.
+And pricing and options markets was forever
+altered by the knowledge that options
+could be priced scientifically using no arbitrage logic.

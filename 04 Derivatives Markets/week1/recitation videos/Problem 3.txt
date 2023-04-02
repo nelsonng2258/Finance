@@ -1,0 +1,76 @@
+
+PROFESSOR: In our third and final question,
+we have the following setup.
+A company enters into a forward contract
+with a bank to sell a foreign currency for K sub 1 at a time
+T sub 1.
+The exchange rate at time T sub 1
+proves to be greater than K sub 1.
+And let's call that exchange rate S sub 1.
+The company asks the bank if it can roll the contract forward
+until time T2 rather than settle at time T sub 1.
+The bank agrees to a new delivery price K2.
+Explain how K2 should be calculated.
+Now, we have a lot of letters and numbers
+floating around here.
+So let's get some convention right at the beginning.
+As a convention, let's assume that the exchange rate
+is quoted as a number of units of domestic currency per unit
+of foreign currency.
+So if the exchange rate goes up, then the foreign currency
+has appreciated, that is its price
+in terms of the domestic currency has increased.
+Also, note that the bank has a long position
+in the forward contract and hence
+has agreed to buy the foreign currency in the future.
+
+First, let's find the value of the forward contract
+to the bank at time T1.
+Since the spot exchange rate S1 at T1
+is greater than the forward exchange rate K1,
+the bank can purchase the foreign currency
+at a lower price using the forward contract
+than it can on the spot market.
+Thus, the value of the foreign contract to the bank
+is equal to the cost savings from purchasing
+the foreign currency with the foreign contract, which
+is S1 minus K1.
+Now, how will the bank optimally choose the new delivery price
+K2 at T2?
+Well, to be as well off as before, the bank requires
+the value of this new rolled forward contract at T1
+to be equal to S1 minus K1.
+This implies that S1 times the exponential
+of negative Rf, where Rf is the foreign risk-free rate,
+times T2 minus T1 minus K2 times the exponential of negative R,
+where R is the domestic risk-free rate,
+times T2 minus T1 is equal to S1 minus K1, where
+both the risk-free rates, domestic and foreign,
+are observed at T1 and applicable to the period
+between T1 and T2.
+
+Now, let's stare at that equation a little bit more.
+The first term on the left-hand side,
+S1 times the exponential of negative Rf times T2 minus T1,
+is the present value of investing S1 units
+the foreign currency at the foreign risk-free rate of Rf
+from T1 to T2.
+The second term on the left-hand side,
+K2 times the exponential of negative R times T2 minus T1,
+is the present value of investing
+K2 units of the foreign currency at the domestic risk-free rate
+of R from T1 to T2.
+If we solve for K, we see that K2
+is equal to S1 minus the exponential of the difference
+between the domestic and the foreign risk-free rate and T2
+minus T1 minus S1 minus K1 times the exponential
+of the domestic risk-free rate times T2 minus T1.
+So what does all this mean?
+Well, what this means is that there are two components to K2.
+The first is the forward price at time T1.
+And the second one is an adjustment
+to the forward price that is equal to the bank's
+gain on the first part of the contract compounded forward
+at the domestic risk-free rate.
+Now that concludes our first recitation for 15.435x.
+I look forward to seeing all of you next week.

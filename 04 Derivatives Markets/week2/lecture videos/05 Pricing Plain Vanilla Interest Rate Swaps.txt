@@ -1,0 +1,166 @@
+
+PROFESSOR: We're now going to go through the logic of how
+the fixed rate on a plain vanilla swap is determined.
+It also involves no-arbitrage logic,
+but it's a little bit more complicated than what
+we've done up to this point.
+The diagram here represents the cash
+flows in a swap from the perspective of the floating
+rate payer.
+Notice that the diagram is drawn as
+if principal payments are exchanged, even though they're
+not.
+That is, the notional principal, denoted here by a capital F,
+is assumed to be exchanged along with the final interest-based
+payment at the final date, N. The minus F and plus F
+cancel out, reflecting that no principal is actually
+exchanged.
+The advantage of this representation
+is that it simplifies the valuation calculation
+by highlighting the swap is equivalent to holding
+two positions.
+The first is a long position in a fixed rate bond,
+with a coupon rate c equal to the fixed rate specified
+in the swap contract.
+Those generate the payments c times F, c times F, c times F,
+c times F, all the way out to the final c
+times F payment at time N.
+The second position is a short position
+in a floating rate bond.
+The floating rate is indexed by a subscript representing
+the time the rate is locked in, which
+is always one period before the money is paid out.
+For example, the floating rate paid
+at the first exchange of payments,
+r0 is based on the rate in the market as of time 0.
+The rate at time 1 is determined here, but paid at time 2,
+and so forth.
+
+That generates a sequence of floating rate payments,
+F times r0, F times r1, F times r2, all the way out to F times
+rN minus 1.
+
+As with other foreign contracts, the payoffs
+on every future date are zero-sum
+between the long and short side of a swap.
+Since it's costless to enter into the swap
+and both counterparties do it voluntarily,
+it has to be that the swap terms are
+set so the net present value of the promised payments are 0.
+Let's think for a second about why that is.
+Well, it's the usual reason with forward contracts
+that if the NPV were positive for one counterparty,
+it would be negative for the other one.
+And the counterparty with the negative NPV
+would not agree to the swap terms.
+This idea, together with what we will
+see about the value of a floating rate bond,
+will tie down the fixed rate on a swap.
+
+A key ingredient to be able to price swaps
+is to understand the price dynamics of safe floating rate
+bonds.
+You already know that for fixed rate bonds, when
+interest rates go up, the price goes down
+because the fixed future payments are discounted
+at a new higher rate.
+For floating rate bonds, the price behavior
+when interest rates change is quite different than for coupon
+bonds.
+In fact, floating rate bonds always
+price at par, or face value, on reset dates.
+Intuitively, the reason that the price of floating rate bonds
+is relatively insensitive to interest rate changes is this.
+With a variable rate, if interest rates go up,
+so do future interest payments.
+Hence, the interest payment does the work
+of bringing the yield up to the current market level
+without the need for the price to adjust.
+
+The rest of the algebra you see on this slide
+is a proof that the price is equal to par on reset dates.
+You can take a look if you're interested,
+but you're only responsible for knowing the fact
+that the price is par on the reset dates.
+Between reset dates, the price of a floating rate bond
+does move inversely to interest rates.
+But because only the next payment is locked in,
+and it will be made soon, the price effects tend to be small.
+
+Another fact that you might want to know about floating rate
+bonds is that they are very similar from the perspective
+of the borrower to a strategy of rolling over a short-term debt.
+A possible advantage of floating rate bonds
+is that they avoid the issuance costs of repeatedly issuing
+short-term debt.
+However, because the bonds may be
+less liquid than short-term debt,
+the rates charged may be somewhat higher.
+
+Now that we know how floating rate bonds are priced,
+we can return to the question of how swap rates are determined
+on a new swap contract.
+As I mentioned earlier, because the swap is a zero-sum contract
+and must be fair to both counterparties,
+it has to be the case that the present value of the fixed rate
+payments equal the present value of the floating rate payments.
+We know that the floating rate payments
+when represented as a floating rate bond will price at par.
+That means that the fixed rate payments,
+when represented as a coupon bond, must also price at par.
+Together, that implies that the fixed rate on the swap
+is determined by setting the present value
+of the future fixed rate payments equal to par.
+
+But looking back at our earlier representation, what we're
+saying here is that the price or the present value
+of the fixed rate payments has to be
+equal to F, the face or par value,
+and we're going to need to solve for the coupon rate that makes
+that the case.
+
+The final important step to understand swap pricing
+is to tie the swap rate back to the spot yield curve.
+Remember that the spot yield curve provides a discount rate
+for cash flows arriving at different future times.
+
+We can then write down an expression
+that equates to par value of the notional fixed rate bond
+to the present value of the promised fixed rate payments,
+where the coupon rate c now is a free variable.
+
+Since the notional principal F cancels
+from both sides of this equation,
+and if we can observe the appropriate yield curve,
+then we can solve for the fixed rate c that makes this
+a quality hold.
+
+In practice, the appropriate rates
+for discounting swap payments may
+be somewhat different than a treasury yield curve, which
+reflects that the two markets are
+identical in terms of liquidity or risk
+or taxes or other factors.
+To adjust for this market participants
+use a swap spot yield curve for swap pricing.
+The swap yield curve is determined from market swap
+prices, just as the treasury yield
+curve is determined by the market
+price of Treasury securities.
+Two final observations-- first we've
+seen that, to eliminate arbitrage opportunities,
+swaps are priced to be consistent
+with the appropriate yield curve, which
+means the pricing is also consistent with the implied
+forward rates in that yield curve with forward rate
+agreements and with other interest rate forward
+and futures contracts.
+Second, the value of a swap changes over time
+as market conditions evolve.
+After a swap is initiated and if interest rates have changed,
+the present value of the fixed rate payments
+will no longer equal the value of the floating rate payments.
+For instance, if rates fall, the floating rate payer
+will benefit because the fixed rate payments received
+won't be affected, but the floating rate payments
+made will be lower.

@@ -1,0 +1,86 @@
+
+PROFESSOR: Hello everyone, and welcome to the first recitation
+of 15.435x.
+My name is JR Scott, and I'm a PhD candidate
+in finance at the MIT Sloan School of Management.
+I'll be writing the recitations for this course.
+In our first recitation, we'll be
+reviewing some of the mechanics of forward contracts.
+Without further ado, let's begin the recitation.
+The recitation consists of three practice problems.
+Problems will roughly increase in order of difficulty,
+and I hope with each problem you gain a better understanding
+of how forward contracts work.
+In the first problem, it's stated that Southern California
+Edison or SCE, will need to buy 200,000 barrels of oil
+in 10 days, and it is worried about fuel costs rising.
+Suppose SCE goes long 200 oil forward contracts of the April
+contract --
+it is currently March --
+each for 1,000 barrels of oil at the current forward price
+of $50 per barrel.
+Suppose forward prices change each day
+as follows in the table below.
+In Part A, we are asked what is the mark-to-market profit
+or loss in dollars the SCE will have on each state?
+To me, the best way to begin is to define some notation.
+So let's define F sub T to be the forward price for day T
+and, N to be the number of barrels of oil
+in each forward contract.
+Thus the mark-to-market profit or loss,
+P/L on each forward contract on date T
+is equal to N times the difference between FT and FT
+minus 1, where FT minus 1 is the forward price
+on the previous day for a long position.
+And N times FT minus 1 minus FT for short position.
+Now armed with that notation, and letting F sub 0
+to be the current forward price of $50,
+since SCE has a long position in 204 contracts with a size of N
+equals 1,000 barrels for each contract.
+We can define SCE's profit or loss on day one
+to be 200 times N times the difference between F1 and F0,
+which, after plugging in values, equals
+200 times 1,000 times 49.75 minus 50,
+which is equal to negative $50,000.
+In other words SCE makes a mark-to-market loss
+of $50,000 on day one.
+Similarly on day two, SCE's profit or loss
+is 200 times N times F2 minus F1,
+which, using the values for F2 and F1 from the initial table,
+is equal to 200 times 1,000 times 47.25 minus 49.75,
+which is equal to negative $500,000.
+Thus we can iterate the above calculation for days 3
+through 10 just substituting in the appropriate forward prices
+into the formula and we can calculate SCE's daily profit
+or loss, which is displayed in the table below.
+Part B asks what is SCE's total profit or loss after 10 days?
+What we're called at SCE's profit
+or loss on its long position in each forward contract
+on the first day, is equal to N times F1 minus F0,
+and on the second day is equal to N times F2 minus F1.
+If we sum these two quantities, we see SCE's profit or loss
+after two days, is equal to N times F2 minus F0.
+
+If we iterate this logic forward all the way to day 10,
+we see that SCE's profit or loss on each forward contract
+after 10 days, is given by N times
+the forward price of day 10, minus
+the initial forward price, which is F0.
+Thus SCE's total profit or loss on its long position in 204
+contracts after 10 days is, 200 times N times F10 minus F0,
+which is equal to 200 times 1,000 times the difference
+between 52.50 and 50, which is $500,000.
+In the last part of problem one, Part C, we are asked,
+explain why this may not be a perfect hedge for SCE.
+Now I can think of a couple of reasons
+why the strategy may not be a perfect hedge,
+and I encourage you to think of some others on your own.
+The first one is that the interest earned on the margin
+account was not included in the calculations
+that we did and will actually affect SCE's payoff.
+The second one -- and this sounds pretty obvious --
+is that not all oil is the same.
+Oil prices differ based on quality and location,
+so that the reference price in this forward contract
+may not be perfectly correlated with the cash purchase price
+that Southern California Edison faces.

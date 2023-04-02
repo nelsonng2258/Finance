@@ -1,0 +1,115 @@
+PROFESSOR: Let's spend a few minutes reviewing
+the idea of risk-free interest rates and the yield curve,
+since they're central to pricing forward contracts
+and other derivatives.
+A risk-free bond promises future payments that
+are free from default risk.
+Its price is the present value of those promised payments.
+An important type of bond for our purpose
+here is a zero-coupon, also called a pure discount bond,
+that promises a single payment at maturity
+equal to its face value.
+Here we call that face value capital
+Z. Given the market price of a zero-coupon bond, p, its face
+value, Z, the maturity date, capital T,
+we can infer the risk-free interest rate, or yield,
+from the formula on the slide.
+
+In this representation, the interest rate, r sub T,
+is stated on a continuous basis.
+That's a common way rates are represented in derivatives
+pricing formulas.
+However, in other markets, such as bond markets,
+yields are often stated on an annual, semiannual, monthly,
+even daily basis.
+And we'll use those alternatives in some
+of the examples we look at.
+
+Notice that if you know the price
+of the bond and its promised payments
+and its time to maturity, then you can infer the yield.
+And if you know the yield, the promised payments, and the time
+to maturity, you can infer the price.
+The price and the yield contain the same information.
+In terms of the underlying economics of the situation,
+you should think of the forces of supply and demand
+determining the risk-free interest rate or the price
+for every zero-coupon bond for every possible maturity.
+I want to turn back and say a few more words also
+about the Treasury spot yield curve.
+The yield curve, which is also known
+as the term structure of interest rates,
+is the relationship between bond yields and bond maturities.
+In practice, the risk-free yield curve
+is often calculated from the market prices of US Treasury
+securities.
+Since there may be no maturing Treasury
+security on a particular future date,
+the spot rates for that date have to be interpolated.
+Finally, it's important to understand
+that bonds like Treasury bonds, whose promised cash flows are
+free from default risk, still entail
+significant risk for investors because the bond's market
+price will change over time as market interest rates change.
+Hedging bond price risk is a very popular use
+of derivatives contracts, and in particular,
+forwards, futures, and swaps.
+
+Forward contract prices for bonds
+and other fixed-income securities
+are closely tied to the yield curve,
+and in particular, to the implied forward rates
+in the yield curve.
+We'll see why in more detail next week.
+But for now, let's review the idea of implied forward rates.
+We just saw that, in general, the price
+today of a zero-coupon bond maturing at time T2
+is found by discounting the face value, Z, that's paid at T2,
+buy the yield to maturity, r sub T2.
+
+As we'll see soon, a no-arbitrage argument
+ties down the forward price for this bond
+for delivery at time T1.
+The forward price is just the future value of the time zero
+bond price as of T1 computed using the current yield,
+r sub T1.
+
+Now, substituting for the bond price into the forward price,
+we can express the forward price in terms of the yields, r of T1
+and r of T2, in the current yield curve.
+
+Now let's turn to forward rates.
+Implicit in forward prices are forward rates.
+A forward rate is the interest rate
+locked in a forward contract on the underlying security.
+In this example, the forward contract
+is for delivery of a zero-coupon bond
+at time T1 that matures at time T2.
+So at T1, it will have remaining life, T2 minus T1.
+
+The implied forward rate is defined
+as the yield that equates the present value of the cash
+flow on the bond at T2 with the forward price paid at T1.
+
+Equating our two equations for the forward price
+and solving for the implied forward rate by rearranging,
+we come up with this important formula
+for the implied forward rate.
+
+Contracts based on forward rates, which
+include bond market futures contracts, short-term interest
+rate contracts and interest rate swaps,
+all are based on this fundamental formula relating
+forward rates for any future time interval
+to the yield curve.
+
+Beyond pricing forward contracts on fixed-income securities,
+the standard formulas used for derivative pricing
+depend on the assumption that market participants
+can borrow or lend at a risk-free rate,
+or at least very close to it.
+In practice, market participants can accomplish
+risk-free borrowing and lending by buying and selling
+Treasury securities or by using collateralized borrowing
+and lending, often with repurchase agreements,
+also known as RPs or repos.

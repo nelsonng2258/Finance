@@ -1,0 +1,125 @@
+
+PROFESSOR: Before we move on, it's worthwhile for us
+to go over some of the mechanics of futures markets in a little
+more detail.
+Remember that traders and futures
+have to post margin that serves as insurance that they'll
+honor their commitments under the contract.
+Gains and losses are settled daily
+between the long and short sides of the contract.
+Example 2.5 here shows how this works
+in the context of a December gold futures contract.
+Let's consider an investor who takes a long position in two
+of these contracts.
+Assume that each contract is for 100 ounces of gold,
+and that the futures price is $1,250 per ounce
+on the date when the investor enters the contract.
+The initial margin requirement is
+set by the exchange at $6,000 per contract.
+So the margin requirement initially is $12,000 in total.
+There's also something called a maintenance margin
+of $4,500 per contract, which represents the minimum that
+must be maintained in each trader's margin
+account over time.
+
+More generally, margin requirements
+are going to differ across different types of contracts,
+and they'll be set depending on the volatility
+of the underlying asset and the contract size.
+This table shows how the balance in the margin
+account evolves over time is a function of a particular path
+of futures settlement prices.
+At the end of the first day, the price has decreased to $1,241,
+from the initial price of $1,250 per ounce.
+The loss on a long position is the difference
+of $1,250 minus $1,241, times the 100 ounces in a contract,
+or $900 per contract.
+The total loss is $1,800 then, on the two contracts.
+
+Correspondingly, the margin balance
+goes from the initial $12,000 down to $10,200, corresponding
+to the $1,800 loss.
+The remaining $10,200 is higher than the required
+total maintenance margin of $9,000,
+so no additional funds are required.
+Now let's go forward to day six and assume the settlement price
+is $1,236.20 per ounce.
+That implies a margin balance of $9,240.
+That's also consistent with subtracting the cumulative loss
+up to that date from the initial margin.
+Well now, a further price drop on day seven
+implies a further loss of $1,260.
+This brings the margin account down to $7,980,
+and that's below the maintenance margin of $9,000.
+To maintain an open position, the trader
+has to deposit an additional $4,020 into the margin account
+to restore it to the initial margin requirement of $12,000.
+The margin account continues to rise and fall
+with the price of gold and you can
+imagine the position is closed out on day 16
+at the then current price of $1,226.90 per ounce.
+The trader withdraws the remaining money
+in the margin account.
+
+We've seen that futures exchanges, which
+serve as clearing houses and central counterparties,
+or CCPs, play a central role in futures markets.
+This diagram goes a little more deeply into the structure
+of a futures trade.
+A retail futures trader would typically place a buy
+or sell order through a broker, who in turn would submit it
+to a clearing member.
+The clearing house member, which is often
+a large financial institution, would
+execute the trade via the clearing house
+with another clearing member, representing
+the client wanting to enter the other side of the same trade.
+The margin accounts would be kept in safekeeping
+at the clearing house.
+Default risk is minimal, not only
+because of the margin accounts, which
+we've talked about before, but also
+because of the added protection from capital reserves
+held by the clearing house and the contractual obligation
+of clearing members to absorb residual losses.
+
+During the severe 2008 financial crisis,
+heightened counterparty risk and concern about default
+caused severe market disruptions and price spikes.
+To try to avoid those problems arising in the future,
+regulators required that many common derivatives
+transactions, that traditionally had been conducted
+in bilateral over-the-counter markets,
+be moved into clearinghouses where
+default risk is much lower.
+Those changes have probably made the markets safer overall.
+However, the concentration of trades
+into a limited number of large clearing houses
+has made those institutions themselves
+a source of systemic risk and a target
+for tighter regulatory scrutiny.
+
+I've emphasized that futures contracts are a particular type
+of forward contract.
+A natural question you might have
+is whether the special institutions
+of futures markets, particularly the requirements of posting
+margin and marking to market daily,
+has any effect on the relative price of otherwise similar
+forward and futures contracts.
+As a practical matter, the formulas
+that we derive for the price and forward contracts
+are commonly used for futures contracts too.
+Theoretically, one can prove that the two prices
+should be identical in a constant interest rate
+environment.
+When interest rates aren't constant,
+small differences arise because of margin account dynamics
+and the correlation between the value of the underlying asset
+and interest rates.
+Those differences are greater in high interest rate environments
+and smaller when forward contracts also
+are collateralized.
+For the purpose of this class, and also
+in most practical situations, the prices
+can be treated as essentially identical.

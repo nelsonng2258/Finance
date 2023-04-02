@@ -1,0 +1,632 @@
+0
+00:00:00,000 --> 00:00:00,730
+
+
+1
+00:00:00,730 --> 00:00:02,230
+PROFESSOR: Next, we're going to turn
+
+2
+00:00:02,230 --> 00:00:04,780
+to some other important types of swaps.
+
+3
+00:00:04,780 --> 00:00:08,650
+We'll start with a deep dive into currency swaps.
+
+4
+00:00:08,650 --> 00:00:11,950
+After interest rates, the second most widely used type
+
+5
+00:00:11,950 --> 00:00:15,100
+of swap contract involves periodically exchanging
+
+6
+00:00:15,100 --> 00:00:19,360
+a payment in one currency for a payment in a second currency.
+
+7
+00:00:19,360 --> 00:00:21,730
+These are known as currency or FX swaps.
+
+8
+00:00:21,730 --> 00:00:25,380
+
+
+9
+00:00:25,380 --> 00:00:27,150
+A currency swap contract may call
+
+10
+00:00:27,150 --> 00:00:31,350
+for fixed or floating payments or a combination of the two.
+
+11
+00:00:31,350 --> 00:00:33,570
+As for interest rate swaps, there's
+
+12
+00:00:33,570 --> 00:00:36,060
+some underlying principle amount that determines
+
+13
+00:00:36,060 --> 00:00:38,630
+the size of the payments.
+
+14
+00:00:38,630 --> 00:00:41,720
+But whereas for interest rates the principle is notional
+
+15
+00:00:41,720 --> 00:00:44,510
+and never exchanged between the two counterparties,
+
+16
+00:00:44,510 --> 00:00:47,210
+with currency swaps the contract may also
+
+17
+00:00:47,210 --> 00:00:49,040
+call for an exchange of principle
+
+18
+00:00:49,040 --> 00:00:51,850
+in the two currencies.
+
+19
+00:00:51,850 --> 00:00:55,690
+A fixed-for-fixed currency swap is like a portfolio
+
+20
+00:00:55,690 --> 00:00:58,120
+of forward currency contracts.
+
+21
+00:00:58,120 --> 00:01:00,550
+As such, these contracts are widely
+
+22
+00:01:00,550 --> 00:01:03,730
+used by corporations and financial institutions
+
+23
+00:01:03,730 --> 00:01:05,950
+to hedge currency exposures arising
+
+24
+00:01:05,950 --> 00:01:09,940
+from international trade and cross-border borrowing
+
+25
+00:01:09,940 --> 00:01:11,220
+and lending transactions.
+
+26
+00:01:11,220 --> 00:01:14,310
+
+
+27
+00:01:14,310 --> 00:01:17,750
+Let's go back to our example of a US exporter hedging currency
+
+28
+00:01:17,750 --> 00:01:19,640
+risk exposure.
+
+29
+00:01:19,640 --> 00:01:22,160
+But now imagine that instead of receiving a lump
+
+30
+00:01:22,160 --> 00:01:26,000
+sum of 5 million euros in six months from its client,
+
+31
+00:01:26,000 --> 00:01:28,070
+the agreement calls for the client making
+
+32
+00:01:28,070 --> 00:01:32,360
+five equal installment payments of 1 million euros paid
+
+33
+00:01:32,360 --> 00:01:37,610
+every six months for the next 2 and 1/2 years.
+
+34
+00:01:37,610 --> 00:01:40,370
+The exporter could hedge each individual installment
+
+35
+00:01:40,370 --> 00:01:43,790
+with a separate currency futures or forward contract.
+
+36
+00:01:43,790 --> 00:01:47,630
+Alternatively, a single currency swap contract
+
+37
+00:01:47,630 --> 00:01:51,640
+could be used to hedge the exposure.
+
+38
+00:01:51,640 --> 00:01:54,760
+Well, let's first review how we can find the forward rates that
+
+39
+00:01:54,760 --> 00:01:57,220
+would be locked in for each installment payment
+
+40
+00:01:57,220 --> 00:01:59,740
+individually.
+
+41
+00:01:59,740 --> 00:02:01,810
+Recall that the initial spot exchange
+
+42
+00:02:01,810 --> 00:02:07,350
+rate was assumed to be $1.2673 per euro,
+
+43
+00:02:07,350 --> 00:02:10,530
+that the dollar interest rate is 5%,
+
+44
+00:02:10,530 --> 00:02:13,170
+and that the euro interest rate is 3%.
+
+45
+00:02:13,170 --> 00:02:14,910
+And let's assume the term structure
+
+46
+00:02:14,910 --> 00:02:18,420
+is flat at these rates in both currencies.
+
+47
+00:02:18,420 --> 00:02:20,670
+With this information, we can use our formula
+
+48
+00:02:20,670 --> 00:02:23,670
+for the forward exchange rate for future delivery dates
+
+49
+00:02:23,670 --> 00:02:25,620
+in six months, one year, et cetera,
+
+50
+00:02:25,620 --> 00:02:27,780
+going out 2 and 1/2 years.
+
+51
+00:02:27,780 --> 00:02:30,420
+You should check that you agree with the outcomes that
+
+52
+00:02:30,420 --> 00:02:31,575
+are listed in this table.
+
+53
+00:02:31,575 --> 00:02:35,740
+
+
+54
+00:02:35,740 --> 00:02:39,360
+Alternatively, the US firm can hedge with a currency swap.
+
+55
+00:02:39,360 --> 00:02:43,050
+The swap could specify that the firm pays 1 million euros
+
+56
+00:02:43,050 --> 00:02:46,980
+every six months for 2 and 1/2 years to a bank counterparty
+
+57
+00:02:46,980 --> 00:02:50,670
+in exchange for a pre-specified swap rate of k,
+
+58
+00:02:50,670 --> 00:02:53,850
+where we'll say K is 1.306.
+
+59
+00:02:53,850 --> 00:02:56,460
+And we'll see where the 1.306 comes
+
+60
+00:02:56,460 --> 00:02:59,190
+from in just a little while.
+
+61
+00:02:59,190 --> 00:03:01,380
+Well, what's the net dollar cash flow
+
+62
+00:03:01,380 --> 00:03:03,600
+for the US firm on each date?
+
+63
+00:03:03,600 --> 00:03:06,060
+That's determined by a combination of the swap
+
+64
+00:03:06,060 --> 00:03:08,310
+transactions and selling the euro's
+
+65
+00:03:08,310 --> 00:03:09,960
+received in the spot market.
+
+66
+00:03:09,960 --> 00:03:12,500
+
+
+67
+00:03:12,500 --> 00:03:15,920
+Specifically, at each swap payment date
+
+68
+00:03:15,920 --> 00:03:19,940
+the firm receives a million times K dollars in exchange
+
+69
+00:03:19,940 --> 00:03:23,200
+for giving up 1 million euros.
+
+70
+00:03:23,200 --> 00:03:27,480
+The euros paid in the swap are worth a million euros
+
+71
+00:03:27,480 --> 00:03:33,460
+times the spot exchange rate, S sub T, of dollars per euro.
+
+72
+00:03:33,460 --> 00:03:35,650
+The net amount received in the swamp
+
+73
+00:03:35,650 --> 00:03:45,320
+which is cash settled then is a million times K minus S sub T.
+
+74
+00:03:45,320 --> 00:03:48,710
+The firm also sells the million euros received
+
+75
+00:03:48,710 --> 00:03:51,320
+from its client in the spot market
+
+76
+00:03:51,320 --> 00:03:55,320
+at the current exchange rate, S sub T again.
+
+77
+00:03:55,320 --> 00:03:58,950
+The net inflow to the firm is a certain one million
+
+78
+00:03:58,950 --> 00:04:05,900
+times the fixed swap rate, K.
+
+79
+00:04:05,900 --> 00:04:10,580
+We took the swap rate in this example to be 1.306.
+
+80
+00:04:10,580 --> 00:04:14,030
+Now let's see where that number actually comes from.
+
+81
+00:04:14,030 --> 00:04:17,120
+I think you won't be surprised to hear that it's nailed down
+
+82
+00:04:17,120 --> 00:04:21,260
+by a no-arbitrage condition, in this case between currency
+
+83
+00:04:21,260 --> 00:04:24,680
+forward rates and currency swap rates.
+
+84
+00:04:24,680 --> 00:04:27,410
+As for interest rate swaps and other forwards and futures
+
+85
+00:04:27,410 --> 00:04:30,170
+contracts, the initial value of the swap
+
+86
+00:04:30,170 --> 00:04:34,460
+must be 0 from the perspective of both counterparties.
+
+87
+00:04:34,460 --> 00:04:37,625
+The swap rate K is chosen to make that happen.
+
+88
+00:04:37,625 --> 00:04:40,460
+
+
+89
+00:04:40,460 --> 00:04:45,480
+To infer the rate K, we can set up a portfolio with two pieces.
+
+90
+00:04:45,480 --> 00:04:49,790
+The first swap of 1 million euros for $1 million
+
+91
+00:04:49,790 --> 00:04:52,160
+times K dollars.
+
+92
+00:04:52,160 --> 00:04:55,100
+We know from before that the payoff in dollar terms
+
+93
+00:04:55,100 --> 00:05:00,080
+at each future date, T is one million times
+
+94
+00:05:00,080 --> 00:05:05,410
+K minus the spot rate on that date.
+
+95
+00:05:05,410 --> 00:05:08,050
+The second piece of this portfolio
+
+96
+00:05:08,050 --> 00:05:10,270
+is a set of forward contracts that
+
+97
+00:05:10,270 --> 00:05:14,980
+specify an exchange of a million times
+
+98
+00:05:14,980 --> 00:05:16,735
+the forward exchange rate at time T
+
+99
+00:05:16,735 --> 00:05:21,460
+dollars for a million euros on each of those future payment
+
+100
+00:05:21,460 --> 00:05:23,450
+dates also.
+
+101
+00:05:23,450 --> 00:05:26,150
+In dollar terms, the euros received
+
+102
+00:05:26,150 --> 00:05:28,880
+in the forward contract at each payment date
+
+103
+00:05:28,880 --> 00:05:32,930
+will be worth 1 million times the spot exchange rate.
+
+104
+00:05:32,930 --> 00:05:38,430
+
+
+105
+00:05:38,430 --> 00:05:41,040
+Putting these two components together,
+
+106
+00:05:41,040 --> 00:05:43,650
+the portfolio payoff at every payment date
+
+107
+00:05:43,650 --> 00:05:52,270
+simplifies just to $1 million times K minus the forward rate.
+
+108
+00:05:52,270 --> 00:05:55,300
+Well, now notice that the payoffs are certain dollar
+
+109
+00:05:55,300 --> 00:05:56,470
+amounts.
+
+110
+00:05:56,470 --> 00:05:59,290
+We know K We know those forward rates.
+
+111
+00:05:59,290 --> 00:06:02,140
+And hence, we can value them by discounting
+
+112
+00:06:02,140 --> 00:06:04,780
+at the risk-free rate along the yield curve
+
+113
+00:06:04,780 --> 00:06:07,460
+for the appropriate maturity.
+
+114
+00:06:07,460 --> 00:06:09,320
+The present value of the cash flows
+
+115
+00:06:09,320 --> 00:06:12,530
+can then be written as the discounted sum shown
+
+116
+00:06:12,530 --> 00:06:16,100
+on this slide, where we've represented the discount rates
+
+117
+00:06:16,100 --> 00:06:17,690
+here on a continuous basis.
+
+118
+00:06:17,690 --> 00:06:20,630
+
+
+119
+00:06:20,630 --> 00:06:22,580
+We also know that because it's free to enter
+
+120
+00:06:22,580 --> 00:06:25,220
+the forward position and the swap position,
+
+121
+00:06:25,220 --> 00:06:30,650
+the value of the portfolio must be equal to 0.
+
+122
+00:06:30,650 --> 00:06:34,130
+So we can set the expression for the present value
+
+123
+00:06:34,130 --> 00:06:38,660
+of the portfolio equal to 0, rearrange it,
+
+124
+00:06:38,660 --> 00:06:42,845
+and solve for the fixed swap rate K that makes it true.
+
+125
+00:06:42,845 --> 00:06:47,220
+
+
+126
+00:06:47,220 --> 00:06:49,410
+Looking at this resulting formula,
+
+127
+00:06:49,410 --> 00:06:51,870
+we can see that K is a present value
+
+128
+00:06:51,870 --> 00:06:54,180
+weighted average of the forward exchange
+
+129
+00:06:54,180 --> 00:06:56,295
+rates on future payment dates.
+
+130
+00:06:56,295 --> 00:06:59,760
+
+
+131
+00:06:59,760 --> 00:07:02,970
+That expression for K can be represented entirely
+
+132
+00:07:02,970 --> 00:07:05,640
+in terms of dollar and euro interest rates
+
+133
+00:07:05,640 --> 00:07:08,850
+by substituting the formula for the forward rate
+
+134
+00:07:08,850 --> 00:07:11,490
+for each payment date into the expression we just
+
+135
+00:07:11,490 --> 00:07:15,670
+derived for K. This representation leads
+
+136
+00:07:15,670 --> 00:07:19,810
+to the interpretation that the currency swap rate equals
+
+137
+00:07:19,810 --> 00:07:22,450
+the current exchange rate multiplied
+
+138
+00:07:22,450 --> 00:07:25,990
+by an expression based on a ratio
+
+139
+00:07:25,990 --> 00:07:29,260
+of the relative risk-free borrowing costs in the two
+
+140
+00:07:29,260 --> 00:07:29,980
+currencies.
+
+141
+00:07:29,980 --> 00:07:32,610
+
+
+142
+00:07:32,610 --> 00:07:35,100
+I want to revisit the comparison between hedging
+
+143
+00:07:35,100 --> 00:07:37,680
+using a sequence of forward contracts
+
+144
+00:07:37,680 --> 00:07:40,050
+and with a single swap.
+
+145
+00:07:40,050 --> 00:07:43,530
+Both methods completely eliminate the exchange rate
+
+146
+00:07:43,530 --> 00:07:46,860
+uncertainty, and both generate cash flows
+
+147
+00:07:46,860 --> 00:07:49,600
+with identical present values.
+
+148
+00:07:49,600 --> 00:07:52,440
+However, the two strategies differ in their cash flow
+
+149
+00:07:52,440 --> 00:07:53,730
+profiles.
+
+150
+00:07:53,730 --> 00:07:57,990
+Whereas the swap provides level payments,
+
+151
+00:07:57,990 --> 00:08:01,950
+the forward contract initially locks in lower cash flows
+
+152
+00:08:01,950 --> 00:08:05,400
+and later on higher ones.
+
+153
+00:08:05,400 --> 00:08:08,790
+One's preference for one pattern of cash flows over the other
+
+154
+00:08:08,790 --> 00:08:12,390
+might influence the choice between the contracts.
+
+155
+00:08:12,390 --> 00:08:15,000
+Other considerations in choosing between them
+
+156
+00:08:15,000 --> 00:08:18,150
+include any differences in transactions costs,
+
+157
+00:08:18,150 --> 00:08:22,250
+availability, and collateral requirements.
+

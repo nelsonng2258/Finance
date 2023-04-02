@@ -1,0 +1,500 @@
+0
+00:00:00,000 --> 00:00:00,660
+
+
+1
+00:00:00,660 --> 00:00:02,460
+PROFESSOR: Without further ado, let's
+
+2
+00:00:02,460 --> 00:00:06,660
+begin by reviewing some options strategies.
+
+3
+00:00:06,660 --> 00:00:09,990
+As mentioned by Professor Lucas during the week four lecture,
+
+4
+00:00:09,990 --> 00:00:13,230
+a bull spread is an options trading strategy
+
+5
+00:00:13,230 --> 00:00:16,620
+designed to profit from the rise in the price of a stock--
+
+6
+00:00:16,620 --> 00:00:20,080
+hence "bull" rather than "bear."
+
+7
+00:00:20,080 --> 00:00:22,150
+In the lecture notes, we saw an example
+
+8
+00:00:22,150 --> 00:00:24,820
+of a bull call spread, which involved
+
+9
+00:00:24,820 --> 00:00:28,570
+the simultaneous purchase and sale of call options
+
+10
+00:00:28,570 --> 00:00:30,880
+with different strike prices.
+
+11
+00:00:30,880 --> 00:00:35,537
+In this case, an investor pays money upfront and profits later
+
+12
+00:00:35,537 --> 00:00:36,745
+when the call options expire.
+
+13
+00:00:36,745 --> 00:00:39,430
+
+
+14
+00:00:39,430 --> 00:00:43,600
+Well, we could have easily have used a bull put spread, which
+
+15
+00:00:43,600 --> 00:00:46,180
+instead involves the simultaneous purchase
+
+16
+00:00:46,180 --> 00:00:49,000
+and sale of put options.
+
+17
+00:00:49,000 --> 00:00:52,150
+Specifically, in a bull put spread,
+
+18
+00:00:52,150 --> 00:00:56,050
+the investor purchases one out-of-the-money put option
+
+19
+00:00:56,050 --> 00:01:01,270
+with strike price K1, and sells an in-the-money put option with
+
+20
+00:01:01,270 --> 00:01:06,150
+strike price K2, where K2 is greater than K1.
+
+21
+00:01:06,150 --> 00:01:10,410
+Recall, on the other hand, that a bear spread involves selling
+
+22
+00:01:10,410 --> 00:01:14,820
+out-of-the-money put option with strike price K1 and purchasing
+
+23
+00:01:14,820 --> 00:01:17,940
+an in-the-money put option with strike price K2,
+
+24
+00:01:17,940 --> 00:01:20,640
+where K2 is greater than K1.
+
+25
+00:01:20,640 --> 00:01:24,120
+A bear spread is a bet that the stock price will fall,
+
+26
+00:01:24,120 --> 00:01:27,060
+as opposed to a bull spread, which is a bet that the stock
+
+27
+00:01:27,060 --> 00:01:29,100
+price will increase.
+
+28
+00:01:29,100 --> 00:01:32,640
+Thus, a bull put spread has payoffs
+
+29
+00:01:32,640 --> 00:01:37,550
+like that of a short position in a bear spread.
+
+30
+00:01:37,550 --> 00:01:41,500
+But in order to yield the same payoff as the bull call spread,
+
+31
+00:01:41,500 --> 00:01:44,530
+a bull put spread also involves, in addition
+
+32
+00:01:44,530 --> 00:01:47,020
+to the short position in the bear spread,
+
+33
+00:01:47,020 --> 00:01:51,100
+the simultaneous purchase of a zero coupon bond with face
+
+34
+00:01:51,100 --> 00:01:54,720
+value equal to K2 minus K1.
+
+35
+00:01:54,720 --> 00:01:56,920
+Why is this the case?
+
+36
+00:01:56,920 --> 00:01:59,160
+Well, recall from put-call parity
+
+37
+00:01:59,160 --> 00:02:02,250
+that given the price of a European call option,
+
+38
+00:02:02,250 --> 00:02:05,520
+we can always find the price of an equivalent European put
+
+39
+00:02:05,520 --> 00:02:08,850
+option as follows in the equation below.
+
+40
+00:02:08,850 --> 00:02:12,480
+On the left-hand side, Put is the price of the European put
+
+41
+00:02:12,480 --> 00:02:16,980
+option, S0 is the spot price of the underlying stock
+
+42
+00:02:16,980 --> 00:02:21,000
+at the initiation of the put or call option,
+
+43
+00:02:21,000 --> 00:02:24,750
+Call is the price of the call option, and this last term--
+
+44
+00:02:24,750 --> 00:02:27,720
+e to the negative r times t times k--
+
+45
+00:02:27,720 --> 00:02:30,870
+is the price of a zero coupon bond with face value
+
+46
+00:02:30,870 --> 00:02:34,460
+K and interest rate r.
+
+47
+00:02:34,460 --> 00:02:37,850
+In other words, the payoff of a portfolio consisting
+
+48
+00:02:37,850 --> 00:02:40,610
+of a call option and a zero coupon bond
+
+49
+00:02:40,610 --> 00:02:42,800
+with face value K and interest rate
+
+50
+00:02:42,800 --> 00:02:45,530
+r, the right-hand side of this equation,
+
+51
+00:02:45,530 --> 00:02:48,290
+is the same as that of a portfolio consisting
+
+52
+00:02:48,290 --> 00:02:51,050
+of a put option and the underlying stock,
+
+53
+00:02:51,050 --> 00:02:53,600
+the left-hand side of the equation.
+
+54
+00:02:53,600 --> 00:02:55,550
+The figure below displays the payoff
+
+55
+00:02:55,550 --> 00:02:57,920
+of the bull put spread as a function
+
+56
+00:02:57,920 --> 00:03:01,330
+of the underlying stock price and maturity.
+
+57
+00:03:01,330 --> 00:03:05,140
+To reiterate, the payoff of the bull put spread, this dark,
+
+58
+00:03:05,140 --> 00:03:09,130
+black line, is the sum of the payoff of a long position
+
+59
+00:03:09,130 --> 00:03:13,770
+in the out-of-the-money put, a long position in a bond with
+
+60
+00:03:13,770 --> 00:03:17,970
+face value K2 minus K1, and a short position
+
+61
+00:03:17,970 --> 00:03:20,810
+in the in-the-money put option.
+
+62
+00:03:20,810 --> 00:03:23,930
+In addition to the bull spread, one of the other options
+
+63
+00:03:23,930 --> 00:03:26,510
+trading strategies that Professor Lucas mentioned
+
+64
+00:03:26,510 --> 00:03:30,350
+during the week four lecture is the butterfly spread.
+
+65
+00:03:30,350 --> 00:03:33,680
+Recall that a butterfly spread is a trading strategy that
+
+66
+00:03:33,680 --> 00:03:36,950
+combines bull and bear spreads to create
+
+67
+00:03:36,950 --> 00:03:42,100
+a market-neutral position with capped profits and losses.
+
+68
+00:03:42,100 --> 00:03:44,170
+In the week four lecture, we saw how
+
+69
+00:03:44,170 --> 00:03:47,770
+to create a butterfly spread using a combination of four
+
+70
+00:03:47,770 --> 00:03:49,760
+call options.
+
+71
+00:03:49,760 --> 00:03:52,940
+Equivalently, we can construct the same butterfly
+
+72
+00:03:52,940 --> 00:03:58,120
+spread using a combination of four put options.
+
+73
+00:03:58,120 --> 00:04:02,140
+The four options are first, a long position in one
+
+74
+00:04:02,140 --> 00:04:08,110
+put option with strike price K0, second, a short position in two
+
+75
+00:04:08,110 --> 00:04:12,430
+put options with strike price K1 and third,
+
+76
+00:04:12,430 --> 00:04:16,660
+a long position in one put option with strike price K2
+
+77
+00:04:16,660 --> 00:04:21,760
+where K0 is less than K1 which in turn is less than K2,
+
+78
+00:04:21,760 --> 00:04:28,500
+and K1 is equal to the average of the strike prices K0 and K2.
+
+79
+00:04:28,500 --> 00:04:33,660
+Specifically, the above strategy is a long put butterfly spread
+
+80
+00:04:33,660 --> 00:04:38,100
+created by buying one put with a lower strike price, K0,
+
+81
+00:04:38,100 --> 00:04:42,780
+selling two at-the-money puts with strike price, K1,
+
+82
+00:04:42,780 --> 00:04:47,650
+and buying one put with a higher strike price, K2.
+
+83
+00:04:47,650 --> 00:04:51,400
+This position is going to achieve its maximum payoff when
+
+84
+00:04:51,400 --> 00:04:53,680
+the underlying stock price remains
+
+85
+00:04:53,680 --> 00:04:58,810
+at the strike price, K1, of the intermediate options.
+
+86
+00:04:58,810 --> 00:05:00,790
+The figure below displays the payoff
+
+87
+00:05:00,790 --> 00:05:04,090
+of the long put butterfly spread as a function
+
+88
+00:05:04,090 --> 00:05:07,220
+of the underlying stock price and maturity.
+
+89
+00:05:07,220 --> 00:05:11,390
+To reiterate, the payoff of the long put butterfly spread
+
+90
+00:05:11,390 --> 00:05:15,050
+is composed of the payoffs of the two long positions
+
+91
+00:05:15,050 --> 00:05:20,350
+in the put options with strike price K0 and K2,
+
+92
+00:05:20,350 --> 00:05:23,560
+and the payoff of the short position in two
+
+93
+00:05:23,560 --> 00:05:26,620
+put options with strike price K1.
+
+94
+00:05:26,620 --> 00:05:30,310
+Notice we get the same dark, black, butterfly spread payoff
+
+95
+00:05:30,310 --> 00:05:33,820
+as we did in the long call butterfly spread discussed
+
+96
+00:05:33,820 --> 00:05:36,470
+in the week four lecture notes.
+
+97
+00:05:36,470 --> 00:05:39,290
+Now hypothetically, what would happen
+
+98
+00:05:39,290 --> 00:05:44,270
+if we reverse the positions in the long put butterfly spread?
+
+99
+00:05:44,270 --> 00:05:48,380
+In particular, say we enter into the following three positions--
+
+100
+00:05:48,380 --> 00:05:51,710
+first, a short position in one put option
+
+101
+00:05:51,710 --> 00:05:55,970
+with strike price, K0, second, a long position
+
+102
+00:05:55,970 --> 00:06:00,350
+in two put options with strike price, K1, and third,
+
+103
+00:06:00,350 --> 00:06:04,370
+a short position in one option with strike price, K2,
+
+104
+00:06:04,370 --> 00:06:10,680
+where K0, K1, and K2 are defined as they were above.
+
+105
+00:06:10,680 --> 00:06:12,660
+The payoff from this strategy will
+
+106
+00:06:12,660 --> 00:06:16,170
+look very similar to the payoff from the long put butterfly
+
+107
+00:06:16,170 --> 00:06:18,360
+spread, but instead, it's flipped
+
+108
+00:06:18,360 --> 00:06:21,820
+about the horizontal axis in the figure we just saw.
+
+109
+00:06:21,820 --> 00:06:24,360
+So in particular, this dark, black line,
+
+110
+00:06:24,360 --> 00:06:27,480
+instead of peaking at the strike price, K1,
+
+111
+00:06:27,480 --> 00:06:30,090
+will have a decline at the strike price of K1.
+
+112
+00:06:30,090 --> 00:06:32,970
+
+
+113
+00:06:32,970 --> 00:06:37,710
+This strategy is referred to as a "short put butterfly spread,"
+
+114
+00:06:37,710 --> 00:06:40,710
+and it's going to realize its maximum payoff when
+
+115
+00:06:40,710 --> 00:06:42,600
+the price of the underlying stock
+
+116
+00:06:42,600 --> 00:06:45,780
+is either above the upper strike price
+
+117
+00:06:45,780 --> 00:06:50,730
+or below the lower strike price at the maturity date.
+
+118
+00:06:50,730 --> 00:06:55,160
+In other words, entering into a short put butterfly spread
+
+119
+00:06:55,160 --> 00:06:58,640
+is a good idea when you expect the volatility of the stock
+
+120
+00:06:58,640 --> 00:07:02,420
+price to increase, implying a higher likelihood
+
+121
+00:07:02,420 --> 00:07:04,970
+that the stock price moves beyond the range of strike
+
+122
+00:07:04,970 --> 00:07:07,650
+prices of the butterfly.
+
+123
+00:07:07,650 --> 00:07:10,770
+In other words, a short put butterfly spread
+
+124
+00:07:10,770 --> 00:07:15,080
+is a bet on higher volatility of the stock price.
+

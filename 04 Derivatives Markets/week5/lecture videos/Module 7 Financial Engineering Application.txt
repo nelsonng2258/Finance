@@ -1,0 +1,191 @@
+
+PROFESSOR: The most common use of the Greeks
+is in dynamic hedging strategies involving Delta, or delta gamma
+hedging.
+In this last part of this week's class,
+we'll look at delta hedging in detail
+in the context of products that offer protection
+against downside risk arising from the stock market.
+Those products were created because investors
+have a taste for securities where their principal is
+protected, but they still share in some of the upside
+if the market turns out to do well.
+Many investment banks offer such securities.
+They hedge this short position that
+creates for them in stocks using a combination
+of purchased options and dynamic trading strategies.
+Examples of these type of products
+are shown in the MITTS and SUN offering documents
+that are available to you on the class materials page.
+Similar products continue to be offered today.
+The example we will first study in detail
+is for a Capital Protected Note, which is loosely
+based on a security that was issued
+in 2008 by Morgan Stanley.
+In this example, we'll be focusing
+on the perspective of the protection seller, which
+you can imagine is an investment bank that you're working at.
+Say it's February 22, 2008, and you're selling
+Capital Protected Notes.
+The note matures on February 20, 2015,
+and so it has a seven year life.
+The issue price per share is $10,
+as is the principal value per share.
+The note pays no interest.
+However, it provides 100% principle protection.
+Investors are guaranteed to get at least the amount
+they paid for each share.
+In addition, the payoff at maturity
+includes what's called a supplemental redemption
+amount, or SRA. That's calculated as 116%
+of the share principal multiplied
+by the return of the normalized S&P 500
+over the life of the security if that return is positive.
+As the issuer of this security, you want to lock in the gain
+from selling the security, which means
+hedging against the risk of the short position you've
+created for yourself in the S&P 500 index.
+We'll look at how you can do this with a dynamic delta
+hedging strategy, which means setting up
+a replicating portfolio and rebalancing it over time
+as market conditions change.
+Next week we'll extend this analysis
+to the alternative of delta gamma hedging, which
+creates a more robust hedge.
+This graph shows the payoff at the end
+of seven years on a share of a Capital Protected Note
+as a function of the normalized S&P 500 index at that time.
+The shape of the payoff reflects the floor value
+equal to the principal of $10, and then
+the potential for appreciation as the value of the S&P 500
+index goes up, multiplied by a factor of 116%.
+To find the value of the Capital Protected Note,
+we decompose the payoff into two components.
+The first is a zero coupon bond with the principal,
+or equivalently, face value of $10, and maturity of cap T
+equals seven years.
+Second, 1.16 at the money call options on a normalized S&P
+500, with maturity T equals 7 years.
+
+The reference index is normalized,
+so that S0 is initially at $10.
+To do that, we need to find beta,
+such that beta times the S&P 500 index value
+is initially equal to $10.
+On the issue date, the actual value of the S&P 500
+was 1,353.1.
+That implies that we can solve for beta
+by dividing 10 by 1353.1.
+All future values of the index used in the calculations
+are also multiplied by this normalization factor.
+We also have other data on the issuance date.
+The interest rate, r, is equal to 3.23% on a continuously
+compounded basis.
+The dividend yield on the S&P 500 is taken to be 2%.
+The bank's forecasts of market volatility over the seven years
+is set to sigma of 15% on an annual basis.
+Notice, if you go back to the previous slide,
+that our payoff diagram could have been constructed
+from the two positions we're just talking about,
+a zero coupon bond with a face value of $10
+plus the call options, which have
+a payoff that looks like that.
+And as usual, we can sum the two positions together
+to get our total payoff, which was what was
+drawn on the original diagram.
+Turning back to our calculation of value, with this information
+you can estimate the value of the security using
+Black-Scholes-Merton for a dividend paying stock
+for the call option component, and adding it
+to the present value of the zero coupon bond.
+We have, then, the present value of the zero coupon
+bond, and 1.16 call options, where the current price is $10,
+the strike price is $10, and we know our other parameters.
+We can solve all of this to find that the present value
+of the bond is 7.9764, the value of each call option is $1.70,
+and we have 1.16 call options in our position.
+So the total value of the position is $9.94.
+Well, that conclusion suggests that the value of the Capital
+Protected Note is a little less than the $10
+that investors pay for the security.
+Effectively, investors are giving up
+the interest they would have earned on the $10 principal
+in exchange for a call option.
+The bank makes $0.05 per share that they issue.
+Well, $0.05 is a pretty thin margin,
+and the short position is a very risky one,
+so the bank wants to hedge that risk to lock
+in the $0.05 per share profit.
+And we'll now turn to how they can do that.
+Since issuing the capital protected note
+involves short positions in a bond
+and in call options on the S&P 500,
+hedging that exposure requires taking
+off setting long positions.
+That implies first buying a zero coupon bond
+for 7.9764 and with a face value of $10
+to hedge the bond component.
+Second, to hedge the option component,
+buy 1.16 units of the replicating portfolio
+for the embedded call option in the Capital Protected Note.
+Here's the procedure for setting up that replicating portfolio
+for the call.
+We first calculate the delta, which we know is n of d1,
+and we get a delta of 0.5747.
+We also know that we can find the bond position
+as being equal to the call minus delta times the current stock
+price.
+That gives us a position in the bond of minus 4.047.
+Taking those two positions together,
+we invest 5.747 in the S&P 500 and borrow 4.047.
+We conclude that the net value of the replicating portfolio
+is the 5.747 minus the 4.047, so it's
+equal to 1.7, which, by construction, is
+the same as the value of the call option.
+The final step is to multiply both the stock and bond
+positions in the replicating portfolio
+by 1.16 to scale up the replicating portfolio
+to match the exposure in the Capital Protected Note.
+To ensure that this hedge continues
+to be effective over the next seven years,
+the bank needs to frequently rebalance
+the replicating portfolio as the underlying delta changes.
+Remember that the call option delta
+will change with the S&P 500 index value,
+with the passage of time, and with any changes in r
+and sigma.
+You could evaluate the size of those different sensitivities
+by calculating the theta, rho, and vega for your exposure.
+Notice that the interest rate risk
+on the portion of the obligation that's the return of principal
+has been fully hedged by investing in a zero coupon
+bond whose payoff matches that part of the liability,
+and no further adjustments are ever necessary.
+With regard to the S&P 500 index, if its value increases,
+then the call option delta increases, and conversely,
+if it decreases.
+As the S&P 500 and any other parameters change,
+you can recalculate delta for the replicating portfolio.
+The replicating portfolio is then
+rebalanced by adjusting the holdings of stocks and bonds
+to match the updated option value in delta.
+Each time the portfolio is rebalanced,
+there may be a gain or loss to the bank.
+But if the hedging strategy is effective,
+the sum of those gains and losses
+will be offset by the gains or losses on the Capital Protected
+Note.
+An important question to ask is: why do a complicated dynamic
+replication here, instead of initially just buying
+call options on the S&P 500?
+The answer is that call options on the S&P 500
+are actively traded for shorter maturities,
+but there is unlikely to be adequate liquidity at longer
+maturities like seven years.
+When liquid options aren't available in the market,
+it can be cheaper, particularly for a large bank,
+to hedge using a dynamic delta hedging strategy.
+In fact, you can think of the $0.05
+that the bank earns as compensation
+for doing this delta hedging on behalf of investors,
+who wouldn't be able to do it as inexpensively on their own.

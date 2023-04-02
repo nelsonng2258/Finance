@@ -1,0 +1,228 @@
+
+PROFESSOR: With all of that for context,
+we're ready to turn to some of the most frequently used
+duration measures.
+The oldest measure of duration, known as Macaulay Duration
+after the man who invented it, represents the elasticity
+of a bond price with respect to its yield.
+In economics and finance, an elasticity
+is the percentage change in one variable--
+in this case, the price of a bond or a portfolio of bonds
+with respect to the percentage change in a second variable;
+in this case, the yield to maturity.
+Notice that the expression here is multiplied by a minus sign.
+That's in order to define the duration as a positive quantity
+when the derivative of price with respect to yield
+is negative, as is typical for bond prices, which
+move inversely to yields.
+This equation represents the idea
+in terms of derivatives of bond price with respect
+to its yield, normalized by this expression
+on the right-hand side, which puts
+everything in percentage terms.
+That is, we have the percentage change in price with respect
+to the percentage change in yield.
+Because a bond's price sensitivity changes over time
+as its remaining maturity shrinks
+and as market interest rate conditions change,
+duration is a property of a bond or portfolio,
+the point in time.
+And it changes over time.
+Now, Macaulay applied this to our familiar equation
+for the price of a bond as the present discounted value
+of its promised cash flows by taking
+the derivative with respect to the yield to maturity.
+The result of Macaulay's calculation
+is the top formula here.
+To explain the notation briefly, the yield Y
+is stated as an annual percentage rate and k
+is the number of assumed compounding periods per year.
+The total number of periods, capital T, when divided by k,
+gives the life of the bond in years.
+This representation allows for bonds
+with payments on a daily, monthly, quarterly, annual,
+and so forth basis.
+The derivation of the formula is optional for you
+but it's included in the appendix
+section of these slides in case you want to take a look.
+Now, the top formula can be rewritten to a more intuitively
+interpretable form.
+That's in this highlighted equation here.
+It says that the Macaulay Duration turns out
+to be a weighted average of the arrival time of the promised
+cash flows, where the weights are present value weights.
+That is, the present value of cash flows
+arriving at a point in time divided
+by the total present value or price of the bond
+So here, we have the fraction of the present value arriving
+in the first period, the fraction
+arriving in the second period, and so
+forth of the last period, each waiting
+their respective arrival time.
+
+Let's now reconsider the four bonds we looked at
+to compare their price sensitivity to interest rate
+changes in Example 3.1.
+We can calculate the Macaulay Duration for each of them.
+Since duration is a measure of price sensitivity
+to yield changes, we'd expect the durations
+to have the same ordering as the price sensitivities
+we found when we recomputed the prices following a yield
+change in the original example.
+If you look back at that, you'll see
+that's exactly what we find.
+This is a good time to introduce you to a handy spreadsheet tool
+on the class web page that allows you to calculate
+durations and convexity for a coupon
+bond with either an annual or semi-annual coupon payment.
+It's called duration and convexity calculator.
+You might want to open it and follow along
+as we go through this example.
+Let's take the first bond.
+That has a 9% annual coupon with semi-annual payments.
+So 4.5% of the face value is paid every 6 months.
+Its maturity is 5 years, and it's
+priced to yield 9% on a bond equivalent basis, which
+means the discount rate is also taken
+to be semi-annual at 4.5%.
+Enter this information into the spreadsheet,
+and then hit Duration to get the Macaulay Duration.
+So we have a maturity of 5 years.
+
+2 represents the semi-annual compounding opportunities.
+The coupon rate is 9%.
+We never need to change the face value.
+And we have the yield at 9%.
+Hitting Duration, we find a Macaulay Duration of 4.134.
+You can see this spreadsheet also
+calculates modified duration and convexity, which
+we'll return to shortly.
+To get the convexity, you also need
+to hit the Convexity button, which for this bond,
+turns out to be 19.45.
+I also want to use the Macaulay Duration
+formula to go back and provide a more intuitive understanding
+of what drives the price sensitivity of coupon bonds
+that don't contain options, such as default or prepayment
+options.
+The formula says that the duration
+is a present value weighted average of cash flow arrival
+times.
+Again, here k is a number of payments per year.
+And capital T is the number of periods.
+For example, if T equals 2 and k equals 4,
+there's a cash flow every quarter for 2 years.
+Clearly, the duration must be less than or equal to the time
+to maturity since no cash flows arrive after maturity.
+The maximum duration is the maturity,
+and that will be the case for a zero coupon bond
+where 100% of the cash flows arrive on the maturity date.
+All else equal, a higher coupon rate
+reduces the duration, because it causes
+a higher percentage of the total cash flows to arrive earlier.
+Finally, the effect of higher market yields
+is also via the present value weights.
+As market yields increase, the present value
+of the more distant payments gets smaller relative
+to the value of the payments arriving sooner.
+That puts a higher proportion of the total present value
+on the earlier payments, pulling down
+the weighted average arrival time of the cash flows
+and shortening the duration.
+
+Going back to the more general representation of Macaulay
+Duration on slide 12 --
+it's also copied here, --
+this formula can be rearranged to express the percentage
+change in the price of a bond as the product
+of minus its duration and the change
+in its yield normalized by the factor 1 over 1 plus Y over k.
+
+Because we use this formula so often,
+it's convenient to roll up that normalization factor
+into the duration measure itself.
+That duration measure is called modified duration.
+With this definition, we now have a very simple formula
+to approximate the percentage price
+change of a bond when there's a small change in its yield.
+It's simply the modified duration multiplied
+by that change in the yield.
+
+Some version of this equation is the basis
+for all duration-based hedging strategies
+for fixed income securities and their related derivatives.
+
+Let's see how while this duration-based approximation
+works by looking at an example.
+As you can check with the duration and convexity
+calculator, a 20-year 5% coupon bond
+with semi-annual coupon payments that's priced to yield 9%
+has a modified duration of 10.4.
+The predicted price change, if yields increase
+from the 9% to 9.1%, according to the duration approximation
+formula, is minus the modified duration
+times the change in yield, which gives us an approximate price
+change of minus 1.04%.
+The actual price change can be found
+by recalculating the price of the bond,
+assuming a discount rate of 9.1% in place of the original 9%.
+The actual price change is minus 1.03%.
+The approximation is very accurate in this case.
+Now let's consider a large yield change from 9% to 11%.
+In that case, the duration approximation formula
+implies a fall in price of 20.8%.
+Again calculating the actual price change,
+the price only drops by 17.94%.
+We can see that with this large yield change,
+the approximation is quite poor.
+A general conclusion is that approximations
+to price changes based just on duration
+work well when there are small changes in yields, but not so
+well for larger changes.
+This will matter for the effectiveness
+of hedging strategies.
+Duration-based hedges only offer good protection
+if rate changes are modest and they
+have to be adjusted over time as yields change.
+A useful way to understand why a duration-based approximation
+of price changes works well for small changes in yields
+is to look at the relationship between the price
+and yield graphically.
+This diagram plots price against yield for a typical bond.
+It's labeled to the actual price curve
+and has the characteristic shape that we saw before.
+As yields rise, price declines but at a decreasing rate.
+
+We know the duration is related to the derivative of the bond
+price with respect to its yield.
+Graphically, that means that it's related to the slope
+of the tangent line to the actual price curve
+at the current yield, which is denoted by Y*.
+
+The duration approximation of the price change
+slides up or down that tangent line.
+For small changes in yield, the actual price change
+gets close to the tangent line approximation.
+
+For a large change in yield, there's
+a large gap between the tangent line and the actual price
+curve, and the approximation is inaccurate.
+
+Notice too that the slope of the tangent line,
+and hence the bond's duration, changes with the yield --
+as the yield gets higher, the line flattens.
+
+A flatter slope means shorter duration.
+
+Finally, what about the duration of a short position?
+We know that a short position flips the sign
+of all of the cash flows.
+That flipped the actual price curve
+over the x-axis in this diagram, and flipped
+the side of the tangent line.
+For example, a bond that, in a long position,
+has a duration of 4 years, has a duration of minus 4 years
+from the perspective of a short position.
+A good exercise is for you to try
+drawing the graph for the short position that
+corresponds to this graph for a long position.

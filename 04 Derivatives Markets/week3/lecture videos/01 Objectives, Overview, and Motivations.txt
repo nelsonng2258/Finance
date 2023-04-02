@@ -1,0 +1,133 @@
+PROFESSOR: Those strategies can be
+used to manage the risk of a cash position,
+say, as we saw with the example of Southwest Savings Bank whose
+mortgage assets were much more sensitive to interest rate risk
+than were the liabilities that it used to fund them with.
+
+Those strategies are also often used
+to manage the risk of derivatives positions that
+are being held--
+for instance, by a bank that accepted the short side
+of a forward interest rate contract initiated
+by one of its clients.
+Later in the course, we'll see that duration and convexity are
+also properties of interest rate sensitive options,
+like puts and call options on bonds.
+Those options then can be similarly used in interest rate
+risk management strategies using the concepts of duration
+and convexity.
+We'll also see that duration corresponds
+to the idea of a delta, and that convexity corresponds
+to the idea of a gamma in the more general language
+of options pricing.
+In fact, that's how the strategies that we're looking
+at here got their names.
+You may remember being introduced
+to the concepts of duration and convexity
+earlier in the MicroMasters Program.
+But you may not already know is that duration and convexity are
+two of the most fundamental and powerful concepts
+for measuring, hedging, and speculating on interest rate
+risk.
+There's several different ways that duration and convexity
+are defined.
+We'll start with the basics and then go on
+to more advanced versions of these concepts that
+are much more accurate when cash flows are uncertain.
+The advanced concepts are important,
+for example, for risk management strategies involving
+callable bonds, pre-payable mortgages, or bonds
+with significant credit risk.
+We'll look at the math behind the basic formulas
+and develop intuition for what they
+mean with a graphical interpretation.
+In order to do the basic calculations involving duration
+and convexity, the Excel spreadsheet, convexity.xls,
+is available on the course web page.
+You should download it and make sure you
+know how to use it to reproduce the basic examples discussed
+in this lecture.
+You will find it to be useful in answering some of the homework
+problems too.
+These next two slides illustrate the historical interest rate
+volatility that has been a major source of risk
+for institutions such as banks, portfolio
+managers, and hedge funds.
+Notice that I'll use the terms rates and yields
+interchangeably when describing market conditions
+in general terms.
+In recent years, short-term interest rates,
+both in the US and other developed countries,
+have been unusually low and quite stable.
+Historically, though, that's an unusual situation
+and one that's likely to change again in the future.
+This graph shows short term rates
+on three-month US Treasury bills going all the way back
+to the 1930s.
+You can see that there were periods,
+like in the late 1970s and early 1980s,
+where rates rapidly climbed and then rapidly fell.
+
+These were periods of extreme rate volatility.
+Where does interest rate volatility come from?
+Narrowly, interest rates are prices
+that move to clear the market for borrowing and lending.
+And volatility arises from changes in the supply of
+and demand for credit.
+Taking a step back, though, a variety
+of macroeconomic factors drive the supply and demand
+for credit, and therefore volatility,
+including expectations about future inflation
+rates and other government policies
+and the strength of the economy.
+
+This graph of long-term rates in the United States
+goes back much further, all the way back to the late 1700s.
+You can see that long-term rates have also
+been quite volatile with long-term trends that sometimes
+rapidly reverse themselves.
+If you were to compare the volatility of short
+and long-term rates over the same fixed horizon--
+say, of five years--
+you would find that the standard deviations of short-term rates
+are higher than those of long-term rates.
+Long-term rates tend to change more slowly over time.
+For that reason, the risk exposure
+to rate changes at different points on the yield curve
+varies.
+Market participants seeking a reliable hedge
+have to take those differences and volatility into account.
+And we'll see how to do that.
+
+Interest rate or yield volatility
+translates directly into price volatility
+for fixed income securities.
+That's because bond prices and yields are related.
+Given a bond's price, you can find its yield.
+And given a bond's yield, you can find its price.
+The simplest example of this is for a zero coupon bond
+with price P, promised face value F, yield per period,
+little r, and maturity of N periods.
+Clearly, if r goes up, P goes down, and vice versa.
+You can also see that this inverse effect
+is magnified as the number of periods increases because
+of compounding.
+From the perspective of a banker, securities dealer,
+or fund manager dealing in fixed income securities like bonds
+and mortgages, it's often not the rate risk in itself
+but rather its impact on the value of the securities
+in their portfolio.
+In other words, the price risk--
+that's the main concern.
+For example, if an upward shift in the yield curve
+causes a bank's assets to fall in value by more
+than it reduces the value of a bank's liabilities,
+that will cause a hit to the bank's capital
+that may create operational or regulatory problems.
+Or in the extreme, it could push it into insolvency.
+In the last class, we saw how swaps or futures contracts that
+matched the maturity of the quantity being hedged
+could reduce that sort of risk.
+This week, we'll see how those derivatives can
+be used to hedge the risk with much more flexibility using
+the concepts of duration and convexity.

@@ -1,0 +1,26 @@
+PROFESSOR: This week, you'll learn
+to use the famous Black-Scholes Merton formula for options
+pricing and to understand the main drivers of option price
+sensitivity, which are known as the Greeks.
+We'll start, again, with a binomial model
+and learn how it's typically calibrated
+to match stock price dynamics.
+By taking the limit as the number of steps
+goes to infinity and the step size goes to 0,
+you'll see one way that the Black-Scholes Merton
+formula for pricing European stock options can be derived.
+Next, we'll take a close look at the Black-Scholes Merton
+model, the formula, and its inputs,
+and the assumptions and intuition behind the model.
+Then we'll turn to the Greeks, which
+are measures of an option value's
+sensitivity to key parameters, including the underlying stock
+price, the risk-free rate, time to expiration, and volatility.
+Finally, we'll study a financial engineering application,
+which is how an insurer can use a dynamic delta hedging
+strategy to limit its exposure to losses from the portfolio
+protection products it sells.
+We'll see that the strategy often works well,
+but that it can fail dramatically when there
+are large and sudden price changes, such as those that
+occur during financial panics.

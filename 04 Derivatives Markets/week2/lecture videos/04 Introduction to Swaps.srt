@@ -1,0 +1,340 @@
+0
+00:00:00,000 --> 00:00:01,380
+
+
+1
+00:00:01,380 --> 00:00:03,780
+PROFESSOR: As usual, let's start with the basics.
+
+2
+00:00:03,780 --> 00:00:06,210
+A swap contract specifies an exchange
+
+3
+00:00:06,210 --> 00:00:08,820
+of payments between two counterparties
+
+4
+00:00:08,820 --> 00:00:12,330
+on one or more future dates where the payment size depends
+
+5
+00:00:12,330 --> 00:00:15,510
+on the difference between two reference prices or interest
+
+6
+00:00:15,510 --> 00:00:17,210
+rates.
+
+7
+00:00:17,210 --> 00:00:20,000
+Like futures contracts, swaps are
+
+8
+00:00:20,000 --> 00:00:22,860
+one kind of forward contract.
+
+9
+00:00:22,860 --> 00:00:24,840
+In fact, a single payment swap is
+
+10
+00:00:24,840 --> 00:00:28,800
+equivalent to a cash settled forward contract.
+
+11
+00:00:28,800 --> 00:00:31,620
+A multiple payment swap is like a package
+
+12
+00:00:31,620 --> 00:00:34,560
+of individual forward contracts, each maturing
+
+13
+00:00:34,560 --> 00:00:37,450
+on a different date.
+
+14
+00:00:37,450 --> 00:00:39,280
+A swap can be used either to hedge
+
+15
+00:00:39,280 --> 00:00:42,140
+or to speculate on the stream of risky cash flows.
+
+16
+00:00:42,140 --> 00:00:44,590
+And as for other derivatives, whether it's
+
+17
+00:00:44,590 --> 00:00:46,630
+considered hedging or speculating
+
+18
+00:00:46,630 --> 00:00:49,780
+depends on the rest of an investor's portfolio
+
+19
+00:00:49,780 --> 00:00:53,890
+and whether the swap transaction serves to decrease or increase
+
+20
+00:00:53,890 --> 00:00:54,580
+the net risk.
+
+21
+00:00:54,580 --> 00:00:59,480
+
+
+22
+00:00:59,480 --> 00:01:01,700
+Interest rate swaps make up the largest part
+
+23
+00:01:01,700 --> 00:01:03,380
+of the swap market.
+
+24
+00:01:03,380 --> 00:01:06,650
+The contracts are primarily used by financial institutions
+
+25
+00:01:06,650 --> 00:01:09,830
+seeking to manage their exposure to interest rate risk.
+
+26
+00:01:09,830 --> 00:01:11,720
+That includes commercial investment
+
+27
+00:01:11,720 --> 00:01:15,080
+in mortgage banks, hedge funds, and fixed income portfolio
+
+28
+00:01:15,080 --> 00:01:17,380
+managers.
+
+29
+00:01:17,380 --> 00:01:20,590
+In what's called a plain vanilla interest rate swap,
+
+30
+00:01:20,590 --> 00:01:22,870
+there's a periodic exchange of cash
+
+31
+00:01:22,870 --> 00:01:25,120
+over the life of the contract based
+
+32
+00:01:25,120 --> 00:01:28,030
+on the difference between the realization of a floating
+
+33
+00:01:28,030 --> 00:01:31,600
+reference rate and a preset fixed rate,
+
+34
+00:01:31,600 --> 00:01:35,290
+and based on a notional principal or contract size,
+
+35
+00:01:35,290 --> 00:01:37,090
+say, a million dollars.
+
+36
+00:01:37,090 --> 00:01:40,870
+So for example, a contract might specify
+
+37
+00:01:40,870 --> 00:01:45,400
+that a fixed rate of 10% will be exchanged annually
+
+38
+00:01:45,400 --> 00:01:49,240
+for a floating payment based on one-year LIBOR
+
+39
+00:01:49,240 --> 00:01:52,910
+over a period of five years.
+
+40
+00:01:52,910 --> 00:01:56,720
+LIBOR stands for the London Inter-Bank Offered Rate.
+
+41
+00:01:56,720 --> 00:01:58,670
+It's a rate at which banks report
+
+42
+00:01:58,670 --> 00:02:01,700
+they're willing to lend to other high quality banks for a given
+
+43
+00:02:01,700 --> 00:02:03,670
+maturity.
+
+44
+00:02:03,670 --> 00:02:05,740
+Because of the serious problems that
+
+45
+00:02:05,740 --> 00:02:09,460
+arose with LIBOR reporting during the financial crisis,
+
+46
+00:02:09,460 --> 00:02:14,200
+regulators have mandated that LIBOR be phased out by 2022
+
+47
+00:02:14,200 --> 00:02:19,120
+and replaced with more reliable benchmarks.
+
+48
+00:02:19,120 --> 00:02:21,730
+A leading replacement in the US is
+
+49
+00:02:21,730 --> 00:02:27,160
+SOFR, which stands for the Secured Overnight Funding Rate.
+
+50
+00:02:27,160 --> 00:02:31,000
+As with LIBOR, its purpose in the context of the swap market
+
+51
+00:02:31,000 --> 00:02:32,890
+is to provide a short term reference
+
+52
+00:02:32,890 --> 00:02:36,710
+rate over the life of the swap contract.
+
+53
+00:02:36,710 --> 00:02:39,610
+Another useful and related piece of terminology
+
+54
+00:02:39,610 --> 00:02:41,620
+is that an interest rate swap can
+
+55
+00:02:41,620 --> 00:02:45,520
+be described as a package of contracts known as forward rate
+
+56
+00:02:45,520 --> 00:02:47,890
+agreements or FRAs.
+
+57
+00:02:47,890 --> 00:02:52,060
+In a forward rate agreement, a pre-specified fixed interest
+
+58
+00:02:52,060 --> 00:02:54,550
+rate payment is exchanged for a payment that
+
+59
+00:02:54,550 --> 00:02:57,710
+depends on a floating rate.
+
+60
+00:02:57,710 --> 00:02:59,870
+The absence of arbitrage opportunities
+
+61
+00:02:59,870 --> 00:03:04,070
+means that swaps, forward rate agreements, futures contracts,
+
+62
+00:03:04,070 --> 00:03:07,220
+and interest rates, and the cash bond market, all
+
+63
+00:03:07,220 --> 00:03:10,440
+must be priced consistently.
+
+64
+00:03:10,440 --> 00:03:12,660
+We've already been using the basic terminology
+
+65
+00:03:12,660 --> 00:03:14,670
+for plain vanilla interest rate swaps,
+
+66
+00:03:14,670 --> 00:03:17,510
+but it's useful to summarize.
+
+67
+00:03:17,510 --> 00:03:19,640
+The notional principle is the basis
+
+68
+00:03:19,640 --> 00:03:23,070
+for calculating the fixed and floating interest rate.
+
+69
+00:03:23,070 --> 00:03:26,840
+It's called notional because there's no actual exchange
+
+70
+00:03:26,840 --> 00:03:30,420
+of principle amounts.
+
+71
+00:03:30,420 --> 00:03:36,030
+There are two counterparties to the swap, one on each side.
+
+72
+00:03:36,030 --> 00:03:39,570
+The fixed rate payer pays the fixed rate
+
+73
+00:03:39,570 --> 00:03:42,150
+that's pre-specified in the contract,
+
+74
+00:03:42,150 --> 00:03:44,640
+and receives the floating rate.
+
+75
+00:03:44,640 --> 00:03:47,400
+As a matter of convention, the fixed rate payer
+
+76
+00:03:47,400 --> 00:03:52,330
+is said to have bought the swap or as long the swap.
+
+77
+00:03:52,330 --> 00:03:54,340
+You can think of the swap as being
+
+78
+00:03:54,340 --> 00:03:58,360
+a long position in the underlying interest rates.
+
+79
+00:03:58,360 --> 00:04:03,680
+It becomes more valuable as market interest rates go up.
+
+80
+00:04:03,680 --> 00:04:06,100
+The floating rate payer pays the floating rate
+
+81
+00:04:06,100 --> 00:04:10,090
+and receives the fixed rate, and is said to be short the swap.
+
+82
+00:04:10,090 --> 00:04:13,480
+Again, this can be understood as a short position in the market
+
+83
+00:04:13,480 --> 00:04:17,500
+interest rate so that there's a gain when rates go down.
+
+84
+00:04:17,500 --> 00:04:18,000
+
+

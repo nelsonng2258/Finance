@@ -1,0 +1,688 @@
+0
+00:00:00,000 --> 00:00:02,200
+
+
+1
+00:00:02,200 --> 00:00:03,870
+PROFESSOR: Some of the oldest and most
+
+2
+00:00:03,870 --> 00:00:05,880
+important foreign contracts were designed
+
+3
+00:00:05,880 --> 00:00:08,010
+to help farmers and industrial firms
+
+4
+00:00:08,010 --> 00:00:10,680
+hedge some of their largest risk exposures.
+
+5
+00:00:10,680 --> 00:00:12,330
+These contracts are for commodities
+
+6
+00:00:12,330 --> 00:00:16,720
+such as oil, metals, and major agricultural commodities.
+
+7
+00:00:16,720 --> 00:00:21,310
+Unlike financial assets that are essentially costless to store
+
+8
+00:00:21,310 --> 00:00:23,620
+and whose returns are in cash and so
+
+9
+00:00:23,620 --> 00:00:26,290
+equally valuable to all investors,
+
+10
+00:00:26,290 --> 00:00:28,720
+the situation is more complicated
+
+11
+00:00:28,720 --> 00:00:30,610
+for these storable commodities.
+
+12
+00:00:30,610 --> 00:00:33,750
+
+
+13
+00:00:33,750 --> 00:00:35,790
+The main costs are for storage.
+
+14
+00:00:35,790 --> 00:00:39,000
+We'll denote by a capital U any lump sum costs,
+
+15
+00:00:39,000 --> 00:00:42,160
+like monthly facility fees, and use a small u
+
+16
+00:00:42,160 --> 00:00:46,570
+to represent storage costs on a proportional flow basis.
+
+17
+00:00:46,570 --> 00:00:49,690
+Storage costs vary over time and with the availability
+
+18
+00:00:49,690 --> 00:00:52,510
+and demand for space which, in turn, will
+
+19
+00:00:52,510 --> 00:00:57,240
+depend on the demand for the underlying commodity.
+
+20
+00:00:57,240 --> 00:00:58,800
+There's also the offsetting notion
+
+21
+00:00:58,800 --> 00:01:01,050
+of a convenience yield, which measures
+
+22
+00:01:01,050 --> 00:01:04,989
+the benefit of physically having possession of a commodity.
+
+23
+00:01:04,989 --> 00:01:09,010
+For example, if you have oil on-hand,
+
+24
+00:01:09,010 --> 00:01:11,510
+it insures against supply disruptions
+
+25
+00:01:11,510 --> 00:01:16,250
+that could cause costly production slowdowns.
+
+26
+00:01:16,250 --> 00:01:19,070
+Mathematically adjusting for storage costs and convenience
+
+27
+00:01:19,070 --> 00:01:20,990
+yields and forward pricing formulas
+
+28
+00:01:20,990 --> 00:01:24,380
+is analogous to the adjustments for dividend or coupon payments
+
+29
+00:01:24,380 --> 00:01:27,530
+that we talked about for financial forward contracts.
+
+30
+00:01:27,530 --> 00:01:30,020
+Storage costs are like negative dividends
+
+31
+00:01:30,020 --> 00:01:33,020
+and convenience yields are like positive dividends.
+
+32
+00:01:33,020 --> 00:01:37,160
+
+
+33
+00:01:37,160 --> 00:01:39,200
+Now let's take a close look at the formulas
+
+34
+00:01:39,200 --> 00:01:42,770
+for the forward prices of storable commodities.
+
+35
+00:01:42,770 --> 00:01:45,530
+As with financial forwards, all of these formulas
+
+36
+00:01:45,530 --> 00:01:48,170
+involve the current spot price of the underlying,
+
+37
+00:01:48,170 --> 00:01:50,240
+the risk-free rate, and the time horizon
+
+38
+00:01:50,240 --> 00:01:52,410
+of the forward contract.
+
+39
+00:01:52,410 --> 00:01:54,770
+Then we'll have to make adjustments for storage costs
+
+40
+00:01:54,770 --> 00:01:58,100
+and convenience yields, just as we did for dividends and coupon
+
+41
+00:01:58,100 --> 00:02:01,670
+payments in the financial asset case.
+
+42
+00:02:01,670 --> 00:02:04,160
+Looking at the first formula, where there are just
+
+43
+00:02:04,160 --> 00:02:07,970
+lumps some storage costs, the forward price has to be higher
+
+44
+00:02:07,970 --> 00:02:11,120
+to compensate for the value of those storage costs which
+
+45
+00:02:11,120 --> 00:02:13,640
+are incurred by the short side of the contract.
+
+46
+00:02:13,640 --> 00:02:17,360
+
+
+47
+00:02:17,360 --> 00:02:19,235
+When the storage costs are incurred
+
+48
+00:02:19,235 --> 00:02:22,760
+as a proportional flow, the same logic
+
+49
+00:02:22,760 --> 00:02:24,905
+leads to the second equation.
+
+50
+00:02:24,905 --> 00:02:29,390
+
+
+51
+00:02:29,390 --> 00:02:31,970
+When there's a positive convenience yield,
+
+52
+00:02:31,970 --> 00:02:34,700
+the value of those services to the short side
+
+53
+00:02:34,700 --> 00:02:36,635
+causes forward prices to be lower.
+
+54
+00:02:36,635 --> 00:02:41,730
+
+
+55
+00:02:41,730 --> 00:02:45,090
+In the last equation, which is the more general case,
+
+56
+00:02:45,090 --> 00:02:48,510
+there are both storage costs and a convenience yield that
+
+57
+00:02:48,510 --> 00:02:52,240
+pull in opposite directions.
+
+58
+00:02:52,240 --> 00:02:57,280
+Over time, as interest rates, storage costs, and convenience
+
+59
+00:02:57,280 --> 00:02:59,830
+yields change with market conditions,
+
+60
+00:02:59,830 --> 00:03:02,900
+you can see that the forward price will change
+
+61
+00:03:02,900 --> 00:03:05,515
+and it can be higher or lower than the current spot price.
+
+62
+00:03:05,515 --> 00:03:09,600
+
+
+63
+00:03:09,600 --> 00:03:12,810
+These formulas also arise from the no-arbitrage logic
+
+64
+00:03:12,810 --> 00:03:15,610
+of Cash-and-Carry trading strategies.
+
+65
+00:03:15,610 --> 00:03:18,480
+However, because storage costs and convenience yields
+
+66
+00:03:18,480 --> 00:03:21,570
+can vary considerably across market participants
+
+67
+00:03:21,570 --> 00:03:24,930
+and across time, they can be difficult to identify.
+
+68
+00:03:24,930 --> 00:03:27,880
+
+
+69
+00:03:27,880 --> 00:03:31,210
+The offsetting effect on forward prices of storage costs
+
+70
+00:03:31,210 --> 00:03:35,290
+and convenience yields also vary with the forward contract
+
+71
+00:03:35,290 --> 00:03:37,330
+maturity.
+
+72
+00:03:37,330 --> 00:03:40,300
+At any point in time and for any commodity
+
+73
+00:03:40,300 --> 00:03:42,700
+on which forward contracts are available,
+
+74
+00:03:42,700 --> 00:03:45,490
+we can plot a forward curve.
+
+75
+00:03:45,490 --> 00:03:47,950
+The forward curve gives the relationship
+
+76
+00:03:47,950 --> 00:03:53,200
+between the forward price and the maturity of the contract.
+
+77
+00:03:53,200 --> 00:03:55,710
+Notice that the short end of the forward curve
+
+78
+00:03:55,710 --> 00:03:59,310
+is always fixed at the current spot price of the commodity
+
+79
+00:03:59,310 --> 00:04:04,020
+by a no-arbitrage condition that forward prices converge to spot
+
+80
+00:04:04,020 --> 00:04:08,210
+prices as contracts mature.
+
+81
+00:04:08,210 --> 00:04:10,940
+When the forward curve is upward-sloping,
+
+82
+00:04:10,940 --> 00:04:15,210
+the forward market is said to be in contango
+
+83
+00:04:15,210 --> 00:04:18,360
+and when the forward curve is downward-sloping,
+
+84
+00:04:18,360 --> 00:04:20,242
+it's called backwardation.
+
+85
+00:04:20,242 --> 00:04:23,780
+
+
+86
+00:04:23,780 --> 00:04:27,950
+This graph shows a variation in the forward curve
+
+87
+00:04:27,950 --> 00:04:32,510
+for a commonly traded type of oil known as West Texas
+
+88
+00:04:32,510 --> 00:04:34,000
+Intermediate, or WTI.
+
+89
+00:04:34,000 --> 00:04:36,720
+
+
+90
+00:04:36,720 --> 00:04:41,880
+The solid line is the spot price at each date on the x-axis.
+
+91
+00:04:41,880 --> 00:04:44,470
+
+
+92
+00:04:44,470 --> 00:04:48,510
+The forward curve, starting at the selected date,
+
+93
+00:04:48,510 --> 00:04:52,750
+is also plotted as a dashed line.
+
+94
+00:04:52,750 --> 00:04:55,630
+You can see that backwardation is
+
+95
+00:04:55,630 --> 00:04:59,050
+more common than contango over this period
+
+96
+00:04:59,050 --> 00:05:01,120
+but that both situations occur.
+
+97
+00:05:01,120 --> 00:05:04,090
+
+
+98
+00:05:04,090 --> 00:05:08,320
+Looking back at the formulas, for backwardation to occur
+
+99
+00:05:08,320 --> 00:05:10,840
+requires that the convenience yield
+
+100
+00:05:10,840 --> 00:05:13,720
+is greater than the combined effect of storage
+
+101
+00:05:13,720 --> 00:05:15,460
+costs and the interest rate.
+
+102
+00:05:15,460 --> 00:05:18,440
+
+
+103
+00:05:18,440 --> 00:05:20,800
+Interestingly, more recently, there
+
+104
+00:05:20,800 --> 00:05:24,610
+was an episode where spot oil prices went negative
+
+105
+00:05:24,610 --> 00:05:27,910
+because demand plummeted.
+
+106
+00:05:27,910 --> 00:05:34,210
+And it isn't possible to quickly turn off oil pumps.
+
+107
+00:05:34,210 --> 00:05:37,240
+Storage capacity was completely exhausted
+
+108
+00:05:37,240 --> 00:05:41,290
+and the price of storage became very high.
+
+109
+00:05:41,290 --> 00:05:43,510
+During that episode, what do you think
+
+110
+00:05:43,510 --> 00:05:46,890
+happened to the forward curve?
+
+111
+00:05:46,890 --> 00:05:50,590
+Well, we can answer that question by, again,
+
+112
+00:05:50,590 --> 00:05:54,870
+referring back to our pricing formula that relates forward
+
+113
+00:05:54,870 --> 00:05:58,110
+price to the spot price, the interest rate, storage
+
+114
+00:05:58,110 --> 00:06:01,500
+costs, and convenience yields.
+
+115
+00:06:01,500 --> 00:06:04,350
+Nothing special happened to the interest rates.
+
+116
+00:06:04,350 --> 00:06:07,890
+And holding oil became more of an inconvenience
+
+117
+00:06:07,890 --> 00:06:09,900
+than a convenience.
+
+118
+00:06:09,900 --> 00:06:12,285
+Storage costs went up sharply.
+
+119
+00:06:12,285 --> 00:06:18,520
+
+
+120
+00:06:18,520 --> 00:06:23,110
+We would then expect to see a sharply upward-sloping
+
+121
+00:06:23,110 --> 00:06:26,975
+forward curve, and that is in fact what happened.
+
+122
+00:06:26,975 --> 00:06:30,600
+
+
+123
+00:06:30,600 --> 00:06:32,490
+Forward contracts are also written
+
+124
+00:06:32,490 --> 00:06:36,030
+on non-storable or short-lived commodities like electricity
+
+125
+00:06:36,030 --> 00:06:38,220
+or fresh fruit and vegetables.
+
+126
+00:06:38,220 --> 00:06:40,860
+For such products, forward prices
+
+127
+00:06:40,860 --> 00:06:43,620
+are not tied to current spot prices
+
+128
+00:06:43,620 --> 00:06:46,230
+by no-arbitrage conditions.
+
+129
+00:06:46,230 --> 00:06:49,530
+Rather, for these non-storable commodities,
+
+130
+00:06:49,530 --> 00:06:52,920
+forward prices contain additional information
+
+131
+00:06:52,920 --> 00:06:57,970
+over spot prices about expected future market conditions.
+
+132
+00:06:57,970 --> 00:07:00,900
+For example, if a future strawberry harvest
+
+133
+00:07:00,900 --> 00:07:04,500
+is expected to be low because of too little rain,
+
+134
+00:07:04,500 --> 00:07:07,140
+the forward price will be higher than if a bumper
+
+135
+00:07:07,140 --> 00:07:10,140
+crop had been expected.
+
+136
+00:07:10,140 --> 00:07:12,120
+Estimating the fair forward price
+
+137
+00:07:12,120 --> 00:07:14,520
+for non-storable commodities then
+
+138
+00:07:14,520 --> 00:07:18,570
+involves modeling stochastic future supply and demand
+
+139
+00:07:18,570 --> 00:07:21,840
+and also determining an appropriate risk-adjusted
+
+140
+00:07:21,840 --> 00:07:22,680
+discount rate.
+
+141
+00:07:22,680 --> 00:07:30,130
+
+
+142
+00:07:30,130 --> 00:07:31,920
+Let's take stock of what we've learned
+
+143
+00:07:31,920 --> 00:07:35,040
+about the pricing of forward contracts for financial assets
+
+144
+00:07:35,040 --> 00:07:37,980
+and storable commodities and draw out
+
+145
+00:07:37,980 --> 00:07:40,530
+some surprising implications that are
+
+146
+00:07:40,530 --> 00:07:43,730
+important for you to remember.
+
+147
+00:07:43,730 --> 00:07:47,870
+If you look back at any of the formulas we've discussed,
+
+148
+00:07:47,870 --> 00:07:51,590
+a surprising and important fact is that the forward price
+
+149
+00:07:51,590 --> 00:07:55,550
+doesn't reflect any information about future market conditions
+
+150
+00:07:55,550 --> 00:08:00,180
+beyond what is reflected in the current spot price.
+
+151
+00:08:00,180 --> 00:08:03,180
+That's because forward prices are tied down
+
+152
+00:08:03,180 --> 00:08:07,380
+by no-arbitrage conditions that only involve the current spot
+
+153
+00:08:07,380 --> 00:08:12,830
+price, the risk-free rate, and anticipated cash flows.
+
+154
+00:08:12,830 --> 00:08:17,150
+This means that it's a mistake to try to use forward prices
+
+155
+00:08:17,150 --> 00:08:21,070
+to predict future spot prices.
+
+156
+00:08:21,070 --> 00:08:24,490
+For example, let's think about the forward price
+
+157
+00:08:24,490 --> 00:08:28,210
+of a non-dividend-paying stock, say on Tesla,
+
+158
+00:08:28,210 --> 00:08:30,580
+and compare it to the expected future price
+
+159
+00:08:30,580 --> 00:08:34,179
+of the stock on the expiration date of the forward contract.
+
+160
+00:08:34,179 --> 00:08:37,299
+Which is higher?
+
+161
+00:08:37,299 --> 00:08:41,710
+Well, recall that the expected return on a stock
+
+162
+00:08:41,710 --> 00:08:46,740
+includes a risk premium that's compensation for market risk.
+
+163
+00:08:46,740 --> 00:08:49,770
+And hence, the expected return on Tesla
+
+164
+00:08:49,770 --> 00:08:52,890
+is higher than the risk-free rate.
+
+165
+00:08:52,890 --> 00:08:56,340
+By contrast, the forward price is
+
+166
+00:08:56,340 --> 00:08:58,950
+based on an expected return that's
+
+167
+00:08:58,950 --> 00:09:01,260
+equal to the risk-free rate.
+
+168
+00:09:01,260 --> 00:09:04,330
+Hence, the forward price of a stock
+
+169
+00:09:04,330 --> 00:09:07,960
+tends to give a downward-biased estimate of the future price
+
+170
+00:09:07,960 --> 00:09:09,750
+of the stock.
+
+171
+00:09:09,750 --> 00:09:11,018
+
+

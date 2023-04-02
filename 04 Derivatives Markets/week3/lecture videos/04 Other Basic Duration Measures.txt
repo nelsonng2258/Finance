@@ -1,0 +1,105 @@
+
+SPEAKER: You've now learned the basics about duration
+but because the concept is so important
+in fixed income risk management strategies,
+I want to also briefly introduce you
+to some related and more general duration measures that are
+practitioners often rely on.
+
+In many applications such as choosing the right size
+for a hedge position, the focus is
+on the dollar size of a price change
+rather than on the percentage change.
+To do this, we rearrange our previous formula
+for the approximate percentage price change based on
+modified duration to get the approximate dollar price
+change.
+
+To make calculations using this formula even simpler,
+we introduced the notion of $1 duration.
+Dollar duration is the modified duration
+multiplied by the price.
+
+With that definition, we can approximate the change
+in the dollar price of a bond or bond portfolio using
+the product of the dollar duration times the change
+in yield, and importantly multiplying it by a minus sign.
+The concept of dollar duration is
+especially important in evaluating risk in a 0 NPV
+fixed income portfolio.
+One where the present value of a long and short position
+are equal.
+An example of this is for an interest rate swap or futures
+contract, which we know initially always has a 0 NPV
+and that we saw was equivalent to holding
+a portfolio with a combination of long and short positions.
+Clearly, it isn't possible to talk about the percentage
+change in the value of a 0 NPV portfolio
+because that would require dividing by 0,
+but the value of the long and short positions
+will change differentially when rates change and the dollar
+price change in the portfolio can be approximated
+with dollar duration.
+
+I've primarily been emphasizing duration for a single bond
+but often it's useful to work with the consolidated duration
+for a portfolio consisting of many bonds.
+Calculating the duration of a bond portfolio
+is straightforward.
+The modified duration of a bond portfolio
+is the value weighted average of the modified duration
+of the bonds in the portfolio.
+A simple example of this is at the bottom of the slide.
+The dollar duration of a bond portfolio
+is simply the sum of the individual dollar durations
+of the portfolio components.
+Later, we'll see that a portfolio's duration can also
+be changed using derivatives contracts.
+So far, we've been working with duration measures
+to treat the promised cash flows on a bond or portfolio as
+if they're a sure thing but that isn't always the case.
+Some bonds are callable or putable
+or there may be default risk.
+In such cases, these embedded call, put, or default options
+affect the price of the bond and also its sensitivity
+to yield changes.
+A good example is a 30-year mortgage
+that's likely to be prepaid over a much shorter horizon,
+say maybe over seven years.
+Calculating its duration as if payments
+will continue for 30 years will greatly
+overestimate the sensitivity of its value to yield changes.
+The most general and most important
+duration concept is that of effective duration.
+It was developed to provide an accurate approximation of price
+sensitivity to interest rate changes
+even in cases when there's uncertainty about future cash
+flows.
+Effective duration is an estimate of the true percentage
+price sensitivity, taking into account any embedded options.
+Unfortunately, there isn't a general formula
+you can use to calculate it.
+Rather, it's something an analyst has
+to estimate based on their best theoretical or empirical model
+of how the price will change for small changes in yield.
+But here's a general rule, when cash flows are certain,
+modified duration is the same thing as effective duration.
+When cash flows are uncertain, it's
+better to use effective duration when it's available.
+Finally, there are generalized notions of duration
+that recognize that a bond's price is not only
+sensitive to its yield to maturity but potentially
+also to other factors.
+Those could include inflation, stock prices,
+or changes in yields at particular points
+along the yield curve.
+The sensitivity to any one of those factors
+is called a partial duration.
+Partial durations are useful when
+you want to tailor a hedge so that it protects
+against a specific risk, say of changes in 10-year treasury
+yields.
+We won't go into this further but it's useful
+to be aware of that logic and that it's
+very similar to that used in the duration based hedges
+that we will look at.

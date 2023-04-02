@@ -1,0 +1,127 @@
+
+PROFESSOR: OK, now that we reviewed some popular options
+strategies, let's review risk-neutral pricing.
+Recall from the week 4 lecture that there
+are two main conceptual frameworks for pricing
+derivative securities.
+The first is replicating portfolios
+and the second is risk-neutral pricing.
+What is risk-neutral pricing?
+Well, risk-neutral, pricing states that the price of any
+derivative security is equal to the expectation of its
+discounted future payoffs, where the expectation is computed
+using the so-called risk-neutral probabilities that assume that
+investors are risk-neutral --
+that is not risk averse --
+and discounting is at the risk-free rate.
+In particular, the price of the derivative security is equal
+to the risk-neutral expectation, E*,
+of the payoff of the security at maturity date,
+T discounted at the risk-free rate, r.
+In the lecture notes, we saw an example
+of how risk-neutral pricing could
+be used to find the price of a call option.
+Can we similarly use risk-neutral pricing
+to find the price of a put option?
+Suppose that the price of the stock evolves as follows.
+In the initial node at T equals 0, the stock price is 50.
+In the two subsequent nodes at T equals 1,
+the stock price is 70 in the up node and 35 in the down node.
+Assume that the risk-free rate is 11%.
+Using risk-neutral pricing, what would
+be the price of a put option on the stock with maturity,
+T equals 1 and strike price, K equals 50?
+As a first step, we can find the risk-neutral probability,
+call it q*, that the up node occurs at T equals 1
+as follows.
+S0, the initial stock price is equal to q*,
+the risk-neutral probability that the up node occurs at time
+T equals 1, times S1,u, the stock price in the up node at T
+equals 1 discounted at the risk-free rate,
+plus the risk-neutral probability that the down node
+occurs at T equals 1, 1 minus q* times the stock price
+in the down node at T equals 1, S1,d discounted
+at the risk-free rate.
+Solving that equation for q*, we see that the risk-neutral
+probability is equal to the initial stock price S0 times e
+to the power of r times t minus the stock price in the down
+node at T equals 1, S1,d, divided by the difference
+in the stock prices in the up node and the down node.
+Plugging in for the value of the initial stock price a time
+T equals 0 of 50, the value of the stock at time T
+equals 1 in the down of 35, the value of the stock at time T
+equals 1 in the up node of 70, the risk-free rate of 11%
+expressed as a decimal, and the maturity of the put option at T
+equals 1 into equation 1 for the risk-neutral probability.
+We see that the risk-neutral probability
+of the up node occurring at time T
+equals 1 is equal to 0.5947, or 59.47%.
+According to the diagram provided,
+the payoff of the put option is equal to 0
+in the up node at time T equals 1,
+and the maximum of the difference between the strike
+price of the put option, K, and the stock
+price in the down node at time T equals 1,
+and 0, which is equal to 15, in the down node.
+Finally, we can compute the price of the put option
+by simply applying the risk-neutral pricing formula.
+Recall that the price of the put option is equal
+to the expectation of its payoff according to the risk-neutral
+measure E*, discounted at the risk-free rate,
+which is equal to e to the negative 0.11 times
+the risk-neutral probability q* of an up node at time T equals
+1 times the payoff of the put option in the up node a time T
+equals 1, which is 0, plus the risk-neutral probability
+of the down node at time T equals 1, 1 minus q*,
+times the payoff of the put option in the down node of 15,
+which equals 5.4462.
+We said that risk-neutral pricing
+could be used to price any derivative,
+not just call and put options.
+One example of a derivative that we've seen before in this class
+is a forward contract.
+Recall that a forward contract is an agreement between two
+parties to either buy or sell an underlying asset on an agreed
+upon date and price.
+In the week 1 lecture, we saw that the forward price
+of a non-dividend paying stock is given
+by the following equation.
+F0 T, which is the forward price for a contract that
+expires at maturity date, T is equal to the current price
+of the stock, S sub 0, times e to the r times T. Can
+we derive the same formula using risk-neutral pricing instead?
+The first thing to notice is that the profit at maturity
+date, T from a long position in the forward contract
+is given by the difference between the stock price
+at maturity date T, ST and the forward price,
+F0 T. Since it costs nothing to enter
+into the forward contract, the value of this contract
+must be equal to 0 at its initiation.
+Thus, the risk-neutral expectation
+of the profit from a long position
+in the forward contract discounted
+at the risk-free rate must be equal to 0.
+Rearranging this equation, we see that the forward price
+is equal to the risk-neutral expectation of the stock
+price at the maturity date, T. Recall
+that in a risk-neutral world, the return on any stock
+is equal to the risk-free rate.
+In the case of a non-dividend paying stock,
+this implies that the initial price of the stock as 0
+is equal to the risk-neutral expectation of the stock price
+at date T, discounted at the risk-free rate.
+Combining these two equations, we
+arrive at the exact same expression
+for the forward price of a non-dividend paying stock
+as we did in the week 1 lecture.
+From the first equation, we know that the forward price is
+equal to the risk-neutral expectation of the stock
+price at the maturity date T. And by rearranging
+the second equation, bringing the exponential of negative r
+times T to the other side, we know
+that the risk-neutral expectation of the stock
+price of maturity date T is equal to the current value
+of the stock price, S0 times e to the r times T.
+The big picture takeaway here is that the forward price
+of the stock is the risk-neutral expectation of the underlying
+asset value at time T.

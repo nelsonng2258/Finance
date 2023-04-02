@@ -1,0 +1,56 @@
+PROFESSOR: We're almost ready to turn to pricing formulas
+and how they were derived but, first, just a little
+more background information.
+I want you to remember that an arbitrage opportunity is
+a trading strategy that either yields a positive profit today
+with no future costs or that costs nothing today but yields
+a positive profit in the future.
+In other words, a way to make free money.
+The pricing formulas for forward contracts and other derivatives
+are often derived using no-arbitrage arguments.
+That is, their prices adjust so that no arbitrage opportunities
+exist.
+Price deviations might arise temporarily,
+but traders try to exploit the situation
+and that quickly pushes prices back in line.
+
+No arbitrage doesn't mean the prices are
+right in any kind of an absolute sense
+or that there's no market frictions,
+it just means that relative prices
+between different securities are consistent.
+The absence of arbitrage leads to the famous Law of One Price.
+Securities with identical future payoffs
+must have the same price today.
+Otherwise, traders would buy low, sell high,
+and pocket an arbitrage profit with all future cash
+flows canceling each other out.
+Now, in the more realistic situation,
+when there's a bid-ask spread between the price
+that an asset can be bought and sold for,
+we can find no-arbitrage bounds on prices rather than
+a single no-arbitrage price.
+For any market price that lies inside those bounds,
+there's no arbitrage opportunity.
+You'll be asked to derive an example of such bounds
+in one of the homework problems.
+The final ingredient we need before turning to driving
+pricing formulas is the idea of short sales,
+also called short selling.
+As you know, a short position is one in which
+a trader sells an asset.
+There are two ways to sell short.
+The first is to sell an asset you already own.
+The second is to borrow it from someone who owns it
+and then sell it.
+The trader must later buy the asset
+and return it to the lender.
+The trader must also replace the value of interest or dividend
+payments that come in while the asset is borrowed.
+In exchange for lending the asset,
+the lender typically receives a small fee.
+Now, sometimes it can be difficult, or even impossible,
+to find the desired asset to borrow in short.
+When shorting becomes expensive or isn't possible,
+derivative prices can diverge from what is predicted
+using no-arbitrage conditions.

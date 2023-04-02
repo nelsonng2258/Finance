@@ -1,0 +1,508 @@
+0
+00:00:00,000 --> 00:00:00,720
+
+
+1
+00:00:00,720 --> 00:00:03,450
+PROFESSOR: OK, now for problem 2--
+
+2
+00:00:03,450 --> 00:00:06,360
+problem 2 states that you are managing a pension fund that
+
+3
+00:00:06,360 --> 00:00:09,780
+has a single payment liability in the amount of $25 million
+
+4
+00:00:09,780 --> 00:00:12,780
+coming due four years from today.
+
+5
+00:00:12,780 --> 00:00:14,910
+You wish to immunize this liability
+
+6
+00:00:14,910 --> 00:00:18,420
+by making investments today that will have a guaranteed terminal
+
+7
+00:00:18,420 --> 00:00:22,200
+value of $25 million in four years.
+
+8
+00:00:22,200 --> 00:00:24,360
+Two investments are available--
+
+9
+00:00:24,360 --> 00:00:27,690
+first, two-year zero coupon notes
+
+10
+00:00:27,690 --> 00:00:31,690
+and second, five-year zero coupon notes.
+
+11
+00:00:31,690 --> 00:00:34,720
+In Part A, it's stated that, if today's yield curve
+
+12
+00:00:34,720 --> 00:00:38,050
+is flat at 10%, how much must be invested
+
+13
+00:00:38,050 --> 00:00:41,920
+in each security in order to immunize this liability?
+
+14
+00:00:41,920 --> 00:00:45,330
+Assume annual compounding.
+
+15
+00:00:45,330 --> 00:00:49,170
+Generally, immunization involves two steps--
+
+16
+00:00:49,170 --> 00:00:51,330
+equalizing both the present values
+
+17
+00:00:51,330 --> 00:00:56,190
+and the modified durations of our assets and liabilities.
+
+18
+00:00:56,190 --> 00:00:58,170
+Let's assume that the two-year and five-year
+
+19
+00:00:58,170 --> 00:01:02,670
+zero coupon notes have face values of $1,000.
+
+20
+00:01:02,670 --> 00:01:05,430
+Since the yield curve is flat at 10%,
+
+21
+00:01:05,430 --> 00:01:07,620
+the price of the two-year zero coupon note
+
+22
+00:01:07,620 --> 00:01:13,170
+is simply $1,000 divided by 1.1 squared, which
+
+23
+00:01:13,170 --> 00:01:16,980
+is equal to $826.45.
+
+24
+00:01:16,980 --> 00:01:20,310
+Similarly, the price of the five-year zero coupon note
+
+25
+00:01:20,310 --> 00:01:25,530
+is $1,000 divided by 1.1 to the fifth, which
+
+26
+00:01:25,530 --> 00:01:30,450
+is equal to $620.92.
+
+27
+00:01:30,450 --> 00:01:34,890
+Since the liability involves a single payment of $25 million
+
+28
+00:01:34,890 --> 00:01:38,800
+in four years, its present value is $25 million
+
+29
+00:01:38,800 --> 00:01:49,720
+divided by 1.1 to the fourth, which is equal to $17,075,336.
+
+30
+00:01:49,720 --> 00:01:53,260
+Since we know that the Macaulay duration of a zero coupon bond
+
+31
+00:01:53,260 --> 00:01:55,630
+is equal to its time to maturity,
+
+32
+00:01:55,630 --> 00:01:58,690
+the modified duration of the two-year zero coupon note
+
+33
+00:01:58,690 --> 00:02:04,070
+is the time to maturity, 2 years, divided by 1.1,
+
+34
+00:02:04,070 --> 00:02:07,250
+which is equal to 1.82 years.
+
+35
+00:02:07,250 --> 00:02:10,960
+Similarly, the modified duration of the five-year zero coupon
+
+36
+00:02:10,960 --> 00:02:15,160
+code is 5 years divided by 1.1, which
+
+37
+00:02:15,160 --> 00:02:18,850
+is equal to 4.54 years and the modified
+
+38
+00:02:18,850 --> 00:02:22,790
+duration of the liability is 4 divided by 1.1,
+
+39
+00:02:22,790 --> 00:02:26,770
+which is equal to 3.64 years.
+
+40
+00:02:26,770 --> 00:02:30,580
+Now, let n2 be the number of two-year zero coupon
+
+41
+00:02:30,580 --> 00:02:34,960
+notes required to immunize liability, and n5
+
+42
+00:02:34,960 --> 00:02:38,560
+be the number of five-year zero coupon notes.
+
+43
+00:02:38,560 --> 00:02:40,630
+In our first step of immunization,
+
+44
+00:02:40,630 --> 00:02:44,350
+we can equate the present values of assets and liabilities
+
+45
+00:02:44,350 --> 00:02:46,710
+in the equation shown--
+
+46
+00:02:46,710 --> 00:03:00,330
+826.45 times n2 plus 620.92 times n5 equals 17,075,336.
+
+47
+00:03:00,330 --> 00:03:02,820
+In the second step, we're going to equate
+
+48
+00:03:02,820 --> 00:03:05,670
+the value-weighted average durations of assets
+
+49
+00:03:05,670 --> 00:03:08,910
+and liabilities in the equation below.
+
+50
+00:03:08,910 --> 00:03:12,210
+1.82, which is the modified duration
+
+51
+00:03:12,210 --> 00:03:17,260
+of the two-year zero-coupon note, times n2 times
+
+52
+00:03:17,260 --> 00:03:20,200
+the price of the two-year zero-coupon note divided
+
+53
+00:03:20,200 --> 00:03:25,090
+by the total value of our portfolio plus 4.54,
+
+54
+00:03:25,090 --> 00:03:28,175
+which is the modified duration of the five-year zero coupon
+
+55
+00:03:28,175 --> 00:03:37,490
+note, times n5 times 620 divided by 17,075,336
+
+56
+00:03:37,490 --> 00:03:43,490
+equals 3.64, the modified duration of our liability.
+
+57
+00:03:43,490 --> 00:03:46,890
+We can solve the system of two equations and two unknowns,
+
+58
+00:03:46,890 --> 00:03:49,850
+n2 and n5, and find that we should invest
+
+59
+00:03:49,850 --> 00:03:55,910
+in n2 equals 6,836 of the two-year zero-coupon notes
+
+60
+00:03:55,910 --> 00:04:01,730
+and n5 equals 18,401 of the five-year zero-coupon notes
+
+61
+00:04:01,730 --> 00:04:04,250
+in order to immunize the liability.
+
+62
+00:04:04,250 --> 00:04:09,580
+Remember, each of the bonds here have a denomination of $1,000.
+
+63
+00:04:09,580 --> 00:04:11,620
+In dollar amounts, that means that we
+
+64
+00:04:11,620 --> 00:04:18,519
+should invest in 6,836 times 826.45, which
+
+65
+00:04:18,519 --> 00:04:23,710
+is equal to $5.65 million of the two-year zero-coupon notes,
+
+66
+00:04:23,710 --> 00:04:30,790
+and 18,401 times 620.92, which equals $11.42 million
+
+67
+00:04:30,790 --> 00:04:33,850
+of the five-year zero-coupon notes.
+
+68
+00:04:33,850 --> 00:04:38,650
+Notice that 5.65 plus 11.42 is roughly
+
+69
+00:04:38,650 --> 00:04:47,520
+equal to the $17,075,336 amount of our liability.
+
+70
+00:04:47,520 --> 00:04:51,750
+OK, Part B says that if interest rates at all maturities
+
+71
+00:04:51,750 --> 00:04:55,350
+rise from 10% to 11%, would you consider
+
+72
+00:04:55,350 --> 00:04:58,650
+yourself better or worse off than if interest rates had
+
+73
+00:04:58,650 --> 00:05:00,480
+remained at 10%?
+
+74
+00:05:00,480 --> 00:05:02,550
+Explain your choice with the calculation,
+
+75
+00:05:02,550 --> 00:05:07,130
+and also explain intuitively why you think this is the case.
+
+76
+00:05:07,130 --> 00:05:09,160
+Well, first, let's go over the intuition.
+
+77
+00:05:09,160 --> 00:05:12,880
+It's very similar to the barbell versus bullet intuition
+
+78
+00:05:12,880 --> 00:05:15,550
+that we reviewed in Problem 1.
+
+79
+00:05:15,550 --> 00:05:17,800
+Specifically, since the cash flows
+
+80
+00:05:17,800 --> 00:05:19,960
+of our immunizing portfolio, which
+
+81
+00:05:19,960 --> 00:05:23,650
+consists of two-years in five-years zero-coupon notes,
+
+82
+00:05:23,650 --> 00:05:26,260
+are more spread out, like a barbell,
+
+83
+00:05:26,260 --> 00:05:30,550
+than the single bullet liability that comes due in four years,
+
+84
+00:05:30,550 --> 00:05:33,760
+the convexity of our immunizing portfolio
+
+85
+00:05:33,760 --> 00:05:37,170
+is likely greater than that of the liability.
+
+86
+00:05:37,170 --> 00:05:39,300
+And all else equal, we like convexity
+
+87
+00:05:39,300 --> 00:05:41,680
+when interest rates change.
+
+88
+00:05:41,680 --> 00:05:45,580
+Thus, if interest rates rise from 10% to 11%,
+
+89
+00:05:45,580 --> 00:05:48,250
+we will likely be better off as the value
+
+90
+00:05:48,250 --> 00:05:51,460
+of our immunizing portfolio will fall by less
+
+91
+00:05:51,460 --> 00:05:54,510
+than that of our liability.
+
+92
+00:05:54,510 --> 00:05:57,090
+To verify this intuition mathematically,
+
+93
+00:05:57,090 --> 00:05:59,520
+we can simply calculate the present values
+
+94
+00:05:59,520 --> 00:06:02,700
+of the liability and our immunizing portfolio
+
+95
+00:06:02,700 --> 00:06:07,020
+under the assumption that interest rates are now 11%.
+
+96
+00:06:07,020 --> 00:06:09,840
+In particular, the present value of the liability
+
+97
+00:06:09,840 --> 00:06:12,480
+coming due in four years will decrease
+
+98
+00:06:12,480 --> 00:06:22,000
+from $17,075,336 to $25 million divided by 1.11 to the fourth,
+
+99
+00:06:22,000 --> 00:06:28,490
+which is equal to $16,468,274.
+
+100
+00:06:28,490 --> 00:06:30,710
+The price of the two-year zero-coupon note,
+
+101
+00:06:30,710 --> 00:06:33,560
+now that interest rates are 11%, is
+
+102
+00:06:33,560 --> 00:06:41,660
+1,000 divided by 1.11 squared, which is equal to $811.62.
+
+103
+00:06:41,660 --> 00:06:44,180
+And the price of the five-year zero-coupon note
+
+104
+00:06:44,180 --> 00:06:48,180
+is now 1,000 divided by 1.11 to the fifth,
+
+105
+00:06:48,180 --> 00:06:52,520
+which is equal to $593.45.
+
+106
+00:06:52,520 --> 00:06:56,120
+Thus, the present value of our immunizing portfolio,
+
+107
+00:06:56,120 --> 00:07:01,220
+using our n2 an n5 amounts that we found in Part A,
+
+108
+00:07:01,220 --> 00:07:09,050
+is equal to $811.62 times $6,836 --
+
+109
+00:07:09,050 --> 00:07:12,050
+that's n2, the amount that we invested in the two-year
+
+110
+00:07:12,050 --> 00:07:13,700
+zero-coupon note --
+
+111
+00:07:13,700 --> 00:07:19,430
+plus $620.92 times $18,401--
+
+112
+00:07:19,430 --> 00:07:23,450
+that's n5, the number of five-zero zero-coupon notes we
+
+113
+00:07:23,450 --> 00:07:29,750
+purchased -- which equals $16,973,783 --
+
+114
+00:07:29,750 --> 00:07:34,580
+which, compared to the new present value of our liability
+
+115
+00:07:34,580 --> 00:07:41,550
+of $16,468,274, is greater.
+
+116
+00:07:41,550 --> 00:07:46,170
+One thing to note before we end Problem 2 is that, in practice,
+
+117
+00:07:46,170 --> 00:07:48,120
+once there is a change in interest rates,
+
+118
+00:07:48,120 --> 00:07:52,270
+like the increase from 10% to 11% in this example,
+
+119
+00:07:52,270 --> 00:07:53,880
+our portfolio shares --
+
+120
+00:07:53,880 --> 00:07:56,070
+the n2 two and n5 --
+
+121
+00:07:56,070 --> 00:07:59,280
+have to be adjusted in order to reimmunize the liability
+
+122
+00:07:59,280 --> 00:08:02,850
+to match the present values and duration of the liability.
+
+123
+00:08:02,850 --> 00:08:06,480
+Such adjustments in practice can involve non-trivial trading
+
+124
+00:08:06,480 --> 00:08:10,110
+costs that make reimmunization a little bit more difficult
+
+125
+00:08:10,110 --> 00:08:12,500
+than it is in this stylized example.
+
+126
+00:08:12,500 --> 00:08:13,000
+
+

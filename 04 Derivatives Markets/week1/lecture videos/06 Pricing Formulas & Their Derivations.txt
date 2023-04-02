@@ -1,0 +1,184 @@
+
+PROFESSOR: We're now going to put the idea of no arbitrage
+to work to drive pricing formulas for many of the most
+popular forward contracts.
+In general, forwards for what are called pure investment
+assets, like stocks, bonds, and currencies,
+can be priced using no arbitrage arguments.
+For instance, we'll return to Example 2.1
+on forward currency contracts and see
+where the forward price of $1.28 per euro came from.
+Specifically, we'll derive formulas
+by considering a so-called cash and carry strategy
+that will generate arbitrage profits for traders
+if forward prices differ from their theoretical values.
+
+While simple cash and carry logic
+ties down the forward prices for pure investment assets,
+pricing is more complicated for non-investment assets,
+such as agricultural products, energy, and metals.
+We will also look at the determinants
+of those forward prices and common formulas used
+to price them.
+
+This very important slide shows the pricing formulas
+for the forward prices of stocks, bonds, and currencies.
+You'll find it useful in answering some of the homework
+questions for this week.
+There are several similarities between all of these formulas.
+First, the forward price always depends
+on the current spot price of the underlying asset,
+for stocks, for bonds, and for currencies.
+Second, it involves a future value factor
+based on the risk-free interest rate
+and on the maturity equal to the time to the contract
+expiration.
+
+Third, there's an adjustment for any cash flows
+that arrive between the time the contract is
+written at time zero and the contract expiration date.
+In the case of stocks, those cash flows are dividends.
+
+For bonds or loans, the cash flows
+are coupons or interest payments.
+And for currencies, the cash flow
+is the interest income from investing in a risk-free bond.
+
+With regard to these cash flow adjustments,
+the formulas differ slightly, depending
+on whether the payment is assumed
+to be continuous or discrete.
+A continuous flow is the natural assumption, for example,
+in the case of the dividend yield on the S&P 500 stock
+price index.
+However, if the underlying is an individual stock,
+dividend payments are more realistically modeled
+as the discrete flow at a known future point in time.
+
+Let's look at an example of how these formulas can be applied.
+Remember Example 2.1, where we looked
+at a US firm that wanted to hedge its exposure to exchange
+rate risk arising from a receivable of 5 million euros
+that would be arriving in six months.
+In that example, we assume that the spot exchange rate
+is $1.2673 per euro currently.
+Remember that the unhedged dollar payoff
+will depend on the exchange rate in six months
+and equals 5 million euros times whatever that exchange
+rate turns out to be.
+Let's also assume that we know that the current six-month US
+dollar risk-free free interest rate is 5%
+and that the current six-month euro risk-free interest
+rate is 3%.
+
+Recall that to hedge the risk that the dollar would
+strengthen against the euro, the firm entered into a contract
+to sell euros forward in exchange for the dollars.
+We assumed that the forward rate was
+$1.28 per euro, which implied that the firm could lock
+in a certain dollar payment which we calculated to be
+$6.4 million in six months.
+
+Using the formula for currency forwards
+and plugging in this information, that
+is the current spot exchange rate was $1.2673,
+the dollar interest rate was 5%, the euro interest rate was 3%,
+and the time horizon is six months,
+you can verify that the implied forward exchange
+rate is $1.28 per euro.
+I showed you formulas for the forward prices of stocks,
+bonds, and currencies that all depend on current spot
+prices, risk-free interest rates,
+any cash flows on the underlying assets
+over the life of the contract, and the time
+until contract expiration.
+Where do these similarities come from?
+The answer is they come from the cash
+and carry strategy that leads to a no arbitrage condition.
+That strategy is similar in all three cases,
+and we'll go through one example here in detail.
+Specifically, let's consider a trading strategy
+involving a short forward position in one share
+of a non-dividend-paying stock.
+As usual, we'll call the contract expiration date
+capital T. We'll start with the multiple transactions at time
+zero.
+First, enter into a short forward position.
+Remember that this requires no upfront payment.
+
+It locks in an obligation to deliver a share of stock
+at a time, capital T, in return for the forward price,
+capital F. Now also at time zero,
+you're going to buy the stock at its current spot price, P sub
+S.
+Importantly, we're going to pay for that purchase with borrowed
+money.
+Because you've bought the stock with borrowed money
+and also the forward contract involves no initial payment,
+the net cash flow at time zero is certainly equal to zero.
+
+Now, let's unwind the position at the contract expiration
+date, cap T. You receive the forward price
+in the forward contract and deliver the share of stock.
+You also have to repay the money you borrowed with interest.
+
+You're going to use the stock that you bought to deliver
+into the forward contract.
+
+The net time, T, cash flow then is the difference
+between the forward price received
+in the forward contract and the money repaid on the loan.
+
+Notice that all of these outcomes
+involve no uncertainty.
+Now, we can appeal to the no arbitrage idea that a trading
+strategy that costs nothing to enter into cannot generate
+a positive profit in the future.
+Hence, we can conclude that the forward price
+has to be less than or equal to the loan repayment amount.
+
+We can finish nailing down the forward price
+by considering a similar set of transactions
+but this time involving a long position in a forward contract
+on that same stock.
+This is called a reverse cash and carry.
+At time zero, enter into a long forward position.
+At the same time, short the stock at its current spot
+price.
+Also, lend the amount received from that short sale
+of the stock at the risk-free rate.
+Because you've sold the stock and lent out the money
+you received and because the forward contract involves
+no initial payment, the net cash flow at time zero
+is identically zero.
+Now, let's unwind the position at the contract expiration
+date, cap T. You pay the forward price, F,
+and you receive the stock in the forward transaction.
+You use the stock you receive in the contract
+to cover your short position that you took a time zero.
+That is you return the stock that you borrowed.
+You also receive the money that you lent out,
+plus the accumulated interest payment.
+The net time, cap T, cash flow is the difference
+between the loan repayment and the forward price you paid out.
+Notice that all of these values are certain.
+Let's again apply no arbitrage logic.
+The time zero cash flow is zero, so there
+can be no future profit.
+We can conclude that the forward price
+has to be greater than or equal to the loan repayment amount.
+
+Putting together the conclusions of the cash and carry
+and the reverse cash and carry logic,
+we can conclude that the forward price
+for a non-dividend-paying stock must
+be exactly equal to the future value of its spot price.
+For stocks that pay a dividend, or for coupon bonds,
+similar logic holds, but adjustments
+must be made for the cash flows from dividends or coupons
+over the life of the contract.
+The general intuition there is that because a dividend
+or a coupon payment reduces the remaining
+value of an asset's cash flows, it reduces its forward price.
+In the recitation, you'll see how this line of reasoning
+ties down the forward price of currencies.

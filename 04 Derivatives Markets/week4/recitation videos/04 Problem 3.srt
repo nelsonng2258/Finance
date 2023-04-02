@@ -1,0 +1,484 @@
+0
+00:00:00,000 --> 00:00:03,600
+PROFESSOR: Now that we've reviewed risk-neutral pricing,
+
+1
+00:00:03,600 --> 00:00:05,970
+let's close the recitation by reviewing
+
+2
+00:00:05,970 --> 00:00:11,450
+dynamic replication or the replicating portfolio approach.
+
+3
+00:00:11,450 --> 00:00:14,780
+As discussed by Professor Lucas in the week 4 lecture,
+
+4
+00:00:14,780 --> 00:00:17,870
+the replicating portfolio approach to pricing an option
+
+5
+00:00:17,870 --> 00:00:20,060
+should imply the exact same price
+
+6
+00:00:20,060 --> 00:00:24,040
+as the risk-neutral pricing approach that we just reviewed.
+
+7
+00:00:24,040 --> 00:00:26,020
+In a multi-period setting, however,
+
+8
+00:00:26,020 --> 00:00:28,330
+constructing the replicating portfolio
+
+9
+00:00:28,330 --> 00:00:31,650
+may be a cumbersome procedure.
+
+10
+00:00:31,650 --> 00:00:34,140
+As an example, consider a stock price
+
+11
+00:00:34,140 --> 00:00:37,440
+that evolves according to the binomial tree below.
+
+12
+00:00:37,440 --> 00:00:41,520
+At time T equals 0, the stock price is $50.
+
+13
+00:00:41,520 --> 00:00:44,070
+At time T equals 1, the stock price
+
+14
+00:00:44,070 --> 00:00:48,300
+is $70 in the up node and $35 in the down node.
+
+15
+00:00:48,300 --> 00:00:50,910
+And now we add a third period, time T
+
+16
+00:00:50,910 --> 00:00:55,710
+equals 2, where the stock price is $100 in the up-up node,
+
+17
+00:00:55,710 --> 00:00:59,790
+50 in either the up-down or the down-up node,
+
+18
+00:00:59,790 --> 00:01:03,190
+or 25 in the down-down node.
+
+19
+00:01:03,190 --> 00:01:05,830
+Using the replicating portfolio approach,
+
+20
+00:01:05,830 --> 00:01:08,770
+we can price a call option with maturity,
+
+21
+00:01:08,770 --> 00:01:15,230
+T equals 2 and strike price, K equals $50 in five steps.
+
+22
+00:01:15,230 --> 00:01:17,680
+In the first step, determine the payoffs
+
+23
+00:01:17,680 --> 00:01:20,650
+from the call option at each node of the tree at t
+
+24
+00:01:20,650 --> 00:01:25,610
+equals 2, that is, working backwards.
+
+25
+00:01:25,610 --> 00:01:31,220
+Well, let C2,uu be the payoff of the call option in the up-up
+
+26
+00:01:31,220 --> 00:01:37,100
+node at time T equals 2, C2,ud which is the same as C2,du be
+
+27
+00:01:37,100 --> 00:01:40,400
+the payoffs in the up-down and down-up nodes,
+
+28
+00:01:40,400 --> 00:01:44,980
+and C2,dd be the payoff in the down-down node.
+
+29
+00:01:44,980 --> 00:01:48,010
+Since the strike price of the call option is $50,
+
+30
+00:01:48,010 --> 00:01:52,210
+the payoff of the call option in the up-up node is $50.
+
+31
+00:01:52,210 --> 00:01:56,170
+In the up-down or down-up node, it's $0.
+
+32
+00:01:56,170 --> 00:02:01,460
+And similarly, in the down-down node, it's also $0.
+
+33
+00:02:01,460 --> 00:02:04,940
+In step 2, we can find the position delta
+
+34
+00:02:04,940 --> 00:02:08,630
+to invest in stocks in our replicating portfolio
+
+35
+00:02:08,630 --> 00:02:12,964
+at each node of the tree at T equals 1.
+
+36
+00:02:12,964 --> 00:02:19,680
+At T equals 1, the delta in the up node, which is Delta 1,u,
+
+37
+00:02:19,680 --> 00:02:23,820
+is equal to the difference between the payoff of the call
+
+38
+00:02:23,820 --> 00:02:27,660
+option in the up-up node and the payoff of the call option
+
+39
+00:02:27,660 --> 00:02:32,460
+in the up-down node, divided by the price of the stock at time
+
+40
+00:02:32,460 --> 00:02:36,720
+T equals 2 in the up-up node and the price of the stock at time
+
+41
+00:02:36,720 --> 00:02:41,310
+T equals 2 in the up-down node, which is equal to 50 minus 0
+
+42
+00:02:41,310 --> 00:02:47,170
+divided by 100 minus 50, which is equal to 1 in the up node.
+
+43
+00:02:47,170 --> 00:02:51,390
+So we invest all of our replicating portfolio in stocks
+
+44
+00:02:51,390 --> 00:02:54,360
+at time T equals 1 in the up node.
+
+45
+00:02:54,360 --> 00:02:57,300
+A similar calculation for delta at time T
+
+46
+00:02:57,300 --> 00:03:00,840
+equals 1 in the down node shows that our delta is
+
+47
+00:03:00,840 --> 00:03:02,940
+equal to 0 in the down node.
+
+48
+00:03:02,940 --> 00:03:07,350
+So we invest none of our portfolio in stocks
+
+49
+00:03:07,350 --> 00:03:10,200
+in the down node at time T equals 1.
+
+50
+00:03:10,200 --> 00:03:12,750
+In step 3, we can find the amount
+
+51
+00:03:12,750 --> 00:03:16,050
+of risk-free bonds in our replicating portfolio
+
+52
+00:03:16,050 --> 00:03:20,560
+at each node of the tree at time T equals 1.
+
+53
+00:03:20,560 --> 00:03:22,840
+We'll recall from the week 4 lecture notes
+
+54
+00:03:22,840 --> 00:03:26,290
+that once we know the deltas at time T equals 1 in both the
+
+55
+00:03:26,290 --> 00:03:29,380
+up node and the down node, it's very easy
+
+56
+00:03:29,380 --> 00:03:31,360
+to compute the amount of risk-free bonds
+
+57
+00:03:31,360 --> 00:03:32,920
+that we invest in.
+
+58
+00:03:32,920 --> 00:03:36,670
+For example, in the up node at time T equals 1,
+
+59
+00:03:36,670 --> 00:03:40,060
+the number of risk-free bonds that we purchase is
+
+60
+00:03:40,060 --> 00:03:42,820
+equal to the negative of the exponential
+
+61
+00:03:42,820 --> 00:03:47,900
+of the negative risk-free rate times the sum of the negative
+
+62
+00:03:47,900 --> 00:03:50,710
+of the value of the call option at time
+
+63
+00:03:50,710 --> 00:03:55,610
+T equals 2 in the up-up node plus the delta at time T
+
+64
+00:03:55,610 --> 00:03:59,030
+equals 1 in the up node times the stock price at time T
+
+65
+00:03:59,030 --> 00:04:00,830
+equals 2 in the up-up node.
+
+66
+00:04:00,830 --> 00:04:03,890
+This is like the dollar size of our position
+
+67
+00:04:03,890 --> 00:04:09,700
+in the stock at time T equals 1 in the up node, which, overall,
+
+68
+00:04:09,700 --> 00:04:15,490
+equals negative 44.7917 in the up node at time T equals 1.
+
+69
+00:04:15,490 --> 00:04:20,380
+That is a short position of 44.7917 units
+
+70
+00:04:20,380 --> 00:04:24,970
+in the risk-free bond at time T equals 1 in the up node,
+
+71
+00:04:24,970 --> 00:04:27,040
+and a similar calculation shows that we
+
+72
+00:04:27,040 --> 00:04:32,170
+invest nothing in risk-free bonds in the down node at time
+
+73
+00:04:32,170 --> 00:04:34,980
+T equals 1.
+
+74
+00:04:34,980 --> 00:04:39,090
+In step 4, we can find the value of a replicating portfolio
+
+75
+00:04:39,090 --> 00:04:41,130
+at each node of the tree at time T
+
+76
+00:04:41,130 --> 00:04:44,580
+equals 1, which, by no-arbitrage, is also
+
+77
+00:04:44,580 --> 00:04:48,610
+the value of the call option at each node.
+
+78
+00:04:48,610 --> 00:04:50,770
+Well, the value of the replicating portfolio
+
+79
+00:04:50,770 --> 00:04:52,690
+slash call option at time T equals
+
+80
+00:04:52,690 --> 00:04:55,540
+1, for instance for the up node, is just
+
+81
+00:04:55,540 --> 00:04:59,890
+the sum of the value of our stock portfolio at time
+
+82
+00:04:59,890 --> 00:05:04,830
+T equals 1 plus the value of our bond portfolio at time
+
+83
+00:05:04,830 --> 00:05:10,550
+T equals 1 in the up node, which is equal to 25.2083.
+
+84
+00:05:10,550 --> 00:05:12,860
+A similar calculation for the down node
+
+85
+00:05:12,860 --> 00:05:16,400
+shows that the value of the replicating portfolio or call
+
+86
+00:05:16,400 --> 00:05:21,780
+option in the down node at time T equals 1 is equal to $0.
+
+87
+00:05:21,780 --> 00:05:23,460
+There were certainly a lot of equations
+
+88
+00:05:23,460 --> 00:05:25,890
+to keep track of in the first four steps.
+
+89
+00:05:25,890 --> 00:05:29,070
+So an easy way of summarizing what we've done so far
+
+90
+00:05:29,070 --> 00:05:31,890
+is to replicate the binomial tree.
+
+91
+00:05:31,890 --> 00:05:34,200
+But now, in addition to the value
+
+92
+00:05:34,200 --> 00:05:36,600
+of the stock at each node, I've also
+
+93
+00:05:36,600 --> 00:05:40,410
+included the delta of the replicating portfolio
+
+94
+00:05:40,410 --> 00:05:43,410
+at each node, the value of the investment
+
+95
+00:05:43,410 --> 00:05:46,290
+in the risk-free bonds at each node,
+
+96
+00:05:46,290 --> 00:05:49,440
+and, finally, the value of the call option or replicating
+
+97
+00:05:49,440 --> 00:05:55,240
+portfolio at each node at both T equals 1 and T equals 2.
+
+98
+00:05:55,240 --> 00:05:59,590
+In our fifth and final step, we simply repeat steps 2
+
+99
+00:05:59,590 --> 00:06:03,360
+through 4 for the T equals 0 node.
+
+100
+00:06:03,360 --> 00:06:06,240
+In other words, we find the delta
+
+101
+00:06:06,240 --> 00:06:09,930
+of our replicating portfolio for the T equals 0 node,
+
+102
+00:06:09,930 --> 00:06:12,690
+we find our investment in risk-free bonds
+
+103
+00:06:12,690 --> 00:06:16,380
+of our replicating portfolio for the T equals 0 node,
+
+104
+00:06:16,380 --> 00:06:19,830
+and we find the value of our replicating portfolio for the T
+
+105
+00:06:19,830 --> 00:06:24,120
+equals 0 node, equivalently, the value of our call option,
+
+106
+00:06:24,120 --> 00:06:27,780
+by using the fact that the value of the call option at time T
+
+107
+00:06:27,780 --> 00:06:35,900
+equals 1 in the up node is equal to 25.2083 and is equal to 0
+
+108
+00:06:35,900 --> 00:06:39,680
+in the down node at time T equals 1.
+
+109
+00:06:39,680 --> 00:06:43,280
+The binomial tree below summarizes step 5.
+
+110
+00:06:43,280 --> 00:06:51,080
+In particular, the delta at time T equals 0 is equal to 0.7202.
+
+111
+00:06:51,080 --> 00:06:53,907
+The investment in risk-free bonds at time T
+
+112
+00:06:53,907 --> 00:06:58,610
+equals 0 is equal to negative 22.5824.
+
+113
+00:06:58,610 --> 00:07:03,340
+That is, we short 22.5824 of risk-free bonds
+
+114
+00:07:03,340 --> 00:07:05,810
+in a replicating portfolio.
+
+115
+00:07:05,810 --> 00:07:09,065
+And the value of a replicating portfolio at time T
+
+116
+00:07:09,065 --> 00:07:12,680
+equals 0, equivalently, the value of our call option,
+
+117
+00:07:12,680 --> 00:07:17,320
+is equal to 13.4294.
+
+118
+00:07:17,320 --> 00:07:20,140
+Well, that wraps up week 4 recitation.
+
+119
+00:07:20,140 --> 00:07:22,540
+Thank you everyone for coming, and I look forward
+
+120
+00:07:22,540 --> 00:07:25,230
+to seeing all of you next week.
+

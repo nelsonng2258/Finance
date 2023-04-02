@@ -1,0 +1,126 @@
+
+PROFESSOR: OK, now for problem 2--
+problem 2 states that you are managing a pension fund that
+has a single payment liability in the amount of $25 million
+coming due four years from today.
+You wish to immunize this liability
+by making investments today that will have a guaranteed terminal
+value of $25 million in four years.
+Two investments are available--
+first, two-year zero coupon notes
+and second, five-year zero coupon notes.
+In Part A, it's stated that, if today's yield curve
+is flat at 10%, how much must be invested
+in each security in order to immunize this liability?
+Assume annual compounding.
+Generally, immunization involves two steps--
+equalizing both the present values
+and the modified durations of our assets and liabilities.
+Let's assume that the two-year and five-year
+zero coupon notes have face values of $1,000.
+Since the yield curve is flat at 10%,
+the price of the two-year zero coupon note
+is simply $1,000 divided by 1.1 squared, which
+is equal to $826.45.
+Similarly, the price of the five-year zero coupon note
+is $1,000 divided by 1.1 to the fifth, which
+is equal to $620.92.
+Since the liability involves a single payment of $25 million
+in four years, its present value is $25 million
+divided by 1.1 to the fourth, which is equal to $17,075,336.
+Since we know that the Macaulay duration of a zero coupon bond
+is equal to its time to maturity,
+the modified duration of the two-year zero coupon note
+is the time to maturity, 2 years, divided by 1.1,
+which is equal to 1.82 years.
+Similarly, the modified duration of the five-year zero coupon
+code is 5 years divided by 1.1, which
+is equal to 4.54 years and the modified
+duration of the liability is 4 divided by 1.1,
+which is equal to 3.64 years.
+Now, let n2 be the number of two-year zero coupon
+notes required to immunize liability, and n5
+be the number of five-year zero coupon notes.
+In our first step of immunization,
+we can equate the present values of assets and liabilities
+in the equation shown--
+826.45 times n2 plus 620.92 times n5 equals 17,075,336.
+In the second step, we're going to equate
+the value-weighted average durations of assets
+and liabilities in the equation below.
+1.82, which is the modified duration
+of the two-year zero-coupon note, times n2 times
+the price of the two-year zero-coupon note divided
+by the total value of our portfolio plus 4.54,
+which is the modified duration of the five-year zero coupon
+note, times n5 times 620 divided by 17,075,336
+equals 3.64, the modified duration of our liability.
+We can solve the system of two equations and two unknowns,
+n2 and n5, and find that we should invest
+in n2 equals 6,836 of the two-year zero-coupon notes
+and n5 equals 18,401 of the five-year zero-coupon notes
+in order to immunize the liability.
+Remember, each of the bonds here have a denomination of $1,000.
+In dollar amounts, that means that we
+should invest in 6,836 times 826.45, which
+is equal to $5.65 million of the two-year zero-coupon notes,
+and 18,401 times 620.92, which equals $11.42 million
+of the five-year zero-coupon notes.
+Notice that 5.65 plus 11.42 is roughly
+equal to the $17,075,336 amount of our liability.
+OK, Part B says that if interest rates at all maturities
+rise from 10% to 11%, would you consider
+yourself better or worse off than if interest rates had
+remained at 10%?
+Explain your choice with the calculation,
+and also explain intuitively why you think this is the case.
+Well, first, let's go over the intuition.
+It's very similar to the barbell versus bullet intuition
+that we reviewed in Problem 1.
+Specifically, since the cash flows
+of our immunizing portfolio, which
+consists of two-years in five-years zero-coupon notes,
+are more spread out, like a barbell,
+than the single bullet liability that comes due in four years,
+the convexity of our immunizing portfolio
+is likely greater than that of the liability.
+And all else equal, we like convexity
+when interest rates change.
+Thus, if interest rates rise from 10% to 11%,
+we will likely be better off as the value
+of our immunizing portfolio will fall by less
+than that of our liability.
+To verify this intuition mathematically,
+we can simply calculate the present values
+of the liability and our immunizing portfolio
+under the assumption that interest rates are now 11%.
+In particular, the present value of the liability
+coming due in four years will decrease
+from $17,075,336 to $25 million divided by 1.11 to the fourth,
+which is equal to $16,468,274.
+The price of the two-year zero-coupon note,
+now that interest rates are 11%, is
+1,000 divided by 1.11 squared, which is equal to $811.62.
+And the price of the five-year zero-coupon note
+is now 1,000 divided by 1.11 to the fifth,
+which is equal to $593.45.
+Thus, the present value of our immunizing portfolio,
+using our n2 an n5 amounts that we found in Part A,
+is equal to $811.62 times $6,836 --
+that's n2, the amount that we invested in the two-year
+zero-coupon note --
+plus $620.92 times $18,401--
+that's n5, the number of five-zero zero-coupon notes we
+purchased -- which equals $16,973,783 --
+which, compared to the new present value of our liability
+of $16,468,274, is greater.
+One thing to note before we end Problem 2 is that, in practice,
+once there is a change in interest rates,
+like the increase from 10% to 11% in this example,
+our portfolio shares --
+the n2 two and n5 --
+have to be adjusted in order to reimmunize the liability
+to match the present values and duration of the liability.
+Such adjustments in practice can involve non-trivial trading
+costs that make reimmunization a little bit more difficult
+than it is in this stylized example.

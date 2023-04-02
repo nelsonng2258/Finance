@@ -1,0 +1,171 @@
+
+PROFESSOR: Some of the oldest and most
+important foreign contracts were designed
+to help farmers and industrial firms
+hedge some of their largest risk exposures.
+These contracts are for commodities
+such as oil, metals, and major agricultural commodities.
+Unlike financial assets that are essentially costless to store
+and whose returns are in cash and so
+equally valuable to all investors,
+the situation is more complicated
+for these storable commodities.
+
+The main costs are for storage.
+We'll denote by a capital U any lump sum costs,
+like monthly facility fees, and use a small u
+to represent storage costs on a proportional flow basis.
+Storage costs vary over time and with the availability
+and demand for space which, in turn, will
+depend on the demand for the underlying commodity.
+There's also the offsetting notion
+of a convenience yield, which measures
+the benefit of physically having possession of a commodity.
+For example, if you have oil on-hand,
+it insures against supply disruptions
+that could cause costly production slowdowns.
+Mathematically adjusting for storage costs and convenience
+yields and forward pricing formulas
+is analogous to the adjustments for dividend or coupon payments
+that we talked about for financial forward contracts.
+Storage costs are like negative dividends
+and convenience yields are like positive dividends.
+
+Now let's take a close look at the formulas
+for the forward prices of storable commodities.
+As with financial forwards, all of these formulas
+involve the current spot price of the underlying,
+the risk-free rate, and the time horizon
+of the forward contract.
+Then we'll have to make adjustments for storage costs
+and convenience yields, just as we did for dividends and coupon
+payments in the financial asset case.
+Looking at the first formula, where there are just
+lumps some storage costs, the forward price has to be higher
+to compensate for the value of those storage costs which
+are incurred by the short side of the contract.
+
+When the storage costs are incurred
+as a proportional flow, the same logic
+leads to the second equation.
+
+When there's a positive convenience yield,
+the value of those services to the short side
+causes forward prices to be lower.
+
+In the last equation, which is the more general case,
+there are both storage costs and a convenience yield that
+pull in opposite directions.
+Over time, as interest rates, storage costs, and convenience
+yields change with market conditions,
+you can see that the forward price will change
+and it can be higher or lower than the current spot price.
+
+These formulas also arise from the no-arbitrage logic
+of Cash-and-Carry trading strategies.
+However, because storage costs and convenience yields
+can vary considerably across market participants
+and across time, they can be difficult to identify.
+
+The offsetting effect on forward prices of storage costs
+and convenience yields also vary with the forward contract
+maturity.
+At any point in time and for any commodity
+on which forward contracts are available,
+we can plot a forward curve.
+The forward curve gives the relationship
+between the forward price and the maturity of the contract.
+Notice that the short end of the forward curve
+is always fixed at the current spot price of the commodity
+by a no-arbitrage condition that forward prices converge to spot
+prices as contracts mature.
+When the forward curve is upward-sloping,
+the forward market is said to be in contango
+and when the forward curve is downward-sloping,
+it's called backwardation.
+
+This graph shows a variation in the forward curve
+for a commonly traded type of oil known as West Texas
+Intermediate, or WTI.
+
+The solid line is the spot price at each date on the x-axis.
+
+The forward curve, starting at the selected date,
+is also plotted as a dashed line.
+You can see that backwardation is
+more common than contango over this period
+but that both situations occur.
+
+Looking back at the formulas, for backwardation to occur
+requires that the convenience yield
+is greater than the combined effect of storage
+costs and the interest rate.
+
+Interestingly, more recently, there
+was an episode where spot oil prices went negative
+because demand plummeted.
+And it isn't possible to quickly turn off oil pumps.
+Storage capacity was completely exhausted
+and the price of storage became very high.
+During that episode, what do you think
+happened to the forward curve?
+Well, we can answer that question by, again,
+referring back to our pricing formula that relates forward
+price to the spot price, the interest rate, storage
+costs, and convenience yields.
+Nothing special happened to the interest rates.
+And holding oil became more of an inconvenience
+than a convenience.
+Storage costs went up sharply.
+
+We would then expect to see a sharply upward-sloping
+forward curve, and that is in fact what happened.
+
+Forward contracts are also written
+on non-storable or short-lived commodities like electricity
+or fresh fruit and vegetables.
+For such products, forward prices
+are not tied to current spot prices
+by no-arbitrage conditions.
+Rather, for these non-storable commodities,
+forward prices contain additional information
+over spot prices about expected future market conditions.
+For example, if a future strawberry harvest
+is expected to be low because of too little rain,
+the forward price will be higher than if a bumper
+crop had been expected.
+Estimating the fair forward price
+for non-storable commodities then
+involves modeling stochastic future supply and demand
+and also determining an appropriate risk-adjusted
+discount rate.
+
+Let's take stock of what we've learned
+about the pricing of forward contracts for financial assets
+and storable commodities and draw out
+some surprising implications that are
+important for you to remember.
+If you look back at any of the formulas we've discussed,
+a surprising and important fact is that the forward price
+doesn't reflect any information about future market conditions
+beyond what is reflected in the current spot price.
+That's because forward prices are tied down
+by no-arbitrage conditions that only involve the current spot
+price, the risk-free rate, and anticipated cash flows.
+This means that it's a mistake to try to use forward prices
+to predict future spot prices.
+For example, let's think about the forward price
+of a non-dividend-paying stock, say on Tesla,
+and compare it to the expected future price
+of the stock on the expiration date of the forward contract.
+Which is higher?
+Well, recall that the expected return on a stock
+includes a risk premium that's compensation for market risk.
+And hence, the expected return on Tesla
+is higher than the risk-free rate.
+By contrast, the forward price is
+based on an expected return that's
+equal to the risk-free rate.
+Hence, the forward price of a stock
+tends to give a downward-biased estimate of the future price
+of the stock.

@@ -1,0 +1,57 @@
+
+We can easily extend our two step example
+to an arbitrarily large number of steps on a tree.
+That extension allows us to more accurately capture
+the distribution of future stock prices
+and the corresponding option payoffs.
+In the subscript pairs here, ij, we'll
+let i denote the time period and j denote
+the node with the highest node labeled as node one.
+Using risk neutral probabilities,
+we can solve backwards for the value of any European style
+derivative as we did in the two period case
+discounting pairwise expected values one period ahead back
+to the current node.
+The procedure is similar for American style derivatives
+except that at each node, we also
+have to check whether or not we want to early exercise.
+When early exercise is optimal, the value at that node
+reflects that choice.
+And it can affect the value as we work
+backwards through the tree.
+We'll return to multi-step trees and how they're
+calibrated in the next lecture and also
+use them to explain one way to derive the Black-Scholes Merton
+options pricing formula.
+I've been using risk-neutral pricing in most of the examples
+here for its simplicity but I want to again emphasize
+that we would have come to the same answers using
+the formulas for creating a replicating portfolio.
+It's important to remember that risk-neutral pricing does not
+mean that people are risk-neutral
+or that they don't care about the considerable risk
+of options, which is a reflection of the fact
+that there are equivalent to a leveraged position
+in the risky underlying stock.
+Risk-neutral pricing works by replacing
+the cost of risk in our usual discount rate
+with an adjustment in the risk-neutral probabilities.
+That adjustment means that the risk-neutral probabilities
+have information, not just about the probability
+of different outcomes, but also about the price of risk
+associated with those outcomes.
+For a stock price tree, the risk-neutral probability, q*,
+will turn out to be less than the physical probability, q,
+which has the effect of putting more weight on lower stock
+price realizations reflecting that the true discount rate is
+higher than the risk-free rate.
+Finally, binomial pricing has been
+shown to work for pricing American options
+where exercise decisions today will
+depend on what we think those decisions will
+be in the future.
+There's no simple alternative to using
+backward induction on trees for pricing American options.
+And luckily, as we extend the tree to many steps,
+a binomial approach can often produce
+a very accurate estimate of a derivatives value.

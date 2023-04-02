@@ -1,0 +1,87 @@
+
+PROFESSOR: A classic use of payoff diagrams
+is to provide a simple proof of the famous put-call parity
+relationship.
+That relationship says that the value of a portfolio consisting
+of a long put in a short call both with the same strike
+price K is equal to the present value
+of a short forward contract with a forward price K.
+It's important to keep in mind that the options
+in forward contracts refer to the same stock
+and the derivative contracts all have the same expiration
+date, T.
+The additional notation that you see here
+is that put refers to the price of the put and hence,
+its premium.
+Call is the call price or the call premium
+and are as the usual risk-free rate.
+Recall that the value of the short position in an existing
+forward contract with forward price K, by no arbitrage,
+has to be the present value of the difference between K
+at the current forward price for the contract in the market.
+Now to prove that equation must hold,
+we start by establishing that the two sides of the equation
+have the same payoffs for every possible value of the stock
+price at time T. We show this graphically,
+adding together along put and a short call
+and seeing that the sum is the same
+as a short forward contract.
+
+Next we applied the idea of no-arbitrage
+to observe that if the two positions have
+identical payoffs in every future state of the world,
+they must have identical prices today.
+That observation leads immediately
+to the put-call parity equation that's written again
+at the bottom of the slide.
+The put-call parity relationship is
+famous because of its practical importance
+in a variety of situations.
+It can be used by traders looking
+to profit from pricing inconsistencies
+between the securities involved.
+It can also be used to quickly find
+the price of a put given the pricing formula for a call
+or vice versa.
+It also highlights that many positions
+can be described either in terms of puts or in terms of calls
+that having these multiple ways of looking at things
+is very helpful in understanding the risk
+characteristics of a position.
+For example, we'll use put-call parity
+to help understand the risk dynamics of levered firms
+and also of risky corporate debt.
+You can use a put-call parity equation
+like any other algebraic equation,
+for example, rearranging it to solve
+for the value of a call in terms of the value
+of a put at a forward contract.
+Or you can solve it for a put in terms of a value
+call in a forward contract.
+Negative values denote short positions and positive values
+denote long positions.
+The first line here rearranges the equation
+to solve for the value of a put.
+
+Then using our pricing formula from
+before for a forward contract, we
+can substitute out the current forward price f sub 0 t
+and replace it with the future value of the current stock
+price as zero.
+
+The last line then expresses the put call parity relationship
+in terms of put, a call, the current stock price
+at the present value of the exercise price
+K. It's quite common to see this equation in this form.
+To give a numerical example, say you
+have a stock selling for $100, a risk free rate of 5%
+and an at the money call option priced at $10.45.
+Then it must be the case that a put option on the stock that
+expires in one year and also has a strike price of 100
+sells for $5.57 It's a good exercise for you to think
+about the trades you'd have to make
+to realize a risk free profit if instead this put
+was priced differently.
+Say it was selling for $6.
+Think about what portfolio you would buy
+and what you would sell in order to realize an arbitrage profit.

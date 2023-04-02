@@ -1,0 +1,652 @@
+0
+00:00:00,000 --> 00:00:02,040
+
+
+1
+00:00:02,040 --> 00:00:04,320
+PROFESSOR: One of the most common uses of swaps
+
+2
+00:00:04,320 --> 00:00:06,300
+is by financial institutions that
+
+3
+00:00:06,300 --> 00:00:09,150
+want to hedge the maturity mismatch between the asset
+
+4
+00:00:09,150 --> 00:00:12,550
+and liability sides of their balance sheet.
+
+5
+00:00:12,550 --> 00:00:16,660
+We'll consider the example of Southwest Savings Bank.
+
+6
+00:00:16,660 --> 00:00:18,430
+This is one of my favorite examples
+
+7
+00:00:18,430 --> 00:00:20,530
+for illustrating the importance of interest rate
+
+8
+00:00:20,530 --> 00:00:24,430
+risk for banks, how swaps and futures are alternative ways
+
+9
+00:00:24,430 --> 00:00:28,120
+to hedge against it, and how swap contracts have been
+
+10
+00:00:28,120 --> 00:00:30,910
+engineered and evolved over time to better help
+
+11
+00:00:30,910 --> 00:00:34,140
+banks address these goals.
+
+12
+00:00:34,140 --> 00:00:37,050
+Like many savings banks, Southwest
+
+13
+00:00:37,050 --> 00:00:40,620
+can fund its investment relatively inexpensively using
+
+14
+00:00:40,620 --> 00:00:43,020
+short term deposit funding.
+
+15
+00:00:43,020 --> 00:00:45,420
+Depositors like the safety and liquidity
+
+16
+00:00:45,420 --> 00:00:47,550
+of holding their money in a bank.
+
+17
+00:00:47,550 --> 00:00:51,420
+Thus, deposits make up the majority of its liabilities.
+
+18
+00:00:51,420 --> 00:00:53,610
+It also has some equity that serves
+
+19
+00:00:53,610 --> 00:00:58,470
+as a buffer against fluctuations in the value of its assets.
+
+20
+00:00:58,470 --> 00:01:01,680
+On the asset side of the balance sheet,
+
+21
+00:01:01,680 --> 00:01:04,500
+it specializes in funding mortgages,
+
+22
+00:01:04,500 --> 00:01:07,065
+which let's assume have a maturity of 10 years.
+
+23
+00:01:07,065 --> 00:01:15,990
+
+
+24
+00:01:15,990 --> 00:01:18,870
+Well, let's imagine that the managers of Southwest
+
+25
+00:01:18,870 --> 00:01:25,350
+decide to invest $1 million into new 10 year mortgages funded
+
+26
+00:01:25,350 --> 00:01:28,520
+with three month time deposits.
+
+27
+00:01:28,520 --> 00:01:32,240
+Say the mortgages carry a 10% interest rate,
+
+28
+00:01:32,240 --> 00:01:37,180
+and the three month time deposits earn 8%.
+
+29
+00:01:37,180 --> 00:01:38,980
+For the first three months, the bank
+
+30
+00:01:38,980 --> 00:01:41,770
+has locked in an attractive 2% spread
+
+31
+00:01:41,770 --> 00:01:43,540
+between the mortgage rate it earns
+
+32
+00:01:43,540 --> 00:01:45,940
+and the deposit rate it pays.
+
+33
+00:01:45,940 --> 00:01:48,970
+Clearly, though, this is a very risky balance sheet.
+
+34
+00:01:48,970 --> 00:01:51,700
+The risk can be understood by considering the future cash
+
+35
+00:01:51,700 --> 00:01:52,730
+flows.
+
+36
+00:01:52,730 --> 00:01:54,670
+If interest rates rise, the mortgages
+
+37
+00:01:54,670 --> 00:01:58,060
+will continue to pay 10%, but the new deposits
+
+38
+00:01:58,060 --> 00:02:01,360
+will carry a higher rate, possibly exceeding the 10%
+
+39
+00:02:01,360 --> 00:02:03,600
+earned on the mortgages.
+
+40
+00:02:03,600 --> 00:02:07,170
+The risk can also be understood as having an immediate effect
+
+41
+00:02:07,170 --> 00:02:10,259
+in terms of the market value or present value of the balance
+
+42
+00:02:10,259 --> 00:02:11,930
+sheet.
+
+43
+00:02:11,930 --> 00:02:15,410
+That is, if rates rise, the market value of the 10 year
+
+44
+00:02:15,410 --> 00:02:17,480
+mortgages will fall considerably more
+
+45
+00:02:17,480 --> 00:02:21,140
+than the market value of the three month time deposits.
+
+46
+00:02:21,140 --> 00:02:23,390
+That means that an increase in interest rates
+
+47
+00:02:23,390 --> 00:02:26,120
+will erode the value of equity, potentially
+
+48
+00:02:26,120 --> 00:02:29,150
+causing financial distress or causing the bank
+
+49
+00:02:29,150 --> 00:02:34,190
+to be in violation of regulatory capital requirements.
+
+50
+00:02:34,190 --> 00:02:37,060
+There are several ways to hedge this risk exposure.
+
+51
+00:02:37,060 --> 00:02:41,080
+We'll compare two popular approaches: futures contracts
+
+52
+00:02:41,080 --> 00:02:42,325
+and interest rate swaps.
+
+53
+00:02:42,325 --> 00:02:46,640
+
+
+54
+00:02:46,640 --> 00:02:49,580
+Hedging with a strip of short term interest rate futures
+
+55
+00:02:49,580 --> 00:02:54,160
+is one way to offset Southwest's interest rate risk exposure.
+
+56
+00:02:54,160 --> 00:02:57,580
+Active short term interest rate futures contract currently
+
+57
+00:02:57,580 --> 00:03:02,500
+include the three month LIBOR and three month SOFR contracts.
+
+58
+00:03:02,500 --> 00:03:05,080
+Looking at the information in this table,
+
+59
+00:03:05,080 --> 00:03:08,080
+the quoted price is used to find the forward interest
+
+60
+00:03:08,080 --> 00:03:10,750
+rate that can be locked in.
+
+61
+00:03:10,750 --> 00:03:15,530
+The annualized rate is just 100 minus the quoted price.
+
+62
+00:03:15,530 --> 00:03:19,880
+So if the price is given as 92, the rate is 8%.
+
+63
+00:03:19,880 --> 00:03:23,290
+
+
+64
+00:03:23,290 --> 00:03:25,570
+Well, to lock in future borrowing rates
+
+65
+00:03:25,570 --> 00:03:28,600
+beyond the first three months covered by the initial time
+
+66
+00:03:28,600 --> 00:03:33,040
+deposits, the bank would short a sequence of contracts,
+
+67
+00:03:33,040 --> 00:03:38,040
+sizing the position to minimize the risk with a hedge ratio.
+
+68
+00:03:38,040 --> 00:03:40,770
+The short position generates gains
+
+69
+00:03:40,770 --> 00:03:43,200
+proportional to the increase in rates
+
+70
+00:03:43,200 --> 00:03:45,150
+offsetting the future higher interest
+
+71
+00:03:45,150 --> 00:03:49,920
+rates in the cash market and the losses that they generate.
+
+72
+00:03:49,920 --> 00:03:52,680
+Specifically, if the contract is based
+
+73
+00:03:52,680 --> 00:03:55,320
+on a principal amount of $1 million,
+
+74
+00:03:55,320 --> 00:04:00,660
+the bank would short one of each of these contracts.
+
+75
+00:04:00,660 --> 00:04:03,300
+While this strategy can provide a decent hedge,
+
+76
+00:04:03,300 --> 00:04:05,200
+it has some drawbacks.
+
+77
+00:04:05,200 --> 00:04:09,300
+One is that it involves a large number of contracts.
+
+78
+00:04:09,300 --> 00:04:12,510
+The second is that liquidity tends to decline rapidly
+
+79
+00:04:12,510 --> 00:04:16,589
+for longer dated contracts, as can be seen from the declining
+
+80
+00:04:16,589 --> 00:04:18,240
+open interest.
+
+81
+00:04:18,240 --> 00:04:23,000
+That reduced liquidity may increase the cost of the hedge.
+
+82
+00:04:23,000 --> 00:04:26,660
+Hedging mortgages is also complicated by the fact
+
+83
+00:04:26,660 --> 00:04:28,400
+that they may be prepaid.
+
+84
+00:04:28,400 --> 00:04:30,530
+And there is considerable uncertainty
+
+85
+00:04:30,530 --> 00:04:33,500
+about what that rate of prepayment will be.
+
+86
+00:04:33,500 --> 00:04:36,890
+That uncertainty will degrade the effectiveness of the hedge,
+
+87
+00:04:36,890 --> 00:04:39,200
+because it's likely that the hedge will turn out
+
+88
+00:04:39,200 --> 00:04:41,210
+to be too big or too small.
+
+89
+00:04:41,210 --> 00:04:44,160
+
+
+90
+00:04:44,160 --> 00:04:46,710
+An alternative is for Southwest to hedge using
+
+91
+00:04:46,710 --> 00:04:49,230
+a 10 year interest rate swap.
+
+92
+00:04:49,230 --> 00:04:52,860
+Southwest would enter as the fixed rate payer, using
+
+93
+00:04:52,860 --> 00:04:54,660
+the income received from the mortgages
+
+94
+00:04:54,660 --> 00:04:57,870
+to cover its swap payout obligations.
+
+95
+00:04:57,870 --> 00:04:59,880
+It would be the floating rate receiver
+
+96
+00:04:59,880 --> 00:05:04,350
+and would use the income from the swap to pay its depositors.
+
+97
+00:05:04,350 --> 00:05:07,710
+It's protected from rising deposit rates by the increasing
+
+98
+00:05:07,710 --> 00:05:11,310
+swap income from the floating payments it receives.
+
+99
+00:05:11,310 --> 00:05:13,590
+Specifically, imagine that it enters
+
+100
+00:05:13,590 --> 00:05:18,840
+into a 10 year swap that matches the maturity of the mortgages.
+
+101
+00:05:18,840 --> 00:05:21,690
+As the fixed rate payer, it pays a rate
+
+102
+00:05:21,690 --> 00:05:23,730
+that was determined competitively
+
+103
+00:05:23,730 --> 00:05:27,680
+in the swap market, as we discussed earlier.
+
+104
+00:05:27,680 --> 00:05:32,300
+The floating rate is indexed to LIBOR, a common index
+
+105
+00:05:32,300 --> 00:05:35,960
+rate for swaps, and the payment frequency
+
+106
+00:05:35,960 --> 00:05:39,830
+is set to be semi-annual, which is also
+
+107
+00:05:39,830 --> 00:05:43,160
+a common frequency for plain vanilla interest rate swaps.
+
+108
+00:05:43,160 --> 00:05:46,300
+
+
+109
+00:05:46,300 --> 00:05:49,900
+Both the strip of short futures and the interest rate swap
+
+110
+00:05:49,900 --> 00:05:53,900
+would serve to protect the bank from rising interest rates.
+
+111
+00:05:53,900 --> 00:05:58,570
+However, the swap contract has a few advantages over futures.
+
+112
+00:05:58,570 --> 00:06:00,820
+There's only one swap contract.
+
+113
+00:06:00,820 --> 00:06:04,450
+It covers the entire 10 year period, avoiding illiquidity
+
+114
+00:06:04,450 --> 00:06:08,110
+and long dated futures, and the more flexible timing
+
+115
+00:06:08,110 --> 00:06:10,570
+means that the contract can better match the maturity
+
+116
+00:06:10,570 --> 00:06:13,840
+dates of the time deposits.
+
+117
+00:06:13,840 --> 00:06:17,170
+However, this plain vanilla swap is still not a perfect hedge
+
+118
+00:06:17,170 --> 00:06:19,410
+for Southwest.
+
+119
+00:06:19,410 --> 00:06:23,610
+Whereas the notional principle of the swap is constant,
+
+120
+00:06:23,610 --> 00:06:26,340
+the mortgage principal will decline over time
+
+121
+00:06:26,340 --> 00:06:28,350
+with amortization.
+
+122
+00:06:28,350 --> 00:06:31,800
+There's likely to be a mismatch between the timing of mortgage
+
+123
+00:06:31,800 --> 00:06:34,320
+payments that are received monthly
+
+124
+00:06:34,320 --> 00:06:38,980
+and the swap payments that are made semi-annually.
+
+125
+00:06:38,980 --> 00:06:43,930
+The rate paid to depositors may not track the LIBOR reference
+
+126
+00:06:43,930 --> 00:06:45,890
+rate in the swap.
+
+127
+00:06:45,890 --> 00:06:48,170
+The uncertainty about prepayment speeds
+
+128
+00:06:48,170 --> 00:06:51,080
+means the bank is likely to be over- or under-hedged
+
+129
+00:06:51,080 --> 00:06:51,665
+in the future.
+
+130
+00:06:51,665 --> 00:06:54,300
+
+
+131
+00:06:54,300 --> 00:06:57,830
+All of these problems can be addressed with customized swaps
+
+132
+00:06:57,830 --> 00:07:00,530
+that use financial engineering to provide users
+
+133
+00:07:00,530 --> 00:07:03,810
+with a more reliable hedge.
+
+134
+00:07:03,810 --> 00:07:08,070
+Amortizing swaps are based on a notional principle balance
+
+135
+00:07:08,070 --> 00:07:10,330
+that declines over time.
+
+136
+00:07:10,330 --> 00:07:12,630
+In this case, the amortization schedule
+
+137
+00:07:12,630 --> 00:07:18,580
+can be set to match the normal mortgage amortization schedule.
+
+138
+00:07:18,580 --> 00:07:21,490
+Basis swaps are an exchange of payments
+
+139
+00:07:21,490 --> 00:07:25,780
+where each side is based on a different reference index.
+
+140
+00:07:25,780 --> 00:07:28,390
+A basis swap could be used to hedge
+
+141
+00:07:28,390 --> 00:07:31,330
+the timing difference between the mortgage cash inflows
+
+142
+00:07:31,330 --> 00:07:34,420
+and the swap fixed rate outflows.
+
+143
+00:07:34,420 --> 00:07:37,450
+Another basis swap could be used to hedge
+
+144
+00:07:37,450 --> 00:07:41,260
+the difference between the deposit rates and the LIBOR
+
+145
+00:07:41,260 --> 00:07:43,240
+rates.
+
+146
+00:07:43,240 --> 00:07:46,270
+Finally, the prepayment risk could be hedged
+
+147
+00:07:46,270 --> 00:07:49,750
+with the use of a swaption.
+
+148
+00:07:49,750 --> 00:07:54,070
+A swaption is an option embedded in a swap contract.
+
+149
+00:07:54,070 --> 00:07:57,730
+Type of swaption that would help Southwest in this situation
+
+150
+00:07:57,730 --> 00:08:00,160
+would allow it to cancel the swap
+
+151
+00:08:00,160 --> 00:08:03,460
+at any time of its choosing, thereby
+
+152
+00:08:03,460 --> 00:08:07,270
+allowing it to take off the hedge if the mortgages are
+
+153
+00:08:07,270 --> 00:08:09,490
+prepaid.
+
+154
+00:08:09,490 --> 00:08:11,860
+While each of these custom features
+
+155
+00:08:11,860 --> 00:08:14,320
+makes for a much better hedge, but it
+
+156
+00:08:14,320 --> 00:08:16,120
+adds to the cost of the hedge.
+
+157
+00:08:16,120 --> 00:08:18,700
+Depending on its risk tolerance, Southwest
+
+158
+00:08:18,700 --> 00:08:22,360
+might prefer the partial protection offered
+
+159
+00:08:22,360 --> 00:08:25,450
+by a plain vanilla interest rate swap,
+
+160
+00:08:25,450 --> 00:08:29,380
+or it may choose to add some of these other features
+
+161
+00:08:29,380 --> 00:08:32,580
+to improve the quality of its hedge.
+
+162
+00:08:32,580 --> 00:08:34,000
+
+

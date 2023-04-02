@@ -1,0 +1,316 @@
+0
+00:00:00,000 --> 00:00:01,755
+PROFESSOR: Like all forward contracts,
+
+1
+00:00:01,755 --> 00:00:03,960
+a futures contract locks in a price
+
+2
+00:00:03,960 --> 00:00:06,750
+today for a transaction that will occur on a specified
+
+3
+00:00:06,750 --> 00:00:08,740
+future date.
+
+4
+00:00:08,740 --> 00:00:11,560
+Futures contracts, though, have a number of special features
+
+5
+00:00:11,560 --> 00:00:14,560
+that are designed to enhance liquidity and minimize trading
+
+6
+00:00:14,560 --> 00:00:16,700
+costs.
+
+7
+00:00:16,700 --> 00:00:20,420
+First, the contracts are traded on an exchange
+
+8
+00:00:20,420 --> 00:00:22,190
+like the well-known Chicago Mercantile
+
+9
+00:00:22,190 --> 00:00:27,050
+Exchange, the CME, or the Intercontinental Exchange, ICE.
+
+10
+00:00:27,050 --> 00:00:29,660
+The Exchange clears all trades and acts
+
+11
+00:00:29,660 --> 00:00:32,689
+as what's called the central counterparty, eliminating
+
+12
+00:00:32,689 --> 00:00:35,780
+bilateral default risk between individual traders
+
+13
+00:00:35,780 --> 00:00:40,380
+and preserving the anonymity between traders.
+
+14
+00:00:40,380 --> 00:00:44,490
+Second, the contracts are highly standardized.
+
+15
+00:00:44,490 --> 00:00:47,310
+For example, a futures contract for wheat
+
+16
+00:00:47,310 --> 00:00:51,030
+specifies the particular variety of the wheat,
+
+17
+00:00:51,030 --> 00:00:53,370
+how many bushels of wheat are included
+
+18
+00:00:53,370 --> 00:00:57,750
+in the contract, delivery dates and locations, contract price
+
+19
+00:00:57,750 --> 00:01:00,660
+increments, and so forth.
+
+20
+00:01:00,660 --> 00:01:04,230
+This standardization across this relatively small number
+
+21
+00:01:04,230 --> 00:01:08,100
+of contracts has the advantage that it concentrates volume
+
+22
+00:01:08,100 --> 00:01:11,100
+and thereby increases contract liquidity.
+
+23
+00:01:11,100 --> 00:01:13,140
+The disadvantage is that the match
+
+24
+00:01:13,140 --> 00:01:16,290
+between a contract and the asset being hedged often
+
+25
+00:01:16,290 --> 00:01:18,800
+is then imperfect.
+
+26
+00:01:18,800 --> 00:01:22,010
+That is, futures contracts are often used to cross hedge,
+
+27
+00:01:22,010 --> 00:01:26,180
+giving rise to the basis risk that we talked about last time.
+
+28
+00:01:26,180 --> 00:01:29,720
+Just to give an example, imagine a farmer who's
+
+29
+00:01:29,720 --> 00:01:32,630
+hedging her durum wheat crop might
+
+30
+00:01:32,630 --> 00:01:36,110
+choose to hedge with a short position in a contract
+
+31
+00:01:36,110 --> 00:01:40,160
+based on soft red winter wheat because the price
+
+32
+00:01:40,160 --> 00:01:42,050
+changes between those two types of wheats
+
+33
+00:01:42,050 --> 00:01:43,430
+are highly correlated.
+
+34
+00:01:43,430 --> 00:01:45,920
+But there's only a futures contract
+
+35
+00:01:45,920 --> 00:01:48,100
+on the red winter wheat.
+
+36
+00:01:48,100 --> 00:01:51,280
+The basis risk then is that the prices
+
+37
+00:01:51,280 --> 00:01:54,760
+of durum wheat and red wheat may not move in tandem,
+
+38
+00:01:54,760 --> 00:01:59,250
+and that will reduce the effectiveness of the hedge.
+
+39
+00:01:59,250 --> 00:02:02,550
+A third special feature of futures contracts
+
+40
+00:02:02,550 --> 00:02:04,530
+is that they're marked to market at least once
+
+41
+00:02:04,530 --> 00:02:07,740
+every day in a process known as daily settlement.
+
+42
+00:02:07,740 --> 00:02:10,440
+A trader entering into a futures contract
+
+43
+00:02:10,440 --> 00:02:14,220
+must put up margin in the form of cash for securities.
+
+44
+00:02:14,220 --> 00:02:17,220
+The margin is held as collateral by the Exchange.
+
+45
+00:02:17,220 --> 00:02:20,460
+And as the futures price for the contract changes,
+
+46
+00:02:20,460 --> 00:02:22,830
+the daily gains or loss are transferred
+
+47
+00:02:22,830 --> 00:02:25,380
+between the accounts of the corresponding long and short
+
+48
+00:02:25,380 --> 00:02:27,120
+positions.
+
+49
+00:02:27,120 --> 00:02:30,660
+If a trader's margin account falls below a threshold
+
+50
+00:02:30,660 --> 00:02:32,910
+level called the maintenance margin,
+
+51
+00:02:32,910 --> 00:02:35,160
+the trader must add additional margin
+
+52
+00:02:35,160 --> 00:02:38,750
+or the Exchange will close out the position.
+
+53
+00:02:38,750 --> 00:02:40,820
+The combination of margin requirements
+
+54
+00:02:40,820 --> 00:02:44,240
+and daily settlement greatly reduce the credit risk exposure
+
+55
+00:02:44,240 --> 00:02:46,850
+of the Exchange and protect market participants
+
+56
+00:02:46,850 --> 00:02:49,800
+against default risk.
+
+57
+00:02:49,800 --> 00:02:51,990
+As it turns out, most futures contracts
+
+58
+00:02:51,990 --> 00:02:55,110
+are closed out prior to maturity.
+
+59
+00:02:55,110 --> 00:02:57,460
+That could be for several reasons.
+
+60
+00:02:57,460 --> 00:02:59,700
+One is that the horizon over which
+
+61
+00:02:59,700 --> 00:03:02,820
+the risk needs to be managed is different than the contract
+
+62
+00:03:02,820 --> 00:03:04,950
+maturity.
+
+63
+00:03:04,950 --> 00:03:07,200
+Contracts may also be closed out early
+
+64
+00:03:07,200 --> 00:03:09,540
+to avoid physical settlement.
+
+65
+00:03:09,540 --> 00:03:12,930
+Going back to our wheat example, a trader
+
+66
+00:03:12,930 --> 00:03:16,500
+might want to speculate on higher than expected demand
+
+67
+00:03:16,500 --> 00:03:19,770
+or bad weather causing wheat prices to rise,
+
+68
+00:03:19,770 --> 00:03:22,200
+but the speculator doesn't want to take delivery
+
+69
+00:03:22,200 --> 00:03:25,960
+of $5,000 bushels of wheat.
+
+70
+00:03:25,960 --> 00:03:28,750
+Contracts are closed out prior to expiration
+
+71
+00:03:28,750 --> 00:03:33,450
+by taking an offsetting position in the same contract.
+
+72
+00:03:33,450 --> 00:03:36,540
+For instance, if you're long in 10 corn contracts
+
+73
+00:03:36,540 --> 00:03:39,870
+expiring in April, you can take a short position
+
+74
+00:03:39,870 --> 00:03:42,090
+and 10 identical contracts.
+
+75
+00:03:42,090 --> 00:03:44,940
+The Exchange has a record of both transactions.
+
+76
+00:03:44,940 --> 00:03:46,620
+And they cancel against each other
+
+77
+00:03:46,620 --> 00:03:48,500
+through the clearing process.
+
+78
+00:03:48,500 --> 00:03:49,000
+
+

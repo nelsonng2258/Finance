@@ -1,0 +1,468 @@
+0
+00:00:00,000 --> 00:00:01,824
+
+
+1
+00:00:01,824 --> 00:00:04,440
+PROFESSOR: Risk managers and options traders
+
+2
+00:00:04,440 --> 00:00:07,440
+need to know the sensitivity of the value of their option
+
+3
+00:00:07,440 --> 00:00:11,070
+holdings to various factors in order to understand their risk
+
+4
+00:00:11,070 --> 00:00:13,620
+exposure and how to hedge it.
+
+5
+00:00:13,620 --> 00:00:17,430
+Those sensitivities of option prices are known as the Greeks.
+
+6
+00:00:17,430 --> 00:00:21,750
+Will discuss, first, Delta, the first order sensitivity
+
+7
+00:00:21,750 --> 00:00:25,470
+to the underlying asset's price; second, Gamma,
+
+8
+00:00:25,470 --> 00:00:28,950
+the second order sensitivity to the underlying asset's price;
+
+9
+00:00:28,950 --> 00:00:32,850
+third, Theta, the sensitivity to the passage of time;
+
+10
+00:00:32,850 --> 00:00:37,500
+fourth, Rho, the sensitivity to interest rates; and fifth,
+
+11
+00:00:37,500 --> 00:00:42,060
+Vega, the sensitivity to the underlying's volatility.
+
+12
+00:00:42,060 --> 00:00:45,450
+For options that can be priced using Black-Scholes-Merton,
+
+13
+00:00:45,450 --> 00:00:48,270
+the Greeks often can be explicitly calculated
+
+14
+00:00:48,270 --> 00:00:52,010
+by taking derivatives of those pricing formulas.
+
+15
+00:00:52,010 --> 00:00:54,400
+However, the concepts are very general,
+
+16
+00:00:54,400 --> 00:00:57,640
+and they're frequently applied to all sorts of derivatives
+
+17
+00:00:57,640 --> 00:01:01,840
+that can't be priced with Black-Scholes-Merton.
+
+18
+00:01:01,840 --> 00:01:04,959
+Delta and Gamma are the first and second order sensitivities
+
+19
+00:01:04,959 --> 00:01:08,020
+of an option's value to changes in the price of the underlying
+
+20
+00:01:08,020 --> 00:01:09,340
+asset.
+
+21
+00:01:09,340 --> 00:01:11,350
+The general idea for the Delta is
+
+22
+00:01:11,350 --> 00:01:14,800
+expressed by taking the derivative of the option price
+
+23
+00:01:14,800 --> 00:01:17,920
+with respect to the value of the underlying.
+
+24
+00:01:17,920 --> 00:01:20,980
+As it's represented here, the underlying
+
+25
+00:01:20,980 --> 00:01:25,560
+is a stock with price, S, if it's a European put or call
+
+26
+00:01:25,560 --> 00:01:28,290
+option that one can differentiate
+
+27
+00:01:28,290 --> 00:01:29,880
+the Black-Scholes-Merton formula,
+
+28
+00:01:29,880 --> 00:01:35,250
+with respect to the stock price, and prove that the Delta is
+
+29
+00:01:35,250 --> 00:01:42,990
+N of d1 for a call, and it's minus N of minus d1 for a put.
+
+30
+00:01:42,990 --> 00:01:47,160
+The Gamma of an option is found by taking the second derivative
+
+31
+00:01:47,160 --> 00:01:51,600
+of its value with respect to the underlying asset price.
+
+32
+00:01:51,600 --> 00:01:54,960
+That's equivalent to taking the first derivative of the Delta.
+
+33
+00:01:54,960 --> 00:01:57,820
+
+
+34
+00:01:57,820 --> 00:02:00,700
+Again, if it's a stock option that
+
+35
+00:02:00,700 --> 00:02:02,440
+satisfies the Black-Scholes-Merton
+
+36
+00:02:02,440 --> 00:02:07,550
+assumptions, you can drive a closed form solution.
+
+37
+00:02:07,550 --> 00:02:11,510
+The result will be identical for either a call or put option,
+
+38
+00:02:11,510 --> 00:02:12,650
+and that's given here.
+
+39
+00:02:12,650 --> 00:02:16,220
+
+
+40
+00:02:16,220 --> 00:02:18,680
+Some of those calculations are actually
+
+41
+00:02:18,680 --> 00:02:20,870
+trickier than it may first appear,
+
+42
+00:02:20,870 --> 00:02:25,850
+because d1 and d2 also depend on s.
+
+43
+00:02:25,850 --> 00:02:28,640
+You can give it a try, or see the calculations
+
+44
+00:02:28,640 --> 00:02:30,890
+in Hull's textbook, or from other sources
+
+45
+00:02:30,890 --> 00:02:32,450
+if you're curious.
+
+46
+00:02:32,450 --> 00:02:34,730
+However, for the homework and exam,
+
+47
+00:02:34,730 --> 00:02:37,670
+you only need to know how to use the formulas shown
+
+48
+00:02:37,670 --> 00:02:39,990
+in the slides and how to interpret them.
+
+49
+00:02:39,990 --> 00:02:44,560
+You won't be asked to do any derivations.
+
+50
+00:02:44,560 --> 00:02:46,630
+Let's return to the graph we looked at earlier,
+
+51
+00:02:46,630 --> 00:02:49,120
+where we plotted the current value of a put option
+
+52
+00:02:49,120 --> 00:02:51,950
+as a function of the underlying stock price.
+
+53
+00:02:51,950 --> 00:02:54,310
+We assume that the current stock price is 100
+
+54
+00:02:54,310 --> 00:02:57,550
+and that the option is currently at-the-money.
+
+55
+00:02:57,550 --> 00:03:00,160
+As before, we can interpret Delta
+
+56
+00:03:00,160 --> 00:03:06,710
+as the slope of the tangent line at the current stock price.
+
+57
+00:03:06,710 --> 00:03:10,480
+Notice that, for a put option, that tangent line
+
+58
+00:03:10,480 --> 00:03:12,880
+has a negative slope everywhere, which
+
+59
+00:03:12,880 --> 00:03:17,730
+means that the Delta of a put option is always negative.
+
+60
+00:03:17,730 --> 00:03:21,110
+The Gamma reflects the convexity of this function,
+
+61
+00:03:21,110 --> 00:03:24,080
+in other words, how much curvature there is.
+
+62
+00:03:24,080 --> 00:03:26,930
+The higher the Gamma the more curvature.
+
+63
+00:03:26,930 --> 00:03:29,620
+
+
+64
+00:03:29,620 --> 00:03:33,990
+Well, now, how about a call option?
+
+65
+00:03:33,990 --> 00:03:36,170
+We can do a similar graphical analysis.
+
+66
+00:03:36,170 --> 00:03:38,790
+
+
+67
+00:03:38,790 --> 00:03:42,260
+The value curve for a call option will look like this.
+
+68
+00:03:42,260 --> 00:03:44,980
+
+
+69
+00:03:44,980 --> 00:03:50,410
+Again, assuming the stock price is currently 100.
+
+70
+00:03:50,410 --> 00:03:55,590
+We can find the slope of the tangent line
+
+71
+00:03:55,590 --> 00:03:58,560
+at the current stock price.
+
+72
+00:03:58,560 --> 00:04:04,520
+And that slope represents the Delta of the call option.
+
+73
+00:04:04,520 --> 00:04:08,350
+You can see that the slope of the value function
+
+74
+00:04:08,350 --> 00:04:12,550
+is positive everywhere, which means the Delta is positive
+
+75
+00:04:12,550 --> 00:04:15,420
+everywhere.
+
+76
+00:04:15,420 --> 00:04:18,600
+And for the Gamma, again, it represents
+
+77
+00:04:18,600 --> 00:04:21,060
+the degree of curvature.
+
+78
+00:04:21,060 --> 00:04:23,790
+The higher the Gamma, the more convexity,
+
+79
+00:04:23,790 --> 00:04:26,930
+or the more curvature.
+
+80
+00:04:26,930 --> 00:04:30,110
+This graph shows what happens to the Delta of a caller put
+
+81
+00:04:30,110 --> 00:04:33,140
+option on the stock as a function of the current value
+
+82
+00:04:33,140 --> 00:04:37,140
+of the underlying stock and holding all else equal.
+
+83
+00:04:37,140 --> 00:04:41,100
+As we just established, both algebraically and graphically,
+
+84
+00:04:41,100 --> 00:04:44,670
+the Delta of the put is always negative.
+
+85
+00:04:44,670 --> 00:04:49,050
+It's most steeply negative for low stock prices,
+
+86
+00:04:49,050 --> 00:04:51,880
+and goes to 0 for high stock prices.
+
+87
+00:04:51,880 --> 00:04:54,630
+
+
+88
+00:04:54,630 --> 00:04:59,160
+We can see that by looking back at the previous graph,
+
+89
+00:04:59,160 --> 00:05:06,650
+where four low stock prices, say, here, the tangent
+
+90
+00:05:06,650 --> 00:05:09,530
+line is steep.
+
+91
+00:05:09,530 --> 00:05:14,330
+And for high stock price, say here, the tangent line
+
+92
+00:05:14,330 --> 00:05:15,630
+is basically flat.
+
+93
+00:05:15,630 --> 00:05:18,710
+The slope is close to 0.
+
+94
+00:05:18,710 --> 00:05:23,540
+For a call option, the slope is 0 when the option is very far
+
+95
+00:05:23,540 --> 00:05:27,860
+out-of-the-money, which is when stock prices are low.
+
+96
+00:05:27,860 --> 00:05:33,540
+And it increases to 1 when the option is deep into-the-money.
+
+97
+00:05:33,540 --> 00:05:35,370
+This is a good place to emphasize
+
+98
+00:05:35,370 --> 00:05:38,970
+that it's this large variation in Deltas with stock prices
+
+99
+00:05:38,970 --> 00:05:42,000
+that causes the replicating portfolios for options
+
+100
+00:05:42,000 --> 00:05:45,450
+to change over time, sometimes quite quickly, when
+
+101
+00:05:45,450 --> 00:05:47,940
+stock prices make a big move.
+
+102
+00:05:47,940 --> 00:05:52,290
+Those changes can necessitate frequent portfolio rebalancing
+
+103
+00:05:52,290 --> 00:05:54,150
+and dynamic hedging strategies.
+
+104
+00:05:54,150 --> 00:05:57,890
+
+
+105
+00:05:57,890 --> 00:06:01,790
+We saw that the Gamma is the same for a put or call option.
+
+106
+00:06:01,790 --> 00:06:05,330
+Plotting it is a function of the current stock price.
+
+107
+00:06:05,330 --> 00:06:08,240
+It's close to 0 for very high or very low
+
+108
+00:06:08,240 --> 00:06:12,350
+values of the underlying stock, relative to the strike price,
+
+109
+00:06:12,350 --> 00:06:17,260
+and peaks near the strike price of the option.
+
+110
+00:06:17,260 --> 00:06:19,240
+This pattern of curvature is also
+
+111
+00:06:19,240 --> 00:06:24,070
+apparent from looking back at the graph on slide 27.
+
+112
+00:06:24,070 --> 00:06:30,060
+We see here that around the strike price,
+
+113
+00:06:30,060 --> 00:06:32,840
+the function is quite curved.
+
+114
+00:06:32,840 --> 00:06:38,690
+But it's fairly straight for high or low values
+
+115
+00:06:38,690 --> 00:06:40,500
+of the stock.
+
+116
+00:06:40,500 --> 00:06:41,000
+
+

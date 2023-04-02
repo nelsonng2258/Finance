@@ -1,0 +1,96 @@
+
+PROFESSOR: Commodity swaps are another useful tool
+for risk management.
+A commodity swap is an agreement to periodically exchange
+a pre-specified fixed payment for a payment linked
+to the current market price of a commodity.
+That makes these swaps equivalent to a portfolio
+of commodity forward contracts, each
+with the same forward price.
+These agreements are usually cash-settled,
+although a contract could specify physical delivery.
+Because oil is an important input into many products,
+and because its price can be very volatile,
+commodity swaps based on oil prices are quite common.
+Let's consider a company that will
+need to buy 100,000 barrels of oil in one and two years.
+We know that there's active forwards in the futures markets
+in oil, and let's assume that in those markets today,
+we can see that the forward price of oil
+is $110 per barrel for delivery in one year,
+and it's $111 per barrel for delivery in two years.
+Also, let's assume that the one and two year interest rates
+are 6% and 6.5% respectively, both on a simple interest rate
+basis.
+From this information, then we know
+that using forwards or futures the company can lock
+in a purchase price per barrel needed over the next two years,
+for a present value cost of $201.638.
+That comes from discounting the first year price we lock in
+per barrel at the one year 6% rate,
+and the two year price we said we could lock in
+at the 6.5% rate.
+Using the now familiar no-arbitrage reasoning
+that a swap must lock in prices that
+are consistent in present value terms with what can be locked
+in forward contracts, and recognizing
+that a swap typically calls for level fixed payments,
+we can solve for x in this equation to get the swap rate.
+
+You can verify the two year no-arbitrage swap
+price per barrel is $110.483.
+This example is also a convenient setup
+to demonstrate that swaps are equivalent to a package
+in forward contracts coupled with borrowing and lending
+money.
+Consider the swap price of $110.483 per barrel,
+versus the forward prices, which we saw
+were $110 for delivery in one year
+and $111 for delivery in two years per barrel.
+Relative to this forward curve, we're
+overpaying $0.483 at the end of the first year,
+and we're underpaying $0.571 at the end of the second year.
+Thus, by entering into the swap, we're
+effectively lending the counterparty money
+for one year, starting at the end of the first year.
+The implied interest rate on this implicit loan
+is the 0.517 divided by 0.483, minus 1, which gives us 7%.
+
+We also had the information that the one and two year
+zero coupon bond yields were 6% and 6.5% respectively.
+You can calculate the implied forward rate
+from this information between years 1 and 2,
+and you'll find that it's also 7%.
+You should verify that for yourself.
+This highlights a general property
+with swaps, which is that fairly priced swaps have embedded
+borrowing and lending rates equal to the implied forward
+rates and the yield curve.
+Consistency of forward and swap contract
+prices with implied forward rates in the yield curve
+is another no-arbitrage relationship
+that must always hold, at least within transaction's cost
+bounds.
+This oil swap example is also a good place
+to pause and confirm that physical settlement of a swap
+contract is equivalent to financial settlement paired
+with particular cash transactions.
+With physical settlement on each payment date, in this example,
+the specified quantity of oil is exchanged for the fixed swap
+price.
+
+The buyer receives the oil and pays $110.483 per barrel
+under the contract.
+Now with financial settlement, the amount
+of cash received by the oil buyer in the swap
+will be the difference between the spot
+price at an exchange date, which is stochastic,
+and the fixed swap price.
+
+The oil buyer can then go and buy the oil on the same day
+in the spot market, paying the spot price.
+The gain or loss on the swap just
+offsets the difference between the spot price of oil
+and the fixed swap price.
+And on net, the oil buyer winds up paying $110.482 per barrel
+on each payment date.

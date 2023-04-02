@@ -1,0 +1,224 @@
+
+INSTRUCTOR: Now that we've covered the basics of duration
+and convexity, I'm here with my friendly hedgehog
+to turn to hedging strategies that
+use duration and convexity.
+We'll start by seeing how to set up these hedges using the cash
+markets and then see how to get the same sort of protection,
+often at a lower cost, with forwards, futures, and swaps.
+We can rearrange the equation introduced on slide 27
+to approximate how much the price of a bond
+will change with a small change in its yield.
+
+This equation for the approximate price change
+is the basis for hedging strategies
+known as delta hedging and gamma hedging.
+Because of that, some of the terms in the equation
+are given special names.
+The product of duration and price
+is often called the hedge ratio.
+
+Earlier, we called this dollar duration.
+They are the same.
+The product of convexity and price is often called gamma.
+That's the same thing as dollar convexity.
+
+Delta hedging in this context refers
+to a hedging strategy based just on first-order price
+sensitivities.
+It involves equating the hedge ratio
+of one's assets and liabilities so as
+to neutralize the effects of yield changes
+on the value of an investor's net position.
+Such a portfolio is described as delta neutral.
+We saw that duration-based approximation to price changes
+is not very accurate for large yield changes.
+From a hedging perspective, that implies
+that a delta-neutral portfolio is still
+exposed to the risk of large yield changes.
+To further reduce that risk, a portfolio
+can be structured to also be gamma neutral.
+A gamma-neutral portfolio is delta neutral,
+and it also equates the gammas of the assets and liabilities.
+Equating the gammas as well as the hedge ratio
+takes into account the convexity of the price-yield relationship
+and provides a more robust hedge.
+This example is one of my favorites.
+It's a little more complex than most of the examples
+we've looked at until now, but I like it
+a lot because it clearly illustrates
+how to set up a delta and gamma hedge
+and also what are the choices and trade-offs involved
+with doing that.
+We'll start by setting up the hedge in several ways
+using the cash market, then we'll
+compare the various outcomes to draw some general conclusions.
+Consider a dealer in corporate bonds
+who finds herself at the end of the trading
+day with an inventory of $1 billion
+in five-year, 6.9% bonds.
+Those bonds are priced at par, and the coupon
+is paid semi-annually.
+Over the course of the day, she might have bought or sold
+many other bonds, but these particular bonds
+are what's leftover at the day's end.
+Well, these corporate bonds are illiquid, and trying
+to sell them quickly would entail
+a loss that she wants to avoid.
+But holding them overnight is risky
+because their price could fall if interest rates rise.
+An alternative that's cheaper to selling the corporate bonds
+is to hedge the risk by instead shorting more liquid Treasury
+bonds.
+If rates rise, the gain on the Treasury short position
+will help offset the loss on the corporate bonds.
+The short Treasury position will be sized using a delta or gamma
+hedging strategy.
+Let's imagine the following liquid treasury bonds are
+available for shorting--
+a 10-year 8% Treasury priced at $1,109
+per $1,000 of face value, or alternatively,
+a three-year 6.3% Treasury priced at $1,008.1
+per $1,000 face value.
+Well, either of these bonds, and in practice,
+many other Treasury bonds, could be used to set up the hedge.
+We'll start by calculating how much of the 10-year bond
+she would need to short, and then we'll
+calculate how much of the three-year bond
+she'd need to short using our formula for finding
+a hedge ratio.
+Then we'll evaluate the performance
+of the hedge in both cases under the assumption
+that yields do rise by 1% overnight on all bonds
+and that all positions are closed out the next day.
+To answer the question in part A about how much to short
+and to set up the hedges, we first
+need to calculate the modified duration
+of the corporate bond holdings and also of the Treasury bonds
+that are candidates for shorting.
+Plugging the information for each bond
+into our duration and convexity calculator
+implies that the long corporate bond position has
+a modified duration of 4.1688.
+The 10-year Treasury has a modified duration of 7.005,
+and the three-year Treasury has a modified duration of 2.7.
+The hedge ratio for the five-year corporate bonds
+is their value of $1 million multiplied by their modified
+duration of 4.1688, which gives a hedge
+ratio of $4.1688 million.
+If the 10-year Treasury bond is used to hedge,
+the amount shorted is such that the hedge ratio of the Treasury
+bond is equated to that of the corporate bond, which
+means solving for the x in the equation x times 7.005
+is equal to $4.1688 million.
+We can solve for x to get 593,861,050.
+If instead, the three-year treasury bond is used to hedge,
+a similar calculation implies a short position
+of $1.54 million.
+Notice that using the shorter-duration bond to hedge
+involves taking a larger position.
+That makes a lot of intuitive sense.
+The price of the shorter-duration bonds
+is less sensitive to yield changes.
+Therefore, it requires a larger position and absolute value
+to get the same dollar price sensitivity to yield changes.
+To evaluate what happens to prices under the hypothetical
+that all yields rise by 1% overnight,
+it's necessary to use the basic formula relating a bond's price
+to its discounted cash flows.
+The way it's done on this slide is
+to calculate the percentage price changes
+for each of the bonds based on the assumed $1,000 face value.
+That percentage change is then applied
+to the original present value of each of the positions.
+
+Alternatively, you could have solved
+for the face value of each bond from the initial hedge ratio
+amounts, calculated the corresponding coupon payments,
+and then re-discounted the new higher rates.
+In either case, the conclusion from the calculations
+is that had the dealer not hedged her position,
+she would have taken a loss of $40,656
+on her corporate bond holdings.
+You can see the very good news is that the delta hedge is
+quite effective either using the three-year Treasuries
+or the 10-year Treasuries.
+Adding together the loss on the corporate bonds
+and the gain on the treasuries, you
+can see on that, she comes out just slightly
+behind using the 10-year bond and slightly ahead using
+the three-year bond.
+
+What's the reason for the differences here?
+Well, as you might have guessed, the differences in outcomes
+can be explained by convexity differences.
+The 10-year Treasury has a much greater convexity
+than the three year treasury, and the convexity
+of her long position falls in between that
+of the two treasuries.
+You might have thought that she would have done better using
+the 10-year Treasury because it is more convex,
+and convexity is a good thing.
+However, you have to remember that whereas greater convexity
+is helpful in a long position, the dealer
+is shorting the Treasuries.
+She's worse off when the short position involves a higher
+convexity bond.
+The general conclusion we can draw from this
+is that a delta hedge will have better results when
+the convexity of the long position
+is greater in absolute value than the convexity
+of the short position.
+However, there may be other factors also
+that would influence your choice of which bonds
+to use to set up a delta hedge.
+For instance, in this case, the three-year treasury,
+because of its shorter duration, necessitates a much larger
+short position.
+That could involve additional transactions costs
+or make it harder to find a counterparty.
+Had the dealer wanted even greater protection
+against losses, she could have constructed
+a gamma-neutral position that not only matched
+the hedge ratios of her long and short positions
+but also matched their gammas.
+In this example where there's only two different securities
+available to use to take the short positions,
+there's only one way to set up a gamma hedge.
+That will involve transacting in both
+of the Treasury securities.
+The quantities transacted will be
+selected to match the hedge ratio
+and also to match the gamma, as shown in these equations.
+
+Here, this involves solving two linear equations
+for two unknowns.
+And you can see the complete solution
+in a write-up on the course web page.
+
+In reality, because there are many bonds that
+could be used to set up a gamma hedge,
+there would be many ways to implement it.
+And as for delta hedging, the choice
+between the different possibilities
+would depend on factors such as cost and availability.
+Now, you may be wondering, if it's
+more effective to gamma hedge, why not always do that instead
+of just delta hedging?
+The answer is that it's more complicated and usually more
+expensive to gamma hedge.
+So if a delta hedge provides sufficient protection,
+it's going to be the easier and cheaper approach.
+Now, there's many situations where
+a hedge may be required for an extended period of time,
+not just overnight.
+In such cases, another consideration
+is that the hedge will need to be adjusted over time
+as rates, and therefore durations, change.
+More frequent adjustments of delta hedge
+are a substitute for gamma hedging.
+That is, frequently adjusting a delta hedge, which is also
+known as dynamic hedging, is a substitute for putting
+on a more robust gamma hedge that
+can be adjusted less frequently for the same amount
+of protection.

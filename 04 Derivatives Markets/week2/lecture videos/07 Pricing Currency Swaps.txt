@@ -1,0 +1,158 @@
+
+PROFESSOR: Next, we're going to turn
+to some other important types of swaps.
+We'll start with a deep dive into currency swaps.
+After interest rates, the second most widely used type
+of swap contract involves periodically exchanging
+a payment in one currency for a payment in a second currency.
+These are known as currency or FX swaps.
+
+A currency swap contract may call
+for fixed or floating payments or a combination of the two.
+As for interest rate swaps, there's
+some underlying principle amount that determines
+the size of the payments.
+But whereas for interest rates the principle is notional
+and never exchanged between the two counterparties,
+with currency swaps the contract may also
+call for an exchange of principle
+in the two currencies.
+A fixed-for-fixed currency swap is like a portfolio
+of forward currency contracts.
+As such, these contracts are widely
+used by corporations and financial institutions
+to hedge currency exposures arising
+from international trade and cross-border borrowing
+and lending transactions.
+
+Let's go back to our example of a US exporter hedging currency
+risk exposure.
+But now imagine that instead of receiving a lump
+sum of 5 million euros in six months from its client,
+the agreement calls for the client making
+five equal installment payments of 1 million euros paid
+every six months for the next 2 and 1/2 years.
+The exporter could hedge each individual installment
+with a separate currency futures or forward contract.
+Alternatively, a single currency swap contract
+could be used to hedge the exposure.
+Well, let's first review how we can find the forward rates that
+would be locked in for each installment payment
+individually.
+Recall that the initial spot exchange
+rate was assumed to be $1.2673 per euro,
+that the dollar interest rate is 5%,
+and that the euro interest rate is 3%.
+And let's assume the term structure
+is flat at these rates in both currencies.
+With this information, we can use our formula
+for the forward exchange rate for future delivery dates
+in six months, one year, et cetera,
+going out 2 and 1/2 years.
+You should check that you agree with the outcomes that
+are listed in this table.
+
+Alternatively, the US firm can hedge with a currency swap.
+The swap could specify that the firm pays 1 million euros
+every six months for 2 and 1/2 years to a bank counterparty
+in exchange for a pre-specified swap rate of k,
+where we'll say K is 1.306.
+And we'll see where the 1.306 comes
+from in just a little while.
+Well, what's the net dollar cash flow
+for the US firm on each date?
+That's determined by a combination of the swap
+transactions and selling the euro's
+received in the spot market.
+
+Specifically, at each swap payment date
+the firm receives a million times K dollars in exchange
+for giving up 1 million euros.
+The euros paid in the swap are worth a million euros
+times the spot exchange rate, S sub T, of dollars per euro.
+The net amount received in the swamp
+which is cash settled then is a million times K minus S sub T.
+The firm also sells the million euros received
+from its client in the spot market
+at the current exchange rate, S sub T again.
+The net inflow to the firm is a certain one million
+times the fixed swap rate, K.
+We took the swap rate in this example to be 1.306.
+Now let's see where that number actually comes from.
+I think you won't be surprised to hear that it's nailed down
+by a no-arbitrage condition, in this case between currency
+forward rates and currency swap rates.
+As for interest rate swaps and other forwards and futures
+contracts, the initial value of the swap
+must be 0 from the perspective of both counterparties.
+The swap rate K is chosen to make that happen.
+
+To infer the rate K, we can set up a portfolio with two pieces.
+The first swap of 1 million euros for $1 million
+times K dollars.
+We know from before that the payoff in dollar terms
+at each future date, T is one million times
+K minus the spot rate on that date.
+The second piece of this portfolio
+is a set of forward contracts that
+specify an exchange of a million times
+the forward exchange rate at time T
+dollars for a million euros on each of those future payment
+dates also.
+In dollar terms, the euros received
+in the forward contract at each payment date
+will be worth 1 million times the spot exchange rate.
+
+Putting these two components together,
+the portfolio payoff at every payment date
+simplifies just to $1 million times K minus the forward rate.
+Well, now notice that the payoffs are certain dollar
+amounts.
+We know K We know those forward rates.
+And hence, we can value them by discounting
+at the risk-free rate along the yield curve
+for the appropriate maturity.
+The present value of the cash flows
+can then be written as the discounted sum shown
+on this slide, where we've represented the discount rates
+here on a continuous basis.
+
+We also know that because it's free to enter
+the forward position and the swap position,
+the value of the portfolio must be equal to 0.
+So we can set the expression for the present value
+of the portfolio equal to 0, rearrange it,
+and solve for the fixed swap rate K that makes it true.
+
+Looking at this resulting formula,
+we can see that K is a present value
+weighted average of the forward exchange
+rates on future payment dates.
+
+That expression for K can be represented entirely
+in terms of dollar and euro interest rates
+by substituting the formula for the forward rate
+for each payment date into the expression we just
+derived for K. This representation leads
+to the interpretation that the currency swap rate equals
+the current exchange rate multiplied
+by an expression based on a ratio
+of the relative risk-free borrowing costs in the two
+currencies.
+
+I want to revisit the comparison between hedging
+using a sequence of forward contracts
+and with a single swap.
+Both methods completely eliminate the exchange rate
+uncertainty, and both generate cash flows
+with identical present values.
+However, the two strategies differ in their cash flow
+profiles.
+Whereas the swap provides level payments,
+the forward contract initially locks in lower cash flows
+and later on higher ones.
+One's preference for one pattern of cash flows over the other
+might influence the choice between the contracts.
+Other considerations in choosing between them
+include any differences in transactions costs,
+availability, and collateral requirements.

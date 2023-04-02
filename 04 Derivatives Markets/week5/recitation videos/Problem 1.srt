@@ -1,0 +1,764 @@
+0
+00:00:00,000 --> 00:00:00,830
+
+
+1
+00:00:00,830 --> 00:00:02,330
+J. R. SCOTT: Hello, everyone.
+
+2
+00:00:02,330 --> 00:00:07,870
+And welcome to the fifth recitation of 15.4.35x.
+
+3
+00:00:07,870 --> 00:00:11,590
+In this recitation, we'll be reviewing two topics.
+
+4
+00:00:11,590 --> 00:00:13,630
+In the first topic, we'll see how
+
+5
+00:00:13,630 --> 00:00:17,740
+we can use the binomial model to numerically calculate the delta
+
+6
+00:00:17,740 --> 00:00:20,960
+and gamma of a call option.
+
+7
+00:00:20,960 --> 00:00:22,910
+In the second topic, we'll see how
+
+8
+00:00:22,910 --> 00:00:25,130
+we can use the binomial model to price
+
+9
+00:00:25,130 --> 00:00:28,460
+a more exotic option than the European call
+
+10
+00:00:28,460 --> 00:00:31,910
+and put options that we've seen in class thus far.
+
+11
+00:00:31,910 --> 00:00:36,460
+Without further ado, let's begin with the first topic.
+
+12
+00:00:36,460 --> 00:00:38,050
+Recall from the week five lecture
+
+13
+00:00:38,050 --> 00:00:42,490
+that the so-called Greeks delta, gamma, theta.
+
+14
+00:00:42,490 --> 00:00:46,120
+rho, and vega are widely used measures
+
+15
+00:00:46,120 --> 00:00:48,790
+of the sensitivity of an option's price
+
+16
+00:00:48,790 --> 00:00:51,180
+to various factors.
+
+17
+00:00:51,180 --> 00:00:54,180
+In particular, delta measures the sensitivity
+
+18
+00:00:54,180 --> 00:00:57,210
+of an option's value to changes in the price
+
+19
+00:00:57,210 --> 00:01:00,390
+of the underlying security.
+
+20
+00:01:00,390 --> 00:01:03,240
+According to the Black-Scholes-Merton model,
+
+21
+00:01:03,240 --> 00:01:07,920
+the delta of a European option on a non-dividend paying stock
+
+22
+00:01:07,920 --> 00:01:11,130
+has the following analytical expression:
+
+23
+00:01:11,130 --> 00:01:14,430
+delta, which is the first derivative of the option's
+
+24
+00:01:14,430 --> 00:01:18,720
+price, with respect to the price of the underlying stock,
+
+25
+00:01:18,720 --> 00:01:23,220
+is equal to n of d1 for calls and negative n
+
+26
+00:01:23,220 --> 00:01:25,770
+of negative d1 for puts.
+
+27
+00:01:25,770 --> 00:01:30,570
+Where p is the option's price, n is the cumulative density
+
+28
+00:01:30,570 --> 00:01:34,680
+function of a standard normally distributed random variable,
+
+29
+00:01:34,680 --> 00:01:39,120
+and d1 is as defined in the Black-Scholes-Merton formula
+
+30
+00:01:39,120 --> 00:01:43,140
+is a log of the price of the stock, divided
+
+31
+00:01:43,140 --> 00:01:47,950
+by the strike price, plus the risk free rate, plus one
+
+32
+00:01:47,950 --> 00:01:50,520
+half the volatility of the stock,
+
+33
+00:01:50,520 --> 00:01:55,380
+times the time to maturity, minus the current period,
+
+34
+00:01:55,380 --> 00:01:59,100
+divided by the volatility, sigma, times the square root
+
+35
+00:01:59,100 --> 00:02:02,910
+of T minus t.
+
+36
+00:02:02,910 --> 00:02:04,500
+It is true more generally and not
+
+37
+00:02:04,500 --> 00:02:06,840
+just for the Black-Scholes-Merton model
+
+38
+00:02:06,840 --> 00:02:09,870
+that call options will have positive deltas,
+
+39
+00:02:09,870 --> 00:02:13,770
+while put options will have negative deltas.
+
+40
+00:02:13,770 --> 00:02:14,530
+OK.
+
+41
+00:02:14,530 --> 00:02:17,400
+But what if we want to compute the delta of an option
+
+42
+00:02:17,400 --> 00:02:20,910
+without invoking the assumptions of the Black-Scholes-Merton
+
+43
+00:02:20,910 --> 00:02:22,470
+model.
+
+44
+00:02:22,470 --> 00:02:24,810
+In the week five lecture, we saw how
+
+45
+00:02:24,810 --> 00:02:27,930
+to calculate the price of a European call option
+
+46
+00:02:27,930 --> 00:02:30,660
+numerically using the binomial tree
+
+47
+00:02:30,660 --> 00:02:36,170
+simulator in the BinomialTree.xls spreadsheet.
+
+48
+00:02:36,170 --> 00:02:39,530
+By varying the price of the underlying stock
+
+49
+00:02:39,530 --> 00:02:43,340
+and recalculating the option price using the binomial tree
+
+50
+00:02:43,340 --> 00:02:48,110
+simulator, we can numerically approximate the derivative dP
+
+51
+00:02:48,110 --> 00:02:53,440
+over dS using the following formula : dP over dS,
+
+52
+00:02:53,440 --> 00:02:57,730
+the delta of the option, is approximately equal to the new
+
+53
+00:02:57,730 --> 00:03:02,350
+option price using the binomial tree simulator after varying
+
+54
+00:03:02,350 --> 00:03:04,570
+the price of the underlying stock,
+
+55
+00:03:04,570 --> 00:03:10,930
+minus the original option price, divided by the new stock price,
+
+56
+00:03:10,930 --> 00:03:14,420
+minus the original stock price.
+
+57
+00:03:14,420 --> 00:03:20,330
+As an example, let's use the BinomialTree.xls spreadsheet
+
+58
+00:03:20,330 --> 00:03:23,060
+to find the price of a European call option
+
+59
+00:03:23,060 --> 00:03:26,160
+on a stock with the following parameters:
+
+60
+00:03:26,160 --> 00:03:28,340
+note that these are the same parameters that you
+
+61
+00:03:28,340 --> 00:03:30,770
+saw in the week five lecture.
+
+62
+00:03:30,770 --> 00:03:36,980
+Mu, the expected return on the stock, is equal to 0.1 or 10%.
+
+63
+00:03:36,980 --> 00:03:42,620
+Sigma, the volatility of the stock, is equal to 0.3 or 30%.
+
+64
+00:03:42,620 --> 00:03:46,190
+The risk free rate, r, is equal to 2%.
+
+65
+00:03:46,190 --> 00:03:49,500
+The dividend yield is 0%.
+
+66
+00:03:49,500 --> 00:03:53,550
+The original value of the underlying stock is 100.
+
+67
+00:03:53,550 --> 00:03:58,020
+The strike price of the European call option is 100.
+
+68
+00:03:58,020 --> 00:04:01,560
+The time to maturity is 0.1.
+
+69
+00:04:01,560 --> 00:04:05,470
+And the number of intervals is equal to 10.
+
+70
+00:04:05,470 --> 00:04:08,260
+After inputting all of these parameters on the left hand
+
+71
+00:04:08,260 --> 00:04:10,660
+side here of the table below, you
+
+72
+00:04:10,660 --> 00:04:13,570
+should find that the price of the European call option,
+
+73
+00:04:13,570 --> 00:04:18,579
+according to the binomial model, is 3.787.
+
+74
+00:04:18,579 --> 00:04:21,880
+According to the binomial tree simulator,
+
+75
+00:04:21,880 --> 00:04:24,070
+we see that the price of the underlying
+
+76
+00:04:24,070 --> 00:04:31,690
+stock in the up node at step i equals 1, s1 one superscript u
+
+77
+00:04:31,690 --> 00:04:38,030
+is equal to 103.045, this cell on the spreadsheet.
+
+78
+00:04:38,030 --> 00:04:40,950
+Similarly, the price of the underlying stock.
+
+79
+00:04:40,950 --> 00:04:45,050
+in the down node at i equals 1 is S1 superscript
+
+80
+00:04:45,050 --> 00:04:53,310
+d, which is equal to 97.045, this cell on the spreadsheet.
+
+81
+00:04:53,310 --> 00:04:56,250
+The price of the call option at each step in node
+
+82
+00:04:56,250 --> 00:04:59,210
+is displayed in the table below.
+
+83
+00:04:59,210 --> 00:05:02,270
+In particular, the price of the European call option
+
+84
+00:05:02,270 --> 00:05:06,830
+in the up mode at step i equals 1 is c1 superscript
+
+85
+00:05:06,830 --> 00:05:11,050
+u, which is equal to 5.381.
+
+86
+00:05:11,050 --> 00:05:15,880
+The price of the European call option in the down node at step
+
+87
+00:05:15,880 --> 00:05:19,420
+i equals 1 is c sub 1 superscript
+
+88
+00:05:19,420 --> 00:05:23,470
+d, which is equal to 2.221.
+
+89
+00:05:23,470 --> 00:05:29,830
+We can plug-in S1 superscript u and S1 superscript d
+
+90
+00:05:29,830 --> 00:05:35,620
+into the numerator of equation one and c1 superscript u
+
+91
+00:05:35,620 --> 00:05:40,930
+and c1 superscript d into the denominator of equation one,
+
+92
+00:05:40,930 --> 00:05:45,220
+in order to numerically approximate delta as follows:
+
+93
+00:05:45,220 --> 00:05:49,090
+delta or dP over dS, is approximately
+
+94
+00:05:49,090 --> 00:05:52,870
+equal to the difference in the value of the European call
+
+95
+00:05:52,870 --> 00:05:58,430
+option in the up node at step one in the value
+
+96
+00:05:58,430 --> 00:06:02,660
+of the European call option in the down node at step 1,
+
+97
+00:06:02,660 --> 00:06:06,950
+divided by the value of the underlying stock in the up
+
+98
+00:06:06,950 --> 00:06:12,160
+node at step 1, minus the value of the underlying
+
+99
+00:06:12,160 --> 00:06:16,000
+stock in the down node at step one, which
+
+100
+00:06:16,000 --> 00:06:25,180
+is equal to 5.381 minus 2.221, divided by 103.045,
+
+101
+00:06:25,180 --> 00:06:28,270
+minus 97.045,
+
+102
+00:06:28,270 --> 00:06:35,650
+which gives us an approximate delta of 0.527.
+
+103
+00:06:35,650 --> 00:06:37,420
+The one thing to notice here is that this
+
+104
+00:06:37,420 --> 00:06:40,300
+is the exact same output as that reported
+
+105
+00:06:40,300 --> 00:06:43,690
+by the BinomialTree.xls spreadsheet
+
+106
+00:06:43,690 --> 00:06:48,500
+in the delta binomial cell, this cell here.
+
+107
+00:06:48,500 --> 00:06:51,640
+
+
+108
+00:06:51,640 --> 00:06:55,240
+Essentially, the binomial tree simulator in the spreadsheet
+
+109
+00:06:55,240 --> 00:06:58,030
+calculates the delta of an option using
+
+110
+00:06:58,030 --> 00:07:02,980
+the u and d implied by the parameterization provided,
+
+111
+00:07:02,980 --> 00:07:06,700
+where u is equal to the exponential of sigma,
+
+112
+00:07:06,700 --> 00:07:10,600
+the volatility, times the square root of h, where
+
+113
+00:07:10,600 --> 00:07:15,190
+h is the length of the interval, T the maturity,
+
+114
+00:07:15,190 --> 00:07:18,800
+divided by n, the number of intervals.
+
+115
+00:07:18,800 --> 00:07:23,450
+Since d equals 1 over u, that is the percentage
+
+116
+00:07:23,450 --> 00:07:26,540
+increase in the stock is equal to the percentage
+
+117
+00:07:26,540 --> 00:07:30,490
+decrease in the stock, this numerical approximation
+
+118
+00:07:30,490 --> 00:07:35,210
+is akin to a symmetric difference quotient.
+
+119
+00:07:35,210 --> 00:07:38,690
+Alternatively, you could numerically approximate delta
+
+120
+00:07:38,690 --> 00:07:41,210
+by using a baseline parameterization,
+
+121
+00:07:41,210 --> 00:07:44,570
+like the one we have above for the binomial tree
+
+122
+00:07:44,570 --> 00:07:47,570
+to get these so-called original stock and option
+
+123
+00:07:47,570 --> 00:07:51,680
+prices in equation one and then vary the stock price
+
+124
+00:07:51,680 --> 00:07:54,630
+by a given amount in a single direction,
+
+125
+00:07:54,630 --> 00:07:59,090
+for example, a 6% increase, to get the new stock
+
+126
+00:07:59,090 --> 00:08:01,270
+and option prices.
+
+127
+00:08:01,270 --> 00:08:04,090
+As opposed to the symmetric difference quotient
+
+128
+00:08:04,090 --> 00:08:07,570
+that the binomial tree spreadsheet is providing,
+
+129
+00:08:07,570 --> 00:08:11,810
+this would be more akin to a one-sided difference quotient.
+
+130
+00:08:11,810 --> 00:08:13,660
+Now that we've seen how to numerically
+
+131
+00:08:13,660 --> 00:08:16,120
+approximate the delta of an option using
+
+132
+00:08:16,120 --> 00:08:18,880
+the binomial model, can we do the same thing
+
+133
+00:08:18,880 --> 00:08:21,210
+for the other Greeks?
+
+134
+00:08:21,210 --> 00:08:23,610
+Well, as discussed in the week five lecture,
+
+135
+00:08:23,610 --> 00:08:26,970
+gamma measures the sensitivity of delta,
+
+136
+00:08:26,970 --> 00:08:30,500
+changes in the price of the underlying security.
+
+137
+00:08:30,500 --> 00:08:32,809
+According to the Black-Scholes-Merton model,
+
+138
+00:08:32,809 --> 00:08:37,370
+the gamma of a European option, either a put or a call,
+
+139
+00:08:37,370 --> 00:08:39,710
+on a non dividend paying stock has
+
+140
+00:08:39,710 --> 00:08:43,030
+the following analytical expression:
+
+141
+00:08:43,030 --> 00:08:46,210
+gamma, which is the second derivative of the options
+
+142
+00:08:46,210 --> 00:08:50,880
+price, with respect to the price of the underlying stock,
+
+143
+00:08:50,880 --> 00:08:53,760
+is itself equal to the first derivative of the options
+
+144
+00:08:53,760 --> 00:08:57,870
+delta, with respect to the price of the underlying stock, which
+
+145
+00:08:57,870 --> 00:09:01,890
+is equal to the derivative of the cumulative distribution
+
+146
+00:09:01,890 --> 00:09:05,190
+function of a standard normally distributed range
+
+147
+00:09:05,190 --> 00:09:10,560
+of variable n of d1, divided by the price of the underlying
+
+148
+00:09:10,560 --> 00:09:14,670
+stock, times its volatility, sigma,
+
+149
+00:09:14,670 --> 00:09:19,630
+multiplied by the square root of its time to maturity, T,
+
+150
+00:09:19,630 --> 00:09:22,420
+where the first derivative of the cumulative distribution
+
+151
+00:09:22,420 --> 00:09:25,900
+function for a standard normal random variable
+
+152
+00:09:25,900 --> 00:09:28,720
+is given in this expression here:
+
+153
+00:09:28,720 --> 00:09:32,920
+mathematically, gamma measures the curvature of an options
+
+154
+00:09:32,920 --> 00:09:38,360
+price, with respect to the price of the underlying security.
+
+155
+00:09:38,360 --> 00:09:40,670
+Can we numerically approximate gamma
+
+156
+00:09:40,670 --> 00:09:43,220
+like we just did for delta?
+
+157
+00:09:43,220 --> 00:09:47,370
+The answer unsurprisingly is, of course.
+
+158
+00:09:47,370 --> 00:09:50,420
+The only difference now is that our numerical approximation
+
+159
+00:09:50,420 --> 00:09:54,140
+formula has in its numerator the difference
+
+160
+00:09:54,140 --> 00:09:59,240
+between the new value of the options delta after changing
+
+161
+00:09:59,240 --> 00:10:03,050
+the underlying stock price, minus the original value
+
+162
+00:10:03,050 --> 00:10:06,050
+of the options delta, divided by the difference
+
+163
+00:10:06,050 --> 00:10:09,860
+between the new stock price and the original stock price.
+
+164
+00:10:09,860 --> 00:10:12,020
+Whereas before, we had the difference
+
+165
+00:10:12,020 --> 00:10:14,840
+between the new price of the option,
+
+166
+00:10:14,840 --> 00:10:18,680
+minus the original price of the option.
+
+167
+00:10:18,680 --> 00:10:22,130
+For example, let's assume the same parameterization
+
+168
+00:10:22,130 --> 00:10:24,800
+for the European call option as above,
+
+169
+00:10:24,800 --> 00:10:28,220
+in particular with a current underlying stock price
+
+170
+00:10:28,220 --> 00:10:31,260
+S0 of 100.
+
+171
+00:10:31,260 --> 00:10:34,470
+Using the BinomialTree.xls spreadsheet,
+
+172
+00:10:34,470 --> 00:10:40,320
+we can calculate the delta for a symmetric 3% increase and 3%
+
+173
+00:10:40,320 --> 00:10:43,260
+decrease in the stock price.
+
+174
+00:10:43,260 --> 00:10:46,140
+In particular, for the 3% increase,
+
+175
+00:10:46,140 --> 00:10:51,030
+we plug-in S0 equals 100, times 1.03,
+
+176
+00:10:51,030 --> 00:10:54,990
+which equals 103 and find the delta of the call option
+
+177
+00:10:54,990 --> 00:10:58,870
+to be 0.647.
+
+178
+00:10:58,870 --> 00:11:05,740
+For the 3% decrease, we plug-in S0 equals 100, times 0.97,
+
+179
+00:11:05,740 --> 00:11:10,240
+which equals 97 and find the delta of the call option
+
+180
+00:11:10,240 --> 00:11:14,000
+to be 0.401.
+
+181
+00:11:14,000 --> 00:11:17,990
+Finally, we just apply equation two, but now
+
+182
+00:11:17,990 --> 00:11:22,840
+with the original values of delta and the stock price,
+
+183
+00:11:22,840 --> 00:11:26,650
+these two values here corresponding to the 3%
+
+184
+00:11:26,650 --> 00:11:32,050
+decrease case and the new values of delta and the stock price,
+
+185
+00:11:32,050 --> 00:11:34,420
+these two values here, corresponding
+
+186
+00:11:34,420 --> 00:11:37,650
+to the 3% increase case.
+
+187
+00:11:37,650 --> 00:11:42,150
+Overall, we have that the gamma of the call option
+
+188
+00:11:42,150 --> 00:11:49,500
+is approximately equal to 0.647 minus 0.401,
+
+189
+00:11:49,500 --> 00:11:57,544
+divided by 103, minus 97, which is equal to 0.041.
+
+190
+00:11:57,544 --> 00:11:59,000
+
+

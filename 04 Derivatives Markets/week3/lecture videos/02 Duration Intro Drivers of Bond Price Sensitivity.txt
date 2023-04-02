@@ -1,0 +1,120 @@
+
+PROFESSOR: Before digging into the definitions
+and interpretations of duration and convexity,
+it's important to take another look
+at the more general equation relating the price of a bond
+with multiple cash flows to its yield to maturity.
+The yield to maturity is the single interest rate
+that equates the price of the bond
+to the present value of its promised payments.
+
+The price and the yield to maturity
+contain the same information.
+Given one and the cash flows, you can solve for the other.
+There are built-in functions in Excel to do these calculations.
+Two that are very useful for coupon bonds
+are the PV function and the Rate function.
+Both are well-documented in Excel.
+I've posted a sample spreadsheet that
+illustrates the use of these and related functions.
+A few things to note.
+First, the relationship between the price of a coupon bond
+and its yield to maturity is a convex function.
+When we look at duration and convexity,
+we'll often plot price against yield in a graph like this.
+
+The yield to maturity abstracts from the spot yield
+curve, which has more precise information about market rates.
+Remember that to find the yield to maturity,
+we apply a single discount rate to all future cash
+flows regardless of their arrival time.
+By contrast, the spot yield curve
+captures the fact that the market
+assigns a potentially different discount
+rate to cash flows arriving at every different maturity.
+You should think of the bond prices observed in markets
+as reflecting the more detailed information in the spot yield
+curve.
+That has to be true or else there
+would be an arbitrage opportunity.
+However, the yield to maturity is an approximation
+that's useful in its simplicity of having only one dimension.
+Most of the duration and convexity measures
+we will focus on do use this yield
+to maturity approximation as a relevant rate.
+However, there are some duration and convexity concepts,
+notably, Fisher-Weil and key rate durations,
+that take into account the complexity of the spot yield
+curve.
+
+Duration and convexity together answer the question,
+approximately how much will a security's price change
+for a small change in its yield?
+In very general terms, you can think
+of the price of any interest sensitive security
+as a function of its yield and other characteristics that
+affect its price, like its liquidity,
+any embedded options, default risk, and so forth.
+We'll let f represent this function
+without being specific about the form that it takes.
+
+Duration measures are all related
+to the first partial derivative of the price with respect
+to yield, answering the question, what's
+the first order effect on price of a small change in yield?
+Convexity measures are all related
+to the second derivative of the price with respect
+to the yield.
+
+Importantly, these metrics apply not only
+to bonds and other fixed income securities,
+but also, to derivative contracts
+like interest rate, swaps, and futures that are also
+interest rate sensitive.
+Understanding duration and convexity in this way
+is directly relevant to the risk management strategies
+based on these metrics.
+There are three main factors that affect the bond or bond
+portfolio's price sensitivity to yield changes:
+remaining maturity, coupon rate, and the general level
+of market interest rates.
+Duration increases with maturity and it
+decreases with coupon rates and the level of market interest
+rates.
+
+This example provides a quantitative sense
+of the relative importance of maturity and coupon rates
+on price sensitivity.
+It's based on comparisons of four bonds,
+two with maturities of 20 years, and two
+with maturities of five years.
+For each maturity, there are two bonds,
+one with a coupon rate at 9%, and two
+with a coupon rate of 5%.
+It's assumed that each are originally priced to yield 9%.
+The table shows, for a range of decreases and increases
+in the market yield, the percentage
+change in the price of the bond relative to its price
+when yields are at 9%.
+Each row of the table represents a particular yield change.
+For example, the highlighted row shows the percentage price
+change for each bond when rates go from 9% down to 8%.
+Comparing across maturities, we can
+see that the percentage price increase is much larger
+for the 20-year bonds than for the five-year bonds, holding
+coupon rates fixed in each case.
+Now, comparing across coupon rates,
+the percentage price increase is smaller for the higher coupon
+rate bond holding maturities fixed.
+Both of these regularities are true in general,
+although the magnitudes will vary
+with the bond characteristics and with market rates.
+Notice, too, that the changes are not symmetric, say,
+for a 1% increase in rates versus a 1% decrease.
+The larger absolute magnitude of the changes when
+rates fall than when they rise, all else equal,
+is related to the positive convexity of the bonds.
+We'll confirm that shortly.
+If you'd like to see how this example was calculated,
+the Excel file I'm showing here has the calculations embedded
+and you can download it and take a look.

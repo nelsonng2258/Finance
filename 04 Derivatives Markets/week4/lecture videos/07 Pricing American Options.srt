@@ -1,0 +1,788 @@
+0
+00:00:00,000 --> 00:00:01,266
+
+
+1
+00:00:01,266 --> 00:00:03,130
+INSTRUCTOR: An American option differs
+
+2
+00:00:03,130 --> 00:00:05,650
+from an otherwise identical European option
+
+3
+00:00:05,650 --> 00:00:08,080
+in that it can be exercised at any time
+
+4
+00:00:08,080 --> 00:00:11,620
+on or before its expiration date.
+
+5
+00:00:11,620 --> 00:00:15,400
+That additional flexibility implies that an American option
+
+6
+00:00:15,400 --> 00:00:19,090
+has to be at least as valuable as its European counterpart,
+
+7
+00:00:19,090 --> 00:00:22,060
+and it may be more valuable.
+
+8
+00:00:22,060 --> 00:00:26,260
+American options are very common, as this list shows.
+
+9
+00:00:26,260 --> 00:00:29,560
+I'll highlight just a few of these items, many of which
+
+10
+00:00:29,560 --> 00:00:33,190
+we'll cover in more detail later in the class.
+
+11
+00:00:33,190 --> 00:00:37,690
+Individual exchange traded stock options are typically American,
+
+12
+00:00:37,690 --> 00:00:42,640
+as are some index options such as the one on the S&P 100
+
+13
+00:00:42,640 --> 00:00:47,260
+that's traded at the Chicago Board Options Exchange.
+
+14
+00:00:47,260 --> 00:00:50,020
+An option to enter into an interest rate swap
+
+15
+00:00:50,020 --> 00:00:53,770
+at a preset fixed rate is called a swaption.
+
+16
+00:00:53,770 --> 00:00:56,560
+This very popular type of option is
+
+17
+00:00:56,560 --> 00:00:58,600
+sold in the over-the-counter market,
+
+18
+00:00:58,600 --> 00:01:02,290
+and is generally American style.
+
+19
+00:01:02,290 --> 00:01:05,990
+Embedded options, as the name suggests,
+
+20
+00:01:05,990 --> 00:01:08,740
+are embedded in other contracts.
+
+21
+00:01:08,740 --> 00:01:10,900
+These are very common.
+
+22
+00:01:10,900 --> 00:01:13,390
+American style embedded options are
+
+23
+00:01:13,390 --> 00:01:17,110
+found in some but not all callable and puttable bonds,
+
+24
+00:01:17,110 --> 00:01:20,980
+in mortgages, and in convertible bonds.
+
+25
+00:01:20,980 --> 00:01:24,010
+The term real options refers to options relating
+
+26
+00:01:24,010 --> 00:01:27,430
+to physical investment choices, such as the option
+
+27
+00:01:27,430 --> 00:01:31,270
+to wait to close down a plant, or to wait before starting
+
+28
+00:01:31,270 --> 00:01:33,220
+to construct a new building.
+
+29
+00:01:33,220 --> 00:01:36,610
+These are often analyzed using options pricing methods
+
+30
+00:01:36,610 --> 00:01:40,760
+for American style options.
+
+31
+00:01:40,760 --> 00:01:43,700
+Although American options can be early exercised,
+
+32
+00:01:43,700 --> 00:01:47,980
+we know in some instances that they shouldn't be.
+
+33
+00:01:47,980 --> 00:01:49,990
+Knowing that is helpful because it allows
+
+34
+00:01:49,990 --> 00:01:52,600
+us to use European options pricing formulas
+
+35
+00:01:52,600 --> 00:01:54,190
+like the Black-Scholes-Merton model
+
+36
+00:01:54,190 --> 00:01:56,620
+for some American options.
+
+37
+00:01:56,620 --> 00:02:00,190
+One prominent example is an American call
+
+38
+00:02:00,190 --> 00:02:03,400
+on a stock that won't pay a dividend before the expiration
+
+39
+00:02:03,400 --> 00:02:04,450
+date.
+
+40
+00:02:04,450 --> 00:02:10,000
+Such an option is always worth more alive than dead.
+
+41
+00:02:10,000 --> 00:02:13,180
+The intuition for this is that early exercise
+
+42
+00:02:13,180 --> 00:02:15,370
+means we make the payment of the strike price
+
+43
+00:02:15,370 --> 00:02:20,550
+sooner, which increases its present value, and that's bad.
+
+44
+00:02:20,550 --> 00:02:22,790
+We also lose the protection from the risk
+
+45
+00:02:22,790 --> 00:02:25,620
+that the value falls below the strike price.
+
+46
+00:02:25,620 --> 00:02:27,980
+In other words, exercising the option
+
+47
+00:02:27,980 --> 00:02:34,300
+early extinguishes the valuable insurance value of the option.
+
+48
+00:02:34,300 --> 00:02:36,680
+Well what if the option is in-the-money
+
+49
+00:02:36,680 --> 00:02:39,790
+and you don't want to keep the option for any longer?
+
+50
+00:02:39,790 --> 00:02:41,800
+You still shouldn't exercise it.
+
+51
+00:02:41,800 --> 00:02:46,190
+Instead, you should just sell it in the open market.
+
+52
+00:02:46,190 --> 00:02:48,470
+Now that analysis for an American call
+
+53
+00:02:48,470 --> 00:02:50,960
+changes for stocks that will pay a dividend
+
+54
+00:02:50,960 --> 00:02:54,330
+before the expiration of the option.
+
+55
+00:02:54,330 --> 00:02:58,610
+Now waiting to exercise also has two disadvantages.
+
+56
+00:02:58,610 --> 00:03:01,940
+If you wait to exercise, you don't get the dividend,
+
+57
+00:03:01,940 --> 00:03:04,550
+and the stock price is going to drop
+
+58
+00:03:04,550 --> 00:03:07,520
+by the amount of the dividend, making it less likely
+
+59
+00:03:07,520 --> 00:03:11,240
+that the call is going to be in the money in the future.
+
+60
+00:03:11,240 --> 00:03:14,780
+Early exercise avoids these disadvantages,
+
+61
+00:03:14,780 --> 00:03:18,650
+but at the cost of time value and losing the remaining option
+
+62
+00:03:18,650 --> 00:03:20,180
+value.
+
+63
+00:03:20,180 --> 00:03:22,550
+Therefore, what the optimal decision
+
+64
+00:03:22,550 --> 00:03:27,590
+will be depends on the specifics of the situation.
+
+65
+00:03:27,590 --> 00:03:30,230
+For American put options, whether or not
+
+66
+00:03:30,230 --> 00:03:33,470
+to early exercise also depends on several factors that
+
+67
+00:03:33,470 --> 00:03:36,020
+pull in different directions, so that the answer
+
+68
+00:03:36,020 --> 00:03:40,080
+will differ depending on the specific situation.
+
+69
+00:03:40,080 --> 00:03:42,740
+The advantage of early exercising
+
+70
+00:03:42,740 --> 00:03:46,650
+is that we receive the strike price K sooner,
+
+71
+00:03:46,650 --> 00:03:50,300
+which, because of time value, increases the present value
+
+72
+00:03:50,300 --> 00:03:52,390
+of the payment.
+
+73
+00:03:52,390 --> 00:03:55,150
+An offsetting disadvantage is that we
+
+74
+00:03:55,150 --> 00:03:58,750
+lose the right to any dividends paid after we exercise,
+
+75
+00:03:58,750 --> 00:04:01,210
+but before expiration.
+
+76
+00:04:01,210 --> 00:04:04,180
+Furthermore, we destroy the insurance value
+
+77
+00:04:04,180 --> 00:04:06,220
+of the put option.
+
+78
+00:04:06,220 --> 00:04:09,460
+That's described on the side as having given up
+
+79
+00:04:09,460 --> 00:04:12,760
+a stock for K that may have been worth more than K
+
+80
+00:04:12,760 --> 00:04:15,360
+in the future.
+
+81
+00:04:15,360 --> 00:04:18,290
+As for the call option on a dividend paying stock,
+
+82
+00:04:18,290 --> 00:04:21,440
+we'll have to figure out the best strategy involving
+
+83
+00:04:21,440 --> 00:04:25,670
+whether and when to early exercise at the same time
+
+84
+00:04:25,670 --> 00:04:28,730
+as we're valuing the option.
+
+85
+00:04:28,730 --> 00:04:30,590
+To start to see how to incorporate
+
+86
+00:04:30,590 --> 00:04:32,720
+the strategic decision of whether and when
+
+87
+00:04:32,720 --> 00:04:35,660
+to exercise into evaluation framework,
+
+88
+00:04:35,660 --> 00:04:38,070
+consider this example.
+
+89
+00:04:38,070 --> 00:04:41,940
+It's May 11, and your longest September put option
+
+90
+00:04:41,940 --> 00:04:47,580
+on the S&P 100 index with a strike price of K equals 740.
+
+91
+00:04:47,580 --> 00:04:54,010
+The S&P 100 on may 11th stands at 689.83.
+
+92
+00:04:54,010 --> 00:04:57,040
+The option is currently in-the-money by a little more
+
+93
+00:04:57,040 --> 00:05:00,840
+than 7% of the index value.
+
+94
+00:05:00,840 --> 00:05:05,530
+Do you exercise immediately or keep the option alive?
+
+95
+00:05:05,530 --> 00:05:07,840
+The general procedure is going to be
+
+96
+00:05:07,840 --> 00:05:11,590
+to compare the value of immediate exercise, which
+
+97
+00:05:11,590 --> 00:05:15,280
+in this case is 7% of the index value,
+
+98
+00:05:15,280 --> 00:05:18,430
+with the value of the option if it's kept alive
+
+99
+00:05:18,430 --> 00:05:21,650
+under the current conditions.
+
+100
+00:05:21,650 --> 00:05:24,130
+The decision rule then is to exercise
+
+101
+00:05:24,130 --> 00:05:29,250
+if and only if the payoff from exercising immediately--
+
+102
+00:05:29,250 --> 00:05:32,910
+the strike price minus the stock index price--
+
+103
+00:05:32,910 --> 00:05:36,150
+exceeds the discounted value of the future distribution
+
+104
+00:05:36,150 --> 00:05:38,890
+of payoffs if you wait.
+
+105
+00:05:38,890 --> 00:05:41,140
+Valuing options on binomial trees
+
+106
+00:05:41,140 --> 00:05:45,400
+makes it easy to systematically evaluate the optimal exercise
+
+107
+00:05:45,400 --> 00:05:49,540
+strategy in this situation.
+
+108
+00:05:49,540 --> 00:05:53,270
+Here's a detailed example of how to do this.
+
+109
+00:05:53,270 --> 00:05:55,940
+The binomial tree here is based on a stock
+
+110
+00:05:55,940 --> 00:05:59,700
+that's currently valued at 100.
+
+111
+00:05:59,700 --> 00:06:03,840
+Each time step of the tree represents six months,
+
+112
+00:06:03,840 --> 00:06:07,140
+so the tree covers a total period of one year.
+
+113
+00:06:07,140 --> 00:06:12,040
+The interest rate is 2% on a continuous basis.
+
+114
+00:06:12,040 --> 00:06:14,500
+The vertical spacing of the nodes on the tree
+
+115
+00:06:14,500 --> 00:06:19,330
+has been chosen to match a stock price volatility of 30%.
+
+116
+00:06:19,330 --> 00:06:22,330
+We'll talk more about how to do this sort of calibration
+
+117
+00:06:22,330 --> 00:06:26,200
+next week, but for now we'll just take the stock price tree
+
+118
+00:06:26,200 --> 00:06:28,060
+as given.
+
+119
+00:06:28,060 --> 00:06:31,630
+Also, we'll take as given the implication of the assumptions
+
+120
+00:06:31,630 --> 00:06:35,200
+used here to construct the tree that the risk-neutral
+
+121
+00:06:35,200 --> 00:06:38,770
+probability of an up move on the tree, q*,
+
+122
+00:06:38,770 --> 00:06:44,800
+is equal to 0.4707 at every single node of the tree.
+
+123
+00:06:44,800 --> 00:06:48,670
+The tree was constructed by multiplying each previous stock
+
+124
+00:06:48,670 --> 00:06:54,340
+price by an up multiplier of 1.2363,
+
+125
+00:06:54,340 --> 00:06:59,050
+and to get the next down node by multiplying the stock
+
+126
+00:06:59,050 --> 00:07:04,820
+price by 1 over 1.2363.
+
+127
+00:07:04,820 --> 00:07:08,630
+Now consider a put option with an at-the-money strike
+
+128
+00:07:08,630 --> 00:07:10,840
+price of 100.
+
+129
+00:07:10,840 --> 00:07:14,010
+We'll actually start here by pricing the European version
+
+130
+00:07:14,010 --> 00:07:17,910
+of the option, which doesn't require any strategic decision
+
+131
+00:07:17,910 --> 00:07:21,570
+about early exercise, but serves as a review of pricing
+
+132
+00:07:21,570 --> 00:07:26,040
+European options on a two step tree.
+
+133
+00:07:26,040 --> 00:07:29,160
+As always, we start at the final date,
+
+134
+00:07:29,160 --> 00:07:34,310
+i equals 2 here, and compute the payoffs at each node.
+
+135
+00:07:34,310 --> 00:07:39,950
+If the stock price is 152.847, or 100,
+
+136
+00:07:39,950 --> 00:07:42,890
+the option is out-of or at-the-money
+
+137
+00:07:42,890 --> 00:07:45,620
+and so is worth nothing.
+
+138
+00:07:45,620 --> 00:07:52,480
+At the bottom node, 100 minus 65.425
+
+139
+00:07:52,480 --> 00:07:56,860
+equals 34.575, which is the value
+
+140
+00:07:56,860 --> 00:07:59,095
+of the put option at that node.
+
+141
+00:07:59,095 --> 00:08:02,110
+
+
+142
+00:08:02,110 --> 00:08:07,600
+Now we can use the risk neutral probability, q*, of 0.4707,
+
+143
+00:08:07,600 --> 00:08:12,420
+and the risk-free rate of 2% to find the discounted value
+
+144
+00:08:12,420 --> 00:08:16,530
+of the put at each node working backwards pairwise
+
+145
+00:08:16,530 --> 00:08:19,880
+on the subtrees.
+
+146
+00:08:19,880 --> 00:08:27,620
+That exercise implies a time 0 value of the put of 9.495.
+
+147
+00:08:27,620 --> 00:08:30,290
+Now let's consider the value of the put option
+
+148
+00:08:30,290 --> 00:08:33,230
+if it's American, with everything else the same
+
+149
+00:08:33,230 --> 00:08:35,659
+as just described.
+
+150
+00:08:35,659 --> 00:08:38,929
+At expiration at i equals 2, the payoffs
+
+151
+00:08:38,929 --> 00:08:41,669
+are the same as with the European case,
+
+152
+00:08:41,669 --> 00:08:45,440
+which is 0 on the top and middle nodes,
+
+153
+00:08:45,440 --> 00:08:51,390
+and 34.575 on the down down node.
+
+154
+00:08:51,390 --> 00:08:54,900
+Stepping back to i equals 1, we need
+
+155
+00:08:54,900 --> 00:08:58,020
+to compare the value of waiting with the value
+
+156
+00:08:58,020 --> 00:09:01,640
+of immediate exercise.
+
+157
+00:09:01,640 --> 00:09:03,620
+The value of waiting at each node
+
+158
+00:09:03,620 --> 00:09:05,570
+can be read off of the calculations
+
+159
+00:09:05,570 --> 00:09:07,880
+we did for the European version of the option
+
+160
+00:09:07,880 --> 00:09:11,160
+on the last slide.
+
+161
+00:09:11,160 --> 00:09:14,040
+Turning to the i equals 1 up node,
+
+162
+00:09:14,040 --> 00:09:18,690
+the stock price of 123 exceeds the strike price,
+
+163
+00:09:18,690 --> 00:09:21,390
+and the put option is out-of-the-money so we would
+
+164
+00:09:21,390 --> 00:09:24,770
+never early exercise it.
+
+165
+00:09:24,770 --> 00:09:27,290
+At the i equals 1 down node, here's
+
+166
+00:09:27,290 --> 00:09:29,720
+where things get interesting.
+
+167
+00:09:29,720 --> 00:09:33,620
+If we exercise immediately, we get the strike of 100
+
+168
+00:09:33,620 --> 00:09:38,390
+minus the stock price of 80.886, for an immediate payoff
+
+169
+00:09:38,390 --> 00:09:41,630
+of 19.114.
+
+170
+00:09:41,630 --> 00:09:48,270
+If we wait, the value is less at 18.119.
+
+171
+00:09:48,270 --> 00:09:53,510
+We conclude that it's better to exercise immediately.
+
+172
+00:09:53,510 --> 00:09:56,020
+Finally, we can go back to time 0,
+
+173
+00:09:56,020 --> 00:09:58,600
+where the option is at-the-money and so it's
+
+174
+00:09:58,600 --> 00:10:01,100
+clearly better to wait.
+
+175
+00:10:01,100 --> 00:10:06,360
+We find the time 0 price to be 10.017
+
+176
+00:10:06,360 --> 00:10:10,800
+based on knowing that we won't early exercise at the time 1
+
+177
+00:10:10,800 --> 00:10:14,640
+up node but that we will early exercise at the time 1
+
+178
+00:10:14,640 --> 00:10:16,260
+down node.
+
+179
+00:10:16,260 --> 00:10:18,690
+The calculations for i equals zero and i
+
+180
+00:10:18,690 --> 00:10:22,970
+equals 1 are highlighted on this sub tree for you to look at.
+
+181
+00:10:22,970 --> 00:10:26,700
+At each node, we compare the value of immediate exercise
+
+182
+00:10:26,700 --> 00:10:29,870
+with the value of keeping the option alive.
+
+183
+00:10:29,870 --> 00:10:32,600
+Note the value of keeping an option alive
+
+184
+00:10:32,600 --> 00:10:36,200
+will depend on what we concluded on any future nodes
+
+185
+00:10:36,200 --> 00:10:39,380
+about whether or not to early exercise.
+
+186
+00:10:39,380 --> 00:10:43,010
+By working backwards, we're able to take into account
+
+187
+00:10:43,010 --> 00:10:46,220
+all of the relevant future strategic decisions
+
+188
+00:10:46,220 --> 00:10:48,230
+on each node.
+
+189
+00:10:48,230 --> 00:10:51,470
+Comparing the results, the American option
+
+190
+00:10:51,470 --> 00:10:55,580
+is worth 10.017, which is more than what
+
+191
+00:10:55,580 --> 00:10:58,670
+we found for the European version of the option, which
+
+192
+00:10:58,670 --> 00:11:01,850
+was worth 9.495.
+
+193
+00:11:01,850 --> 00:11:04,670
+The difference, of course, is because of what
+
+194
+00:11:04,670 --> 00:11:07,490
+happens at the i equals 1 down node,
+
+195
+00:11:07,490 --> 00:11:11,740
+where there's an extra benefit from early exercise.
+
+196
+00:11:11,740 --> 00:11:13,000
+
+

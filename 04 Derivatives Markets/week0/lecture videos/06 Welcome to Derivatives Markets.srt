@@ -1,0 +1,528 @@
+0
+00:00:00,000 --> 00:00:03,180
+DEBORAH LUCAS: Hello, and welcome to 15.435x--
+
+1
+00:00:03,180 --> 00:00:06,990
+Derivatives Markets-- Advanced Modeling and Strategies.
+
+2
+00:00:06,990 --> 00:00:10,410
+I'm Deborah Lucas your professor for this fifth course
+
+3
+00:00:10,410 --> 00:00:14,490
+in the MIT Sloan MicroMasters program.
+
+4
+00:00:14,490 --> 00:00:16,470
+Derivatives are ubiquitous in the world
+
+5
+00:00:16,470 --> 00:00:18,130
+of finance and business.
+
+6
+00:00:18,130 --> 00:00:22,080
+In fact, more than 94% of Fortune 500 companies
+
+7
+00:00:22,080 --> 00:00:24,510
+report they use these powerful tools
+
+8
+00:00:24,510 --> 00:00:26,460
+to help manage their risk.
+
+9
+00:00:26,460 --> 00:00:29,130
+Developing a solid understanding of derivatives
+
+10
+00:00:29,130 --> 00:00:32,880
+is critical knowledge for some career paths in finance
+
+11
+00:00:32,880 --> 00:00:35,010
+and highly useful in others.
+
+12
+00:00:35,010 --> 00:00:37,230
+Clearly, a working knowledge of derivatives
+
+13
+00:00:37,230 --> 00:00:40,530
+is essential if you're dealing with them directly,
+
+14
+00:00:40,530 --> 00:00:44,610
+as you likely will be in some areas of sales and trading,
+
+15
+00:00:44,610 --> 00:00:46,800
+or if you're working at a hedge fund
+
+16
+00:00:46,800 --> 00:00:50,640
+or in some asset management or risk management roles.
+
+17
+00:00:50,640 --> 00:00:53,760
+Large financial institutions like insurance companies
+
+18
+00:00:53,760 --> 00:00:55,710
+and commercial and investment banks
+
+19
+00:00:55,710 --> 00:00:58,590
+are the single largest users of derivatives
+
+20
+00:00:58,590 --> 00:01:01,920
+in order to manage their own risk exposures.
+
+21
+00:01:01,920 --> 00:01:03,930
+They are also the largest providers
+
+22
+00:01:03,930 --> 00:01:06,900
+of derivatives products to the rest of the market.
+
+23
+00:01:06,900 --> 00:01:09,870
+These institutions employ many talented people
+
+24
+00:01:09,870 --> 00:01:11,730
+to carry out these tasks.
+
+25
+00:01:11,730 --> 00:01:15,540
+In other financial positions, such as in the CFO's office
+
+26
+00:01:15,540 --> 00:01:19,110
+in a large corporation or working in a family office,
+
+27
+00:01:19,110 --> 00:01:21,030
+you're more likely to be a consumer
+
+28
+00:01:21,030 --> 00:01:22,980
+of derivative products, where you'll
+
+29
+00:01:22,980 --> 00:01:25,920
+use them to help manage risks such as those
+
+30
+00:01:25,920 --> 00:01:29,250
+arising from stock market exposures or exchange rate
+
+31
+00:01:29,250 --> 00:01:30,900
+volatility.
+
+32
+00:01:30,900 --> 00:01:34,590
+Understanding derivatives is also increasingly important
+
+33
+00:01:34,590 --> 00:01:37,470
+in the world of public finance, for regulators
+
+34
+00:01:37,470 --> 00:01:39,660
+of financial institutions, and for
+
+35
+00:01:39,660 --> 00:01:41,970
+the many financial practitioners working
+
+36
+00:01:41,970 --> 00:01:45,090
+in central banks, treasury departments, and finance
+
+37
+00:01:45,090 --> 00:01:46,140
+ministries.
+
+38
+00:01:46,140 --> 00:01:48,690
+Beyond their practical value, many people
+
+39
+00:01:48,690 --> 00:01:51,660
+find the study of derivatives pricing models compelling
+
+40
+00:01:51,660 --> 00:01:53,910
+because of their elegance and because
+
+41
+00:01:53,910 --> 00:01:56,760
+of their track record of success at explaining
+
+42
+00:01:56,760 --> 00:01:58,530
+real-world outcomes.
+
+43
+00:01:58,530 --> 00:02:01,080
+I like to say derivatives pricing
+
+44
+00:02:01,080 --> 00:02:03,510
+is where physics meets finance.
+
+45
+00:02:03,510 --> 00:02:06,900
+That's because the models work so exceptionally well
+
+46
+00:02:06,900 --> 00:02:10,620
+and also because some of them are literal analogs of models
+
+47
+00:02:10,620 --> 00:02:12,900
+used in physics.
+
+48
+00:02:12,900 --> 00:02:16,050
+Although many of the models were developed using continuous time
+
+49
+00:02:16,050 --> 00:02:18,780
+mathematics and stochastic calculus,
+
+50
+00:02:18,780 --> 00:02:22,680
+the good news is that you don't have to be a rocket scientist
+
+51
+00:02:22,680 --> 00:02:26,130
+to understand and apply them to solving practical business
+
+52
+00:02:26,130 --> 00:02:27,370
+problems.
+
+53
+00:02:27,370 --> 00:02:31,080
+We will use math to help develop your basic understanding,
+
+54
+00:02:31,080 --> 00:02:33,390
+but the major emphasis will be on learning
+
+55
+00:02:33,390 --> 00:02:37,350
+to use these tools for valuation and risk management.
+
+56
+00:02:37,350 --> 00:02:40,500
+At MIT Sloan, we're also very proud of the fact
+
+57
+00:02:40,500 --> 00:02:42,540
+that many of the most famous derivatives
+
+58
+00:02:42,540 --> 00:02:45,960
+pricing models were invented right here.
+
+59
+00:02:45,960 --> 00:02:49,890
+Fischer Black and Bob Merton were both young faculty members
+
+60
+00:02:49,890 --> 00:02:54,450
+working at Sloan when, together with Myron Scholes at Chicago,
+
+61
+00:02:54,450 --> 00:02:58,110
+they developed the famous Black-Scholes-Merton options
+
+62
+00:02:58,110 --> 00:02:59,550
+pricing model.
+
+63
+00:02:59,550 --> 00:03:01,980
+And Bob Burton's early work showing
+
+64
+00:03:01,980 --> 00:03:04,620
+how the cost of default risk could be quantified
+
+65
+00:03:04,620 --> 00:03:06,690
+with a derivatives pricing approach
+
+66
+00:03:06,690 --> 00:03:11,250
+continues to be widely used by credit analysts today.
+
+67
+00:03:11,250 --> 00:03:13,710
+As a well-trained financial professional,
+
+68
+00:03:13,710 --> 00:03:15,870
+it's essential for you to be familiar
+
+69
+00:03:15,870 --> 00:03:19,290
+with derivative securities and with the analytical methods
+
+70
+00:03:19,290 --> 00:03:22,170
+that have been developed to understand and deploy them.
+
+71
+00:03:22,170 --> 00:03:24,120
+Helping you achieve that objective
+
+72
+00:03:24,120 --> 00:03:27,220
+is the overarching goal of this course.
+
+73
+00:03:27,220 --> 00:03:30,780
+The course will help you develop a sophisticated and durable
+
+74
+00:03:30,780 --> 00:03:34,980
+understanding of derivative modeling valuation and risk
+
+75
+00:03:34,980 --> 00:03:40,110
+management strategies, a basic familiarity with major markets
+
+76
+00:03:40,110 --> 00:03:43,440
+and instruments, and valuable insights
+
+77
+00:03:43,440 --> 00:03:47,010
+into current developments in these always-evolving markets.
+
+78
+00:03:47,010 --> 00:03:50,130
+Ideally, you will come away from this class
+
+79
+00:03:50,130 --> 00:03:52,710
+with the skills and confidence to apply
+
+80
+00:03:52,710 --> 00:03:55,530
+what you've learned to the new types of derivatives
+
+81
+00:03:55,530 --> 00:03:58,290
+that you encounter over the course of your career
+
+82
+00:03:58,290 --> 00:04:01,080
+and in your personal financial endeavors.
+
+83
+00:04:01,080 --> 00:04:02,790
+Derivatives have been a large part
+
+84
+00:04:02,790 --> 00:04:05,010
+of my academic and professional life.
+
+85
+00:04:05,010 --> 00:04:07,980
+I joined MIT Sloan's Finance group
+
+86
+00:04:07,980 --> 00:04:10,200
+as the Sloan Distinguished Professor of Finance
+
+87
+00:04:10,200 --> 00:04:13,020
+in 2010, and shortly after, became
+
+88
+00:04:13,020 --> 00:04:15,420
+the founding director of the MIT Golub Center
+
+89
+00:04:15,420 --> 00:04:17,730
+for Finance and Policy.
+
+90
+00:04:17,730 --> 00:04:21,089
+At Sloan, I teach two classes at the master's level
+
+91
+00:04:21,089 --> 00:04:22,920
+that emphasize derivatives--
+
+92
+00:04:22,920 --> 00:04:27,120
+Futures and Options and Fixed Income and Derivatives.
+
+93
+00:04:27,120 --> 00:04:30,090
+This course draws heavily from those electives.
+
+94
+00:04:30,090 --> 00:04:32,160
+I also teach advanced asset pricing
+
+95
+00:04:32,160 --> 00:04:36,120
+to PhD students in other special topics courses.
+
+96
+00:04:36,120 --> 00:04:38,610
+Professionally, my non-academic jobs
+
+97
+00:04:38,610 --> 00:04:41,460
+have primarily been in public policy, including
+
+98
+00:04:41,460 --> 00:04:44,400
+having been the chief economist for the US Congressional Budget
+
+99
+00:04:44,400 --> 00:04:48,180
+Office, or CBO, and then the founding assistant director
+
+100
+00:04:48,180 --> 00:04:51,510
+for CBO's Financial Analysis division,
+
+101
+00:04:51,510 --> 00:04:54,570
+a group which puts the tools you'll learn here
+
+102
+00:04:54,570 --> 00:04:57,930
+into practice to help inform Congress and the public
+
+103
+00:04:57,930 --> 00:05:01,020
+about the cost and risk of the trillions of dollars
+
+104
+00:05:01,020 --> 00:05:04,710
+of financial guarantees made by the US federal government.
+
+105
+00:05:04,710 --> 00:05:08,130
+I continue to do consulting for CBO, central banks,
+
+106
+00:05:08,130 --> 00:05:10,470
+and other international financial institutions
+
+107
+00:05:10,470 --> 00:05:11,620
+in this area.
+
+108
+00:05:11,620 --> 00:05:13,770
+I've also been a director on the boards
+
+109
+00:05:13,770 --> 00:05:17,230
+of several private financial institutions and corporations,
+
+110
+00:05:17,230 --> 00:05:20,340
+including currently serving on the board of Chicago Mercantile
+
+111
+00:05:20,340 --> 00:05:24,090
+Exchange, or CME, which is the world's largest derivatives
+
+112
+00:05:24,090 --> 00:05:27,300
+exchange and an important innovator in the derivatives
+
+113
+00:05:27,300 --> 00:05:28,380
+marketplace.
+
+114
+00:05:28,380 --> 00:05:31,380
+My research is closely aligned with my financial policy
+
+115
+00:05:31,380 --> 00:05:33,810
+work and the goals of the MIT Golub Center
+
+116
+00:05:33,810 --> 00:05:35,250
+for Finance and Policy.
+
+117
+00:05:35,250 --> 00:05:38,130
+It starts with the observation that governments
+
+118
+00:05:38,130 --> 00:05:41,070
+are the world's largest financial institutions
+
+119
+00:05:41,070 --> 00:05:44,700
+and the most influential financial decision makers.
+
+120
+00:05:44,700 --> 00:05:48,180
+My research aims to develop metrics to help governments
+
+121
+00:05:48,180 --> 00:05:50,670
+make better informed and more transparent
+
+122
+00:05:50,670 --> 00:05:53,130
+decisions based on the principles
+
+123
+00:05:53,130 --> 00:05:55,180
+of financial economics.
+
+124
+00:05:55,180 --> 00:05:57,630
+Many of the projects are related to derivatives,
+
+125
+00:05:57,630 --> 00:06:00,510
+such as valuing embedded derivatives and government
+
+126
+00:06:00,510 --> 00:06:03,840
+credit support and valuing too-big-to-fail bank
+
+127
+00:06:03,840 --> 00:06:04,860
+guarantees.
+
+128
+00:06:04,860 --> 00:06:06,480
+I'm looking forward to our journey
+
+129
+00:06:06,480 --> 00:06:08,670
+together through the world of derivatives
+
+130
+00:06:08,670 --> 00:06:10,230
+and hope you are too.
+
+131
+00:06:10,230 --> 00:06:12,380
+[MUSIC PLAYING]
+

@@ -1,0 +1,117 @@
+
+INSTRUCTOR: Let's turn to the important topic
+of risk-neutral pricing.
+If you look back to the general approach
+for finding a replicating portfolio
+to price an option on slide 32, you'll
+see that none of the formulas involve
+the true probability, q, of the stock price going up at time 1
+on the binomial tree.
+The natural question is whether this
+means that those actual probabilities really
+don't affect option prices.
+The answer is yes and no.
+Mechanically, we don't need the probabilities
+because we valued options by matching
+the payoffs of the options and the replicating portfolios
+in each of the possible future states of the world
+individually, using the information
+in the binomial tree about stock prices and the risk free rate.
+
+However, the physical probability, q
+determines future stock prices and their volatility.
+Given a risk adjusted discount rate for the stock,
+it also determines the current stock price.
+Hence, the current stock price reflects
+the probability distribution of future stock prices.
+Now since option values depend on the current stock price, S0,
+the probability does in fact influence the option value
+but it only does so indirectly.
+
+The fact that there's no direct dependence
+on the physical probability, q is the basis
+for being able to use the trick of risk-neutral pricing
+as an alternative to finding the replicating portfolio.
+
+Risk-neutral pricing is a mathematical alternative
+to a replicating portfolio approach to pricing options
+that's often simpler to work with.
+Because the true or physical probability, q,
+of an up step in the tree is not used in the pricing formulas
+based on portfolio replication, we're
+free to replace that probability with the so-called risk-neutral
+probability.
+The risk-neutral probability is chosen
+to be as if we live in a risk-neutral world
+where all cash flows are discounted at a risk-free rate,
+including those for risky stocks and derivative securities
+like options and futures.
+That is, we can find the risk-neutral neutral
+probability, which we'll call q*,
+by solving for it in a formula that equates the stock price
+with the present value of the time 1 cash flows on the stock,
+discounted at the risk free rate.
+For instance, doing this in our last example
+would replace the true discount rate of 19%
+with the risk free rate of 11%.
+
+There still is actually a risk adjustment,
+but it's accomplished through the distorted probability
+weights by using q* instead of q.
+Here's the present value calculation.
+And now we can rearrange that formula and solve for q*
+in terms of the stock prices on all of the nodes
+of our binomial tree and the risk-free rate.
+
+We can represent the time 0 stock price as the expectation
+of the discounted future payoffs on the stock,
+but under the risk-neutral expectation operator,
+E* that uses risk-neutral probabilities in place
+of the physical ones.
+
+The advantage of this approach is
+that we can now price any derivative security on a stock
+by calculating the derivative's expected payoff
+using risk-neutral probabilities in place
+of physical probabilities, and discounting
+at the risk free rate.
+That idea is summarized by formula one here.
+Going back to our previous example where the stock price
+is 50 at time 0, and either 70 or 35 in one period,
+and with the risk free rate of 11%,
+we can solve for q* using the formula we derived for it.
+
+We know that the call option has a payoff of 20 on the up node
+and is worth 0 on the down node.
+We can now find its price by finding
+the risk-neutral expectation of the option's value at time 1,
+and discounting it back at the risk free rate to time 0.
+
+The result is exactly the same as what
+we calculated with the replicating portfolio approach.
+The call is worth 10.6547.
+Now if you ever find a small difference
+when you compare your answers between the two approaches,
+it will be due to rounding error in your calculations,
+not any true difference in the answers.
+Mathematically, the two approaches
+are completely equivalent.
+Here's a recipe that summarizes what
+we've learned about risk neutral pricing of European style
+derivatives on a binomial tree.
+We start by assuming counter factually
+that prices are determined by discounting
+at a risk-free rate.
+This is often described as assuming a fictional world
+where people are risk-neutral Then
+based on the model of the evolution of stock
+prices and the risk free rate, we
+infer the risk-neutral probabilities.
+We can then use these probabilities
+to compute the price of any derivative security
+based on taking the risk-neutral expectation of the payoffs,
+and discounting at the risk-free rate.
+This recipe is easily extended to the multi-step trees that
+will start to look at next, and to other approaches to pricing,
+including Monte Carlo methods, that we'll
+be touching on in a few weeks.

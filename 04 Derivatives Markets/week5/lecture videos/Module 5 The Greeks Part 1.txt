@@ -1,0 +1,116 @@
+
+PROFESSOR: Risk managers and options traders
+need to know the sensitivity of the value of their option
+holdings to various factors in order to understand their risk
+exposure and how to hedge it.
+Those sensitivities of option prices are known as the Greeks.
+Will discuss, first, Delta, the first order sensitivity
+to the underlying asset's price; second, Gamma,
+the second order sensitivity to the underlying asset's price;
+third, Theta, the sensitivity to the passage of time;
+fourth, Rho, the sensitivity to interest rates; and fifth,
+Vega, the sensitivity to the underlying's volatility.
+For options that can be priced using Black-Scholes-Merton,
+the Greeks often can be explicitly calculated
+by taking derivatives of those pricing formulas.
+However, the concepts are very general,
+and they're frequently applied to all sorts of derivatives
+that can't be priced with Black-Scholes-Merton.
+Delta and Gamma are the first and second order sensitivities
+of an option's value to changes in the price of the underlying
+asset.
+The general idea for the Delta is
+expressed by taking the derivative of the option price
+with respect to the value of the underlying.
+As it's represented here, the underlying
+is a stock with price, S, if it's a European put or call
+option that one can differentiate
+the Black-Scholes-Merton formula,
+with respect to the stock price, and prove that the Delta is
+N of d1 for a call, and it's minus N of minus d1 for a put.
+The Gamma of an option is found by taking the second derivative
+of its value with respect to the underlying asset price.
+That's equivalent to taking the first derivative of the Delta.
+
+Again, if it's a stock option that
+satisfies the Black-Scholes-Merton
+assumptions, you can drive a closed form solution.
+The result will be identical for either a call or put option,
+and that's given here.
+
+Some of those calculations are actually
+trickier than it may first appear,
+because d1 and d2 also depend on s.
+You can give it a try, or see the calculations
+in Hull's textbook, or from other sources
+if you're curious.
+However, for the homework and exam,
+you only need to know how to use the formulas shown
+in the slides and how to interpret them.
+You won't be asked to do any derivations.
+Let's return to the graph we looked at earlier,
+where we plotted the current value of a put option
+as a function of the underlying stock price.
+We assume that the current stock price is 100
+and that the option is currently at-the-money.
+As before, we can interpret Delta
+as the slope of the tangent line at the current stock price.
+Notice that, for a put option, that tangent line
+has a negative slope everywhere, which
+means that the Delta of a put option is always negative.
+The Gamma reflects the convexity of this function,
+in other words, how much curvature there is.
+The higher the Gamma the more curvature.
+
+Well, now, how about a call option?
+We can do a similar graphical analysis.
+
+The value curve for a call option will look like this.
+
+Again, assuming the stock price is currently 100.
+We can find the slope of the tangent line
+at the current stock price.
+And that slope represents the Delta of the call option.
+You can see that the slope of the value function
+is positive everywhere, which means the Delta is positive
+everywhere.
+And for the Gamma, again, it represents
+the degree of curvature.
+The higher the Gamma, the more convexity,
+or the more curvature.
+This graph shows what happens to the Delta of a caller put
+option on the stock as a function of the current value
+of the underlying stock and holding all else equal.
+As we just established, both algebraically and graphically,
+the Delta of the put is always negative.
+It's most steeply negative for low stock prices,
+and goes to 0 for high stock prices.
+
+We can see that by looking back at the previous graph,
+where four low stock prices, say, here, the tangent
+line is steep.
+And for high stock price, say here, the tangent line
+is basically flat.
+The slope is close to 0.
+For a call option, the slope is 0 when the option is very far
+out-of-the-money, which is when stock prices are low.
+And it increases to 1 when the option is deep into-the-money.
+This is a good place to emphasize
+that it's this large variation in Deltas with stock prices
+that causes the replicating portfolios for options
+to change over time, sometimes quite quickly, when
+stock prices make a big move.
+Those changes can necessitate frequent portfolio rebalancing
+and dynamic hedging strategies.
+
+We saw that the Gamma is the same for a put or call option.
+Plotting it is a function of the current stock price.
+It's close to 0 for very high or very low
+values of the underlying stock, relative to the strike price,
+and peaks near the strike price of the option.
+This pattern of curvature is also
+apparent from looking back at the graph on slide 27.
+We see here that around the strike price,
+the function is quite curved.
+But it's fairly straight for high or low values
+of the stock.

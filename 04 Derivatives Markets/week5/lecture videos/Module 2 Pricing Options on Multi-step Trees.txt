@@ -1,0 +1,85 @@
+
+PROFESSOR: We'll continue to use the general procedure you
+learned last week to price derivatives on a binomial tree,
+but now we can write the risk neutral probability
+of an up move q star in terms of u, d, r, and h.
+In fact, it's straightforward to prove
+that q star will equal the ratio shown here
+on a non-dividend-paying stock.
+You can verify that it comes from solving for q star
+as we did last week based on the equation that
+sets the current stock price equal to the discounted
+value of the risk neutral expectation of the stock
+price on the next time step discounted back
+at the risk-free rate.
+Well, once we have the price tree and q star,
+we can price any European style derivative as before
+by evaluating the payoff at the terminal time t
+and working backwards.
+Then at each time step and on each node,
+we can calculate the risk neutral expectation
+of the derivative value on the next step
+and discount it back to get the value of the derivative
+at the node we're looking at.
+
+For instance, for call options, we
+start at the n-th time step, which is the last one,
+and compute the payoff at each of the j nodes
+from the familiar equation for the payoff on a call.
+
+We then can work backwards to find the call value at time i
+and know j calculating the risk neutral
+expected value at time i plus 1 based on the risk
+neutral probability and discounting back
+over the time interval h at the risk-free rate.
+Going back to the inputs in the binomial tree spreadsheet,
+we can specify the strike price of the option.
+In this example, we'll assume the strike
+price is set equal to 100.
+There's also an indicator variable,
+which we set to 1 to indicate that we're
+looking for a call price.
+If that's sent to any other value,
+the spreadsheet will treat the option as a put option.
+
+We need to set the time horizon capital
+T to be the expiration date of the option, which
+we'll take to be 0.1% here.
+
+The output then also includes the risk neutral probability q
+star, the same as the stock price
+tree we saw before based on an n of 10 steps between time 0
+and time capped t of 0.1.
+Then the value of the option at each node
+is represented on the lower tree and calculated
+by working backwards.
+For example, at the time 0.1 node,
+where the stock price is $112.75,
+the payoff on the call option is $12.75.
+The time 0 node gives the call option value of 3.787.
+That value is also recorded at the top
+of the spreadsheet, along with the delta of the call option,
+[AUDIO OUT].
+
+The calculations here are based on the same input,
+except for the number of steps on the trees
+has been increased from 10 to 250.
+Clearly, there's too many numbers in a 250-step tree
+to show on a single slide.
+So what's pictured here is a truncation
+showing only the first 10 steps for the stock price tree
+and also for the call price tree.
+Notice that with the change in the number of steps
+and all else the same as before, the output parameters u, d, q,
+and q star all have to change too.
+Those changes capture the lower stock price variation
+and smaller effective discounting over each shorter
+time interval between nodes.
+The estimated call price now is 3.876.
+That's quite close to the previous and less
+precisely estimated price of 3.787, which was
+based on only using 10 steps.
+As we're about to discuss, the limit
+taking the number of steps to infinity
+gives the Black-Scholes-Merton price, which is 3.88.
+With 250 steps, we get essentially the same answer.

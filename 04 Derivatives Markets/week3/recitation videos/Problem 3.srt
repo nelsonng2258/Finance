@@ -1,0 +1,408 @@
+0
+00:00:00,000 --> 00:00:05,390
+PROFESSOR: Finally, let's review the last problem, Problem 3.
+
+1
+00:00:05,390 --> 00:00:07,850
+Problem 3 states that you are a manager
+
+2
+00:00:07,850 --> 00:00:12,300
+of a hedge fund that specializes in the fixed income market.
+
+3
+00:00:12,300 --> 00:00:14,250
+The fund's portfolio currently consists
+
+4
+00:00:14,250 --> 00:00:17,460
+of these three positions in which all yields are
+
+5
+00:00:17,460 --> 00:00:21,600
+bond equivalent yields, which, if you recall from Problem 1,
+
+6
+00:00:21,600 --> 00:00:26,770
+are annual yields that assume semi-annual coupon payments.
+
+7
+00:00:26,770 --> 00:00:29,050
+The first position is a short position
+
+8
+00:00:29,050 --> 00:00:34,660
+in $150,000 face value of a 7-year 2.8% coupon
+
+9
+00:00:34,660 --> 00:00:37,480
+bond with semi-annual coupon payments
+
+10
+00:00:37,480 --> 00:00:39,880
+that is priced to yield 3.95%.
+
+11
+00:00:39,880 --> 00:00:43,640
+The second position is a long position
+
+12
+00:00:43,640 --> 00:00:49,370
+in $350,000 face value of a 3-year 2.25% coupon
+
+13
+00:00:49,370 --> 00:00:52,520
+bond with, again, semi-annual payments
+
+14
+00:00:52,520 --> 00:00:56,280
+but is now priced to yield 2.75%.
+
+15
+00:00:56,280 --> 00:01:01,170
+The third and final position is a long position in $425,000
+
+16
+00:01:01,170 --> 00:01:05,370
+face value of a 14-year 4.6% coupon
+
+17
+00:01:05,370 --> 00:01:13,020
+bond with semi-annual payments and is priced to yield 4.125%.
+
+18
+00:01:13,020 --> 00:01:15,240
+As a portfolio manager, you decide
+
+19
+00:01:15,240 --> 00:01:18,660
+to delta-hedge the interest rate exposure of your fund's
+
+20
+00:01:18,660 --> 00:01:23,100
+portfolio using a 3-year interest rate swap.
+
+21
+00:01:23,100 --> 00:01:27,840
+The swap specifies a semi-annual exchange of 6-month LIBOR
+
+22
+00:01:27,840 --> 00:01:32,490
+for a fixed payment of 3.5%, paid semi-annually.
+
+23
+00:01:32,490 --> 00:01:37,860
+That is a fixed payment of 1.75% every 6 months.
+
+24
+00:01:37,860 --> 00:01:42,360
+The current 6-month LIBOR rate is 1.4%.
+
+25
+00:01:42,360 --> 00:01:45,390
+As a warm-up, Part A simply asks whether we
+
+26
+00:01:45,390 --> 00:01:48,090
+would want to be a fixed or a floating rate
+
+27
+00:01:48,090 --> 00:01:50,527
+payor in the swap?
+
+28
+00:01:50,527 --> 00:01:53,110
+Well, you don't actually have to do any calculations to answer
+
+29
+00:01:53,110 --> 00:01:54,430
+this question.
+
+30
+00:01:54,430 --> 00:01:58,210
+It's pretty clear from the sizes of our long positions
+
+31
+00:01:58,210 --> 00:02:01,090
+and short positions that on net, we
+
+32
+00:02:01,090 --> 00:02:04,510
+will be receiving fixed payments from our portfolio.
+
+33
+00:02:04,510 --> 00:02:07,420
+In other words, we are long duration
+
+34
+00:02:07,420 --> 00:02:10,330
+and in order to delta-hedge the interest rate
+
+35
+00:02:10,330 --> 00:02:12,550
+risk to our fund's equity, we want
+
+36
+00:02:12,550 --> 00:02:16,240
+to be a fixed rate payor, equivalently, a floating rate
+
+37
+00:02:16,240 --> 00:02:17,830
+receiver in the swap.
+
+38
+00:02:17,830 --> 00:02:20,340
+
+
+39
+00:02:20,340 --> 00:02:22,110
+Now, let's assume that you calculate
+
+40
+00:02:22,110 --> 00:02:30,680
+the dollar duration of your portfolio to be $4,743,387.
+
+41
+00:02:30,680 --> 00:02:32,360
+Part B is simply asking--
+
+42
+00:02:32,360 --> 00:02:34,160
+what would be the notional principal
+
+43
+00:02:34,160 --> 00:02:37,490
+of the swap, in which we are a fixed rate payor, that
+
+44
+00:02:37,490 --> 00:02:41,150
+delta-hedges our portfolio?
+
+45
+00:02:41,150 --> 00:02:44,420
+The first thing to recall here is that an interest rate swap
+
+46
+00:02:44,420 --> 00:02:48,050
+is equivalent to a long position in a fixed rate bond,
+
+47
+00:02:48,050 --> 00:02:50,660
+in a short position in a floating rate bond,
+
+48
+00:02:50,660 --> 00:02:53,510
+or vice versa, depending on whether or not
+
+49
+00:02:53,510 --> 00:02:56,270
+we are a fixed rate payor or a floating rate
+
+50
+00:02:56,270 --> 00:02:58,380
+payor in the swap.
+
+51
+00:02:58,380 --> 00:03:00,660
+Both positions, the long position
+
+52
+00:03:00,660 --> 00:03:05,450
+and the short position, are initially priced at par.
+
+53
+00:03:05,450 --> 00:03:07,820
+To find the notional principal of the swap,
+
+54
+00:03:07,820 --> 00:03:09,560
+we first need to find the modified
+
+55
+00:03:09,560 --> 00:03:13,700
+durations of the fixed and floating legs of the swap.
+
+56
+00:03:13,700 --> 00:03:16,610
+To find the modified duration of the fixed leg of the swap,
+
+57
+00:03:16,610 --> 00:03:19,670
+we can use the convexity.xls calculator
+
+58
+00:03:19,670 --> 00:03:23,260
+that we used in Problem 1.
+
+59
+00:03:23,260 --> 00:03:24,670
+Recall that the problem statement
+
+60
+00:03:24,670 --> 00:03:28,120
+says that the swap specifies a semi-annual exchange
+
+61
+00:03:28,120 --> 00:03:32,410
+of 6-month LIBOR for a fixed payment of 3.5% paid
+
+62
+00:03:32,410 --> 00:03:34,220
+semi-annually.
+
+63
+00:03:34,220 --> 00:03:37,880
+Thus, in our convexity.xls calculator,
+
+64
+00:03:37,880 --> 00:03:40,580
+we can substitute in the appropriate parameters
+
+65
+00:03:40,580 --> 00:03:45,290
+for a semi-annual fixed payment of 3.5% and three years
+
+66
+00:03:45,290 --> 00:03:47,660
+to maturity, and find that the modified
+
+67
+00:03:47,660 --> 00:03:54,350
+duration of the fixed leg of the swap is 2.8245 years.
+
+68
+00:03:54,350 --> 00:03:56,350
+What about the modified duration of the floating
+
+69
+00:03:56,350 --> 00:03:58,190
+leg of the swap?
+
+70
+00:03:58,190 --> 00:04:00,680
+Well recall, called that the Macaulay duration
+
+71
+00:04:00,680 --> 00:04:02,960
+of the floating leg of the swap is
+
+72
+00:04:02,960 --> 00:04:05,870
+equal to the time to the next reset.
+
+73
+00:04:05,870 --> 00:04:10,280
+In this case, since there are 6 months until the next reset,
+
+74
+00:04:10,280 --> 00:04:14,820
+the Macaulay duration will be, in years, 0.5.
+
+75
+00:04:14,820 --> 00:04:18,630
+Thus, the modified duration of the floating leg of the swap
+
+76
+00:04:18,630 --> 00:04:24,450
+is equal to 0.5 divided by 1 plus 0.014,
+
+77
+00:04:24,450 --> 00:04:26,310
+which is the current 6-month LIBOR
+
+78
+00:04:26,310 --> 00:04:32,710
+rate of 1.4%, divided by 2 to express it as a 6-month rate.
+
+79
+00:04:32,710 --> 00:04:36,190
+That equals 0.4965 years, which is
+
+80
+00:04:36,190 --> 00:04:40,510
+the modified duration of the floating leg of the swap.
+
+81
+00:04:40,510 --> 00:04:43,210
+The last step, in order to find the notional principal
+
+82
+00:04:43,210 --> 00:04:46,900
+of the swap, is to equate the hedge ratios, or dollar
+
+83
+00:04:46,900 --> 00:04:51,660
+durations, of our portfolio with that of the swap.
+
+84
+00:04:51,660 --> 00:04:53,760
+In the equation shown, the left-hand side
+
+85
+00:04:53,760 --> 00:04:55,860
+is the hedge ratio, or dollar duration
+
+86
+00:04:55,860 --> 00:05:04,390
+of our portfolio, which was given to be $4,743,387.
+
+87
+00:05:04,390 --> 00:05:07,720
+The hedge ratio, or dollar duration, of our swap
+
+88
+00:05:07,720 --> 00:05:09,370
+is equal to the notional principal
+
+89
+00:05:09,370 --> 00:05:10,810
+of the swap in dollars--
+
+90
+00:05:10,810 --> 00:05:12,760
+which I denoted by S--
+
+91
+00:05:12,760 --> 00:05:15,850
+times the difference between the modified duration
+
+92
+00:05:15,850 --> 00:05:19,180
+of the fixed leg of the swap and the modified duration
+
+93
+00:05:19,180 --> 00:05:21,430
+of the floating leg of the swap.
+
+94
+00:05:21,430 --> 00:05:25,450
+It's fixed minus floating here because, as in Part A,
+
+95
+00:05:25,450 --> 00:05:28,510
+we determined that we wanted to be a fixed rate
+
+96
+00:05:28,510 --> 00:05:34,240
+payor, equivalently a floating rate receiver, in the swap.
+
+97
+00:05:34,240 --> 00:05:37,340
+Solving for S, you should find that the notional principal
+
+98
+00:05:37,340 --> 00:05:44,220
+of the swap is $2,037,560.
+
+99
+00:05:44,220 --> 00:05:45,960
+Well, that's it for Problem 3.
+
+100
+00:05:45,960 --> 00:05:48,300
+Thank you for attending this week's recitation.
+
+101
+00:05:48,300 --> 00:05:51,560
+And I look forward to seeing all of you next week.
+

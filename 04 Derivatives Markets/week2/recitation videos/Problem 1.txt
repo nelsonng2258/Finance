@@ -1,0 +1,101 @@
+
+J R SCOTT: Hello, everyone and welcome to the second
+recitation of 15.435x.
+In this recitation, we'll be reviewing
+futures contracts and swaps.
+The recitation will consist of three problems.
+In the first problem, we'll see how
+two companies with different borrowing rates
+can mutually benefit from a swap.
+In the second problem, we'll see how a futures
+contract can be used for hedging as well as speculation motives.
+And in the third problem, we'll review some of the mechanics
+and pricing of currency swaps.
+Without further ado, let's begin.
+Problem 1-- company A, a British manufacturer,
+wishes to borrow US dollars at a fixed rate of interest.
+Company B, a US multinational, wishes to borrow sterling
+at a fixed rate of interest.
+They've been quoted the following interest
+rates per annum, adjusted for differential tax rates.
+Company A can borrow in pounds at 11% and in dollars at 7%.
+Company B can borrow in pounds at 10.6%
+and in dollars at 6.2%.
+Design a swap that will net a financial institution, acting
+as an intermediary, 10 basis points per annum,
+and will produce a gain of 15 basis points per annum
+for each of the two companies, relative to what
+they would pay borrowing directly
+in their preferred currencies.
+The first thing to note is that company A
+has a relative advantage when borrowing in pounds.
+Although it costs company a 40 basis points
+more to borrow in pounds relative to company B,
+it costs company a 80 basis points more
+to borrow in dollars.
+Symmetrically, company B has a relative advantage
+when borrowing in dollars.
+I like to think of this setup like an international trade.
+For company B, it has an absolute advantage in borrowing
+in both sterling and in dollars, although company
+has a relative advantage, sometimes
+called a comparative advantage, when borrowing in pounds.
+This fact leads us to say that there
+is an opportunity for both companies
+to lower their borrowing costs using
+a fixed-for-fixed currency swap.
+This question is asking us how exactly
+the swap should be structured.
+Let's assume that both company A and company
+B want to borrow the same principal amount, which we I'll
+denote capital P, in dollars, and capital P-star in pounds.
+Let's assume that company A initially
+borrows P-star in pounds at an interest rate of 11%.
+In the swap, the intermediary is going to exchange P-star for P
+at the spot exchange rate between pounds and dollars.
+Since we're on an annual basis, the swap
+can be structured so that every year, company
+A pays a fixed interest rate on the principal, P,
+to the intermediary in dollars, and receives a fixed interest
+rate on the principal, P-star in pounds.
+To finance its loan, company A needs
+to receive at least a fixed interest rate of 11% in pounds.
+Since company A wants to borrow in US dollars,
+it will pay an interest rate that
+is 15 basis points less than the 7% interest
+rate it could have paid without the swap, or 6.85%.
+What about company B?
+Company B initially borrows P in dollars
+at an interest rate of 6.2%.
+In the currency swap, the intermediary exchanges
+P for P-star at the spot exchange rate.
+Each year, company B pays a fixed interest rate
+on the principal, P-star to the intermediary in pounds
+and receives a fixed interest rate
+on the principal P, in dollars.
+To finance its loan, company B needs
+to receive a fixed interest rate of at least 6.2% in dollars.
+Since company B wants to borrow in pounds,
+it will pay an interest rate that
+is 15 basis points less than the 10.6% interest
+rate it could have paid without the swap or 10.45%.
+At the terminal date of the currency swap,
+the principal is exchanged again.
+The intermediary is going to earn a spread of 10 basis
+points on the swap.
+The spread is partly compensation for the exchange
+rate risk faced by the intermediary
+but in principle, the intermediary
+could always hedge this risk using forward contracts.
+The more important risk is counterparty risk,
+the risk that either company A or company B fails
+to meet its obligations.
+The diagram below summarizes the cash flows of the swap.
+The kind of an important thing to note
+here is that at initiation, the principal
+amounts P and P-star flow in the opposite direction
+of the arrows.
+Interest payments flow in the same direction as the arrows
+during the life of the swap and the principal amounts also
+flow in the same direction as the arrows
+at the terminal date of the swap.

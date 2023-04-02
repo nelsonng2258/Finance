@@ -1,0 +1,141 @@
+
+PROFESSOR: Let's now turn to the second-order relation
+between bond prices and yields, which is known as convexity.
+Convexity measures the degree of inward curvature
+of the price-yield relationship.
+It's based on the second derivative of a securities
+price with respect to its yield.
+As for duration, there are basic and generalized convexity
+measures with those described as effective being
+the most accurate in general.
+We will see that convexity is used
+to improve upon duration-based approximations of price risk
+and in many hedging strategies.
+It's usually used in combination with duration rather than
+as a standalone tool.
+A long position in noncallable bonds
+always has positive convexity, which is a desirable property.
+All else equal, higher convexity means
+that prices increase more when yields fall
+and decrease less when yields rise.
+By the same token, short positions and noncallable bonds
+always have negative convexity, which
+is an undesirable property.
+Convexity is also affected by any embedded options.
+And it can be altered by taking derivatives positions
+as we'll see in a little while.
+Turning to the mouth, convexity is
+calculated by taking the second derivative
+of the price-yield relationship and dividing by the bond price.
+It takes cash flows as certain as in the derivation
+of Macaulay or modified duration.
+Then we differentiate twice, divide by the bond price,
+and we have the formula for convexity.
+
+Whereas duration has units of years,
+convexity has units of years squared.
+It's not helpful to try to interpret it in those terms.
+However, because the formula is complicated,
+it's quite helpful to have a mental shortcut
+to know that for a zero-coupon bond,
+convexity is approximately its maturity squared.
+For the same reasons as setting up a hedge often
+uses dollar duration, it's often useful to know the dollar
+convexity.
+Dollar convexity is standard or effective convexity
+multiplied by the bond price.
+
+Also remember that you don't have
+to use this formula by hand.
+You can use the convexity calculator for much of the math
+that you'll be asked to do.
+
+Looking again at a plot of the actual price yield relationship
+provides a more intuitive understanding of convexity
+and why it can be used in hedging strategies
+to create more robust hedges.
+The green-shaded area here indicates
+the convexity is related to the curvature
+of the actual price-yield curve.
+So here we have the actual price-yield curve.
+It's a convex function because it's inward curved.
+And if we had a different bond with more inward curvature,
+we would describe it as more convex.
+The more convex a bond or fixed income portfolio, the greater
+that degree of inward curvature.
+Holding duration constant, you can also
+see that the greater convexity is a good thing.
+Because for any shifts in yields,
+the price is higher than in the case of less convexity.
+It's important to note that technically that statement is
+only true for parallel shifts in the yield curve.
+Greater convexity is usually a good thing,
+but it's not an arbitrage opportunity.
+Well, let's get back to the idea of approximating a price
+change with the duration approximation.
+Remember that algebra corresponds to sliding down
+the tangent line say when yields go from Y* to Y-new here.
+
+So again, we're sliding down the tangent line.
+The estimated new price is less than the actual price
+by this vertical distance.
+
+If the error gets larger, the more convex the bond
+is because there's more inward curvature.
+A correction to our formula based on convexity
+can be used to increase the accuracy of our estimate,
+getting closer to the true new price.
+So a convexity correction will pull up our estimate,
+but we'll see it actually overshoots a bit.
+Some positions exhibit what's called negative convexity.
+And mathematically, negative convexity
+is the same thing as concavity.
+One example is a short bond position.
+Remember that a short position always
+flips the actual price-yield curve over the x-axis.
+Negative convexity also rises in some long positions
+such as for callable bonds over some range of yields.
+And that's what's pictured here.
+That's because as rates fall, the bond
+becomes more likely to be called before maturity,
+which puts an upper bound on its price appreciation.
+We'll return to that when we talk about call options.
+What's important to understand here
+is that negative convexity is unfavorable for either a long
+or a short position because it makes
+outcomes worse for any given change in yields,
+again, holding all else equal including duration.
+So it's moving us down relative to the straight line
+or the tangent line.
+
+We just saw graphically that a convexity adjustment
+to a duration-based estimate of price changes
+can improve that estimate.
+The algebra that corresponds to that idea
+is given in this equation.
+
+It relates the percentage change in the bond price
+to minus the duration times the change
+in the yield, the term that we have seen before,
+plus a new term, which is adding one
+half the convexity times the change in the yield squared.
+Some of you might recognize this as a second-order Taylor series
+expansion of the equation for the price of a bond.
+Going back to an example that's similar to the one we looked
+at earlier, let's approximate the percentage price change
+for a 25-year 6% coupon bond priced to yield 9% when there's
+a 2% increase in its yield.
+Using the duration and convexity calculator,
+you can verify that the modified duration is 10.62,
+and the convexity is 182.92.
+Plugging these values into our formula for the percentage
+price change produces an estimated decline in price
+of 17.58%.
+The actual price change is 18.03%,
+which is actually pretty close considering
+that a 2% change in yields is a really large jump that's
+unlikely to occur over any short time period.
+This calculation also shows the size of the improvement
+from including the convexity correction.
+The duration approximation alone implies a 21.24% price drop,
+which is more than three percentage points too large.

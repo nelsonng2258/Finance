@@ -1,0 +1,215 @@
+
+PROFESSOR: You learned the basics of options
+and other parts of the MicroMasters Program,
+but I want to quickly review them here.
+Options confer upon their holder the right but not
+the obligation to buy or sell a pre-specified security
+or commodity at a predetermined price, which is also
+called the strike price.
+A call option gives the right to buy.
+A put option gives the right to sell.
+Using the option is called exercising the option.
+Options have fixed maturity dates which
+are called expiration dates.
+A European-style style option can only
+be exercised on the expiration date of the contract.
+An American option can be exercised any time up
+and until its expiration.
+I remember that difference with the mnemonic
+that the E in European stands for End, and the A in American
+stands for Any time.
+The seller of an option is said to write the option.
+The option writer receives the option premium,
+which is the price paid for the option.
+The premium is paid up front.
+The right to buy or sell at a predetermined price
+is valuable, and options always have a positive value
+to the holder and a cost to the writer.
+The premium is compensation for that cost.
+Although American options are more common in practice
+than European options, it's much easier
+to analyze and price European options.
+European options pricing formulas also often work
+for American options.
+Hence, we'll focus on European options to build intuition
+and to develop basic pricing formulas.
+Towards the end of this lecture, we'll
+also consider an example of the modifications
+we'll need to analyze the price of American options.
+Options on the stocks of many large firms
+are listed on exchanges.
+If you're interested in taking a look at data that's currently
+available on a particular firm, I
+suggest you go to the website of the Chicago Board Options
+Exchange, or CBOE, and take a look.
+But here, we have an example of the options
+available on a particular day on Apple stock.
+The most recent stock trade that day was recorded to be $377.37.
+As is typical in this market, there's
+put and call options, which are available with a variety
+of strike prices on both sides of the current stock price
+and with a variety of maturities.
+For instance, the Apple October $380 call, which is right here,
+has a strike price of $380.
+It expires in 79 days.
+The options contract can be purchased for $24.20,
+the ask price.
+It can be sold for the bid price of $23.75.
+Just so you get an idea of what is available
+and where, this slide lists the major exchanges where options
+are actively traded and the broad categories
+of exchange-traded options contracts.
+As we saw for futures, traded options
+offer the protection of central clearing, which minimizes
+default or counterparty risk.
+The exchange requires margin to be
+posted to ensure performance.
+Unlike futures, where the margin requirements
+are symmetric for the long and short sides of the contract
+because the risks are also symmetric,
+in the options market, where the risk is asymmetric,
+it's the seller who has to pose a large enough margin
+to ensure that the seller's obligation can be met.
+
+To determine the payoffs on a European call option,
+we consider the optimal actions of the call option
+buyer at the expiration date, capital T.
+If the stock price on that date, s sub T,
+is less than the strike price, then the option
+should never be exercised.
+If the option buyer wants to buy the stock,
+they can do that more cheaply by buying the stock
+in the open market rather than by paying the strike price
+and exercising the option.
+
+If the stock price is greater than the strike price,
+it's optimal to exercise the option.
+That's because by exercising the option
+and paying k for a stock that's currently worth more than
+that, they realize a payoff of the price of the stock
+minus the strike price.
+
+That's true whether or not the option buyer
+wants to keep the stock in their portfolio,
+since if they don't want to keep the stock,
+they can immediately sell it after the exercise the option.
+The equation on the bottom of the slide
+summarizes this logic, stating that the payoff
+on a long position in a call option
+is the maximum of the difference at the expiration
+date between the stock price and the strike price and 0.
+The payout for a call option can be plotted on a payoff diagram.
+Remember that a payoff diagram shows the profit
+from a cash or derivatives position as a function
+of the underlying asset.
+In the example here, the underlying
+is one share of stock, and the option
+has a strike price, k, of 100.
+The payoff is $0 if the stock price at expiration
+is less than $100, and rises 1 for 1 with the stock price
+when the stock price exceeds $100.
+I also want to remind you that we
+can plot the sum of multiple positions on a payoff diagram.
+If instead, we were looking at a call
+option for two shares of the stock
+instead of for just one share, the upward-sloping part
+of the line would be twice as steep.
+So we get a figure that looks like this.
+
+There's also some terminology you should know.
+And out of the money call option is
+one where the strike price is greater than the current price
+of the underlying.
+And in the money call option, it has a strike price
+that's less than the current market price of the underlying.
+And at the money call, it has a strike price
+that equals the current price of the underlying.
+We'll use the abbreviations OTM, ITM and ATM
+to describe each of those situations.
+As we're all cash or derivative positions,
+the payoff on a short position is
+the negative of the payoff on the long position.
+In terms of payoff diagrams, then, that
+flips the payoff over the x-axis.
+For a short call option, the payoff
+has the characteristic shape shown here.
+We can use the same sort of analysis
+to infer the payoff on a European put option
+by considering the optimal actions of the put option buyer
+at the expiration date, capital T.
+If the stock price is less than the strike price at T,
+then it's optimal to exercise the option.
+That's because by exercising the option
+and receiving the strike price, k, for a stock that's currently
+worth less than k, they realized a positive payoff
+equal to k minus the value of the stock.
+
+That's true whether or not the option holder
+wants to keep the stock in their portfolio.
+If they still do want to hold it,
+they can immediately buy the stock in the open market
+after delivering it in the options contract,
+leaving them with a stock and also with a gain
+from the payoff on the options contract.
+Now, if the stock price is greater
+than the strike price, k, then the option
+should not be exercised.
+If the option holder wants to sell the stock,
+they can get more for it by selling
+the stock in the open market than by exercising the option.
+The equation at the bottom of the slide
+summarizes this logic, stating that the payoff is
+the maximum of the difference between the strike price
+and the stock price and $0.
+We can plot the payoff for a long put
+position on a payoff diagram to get this characteristic shape.
+
+This example is, again, based on a strike
+price of $100 and a put option contract
+based on one share of stock.
+
+Also, as usual, the payoff diagram for a short position
+flips the picture for the long position over the x-axis.
+Note that for puts also, the slope parts of the lines
+can be made steeper by increasing
+the number of contracts or the number of stocks specified
+in a single contract.
+Focusing on payoffs alone gives an incomplete picture
+of the cash flows involved in options
+transactions, because it neglects
+the upfront premium paid from the buyer
+to the writer of the option.
+In fact, just looking at the payoff diagram,
+it suggests that one would never write
+an option because the best outcome would involve a zero
+payoff.
+And payoff diagrams make an option
+look like a free lunch with no possibility of loss
+from the perspective of the long side.
+Profit diagrams give a more complete picture of the cash
+flows involved by subtracting the upfront premium
+from the payoffs to the buyers and adding it
+to the payoffs of the sellers.
+Note that profit diagrams typically
+don't adjust for the higher future value of the premiums
+because they're paid up front.
+That distortion tends to be small
+when interest rates are low and for short-dated options.
+The graphs here show how taking into account
+the premium in a profit diagram causes
+those diagrams to differ from the corresponding payoff
+diagrams.
+It's clear in a profit diagram that there's
+no free lunch for option buyers, and that option sellers.
+profit when market conditions are such that options
+are allowed to expire without exercise.
+Despite that seeming advantage of profit diagrams
+in providing a more complete picture,
+path diagrams are actually more common.
+That's because they give a clear idea
+of the amounts that will change hands
+at the contract expiration.
+Knowing the outcomes at that time
+is useful in evaluating trading strategies,
+and also, it's an essential input
+into the pricing of the contracts.

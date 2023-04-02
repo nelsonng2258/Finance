@@ -1,0 +1,348 @@
+0
+00:00:00,000 --> 00:00:02,640
+PROFESSOR: We can now turn back to payoff diagrams
+
+1
+00:00:02,640 --> 00:00:05,550
+as a way to understand why a long position
+
+2
+00:00:05,550 --> 00:00:09,180
+in a forward contract is like a highly-leveraged position
+
+3
+00:00:09,180 --> 00:00:12,160
+in the underlying asset.
+
+4
+00:00:12,160 --> 00:00:15,280
+For this example, let's consider a forward contract
+
+5
+00:00:15,280 --> 00:00:20,410
+on a share of stock which locks in a forward price of $65
+
+6
+00:00:20,410 --> 00:00:22,850
+to buy a share.
+
+7
+00:00:22,850 --> 00:00:26,390
+We'll construct a portfolio of the underlying
+
+8
+00:00:26,390 --> 00:00:30,080
+stock and a risk-free, zero-coupon bond that
+
+9
+00:00:30,080 --> 00:00:34,370
+has payoffs that are identical to our forward contract.
+
+10
+00:00:34,370 --> 00:00:36,970
+Let's start with the bond.
+
+11
+00:00:36,970 --> 00:00:40,570
+The first path diagram here is the payoff
+
+12
+00:00:40,570 --> 00:00:43,240
+on a zero-coupon bond with a face
+
+13
+00:00:43,240 --> 00:00:47,530
+value of $65 that matures on the same day
+
+14
+00:00:47,530 --> 00:00:49,450
+as the forward contract on the stock
+
+15
+00:00:49,450 --> 00:00:51,040
+that we want to compare it with.
+
+16
+00:00:51,040 --> 00:00:53,550
+
+
+17
+00:00:53,550 --> 00:00:56,820
+The payoff on a long position in the bond
+
+18
+00:00:56,820 --> 00:01:01,470
+is $65 no matter what the value of the underlying stock
+
+19
+00:01:01,470 --> 00:01:05,370
+is on the expiration or maturity date of the contract.
+
+20
+00:01:05,370 --> 00:01:10,260
+Hence, the payoff diagram shows a horizontal line at $65.
+
+21
+00:01:10,260 --> 00:01:17,880
+
+
+22
+00:01:17,880 --> 00:01:20,340
+For a short position in the bond,
+
+23
+00:01:20,340 --> 00:01:23,730
+the payoff is also invariant to the stock price.
+
+24
+00:01:23,730 --> 00:01:26,460
+The seller of the bond on a short position
+
+25
+00:01:26,460 --> 00:01:30,000
+is out the face value of the $65 no matter
+
+26
+00:01:30,000 --> 00:01:33,390
+what happens to the price of the underlying stock.
+
+27
+00:01:33,390 --> 00:01:38,467
+Hence, the payoff diagram shows a horizontal line at minus $65.
+
+28
+00:01:38,467 --> 00:01:43,440
+
+
+29
+00:01:43,440 --> 00:01:45,420
+Now let's look at the payoff diagram
+
+30
+00:01:45,420 --> 00:01:49,020
+for long and short positions in the underlying stock.
+
+31
+00:01:49,020 --> 00:01:52,200
+If you own the stock, its value on the expiration date
+
+32
+00:01:52,200 --> 00:01:55,350
+of the forward contract is whatever the stock price
+
+33
+00:01:55,350 --> 00:01:57,090
+is on that same day.
+
+34
+00:01:57,090 --> 00:02:00,180
+Hence, the payoff increases one-for-one with the stock
+
+35
+00:02:00,180 --> 00:02:04,240
+price as in the top diagram.
+
+36
+00:02:04,240 --> 00:02:07,030
+And as for the bond, a short position
+
+37
+00:02:07,030 --> 00:02:10,389
+in the stock on a payoff diagram flips
+
+38
+00:02:10,389 --> 00:02:13,000
+the outcomes over the x-axis.
+
+39
+00:02:13,000 --> 00:02:16,840
+A short position involves a loss of the value on the expiration
+
+40
+00:02:16,840 --> 00:02:19,840
+date equal to the price of the stock that day.
+
+41
+00:02:19,840 --> 00:02:22,600
+Hence, the payoff decreases one-for-one
+
+42
+00:02:22,600 --> 00:02:27,810
+with the stock price as in the lower diagram here.
+
+43
+00:02:27,810 --> 00:02:30,630
+Let's consider the payoff on a long forward contract
+
+44
+00:02:30,630 --> 00:02:34,770
+in the stock with a forward price of $65.
+
+45
+00:02:34,770 --> 00:02:36,720
+We know that the payoff at expiration
+
+46
+00:02:36,720 --> 00:02:38,580
+will be the difference between the stock
+
+47
+00:02:38,580 --> 00:02:43,770
+price on that date minus the $65 paid in the forward contract.
+
+48
+00:02:43,770 --> 00:02:47,670
+The payoff, therefore, increases linearly and one-for-one
+
+49
+00:02:47,670 --> 00:02:51,570
+in the price of the stock starting at minus $65
+
+50
+00:02:51,570 --> 00:02:53,370
+if the stock price is $0.
+
+51
+00:02:53,370 --> 00:02:56,270
+
+
+52
+00:02:56,270 --> 00:02:59,390
+And, finally, let's compare the payoff diagram
+
+53
+00:02:59,390 --> 00:03:03,590
+on the forward contract to the one for a portfolio that's
+
+54
+00:03:03,590 --> 00:03:08,390
+long one share of the stock and short a zero-coupon bond
+
+55
+00:03:08,390 --> 00:03:11,840
+with a face value of $65 that matures
+
+56
+00:03:11,840 --> 00:03:15,850
+on the same date as the forward contract.
+
+57
+00:03:15,850 --> 00:03:19,930
+The payoff on that portfolio is found by vertically adding
+
+58
+00:03:19,930 --> 00:03:23,450
+the payoffs we found earlier.
+
+59
+00:03:23,450 --> 00:03:28,520
+The short bond always has a payoff of minus $65.
+
+60
+00:03:28,520 --> 00:03:33,750
+And the stock value increases one-for-one in the stock price.
+
+61
+00:03:33,750 --> 00:03:38,120
+The result is plotted on the bottom diagram.
+
+62
+00:03:38,120 --> 00:03:41,500
+We can see that no matter what happens to the underlying stock
+
+63
+00:03:41,500 --> 00:03:44,200
+price, the payoff on the forward contract
+
+64
+00:03:44,200 --> 00:03:47,980
+will be identical to the payoff on the portfolio consisting
+
+65
+00:03:47,980 --> 00:03:52,830
+of a share of the stock and the short bond.
+
+66
+00:03:52,830 --> 00:03:56,580
+This can be described, then, as a highly-leveraged position
+
+67
+00:03:56,580 --> 00:03:58,890
+in the stock because shorting a bond
+
+68
+00:03:58,890 --> 00:04:01,470
+is borrowing and the borrowed money
+
+69
+00:04:01,470 --> 00:04:04,800
+is used to help fund the stock purchase.
+
+70
+00:04:04,800 --> 00:04:07,980
+In other words, a so-called leveraged position
+
+71
+00:04:07,980 --> 00:04:11,900
+is one that is funded in part by borrowing.
+
+72
+00:04:11,900 --> 00:04:14,360
+This equivalence between a forward contract
+
+73
+00:04:14,360 --> 00:04:16,910
+and its replicating portfolio will also
+
+74
+00:04:16,910 --> 00:04:20,600
+be key to pricing forward contracts.
+
+75
+00:04:20,600 --> 00:04:23,360
+The bottom line is that long forward contracts
+
+76
+00:04:23,360 --> 00:04:26,990
+allow market participants to take highly-leveraged positions
+
+77
+00:04:26,990 --> 00:04:29,030
+in the risky underlying asset with little
+
+78
+00:04:29,030 --> 00:04:32,390
+or no money down, even if they couldn't do so directly
+
+79
+00:04:32,390 --> 00:04:36,330
+by borrowing and buying the risky asset.
+
+80
+00:04:36,330 --> 00:04:40,170
+A similar analysis implies that forward short positions
+
+81
+00:04:40,170 --> 00:04:43,050
+are equivalent to lending and going
+
+82
+00:04:43,050 --> 00:04:45,940
+short in the underlying asset.
+
+83
+00:04:45,940 --> 00:04:48,400
+This provides short risk exposure
+
+84
+00:04:48,400 --> 00:04:53,770
+to an underlying asset, either to hedge or to speculate, again
+
+85
+00:04:53,770 --> 00:04:55,500
+with no money down.
+
+86
+00:04:55,500 --> 00:04:56,000
+
+

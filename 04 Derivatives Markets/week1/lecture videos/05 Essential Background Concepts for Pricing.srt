@@ -1,0 +1,228 @@
+0
+00:00:00,000 --> 00:00:02,860
+PROFESSOR: We're almost ready to turn to pricing formulas
+
+1
+00:00:02,860 --> 00:00:05,580
+and how they were derived but, first, just a little
+
+2
+00:00:05,580 --> 00:00:09,100
+more background information.
+
+3
+00:00:09,100 --> 00:00:12,040
+I want you to remember that an arbitrage opportunity is
+
+4
+00:00:12,040 --> 00:00:15,820
+a trading strategy that either yields a positive profit today
+
+5
+00:00:15,820 --> 00:00:20,830
+with no future costs or that costs nothing today but yields
+
+6
+00:00:20,830 --> 00:00:23,270
+a positive profit in the future.
+
+7
+00:00:23,270 --> 00:00:27,710
+In other words, a way to make free money.
+
+8
+00:00:27,710 --> 00:00:31,210
+The pricing formulas for forward contracts and other derivatives
+
+9
+00:00:31,210 --> 00:00:35,650
+are often derived using no-arbitrage arguments.
+
+10
+00:00:35,650 --> 00:00:39,700
+That is, their prices adjust so that no arbitrage opportunities
+
+11
+00:00:39,700 --> 00:00:41,510
+exist.
+
+12
+00:00:41,510 --> 00:00:44,810
+Price deviations might arise temporarily,
+
+13
+00:00:44,810 --> 00:00:47,990
+but traders try to exploit the situation
+
+14
+00:00:47,990 --> 00:00:50,765
+and that quickly pushes prices back in line.
+
+15
+00:00:50,765 --> 00:00:53,290
+
+
+16
+00:00:53,290 --> 00:00:55,990
+No arbitrage doesn't mean the prices are
+
+17
+00:00:55,990 --> 00:00:59,140
+right in any kind of an absolute sense
+
+18
+00:00:59,140 --> 00:01:01,420
+or that there's no market frictions,
+
+19
+00:01:01,420 --> 00:01:03,580
+it just means that relative prices
+
+20
+00:01:03,580 --> 00:01:07,970
+between different securities are consistent.
+
+21
+00:01:07,970 --> 00:01:12,250
+The absence of arbitrage leads to the famous Law of One Price.
+
+22
+00:01:12,250 --> 00:01:15,010
+Securities with identical future payoffs
+
+23
+00:01:15,010 --> 00:01:17,560
+must have the same price today.
+
+24
+00:01:17,560 --> 00:01:20,950
+Otherwise, traders would buy low, sell high,
+
+25
+00:01:20,950 --> 00:01:24,310
+and pocket an arbitrage profit with all future cash
+
+26
+00:01:24,310 --> 00:01:28,120
+flows canceling each other out.
+
+27
+00:01:28,120 --> 00:01:30,420
+Now, in the more realistic situation,
+
+28
+00:01:30,420 --> 00:01:33,360
+when there's a bid-ask spread between the price
+
+29
+00:01:33,360 --> 00:01:35,880
+that an asset can be bought and sold for,
+
+30
+00:01:35,880 --> 00:01:40,110
+we can find no-arbitrage bounds on prices rather than
+
+31
+00:01:40,110 --> 00:01:42,910
+a single no-arbitrage price.
+
+32
+00:01:42,910 --> 00:01:46,150
+For any market price that lies inside those bounds,
+
+33
+00:01:46,150 --> 00:01:48,580
+there's no arbitrage opportunity.
+
+34
+00:01:48,580 --> 00:01:51,490
+You'll be asked to derive an example of such bounds
+
+35
+00:01:51,490 --> 00:01:55,140
+in one of the homework problems.
+
+36
+00:01:55,140 --> 00:01:58,200
+The final ingredient we need before turning to driving
+
+37
+00:01:58,200 --> 00:02:01,680
+pricing formulas is the idea of short sales,
+
+38
+00:02:01,680 --> 00:02:04,850
+also called short selling.
+
+39
+00:02:04,850 --> 00:02:07,220
+As you know, a short position is one in which
+
+40
+00:02:07,220 --> 00:02:09,410
+a trader sells an asset.
+
+41
+00:02:09,410 --> 00:02:12,980
+There are two ways to sell short.
+
+42
+00:02:12,980 --> 00:02:16,900
+The first is to sell an asset you already own.
+
+43
+00:02:16,900 --> 00:02:19,900
+The second is to borrow it from someone who owns it
+
+44
+00:02:19,900 --> 00:02:21,920
+and then sell it.
+
+45
+00:02:21,920 --> 00:02:23,810
+The trader must later buy the asset
+
+46
+00:02:23,810 --> 00:02:25,430
+and return it to the lender.
+
+47
+00:02:25,430 --> 00:02:29,030
+The trader must also replace the value of interest or dividend
+
+48
+00:02:29,030 --> 00:02:33,220
+payments that come in while the asset is borrowed.
+
+49
+00:02:33,220 --> 00:02:35,620
+In exchange for lending the asset,
+
+50
+00:02:35,620 --> 00:02:39,410
+the lender typically receives a small fee.
+
+51
+00:02:39,410 --> 00:02:42,380
+Now, sometimes it can be difficult, or even impossible,
+
+52
+00:02:42,380 --> 00:02:45,920
+to find the desired asset to borrow in short.
+
+53
+00:02:45,920 --> 00:02:49,220
+When shorting becomes expensive or isn't possible,
+
+54
+00:02:49,220 --> 00:02:52,220
+derivative prices can diverge from what is predicted
+
+55
+00:02:52,220 --> 00:02:55,510
+using no-arbitrage conditions.
+
+56
+00:02:55,510 --> 00:02:56,148
+
+

@@ -1,0 +1,114 @@
+PROFESSOR: Forward contracts are the most widely used tools
+for risk management in the world.
+Notice that the term risk management encompasses
+the idea of hedging or reducing risk,
+such as when a farmer uses a forward contract
+to lock in the selling price of his wheat.
+But the term risk management also
+encompasses speculative trades, such as when
+the buy side of that forward contract
+doesn't plan to use the wheat but instead is
+taking a calculated risk that the price of the wheat
+will exceed the forward price paid.
+Other derivative contracts, such as futures and swaps,
+are particular types of forward contracts.
+We'll talk about those next week.
+Let's start with a precise definition
+of a forward contract.
+A forward contract is an agreement
+between two counterparties to trade a pre-specified amount
+of goods or securities at a pre-specified future date,
+which we'll call capital T, for a pre-specified forward price,
+capital F subzero, where 0 denotes that the time is now.
+It's free to enter a forward contract initially.
+However, to ensure that both sides meet their obligations,
+collateral often has to be posted.
+Sometimes forward contracts call for a payment
+up front instead of a contract expiration.
+That's called a prepaid forward contract.
+The price in a prepaid forward contract
+is just the present value of the regular forward price,
+but otherwise, the two types of contracts are identical.
+I'm mentioning this because we'll
+see that the prepaid price is mathematically
+quite useful in some hedging applications
+that we'll look at.
+The key observation that's used for pricing forward contracts
+is that the pre-specified forward price of 0
+must be set to ensure that the value of the contract
+is 0 from the perspective of both counterparties
+at inception.
+This has to be the case, since it's
+free to enter the contract.
+Some important terminology is that the buyer
+of the asset in the forward contract
+is on the long side of the contract.
+The buyer has taken a long position.
+On the other side, the seller is on the short side
+of the contract and is said to be short the contract.
+Two other important features--
+first, most forward contracts trade
+over the counter, which means through privately
+arranged trades rather than on an exchange.
+Brokers and dealers often serve as intermediaries,
+matching sellers with buyers.
+OK.
+Importantly, forward contracts can
+involve the physical delivery of the underlying asset
+or they can be cash settled.
+With physical delivery, as it sounds,
+the underlying asset is delivered to the buyer
+by the seller in exchange for the forward price.
+Cash settlement, which involves a payment linked
+to the current price of the underlying commodity,
+is convenient in cases where physical delivery
+is costly or complicated.
+For example, imagine the difficulty
+of having to deliver all 500 stocks in the right proportions
+on an S&P 500 forward contract.
+Such contracts are typically cash settled
+to avoid those complications.
+We will see that the financial value of the contract
+is the same with either physical or with cash settlement.
+It's fairly straightforward to find
+the profit or loss on a forward contract at expiration.
+In general, we'll call s sub T the spot
+price, or current market price, of the underlying asset
+in the contract at time little t.
+Assume, too, that the contract covers n units of the asset.
+
+The payoff will depend on the number of units
+and on the difference between the current spot price
+and the forward price locked in on the contract.
+Let's look at this from the perspective of the long side
+of the contract.
+The long earns the spot price minus the forward price
+on n units of the asset.
+That corresponds to the long ping of sub-0 per unit,
+and then receiving the n assets via the forward contract,
+and then turning around and selling the assets at the spot
+price s capital T in the spot market.
+Clearly, the profit or loss to the short side
+is just the negative of the profit or loss
+to the long side.
+The contract is always zero-sum between them.
+The questions in this box are a useful check
+on your basic understanding of how forward contracts work,
+the payoffs to both sides, and why
+the contract can create value for users even though they
+are zero-sum.
+In the recitation, JR will discuss these answers with you,
+but it's a good exercise to think about them
+and discuss them with your fellow students beforehand.
+This figure summarizes the timing
+of cash flows and payoffs that we've been talking about.
+The forward price is agreed to between the long and short
+sides of the contract at time 0.
+No money changes hands, but either
+or both counterparties may have to post collateral
+to protect against default. At contract expiration,
+the profit or loss per unit of the underlying
+depends on the difference between the forward price set
+and the contract and the current spot price.
+The payoff is zero-sum between the long side of the contract
+and the short side of the contract.

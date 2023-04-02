@@ -1,0 +1,536 @@
+0
+00:00:00,000 --> 00:00:02,080
+PROFESSOR: Those strategies can be
+
+1
+00:00:02,080 --> 00:00:05,380
+used to manage the risk of a cash position,
+
+2
+00:00:05,380 --> 00:00:09,550
+say, as we saw with the example of Southwest Savings Bank whose
+
+3
+00:00:09,550 --> 00:00:13,420
+mortgage assets were much more sensitive to interest rate risk
+
+4
+00:00:13,420 --> 00:00:16,614
+than were the liabilities that it used to fund them with.
+
+5
+00:00:16,614 --> 00:00:19,150
+
+
+6
+00:00:19,150 --> 00:00:21,880
+Those strategies are also often used
+
+7
+00:00:21,880 --> 00:00:24,760
+to manage the risk of derivatives positions that
+
+8
+00:00:24,760 --> 00:00:25,960
+are being held--
+
+9
+00:00:25,960 --> 00:00:29,620
+for instance, by a bank that accepted the short side
+
+10
+00:00:29,620 --> 00:00:32,229
+of a forward interest rate contract initiated
+
+11
+00:00:32,229 --> 00:00:35,860
+by one of its clients.
+
+12
+00:00:35,860 --> 00:00:39,970
+Later in the course, we'll see that duration and convexity are
+
+13
+00:00:39,970 --> 00:00:43,330
+also properties of interest rate sensitive options,
+
+14
+00:00:43,330 --> 00:00:46,660
+like puts and call options on bonds.
+
+15
+00:00:46,660 --> 00:00:50,170
+Those options then can be similarly used in interest rate
+
+16
+00:00:50,170 --> 00:00:54,490
+risk management strategies using the concepts of duration
+
+17
+00:00:54,490 --> 00:00:56,860
+and convexity.
+
+18
+00:00:56,860 --> 00:00:59,890
+We'll also see that duration corresponds
+
+19
+00:00:59,890 --> 00:01:03,700
+to the idea of a delta, and that convexity corresponds
+
+20
+00:01:03,700 --> 00:01:07,450
+to the idea of a gamma in the more general language
+
+21
+00:01:07,450 --> 00:01:09,680
+of options pricing.
+
+22
+00:01:09,680 --> 00:01:12,520
+In fact, that's how the strategies that we're looking
+
+23
+00:01:12,520 --> 00:01:16,160
+at here got their names.
+
+24
+00:01:16,160 --> 00:01:17,810
+You may remember being introduced
+
+25
+00:01:17,810 --> 00:01:20,570
+to the concepts of duration and convexity
+
+26
+00:01:20,570 --> 00:01:23,810
+earlier in the MicroMasters Program.
+
+27
+00:01:23,810 --> 00:01:27,770
+But you may not already know is that duration and convexity are
+
+28
+00:01:27,770 --> 00:01:31,220
+two of the most fundamental and powerful concepts
+
+29
+00:01:31,220 --> 00:01:35,000
+for measuring, hedging, and speculating on interest rate
+
+30
+00:01:35,000 --> 00:01:37,120
+risk.
+
+31
+00:01:37,120 --> 00:01:40,060
+There's several different ways that duration and convexity
+
+32
+00:01:40,060 --> 00:01:41,530
+are defined.
+
+33
+00:01:41,530 --> 00:01:44,260
+We'll start with the basics and then go on
+
+34
+00:01:44,260 --> 00:01:47,350
+to more advanced versions of these concepts that
+
+35
+00:01:47,350 --> 00:01:51,610
+are much more accurate when cash flows are uncertain.
+
+36
+00:01:51,610 --> 00:01:53,310
+The advanced concepts are important,
+
+37
+00:01:53,310 --> 00:01:57,420
+for example, for risk management strategies involving
+
+38
+00:01:57,420 --> 00:02:01,200
+callable bonds, pre-payable mortgages, or bonds
+
+39
+00:02:01,200 --> 00:02:04,320
+with significant credit risk.
+
+40
+00:02:04,320 --> 00:02:07,120
+We'll look at the math behind the basic formulas
+
+41
+00:02:07,120 --> 00:02:08,910
+and develop intuition for what they
+
+42
+00:02:08,910 --> 00:02:12,900
+mean with a graphical interpretation.
+
+43
+00:02:12,900 --> 00:02:16,230
+In order to do the basic calculations involving duration
+
+44
+00:02:16,230 --> 00:02:22,050
+and convexity, the Excel spreadsheet, convexity.xls,
+
+45
+00:02:22,050 --> 00:02:25,140
+is available on the course web page.
+
+46
+00:02:25,140 --> 00:02:27,030
+You should download it and make sure you
+
+47
+00:02:27,030 --> 00:02:30,690
+know how to use it to reproduce the basic examples discussed
+
+48
+00:02:30,690 --> 00:02:33,180
+in this lecture.
+
+49
+00:02:33,180 --> 00:02:36,080
+You will find it to be useful in answering some of the homework
+
+50
+00:02:36,080 --> 00:02:38,870
+problems too.
+
+51
+00:02:38,870 --> 00:02:42,170
+These next two slides illustrate the historical interest rate
+
+52
+00:02:42,170 --> 00:02:45,170
+volatility that has been a major source of risk
+
+53
+00:02:45,170 --> 00:02:48,110
+for institutions such as banks, portfolio
+
+54
+00:02:48,110 --> 00:02:51,240
+managers, and hedge funds.
+
+55
+00:02:51,240 --> 00:02:54,660
+Notice that I'll use the terms rates and yields
+
+56
+00:02:54,660 --> 00:02:57,780
+interchangeably when describing market conditions
+
+57
+00:02:57,780 --> 00:03:00,360
+in general terms.
+
+58
+00:03:00,360 --> 00:03:02,850
+In recent years, short-term interest rates,
+
+59
+00:03:02,850 --> 00:03:05,490
+both in the US and other developed countries,
+
+60
+00:03:05,490 --> 00:03:08,190
+have been unusually low and quite stable.
+
+61
+00:03:08,190 --> 00:03:11,250
+Historically, though, that's an unusual situation
+
+62
+00:03:11,250 --> 00:03:15,770
+and one that's likely to change again in the future.
+
+63
+00:03:15,770 --> 00:03:17,680
+This graph shows short term rates
+
+64
+00:03:17,680 --> 00:03:20,350
+on three-month US Treasury bills going all the way back
+
+65
+00:03:20,350 --> 00:03:23,470
+to the 1930s.
+
+66
+00:03:23,470 --> 00:03:24,970
+You can see that there were periods,
+
+67
+00:03:24,970 --> 00:03:27,940
+like in the late 1970s and early 1980s,
+
+68
+00:03:27,940 --> 00:03:31,030
+where rates rapidly climbed and then rapidly fell.
+
+69
+00:03:31,030 --> 00:03:34,590
+
+
+70
+00:03:34,590 --> 00:03:39,060
+These were periods of extreme rate volatility.
+
+71
+00:03:39,060 --> 00:03:42,460
+Where does interest rate volatility come from?
+
+72
+00:03:42,460 --> 00:03:44,890
+Narrowly, interest rates are prices
+
+73
+00:03:44,890 --> 00:03:48,900
+that move to clear the market for borrowing and lending.
+
+74
+00:03:48,900 --> 00:03:53,130
+And volatility arises from changes in the supply of
+
+75
+00:03:53,130 --> 00:03:56,680
+and demand for credit.
+
+76
+00:03:56,680 --> 00:03:59,500
+Taking a step back, though, a variety
+
+77
+00:03:59,500 --> 00:04:02,920
+of macroeconomic factors drive the supply and demand
+
+78
+00:04:02,920 --> 00:04:05,290
+for credit, and therefore volatility,
+
+79
+00:04:05,290 --> 00:04:08,470
+including expectations about future inflation
+
+80
+00:04:08,470 --> 00:04:10,510
+rates and other government policies
+
+81
+00:04:10,510 --> 00:04:12,430
+and the strength of the economy.
+
+82
+00:04:12,430 --> 00:04:14,960
+
+
+83
+00:04:14,960 --> 00:04:17,620
+This graph of long-term rates in the United States
+
+84
+00:04:17,620 --> 00:04:22,540
+goes back much further, all the way back to the late 1700s.
+
+85
+00:04:22,540 --> 00:04:25,300
+You can see that long-term rates have also
+
+86
+00:04:25,300 --> 00:04:29,110
+been quite volatile with long-term trends that sometimes
+
+87
+00:04:29,110 --> 00:04:32,640
+rapidly reverse themselves.
+
+88
+00:04:32,640 --> 00:04:35,660
+If you were to compare the volatility of short
+
+89
+00:04:35,660 --> 00:04:38,870
+and long-term rates over the same fixed horizon--
+
+90
+00:04:38,870 --> 00:04:41,130
+say, of five years--
+
+91
+00:04:41,130 --> 00:04:45,110
+you would find that the standard deviations of short-term rates
+
+92
+00:04:45,110 --> 00:04:47,780
+are higher than those of long-term rates.
+
+93
+00:04:47,780 --> 00:04:52,130
+Long-term rates tend to change more slowly over time.
+
+94
+00:04:52,130 --> 00:04:54,680
+For that reason, the risk exposure
+
+95
+00:04:54,680 --> 00:04:57,440
+to rate changes at different points on the yield curve
+
+96
+00:04:57,440 --> 00:04:58,790
+varies.
+
+97
+00:04:58,790 --> 00:05:01,790
+Market participants seeking a reliable hedge
+
+98
+00:05:01,790 --> 00:05:05,210
+have to take those differences and volatility into account.
+
+99
+00:05:05,210 --> 00:05:06,815
+And we'll see how to do that.
+
+100
+00:05:06,815 --> 00:05:09,550
+
+
+101
+00:05:09,550 --> 00:05:11,500
+Interest rate or yield volatility
+
+102
+00:05:11,500 --> 00:05:14,020
+translates directly into price volatility
+
+103
+00:05:14,020 --> 00:05:16,030
+for fixed income securities.
+
+104
+00:05:16,030 --> 00:05:19,570
+That's because bond prices and yields are related.
+
+105
+00:05:19,570 --> 00:05:22,240
+Given a bond's price, you can find its yield.
+
+106
+00:05:22,240 --> 00:05:25,630
+And given a bond's yield, you can find its price.
+
+107
+00:05:25,630 --> 00:05:29,470
+The simplest example of this is for a zero coupon bond
+
+108
+00:05:29,470 --> 00:05:37,450
+with price P, promised face value F, yield per period,
+
+109
+00:05:37,450 --> 00:05:42,530
+little r, and maturity of N periods.
+
+110
+00:05:42,530 --> 00:05:49,710
+Clearly, if r goes up, P goes down, and vice versa.
+
+111
+00:05:49,710 --> 00:05:52,100
+You can also see that this inverse effect
+
+112
+00:05:52,100 --> 00:05:56,030
+is magnified as the number of periods increases because
+
+113
+00:05:56,030 --> 00:05:59,370
+of compounding.
+
+114
+00:05:59,370 --> 00:06:02,220
+From the perspective of a banker, securities dealer,
+
+115
+00:06:02,220 --> 00:06:05,460
+or fund manager dealing in fixed income securities like bonds
+
+116
+00:06:05,460 --> 00:06:10,210
+and mortgages, it's often not the rate risk in itself
+
+117
+00:06:10,210 --> 00:06:13,620
+but rather its impact on the value of the securities
+
+118
+00:06:13,620 --> 00:06:15,250
+in their portfolio.
+
+119
+00:06:15,250 --> 00:06:17,160
+In other words, the price risk--
+
+120
+00:06:17,160 --> 00:06:20,130
+that's the main concern.
+
+121
+00:06:20,130 --> 00:06:23,550
+For example, if an upward shift in the yield curve
+
+122
+00:06:23,550 --> 00:06:27,240
+causes a bank's assets to fall in value by more
+
+123
+00:06:27,240 --> 00:06:30,480
+than it reduces the value of a bank's liabilities,
+
+124
+00:06:30,480 --> 00:06:33,660
+that will cause a hit to the bank's capital
+
+125
+00:06:33,660 --> 00:06:36,960
+that may create operational or regulatory problems.
+
+126
+00:06:36,960 --> 00:06:40,950
+Or in the extreme, it could push it into insolvency.
+
+127
+00:06:40,950 --> 00:06:44,790
+In the last class, we saw how swaps or futures contracts that
+
+128
+00:06:44,790 --> 00:06:48,000
+matched the maturity of the quantity being hedged
+
+129
+00:06:48,000 --> 00:06:50,610
+could reduce that sort of risk.
+
+130
+00:06:50,610 --> 00:06:53,220
+This week, we'll see how those derivatives can
+
+131
+00:06:53,220 --> 00:06:57,720
+be used to hedge the risk with much more flexibility using
+
+132
+00:06:57,720 --> 00:07:01,500
+the concepts of duration and convexity.
+
+133
+00:07:01,500 --> 00:07:02,000
+
+

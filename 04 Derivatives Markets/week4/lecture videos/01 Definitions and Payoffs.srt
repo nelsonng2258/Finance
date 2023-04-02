@@ -1,0 +1,864 @@
+0
+00:00:00,000 --> 00:00:00,407
+
+
+1
+00:00:00,407 --> 00:00:02,240
+PROFESSOR: You learned the basics of options
+
+2
+00:00:02,240 --> 00:00:04,370
+and other parts of the MicroMasters Program,
+
+3
+00:00:04,370 --> 00:00:07,070
+but I want to quickly review them here.
+
+4
+00:00:07,070 --> 00:00:10,130
+Options confer upon their holder the right but not
+
+5
+00:00:10,130 --> 00:00:14,090
+the obligation to buy or sell a pre-specified security
+
+6
+00:00:14,090 --> 00:00:17,120
+or commodity at a predetermined price, which is also
+
+7
+00:00:17,120 --> 00:00:19,310
+called the strike price.
+
+8
+00:00:19,310 --> 00:00:22,250
+A call option gives the right to buy.
+
+9
+00:00:22,250 --> 00:00:25,230
+A put option gives the right to sell.
+
+10
+00:00:25,230 --> 00:00:29,970
+Using the option is called exercising the option.
+
+11
+00:00:29,970 --> 00:00:32,820
+Options have fixed maturity dates which
+
+12
+00:00:32,820 --> 00:00:36,630
+are called expiration dates.
+
+13
+00:00:36,630 --> 00:00:39,300
+A European-style style option can only
+
+14
+00:00:39,300 --> 00:00:43,590
+be exercised on the expiration date of the contract.
+
+15
+00:00:43,590 --> 00:00:47,760
+An American option can be exercised any time up
+
+16
+00:00:47,760 --> 00:00:50,580
+and until its expiration.
+
+17
+00:00:50,580 --> 00:00:53,040
+I remember that difference with the mnemonic
+
+18
+00:00:53,040 --> 00:00:58,410
+that the E in European stands for End, and the A in American
+
+19
+00:00:58,410 --> 00:01:01,840
+stands for Any time.
+
+20
+00:01:01,840 --> 00:01:05,650
+The seller of an option is said to write the option.
+
+21
+00:01:05,650 --> 00:01:09,440
+The option writer receives the option premium,
+
+22
+00:01:09,440 --> 00:01:12,100
+which is the price paid for the option.
+
+23
+00:01:12,100 --> 00:01:15,590
+The premium is paid up front.
+
+24
+00:01:15,590 --> 00:01:19,040
+The right to buy or sell at a predetermined price
+
+25
+00:01:19,040 --> 00:01:22,820
+is valuable, and options always have a positive value
+
+26
+00:01:22,820 --> 00:01:25,820
+to the holder and a cost to the writer.
+
+27
+00:01:25,820 --> 00:01:30,100
+The premium is compensation for that cost.
+
+28
+00:01:30,100 --> 00:01:32,980
+Although American options are more common in practice
+
+29
+00:01:32,980 --> 00:01:35,710
+than European options, it's much easier
+
+30
+00:01:35,710 --> 00:01:38,800
+to analyze and price European options.
+
+31
+00:01:38,800 --> 00:01:42,460
+European options pricing formulas also often work
+
+32
+00:01:42,460 --> 00:01:43,930
+for American options.
+
+33
+00:01:43,930 --> 00:01:47,770
+Hence, we'll focus on European options to build intuition
+
+34
+00:01:47,770 --> 00:01:50,740
+and to develop basic pricing formulas.
+
+35
+00:01:50,740 --> 00:01:52,480
+Towards the end of this lecture, we'll
+
+36
+00:01:52,480 --> 00:01:55,510
+also consider an example of the modifications
+
+37
+00:01:55,510 --> 00:02:00,650
+we'll need to analyze the price of American options.
+
+38
+00:02:00,650 --> 00:02:02,870
+Options on the stocks of many large firms
+
+39
+00:02:02,870 --> 00:02:04,910
+are listed on exchanges.
+
+40
+00:02:04,910 --> 00:02:07,520
+If you're interested in taking a look at data that's currently
+
+41
+00:02:07,520 --> 00:02:09,800
+available on a particular firm, I
+
+42
+00:02:09,800 --> 00:02:13,520
+suggest you go to the website of the Chicago Board Options
+
+43
+00:02:13,520 --> 00:02:16,980
+Exchange, or CBOE, and take a look.
+
+44
+00:02:16,980 --> 00:02:19,160
+But here, we have an example of the options
+
+45
+00:02:19,160 --> 00:02:23,810
+available on a particular day on Apple stock.
+
+46
+00:02:23,810 --> 00:02:35,720
+The most recent stock trade that day was recorded to be $377.37.
+
+47
+00:02:35,720 --> 00:02:38,270
+As is typical in this market, there's
+
+48
+00:02:38,270 --> 00:02:46,400
+put and call options, which are available with a variety
+
+49
+00:02:46,400 --> 00:02:51,500
+of strike prices on both sides of the current stock price
+
+50
+00:02:51,500 --> 00:02:54,690
+and with a variety of maturities.
+
+51
+00:02:54,690 --> 00:03:01,540
+For instance, the Apple October $380 call, which is right here,
+
+52
+00:03:01,540 --> 00:03:04,200
+has a strike price of $380.
+
+53
+00:03:04,200 --> 00:03:07,530
+It expires in 79 days.
+
+54
+00:03:07,530 --> 00:03:11,520
+The options contract can be purchased for $24.20,
+
+55
+00:03:11,520 --> 00:03:12,780
+the ask price.
+
+56
+00:03:12,780 --> 00:03:18,750
+It can be sold for the bid price of $23.75.
+
+57
+00:03:18,750 --> 00:03:21,210
+Just so you get an idea of what is available
+
+58
+00:03:21,210 --> 00:03:25,260
+and where, this slide lists the major exchanges where options
+
+59
+00:03:25,260 --> 00:03:28,200
+are actively traded and the broad categories
+
+60
+00:03:28,200 --> 00:03:32,460
+of exchange-traded options contracts.
+
+61
+00:03:32,460 --> 00:03:35,940
+As we saw for futures, traded options
+
+62
+00:03:35,940 --> 00:03:39,480
+offer the protection of central clearing, which minimizes
+
+63
+00:03:39,480 --> 00:03:42,060
+default or counterparty risk.
+
+64
+00:03:42,060 --> 00:03:44,190
+The exchange requires margin to be
+
+65
+00:03:44,190 --> 00:03:47,130
+posted to ensure performance.
+
+66
+00:03:47,130 --> 00:03:49,890
+Unlike futures, where the margin requirements
+
+67
+00:03:49,890 --> 00:03:52,800
+are symmetric for the long and short sides of the contract
+
+68
+00:03:52,800 --> 00:03:55,350
+because the risks are also symmetric,
+
+69
+00:03:55,350 --> 00:03:59,130
+in the options market, where the risk is asymmetric,
+
+70
+00:03:59,130 --> 00:04:03,210
+it's the seller who has to pose a large enough margin
+
+71
+00:04:03,210 --> 00:04:06,210
+to ensure that the seller's obligation can be met.
+
+72
+00:04:06,210 --> 00:04:08,860
+
+
+73
+00:04:08,860 --> 00:04:12,670
+To determine the payoffs on a European call option,
+
+74
+00:04:12,670 --> 00:04:15,490
+we consider the optimal actions of the call option
+
+75
+00:04:15,490 --> 00:04:19,959
+buyer at the expiration date, capital T.
+
+76
+00:04:19,959 --> 00:04:24,280
+If the stock price on that date, s sub T,
+
+77
+00:04:24,280 --> 00:04:28,470
+is less than the strike price, then the option
+
+78
+00:04:28,470 --> 00:04:31,520
+should never be exercised.
+
+79
+00:04:31,520 --> 00:04:34,460
+If the option buyer wants to buy the stock,
+
+80
+00:04:34,460 --> 00:04:37,040
+they can do that more cheaply by buying the stock
+
+81
+00:04:37,040 --> 00:04:40,820
+in the open market rather than by paying the strike price
+
+82
+00:04:40,820 --> 00:04:42,185
+and exercising the option.
+
+83
+00:04:42,185 --> 00:04:44,840
+
+
+84
+00:04:44,840 --> 00:04:48,530
+If the stock price is greater than the strike price,
+
+85
+00:04:48,530 --> 00:04:51,710
+it's optimal to exercise the option.
+
+86
+00:04:51,710 --> 00:04:54,740
+That's because by exercising the option
+
+87
+00:04:54,740 --> 00:04:58,430
+and paying k for a stock that's currently worth more than
+
+88
+00:04:58,430 --> 00:05:03,050
+that, they realize a payoff of the price of the stock
+
+89
+00:05:03,050 --> 00:05:04,550
+minus the strike price.
+
+90
+00:05:04,550 --> 00:05:07,450
+
+
+91
+00:05:07,450 --> 00:05:09,940
+That's true whether or not the option buyer
+
+92
+00:05:09,940 --> 00:05:13,180
+wants to keep the stock in their portfolio,
+
+93
+00:05:13,180 --> 00:05:15,400
+since if they don't want to keep the stock,
+
+94
+00:05:15,400 --> 00:05:20,500
+they can immediately sell it after the exercise the option.
+
+95
+00:05:20,500 --> 00:05:22,690
+The equation on the bottom of the slide
+
+96
+00:05:22,690 --> 00:05:25,630
+summarizes this logic, stating that the payoff
+
+97
+00:05:25,630 --> 00:05:28,210
+on a long position in a call option
+
+98
+00:05:28,210 --> 00:05:31,300
+is the maximum of the difference at the expiration
+
+99
+00:05:31,300 --> 00:05:37,660
+date between the stock price and the strike price and 0.
+
+100
+00:05:37,660 --> 00:05:41,380
+The payout for a call option can be plotted on a payoff diagram.
+
+101
+00:05:41,380 --> 00:05:43,990
+Remember that a payoff diagram shows the profit
+
+102
+00:05:43,990 --> 00:05:46,960
+from a cash or derivatives position as a function
+
+103
+00:05:46,960 --> 00:05:49,000
+of the underlying asset.
+
+104
+00:05:49,000 --> 00:05:51,040
+In the example here, the underlying
+
+105
+00:05:51,040 --> 00:05:53,560
+is one share of stock, and the option
+
+106
+00:05:53,560 --> 00:05:57,220
+has a strike price, k, of 100.
+
+107
+00:05:57,220 --> 00:06:01,150
+The payoff is $0 if the stock price at expiration
+
+108
+00:06:01,150 --> 00:06:05,800
+is less than $100, and rises 1 for 1 with the stock price
+
+109
+00:06:05,800 --> 00:06:13,110
+when the stock price exceeds $100.
+
+110
+00:06:13,110 --> 00:06:15,090
+I also want to remind you that we
+
+111
+00:06:15,090 --> 00:06:20,890
+can plot the sum of multiple positions on a payoff diagram.
+
+112
+00:06:20,890 --> 00:06:23,290
+If instead, we were looking at a call
+
+113
+00:06:23,290 --> 00:06:26,080
+option for two shares of the stock
+
+114
+00:06:26,080 --> 00:06:29,770
+instead of for just one share, the upward-sloping part
+
+115
+00:06:29,770 --> 00:06:31,870
+of the line would be twice as steep.
+
+116
+00:06:31,870 --> 00:06:34,150
+So we get a figure that looks like this.
+
+117
+00:06:34,150 --> 00:06:38,170
+
+
+118
+00:06:38,170 --> 00:06:40,740
+There's also some terminology you should know.
+
+119
+00:06:40,740 --> 00:06:42,420
+And out of the money call option is
+
+120
+00:06:42,420 --> 00:06:45,360
+one where the strike price is greater than the current price
+
+121
+00:06:45,360 --> 00:06:47,130
+of the underlying.
+
+122
+00:06:47,130 --> 00:06:49,740
+And in the money call option, it has a strike price
+
+123
+00:06:49,740 --> 00:06:52,680
+that's less than the current market price of the underlying.
+
+124
+00:06:52,680 --> 00:06:56,100
+And at the money call, it has a strike price
+
+125
+00:06:56,100 --> 00:06:58,560
+that equals the current price of the underlying.
+
+126
+00:06:58,560 --> 00:07:03,000
+We'll use the abbreviations OTM, ITM and ATM
+
+127
+00:07:03,000 --> 00:07:06,590
+to describe each of those situations.
+
+128
+00:07:06,590 --> 00:07:09,080
+As we're all cash or derivative positions,
+
+129
+00:07:09,080 --> 00:07:11,510
+the payoff on a short position is
+
+130
+00:07:11,510 --> 00:07:14,030
+the negative of the payoff on the long position.
+
+131
+00:07:14,030 --> 00:07:16,700
+In terms of payoff diagrams, then, that
+
+132
+00:07:16,700 --> 00:07:19,550
+flips the payoff over the x-axis.
+
+133
+00:07:19,550 --> 00:07:22,130
+For a short call option, the payoff
+
+134
+00:07:22,130 --> 00:07:26,750
+has the characteristic shape shown here.
+
+135
+00:07:26,750 --> 00:07:28,670
+We can use the same sort of analysis
+
+136
+00:07:28,670 --> 00:07:31,760
+to infer the payoff on a European put option
+
+137
+00:07:31,760 --> 00:07:35,180
+by considering the optimal actions of the put option buyer
+
+138
+00:07:35,180 --> 00:07:38,450
+at the expiration date, capital T.
+
+139
+00:07:38,450 --> 00:07:43,440
+If the stock price is less than the strike price at T,
+
+140
+00:07:43,440 --> 00:07:46,920
+then it's optimal to exercise the option.
+
+141
+00:07:46,920 --> 00:07:49,470
+That's because by exercising the option
+
+142
+00:07:49,470 --> 00:07:53,100
+and receiving the strike price, k, for a stock that's currently
+
+143
+00:07:53,100 --> 00:07:57,090
+worth less than k, they realized a positive payoff
+
+144
+00:07:57,090 --> 00:07:59,370
+equal to k minus the value of the stock.
+
+145
+00:07:59,370 --> 00:08:03,290
+
+
+146
+00:08:03,290 --> 00:08:05,540
+That's true whether or not the option holder
+
+147
+00:08:05,540 --> 00:08:08,180
+wants to keep the stock in their portfolio.
+
+148
+00:08:08,180 --> 00:08:10,010
+If they still do want to hold it,
+
+149
+00:08:10,010 --> 00:08:12,740
+they can immediately buy the stock in the open market
+
+150
+00:08:12,740 --> 00:08:15,350
+after delivering it in the options contract,
+
+151
+00:08:15,350 --> 00:08:18,230
+leaving them with a stock and also with a gain
+
+152
+00:08:18,230 --> 00:08:21,540
+from the payoff on the options contract.
+
+153
+00:08:21,540 --> 00:08:23,480
+Now, if the stock price is greater
+
+154
+00:08:23,480 --> 00:08:26,600
+than the strike price, k, then the option
+
+155
+00:08:26,600 --> 00:08:28,460
+should not be exercised.
+
+156
+00:08:28,460 --> 00:08:31,130
+If the option holder wants to sell the stock,
+
+157
+00:08:31,130 --> 00:08:33,230
+they can get more for it by selling
+
+158
+00:08:33,230 --> 00:08:37,669
+the stock in the open market than by exercising the option.
+
+159
+00:08:37,669 --> 00:08:39,620
+The equation at the bottom of the slide
+
+160
+00:08:39,620 --> 00:08:44,179
+summarizes this logic, stating that the payoff is
+
+161
+00:08:44,179 --> 00:08:47,780
+the maximum of the difference between the strike price
+
+162
+00:08:47,780 --> 00:08:52,340
+and the stock price and $0.
+
+163
+00:08:52,340 --> 00:08:54,530
+We can plot the payoff for a long put
+
+164
+00:08:54,530 --> 00:08:58,625
+position on a payoff diagram to get this characteristic shape.
+
+165
+00:08:58,625 --> 00:09:02,260
+
+
+166
+00:09:02,260 --> 00:09:04,330
+This example is, again, based on a strike
+
+167
+00:09:04,330 --> 00:09:08,320
+price of $100 and a put option contract
+
+168
+00:09:08,320 --> 00:09:09,865
+based on one share of stock.
+
+169
+00:09:09,865 --> 00:09:14,090
+
+
+170
+00:09:14,090 --> 00:09:18,560
+Also, as usual, the payoff diagram for a short position
+
+171
+00:09:18,560 --> 00:09:24,510
+flips the picture for the long position over the x-axis.
+
+172
+00:09:24,510 --> 00:09:27,770
+Note that for puts also, the slope parts of the lines
+
+173
+00:09:27,770 --> 00:09:30,140
+can be made steeper by increasing
+
+174
+00:09:30,140 --> 00:09:33,470
+the number of contracts or the number of stocks specified
+
+175
+00:09:33,470 --> 00:09:36,180
+in a single contract.
+
+176
+00:09:36,180 --> 00:09:39,090
+Focusing on payoffs alone gives an incomplete picture
+
+177
+00:09:39,090 --> 00:09:41,070
+of the cash flows involved in options
+
+178
+00:09:41,070 --> 00:09:43,140
+transactions, because it neglects
+
+179
+00:09:43,140 --> 00:09:45,060
+the upfront premium paid from the buyer
+
+180
+00:09:45,060 --> 00:09:47,410
+to the writer of the option.
+
+181
+00:09:47,410 --> 00:09:49,710
+In fact, just looking at the payoff diagram,
+
+182
+00:09:49,710 --> 00:09:52,740
+it suggests that one would never write
+
+183
+00:09:52,740 --> 00:09:55,620
+an option because the best outcome would involve a zero
+
+184
+00:09:55,620 --> 00:09:57,060
+payoff.
+
+185
+00:09:57,060 --> 00:09:59,670
+And payoff diagrams make an option
+
+186
+00:09:59,670 --> 00:10:03,060
+look like a free lunch with no possibility of loss
+
+187
+00:10:03,060 --> 00:10:06,480
+from the perspective of the long side.
+
+188
+00:10:06,480 --> 00:10:09,870
+Profit diagrams give a more complete picture of the cash
+
+189
+00:10:09,870 --> 00:10:13,350
+flows involved by subtracting the upfront premium
+
+190
+00:10:13,350 --> 00:10:16,050
+from the payoffs to the buyers and adding it
+
+191
+00:10:16,050 --> 00:10:19,010
+to the payoffs of the sellers.
+
+192
+00:10:19,010 --> 00:10:21,800
+Note that profit diagrams typically
+
+193
+00:10:21,800 --> 00:10:25,130
+don't adjust for the higher future value of the premiums
+
+194
+00:10:25,130 --> 00:10:27,230
+because they're paid up front.
+
+195
+00:10:27,230 --> 00:10:29,780
+That distortion tends to be small
+
+196
+00:10:29,780 --> 00:10:34,940
+when interest rates are low and for short-dated options.
+
+197
+00:10:34,940 --> 00:10:37,520
+The graphs here show how taking into account
+
+198
+00:10:37,520 --> 00:10:40,370
+the premium in a profit diagram causes
+
+199
+00:10:40,370 --> 00:10:44,060
+those diagrams to differ from the corresponding payoff
+
+200
+00:10:44,060 --> 00:10:45,890
+diagrams.
+
+201
+00:10:45,890 --> 00:10:48,620
+It's clear in a profit diagram that there's
+
+202
+00:10:48,620 --> 00:10:52,220
+no free lunch for option buyers, and that option sellers.
+
+203
+00:10:52,220 --> 00:10:55,580
+profit when market conditions are such that options
+
+204
+00:10:55,580 --> 00:10:59,720
+are allowed to expire without exercise.
+
+205
+00:10:59,720 --> 00:11:03,110
+Despite that seeming advantage of profit diagrams
+
+206
+00:11:03,110 --> 00:11:05,690
+in providing a more complete picture,
+
+207
+00:11:05,690 --> 00:11:08,750
+path diagrams are actually more common.
+
+208
+00:11:08,750 --> 00:11:11,450
+That's because they give a clear idea
+
+209
+00:11:11,450 --> 00:11:13,670
+of the amounts that will change hands
+
+210
+00:11:13,670 --> 00:11:16,400
+at the contract expiration.
+
+211
+00:11:16,400 --> 00:11:18,590
+Knowing the outcomes at that time
+
+212
+00:11:18,590 --> 00:11:21,800
+is useful in evaluating trading strategies,
+
+213
+00:11:21,800 --> 00:11:24,620
+and also, it's an essential input
+
+214
+00:11:24,620 --> 00:11:27,550
+into the pricing of the contracts.
+
+215
+00:11:27,550 --> 00:11:51,000
+
+

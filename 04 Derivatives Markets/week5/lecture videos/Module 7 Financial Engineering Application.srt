@@ -1,0 +1,764 @@
+0
+00:00:00,000 --> 00:00:01,117
+
+
+1
+00:00:01,117 --> 00:00:02,950
+PROFESSOR: The most common use of the Greeks
+
+2
+00:00:02,950 --> 00:00:07,120
+is in dynamic hedging strategies involving Delta, or delta gamma
+
+3
+00:00:07,120 --> 00:00:09,050
+hedging.
+
+4
+00:00:09,050 --> 00:00:11,490
+In this last part of this week's class,
+
+5
+00:00:11,490 --> 00:00:13,730
+we'll look at delta hedging in detail
+
+6
+00:00:13,730 --> 00:00:16,850
+in the context of products that offer protection
+
+7
+00:00:16,850 --> 00:00:21,290
+against downside risk arising from the stock market.
+
+8
+00:00:21,290 --> 00:00:23,750
+Those products were created because investors
+
+9
+00:00:23,750 --> 00:00:26,690
+have a taste for securities where their principal is
+
+10
+00:00:26,690 --> 00:00:29,900
+protected, but they still share in some of the upside
+
+11
+00:00:29,900 --> 00:00:32,850
+if the market turns out to do well.
+
+12
+00:00:32,850 --> 00:00:36,570
+Many investment banks offer such securities.
+
+13
+00:00:36,570 --> 00:00:38,550
+They hedge this short position that
+
+14
+00:00:38,550 --> 00:00:41,790
+creates for them in stocks using a combination
+
+15
+00:00:41,790 --> 00:00:46,150
+of purchased options and dynamic trading strategies.
+
+16
+00:00:46,150 --> 00:00:48,970
+Examples of these type of products
+
+17
+00:00:48,970 --> 00:00:52,600
+are shown in the MITTS and SUN offering documents
+
+18
+00:00:52,600 --> 00:00:56,470
+that are available to you on the class materials page.
+
+19
+00:00:56,470 --> 00:01:01,050
+Similar products continue to be offered today.
+
+20
+00:01:01,050 --> 00:01:03,930
+The example we will first study in detail
+
+21
+00:01:03,930 --> 00:01:07,470
+is for a Capital Protected Note, which is loosely
+
+22
+00:01:07,470 --> 00:01:09,390
+based on a security that was issued
+
+23
+00:01:09,390 --> 00:01:12,660
+in 2008 by Morgan Stanley.
+
+24
+00:01:12,660 --> 00:01:14,790
+In this example, we'll be focusing
+
+25
+00:01:14,790 --> 00:01:17,760
+on the perspective of the protection seller, which
+
+26
+00:01:17,760 --> 00:01:21,580
+you can imagine is an investment bank that you're working at.
+
+27
+00:01:21,580 --> 00:01:25,920
+Say it's February 22, 2008, and you're selling
+
+28
+00:01:25,920 --> 00:01:28,800
+Capital Protected Notes.
+
+29
+00:01:28,800 --> 00:01:32,550
+The note matures on February 20, 2015,
+
+30
+00:01:32,550 --> 00:01:36,010
+and so it has a seven year life.
+
+31
+00:01:36,010 --> 00:01:39,600
+The issue price per share is $10,
+
+32
+00:01:39,600 --> 00:01:43,850
+as is the principal value per share.
+
+33
+00:01:43,850 --> 00:01:46,080
+The note pays no interest.
+
+34
+00:01:46,080 --> 00:01:50,090
+However, it provides 100% principle protection.
+
+35
+00:01:50,090 --> 00:01:52,760
+Investors are guaranteed to get at least the amount
+
+36
+00:01:52,760 --> 00:01:55,040
+they paid for each share.
+
+37
+00:01:55,040 --> 00:01:57,950
+In addition, the payoff at maturity
+
+38
+00:01:57,950 --> 00:02:00,980
+includes what's called a supplemental redemption
+
+39
+00:02:00,980 --> 00:02:06,630
+amount, or SRA. That's calculated as 116%
+
+40
+00:02:06,630 --> 00:02:09,240
+of the share principal multiplied
+
+41
+00:02:09,240 --> 00:02:12,300
+by the return of the normalized S&P 500
+
+42
+00:02:12,300 --> 00:02:17,980
+over the life of the security if that return is positive.
+
+43
+00:02:17,980 --> 00:02:22,030
+As the issuer of this security, you want to lock in the gain
+
+44
+00:02:22,030 --> 00:02:24,490
+from selling the security, which means
+
+45
+00:02:24,490 --> 00:02:27,610
+hedging against the risk of the short position you've
+
+46
+00:02:27,610 --> 00:02:32,040
+created for yourself in the S&P 500 index.
+
+47
+00:02:32,040 --> 00:02:35,490
+We'll look at how you can do this with a dynamic delta
+
+48
+00:02:35,490 --> 00:02:38,310
+hedging strategy, which means setting up
+
+49
+00:02:38,310 --> 00:02:42,420
+a replicating portfolio and rebalancing it over time
+
+50
+00:02:42,420 --> 00:02:45,770
+as market conditions change.
+
+51
+00:02:45,770 --> 00:02:47,810
+Next week we'll extend this analysis
+
+52
+00:02:47,810 --> 00:02:50,900
+to the alternative of delta gamma hedging, which
+
+53
+00:02:50,900 --> 00:02:54,270
+creates a more robust hedge.
+
+54
+00:02:54,270 --> 00:02:56,160
+This graph shows the payoff at the end
+
+55
+00:02:56,160 --> 00:02:59,340
+of seven years on a share of a Capital Protected Note
+
+56
+00:02:59,340 --> 00:03:04,760
+as a function of the normalized S&P 500 index at that time.
+
+57
+00:03:04,760 --> 00:03:08,800
+The shape of the payoff reflects the floor value
+
+58
+00:03:08,800 --> 00:03:14,570
+equal to the principal of $10, and then
+
+59
+00:03:14,570 --> 00:03:21,120
+the potential for appreciation as the value of the S&P 500
+
+60
+00:03:21,120 --> 00:03:28,470
+index goes up, multiplied by a factor of 116%.
+
+61
+00:03:28,470 --> 00:03:31,080
+To find the value of the Capital Protected Note,
+
+62
+00:03:31,080 --> 00:03:34,390
+we decompose the payoff into two components.
+
+63
+00:03:34,390 --> 00:03:37,830
+The first is a zero coupon bond with the principal,
+
+64
+00:03:37,830 --> 00:03:42,780
+or equivalently, face value of $10, and maturity of cap T
+
+65
+00:03:42,780 --> 00:03:44,960
+equals seven years.
+
+66
+00:03:44,960 --> 00:03:52,100
+Second, 1.16 at the money call options on a normalized S&P
+
+67
+00:03:52,100 --> 00:03:56,565
+500, with maturity T equals 7 years.
+
+68
+00:03:56,565 --> 00:03:59,100
+
+
+69
+00:03:59,100 --> 00:04:01,510
+The reference index is normalized,
+
+70
+00:04:01,510 --> 00:04:05,340
+so that S0 is initially at $10.
+
+71
+00:04:05,340 --> 00:04:07,620
+To do that, we need to find beta,
+
+72
+00:04:07,620 --> 00:04:11,310
+such that beta times the S&P 500 index value
+
+73
+00:04:11,310 --> 00:04:14,670
+is initially equal to $10.
+
+74
+00:04:14,670 --> 00:04:19,230
+On the issue date, the actual value of the S&P 500
+
+75
+00:04:19,230 --> 00:04:22,440
+was 1,353.1.
+
+76
+00:04:22,440 --> 00:04:25,050
+That implies that we can solve for beta
+
+77
+00:04:25,050 --> 00:04:28,710
+by dividing 10 by 1353.1.
+
+78
+00:04:28,710 --> 00:04:32,280
+All future values of the index used in the calculations
+
+79
+00:04:32,280 --> 00:04:37,060
+are also multiplied by this normalization factor.
+
+80
+00:04:37,060 --> 00:04:40,140
+We also have other data on the issuance date.
+
+81
+00:04:40,140 --> 00:04:45,450
+The interest rate, r, is equal to 3.23% on a continuously
+
+82
+00:04:45,450 --> 00:04:47,190
+compounded basis.
+
+83
+00:04:47,190 --> 00:04:52,420
+The dividend yield on the S&P 500 is taken to be 2%.
+
+84
+00:04:52,420 --> 00:04:55,870
+The bank's forecasts of market volatility over the seven years
+
+85
+00:04:55,870 --> 00:05:02,230
+is set to sigma of 15% on an annual basis.
+
+86
+00:05:02,230 --> 00:05:05,620
+Notice, if you go back to the previous slide,
+
+87
+00:05:05,620 --> 00:05:10,060
+that our payoff diagram could have been constructed
+
+88
+00:05:10,060 --> 00:05:14,540
+from the two positions we're just talking about,
+
+89
+00:05:14,540 --> 00:05:18,740
+a zero coupon bond with a face value of $10
+
+90
+00:05:18,740 --> 00:05:23,940
+plus the call options, which have
+
+91
+00:05:23,940 --> 00:05:25,800
+a payoff that looks like that.
+
+92
+00:05:25,800 --> 00:05:30,210
+And as usual, we can sum the two positions together
+
+93
+00:05:30,210 --> 00:05:34,110
+to get our total payoff, which was what was
+
+94
+00:05:34,110 --> 00:05:36,510
+drawn on the original diagram.
+
+95
+00:05:36,510 --> 00:05:41,550
+Turning back to our calculation of value, with this information
+
+96
+00:05:41,550 --> 00:05:44,760
+you can estimate the value of the security using
+
+97
+00:05:44,760 --> 00:05:47,400
+Black-Scholes-Merton for a dividend paying stock
+
+98
+00:05:47,400 --> 00:05:50,100
+for the call option component, and adding it
+
+99
+00:05:50,100 --> 00:05:54,540
+to the present value of the zero coupon bond.
+
+100
+00:05:54,540 --> 00:05:59,230
+We have, then, the present value of the zero coupon
+
+101
+00:05:59,230 --> 00:06:08,430
+bond, and 1.16 call options, where the current price is $10,
+
+102
+00:06:08,430 --> 00:06:13,740
+the strike price is $10, and we know our other parameters.
+
+103
+00:06:13,740 --> 00:06:17,280
+We can solve all of this to find that the present value
+
+104
+00:06:17,280 --> 00:06:25,890
+of the bond is 7.9764, the value of each call option is $1.70,
+
+105
+00:06:25,890 --> 00:06:29,380
+and we have 1.16 call options in our position.
+
+106
+00:06:29,380 --> 00:06:36,720
+So the total value of the position is $9.94.
+
+107
+00:06:36,720 --> 00:06:41,070
+Well, that conclusion suggests that the value of the Capital
+
+108
+00:06:41,070 --> 00:06:44,610
+Protected Note is a little less than the $10
+
+109
+00:06:44,610 --> 00:06:47,370
+that investors pay for the security.
+
+110
+00:06:47,370 --> 00:06:49,500
+Effectively, investors are giving up
+
+111
+00:06:49,500 --> 00:06:52,650
+the interest they would have earned on the $10 principal
+
+112
+00:06:52,650 --> 00:06:55,470
+in exchange for a call option.
+
+113
+00:06:55,470 --> 00:06:59,970
+The bank makes $0.05 per share that they issue.
+
+114
+00:06:59,970 --> 00:07:03,480
+Well, $0.05 is a pretty thin margin,
+
+115
+00:07:03,480 --> 00:07:07,080
+and the short position is a very risky one,
+
+116
+00:07:07,080 --> 00:07:10,230
+so the bank wants to hedge that risk to lock
+
+117
+00:07:10,230 --> 00:07:12,630
+in the $0.05 per share profit.
+
+118
+00:07:12,630 --> 00:07:15,830
+And we'll now turn to how they can do that.
+
+119
+00:07:15,830 --> 00:07:17,840
+Since issuing the capital protected note
+
+120
+00:07:17,840 --> 00:07:20,000
+involves short positions in a bond
+
+121
+00:07:20,000 --> 00:07:22,940
+and in call options on the S&P 500,
+
+122
+00:07:22,940 --> 00:07:25,310
+hedging that exposure requires taking
+
+123
+00:07:25,310 --> 00:07:28,610
+off setting long positions.
+
+124
+00:07:28,610 --> 00:07:32,120
+That implies first buying a zero coupon bond
+
+125
+00:07:32,120 --> 00:07:37,050
+for 7.9764 and with a face value of $10
+
+126
+00:07:37,050 --> 00:07:40,160
+to hedge the bond component.
+
+127
+00:07:40,160 --> 00:07:42,710
+Second, to hedge the option component,
+
+128
+00:07:42,710 --> 00:07:46,490
+buy 1.16 units of the replicating portfolio
+
+129
+00:07:46,490 --> 00:07:50,540
+for the embedded call option in the Capital Protected Note.
+
+130
+00:07:50,540 --> 00:07:53,990
+Here's the procedure for setting up that replicating portfolio
+
+131
+00:07:53,990 --> 00:07:55,220
+for the call.
+
+132
+00:07:55,220 --> 00:08:00,690
+We first calculate the delta, which we know is n of d1,
+
+133
+00:08:00,690 --> 00:08:05,790
+and we get a delta of 0.5747.
+
+134
+00:08:05,790 --> 00:08:10,050
+We also know that we can find the bond position
+
+135
+00:08:10,050 --> 00:08:15,030
+as being equal to the call minus delta times the current stock
+
+136
+00:08:15,030 --> 00:08:16,200
+price.
+
+137
+00:08:16,200 --> 00:08:23,910
+That gives us a position in the bond of minus 4.047.
+
+138
+00:08:23,910 --> 00:08:28,110
+Taking those two positions together,
+
+139
+00:08:28,110 --> 00:08:37,530
+we invest 5.747 in the S&P 500 and borrow 4.047.
+
+140
+00:08:37,530 --> 00:08:41,309
+We conclude that the net value of the replicating portfolio
+
+141
+00:08:41,309 --> 00:08:47,640
+is the 5.747 minus the 4.047, so it's
+
+142
+00:08:47,640 --> 00:08:51,990
+equal to 1.7, which, by construction, is
+
+143
+00:08:51,990 --> 00:08:55,120
+the same as the value of the call option.
+
+144
+00:08:55,120 --> 00:08:58,110
+The final step is to multiply both the stock and bond
+
+145
+00:08:58,110 --> 00:09:00,420
+positions in the replicating portfolio
+
+146
+00:09:00,420 --> 00:09:04,380
+by 1.16 to scale up the replicating portfolio
+
+147
+00:09:04,380 --> 00:09:09,130
+to match the exposure in the Capital Protected Note.
+
+148
+00:09:09,130 --> 00:09:10,960
+To ensure that this hedge continues
+
+149
+00:09:10,960 --> 00:09:13,210
+to be effective over the next seven years,
+
+150
+00:09:13,210 --> 00:09:15,430
+the bank needs to frequently rebalance
+
+151
+00:09:15,430 --> 00:09:19,990
+the replicating portfolio as the underlying delta changes.
+
+152
+00:09:19,990 --> 00:09:21,640
+Remember that the call option delta
+
+153
+00:09:21,640 --> 00:09:25,000
+will change with the S&P 500 index value,
+
+154
+00:09:25,000 --> 00:09:28,180
+with the passage of time, and with any changes in r
+
+155
+00:09:28,180 --> 00:09:29,470
+and sigma.
+
+156
+00:09:29,470 --> 00:09:32,680
+You could evaluate the size of those different sensitivities
+
+157
+00:09:32,680 --> 00:09:39,390
+by calculating the theta, rho, and vega for your exposure.
+
+158
+00:09:39,390 --> 00:09:41,190
+Notice that the interest rate risk
+
+159
+00:09:41,190 --> 00:09:45,690
+on the portion of the obligation that's the return of principal
+
+160
+00:09:45,690 --> 00:09:48,990
+has been fully hedged by investing in a zero coupon
+
+161
+00:09:48,990 --> 00:09:52,530
+bond whose payoff matches that part of the liability,
+
+162
+00:09:52,530 --> 00:09:56,070
+and no further adjustments are ever necessary.
+
+163
+00:09:56,070 --> 00:10:00,810
+With regard to the S&P 500 index, if its value increases,
+
+164
+00:10:00,810 --> 00:10:04,500
+then the call option delta increases, and conversely,
+
+165
+00:10:04,500 --> 00:10:06,570
+if it decreases.
+
+166
+00:10:06,570 --> 00:10:10,290
+As the S&P 500 and any other parameters change,
+
+167
+00:10:10,290 --> 00:10:14,310
+you can recalculate delta for the replicating portfolio.
+
+168
+00:10:14,310 --> 00:10:16,470
+The replicating portfolio is then
+
+169
+00:10:16,470 --> 00:10:19,740
+rebalanced by adjusting the holdings of stocks and bonds
+
+170
+00:10:19,740 --> 00:10:23,220
+to match the updated option value in delta.
+
+171
+00:10:23,220 --> 00:10:25,920
+Each time the portfolio is rebalanced,
+
+172
+00:10:25,920 --> 00:10:28,620
+there may be a gain or loss to the bank.
+
+173
+00:10:28,620 --> 00:10:31,620
+But if the hedging strategy is effective,
+
+174
+00:10:31,620 --> 00:10:33,810
+the sum of those gains and losses
+
+175
+00:10:33,810 --> 00:10:37,230
+will be offset by the gains or losses on the Capital Protected
+
+176
+00:10:37,230 --> 00:10:39,220
+Note.
+
+177
+00:10:39,220 --> 00:10:43,780
+An important question to ask is: why do a complicated dynamic
+
+178
+00:10:43,780 --> 00:10:47,200
+replication here, instead of initially just buying
+
+179
+00:10:47,200 --> 00:10:50,400
+call options on the S&P 500?
+
+180
+00:10:50,400 --> 00:10:53,640
+The answer is that call options on the S&P 500
+
+181
+00:10:53,640 --> 00:10:56,340
+are actively traded for shorter maturities,
+
+182
+00:10:56,340 --> 00:10:59,730
+but there is unlikely to be adequate liquidity at longer
+
+183
+00:10:59,730 --> 00:11:01,740
+maturities like seven years.
+
+184
+00:11:01,740 --> 00:11:04,660
+When liquid options aren't available in the market,
+
+185
+00:11:04,660 --> 00:11:07,530
+it can be cheaper, particularly for a large bank,
+
+186
+00:11:07,530 --> 00:11:11,230
+to hedge using a dynamic delta hedging strategy.
+
+187
+00:11:11,230 --> 00:11:13,380
+In fact, you can think of the $0.05
+
+188
+00:11:13,380 --> 00:11:15,870
+that the bank earns as compensation
+
+189
+00:11:15,870 --> 00:11:19,590
+for doing this delta hedging on behalf of investors,
+
+190
+00:11:19,590 --> 00:11:24,770
+who wouldn't be able to do it as inexpensively on their own.
+

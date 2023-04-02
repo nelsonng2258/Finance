@@ -1,0 +1,125 @@
+
+PROFESSOR: Without further ado, let's
+begin by reviewing some options strategies.
+As mentioned by Professor Lucas during the week four lecture,
+a bull spread is an options trading strategy
+designed to profit from the rise in the price of a stock--
+hence "bull" rather than "bear."
+In the lecture notes, we saw an example
+of a bull call spread, which involved
+the simultaneous purchase and sale of call options
+with different strike prices.
+In this case, an investor pays money upfront and profits later
+when the call options expire.
+
+Well, we could have easily have used a bull put spread, which
+instead involves the simultaneous purchase
+and sale of put options.
+Specifically, in a bull put spread,
+the investor purchases one out-of-the-money put option
+with strike price K1, and sells an in-the-money put option with
+strike price K2, where K2 is greater than K1.
+Recall, on the other hand, that a bear spread involves selling
+out-of-the-money put option with strike price K1 and purchasing
+an in-the-money put option with strike price K2,
+where K2 is greater than K1.
+A bear spread is a bet that the stock price will fall,
+as opposed to a bull spread, which is a bet that the stock
+price will increase.
+Thus, a bull put spread has payoffs
+like that of a short position in a bear spread.
+But in order to yield the same payoff as the bull call spread,
+a bull put spread also involves, in addition
+to the short position in the bear spread,
+the simultaneous purchase of a zero coupon bond with face
+value equal to K2 minus K1.
+Why is this the case?
+Well, recall from put-call parity
+that given the price of a European call option,
+we can always find the price of an equivalent European put
+option as follows in the equation below.
+On the left-hand side, Put is the price of the European put
+option, S0 is the spot price of the underlying stock
+at the initiation of the put or call option,
+Call is the price of the call option, and this last term--
+e to the negative r times t times k--
+is the price of a zero coupon bond with face value
+K and interest rate r.
+In other words, the payoff of a portfolio consisting
+of a call option and a zero coupon bond
+with face value K and interest rate
+r, the right-hand side of this equation,
+is the same as that of a portfolio consisting
+of a put option and the underlying stock,
+the left-hand side of the equation.
+The figure below displays the payoff
+of the bull put spread as a function
+of the underlying stock price and maturity.
+To reiterate, the payoff of the bull put spread, this dark,
+black line, is the sum of the payoff of a long position
+in the out-of-the-money put, a long position in a bond with
+face value K2 minus K1, and a short position
+in the in-the-money put option.
+In addition to the bull spread, one of the other options
+trading strategies that Professor Lucas mentioned
+during the week four lecture is the butterfly spread.
+Recall that a butterfly spread is a trading strategy that
+combines bull and bear spreads to create
+a market-neutral position with capped profits and losses.
+In the week four lecture, we saw how
+to create a butterfly spread using a combination of four
+call options.
+Equivalently, we can construct the same butterfly
+spread using a combination of four put options.
+The four options are first, a long position in one
+put option with strike price K0, second, a short position in two
+put options with strike price K1 and third,
+a long position in one put option with strike price K2
+where K0 is less than K1 which in turn is less than K2,
+and K1 is equal to the average of the strike prices K0 and K2.
+Specifically, the above strategy is a long put butterfly spread
+created by buying one put with a lower strike price, K0,
+selling two at-the-money puts with strike price, K1,
+and buying one put with a higher strike price, K2.
+This position is going to achieve its maximum payoff when
+the underlying stock price remains
+at the strike price, K1, of the intermediate options.
+The figure below displays the payoff
+of the long put butterfly spread as a function
+of the underlying stock price and maturity.
+To reiterate, the payoff of the long put butterfly spread
+is composed of the payoffs of the two long positions
+in the put options with strike price K0 and K2,
+and the payoff of the short position in two
+put options with strike price K1.
+Notice we get the same dark, black, butterfly spread payoff
+as we did in the long call butterfly spread discussed
+in the week four lecture notes.
+Now hypothetically, what would happen
+if we reverse the positions in the long put butterfly spread?
+In particular, say we enter into the following three positions--
+first, a short position in one put option
+with strike price, K0, second, a long position
+in two put options with strike price, K1, and third,
+a short position in one option with strike price, K2,
+where K0, K1, and K2 are defined as they were above.
+The payoff from this strategy will
+look very similar to the payoff from the long put butterfly
+spread, but instead, it's flipped
+about the horizontal axis in the figure we just saw.
+So in particular, this dark, black line,
+instead of peaking at the strike price, K1,
+will have a decline at the strike price of K1.
+
+This strategy is referred to as a "short put butterfly spread,"
+and it's going to realize its maximum payoff when
+the price of the underlying stock
+is either above the upper strike price
+or below the lower strike price at the maturity date.
+In other words, entering into a short put butterfly spread
+is a good idea when you expect the volatility of the stock
+price to increase, implying a higher likelihood
+that the stock price moves beyond the range of strike
+prices of the butterfly.
+In other words, a short put butterfly spread
+is a bet on higher volatility of the stock price.

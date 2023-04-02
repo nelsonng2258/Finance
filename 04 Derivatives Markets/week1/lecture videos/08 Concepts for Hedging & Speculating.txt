@@ -1,0 +1,128 @@
+
+PROFESSOR: In the last segment for this week,
+I want to turn to how the price of a forward contract
+changes over time and its relevance
+for hedging and speculative strategies.
+
+So far, we've focused on how prices of new forward contracts
+are set.
+We've seen that those prices imply that initially, it's
+free to enter into a longer short position on the contract.
+Over time, though, as market conditions change,
+so does the value of an existing forward contract.
+What happens to the forward price over time
+affects the success of hedges or speculative strategies.
+It's also important when traders want
+to exit a contract before expiration, for instance,
+because the asset that was being hedged has been sold.
+A forward contract can be exited by taking an offsetting
+forward position.
+If you're long a contract you want to get out of,
+you can enter the short side of the identical contract,
+and vice versa to get out of a short position.
+Alternatively, you can sell the contract
+to another trader for its current value.
+In either case, closing out the contract
+will entail a gain or loss if the forward price has changed
+from its original value.
+Here's the algebra.
+We'll call k the original forward price
+specified in the contract.
+We're looking at time 0.
+The same contract, were written at a later time-- little t--
+would have a forward price--
+capital F, sub little t--
+based on current market conditions and the remaining
+maturity of the contract, which at this point is capital T,
+minus little t.
+By the principle of no arbitrage,
+the value at any time T of a long position
+is going to be the present value of the difference
+between the current forward price
+and the original forward price.
+
+A good exercise is to try to describe the training
+strategy that generates an arbitrage
+profit if this relationship doesn't hold.
+A forward contract, as we know, is always
+zero sum between the long and short contract holders.
+So the value of the short position over time
+will still be the negative of the value of the long position.
+
+Well, hedging with the forward contract
+involves taking the opposite position
+in the forward contract from your spot and exposure.
+For example, say you currently own
+100 shares of Alphabet stock as part of your portfolio,
+and you want to lock in a current future selling
+price for the shares.
+You could do that by shorting a forward contract on 100
+shares of the Alphabet stock.
+For that hedge to be effective, the forward and spot prices
+of the cash and forward position have
+to move together over time.
+The difference between the spot price and the forward price
+is called the basis.
+An important fact about the basis
+is that it always goes to 0 on the expiration
+date of a forward contract.
+Otherwise, one could buy spot and sell
+forward, or vice versa, and capture an arbitrage profit.
+However, as the graph here illustrates,
+the basis can be wide prior to expiration.
+And there's uncertainty about how that basis is
+going to move over time.
+For example, a big change in the convenience yield
+of a commodity could cause its basis to jump.
+Also note that the basis can be positive or negative, depending
+on market conditions.
+When a hedge is set up that will be closed out
+prior to contract expiration, this basis risk
+can be quite significant, and means that the hedge may not
+be very effective.
+Well, this brings us to the related issue of cross hedging.
+It's frequent that a contract in one type of security
+or commodity is used to hedge a risk
+exposure in a different, but related, security or commodity.
+So for example, an electric utility
+might hedge some of its production costs
+using contracts on West Texas crude oil,
+even though the oil that it uses in production
+comes from a different source.
+Why do a cross hedge?
+Well, often the reason to cross hedge
+is for liquidity and to reduce transactions costs.
+Certain forward contracts, such as those
+traded on futures exchanges, are more available and more liquid
+than others, making them less expensive to transact in.
+The disadvantage of cross hedging, as we saw,
+is that the basis risk tends to be greater,
+reducing the quality of the hedge.
+In setting up a hedge using forward contracts,
+a fundamental question is how to choose the size
+of your forward position.
+That question is answered by calculating a hedge ratio.
+The hedge ratio is the relative number
+of units of assets in the forward contract to units
+of assets being hedged that maximizes
+the effectiveness of the hedge.
+In order to have the same total price
+change in your spot in forward positions
+to create that offset, it must be
+that the size of the spot position multiplied
+by the expected change in the price per unit
+is equal to the size of the forward position
+times the expected change in the forward price, again per unit.
+
+Rearranging this equation gives the hedge ratio,
+which is the size of the spot position relative to the size
+of the forward position in terms of the relative expected price
+changes.
+To implement a hedge ratio in practice,
+you'll need to have an estimate of the expected price
+change, both for your spot and forward positions.
+One of the homework problems asks
+you to do this in the context of hedging a stock position.
+To answer it, you'll need to recall what you learned earlier
+in the MicroMasters Program about expected stock
+returns and the CAPM.

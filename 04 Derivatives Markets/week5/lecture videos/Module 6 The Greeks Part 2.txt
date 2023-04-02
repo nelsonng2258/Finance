@@ -1,0 +1,153 @@
+PROFESSOR: Theta is a sensitivity of an option's
+value to the passage of time.
+It's estimated by taking the derivative of an options price
+with respect to the current time, little t.
+
+Note that as the current time increases,
+the remaining time to expiration decreases.
+Thus, Theta is telling us about what happens to option value
+as its remaining maturity gets smaller.
+The expression for Theta that comes out
+of the Black-Scholes-Merton model
+is a long and ugly formula, and I won't ask you to use it.
+But I do want you to understand the forces that
+influence its value.
+In fact, the sign of Theta can be either positive or negative,
+depending on where the current stock price is, relative
+to the strike price, and also depending on other parameters.
+To understand why the sign can go either way,
+consider the current value of a put option
+as a function of the current stock price,
+and also the payoff on that same option at its expiration.
+The current value of the put is in blue, as usual.
+And now, the payoff is this dotted line.
+
+We know by no arbitrage that, as the expiration date approaches,
+the current value of the option has
+to approach its final payoff.
+Because the characteristic shape of the current value
+of a European put option typically
+lies below the final payoff for low values of the stock price,
+and it lies above the final payoff for high values
+of the stock price, we have a positive Theta for low stock
+prices and we have a negative Theta for high stock prices.
+
+This slide, again, explains the idea
+of the Theta of a European put option
+is positive for low stock prices and negative for high stock
+prices.
+The basic story is what I just explained.
+In thinking about Theta in general,
+you should keep in mind that, for both puts and calls,
+a shorter time to expiration tends
+to reduce option value because it shortens the time over which
+the option provides insurance value
+or that it has positive upside.
+This is related to the fact that an option typically
+has positive time value.
+However, that's not always the case.
+A simple example demonstrates that the opposite
+can be true for a put option.
+That is, that it can become more valuable when there's
+a shorter time to expiration, and thus have a positive Theta.
+Say the stock value has gone to 0 because the firm has
+gone bankrupt.
+Then, the payoff will just be the strike price
+and the value of that payoff today is its present value.
+The present value will be higher, the sooner
+the payoff can be realized.
+For European call options, there's two distinct cases
+to consider.
+When the stock won't pay a dividend
+prior to its expiration, Theta is unambiguously negative.
+That's because, when the stock price is very high relative
+to the strike price, the option is very likely to be exercised.
+The dominant effect is it's better
+to postpone paying the strike price,
+because, effectively, you have a zero interest rate
+loan in the amount of the strike price.
+When the stock price is low, the option
+provides downside protection for longer, if it
+has a longer time to maturity.
+And again, there's the benefit of postponing
+any future payment.
+The second case is for a dividend paying stock.
+As we talked about in the last class,
+because the dividend causes the stock price to drop,
+it can be optimal to early exercise a call option
+to capture that dividend.
+Since that isn't possible with European options,
+the option may be worth more on a dividend paying stock
+when it has a shorter maturity.
+The intuition for the sign of Theta for European call
+options in each of those two cases
+is illustrated here, graphically.
+Again, comparing the current value of the option
+as a function of the current stock price with its payoff
+value at expiration.
+The top graph shows that the value
+of a call option on a non-dividend paying stock
+always lies above the payoff and so converges to the payoff
+from above over time.
+The option is worth more alive than dead.
+That implies a negative Theta.
+For a dividend paying stock, which
+is shown in the bottom graph, there
+are two offsetting forces.
+That is, the time value of the option
+pulls in the opposite direction from the effect of the dividend
+payment.
+For low stock prices, the dividend effect
+can dominate, resulting in a negative Theta.
+Although the Black-Scholes-Merton model
+assumes a constant interest rate and a constant stock price
+volatility, we know, in fact, that interest rates
+and volatilities vary over time.
+It's useful, then, to know how much an option value will
+be affected, in case one wants to hedge those sources of risk.
+We'll first consider the effect of interest rate changes.
+Rho answers the question, what's the derivative of the option
+price, with respect to a small change in the interest
+rate, holding everything else constant?
+For European puts and calls, it can
+be valued using the Black-Scholes-Merton model.
+That implies the simple formulas for Rho that are shown here.
+
+The sign of Rho for a call option is always positive.
+That's because, when interest rates are higher,
+the value of waiting to pay the strike price, K,
+is also higher.
+The opposite is true for a put option.
+And its Rho is always negative.
+Having to wait to receive the strike price
+becomes more costly with a higher interest rate.
+The formulas for Rho show that it increases at absolute value
+with the expiration date, cap T. That makes sense,
+because the longer the time to expiration,
+the larger is the effect of interest rates on value.
+It also increases with K for the same reason.
+Finally, Rho is affected by N of d2 and N of minus d2.
+
+The weights of N of d2 an N of minus d2
+can always be interpreted as the probability
+that the option will expire in the money, which, of course, is
+when the timing of the strike price payment
+will be relevant to value.
+Our final Greek is Vega.
+Vega measures the sensitivity of option value to volatility.
+As usual, we differentiate the option value with respect
+to the variable of interest, in this case, Sigma.
+
+Vega turns out to be always positive.
+And in the case of the Black-Scholes-Merton version,
+it's equal to this expression.
+Both put and call options provide more protection
+and more potential upside when volatility increases.
+And that increases their value.
+As this graph shows, Vega is highest for an at the money
+option, where the curvature of the payoff
+and the current value of the option is highest.
+A curiosity about Vega that you might have already noticed
+is that it's not actually a Greek letter.
+But for the purposes of options pricing,
+it's become an honorary Greek.

@@ -1,0 +1,424 @@
+0
+00:00:00,000 --> 00:00:01,272
+
+
+1
+00:00:01,272 --> 00:00:03,480
+SPEAKER: You've now learned the basics about duration
+
+2
+00:00:03,480 --> 00:00:05,580
+but because the concept is so important
+
+3
+00:00:05,580 --> 00:00:08,070
+in fixed income risk management strategies,
+
+4
+00:00:08,070 --> 00:00:10,140
+I want to also briefly introduce you
+
+5
+00:00:10,140 --> 00:00:13,060
+to some related and more general duration measures that are
+
+6
+00:00:13,060 --> 00:00:15,090
+practitioners often rely on.
+
+7
+00:00:15,090 --> 00:00:17,810
+
+
+8
+00:00:17,810 --> 00:00:20,780
+In many applications such as choosing the right size
+
+9
+00:00:20,780 --> 00:00:23,360
+for a hedge position, the focus is
+
+10
+00:00:23,360 --> 00:00:25,640
+on the dollar size of a price change
+
+11
+00:00:25,640 --> 00:00:28,440
+rather than on the percentage change.
+
+12
+00:00:28,440 --> 00:00:31,400
+To do this, we rearrange our previous formula
+
+13
+00:00:31,400 --> 00:00:34,550
+for the approximate percentage price change based on
+
+14
+00:00:34,550 --> 00:00:38,730
+modified duration to get the approximate dollar price
+
+15
+00:00:38,730 --> 00:00:39,230
+change.
+
+16
+00:00:39,230 --> 00:00:44,160
+
+
+17
+00:00:44,160 --> 00:00:48,390
+To make calculations using this formula even simpler,
+
+18
+00:00:48,390 --> 00:00:52,710
+we introduced the notion of $1 duration.
+
+19
+00:00:52,710 --> 00:00:55,770
+Dollar duration is the modified duration
+
+20
+00:00:55,770 --> 00:00:57,510
+multiplied by the price.
+
+21
+00:00:57,510 --> 00:01:01,090
+
+
+22
+00:01:01,090 --> 00:01:04,810
+With that definition, we can approximate the change
+
+23
+00:01:04,810 --> 00:01:10,000
+in the dollar price of a bond or bond portfolio using
+
+24
+00:01:10,000 --> 00:01:14,290
+the product of the dollar duration times the change
+
+25
+00:01:14,290 --> 00:01:20,760
+in yield, and importantly multiplying it by a minus sign.
+
+26
+00:01:20,760 --> 00:01:22,530
+The concept of dollar duration is
+
+27
+00:01:22,530 --> 00:01:26,010
+especially important in evaluating risk in a 0 NPV
+
+28
+00:01:26,010 --> 00:01:28,290
+fixed income portfolio.
+
+29
+00:01:28,290 --> 00:01:31,980
+One where the present value of a long and short position
+
+30
+00:01:31,980 --> 00:01:33,540
+are equal.
+
+31
+00:01:33,540 --> 00:01:36,990
+An example of this is for an interest rate swap or futures
+
+32
+00:01:36,990 --> 00:01:41,880
+contract, which we know initially always has a 0 NPV
+
+33
+00:01:41,880 --> 00:01:45,240
+and that we saw was equivalent to holding
+
+34
+00:01:45,240 --> 00:01:51,770
+a portfolio with a combination of long and short positions.
+
+35
+00:01:51,770 --> 00:01:54,620
+Clearly, it isn't possible to talk about the percentage
+
+36
+00:01:54,620 --> 00:01:57,800
+change in the value of a 0 NPV portfolio
+
+37
+00:01:57,800 --> 00:02:01,060
+because that would require dividing by 0,
+
+38
+00:02:01,060 --> 00:02:03,280
+but the value of the long and short positions
+
+39
+00:02:03,280 --> 00:02:07,120
+will change differentially when rates change and the dollar
+
+40
+00:02:07,120 --> 00:02:10,090
+price change in the portfolio can be approximated
+
+41
+00:02:10,090 --> 00:02:11,020
+with dollar duration.
+
+42
+00:02:11,020 --> 00:02:13,930
+
+
+43
+00:02:13,930 --> 00:02:18,440
+I've primarily been emphasizing duration for a single bond
+
+44
+00:02:18,440 --> 00:02:22,300
+but often it's useful to work with the consolidated duration
+
+45
+00:02:22,300 --> 00:02:26,730
+for a portfolio consisting of many bonds.
+
+46
+00:02:26,730 --> 00:02:29,640
+Calculating the duration of a bond portfolio
+
+47
+00:02:29,640 --> 00:02:31,690
+is straightforward.
+
+48
+00:02:31,690 --> 00:02:34,050
+The modified duration of a bond portfolio
+
+49
+00:02:34,050 --> 00:02:37,740
+is the value weighted average of the modified duration
+
+50
+00:02:37,740 --> 00:02:40,590
+of the bonds in the portfolio.
+
+51
+00:02:40,590 --> 00:02:46,290
+A simple example of this is at the bottom of the slide.
+
+52
+00:02:46,290 --> 00:02:48,690
+The dollar duration of a bond portfolio
+
+53
+00:02:48,690 --> 00:02:51,930
+is simply the sum of the individual dollar durations
+
+54
+00:02:51,930 --> 00:02:54,450
+of the portfolio components.
+
+55
+00:02:54,450 --> 00:02:57,780
+Later, we'll see that a portfolio's duration can also
+
+56
+00:02:57,780 --> 00:03:02,080
+be changed using derivatives contracts.
+
+57
+00:03:02,080 --> 00:03:04,510
+So far, we've been working with duration measures
+
+58
+00:03:04,510 --> 00:03:08,110
+to treat the promised cash flows on a bond or portfolio as
+
+59
+00:03:08,110 --> 00:03:11,420
+if they're a sure thing but that isn't always the case.
+
+60
+00:03:11,420 --> 00:03:13,930
+Some bonds are callable or putable
+
+61
+00:03:13,930 --> 00:03:15,790
+or there may be default risk.
+
+62
+00:03:15,790 --> 00:03:20,530
+In such cases, these embedded call, put, or default options
+
+63
+00:03:20,530 --> 00:03:24,010
+affect the price of the bond and also its sensitivity
+
+64
+00:03:24,010 --> 00:03:25,750
+to yield changes.
+
+65
+00:03:25,750 --> 00:03:27,940
+A good example is a 30-year mortgage
+
+66
+00:03:27,940 --> 00:03:32,320
+that's likely to be prepaid over a much shorter horizon,
+
+67
+00:03:32,320 --> 00:03:34,660
+say maybe over seven years.
+
+68
+00:03:34,660 --> 00:03:37,600
+Calculating its duration as if payments
+
+69
+00:03:37,600 --> 00:03:39,760
+will continue for 30 years will greatly
+
+70
+00:03:39,760 --> 00:03:45,610
+overestimate the sensitivity of its value to yield changes.
+
+71
+00:03:45,610 --> 00:03:47,560
+The most general and most important
+
+72
+00:03:47,560 --> 00:03:52,240
+duration concept is that of effective duration.
+
+73
+00:03:52,240 --> 00:03:55,630
+It was developed to provide an accurate approximation of price
+
+74
+00:03:55,630 --> 00:03:57,760
+sensitivity to interest rate changes
+
+75
+00:03:57,760 --> 00:04:01,720
+even in cases when there's uncertainty about future cash
+
+76
+00:04:01,720 --> 00:04:03,310
+flows.
+
+77
+00:04:03,310 --> 00:04:07,030
+Effective duration is an estimate of the true percentage
+
+78
+00:04:07,030 --> 00:04:12,680
+price sensitivity, taking into account any embedded options.
+
+79
+00:04:12,680 --> 00:04:15,340
+Unfortunately, there isn't a general formula
+
+80
+00:04:15,340 --> 00:04:17,740
+you can use to calculate it.
+
+81
+00:04:17,740 --> 00:04:20,170
+Rather, it's something an analyst has
+
+82
+00:04:20,170 --> 00:04:25,600
+to estimate based on their best theoretical or empirical model
+
+83
+00:04:25,600 --> 00:04:30,250
+of how the price will change for small changes in yield.
+
+84
+00:04:30,250 --> 00:04:35,050
+But here's a general rule, when cash flows are certain,
+
+85
+00:04:35,050 --> 00:04:39,940
+modified duration is the same thing as effective duration.
+
+86
+00:04:39,940 --> 00:04:42,520
+When cash flows are uncertain, it's
+
+87
+00:04:42,520 --> 00:04:47,800
+better to use effective duration when it's available.
+
+88
+00:04:47,800 --> 00:04:50,430
+Finally, there are generalized notions of duration
+
+89
+00:04:50,430 --> 00:04:52,830
+that recognize that a bond's price is not only
+
+90
+00:04:52,830 --> 00:04:56,130
+sensitive to its yield to maturity but potentially
+
+91
+00:04:56,130 --> 00:04:58,380
+also to other factors.
+
+92
+00:04:58,380 --> 00:05:01,140
+Those could include inflation, stock prices,
+
+93
+00:05:01,140 --> 00:05:04,140
+or changes in yields at particular points
+
+94
+00:05:04,140 --> 00:05:06,500
+along the yield curve.
+
+95
+00:05:06,500 --> 00:05:09,890
+The sensitivity to any one of those factors
+
+96
+00:05:09,890 --> 00:05:12,140
+is called a partial duration.
+
+97
+00:05:12,140 --> 00:05:14,120
+Partial durations are useful when
+
+98
+00:05:14,120 --> 00:05:16,640
+you want to tailor a hedge so that it protects
+
+99
+00:05:16,640 --> 00:05:21,080
+against a specific risk, say of changes in 10-year treasury
+
+100
+00:05:21,080 --> 00:05:22,910
+yields.
+
+101
+00:05:22,910 --> 00:05:25,760
+We won't go into this further but it's useful
+
+102
+00:05:25,760 --> 00:05:27,950
+to be aware of that logic and that it's
+
+103
+00:05:27,950 --> 00:05:31,310
+very similar to that used in the duration based hedges
+
+104
+00:05:31,310 --> 00:05:33,500
+that we will look at.
+
+105
+00:05:33,500 --> 00:05:34,000
+
+

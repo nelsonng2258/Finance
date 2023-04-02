@@ -1,0 +1,564 @@
+0
+00:00:00,000 --> 00:00:00,820
+
+
+1
+00:00:00,820 --> 00:00:03,600
+PROFESSOR: Let's now turn to the second-order relation
+
+2
+00:00:03,600 --> 00:00:07,860
+between bond prices and yields, which is known as convexity.
+
+3
+00:00:07,860 --> 00:00:11,190
+Convexity measures the degree of inward curvature
+
+4
+00:00:11,190 --> 00:00:13,710
+of the price-yield relationship.
+
+5
+00:00:13,710 --> 00:00:16,379
+It's based on the second derivative of a securities
+
+6
+00:00:16,379 --> 00:00:18,870
+price with respect to its yield.
+
+7
+00:00:18,870 --> 00:00:22,830
+As for duration, there are basic and generalized convexity
+
+8
+00:00:22,830 --> 00:00:26,670
+measures with those described as effective being
+
+9
+00:00:26,670 --> 00:00:29,400
+the most accurate in general.
+
+10
+00:00:29,400 --> 00:00:31,140
+We will see that convexity is used
+
+11
+00:00:31,140 --> 00:00:35,340
+to improve upon duration-based approximations of price risk
+
+12
+00:00:35,340 --> 00:00:38,280
+and in many hedging strategies.
+
+13
+00:00:38,280 --> 00:00:41,910
+It's usually used in combination with duration rather than
+
+14
+00:00:41,910 --> 00:00:44,560
+as a standalone tool.
+
+15
+00:00:44,560 --> 00:00:46,750
+A long position in noncallable bonds
+
+16
+00:00:46,750 --> 00:00:51,670
+always has positive convexity, which is a desirable property.
+
+17
+00:00:51,670 --> 00:00:54,760
+All else equal, higher convexity means
+
+18
+00:00:54,760 --> 00:00:57,820
+that prices increase more when yields fall
+
+19
+00:00:57,820 --> 00:01:00,460
+and decrease less when yields rise.
+
+20
+00:01:00,460 --> 00:01:04,360
+By the same token, short positions and noncallable bonds
+
+21
+00:01:04,360 --> 00:01:06,580
+always have negative convexity, which
+
+22
+00:01:06,580 --> 00:01:09,800
+is an undesirable property.
+
+23
+00:01:09,800 --> 00:01:13,130
+Convexity is also affected by any embedded options.
+
+24
+00:01:13,130 --> 00:01:16,040
+And it can be altered by taking derivatives positions
+
+25
+00:01:16,040 --> 00:01:19,060
+as we'll see in a little while.
+
+26
+00:01:19,060 --> 00:01:20,770
+Turning to the mouth, convexity is
+
+27
+00:01:20,770 --> 00:01:23,230
+calculated by taking the second derivative
+
+28
+00:01:23,230 --> 00:01:28,010
+of the price-yield relationship and dividing by the bond price.
+
+29
+00:01:28,010 --> 00:01:30,980
+It takes cash flows as certain as in the derivation
+
+30
+00:01:30,980 --> 00:01:34,040
+of Macaulay or modified duration.
+
+31
+00:01:34,040 --> 00:01:37,940
+Then we differentiate twice, divide by the bond price,
+
+32
+00:01:37,940 --> 00:01:40,130
+and we have the formula for convexity.
+
+33
+00:01:40,130 --> 00:01:43,350
+
+
+34
+00:01:43,350 --> 00:01:45,750
+Whereas duration has units of years,
+
+35
+00:01:45,750 --> 00:01:48,450
+convexity has units of years squared.
+
+36
+00:01:48,450 --> 00:01:52,470
+It's not helpful to try to interpret it in those terms.
+
+37
+00:01:52,470 --> 00:01:55,200
+However, because the formula is complicated,
+
+38
+00:01:55,200 --> 00:01:57,600
+it's quite helpful to have a mental shortcut
+
+39
+00:01:57,600 --> 00:02:00,210
+to know that for a zero-coupon bond,
+
+40
+00:02:00,210 --> 00:02:05,570
+convexity is approximately its maturity squared.
+
+41
+00:02:05,570 --> 00:02:08,030
+For the same reasons as setting up a hedge often
+
+42
+00:02:08,030 --> 00:02:12,230
+uses dollar duration, it's often useful to know the dollar
+
+43
+00:02:12,230 --> 00:02:13,790
+convexity.
+
+44
+00:02:13,790 --> 00:02:17,750
+Dollar convexity is standard or effective convexity
+
+45
+00:02:17,750 --> 00:02:19,475
+multiplied by the bond price.
+
+46
+00:02:19,475 --> 00:02:23,320
+
+
+47
+00:02:23,320 --> 00:02:25,480
+Also remember that you don't have
+
+48
+00:02:25,480 --> 00:02:27,800
+to use this formula by hand.
+
+49
+00:02:27,800 --> 00:02:31,300
+You can use the convexity calculator for much of the math
+
+50
+00:02:31,300 --> 00:02:32,425
+that you'll be asked to do.
+
+51
+00:02:32,425 --> 00:02:35,700
+
+
+52
+00:02:35,700 --> 00:02:38,970
+Looking again at a plot of the actual price yield relationship
+
+53
+00:02:38,970 --> 00:02:42,300
+provides a more intuitive understanding of convexity
+
+54
+00:02:42,300 --> 00:02:44,520
+and why it can be used in hedging strategies
+
+55
+00:02:44,520 --> 00:02:47,740
+to create more robust hedges.
+
+56
+00:02:47,740 --> 00:02:50,770
+The green-shaded area here indicates
+
+57
+00:02:50,770 --> 00:02:53,530
+the convexity is related to the curvature
+
+58
+00:02:53,530 --> 00:02:56,990
+of the actual price-yield curve.
+
+59
+00:02:56,990 --> 00:03:00,430
+So here we have the actual price-yield curve.
+
+60
+00:03:00,430 --> 00:03:04,330
+It's a convex function because it's inward curved.
+
+61
+00:03:04,330 --> 00:03:10,870
+And if we had a different bond with more inward curvature,
+
+62
+00:03:10,870 --> 00:03:15,580
+we would describe it as more convex.
+
+63
+00:03:15,580 --> 00:03:19,780
+The more convex a bond or fixed income portfolio, the greater
+
+64
+00:03:19,780 --> 00:03:22,580
+that degree of inward curvature.
+
+65
+00:03:22,580 --> 00:03:25,250
+Holding duration constant, you can also
+
+66
+00:03:25,250 --> 00:03:28,220
+see that the greater convexity is a good thing.
+
+67
+00:03:28,220 --> 00:03:30,650
+Because for any shifts in yields,
+
+68
+00:03:30,650 --> 00:03:37,450
+the price is higher than in the case of less convexity.
+
+69
+00:03:37,450 --> 00:03:40,240
+It's important to note that technically that statement is
+
+70
+00:03:40,240 --> 00:03:43,840
+only true for parallel shifts in the yield curve.
+
+71
+00:03:43,840 --> 00:03:47,530
+Greater convexity is usually a good thing,
+
+72
+00:03:47,530 --> 00:03:51,090
+but it's not an arbitrage opportunity.
+
+73
+00:03:51,090 --> 00:03:54,120
+Well, let's get back to the idea of approximating a price
+
+74
+00:03:54,120 --> 00:03:57,570
+change with the duration approximation.
+
+75
+00:03:57,570 --> 00:04:01,020
+Remember that algebra corresponds to sliding down
+
+76
+00:04:01,020 --> 00:04:09,915
+the tangent line say when yields go from Y* to Y-new here.
+
+77
+00:04:09,915 --> 00:04:12,810
+
+
+78
+00:04:12,810 --> 00:04:17,310
+So again, we're sliding down the tangent line.
+
+79
+00:04:17,310 --> 00:04:21,930
+The estimated new price is less than the actual price
+
+80
+00:04:21,930 --> 00:04:23,475
+by this vertical distance.
+
+81
+00:04:23,475 --> 00:04:26,410
+
+
+82
+00:04:26,410 --> 00:04:29,680
+If the error gets larger, the more convex the bond
+
+83
+00:04:29,680 --> 00:04:33,460
+is because there's more inward curvature.
+
+84
+00:04:33,460 --> 00:04:37,120
+A correction to our formula based on convexity
+
+85
+00:04:37,120 --> 00:04:42,610
+can be used to increase the accuracy of our estimate,
+
+86
+00:04:42,610 --> 00:04:46,040
+getting closer to the true new price.
+
+87
+00:04:46,040 --> 00:04:50,140
+So a convexity correction will pull up our estimate,
+
+88
+00:04:50,140 --> 00:04:54,890
+but we'll see it actually overshoots a bit.
+
+89
+00:04:54,890 --> 00:04:59,750
+Some positions exhibit what's called negative convexity.
+
+90
+00:04:59,750 --> 00:05:01,850
+And mathematically, negative convexity
+
+91
+00:05:01,850 --> 00:05:04,190
+is the same thing as concavity.
+
+92
+00:05:04,190 --> 00:05:07,140
+One example is a short bond position.
+
+93
+00:05:07,140 --> 00:05:09,200
+Remember that a short position always
+
+94
+00:05:09,200 --> 00:05:14,490
+flips the actual price-yield curve over the x-axis.
+
+95
+00:05:14,490 --> 00:05:17,720
+Negative convexity also rises in some long positions
+
+96
+00:05:17,720 --> 00:05:21,230
+such as for callable bonds over some range of yields.
+
+97
+00:05:21,230 --> 00:05:23,580
+And that's what's pictured here.
+
+98
+00:05:23,580 --> 00:05:26,000
+That's because as rates fall, the bond
+
+99
+00:05:26,000 --> 00:05:28,950
+becomes more likely to be called before maturity,
+
+100
+00:05:28,950 --> 00:05:32,780
+which puts an upper bound on its price appreciation.
+
+101
+00:05:32,780 --> 00:05:35,870
+We'll return to that when we talk about call options.
+
+102
+00:05:35,870 --> 00:05:38,150
+What's important to understand here
+
+103
+00:05:38,150 --> 00:05:42,830
+is that negative convexity is unfavorable for either a long
+
+104
+00:05:42,830 --> 00:05:45,140
+or a short position because it makes
+
+105
+00:05:45,140 --> 00:05:48,500
+outcomes worse for any given change in yields,
+
+106
+00:05:48,500 --> 00:05:52,260
+again, holding all else equal including duration.
+
+107
+00:05:52,260 --> 00:06:00,600
+So it's moving us down relative to the straight line
+
+108
+00:06:00,600 --> 00:06:01,665
+or the tangent line.
+
+109
+00:06:01,665 --> 00:06:04,930
+
+
+110
+00:06:04,930 --> 00:06:07,810
+We just saw graphically that a convexity adjustment
+
+111
+00:06:07,810 --> 00:06:10,540
+to a duration-based estimate of price changes
+
+112
+00:06:10,540 --> 00:06:13,520
+can improve that estimate.
+
+113
+00:06:13,520 --> 00:06:15,980
+The algebra that corresponds to that idea
+
+114
+00:06:15,980 --> 00:06:17,165
+is given in this equation.
+
+115
+00:06:17,165 --> 00:06:20,330
+
+
+116
+00:06:20,330 --> 00:06:25,300
+It relates the percentage change in the bond price
+
+117
+00:06:25,300 --> 00:06:28,210
+to minus the duration times the change
+
+118
+00:06:28,210 --> 00:06:32,530
+in the yield, the term that we have seen before,
+
+119
+00:06:32,530 --> 00:06:36,440
+plus a new term, which is adding one
+
+120
+00:06:36,440 --> 00:06:40,810
+half the convexity times the change in the yield squared.
+
+121
+00:06:40,810 --> 00:06:44,440
+Some of you might recognize this as a second-order Taylor series
+
+122
+00:06:44,440 --> 00:06:48,470
+expansion of the equation for the price of a bond.
+
+123
+00:06:48,470 --> 00:06:51,470
+Going back to an example that's similar to the one we looked
+
+124
+00:06:51,470 --> 00:06:55,790
+at earlier, let's approximate the percentage price change
+
+125
+00:06:55,790 --> 00:07:01,940
+for a 25-year 6% coupon bond priced to yield 9% when there's
+
+126
+00:07:01,940 --> 00:07:05,330
+a 2% increase in its yield.
+
+127
+00:07:05,330 --> 00:07:08,480
+Using the duration and convexity calculator,
+
+128
+00:07:08,480 --> 00:07:13,370
+you can verify that the modified duration is 10.62,
+
+129
+00:07:13,370 --> 00:07:20,700
+and the convexity is 182.92.
+
+130
+00:07:20,700 --> 00:07:24,690
+Plugging these values into our formula for the percentage
+
+131
+00:07:24,690 --> 00:07:29,280
+price change produces an estimated decline in price
+
+132
+00:07:29,280 --> 00:07:33,720
+of 17.58%.
+
+133
+00:07:33,720 --> 00:07:38,530
+The actual price change is 18.03%,
+
+134
+00:07:38,530 --> 00:07:40,780
+which is actually pretty close considering
+
+135
+00:07:40,780 --> 00:07:45,040
+that a 2% change in yields is a really large jump that's
+
+136
+00:07:45,040 --> 00:07:49,380
+unlikely to occur over any short time period.
+
+137
+00:07:49,380 --> 00:07:52,620
+This calculation also shows the size of the improvement
+
+138
+00:07:52,620 --> 00:07:55,560
+from including the convexity correction.
+
+139
+00:07:55,560 --> 00:08:02,790
+The duration approximation alone implies a 21.24% price drop,
+
+140
+00:08:02,790 --> 00:08:07,220
+which is more than three percentage points too large.
+

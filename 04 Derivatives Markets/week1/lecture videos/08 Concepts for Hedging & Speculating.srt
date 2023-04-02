@@ -1,0 +1,512 @@
+0
+00:00:00,000 --> 00:00:01,255
+
+
+1
+00:00:01,255 --> 00:00:03,130
+PROFESSOR: In the last segment for this week,
+
+2
+00:00:03,130 --> 00:00:05,770
+I want to turn to how the price of a forward contract
+
+3
+00:00:05,770 --> 00:00:08,260
+changes over time and its relevance
+
+4
+00:00:08,260 --> 00:00:10,310
+for hedging and speculative strategies.
+
+5
+00:00:10,310 --> 00:00:13,210
+
+
+6
+00:00:13,210 --> 00:00:16,560
+So far, we've focused on how prices of new forward contracts
+
+7
+00:00:16,560 --> 00:00:18,810
+are set.
+
+8
+00:00:18,810 --> 00:00:21,930
+We've seen that those prices imply that initially, it's
+
+9
+00:00:21,930 --> 00:00:27,280
+free to enter into a longer short position on the contract.
+
+10
+00:00:27,280 --> 00:00:30,500
+Over time, though, as market conditions change,
+
+11
+00:00:30,500 --> 00:00:35,700
+so does the value of an existing forward contract.
+
+12
+00:00:35,700 --> 00:00:38,010
+What happens to the forward price over time
+
+13
+00:00:38,010 --> 00:00:42,030
+affects the success of hedges or speculative strategies.
+
+14
+00:00:42,030 --> 00:00:43,830
+It's also important when traders want
+
+15
+00:00:43,830 --> 00:00:47,940
+to exit a contract before expiration, for instance,
+
+16
+00:00:47,940 --> 00:00:53,360
+because the asset that was being hedged has been sold.
+
+17
+00:00:53,360 --> 00:00:56,720
+A forward contract can be exited by taking an offsetting
+
+18
+00:00:56,720 --> 00:00:58,310
+forward position.
+
+19
+00:00:58,310 --> 00:01:00,800
+If you're long a contract you want to get out of,
+
+20
+00:01:00,800 --> 00:01:04,459
+you can enter the short side of the identical contract,
+
+21
+00:01:04,459 --> 00:01:07,990
+and vice versa to get out of a short position.
+
+22
+00:01:07,990 --> 00:01:10,960
+Alternatively, you can sell the contract
+
+23
+00:01:10,960 --> 00:01:14,770
+to another trader for its current value.
+
+24
+00:01:14,770 --> 00:01:17,200
+In either case, closing out the contract
+
+25
+00:01:17,200 --> 00:01:20,500
+will entail a gain or loss if the forward price has changed
+
+26
+00:01:20,500 --> 00:01:24,020
+from its original value.
+
+27
+00:01:24,020 --> 00:01:26,060
+Here's the algebra.
+
+28
+00:01:26,060 --> 00:01:29,000
+We'll call k the original forward price
+
+29
+00:01:29,000 --> 00:01:30,710
+specified in the contract.
+
+30
+00:01:30,710 --> 00:01:34,450
+We're looking at time 0.
+
+31
+00:01:34,450 --> 00:01:39,310
+The same contract, were written at a later time-- little t--
+
+32
+00:01:39,310 --> 00:01:41,740
+would have a forward price--
+
+33
+00:01:41,740 --> 00:01:43,570
+capital F, sub little t--
+
+34
+00:01:43,570 --> 00:01:46,600
+based on current market conditions and the remaining
+
+35
+00:01:46,600 --> 00:01:50,170
+maturity of the contract, which at this point is capital T,
+
+36
+00:01:50,170 --> 00:01:52,300
+minus little t.
+
+37
+00:01:52,300 --> 00:01:55,330
+By the principle of no arbitrage,
+
+38
+00:01:55,330 --> 00:01:58,780
+the value at any time T of a long position
+
+39
+00:01:58,780 --> 00:02:02,440
+is going to be the present value of the difference
+
+40
+00:02:02,440 --> 00:02:05,560
+between the current forward price
+
+41
+00:02:05,560 --> 00:02:07,150
+and the original forward price.
+
+42
+00:02:07,150 --> 00:02:10,610
+
+
+43
+00:02:10,610 --> 00:02:13,580
+A good exercise is to try to describe the training
+
+44
+00:02:13,580 --> 00:02:16,160
+strategy that generates an arbitrage
+
+45
+00:02:16,160 --> 00:02:20,340
+profit if this relationship doesn't hold.
+
+46
+00:02:20,340 --> 00:02:22,340
+A forward contract, as we know, is always
+
+47
+00:02:22,340 --> 00:02:25,830
+zero sum between the long and short contract holders.
+
+48
+00:02:25,830 --> 00:02:28,880
+So the value of the short position over time
+
+49
+00:02:28,880 --> 00:02:32,660
+will still be the negative of the value of the long position.
+
+50
+00:02:32,660 --> 00:02:35,670
+
+
+51
+00:02:35,670 --> 00:02:37,980
+Well, hedging with the forward contract
+
+52
+00:02:37,980 --> 00:02:40,200
+involves taking the opposite position
+
+53
+00:02:40,200 --> 00:02:44,770
+in the forward contract from your spot and exposure.
+
+54
+00:02:44,770 --> 00:02:47,170
+For example, say you currently own
+
+55
+00:02:47,170 --> 00:02:51,280
+100 shares of Alphabet stock as part of your portfolio,
+
+56
+00:02:51,280 --> 00:02:53,920
+and you want to lock in a current future selling
+
+57
+00:02:53,920 --> 00:02:55,480
+price for the shares.
+
+58
+00:02:55,480 --> 00:02:58,600
+You could do that by shorting a forward contract on 100
+
+59
+00:02:58,600 --> 00:03:01,360
+shares of the Alphabet stock.
+
+60
+00:03:01,360 --> 00:03:05,800
+For that hedge to be effective, the forward and spot prices
+
+61
+00:03:05,800 --> 00:03:08,140
+of the cash and forward position have
+
+62
+00:03:08,140 --> 00:03:11,140
+to move together over time.
+
+63
+00:03:11,140 --> 00:03:15,610
+The difference between the spot price and the forward price
+
+64
+00:03:15,610 --> 00:03:19,010
+is called the basis.
+
+65
+00:03:19,010 --> 00:03:20,960
+An important fact about the basis
+
+66
+00:03:20,960 --> 00:03:23,810
+is that it always goes to 0 on the expiration
+
+67
+00:03:23,810 --> 00:03:25,830
+date of a forward contract.
+
+68
+00:03:25,830 --> 00:03:28,190
+Otherwise, one could buy spot and sell
+
+69
+00:03:28,190 --> 00:03:34,050
+forward, or vice versa, and capture an arbitrage profit.
+
+70
+00:03:34,050 --> 00:03:37,550
+However, as the graph here illustrates,
+
+71
+00:03:37,550 --> 00:03:40,730
+the basis can be wide prior to expiration.
+
+72
+00:03:40,730 --> 00:03:43,970
+And there's uncertainty about how that basis is
+
+73
+00:03:43,970 --> 00:03:46,170
+going to move over time.
+
+74
+00:03:46,170 --> 00:03:48,950
+For example, a big change in the convenience yield
+
+75
+00:03:48,950 --> 00:03:52,580
+of a commodity could cause its basis to jump.
+
+76
+00:03:52,580 --> 00:03:56,480
+Also note that the basis can be positive or negative, depending
+
+77
+00:03:56,480 --> 00:03:59,740
+on market conditions.
+
+78
+00:03:59,740 --> 00:04:02,390
+When a hedge is set up that will be closed out
+
+79
+00:04:02,390 --> 00:04:06,200
+prior to contract expiration, this basis risk
+
+80
+00:04:06,200 --> 00:04:09,350
+can be quite significant, and means that the hedge may not
+
+81
+00:04:09,350 --> 00:04:12,390
+be very effective.
+
+82
+00:04:12,390 --> 00:04:17,390
+Well, this brings us to the related issue of cross hedging.
+
+83
+00:04:17,390 --> 00:04:20,570
+It's frequent that a contract in one type of security
+
+84
+00:04:20,570 --> 00:04:23,780
+or commodity is used to hedge a risk
+
+85
+00:04:23,780 --> 00:04:29,420
+exposure in a different, but related, security or commodity.
+
+86
+00:04:29,420 --> 00:04:31,610
+So for example, an electric utility
+
+87
+00:04:31,610 --> 00:04:34,280
+might hedge some of its production costs
+
+88
+00:04:34,280 --> 00:04:37,730
+using contracts on West Texas crude oil,
+
+89
+00:04:37,730 --> 00:04:40,460
+even though the oil that it uses in production
+
+90
+00:04:40,460 --> 00:04:43,920
+comes from a different source.
+
+91
+00:04:43,920 --> 00:04:45,330
+Why do a cross hedge?
+
+92
+00:04:45,330 --> 00:04:47,250
+Well, often the reason to cross hedge
+
+93
+00:04:47,250 --> 00:04:50,100
+is for liquidity and to reduce transactions costs.
+
+94
+00:04:50,100 --> 00:04:52,740
+Certain forward contracts, such as those
+
+95
+00:04:52,740 --> 00:04:56,580
+traded on futures exchanges, are more available and more liquid
+
+96
+00:04:56,580 --> 00:05:01,380
+than others, making them less expensive to transact in.
+
+97
+00:05:01,380 --> 00:05:04,360
+The disadvantage of cross hedging, as we saw,
+
+98
+00:05:04,360 --> 00:05:06,930
+is that the basis risk tends to be greater,
+
+99
+00:05:06,930 --> 00:05:10,910
+reducing the quality of the hedge.
+
+100
+00:05:10,910 --> 00:05:13,340
+In setting up a hedge using forward contracts,
+
+101
+00:05:13,340 --> 00:05:16,100
+a fundamental question is how to choose the size
+
+102
+00:05:16,100 --> 00:05:18,680
+of your forward position.
+
+103
+00:05:18,680 --> 00:05:22,710
+That question is answered by calculating a hedge ratio.
+
+104
+00:05:22,710 --> 00:05:25,500
+The hedge ratio is the relative number
+
+105
+00:05:25,500 --> 00:05:29,760
+of units of assets in the forward contract to units
+
+106
+00:05:29,760 --> 00:05:32,880
+of assets being hedged that maximizes
+
+107
+00:05:32,880 --> 00:05:36,380
+the effectiveness of the hedge.
+
+108
+00:05:36,380 --> 00:05:38,270
+In order to have the same total price
+
+109
+00:05:38,270 --> 00:05:40,550
+change in your spot in forward positions
+
+110
+00:05:40,550 --> 00:05:43,400
+to create that offset, it must be
+
+111
+00:05:43,400 --> 00:05:47,690
+that the size of the spot position multiplied
+
+112
+00:05:47,690 --> 00:05:52,830
+by the expected change in the price per unit
+
+113
+00:05:52,830 --> 00:05:57,360
+is equal to the size of the forward position
+
+114
+00:05:57,360 --> 00:06:02,430
+times the expected change in the forward price, again per unit.
+
+115
+00:06:02,430 --> 00:06:05,380
+
+
+116
+00:06:05,380 --> 00:06:10,010
+Rearranging this equation gives the hedge ratio,
+
+117
+00:06:10,010 --> 00:06:13,870
+which is the size of the spot position relative to the size
+
+118
+00:06:13,870 --> 00:06:18,040
+of the forward position in terms of the relative expected price
+
+119
+00:06:18,040 --> 00:06:20,810
+changes.
+
+120
+00:06:20,810 --> 00:06:24,590
+To implement a hedge ratio in practice,
+
+121
+00:06:24,590 --> 00:06:27,350
+you'll need to have an estimate of the expected price
+
+122
+00:06:27,350 --> 00:06:31,540
+change, both for your spot and forward positions.
+
+123
+00:06:31,540 --> 00:06:33,640
+One of the homework problems asks
+
+124
+00:06:33,640 --> 00:06:38,260
+you to do this in the context of hedging a stock position.
+
+125
+00:06:38,260 --> 00:06:41,260
+To answer it, you'll need to recall what you learned earlier
+
+126
+00:06:41,260 --> 00:06:44,350
+in the MicroMasters Program about expected stock
+
+127
+00:06:44,350 --> 00:06:47,880
+returns and the CAPM.
+

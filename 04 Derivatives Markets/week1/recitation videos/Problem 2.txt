@@ -1,0 +1,125 @@
+
+PROFESSOR: OK.
+Now, let's move on to the second problem of the recitation.
+Problem 2 states that a stock is expected
+to pay a dividend of $1 per share in two months
+and also in five months.
+The stock price is currently $50 and the risk-free rate
+of interest is 8% per annum with continuous compounding
+for all maturities.
+An investor has just taken a short position
+in a six month forward contract on the stock.
+In the first part of the question,
+we are asked what are the forward price
+and the initial value of the forward contract?
+
+The easiest way to solve this problem
+is to break it down into three steps.
+In step one, we'll use a given risk-free rate
+to find the present value of the stocks expected dividends.
+First, the notation.
+Let lowercase t denote the time in years and r
+be the continuously compounded constant risk-free rate
+expressed as a decimal.
+As we saw in Professor Lucas's first lecture,
+we can discount any cash flow arriving at time t
+back to the present using the expression PV equals
+D times the exponential of negative r times
+t on a continuous basis, where D is the cash flow,
+in this case in dollars, and PV is its present value.
+
+Deploying that definition, we can find the present value
+of the $1 dividends that we expect
+to receive in both 2 and 5 months
+as I, which equals 1 times the exponential of negative 0.08
+for the 8% risk-free rate times 2/12 for the two month dividend
+plus 1 times the exponential of negative 0.08
+times 5/12 for the five month dividend,
+which is roughly equal to $1.95.
+In step two, we can find the forward price
+of the stock using the equation we learned in Professor Lucas's
+first lecture.
+Recall from Professor Lucas's lecture
+that we can calculate the forward price of a stock
+as F0 equals PS0 minus I times the exponential of r times t,
+where F0 is the initial forward price,
+P sub S0 is the current price of the stock and t
+is the time to the maturity of the forward contract measured
+in years.
+Plugging in, PS0 equals $50, I equals $1.95,
+and t equals 0.5 for six months.
+We get that the forward price is F0
+equals 50 minus 1.954 times e to the 0.08 times
+0.5, which equals $50.01.
+Finally, in step three, we can find
+the initial value of the short position
+in the forward contract.
+This is not so hard, really.
+As Professor Lucas discussed in lecture,
+in the absence of arbitrage, all forward contracts
+must have a net present value of 0 at inception.
+Now, why is this the case?
+Well, let P sub S0 will be the current price
+of the stock that's underlying the forward contract.
+The cash flows from a short forward position
+are equivalent to those obtained by simultaneously lending
+negative P sub S0 dollars today and shorting the stock at P sub
+S0.
+Clearly, the net cash flow today from this so-called Reverse
+Cash-and-Carry strategy is 0.
+So by the Law of One Price, the net present value
+of the short position in the forward contract is also 0.
+
+In Part B, it's three months later.
+The price of the stock is now $48
+and the risk-free rate is still 8% per annum.
+What are the forward price and the value of the short position
+in the forward contract now?
+Well just like in Part A, we can go through our three steps.
+Recall that in step one, we can use the given risk-free rate
+to find the present value of the stock's expected dividends.
+Since we originally expected to receive $1 dividends
+in 2 and 5 months, now that it's three months later,
+we can expect to receive a single dividend in two months.
+The risk-free rate is still 8%, so the present value
+of this dividend is I, which equals 1 times the exponential
+of negative 0.08 times 2/12, which
+is roughly equal to $0.98.
+Now in step two, we can find the forward price
+of the stock using the equation we learned in Professor Lucas's
+first lecture.
+Suppose F sub lowercase t is the forward price
+for a contract negotiated at time lowercase t measured
+in years, P sub S lowercase t is the stock price
+at time lowercase t, and capital T
+is the time to maturity of the contract also denominated
+in years.
+In this general form, our equation for the forward price
+of a stock is now F sub lowercase t equals
+P sub S lowercase t minus I times the exponential of r
+times uppercase T. Plugging in P sub S lowercase t equals $48,
+I equals roughly $0.98, and capital T equals 0.25,
+we can find the forward price of the stock
+three months later to be 48 minus 0.9868 times
+the exponential of 0.8 times 3/12
+for three months, which is equal to $47.96.
+In our third and final step, we can
+find the value of the short position
+in the forward contract.
+Now, we can't use the trick from the first part of the question
+since we're no longer at the initiation of the contract
+but from Professor Lucas's lecture, we
+saw that the value of a short position
+in any forward contract at time lowercase t
+is given by lowercase f sub lowercase t,
+which is equal to capital F0 minus capital F sub
+t times the exponential of negative r
+times the difference between capital T and lowercase t.
+Thus, we can find the value of a short position
+in the forward contract three months later by plugging
+in capital F sub 0 equals $50.01,
+capital F sub 0.25, which we just found in step 2,
+equals $47.96, capital T equals 0.5
+for a maturity of six months, and lowercase t equals 0.25
+since we're three months into the contract, into the equation
+above, which gives us an answer of $2.01.

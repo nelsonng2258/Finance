@@ -1,0 +1,488 @@
+0
+00:00:00,000 --> 00:00:00,926
+
+
+1
+00:00:00,926 --> 00:00:04,210
+INSTRUCTOR: Let's look at an example of how forward currency
+
+2
+00:00:04,210 --> 00:00:07,360
+contracts are often used to hedge against exchange rate
+
+3
+00:00:07,360 --> 00:00:09,100
+risk.
+
+4
+00:00:09,100 --> 00:00:11,730
+Imagine that a US firm has sold a piece of equipment
+
+5
+00:00:11,730 --> 00:00:13,980
+to a German client, and the firm has
+
+6
+00:00:13,980 --> 00:00:16,710
+agreed to accept the payment of 5 million euros
+
+7
+00:00:16,710 --> 00:00:19,060
+to be paid in six months.
+
+8
+00:00:19,060 --> 00:00:22,040
+At time t when the agreement is made,
+
+9
+00:00:22,040 --> 00:00:27,490
+the exchange rate is $1.2673 USD per euro.
+
+10
+00:00:27,490 --> 00:00:30,530
+What's the risk for the US firm?
+
+11
+00:00:30,530 --> 00:00:32,960
+Well, clearly, there's exchange rate risk
+
+12
+00:00:32,960 --> 00:00:34,820
+because over the next six months,
+
+13
+00:00:34,820 --> 00:00:38,240
+euros could depreciate relative to the dollar.
+
+14
+00:00:38,240 --> 00:00:41,480
+The unhedged dollar value of the payment in six months
+
+15
+00:00:41,480 --> 00:00:45,500
+will be 5 million euros times whatever the exchange
+
+16
+00:00:45,500 --> 00:00:48,140
+rate turns out to be in six months, which
+
+17
+00:00:48,140 --> 00:00:49,130
+is a random variable.
+
+18
+00:00:49,130 --> 00:00:52,380
+
+
+19
+00:00:52,380 --> 00:00:54,210
+To hedge this exposure, the firm can
+
+20
+00:00:54,210 --> 00:00:56,220
+enter into a forward contract with a bank
+
+21
+00:00:56,220 --> 00:00:59,090
+to sell the euros forward.
+
+22
+00:00:59,090 --> 00:01:01,670
+In that contract, say that the firm
+
+23
+00:01:01,670 --> 00:01:05,690
+agrees to deliver 5 million euros in six months in exchange
+
+24
+00:01:05,690 --> 00:01:08,210
+for dollars at a pre-specified exchange
+
+25
+00:01:08,210 --> 00:01:12,650
+rate of $1.28 per euro.
+
+26
+00:01:12,650 --> 00:01:16,430
+That position can be described as the firm being short
+
+27
+00:01:16,430 --> 00:01:19,210
+the euro forward.
+
+28
+00:01:19,210 --> 00:01:22,030
+At the expiration date in six months,
+
+29
+00:01:22,030 --> 00:01:24,490
+the profit or loss on the forward contract
+
+30
+00:01:24,490 --> 00:01:28,420
+with the bank in dollars is $5 million times
+
+31
+00:01:28,420 --> 00:01:32,140
+the forward rate locked in minus the spot exchange rate
+
+32
+00:01:32,140 --> 00:01:34,255
+in six months of dollars per euros.
+
+33
+00:01:34,255 --> 00:01:37,070
+
+
+34
+00:01:37,070 --> 00:01:39,530
+The firm also receives the 5 million
+
+35
+00:01:39,530 --> 00:01:42,260
+euro payment from its client, which
+
+36
+00:01:42,260 --> 00:01:46,880
+has dollar value of 5 million euros multiplied by the spot
+
+37
+00:01:46,880 --> 00:01:50,520
+exchange rate in six months.
+
+38
+00:01:50,520 --> 00:01:53,130
+Putting the two transactions together,
+
+39
+00:01:53,130 --> 00:01:57,450
+the effect of the spot exchange rate in six months cancels out,
+
+40
+00:01:57,450 --> 00:02:01,320
+and the firm has locked in a dollar payment of $6.4 million
+
+41
+00:02:01,320 --> 00:02:09,270
+based on the forward rate of 1.28.
+
+42
+00:02:09,270 --> 00:02:12,300
+This is a good example for reviewing payoff diagrams,
+
+43
+00:02:12,300 --> 00:02:14,460
+which are often used as a tool to understand
+
+44
+00:02:14,460 --> 00:02:16,200
+the full range of possible outcomes
+
+45
+00:02:16,200 --> 00:02:19,440
+from decisions that involve a combination of derivatives
+
+46
+00:02:19,440 --> 00:02:22,020
+and other investments whose payoff also depends
+
+47
+00:02:22,020 --> 00:02:26,020
+on the value of a common underlying asset.
+
+48
+00:02:26,020 --> 00:02:29,260
+In a payoff diagram, the x-axis is a variable
+
+49
+00:02:29,260 --> 00:02:31,840
+that represents the value of the underlying asset
+
+50
+00:02:31,840 --> 00:02:34,980
+at some future point in time.
+
+51
+00:02:34,980 --> 00:02:40,260
+In this example, it represents the future spot exchange rate
+
+52
+00:02:40,260 --> 00:02:43,740
+of dollars per euro in six months.
+
+53
+00:02:43,740 --> 00:02:47,850
+The y-axis on a payoff diagram is the profit or loss
+
+54
+00:02:47,850 --> 00:02:50,640
+from a position or combination of positions
+
+55
+00:02:50,640 --> 00:02:53,300
+represented on the diagram.
+
+56
+00:02:53,300 --> 00:02:57,080
+The payoff here is denominated in dollars.
+
+57
+00:02:57,080 --> 00:03:04,780
+So the top diagram describes the original exposure,
+
+58
+00:03:04,780 --> 00:03:07,710
+which is based on the value of the receivable of 5
+
+59
+00:03:07,710 --> 00:03:12,470
+million euros in six months in dollar terms.
+
+60
+00:03:12,470 --> 00:03:17,080
+If euros are worthless at that time,
+
+61
+00:03:17,080 --> 00:03:19,720
+then the payoff will be 0.
+
+62
+00:03:19,720 --> 00:03:24,070
+As the exchange rate rises, the dollar payoff
+
+63
+00:03:24,070 --> 00:03:26,140
+rises linearly with it.
+
+64
+00:03:26,140 --> 00:03:28,740
+
+
+65
+00:03:28,740 --> 00:03:32,280
+Now let's turn to the payoff on this short forward position
+
+66
+00:03:32,280 --> 00:03:35,250
+in euros.
+
+67
+00:03:35,250 --> 00:03:38,430
+From the formula we have for profit or loss,
+
+68
+00:03:38,430 --> 00:03:42,720
+at a spot exchange rate of $1.28 per euro,
+
+69
+00:03:42,720 --> 00:03:46,260
+the forward rate we assumed was set in the contract,
+
+70
+00:03:46,260 --> 00:03:47,415
+the payoff will be 0.
+
+71
+00:03:47,415 --> 00:03:51,330
+
+
+72
+00:03:51,330 --> 00:03:54,660
+For spot exchange rates above 1.28,
+
+73
+00:03:54,660 --> 00:03:59,960
+the forward contract entails a loss and vice
+
+74
+00:03:59,960 --> 00:04:07,100
+versa for spot exchange rates below 1.28.
+
+75
+00:04:07,100 --> 00:04:10,460
+For a position that has multiple components that all depend
+
+76
+00:04:10,460 --> 00:04:12,860
+on the same underlying variable, we
+
+77
+00:04:12,860 --> 00:04:16,040
+can always find the net payoff by vertically
+
+78
+00:04:16,040 --> 00:04:20,240
+adding the component payoffs on a payoff diagram.
+
+79
+00:04:20,240 --> 00:04:23,330
+In this case, adding together the payoffs
+
+80
+00:04:23,330 --> 00:04:26,420
+on the original exposure with the payoffs
+
+81
+00:04:26,420 --> 00:04:30,590
+on the forward contract at each point on the x-axis
+
+82
+00:04:30,590 --> 00:04:33,620
+generates the net payoff illustrated
+
+83
+00:04:33,620 --> 00:04:35,765
+in the hedged position diagram.
+
+84
+00:04:35,765 --> 00:04:43,780
+
+
+85
+00:04:43,780 --> 00:04:46,030
+The forward contract gains or losses
+
+86
+00:04:46,030 --> 00:04:50,320
+exactly offset the losses or gains on the original exposure,
+
+87
+00:04:50,320 --> 00:04:55,600
+leaving the firm with a certain dollar payoff of $6.4 million
+
+88
+00:04:55,600 --> 00:04:59,065
+that we calculated algebraically on the previous slide.
+
+89
+00:04:59,065 --> 00:05:01,760
+
+
+90
+00:05:01,760 --> 00:05:04,150
+Well, you might wonder what could go wrong here.
+
+91
+00:05:04,150 --> 00:05:07,480
+Is this payoff really 100% safe?
+
+92
+00:05:07,480 --> 00:05:10,990
+The answer is that it is as long as all of the contracts
+
+93
+00:05:10,990 --> 00:05:13,390
+are actually honored.
+
+94
+00:05:13,390 --> 00:05:15,730
+However, if the German client defaults,
+
+95
+00:05:15,730 --> 00:05:17,560
+the firm is still obligated to make good
+
+96
+00:05:17,560 --> 00:05:19,060
+on its forward contract.
+
+97
+00:05:19,060 --> 00:05:21,770
+And it would lose money on the forward contract
+
+98
+00:05:21,770 --> 00:05:26,320
+if the dollar were to appreciate.
+
+99
+00:05:26,320 --> 00:05:28,360
+In general, it's impossible to know
+
+100
+00:05:28,360 --> 00:05:31,060
+when someone entering a forward contract
+
+101
+00:05:31,060 --> 00:05:33,220
+or some other derivative position
+
+102
+00:05:33,220 --> 00:05:36,160
+is hedging or speculating without having
+
+103
+00:05:36,160 --> 00:05:39,170
+some additional information.
+
+104
+00:05:39,170 --> 00:05:42,410
+A derivatives position functions as a hedge
+
+105
+00:05:42,410 --> 00:05:45,200
+when it offsets the risk of another position
+
+106
+00:05:45,200 --> 00:05:49,100
+in an investor's portfolio, as when the exporter here
+
+107
+00:05:49,100 --> 00:05:53,336
+was going to be long euros from the sale of the goods.
+
+108
+00:05:53,336 --> 00:05:59,040
+It's speculation when there's no offsetting exposure.
+
+109
+00:05:59,040 --> 00:06:02,550
+Speculators serve an important function in derivatives markets
+
+110
+00:06:02,550 --> 00:06:04,830
+by helping to make it possible for hedgers
+
+111
+00:06:04,830 --> 00:06:08,190
+to protect themselves even when there aren't enough
+
+112
+00:06:08,190 --> 00:06:10,860
+other hedgers with an opposite exposure
+
+113
+00:06:10,860 --> 00:06:14,870
+to take the other sides of the contract.
+
+114
+00:06:14,870 --> 00:06:17,420
+The diagram shown here is again the payoff
+
+115
+00:06:17,420 --> 00:06:19,940
+on a short forward contract in euros.
+
+116
+00:06:19,940 --> 00:06:23,480
+Taken alone, it represents a speculative bet
+
+117
+00:06:23,480 --> 00:06:27,070
+that the value of euro will fall against the dollar.
+
+118
+00:06:27,070 --> 00:06:29,560
+As we'll see next, this is effectively
+
+119
+00:06:29,560 --> 00:06:32,320
+the short side of a highly-levered position
+
+120
+00:06:32,320 --> 00:06:33,500
+in euros.
+
+121
+00:06:33,500 --> 00:06:34,000
+
+

@@ -1,0 +1,504 @@
+0
+00:00:00,000 --> 00:00:01,400
+
+
+1
+00:00:01,400 --> 00:00:03,830
+PROFESSOR: Before we move on, it's worthwhile for us
+
+2
+00:00:03,830 --> 00:00:06,800
+to go over some of the mechanics of futures markets in a little
+
+3
+00:00:06,800 --> 00:00:09,160
+more detail.
+
+4
+00:00:09,160 --> 00:00:10,920
+Remember that traders and futures
+
+5
+00:00:10,920 --> 00:00:14,370
+have to post margin that serves as insurance that they'll
+
+6
+00:00:14,370 --> 00:00:17,810
+honor their commitments under the contract.
+
+7
+00:00:17,810 --> 00:00:19,910
+Gains and losses are settled daily
+
+8
+00:00:19,910 --> 00:00:24,200
+between the long and short sides of the contract.
+
+9
+00:00:24,200 --> 00:00:27,590
+Example 2.5 here shows how this works
+
+10
+00:00:27,590 --> 00:00:32,920
+in the context of a December gold futures contract.
+
+11
+00:00:32,920 --> 00:00:36,490
+Let's consider an investor who takes a long position in two
+
+12
+00:00:36,490 --> 00:00:38,830
+of these contracts.
+
+13
+00:00:38,830 --> 00:00:42,100
+Assume that each contract is for 100 ounces of gold,
+
+14
+00:00:42,100 --> 00:00:46,270
+and that the futures price is $1,250 per ounce
+
+15
+00:00:46,270 --> 00:00:50,790
+on the date when the investor enters the contract.
+
+16
+00:00:50,790 --> 00:00:53,070
+The initial margin requirement is
+
+17
+00:00:53,070 --> 00:00:57,160
+set by the exchange at $6,000 per contract.
+
+18
+00:00:57,160 --> 00:01:03,390
+So the margin requirement initially is $12,000 in total.
+
+19
+00:01:03,390 --> 00:01:06,240
+There's also something called a maintenance margin
+
+20
+00:01:06,240 --> 00:01:11,190
+of $4,500 per contract, which represents the minimum that
+
+21
+00:01:11,190 --> 00:01:13,320
+must be maintained in each trader's margin
+
+22
+00:01:13,320 --> 00:01:14,475
+account over time.
+
+23
+00:01:14,475 --> 00:01:17,200
+
+
+24
+00:01:17,200 --> 00:01:19,180
+More generally, margin requirements
+
+25
+00:01:19,180 --> 00:01:23,260
+are going to differ across different types of contracts,
+
+26
+00:01:23,260 --> 00:01:25,660
+and they'll be set depending on the volatility
+
+27
+00:01:25,660 --> 00:01:30,070
+of the underlying asset and the contract size.
+
+28
+00:01:30,070 --> 00:01:32,290
+This table shows how the balance in the margin
+
+29
+00:01:32,290 --> 00:01:36,040
+account evolves over time is a function of a particular path
+
+30
+00:01:36,040 --> 00:01:39,280
+of futures settlement prices.
+
+31
+00:01:39,280 --> 00:01:45,250
+At the end of the first day, the price has decreased to $1,241,
+
+32
+00:01:45,250 --> 00:01:53,160
+from the initial price of $1,250 per ounce.
+
+33
+00:01:53,160 --> 00:01:56,300
+The loss on a long position is the difference
+
+34
+00:01:56,300 --> 00:02:02,570
+of $1,250 minus $1,241, times the 100 ounces in a contract,
+
+35
+00:02:02,570 --> 00:02:04,970
+or $900 per contract.
+
+36
+00:02:04,970 --> 00:02:09,080
+The total loss is $1,800 then, on the two contracts.
+
+37
+00:02:09,080 --> 00:02:13,720
+
+
+38
+00:02:13,720 --> 00:02:15,880
+Correspondingly, the margin balance
+
+39
+00:02:15,880 --> 00:02:23,930
+goes from the initial $12,000 down to $10,200, corresponding
+
+40
+00:02:23,930 --> 00:02:27,780
+to the $1,800 loss.
+
+41
+00:02:27,780 --> 00:02:31,710
+The remaining $10,200 is higher than the required
+
+42
+00:02:31,710 --> 00:02:34,740
+total maintenance margin of $9,000,
+
+43
+00:02:34,740 --> 00:02:39,730
+so no additional funds are required.
+
+44
+00:02:39,730 --> 00:02:45,840
+Now let's go forward to day six and assume the settlement price
+
+45
+00:02:45,840 --> 00:02:50,350
+is $1,236.20 per ounce.
+
+46
+00:02:50,350 --> 00:02:57,020
+That implies a margin balance of $9,240.
+
+47
+00:02:57,020 --> 00:03:00,530
+That's also consistent with subtracting the cumulative loss
+
+48
+00:03:00,530 --> 00:03:04,890
+up to that date from the initial margin.
+
+49
+00:03:04,890 --> 00:03:08,910
+Well now, a further price drop on day seven
+
+50
+00:03:08,910 --> 00:03:14,320
+implies a further loss of $1,260.
+
+51
+00:03:14,320 --> 00:03:20,480
+This brings the margin account down to $7,980,
+
+52
+00:03:20,480 --> 00:03:26,160
+and that's below the maintenance margin of $9,000.
+
+53
+00:03:26,160 --> 00:03:28,320
+To maintain an open position, the trader
+
+54
+00:03:28,320 --> 00:03:33,270
+has to deposit an additional $4,020 into the margin account
+
+55
+00:03:33,270 --> 00:03:41,200
+to restore it to the initial margin requirement of $12,000.
+
+56
+00:03:41,200 --> 00:03:43,630
+The margin account continues to rise and fall
+
+57
+00:03:43,630 --> 00:03:46,690
+with the price of gold and you can
+
+58
+00:03:46,690 --> 00:03:50,770
+imagine the position is closed out on day 16
+
+59
+00:03:50,770 --> 00:03:57,710
+at the then current price of $1,226.90 per ounce.
+
+60
+00:03:57,710 --> 00:04:00,220
+The trader withdraws the remaining money
+
+61
+00:04:00,220 --> 00:04:01,180
+in the margin account.
+
+62
+00:04:01,180 --> 00:04:06,950
+
+
+63
+00:04:06,950 --> 00:04:09,560
+We've seen that futures exchanges, which
+
+64
+00:04:09,560 --> 00:04:12,560
+serve as clearing houses and central counterparties,
+
+65
+00:04:12,560 --> 00:04:17,450
+or CCPs, play a central role in futures markets.
+
+66
+00:04:17,450 --> 00:04:20,420
+This diagram goes a little more deeply into the structure
+
+67
+00:04:20,420 --> 00:04:22,880
+of a futures trade.
+
+68
+00:04:22,880 --> 00:04:25,760
+A retail futures trader would typically place a buy
+
+69
+00:04:25,760 --> 00:04:30,380
+or sell order through a broker, who in turn would submit it
+
+70
+00:04:30,380 --> 00:04:32,480
+to a clearing member.
+
+71
+00:04:32,480 --> 00:04:35,570
+The clearing house member, which is often
+
+72
+00:04:35,570 --> 00:04:37,760
+a large financial institution, would
+
+73
+00:04:37,760 --> 00:04:40,070
+execute the trade via the clearing house
+
+74
+00:04:40,070 --> 00:04:42,800
+with another clearing member, representing
+
+75
+00:04:42,800 --> 00:04:48,170
+the client wanting to enter the other side of the same trade.
+
+76
+00:04:48,170 --> 00:04:51,020
+The margin accounts would be kept in safekeeping
+
+77
+00:04:51,020 --> 00:04:53,680
+at the clearing house.
+
+78
+00:04:53,680 --> 00:04:56,380
+Default risk is minimal, not only
+
+79
+00:04:56,380 --> 00:04:58,030
+because of the margin accounts, which
+
+80
+00:04:58,030 --> 00:05:00,700
+we've talked about before, but also
+
+81
+00:05:00,700 --> 00:05:03,460
+because of the added protection from capital reserves
+
+82
+00:05:03,460 --> 00:05:07,210
+held by the clearing house and the contractual obligation
+
+83
+00:05:07,210 --> 00:05:09,730
+of clearing members to absorb residual losses.
+
+84
+00:05:09,730 --> 00:05:12,710
+
+
+85
+00:05:12,710 --> 00:05:16,760
+During the severe 2008 financial crisis,
+
+86
+00:05:16,760 --> 00:05:19,970
+heightened counterparty risk and concern about default
+
+87
+00:05:19,970 --> 00:05:25,270
+caused severe market disruptions and price spikes.
+
+88
+00:05:25,270 --> 00:05:28,090
+To try to avoid those problems arising in the future,
+
+89
+00:05:28,090 --> 00:05:30,970
+regulators required that many common derivatives
+
+90
+00:05:30,970 --> 00:05:34,390
+transactions, that traditionally had been conducted
+
+91
+00:05:34,390 --> 00:05:37,450
+in bilateral over-the-counter markets,
+
+92
+00:05:37,450 --> 00:05:39,520
+be moved into clearinghouses where
+
+93
+00:05:39,520 --> 00:05:42,340
+default risk is much lower.
+
+94
+00:05:42,340 --> 00:05:46,730
+Those changes have probably made the markets safer overall.
+
+95
+00:05:46,730 --> 00:05:48,770
+However, the concentration of trades
+
+96
+00:05:48,770 --> 00:05:51,890
+into a limited number of large clearing houses
+
+97
+00:05:51,890 --> 00:05:54,530
+has made those institutions themselves
+
+98
+00:05:54,530 --> 00:05:57,680
+a source of systemic risk and a target
+
+99
+00:05:57,680 --> 00:05:59,525
+for tighter regulatory scrutiny.
+
+100
+00:05:59,525 --> 00:06:02,930
+
+
+101
+00:06:02,930 --> 00:06:06,380
+I've emphasized that futures contracts are a particular type
+
+102
+00:06:06,380 --> 00:06:08,730
+of forward contract.
+
+103
+00:06:08,730 --> 00:06:10,620
+A natural question you might have
+
+104
+00:06:10,620 --> 00:06:12,750
+is whether the special institutions
+
+105
+00:06:12,750 --> 00:06:16,470
+of futures markets, particularly the requirements of posting
+
+106
+00:06:16,470 --> 00:06:19,020
+margin and marking to market daily,
+
+107
+00:06:19,020 --> 00:06:22,530
+has any effect on the relative price of otherwise similar
+
+108
+00:06:22,530 --> 00:06:25,830
+forward and futures contracts.
+
+109
+00:06:25,830 --> 00:06:28,110
+As a practical matter, the formulas
+
+110
+00:06:28,110 --> 00:06:30,540
+that we derive for the price and forward contracts
+
+111
+00:06:30,540 --> 00:06:34,600
+are commonly used for futures contracts too.
+
+112
+00:06:34,600 --> 00:06:37,390
+Theoretically, one can prove that the two prices
+
+113
+00:06:37,390 --> 00:06:40,000
+should be identical in a constant interest rate
+
+114
+00:06:40,000 --> 00:06:42,410
+environment.
+
+115
+00:06:42,410 --> 00:06:44,180
+When interest rates aren't constant,
+
+116
+00:06:44,180 --> 00:06:47,630
+small differences arise because of margin account dynamics
+
+117
+00:06:47,630 --> 00:06:50,510
+and the correlation between the value of the underlying asset
+
+118
+00:06:50,510 --> 00:06:52,400
+and interest rates.
+
+119
+00:06:52,400 --> 00:06:55,700
+Those differences are greater in high interest rate environments
+
+120
+00:06:55,700 --> 00:06:58,070
+and smaller when forward contracts also
+
+121
+00:06:58,070 --> 00:06:59,870
+are collateralized.
+
+122
+00:06:59,870 --> 00:07:02,210
+For the purpose of this class, and also
+
+123
+00:07:02,210 --> 00:07:05,120
+in most practical situations, the prices
+
+124
+00:07:05,120 --> 00:07:08,470
+can be treated as essentially identical.
+
+125
+00:07:08,470 --> 00:07:09,000
+
+

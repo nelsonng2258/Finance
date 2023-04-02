@@ -1,0 +1,504 @@
+0
+00:00:00,000 --> 00:00:00,920
+
+
+1
+00:00:00,920 --> 00:00:01,850
+PROFESSOR: OK.
+
+2
+00:00:01,850 --> 00:00:06,970
+Now, let's move on to the second problem of the recitation.
+
+3
+00:00:06,970 --> 00:00:09,790
+Problem 2 states that a stock is expected
+
+4
+00:00:09,790 --> 00:00:13,000
+to pay a dividend of $1 per share in two months
+
+5
+00:00:13,000 --> 00:00:15,220
+and also in five months.
+
+6
+00:00:15,220 --> 00:00:18,670
+The stock price is currently $50 and the risk-free rate
+
+7
+00:00:18,670 --> 00:00:22,840
+of interest is 8% per annum with continuous compounding
+
+8
+00:00:22,840 --> 00:00:24,580
+for all maturities.
+
+9
+00:00:24,580 --> 00:00:27,160
+An investor has just taken a short position
+
+10
+00:00:27,160 --> 00:00:31,250
+in a six month forward contract on the stock.
+
+11
+00:00:31,250 --> 00:00:32,700
+In the first part of the question,
+
+12
+00:00:32,700 --> 00:00:35,150
+we are asked what are the forward price
+
+13
+00:00:35,150 --> 00:00:37,235
+and the initial value of the forward contract?
+
+14
+00:00:37,235 --> 00:00:40,630
+
+
+15
+00:00:40,630 --> 00:00:42,670
+The easiest way to solve this problem
+
+16
+00:00:42,670 --> 00:00:45,530
+is to break it down into three steps.
+
+17
+00:00:45,530 --> 00:00:48,370
+In step one, we'll use a given risk-free rate
+
+18
+00:00:48,370 --> 00:00:52,740
+to find the present value of the stocks expected dividends.
+
+19
+00:00:52,740 --> 00:00:54,240
+First, the notation.
+
+20
+00:00:54,240 --> 00:00:57,840
+Let lowercase t denote the time in years and r
+
+21
+00:00:57,840 --> 00:01:00,780
+be the continuously compounded constant risk-free rate
+
+22
+00:01:00,780 --> 00:01:02,670
+expressed as a decimal.
+
+23
+00:01:02,670 --> 00:01:05,319
+As we saw in Professor Lucas's first lecture,
+
+24
+00:01:05,319 --> 00:01:08,850
+we can discount any cash flow arriving at time t
+
+25
+00:01:08,850 --> 00:01:12,900
+back to the present using the expression PV equals
+
+26
+00:01:12,900 --> 00:01:16,170
+D times the exponential of negative r times
+
+27
+00:01:16,170 --> 00:01:20,190
+t on a continuous basis, where D is the cash flow,
+
+28
+00:01:20,190 --> 00:01:23,595
+in this case in dollars, and PV is its present value.
+
+29
+00:01:23,595 --> 00:01:26,350
+
+
+30
+00:01:26,350 --> 00:01:30,070
+Deploying that definition, we can find the present value
+
+31
+00:01:30,070 --> 00:01:32,530
+of the $1 dividends that we expect
+
+32
+00:01:32,530 --> 00:01:34,630
+to receive in both 2 and 5 months
+
+33
+00:01:34,630 --> 00:01:42,760
+as I, which equals 1 times the exponential of negative 0.08
+
+34
+00:01:42,760 --> 00:01:48,640
+for the 8% risk-free rate times 2/12 for the two month dividend
+
+35
+00:01:48,640 --> 00:01:53,470
+plus 1 times the exponential of negative 0.08
+
+36
+00:01:53,470 --> 00:01:56,840
+times 5/12 for the five month dividend,
+
+37
+00:01:56,840 --> 00:02:02,430
+which is roughly equal to $1.95.
+
+38
+00:02:02,430 --> 00:02:05,190
+In step two, we can find the forward price
+
+39
+00:02:05,190 --> 00:02:08,639
+of the stock using the equation we learned in Professor Lucas's
+
+40
+00:02:08,639 --> 00:02:10,320
+first lecture.
+
+41
+00:02:10,320 --> 00:02:12,510
+Recall from Professor Lucas's lecture
+
+42
+00:02:12,510 --> 00:02:14,790
+that we can calculate the forward price of a stock
+
+43
+00:02:14,790 --> 00:02:23,250
+as F0 equals PS0 minus I times the exponential of r times t,
+
+44
+00:02:23,250 --> 00:02:26,430
+where F0 is the initial forward price,
+
+45
+00:02:26,430 --> 00:02:30,390
+P sub S0 is the current price of the stock and t
+
+46
+00:02:30,390 --> 00:02:33,360
+is the time to the maturity of the forward contract measured
+
+47
+00:02:33,360 --> 00:02:34,950
+in years.
+
+48
+00:02:34,950 --> 00:02:41,880
+Plugging in, PS0 equals $50, I equals $1.95,
+
+49
+00:02:41,880 --> 00:02:45,630
+and t equals 0.5 for six months.
+
+50
+00:02:45,630 --> 00:02:48,600
+We get that the forward price is F0
+
+51
+00:02:48,600 --> 00:02:55,710
+equals 50 minus 1.954 times e to the 0.08 times
+
+52
+00:02:55,710 --> 00:03:02,850
+0.5, which equals $50.01.
+
+53
+00:03:02,850 --> 00:03:05,790
+Finally, in step three, we can find
+
+54
+00:03:05,790 --> 00:03:07,890
+the initial value of the short position
+
+55
+00:03:07,890 --> 00:03:09,850
+in the forward contract.
+
+56
+00:03:09,850 --> 00:03:11,610
+This is not so hard, really.
+
+57
+00:03:11,610 --> 00:03:13,860
+As Professor Lucas discussed in lecture,
+
+58
+00:03:13,860 --> 00:03:17,190
+in the absence of arbitrage, all forward contracts
+
+59
+00:03:17,190 --> 00:03:21,100
+must have a net present value of 0 at inception.
+
+60
+00:03:21,100 --> 00:03:23,020
+Now, why is this the case?
+
+61
+00:03:23,020 --> 00:03:25,170
+Well, let P sub S0 will be the current price
+
+62
+00:03:25,170 --> 00:03:28,110
+of the stock that's underlying the forward contract.
+
+63
+00:03:28,110 --> 00:03:31,110
+The cash flows from a short forward position
+
+64
+00:03:31,110 --> 00:03:34,680
+are equivalent to those obtained by simultaneously lending
+
+65
+00:03:34,680 --> 00:03:39,780
+negative P sub S0 dollars today and shorting the stock at P sub
+
+66
+00:03:39,780 --> 00:03:41,490
+S0.
+
+67
+00:03:41,490 --> 00:03:45,180
+Clearly, the net cash flow today from this so-called Reverse
+
+68
+00:03:45,180 --> 00:03:47,760
+Cash-and-Carry strategy is 0.
+
+69
+00:03:47,760 --> 00:03:50,880
+So by the Law of One Price, the net present value
+
+70
+00:03:50,880 --> 00:03:54,240
+of the short position in the forward contract is also 0.
+
+71
+00:03:54,240 --> 00:03:57,860
+
+
+72
+00:03:57,860 --> 00:04:00,440
+In Part B, it's three months later.
+
+73
+00:04:00,440 --> 00:04:03,020
+The price of the stock is now $48
+
+74
+00:04:03,020 --> 00:04:06,410
+and the risk-free rate is still 8% per annum.
+
+75
+00:04:06,410 --> 00:04:09,200
+What are the forward price and the value of the short position
+
+76
+00:04:09,200 --> 00:04:11,240
+in the forward contract now?
+
+77
+00:04:11,240 --> 00:04:15,740
+Well just like in Part A, we can go through our three steps.
+
+78
+00:04:15,740 --> 00:04:19,339
+Recall that in step one, we can use the given risk-free rate
+
+79
+00:04:19,339 --> 00:04:23,580
+to find the present value of the stock's expected dividends.
+
+80
+00:04:23,580 --> 00:04:26,970
+Since we originally expected to receive $1 dividends
+
+81
+00:04:26,970 --> 00:04:30,960
+in 2 and 5 months, now that it's three months later,
+
+82
+00:04:30,960 --> 00:04:35,230
+we can expect to receive a single dividend in two months.
+
+83
+00:04:35,230 --> 00:04:38,370
+The risk-free rate is still 8%, so the present value
+
+84
+00:04:38,370 --> 00:04:43,560
+of this dividend is I, which equals 1 times the exponential
+
+85
+00:04:43,560 --> 00:04:47,850
+of negative 0.08 times 2/12, which
+
+86
+00:04:47,850 --> 00:04:53,220
+is roughly equal to $0.98.
+
+87
+00:04:53,220 --> 00:04:55,890
+Now in step two, we can find the forward price
+
+88
+00:04:55,890 --> 00:04:59,010
+of the stock using the equation we learned in Professor Lucas's
+
+89
+00:04:59,010 --> 00:05:00,820
+first lecture.
+
+90
+00:05:00,820 --> 00:05:04,200
+Suppose F sub lowercase t is the forward price
+
+91
+00:05:04,200 --> 00:05:07,710
+for a contract negotiated at time lowercase t measured
+
+92
+00:05:07,710 --> 00:05:12,060
+in years, P sub S lowercase t is the stock price
+
+93
+00:05:12,060 --> 00:05:15,300
+at time lowercase t, and capital T
+
+94
+00:05:15,300 --> 00:05:18,960
+is the time to maturity of the contract also denominated
+
+95
+00:05:18,960 --> 00:05:20,340
+in years.
+
+96
+00:05:20,340 --> 00:05:23,640
+In this general form, our equation for the forward price
+
+97
+00:05:23,640 --> 00:05:27,690
+of a stock is now F sub lowercase t equals
+
+98
+00:05:27,690 --> 00:05:33,060
+P sub S lowercase t minus I times the exponential of r
+
+99
+00:05:33,060 --> 00:05:40,290
+times uppercase T. Plugging in P sub S lowercase t equals $48,
+
+100
+00:05:40,290 --> 00:05:46,380
+I equals roughly $0.98, and capital T equals 0.25,
+
+101
+00:05:46,380 --> 00:05:48,570
+we can find the forward price of the stock
+
+102
+00:05:48,570 --> 00:05:55,350
+three months later to be 48 minus 0.9868 times
+
+103
+00:05:55,350 --> 00:05:59,040
+the exponential of 0.8 times 3/12
+
+104
+00:05:59,040 --> 00:06:06,130
+for three months, which is equal to $47.96.
+
+105
+00:06:06,130 --> 00:06:08,260
+In our third and final step, we can
+
+106
+00:06:08,260 --> 00:06:10,300
+find the value of the short position
+
+107
+00:06:10,300 --> 00:06:12,890
+in the forward contract.
+
+108
+00:06:12,890 --> 00:06:16,330
+Now, we can't use the trick from the first part of the question
+
+109
+00:06:16,330 --> 00:06:19,510
+since we're no longer at the initiation of the contract
+
+110
+00:06:19,510 --> 00:06:22,060
+but from Professor Lucas's lecture, we
+
+111
+00:06:22,060 --> 00:06:23,800
+saw that the value of a short position
+
+112
+00:06:23,800 --> 00:06:26,830
+in any forward contract at time lowercase t
+
+113
+00:06:26,830 --> 00:06:31,660
+is given by lowercase f sub lowercase t,
+
+114
+00:06:31,660 --> 00:06:35,470
+which is equal to capital F0 minus capital F sub
+
+115
+00:06:35,470 --> 00:06:38,920
+t times the exponential of negative r
+
+116
+00:06:38,920 --> 00:06:43,570
+times the difference between capital T and lowercase t.
+
+117
+00:06:43,570 --> 00:06:46,390
+Thus, we can find the value of a short position
+
+118
+00:06:46,390 --> 00:06:49,270
+in the forward contract three months later by plugging
+
+119
+00:06:49,270 --> 00:06:54,280
+in capital F sub 0 equals $50.01,
+
+120
+00:06:54,280 --> 00:06:59,260
+capital F sub 0.25, which we just found in step 2,
+
+121
+00:06:59,260 --> 00:07:04,900
+equals $47.96, capital T equals 0.5
+
+122
+00:07:04,900 --> 00:07:10,120
+for a maturity of six months, and lowercase t equals 0.25
+
+123
+00:07:10,120 --> 00:07:13,420
+since we're three months into the contract, into the equation
+
+124
+00:07:13,420 --> 00:07:17,760
+above, which gives us an answer of $2.01.
+
+125
+00:07:17,760 --> 00:07:21,000
+
+

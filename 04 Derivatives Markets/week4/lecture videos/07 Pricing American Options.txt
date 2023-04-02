@@ -1,0 +1,196 @@
+
+INSTRUCTOR: An American option differs
+from an otherwise identical European option
+in that it can be exercised at any time
+on or before its expiration date.
+That additional flexibility implies that an American option
+has to be at least as valuable as its European counterpart,
+and it may be more valuable.
+American options are very common, as this list shows.
+I'll highlight just a few of these items, many of which
+we'll cover in more detail later in the class.
+Individual exchange traded stock options are typically American,
+as are some index options such as the one on the S&P 100
+that's traded at the Chicago Board Options Exchange.
+An option to enter into an interest rate swap
+at a preset fixed rate is called a swaption.
+This very popular type of option is
+sold in the over-the-counter market,
+and is generally American style.
+Embedded options, as the name suggests,
+are embedded in other contracts.
+These are very common.
+American style embedded options are
+found in some but not all callable and puttable bonds,
+in mortgages, and in convertible bonds.
+The term real options refers to options relating
+to physical investment choices, such as the option
+to wait to close down a plant, or to wait before starting
+to construct a new building.
+These are often analyzed using options pricing methods
+for American style options.
+Although American options can be early exercised,
+we know in some instances that they shouldn't be.
+Knowing that is helpful because it allows
+us to use European options pricing formulas
+like the Black-Scholes-Merton model
+for some American options.
+One prominent example is an American call
+on a stock that won't pay a dividend before the expiration
+date.
+Such an option is always worth more alive than dead.
+The intuition for this is that early exercise
+means we make the payment of the strike price
+sooner, which increases its present value, and that's bad.
+We also lose the protection from the risk
+that the value falls below the strike price.
+In other words, exercising the option
+early extinguishes the valuable insurance value of the option.
+Well what if the option is in-the-money
+and you don't want to keep the option for any longer?
+You still shouldn't exercise it.
+Instead, you should just sell it in the open market.
+Now that analysis for an American call
+changes for stocks that will pay a dividend
+before the expiration of the option.
+Now waiting to exercise also has two disadvantages.
+If you wait to exercise, you don't get the dividend,
+and the stock price is going to drop
+by the amount of the dividend, making it less likely
+that the call is going to be in the money in the future.
+Early exercise avoids these disadvantages,
+but at the cost of time value and losing the remaining option
+value.
+Therefore, what the optimal decision
+will be depends on the specifics of the situation.
+For American put options, whether or not
+to early exercise also depends on several factors that
+pull in different directions, so that the answer
+will differ depending on the specific situation.
+The advantage of early exercising
+is that we receive the strike price K sooner,
+which, because of time value, increases the present value
+of the payment.
+An offsetting disadvantage is that we
+lose the right to any dividends paid after we exercise,
+but before expiration.
+Furthermore, we destroy the insurance value
+of the put option.
+That's described on the side as having given up
+a stock for K that may have been worth more than K
+in the future.
+As for the call option on a dividend paying stock,
+we'll have to figure out the best strategy involving
+whether and when to early exercise at the same time
+as we're valuing the option.
+To start to see how to incorporate
+the strategic decision of whether and when
+to exercise into evaluation framework,
+consider this example.
+It's May 11, and your longest September put option
+on the S&P 100 index with a strike price of K equals 740.
+The S&P 100 on may 11th stands at 689.83.
+The option is currently in-the-money by a little more
+than 7% of the index value.
+Do you exercise immediately or keep the option alive?
+The general procedure is going to be
+to compare the value of immediate exercise, which
+in this case is 7% of the index value,
+with the value of the option if it's kept alive
+under the current conditions.
+The decision rule then is to exercise
+if and only if the payoff from exercising immediately--
+the strike price minus the stock index price--
+exceeds the discounted value of the future distribution
+of payoffs if you wait.
+Valuing options on binomial trees
+makes it easy to systematically evaluate the optimal exercise
+strategy in this situation.
+Here's a detailed example of how to do this.
+The binomial tree here is based on a stock
+that's currently valued at 100.
+Each time step of the tree represents six months,
+so the tree covers a total period of one year.
+The interest rate is 2% on a continuous basis.
+The vertical spacing of the nodes on the tree
+has been chosen to match a stock price volatility of 30%.
+We'll talk more about how to do this sort of calibration
+next week, but for now we'll just take the stock price tree
+as given.
+Also, we'll take as given the implication of the assumptions
+used here to construct the tree that the risk-neutral
+probability of an up move on the tree, q*,
+is equal to 0.4707 at every single node of the tree.
+The tree was constructed by multiplying each previous stock
+price by an up multiplier of 1.2363,
+and to get the next down node by multiplying the stock
+price by 1 over 1.2363.
+Now consider a put option with an at-the-money strike
+price of 100.
+We'll actually start here by pricing the European version
+of the option, which doesn't require any strategic decision
+about early exercise, but serves as a review of pricing
+European options on a two step tree.
+As always, we start at the final date,
+i equals 2 here, and compute the payoffs at each node.
+If the stock price is 152.847, or 100,
+the option is out-of or at-the-money
+and so is worth nothing.
+At the bottom node, 100 minus 65.425
+equals 34.575, which is the value
+of the put option at that node.
+
+Now we can use the risk neutral probability, q*, of 0.4707,
+and the risk-free rate of 2% to find the discounted value
+of the put at each node working backwards pairwise
+on the subtrees.
+That exercise implies a time 0 value of the put of 9.495.
+Now let's consider the value of the put option
+if it's American, with everything else the same
+as just described.
+At expiration at i equals 2, the payoffs
+are the same as with the European case,
+which is 0 on the top and middle nodes,
+and 34.575 on the down down node.
+Stepping back to i equals 1, we need
+to compare the value of waiting with the value
+of immediate exercise.
+The value of waiting at each node
+can be read off of the calculations
+we did for the European version of the option
+on the last slide.
+Turning to the i equals 1 up node,
+the stock price of 123 exceeds the strike price,
+and the put option is out-of-the-money so we would
+never early exercise it.
+At the i equals 1 down node, here's
+where things get interesting.
+If we exercise immediately, we get the strike of 100
+minus the stock price of 80.886, for an immediate payoff
+of 19.114.
+If we wait, the value is less at 18.119.
+We conclude that it's better to exercise immediately.
+Finally, we can go back to time 0,
+where the option is at-the-money and so it's
+clearly better to wait.
+We find the time 0 price to be 10.017
+based on knowing that we won't early exercise at the time 1
+up node but that we will early exercise at the time 1
+down node.
+The calculations for i equals zero and i
+equals 1 are highlighted on this sub tree for you to look at.
+At each node, we compare the value of immediate exercise
+with the value of keeping the option alive.
+Note the value of keeping an option alive
+will depend on what we concluded on any future nodes
+about whether or not to early exercise.
+By working backwards, we're able to take into account
+all of the relevant future strategic decisions
+on each node.
+Comparing the results, the American option
+is worth 10.017, which is more than what
+we found for the European version of the option, which
+was worth 9.495.
+The difference, of course, is because of what
+happens at the i equals 1 down node,
+where there's an extra benefit from early exercise.

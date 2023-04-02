@@ -1,0 +1,332 @@
+0
+00:00:00,000 --> 00:00:01,790
+
+
+1
+00:00:01,790 --> 00:00:04,340
+PROFESSOR: Clearly, it's impossible to accurately model
+
+2
+00:00:04,340 --> 00:00:06,500
+the future distribution of stock prices
+
+3
+00:00:06,500 --> 00:00:10,280
+or derivative payoffs using a two-point distribution
+
+4
+00:00:10,280 --> 00:00:12,350
+and we wouldn't expect that model
+
+5
+00:00:12,350 --> 00:00:15,290
+to do a good job of pricing derivatives.
+
+6
+00:00:15,290 --> 00:00:17,720
+Luckily, we can extend the ideas we've
+
+7
+00:00:17,720 --> 00:00:20,390
+developed for one-step trees to trees
+
+8
+00:00:20,390 --> 00:00:24,260
+with an arbitrarily large number of steps and by doing so,
+
+9
+00:00:24,260 --> 00:00:28,550
+capture the distribution of outcomes much more accurately.
+
+10
+00:00:28,550 --> 00:00:31,310
+The general idea of how to do pricing
+
+11
+00:00:31,310 --> 00:00:35,420
+on a multi-step binomial tree can be most easily understood
+
+12
+00:00:35,420 --> 00:00:38,850
+using a two-step tree.
+
+13
+00:00:38,850 --> 00:00:42,480
+In the tree here, we've started with the original tree
+
+14
+00:00:42,480 --> 00:00:45,690
+from our last example and extended it out
+
+15
+00:00:45,690 --> 00:00:48,320
+one more period.
+
+16
+00:00:48,320 --> 00:00:53,030
+If at time 1, for instance, the stock price
+
+17
+00:00:53,030 --> 00:00:58,180
+is at the up node at 70, we're going
+
+18
+00:00:58,180 --> 00:01:06,370
+to assume that it will be either 100 or 50 the next period.
+
+19
+00:01:06,370 --> 00:01:08,950
+Starting at the down node at time 1,
+
+20
+00:01:08,950 --> 00:01:15,310
+where the stock price equals 35, we'll now assume that at time 2
+
+21
+00:01:15,310 --> 00:01:18,410
+it will go up to 50 or down to 25.
+
+22
+00:01:18,410 --> 00:01:21,360
+
+
+23
+00:01:21,360 --> 00:01:24,600
+For now, we're taking this tree as given but,
+
+24
+00:01:24,600 --> 00:01:28,710
+as I mentioned before, in practice we would calibrate it
+
+25
+00:01:28,710 --> 00:01:32,070
+based on a statistical analysis of the underlying stock
+
+26
+00:01:32,070 --> 00:01:34,300
+returns.
+
+27
+00:01:34,300 --> 00:01:37,490
+Also notice that we chose the outcomes
+
+28
+00:01:37,490 --> 00:01:41,890
+starting at 70 at time 1 and going down and also
+
+29
+00:01:41,890 --> 00:01:46,300
+the outcome starting at 35 and going up to be identical.
+
+30
+00:01:46,300 --> 00:01:51,380
+
+
+31
+00:01:51,380 --> 00:01:53,780
+Restricting the evolution of stock prices
+
+32
+00:01:53,780 --> 00:01:57,140
+to ensure that this is the case creates what's
+
+33
+00:01:57,140 --> 00:01:59,930
+called a recombining tree.
+
+34
+00:01:59,930 --> 00:02:03,140
+That restriction is typically imposed because it greatly
+
+35
+00:02:03,140 --> 00:02:08,919
+simplifies calculations but it's not absolutely necessary.
+
+36
+00:02:08,919 --> 00:02:11,860
+We'll now use this tree to price a European call
+
+37
+00:02:11,860 --> 00:02:16,900
+option with a strike price of 50 that expires at time 2.
+
+38
+00:02:16,900 --> 00:02:19,000
+We'll continue to assume a risk-free rate
+
+39
+00:02:19,000 --> 00:02:21,835
+of 11% per period on a continuous basis.
+
+40
+00:02:21,835 --> 00:02:24,380
+
+
+41
+00:02:24,380 --> 00:02:27,050
+We'll price the option working backwards on the tree
+
+42
+00:02:27,050 --> 00:02:29,780
+to find its value on every node.
+
+43
+00:02:29,780 --> 00:02:33,650
+Starting at time 2, the option is only
+
+44
+00:02:33,650 --> 00:02:37,730
+in the money at the top on the up-up node
+
+45
+00:02:37,730 --> 00:02:41,570
+where the payoff is the stock price of 100
+
+46
+00:02:41,570 --> 00:02:46,730
+minus the $50 strike price so the payoff on the call option
+
+47
+00:02:46,730 --> 00:02:47,495
+is 50.
+
+48
+00:02:47,495 --> 00:02:50,780
+
+
+49
+00:02:50,780 --> 00:02:53,750
+The middle node has a stock price of 50
+
+50
+00:02:53,750 --> 00:02:57,550
+and there is no gain from exercising the option.
+
+51
+00:02:57,550 --> 00:03:01,750
+And at the bottom node, the call option is clearly
+
+52
+00:03:01,750 --> 00:03:03,350
+out-of-the-money.
+
+53
+00:03:03,350 --> 00:03:10,050
+Now at each time 1 node we can compute the option value as we
+
+54
+00:03:10,050 --> 00:03:14,100
+did with the one-step tree, by first finding the risk-neutral
+
+55
+00:03:14,100 --> 00:03:19,740
+probability of an up-move, q*, based on the one-period subtree
+
+56
+00:03:19,740 --> 00:03:22,230
+and then applying the probabilities to the option
+
+57
+00:03:22,230 --> 00:03:26,680
+payoffs of 50 in the up state and 0 in the down-state at time
+
+58
+00:03:26,680 --> 00:03:27,180
+2.
+
+59
+00:03:27,180 --> 00:03:29,890
+
+
+60
+00:03:29,890 --> 00:03:33,460
+This is our subtree and we're going
+
+61
+00:03:33,460 --> 00:03:38,020
+to find the call option at time 1 in the up state
+
+62
+00:03:38,020 --> 00:03:43,540
+by discounting these two payoffs weighted by the risk
+
+63
+00:03:43,540 --> 00:03:45,340
+neutral probability.
+
+64
+00:03:45,340 --> 00:03:49,660
+Well, that yields the call price at time 1
+
+65
+00:03:49,660 --> 00:03:56,810
+on the up node C1u of 25.2083.
+
+66
+00:03:56,810 --> 00:04:00,200
+In the same way on the time 1 down node,
+
+67
+00:04:00,200 --> 00:04:02,990
+we can find the call option value
+
+68
+00:04:02,990 --> 00:04:05,495
+by looking at the one-step subproblem.
+
+69
+00:04:05,495 --> 00:04:09,880
+
+
+70
+00:04:09,880 --> 00:04:12,790
+On that node we don't have to do any math
+
+71
+00:04:12,790 --> 00:04:17,380
+because if the payoffs at time 2 are all 0,
+
+72
+00:04:17,380 --> 00:04:19,720
+we know the value of the call option at time 1
+
+73
+00:04:19,720 --> 00:04:22,480
+will also be 0.
+
+74
+00:04:22,480 --> 00:04:27,130
+Now going back the last step to time 0 and again solving
+
+75
+00:04:27,130 --> 00:04:37,000
+the one-step subproblem, we find a q* at time 0 of 0.5947.
+
+76
+00:04:37,000 --> 00:04:39,130
+Apply it to the call option at time 1
+
+77
+00:04:39,130 --> 00:04:42,210
+in the up state to get the expected
+
+78
+00:04:42,210 --> 00:04:44,820
+time 1 value of the call option, and then
+
+79
+00:04:44,820 --> 00:04:47,520
+we discount it back at the risk-free rate,
+
+80
+00:04:47,520 --> 00:04:49,980
+and we come to the conclusion that the call
+
+81
+00:04:49,980 --> 00:04:53,780
+option is worth 13.4294.
+
+82
+00:04:53,780 --> 00:04:56,000
+
+
