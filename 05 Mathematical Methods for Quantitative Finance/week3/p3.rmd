@@ -1,0 +1,25 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+TS <- read_csv("./PS3-data.csv")
+```
+```{r}
+apply(TS,2,mean)*252
+apply(TS,2,sd)*sqrt(252)
+```
+```{r}
+apply(TS, 2, acf)
+apply(TS, 2, pacf)
+```
+```{r}
+library(forecast)
+for (i in TS) {
+  fit <- auto.arima(i)
+  plot(forecast(fit, h = 20))
+}
+
+```

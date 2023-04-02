@@ -1,0 +1,512 @@
+0
+00:00:00,000 --> 00:00:01,330
+
+
+1
+00:00:01,330 --> 00:00:03,550
+PROFESSOR: Now here's an exercise.
+
+2
+00:00:03,550 --> 00:00:06,820
+Let F be the function of t and B,
+
+3
+00:00:06,820 --> 00:00:09,130
+where B is a standard Brownian motion,
+
+4
+00:00:09,130 --> 00:00:14,020
+be e to the minus rt times the sine of theta B.
+
+5
+00:00:14,020 --> 00:00:17,230
+So r and theta are both constants.
+
+6
+00:00:17,230 --> 00:00:19,430
+And what we'd like to do are two things.
+
+7
+00:00:19,430 --> 00:00:24,220
+First, find the differential dF using Ito's lemma.
+
+8
+00:00:24,220 --> 00:00:29,010
+Second, looking at the result that you have, consider
+
+9
+00:00:29,010 --> 00:00:31,200
+the parameter values, r and theta,
+
+10
+00:00:31,200 --> 00:00:35,820
+and ask if there are choices of r and theta in terms of which,
+
+11
+00:00:35,820 --> 00:00:37,950
+dF becomes particularly simple, where
+
+12
+00:00:37,950 --> 00:00:40,890
+it becomes only, either a function of dt
+
+13
+00:00:40,890 --> 00:00:42,960
+or a function of dB.
+
+14
+00:00:42,960 --> 00:00:44,700
+So pause the video.
+
+15
+00:00:44,700 --> 00:00:46,555
+Take a few minutes to work on it.
+
+16
+00:00:46,555 --> 00:00:48,555
+And then we'll go through the solution together.
+
+17
+00:00:48,555 --> 00:01:06,970
+
+
+18
+00:01:06,970 --> 00:01:12,010
+Now we'll use the simplified form of Ito's lemma
+
+19
+00:01:12,010 --> 00:01:13,900
+because we have it in terms of B,
+
+20
+00:01:13,900 --> 00:01:18,440
+not in a more complicated generalized Ito process.
+
+21
+00:01:18,440 --> 00:01:21,100
+So let's take a look.
+
+22
+00:01:21,100 --> 00:01:27,070
+We have that dx is just dB.
+
+23
+00:01:27,070 --> 00:01:29,650
+So in our version of Ito's lemma,
+
+24
+00:01:29,650 --> 00:01:31,330
+where we take differentials with respect
+
+25
+00:01:31,330 --> 00:01:33,640
+to x, we can just replace them by B.
+
+26
+00:01:33,640 --> 00:01:37,010
+And where we have the Ito term with little b squared--
+
+27
+00:01:37,010 --> 00:01:41,950
+remember that in our usual notation, this is a equals 0
+
+28
+00:01:41,950 --> 00:01:44,440
+and little b equals 1.
+
+29
+00:01:44,440 --> 00:01:46,330
+So that simplifies.
+
+30
+00:01:46,330 --> 00:01:47,980
+The next thing we do is we compute
+
+31
+00:01:47,980 --> 00:01:50,780
+the partial derivatives, the three partial derivatives that
+
+32
+00:01:50,780 --> 00:01:55,210
+show up in Ito's formula, of F. So we need partial
+
+33
+00:01:55,210 --> 00:01:59,610
+of F with respect to time.
+
+34
+00:01:59,610 --> 00:02:00,440
+That's easy.
+
+35
+00:02:00,440 --> 00:02:12,980
+That's e to the minus rt times minus r times sine of theta B.
+
+36
+00:02:12,980 --> 00:02:18,860
+So we can rewrite that as, minus r times F itself,
+
+37
+00:02:18,860 --> 00:02:19,550
+if we'd like to.
+
+38
+00:02:19,550 --> 00:02:22,460
+We can use either of those forms.
+
+39
+00:02:22,460 --> 00:02:26,240
+We have the second partial derivative
+
+40
+00:02:26,240 --> 00:02:28,250
+in the first partial derivative with respect
+
+41
+00:02:28,250 --> 00:02:32,990
+to B. So partial of F with respect to B
+
+42
+00:02:32,990 --> 00:02:39,950
+is just equal to theta times e to the minus rt
+
+43
+00:02:39,950 --> 00:02:43,280
+times cosine of theta B.
+
+44
+00:02:43,280 --> 00:02:46,490
+And the second partial derivative
+
+45
+00:02:46,490 --> 00:02:53,150
+is going to be second partial of F with respect to B squared
+
+46
+00:02:53,150 --> 00:02:59,240
+is going to be minus theta squared e to the minus rt
+
+47
+00:02:59,240 --> 00:03:04,070
+times sine of theta B. And that is the same thing
+
+48
+00:03:04,070 --> 00:03:11,570
+as minus theta squared times F. Minus theta
+
+49
+00:03:11,570 --> 00:03:14,810
+squared times F because the e to the minus rt
+
+50
+00:03:14,810 --> 00:03:16,280
+just comes along for the ride.
+
+51
+00:03:16,280 --> 00:03:19,260
+
+
+52
+00:03:19,260 --> 00:03:23,010
+So let's just substitute with our results.
+
+53
+00:03:23,010 --> 00:03:30,060
+So we have that dF is the partial of F with respect
+
+54
+00:03:30,060 --> 00:03:32,070
+to t times to dt.
+
+55
+00:03:32,070 --> 00:03:38,000
+That's going to give us a minus re
+
+56
+00:03:38,000 --> 00:03:45,070
+to the minus rt sine theta B, all times
+
+57
+00:03:45,070 --> 00:03:51,000
+dt plus first partial with respect to B times dB.
+
+58
+00:03:51,000 --> 00:04:00,370
+That's going to give us theta e the minus rt cosine theta B
+
+59
+00:04:00,370 --> 00:04:03,730
+times dB plus the Ito term, which
+
+60
+00:04:03,730 --> 00:04:08,050
+is going to be 1/2 second partial with respect to b
+
+61
+00:04:08,050 --> 00:04:12,260
+squared of F times dt.
+
+62
+00:04:12,260 --> 00:04:16,060
+So that's going to give us minus theta squared
+
+63
+00:04:16,060 --> 00:04:26,070
+e to the minus rt divided by 2 times sine theta B dt.
+
+64
+00:04:26,070 --> 00:04:28,710
+If we group the terms together we see,
+
+65
+00:04:28,710 --> 00:04:30,900
+first of all, that everything--
+
+66
+00:04:30,900 --> 00:04:34,410
+the common e to the minus rt out in front.
+
+67
+00:04:34,410 --> 00:04:36,370
+That's good to keep in mind.
+
+68
+00:04:36,370 --> 00:04:39,660
+And then the first term we're going
+
+69
+00:04:39,660 --> 00:04:49,860
+to have is going to be give us a minus r
+
+70
+00:04:49,860 --> 00:05:05,165
+plus theta squared over 2 times sine theta B dt.
+
+71
+00:05:05,165 --> 00:05:10,190
+
+
+72
+00:05:10,190 --> 00:05:10,690
+Let's see.
+
+73
+00:05:10,690 --> 00:05:17,820
+We wanted to have a big thing for our exponential outside
+
+74
+00:05:17,820 --> 00:05:18,900
+of everything.
+
+75
+00:05:18,900 --> 00:05:21,420
+And we've got our second term.
+
+76
+00:05:21,420 --> 00:05:23,160
+It's going to be the dB term.
+
+77
+00:05:23,160 --> 00:05:46,700
+It's going to be plus theta e to the minus rt cosine theta B dB.
+
+78
+00:05:46,700 --> 00:05:47,880
+And there we go.
+
+79
+00:05:47,880 --> 00:05:51,185
+So this expression gives us our result or dF.
+
+80
+00:05:51,185 --> 00:05:53,720
+
+
+81
+00:05:53,720 --> 00:05:55,260
+So that's our expression.
+
+82
+00:05:55,260 --> 00:05:57,050
+So it's an Ito process because it's
+
+83
+00:05:57,050 --> 00:06:02,130
+something times dt plus something times dB, OK?
+
+84
+00:06:02,130 --> 00:06:05,160
+So if we want to write down these coefficient functions,
+
+85
+00:06:05,160 --> 00:06:10,320
+we could say that we have a F is going to be minus
+
+86
+00:06:10,320 --> 00:06:20,940
+e to the minus rt times r plus theta squared over 2 sine theta
+
+87
+00:06:20,940 --> 00:06:25,620
+B. And that's definitely a function of t and B.
+
+88
+00:06:25,620 --> 00:06:32,600
+And B is going to be e to the minus rt times theta
+
+89
+00:06:32,600 --> 00:06:38,420
+cosine of theta B. And that's definitely
+
+90
+00:06:38,420 --> 00:06:44,970
+a function of time and B. Sorry, it's behind my head.
+
+91
+00:06:44,970 --> 00:06:46,590
+So let's take a look at the expression
+
+92
+00:06:46,590 --> 00:06:49,110
+and see if we can answer the second question,
+
+93
+00:06:49,110 --> 00:06:52,500
+are there values of r and theta, in which this
+
+94
+00:06:52,500 --> 00:06:56,520
+would simplify to only be a function of dt or dB?
+
+95
+00:06:56,520 --> 00:07:00,480
+Well it can't possibly be a function only of dB.
+
+96
+00:07:00,480 --> 00:07:03,330
+Remember, the dB is our source of randomness.
+
+97
+00:07:03,330 --> 00:07:07,350
+And we can't make the randomness go away just by changing
+
+98
+00:07:07,350 --> 00:07:09,190
+variables in a simple way.
+
+99
+00:07:09,190 --> 00:07:11,340
+We're not going to turn something
+
+100
+00:07:11,340 --> 00:07:14,610
+that was random into something that's non-random that easily.
+
+101
+00:07:14,610 --> 00:07:16,620
+We'll see some other ways to do that.
+
+102
+00:07:16,620 --> 00:07:18,130
+But what about the first term?
+
+103
+00:07:18,130 --> 00:07:21,360
+Well the first term is e to the minus rt,
+
+104
+00:07:21,360 --> 00:07:23,460
+but now notice the coefficient function.
+
+105
+00:07:23,460 --> 00:07:26,850
+It involves r plus theta squared over 2.
+
+106
+00:07:26,850 --> 00:07:31,680
+So if I chose r to be minus theta squared over 2,
+
+107
+00:07:31,680 --> 00:07:33,820
+then the first term would vanish.
+
+108
+00:07:33,820 --> 00:07:36,570
+Usually, when we have r in our expressions,
+
+109
+00:07:36,570 --> 00:07:38,890
+we think of r as being the risk-free interest rate.
+
+110
+00:07:38,890 --> 00:07:40,740
+And normally the risk-free interest rate
+
+111
+00:07:40,740 --> 00:07:42,880
+needs to be a positive number.
+
+112
+00:07:42,880 --> 00:07:46,410
+But keep in mind that, there certainly
+
+113
+00:07:46,410 --> 00:07:48,628
+are negative interest rates that actually do now
+
+114
+00:07:48,628 --> 00:07:50,670
+happen in the real world, even though we normally
+
+115
+00:07:50,670 --> 00:07:53,200
+would think of r as being typically positive.
+
+116
+00:07:53,200 --> 00:07:56,190
+And here in this example, this is not
+
+117
+00:07:56,190 --> 00:07:57,660
+meant to be a financial example.
+
+118
+00:07:57,660 --> 00:08:01,050
+These are just arbitrary parameter choices.
+
+119
+00:08:01,050 --> 00:08:03,330
+So we certainly could pick a special value
+
+120
+00:08:03,330 --> 00:08:06,750
+of r, in terms of which the coefficient function of t
+
+121
+00:08:06,750 --> 00:08:07,470
+would vanish.
+
+122
+00:08:07,470 --> 00:08:11,790
+And then we'd be left with just the term in dB.
+
+123
+00:08:11,790 --> 00:08:16,650
+So, a simple case where we took a basic function,
+
+124
+00:08:16,650 --> 00:08:22,920
+not additive but multiplicative, a function of r times--
+
+125
+00:08:22,920 --> 00:08:26,340
+excuse me, a function of time, times a function of B,
+
+126
+00:08:26,340 --> 00:08:30,900
+applied Ito's lemma, turn the crank and we get our answer.
+
+127
+00:08:30,900 --> 00:08:33,560
+That's all there is to it.
+

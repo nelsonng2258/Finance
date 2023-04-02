@@ -1,0 +1,213 @@
+
+PROFESSOR: Let's summarize a few key formulas.
+Ito processes are our generalized random walks,
+our generalized processes that have the form a dt plus b dB
+where little a and little b are, in general, functions
+of x and t.
+x, in our example of stock prices, is s- is price--
+but it may take different values.
+Ito's formula tells us, for stochastic processes of the Ito
+type, Ito's formula from Ito's lemma
+tells us how to compute differentials.
+And they have an extra term relative to the ordinary chain
+rule.
+We have first partial with respect to t,
+first partial with respect to x, and then we
+have a second partial with respect to x but times
+dt instead of dx squared.
+We remember the heuristic-- that every time we see
+a d b squared, it's worth a dt.
+Every time we would have seen a dx squared,
+it's worth a b squared dt, where little b is the same
+as the coefficient up here.
+Our most common and most popular Ito process
+is the standard stock price formula
+that's written as dS over S is mu dt plus sigma db,
+or multiply thing through by S so that we can correctly
+identify the coefficients a and b,
+we can write this is dS is mu S dt plus sigma S db.
+We saw-- and you should check and be familiar with this--
+that if we apply Ito's lemma to the function f equals log S,
+we derive, on the right-hand side,
+that the differential of log S-- this
+is an exact differential on the left-hand side,
+and on the right-hand side is an Ito process
+with constant coefficients.
+The sigma parameter now doesn't have an S in here,
+and the mu is shifted by an amount
+minus sigma squared over 2.
+To derive the Black-Scholes equation,
+we combine this stock price evolution
+with a hedging algorithm where we
+pick a number of shares delta that's
+always equal to partial of V with respect to S
+to hold short.
+We assume that our portfolio grows at the risk-free rate.
+And we're able to eliminate risk by dynamically hedging.
+And that tells us what the value of a derivative
+must be in order to avoid arbitrage.
+It's given by solutions to this equation.
+What I want to do is just show a couple
+of tweaks that we can make to the equation.
+And then we're going to turn to looking
+at how to solve the equation.
+The way we're going to do it is, we're
+going to simplify the equation.
+This is pretty complicated to solve, and along the way,
+we're going to turn it into a much simpler differential
+equation.
+We'll take a look at that equation for a while.
+It's called the diffusion equation.
+And then we'll recover it back in our original Black-Scholes
+variables.
+First, some of the overall properties.
+The equation is linear.
+And that means that the sum of two solutions,
+or any linear combination of solutions,
+is always a solution.
+Now, in boundary value in partial differential equations,
+we sometimes look at initial values.
+We sometimes look at boundary values on the sides.
+But what's special about our application for finance--
+it's a little bit different from what you would
+see in a typical PDE textbook.
+Is, instead of initial conditions,
+we're going to specify a terminal condition.
+That is, when we think about options,
+we know what they're worth when they expire.
+We want to know what they're worth before expiration.
+The payoff is contractually determined at a future date,
+and we're going to have to work backwards in time.
+Luckily, we'll see that the signs in our equation
+work out just right for that.
+Now, there are a whole bunch of other assumptions
+that go into this.
+In particular, we're looking at a special stock price model--
+namely, geometric Brownian motion.
+But a lot of what we said could go through
+for other kinds of processes.
+We can change the process to some of the examples
+I showed you earlier.
+And we might ask about generalizing further
+where some of the things that we've held constant
+perhaps become, themselves, dynamic over time.
+What happens if volatility changes
+over time, which seems to be a real-world phenomenon
+in financial markets?
+What if there are limits on the allowed prices?
+There are lots of generalizations we could make.
+Let's take a look at a few easy ones.
+One of them is that I neglected dividends.
+And if you've studied options before,
+you know that discrete dividends are a big deal.
+There's a theorem about early exercise.
+Now, the dividends I'm going to discuss here
+are not discrete dividends, which we usually would
+handle with different tools.
+But I want to think about a continuous dividend
+yield, which is one way that we typically
+model indices or portfolios.
+We think that if there are a bunch of stocks that
+get dividends at different times,
+we'll just kind of average this out smoothly.
+The important thing is that, if dividends arrive at a rate D,
+we might think that the dividends are
+kind of offsetting the interest rate.
+But there are two reasons--
+there are two places where the interest rate enters
+the equation, and only one place where the dividends show up.
+So it's not just a shift in the risk-free rate.
+The holder of the stock gets dividends,
+but the holder of the option does not get the dividends.
+That's the whole thing behind the timing of early exercise.
+The Black-Scholes equation is modified,
+but it's not just a straight substitution of r.
+It's a substitution in this term,
+because the stock is earning dividends.
+
+We could think of currency options,
+which are on foreign currency.
+And we don't just trade suitcases full of cash.
+We trade interest-bearing instruments.
+On currency options, we receive a foreign interest rate, which
+is equivalent to a cash inflow.
+Again, we've got to change to our cash.
+And again, it's not just a straight-out substitution
+of the interest rates.
+Here, we've got to change to r in this place.
+This r stays the same.
+We have another adjustment we can make in commodity options,
+where we have a cost of carry.
+It doesn't cost anything to store a stock option.
+It does cost something if you have oil
+and you have options on oil.
+Having an oil option doesn't cost anything, but having oil
+does cost something.
+Having gold does cost something-- to store it,
+to have security for it, possibly to transport it.
+So when we look at physical commodities,
+we typically include a cost of carry for the duration
+of the contract at a rate q.
+And guess what?
+That shows up in this term.
+And once again, the other interest rate term
+is unchanged.
+
+Options on futures are an interesting case,
+and we can get an equation called
+the Black equation, which Fischer Black did on his own,
+without Scholes.
+And we do this by changing the value
+from the spot to the forward price.
+Keep in mind that there is discounting.
+We can think about present values.
+And in fact, we'll see that one reason there's
+a lot of complexity in the Black-Scholes equation
+is because we didn't build discounting
+into it to begin with.
+You can see that the equation simplifies
+a lot if we were to set the interest rate equal to 0.
+But there are two things we might potentially discount.
+One of them is S. The other one is V.
+Let's take a look.
+If we change variables so that we
+do things in terms of the forward price instead
+of the spot price, I can introduce this script F,
+which I've done because we used F
+before for a general function.
+Here, I'd like this F to represent
+the forward price that's related to the spot
+price in the usual way.
+And we substitute in-- use the ordinary chain
+rule, because there's nothing special about this pre-factor.
+F and s are both stochastic, but e to the r t minus t is not.
+And we get a simpler equation.
+One of our terms from our original Black-Scholes equation
+dropped out.
+And that's telling us, what that equation really was doing
+was accounting for the fact that we
+should think about the present value rather than the spot
+value.
+In those terms, my Black-Scholes equation now
+has only a term with a time derivative,
+and with a second derivative with respect to the under line,
+the first derivative term went away.
+And I still have the constant term that's left over.
+Now, what I would like to do is, I
+would like to compare this with another well-known equation
+called the diffusion equation, which I've written
+down here at the bottom.
+The diffusion equation-- you'll notice both of these equations
+have a term partial of V with respect to t.
+The next term-- they both have a 1/2.
+They both have a second derivative with respect
+to another variable over here.
+This has a pre-factor.
+This one doesn't.
+This has a plus sign.
+This one has a minus sign.
+And of course, there's this extra leftover term right here.
+But the first two terms are intriguing.
+And we're going to go a bit further and see
+if we can get the original Black-Scholes
+equation to be related to a diffusion equation.

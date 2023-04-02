@@ -1,0 +1,284 @@
+
+PROFESSOR: Let's take a closer look at the diffusion equation.
+So the general diffusion equation is given right here.
+So we say that we have a function p of z and t,
+and they need to satisfy this differential equation.
+The first partial with respect to t
+minus half the second partial with respect to z equals 0.
+And we've seen that there's a very special solution, p0,
+that satisfies that equation, which
+we can find by plugging it in and taking some derivatives.
+So here's our p0.
+Now, I claimed that if we construct this integral on top,
+that this is the solution to the equation.
+So what I'd like to do is, let's check that,
+and then let's apply it.
+So the first thing to do is to check it.
+And the way we do it is we take derivatives.
+And what we find is that if we take that integral expression,
+and we stick it into the differential equation, what
+we'll do is, we'll move the differential operators inside.
+So for example, the partial derivative
+with respect to time of p of z and t
+is the integral of the partial with respect to--
+excuse me-- the partial with respect
+to time of everything inside the integral P0 z minus wt f of w,
+dw.
+
+But where is the t dependence?
+The t dependence is only in one place.
+It's in p0.
+And similarly with the second derivative.
+So if I take the differential operator, partial with respect
+to t minus 1/2 second partial with respect to z squared,
+and I act on p, then that's the same thing
+as this differential operator partial of t minus 1/2
+second partial with respect to--
+
+let me get our pens right--
+z squared, times-- what are they going to act on?
+Well, the only thing that depends on z and t is p0.
+p0 z and t--
+excuse me.
+
+z minus w t of w, tw.
+The only potential complication that we'd have to worry about
+is this derivative act here on this t.
+This is derivatives with respect to z.
+This is not p0 of z and t, it's z minus w.
+But because it's just shifted by a constant,
+the derivatives are exactly the same.
+So this operator, when I move it inside the integral,
+acting on this part of the integrand gives 0.
+And it doesn't matter what f is.
+The integral is always going to be 0, provided
+that the intervals converge.
+And they will converge whenever t is greater than 0.
+The limit t goes to 0 is a special case.
+And we'll have more to say about that.
+This is the reason why this integral form works.
+So the reason it works is that, whenever
+I act with the differential operator,
+this piece here is the only thing that's hit,
+and it vanishes.
+So this expression necessarily solves
+the differential equation.
+If in addition, I get something that
+has the right initial conditions, then I'm done.
+I know that it satisfies the initial conditions.
+I know that it satisfies the differential equation.
+That's all we need to know.
+So let's do a couple examples.
+So exercise.
+Suppose that f of z is z squared.
+So this was an example that we did a lecture.
+So I have the p of z comma 0 is equal to z squared.
+And I say, find p of zt, or t in general,
+at least for positive values of t.
+So take a moment and go do that.
+Take a look at the internals.
+And then, we'll come back and we'll do that together.
+
+OK.
+Let's go.
+Do you have an answer?
+All right, well you probably have the same answer
+that we had in lecture.
+But let's do the integrals.
+So what we need to do is, we've got a formula.
+Let's just plug and chug.
+So p of zt is going to be equal to the integral of 1
+over square root of 2 pi, e to the minus z
+minus w squared over 2t.
+I should have put in a t down here.
+Remember, it's a Gaussian where the variance is t.
+So it's not completely standardized.
+So there is t dependence in this.
+And then, what we'd like to do is
+multiply this times w squared tw.
+So that's the integral that we'd like to do.
+How do we do this integral?
+Well, let's change variables.
+So what we'd like to do is, let's simplify the exponent
+and pick a new variable.
+So let's let u be equal to w minus z divided
+by square root of t.
+That way, the thing in the exponential
+up here is going to be e to the minus u squared over 2.
+And that'll be a very simple form.
+Then, because we have this differential form--
+because we have this form for u, We also
+have the du is going to be dw over square root of t.
+But that's pretty good, because we have a dw right here,
+and we have a square root of t down here.
+So those are going to combine very nicely.
+So let's make those substitutions.
+
+And we'll see that p of z is going
+to be equal to 1 over square root of 2
+pi times the integral of e to the minus
+u squared over 2 times--
+we need a w squared.
+Well, w-- if this is my expression for u,
+then w is going to be u times square root of t plus z.
+So let's write that out.
+This is going to be u times square root of t, plus z.
+Then we have that quantity squared du.
+Well, that's pretty easy.
+Because now we almost have things in standardized form
+for a Gaussian interval.
+And this goes from minus infinity to infinity.
+So this is going to be 1 over square root of 2 pi integral
+from minus infinity to infinity, e
+to the minus u squared, times--
+let's just expand that out.
+We're going to have u squared times t plus 2u square root
+of t times z plus z squared du.
+Let's look at each of these terms.
+The first term, right here, is going to be u squared times t.
+Remember, t is a constant with respect
+to the variable of integration.
+So this is going to give us--
+a first term will be t times 1 over square root of 2
+pi integral should be over 2, e to the minus 2 squared over 2,
+u squared du.
+The second term, right here, is going to vanish.
+Because it's linear in u, this is an even function in u.
+We're going from minus infinity to infinity.
+And even functions-- excuse me, odd functions
+are going to have varnishing integrals.
+It's just a plus sign to the minus sign
+are going to cancel each other out.
+And then, the last term, z squared that we have right
+here, that's just a constant.
+So we have plus z squared times 1
+over square root of 2 pi, integral e to the minus u
+squared over 2 du, without anything else.
+Well, this expression is equal to 1.
+And so is this expression.
+Because this is just the variance
+of the standardized Gaussian distribution.
+So we do the integrals.
+And what we're left with is z squared plus t.
+And we can check that it satisfies our differential
+equation.
+If we take the partial of p with respect to t, we get 1.
+If we take the second partial--
+1/2 the second partial with respect to z squared, we get 1.
+And if we subtract the two of them, we get 0.
+So we're done.
+So this is the answer.
+Let's do one more exercise.
+Slightly different version of the one that we did in lecture.
+But now, don't refer back to the lecture.
+Just take a look at what we've done for the integrals.
+And do this one yourself.
+So what I'd like to do is introduce the Gaussian
+cumulative distribution function,
+which is going to be useful and show up in a few places.
+I will call this phi of x.
+It's going to be defined as the integral of e to the minus z
+squared over 2 dz, from minus infinity up to x.
+So I compute the left side of the integral
+of the bell curve for the Gaussian distribution
+up to some point x.
+So in terms of Gaussian probabilities,
+this is the same thing as the probability
+that a Gaussian random variable z is less
+than some particular value x.
+Now, from the fundamental theorem of calculus of course,
+I know that d by dx phi of x is just e to the minus x
+squared over 2.
+So I can differentiate or I can integrate.
+I can go back and forth.
+But this basic idea that it's an incomplete integral.
+So I integrate from minus infinity
+up to a particular value x that's defined out here.
+It's going to be useful, and we'll
+see that it shows up in a bunch of places.
+Here's a really simple example.
+So exercise.
+
+Let's let f of w equal 1 for w less than kappa,
+and 0 for w greater than kappa.
+So the question is, find p of zt,
+where remember that this is p and z a time 0.
+So at time 0, it's a step function.
+It's either 0 or 1 depending on the value of its argument.
+I apologize, this should be a w in that case.
+So what we'd like to do is, we want to find p of zt
+for the general case.
+So take a moment, see if you can work it out
+from our general definition.
+Remember that our definition is, we integrate p0
+against p0 evaluated at z minus w against the function f of w.
+And we integrate that over w in an explicit expression
+in terms of z.
+Go take a moment to do that.
+And then, we'll take a look at this together.
+
+OK?
+Let's go.
+Let's just work from the definition.
+The reason why this is particularly nice
+is the integrand is either 1 or 0.
+So there's an interesting generalization
+that's important for the Black-Scholes case, where
+we might-- instead of 1 or 0, we might
+like to let it be 0 in the lower case, but kappa minus w
+in the upper case.
+So after you've done this one, I'd
+suggest trying that one as an extension.
+But this one's fairly straightforward.
+So let's do this one together just
+to make sure we've got the concepts and our definitions
+of the integral.
+
+So this is going to be integral of 1 over the square root of 2
+pi t, e to the minus z minus w quantity squared over 2, dw--
+now, the integrand is either 0 or 1.
+So if it were 1, we would be done.
+But because it's 0 for large values of w, for w
+greater than kappa, our integral is only
+going to go from minus infinity up to kappa.
+So that's it.
+So now you can recognize that apart
+from the shift in the exponent-- and sorry,
+I put my omissions in red.
+There should be a t here just to match the t that's down here.
+So now we need to do the Gaussian integral.
+And as a function of kappa, what are we going to get?
+So let's do the integral.
+And the way we can do the integral
+is, we can make the same change of variables as last time.
+So let's let u equal w minus z over square root of t.
+Implies that we have du is going to be dw over square root of t.
+That's going to work the same as before.
+In addition, our upper limit of integration is w equals kappa.
+And that's going to translate into an upper limit of u
+is going to be kappa minus z over square root of t.
+
+So let's call that u star perhaps,
+for upper limit of integration.
+So now, we have making that change of variables.
+p of zt is going to be the integral from minus
+infinity up to kappa minus z over square root of t,
+times 1 over square root of 2 pi, e
+to the minus u squared over 2, du.
+Now, there are no more t's in the integrand.
+Everything in terms of a new variable
+of integration, a dummy variable u.
+And this is our definition of our function phi.
+So this is now equal to phi kappa minus z, divided
+by square root of t, which is a very well behaved function
+for positive values of t.
+And it would be interesting to take a look
+and plot this as t goes to 0.
+But right now, we have the result that we saw it.
+And we can check this, again, by differentiating and putting it
+into the differential equation, and verifying that it satisfies
+the equation, and verifying that it
+satisfies the initial conditions a t equals 0.
+Which as I said, it requires taking a limit,
+because we can't immediately set t equals 0
+in this case in the way we did previously.

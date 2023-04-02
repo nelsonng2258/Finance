@@ -1,0 +1,95 @@
+
+PROFESSOR: Models we study for applications in finance
+are not just mathematical constructs,
+they're tools that we use as approximations to reality
+and that we use for interpreting data and understanding
+the world around us.
+Now in finance, the problem we have
+is quite different from that we have in the physical sciences,
+even though some of the mathematical tools
+are quite similar.
+Rutherford once said that if your experiment needs
+statistics, you should have done a better experiment.
+But in finance, we're really quite different from laboratory
+sciences.
+Most of our data is noisy.
+We need statistics, we need tools
+to get to the bottom of it.
+Furthermore, we can't repeat an experiment,
+not in a true laboratory sense.
+Actually, we have an interesting dichotomy.
+We've got on the one hand, that we often
+deal with market data and historical market data.
+And that is almost by definition reproducible.
+If we plug-in the same numbers, we
+should get exactly the same answer no matter
+who does the calculation.
+That's a good reason why it's interesting exercise
+to pick up previously published papers
+and work and reproduce their results.
+Unlike a laboratory result, you should
+be able to get exactly the same thing if you
+can get your hands on the same historical market
+data on which some empirical studies were based.
+On the other hand, markets change.
+We can't go back in time.
+And all of our results are going to generally be provisional.
+So this leads to a different perspective on modeling,
+and often to the difficulty in settling questions.
+And one that we'll take a look at
+is going to be the role of the random walk
+model and the so-called random walk hypothesis.
+What does it say and can we test it?
+More generally when we're looking at models,
+we have a bunch of questions that we want to ask.
+And I'll talk about a few of them now
+and will develop more of them over the course of this lecture
+and beyond.
+We'd really like to know would be,
+what's the model that generates the data that
+determines how prices move, how variables evolve and so on.
+But nobody tells us that there is such a thing.
+There might not be such a thing.
+If there is, it might change and we can't look it up in a book
+exactly.
+What we're typically faced with when it comes to real world
+problems is data, and maybe a whole bunch of different models
+and some candidate models.
+So the questions we ask includes these, and not
+necessarily in this order.
+What's the model that best fits the data?
+If we have a choice of models.
+If the models have adjustable parameters,
+how should we find the best values for those parameters?
+How do we decide among the better of two models?
+It might have a different number of adjustable parameters.
+Do the models of a stationarity?
+That is, do they describe the evolution
+of our variables of interest in a way
+that the models themselves don't change over time?
+That is the probability distributions
+are stationary over time, the so-called time's translation
+invariance.
+How should we be estimating our parameters?
+How can we take a look at what's going on with data?
+Before we build models and test them,
+we might want to take a look at the data
+and see if there's some general attributes that
+suggest the kind of models that might or might not
+be appropriate.
+So we often do some initial exploration.
+And sometimes we do this with the same statistical tools
+that show up in other settings as well.
+We often want to test hypotheses.
+Is this model correct or is it not?
+That's our simplest version.
+Or if we have a bunch of models, which of the models
+is the best?
+And finally, we'll take a look when
+we look at structured models of information propagation
+in time series models as to how we can decide about what
+the appropriate correlation links are,
+what the distances are, what the order and class
+of an appropriate model is.
+There's not always an easy answer.
+So let's review for a moment, just a couple of the basics.

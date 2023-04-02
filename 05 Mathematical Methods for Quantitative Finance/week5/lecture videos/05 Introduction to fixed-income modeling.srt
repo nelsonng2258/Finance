@@ -1,0 +1,768 @@
+0
+00:00:00,000 --> 00:00:01,130
+
+
+1
+00:00:01,130 --> 00:00:03,350
+PROFESSOR: Now let's look at using the Ito calculus
+
+2
+00:00:03,350 --> 00:00:07,010
+and the tools of continuous time finance in setting
+
+3
+00:00:07,010 --> 00:00:08,720
+of fixed-income modeling.
+
+4
+00:00:08,720 --> 00:00:13,730
+So far, we've looked mostly at the classic examples of stock
+
+5
+00:00:13,730 --> 00:00:16,280
+as a random continuous time process,
+
+6
+00:00:16,280 --> 00:00:18,680
+looking at the evolution of the stock price,
+
+7
+00:00:18,680 --> 00:00:20,870
+and we've looked at derivative pricing in terms
+
+8
+00:00:20,870 --> 00:00:23,030
+of an option on the stock.
+
+9
+00:00:23,030 --> 00:00:25,170
+When we go to the world of bonds,
+
+10
+00:00:25,170 --> 00:00:26,910
+we'll find a bunch of interesting things.
+
+11
+00:00:26,910 --> 00:00:29,610
+First of all, interest rates are dynamic.
+
+12
+00:00:29,610 --> 00:00:33,320
+Now, when we saw interest rates in looking at stock options
+
+13
+00:00:33,320 --> 00:00:35,150
+and deriving the Black-Scholes equation,
+
+14
+00:00:35,150 --> 00:00:38,120
+there was a single variable r, which
+
+15
+00:00:38,120 --> 00:00:41,180
+was held to be a constant, the risk-free rate.
+
+16
+00:00:41,180 --> 00:00:43,670
+In fact, interest rates change over time,
+
+17
+00:00:43,670 --> 00:00:46,580
+and interest rates change over time unpredictably.
+
+18
+00:00:46,580 --> 00:00:51,530
+So they're in fact random variables, not just parameters.
+
+19
+00:00:51,530 --> 00:00:53,120
+Interest rates aren't tradable.
+
+20
+00:00:53,120 --> 00:00:56,510
+So although we'll have a random driver that, in many ways,
+
+21
+00:00:56,510 --> 00:00:59,330
+will have the same properties and same kind of Ito
+
+22
+00:00:59,330 --> 00:01:01,940
+description as we had for stock prices,
+
+23
+00:01:01,940 --> 00:01:04,010
+our hedging arguments won't necessarily
+
+24
+00:01:04,010 --> 00:01:06,350
+go through the same way, because we can't trade
+
+25
+00:01:06,350 --> 00:01:09,640
+interest rates themselves.
+
+26
+00:01:09,640 --> 00:01:11,350
+Interest rates are the term structure.
+
+27
+00:01:11,350 --> 00:01:14,230
+That is, there are different interest rates associated
+
+28
+00:01:14,230 --> 00:01:16,430
+with different maturities of bonds and, of course,
+
+29
+00:01:16,430 --> 00:01:18,130
+different levels of creditworthiness.
+
+30
+00:01:18,130 --> 00:01:21,580
+So even if we're looking at risk-free bonds that
+
+31
+00:01:21,580 --> 00:01:25,540
+have no default risk, they may still have risk in the sense
+
+32
+00:01:25,540 --> 00:01:30,700
+that market rates, interest rates can vary.
+
+33
+00:01:30,700 --> 00:01:31,850
+There's a term structure.
+
+34
+00:01:31,850 --> 00:01:33,820
+So we don't find the same interest rate
+
+35
+00:01:33,820 --> 00:01:39,090
+on a one-year bond, a two-year bond, and a 30-year bond.
+
+36
+00:01:39,090 --> 00:01:41,970
+These term structures themselves change over time.
+
+37
+00:01:41,970 --> 00:01:45,090
+And they're a very important subject for modeling.
+
+38
+00:01:45,090 --> 00:01:47,620
+And they not only change over time,
+
+39
+00:01:47,620 --> 00:01:50,120
+but they do so in ways that are unpredictable.
+
+40
+00:01:50,120 --> 00:01:53,730
+So it's natural to model the entire curve not just
+
+41
+00:01:53,730 --> 00:01:55,800
+a single point or a single interest rate
+
+42
+00:01:55,800 --> 00:01:58,240
+as being stochastic.
+
+43
+00:01:58,240 --> 00:02:02,140
+The bond prices are determined in relation
+
+44
+00:02:02,140 --> 00:02:03,400
+to these interest rates.
+
+45
+00:02:03,400 --> 00:02:08,199
+But there may be a lot of bonds associated with a single rate
+
+46
+00:02:08,199 --> 00:02:10,220
+or with a particular set of rates.
+
+47
+00:02:10,220 --> 00:02:12,010
+So there are many interrelationships
+
+48
+00:02:12,010 --> 00:02:13,660
+among the different interest rates
+
+49
+00:02:13,660 --> 00:02:18,250
+and across the entire yield curve.
+
+50
+00:02:18,250 --> 00:02:23,950
+And interest rate derivatives on futures, bond options, interest
+
+51
+00:02:23,950 --> 00:02:25,480
+rate swaps--
+
+52
+00:02:25,480 --> 00:02:28,160
+a whole variety of other derivative contracts
+
+53
+00:02:28,160 --> 00:02:31,415
+depend on all of these features.
+
+54
+00:02:31,415 --> 00:02:35,110
+So here's a snapshot just taken from Bloomberg
+
+55
+00:02:35,110 --> 00:02:36,820
+of a bunch of US securities.
+
+56
+00:02:36,820 --> 00:02:39,010
+And we see that there are securities that trade.
+
+57
+00:02:39,010 --> 00:02:40,570
+They have different interest rates.
+
+58
+00:02:40,570 --> 00:02:41,740
+They're quoted in price.
+
+59
+00:02:41,740 --> 00:02:43,390
+They're quoted in yield terms.
+
+60
+00:02:43,390 --> 00:02:45,520
+They're quoted with different expirations.
+
+61
+00:02:45,520 --> 00:02:50,840
+And we can find this across various sovereign debt markets.
+
+62
+00:02:50,840 --> 00:02:54,700
+And of course, the corporate market is even larger.
+
+63
+00:02:54,700 --> 00:02:57,730
+Here's an example of what I meant by the yield curve.
+
+64
+00:02:57,730 --> 00:03:03,130
+We're looking at the interest rate, the yield to maturity,
+
+65
+00:03:03,130 --> 00:03:05,200
+for US bonds.
+
+66
+00:03:05,200 --> 00:03:08,170
+And this curve shows us the interest rate
+
+67
+00:03:08,170 --> 00:03:13,660
+in percent on the y-axis against the term
+
+68
+00:03:13,660 --> 00:03:16,910
+or tenor on the x-axis.
+
+69
+00:03:16,910 --> 00:03:19,180
+So we see a characteristic shape where
+
+70
+00:03:19,180 --> 00:03:21,490
+things are rising over time.
+
+71
+00:03:21,490 --> 00:03:24,220
+We get higher interest rates if we go farther out.
+
+72
+00:03:24,220 --> 00:03:26,680
+But also notice, there's some curvage area here.
+
+73
+00:03:26,680 --> 00:03:30,880
+We're convex here, and we become concave.
+
+74
+00:03:30,880 --> 00:03:32,690
+There's a point of inflection.
+
+75
+00:03:32,690 --> 00:03:34,900
+If I look at a different point in time--
+
+76
+00:03:34,900 --> 00:03:37,750
+for example, I look at a point one year prior
+
+77
+00:03:37,750 --> 00:03:41,200
+or a month prior, I might see a different shape
+
+78
+00:03:41,200 --> 00:03:42,920
+and a different level.
+
+79
+00:03:42,920 --> 00:03:46,660
+So this curve up here, notice, is downward-sloping.
+
+80
+00:03:46,660 --> 00:03:50,240
+It's an inverted curve at the beginning, and then it rises.
+
+81
+00:03:50,240 --> 00:03:54,050
+So all of these rates are higher than the ones down below.
+
+82
+00:03:54,050 --> 00:03:55,600
+So the curve is moved up.
+
+83
+00:03:55,600 --> 00:04:00,050
+But it's also changed in shape, and it's changed in direction.
+
+84
+00:04:00,050 --> 00:04:02,050
+So what are some features that are
+
+85
+00:04:02,050 --> 00:04:04,590
+consistent with basic principles of finance?
+
+86
+00:04:04,590 --> 00:04:08,840
+What are the mathematical tools we have to describe them?
+
+87
+00:04:08,840 --> 00:04:10,840
+And then, what kinds of predictions can we make?
+
+88
+00:04:10,840 --> 00:04:14,380
+That's a subject of fixed-income modeling.
+
+89
+00:04:14,380 --> 00:04:16,760
+And we can pick different kinds of variables,
+
+90
+00:04:16,760 --> 00:04:18,610
+which may be closely associated, but may
+
+91
+00:04:18,610 --> 00:04:21,860
+have different interpretations.
+
+92
+00:04:21,860 --> 00:04:25,618
+Now, suppose we want to take a look at how to price bonds
+
+93
+00:04:25,618 --> 00:04:27,160
+in the same way that we looked at how
+
+94
+00:04:27,160 --> 00:04:29,410
+to price stock options already.
+
+95
+00:04:29,410 --> 00:04:31,870
+Now, the pricing of bonds has a few twists.
+
+96
+00:04:31,870 --> 00:04:34,850
+First of all, which interest rate should we use?
+
+97
+00:04:34,850 --> 00:04:36,040
+What should they depend on?
+
+98
+00:04:36,040 --> 00:04:38,200
+There's not a single risk-free rate
+
+99
+00:04:38,200 --> 00:04:40,300
+that showed up in our calculations
+
+100
+00:04:40,300 --> 00:04:42,700
+before that we could use for discounting
+
+101
+00:04:42,700 --> 00:04:45,715
+or for risk-neutral pricing.
+
+102
+00:04:45,715 --> 00:04:49,750
+Now, risk-free bonds of different maturities
+
+103
+00:04:49,750 --> 00:04:54,130
+all could lay an equal claim to being the risk-free rate.
+
+104
+00:04:54,130 --> 00:04:56,890
+It's tempting to take a look at the short rate, the shortest
+
+105
+00:04:56,890 --> 00:04:58,840
+maturity bonds, but--
+
+106
+00:04:58,840 --> 00:05:01,360
+because they seem to be special because they're
+
+107
+00:05:01,360 --> 00:05:04,150
+at one end of the curve rather than some arbitrary
+
+108
+00:05:04,150 --> 00:05:05,260
+point in the middle.
+
+109
+00:05:05,260 --> 00:05:08,350
+But really, between any two points in the curve,
+
+110
+00:05:08,350 --> 00:05:11,620
+we can ask what a view that represents for how rates
+
+111
+00:05:11,620 --> 00:05:13,120
+might evolve in the future.
+
+112
+00:05:13,120 --> 00:05:14,987
+And they all contribute to our notion
+
+113
+00:05:14,987 --> 00:05:16,570
+of what we should think about as being
+
+114
+00:05:16,570 --> 00:05:19,990
+the relevant risk-free rate, especially when we
+
+115
+00:05:19,990 --> 00:05:24,340
+have multi-period problems or multiple time horizons.
+
+116
+00:05:24,340 --> 00:05:26,590
+We can't just content ourselves with picking
+
+117
+00:05:26,590 --> 00:05:28,960
+a short overnight rate saying that's it;
+
+118
+00:05:28,960 --> 00:05:30,620
+let's be done with it.
+
+119
+00:05:30,620 --> 00:05:33,070
+So interest rates aren't constant in time.
+
+120
+00:05:33,070 --> 00:05:34,840
+They're not deterministic.
+
+121
+00:05:34,840 --> 00:05:37,420
+We do need to model them as random variables.
+
+122
+00:05:37,420 --> 00:05:39,520
+But we also need to keep in mind that what
+
+123
+00:05:39,520 --> 00:05:46,930
+gets traded are bonds, are generally bonds, or derivatives
+
+124
+00:05:46,930 --> 00:05:49,390
+on bonds or on interest rates, but not the interest rates
+
+125
+00:05:49,390 --> 00:05:49,960
+themselves.
+
+126
+00:05:49,960 --> 00:05:51,700
+Those can't be traded.
+
+127
+00:05:51,700 --> 00:05:56,320
+So the bonds come in-- and I'll talk mostly about bonds.
+
+128
+00:05:56,320 --> 00:05:59,590
+But bonds come in a variety of maturities.
+
+129
+00:05:59,590 --> 00:06:05,620
+And because we have multiple instruments all trading based
+
+130
+00:06:05,620 --> 00:06:10,280
+on the same kind of principles, we
+
+131
+00:06:10,280 --> 00:06:13,550
+might expect there to be some no-arbitrage constraints
+
+132
+00:06:13,550 --> 00:06:18,270
+on the relative prices of bond.
+
+133
+00:06:18,270 --> 00:06:19,910
+So here's an idea.
+
+134
+00:06:19,910 --> 00:06:23,280
+What we'd like to do is look for a way to price all bonds,
+
+135
+00:06:23,280 --> 00:06:25,220
+or all bonds from a particular class,
+
+136
+00:06:25,220 --> 00:06:30,140
+of all maturities in a way that avoids arbitrage and that
+
+137
+00:06:30,140 --> 00:06:33,950
+minimizes or leads to a fixed number of stochastic factors.
+
+138
+00:06:33,950 --> 00:06:36,830
+We could try to model each bond independently,
+
+139
+00:06:36,830 --> 00:06:41,660
+but that would not be a great description of reality
+
+140
+00:06:41,660 --> 00:06:44,090
+because they do have commonalities.
+
+141
+00:06:44,090 --> 00:06:47,930
+But also, we really want to be able to take advantage
+
+142
+00:06:47,930 --> 00:06:51,440
+in thinking about portfolios and thinking about possibilities
+
+143
+00:06:51,440 --> 00:06:53,390
+for arbitrage and how no arbitrage
+
+144
+00:06:53,390 --> 00:06:56,540
+can inform pricing relationships, about how
+
+145
+00:06:56,540 --> 00:07:00,080
+the bonds that are connected to common rates,
+
+146
+00:07:00,080 --> 00:07:02,580
+they have relationships among them.
+
+147
+00:07:02,580 --> 00:07:05,600
+So let's take a look at the simplest example.
+
+148
+00:07:05,600 --> 00:07:08,990
+We're going to imagine that we have bonds that do depend
+
+149
+00:07:08,990 --> 00:07:10,940
+on a single, random variable.
+
+150
+00:07:10,940 --> 00:07:12,710
+And that random variable, we'll say
+
+151
+00:07:12,710 --> 00:07:14,960
+will be what we call the short rate, which
+
+152
+00:07:14,960 --> 00:07:17,900
+is a-- think of not just as being an overnight rate,
+
+153
+00:07:17,900 --> 00:07:21,380
+but as being an instantaneous spot interest
+
+154
+00:07:21,380 --> 00:07:27,090
+rate, the rate we can get right now for infinitesimal duration.
+
+155
+00:07:27,090 --> 00:07:28,250
+So this isn't tradable.
+
+156
+00:07:28,250 --> 00:07:29,160
+You can't buy it.
+
+157
+00:07:29,160 --> 00:07:30,500
+You can't buy a bond for that.
+
+158
+00:07:30,500 --> 00:07:31,910
+You can't invest in it.
+
+159
+00:07:31,910 --> 00:07:36,110
+But it's kind of clear that it might be approximately
+
+160
+00:07:36,110 --> 00:07:39,260
+equal to what we would see for very short-term, say,
+
+161
+00:07:39,260 --> 00:07:40,440
+overnight rates.
+
+162
+00:07:40,440 --> 00:07:42,410
+So let's think that that might be
+
+163
+00:07:42,410 --> 00:07:45,740
+one of the variables of interest in describing our yield curve
+
+164
+00:07:45,740 --> 00:07:48,232
+and describing bonds, certainly, what
+
+165
+00:07:48,232 --> 00:07:49,940
+they're worth a very short period of time
+
+166
+00:07:49,940 --> 00:07:51,740
+would inform arbitrages.
+
+167
+00:07:51,740 --> 00:07:53,960
+So let's imagine that we have a variable
+
+168
+00:07:53,960 --> 00:07:58,550
+that we'll call y for the short term--
+
+169
+00:07:58,550 --> 00:08:04,080
+this short instantaneous rate.
+
+170
+00:08:04,080 --> 00:08:07,910
+So let's think that we want to have a pricing formula where
+
+171
+00:08:07,910 --> 00:08:11,780
+we have the price of a bond; let's call it V.
+
+172
+00:08:11,780 --> 00:08:13,160
+It depends on time.
+
+173
+00:08:13,160 --> 00:08:14,540
+It depends on the current time.
+
+174
+00:08:14,540 --> 00:08:16,043
+It depends on big T--
+
+175
+00:08:16,043 --> 00:08:17,710
+I'll let it be the maturity of the bond.
+
+176
+00:08:17,710 --> 00:08:21,210
+So let's think of that as being a fixed time in the future.
+
+177
+00:08:21,210 --> 00:08:24,080
+It's a parameter of the bond; it's not a variable.
+
+178
+00:08:24,080 --> 00:08:28,070
+And y, little y where I've written a subscript t
+
+179
+00:08:28,070 --> 00:08:30,530
+to remind us that it's time dependent-- to be
+
+180
+00:08:30,530 --> 00:08:32,120
+our random variable.
+
+181
+00:08:32,120 --> 00:08:36,030
+And let's let y be described by an Ito process.
+
+182
+00:08:36,030 --> 00:08:41,000
+So dy is something of the form a dt plus bdB.
+
+183
+00:08:41,000 --> 00:08:43,340
+So in this structure, what we're doing is
+
+184
+00:08:43,340 --> 00:08:46,140
+we're imagining that the short rate, y,
+
+185
+00:08:46,140 --> 00:08:47,930
+which is an observable, is nevertheless
+
+186
+00:08:47,930 --> 00:08:51,080
+described by an Ito process, and the value
+
+187
+00:08:51,080 --> 00:08:54,080
+of bonds of all maturities depend on that variable.
+
+188
+00:08:54,080 --> 00:08:55,580
+It might depend on other things too.
+
+189
+00:08:55,580 --> 00:08:58,700
+But let's start with the one-factor picture.
+
+190
+00:08:58,700 --> 00:09:02,930
+And let's see where that leads us.
+
+191
+00:09:02,930 --> 00:09:04,000
+
+

@@ -1,0 +1,207 @@
+PROFESSOR: What kinds of Ito processes
+might we use for looking at the short rate?
+So we've seen how given an Ito process for the short rate,
+we can get a differential equation,
+a partial differential equation for bond prices
+in terms of this unknown market price at risk.
+But we do have a whole bunch of relationships
+that hold in order to avoid arbitrage among the bonds,
+and it gives some hope of seeing a structure for the yield
+curve.
+So there's a huge literature on different kinds
+of models for the spot rate, and here are a few examples.
+So just to take a look at a few of them,
+the Ho and Lee model starts with an arbitrary function of dt
+plus a constant Brownian term.
+So there's a time-dependent, deterministic first term
+that corresponds to the drift part,
+to the return part of an Ito process,
+and a random part fixed volatility.
+So we can determine new arbitrage prices.
+And then by picking different functional forms of psi,
+we can try to fit observed market prices if we think
+that the markets are efficient in our pricing
+and taking into account these relationships correctly.
+So one way that we might do that is
+to take a look at observed market prices
+and then try to fit a curve through this,
+take some derivatives of this in such a way
+that we can determine a psi of t that yields prices--
+no pun intended-- that yields prices
+that hopefully, fit the yield curve reasonably well.
+So that's a way to kind of match existing market data.
+The Vasicek model is a single-factor model
+that has mean reversion built into it.
+And you'll recognize this as being the Ornstein-Uhlenbeck
+process that we looked at in the continuous time
+analog of an autoregressive time series model.
+So in this model, there's also a constant term,
+but there's a definite specific form for the coefficient of dt.
+It's not some arbitrary function psi.
+It's a particular form, and it says that interest rates
+are mean reverting.
+The Hull and White model kind of tries
+to combine the best of both of the above.
+So it has a mean reversion term plus an arbitrary function,
+and it lets us model the yield curve
+and have some structure for volatility.
+The CIR model, the Cox-Ingersoll-Ross model,
+takes a different twist by modifying the dB term
+and taking a look at how the effective volatility may
+depend on the levels of interest rates.
+So how do we proceed?
+You pick your model, you pick your Ito process,
+and then you solve your bond pricing equation.
+You look at the market.
+You see what you like.
+If you don't like it, you come back here,
+you pick another one, and you start again.
+And if you don't like any of these models,
+you can start with your own.
+So the methodology goes this way.
+We're connecting a particular postulate for an Ito process
+that drives one of the random factors--
+in this case, these are single-factor models--
+and then we solve for prices consistent with principles
+of no arbitrage.
+So for example, if the spot rate follows an OU process,
+and the market price of risk is assumed
+to be constant or linear--
+so this eta function, I'm just putting an arbitrary, c0 or c1,
+you can set one or the other of them to 0 if you'd like.
+We can do a little bit of arithmetic with the function
+f in terms of the a and b parameters for the structure
+of our Ito process from our bond-pricing equation,
+and we can see what kind of equation that we get.
+We can look at estimating the model parameters
+either from looking at dynamics of the short rate
+or by taking a look at observed bond prices.
+So here, I've introduced the a prime and a y prime
+just to be rescaled parameters based
+on some estimates we might do.
+The details aren't that important.
+It's just to show you that the overall structure that I get
+can have a form that's of the same overall form, something
+that's linear in the spot rate, which is the same structure
+that we have up here in our original process.
+So the reason we do this as opposed to something simpler,
+like Brownian motion or geometric Brownian motion,
+is that interest rates, unlike stock prices, don't diffuse.
+They don't go all over the place.
+In fact, they don't vary that much at all.
+So mean reversion is an interesting starting place.
+The idea is the rates might change,
+but maybe they stay in a given neighborhood for a while.
+Certainly, over the last long period of time,
+the rates have been pretty close to 0.
+But the idea is that instead of having a strict bound--
+say, a zero bound for interest rates or an upper bound
+beyond which they can't go--
+we see that the diffusion model isn't a good model.
+But by having a mean reversion factor, like the Vasicek model,
+it's the dynamics that keep it from going.
+There's something always pulling the interest rates back.
+Now, that does mean that we need an estimate for what
+the parameters are for this mean to which they're reverting.
+Is there some long-term average that we should use?
+Is there a different way we can think about it?
+So those are part of the estimation
+question for this model.
+And we can ask if we're thinking about what things should
+be long-term, or if we're thinking about empirically,
+what works best in terms of the set of option
+prices and the yield curve that the model produces.
+But suppose we do take this structure,
+and we just want to do the mathematics
+and see what we can get by applying the Ito
+calculus to this setting.
+So let's take a look.
+So we've got this general structure.
+So we have that dy is some constant times y bar minus y--
+that's our mean reversion term--
+plus sigma dB.
+Now, one of the things that we can do that's convenient
+is to transform the variables.
+So let's use Ito's lemma to change from variable y
+to variable z where we'll put in an exponential dependence.
+And we're not surprised by that, because we would think
+that if the model were purely deterministic,
+we would have a long-term average interest rate,
+and we might expect to see exponential behavior.
+So if we just plug that in and turn the crank,
+we see that we get this expression for dy.
+We make this substitution for y and z.
+And then we see that we can write dz
+in terms of an exponential prefactor
+out in front, times something that looks like a random walk
+with constant coefficients.
+So this is not a random walk.
+But in terms of the z variable, we've
+turned it into something that looks like it
+has some similar properties.
+And the advantage of this is not that we're
+going to get diffusion where we didn't have any before.
+The point here is that by having this be an exact differential
+and this have constant coefficients,
+we have a chance of integrating the last integral.
+So if we integrate that SDE, what
+do we find for the behavior?
+We find that z can be written-- the evolution of z
+from an initial starting point that's
+an arbitrary constant, z0, can be written in this form where
+we can now study what happens as t goes to 0
+and as t goes to infinity for a long time.
+So what we see is when we turn things, we solve for z,
+we do the integral in terms of z.
+And then we substitute back to get y.
+And what do we see?
+We see one term, initially y0, and this term
+decreases exponentially with time.
+This term here, as time goes on, the e to the minus
+at goes to 0, and this approaches y bar.
+And now we see that by combining these two terms,
+that if sigma were equal to 0, we
+would have something that would begin at any y0,
+and it would relax over time to reach
+y bar as t goes to infinity, which
+is what we would expect for our mean reversion process
+in the absence of volatility.
+There is volatility, though.
+And we have this term in dB, which is
+a sequence of random variables.
+And therefore, writing it out in this way,
+it looks like it's in closed form.
+But, of course, that interval over dB
+is itself a random variable.
+It says that dB's need to be weighted
+by the exponential prefactor at different steps along the way.
+So this is an expression for y.
+We can ask about the moments of its distribution.
+That's the full y.
+We know it's related to a Gaussian,
+because the infinitesimal dB's are Gaussian,
+but we have this time-weighted average of dB's.
+But we certainly can compute the mean and variance
+of that expression.
+So if we take the mean for the long-term value,
+we see that because the expectation is linear,
+the dB term goes away, and we're just left with this expression
+that I mentioned before for how the long-term average behaves
+and how it starts at y0, and it relaxes as t goes to infinity,
+to reach y bar.
+In terms of the variance, we apply our definition.
+The variance is the expectation of y minus its own expectation,
+quantity squared.
+We multiply it out.
+We end up with double integrals of our products of dB.
+We use our Ito rule, which says that dB
+at time s and dB at time s prime are uncorrelated
+with each other, unless their times coincide,
+in which case, their variance is dt.
+So we can do the integrals, and we
+find a time-dependent variance.
+And t goes to infinity, we're left with the constant result
+in terms of the initial parameters of the model,
+sigma squared-- remember, sigma was the coefficient
+of our Brownian term--
+sigma squared over 2 alpha.

@@ -1,0 +1,1044 @@
+0
+00:00:00,000 --> 00:00:01,820
+
+
+1
+00:00:01,820 --> 00:00:04,460
+PROFESSOR: So how can we generalize
+
+2
+00:00:04,460 --> 00:00:07,310
+the work we've done so far to this new setting?
+
+3
+00:00:07,310 --> 00:00:10,040
+How do we find a partial differential equation that
+
+4
+00:00:10,040 --> 00:00:13,250
+describes the prices of bonds?
+
+5
+00:00:13,250 --> 00:00:15,890
+Remember that in the case of stock options,
+
+6
+00:00:15,890 --> 00:00:18,680
+we had a definite underlying that was tradable,
+
+7
+00:00:18,680 --> 00:00:23,600
+and we built a portfolio of the stock with the derivative.
+
+8
+00:00:23,600 --> 00:00:25,670
+But here we have a whole bunch of bonds,
+
+9
+00:00:25,670 --> 00:00:28,490
+they're all on an equal footing, and none of them
+
+10
+00:00:28,490 --> 00:00:32,650
+is actually the random variable of interest.
+
+11
+00:00:32,650 --> 00:00:35,310
+So the thing that we know that's described by an Ito process
+
+12
+00:00:35,310 --> 00:00:38,520
+is the short rate, and the prices depend on that.
+
+13
+00:00:38,520 --> 00:00:41,530
+So how can we generalize things?
+
+14
+00:00:41,530 --> 00:00:45,720
+How can we set up a relationship that could lead to a PDE?
+
+15
+00:00:45,720 --> 00:00:49,140
+What kind of instruments can we use for hedging?
+
+16
+00:00:49,140 --> 00:00:50,760
+Now what we'd like to do is first,
+
+17
+00:00:50,760 --> 00:00:52,860
+let's count our stochastic degrees of freedom.
+
+18
+00:00:52,860 --> 00:00:53,580
+We've got one.
+
+19
+00:00:53,580 --> 00:00:55,050
+We have a single short rate.
+
+20
+00:00:55,050 --> 00:00:59,190
+And of course, this generalizes for more sophisticated models,
+
+21
+00:00:59,190 --> 00:01:01,110
+but let's just start with that.
+
+22
+00:01:01,110 --> 00:01:03,480
+It's not tradable, but we have a whole bunch
+
+23
+00:01:03,480 --> 00:01:06,540
+of bonds, all of which depend on that rate.
+
+24
+00:01:06,540 --> 00:01:09,450
+Since there are multiple bonds, they all
+
+25
+00:01:09,450 --> 00:01:11,940
+have a dependence on that single factor,
+
+26
+00:01:11,940 --> 00:01:14,670
+if we put them together in a portfolio
+
+27
+00:01:14,670 --> 00:01:17,950
+and we think about dynamically rebalancing the portfolio,
+
+28
+00:01:17,950 --> 00:01:20,820
+it should be possible to cancel out the risk
+
+29
+00:01:20,820 --> 00:01:24,990
+and determine a PDE that gives us the relative relationship
+
+30
+00:01:24,990 --> 00:01:26,220
+among bonds.
+
+31
+00:01:26,220 --> 00:01:27,330
+How many bonds?
+
+32
+00:01:27,330 --> 00:01:29,100
+Why don't we start with two?
+
+33
+00:01:29,100 --> 00:01:32,280
+That would let us cancel the common source of risk
+
+34
+00:01:32,280 --> 00:01:33,510
+to both of them.
+
+35
+00:01:33,510 --> 00:01:34,740
+Which two?
+
+36
+00:01:34,740 --> 00:01:36,150
+Take your pick.
+
+37
+00:01:36,150 --> 00:01:37,892
+So let's see what we can do.
+
+38
+00:01:37,892 --> 00:01:39,850
+We're going to start with the one-factor model,
+
+39
+00:01:39,850 --> 00:01:41,642
+and we're going to assume that all the bond
+
+40
+00:01:41,642 --> 00:01:44,130
+prices depend on this single stochastic variable,
+
+41
+00:01:44,130 --> 00:01:45,190
+the short rate.
+
+42
+00:01:45,190 --> 00:01:48,450
+So what we'll do is we'll take two zero-coupon bonds
+
+43
+00:01:48,450 --> 00:01:49,590
+of different maturities.
+
+44
+00:01:49,590 --> 00:01:52,840
+We'll think of them as being T1 and T2 and the values
+
+45
+00:01:52,840 --> 00:01:54,690
+as being the V1 and V2.
+
+46
+00:01:54,690 --> 00:01:57,960
+And we'll create a dynamic portfolio
+
+47
+00:01:57,960 --> 00:02:00,150
+that's going to be risk-free.
+
+48
+00:02:00,150 --> 00:02:01,380
+Where do we start?
+
+49
+00:02:01,380 --> 00:02:02,730
+With Ito's lemma.
+
+50
+00:02:02,730 --> 00:02:06,300
+So for each bond, Ito's formula tells us
+
+51
+00:02:06,300 --> 00:02:10,979
+that the DV, the differential for the value of the bond,
+
+52
+00:02:10,979 --> 00:02:13,320
+is given by partial of V with respect
+
+53
+00:02:13,320 --> 00:02:17,010
+to t times dt plus partial of V with respect
+
+54
+00:02:17,010 --> 00:02:19,860
+to y dy plus the Ito term, which here I've
+
+55
+00:02:19,860 --> 00:02:22,590
+grouped with the coefficient of dt that's
+
+56
+00:02:22,590 --> 00:02:26,370
+given by the usual form, b squared over 2 second partial
+
+57
+00:02:26,370 --> 00:02:28,170
+of V with respect to y.
+
+58
+00:02:28,170 --> 00:02:31,560
+So keep in mind now that this is analogous to what
+
+59
+00:02:31,560 --> 00:02:35,430
+we saw for stocks where s is replaced by y,
+
+60
+00:02:35,430 --> 00:02:39,030
+and the b squared is going to depend on the particular model
+
+61
+00:02:39,030 --> 00:02:41,640
+that we have for the short interest rate.
+
+62
+00:02:41,640 --> 00:02:45,090
+But our portfolio doesn't consist of any y's ,
+
+63
+00:02:45,090 --> 00:02:47,210
+it's only going to consist of v's.
+
+64
+00:02:47,210 --> 00:02:48,210
+Let's see how that goes.
+
+65
+00:02:48,210 --> 00:02:50,860
+
+
+66
+00:02:50,860 --> 00:02:52,710
+So we're going to do is let's build
+
+67
+00:02:52,710 --> 00:02:59,730
+a portfolio with q1 bonds of value 1 and q2 bonds value 2,
+
+68
+00:02:59,730 --> 00:03:01,710
+and we'll call this value oi, and we'd
+
+69
+00:03:01,710 --> 00:03:03,480
+like to eliminate risk.
+
+70
+00:03:03,480 --> 00:03:06,270
+Well, we can do that in exactly the same way
+
+71
+00:03:06,270 --> 00:03:10,380
+that we did before, by choosing an appropriate ratio of q1
+
+72
+00:03:10,380 --> 00:03:11,190
+and q2.
+
+73
+00:03:11,190 --> 00:03:13,630
+Now keep in mind, when we looked at the stock option case,
+
+74
+00:03:13,630 --> 00:03:16,805
+we thought of keeping a single option in a variable number
+
+75
+00:03:16,805 --> 00:03:18,180
+of shares of stock, but there was
+
+76
+00:03:18,180 --> 00:03:21,000
+no reason we had to do that except partly,
+
+77
+00:03:21,000 --> 00:03:23,430
+historical interest, and partly, the realities of trading
+
+78
+00:03:23,430 --> 00:03:25,320
+in the market, which is that stock is
+
+79
+00:03:25,320 --> 00:03:26,760
+much more liquid than options.
+
+80
+00:03:26,760 --> 00:03:28,770
+But we could have held one share of stock
+
+81
+00:03:28,770 --> 00:03:29,830
+in our hedging argument.
+
+82
+00:03:29,830 --> 00:03:31,770
+It would've gone through exactly the same way
+
+83
+00:03:31,770 --> 00:03:34,500
+if we'd varied the number of options that we had.
+
+84
+00:03:34,500 --> 00:03:36,490
+And in fact, the overall scale doesn't matter.
+
+85
+00:03:36,490 --> 00:03:39,060
+What matters is the ratio of the number
+
+86
+00:03:39,060 --> 00:03:42,250
+of shares of one instrument relative to another.
+
+87
+00:03:42,250 --> 00:03:44,530
+So the same thing holds here.
+
+88
+00:03:44,530 --> 00:03:46,830
+But this time it's actually a little bit clearer,
+
+89
+00:03:46,830 --> 00:03:49,870
+because v1 and v2 are on equal footing.
+
+90
+00:03:49,870 --> 00:03:55,710
+So if I build a portfolio with q1 units of bond 1,
+
+91
+00:03:55,710 --> 00:03:59,310
+q2 units of bond 2 that have maturities t1 and t2,
+
+92
+00:03:59,310 --> 00:04:03,480
+and I choose these ratios in this particular way--
+
+93
+00:04:03,480 --> 00:04:05,040
+that are given by the ratios that
+
+94
+00:04:05,040 --> 00:04:07,570
+look like what we previously called the delta in the case
+
+95
+00:04:07,570 --> 00:04:08,940
+of the stock option--
+
+96
+00:04:08,940 --> 00:04:13,560
+then, and if I apply Ito's formula to this portfolio,
+
+97
+00:04:13,560 --> 00:04:16,320
+I can cancel the risky terms.
+
+98
+00:04:16,320 --> 00:04:20,130
+I can cancel the coefficients of dy
+
+99
+00:04:20,130 --> 00:04:23,880
+and be left only with something in dt, the same way
+
+100
+00:04:23,880 --> 00:04:26,970
+that we eliminated risk in deriving the Black-Scholes
+
+101
+00:04:26,970 --> 00:04:27,940
+equation.
+
+102
+00:04:27,940 --> 00:04:29,310
+So what do we get?
+
+103
+00:04:29,310 --> 00:04:31,290
+By combining the portfolio in this way
+
+104
+00:04:31,290 --> 00:04:35,820
+with the specially chosen ratio of q1 to q2,
+
+105
+00:04:35,820 --> 00:04:40,420
+we can see that our portfolio pi earns the risk-free rate.
+
+106
+00:04:40,420 --> 00:04:44,550
+So instead of r times pi dt, now because it's
+
+107
+00:04:44,550 --> 00:04:47,160
+earning over an infinitesimal period of time
+
+108
+00:04:47,160 --> 00:04:50,310
+and y is the short-term interest rate,
+
+109
+00:04:50,310 --> 00:04:54,440
+I have the d pi, because it's risk-free,
+
+110
+00:04:54,440 --> 00:04:59,180
+is going to earn y dt times the value of that portfolio, pi.
+
+111
+00:04:59,180 --> 00:05:03,170
+So it's earning a risk-free rate at rate y.
+
+112
+00:05:03,170 --> 00:05:04,940
+If I expand the differentials and I
+
+113
+00:05:04,940 --> 00:05:09,440
+take account of the cancellation from q1 and q2,
+
+114
+00:05:09,440 --> 00:05:12,530
+the terms that don't cancel give me this expression.
+
+115
+00:05:12,530 --> 00:05:19,100
+I've got a sum over 1 and 2 for q sub i of dV dt
+
+116
+00:05:19,100 --> 00:05:22,040
+plus b squared over 2 second partial of V
+
+117
+00:05:22,040 --> 00:05:24,950
+with respect to y squared, all times dt.
+
+118
+00:05:24,950 --> 00:05:27,740
+So this left-hand side is all something
+
+119
+00:05:27,740 --> 00:05:29,540
+that's proportional to dt.
+
+120
+00:05:29,540 --> 00:05:31,310
+It's got a bunch of partial derivatives,
+
+121
+00:05:31,310 --> 00:05:34,550
+a bunch of quantities in front, and it's something
+
+122
+00:05:34,550 --> 00:05:35,900
+that's deterministic.
+
+123
+00:05:35,900 --> 00:05:38,540
+On the right-hand side, I also have something proportional
+
+124
+00:05:38,540 --> 00:05:39,650
+to dt.
+
+125
+00:05:39,650 --> 00:05:43,200
+It's y times the value of the portfolio itself.
+
+126
+00:05:43,200 --> 00:05:45,680
+So notice now the structure that we've got.
+
+127
+00:05:45,680 --> 00:05:49,190
+The last time we did this for deriving Black-Scholes,
+
+128
+00:05:49,190 --> 00:05:50,810
+we had a whole bunch of terms that
+
+129
+00:05:50,810 --> 00:05:52,730
+were all coefficients of dt.
+
+130
+00:05:52,730 --> 00:05:55,130
+We said the only way that that could hold
+
+131
+00:05:55,130 --> 00:05:59,940
+is if the coefficients of dt were themselves equal.
+
+132
+00:05:59,940 --> 00:06:03,830
+So that is, this summation here should
+
+133
+00:06:03,830 --> 00:06:08,150
+be equal to y times q1 v1 plus q2 v2.
+
+134
+00:06:08,150 --> 00:06:12,680
+Now notice that we've got a bunch of 1s and a bunch of 2s,
+
+135
+00:06:12,680 --> 00:06:14,340
+and they're separate.
+
+136
+00:06:14,340 --> 00:06:17,420
+So we have a bunch of terms that sum with q1 and v1,
+
+137
+00:06:17,420 --> 00:06:20,000
+and a bunch of other terms with q2 and v2.
+
+138
+00:06:20,000 --> 00:06:21,560
+And one of the standard techniques
+
+139
+00:06:21,560 --> 00:06:24,830
+for solving and organizing differential equations
+
+140
+00:06:24,830 --> 00:06:26,730
+is to separate variables.
+
+141
+00:06:26,730 --> 00:06:31,610
+So let's choose, not just the ratio of q1 over q2,
+
+142
+00:06:31,610 --> 00:06:34,620
+let's set the scale, let's pick a particular value.
+
+143
+00:06:34,620 --> 00:06:36,620
+So here's a convenient one.
+
+144
+00:06:36,620 --> 00:06:41,790
+If we take q1 to be 1 over--
+
+145
+00:06:41,790 --> 00:06:46,160
+
+
+146
+00:06:46,160 --> 00:06:47,920
+let's see if I can get my pointer back.
+
+147
+00:06:47,920 --> 00:06:50,770
+
+
+148
+00:06:50,770 --> 00:06:55,600
+If I can take q1 to be 1 over partial of V with respect to y,
+
+149
+00:06:55,600 --> 00:06:57,970
+assuming that's non-zero, and q2 to be
+
+150
+00:06:57,970 --> 00:07:01,780
+minus the similar kind of thing, you
+
+151
+00:07:01,780 --> 00:07:05,380
+notice these two choices will satisfy this ratio.
+
+152
+00:07:05,380 --> 00:07:06,370
+That's all I need.
+
+153
+00:07:06,370 --> 00:07:08,860
+And when I go back to my expression for Ito,
+
+154
+00:07:08,860 --> 00:07:10,420
+you see that that will be sufficient
+
+155
+00:07:10,420 --> 00:07:15,250
+when I multiply q1 times this term with v1 and q2
+
+156
+00:07:15,250 --> 00:07:19,910
+with that term to v2, that will cancel out the dy terms.
+
+157
+00:07:19,910 --> 00:07:22,180
+So this particular choice not only
+
+158
+00:07:22,180 --> 00:07:26,680
+cancels out the dy terms that's already given by this ratio,
+
+159
+00:07:26,680 --> 00:07:33,470
+but it lets us separate the v1 and the v2 terms completely.
+
+160
+00:07:33,470 --> 00:07:34,700
+So here's what we get.
+
+161
+00:07:34,700 --> 00:07:37,070
+Let's equate the coefficients of dt.
+
+162
+00:07:37,070 --> 00:07:38,750
+Let's group the terms together.
+
+163
+00:07:38,750 --> 00:07:40,970
+Let's put all the v1's on the left,
+
+164
+00:07:40,970 --> 00:07:43,590
+let's put all the v2's on the right.
+
+165
+00:07:43,590 --> 00:07:46,970
+And because that minus sign in front of q2,
+
+166
+00:07:46,970 --> 00:07:50,070
+we have the following nice symmetrical expression.
+
+167
+00:07:50,070 --> 00:07:56,150
+We have one equation in terms of two unknown prices, v1 and v2.
+
+168
+00:07:56,150 --> 00:08:01,420
+So I have this expression in v1 is equal to this expression
+
+169
+00:08:01,420 --> 00:08:03,010
+here in v2.
+
+170
+00:08:03,010 --> 00:08:04,960
+And let's look at the structure for a moment.
+
+171
+00:08:04,960 --> 00:08:08,620
+In the numerator, we see that most of these terms, these
+
+172
+00:08:08,620 --> 00:08:11,110
+are three of the four terms that showed up
+
+173
+00:08:11,110 --> 00:08:15,010
+in the Black-Scholes equation, partial of V with respect to t.
+
+174
+00:08:15,010 --> 00:08:18,250
+I've got a b squared over 2 second partial with respect
+
+175
+00:08:18,250 --> 00:08:21,010
+to y minus v1.
+
+176
+00:08:21,010 --> 00:08:25,060
+And then I've divided by partial of v1 with respect to y1.
+
+177
+00:08:25,060 --> 00:08:28,180
+That's my q.
+
+178
+00:08:28,180 --> 00:08:30,220
+And over here, I've got the same thing,
+
+179
+00:08:30,220 --> 00:08:33,850
+but just with all the subscripts 1 replaced by subscripts 2.
+
+180
+00:08:33,850 --> 00:08:35,799
+So it's different from Black-Scholes.
+
+181
+00:08:35,799 --> 00:08:39,549
+Before, I had an expression for a single variable v,
+
+182
+00:08:39,549 --> 00:08:41,710
+and I set it equal to 0.
+
+183
+00:08:41,710 --> 00:08:45,630
+In this case, I have two expressions, one of them in v1,
+
+184
+00:08:45,630 --> 00:08:48,890
+one of them in v2, and I set them equal to each other.
+
+185
+00:08:48,890 --> 00:08:50,860
+Neither of them is equal to 0.
+
+186
+00:08:50,860 --> 00:08:53,320
+So it doesn't look like we made a lot of progress.
+
+187
+00:08:53,320 --> 00:08:57,010
+Again, one equation for two unknowns, v1 and v2.
+
+188
+00:08:57,010 --> 00:08:59,560
+But let's think about the structure for a moment.
+
+189
+00:08:59,560 --> 00:09:03,130
+Because all the v1's and v2's are isolated--
+
+190
+00:09:03,130 --> 00:09:04,960
+and remember that the v1's and v2's
+
+191
+00:09:04,960 --> 00:09:09,730
+correspond to the prices of bonds of different maturities--
+
+192
+00:09:09,730 --> 00:09:11,350
+that really tells us something.
+
+193
+00:09:11,350 --> 00:09:16,030
+Because the expression on the left depends on T1,
+
+194
+00:09:16,030 --> 00:09:19,360
+the second expression depends on T2.
+
+195
+00:09:19,360 --> 00:09:21,710
+But these two expressions are equal to each other.
+
+196
+00:09:21,710 --> 00:09:24,025
+And the one on the left doesn't have any T2's, the one
+
+197
+00:09:24,025 --> 00:09:25,450
+on the right doesn't have T1's.
+
+198
+00:09:25,450 --> 00:09:26,800
+How could that be?
+
+199
+00:09:26,800 --> 00:09:29,800
+The only way that this expression can hold,
+
+200
+00:09:29,800 --> 00:09:31,450
+that we can have these two things
+
+201
+00:09:31,450 --> 00:09:36,800
+equal to each other, that this can be equal to this,
+
+202
+00:09:36,800 --> 00:09:40,250
+is if neither of them depends on T1 or T2.
+
+203
+00:09:40,250 --> 00:09:44,420
+That is, this entire ratio as well as this one
+
+204
+00:09:44,420 --> 00:09:45,650
+need to be constant.
+
+205
+00:09:45,650 --> 00:09:49,220
+They need to be independent of the particular bond.
+
+206
+00:09:49,220 --> 00:09:51,080
+They can't depend on the bond's maturity.
+
+207
+00:09:51,080 --> 00:09:53,480
+They can't depend on anything else for the bond.
+
+208
+00:09:53,480 --> 00:09:55,730
+They need to be something that depends only
+
+209
+00:09:55,730 --> 00:09:58,100
+on time and on the short rate, which
+
+210
+00:09:58,100 --> 00:10:00,180
+are the two things that they have in common.
+
+211
+00:10:00,180 --> 00:10:03,980
+Anything that's bonds specific can't appear.
+
+212
+00:10:03,980 --> 00:10:07,040
+So it's in the individual terms, the v1
+
+213
+00:10:07,040 --> 00:10:09,140
+and its partial derivatives are there,
+
+214
+00:10:09,140 --> 00:10:12,170
+but that particular grouping of partial derivatives
+
+215
+00:10:12,170 --> 00:10:14,570
+and all those different terms in the numerators
+
+216
+00:10:14,570 --> 00:10:17,960
+need to be such that all of the explicit things that
+
+217
+00:10:17,960 --> 00:10:21,270
+are bond-dependent cancel out.
+
+218
+00:10:21,270 --> 00:10:26,370
+So because each side needs to be independent
+
+219
+00:10:26,370 --> 00:10:28,120
+and they're both equal to each other,
+
+220
+00:10:28,120 --> 00:10:31,750
+we can give that thing that they're equal to a name.
+
+221
+00:10:31,750 --> 00:10:33,390
+And we'll call it f.
+
+222
+00:10:33,390 --> 00:10:35,910
+We'll call it f, and we'll say it can depend on t,
+
+223
+00:10:35,910 --> 00:10:37,350
+and it can depend on y.
+
+224
+00:10:37,350 --> 00:10:39,030
+So it's some unknown function.
+
+225
+00:10:39,030 --> 00:10:42,330
+It's not 0, but it is something that doesn't
+
+226
+00:10:42,330 --> 00:10:44,170
+depend on the individual bonds.
+
+227
+00:10:44,170 --> 00:10:47,190
+And in fact, this is not only true for bond 1 and bond 2,
+
+228
+00:10:47,190 --> 00:10:48,150
+which are arbitrary.
+
+229
+00:10:48,150 --> 00:10:50,880
+It has to be true for all of the bonds,
+
+230
+00:10:50,880 --> 00:10:53,200
+no matter what their maturities are.
+
+231
+00:10:53,200 --> 00:10:54,970
+So here's what we found.
+
+232
+00:10:54,970 --> 00:10:58,200
+Now we have a differential equation for the bond pricing.
+
+233
+00:10:58,200 --> 00:11:02,400
+We've got the equation for any bond with any subscript i,
+
+234
+00:11:02,400 --> 00:11:05,580
+we have this Black-Scholes-like equation,
+
+235
+00:11:05,580 --> 00:11:09,540
+partial of V with respect to t plus second derivative,
+
+236
+00:11:09,540 --> 00:11:11,970
+this our diffusion term, with b squared over 2--
+
+237
+00:11:11,970 --> 00:11:15,690
+b comes from the Ito process defining y--
+
+238
+00:11:15,690 --> 00:11:17,490
+minus yV.
+
+239
+00:11:17,490 --> 00:11:22,080
+Remember, this looks like our minus rV term in Black-Scholes.
+
+240
+00:11:22,080 --> 00:11:23,910
+But now instead of r, it's replaced
+
+241
+00:11:23,910 --> 00:11:25,870
+by y, which is dynamic.
+
+242
+00:11:25,870 --> 00:11:27,630
+It's not the constant risk-free rate.
+
+243
+00:11:27,630 --> 00:11:30,330
+It's the dynamical random variable.
+
+244
+00:11:30,330 --> 00:11:33,490
+And then I have this other term, f of y--
+
+245
+00:11:33,490 --> 00:11:36,900
+which is a function that we don't know, it's unspecified--
+
+246
+00:11:36,900 --> 00:11:39,143
+times the partial of V with respect to y,
+
+247
+00:11:39,143 --> 00:11:41,310
+that we get just by multiplying through and clearing
+
+248
+00:11:41,310 --> 00:11:42,270
+denominators.
+
+249
+00:11:42,270 --> 00:11:44,130
+And that whole thing is equal to 0.
+
+250
+00:11:44,130 --> 00:11:46,260
+And what do we have for a boundary condition?
+
+251
+00:11:46,260 --> 00:11:48,480
+These are zero coupon bonds that are typically
+
+252
+00:11:48,480 --> 00:11:51,210
+normalized by saying that at maturity, they
+
+253
+00:11:51,210 --> 00:11:53,440
+pay off $1 or one unit.
+
+254
+00:11:53,440 --> 00:11:55,590
+We can pick a different normalization if we'd like.
+
+255
+00:11:55,590 --> 00:11:58,440
+So they have the normalization, then at maturity,
+
+256
+00:11:58,440 --> 00:11:59,640
+they're equal to 1.
+
+257
+00:11:59,640 --> 00:12:02,520
+But at times prior, their value's
+
+258
+00:12:02,520 --> 00:12:04,620
+determined by this differential equation,
+
+259
+00:12:04,620 --> 00:12:08,310
+and the maturity is one of the defining features
+
+260
+00:12:08,310 --> 00:12:10,880
+of the particular bond.
+

@@ -1,0 +1,1140 @@
+0
+00:00:00,000 --> 00:00:01,100
+
+
+1
+00:00:01,100 --> 00:00:03,920
+PROFESSOR: Let's take a closer look at the diffusion equation.
+
+2
+00:00:03,920 --> 00:00:09,390
+So the general diffusion equation is given right here.
+
+3
+00:00:09,390 --> 00:00:12,320
+So we say that we have a function p of z and t,
+
+4
+00:00:12,320 --> 00:00:14,880
+and they need to satisfy this differential equation.
+
+5
+00:00:14,880 --> 00:00:16,910
+The first partial with respect to t
+
+6
+00:00:16,910 --> 00:00:21,590
+minus half the second partial with respect to z equals 0.
+
+7
+00:00:21,590 --> 00:00:24,980
+And we've seen that there's a very special solution, p0,
+
+8
+00:00:24,980 --> 00:00:26,960
+that satisfies that equation, which
+
+9
+00:00:26,960 --> 00:00:30,810
+we can find by plugging it in and taking some derivatives.
+
+10
+00:00:30,810 --> 00:00:32,479
+So here's our p0.
+
+11
+00:00:32,479 --> 00:00:37,820
+Now, I claimed that if we construct this integral on top,
+
+12
+00:00:37,820 --> 00:00:40,560
+that this is the solution to the equation.
+
+13
+00:00:40,560 --> 00:00:42,830
+So what I'd like to do is, let's check that,
+
+14
+00:00:42,830 --> 00:00:44,700
+and then let's apply it.
+
+15
+00:00:44,700 --> 00:00:46,710
+So the first thing to do is to check it.
+
+16
+00:00:46,710 --> 00:00:49,520
+And the way we do it is we take derivatives.
+
+17
+00:00:49,520 --> 00:00:55,040
+And what we find is that if we take that integral expression,
+
+18
+00:00:55,040 --> 00:00:58,220
+and we stick it into the differential equation, what
+
+19
+00:00:58,220 --> 00:01:01,550
+we'll do is, we'll move the differential operators inside.
+
+20
+00:01:01,550 --> 00:01:08,820
+So for example, the partial derivative
+
+21
+00:01:08,820 --> 00:01:13,980
+with respect to time of p of z and t
+
+22
+00:01:13,980 --> 00:01:19,170
+is the integral of the partial with respect to--
+
+23
+00:01:19,170 --> 00:01:24,460
+excuse me-- the partial with respect
+
+24
+00:01:24,460 --> 00:01:36,150
+to time of everything inside the integral P0 z minus wt f of w,
+
+25
+00:01:36,150 --> 00:01:36,650
+dw.
+
+26
+00:01:36,650 --> 00:01:39,340
+
+
+27
+00:01:39,340 --> 00:01:40,870
+But where is the t dependence?
+
+28
+00:01:40,870 --> 00:01:42,790
+The t dependence is only in one place.
+
+29
+00:01:42,790 --> 00:01:44,500
+It's in p0.
+
+30
+00:01:44,500 --> 00:01:47,250
+And similarly with the second derivative.
+
+31
+00:01:47,250 --> 00:01:52,090
+So if I take the differential operator, partial with respect
+
+32
+00:01:52,090 --> 00:01:59,960
+to t minus 1/2 second partial with respect to z squared,
+
+33
+00:01:59,960 --> 00:02:03,620
+and I act on p, then that's the same thing
+
+34
+00:02:03,620 --> 00:02:11,620
+as this differential operator partial of t minus 1/2
+
+35
+00:02:11,620 --> 00:02:17,540
+second partial with respect to--
+
+36
+00:02:17,540 --> 00:02:20,540
+
+
+37
+00:02:20,540 --> 00:02:22,220
+let me get our pens right--
+
+38
+00:02:22,220 --> 00:02:26,850
+z squared, times-- what are they going to act on?
+
+39
+00:02:26,850 --> 00:02:32,934
+Well, the only thing that depends on z and t is p0.
+
+40
+00:02:32,934 --> 00:02:35,020
+p0 z and t--
+
+41
+00:02:35,020 --> 00:02:35,620
+excuse me.
+
+42
+00:02:35,620 --> 00:02:40,410
+
+
+43
+00:02:40,410 --> 00:02:46,490
+z minus w t of w, tw.
+
+44
+00:02:46,490 --> 00:02:50,390
+The only potential complication that we'd have to worry about
+
+45
+00:02:50,390 --> 00:02:53,180
+is this derivative act here on this t.
+
+46
+00:02:53,180 --> 00:02:56,360
+This is derivatives with respect to z.
+
+47
+00:02:56,360 --> 00:03:00,170
+This is not p0 of z and t, it's z minus w.
+
+48
+00:03:00,170 --> 00:03:03,170
+But because it's just shifted by a constant,
+
+49
+00:03:03,170 --> 00:03:05,390
+the derivatives are exactly the same.
+
+50
+00:03:05,390 --> 00:03:09,050
+So this operator, when I move it inside the integral,
+
+51
+00:03:09,050 --> 00:03:12,680
+acting on this part of the integrand gives 0.
+
+52
+00:03:12,680 --> 00:03:14,780
+And it doesn't matter what f is.
+
+53
+00:03:14,780 --> 00:03:17,660
+The integral is always going to be 0, provided
+
+54
+00:03:17,660 --> 00:03:19,100
+that the intervals converge.
+
+55
+00:03:19,100 --> 00:03:22,580
+And they will converge whenever t is greater than 0.
+
+56
+00:03:22,580 --> 00:03:25,190
+The limit t goes to 0 is a special case.
+
+57
+00:03:25,190 --> 00:03:27,260
+And we'll have more to say about that.
+
+58
+00:03:27,260 --> 00:03:30,840
+This is the reason why this integral form works.
+
+59
+00:03:30,840 --> 00:03:33,020
+So the reason it works is that, whenever
+
+60
+00:03:33,020 --> 00:03:36,080
+I act with the differential operator,
+
+61
+00:03:36,080 --> 00:03:39,110
+this piece here is the only thing that's hit,
+
+62
+00:03:39,110 --> 00:03:40,370
+and it vanishes.
+
+63
+00:03:40,370 --> 00:03:44,150
+So this expression necessarily solves
+
+64
+00:03:44,150 --> 00:03:45,780
+the differential equation.
+
+65
+00:03:45,780 --> 00:03:48,020
+If in addition, I get something that
+
+66
+00:03:48,020 --> 00:03:51,110
+has the right initial conditions, then I'm done.
+
+67
+00:03:51,110 --> 00:03:53,600
+I know that it satisfies the initial conditions.
+
+68
+00:03:53,600 --> 00:03:57,510
+I know that it satisfies the differential equation.
+
+69
+00:03:57,510 --> 00:04:00,900
+That's all we need to know.
+
+70
+00:04:00,900 --> 00:04:04,110
+So let's do a couple examples.
+
+71
+00:04:04,110 --> 00:04:12,650
+So exercise.
+
+72
+00:04:12,650 --> 00:04:18,670
+Suppose that f of z is z squared.
+
+73
+00:04:18,670 --> 00:04:21,730
+So this was an example that we did a lecture.
+
+74
+00:04:21,730 --> 00:04:27,720
+So I have the p of z comma 0 is equal to z squared.
+
+75
+00:04:27,720 --> 00:04:36,280
+And I say, find p of zt, or t in general,
+
+76
+00:04:36,280 --> 00:04:39,760
+at least for positive values of t.
+
+77
+00:04:39,760 --> 00:04:41,700
+So take a moment and go do that.
+
+78
+00:04:41,700 --> 00:04:43,192
+Take a look at the internals.
+
+79
+00:04:43,192 --> 00:04:45,400
+And then, we'll come back and we'll do that together.
+
+80
+00:04:45,400 --> 00:04:56,920
+
+
+81
+00:04:56,920 --> 00:04:57,670
+OK.
+
+82
+00:04:57,670 --> 00:04:58,570
+Let's go.
+
+83
+00:04:58,570 --> 00:04:59,770
+Do you have an answer?
+
+84
+00:04:59,770 --> 00:05:01,812
+All right, well you probably have the same answer
+
+85
+00:05:01,812 --> 00:05:04,570
+that we had in lecture.
+
+86
+00:05:04,570 --> 00:05:06,110
+But let's do the integrals.
+
+87
+00:05:06,110 --> 00:05:08,590
+So what we need to do is, we've got a formula.
+
+88
+00:05:08,590 --> 00:05:11,020
+Let's just plug and chug.
+
+89
+00:05:11,020 --> 00:05:15,910
+So p of zt is going to be equal to the integral of 1
+
+90
+00:05:15,910 --> 00:05:21,540
+over square root of 2 pi, e to the minus z
+
+91
+00:05:21,540 --> 00:05:25,290
+minus w squared over 2t.
+
+92
+00:05:25,290 --> 00:05:29,360
+I should have put in a t down here.
+
+93
+00:05:29,360 --> 00:05:34,040
+Remember, it's a Gaussian where the variance is t.
+
+94
+00:05:34,040 --> 00:05:35,780
+So it's not completely standardized.
+
+95
+00:05:35,780 --> 00:05:37,825
+So there is t dependence in this.
+
+96
+00:05:37,825 --> 00:05:39,200
+And then, what we'd like to do is
+
+97
+00:05:39,200 --> 00:05:47,250
+multiply this times w squared tw.
+
+98
+00:05:47,250 --> 00:05:49,090
+So that's the integral that we'd like to do.
+
+99
+00:05:49,090 --> 00:05:50,490
+How do we do this integral?
+
+100
+00:05:50,490 --> 00:05:52,300
+Well, let's change variables.
+
+101
+00:05:52,300 --> 00:05:55,230
+So what we'd like to do is, let's simplify the exponent
+
+102
+00:05:55,230 --> 00:05:58,420
+and pick a new variable.
+
+103
+00:05:58,420 --> 00:06:07,910
+So let's let u be equal to w minus z divided
+
+104
+00:06:07,910 --> 00:06:10,400
+by square root of t.
+
+105
+00:06:10,400 --> 00:06:13,250
+That way, the thing in the exponential
+
+106
+00:06:13,250 --> 00:06:17,240
+up here is going to be e to the minus u squared over 2.
+
+107
+00:06:17,240 --> 00:06:19,410
+And that'll be a very simple form.
+
+108
+00:06:19,410 --> 00:06:21,590
+Then, because we have this differential form--
+
+109
+00:06:21,590 --> 00:06:24,200
+because we have this form for u, We also
+
+110
+00:06:24,200 --> 00:06:30,230
+have the du is going to be dw over square root of t.
+
+111
+00:06:30,230 --> 00:06:33,702
+But that's pretty good, because we have a dw right here,
+
+112
+00:06:33,702 --> 00:06:35,410
+and we have a square root of t down here.
+
+113
+00:06:35,410 --> 00:06:38,550
+So those are going to combine very nicely.
+
+114
+00:06:38,550 --> 00:06:41,030
+So let's make those substitutions.
+
+115
+00:06:41,030 --> 00:06:44,480
+
+
+116
+00:06:44,480 --> 00:06:46,730
+And we'll see that p of z is going
+
+117
+00:06:46,730 --> 00:06:50,000
+to be equal to 1 over square root of 2
+
+118
+00:06:50,000 --> 00:06:53,800
+pi times the integral of e to the minus
+
+119
+00:06:53,800 --> 00:06:58,070
+u squared over 2 times--
+
+120
+00:06:58,070 --> 00:06:59,380
+we need a w squared.
+
+121
+00:06:59,380 --> 00:07:05,260
+Well, w-- if this is my expression for u,
+
+122
+00:07:05,260 --> 00:07:10,690
+then w is going to be u times square root of t plus z.
+
+123
+00:07:10,690 --> 00:07:13,320
+So let's write that out.
+
+124
+00:07:13,320 --> 00:07:21,440
+This is going to be u times square root of t, plus z.
+
+125
+00:07:21,440 --> 00:07:25,980
+Then we have that quantity squared du.
+
+126
+00:07:25,980 --> 00:07:27,600
+Well, that's pretty easy.
+
+127
+00:07:27,600 --> 00:07:31,160
+Because now we almost have things in standardized form
+
+128
+00:07:31,160 --> 00:07:32,160
+for a Gaussian interval.
+
+129
+00:07:32,160 --> 00:07:35,740
+And this goes from minus infinity to infinity.
+
+130
+00:07:35,740 --> 00:07:40,550
+So this is going to be 1 over square root of 2 pi integral
+
+131
+00:07:40,550 --> 00:07:43,400
+from minus infinity to infinity, e
+
+132
+00:07:43,400 --> 00:07:47,060
+to the minus u squared, times--
+
+133
+00:07:47,060 --> 00:07:49,010
+let's just expand that out.
+
+134
+00:07:49,010 --> 00:07:56,870
+We're going to have u squared times t plus 2u square root
+
+135
+00:07:56,870 --> 00:08:05,720
+of t times z plus z squared du.
+
+136
+00:08:05,720 --> 00:08:08,080
+Let's look at each of these terms.
+
+137
+00:08:08,080 --> 00:08:12,290
+The first term, right here, is going to be u squared times t.
+
+138
+00:08:12,290 --> 00:08:14,720
+Remember, t is a constant with respect
+
+139
+00:08:14,720 --> 00:08:16,560
+to the variable of integration.
+
+140
+00:08:16,560 --> 00:08:19,180
+So this is going to give us--
+
+141
+00:08:19,180 --> 00:08:25,790
+a first term will be t times 1 over square root of 2
+
+142
+00:08:25,790 --> 00:08:33,510
+pi integral should be over 2, e to the minus 2 squared over 2,
+
+143
+00:08:33,510 --> 00:08:37,469
+u squared du.
+
+144
+00:08:37,469 --> 00:08:43,200
+The second term, right here, is going to vanish.
+
+145
+00:08:43,200 --> 00:08:46,980
+Because it's linear in u, this is an even function in u.
+
+146
+00:08:46,980 --> 00:08:50,160
+We're going from minus infinity to infinity.
+
+147
+00:08:50,160 --> 00:08:55,945
+And even functions-- excuse me, odd functions
+
+148
+00:08:55,945 --> 00:08:57,570
+are going to have varnishing integrals.
+
+149
+00:08:57,570 --> 00:08:59,257
+It's just a plus sign to the minus sign
+
+150
+00:08:59,257 --> 00:09:00,910
+are going to cancel each other out.
+
+151
+00:09:00,910 --> 00:09:05,630
+And then, the last term, z squared that we have right
+
+152
+00:09:05,630 --> 00:09:07,680
+here, that's just a constant.
+
+153
+00:09:07,680 --> 00:09:15,440
+So we have plus z squared times 1
+
+154
+00:09:15,440 --> 00:09:19,250
+over square root of 2 pi, integral e to the minus u
+
+155
+00:09:19,250 --> 00:09:23,750
+squared over 2 du, without anything else.
+
+156
+00:09:23,750 --> 00:09:27,880
+Well, this expression is equal to 1.
+
+157
+00:09:27,880 --> 00:09:29,140
+And so is this expression.
+
+158
+00:09:29,140 --> 00:09:31,810
+Because this is just the variance
+
+159
+00:09:31,810 --> 00:09:34,670
+of the standardized Gaussian distribution.
+
+160
+00:09:34,670 --> 00:09:35,920
+So we do the integrals.
+
+161
+00:09:35,920 --> 00:09:42,060
+And what we're left with is z squared plus t.
+
+162
+00:09:42,060 --> 00:09:44,460
+And we can check that it satisfies our differential
+
+163
+00:09:44,460 --> 00:09:45,550
+equation.
+
+164
+00:09:45,550 --> 00:09:52,560
+If we take the partial of p with respect to t, we get 1.
+
+165
+00:09:52,560 --> 00:09:54,270
+If we take the second partial--
+
+166
+00:09:54,270 --> 00:09:59,790
+1/2 the second partial with respect to z squared, we get 1.
+
+167
+00:09:59,790 --> 00:10:02,100
+And if we subtract the two of them, we get 0.
+
+168
+00:10:02,100 --> 00:10:03,160
+So we're done.
+
+169
+00:10:03,160 --> 00:10:06,000
+So this is the answer.
+
+170
+00:10:06,000 --> 00:10:08,900
+Let's do one more exercise.
+
+171
+00:10:08,900 --> 00:10:11,670
+Slightly different version of the one that we did in lecture.
+
+172
+00:10:11,670 --> 00:10:13,790
+But now, don't refer back to the lecture.
+
+173
+00:10:13,790 --> 00:10:16,160
+Just take a look at what we've done for the integrals.
+
+174
+00:10:16,160 --> 00:10:18,950
+And do this one yourself.
+
+175
+00:10:18,950 --> 00:10:27,160
+So what I'd like to do is introduce the Gaussian
+
+176
+00:10:27,160 --> 00:10:29,840
+cumulative distribution function,
+
+177
+00:10:29,840 --> 00:10:32,770
+which is going to be useful and show up in a few places.
+
+178
+00:10:32,770 --> 00:10:35,230
+I will call this phi of x.
+
+179
+00:10:35,230 --> 00:10:43,320
+It's going to be defined as the integral of e to the minus z
+
+180
+00:10:43,320 --> 00:10:50,810
+squared over 2 dz, from minus infinity up to x.
+
+181
+00:10:50,810 --> 00:10:56,660
+So I compute the left side of the integral
+
+182
+00:10:56,660 --> 00:10:58,940
+of the bell curve for the Gaussian distribution
+
+183
+00:10:58,940 --> 00:11:00,600
+up to some point x.
+
+184
+00:11:00,600 --> 00:11:03,030
+So in terms of Gaussian probabilities,
+
+185
+00:11:03,030 --> 00:11:06,530
+this is the same thing as the probability
+
+186
+00:11:06,530 --> 00:11:09,830
+that a Gaussian random variable z is less
+
+187
+00:11:09,830 --> 00:11:11,940
+than some particular value x.
+
+188
+00:11:11,940 --> 00:11:14,960
+Now, from the fundamental theorem of calculus of course,
+
+189
+00:11:14,960 --> 00:11:26,380
+I know that d by dx phi of x is just e to the minus x
+
+190
+00:11:26,380 --> 00:11:27,970
+squared over 2.
+
+191
+00:11:27,970 --> 00:11:30,580
+So I can differentiate or I can integrate.
+
+192
+00:11:30,580 --> 00:11:31,670
+I can go back and forth.
+
+193
+00:11:31,670 --> 00:11:35,240
+But this basic idea that it's an incomplete integral.
+
+194
+00:11:35,240 --> 00:11:36,910
+So I integrate from minus infinity
+
+195
+00:11:36,910 --> 00:11:40,150
+up to a particular value x that's defined out here.
+
+196
+00:11:40,150 --> 00:11:41,800
+It's going to be useful, and we'll
+
+197
+00:11:41,800 --> 00:11:43,930
+see that it shows up in a bunch of places.
+
+198
+00:11:43,930 --> 00:11:47,100
+Here's a really simple example.
+
+199
+00:11:47,100 --> 00:11:49,880
+So exercise.
+
+200
+00:11:49,880 --> 00:11:53,920
+
+
+201
+00:11:53,920 --> 00:12:02,630
+Let's let f of w equal 1 for w less than kappa,
+
+202
+00:12:02,630 --> 00:12:08,770
+and 0 for w greater than kappa.
+
+203
+00:12:08,770 --> 00:12:15,230
+So the question is, find p of zt,
+
+204
+00:12:15,230 --> 00:12:23,530
+where remember that this is p and z a time 0.
+
+205
+00:12:23,530 --> 00:12:25,960
+So at time 0, it's a step function.
+
+206
+00:12:25,960 --> 00:12:30,490
+It's either 0 or 1 depending on the value of its argument.
+
+207
+00:12:30,490 --> 00:12:41,100
+I apologize, this should be a w in that case.
+
+208
+00:12:41,100 --> 00:12:45,870
+So what we'd like to do is, we want to find p of zt
+
+209
+00:12:45,870 --> 00:12:47,460
+for the general case.
+
+210
+00:12:47,460 --> 00:12:49,920
+So take a moment, see if you can work it out
+
+211
+00:12:49,920 --> 00:12:52,710
+from our general definition.
+
+212
+00:12:52,710 --> 00:12:56,220
+Remember that our definition is, we integrate p0
+
+213
+00:12:56,220 --> 00:13:02,700
+against p0 evaluated at z minus w against the function f of w.
+
+214
+00:13:02,700 --> 00:13:06,240
+And we integrate that over w in an explicit expression
+
+215
+00:13:06,240 --> 00:13:07,860
+in terms of z.
+
+216
+00:13:07,860 --> 00:13:09,490
+Go take a moment to do that.
+
+217
+00:13:09,490 --> 00:13:11,365
+And then, we'll take a look at this together.
+
+218
+00:13:11,365 --> 00:13:21,180
+
+
+219
+00:13:21,180 --> 00:13:21,750
+OK?
+
+220
+00:13:21,750 --> 00:13:22,290
+Let's go.
+
+221
+00:13:22,290 --> 00:13:24,030
+Let's just work from the definition.
+
+222
+00:13:24,030 --> 00:13:26,160
+The reason why this is particularly nice
+
+223
+00:13:26,160 --> 00:13:29,010
+is the integrand is either 1 or 0.
+
+224
+00:13:29,010 --> 00:13:30,810
+So there's an interesting generalization
+
+225
+00:13:30,810 --> 00:13:32,940
+that's important for the Black-Scholes case, where
+
+226
+00:13:32,940 --> 00:13:35,910
+we might-- instead of 1 or 0, we might
+
+227
+00:13:35,910 --> 00:13:40,350
+like to let it be 0 in the lower case, but kappa minus w
+
+228
+00:13:40,350 --> 00:13:41,453
+in the upper case.
+
+229
+00:13:41,453 --> 00:13:42,870
+So after you've done this one, I'd
+
+230
+00:13:42,870 --> 00:13:44,837
+suggest trying that one as an extension.
+
+231
+00:13:44,837 --> 00:13:46,420
+But this one's fairly straightforward.
+
+232
+00:13:46,420 --> 00:13:48,210
+So let's do this one together just
+
+233
+00:13:48,210 --> 00:13:50,640
+to make sure we've got the concepts and our definitions
+
+234
+00:13:50,640 --> 00:13:51,330
+of the integral.
+
+235
+00:13:51,330 --> 00:13:54,100
+
+
+236
+00:13:54,100 --> 00:13:59,580
+So this is going to be integral of 1 over the square root of 2
+
+237
+00:13:59,580 --> 00:14:09,270
+pi t, e to the minus z minus w quantity squared over 2, dw--
+
+238
+00:14:09,270 --> 00:14:12,390
+now, the integrand is either 0 or 1.
+
+239
+00:14:12,390 --> 00:14:14,940
+So if it were 1, we would be done.
+
+240
+00:14:14,940 --> 00:14:18,930
+But because it's 0 for large values of w, for w
+
+241
+00:14:18,930 --> 00:14:21,360
+greater than kappa, our integral is only
+
+242
+00:14:21,360 --> 00:14:28,000
+going to go from minus infinity up to kappa.
+
+243
+00:14:28,000 --> 00:14:28,970
+So that's it.
+
+244
+00:14:28,970 --> 00:14:30,910
+So now you can recognize that apart
+
+245
+00:14:30,910 --> 00:14:33,640
+from the shift in the exponent-- and sorry,
+
+246
+00:14:33,640 --> 00:14:36,310
+I put my omissions in red.
+
+247
+00:14:36,310 --> 00:14:40,610
+There should be a t here just to match the t that's down here.
+
+248
+00:14:40,610 --> 00:14:43,300
+So now we need to do the Gaussian integral.
+
+249
+00:14:43,300 --> 00:14:50,010
+And as a function of kappa, what are we going to get?
+
+250
+00:14:50,010 --> 00:14:51,563
+So let's do the integral.
+
+251
+00:14:51,563 --> 00:14:52,980
+And the way we can do the integral
+
+252
+00:14:52,980 --> 00:14:56,390
+is, we can make the same change of variables as last time.
+
+253
+00:14:56,390 --> 00:15:05,300
+So let's let u equal w minus z over square root of t.
+
+254
+00:15:05,300 --> 00:15:12,440
+Implies that we have du is going to be dw over square root of t.
+
+255
+00:15:12,440 --> 00:15:14,540
+That's going to work the same as before.
+
+256
+00:15:14,540 --> 00:15:19,970
+In addition, our upper limit of integration is w equals kappa.
+
+257
+00:15:19,970 --> 00:15:24,890
+And that's going to translate into an upper limit of u
+
+258
+00:15:24,890 --> 00:15:30,260
+is going to be kappa minus z over square root of t.
+
+259
+00:15:30,260 --> 00:15:34,350
+
+
+260
+00:15:34,350 --> 00:15:36,300
+So let's call that u star perhaps,
+
+261
+00:15:36,300 --> 00:15:39,210
+for upper limit of integration.
+
+262
+00:15:39,210 --> 00:15:44,610
+So now, we have making that change of variables.
+
+263
+00:15:44,610 --> 00:15:48,170
+p of zt is going to be the integral from minus
+
+264
+00:15:48,170 --> 00:15:53,570
+infinity up to kappa minus z over square root of t,
+
+265
+00:15:53,570 --> 00:15:57,770
+times 1 over square root of 2 pi, e
+
+266
+00:15:57,770 --> 00:16:01,730
+to the minus u squared over 2, du.
+
+267
+00:16:01,730 --> 00:16:04,760
+Now, there are no more t's in the integrand.
+
+268
+00:16:04,760 --> 00:16:06,560
+Everything in terms of a new variable
+
+269
+00:16:06,560 --> 00:16:09,110
+of integration, a dummy variable u.
+
+270
+00:16:09,110 --> 00:16:14,930
+And this is our definition of our function phi.
+
+271
+00:16:14,930 --> 00:16:21,560
+So this is now equal to phi kappa minus z, divided
+
+272
+00:16:21,560 --> 00:16:26,780
+by square root of t, which is a very well behaved function
+
+273
+00:16:26,780 --> 00:16:28,210
+for positive values of t.
+
+274
+00:16:28,210 --> 00:16:29,960
+And it would be interesting to take a look
+
+275
+00:16:29,960 --> 00:16:32,420
+and plot this as t goes to 0.
+
+276
+00:16:32,420 --> 00:16:35,090
+But right now, we have the result that we saw it.
+
+277
+00:16:35,090 --> 00:16:39,685
+And we can check this, again, by differentiating and putting it
+
+278
+00:16:39,685 --> 00:16:44,180
+into the differential equation, and verifying that it satisfies
+
+279
+00:16:44,180 --> 00:16:46,190
+the equation, and verifying that it
+
+280
+00:16:46,190 --> 00:16:49,610
+satisfies the initial conditions a t equals 0.
+
+281
+00:16:49,610 --> 00:16:51,560
+Which as I said, it requires taking a limit,
+
+282
+00:16:51,560 --> 00:16:53,810
+because we can't immediately set t equals 0
+
+283
+00:16:53,810 --> 00:16:57,500
+in this case in the way we did previously.
+
+284
+00:16:57,500 --> 00:16:58,000
+
+

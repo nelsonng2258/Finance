@@ -1,0 +1,261 @@
+
+PROFESSOR: So how can we generalize
+the work we've done so far to this new setting?
+How do we find a partial differential equation that
+describes the prices of bonds?
+Remember that in the case of stock options,
+we had a definite underlying that was tradable,
+and we built a portfolio of the stock with the derivative.
+But here we have a whole bunch of bonds,
+they're all on an equal footing, and none of them
+is actually the random variable of interest.
+So the thing that we know that's described by an Ito process
+is the short rate, and the prices depend on that.
+So how can we generalize things?
+How can we set up a relationship that could lead to a PDE?
+What kind of instruments can we use for hedging?
+Now what we'd like to do is first,
+let's count our stochastic degrees of freedom.
+We've got one.
+We have a single short rate.
+And of course, this generalizes for more sophisticated models,
+but let's just start with that.
+It's not tradable, but we have a whole bunch
+of bonds, all of which depend on that rate.
+Since there are multiple bonds, they all
+have a dependence on that single factor,
+if we put them together in a portfolio
+and we think about dynamically rebalancing the portfolio,
+it should be possible to cancel out the risk
+and determine a PDE that gives us the relative relationship
+among bonds.
+How many bonds?
+Why don't we start with two?
+That would let us cancel the common source of risk
+to both of them.
+Which two?
+Take your pick.
+So let's see what we can do.
+We're going to start with the one-factor model,
+and we're going to assume that all the bond
+prices depend on this single stochastic variable,
+the short rate.
+So what we'll do is we'll take two zero-coupon bonds
+of different maturities.
+We'll think of them as being T1 and T2 and the values
+as being the V1 and V2.
+And we'll create a dynamic portfolio
+that's going to be risk-free.
+Where do we start?
+With Ito's lemma.
+So for each bond, Ito's formula tells us
+that the DV, the differential for the value of the bond,
+is given by partial of V with respect
+to t times dt plus partial of V with respect
+to y dy plus the Ito term, which here I've
+grouped with the coefficient of dt that's
+given by the usual form, b squared over 2 second partial
+of V with respect to y.
+So keep in mind now that this is analogous to what
+we saw for stocks where s is replaced by y,
+and the b squared is going to depend on the particular model
+that we have for the short interest rate.
+But our portfolio doesn't consist of any y's ,
+it's only going to consist of v's.
+Let's see how that goes.
+
+So we're going to do is let's build
+a portfolio with q1 bonds of value 1 and q2 bonds value 2,
+and we'll call this value oi, and we'd
+like to eliminate risk.
+Well, we can do that in exactly the same way
+that we did before, by choosing an appropriate ratio of q1
+and q2.
+Now keep in mind, when we looked at the stock option case,
+we thought of keeping a single option in a variable number
+of shares of stock, but there was
+no reason we had to do that except partly,
+historical interest, and partly, the realities of trading
+in the market, which is that stock is
+much more liquid than options.
+But we could have held one share of stock
+in our hedging argument.
+It would've gone through exactly the same way
+if we'd varied the number of options that we had.
+And in fact, the overall scale doesn't matter.
+What matters is the ratio of the number
+of shares of one instrument relative to another.
+So the same thing holds here.
+But this time it's actually a little bit clearer,
+because v1 and v2 are on equal footing.
+So if I build a portfolio with q1 units of bond 1,
+q2 units of bond 2 that have maturities t1 and t2,
+and I choose these ratios in this particular way--
+that are given by the ratios that
+look like what we previously called the delta in the case
+of the stock option--
+then, and if I apply Ito's formula to this portfolio,
+I can cancel the risky terms.
+I can cancel the coefficients of dy
+and be left only with something in dt, the same way
+that we eliminated risk in deriving the Black-Scholes
+equation.
+So what do we get?
+By combining the portfolio in this way
+with the specially chosen ratio of q1 to q2,
+we can see that our portfolio pi earns the risk-free rate.
+So instead of r times pi dt, now because it's
+earning over an infinitesimal period of time
+and y is the short-term interest rate,
+I have the d pi, because it's risk-free,
+is going to earn y dt times the value of that portfolio, pi.
+So it's earning a risk-free rate at rate y.
+If I expand the differentials and I
+take account of the cancellation from q1 and q2,
+the terms that don't cancel give me this expression.
+I've got a sum over 1 and 2 for q sub i of dV dt
+plus b squared over 2 second partial of V
+with respect to y squared, all times dt.
+So this left-hand side is all something
+that's proportional to dt.
+It's got a bunch of partial derivatives,
+a bunch of quantities in front, and it's something
+that's deterministic.
+On the right-hand side, I also have something proportional
+to dt.
+It's y times the value of the portfolio itself.
+So notice now the structure that we've got.
+The last time we did this for deriving Black-Scholes,
+we had a whole bunch of terms that
+were all coefficients of dt.
+We said the only way that that could hold
+is if the coefficients of dt were themselves equal.
+So that is, this summation here should
+be equal to y times q1 v1 plus q2 v2.
+Now notice that we've got a bunch of 1s and a bunch of 2s,
+and they're separate.
+So we have a bunch of terms that sum with q1 and v1,
+and a bunch of other terms with q2 and v2.
+And one of the standard techniques
+for solving and organizing differential equations
+is to separate variables.
+So let's choose, not just the ratio of q1 over q2,
+let's set the scale, let's pick a particular value.
+So here's a convenient one.
+If we take q1 to be 1 over--
+
+let's see if I can get my pointer back.
+
+If I can take q1 to be 1 over partial of V with respect to y,
+assuming that's non-zero, and q2 to be
+minus the similar kind of thing, you
+notice these two choices will satisfy this ratio.
+That's all I need.
+And when I go back to my expression for Ito,
+you see that that will be sufficient
+when I multiply q1 times this term with v1 and q2
+with that term to v2, that will cancel out the dy terms.
+So this particular choice not only
+cancels out the dy terms that's already given by this ratio,
+but it lets us separate the v1 and the v2 terms completely.
+So here's what we get.
+Let's equate the coefficients of dt.
+Let's group the terms together.
+Let's put all the v1's on the left,
+let's put all the v2's on the right.
+And because that minus sign in front of q2,
+we have the following nice symmetrical expression.
+We have one equation in terms of two unknown prices, v1 and v2.
+So I have this expression in v1 is equal to this expression
+here in v2.
+And let's look at the structure for a moment.
+In the numerator, we see that most of these terms, these
+are three of the four terms that showed up
+in the Black-Scholes equation, partial of V with respect to t.
+I've got a b squared over 2 second partial with respect
+to y minus v1.
+And then I've divided by partial of v1 with respect to y1.
+That's my q.
+And over here, I've got the same thing,
+but just with all the subscripts 1 replaced by subscripts 2.
+So it's different from Black-Scholes.
+Before, I had an expression for a single variable v,
+and I set it equal to 0.
+In this case, I have two expressions, one of them in v1,
+one of them in v2, and I set them equal to each other.
+Neither of them is equal to 0.
+So it doesn't look like we made a lot of progress.
+Again, one equation for two unknowns, v1 and v2.
+But let's think about the structure for a moment.
+Because all the v1's and v2's are isolated--
+and remember that the v1's and v2's
+correspond to the prices of bonds of different maturities--
+that really tells us something.
+Because the expression on the left depends on T1,
+the second expression depends on T2.
+But these two expressions are equal to each other.
+And the one on the left doesn't have any T2's, the one
+on the right doesn't have T1's.
+How could that be?
+The only way that this expression can hold,
+that we can have these two things
+equal to each other, that this can be equal to this,
+is if neither of them depends on T1 or T2.
+That is, this entire ratio as well as this one
+need to be constant.
+They need to be independent of the particular bond.
+They can't depend on the bond's maturity.
+They can't depend on anything else for the bond.
+They need to be something that depends only
+on time and on the short rate, which
+are the two things that they have in common.
+Anything that's bonds specific can't appear.
+So it's in the individual terms, the v1
+and its partial derivatives are there,
+but that particular grouping of partial derivatives
+and all those different terms in the numerators
+need to be such that all of the explicit things that
+are bond-dependent cancel out.
+So because each side needs to be independent
+and they're both equal to each other,
+we can give that thing that they're equal to a name.
+And we'll call it f.
+We'll call it f, and we'll say it can depend on t,
+and it can depend on y.
+So it's some unknown function.
+It's not 0, but it is something that doesn't
+depend on the individual bonds.
+And in fact, this is not only true for bond 1 and bond 2,
+which are arbitrary.
+It has to be true for all of the bonds,
+no matter what their maturities are.
+So here's what we found.
+Now we have a differential equation for the bond pricing.
+We've got the equation for any bond with any subscript i,
+we have this Black-Scholes-like equation,
+partial of V with respect to t plus second derivative,
+this our diffusion term, with b squared over 2--
+b comes from the Ito process defining y--
+minus yV.
+Remember, this looks like our minus rV term in Black-Scholes.
+But now instead of r, it's replaced
+by y, which is dynamic.
+It's not the constant risk-free rate.
+It's the dynamical random variable.
+And then I have this other term, f of y--
+which is a function that we don't know, it's unspecified--
+times the partial of V with respect to y,
+that we get just by multiplying through and clearing
+denominators.
+And that whole thing is equal to 0.
+And what do we have for a boundary condition?
+These are zero coupon bonds that are typically
+normalized by saying that at maturity, they
+pay off $1 or one unit.
+We can pick a different normalization if we'd like.
+So they have the normalization, then at maturity,
+they're equal to 1.
+But at times prior, their value's
+determined by this differential equation,
+and the maturity is one of the defining features
+of the particular bond.

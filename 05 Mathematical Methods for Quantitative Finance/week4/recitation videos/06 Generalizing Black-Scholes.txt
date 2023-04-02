@@ -1,0 +1,185 @@
+
+PROFESSOR: When we derived the Black-Scholes equation
+in lecture, it had two parts.
+An expression for the stock dynamics is an Ito process
+and then an expression for the derivative the
+used Ito's lemma.
+And then we combine the two in a portfolio, canceled the risk,
+and found a partial differential equation, which
+had no risk in it, and then we can solve that
+by ordinary techniques.
+Now one thing that we might ask is,
+what if stocks don't follow random walks?
+What if stocks don't follow geometric Brownian motion?
+How important is that?
+Does the whole option-pricing relationship fall apart?
+Quite the opposite.
+So let's take a look.
+Suppose we have a general Ito process, where we have dS,
+is given by any function, a times
+dt plus any other function b of t and S times dB,
+times the random part.
+Let's see what happens in our derivation.
+Which parts go through and which parts change.
+So remember when we did it before, we had previously,
+this was dS was equal to uSdt plus sigma S dB.
+So these were very special forms of coefficient functions. a
+and b in particular, they're time independent,
+they're linear in S. And that's it.
+So those were quite special, but let's leave a and b
+completely general.
+So that was one part.
+The other part we're going to leave identical.
+So let's let V is going to be a general function of t and S, is
+the value of the derivative security
+on the underlying security whose price is given by S.
+And you notice some places, I've had little subscripts, t,
+on my variables.
+From now on, generally, I'm going
+to assume that we know that our capital letters are
+random variables, they're stochastic processes,
+and that they're time dependent.
+In our coefficient functions, a and b and F and V,
+our value functions, are going to be ordinary functions
+but they're functions of random variables.
+So sometimes it was convenient to put a little subscript, t,
+down here and over here, to remind us that these
+are the random variables.
+But by now it should be clear in context that S or x or V
+are always going to be functions, possibly
+explicitly of time, but they're going to be random variables.
+And those random variables are time dependent.
+OK.
+So what did we have for dV?
+Well, dV was given because it's a derivative,
+it doesn't have any choice.
+It depends on S. And what it depends on also is Ito's lemma
+and that's just math.
+So it's given by--
+excuse me, we're working in v instead of f.
+Just a different part of the alphabet for a change.
+And it's conventional in literature,
+when we're talking about derivatives,
+that you can pick your favorite letter.
+So this is going to be partial of v with respect to tdt.
+Partial of v with respect to SdS.
+
+And then, plus the Ito term, which
+will be b squared over 2, second partial of F with respect to S
+squared dt.
+OK.
+So this b over here is the same one as this coefficient there.
+So all I've done is I've just left us in more general form.
+Let's follow the same steps.
+So this is, just to mark this up a little bit,
+this defines dynamics of the underlying.
+
+This is just Ito's lemma.
+We'll call it Ito's formula for V.
+And now we'd like to build a portfolio.
+
+In our portfolio, pi will consist
+of being long one derivative and minus a quantity, q,
+that I'll give the name delta, in this case.
+Think of them as shares of stock.
+So I have delta shares of stock with value S.
+So this is the value of the portfolio,
+and then we'd like to ask about its change of value,
+its differential.
+So we have d pi, is going to be dV minus delta dS.
+And when we combined terms, we saw
+that this was terms with a dt times partial of V
+with respect to t.
+That comes from up here.
+| have my Ito term, it's going to be plus b squared over 2.
+Second partial of V with respect to S squared.
+
+And then I'm going to have a term, which
+is going to be plus dS, and it's going to have partial of V
+with respect to S from right here.
+And it's going to have a delta term
+from here, which is delta dS.
+And because it's written in that form I really
+don't want to go to the trouble of expanding out this dS,
+writing it in terms of its original defining parts, do I?
+Because I can cancel it out right there where it sits.
+So our strategy was let's let delta equal partial
+of V with respect to S. That makes
+the risky term on the right, on the second term
+of the right hand side, vanish.
+And then we can have an expression
+for a risk free portfolio.
+So if we set delta equal to partial of V with respect to S.
+If we do this, then two things happen.
+That risky term in dS vanishes.
+
+So that's one.
+And two, we would say that pi earns the risk free rate.
+
+Rate of interest.
+
+Because otherwise it would be arbitrage.
+So in that case, we have the d pi is going to be equal,
+on the one hand, dt times the first term and that's it.
+The second one will drop out.
+
+And this has to be equal to the risk
+free rate of growth, which will be r pi dt infinitesimally.
+And that's our basic expression.
+Now, I'm going to do a little bit more elaboration on it.
+But up to here, what depended on the particular choice
+of stock dynamics?
+So the answer is almost nothing.
+But the only thing that shows up, it depends on the form
+that we began with up here.
+It does not depend on the sigma S.
+The sigma S does mean that when we get expressions like this
+here, this would be sigma squared S squared over 2
+in the Black-Scholes equation.
+Here it's general.
+It's b squared over 2.
+What about the a term?
+The a term goes away.
+Nothing depends on it.
+It's dropped out completely.
+Well it's not completely dropped out.
+In a sense, the a term is part of dS,
+but we canceled the dS term.
+So whatever relationship there is between the
+a function in the stock, and the subsequent behavior
+of the derivative, it's already been taken care of
+or it's already been canceled out of the equation.
+It no longer matters when we have a portfolio that
+balances exactly the right amount
+of the derivative security in the right amount
+of the underlying.
+So we still have a b, which we haven't specified.
+So the only difference at this point,
+from our Black-Scholes equation, is that instead of b squared,
+we would have had sigma squared S squared.
+And then we expanded out and we have the same thing
+that we had before.
+We simply write this as r times V minus delta S times dt.
+And now we notice that on the left hand, right hand sides,
+I have everything in dt.
+Moving everything to the same side
+or if you'd like, dividing by dt,
+because there are no more stochastic differentials,
+we can put in our dt times partial of V with respect to t
+plus b squared over 2.
+d2 of V squared plus r partial of V with respect to S--
+should be rS--
+minus rV.
+And this whole thing is equal to zero.
+And therefore the coefficient, the thing in the brackets,
+has to be equal to zero.
+The thing that is the coefficient of dt.
+So that's it.
+That's our generalization.
+So given an Ito process, a general Ito
+process up here, in terms of anything
+with any coefficient a and any coefficient
+b, we've got the Black-Scholes equation, with the only thing
+that we need to do is to substitute
+in the appropriate b.
+So here's your chance to try it out.

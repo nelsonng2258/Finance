@@ -1,0 +1,41 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+mu <- 0.06
+sigma <- 0.4
+S0 <- 100
+K <- 100
+steps <- 252
+paths <- 10000
+S <- matrix(S0, paths, 1)
+Count <- matrix(0, paths, 1)
+Call <- matrix(0, paths, 1)
+Put <- matrix(0, paths, 1)
+for (i in 1:paths) {
+  r0 <- 0
+  z <- rbinom(steps, 1, 0.5)
+  for (j in 1:steps) {
+    if (z[j] == 0) {
+      z[j] <- -1
+    }
+    r0 <- r0 + mu / steps + sigma / sqrt(steps) * z[j]
+    next_price <- S0 * exp(r0)
+    if (j > 1) {
+      if (xor((next_price < S0), (S[i] < S0))) {
+        Count[i] <- Count[i] + 1
+      }
+    }
+    S[i] <- S0 * exp(r0)
+    Call[i] <- max(S[i] - K, 0)
+    Put[i] <- max(K - S[i], 0)
+  }
+}
+
+summary(S)
+summary(Count)
+summary(Call)
+
+```

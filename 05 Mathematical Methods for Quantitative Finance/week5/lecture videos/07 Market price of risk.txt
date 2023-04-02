@@ -1,0 +1,62 @@
+
+PROFESSOR: Is there a financial interpretation to the mystery
+function f of t and y?
+Well, here's one.
+We can think of it in terms of the risk premium on the bond.
+So the bond's Ito process can be written as usual.
+From Ito's Lemma is dV something times dt plus something
+times dy.
+And let's put it in standard form.
+We will rewrite it as something times dt plus something times
+dB.
+So the coefficient of dB is what we usually think of
+is being the volatility.
+And it's associated with the randomness.
+If that coefficient were to go to 0,
+the equation would be deterministic.
+It would only depend.
+It would have time evolution determined by dt.
+But there wouldn't be any randomness associated with it.
+So we can think of the deterministic piece
+as telling us about the growth rate in the absence of risk
+and this piece being associated with the risk.
+So if we ask about the amount of excess
+risk there is and the amount of--
+excuse me-- the amount of risk there
+is relative to the amount of excess return
+above the risk-free rate, we can take
+the value, the return on the bond, dV in a given period,
+relative to what it would earn if it were risk free.
+So if it were risk free, this would be equal to 0.
+And then we divide it by the risk
+to get the ratio of excess return per unit of risk.
+And we have this expression.
+And the coefficient of dt, in this case, in terms of a and b,
+the coefficients from the Ito process,
+and f, our unknown function, that particular combination
+a plus f over b is given a name.
+And it's called the market price of risk.
+Now, we give it a symbol.
+We'll call it eta.
+So we can track it through some further manipulations
+if we'd like.
+But what are its properties?
+Well, first of all, it doesn't depend on which bond
+we look at.
+It's going to be the same thing for all of the bonds.
+And it represents the extra return
+that we get per unit of randomness,
+per extra coefficient of dB.
+Unfortunately, it's not observable.
+And it ends up being a fudge factor in lots of models.
+This happens whenever the stochastic driver is not
+something that's directly tradable.
+That's where this uncertainty comes from.
+In the case of our stock and our stock option,
+the stock price was directly observable.
+And we didn't have any ambiguity.
+So common approaches are either to figure out
+something that seems like it ought to be
+a reasonable functional form.
+We'd make or look for something that can be solved analytically
+or to try to make empirical fits to market data.

@@ -1,0 +1,261 @@
+PROFESSOR: So what are some alternatives?
+Well, we've seen a couple of them already.
+If we have deviations, we might think
+about adding extra terms to generalize or extend
+the random walk model.
+And the class in which we can look at ARMA models or even
+ARIMA models.
+But ARMA models include a combination
+of autoregressive terms that depend
+on previous lagged observations of the random variable,
+and moving average term that depend on the previous
+lagged shocks or innovations which
+are not related to the actual direct observations themselves.
+So in our language, we can add r's.
+Lagged on the right-hand side, or we can add z's.
+And of course, they're not entirely independent
+if we want to trade them off at the possible cost of doing
+an infinite recursion.
+So some models that we've seen--
+random walk model with no extra terms,
+AR1 with a constant term, a z term, and then one lag,
+a generalized ARMA pq model where
+we've got p lags of the r variable,
+q lags of the z variable.
+And in each case, we have our increments,
+our z's written here, are normalized IID
+random variables, which makes it easy for computing
+our expectations.
+Coming back to our old friend, the AR1 model,
+we can write it in sort of standard form.
+And we can look at its structure.
+And now we want to think about what this is telling us
+relative to the random walk.
+So we look at the mean return.
+The mean return is 0.
+And remember, lambda equals 0 is a special case where
+we get the random walk.
+The variance, we compute by putting in the equation.
+We substitute here for the definition.
+We put in our equation as a reminder.
+And we take expectations and we solve algebraically.
+And we find that we have the variance is sigma squared
+over 1 minus lambda squared.
+We get the higher order values by recursion.
+And we know that the values as a function of k are decreasing.
+Each extra k, each extra lag in the AR1 model
+brings the power of lambda.
+Since lambda says less than 1, that's
+suppressing the magnitude of the fluctuations.
+So what it's telling us is in this model where there's
+mean reversion, that influence on a given day,
+above or below the mean, propagates in time
+but is damped out exponentially.
+That would be the end of the story
+if there were no sources of randomness.
+But because we can get new kicks every day,
+this exponential decay may not be
+as easily visible in the data.
+So we want to be able to estimate things from data
+and we want to be able to determine
+which is an appropriate model to use from that large class.
+Is it AR1 or is it an ARMA32 model?
+How can we tell?
+How do we pick the appropriate order of a model?
+And within each model, how do we determine its parameters?
+So when we look at estimation, we want our estimators
+to be consistent.
+That is, in probability, they should
+converge to the true value.
+If I take t to infinity, if I look at enough points,
+then the probability of deviating from the true value
+should vanish.
+This is equivalent to our law of large numbers.
+We want them to be unbiased.
+Unbiased simply means that the expectation of the estimator
+should be the true parameter value.
+We want them to be asymptotically normal--
+and we expect them to be asymptotically normal--
+so that we can apply our tests.
+And this can be shown for the estimators
+that I've written down so far.
+Typically, we need to think about the sampling distribution
+and we'll choose scaling variables
+so that we can relate things to a standard normal distribution
+for significance testing.
+And if we have estimators to do all of the above,
+and we have more than one choice,
+we'd like to find the best estimator, possibly
+one with minimum variance.
+And we can talk about efficiency of estimators
+that give us the best estimate within a given class.
+So how do we do parameter estimation in AR1?
+Well, R1, we have a structure.
+We have three parameters.
+We have mu, lambda, and sigma.
+And what we want to recognize is it really
+has a structure of a typical linear regression model.
+And we can find its parameters using ordinary least squares.
+In fact, the only thing that's special
+is that we have an r on the left and an rt minus 1 on the right.
+Now when we computed the autocovariance,
+I emphasized that those are really the same series.
+It's a stationary series, so their expectations
+are the same.
+And we can think of them as being the same.
+When it comes to estimating the parameters,
+I want to take the opposite tack.
+Let's think of them temporarily as being completely different.
+So remember, if we have a model that looks like this,
+we'd like to do a linear fit.
+We have a typical regression model.
+And we add an error term if we don't have points lying exactly
+on a straight line.
+And we'd like to find a line of best fit
+where the errors are minimized for the best
+values of alpha and beta.
+We can get exactly that same structure from our AR1 model
+just by doing a little algebra and shifting terms around.
+So I move the r minus mu and I move the mu
+to the right-hand side, I can write this
+as rt is a constant plus something times
+rt minus 1, plus an error term.
+So that looks exactly like the above
+if I make the substitutions for alpha--
+that's equivalent.
+The intercept is equivalent to mu times 1 plus lambda.
+The slope is minus lambda.
+The y variable, the dependent variable, is r sub t.
+And the independent variable is r of t minus 1.
+So given data, we can just apply ordinary least squares
+to get the values of the coefficients.
+So we can do that ourselves using ordinary least squares
+in a spreadsheet program or in R using the LM function.
+R also has some nice special functions
+for computing AR and for ARMA models,
+but we'll get that directly.
+But the basic idea is that we already know how to do this.
+It's just ordinary statistics.
+Now, we can do exactly the same thing for an ARP model.
+We just have a bunch more terms.
+So we use our maximum likelihood estimators.
+We can throw it into a spreadsheet,
+we can throw it into R.
+We have a multivariate regression.
+We turn the crank, we get our usual estimates.
+How do we determine the order though?
+Suppose we're not sure what p to use.
+Suppose I don't know if it should be
+AR1 or AR3 or something else.
+So the tool for doing order determination
+for autoregressive models is through what's
+called the PACF function, or the partial autocorrelation
+function.
+And the idea is really straightforward.
+What we do is we set up a sequence of models,
+and we do an AR1 model, and we do an AR2 model,
+and we do an AR3 model, up to an ARN model.
+And I've written these down here.
+So for each of these models, we do an estimate.
+So I do my line of best fit for the first model,
+I do my line of best fit.
+So given the same set of observations in R,
+so the same time series data for R. In each case,
+I do my line of best fit.
+And the PACF is defined to be the coefficient of the last lag
+term.
+So in this case, it's C11.
+In the first one and the second one,
+it's C22, and the last one at CNN.
+And what we want to do is we want
+to identify how far we go when we no longer need
+to add new terms.
+That is, when the last coefficient is negligible,
+then we drop it.
+So the PACF function is very convenient for capturing
+all of this at once.
+We compute all these regressions in parallel,
+and then we can take a look.
+And what we want to do is we're saying,
+there could be more terms as we generally
+do when deciding how many variables to choose.
+We want to have an economical parsimonious
+description of the data.
+We're going to pick the smallest number of variables
+to give us a meaningful description of the data.
+And we're going to toss out extra terms that
+are not needed where their coefficients are not
+significant.
+So let's look at this for a couple examples.
+I'll generate some Monte Carlo data.
+And here's my Monte Carlo data for an AR2.
+So you can see that here, these are my parameter choices.
+And here is my AR2.
+So I've made a bunch of parameter choices
+for c0, c1, and c2.
+I'm going to look at 1,000 time steps.
+I'm going to compute a single path here,
+but you can certainly compute more.
+I'm putting this in a column vector.
+If I had had more paths, two in parallel,
+I could easily do that.
+I'm going to run a recursion starting at step 3,
+because I need some initial observations, which
+I'm going to set equal to 0.
+And I'm going to run my recursion.
+So rt, this is just my defining equation for an AR2.
+And then I'm going to plot a path.
+So here's my path.
+And then I'm going to look at the ACF and at the PACF.
+And rather than computing that by hand or doing them in Excel,
+we'll do it in R, because this will give us all the results
+in one fell swoop.
+So here's an example of what my sample path looks like.
+You should run the code.
+Your sample path is obviously going to look different.
+And here is the AR2 sample autocorrelation function.
+So remember, that autocorrelation functions,
+unlike autocovariances, are normalized.
+They're pure numbers.
+So they're normalized.
+The lag 0 should be equal to 1.
+And we see that here.
+We see that we've got things showing up at lag 1
+and lag 2, which is not surprising,
+given the structure of our model.
+And then we take a look at the partial autocorrelation
+function.
+And we see that we have non negligible terms for lag 1
+and for lag 2.
+And everything else is not statistically significant.
+So this is an example of how we can determine
+the order of a model when we have
+potentially different numbers of terms,
+how we can estimate the parameters for a given
+model of a particular order using
+ordinary least squares, or maximum likelihood
+estimation more generally.
+And how we can extend the random walk model to a range of models
+that have positive or negative serial correlation.
+And they potentially allow us to describe interesting ways
+in which information can propagate from one period
+to the next.
+Now when we add more terms and more parameters,
+we can improve things by getting a better fit,
+or it may lead to overfitting.
+So typically, this is an old story in statistics.
+We want to expand the likelihood function with a penalty
+for additional parameters.
+Because we like to say that if you
+can have the same quality of fit with different numbers of terms
+or different parameters, we'd rather have fewer.
+So we penalize extra parameters in the likelihood function.
+And there are a couple of ways common ways of doing it.
+The AIC and BIC, they give slightly different penalty
+weights.
+But the general idea is that we can in
+modeling we can favor simpler models with fewer terms.
+Sometimes, as in the previous example, it will jump out at us
+and we'll be able to see where to truncate the series.
+Sometimes, the data unfortunately
+will not be as clear.

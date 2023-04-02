@@ -1,0 +1,616 @@
+0
+00:00:00,000 --> 00:00:01,900
+
+
+1
+00:00:01,900 --> 00:00:05,020
+PROFESSOR: Now we're almost ready to do Black-Scholes.
+
+2
+00:00:05,020 --> 00:00:07,310
+Let's consider our portfolio.
+
+3
+00:00:07,310 --> 00:00:12,160
+But now we're going to augment pi by including cash.
+
+4
+00:00:12,160 --> 00:00:16,870
+So before I wrote down that pi was V minus delta S.
+
+5
+00:00:16,870 --> 00:00:20,680
+And that was partly to lure you toward the answer.
+
+6
+00:00:20,680 --> 00:00:23,500
+Let's be much more open minded about what the number of shares
+
+7
+00:00:23,500 --> 00:00:25,435
+is, and just leave it as a generic q,
+
+8
+00:00:25,435 --> 00:00:28,420
+and yet put in a plus sign here for Q.
+
+9
+00:00:28,420 --> 00:00:31,100
+So we're going to have to solve for everything.
+
+10
+00:00:31,100 --> 00:00:33,070
+So my general rule for the portfolio
+
+11
+00:00:33,070 --> 00:00:37,150
+is, I have the value of 1 option plus the number of shares
+
+12
+00:00:37,150 --> 00:00:40,240
+times the value per share plus the amount of cash
+
+13
+00:00:40,240 --> 00:00:42,610
+times the value of the cash, and that's
+
+14
+00:00:42,610 --> 00:00:45,320
+the value of a portfolio.
+
+15
+00:00:45,320 --> 00:00:49,600
+So what happens to this portfolio as we rebalance?
+
+16
+00:00:49,600 --> 00:00:52,060
+Well, we think of our picture.
+
+17
+00:00:52,060 --> 00:00:53,980
+And we've got the rebalancing.
+
+18
+00:00:53,980 --> 00:00:57,560
+And we have the dynamics between two different periods.
+
+19
+00:00:57,560 --> 00:01:03,140
+So the rebalancing, we know that the value doesn't
+
+20
+00:01:03,140 --> 00:01:05,580
+change by accounting rules.
+
+21
+00:01:05,580 --> 00:01:07,500
+We're just changing one asset for another.
+
+22
+00:01:07,500 --> 00:01:10,790
+So what happens between two rebalancings,
+
+23
+00:01:10,790 --> 00:01:14,420
+that is, over the time scale of one market day?
+
+24
+00:01:14,420 --> 00:01:17,450
+Well, we're holding-- remember our picture,
+
+25
+00:01:17,450 --> 00:01:21,170
+over the market day, we're holding our quantities fixed,
+
+26
+00:01:21,170 --> 00:01:23,070
+and the prices are changing.
+
+27
+00:01:23,070 --> 00:01:25,400
+So the change in value in the portfolio
+
+28
+00:01:25,400 --> 00:01:27,560
+is a change in value of the option
+
+29
+00:01:27,560 --> 00:01:31,560
+plus this quantity is held fixed, the stock changes value,
+
+30
+00:01:31,560 --> 00:01:34,520
+the cash balance is held fixed, and possibly
+
+31
+00:01:34,520 --> 00:01:37,490
+the money changes value where we're earning interest.
+
+32
+00:01:37,490 --> 00:01:41,180
+If we go to the continuous time limit, and go to differentials,
+
+33
+00:01:41,180 --> 00:01:45,380
+we see that we can write that as d pi, as dV
+
+34
+00:01:45,380 --> 00:01:50,090
+plus d of qS plus CM.
+
+35
+00:01:50,090 --> 00:01:54,020
+That is, I'm just taking the differential of my top line.
+
+36
+00:01:54,020 --> 00:01:55,850
+Now, let's expand it out.
+
+37
+00:01:55,850 --> 00:01:57,680
+This is dV plus--
+
+38
+00:01:57,680 --> 00:02:00,470
+and let's keep everything from our product rule.
+
+39
+00:02:00,470 --> 00:02:04,950
+I have qdS plus Sdq, which I've put out here.
+
+40
+00:02:04,950 --> 00:02:08,479
+I have C plus dqdS.
+
+41
+00:02:08,479 --> 00:02:15,220
+I have CdM plus MdC plus dCdM.
+
+42
+00:02:15,220 --> 00:02:18,090
+And I've grouped these this way for a reason.
+
+43
+00:02:18,090 --> 00:02:22,010
+These four terms are just a self-financing condition
+
+44
+00:02:22,010 --> 00:02:24,210
+that we saw previously.
+
+45
+00:02:24,210 --> 00:02:27,260
+So these four terms together are all
+
+46
+00:02:27,260 --> 00:02:32,300
+present on the right-hand side, but collectively they equal 0.
+
+47
+00:02:32,300 --> 00:02:35,210
+So our expression gets a lot simpler.
+
+48
+00:02:35,210 --> 00:02:39,430
+d pi is dV plus qdS plus CdM.
+
+49
+00:02:39,430 --> 00:02:44,920
+Now we recognize that dM, the change in the value of money,
+
+50
+00:02:44,920 --> 00:02:47,680
+is just our rMdt.
+
+51
+00:02:47,680 --> 00:02:50,630
+That's the risk-free rate.
+
+52
+00:02:50,630 --> 00:02:54,162
+Finally, we can take CM--
+
+53
+00:02:54,162 --> 00:02:55,830
+which, we don't really want to see money
+
+54
+00:02:55,830 --> 00:02:57,570
+in our equation anyways.
+
+55
+00:02:57,570 --> 00:03:01,140
+Come back up here, and we can replace CM
+
+56
+00:03:01,140 --> 00:03:08,640
+by pi minus V minus qS, which I've done right here.
+
+57
+00:03:08,640 --> 00:03:12,540
+So now I have an expression for d pi.
+
+58
+00:03:12,540 --> 00:03:20,210
+dV plus qdS plus r times this quantity times dt.
+
+59
+00:03:20,210 --> 00:03:23,960
+Now we want to look for a dynamic trading strategy
+
+60
+00:03:23,960 --> 00:03:27,110
+where the number of shares that we have, q, not only
+
+61
+00:03:27,110 --> 00:03:29,180
+is we're not going to assume it's constant.
+
+62
+00:03:29,180 --> 00:03:31,010
+We expect it to be changing.
+
+63
+00:03:31,010 --> 00:03:33,800
+In fact, that's going to give us to rule for how
+
+64
+00:03:33,800 --> 00:03:35,430
+we can execute these hedges.
+
+65
+00:03:35,430 --> 00:03:38,150
+That's going to give us the rule for how we can actually
+
+66
+00:03:38,150 --> 00:03:40,230
+eliminate risk.
+
+67
+00:03:40,230 --> 00:03:42,050
+So the reason we can do this, and we
+
+68
+00:03:42,050 --> 00:03:43,880
+would expect this to work, is there's
+
+69
+00:03:43,880 --> 00:03:47,460
+only one stochastic driver in the entire problem,
+
+70
+00:03:47,460 --> 00:03:48,930
+and that's the stock.
+
+71
+00:03:48,930 --> 00:03:50,820
+So we have that dS term.
+
+72
+00:03:50,820 --> 00:03:52,610
+And we know that the stock moves,
+
+73
+00:03:52,610 --> 00:03:56,660
+but the value of the derivative is random, the value of V
+
+74
+00:03:56,660 --> 00:04:02,090
+random through its dependence on S. So we've got one driver.
+
+75
+00:04:02,090 --> 00:04:05,360
+We have two, possibly three instruments.
+
+76
+00:04:05,360 --> 00:04:08,730
+Maybe we can cancel it out in a dynamic way.
+
+77
+00:04:08,730 --> 00:04:11,880
+So let's take a look.
+
+78
+00:04:11,880 --> 00:04:14,100
+I'm going to take my previous expression.
+
+79
+00:04:14,100 --> 00:04:16,649
+And all I'm going to do is, in place of dV,
+
+80
+00:04:16,649 --> 00:04:18,390
+I'm going to use Ito's lemma.
+
+81
+00:04:18,390 --> 00:04:22,860
+So I'm going to have this set of terms, dt plus partial of V
+
+82
+00:04:22,860 --> 00:04:25,530
+with respect to S times dS.
+
+83
+00:04:25,530 --> 00:04:27,270
+And this term over here comes along
+
+84
+00:04:27,270 --> 00:04:29,560
+from the ride from the previous slide.
+
+85
+00:04:29,560 --> 00:04:33,890
+Notice that, if I group my dS terms together--
+
+86
+00:04:33,890 --> 00:04:37,970
+OK, I have this is a dt term, this is a dt term,
+
+87
+00:04:37,970 --> 00:04:40,020
+I've got my dS terms here.
+
+88
+00:04:40,020 --> 00:04:42,680
+Can I make this coefficient go away?
+
+89
+00:04:42,680 --> 00:04:44,270
+Yes, we can.
+
+90
+00:04:44,270 --> 00:04:49,610
+If we define q to be minus partial of V with respect to S.
+
+91
+00:04:49,610 --> 00:04:53,150
+And that corresponds to what we called minus delta before.
+
+92
+00:04:53,150 --> 00:04:55,910
+But now, notice that we're not assuming
+
+93
+00:04:55,910 --> 00:04:57,510
+that anything is constant.
+
+94
+00:04:57,510 --> 00:05:04,700
+In fact, we're requiring that we trade such that q always
+
+95
+00:05:04,700 --> 00:05:07,640
+is equal to partial of V with respect to S
+
+96
+00:05:07,640 --> 00:05:09,770
+so that the risk is always balanced.
+
+97
+00:05:09,770 --> 00:05:11,420
+We can do that instantaneously.
+
+98
+00:05:11,420 --> 00:05:14,750
+When the prices change, we might need to retrade.
+
+99
+00:05:14,750 --> 00:05:19,190
+So this dynamic rehedging lets us eliminate risk
+
+100
+00:05:19,190 --> 00:05:21,770
+at the cost of possibly doing a lot of trading
+
+101
+00:05:21,770 --> 00:05:23,600
+over very small intervals.
+
+102
+00:05:23,600 --> 00:05:26,370
+
+
+103
+00:05:26,370 --> 00:05:30,120
+Finally, with this choice, we can go through and simplify.
+
+104
+00:05:30,120 --> 00:05:32,760
+And we'll find that we get the same Black-Scholes.
+
+105
+00:05:32,760 --> 00:05:34,230
+Equation again.
+
+106
+00:05:34,230 --> 00:05:37,390
+This term here goes away.
+
+107
+00:05:37,390 --> 00:05:41,310
+Everything else we group together, has a dt in it.
+
+108
+00:05:41,310 --> 00:05:44,370
+We look for the coefficient of dt and set
+
+109
+00:05:44,370 --> 00:05:48,450
+that equal to 0 because we've said d pi is not changing.
+
+110
+00:05:48,450 --> 00:05:51,240
+And we finally have-- because remember
+
+111
+00:05:51,240 --> 00:05:56,670
+d pi is not changing now because pi includes the cash.
+
+112
+00:05:56,670 --> 00:05:58,800
+And the interest is all incorporated
+
+113
+00:05:58,800 --> 00:06:00,560
+as part of our portfolio.
+
+114
+00:06:00,560 --> 00:06:03,750
+So we started with a portfolio with initial value 0.
+
+115
+00:06:03,750 --> 00:06:04,980
+It's self-financing.
+
+116
+00:06:04,980 --> 00:06:06,690
+There's no money coming in or out.
+
+117
+00:06:06,690 --> 00:06:08,020
+There's no risk.
+
+118
+00:06:08,020 --> 00:06:09,870
+So it began with value 0.
+
+119
+00:06:09,870 --> 00:06:11,460
+It stays 0.
+
+120
+00:06:11,460 --> 00:06:13,320
+The rate of change is 0.
+
+121
+00:06:13,320 --> 00:06:16,890
+And that tells us that this big expression in parentheses
+
+122
+00:06:16,890 --> 00:06:21,360
+has to be 0 for all time and for all values of S
+
+123
+00:06:21,360 --> 00:06:23,590
+where the option is alive.
+
+124
+00:06:23,590 --> 00:06:25,230
+That's prior to expiration.
+
+125
+00:06:25,230 --> 00:06:27,600
+And that gives us the Black-Scholes.
+
+126
+00:06:27,600 --> 00:06:31,210
+Partial differential equation once again,
+
+127
+00:06:31,210 --> 00:06:34,060
+this time without cheating.
+
+128
+00:06:34,060 --> 00:06:36,880
+So the lesson to take away from this, apart
+
+129
+00:06:36,880 --> 00:06:39,970
+from two different derivations for getting Black-Scholes.
+
+130
+00:06:39,970 --> 00:06:43,450
+Equation is this notion of, number one,
+
+131
+00:06:43,450 --> 00:06:47,170
+that we have a self-financing portfolio, that this
+
+132
+00:06:47,170 --> 00:06:50,800
+is a self-contained closed world where we're able to rebalance.
+
+133
+00:06:50,800 --> 00:06:54,370
+And because we have these multiple instruments and only
+
+134
+00:06:54,370 --> 00:06:58,180
+one source of risk, we're able to cancel out the risk.
+
+135
+00:06:58,180 --> 00:07:00,550
+By looking at the rebalancing, though,
+
+136
+00:07:00,550 --> 00:07:02,710
+even though we're back continuous time,
+
+137
+00:07:02,710 --> 00:07:05,200
+by having broken it into two parts--
+
+138
+00:07:05,200 --> 00:07:09,760
+the rebalancing where we hold prices fixed and change
+
+139
+00:07:09,760 --> 00:07:12,520
+quantities and the evolution period
+
+140
+00:07:12,520 --> 00:07:14,320
+where we hold the quantities fixed
+
+141
+00:07:14,320 --> 00:07:16,300
+and the prices can change--
+
+142
+00:07:16,300 --> 00:07:19,630
+that becomes hard to distinguish if we do everything
+
+143
+00:07:19,630 --> 00:07:21,610
+immediately in continuous time.
+
+144
+00:07:21,610 --> 00:07:25,480
+But it is important that we do things in a nonparticipating
+
+145
+00:07:25,480 --> 00:07:26,110
+way.
+
+146
+00:07:26,110 --> 00:07:27,340
+So these are discrete.
+
+147
+00:07:27,340 --> 00:07:30,250
+That is, we need to observe, and then trade, observe,
+
+148
+00:07:30,250 --> 00:07:33,250
+and then trade, no matter how small the time intervals.
+
+149
+00:07:33,250 --> 00:07:35,200
+We can't do it in the opposite order.
+
+150
+00:07:35,200 --> 00:07:38,800
+If we could see the future prices and then trade on them,
+
+151
+00:07:38,800 --> 00:07:40,790
+that would be a terrific source of riches.
+
+152
+00:07:40,790 --> 00:07:44,170
+Unfortunately, real markets don't work that way.
+
+153
+00:07:44,170 --> 00:07:48,060
+And our mathematics needs to respect that.
+

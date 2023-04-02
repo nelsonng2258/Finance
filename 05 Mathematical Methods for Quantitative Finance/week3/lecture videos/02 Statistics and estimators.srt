@@ -1,0 +1,308 @@
+0
+00:00:00,000 --> 00:00:02,292
+
+
+1
+00:00:02,292 --> 00:00:03,750
+PROFESSOR: You know from statistics
+
+2
+00:00:03,750 --> 00:00:07,660
+that a statistic is a function of the data.
+
+3
+00:00:07,660 --> 00:00:10,650
+It's a formula into which we can plug numbers and get out
+
+4
+00:00:10,650 --> 00:00:11,340
+another number.
+
+5
+00:00:11,340 --> 00:00:14,100
+And the classic examples in two of the most useful ones
+
+6
+00:00:14,100 --> 00:00:16,990
+in finance are the mean and the variance.
+
+7
+00:00:16,990 --> 00:00:19,260
+So the mean, we take a bunch of numbers,
+
+8
+00:00:19,260 --> 00:00:21,510
+compute their arithmetical average.
+
+9
+00:00:21,510 --> 00:00:22,470
+That's a function.
+
+10
+00:00:22,470 --> 00:00:23,760
+We could have taken other functions.
+
+11
+00:00:23,760 --> 00:00:24,900
+We could have taken their sum.
+
+12
+00:00:24,900 --> 00:00:26,910
+We could have taken different weighted averages.
+
+13
+00:00:26,910 --> 00:00:31,410
+This is a particular statistic that gives us a summary number
+
+14
+00:00:31,410 --> 00:00:33,780
+given a time series-- or a collection, actually,
+
+15
+00:00:33,780 --> 00:00:35,520
+not necessarily ordered--
+
+16
+00:00:35,520 --> 00:00:37,170
+values R sub t.
+
+17
+00:00:37,170 --> 00:00:38,467
+Same thing for the variance.
+
+18
+00:00:38,467 --> 00:00:39,300
+We can compute this.
+
+19
+00:00:39,300 --> 00:00:43,130
+Now, descriptive statistics don't require a model.
+
+20
+00:00:43,130 --> 00:00:44,970
+And one thing they do is they reduce
+
+21
+00:00:44,970 --> 00:00:48,130
+a large number of values down to a small number of values.
+
+22
+00:00:48,130 --> 00:00:50,220
+So these two numbers mu and sigma
+
+23
+00:00:50,220 --> 00:00:55,290
+can characterize a set of r's of arbitrary size.
+
+24
+00:00:55,290 --> 00:00:56,820
+So that obviously means that we're
+
+25
+00:00:56,820 --> 00:00:58,140
+throwing away information.
+
+26
+00:00:58,140 --> 00:01:01,650
+We're going from a large number of values down to two.
+
+27
+00:01:01,650 --> 00:01:05,730
+For these to be useful, we should in some sense
+
+28
+00:01:05,730 --> 00:01:09,480
+capture values that matter to us for what we're
+
+29
+00:01:09,480 --> 00:01:12,840
+doing in the sense that if we had two different collections
+
+30
+00:01:12,840 --> 00:01:15,630
+of r's, two different samples that were taken
+
+31
+00:01:15,630 --> 00:01:17,790
+and they had the same summary statistics,
+
+32
+00:01:17,790 --> 00:01:20,070
+we've got a good collection of summary statistics
+
+33
+00:01:20,070 --> 00:01:21,510
+if we feel about the same.
+
+34
+00:01:21,510 --> 00:01:23,850
+In this case, we often think of mu and sigma
+
+35
+00:01:23,850 --> 00:01:26,970
+as being the mean return and risk associated
+
+36
+00:01:26,970 --> 00:01:28,830
+with an investment or an asset.
+
+37
+00:01:28,830 --> 00:01:33,150
+And two assets that had similar mu and similar sigma might be
+
+38
+00:01:33,150 --> 00:01:35,640
+things that we would feel similarly about,
+
+39
+00:01:35,640 --> 00:01:38,520
+whereas if one had twice the return of the other for a given
+
+40
+00:01:38,520 --> 00:01:41,130
+level of risk we would differentiate them without
+
+41
+00:01:41,130 --> 00:01:44,160
+needing to dive into the details of the r's.
+
+42
+00:01:44,160 --> 00:01:48,570
+So that's a sign of well-chosen and well-behaved statistics.
+
+43
+00:01:48,570 --> 00:01:50,940
+But this is purely descriptive, and it
+
+44
+00:01:50,940 --> 00:01:55,290
+doesn't require any kind of model or anything further.
+
+45
+00:01:55,290 --> 00:01:58,380
+An estimator is a random variable.
+
+46
+00:01:58,380 --> 00:02:02,580
+And the formulas for estimators look quite familiar,
+
+47
+00:02:02,580 --> 00:02:03,930
+these formulas here.
+
+48
+00:02:03,930 --> 00:02:07,770
+For an estimate for the mean and for the variance
+
+49
+00:02:07,770 --> 00:02:10,139
+take a form that is mathematically
+
+50
+00:02:10,139 --> 00:02:12,662
+identical to what we saw on the previous page.
+
+51
+00:02:12,662 --> 00:02:14,370
+However, we think about them differently.
+
+52
+00:02:14,370 --> 00:02:16,710
+In this case, we don't yet have the data.
+
+53
+00:02:16,710 --> 00:02:18,450
+We think about them being a function
+
+54
+00:02:18,450 --> 00:02:20,170
+of future observations.
+
+55
+00:02:20,170 --> 00:02:22,560
+So they're random variables in the sense
+
+56
+00:02:22,560 --> 00:02:26,700
+that given a particular set of realizations,
+
+57
+00:02:26,700 --> 00:02:29,400
+particular set of draws from a distribution,
+
+58
+00:02:29,400 --> 00:02:30,880
+we'll get different values.
+
+59
+00:02:30,880 --> 00:02:35,670
+So mu hat and sigma squared hat may take different values based
+
+60
+00:02:35,670 --> 00:02:37,420
+on different observations.
+
+61
+00:02:37,420 --> 00:02:40,560
+So as a random variable, an estimator
+
+62
+00:02:40,560 --> 00:02:44,520
+has a distribution that's known as the sampling distribution.
+
+63
+00:02:44,520 --> 00:02:48,030
+And the first and second moments are easy to compute and derive.
+
+64
+00:02:48,030 --> 00:02:50,400
+And because of the central limit theorem,
+
+65
+00:02:50,400 --> 00:02:52,590
+if we've got well-behaved estimators,
+
+66
+00:02:52,590 --> 00:02:57,180
+then we run into the situation that we
+
+67
+00:02:57,180 --> 00:02:59,430
+might expect where the distribution,
+
+68
+00:02:59,430 --> 00:03:01,470
+the sampling distribution can approach
+
+69
+00:03:01,470 --> 00:03:05,230
+a Gaussian as the number of observations gets very large.
+
+70
+00:03:05,230 --> 00:03:08,940
+So that's one of the reasons we like large statistical samples.
+
+71
+00:03:08,940 --> 00:03:11,940
+We have good statistics, it gives us
+
+72
+00:03:11,940 --> 00:03:14,340
+not just the narrow distribution,
+
+73
+00:03:14,340 --> 00:03:16,920
+but it also gives us one that has a well-known shape
+
+74
+00:03:16,920 --> 00:03:18,720
+and approaches the Gaussian.
+
+75
+00:03:18,720 --> 00:03:22,980
+An estimate is a number that we get from the same formulas
+
+76
+00:03:22,980 --> 00:03:27,440
+by applying it to a particular set of realizations.
+

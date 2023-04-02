@@ -1,0 +1,128 @@
+
+PROFESSOR: Now here's an exercise.
+Let F be the function of t and B,
+where B is a standard Brownian motion,
+be e to the minus rt times the sine of theta B.
+So r and theta are both constants.
+And what we'd like to do are two things.
+First, find the differential dF using Ito's lemma.
+Second, looking at the result that you have, consider
+the parameter values, r and theta,
+and ask if there are choices of r and theta in terms of which,
+dF becomes particularly simple, where
+it becomes only, either a function of dt
+or a function of dB.
+So pause the video.
+Take a few minutes to work on it.
+And then we'll go through the solution together.
+
+Now we'll use the simplified form of Ito's lemma
+because we have it in terms of B,
+not in a more complicated generalized Ito process.
+So let's take a look.
+We have that dx is just dB.
+So in our version of Ito's lemma,
+where we take differentials with respect
+to x, we can just replace them by B.
+And where we have the Ito term with little b squared--
+remember that in our usual notation, this is a equals 0
+and little b equals 1.
+So that simplifies.
+The next thing we do is we compute
+the partial derivatives, the three partial derivatives that
+show up in Ito's formula, of F. So we need partial
+of F with respect to time.
+That's easy.
+That's e to the minus rt times minus r times sine of theta B.
+So we can rewrite that as, minus r times F itself,
+if we'd like to.
+We can use either of those forms.
+We have the second partial derivative
+in the first partial derivative with respect
+to B. So partial of F with respect to B
+is just equal to theta times e to the minus rt
+times cosine of theta B.
+And the second partial derivative
+is going to be second partial of F with respect to B squared
+is going to be minus theta squared e to the minus rt
+times sine of theta B. And that is the same thing
+as minus theta squared times F. Minus theta
+squared times F because the e to the minus rt
+just comes along for the ride.
+
+So let's just substitute with our results.
+So we have that dF is the partial of F with respect
+to t times to dt.
+That's going to give us a minus re
+to the minus rt sine theta B, all times
+dt plus first partial with respect to B times dB.
+That's going to give us theta e the minus rt cosine theta B
+times dB plus the Ito term, which
+is going to be 1/2 second partial with respect to b
+squared of F times dt.
+So that's going to give us minus theta squared
+e to the minus rt divided by 2 times sine theta B dt.
+If we group the terms together we see,
+first of all, that everything--
+the common e to the minus rt out in front.
+That's good to keep in mind.
+And then the first term we're going
+to have is going to be give us a minus r
+plus theta squared over 2 times sine theta B dt.
+
+Let's see.
+We wanted to have a big thing for our exponential outside
+of everything.
+And we've got our second term.
+It's going to be the dB term.
+It's going to be plus theta e to the minus rt cosine theta B dB.
+And there we go.
+So this expression gives us our result or dF.
+
+So that's our expression.
+So it's an Ito process because it's
+something times dt plus something times dB, OK?
+So if we want to write down these coefficient functions,
+we could say that we have a F is going to be minus
+e to the minus rt times r plus theta squared over 2 sine theta
+B. And that's definitely a function of t and B.
+And B is going to be e to the minus rt times theta
+cosine of theta B. And that's definitely
+a function of time and B. Sorry, it's behind my head.
+So let's take a look at the expression
+and see if we can answer the second question,
+are there values of r and theta, in which this
+would simplify to only be a function of dt or dB?
+Well it can't possibly be a function only of dB.
+Remember, the dB is our source of randomness.
+And we can't make the randomness go away just by changing
+variables in a simple way.
+We're not going to turn something
+that was random into something that's non-random that easily.
+We'll see some other ways to do that.
+But what about the first term?
+Well the first term is e to the minus rt,
+but now notice the coefficient function.
+It involves r plus theta squared over 2.
+So if I chose r to be minus theta squared over 2,
+then the first term would vanish.
+Usually, when we have r in our expressions,
+we think of r as being the risk-free interest rate.
+And normally the risk-free interest rate
+needs to be a positive number.
+But keep in mind that, there certainly
+are negative interest rates that actually do now
+happen in the real world, even though we normally
+would think of r as being typically positive.
+And here in this example, this is not
+meant to be a financial example.
+These are just arbitrary parameter choices.
+So we certainly could pick a special value
+of r, in terms of which the coefficient function of t
+would vanish.
+And then we'd be left with just the term in dB.
+So, a simple case where we took a basic function,
+not additive but multiplicative, a function of r times--
+excuse me, a function of time, times a function of B,
+applied Ito's lemma, turn the crank and we get our answer.
+That's all there is to it.

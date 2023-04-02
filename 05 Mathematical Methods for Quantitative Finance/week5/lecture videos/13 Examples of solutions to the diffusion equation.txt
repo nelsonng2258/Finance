@@ -1,0 +1,189 @@
+
+PROFESSOR: So let's try a few examples
+to check that this trick really looks like it should work.
+And then we'll be all set to take a look both at
+how and why it works, and how we can apply it to solving
+the Black-Scholes equation.
+Let's try a couple of examples.
+If we take a look f of z equal to z squared,
+then what our rule says is we should have p of zt
+should be the integral of 1 over square root 2 pi t
+e to the minus z minus z prime squared, z prime--
+oops.
+Let's leave it in red.
+z prime squared dz prime.
+And if we do that Gaussian integral we find the result.
+This is equal to z squared plus t.
+And let's check that.
+Well, p of z at t equals 0 is z squared.
+So that part works.
+This part matches this part.
+That's good.
+Does it satisfy the differential equation?
+What does the differential equation say?
+The differential equation says that partial
+of p with respect to t minus 1/2 second partial of p
+with respect to z squared should be equal to 0.
+Is it?
+Well, partial of-- here's our expression.
+The partial with respect to t is 1 minus 1/2 times
+the second partial with respect to z.
+First partial is 2z, the second partial is 2,
+and it's equal to 0.
+Shall we do another one?
+Let's try f of z equals cosine of lambda
+z, where lambda is a constant.
+So then we do the integral.
+We find the p of z, t by doing the Gaussian integral.
+And you can do this by looking it up in a table book,
+you can use Mathematica, or you can
+break the cosine into complex exponentials
+and complete the squared.
+There are a variety of techniques for doing this.
+When you do the integral, we find that this
+is equal to-- let's see.
+We have-- this is the integral of p0 of z minus z prime t.
+That's our old friend, the Gaussian.
+Times cosine of lambda z.
+Of course, my integrals, unless specified otherwise,
+go from minus infinity to infinity.
+That's a z prime.
+dz prime.
+And this integral, when we do it,
+is equal to e to the minus lambda squared t, or 2 times
+cosine lambda z.
+
+So let's take a look at this expression and see,
+does it satisfy the differential equation?
+Does it satisfy the initial conditions?
+p of z, t as t goes to 0 equal to cosine lambda z.
+So that checks.
+And how about the derivatives?
+Well, the partial of p with respect
+to t minus 1/2 partial of p with respect to z squared.
+Partial of this expression with respect to t
+gives us from this exponential, e is here.
+When we differentiate with respect to t,
+we're going to get a minus lambda squared over 2,
+going to get--
+
+it's going to be minus lambda squared over 2 times
+the function itself, times p of z, t, and minus 1/2
+times the second partial with respect to z.
+Well, the derivative, the first derivative
+of that function with respect to z
+is e to the minus lambda squared t/2 times lambda minus sine.
+And the second one is going to bring down another lambda,
+and the sine will turn into a cosine,
+and we'll be left with minus 1/2 times minus lambda squared
+times the function itself, p of z, t, all of which
+is equal to 0.
+So those are two instances that we've
+checked so far in which doing our integral formula
+generates something which is a completely reasonable function.
+It has the desired properties that we
+wanted when t is equal to 0, and it's
+got some time dependence for t greater than 0 for what
+goes on.
+Finally, let's look at one more example
+that's actually relevant for option pricing, that's
+a closer example.
+So let's take a look now at what happens if we have f of z
+is equal to what we'll call the step function, theta z
+minus kappa, where theta z is defined to be 1 for z
+greater than zero and z for z less than zero.
+It's a step function.
+It goes long for 0, and then it goes up,
+and then it's equal to 1.
+So it's 0 for negative numbers, it's 1 for positive numbers.
+That's what we'd like to have as t goes to 0.
+And in this case then, that means
+that our integration, our integrand,
+is going to be our Gaussian times the function 1,
+but the integral's going to be cut off.
+So this says that p of z, t which
+is going to be the integral, remember, of p0 of z minus z
+prime t times f of z prime dz prime,
+is going to be equal to 1 over square root of 2 pi
+t times the integral of e the minus z minus z prime squared
+over 2t times dz prime.
+And what about our limits of integration?
+Well, this is only going to be nonzero for,
+and this is the part I wanted to have in yellow,
+starting from kappa to infinity, not from minus infinity
+to infinity.
+So we can rewrite this in terms of a variable.
+Let's define a new variable.
+Let's let u equal z minus z prime over square root of t.
+
+So du is going to be minus dz prime over square root of t.
+Remember that inside the integral, z and t
+are both constant.
+So now I can write this integral as the integral is going to be
+equal to 1 over square root of 2 pi, which is a constant,
+from minus infinity to a value we'll call u*,
+of e to the minus u squared over 2 du.
+Now, this expression is the cumulative distribution
+function, or the Gauss integral.
+That is, instead of integrating from minus infinity
+to infinity, where we get 1, we're
+integrating from minus infinity up to some particular value.
+And this function, this definite integral
+which doesn't go to infinity, has a name.
+And well call it, we'll give it a notation
+that we'll be calling this phi.
+So we will define this to be phi of u*.
+And when we substitute back to our original variables,
+we find that this is going to be equal to phi z minus kappa
+over square root of t.
+So phi is this incomplete integral.
+It's the thing which when we differentiate it,
+we get the probability density, because we
+differentiate with respect to the upper limit
+of the integral.
+And in this case, what we get is an integral that's
+cut off at the lower bound where we have the cutoff in our step
+function, our initial function here.
+Our function-- excuse me, forgot my pointer--
+our initial function right here.
+So our initial function says that we've
+got theta is 1 where z in excess of kappa
+and it's 0 below kappa.
+
+So that's the solution when t equals 0,
+and the solution for arbitrary times is given here.
+Now, this one we need to be careful.
+Because in the limit where t goes to 0,
+we need to be quite careful about how this behaves.
+Because the function is a smooth function,
+but it's going to approach a step function.
+So what happens is this function is going to behave
+more or less like this--
+if we can draw this.
+Then we're going to go from minus 1 to 1
+for the phi function.
+But as t goes to 0, this function
+is going to become steeper and steeper,
+and eventually approach a step function, which
+has a discontinuity that we put in at the beginning.
+But for larger values of t, it's a completely reasonable
+function and a very smooth function.
+So we've done three examples of our basic rule
+from our equation, which says that we
+can use our special Gaussian solution to generate arbitrary
+solutions.
+And how are we going to apply that
+for option pricing given the kernel that we have,
+given this function p0?
+And we'll find the correct version of it
+for the Black-Scholes equation.
+It says if you want a price not just a call option,
+but a put option or a straddle or something
+with some exotic pay-off, all you need to do
+is take the same integrand, change
+the function-- the payoff function-- do the integral,
+and then you're done.
+And this will generate all possible solutions
+to the differential equation for the values
+of option prices, derivative prices that
+are consistent with these financial principles.

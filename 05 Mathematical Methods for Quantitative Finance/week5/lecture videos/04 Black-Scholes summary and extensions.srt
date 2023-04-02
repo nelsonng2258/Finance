@@ -1,0 +1,856 @@
+0
+00:00:00,000 --> 00:00:01,143
+
+
+1
+00:00:01,143 --> 00:00:03,060
+PROFESSOR: Let's summarize a few key formulas.
+
+2
+00:00:03,060 --> 00:00:06,720
+Ito processes are our generalized random walks,
+
+3
+00:00:06,720 --> 00:00:13,540
+our generalized processes that have the form a dt plus b dB
+
+4
+00:00:13,540 --> 00:00:17,280
+where little a and little b are, in general, functions
+
+5
+00:00:17,280 --> 00:00:18,675
+of x and t.
+
+6
+00:00:18,675 --> 00:00:23,770
+x, in our example of stock prices, is s- is price--
+
+7
+00:00:23,770 --> 00:00:25,890
+but it may take different values.
+
+8
+00:00:25,890 --> 00:00:32,340
+Ito's formula tells us, for stochastic processes of the Ito
+
+9
+00:00:32,340 --> 00:00:35,520
+type, Ito's formula from Ito's lemma
+
+10
+00:00:35,520 --> 00:00:38,070
+tells us how to compute differentials.
+
+11
+00:00:38,070 --> 00:00:41,820
+And they have an extra term relative to the ordinary chain
+
+12
+00:00:41,820 --> 00:00:42,690
+rule.
+
+13
+00:00:42,690 --> 00:00:45,420
+We have first partial with respect to t,
+
+14
+00:00:45,420 --> 00:00:48,390
+first partial with respect to x, and then we
+
+15
+00:00:48,390 --> 00:00:52,170
+have a second partial with respect to x but times
+
+16
+00:00:52,170 --> 00:00:55,020
+dt instead of dx squared.
+
+17
+00:00:55,020 --> 00:00:57,360
+We remember the heuristic-- that every time we see
+
+18
+00:00:57,360 --> 00:00:59,700
+a d b squared, it's worth a dt.
+
+19
+00:00:59,700 --> 00:01:02,130
+Every time we would have seen a dx squared,
+
+20
+00:01:02,130 --> 00:01:07,050
+it's worth a b squared dt, where little b is the same
+
+21
+00:01:07,050 --> 00:01:09,060
+as the coefficient up here.
+
+22
+00:01:09,060 --> 00:01:12,690
+Our most common and most popular Ito process
+
+23
+00:01:12,690 --> 00:01:14,950
+is the standard stock price formula
+
+24
+00:01:14,950 --> 00:01:18,810
+that's written as dS over S is mu dt plus sigma db,
+
+25
+00:01:18,810 --> 00:01:22,200
+or multiply thing through by S so that we can correctly
+
+26
+00:01:22,200 --> 00:01:24,480
+identify the coefficients a and b,
+
+27
+00:01:24,480 --> 00:01:29,910
+we can write this is dS is mu S dt plus sigma S db.
+
+28
+00:01:29,910 --> 00:01:32,730
+We saw-- and you should check and be familiar with this--
+
+29
+00:01:32,730 --> 00:01:36,660
+that if we apply Ito's lemma to the function f equals log S,
+
+30
+00:01:36,660 --> 00:01:38,910
+we derive, on the right-hand side,
+
+31
+00:01:38,910 --> 00:01:41,400
+that the differential of log S-- this
+
+32
+00:01:41,400 --> 00:01:43,890
+is an exact differential on the left-hand side,
+
+33
+00:01:43,890 --> 00:01:46,890
+and on the right-hand side is an Ito process
+
+34
+00:01:46,890 --> 00:01:48,780
+with constant coefficients.
+
+35
+00:01:48,780 --> 00:01:51,930
+The sigma parameter now doesn't have an S in here,
+
+36
+00:01:51,930 --> 00:01:54,930
+and the mu is shifted by an amount
+
+37
+00:01:54,930 --> 00:01:57,270
+minus sigma squared over 2.
+
+38
+00:01:57,270 --> 00:01:59,490
+To derive the Black-Scholes equation,
+
+39
+00:01:59,490 --> 00:02:03,090
+we combine this stock price evolution
+
+40
+00:02:03,090 --> 00:02:05,370
+with a hedging algorithm where we
+
+41
+00:02:05,370 --> 00:02:08,070
+pick a number of shares delta that's
+
+42
+00:02:08,070 --> 00:02:11,640
+always equal to partial of V with respect to S
+
+43
+00:02:11,640 --> 00:02:12,990
+to hold short.
+
+44
+00:02:12,990 --> 00:02:16,290
+We assume that our portfolio grows at the risk-free rate.
+
+45
+00:02:16,290 --> 00:02:20,040
+And we're able to eliminate risk by dynamically hedging.
+
+46
+00:02:20,040 --> 00:02:24,000
+And that tells us what the value of a derivative
+
+47
+00:02:24,000 --> 00:02:27,090
+must be in order to avoid arbitrage.
+
+48
+00:02:27,090 --> 00:02:30,450
+It's given by solutions to this equation.
+
+49
+00:02:30,450 --> 00:02:32,190
+What I want to do is just show a couple
+
+50
+00:02:32,190 --> 00:02:34,675
+of tweaks that we can make to the equation.
+
+51
+00:02:34,675 --> 00:02:36,300
+And then we're going to turn to looking
+
+52
+00:02:36,300 --> 00:02:37,717
+at how to solve the equation.
+
+53
+00:02:37,717 --> 00:02:39,300
+The way we're going to do it is, we're
+
+54
+00:02:39,300 --> 00:02:40,650
+going to simplify the equation.
+
+55
+00:02:40,650 --> 00:02:44,118
+This is pretty complicated to solve, and along the way,
+
+56
+00:02:44,118 --> 00:02:46,410
+we're going to turn it into a much simpler differential
+
+57
+00:02:46,410 --> 00:02:47,392
+equation.
+
+58
+00:02:47,392 --> 00:02:49,350
+We'll take a look at that equation for a while.
+
+59
+00:02:49,350 --> 00:02:51,180
+It's called the diffusion equation.
+
+60
+00:02:51,180 --> 00:02:55,050
+And then we'll recover it back in our original Black-Scholes
+
+61
+00:02:55,050 --> 00:02:56,370
+variables.
+
+62
+00:02:56,370 --> 00:03:00,210
+First, some of the overall properties.
+
+63
+00:03:00,210 --> 00:03:01,710
+The equation is linear.
+
+64
+00:03:01,710 --> 00:03:03,900
+And that means that the sum of two solutions,
+
+65
+00:03:03,900 --> 00:03:06,030
+or any linear combination of solutions,
+
+66
+00:03:06,030 --> 00:03:08,200
+is always a solution.
+
+67
+00:03:08,200 --> 00:03:12,150
+Now, in boundary value in partial differential equations,
+
+68
+00:03:12,150 --> 00:03:14,010
+we sometimes look at initial values.
+
+69
+00:03:14,010 --> 00:03:16,770
+We sometimes look at boundary values on the sides.
+
+70
+00:03:16,770 --> 00:03:19,552
+But what's special about our application for finance--
+
+71
+00:03:19,552 --> 00:03:21,510
+it's a little bit different from what you would
+
+72
+00:03:21,510 --> 00:03:23,640
+see in a typical PDE textbook.
+
+73
+00:03:23,640 --> 00:03:25,560
+Is, instead of initial conditions,
+
+74
+00:03:25,560 --> 00:03:27,870
+we're going to specify a terminal condition.
+
+75
+00:03:27,870 --> 00:03:30,340
+That is, when we think about options,
+
+76
+00:03:30,340 --> 00:03:32,310
+we know what they're worth when they expire.
+
+77
+00:03:32,310 --> 00:03:35,010
+We want to know what they're worth before expiration.
+
+78
+00:03:35,010 --> 00:03:38,610
+The payoff is contractually determined at a future date,
+
+79
+00:03:38,610 --> 00:03:41,220
+and we're going to have to work backwards in time.
+
+80
+00:03:41,220 --> 00:03:44,040
+Luckily, we'll see that the signs in our equation
+
+81
+00:03:44,040 --> 00:03:45,868
+work out just right for that.
+
+82
+00:03:45,868 --> 00:03:47,910
+Now, there are a whole bunch of other assumptions
+
+83
+00:03:47,910 --> 00:03:48,660
+that go into this.
+
+84
+00:03:48,660 --> 00:03:51,960
+In particular, we're looking at a special stock price model--
+
+85
+00:03:51,960 --> 00:03:54,840
+namely, geometric Brownian motion.
+
+86
+00:03:54,840 --> 00:03:57,270
+But a lot of what we said could go through
+
+87
+00:03:57,270 --> 00:04:00,120
+for other kinds of processes.
+
+88
+00:04:00,120 --> 00:04:03,810
+We can change the process to some of the examples
+
+89
+00:04:03,810 --> 00:04:05,280
+I showed you earlier.
+
+90
+00:04:05,280 --> 00:04:08,160
+And we might ask about generalizing further
+
+91
+00:04:08,160 --> 00:04:10,680
+where some of the things that we've held constant
+
+92
+00:04:10,680 --> 00:04:13,800
+perhaps become, themselves, dynamic over time.
+
+93
+00:04:13,800 --> 00:04:15,750
+What happens if volatility changes
+
+94
+00:04:15,750 --> 00:04:19,800
+over time, which seems to be a real-world phenomenon
+
+95
+00:04:19,800 --> 00:04:22,140
+in financial markets?
+
+96
+00:04:22,140 --> 00:04:25,350
+What if there are limits on the allowed prices?
+
+97
+00:04:25,350 --> 00:04:27,960
+There are lots of generalizations we could make.
+
+98
+00:04:27,960 --> 00:04:30,160
+Let's take a look at a few easy ones.
+
+99
+00:04:30,160 --> 00:04:32,170
+One of them is that I neglected dividends.
+
+100
+00:04:32,170 --> 00:04:33,780
+And if you've studied options before,
+
+101
+00:04:33,780 --> 00:04:36,340
+you know that discrete dividends are a big deal.
+
+102
+00:04:36,340 --> 00:04:38,700
+There's a theorem about early exercise.
+
+103
+00:04:38,700 --> 00:04:41,027
+Now, the dividends I'm going to discuss here
+
+104
+00:04:41,027 --> 00:04:43,110
+are not discrete dividends, which we usually would
+
+105
+00:04:43,110 --> 00:04:46,360
+handle with different tools.
+
+106
+00:04:46,360 --> 00:04:48,570
+But I want to think about a continuous dividend
+
+107
+00:04:48,570 --> 00:04:50,610
+yield, which is one way that we typically
+
+108
+00:04:50,610 --> 00:04:54,750
+model indices or portfolios.
+
+109
+00:04:54,750 --> 00:04:57,155
+We think that if there are a bunch of stocks that
+
+110
+00:04:57,155 --> 00:04:58,530
+get dividends at different times,
+
+111
+00:04:58,530 --> 00:05:01,170
+we'll just kind of average this out smoothly.
+
+112
+00:05:01,170 --> 00:05:04,800
+The important thing is that, if dividends arrive at a rate D,
+
+113
+00:05:04,800 --> 00:05:07,350
+we might think that the dividends are
+
+114
+00:05:07,350 --> 00:05:10,080
+kind of offsetting the interest rate.
+
+115
+00:05:10,080 --> 00:05:12,750
+But there are two reasons--
+
+116
+00:05:12,750 --> 00:05:15,630
+there are two places where the interest rate enters
+
+117
+00:05:15,630 --> 00:05:19,380
+the equation, and only one place where the dividends show up.
+
+118
+00:05:19,380 --> 00:05:23,260
+So it's not just a shift in the risk-free rate.
+
+119
+00:05:23,260 --> 00:05:25,590
+The holder of the stock gets dividends,
+
+120
+00:05:25,590 --> 00:05:28,670
+but the holder of the option does not get the dividends.
+
+121
+00:05:28,670 --> 00:05:34,110
+That's the whole thing behind the timing of early exercise.
+
+122
+00:05:34,110 --> 00:05:36,300
+The Black-Scholes equation is modified,
+
+123
+00:05:36,300 --> 00:05:39,030
+but it's not just a straight substitution of r.
+
+124
+00:05:39,030 --> 00:05:44,490
+It's a substitution in this term,
+
+125
+00:05:44,490 --> 00:05:50,960
+because the stock is earning dividends.
+
+126
+00:05:50,960 --> 00:05:53,780
+
+
+127
+00:05:53,780 --> 00:05:56,570
+We could think of currency options,
+
+128
+00:05:56,570 --> 00:06:00,380
+which are on foreign currency.
+
+129
+00:06:00,380 --> 00:06:04,290
+And we don't just trade suitcases full of cash.
+
+130
+00:06:04,290 --> 00:06:07,400
+We trade interest-bearing instruments.
+
+131
+00:06:07,400 --> 00:06:10,820
+On currency options, we receive a foreign interest rate, which
+
+132
+00:06:10,820 --> 00:06:12,980
+is equivalent to a cash inflow.
+
+133
+00:06:12,980 --> 00:06:15,620
+Again, we've got to change to our cash.
+
+134
+00:06:15,620 --> 00:06:18,590
+And again, it's not just a straight-out substitution
+
+135
+00:06:18,590 --> 00:06:20,090
+of the interest rates.
+
+136
+00:06:20,090 --> 00:06:23,150
+Here, we've got to change to r in this place.
+
+137
+00:06:23,150 --> 00:06:25,500
+This r stays the same.
+
+138
+00:06:25,500 --> 00:06:28,730
+We have another adjustment we can make in commodity options,
+
+139
+00:06:28,730 --> 00:06:31,460
+where we have a cost of carry.
+
+140
+00:06:31,460 --> 00:06:34,470
+It doesn't cost anything to store a stock option.
+
+141
+00:06:34,470 --> 00:06:37,250
+It does cost something if you have oil
+
+142
+00:06:37,250 --> 00:06:39,740
+and you have options on oil.
+
+143
+00:06:39,740 --> 00:06:43,100
+Having an oil option doesn't cost anything, but having oil
+
+144
+00:06:43,100 --> 00:06:44,150
+does cost something.
+
+145
+00:06:44,150 --> 00:06:47,140
+Having gold does cost something-- to store it,
+
+146
+00:06:47,140 --> 00:06:50,400
+to have security for it, possibly to transport it.
+
+147
+00:06:50,400 --> 00:06:53,450
+So when we look at physical commodities,
+
+148
+00:06:53,450 --> 00:06:57,440
+we typically include a cost of carry for the duration
+
+149
+00:06:57,440 --> 00:06:59,570
+of the contract at a rate q.
+
+150
+00:06:59,570 --> 00:07:00,860
+And guess what?
+
+151
+00:07:00,860 --> 00:07:02,460
+That shows up in this term.
+
+152
+00:07:02,460 --> 00:07:05,120
+And once again, the other interest rate term
+
+153
+00:07:05,120 --> 00:07:06,170
+is unchanged.
+
+154
+00:07:06,170 --> 00:07:08,960
+
+
+155
+00:07:08,960 --> 00:07:11,395
+Options on futures are an interesting case,
+
+156
+00:07:11,395 --> 00:07:13,250
+and we can get an equation called
+
+157
+00:07:13,250 --> 00:07:17,510
+the Black equation, which Fischer Black did on his own,
+
+158
+00:07:17,510 --> 00:07:18,770
+without Scholes.
+
+159
+00:07:18,770 --> 00:07:21,860
+And we do this by changing the value
+
+160
+00:07:21,860 --> 00:07:25,820
+from the spot to the forward price.
+
+161
+00:07:25,820 --> 00:07:28,490
+Keep in mind that there is discounting.
+
+162
+00:07:28,490 --> 00:07:29,933
+We can think about present values.
+
+163
+00:07:29,933 --> 00:07:31,850
+And in fact, we'll see that one reason there's
+
+164
+00:07:31,850 --> 00:07:34,700
+a lot of complexity in the Black-Scholes equation
+
+165
+00:07:34,700 --> 00:07:36,590
+is because we didn't build discounting
+
+166
+00:07:36,590 --> 00:07:38,330
+into it to begin with.
+
+167
+00:07:38,330 --> 00:07:40,040
+You can see that the equation simplifies
+
+168
+00:07:40,040 --> 00:07:42,770
+a lot if we were to set the interest rate equal to 0.
+
+169
+00:07:42,770 --> 00:07:45,290
+But there are two things we might potentially discount.
+
+170
+00:07:45,290 --> 00:07:48,620
+One of them is S. The other one is V.
+
+171
+00:07:48,620 --> 00:07:49,560
+Let's take a look.
+
+172
+00:07:49,560 --> 00:07:51,590
+If we change variables so that we
+
+173
+00:07:51,590 --> 00:07:54,290
+do things in terms of the forward price instead
+
+174
+00:07:54,290 --> 00:07:59,575
+of the spot price, I can introduce this script F,
+
+175
+00:07:59,575 --> 00:08:00,950
+which I've done because we used F
+
+176
+00:08:00,950 --> 00:08:02,690
+before for a general function.
+
+177
+00:08:02,690 --> 00:08:04,580
+Here, I'd like this F to represent
+
+178
+00:08:04,580 --> 00:08:07,220
+the forward price that's related to the spot
+
+179
+00:08:07,220 --> 00:08:10,370
+price in the usual way.
+
+180
+00:08:10,370 --> 00:08:13,130
+And we substitute in-- use the ordinary chain
+
+181
+00:08:13,130 --> 00:08:16,610
+rule, because there's nothing special about this pre-factor.
+
+182
+00:08:16,610 --> 00:08:21,110
+F and s are both stochastic, but e to the r t minus t is not.
+
+183
+00:08:21,110 --> 00:08:23,660
+And we get a simpler equation.
+
+184
+00:08:23,660 --> 00:08:26,270
+One of our terms from our original Black-Scholes equation
+
+185
+00:08:26,270 --> 00:08:27,470
+dropped out.
+
+186
+00:08:27,470 --> 00:08:30,470
+And that's telling us, what that equation really was doing
+
+187
+00:08:30,470 --> 00:08:33,200
+was accounting for the fact that we
+
+188
+00:08:33,200 --> 00:08:38,480
+should think about the present value rather than the spot
+
+189
+00:08:38,480 --> 00:08:39,710
+value.
+
+190
+00:08:39,710 --> 00:08:42,080
+In those terms, my Black-Scholes equation now
+
+191
+00:08:42,080 --> 00:08:44,600
+has only a term with a time derivative,
+
+192
+00:08:44,600 --> 00:08:48,440
+and with a second derivative with respect to the under line,
+
+193
+00:08:48,440 --> 00:08:50,630
+the first derivative term went away.
+
+194
+00:08:50,630 --> 00:08:53,533
+And I still have the constant term that's left over.
+
+195
+00:08:53,533 --> 00:08:54,950
+Now, what I would like to do is, I
+
+196
+00:08:54,950 --> 00:08:57,980
+would like to compare this with another well-known equation
+
+197
+00:08:57,980 --> 00:09:00,590
+called the diffusion equation, which I've written
+
+198
+00:09:00,590 --> 00:09:03,410
+down here at the bottom.
+
+199
+00:09:03,410 --> 00:09:06,470
+The diffusion equation-- you'll notice both of these equations
+
+200
+00:09:06,470 --> 00:09:10,520
+have a term partial of V with respect to t.
+
+201
+00:09:10,520 --> 00:09:13,070
+The next term-- they both have a 1/2.
+
+202
+00:09:13,070 --> 00:09:16,010
+They both have a second derivative with respect
+
+203
+00:09:16,010 --> 00:09:19,810
+to another variable over here.
+
+204
+00:09:19,810 --> 00:09:22,120
+This has a pre-factor.
+
+205
+00:09:22,120 --> 00:09:23,980
+This one doesn't.
+
+206
+00:09:23,980 --> 00:09:25,930
+This has a plus sign.
+
+207
+00:09:25,930 --> 00:09:27,760
+This one has a minus sign.
+
+208
+00:09:27,760 --> 00:09:31,960
+And of course, there's this extra leftover term right here.
+
+209
+00:09:31,960 --> 00:09:34,600
+But the first two terms are intriguing.
+
+210
+00:09:34,600 --> 00:09:36,640
+And we're going to go a bit further and see
+
+211
+00:09:36,640 --> 00:09:38,350
+if we can get the original Black-Scholes
+
+212
+00:09:38,350 --> 00:09:42,480
+equation to be related to a diffusion equation.
+
+213
+00:09:42,480 --> 00:09:43,000
+
+

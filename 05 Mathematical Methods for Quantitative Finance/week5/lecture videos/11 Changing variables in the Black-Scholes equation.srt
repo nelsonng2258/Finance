@@ -1,0 +1,588 @@
+0
+00:00:00,000 --> 00:00:00,643
+
+
+1
+00:00:00,643 --> 00:00:03,060
+PROFESSOR: Now, to get from Black-Scholes to the diffusion
+
+2
+00:00:03,060 --> 00:00:06,160
+equation, we make a few changes of variables,
+
+3
+00:00:06,160 --> 00:00:08,010
+which are not obvious at all.
+
+4
+00:00:08,010 --> 00:00:09,480
+And I'm going to show them to you,
+
+5
+00:00:09,480 --> 00:00:11,040
+and you're free to check them out
+
+6
+00:00:11,040 --> 00:00:12,690
+or you can take my word for them.
+
+7
+00:00:12,690 --> 00:00:14,790
+I'll explain where each of them comes from.
+
+8
+00:00:14,790 --> 00:00:17,070
+The first change of variables that we have
+
+9
+00:00:17,070 --> 00:00:22,740
+is to replace V by a present value factor in front
+
+10
+00:00:22,740 --> 00:00:24,270
+and to change the value.
+
+11
+00:00:24,270 --> 00:00:27,520
+That is, instead of writing things for the derivative,
+
+12
+00:00:27,520 --> 00:00:31,030
+we can express things in terms of its forward or future value.
+
+13
+00:00:31,030 --> 00:00:33,750
+So we know that there's discounting
+
+14
+00:00:33,750 --> 00:00:37,710
+should take place, at least for people who've taken 15415.
+
+15
+00:00:37,710 --> 00:00:40,540
+You know how that works, how we look at present value.
+
+16
+00:00:40,540 --> 00:00:43,500
+And one of the ways that we can simplify our equation
+
+17
+00:00:43,500 --> 00:00:46,050
+by combining terms is simply to put
+
+18
+00:00:46,050 --> 00:00:49,920
+in a discount factor in terms of the derivative itself.
+
+19
+00:00:49,920 --> 00:00:52,200
+And if we do that, we eliminate the one
+
+20
+00:00:52,200 --> 00:00:53,970
+term in the Black-Scholes equation
+
+21
+00:00:53,970 --> 00:00:57,030
+they didn't have any derivatives, the minus rV term,
+
+22
+00:00:57,030 --> 00:01:01,130
+and we can have this expression here in terms of U.
+
+23
+00:01:01,130 --> 00:01:05,310
+The next thing we can do is substitute for time
+
+24
+00:01:05,310 --> 00:01:06,630
+and for the stock price.
+
+25
+00:01:06,630 --> 00:01:08,970
+In terms of the stock price, what we're going to do
+
+26
+00:01:08,970 --> 00:01:11,095
+is we're going to introduce a logarithmic variable.
+
+27
+00:01:11,095 --> 00:01:14,790
+And we've already seen that in many ways rather than price,
+
+28
+00:01:14,790 --> 00:01:17,595
+the logarithm of price or the differences of logarithms
+
+29
+00:01:17,595 --> 00:01:20,340
+of price are much more natural variables.
+
+30
+00:01:20,340 --> 00:01:23,320
+Because what matters from an investment point of view,
+
+31
+00:01:23,320 --> 00:01:24,990
+from an informational point of view
+
+32
+00:01:24,990 --> 00:01:28,860
+is how stock prices change, not with the absolute levels are.
+
+33
+00:01:28,860 --> 00:01:30,900
+And the natural variable for capturing
+
+34
+00:01:30,900 --> 00:01:32,970
+those in a continuous time setting
+
+35
+00:01:32,970 --> 00:01:34,590
+is a logarithm of the price.
+
+36
+00:01:34,590 --> 00:01:36,550
+But this is just a change of variables.
+
+37
+00:01:36,550 --> 00:01:39,870
+So we'll call S. We'll replace it by E to the xi
+
+38
+00:01:39,870 --> 00:01:42,570
+or we'll let xi equal the logarithm of S.
+
+39
+00:01:42,570 --> 00:01:46,230
+And that will help simplify the equation.
+
+40
+00:01:46,230 --> 00:01:48,210
+The tip off that we might see that when
+
+41
+00:01:48,210 --> 00:01:50,670
+we look at the structure of our differential equation
+
+42
+00:01:50,670 --> 00:01:53,190
+is to notice the structure of these terms here.
+
+43
+00:01:53,190 --> 00:01:56,940
+Where this is an S d by dS and this
+
+44
+00:01:56,940 --> 00:02:00,600
+has an S squared with a second partial with respect to S
+
+45
+00:02:00,600 --> 00:02:01,380
+squared.
+
+46
+00:02:01,380 --> 00:02:04,690
+Because this has an S and a derivative with respect to S,
+
+47
+00:02:04,690 --> 00:02:08,039
+this is two S's and two derivatives, those behave
+
+48
+00:02:08,039 --> 00:02:09,940
+like logarithmic derivatives.
+
+49
+00:02:09,940 --> 00:02:12,840
+So the logarithmic derivatives simplify things,
+
+50
+00:02:12,840 --> 00:02:15,210
+and they'll transform this so that instead
+
+51
+00:02:15,210 --> 00:02:18,660
+of having this pre-factor S and this pre-factor S squared,
+
+52
+00:02:18,660 --> 00:02:19,680
+we won't have anything.
+
+53
+00:02:19,680 --> 00:02:23,405
+We'll just get an equation with constant coefficients.
+
+54
+00:02:23,405 --> 00:02:25,530
+The other change we'd like to make at the same time
+
+55
+00:02:25,530 --> 00:02:27,150
+is in our time variable.
+
+56
+00:02:27,150 --> 00:02:29,580
+And instead of measuring time forward,
+
+57
+00:02:29,580 --> 00:02:31,410
+we're going to measure time backwards
+
+58
+00:02:31,410 --> 00:02:35,490
+counting back from potentially an option expiration.
+
+59
+00:02:35,490 --> 00:02:38,910
+And the tip off for that is the relative sign
+
+60
+00:02:38,910 --> 00:02:41,130
+that we have between the time derivative
+
+61
+00:02:41,130 --> 00:02:43,350
+and the second derivative with respect
+
+62
+00:02:43,350 --> 00:02:48,150
+to the independent variable with respect to the underlying.
+
+63
+00:02:48,150 --> 00:02:50,880
+Now, notice that if I change S to minus S,
+
+64
+00:02:50,880 --> 00:02:54,000
+not only to negative prices not make sense financially,
+
+65
+00:02:54,000 --> 00:02:56,640
+but this equation, this part wouldn't change.
+
+66
+00:02:56,640 --> 00:02:58,960
+But there's a single time derivative here.
+
+67
+00:02:58,960 --> 00:03:01,500
+So changing the direction of time matters a lot.
+
+68
+00:03:01,500 --> 00:03:05,070
+Now, this actually works out fantastically well for us.
+
+69
+00:03:05,070 --> 00:03:07,500
+Normally for partial differential equations,
+
+70
+00:03:07,500 --> 00:03:09,630
+we look at how things evolve forward
+
+71
+00:03:09,630 --> 00:03:12,060
+and the relative sign that we would want
+
+72
+00:03:12,060 --> 00:03:13,428
+would be a minus sign.
+
+73
+00:03:13,428 --> 00:03:14,970
+Here there's a plus sign, which would
+
+74
+00:03:14,970 --> 00:03:18,270
+make it much more difficult to interpret and to solve.
+
+75
+00:03:18,270 --> 00:03:21,150
+But it turns out that the conditions we want
+
+76
+00:03:21,150 --> 00:03:22,560
+are the backward conditions.
+
+77
+00:03:22,560 --> 00:03:24,090
+We know the terminal values.
+
+78
+00:03:24,090 --> 00:03:26,050
+We want to find out what happens before.
+
+79
+00:03:26,050 --> 00:03:27,690
+So let's make this substitution.
+
+80
+00:03:27,690 --> 00:03:33,007
+We'll let tau equal t minus big T some fixed constant minus t.
+
+81
+00:03:33,007 --> 00:03:35,340
+Because this is a constant and we're making derivatives,
+
+82
+00:03:35,340 --> 00:03:37,360
+the big T isn't going to matter.
+
+83
+00:03:37,360 --> 00:03:38,460
+It's not going to show up.
+
+84
+00:03:38,460 --> 00:03:40,950
+And in fact, big T really will only
+
+85
+00:03:40,950 --> 00:03:45,670
+reappear when we impose boundary conditions on our equations.
+
+86
+00:03:45,670 --> 00:03:47,940
+So if we make those changes to variables,
+
+87
+00:03:47,940 --> 00:03:49,960
+we find that we get this expression.
+
+88
+00:03:49,960 --> 00:03:51,930
+We now have a derivative with respect
+
+89
+00:03:51,930 --> 00:03:55,250
+to a timelike variable, a relative minus sign,
+
+90
+00:03:55,250 --> 00:03:58,020
+a second derivative term with constant coefficients,
+
+91
+00:03:58,020 --> 00:04:01,470
+and then this piece over here with our interesting minus
+
+92
+00:04:01,470 --> 00:04:02,970
+sigma squared over 2 that we've seen
+
+93
+00:04:02,970 --> 00:04:06,000
+before times the first derivative piece.
+
+94
+00:04:06,000 --> 00:04:07,765
+And we can make that part go away as well.
+
+95
+00:04:07,765 --> 00:04:08,640
+So let's clean it up.
+
+96
+00:04:08,640 --> 00:04:10,920
+Finally, with one more change that
+
+97
+00:04:10,920 --> 00:04:17,040
+will absorb a single derivative term in our change of variable,
+
+98
+00:04:17,040 --> 00:04:19,019
+and let's introduce this variable x.
+
+99
+00:04:19,019 --> 00:04:23,820
+You'll notice that this logarithm, this log of S
+
+100
+00:04:23,820 --> 00:04:27,870
+plus this other piece in tau, if we were to exponentiate it,
+
+101
+00:04:27,870 --> 00:04:30,150
+if we were to exponentiate this whole expression,
+
+102
+00:04:30,150 --> 00:04:35,130
+you'll notice this should look familiar from the form
+
+103
+00:04:35,130 --> 00:04:38,070
+that we saw for the geometric Brownian motion.
+
+104
+00:04:38,070 --> 00:04:41,940
+And we looked at the integral of the stochastic differential
+
+105
+00:04:41,940 --> 00:04:42,720
+equation.
+
+106
+00:04:42,720 --> 00:04:44,920
+We had an expression just like that.
+
+107
+00:04:44,920 --> 00:04:47,010
+So it's not that the natural variable
+
+108
+00:04:47,010 --> 00:04:51,270
+is log S. Really the natural variable looks
+
+109
+00:04:51,270 --> 00:04:55,830
+like logarithm of S, E to the R tau minus sigma
+
+110
+00:04:55,830 --> 00:04:57,390
+squared tau over 2.
+
+111
+00:04:57,390 --> 00:05:00,730
+So either way, whether you like cleaning up the mathematics
+
+112
+00:05:00,730 --> 00:05:05,710
+or whether you're inspired by the form of the SDE
+
+113
+00:05:05,710 --> 00:05:08,920
+that we saw earlier, if we make that change a variable,
+
+114
+00:05:08,920 --> 00:05:10,930
+we're left with this expression now
+
+115
+00:05:10,930 --> 00:05:13,690
+which looks exactly like our diffusion equation
+
+116
+00:05:13,690 --> 00:05:16,330
+with a diffusion constant.
+
+117
+00:05:16,330 --> 00:05:18,190
+This is standard in literature sometimes
+
+118
+00:05:18,190 --> 00:05:19,720
+to have the constant sigma squared
+
+119
+00:05:19,720 --> 00:05:22,540
+that's here known as the diffusion constant.
+
+120
+00:05:22,540 --> 00:05:26,620
+We can make that go away as well by absorbing it into tau so
+
+121
+00:05:26,620 --> 00:05:29,380
+that the combination that always will appear would be sigma
+
+122
+00:05:29,380 --> 00:05:30,640
+squared tau.
+
+123
+00:05:30,640 --> 00:05:33,050
+And by redefining that, we could make it go away.
+
+124
+00:05:33,050 --> 00:05:36,010
+So there would be no extra coefficients at all.
+
+125
+00:05:36,010 --> 00:05:39,270
+
+
+126
+00:05:39,270 --> 00:05:41,280
+We can check that this particular form
+
+127
+00:05:41,280 --> 00:05:43,810
+does satisfy that equation.
+
+128
+00:05:43,810 --> 00:05:46,480
+So let's take a look at this special solution.
+
+129
+00:05:46,480 --> 00:05:49,200
+This is like the p0 that I showed you before.
+
+130
+00:05:49,200 --> 00:05:51,600
+Again, it's an exercise in differentiation.
+
+131
+00:05:51,600 --> 00:05:53,340
+If you didn't do the earlier one,
+
+132
+00:05:53,340 --> 00:05:55,380
+you can follow along with this one.
+
+133
+00:05:55,380 --> 00:05:58,500
+So here's my definition of U. The only difference
+
+134
+00:05:58,500 --> 00:06:01,080
+is the sigma squared that shows up, and as I said,
+
+135
+00:06:01,080 --> 00:06:05,190
+always in this combination, sigma squared tau.
+
+136
+00:06:05,190 --> 00:06:07,440
+So we take one partial derivative
+
+137
+00:06:07,440 --> 00:06:09,640
+and we see it brings down a pre-factor with respect
+
+138
+00:06:09,640 --> 00:06:11,670
+to U, because it's exponential.
+
+139
+00:06:11,670 --> 00:06:13,530
+The second partial derivative with respect
+
+140
+00:06:13,530 --> 00:06:17,640
+to x, partial derivative with respect to tau,
+
+141
+00:06:17,640 --> 00:06:19,750
+and then we can equate these expressions.
+
+142
+00:06:19,750 --> 00:06:22,470
+So we see that the partial with respect to tau
+
+143
+00:06:22,470 --> 00:06:25,980
+is sigma squared over 2 times the second partial with respect
+
+144
+00:06:25,980 --> 00:06:27,480
+to x.
+
+145
+00:06:27,480 --> 00:06:29,500
+That's our diffusion equation.
+
+146
+00:06:29,500 --> 00:06:30,000
+
+

@@ -1,0 +1,219 @@
+
+PROFESSOR: So we want to think about ways
+of measuring deviations from forecasts
+because our forecast is unlikely to be exactly realized.
+And therefore we define forecast error
+to be simply the difference between our forecast
+and what happened, between the outcome and the prediction.
+If we said the price was going to be 100
+and it turned out to be 200 or it turned out to be 50,
+the difference between the forecast and the outcome
+is the error.
+And a good forecast is not one that gives you the highest
+price, it's the one where the prediction comes
+closest to the final outcome.
+So if we define our forecast error
+with E to be the outcome in the future minus the forecast that
+was made at an earlier time t-- so this is the forecast made
+at time t with horizon h.
+And what we want to compare it to
+naturally is the observation at time t plus h.
+We can't do that until we've reached time t plus h beyond.
+But at that point we can evaluate the forecast
+and the forecast error.
+So we can take this difference.
+Now, we want to then define the error.
+Error function, the cost function
+is something that we like to minimize
+if we have good forecasts, and something
+that we can use to quantify or compare
+different kinds of forecasts.
+We'd like to say that one forecasting methodology is
+better than another if it produces smaller forecast
+errors.
+The most popular metric is the mean squared forecast error.
+So let's just take a look at the squared forecast
+error for a moment.
+If we take this quadratic form where
+we take that error, this error term, and we square
+it and we might multiply it times some scale
+coefficient of positive number c for our cost.
+This gives us a couple of properties.
+First, it's 0 when the forecast is spot on.
+And it's symmetric.
+It treats whether we're too high or too low
+as both being errors.
+Now, a lot of times financially we
+don't feel equally the same about losses
+as we do about gains.
+If we expected to make $1 million
+on a particular investment and we make $2 million,
+most people wouldn't count that as being an error.
+But we should.
+And the reason that we should is because it
+bears on our ability to make better
+predictions in the future.
+If we ignore the errors that are on the upside,
+we're missing a chance to improve.
+However, if we have some control over the distribution--
+if we have observations in data or control
+over the distribution of our errors,
+we certainly can say that we'd like
+to have a forecasting methodology that
+minimizes downside errors more than upside errors.
+And, in that case, we might want to cost
+function which is not symmetric, which
+doesn't have this simple form.
+So this is here for convenience, not
+because it's a universal answer to different kinds
+of applications.
+There's another problem with squared forecast
+errors as a criterion for choosing or evaluating models.
+And we can see that by doing the same calculation
+in two different ways.
+Here's an example.
+Consider the AR1 process.
+So if we think of demeaning our variable,
+we could write this as xt is minus x--
+minus lambda xt minus 1 plus sigma 0 here.
+I've just written it as epsilon t.
+Now, I could also write, just by subtracting xt minus 1
+from both sides of the equation, I
+could write an expression for delta xt,
+and I could forecast that.
+That is, instead of thinking about a forecast for x,
+I could forecast how much x changes from one period
+to the next.
+Obviously, those are exactly the same thing.
+So let's take a look at whether we have a process described
+by levels or by differences.
+So add one step ahead, the forecasts differ.
+So we just compute by taking expectations.
+So let's let f represent the forecast of our usual model
+and our usual expectation of x of t plus 1 at time t
+given the information set time t is minus lambda xt--
+
+the previous value that we had, the last value that was
+observed.
+And for our delta, we get minus 1 times 1 plus lambda xt.
+But that's not surprising.
+They're different variables.
+We would expect the forecast quantities to differ.
+And I've denoted the delta 1 with a prime.
+So f prime for the differences, f is for the levels themselves.
+Now, what about the forecast errors?
+Well, the mean forecast errors in this case
+are identical, which tells us that at this level
+it doesn't matter which one we're using.
+The errors would be the same.
+And if I minimize the errors forecasting technique
+or parameter estimation, I'm going
+to get the same result in either case.
+So in the first case I apply my definition
+for the forecast error.
+Observation minus forecast, once it's known,
+this would be the forecast error.
+But we're going to ask about it in expectation,
+before it's yet known.
+So we'd like to minimize our future errors.
+Once they're past errors, it's too late
+to do anything about them.
+So here's what we do.
+We construct this object, x minus f.
+We take its square, and we compute its expectation,
+and we do the calculation.
+And we find its sigma squared.
+We do the same thing with f prime and its future value,
+delta in this case of xt plus 1 the value
+that we're trying to forecast, we find we get the same value
+But if two steps ahead, things are different.
+At two steps ahead we can do the calculation again
+in terms of both variables.
+In terms of xt the algebra is a little bit longer,
+but it's straightforward.
+It's the same rules that we apply.
+We have xt plus 2.
+By doubly recursing and doing a double substitution
+to get an expression in terms of xt which is known
+and two random variables for time t plus 1 and t plus 2,
+we compute the forecast two time steps ahead.
+We get lambda xt--
+lambda squared xt, and we compute
+the mean squared forecast error for the two
+step ahead forecast.
+We find it's equal to lambda squared
+1 plus lambda squared-- sigma squared
+times 1 plus lambda squared.
+And you should check and re-derive this yourself.
+Now, in terms of the difference variable
+we get a different result. So if we
+do the same thing for f prime at two steps ahead
+and we do the substitutions, we have this expression
+for our expectation and we compute
+the difference between the forecast and the outcome.
+And we take its square and we compute its expectation.
+That's our mean squared forecast error
+for the expectation of the squared forecast error
+or a forecast system built using differences.
+And we do the algebra.
+And when the dust clears, we find
+that for general lambda, except for one special value of lambda
+happens to be equal to minus 1/2,
+this expression differs from the one we found here.
+That says that the forecast criterion is different
+depending on which way we describe things.
+But that's not all.
+If we don't know our parameters, and usually
+we don't know the exact parameters.
+Usually we need to estimate parameters from data.
+So if we're making forecasts using estimated parameters
+we have an additional source of error.
+One of them is the underlying randomness
+that's part of the nature of our process.
+But the other source of error is the fact
+that our parameters might not be right.
+And we can see that by putting in lambda hat for our estimate
+of the parameter.
+And, of course, lambda hat is not the true lambda.
+The process evolves according to the true lambda,
+but our forecast is made using our best estimate of lambda,
+which is lambda hat.
+So the forecast error in this case
+has a new term that depends on lambda minus lambda hat.
+It vanishes in the event that we have estimated the parameter
+correctly.
+But otherwise, we have an extra term.
+We go through, we turn the crank, and you can check this.
+And what we find is that now there's
+a new term in the two step ahead forecast
+error, which depends on the difference between lambda
+and lambda hat.
+So this extra term is an additional contribution
+to error when our parameters might deviate.
+And in terms of the difference variable,
+we get something else, which is even more complicated,
+which has even more terms.
+But one of the things we can check in both cases
+to make sure at least we haven't made
+a terrible mistake in our algebra
+is to check that it vanishes in the case where lambda
+is equal to lambda squared.
+So we see that the mean squared forecast errors differ.
+They depend on the value of the parameter.
+They depend on the value of the estimate that's
+used in the forecast.
+And when we are comparing forecasts we should make sure
+first that we do things that are invariant,
+that don't depend on the way we chose
+to label our variables to describe
+exactly the same thing.
+More importantly, we should think in financial terms.
+We should think about assigning error functions or cost
+functions based on the scenarios of interest.
+So, again, we might not want to treat asymmetrically gains
+and losses the same way.
+Sometimes we might if we want symmetric precision,
+but it really depends on the setting and it's something
+that you should keep in mind.
+And it's a choice of the modeler.
+There isn't a single right way to do things.

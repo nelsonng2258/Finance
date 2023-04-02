@@ -1,0 +1,652 @@
+0
+00:00:00,000 --> 00:00:01,780
+
+
+1
+00:00:01,780 --> 00:00:05,140
+PROFESSOR: Let's try exercising a little bit more control
+
+2
+00:00:05,140 --> 00:00:07,600
+over the way in which delta t goes to zero
+
+3
+00:00:07,600 --> 00:00:10,420
+and the step size goes to zero so that we can
+
+4
+00:00:10,420 --> 00:00:13,870
+get a limit which has a finite variance instead of one that's
+
+5
+00:00:13,870 --> 00:00:15,220
+infinite or zero.
+
+6
+00:00:15,220 --> 00:00:17,380
+So consider the following.
+
+7
+00:00:17,380 --> 00:00:20,950
+Let's let delta t be T/n as before.
+
+8
+00:00:20,950 --> 00:00:24,070
+This time, let's take our step size
+
+9
+00:00:24,070 --> 00:00:26,710
+to go as square root of delta t.
+
+10
+00:00:26,710 --> 00:00:29,440
+That is, let's let lambda, which is the step
+
+11
+00:00:29,440 --> 00:00:31,840
+size that we're going to have in our process,
+
+12
+00:00:31,840 --> 00:00:34,510
+be square root of T/n.
+
+13
+00:00:34,510 --> 00:00:37,780
+The important part isn't the T. It's the square root of 1/n
+
+14
+00:00:37,780 --> 00:00:38,990
+that we have here.
+
+15
+00:00:38,990 --> 00:00:43,445
+So as before, we construct our series B delta t,
+
+16
+00:00:43,445 --> 00:00:46,570
+T as consisting of a number of steps
+
+17
+00:00:46,570 --> 00:00:51,550
+to represent the entire time horizon of length big T.
+
+18
+00:00:51,550 --> 00:00:54,970
+That's our overall duration in macroscopic time.
+
+19
+00:00:54,970 --> 00:01:00,220
+And we're going to have n infinitesimal steps epsilon t.
+
+20
+00:01:00,220 --> 00:01:04,120
+Those steps are going to have this scaling.
+
+21
+00:01:04,120 --> 00:01:09,040
+They're going to be square root of delta t times zt.
+
+22
+00:01:09,040 --> 00:01:10,990
+And what about the variance?
+
+23
+00:01:10,990 --> 00:01:13,270
+Well, the expectation is zero as always,
+
+24
+00:01:13,270 --> 00:01:17,500
+but now the variance is n times the variance
+
+25
+00:01:17,500 --> 00:01:24,070
+of the epsilon variables of our scaled step sizes.
+
+26
+00:01:24,070 --> 00:01:28,830
+That means that the variance is n delta
+
+27
+00:01:28,830 --> 00:01:32,280
+t times the variance of z.
+
+28
+00:01:32,280 --> 00:01:35,250
+This variance is just equal to one,
+
+29
+00:01:35,250 --> 00:01:40,740
+and this here is equal to big T because n delta
+
+30
+00:01:40,740 --> 00:01:42,180
+t is being held fixed.
+
+31
+00:01:42,180 --> 00:01:44,800
+We saw that up here.
+
+32
+00:01:44,800 --> 00:01:52,480
+So what we get is the variance is equal to T, which is finite.
+
+33
+00:01:52,480 --> 00:01:56,800
+So by scaling our steps in a particular way,
+
+34
+00:01:56,800 --> 00:01:59,920
+by letting the step size go to zero as 1
+
+35
+00:01:59,920 --> 00:02:03,790
+over square root of n, or as the square root of delta t,
+
+36
+00:02:03,790 --> 00:02:06,010
+we can achieve a continuous limit
+
+37
+00:02:06,010 --> 00:02:08,620
+where delta t goes to zero and we still
+
+38
+00:02:08,620 --> 00:02:14,020
+end up with finite variance, not zero and not infinite.
+
+39
+00:02:14,020 --> 00:02:16,630
+This defines Brownian motion.
+
+40
+00:02:16,630 --> 00:02:21,100
+So Brownian motion is a process where
+
+41
+00:02:21,100 --> 00:02:22,780
+it's the limit we obtain by letting
+
+42
+00:02:22,780 --> 00:02:27,790
+delta t go to zero where we find that, relative to our starting
+
+43
+00:02:27,790 --> 00:02:32,590
+point, the endpoint is a Gaussian randomly distributed
+
+44
+00:02:32,590 --> 00:02:35,920
+variable with zero mean and a variance
+
+45
+00:02:35,920 --> 00:02:38,440
+equal to the length of time elapsed,
+
+46
+00:02:38,440 --> 00:02:42,053
+no matter what that time is.
+
+47
+00:02:42,053 --> 00:02:43,970
+Now, there are a lot of interesting properties
+
+48
+00:02:43,970 --> 00:02:45,500
+of Brownian motion, and we're not
+
+49
+00:02:45,500 --> 00:02:46,700
+going to derive all of them.
+
+50
+00:02:46,700 --> 00:02:48,740
+We're just going to work with the processes
+
+51
+00:02:48,740 --> 00:02:51,680
+to see the things that are most useful for finance.
+
+52
+00:02:51,680 --> 00:02:55,580
+The paths that we get that we obtain by taking this limit
+
+53
+00:02:55,580 --> 00:02:57,680
+are fractal in nature.
+
+54
+00:02:57,680 --> 00:03:01,560
+They're continuous paths, but they're nowhere differentiable,
+
+55
+00:03:01,560 --> 00:03:03,860
+so we're going to need to modify our rules for taking
+
+56
+00:03:03,860 --> 00:03:06,590
+derivatives to deal with these new paths.
+
+57
+00:03:06,590 --> 00:03:09,560
+Instead of looking at our usual definitions
+
+58
+00:03:09,560 --> 00:03:13,920
+for taking derivatives for doing calculus,
+
+59
+00:03:13,920 --> 00:03:16,730
+we're going to have to think about things probabilistically
+
+60
+00:03:16,730 --> 00:03:20,510
+and replace our usual limits by a kind of convergence
+
+61
+00:03:20,510 --> 00:03:24,820
+for probability distributions.
+
+62
+00:03:24,820 --> 00:03:27,900
+Now, we could have defined this abstractly from the beginning,
+
+63
+00:03:27,900 --> 00:03:31,230
+but it's useful for a lot of practical and conceptual
+
+64
+00:03:31,230 --> 00:03:34,020
+reasons to think about taking the limit in this way.
+
+65
+00:03:34,020 --> 00:03:36,690
+One of the interesting things is that this limit really
+
+66
+00:03:36,690 --> 00:03:37,560
+is universal.
+
+67
+00:03:37,560 --> 00:03:40,020
+We could have started with steps, remember,
+
+68
+00:03:40,020 --> 00:03:44,190
+that are drawn from any IID distribution that satisfies
+
+69
+00:03:44,190 --> 00:03:47,430
+the properties that we have for just our general things
+
+70
+00:03:47,430 --> 00:03:49,420
+for a standardized random variable.
+
+71
+00:03:49,420 --> 00:03:52,050
+So we're going to end up with something which has a Gaussian
+
+72
+00:03:52,050 --> 00:03:55,080
+distribution, regardless of where we started,
+
+73
+00:03:55,080 --> 00:03:57,090
+due to the central limit theorem.
+
+74
+00:03:57,090 --> 00:03:58,740
+Interestingly, we'll see that when
+
+75
+00:03:58,740 --> 00:04:00,720
+we want to do numerical approximations,
+
+76
+00:04:00,720 --> 00:04:03,750
+we want to do Monte Carlo option pricing, for example,
+
+77
+00:04:03,750 --> 00:04:07,020
+we're going to re-discretize, and it'll
+
+78
+00:04:07,020 --> 00:04:08,580
+look like we've come full circle,
+
+79
+00:04:08,580 --> 00:04:10,900
+and then we're going back to where we started.
+
+80
+00:04:10,900 --> 00:04:14,670
+Now, there is more than one limit possible,
+
+81
+00:04:14,670 --> 00:04:16,440
+and there's a literature on this, which
+
+82
+00:04:16,440 --> 00:04:18,329
+we're not going to go into.
+
+83
+00:04:18,329 --> 00:04:22,410
+I want to point out that the essential ingredient
+
+84
+00:04:22,410 --> 00:04:26,490
+for finance is that we have non-anticipating processes.
+
+85
+00:04:26,490 --> 00:04:30,210
+That is, we're taking a limit as t evolves
+
+86
+00:04:30,210 --> 00:04:31,950
+where we don't know what's in the future.
+
+87
+00:04:31,950 --> 00:04:34,230
+It's possible to take things that are symmetric,
+
+88
+00:04:34,230 --> 00:04:36,750
+that are agnostic between past and future,
+
+89
+00:04:36,750 --> 00:04:39,120
+or even things that go the other way and that anticipate
+
+90
+00:04:39,120 --> 00:04:40,060
+the future.
+
+91
+00:04:40,060 --> 00:04:43,590
+So there are some mathematical subtleties
+
+92
+00:04:43,590 --> 00:04:45,390
+in those different limits.
+
+93
+00:04:45,390 --> 00:04:47,700
+I'll point out what the rules are for the limit
+
+94
+00:04:47,700 --> 00:04:50,550
+that we're interested in, which is defined in just the way
+
+95
+00:04:50,550 --> 00:04:55,430
+that we went through right now.
+
+96
+00:04:55,430 --> 00:04:59,830
+So what are some of the properties of Brownian paths?
+
+97
+00:04:59,830 --> 00:05:03,970
+Well, we started by taking a finite path,
+
+98
+00:05:03,970 --> 00:05:07,360
+we broke it into infinitesimals, and we came up
+
+99
+00:05:07,360 --> 00:05:08,980
+with some properties that are true
+
+100
+00:05:08,980 --> 00:05:11,330
+of the finite macroscopic path.
+
+101
+00:05:11,330 --> 00:05:14,710
+So one of them is that the properties of the path
+
+102
+00:05:14,710 --> 00:05:16,940
+depend only on the time differences.
+
+103
+00:05:16,940 --> 00:05:22,120
+So if we think of X of t1 and t2 as being Brownian motion that
+
+104
+00:05:22,120 --> 00:05:25,420
+goes between time t1 and t2, we can think of it
+
+105
+00:05:25,420 --> 00:05:28,180
+as the difference between the endpoints, all right?
+
+106
+00:05:28,180 --> 00:05:30,220
+So the initial point doesn't matter.
+
+107
+00:05:30,220 --> 00:05:32,410
+The results that we have are a function
+
+108
+00:05:32,410 --> 00:05:35,740
+only of the elapsed time between the two.
+
+109
+00:05:35,740 --> 00:05:38,150
+It doesn't matter what the origin of time is.
+
+110
+00:05:38,150 --> 00:05:42,130
+So if we shift time forward or backward by any constant,
+
+111
+00:05:42,130 --> 00:05:44,260
+the properties that we have are the same.
+
+112
+00:05:44,260 --> 00:05:46,150
+The distribution is the same.
+
+113
+00:05:46,150 --> 00:05:49,000
+The variance only depends on the elapsed time
+
+114
+00:05:49,000 --> 00:05:50,650
+between the endpoints.
+
+115
+00:05:50,650 --> 00:05:54,790
+But that being said, the endpoints
+
+116
+00:05:54,790 --> 00:05:58,090
+don't need to be separated by a finite amount of time.
+
+117
+00:05:58,090 --> 00:06:01,750
+We could bring them back to where big T gets smaller
+
+118
+00:06:01,750 --> 00:06:04,150
+and smaller and smaller and to the point where
+
+119
+00:06:04,150 --> 00:06:05,950
+we get a new infinitesimal.
+
+120
+00:06:05,950 --> 00:06:08,830
+So we started by taking a finite path,
+
+121
+00:06:08,830 --> 00:06:11,050
+we chopped it into infinitesimals,
+
+122
+00:06:11,050 --> 00:06:13,390
+we got properties of that finite path,
+
+123
+00:06:13,390 --> 00:06:16,600
+and now I'm going to shrink the length of that path back
+
+124
+00:06:16,600 --> 00:06:17,440
+to delta t.
+
+125
+00:06:17,440 --> 00:06:20,710
+So this might seem as though we've done nothing
+
+126
+00:06:20,710 --> 00:06:23,290
+and we're going full circle, but I remind you
+
+127
+00:06:23,290 --> 00:06:28,120
+that our initial discrete process for any finite size
+
+128
+00:06:28,120 --> 00:06:31,600
+delta t could have had non-Gaussian distribution,
+
+129
+00:06:31,600 --> 00:06:35,360
+and the Brownian paths are Gaussian at all scales.
+
+130
+00:06:35,360 --> 00:06:38,830
+So if I look at a small chunk, a small piece
+
+131
+00:06:38,830 --> 00:06:43,030
+of infinitesimal time evolution in Brownian motion
+
+132
+00:06:43,030 --> 00:06:44,860
+for a Brownian path, and I'll call
+
+133
+00:06:44,860 --> 00:06:49,390
+that interval dB sub t just to remind you
+
+134
+00:06:49,390 --> 00:06:50,360
+of the time dependence.
+
+135
+00:06:50,360 --> 00:06:53,545
+Little subscript t is notation you'll see sometimes.
+
+136
+00:06:53,545 --> 00:06:54,920
+It's not particularly meaningful.
+
+137
+00:06:54,920 --> 00:06:57,310
+It's just a reminder of the time dependence.
+
+138
+00:06:57,310 --> 00:06:59,800
+This is going to be normally distributed
+
+139
+00:06:59,800 --> 00:07:03,670
+with mean zero, of course, and variance equal to the time
+
+140
+00:07:03,670 --> 00:07:05,560
+interval, which is delta t.
+
+141
+00:07:05,560 --> 00:07:07,210
+So if we'd started with something
+
+142
+00:07:07,210 --> 00:07:10,540
+that, for example, was a discrete random variable, maybe
+
+143
+00:07:10,540 --> 00:07:12,040
+with plus or minus one, we wouldn't
+
+144
+00:07:12,040 --> 00:07:13,540
+have had this property at all.
+
+145
+00:07:13,540 --> 00:07:16,540
+At small scales our granular thing
+
+146
+00:07:16,540 --> 00:07:18,980
+would have recovered the building blocks that we had.
+
+147
+00:07:18,980 --> 00:07:21,100
+So here we do have this universal behavior
+
+148
+00:07:21,100 --> 00:07:24,670
+for Brownian paths, that they're Gaussian at all time scales,
+
+149
+00:07:24,670 --> 00:07:26,890
+big and small.
+
+150
+00:07:26,890 --> 00:07:28,550
+They also are independent.
+
+151
+00:07:28,550 --> 00:07:31,270
+So if I look at the covariance taken
+
+152
+00:07:31,270 --> 00:07:36,100
+at two different times for two different infinitesimal time
+
+153
+00:07:36,100 --> 00:07:39,370
+intervals, I find that they're equal to zero if the times are
+
+154
+00:07:39,370 --> 00:07:42,070
+different, or the variance of the process
+
+155
+00:07:42,070 --> 00:07:45,430
+is dt if t and t prime are equal.
+
+156
+00:07:45,430 --> 00:07:48,220
+We can also talk about integrating the process
+
+157
+00:07:48,220 --> 00:07:52,300
+to go from an infinitesimal back to the finite values.
+
+158
+00:07:52,300 --> 00:07:55,270
+And sometimes we'll write this in integral form
+
+159
+00:07:55,270 --> 00:07:58,360
+as saying that BT minus B0, or I can
+
+160
+00:07:58,360 --> 00:08:00,250
+put the B0 on the right-hand side,
+
+161
+00:08:00,250 --> 00:08:02,590
+is the integral from time zero to time
+
+162
+00:08:02,590 --> 00:08:06,780
+big T of our infinitesimal.
+

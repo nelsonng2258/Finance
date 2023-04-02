@@ -1,0 +1,680 @@
+0
+00:00:00,000 --> 00:00:04,280
+PROFESSOR: Let's take a look at Ito processes and Ito's lemma.
+
+1
+00:00:04,280 --> 00:00:06,630
+Let's do a few examples.
+
+2
+00:00:06,630 --> 00:00:09,540
+So an Ito process has two parts.
+
+3
+00:00:09,540 --> 00:00:11,930
+It has a deterministic part and a random part.
+
+4
+00:00:11,930 --> 00:00:13,490
+And of course, random part is the one
+
+5
+00:00:13,490 --> 00:00:15,500
+that we're particularly interested in.
+
+6
+00:00:15,500 --> 00:00:18,050
+This is directly analogous to what we did when
+
+7
+00:00:18,050 --> 00:00:19,340
+we looked at discrete time.
+
+8
+00:00:19,340 --> 00:00:22,910
+If we think about our old friend the generalized random walk,
+
+9
+00:00:22,910 --> 00:00:25,700
+we had a term r, which represented
+
+10
+00:00:25,700 --> 00:00:27,980
+the change, the difference in variables,
+
+11
+00:00:27,980 --> 00:00:30,350
+in this case, logarithms and prices,
+
+12
+00:00:30,350 --> 00:00:32,360
+over a particular interval.
+
+13
+00:00:32,360 --> 00:00:35,420
+That's going to be one way you can think about dx.
+
+14
+00:00:35,420 --> 00:00:38,030
+The next term, mu, was just a constant.
+
+15
+00:00:38,030 --> 00:00:41,630
+It was something by which in every period r would increase.
+
+16
+00:00:41,630 --> 00:00:44,000
+The same kind of thing with the term adt.
+
+17
+00:00:44,000 --> 00:00:46,730
+We think of it as being a deterministic term.
+
+18
+00:00:46,730 --> 00:00:49,760
+And in fact, if a were a constant mu,
+
+19
+00:00:49,760 --> 00:00:53,060
+and we were to integrate this over a time interval of length
+
+20
+00:00:53,060 --> 00:00:55,280
+1, we would see that we'd get the same result.
+
+21
+00:00:55,280 --> 00:00:57,140
+We would just get a constant.
+
+22
+00:00:57,140 --> 00:01:02,990
+And then the last term has two parts, a little b and a big B.
+
+23
+00:01:02,990 --> 00:01:09,230
+The big dB plays the role of our standardized random variable
+
+24
+00:01:09,230 --> 00:01:13,520
+Z. That is, it has zero mean instead of unit variance.
+
+25
+00:01:13,520 --> 00:01:16,460
+Because it's an infinitesimal, it has the next best thing.
+
+26
+00:01:16,460 --> 00:01:18,650
+It has variance dt.
+
+27
+00:01:18,650 --> 00:01:22,280
+And the coefficient function in front of it, little b,
+
+28
+00:01:22,280 --> 00:01:24,200
+plays the same role as sigma.
+
+29
+00:01:24,200 --> 00:01:27,050
+The difference is that our coefficient functions a and b,
+
+30
+00:01:27,050 --> 00:01:27,860
+might just be that.
+
+31
+00:01:27,860 --> 00:01:29,220
+They might be functions.
+
+32
+00:01:29,220 --> 00:01:37,340
+So a and b can be functions of t and of x itself, all right?
+
+33
+00:01:37,340 --> 00:01:47,910
+So we do have that a can be a function in general of t and x.
+
+34
+00:01:47,910 --> 00:01:51,350
+And b could be a function of t and x as well.
+
+35
+00:01:51,350 --> 00:01:54,020
+But certainly, the special cases where little a and little b
+
+36
+00:01:54,020 --> 00:01:57,030
+are constant, are going to be interesting.
+
+37
+00:01:57,030 --> 00:01:59,340
+Now the question that we ask in applying
+
+38
+00:01:59,340 --> 00:02:03,660
+Ito's lemma is, suppose I'm given an Ito process dx,
+
+39
+00:02:03,660 --> 00:02:06,060
+and I have some function of x.
+
+40
+00:02:06,060 --> 00:02:07,470
+What's its differential?
+
+41
+00:02:07,470 --> 00:02:10,889
+If it were an ordinary function, an ordinary deterministic
+
+42
+00:02:10,889 --> 00:02:14,490
+function, then the answer would be given by the chain rule.
+
+43
+00:02:14,490 --> 00:02:16,200
+And if you don't remember the chain rule,
+
+44
+00:02:16,200 --> 00:02:19,802
+now would be an excellent time to go brush up
+
+45
+00:02:19,802 --> 00:02:21,510
+because we're going to be using it a lot.
+
+46
+00:02:21,510 --> 00:02:23,880
+And what I want you to focus on are the differences
+
+47
+00:02:23,880 --> 00:02:27,760
+between the ordinary chain rule and the Ito rule.
+
+48
+00:02:27,760 --> 00:02:31,230
+So the first two terms tell us for a function of t and x
+
+49
+00:02:31,230 --> 00:02:32,790
+how differentials behave.
+
+50
+00:02:32,790 --> 00:02:35,910
+They depend on the evolution with respect
+
+51
+00:02:35,910 --> 00:02:38,160
+to time, the partial derivative with respect
+
+52
+00:02:38,160 --> 00:02:42,570
+to time times dt plus the partial with respect to x times
+
+53
+00:02:42,570 --> 00:02:43,230
+dx.
+
+54
+00:02:43,230 --> 00:02:46,410
+And this piece over here is genuinely new.
+
+55
+00:02:46,410 --> 00:02:47,813
+And that's going to be the source
+
+56
+00:02:47,813 --> 00:02:49,230
+of a lot of the interesting things
+
+57
+00:02:49,230 --> 00:02:52,320
+that we'll see when we look at continuous time finance.
+
+58
+00:02:52,320 --> 00:02:54,300
+Our strategy is going to be the same
+
+59
+00:02:54,300 --> 00:02:57,480
+though, that we saw in looking at time series models,
+
+60
+00:02:57,480 --> 00:03:01,650
+namely, to build complex models and interesting phenomenon
+
+61
+00:03:01,650 --> 00:03:04,620
+relationships out of very simple building blocks.
+
+62
+00:03:04,620 --> 00:03:10,100
+So our simple building block here, is going to be dB.
+
+63
+00:03:10,100 --> 00:03:10,670
+That's it.
+
+64
+00:03:10,670 --> 00:03:14,070
+So we want to know the properties of dB,
+
+65
+00:03:14,070 --> 00:03:16,350
+either in differential or integral form.
+
+66
+00:03:16,350 --> 00:03:19,620
+And we're going to be combining those in different ways
+
+67
+00:03:19,620 --> 00:03:23,620
+and solving some interesting financial problems.
+
+68
+00:03:23,620 --> 00:03:26,880
+So the idea is that economic variables of interest,
+
+69
+00:03:26,880 --> 00:03:29,580
+like a stock price, like an interest rate,
+
+70
+00:03:29,580 --> 00:03:33,780
+like a yield or a wide variety of other variables,
+
+71
+00:03:33,780 --> 00:03:37,350
+will be described by stochastic processes that can be built out
+
+72
+00:03:37,350 --> 00:03:41,190
+of Brownian motion, who is in infinitesimal form, our dB.
+
+73
+00:03:41,190 --> 00:03:44,490
+Then we're going to apply our usual tools, which we linearity
+
+74
+00:03:44,490 --> 00:03:47,820
+expectations plus a new tool, Ito's lemma,
+
+75
+00:03:47,820 --> 00:03:51,450
+for evaluating functions for looking at changes in variable
+
+76
+00:03:51,450 --> 00:03:52,845
+to get interesting results.
+
+77
+00:03:52,845 --> 00:03:56,490
+
+
+78
+00:03:56,490 --> 00:03:58,800
+Now in general, our goal is going
+
+79
+00:03:58,800 --> 00:04:07,510
+to be to apply Ito's lemma to functions of the form F of t
+
+80
+00:04:07,510 --> 00:04:09,280
+and x, and--
+
+81
+00:04:09,280 --> 00:04:12,190
+sorry, let's scrawl that up slightly.
+
+82
+00:04:12,190 --> 00:04:14,680
+So we're going to apply Ito's lemma
+
+83
+00:04:14,680 --> 00:04:17,320
+to things that are of the form function of t
+
+84
+00:04:17,320 --> 00:04:18,730
+and a function of x.
+
+85
+00:04:18,730 --> 00:04:22,330
+In the classic case, and one will be thinking most about--
+
+86
+00:04:22,330 --> 00:04:25,330
+it's going to be the case of pricing derivative securities.
+
+87
+00:04:25,330 --> 00:04:27,550
+So a derivative security is a security
+
+88
+00:04:27,550 --> 00:04:30,670
+whose value depends on, is derived from,
+
+89
+00:04:30,670 --> 00:04:32,390
+the value of something else.
+
+90
+00:04:32,390 --> 00:04:34,840
+So the classic example would be a stock option,
+
+91
+00:04:34,840 --> 00:04:37,930
+where x would be the stock price or possibly
+
+92
+00:04:37,930 --> 00:04:39,340
+the logarithm of the stock price,
+
+93
+00:04:39,340 --> 00:04:42,160
+but x is related to the value of the underlying,
+
+94
+00:04:42,160 --> 00:04:45,430
+t is ordinary time, and F is the value
+
+95
+00:04:45,430 --> 00:04:47,020
+of the derivative security.
+
+96
+00:04:47,020 --> 00:04:49,600
+And what Ito's lemma tells us is,
+
+97
+00:04:49,600 --> 00:04:54,730
+how changes in the value of the underlying
+
+98
+00:04:54,730 --> 00:04:56,970
+translate into changes in the value
+
+99
+00:04:56,970 --> 00:04:58,600
+of the derivative security.
+
+100
+00:04:58,600 --> 00:05:01,030
+We'll look at this as we do often
+
+101
+00:05:01,030 --> 00:05:02,890
+in differential equations, by taking
+
+102
+00:05:02,890 --> 00:05:05,380
+what happened that infinitesimal time,
+
+103
+00:05:05,380 --> 00:05:08,260
+and then solving for what happens in the general case
+
+104
+00:05:08,260 --> 00:05:10,520
+as we apply boundary conditions.
+
+105
+00:05:10,520 --> 00:05:13,540
+So, what I'd like to do now is give a few examples,
+
+106
+00:05:13,540 --> 00:05:16,570
+where we can just use some of the basic calculus
+
+107
+00:05:16,570 --> 00:05:20,920
+and get used to computing Ito differentials.
+
+108
+00:05:20,920 --> 00:05:23,420
+And there are a few things I'd like you to pay attention to.
+
+109
+00:05:23,420 --> 00:05:25,670
+The first one is to look at the structure.
+
+110
+00:05:25,670 --> 00:05:28,840
+So the basic structure of an Ito process
+
+111
+00:05:28,840 --> 00:05:32,290
+is that, in an Ito process, it's always
+
+112
+00:05:32,290 --> 00:05:35,390
+of the form for an Ito process that we have--
+
+113
+00:05:35,390 --> 00:05:39,010
+an Ito process is something times dt
+
+114
+00:05:39,010 --> 00:05:41,590
+plus something else times dB.
+
+115
+00:05:41,590 --> 00:05:43,120
+And we might need to massage things
+
+116
+00:05:43,120 --> 00:05:46,640
+or move some terms around, or regroup or rewrite things.
+
+117
+00:05:46,640 --> 00:05:50,110
+But if we can do that, then we'll be all set.
+
+118
+00:05:50,110 --> 00:05:52,070
+That means that it's an Ito process.
+
+119
+00:05:52,070 --> 00:05:53,770
+And the reason that Ito processes
+
+120
+00:05:53,770 --> 00:05:58,570
+are interesting as a class is that, Ito's lemma tells us
+
+121
+00:05:58,570 --> 00:06:00,610
+that the differential of an Ito process
+
+122
+00:06:00,610 --> 00:06:03,218
+is itself an Ito process.
+
+123
+00:06:03,218 --> 00:06:04,760
+So that's what's going to be helpful.
+
+124
+00:06:04,760 --> 00:06:07,420
+So what we want to do is, we want to look at the structure
+
+125
+00:06:07,420 --> 00:06:10,420
+that we have, in terms of the different differentials.
+
+126
+00:06:10,420 --> 00:06:13,990
+We want to keep in mind which pieces are stochastic
+
+127
+00:06:13,990 --> 00:06:16,420
+and which pieces are deterministic,
+
+128
+00:06:16,420 --> 00:06:19,780
+which pieces are functions of time only,
+
+129
+00:06:19,780 --> 00:06:23,510
+so they can evolve in time but in a non-random way.
+
+130
+00:06:23,510 --> 00:06:26,307
+We want to see which things depend on what.
+
+131
+00:06:26,307 --> 00:06:27,890
+Are there functions that are constant?
+
+132
+00:06:27,890 --> 00:06:29,000
+Do they depend on t?
+
+133
+00:06:29,000 --> 00:06:30,140
+Do they depend on B?
+
+134
+00:06:30,140 --> 00:06:31,910
+Do they depend on both?
+
+135
+00:06:31,910 --> 00:06:34,610
+If I'm computing differentials, notice
+
+136
+00:06:34,610 --> 00:06:40,760
+that in the formula for dF, that I have b, appears here,
+
+137
+00:06:40,760 --> 00:06:43,050
+but a doesn't appear at all.
+
+138
+00:06:43,050 --> 00:06:46,410
+So does that mean the dF is independent of a?
+
+139
+00:06:46,410 --> 00:06:48,140
+Well certainly not independent of b.
+
+140
+00:06:48,140 --> 00:06:50,870
+So when I've written little a and little b, remember,
+
+141
+00:06:50,870 --> 00:06:53,580
+those are just the coefficients of these things.
+
+142
+00:06:53,580 --> 00:06:55,230
+So we'll use different variables,
+
+143
+00:06:55,230 --> 00:06:56,390
+I'll take different forms.
+
+144
+00:06:56,390 --> 00:06:59,130
+I might even re-use letters a and b from time to time.
+
+145
+00:06:59,130 --> 00:07:01,400
+But in this formula, in Ito's formula,
+
+146
+00:07:01,400 --> 00:07:03,860
+this b squared means the coefficient
+
+147
+00:07:03,860 --> 00:07:07,068
+of whatever is in the defining formula for dx,
+
+148
+00:07:07,068 --> 00:07:09,110
+which is the variable with respect to which we're
+
+149
+00:07:09,110 --> 00:07:10,980
+differentiating.
+
+150
+00:07:10,980 --> 00:07:13,940
+So does this mean that dF is independent of a?
+
+151
+00:07:13,940 --> 00:07:16,010
+Well, it looks like it in this form,
+
+152
+00:07:16,010 --> 00:07:17,840
+but not really, because remember,
+
+153
+00:07:17,840 --> 00:07:21,140
+this expression, which is a standard form Ito's lemma,
+
+154
+00:07:21,140 --> 00:07:22,145
+contains a dx.
+
+155
+00:07:22,145 --> 00:07:25,477
+So then this term is a dt, this term is a dt.
+
+156
+00:07:25,477 --> 00:07:26,685
+We could group them together.
+
+157
+00:07:26,685 --> 00:07:29,420
+The reason it's often written like this is so that we can
+
+158
+00:07:29,420 --> 00:07:33,080
+say, chain rule plus new guy.
+
+159
+00:07:33,080 --> 00:07:36,110
+But in addition to that, we do have dx,
+
+160
+00:07:36,110 --> 00:07:38,150
+which I could substitute in.
+
+161
+00:07:38,150 --> 00:07:40,400
+It has a dt and a dB.
+
+162
+00:07:40,400 --> 00:07:42,590
+And that of course, contains a.
+
+163
+00:07:42,590 --> 00:07:45,830
+So even though the a isn't explicitly visible,
+
+164
+00:07:45,830 --> 00:07:47,330
+we might think of it as being there.
+
+165
+00:07:47,330 --> 00:07:48,980
+And you'll want to keep an eye on these
+
+166
+00:07:48,980 --> 00:07:50,810
+because they'll show up in interesting ways
+
+167
+00:07:50,810 --> 00:07:53,360
+in different applications, whether things are explicitly
+
+168
+00:07:53,360 --> 00:07:55,670
+visible or implicit in the language,
+
+169
+00:07:55,670 --> 00:07:59,320
+or whether they're gone entirely.
+

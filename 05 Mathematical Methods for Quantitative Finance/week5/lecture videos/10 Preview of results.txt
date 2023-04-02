@@ -1,0 +1,103 @@
+
+PROFESSOR: In order to solve the Black-Scholes equation, which
+is a pretty complicated differential equation,
+what we're going to do is make some changes of variables
+to turn Black-Scholes into a related equation that's
+a lot easier to work with and easier to understand.
+We'll take a look at some of its features,
+and then we'll transform back and we'll
+get our final answer in terms of the original Black-Scholes
+variables.
+So let's just preview some of the key results
+and what our key approach is going to be,
+how we're going to go about doing this.
+So the first thing is what equation are we talking about?
+The Black-Scholes PDE is closely related
+to the diffusion equation, a well-known partial differential
+equation, which is written in this way
+as the partial of a function we'll call p0 with respect to t
+is equal to 1/2 the second derivative.
+So I have the first derivative on the left hand side.
+I have second derivative on the right hand side,
+and these both have the same sign.
+If I put them on the same side of the equation,
+there's going to be a minus sign relative to the two.
+What's the solution to this equation?
+Well, there are a lot of them.
+But there's one that's very, very special.
+That solution is a Gaussian, and that's one I've called p0.
+So right now you should take a moment
+to check that this expression satisfies this differential
+equation.
+You'd like to practice your partial derivatives,
+there's no better time to do it right now.
+You can see it's a little bit complicated
+because this Gaussian where we've done Gaussians
+before, it's easy to differentiate
+with respect to z.
+There's z squared up here.
+But the t's appear in two different places.
+They appear down here and they appear over here.
+And the effect of t's appearing in
+that way is that as t plays the role of sigma squared,
+it's related to the width of the distribution.
+As t gets larger, the Gaussian gets wider and wider.
+And I've illustrated this here, that the peak gets lower,
+the distribution gets larger.
+One of the really interesting features
+is that t approaches 0, the opposite happens.
+The Gaussian gets steeper and steeper
+and gets peaked near the origin.
+So the first thing is simple differential equation.
+Very interesting Gaussian, our old friend the Gaussian.
+Special solution to that differential equation.
+And we're going to use that special solution
+to generate other solutions.
+So the way in which we do that is going
+to be a kernel type approach.
+And I'll show you some examples in a moment
+and you'll have a chance to do some yourself.
+But the basic idea is that we find a function p.
+It has a special form, and in this case, it's a Gaussian.
+And if we want to find any particular solution that
+has special boundary conditions, what we do
+is we take our function p.
+We're going to integrate it times something representing
+the boundary conditions to get the thing that we want.
+So in the case of stock options, what we're thinking about
+is this expression here is going to be the replacement for p0.
+This is going to be some complicated expression,
+but it's going to be the moral and variable transformed
+equivalent of p0.
+This expression here is going to define
+the payoff of the derivative at expiration.
+Usually when we look at partial differential equations,
+we think of initial conditions or of boundary conditions.
+And if we have initial conditions,
+we think about what happened subsequently.
+In the case of financial derivatives
+that have a definite expiration date, we work time backwards.
+We know what they're worth in the future at expiration,
+but we need to figure out what they're worth at times prior.
+What this expression does is it lets
+us convert from one to the other and look
+at the structure of it, because we'll be seeing this again.
+The integration variable is with respect
+to this St over all possible future terminal
+values of the stock price.
+But this function here, p, depends not only
+on St and big T on the values at termination.
+It also depends on the current stock
+price and the current time.
+And because these are variables outside but they're
+constants under the integral, this p function
+is going to give us a bridge between the two,
+between the terminal values and the present values.
+And we're also going to see that the same equation,
+the diffusion equation, describes
+a bunch of other things, including
+the evolution of probability distributions for random walks.
+It helps us solve problems for the presence of barriers
+for things like exotic options, knock in,
+knock out options, and so on.
+We'll get some good intuition about how those behave.

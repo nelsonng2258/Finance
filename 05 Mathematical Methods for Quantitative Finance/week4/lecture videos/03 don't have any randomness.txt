@@ -1,0 +1,144 @@
+
+PROFESSOR: So we have integral formulas
+and we have differential formulas.
+What are we going to do?
+What are we going to use?
+The answer is we're going to use them both.
+Most of the time we're going to be working in differential form
+and constructing what are known as stochastic differential
+equations that involve things like that infinitesimal dB
+that I showed you on the previous slide.
+That's the small time limit of our finite Brownian motion
+path.
+And we'll see these stochastic differentials
+involve these Gaussian random variables.
+And under certain circumstances, we
+can reduce them to partial differential equations,
+familiar from calculus, that don't have any randomness.
+And then we can apply normal techniques
+that we have from the theory of partial differential equations.
+However, we also sometimes use the integral form,
+where we want to take a differential version
+and integrate it up.
+That's something that we need to think
+about a little bit differently from doing integrals
+in ordinary single or multiple-variable calculus
+because the thing that we're integrating
+is a random variable, and its randomness
+depends on where it is in time.
+So we can't just do a straightforward integration.
+We need to think about the results of the integration
+as themselves representing a probability distribution.
+But an important example of where
+we think about things, these integral forms
+for finite values, is in doing option pricing,
+and a discrete approximation to that on a computer
+that we'll be seeing where we do Monte Carlo simulations.
+So we might like to--
+it turns out that we can define the price of an option
+as an expectation over a bunch of Brownian paths
+that are integrated over a finite time period.
+And for that, we'll want to have our integral representation
+of what the paths are and what their probability
+distribution is.
+
+Finally, let's do a quick version
+of our generalized random walk because just pure Brownian
+motion is a bit boring.
+It's like a standardized random variable.
+There's not a whole lot that we can
+do with it if it only depends on time
+and it doesn't have any parameters.
+We'd like to include something that
+could represent our old friends, return and risk.
+So remember what we did with our basic random walk
+to get to the generalized random walk.
+We introduced parameters.
+So we started with a return variable
+for our log-normal process where we
+took our variable z, our standardized random variable,
+we multiplied it times a constant,
+sigma, to represent the step size,
+and we possibly added another constant mu that
+represented the drift.
+So I've written this as mu 0 and sigma 0
+because I don't exactly know right now what
+scale I want to use.
+And let's think of those as being the bare parameters
+for constructing a process where the time interval was fixed.
+So when delta t was equal to 1, this was how we set things up.
+We said that if I had bare parameters mu 0 and sigma 0,
+then the random variable constructed in this way, r sub
+t, was normally distributed with mean mu and variance
+sigma squared.
+Then, if I added a whole bunch of them
+together to get some finite-length path
+of multiple steps, I could go from 0
+to a value of, let's say, big T, letting big T be an integer
+number, by aggregating a bunch of individual time steps,
+mostly T of them.
+And because the logarithm of a product
+is the sum of the logarithms and because the variances add
+and all our usual rules, we see that by adding together big T
+variables, I could get a process that was normally distributed
+with parameter mu 0 t, variance sigma 0
+squared T relative to the bare parameters.
+Well, now we'd like to let delta t go to 0.
+So how are we going to do it?
+What we'd like to do is find a way
+that we can pick a scaling for our parameters
+such that we get finite values that we
+can interpret financially when we get our Brownian motion
+limit.
+So we'd like to think about getting the same kind of value,
+a finite path, logarithm of ST over S0, same
+as we had up here, by taking the limit as delta t goes to 0.
+How are we going to do that?
+Well, we're going to have our path consist
+of a bunch of steps, but now we're
+going to let our parameters scale in the following way.
+We're going to let the drift term go as mu delta t
+and we're going to let the step size
+term go as sigma square root of delta t.
+And with that particular scaling, when we take n steps,
+where n is t over delta t, as we saw before,
+we'll get a finite result. So it's the same thing
+that we saw.
+The part that's random is the square root of delta t.
+The part that's deterministic, a 1/n result is just fine.
+So if we do these sums, I've got n terms here, mu delta t times,
+each term is going to be identical,
+times t over delta t.
+That's going to give me mu times t.
+Over here, I can scale out in front a sigma square root
+of delta t times the sum of the z's.
+But the square root of delta t grouped
+with the z, if I only pull the sigma out in front,
+then I have exactly my definition of my Brownian path.
+So with this scaling, by introducing mu and sigma
+in precisely this way where the drift and the volatility
+of a process as we let delta t go to 0,
+we get the finite result that we can
+have stock price evolution, let's say,
+represented by a random path that
+has mean mu times the length of time.
+And sigma integral dB is going to give us
+something which is finite--
+for finite times, is a random variable
+that's drawn from mu of--
+excuse me, from N of mu, t sigma squared t.
+That is, it is going to have a mean that
+grows with time linearly and a variance that
+grows with time linearly and a volatility that grows
+with the square root of time.
+More generally, we don't need to let mu and sigma be constant.
+If they depend on time, if they're deterministic functions
+of time, then we could think about letting
+them change slowly in time.
+If they're smooth functions of time,
+or actually just integrable functions of time,
+we can have this general result, but provided that they're not
+random variables.
+So the typical case is mu and sigma are constant,
+but we'll see shortly that we can generalize even
+further when we introduce Ito processes.

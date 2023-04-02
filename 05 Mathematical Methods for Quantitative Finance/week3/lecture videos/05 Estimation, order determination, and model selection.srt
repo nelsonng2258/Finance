@@ -1,0 +1,1044 @@
+0
+00:00:00,000 --> 00:00:01,900
+PROFESSOR: So what are some alternatives?
+
+1
+00:00:01,900 --> 00:00:04,200
+Well, we've seen a couple of them already.
+
+2
+00:00:04,200 --> 00:00:07,333
+If we have deviations, we might think
+
+3
+00:00:07,333 --> 00:00:10,800
+about adding extra terms to generalize or extend
+
+4
+00:00:10,800 --> 00:00:12,133
+the random walk model.
+
+5
+00:00:12,133 --> 00:00:15,166
+And the class in which we can look at ARMA models or even
+
+6
+00:00:15,166 --> 00:00:16,233
+ARIMA models.
+
+7
+00:00:16,233 --> 00:00:18,400
+But ARMA models include a combination
+
+8
+00:00:18,400 --> 00:00:20,400
+of autoregressive terms that depend
+
+9
+00:00:20,400 --> 00:00:25,033
+on previous lagged observations of the random variable,
+
+10
+00:00:25,033 --> 00:00:27,966
+and moving average term that depend on the previous
+
+11
+00:00:27,966 --> 00:00:30,533
+lagged shocks or innovations which
+
+12
+00:00:30,533 --> 00:00:33,900
+are not related to the actual direct observations themselves.
+
+13
+00:00:33,900 --> 00:00:36,166
+So in our language, we can add r's.
+
+14
+00:00:36,166 --> 00:00:38,566
+Lagged on the right-hand side, or we can add z's.
+
+15
+00:00:38,566 --> 00:00:41,600
+And of course, they're not entirely independent
+
+16
+00:00:41,600 --> 00:00:44,633
+if we want to trade them off at the possible cost of doing
+
+17
+00:00:44,633 --> 00:00:46,033
+an infinite recursion.
+
+18
+00:00:46,033 --> 00:00:48,200
+So some models that we've seen--
+
+19
+00:00:48,200 --> 00:00:50,700
+random walk model with no extra terms,
+
+20
+00:00:50,700 --> 00:00:55,200
+AR1 with a constant term, a z term, and then one lag,
+
+21
+00:00:55,200 --> 00:00:58,100
+a generalized ARMA pq model where
+
+22
+00:00:58,100 --> 00:01:01,266
+we've got p lags of the r variable,
+
+23
+00:01:01,266 --> 00:01:03,800
+q lags of the z variable.
+
+24
+00:01:03,800 --> 00:01:06,300
+And in each case, we have our increments,
+
+25
+00:01:06,300 --> 00:01:11,433
+our z's written here, are normalized IID
+
+26
+00:01:11,433 --> 00:01:13,800
+random variables, which makes it easy for computing
+
+27
+00:01:13,800 --> 00:01:15,300
+our expectations.
+
+28
+00:01:15,300 --> 00:01:18,066
+Coming back to our old friend, the AR1 model,
+
+29
+00:01:18,066 --> 00:01:22,066
+we can write it in sort of standard form.
+
+30
+00:01:22,066 --> 00:01:23,566
+And we can look at its structure.
+
+31
+00:01:23,566 --> 00:01:27,000
+And now we want to think about what this is telling us
+
+32
+00:01:27,000 --> 00:01:29,033
+relative to the random walk.
+
+33
+00:01:29,033 --> 00:01:30,366
+So we look at the mean return.
+
+34
+00:01:30,366 --> 00:01:31,533
+The mean return is 0.
+
+35
+00:01:31,533 --> 00:01:34,166
+And remember, lambda equals 0 is a special case where
+
+36
+00:01:34,166 --> 00:01:35,666
+we get the random walk.
+
+37
+00:01:35,666 --> 00:01:38,966
+The variance, we compute by putting in the equation.
+
+38
+00:01:38,966 --> 00:01:41,900
+We substitute here for the definition.
+
+39
+00:01:41,900 --> 00:01:44,833
+We put in our equation as a reminder.
+
+40
+00:01:44,833 --> 00:01:48,300
+And we take expectations and we solve algebraically.
+
+41
+00:01:48,300 --> 00:01:50,900
+And we find that we have the variance is sigma squared
+
+42
+00:01:50,900 --> 00:01:52,933
+over 1 minus lambda squared.
+
+43
+00:01:52,933 --> 00:01:56,433
+We get the higher order values by recursion.
+
+44
+00:01:56,433 --> 00:02:03,900
+And we know that the values as a function of k are decreasing.
+
+45
+00:02:03,900 --> 00:02:07,700
+Each extra k, each extra lag in the AR1 model
+
+46
+00:02:07,700 --> 00:02:09,266
+brings the power of lambda.
+
+47
+00:02:09,266 --> 00:02:11,266
+Since lambda says less than 1, that's
+
+48
+00:02:11,266 --> 00:02:13,900
+suppressing the magnitude of the fluctuations.
+
+49
+00:02:13,900 --> 00:02:16,700
+So what it's telling us is in this model where there's
+
+50
+00:02:16,700 --> 00:02:20,400
+mean reversion, that influence on a given day,
+
+51
+00:02:20,400 --> 00:02:23,400
+above or below the mean, propagates in time
+
+52
+00:02:23,400 --> 00:02:26,066
+but is damped out exponentially.
+
+53
+00:02:26,066 --> 00:02:27,866
+That would be the end of the story
+
+54
+00:02:27,866 --> 00:02:30,000
+if there were no sources of randomness.
+
+55
+00:02:30,000 --> 00:02:32,966
+But because we can get new kicks every day,
+
+56
+00:02:32,966 --> 00:02:35,966
+this exponential decay may not be
+
+57
+00:02:35,966 --> 00:02:38,766
+as easily visible in the data.
+
+58
+00:02:38,766 --> 00:02:41,966
+So we want to be able to estimate things from data
+
+59
+00:02:41,966 --> 00:02:43,933
+and we want to be able to determine
+
+60
+00:02:43,933 --> 00:02:47,400
+which is an appropriate model to use from that large class.
+
+61
+00:02:47,400 --> 00:02:50,533
+Is it AR1 or is it an ARMA32 model?
+
+62
+00:02:50,533 --> 00:02:51,633
+How can we tell?
+
+63
+00:02:51,633 --> 00:02:54,666
+How do we pick the appropriate order of a model?
+
+64
+00:02:54,666 --> 00:02:59,266
+And within each model, how do we determine its parameters?
+
+65
+00:02:59,266 --> 00:03:02,200
+So when we look at estimation, we want our estimators
+
+66
+00:03:02,200 --> 00:03:03,700
+to be consistent.
+
+67
+00:03:03,700 --> 00:03:05,866
+That is, in probability, they should
+
+68
+00:03:05,866 --> 00:03:07,366
+converge to the true value.
+
+69
+00:03:07,366 --> 00:03:10,633
+If I take t to infinity, if I look at enough points,
+
+70
+00:03:10,633 --> 00:03:13,800
+then the probability of deviating from the true value
+
+71
+00:03:13,800 --> 00:03:15,300
+should vanish.
+
+72
+00:03:15,300 --> 00:03:18,766
+This is equivalent to our law of large numbers.
+
+73
+00:03:18,766 --> 00:03:20,533
+We want them to be unbiased.
+
+74
+00:03:20,533 --> 00:03:24,566
+Unbiased simply means that the expectation of the estimator
+
+75
+00:03:24,566 --> 00:03:29,566
+should be the true parameter value.
+
+76
+00:03:34,166 --> 00:03:37,733
+We want them to be asymptotically normal--
+
+77
+00:03:37,760 --> 00:03:40,140
+and we expect them to be asymptotically normal--
+
+78
+00:03:40,133 --> 00:03:42,666
+so that we can apply our tests.
+
+79
+00:03:44,266 --> 00:03:47,333
+And this can be shown for the estimators
+
+80
+00:03:47,333 --> 00:03:50,133
+that I've written down so far.
+
+81
+00:03:50,133 --> 00:03:53,466
+Typically, we need to think about the sampling distribution
+
+82
+00:03:53,466 --> 00:03:55,566
+and we'll choose scaling variables
+
+83
+00:03:55,566 --> 00:03:59,466
+so that we can relate things to a standard normal distribution
+
+84
+00:03:59,466 --> 00:04:01,333
+for significance testing.
+
+85
+00:04:01,333 --> 00:04:04,666
+And if we have estimators to do all of the above,
+
+86
+00:04:04,666 --> 00:04:06,033
+and we have more than one choice,
+
+87
+00:04:06,033 --> 00:04:09,233
+we'd like to find the best estimator, possibly
+
+88
+00:04:09,233 --> 00:04:11,066
+one with minimum variance.
+
+89
+00:04:11,066 --> 00:04:13,566
+And we can talk about efficiency of estimators
+
+90
+00:04:13,566 --> 00:04:22,333
+that give us the best estimate within a given class.
+
+91
+00:04:22,333 --> 00:04:25,600
+So how do we do parameter estimation in AR1?
+
+92
+00:04:25,600 --> 00:04:29,133
+Well, R1, we have a structure.
+
+93
+00:04:29,133 --> 00:04:30,533
+We have three parameters.
+
+94
+00:04:30,533 --> 00:04:32,666
+We have mu, lambda, and sigma.
+
+95
+00:04:32,666 --> 00:04:35,033
+And what we want to recognize is it really
+
+96
+00:04:35,033 --> 00:04:37,966
+has a structure of a typical linear regression model.
+
+97
+00:04:37,966 --> 00:04:41,166
+And we can find its parameters using ordinary least squares.
+
+98
+00:04:41,166 --> 00:04:43,033
+In fact, the only thing that's special
+
+99
+00:04:43,033 --> 00:04:47,000
+is that we have an r on the left and an rt minus 1 on the right.
+
+100
+00:04:47,000 --> 00:04:49,333
+Now when we computed the autocovariance,
+
+101
+00:04:49,333 --> 00:04:52,066
+I emphasized that those are really the same series.
+
+102
+00:04:52,066 --> 00:04:54,400
+It's a stationary series, so their expectations
+
+103
+00:04:54,400 --> 00:04:55,333
+are the same.
+
+104
+00:04:55,333 --> 00:04:58,033
+And we can think of them as being the same.
+
+105
+00:04:58,033 --> 00:05:00,333
+When it comes to estimating the parameters,
+
+106
+00:05:00,333 --> 00:05:01,733
+I want to take the opposite tack.
+
+107
+00:05:01,733 --> 00:05:04,900
+Let's think of them temporarily as being completely different.
+
+108
+00:05:04,900 --> 00:05:08,200
+So remember, if we have a model that looks like this,
+
+109
+00:05:08,200 --> 00:05:09,566
+we'd like to do a linear fit.
+
+110
+00:05:09,566 --> 00:05:11,300
+We have a typical regression model.
+
+111
+00:05:11,300 --> 00:05:14,466
+And we add an error term if we don't have points lying exactly
+
+112
+00:05:14,466 --> 00:05:15,300
+on a straight line.
+
+113
+00:05:15,300 --> 00:05:19,000
+And we'd like to find a line of best fit
+
+114
+00:05:19,000 --> 00:05:22,033
+where the errors are minimized for the best
+
+115
+00:05:22,033 --> 00:05:24,133
+values of alpha and beta.
+
+116
+00:05:24,133 --> 00:05:28,066
+We can get exactly that same structure from our AR1 model
+
+117
+00:05:28,066 --> 00:05:30,966
+just by doing a little algebra and shifting terms around.
+
+118
+00:05:30,966 --> 00:05:34,033
+So I move the r minus mu and I move the mu
+
+119
+00:05:34,033 --> 00:05:35,800
+to the right-hand side, I can write this
+
+120
+00:05:35,800 --> 00:05:40,366
+as rt is a constant plus something times
+
+121
+00:05:40,366 --> 00:05:45,200
+rt minus 1, plus an error term.
+
+122
+00:05:45,200 --> 00:05:47,300
+So that looks exactly like the above
+
+123
+00:05:47,300 --> 00:05:49,800
+if I make the substitutions for alpha--
+
+124
+00:05:49,800 --> 00:05:50,633
+that's equivalent.
+
+125
+00:05:50,633 --> 00:05:54,800
+The intercept is equivalent to mu times 1 plus lambda.
+
+126
+00:05:54,800 --> 00:05:57,666
+The slope is minus lambda.
+
+127
+00:05:57,666 --> 00:06:01,466
+The y variable, the dependent variable, is r sub t.
+
+128
+00:06:01,466 --> 00:06:05,300
+And the independent variable is r of t minus 1.
+
+129
+00:06:05,300 --> 00:06:09,400
+So given data, we can just apply ordinary least squares
+
+130
+00:06:09,400 --> 00:06:11,900
+to get the values of the coefficients.
+
+131
+00:06:11,900 --> 00:06:14,533
+So we can do that ourselves using ordinary least squares
+
+132
+00:06:14,533 --> 00:06:19,733
+in a spreadsheet program or in R using the LM function.
+
+133
+00:06:19,733 --> 00:06:21,833
+R also has some nice special functions
+
+134
+00:06:21,833 --> 00:06:24,066
+for computing AR and for ARMA models,
+
+135
+00:06:24,066 --> 00:06:25,233
+but we'll get that directly.
+
+136
+00:06:25,233 --> 00:06:28,500
+But the basic idea is that we already know how to do this.
+
+137
+00:06:28,500 --> 00:06:31,733
+It's just ordinary statistics.
+
+138
+00:06:31,733 --> 00:06:37,133
+Now, we can do exactly the same thing for an ARP model.
+
+139
+00:06:37,133 --> 00:06:39,200
+We just have a bunch more terms.
+
+140
+00:06:39,200 --> 00:06:42,666
+So we use our maximum likelihood estimators.
+
+141
+00:06:42,666 --> 00:06:44,800
+We can throw it into a spreadsheet,
+
+142
+00:06:44,800 --> 00:06:46,166
+we can throw it into R.
+
+143
+00:06:46,166 --> 00:06:48,466
+We have a multivariate regression.
+
+144
+00:06:48,466 --> 00:06:52,300
+We turn the crank, we get our usual estimates.
+
+145
+00:06:52,300 --> 00:06:54,400
+How do we determine the order though?
+
+146
+00:06:54,400 --> 00:06:57,166
+Suppose we're not sure what p to use.
+
+147
+00:06:57,166 --> 00:06:59,166
+Suppose I don't know if it should be
+
+148
+00:06:59,166 --> 00:07:03,066
+AR1 or AR3 or something else.
+
+149
+00:07:03,066 --> 00:07:05,600
+So the tool for doing order determination
+
+150
+00:07:05,600 --> 00:07:09,466
+for autoregressive models is through what's
+
+151
+00:07:09,466 --> 00:07:12,766
+called the PACF function, or the partial autocorrelation
+
+152
+00:07:12,766 --> 00:07:13,300
+function.
+
+153
+00:07:13,300 --> 00:07:14,900
+And the idea is really straightforward.
+
+154
+00:07:14,900 --> 00:07:18,033
+What we do is we set up a sequence of models,
+
+155
+00:07:18,033 --> 00:07:21,166
+and we do an AR1 model, and we do an AR2 model,
+
+156
+00:07:21,166 --> 00:07:23,700
+and we do an AR3 model, up to an ARN model.
+
+157
+00:07:23,700 --> 00:07:27,000
+And I've written these down here.
+
+158
+00:07:27,000 --> 00:07:32,800
+So for each of these models, we do an estimate.
+
+159
+00:07:32,800 --> 00:07:35,500
+So I do my line of best fit for the first model,
+
+160
+00:07:35,500 --> 00:07:37,000
+I do my line of best fit.
+
+161
+00:07:37,000 --> 00:07:39,766
+So given the same set of observations in R,
+
+162
+00:07:39,766 --> 00:07:43,033
+so the same time series data for R. In each case,
+
+163
+00:07:43,033 --> 00:07:44,933
+I do my line of best fit.
+
+164
+00:07:44,933 --> 00:07:49,700
+And the PACF is defined to be the coefficient of the last lag
+
+165
+00:07:49,700 --> 00:07:50,500
+term.
+
+166
+00:07:50,500 --> 00:07:53,266
+So in this case, it's C11.
+
+167
+00:07:53,266 --> 00:07:54,800
+In the first one and the second one,
+
+168
+00:07:54,800 --> 00:07:57,833
+it's C22, and the last one at CNN.
+
+169
+00:07:57,833 --> 00:07:59,433
+And what we want to do is we want
+
+170
+00:07:59,433 --> 00:08:03,666
+to identify how far we go when we no longer need
+
+171
+00:08:03,666 --> 00:08:04,566
+to add new terms.
+
+172
+00:08:04,566 --> 00:08:09,266
+That is, when the last coefficient is negligible,
+
+173
+00:08:09,266 --> 00:08:10,733
+then we drop it.
+
+174
+00:08:10,733 --> 00:08:14,733
+So the PACF function is very convenient for capturing
+
+175
+00:08:14,733 --> 00:08:15,966
+all of this at once.
+
+176
+00:08:15,966 --> 00:08:18,466
+We compute all these regressions in parallel,
+
+177
+00:08:18,466 --> 00:08:19,900
+and then we can take a look.
+
+178
+00:08:19,900 --> 00:08:21,666
+And what we want to do is we're saying,
+
+179
+00:08:21,666 --> 00:08:24,466
+there could be more terms as we generally
+
+180
+00:08:24,466 --> 00:08:27,533
+do when deciding how many variables to choose.
+
+181
+00:08:27,533 --> 00:08:30,766
+We want to have an economical parsimonious
+
+182
+00:08:30,766 --> 00:08:31,866
+description of the data.
+
+183
+00:08:31,866 --> 00:08:34,066
+We're going to pick the smallest number of variables
+
+184
+00:08:34,066 --> 00:08:36,166
+to give us a meaningful description of the data.
+
+185
+00:08:36,166 --> 00:08:39,900
+And we're going to toss out extra terms that
+
+186
+00:08:39,900 --> 00:08:42,600
+are not needed where their coefficients are not
+
+187
+00:08:42,600 --> 00:08:44,533
+significant.
+
+188
+00:08:44,533 --> 00:08:47,166
+So let's look at this for a couple examples.
+
+189
+00:08:47,166 --> 00:08:49,666
+I'll generate some Monte Carlo data.
+
+190
+00:08:49,666 --> 00:08:52,866
+And here's my Monte Carlo data for an AR2.
+
+191
+00:08:52,866 --> 00:08:56,666
+So you can see that here, these are my parameter choices.
+
+192
+00:08:56,666 --> 00:08:58,433
+And here is my AR2.
+
+193
+00:08:58,433 --> 00:09:00,166
+So I've made a bunch of parameter choices
+
+194
+00:09:00,166 --> 00:09:02,500
+for c0, c1, and c2.
+
+195
+00:09:02,500 --> 00:09:05,033
+I'm going to look at 1,000 time steps.
+
+196
+00:09:05,033 --> 00:09:07,066
+I'm going to compute a single path here,
+
+197
+00:09:07,066 --> 00:09:08,933
+but you can certainly compute more.
+
+198
+00:09:08,933 --> 00:09:10,733
+I'm putting this in a column vector.
+
+199
+00:09:10,733 --> 00:09:14,866
+If I had had more paths, two in parallel,
+
+200
+00:09:14,866 --> 00:09:16,266
+I could easily do that.
+
+201
+00:09:16,266 --> 00:09:19,366
+I'm going to run a recursion starting at step 3,
+
+202
+00:09:19,366 --> 00:09:21,466
+because I need some initial observations, which
+
+203
+00:09:21,466 --> 00:09:23,233
+I'm going to set equal to 0.
+
+204
+00:09:23,233 --> 00:09:24,766
+And I'm going to run my recursion.
+
+205
+00:09:24,766 --> 00:09:28,433
+So rt, this is just my defining equation for an AR2.
+
+206
+00:09:28,433 --> 00:09:30,500
+And then I'm going to plot a path.
+
+207
+00:09:30,500 --> 00:09:31,566
+So here's my path.
+
+208
+00:09:31,566 --> 00:09:36,800
+And then I'm going to look at the ACF and at the PACF.
+
+209
+00:09:36,800 --> 00:09:39,433
+And rather than computing that by hand or doing them in Excel,
+
+210
+00:09:39,433 --> 00:09:41,866
+we'll do it in R, because this will give us all the results
+
+211
+00:09:41,866 --> 00:09:43,333
+in one fell swoop.
+
+212
+00:09:43,333 --> 00:09:46,366
+So here's an example of what my sample path looks like.
+
+213
+00:09:46,366 --> 00:09:47,400
+You should run the code.
+
+214
+00:09:47,400 --> 00:09:51,100
+Your sample path is obviously going to look different.
+
+215
+00:09:51,100 --> 00:09:55,866
+And here is the AR2 sample autocorrelation function.
+
+216
+00:09:55,866 --> 00:09:58,166
+So remember, that autocorrelation functions,
+
+217
+00:09:58,166 --> 00:10:01,200
+unlike autocovariances, are normalized.
+
+218
+00:10:01,200 --> 00:10:02,400
+They're pure numbers.
+
+219
+00:10:02,400 --> 00:10:03,433
+So they're normalized.
+
+220
+00:10:03,433 --> 00:10:05,400
+The lag 0 should be equal to 1.
+
+221
+00:10:05,400 --> 00:10:08,233
+And we see that here.
+
+222
+00:10:08,233 --> 00:10:12,100
+We see that we've got things showing up at lag 1
+
+223
+00:10:12,100 --> 00:10:14,533
+and lag 2, which is not surprising,
+
+224
+00:10:14,533 --> 00:10:17,933
+given the structure of our model.
+
+225
+00:10:17,933 --> 00:10:21,233
+And then we take a look at the partial autocorrelation
+
+226
+00:10:21,233 --> 00:10:21,733
+function.
+
+227
+00:10:23,066 --> 00:10:29,800
+And we see that we have non negligible terms for lag 1
+
+228
+00:10:29,800 --> 00:10:30,833
+and for lag 2.
+
+229
+00:10:30,833 --> 00:10:34,400
+And everything else is not statistically significant.
+
+230
+00:10:34,400 --> 00:10:38,400
+So this is an example of how we can determine
+
+231
+00:10:38,400 --> 00:10:40,500
+the order of a model when we have
+
+232
+00:10:40,500 --> 00:10:42,900
+potentially different numbers of terms,
+
+233
+00:10:42,900 --> 00:10:46,000
+how we can estimate the parameters for a given
+
+234
+00:10:46,000 --> 00:10:48,466
+model of a particular order using
+
+235
+00:10:48,466 --> 00:10:50,633
+ordinary least squares, or maximum likelihood
+
+236
+00:10:50,633 --> 00:10:52,800
+estimation more generally.
+
+237
+00:10:52,800 --> 00:10:58,700
+And how we can extend the random walk model to a range of models
+
+238
+00:10:58,700 --> 00:11:01,266
+that have positive or negative serial correlation.
+
+239
+00:11:01,266 --> 00:11:04,800
+And they potentially allow us to describe interesting ways
+
+240
+00:11:04,800 --> 00:11:07,766
+in which information can propagate from one period
+
+241
+00:11:07,766 --> 00:11:09,300
+to the next.
+
+242
+00:11:09,300 --> 00:11:12,533
+Now when we add more terms and more parameters,
+
+243
+00:11:12,533 --> 00:11:15,666
+we can improve things by getting a better fit,
+
+244
+00:11:15,666 --> 00:11:17,766
+or it may lead to overfitting.
+
+245
+00:11:17,766 --> 00:11:20,966
+So typically, this is an old story in statistics.
+
+246
+00:11:20,966 --> 00:11:24,233
+We want to expand the likelihood function with a penalty
+
+247
+00:11:24,233 --> 00:11:25,733
+for additional parameters.
+
+248
+00:11:25,733 --> 00:11:27,133
+Because we like to say that if you
+
+249
+00:11:27,133 --> 00:11:31,700
+can have the same quality of fit with different numbers of terms
+
+250
+00:11:31,700 --> 00:11:34,066
+or different parameters, we'd rather have fewer.
+
+251
+00:11:34,066 --> 00:11:38,533
+So we penalize extra parameters in the likelihood function.
+
+252
+00:11:38,533 --> 00:11:41,700
+And there are a couple of ways common ways of doing it.
+
+253
+00:11:41,700 --> 00:11:45,600
+The AIC and BIC, they give slightly different penalty
+
+254
+00:11:45,600 --> 00:11:46,133
+weights.
+
+255
+00:11:46,133 --> 00:11:49,800
+But the general idea is that we can in
+
+256
+00:11:49,800 --> 00:11:54,566
+modeling we can favor simpler models with fewer terms.
+
+257
+00:11:54,566 --> 00:11:57,633
+Sometimes, as in the previous example, it will jump out at us
+
+258
+00:11:57,633 --> 00:12:00,033
+and we'll be able to see where to truncate the series.
+
+259
+00:12:00,033 --> 00:12:03,000
+Sometimes, the data unfortunately
+
+260
+00:12:03,000 --> 00:12:05,266
+will not be as clear.
+

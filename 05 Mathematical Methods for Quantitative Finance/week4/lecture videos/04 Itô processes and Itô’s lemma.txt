@@ -1,0 +1,222 @@
+
+PROFESSOR: An Ito process is like a generalized random walk,
+and Ito's lemma will give us a formula for doing calculus
+with Ito processes.
+So an Ito process is defined to be a differential that's
+a linear combination of dB, our Gaussian Brownian
+random variable, plus possibly times a scale factor little b,
+plus some deterministic part I'll call a dt.
+If the second term were absent, this
+would just be an ordinary differential,
+and we could look about ordinary ways of integrating it.
+But dB is going to be random, and that's going
+to give us something different.
+In particular, because the Brownian path
+itself is not differentiable, X won't be differentiable,
+and we can't take derivatives in the usual way.
+If we had a function of X and t where X were a normal variable,
+the usual chain rule would say that we compute
+the differential of our function F of t and X
+as partial of F with respect to t times
+dt plus partial with respect to X dX,
+and that would be it for our ordinary chain rule.
+But we're going to see that there's an extra term that
+gets added when we're dealing with Ito processes,
+and that comes about because we can't use this rule because we
+can't differentiate directly for Brownian paths.
+So the idea behind the proof is we're
+going to try to rewrite our familiar ideas from calculus
+in a way that makes sense probabilistically.
+Let me tell you up front that, number one,
+I'm going to sketch out the proof
+and it's not going to be rigorous.
+This is going to be a somewhat heuristic proof.
+And number two, the results actually
+matter more than the proof.
+So I'll be upfront about this.
+I want you to see where it comes from.
+I'd like you to see where the probability arises and the Ito
+term in the modified chain rule, but this
+is an area where even if you don't remember
+how to derive it, if you start with Ito's lemma, the rule
+that we're going to have, you can apply it successfully
+without really needing to come back to the derivation.
+So with a little bit of chagrin, I will admit that.
+But I hope it gives you confidence that you can--
+if you don't follow every detail in what we're doing,
+it's not going to make any difference for the result.
+So the idea is we'd like to capture the expression up here
+in a case where we're dealing with probabilities.
+So you can think of this as we construct
+the object on the right by taking finite changes
+dx, where I've written it here as delta x.
+I construct this ratio F of x plus delta
+x minus F of x over delta x, and then I take a limit.
+And that defines the object that's on the left-hand side
+that we typically call the derivative of F,
+or in this case, F prime.
+So what I'd like to do is I'd like
+to say in probability, because the result
+on the right-hand side is going to be different every time I
+compute it, because x is a random variable,
+F is going to be random.
+I'm not going to get a concrete, definite result for F.
+The sense in which I'm going to define it
+is to say that I have found a sensible definition for F prime
+if the probability that this function deviates
+from the right-hand side goes to 0 as delta x goes to 0.
+So I can write this in the following two ways.
+I can write it either as saying that the probability
+of a deviation-- so I've written this
+as being the difference between the left and right-hand sides
+above me, quantity squared, so that it's always
+a positive quantity.
+The probability that that's greater than 0
+goes to 0 as delta x goes to 0.
+In other words, they're equal.
+So if a construct, F prime of x, satisfies this,
+I would say I've found the derivatives.
+You notice that's the same flavor,
+same result in the non-probabilistic case
+as the traditional formula.
+I can also state it in terms of expectations.
+I can say that the expectation that the squared difference
+will be non-zero goes to 0.
+So what are we going to do?
+Well, we're going to start by writing things out,
+a differential for a Taylor series,
+including lots of higher-order terms,
+and then we're going to only keep
+terms that are of order dt.
+Anything that vanishes as dt or delta t
+goes to 0 faster than dt, we're going to toss out.
+But what we'll need to do is keep a couple extra terms
+because a few things that we might have thought
+would vanish actually, it turns out, stick around.
+So we're going to start with our definition of our Ito process
+and just plug it in.
+So I start by writing out an ordinary Taylor expansion
+for a differential in terms of all
+these higher-order derivatives.
+There will be cross terms, partial
+of F with respect to X and t, dX/dt, term in dt squared,
+terms in dX cubed, dX squared, dt, and so on.
+And what I'm going to do for each of these
+is I can substitute in my expression here for dX, here
+for dX squared, and so on.
+And then what I'd like to do is think
+about taking expectations of the left side
+and the right-hand side and see which
+terms survive as we think of dt as being an infinitesimal.
+So to do that, we want to look at our basic building block.
+Remember that dB is a Gaussian random variable.
+So it has mean 0, it has no skewness for its third moment,
+its square.
+We know its variance is dt, the length of the time interval,
+which is infinitesimal.
+And if we want the fourth power, we
+get-- whereas a normal random variable, the fourth moment is
+equal to 3, that's the reason we subtract off
+3 for our excess kurtosis, in the case of infinitesimals,
+when you put it in the dt's, I get the result
+for the fourth power.
+This is the same as the usual 3 times
+dt squared, which we get just on dimensional grounds.
+So if I take those building blocks for dB
+and I apply them to Ito processes
+and ask about expectation and mean and variance and so on,
+do the usual thing.
+I apply linearity.
+So dX is just a dt plus b dB.
+Apply linearity, so it's the expectation of a sum
+is the sum of the expectations.
+a dt is deterministic.
+It's like a constant.
+So I get a dt out here.
+The mean of dB is 0, so all I get
+for the mean of my Ito process is
+a dt, which is deterministic.
+What about the square?
+Well, for the square, I put in the square,
+take the second power, expand it out, do the exponentials using
+the formulas on the top of the screen,
+and I get a squared dt plus b squared dt.
+When I compute the variance, remembering
+that the variance is always the expectation
+of the square minus the square of the expectation,
+I find that the variance of dt is just little b squared dt,
+and so on.
+And I can compute higher moments as well.
+
+So let's go back to our formula for dF,
+and remember that we're going to be interested in terms
+that are of order dt.
+The key thing to keep in mind that's
+going to drive our results is that because the expectation
+of dB squared is dt and the variance
+or the expectation of dX squared has a dt in it
+for the variance, that we can think of dB as being
+like a square root of dt.
+And remember, as dt goes to 0, the square root of dt
+is going to be bigger than dt.
+But let's just put in the terms, we'll group things together,
+and then we'll take the limit and see what vanishes.
+So first I've got my expression for dF.
+
+Next we're going to substitute in for dX, for dX squared,
+and so on, where we're thinking about expectations.
+And the higher-order terms are going to be non-stochastic.
+We can group things together, where I can now
+group together coefficients of dt.
+Notice that I have a dt over here, a dt here, and a dt here.
+Let me take the first and last terms and group
+them together here, and I'll take the middle term,
+and let's just keep it in this form for the moment,
+bring it down here, partial of F with respect to X times dX.
+Alternatively, instead of writing things
+as a function of dt and dX, I can write them
+as a function of dt and dB simply
+by using the definition of dX.
+So either way, in either this form or in the bottom form,
+I have an expression for dF that I can work with.
+So either of these two forms, depending on our applications,
+will be useful.
+The point about looking at the last one
+is look at its structure.
+You notice that it's of the form something times dt
+plus something else times dB.
+That's just an Ito process.
+So the differential of F when F is a function of an Ito process
+is also an Ito process, and that's why these are useful,
+because they're closed when we take differentials.
+We get more Ito processes.
+Here's the heuristic.
+It's the easy way to keep track of things
+without doing a lot of Taylor expansions.
+If every time you see a dB squared,
+you think of it as being a dt and every time you
+see a dX squared, you think of it-- remember,
+this is the pure, standardized random variable.
+This is with a scale factor in it.
+If every time you see a dX squared, you replace it
+by little b squared dt, you'll basically
+get the right answers.
+So the differential that we have has one extra term
+beyond the usual chain rule, OK?
+So this is our result from the previous page.
+When we take a look at this expression here,
+we see that this term dt--
+this term-- get my pointer working.
+This term dt and this term dX are the usual chain rule,
+but this one here is something new.
+So writing it in standard form, we have Ito's lemma in the box,
+and I'll circle it again in red.
+So this is worth getting to know very, very well.
+It says that the differential of a function of X,
+where X is an Ito process, is partial of F with respect
+to t dt, plus partial of F with respect to X dX
+plus a new term that involves the second partial derivative
+with respect to X squared, but it's multiplied by dt.
+So we've seen that the differential
+of a function of an Ito process is itself an Ito process.
+And this formula is Ito's lemma.

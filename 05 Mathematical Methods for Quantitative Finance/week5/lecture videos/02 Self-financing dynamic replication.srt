@@ -1,0 +1,572 @@
+0
+00:00:00,000 --> 00:00:00,977
+
+
+1
+00:00:00,977 --> 00:00:03,060
+PROFESSOR: Now, I'd like you to give you a picture
+
+2
+00:00:03,060 --> 00:00:06,390
+and have you keep this picture in mind, because it's
+
+3
+00:00:06,390 --> 00:00:08,160
+a discrete picture, and then we're
+
+4
+00:00:08,160 --> 00:00:10,050
+going to let delta t go to 0 again.
+
+5
+00:00:10,050 --> 00:00:11,760
+But in many ways, a discrete picture
+
+6
+00:00:11,760 --> 00:00:13,950
+is important and gives us some insight
+
+7
+00:00:13,950 --> 00:00:16,870
+into what's going on in the Black-Scholes world.
+
+8
+00:00:16,870 --> 00:00:19,890
+So what I'd like to do is think of each of these segments
+
+9
+00:00:19,890 --> 00:00:22,012
+as being related to a given trading period.
+
+10
+00:00:22,012 --> 00:00:23,970
+And we'll think of this as being a trading day.
+
+11
+00:00:23,970 --> 00:00:28,020
+And in fact, this is how many option traders and market
+
+12
+00:00:28,020 --> 00:00:29,160
+makers do trade.
+
+13
+00:00:29,160 --> 00:00:32,009
+They think of re-hedging, let's say, once per period
+
+14
+00:00:32,009 --> 00:00:33,835
+or that might be once per day.
+
+15
+00:00:33,835 --> 00:00:35,460
+So what I want to do is I want to think
+
+16
+00:00:35,460 --> 00:00:38,680
+about opening an initial position here at the beginning.
+
+17
+00:00:38,680 --> 00:00:43,020
+And then there's intraday period and then the end of the day
+
+18
+00:00:43,020 --> 00:00:47,470
+comes and we observe the closing prices at the end of the day.
+
+19
+00:00:47,470 --> 00:00:50,730
+I'm going to assume that very close to the end,
+
+20
+00:00:50,730 --> 00:00:54,990
+let's say a minute 30 seconds before the equity markets
+
+21
+00:00:54,990 --> 00:00:58,080
+close, that there's a lot of activity and liquidity
+
+22
+00:00:58,080 --> 00:01:00,990
+in the markets and that without waiting for the shares
+
+23
+00:01:00,990 --> 00:01:03,030
+to close, they're not going to move very much
+
+24
+00:01:03,030 --> 00:01:05,580
+but that I can buy or sell shares
+
+25
+00:01:05,580 --> 00:01:10,150
+to set a new delta position to have for the following day.
+
+26
+00:01:10,150 --> 00:01:11,700
+So here's what I assume.
+
+27
+00:01:11,700 --> 00:01:13,830
+At the end of each day, I'm going
+
+28
+00:01:13,830 --> 00:01:16,170
+to observe the price of the underlying,
+
+29
+00:01:16,170 --> 00:01:20,070
+but I'm also going to use that information to construct
+
+30
+00:01:20,070 --> 00:01:21,750
+a new hedge position.
+
+31
+00:01:21,750 --> 00:01:24,160
+And then I'll wait for the next trading day
+
+32
+00:01:24,160 --> 00:01:26,860
+and at the end of that day, I'll repeat the process.
+
+33
+00:01:26,860 --> 00:01:31,390
+So I've broken this set of steps into two parts.
+
+34
+00:01:31,390 --> 00:01:34,110
+One of them is that when the market is open,
+
+35
+00:01:34,110 --> 00:01:36,900
+the quantities that we have are held fixed,
+
+36
+00:01:36,900 --> 00:01:39,840
+but the prices change as the market moves.
+
+37
+00:01:39,840 --> 00:01:42,360
+So prices change, but we're not doing any trading
+
+38
+00:01:42,360 --> 00:01:44,300
+during the day.
+
+39
+00:01:44,300 --> 00:01:47,937
+At the end of the day, the prices no longer move.
+
+40
+00:01:47,937 --> 00:01:50,270
+I'm assuming they move very, very little during the time
+
+41
+00:01:50,270 --> 00:01:51,530
+it takes us to do this.
+
+42
+00:01:51,530 --> 00:01:53,750
+At the end of the day, as I rebalance,
+
+43
+00:01:53,750 --> 00:01:57,380
+the prices are held fixed, but the quantities change.
+
+44
+00:01:57,380 --> 00:01:59,700
+So from an accounting perspective,
+
+45
+00:01:59,700 --> 00:02:01,700
+the rebalancing is just exchanging
+
+46
+00:02:01,700 --> 00:02:03,170
+one asset for another.
+
+47
+00:02:03,170 --> 00:02:07,290
+We're exchanging cash for stock of equal value.
+
+48
+00:02:07,290 --> 00:02:07,890
+OK.
+
+49
+00:02:07,890 --> 00:02:09,590
+So we've got two things.
+
+50
+00:02:09,590 --> 00:02:13,080
+We've got the end of day rebalancing and fixed price
+
+51
+00:02:13,080 --> 00:02:17,580
+and we have the intraday market evolution dynamic stock price
+
+52
+00:02:17,580 --> 00:02:22,440
+evolution, dynamic option price evolution while we're holding
+
+53
+00:02:22,440 --> 00:02:25,970
+the quantities constant.
+
+54
+00:02:25,970 --> 00:02:28,960
+And when we look at the real world prices,
+
+55
+00:02:28,960 --> 00:02:33,550
+we see this is an example, a screenshot taken from Bloomberg
+
+56
+00:02:33,550 --> 00:02:35,740
+where we can see the price in Spotify
+
+57
+00:02:35,740 --> 00:02:38,020
+over several intraday periods.
+
+58
+00:02:38,020 --> 00:02:41,980
+You can see that on some days, the movements are jagged
+
+59
+00:02:41,980 --> 00:02:43,270
+and look stochastic.
+
+60
+00:02:43,270 --> 00:02:45,670
+And I've left out the overnight period.
+
+61
+00:02:45,670 --> 00:02:47,440
+And the next day begins more or less
+
+62
+00:02:47,440 --> 00:02:48,890
+where the other one started.
+
+63
+00:02:48,890 --> 00:02:50,430
+But that's not always the case.
+
+64
+00:02:50,430 --> 00:02:54,580
+Sometimes we do observe jumps and there are very big changes
+
+65
+00:02:54,580 --> 00:02:57,370
+from the close on one day to the beginning of the next day.
+
+66
+00:02:57,370 --> 00:02:59,560
+And we're either going to be excluding that
+
+67
+00:02:59,560 --> 00:03:01,810
+or it won't really matter because we're
+
+68
+00:03:01,810 --> 00:03:05,590
+going to be jumping from one end of day close
+
+69
+00:03:05,590 --> 00:03:07,210
+to the next end of day close.
+
+70
+00:03:07,210 --> 00:03:09,730
+So whether this dropped immediately on the open
+
+71
+00:03:09,730 --> 00:03:13,690
+or at some point during the day, the main driver for our results
+
+72
+00:03:13,690 --> 00:03:16,180
+is going to be where it ends up on the following day.
+
+73
+00:03:16,180 --> 00:03:19,650
+
+
+74
+00:03:19,650 --> 00:03:20,150
+So
+
+75
+00:03:20,150 --> 00:03:22,430
+Let's leave the derivatives out of it for a moment
+
+76
+00:03:22,430 --> 00:03:25,220
+and look at a rebalancing condition
+
+77
+00:03:25,220 --> 00:03:27,380
+for this self-financing portfolio.
+
+78
+00:03:27,380 --> 00:03:32,390
+So let's let x be a portfolio that initially has value 0.
+
+79
+00:03:32,390 --> 00:03:34,220
+But again, I've got a lot of credit.
+
+80
+00:03:34,220 --> 00:03:36,140
+So it can have stocks and bonds.
+
+81
+00:03:36,140 --> 00:03:39,770
+And I'm going to just call our interest bearing instruments
+
+82
+00:03:39,770 --> 00:03:40,550
+cash.
+
+83
+00:03:40,550 --> 00:03:42,500
+Instead of money market, instead of a bond,
+
+84
+00:03:42,500 --> 00:03:44,220
+I'll refer to it as cash.
+
+85
+00:03:44,220 --> 00:03:48,230
+So let's assume that I have a portfolio x.
+
+86
+00:03:48,230 --> 00:03:50,360
+X is the value of the portfolio.
+
+87
+00:03:50,360 --> 00:03:53,990
+And I can have stock in quantity q
+
+88
+00:03:53,990 --> 00:03:59,630
+and I can have cash in quantity C. S is the value of the stock.
+
+89
+00:03:59,630 --> 00:04:04,490
+M is the value of money, which will
+
+90
+00:04:04,490 --> 00:04:06,390
+grow with the risk free rate.
+
+91
+00:04:06,390 --> 00:04:09,290
+So when I initially set up my portfolio,
+
+92
+00:04:09,290 --> 00:04:10,800
+I started with no money.
+
+93
+00:04:10,800 --> 00:04:13,610
+I'm going to end up with no money.
+
+94
+00:04:13,610 --> 00:04:16,970
+So my initial setup doesn't require any money.
+
+95
+00:04:16,970 --> 00:04:21,500
+And subsequent rebalancing never changes the portfolio value.
+
+96
+00:04:21,500 --> 00:04:26,240
+That is, if I want to be long stock at a positive price,
+
+97
+00:04:26,240 --> 00:04:28,610
+I'm going to need to have a negative cash
+
+98
+00:04:28,610 --> 00:04:30,620
+balance to finance it.
+
+99
+00:04:30,620 --> 00:04:33,110
+If I'm going to be short stock and this is negative,
+
+100
+00:04:33,110 --> 00:04:34,700
+I'll have positive cash.
+
+101
+00:04:34,700 --> 00:04:37,160
+And the amount of cash is determined
+
+102
+00:04:37,160 --> 00:04:43,140
+as C is going to equal minus qS over M, the value of money.
+
+103
+00:04:43,140 --> 00:04:44,990
+So it's as simple as that.
+
+104
+00:04:44,990 --> 00:04:49,560
+When we look at rebalancing at the end of a day, so
+
+105
+00:04:49,560 --> 00:04:51,560
+at the end of a day, the prices aren't changing.
+
+106
+00:04:51,560 --> 00:04:56,450
+And I look at the value from post re-hedging
+
+107
+00:04:56,450 --> 00:04:59,630
+compared to pre re-hedging where I changed
+
+108
+00:04:59,630 --> 00:05:01,430
+the quantities of stock.
+
+109
+00:05:01,430 --> 00:05:02,310
+What do I get?
+
+110
+00:05:02,310 --> 00:05:04,970
+Well, simple arithmetic.
+
+111
+00:05:04,970 --> 00:05:09,650
+So I've got S times the change in quantity
+
+112
+00:05:09,650 --> 00:05:13,340
+for the trade I do for re-hedging plus M times
+
+113
+00:05:13,340 --> 00:05:15,350
+the change in quantity in cash.
+
+114
+00:05:15,350 --> 00:05:17,450
+That's the change in value of the portfolio.
+
+115
+00:05:17,450 --> 00:05:20,480
+But because everything-- none of the prices are changing,
+
+116
+00:05:20,480 --> 00:05:22,580
+we're just shifting one asset into another.
+
+117
+00:05:22,580 --> 00:05:24,830
+That value is equal to 0.
+
+118
+00:05:24,830 --> 00:05:26,653
+Now, let me just rewrite that.
+
+119
+00:05:26,653 --> 00:05:28,070
+Because what I'd like to do is I'd
+
+120
+00:05:28,070 --> 00:05:30,270
+like to shift the end points a little bit.
+
+121
+00:05:30,270 --> 00:05:33,200
+So instead of ST and MT here, I'd
+
+122
+00:05:33,200 --> 00:05:37,310
+really like to have ST minus 1 and MT minus 1.
+
+123
+00:05:37,310 --> 00:05:41,240
+Because these represent a change in value
+
+124
+00:05:41,240 --> 00:05:47,000
+in the future from T minus 1 to T. And I'd like this to be--
+
+125
+00:05:47,000 --> 00:05:49,490
+I like to think of this as being a random variable,
+
+126
+00:05:49,490 --> 00:05:51,710
+and I want this to be non-anticipating.
+
+127
+00:05:51,710 --> 00:05:54,410
+So I'd like this to be at the beginning of my end point
+
+128
+00:05:54,410 --> 00:05:57,240
+rather than at the end of the end point over here.
+
+129
+00:05:57,240 --> 00:06:01,040
+So I can do that at the cost of adding two new terms just
+
+130
+00:06:01,040 --> 00:06:02,630
+to cancel the stuff I added.
+
+131
+00:06:02,630 --> 00:06:05,280
+And that gives me these terms down below.
+
+132
+00:06:05,280 --> 00:06:06,720
+And this is just arithmetic.
+
+133
+00:06:06,720 --> 00:06:08,870
+This is an exact equality.
+
+134
+00:06:08,870 --> 00:06:12,920
+Now if we think about turning this into infinitesimals
+
+135
+00:06:12,920 --> 00:06:15,650
+in continuous time and we recognize
+
+136
+00:06:15,650 --> 00:06:19,460
+that this whole thing is 0, we have the following equation
+
+137
+00:06:19,460 --> 00:06:21,540
+that represents self-financing.
+
+138
+00:06:21,540 --> 00:06:32,240
+Sdq, which is up here, plus MdC plus dSdq plus dMdC
+
+139
+00:06:32,240 --> 00:06:33,890
+now is equal to 0.
+
+140
+00:06:33,890 --> 00:06:39,080
+So this equation here holds when our rebalancing
+
+141
+00:06:39,080 --> 00:06:42,320
+is self-financing, when there's no new money coming in or going
+
+142
+00:06:42,320 --> 00:06:43,870
+out.
+

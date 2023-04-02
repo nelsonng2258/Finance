@@ -1,0 +1,250 @@
+
+PROFESSOR: Let's talk more about ito processes and Ito's lemma.
+So we know that an ito process is a stochastic process that
+can be described in differential form
+by an expression of the type dx is adt plus bdB.
+And we think of this as something
+that tells us what happens between a time interval dt.
+That's why we think of the dt part as being deterministic.
+The coefficient functions a and b
+are evaluated at the starting point,
+or evaluated at a time, t, for value x.
+And that we assume is known.
+What we want to know is what happens
+during the next interval dt.
+What's the new increment to x, dx that gets added on?
+So in that sense, the a and b are coefficient functions
+and the randomness is all in dB.
+And we know the nice properties of dB,
+of our Brownian increment.
+We know that this is a normal random variable with mean 0
+and variance dt.
+Now Ito's lemma tells us how we can take these functions of x,
+where x is generally not differentiable,
+but F is a differentiable function of t and x,
+and how we can find out how it behaves, how it evolved.
+And I've shown you two ways of framing it.
+And I'd like to sort of add a third hybrid way that
+can also be useful.
+It doesn't really add anything new,
+but it's another thing to keep in mind because it's
+an extra approach for solving different kinds of problems.
+So remember that we saw that we can write things
+in differential form.
+And in certain cases, we can also integrate explicitly.
+In particular, when the left and right hand side
+do total differentials, we can write things out
+in explicit form.
+So let's take a look at an example
+and just go through the different ways
+that we can write dF.
+So this is one of them.
+
+So this is one of them where I write
+things in terms of dt and dx.
+And as we've seen in our derivations of Ito's lemma,
+this is particularly convenient when the dx's are
+going to cancel each other out.
+So in this case, we think of writing the two functions
+in square brackets that begin with F. They all
+depend on derivatives of F. F is a function of t
+and x, so we think of the square brackets
+and writing them out as functions of t And x.
+And that's just fine.
+So from this point of view, the one other way
+we might choose to write it is to take our expression for dx
+and simplify, or expand depending
+on how you look at it, by substituting in this value
+here for dx, in which case, we have
+our alternate expression where we can write this as dF equals
+partial of F with respect to t plus b squared over 2,
+our ito term, d2F dx squared.
+And now we'll replace our dx by its definition.
+So we'll include another term, this
+plus a partial of F with respect to x times dt
+plus b partial of F with respect to x plus dB.
+So all I did was I expanded this term by substituting
+what we had here, OK?
+So in the top form, it's useful when we want to cancel the x's.
+In the bottom form, it's useful when
+we want to look at an ito process on its own.
+And it's helpful to break things down to its lowest components
+because dB is normally standardized.
+Dx, that we have on the line above,
+isn't necessarily standardized.
+So depending on what we'd like to do,
+we have different applications that might be useful.
+The third thing I wanted to add, though,
+is that sometimes, we'd like to express
+the coefficient functions in the square brackets,
+not in terms of t and x, but in terms of t and F.
+That is, we'd like to have a complete replacement,
+a complete transformation of the variable from x into F.
+And in certain cases, that will be possible.
+In some other cases, it won't.
+So let's take a look at an example
+that we can write in three different ways.
+Exercise.
+Let's let dx evolve according to ux dt plus sigma x dB.
+So our coefficient functions a and b in this case
+are replaced by the definite values
+that we've seen in this familiar form.
+Little a is equal to mu times x.
+Little b is equal to sigma times x.
+And let's suppose that we have a function F which is equal to e
+to the minus rt where r is a constant--
+think of it as being a risk free rate--
+times x squared.
+So here's the exercise.
+Write out df in three different ways.
+Write it first as a function of something dt plus something dx.
+Then write it is something dt plus something dB.
+And then, finally, write it again as something dt plus
+something dB, but this time, without any explicit x's.
+See if you can write it strictly in terms of F. And if you can,
+what kind of interpretation does it have?
+Take a moment to look at that, to work it out, and then
+come back and we'll solve it together.
+
+All right, let's begin by taking partial derivatives, shall we?
+So we know that equal to e to the minus rt times x squared.
+So partial of F with respect to t is going to be minus r
+e to the minus rt times x squared partial of F
+with respect to x.
+It's going to be e to the minus rt times 2x.
+And the second partial derivative
+of F with respect to x squared is
+going to be simply twice e to the minus rt.
+So let's take these results and put them
+into our formula for Ito's lemma.
+So we have the df in our first expression
+is going to be partial of F with respect to t.
+That's going to give us a minus r e to the minus rt x squared
+plus b squared over 2, which is going
+to be sigma x quantity squared over 2 times
+the second partial derivative with respect
+to x squared, which is going to be times 2 e to the minus rt.
+
+This is the expression that multiplies dt.
+Plus, the coefficient for dB is simpler
+because it's just the first partial with respect to x.
+So it's e to the minus RT times 2x dx.
+So if we simplify terms a little bit,
+we notice that everything gets multiplied by an e
+to the minus rt, so we could take that out in front
+if we like.
+Each of the terms will have an e to the minus rt.
+
+Now we know this it's going to have an x squared times
+minus r plus sigma squared dt.
+That is, we notice there's an x squared here
+and there's an x squared here that came from our ito term.
+And there's no x over there.
+So I have an x squared and an x squared.
+We're minus r from taking the derivative.
+And sigma squared over 2 multiplied by 2,
+which just gives me sigma squared.
+In the second term, it's going to be just as easy.
+
+So it's going to be plus e to the minus rt times 2x dx.
+
+Now at this point, we can make an interesting observation
+for that third form that we had.
+Notice that the first line in our result right
+here is a combination e to the minus rt and x squared.
+But that's just the same as F.
+So let's go ahead and rewrite this as F times sigma squared
+minus r dt.
+That's our first term.
+And what about the second term?
+Well, this is not equal to F. But suppose
+that we multiply and divide by x.
+In that case, we could write this as plus 2 F times dx
+over x.
+So what I've done is I've multiplied and divided.
+In this line, I've multiplied this by x,
+and I've divided this by x.
+Now you notice I have F times something dt plus F
+times dx over x.
+And here, I can substitute back my original definition.
+So let's keep going.
+So this is going to be F times sigma squared
+minus r dt plus 2F times dx over x,
+which was mu dt plus sigma dB.
+
+Let's combine these.
+And this is our dt term is going to be
+F times sigma squared minus r plus 2mu dt plus 2F sigma dB.
+In other words, we could write this as dF over F
+is equal to 2mu plus sigma squared minus r dt plus 2 sigma
+dB.
+So you notice that this form here for the ito process just
+involves F. There are no explicit x's.
+The way the x's entered was exactly in the right way that
+we could group them together to make them into F's.
+Now that worked because of the particular form
+we chose for our ito process, but that's
+a very common process, and it's a very useful form.
+So in this case, I have an expression for dF written
+in terms of dt plus dB, so we can see it's an ito process,
+but there are no explicit x's.
+We've changed variables completely,
+so everything instead of depending on t and x,
+now it depends on t and F. And, of course, our middle
+form we can get just by doing our usual substitution
+by writing out dx here and expanding the rest of the way.
+And the values, we would have dF is going to be--
+keeping everything in terms of the x's
+and the partial derivatives that we had--
+e to the minus rt x squared times minus r
+plus sigma squared plus 2mu dt.
+
+Let's see.
+I think I need another parenthesis here somewhere.
+Let's try putting one there.
+OK, plus 2 sigma e to the minus rt x squared dB.
+So just to make that clear, this is
+something dt plus something dB.
+And in this case, the coefficient functions of dt
+and dB are just in terms of x's.
+So if I were combining multiple things
+and I had different versions of x,
+this might be more convenient form.
+If I wanted to study f on its own and ask how does f behave,
+the line above, this one in the box,
+might be easier to integrate.
+So all of these are valid forms.
+And in each case, all we need to do
+is apply the rules for Ito's lemma, take the derivatives,
+and substitute them in.
+Which way we regroup them together and what's useful
+is going to depend on the application that you have.
+
+Just as one final extension of this,
+if we wanted to go all the way and integrate the process F,
+we could do the game that we did before where
+now the expression in the box looks exactly
+like the kind of expression that we had for geometric Brownian
+motion.
+DF over F is some constant times dt
+plus some other constant times dB.
+We'd look for the differential of log F. We know that that's
+going to take this form, and we're
+going to shift by the square of 2 sigma in the drift term
+and get another expression.
+And that would be integral.
+There's another shorthand way that we could do it,
+too, which is to use our definition of F
+inside the differential.
+So if we were to ask for d of log F,
+we could use Ito's lemma on that process dF over F. Or are we
+could say, well, this is just d of logarithm of e
+to the minus rt times x squared.
+And that's an ordinary function.
+We could do that logarithm that says that this is d of minus rt
+plus twice log X. And that tells us that this is minus r dt
+plus twice d of log X. And we know what d of log X is.
+And if we substitute in, we find the same result. OK,
+we find that this is going to be equal to 2mu minus
+sigma squared minus r dt plus 2 sigma dB.
+Two ways of getting the same answer.

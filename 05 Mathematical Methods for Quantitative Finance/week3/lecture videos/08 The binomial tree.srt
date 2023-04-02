@@ -1,0 +1,1232 @@
+0
+00:00:00,000 --> 00:00:00,720
+
+
+1
+00:00:00,720 --> 00:00:03,330
+PROFESSOR: Let's look at another setting for random walks--
+
+2
+00:00:03,330 --> 00:00:07,790
+the binomial tree model that's used in option pricing.
+
+3
+00:00:07,790 --> 00:00:11,790
+In the binomial model, in each discrete time step
+
+4
+00:00:11,790 --> 00:00:14,520
+a stock price, let's say an asset price,
+
+5
+00:00:14,520 --> 00:00:19,170
+can move only up or down to a particular fixed value.
+
+6
+00:00:19,170 --> 00:00:21,870
+This sounds crazy, far away from reality.
+
+7
+00:00:21,870 --> 00:00:25,740
+Stock prices can move anything, up or down in very small
+
+8
+00:00:25,740 --> 00:00:26,520
+increments.
+
+9
+00:00:26,520 --> 00:00:28,860
+But in this model, we say there's only one thing
+
+10
+00:00:28,860 --> 00:00:30,720
+it can do going up or down.
+
+11
+00:00:30,720 --> 00:00:34,470
+In typically in the model, we allow the movements
+
+12
+00:00:34,470 --> 00:00:36,400
+to be by the same percentage increase,
+
+13
+00:00:36,400 --> 00:00:38,940
+to have the same return in each time step,
+
+14
+00:00:38,940 --> 00:00:41,050
+so it's a stationary series.
+
+15
+00:00:41,050 --> 00:00:45,130
+So here's the structure of the model-- time goes to the right.
+
+16
+00:00:45,130 --> 00:00:48,540
+And in each column, so I start from this point here
+
+17
+00:00:48,540 --> 00:00:50,550
+and I've labeled all these nodes and I go either
+
+18
+00:00:50,550 --> 00:00:52,290
+to node 1 or node 2.
+
+19
+00:00:52,290 --> 00:00:54,420
+And then from each of these other nodes,
+
+20
+00:00:54,420 --> 00:00:56,520
+I have two choices as time evolves.
+
+21
+00:00:56,520 --> 00:00:58,830
+Here, I can go to either 4 or 5.
+
+22
+00:00:58,830 --> 00:01:00,010
+I can go up or down.
+
+23
+00:01:00,010 --> 00:01:02,940
+If I'm from 5, I can go to 8 or 9.
+
+24
+00:01:02,940 --> 00:01:05,700
+If I end up a terminal node 8, though, there
+
+25
+00:01:05,700 --> 00:01:07,710
+are a lot of ways I could have gotten there.
+
+26
+00:01:07,710 --> 00:01:10,920
+I could have gone 0, 1, 4, 8.
+
+27
+00:01:10,920 --> 00:01:13,200
+I could have gone 0, 2, 5, 8.
+
+28
+00:01:13,200 --> 00:01:15,780
+I could go 0, 2, 4, 8.
+
+29
+00:01:15,780 --> 00:01:19,950
+So if I want to know what the likelihood is to end up
+
+30
+00:01:19,950 --> 00:01:24,030
+at a terminal node of a particular value,
+
+31
+00:01:24,030 --> 00:01:26,940
+I can just add up all the possible ways
+
+32
+00:01:26,940 --> 00:01:31,950
+to get there, multiply times the probability of seeing
+
+33
+00:01:31,950 --> 00:01:33,870
+that particular path realized.
+
+34
+00:01:33,870 --> 00:01:37,620
+And that turns out to be essential for doing option
+
+35
+00:01:37,620 --> 00:01:40,080
+pricing and for managing risk.
+
+36
+00:01:40,080 --> 00:01:41,730
+But in terms of the basic model, we
+
+37
+00:01:41,730 --> 00:01:44,250
+recognize right away that's a random walk.
+
+38
+00:01:44,250 --> 00:01:47,160
+After all, we're taking steps, discrete steps,
+
+39
+00:01:47,160 --> 00:01:48,790
+in each time period.
+
+40
+00:01:48,790 --> 00:01:50,850
+And we're looking at the aggregate behavior
+
+41
+00:01:50,850 --> 00:01:51,970
+of those steps.
+
+42
+00:01:51,970 --> 00:01:54,780
+And we know that some of the large time properties
+
+43
+00:01:54,780 --> 00:01:58,020
+are related to the statistical distribution
+
+44
+00:01:58,020 --> 00:02:00,610
+of the sum of random steps.
+
+45
+00:02:00,610 --> 00:02:04,830
+So we do this in two steps, no pun intended.
+
+46
+00:02:04,830 --> 00:02:07,440
+We build the tree, we have a structure
+
+47
+00:02:07,440 --> 00:02:09,750
+for what the up and down moves represent.
+
+48
+00:02:09,750 --> 00:02:13,450
+Usually, we have a fixed return associated with up and down.
+
+49
+00:02:13,450 --> 00:02:15,793
+And that gives us a recombining tree,
+
+50
+00:02:15,793 --> 00:02:18,210
+where you notice there are two different ways to get, say,
+
+51
+00:02:18,210 --> 00:02:19,260
+to node 4.
+
+52
+00:02:19,260 --> 00:02:22,800
+Going up and down is the same as going down and up.
+
+53
+00:02:22,800 --> 00:02:25,200
+There are trees that don't necessarily recombine,
+
+54
+00:02:25,200 --> 00:02:28,731
+but in this case we'll keep the recombining tree.
+
+55
+00:02:28,731 --> 00:02:31,320
+And there are trees also that have multiple branches.
+
+56
+00:02:31,320 --> 00:02:33,792
+There are trinomial trees and multinomial trees.
+
+57
+00:02:33,792 --> 00:02:35,500
+But we'll do a look in the binomial tree.
+
+58
+00:02:35,500 --> 00:02:37,590
+So first we have the tree structure.
+
+59
+00:02:37,590 --> 00:02:40,800
+We assign to each branch a magnitude
+
+60
+00:02:40,800 --> 00:02:45,540
+by which the return changes, if we go up or if we go down,
+
+61
+00:02:45,540 --> 00:02:47,910
+and a probability of that happening.
+
+62
+00:02:47,910 --> 00:02:50,220
+Once we set up the tree structure,
+
+63
+00:02:50,220 --> 00:02:53,760
+we're ready to do some analytics and to price derivatives
+
+64
+00:02:53,760 --> 00:02:58,380
+on this tree, and also to take a look at in this structure
+
+65
+00:02:58,380 --> 00:03:00,360
+some very interesting possibilities
+
+66
+00:03:00,360 --> 00:03:06,260
+for exotic options and for different boundary conditions.
+
+67
+00:03:06,260 --> 00:03:09,700
+So the random walk process is the basis
+
+68
+00:03:09,700 --> 00:03:13,060
+of one approach to option pricing.
+
+69
+00:03:13,060 --> 00:03:16,450
+And it's obviously an extreme simplification of the dynamics.
+
+70
+00:03:16,450 --> 00:03:19,300
+But in the limit we actually end up
+
+71
+00:03:19,300 --> 00:03:21,460
+getting exactly the same result that we
+
+72
+00:03:21,460 --> 00:03:24,140
+do through continuous time approaches.
+
+73
+00:03:24,140 --> 00:03:26,290
+So in each time step the underlying
+
+74
+00:03:26,290 --> 00:03:29,560
+can either go up or down and we have uncertain payoffs.
+
+75
+00:03:29,560 --> 00:03:32,260
+Usually in this model, we think of having two assets--
+
+76
+00:03:32,260 --> 00:03:35,680
+one risky asset and a risk-free asset whose return
+
+77
+00:03:35,680 --> 00:03:38,320
+doesn't depend on where we are on the tree.
+
+78
+00:03:38,320 --> 00:03:40,270
+But one of the things we also need
+
+79
+00:03:40,270 --> 00:03:43,300
+to do to match this to reality is
+
+80
+00:03:43,300 --> 00:03:47,220
+take our abstract random walk and put some parameters on it.
+
+81
+00:03:47,220 --> 00:03:50,060
+We need to find out what the appropriate scales are.
+
+82
+00:03:50,060 --> 00:03:52,990
+And so we need to set the scales.
+
+83
+00:03:52,990 --> 00:03:54,790
+We need to decide on the returns.
+
+84
+00:03:54,790 --> 00:03:57,040
+We need to decide on the probabilities.
+
+85
+00:03:57,040 --> 00:04:00,250
+And that's going to tell us how this can map over
+
+86
+00:04:00,250 --> 00:04:02,270
+into the real world.
+
+87
+00:04:02,270 --> 00:04:05,620
+So here's an example of how we set up the structure.
+
+88
+00:04:05,620 --> 00:04:08,950
+We have a recursive behavior for a random walk where we say,
+
+89
+00:04:08,950 --> 00:04:12,640
+at each time step the new price, one step ahead,
+
+90
+00:04:12,640 --> 00:04:16,750
+is going to be the previous price, either times a number
+
+91
+00:04:16,750 --> 00:04:20,620
+I'll call u for an up move with probability p,
+
+92
+00:04:20,620 --> 00:04:23,920
+or a down move with probability 1 minus p.
+
+93
+00:04:23,920 --> 00:04:25,480
+That's one reason why I sometimes use
+
+94
+00:04:25,480 --> 00:04:28,360
+S instead of p for probability.
+
+95
+00:04:28,360 --> 00:04:31,700
+S we'll think of as stock price.
+
+96
+00:04:31,700 --> 00:04:34,120
+So the structure has this tree structure
+
+97
+00:04:34,120 --> 00:04:36,100
+here where, as I build things up,
+
+98
+00:04:36,100 --> 00:04:38,590
+I started this node with price S0.
+
+99
+00:04:38,590 --> 00:04:44,500
+With probability p I can go up and realize the price S0u.
+
+100
+00:04:44,500 --> 00:04:48,520
+If I go up again, the probability of going up and up
+
+101
+00:04:48,520 --> 00:04:50,800
+is p squared is my cumulative probability
+
+102
+00:04:50,800 --> 00:04:52,240
+to get to this point.
+
+103
+00:04:52,240 --> 00:04:56,350
+If I do so, the asset price with probability p squared
+
+104
+00:04:56,350 --> 00:04:58,880
+is going to be S0u squared.
+
+105
+00:04:58,880 --> 00:05:01,810
+Now I could end up if I have an up and down move,
+
+106
+00:05:01,810 --> 00:05:04,030
+I have two different ways of doing that.
+
+107
+00:05:04,030 --> 00:05:08,470
+Each of those ways has probability p times 1 minus p,
+
+108
+00:05:08,470 --> 00:05:10,990
+and I get this value, and similarly
+
+109
+00:05:10,990 --> 00:05:12,250
+for the downside of the tree.
+
+110
+00:05:12,250 --> 00:05:14,600
+And I can go at an arbitrary number of steps.
+
+111
+00:05:14,600 --> 00:05:16,250
+So what's the structure we expect?
+
+112
+00:05:16,250 --> 00:05:18,190
+Well, it's a binomial tree.
+
+113
+00:05:18,190 --> 00:05:21,250
+No surprise-- we find a binomial distribution.
+
+114
+00:05:21,250 --> 00:05:26,020
+The probability of observing a particular stock price
+
+115
+00:05:26,020 --> 00:05:30,280
+is equal to the probability of our binomial distribution
+
+116
+00:05:30,280 --> 00:05:36,520
+of the corresponding set of up and down moves.
+
+117
+00:05:36,520 --> 00:05:39,760
+So in this case if I have t time steps
+
+118
+00:05:39,760 --> 00:05:42,220
+and I need there to be k up moves,
+
+119
+00:05:42,220 --> 00:05:44,770
+I have t choose k ways of doing it.
+
+120
+00:05:44,770 --> 00:05:48,190
+They have probability p to the k, 1 minus p to the t minus k.
+
+121
+00:05:48,190 --> 00:05:50,320
+It's our old friend the binomial distribution.
+
+122
+00:05:50,320 --> 00:05:53,280
+
+
+123
+00:05:53,280 --> 00:05:56,270
+Let's look at a concrete example.
+
+124
+00:05:56,270 --> 00:05:58,460
+Suppose u is equal to 2.
+
+125
+00:05:58,460 --> 00:06:00,080
+This is rather extreme.
+
+126
+00:06:00,080 --> 00:06:04,100
+Suppose in each time step the value of the stock doubles.
+
+127
+00:06:04,100 --> 00:06:07,700
+Suppose if I go down the value of the stock is cut in half.
+
+128
+00:06:07,700 --> 00:06:10,760
+Suppose the probability of an up move is 1/3,
+
+129
+00:06:10,760 --> 00:06:12,880
+the probability of a down move is 1/3.
+
+130
+00:06:12,880 --> 00:06:16,190
+Excuse me, probability of up is 2/3, probability of down move
+
+131
+00:06:16,190 --> 00:06:17,090
+is 1/3.
+
+132
+00:06:17,090 --> 00:06:19,830
+And let's suppose we have a starting price of 16.
+
+133
+00:06:19,830 --> 00:06:21,230
+So the tree looks like this.
+
+134
+00:06:21,230 --> 00:06:26,720
+16 with probability 2/3 doubles at time 1 to value 32.
+
+135
+00:06:26,720 --> 00:06:29,540
+And it can double again to value 64.
+
+136
+00:06:29,540 --> 00:06:33,350
+The probability of getting there at the end of two times steps
+
+137
+00:06:33,350 --> 00:06:35,180
+is 4/9.
+
+138
+00:06:35,180 --> 00:06:41,270
+The other terminal values at t equals 2 are 64, 16, and 4.
+
+139
+00:06:41,270 --> 00:06:44,270
+And that's it, it can't be anything else.
+
+140
+00:06:44,270 --> 00:06:48,170
+All right, so this is a very rigid model
+
+141
+00:06:48,170 --> 00:06:50,420
+of how stock prices could evolve and what
+
+142
+00:06:50,420 --> 00:06:52,310
+their terminal values are.
+
+143
+00:06:52,310 --> 00:06:54,530
+We can do some of the usual analytics.
+
+144
+00:06:54,530 --> 00:06:56,720
+For example, we could ask about the distribution
+
+145
+00:06:56,720 --> 00:06:58,820
+of stock prices at time t.
+
+146
+00:06:58,820 --> 00:07:00,360
+And here we have it.
+
+147
+00:07:00,360 --> 00:07:06,560
+So these are probability 4/9 to get a 64, probability 4/9
+
+148
+00:07:06,560 --> 00:07:07,520
+to get a 16.
+
+149
+00:07:07,520 --> 00:07:09,770
+Probability 1/9 to get a 4.
+
+150
+00:07:09,770 --> 00:07:11,540
+And that's it.
+
+151
+00:07:11,540 --> 00:07:13,610
+Now where it really gets interesting
+
+152
+00:07:13,610 --> 00:07:16,280
+is when we apply this to option pricing.
+
+153
+00:07:16,280 --> 00:07:24,420
+Now option pricing-- options are kind of a derivative.
+
+154
+00:07:24,420 --> 00:07:27,420
+And a derivative is a security whose value
+
+155
+00:07:27,420 --> 00:07:29,310
+depends on another security.
+
+156
+00:07:29,310 --> 00:07:32,310
+So you may be familiar with stock options,
+
+157
+00:07:32,310 --> 00:07:36,300
+and in particular call options that give you the right--
+
+158
+00:07:36,300 --> 00:07:38,160
+but not the obligation--
+
+159
+00:07:38,160 --> 00:07:48,730
+to buy security at a fixed price k for a call option,
+
+160
+00:07:48,730 --> 00:07:52,520
+but you would only exercise that if the market price is above k.
+
+161
+00:07:52,520 --> 00:07:56,560
+So if I tell you you have the right to buy a stock at $10,
+
+162
+00:07:56,560 --> 00:07:59,920
+you would not exercise that if the stock were $3.
+
+163
+00:07:59,920 --> 00:08:02,410
+You'd only exercise it if the price were more.
+
+164
+00:08:02,410 --> 00:08:04,880
+And then you could realize an immediate profit.
+
+165
+00:08:04,880 --> 00:08:08,830
+So if you have an option to buy a stock at a strike price
+
+166
+00:08:08,830 --> 00:08:12,820
+k equals $10, and at the time when the option is
+
+167
+00:08:12,820 --> 00:08:17,440
+about to expire if the stock price is $64, that means
+
+168
+00:08:17,440 --> 00:08:21,130
+you could buy it for 10 sell it for 64,
+
+169
+00:08:21,130 --> 00:08:24,100
+and have a profit of $54.
+
+170
+00:08:24,100 --> 00:08:26,410
+So no arbitrage tells us that if you
+
+171
+00:08:26,410 --> 00:08:31,070
+could make that $54 by doing that transaction,
+
+172
+00:08:31,070 --> 00:08:33,880
+then the value of the option should be $54.
+
+173
+00:08:33,880 --> 00:08:37,690
+So put options work similarly.
+
+174
+00:08:37,690 --> 00:08:39,940
+They give you the right but not the obligation
+
+175
+00:08:39,940 --> 00:08:41,890
+to sell at a fixed price.
+
+176
+00:08:41,890 --> 00:08:44,710
+You're not going to sell if you could get more money by selling
+
+177
+00:08:44,710 --> 00:08:45,950
+at the market price.
+
+178
+00:08:45,950 --> 00:08:48,940
+So put options are valuable if the price goes down.
+
+179
+00:08:48,940 --> 00:08:51,650
+Call options are valuable if the price goes up.
+
+180
+00:08:51,650 --> 00:08:55,690
+But in both cases, their value depends
+
+181
+00:08:55,690 --> 00:08:58,990
+quite asymmetrically on the value of the underlying,
+
+182
+00:08:58,990 --> 00:09:00,590
+on the value of the stock.
+
+183
+00:09:00,590 --> 00:09:02,890
+So a common structure that we see
+
+184
+00:09:02,890 --> 00:09:07,810
+in binomial trees as part of our approach to option pricing
+
+185
+00:09:07,810 --> 00:09:10,960
+is that first we set up the binomial random walks that
+
+186
+00:09:10,960 --> 00:09:13,510
+correspond to the stock price movement.
+
+187
+00:09:13,510 --> 00:09:16,720
+And then we look on the terminal nodes
+
+188
+00:09:16,720 --> 00:09:19,960
+out here in this example at t equals 2,
+
+189
+00:09:19,960 --> 00:09:23,050
+and assuming my option expires at t equals 2.
+
+190
+00:09:23,050 --> 00:09:25,240
+I look at the terminal nodes and I
+
+191
+00:09:25,240 --> 00:09:31,030
+say, what are the values of the options on the terminal nodes.
+
+192
+00:09:31,030 --> 00:09:33,160
+And they're determined by the value of the stock
+
+193
+00:09:33,160 --> 00:09:34,400
+on the terminal nodes.
+
+194
+00:09:34,400 --> 00:09:39,010
+So if the stock has value 64, 16, and 4,
+
+195
+00:09:39,010 --> 00:09:42,880
+then the value of a call option C at that point in time
+
+196
+00:09:42,880 --> 00:09:47,470
+could be 54 in the upper position with probability 4/9.
+
+197
+00:09:47,470 --> 00:09:50,590
+It could be 6 with probability 4/9,
+
+198
+00:09:50,590 --> 00:09:52,660
+because there are two ways of reaching it.
+
+199
+00:09:52,660 --> 00:09:55,030
+Or it could be 0, because we're not
+
+200
+00:09:55,030 --> 00:09:58,150
+going to buy a stock for $10 if we could buy it
+
+201
+00:09:58,150 --> 00:09:59,920
+by exercising our option--
+
+202
+00:09:59,920 --> 00:10:04,360
+if we could just throw away the option, it's valueless,
+
+203
+00:10:04,360 --> 00:10:07,630
+and we were to buy the stock on the market for $4.
+
+204
+00:10:07,630 --> 00:10:11,080
+Put options work in a complementary way.
+
+205
+00:10:11,080 --> 00:10:13,540
+And there's a property called put-call parity, which
+
+206
+00:10:13,540 --> 00:10:15,190
+you can see here in action.
+
+207
+00:10:15,190 --> 00:10:17,140
+Where when the risk-free rate is 0,
+
+208
+00:10:17,140 --> 00:10:19,960
+the value of a call minus the value of a put
+
+209
+00:10:19,960 --> 00:10:24,530
+is the value of the security minus the strike price.
+
+210
+00:10:24,530 --> 00:10:26,590
+So here we have the put is worthless
+
+211
+00:10:26,590 --> 00:10:29,530
+up here, because the stock is worth more than $10.
+
+212
+00:10:29,530 --> 00:10:32,140
+Here it's worthless stock is worth more than $10.
+
+213
+00:10:32,140 --> 00:10:34,750
+And down here it's worth $6, because we
+
+214
+00:10:34,750 --> 00:10:38,635
+could sell for $10 something that we could buy for $4.
+
+215
+00:10:38,635 --> 00:10:42,120
+
+
+216
+00:10:42,120 --> 00:10:48,460
+The tree becomes useful for more general kinds of problems,
+
+217
+00:10:48,460 --> 00:10:50,460
+and especially if we have different kinds
+
+218
+00:10:50,460 --> 00:10:51,460
+of boundary conditions.
+
+219
+00:10:51,460 --> 00:10:54,690
+So typically we're thinking for a vanilla
+
+220
+00:10:54,690 --> 00:10:58,590
+option that only expires at a particular point in time.
+
+221
+00:10:58,590 --> 00:11:01,260
+We go out and we look at the terminal nodes in the tree.
+
+222
+00:11:01,260 --> 00:11:03,750
+But we might have dividends that occur
+
+223
+00:11:03,750 --> 00:11:05,200
+at some intermediate point.
+
+224
+00:11:05,200 --> 00:11:07,230
+We might want to know at intermediate points
+
+225
+00:11:07,230 --> 00:11:11,160
+on interior nodes of the tree should we exercise the option.
+
+226
+00:11:11,160 --> 00:11:13,380
+Is it advantageous to do so?
+
+227
+00:11:13,380 --> 00:11:16,620
+There might be exotic options that if we
+
+228
+00:11:16,620 --> 00:11:19,410
+hit a particular node, if we go down too
+
+229
+00:11:19,410 --> 00:11:23,040
+far before we're going up, the option might become valueless.
+
+230
+00:11:23,040 --> 00:11:24,990
+Those are known as knock-out options.
+
+231
+00:11:24,990 --> 00:11:27,570
+And there are knock-in options that start valueless.
+
+232
+00:11:27,570 --> 00:11:30,780
+But if we hit a particular node, then they come to life.
+
+233
+00:11:30,780 --> 00:11:31,950
+And that splits.
+
+234
+00:11:31,950 --> 00:11:34,080
+It differentiates among the different paths.
+
+235
+00:11:34,080 --> 00:11:35,880
+We don't just group them together
+
+236
+00:11:35,880 --> 00:11:38,190
+and count the total number of combinatorics.
+
+237
+00:11:38,190 --> 00:11:40,830
+We need to separate those that might pass for a particular
+
+238
+00:11:40,830 --> 00:11:42,550
+node from those that don't.
+
+239
+00:11:42,550 --> 00:11:45,990
+So usual, it reduces to problems that we've already
+
+240
+00:11:45,990 --> 00:11:47,910
+seen in probability where we need
+
+241
+00:11:47,910 --> 00:11:51,300
+to classify different kinds of trajectories,
+
+242
+00:11:51,300 --> 00:11:53,970
+compute the probability of each, and then sum up
+
+243
+00:11:53,970 --> 00:11:57,010
+the ones that are of interest for the particular application.
+
+244
+00:11:57,010 --> 00:11:59,700
+Now to be able to connect with our previous model, what
+
+245
+00:11:59,700 --> 00:12:01,830
+we need to do is calibrate the tree.
+
+246
+00:12:01,830 --> 00:12:04,530
+We need to be able to connect parameters
+
+247
+00:12:04,530 --> 00:12:08,110
+on the tree with parameters of real-world stock prices.
+
+248
+00:12:08,110 --> 00:12:10,590
+So if we think of our stock price
+
+249
+00:12:10,590 --> 00:12:17,730
+as having a random walk with a logarithmic return
+
+250
+00:12:17,730 --> 00:12:22,710
+variable that takes binomial steps, in this notation,
+
+251
+00:12:22,710 --> 00:12:25,350
+if we think of r as being defined
+
+252
+00:12:25,350 --> 00:12:28,950
+as a logarithmic return, then in the binomial model
+
+253
+00:12:28,950 --> 00:12:31,920
+r would take two values, either the logarithm of u
+
+254
+00:12:31,920 --> 00:12:36,060
+so that e to the r multiplies St minus 1 by u,
+
+255
+00:12:36,060 --> 00:12:39,730
+or logarithm of D. So that's straightforward.
+
+256
+00:12:39,730 --> 00:12:45,010
+If we want to know how to implement our model
+
+257
+00:12:45,010 --> 00:12:47,910
+and we have a given u and D, this is how we do it
+
+258
+00:12:47,910 --> 00:12:52,570
+And we can also do it in terms of a typical Bernoulli-type
+
+259
+00:12:52,570 --> 00:12:53,070
+variable.
+
+260
+00:12:53,070 --> 00:12:56,310
+If we let x be 1 or 0, we can construct a variable.
+
+261
+00:12:56,310 --> 00:12:58,800
+Because it only has two states, it doesn't really
+
+262
+00:12:58,800 --> 00:13:00,570
+matter how we do it.
+
+263
+00:13:00,570 --> 00:13:02,930
+We can rewrite things for linear transformations
+
+264
+00:13:02,930 --> 00:13:04,680
+as long as there are two different states.
+
+265
+00:13:04,680 --> 00:13:07,680
+Here, if I have a 1 and a 0, I can multiply something
+
+266
+00:13:07,680 --> 00:13:09,190
+and add something else.
+
+267
+00:13:09,190 --> 00:13:12,090
+And I can relate it to the log u and log D formulation.
+
+268
+00:13:12,090 --> 00:13:14,250
+So we can use different kinds of formulation.
+
+269
+00:13:14,250 --> 00:13:17,850
+The basic point is, it's a two-state model at each node.
+
+270
+00:13:17,850 --> 00:13:20,690
+
+
+271
+00:13:20,690 --> 00:13:25,390
+So to connect this to real world asset values
+
+272
+00:13:25,390 --> 00:13:27,910
+and their returns and their volatilities,
+
+273
+00:13:27,910 --> 00:13:31,150
+we calibrate the model by taking expectations.
+
+274
+00:13:31,150 --> 00:13:34,810
+So we would calibrate mu to be the expectation
+
+275
+00:13:34,810 --> 00:13:37,930
+of r from the formulas that we had before.
+
+276
+00:13:37,930 --> 00:13:40,840
+And we compute sigma squared as the variance
+
+277
+00:13:40,840 --> 00:13:43,510
+by applying the definition and using
+
+278
+00:13:43,510 --> 00:13:46,030
+our usual results for things that
+
+279
+00:13:46,030 --> 00:13:48,160
+are constructed out of basic z.
+
+280
+00:13:48,160 --> 00:13:52,360
+So we put in the distribution of our binomial variables.
+
+281
+00:13:52,360 --> 00:13:54,280
+We have some extra parameters.
+
+282
+00:13:54,280 --> 00:13:55,090
+We compute.
+
+283
+00:13:55,090 --> 00:13:58,180
+And then what we're going to do is we have expressions now
+
+284
+00:13:58,180 --> 00:14:03,190
+for mu and sigma squared, which are things that we can estimate
+
+285
+00:14:03,190 --> 00:14:05,770
+and think about in terms of real-world asset
+
+286
+00:14:05,770 --> 00:14:07,820
+prices, their mean and their variance,
+
+287
+00:14:07,820 --> 00:14:10,180
+and we can connect them to model parameters
+
+288
+00:14:10,180 --> 00:14:14,920
+in the random walk, things that are the step size a and b,
+
+289
+00:14:14,920 --> 00:14:17,830
+the coefficients of the step formulation
+
+290
+00:14:17,830 --> 00:14:20,560
+in the Bernoulli form I just showed you and p
+
+291
+00:14:20,560 --> 00:14:22,370
+the probability.
+
+292
+00:14:22,370 --> 00:14:25,840
+So we can solve for a, p, and b in terms
+
+293
+00:14:25,840 --> 00:14:28,000
+of the up and down factors, for example.
+
+294
+00:14:28,000 --> 00:14:31,720
+And we can do that this over here to have a and b
+
+295
+00:14:31,720 --> 00:14:34,120
+in terms of those with mu and sigma.
+
+296
+00:14:34,120 --> 00:14:36,910
+And then we can express log u and log D
+
+297
+00:14:36,910 --> 00:14:40,420
+also in terms of mu and sigma so that if we
+
+298
+00:14:40,420 --> 00:14:45,100
+have particular real world values of mu and sigma, that
+
+299
+00:14:45,100 --> 00:14:48,580
+can tell us what u and D we can use on the model that
+
+300
+00:14:48,580 --> 00:14:51,430
+will give us something that will be
+
+301
+00:14:51,430 --> 00:14:56,680
+a discrete representation of the real-world drift and volatility
+
+302
+00:14:56,680 --> 00:14:57,980
+that we want.
+
+303
+00:14:57,980 --> 00:15:02,380
+Notice that the specification actually matches
+
+304
+00:15:02,380 --> 00:15:05,060
+different numbers and parameters, that in this case
+
+305
+00:15:05,060 --> 00:15:09,520
+we have two real world parameters, mu and sigma,
+
+306
+00:15:09,520 --> 00:15:14,500
+in terms of three model parameters, three unknowns.
+
+307
+00:15:14,500 --> 00:15:15,000
+
+

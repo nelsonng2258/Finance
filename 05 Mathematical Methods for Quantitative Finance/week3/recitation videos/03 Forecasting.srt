@@ -1,0 +1,1664 @@
+0
+00:00:00,000 --> 00:00:00,943
+
+
+1
+00:00:00,943 --> 00:00:02,610
+PROFESSOR: Let's talk about forecasting.
+
+2
+00:00:02,610 --> 00:00:05,340
+We saw in lecture that forecasting
+
+3
+00:00:05,340 --> 00:00:08,580
+is an application of conditional probability to time series
+
+4
+00:00:08,580 --> 00:00:09,430
+models.
+
+5
+00:00:09,430 --> 00:00:12,420
+So we think of the time series as generating the data.
+
+6
+00:00:12,420 --> 00:00:15,550
+And we ask at a given point in time,
+
+7
+00:00:15,550 --> 00:00:18,240
+given all the observations that exist up
+
+8
+00:00:18,240 --> 00:00:22,410
+through that point in time, what can we say about the future?
+
+9
+00:00:22,410 --> 00:00:25,170
+We might want to know what happens one time step ahead,
+
+10
+00:00:25,170 --> 00:00:28,380
+two time steps ahead, or in limit
+
+11
+00:00:28,380 --> 00:00:30,940
+as the number of times that goes to infinity,
+
+12
+00:00:30,940 --> 00:00:35,650
+but the key thing is the break between past and future.
+
+13
+00:00:35,650 --> 00:00:38,610
+So we take the present time to be just after we've
+
+14
+00:00:38,610 --> 00:00:40,260
+made our final observation.
+
+15
+00:00:40,260 --> 00:00:43,650
+And we're first forecast period is one step ahead.
+
+16
+00:00:43,650 --> 00:00:46,470
+And, as I said, the key tool is in addition to
+
+17
+00:00:46,470 --> 00:00:48,210
+our previous ones with expectations,
+
+18
+00:00:48,210 --> 00:00:51,300
+linearity, algebraic substitution, recursion.
+
+19
+00:00:51,300 --> 00:00:53,860
+We had a new one, which is conditional probability.
+
+20
+00:00:53,860 --> 00:00:56,430
+In this setting, conditional probability simply
+
+21
+00:00:56,430 --> 00:00:59,820
+means that for any variable that was
+
+22
+00:00:59,820 --> 00:01:03,630
+a random variable in the past that has been realized,
+
+23
+00:01:03,630 --> 00:01:05,260
+it's no longer a random variable.
+
+24
+00:01:05,260 --> 00:01:06,150
+Now it's a scalar.
+
+25
+00:01:06,150 --> 00:01:07,570
+Now it's a number.
+
+26
+00:01:07,570 --> 00:01:10,110
+So those things that show up in the recursion
+
+27
+00:01:10,110 --> 00:01:12,690
+that we previously thought of as random variables,
+
+28
+00:01:12,690 --> 00:01:16,170
+in this setting, when we take conditional expectations
+
+29
+00:01:16,170 --> 00:01:19,770
+of our defining equations or equations of evolution,
+
+30
+00:01:19,770 --> 00:01:21,910
+then they take a different character,
+
+31
+00:01:21,910 --> 00:01:23,160
+because they're already known.
+
+32
+00:01:23,160 --> 00:01:25,750
+They're no longer random variables.
+
+33
+00:01:25,750 --> 00:01:27,810
+So we looked at an example in lecture.
+
+34
+00:01:27,810 --> 00:01:30,390
+Let's just do a couple of examples together.
+
+35
+00:01:30,390 --> 00:01:31,540
+It's the same structure.
+
+36
+00:01:31,540 --> 00:01:33,540
+They're just one or two things it might be worth
+
+37
+00:01:33,540 --> 00:01:35,880
+paying attention to as you look at the blind forecast
+
+38
+00:01:35,880 --> 00:01:37,070
+of your own.
+
+39
+00:01:37,070 --> 00:01:39,570
+Some of the things that might have look special for the case
+
+40
+00:01:39,570 --> 00:01:42,550
+of the AR 1 are quite general.
+
+41
+00:01:42,550 --> 00:01:44,110
+So let's take a look at a model.
+
+42
+00:01:44,110 --> 00:01:57,585
+Let's look at, say, an AR MA 1, model, AR MA 1,
+
+43
+00:01:57,585 --> 00:02:01,840
+1, which is this form.
+
+44
+00:02:01,840 --> 00:02:09,710
+Let's say that Xt is equal to a constant C0 plus C1 X
+
+45
+00:02:09,710 --> 00:02:13,580
+the previous 1 plus a bunch of Z's.
+
+46
+00:02:13,580 --> 00:02:16,220
+So I'm going to keep the notation sigma
+
+47
+00:02:16,220 --> 00:02:19,760
+Zt for our shock for innovation in the period.
+
+48
+00:02:19,760 --> 00:02:22,100
+You could give it another name for its coefficient.
+
+49
+00:02:22,100 --> 00:02:23,660
+Remember that sigma, in this case,
+
+50
+00:02:23,660 --> 00:02:26,300
+is not the standard deviation of x.
+
+51
+00:02:26,300 --> 00:02:29,480
+It's just a scaling parameter for the random shock z.
+
+52
+00:02:29,480 --> 00:02:33,620
+And then we'll call this phi 1 Zt minus 1.
+
+53
+00:02:33,620 --> 00:02:35,570
+So the first thing we'd like to do
+
+54
+00:02:35,570 --> 00:02:40,650
+is compute the mean value for x and simplify our expression.
+
+55
+00:02:40,650 --> 00:02:42,980
+So we use our usual trick.
+
+56
+00:02:42,980 --> 00:02:48,290
+Mu is the name will give the expectation of Xt.
+
+57
+00:02:48,290 --> 00:02:50,930
+And then we take expectations on the right hand side
+
+58
+00:02:50,930 --> 00:02:52,760
+and apply linearity.
+
+59
+00:02:52,760 --> 00:02:59,975
+So we have this is going to be C0 plus C1 expectation of X
+
+60
+00:02:59,975 --> 00:03:03,680
+t minus 1, but we know that that is just
+
+61
+00:03:03,680 --> 00:03:07,760
+the same thing as C1 times mu.
+
+62
+00:03:07,760 --> 00:03:10,820
+And then we're going to have plus 0 plus 0,
+
+63
+00:03:10,820 --> 00:03:13,440
+because the Z's have 0 expectation.
+
+64
+00:03:13,440 --> 00:03:18,890
+So we have the result that mu is going to be equal
+
+65
+00:03:18,890 --> 00:03:22,250
+to C0 over 1 minus C1.
+
+66
+00:03:22,250 --> 00:03:26,780
+And you should recognize that expression from our AR 1 model.
+
+67
+00:03:26,780 --> 00:03:28,860
+It's exactly the same expression.
+
+68
+00:03:28,860 --> 00:03:32,810
+And therefore, we can substitute and rewrite our equation
+
+69
+00:03:32,810 --> 00:03:35,390
+as a bunch of things that are grouped together in such a way
+
+70
+00:03:35,390 --> 00:03:36,680
+that they all have 0 mean.
+
+71
+00:03:36,680 --> 00:03:39,770
+That is to say, if I substitute for C0
+
+72
+00:03:39,770 --> 00:03:43,490
+and say it's equal to mu times 1 minus C1,
+
+73
+00:03:43,490 --> 00:03:44,990
+then I can write this as Xt--
+
+74
+00:03:44,990 --> 00:03:49,112
+
+
+75
+00:03:49,112 --> 00:03:51,940
+let's keep our colors consistent here--
+
+76
+00:03:51,940 --> 00:03:53,740
+Xt minus mu--
+
+77
+00:03:53,740 --> 00:03:55,870
+I can put this on either side of the equation,
+
+78
+00:03:55,870 --> 00:03:57,620
+depending on what I'd like to do--
+
+79
+00:03:57,620 --> 00:04:00,100
+but just for looking at the structure of the model,
+
+80
+00:04:00,100 --> 00:04:04,930
+I'll right this is Xt minus 1 minus mu
+
+81
+00:04:04,930 --> 00:04:13,300
+plus sigma Zt plus phi 1 Z of t minus 1.
+
+82
+00:04:13,300 --> 00:04:15,250
+Now the next thing we want to do is put things
+
+83
+00:04:15,250 --> 00:04:16,850
+in forecasting form.
+
+84
+00:04:16,850 --> 00:04:20,170
+So what I'm going to do is I'm going to shift t to t plus 1.
+
+85
+00:04:20,170 --> 00:04:23,500
+Everywhere where I see a t, I'm going to write t plus 1.
+
+86
+00:04:23,500 --> 00:04:26,440
+And that puts the future values on the left
+
+87
+00:04:26,440 --> 00:04:29,020
+and the present and past values or the known
+
+88
+00:04:29,020 --> 00:04:31,100
+values on the right hand side.
+
+89
+00:04:31,100 --> 00:04:34,810
+So for one-time step ahead, this makes exactly the split
+
+90
+00:04:34,810 --> 00:04:36,080
+that we want to have.
+
+91
+00:04:36,080 --> 00:04:40,120
+So what I'll do is-- let me just write this as Xt plus 1.
+
+92
+00:04:40,120 --> 00:04:43,000
+Here I can put the mu on the right hand side if I like.
+
+93
+00:04:43,000 --> 00:04:54,400
+And this is going to be C1 of Xt minus 2 plus sigma Zt plus 1
+
+94
+00:04:54,400 --> 00:04:58,090
+plus phi 1 and Z.
+
+95
+00:04:58,090 --> 00:05:03,820
+So notice that in our original description,
+
+96
+00:05:03,820 --> 00:05:06,490
+in our terms of our original coefficient
+
+97
+00:05:06,490 --> 00:05:11,140
+C1 was a reminder that it matched the lag 1x variable.
+
+98
+00:05:11,140 --> 00:05:15,160
+And phi 1 was a reminder that it matched lag 1 Z variable.
+
+99
+00:05:15,160 --> 00:05:18,700
+If we had C2, C3, and phi 2, phi 3, phi 4,
+
+100
+00:05:18,700 --> 00:05:21,730
+those would have matched the corresponding lags of the Z's,
+
+101
+00:05:21,730 --> 00:05:24,710
+but what really matters are the relative amounts.
+
+102
+00:05:24,710 --> 00:05:28,060
+So when I add 1 to everything, there's no surprise
+
+103
+00:05:28,060 --> 00:05:30,100
+or there shouldn't be the C1 now gets
+
+104
+00:05:30,100 --> 00:05:35,050
+multiplied by Xt without a lag and similarly with phi 1.
+
+105
+00:05:35,050 --> 00:05:36,820
+So that's here.
+
+106
+00:05:36,820 --> 00:05:38,690
+So what's our forecast?
+
+107
+00:05:38,690 --> 00:05:41,380
+So our definition for our forecast
+
+108
+00:05:41,380 --> 00:05:43,820
+is going to be the conditional probability.
+
+109
+00:05:43,820 --> 00:05:48,220
+So our first forecast is going to be f of t comma 1.
+
+110
+00:05:48,220 --> 00:05:52,150
+That is the forecast made at time t for one-time step
+
+111
+00:05:52,150 --> 00:05:53,600
+ahead in the future.
+
+112
+00:05:53,600 --> 00:05:55,660
+And there are different notations for this.
+
+113
+00:05:55,660 --> 00:05:58,510
+So what you really should rely on is not the notation,
+
+114
+00:05:58,510 --> 00:06:00,920
+but reduce everything to expectations.
+
+115
+00:06:00,920 --> 00:06:05,830
+So this is the expectation of t plus 1 given everything
+
+116
+00:06:05,830 --> 00:06:15,690
+up through that point, which includes Xt, Zt,
+
+117
+00:06:15,690 --> 00:06:17,250
+and any previous failures, but those
+
+118
+00:06:17,250 --> 00:06:20,050
+don't show up in this equation on the right-hand side.
+
+119
+00:06:20,050 --> 00:06:21,930
+So let's compute the expectation.
+
+120
+00:06:21,930 --> 00:06:24,540
+And what we noticed is that the only random variable
+
+121
+00:06:24,540 --> 00:06:27,090
+on the right hand side is this one.
+
+122
+00:06:27,090 --> 00:06:29,010
+That's the only thing that's random.
+
+123
+00:06:29,010 --> 00:06:31,680
+So this value here is known.
+
+124
+00:06:31,680 --> 00:06:33,570
+This value here is known.
+
+125
+00:06:33,570 --> 00:06:35,250
+There's only one random variable.
+
+126
+00:06:35,250 --> 00:06:38,550
+And we take expectations, the expectation of t plus 1
+
+127
+00:06:38,550 --> 00:06:39,820
+is going to vanish.
+
+128
+00:06:39,820 --> 00:06:40,990
+So what do we get?
+
+129
+00:06:40,990 --> 00:06:47,540
+We're going to get that the forecast is equal to--
+
+130
+00:06:47,540 --> 00:06:49,190
+we'll leave this here--
+
+131
+00:06:49,190 --> 00:07:02,490
+is going to be mu plus C1 times Xt minus mu plus phi 1.
+
+132
+00:07:02,490 --> 00:07:06,580
+
+
+133
+00:07:06,580 --> 00:07:09,570
+So we just do the calculation.
+
+134
+00:07:09,570 --> 00:07:11,610
+It's exactly the same as the expression
+
+135
+00:07:11,610 --> 00:07:15,990
+above, except for this term, this random term
+
+136
+00:07:15,990 --> 00:07:19,450
+that dropped out, because it has zero expectation.
+
+137
+00:07:19,450 --> 00:07:22,120
+So let's take a look at the forecast error.
+
+138
+00:07:22,120 --> 00:07:24,510
+So the first forecast error for one-time step
+
+139
+00:07:24,510 --> 00:07:32,350
+ahead is going to be, e is going to be f,
+
+140
+00:07:32,350 --> 00:07:34,612
+or actually it's going to be the outcome, excuse me,
+
+141
+00:07:34,612 --> 00:07:35,820
+but we're going to square it.
+
+142
+00:07:35,820 --> 00:07:37,090
+So it won't matter.
+
+143
+00:07:37,090 --> 00:07:44,240
+The error is going to be X t plus 1 minus f t comma 1.
+
+144
+00:07:44,240 --> 00:07:46,910
+That is the forecast error as defined
+
+145
+00:07:46,910 --> 00:07:49,190
+as the difference between what we predicted
+
+146
+00:07:49,190 --> 00:07:51,350
+and what actually happened.
+
+147
+00:07:51,350 --> 00:07:53,510
+What we'd like to do and the way in which
+
+148
+00:07:53,510 --> 00:07:56,390
+we have this definition for the forecast being optimal
+
+149
+00:07:56,390 --> 00:07:59,510
+is we're going to minimize the mean squared forecast error.
+
+150
+00:07:59,510 --> 00:08:03,920
+That is going to minimize the square of e
+
+151
+00:08:03,920 --> 00:08:06,920
+in expectation of all possible things that would happen.
+
+152
+00:08:06,920 --> 00:08:09,710
+Now we could use other kinds of loss functions.
+
+153
+00:08:09,710 --> 00:08:11,540
+Those will depend on the settings,
+
+154
+00:08:11,540 --> 00:08:13,290
+depending on the economic values.
+
+155
+00:08:13,290 --> 00:08:17,090
+So it's just a question of doing and minimization,
+
+156
+00:08:17,090 --> 00:08:19,533
+but in this case, we have this basic result
+
+157
+00:08:19,533 --> 00:08:20,950
+that this will be our expectation,
+
+158
+00:08:20,950 --> 00:08:22,980
+but let's compute the forecast error.
+
+159
+00:08:22,980 --> 00:08:26,690
+So the idea is that what we really want, in general, if you
+
+160
+00:08:26,690 --> 00:08:29,420
+want to drive this and check, what we really want
+
+161
+00:08:29,420 --> 00:08:34,130
+is we want a predictor for f, that some function of all
+
+162
+00:08:34,130 --> 00:08:37,460
+the previous observations, in this case, just Xt and Zt,
+
+163
+00:08:37,460 --> 00:08:39,330
+we'd like to be a linear function.
+
+164
+00:08:39,330 --> 00:08:41,720
+And when we find the linear function that
+
+165
+00:08:41,720 --> 00:08:44,030
+minimizes the mean squared error,
+
+166
+00:08:44,030 --> 00:08:46,830
+we find that it's this conditional expectation.
+
+167
+00:08:46,830 --> 00:08:48,698
+So let's compute this quantity.
+
+168
+00:08:48,698 --> 00:08:50,990
+And we'll see that there's a really nice structure that
+
+169
+00:08:50,990 --> 00:08:51,890
+shows up.
+
+170
+00:08:51,890 --> 00:08:55,820
+Xt plus 1 minus the forecast, you
+
+171
+00:08:55,820 --> 00:08:59,000
+notice that most of the terms are common.
+
+172
+00:08:59,000 --> 00:09:09,140
+So Xt plus 1 involves this term and this term.
+
+173
+00:09:09,140 --> 00:09:12,080
+Xt plus 1 involves-- this is the only term that
+
+174
+00:09:12,080 --> 00:09:14,640
+doesn't appear in ft 1.
+
+175
+00:09:14,640 --> 00:09:20,300
+So when I take this quantity and I subtract this quantity given
+
+176
+00:09:20,300 --> 00:09:22,850
+down here, I've got a very simple result.
+
+177
+00:09:22,850 --> 00:09:29,900
+This is just equal to sigma z plus 1.
+
+178
+00:09:29,900 --> 00:09:33,830
+And therefore, the mean squared forecast error
+
+179
+00:09:33,830 --> 00:09:43,340
+is Et plus 1 squared is equal to the expectation of sigma
+
+180
+00:09:43,340 --> 00:09:46,980
+Zt plus 1 quantity squared.
+
+181
+00:09:46,980 --> 00:09:49,730
+And that's just equal to sigma squared.
+
+182
+00:09:49,730 --> 00:09:54,950
+
+
+183
+00:09:54,950 --> 00:09:59,980
+Now what about looking at multiple forecasts?
+
+184
+00:09:59,980 --> 00:10:02,180
+So we'd like to go for future horizons.
+
+185
+00:10:02,180 --> 00:10:03,880
+One-step was easy.
+
+186
+00:10:03,880 --> 00:10:06,310
+So the general rule is that when we
+
+187
+00:10:06,310 --> 00:10:08,980
+want to do it two-step ahead forecast,
+
+188
+00:10:08,980 --> 00:10:10,343
+we're going to shift everything.
+
+189
+00:10:10,343 --> 00:10:11,510
+We're going to add one more.
+
+190
+00:10:11,510 --> 00:10:13,330
+So we write an expression for X of t
+
+191
+00:10:13,330 --> 00:10:16,190
+plus 2, but now on the right hand side,
+
+192
+00:10:16,190 --> 00:10:18,760
+I've got 2 plus 1, which isn't known yet.
+
+193
+00:10:18,760 --> 00:10:20,950
+So here's the general procedure.
+
+194
+00:10:20,950 --> 00:10:22,690
+Keep doing the recursion.
+
+195
+00:10:22,690 --> 00:10:27,850
+Keep substituting in back until all of the X's on the right
+
+196
+00:10:27,850 --> 00:10:32,320
+hand side of the equation have a time index of t or earlier.
+
+197
+00:10:32,320 --> 00:10:33,203
+The Z's can be later.
+
+198
+00:10:33,203 --> 00:10:35,620
+That's OK, because we're going to take their expectations,
+
+199
+00:10:35,620 --> 00:10:36,950
+and they're going to vanish.
+
+200
+00:10:36,950 --> 00:10:39,610
+So we might have some possibly unknown Z's.
+
+201
+00:10:39,610 --> 00:10:43,660
+But the basic idea is once we go beyond one-time step,
+
+202
+00:10:43,660 --> 00:10:45,230
+how do you know what to do?
+
+203
+00:10:45,230 --> 00:10:46,550
+It's easy.
+
+204
+00:10:46,550 --> 00:10:49,030
+You're doing Xt plus h for horizon h
+
+205
+00:10:49,030 --> 00:10:50,290
+on the left hand side.
+
+206
+00:10:50,290 --> 00:10:53,710
+And on the right hand side, you do probably h or h
+
+207
+00:10:53,710 --> 00:10:58,690
+minus 1 recursive substitutions of the defining equation
+
+208
+00:10:58,690 --> 00:11:02,890
+until we can express Xt plus h in terms of X, Xt
+
+209
+00:11:02,890 --> 00:11:04,300
+minus 1, and so on.
+
+210
+00:11:04,300 --> 00:11:06,190
+Those are all known quantities.
+
+211
+00:11:06,190 --> 00:11:08,560
+Then we take conditional expectations.
+
+212
+00:11:08,560 --> 00:11:09,940
+We have our forecast.
+
+213
+00:11:09,940 --> 00:11:11,830
+We compute the forecast errors.
+
+214
+00:11:11,830 --> 00:11:14,080
+We take expectations of their squares.
+
+215
+00:11:14,080 --> 00:11:17,600
+That's easy as well, because it's just the same quantities.
+
+216
+00:11:17,600 --> 00:11:21,070
+Now we have the known and the unknown ones
+
+217
+00:11:21,070 --> 00:11:22,600
+clearly delineated.
+
+218
+00:11:22,600 --> 00:11:25,370
+And we get our results for our mean squared forecast error.
+
+219
+00:11:25,370 --> 00:11:27,370
+And there are two really important properties
+
+220
+00:11:27,370 --> 00:11:29,030
+to keep in mind for our solution.
+
+221
+00:11:29,030 --> 00:11:33,880
+One of them is the forecast error has zero expectation.
+
+222
+00:11:33,880 --> 00:11:36,790
+And the forecast error is orthogonal
+
+223
+00:11:36,790 --> 00:11:39,775
+to the other variables, to the other random variables--
+
+224
+00:11:39,775 --> 00:11:43,240
+
+
+225
+00:11:43,240 --> 00:11:47,270
+excuse me, to the other predictor variables.
+
+226
+00:11:47,270 --> 00:11:51,220
+So let's take a look for another example
+
+227
+00:11:51,220 --> 00:11:54,800
+Let's take a look at an AR MA 2, 2 model, shall we?
+
+228
+00:11:54,800 --> 00:12:04,190
+So now when you're given numbers for the forecasts
+
+229
+00:12:04,190 --> 00:12:07,970
+or particular horizons, you can either plug them in right away
+
+230
+00:12:07,970 --> 00:12:10,320
+or you can leave the parameters general.
+
+231
+00:12:10,320 --> 00:12:12,620
+That generally makes it easier to check your math
+
+232
+00:12:12,620 --> 00:12:15,320
+and find any sign errors that might be there,
+
+233
+00:12:15,320 --> 00:12:17,750
+but either way, whether you substitute indefinite numbers
+
+234
+00:12:17,750 --> 00:12:20,300
+for the parameters before or after shouldn't
+
+235
+00:12:20,300 --> 00:12:21,365
+make any difference.
+
+236
+00:12:21,365 --> 00:12:23,990
+When you're doing forecast, you do want to pay attention though
+
+237
+00:12:23,990 --> 00:12:27,530
+to the initial conditions if you have to bootstrap your process,
+
+238
+00:12:27,530 --> 00:12:31,610
+because if you're asked for a forecast one or three
+
+239
+00:12:31,610 --> 00:12:34,850
+or seven steps ahead, you'll need enough data to get
+
+240
+00:12:34,850 --> 00:12:37,910
+the process started before you can generate the recursion.
+
+241
+00:12:37,910 --> 00:12:39,780
+The recursive techniques that we have
+
+242
+00:12:39,780 --> 00:12:42,470
+that I'm writing down here for the forecast
+
+243
+00:12:42,470 --> 00:12:47,120
+are technically appropriate for the case, where we go
+
+244
+00:12:47,120 --> 00:12:49,040
+infinitely far into the past.
+
+245
+00:12:49,040 --> 00:12:51,860
+Even if the series did exist an infinitely long time,
+
+246
+00:12:51,860 --> 00:12:54,000
+we wouldn't have an infinite amount of data.
+
+247
+00:12:54,000 --> 00:12:56,660
+So we do need to make sure we have the initial conditions set
+
+248
+00:12:56,660 --> 00:13:00,230
+to get numerical answers, but the basic rules are compute
+
+249
+00:13:00,230 --> 00:13:04,040
+conditional expectations after writing our defining
+
+250
+00:13:04,040 --> 00:13:08,960
+equations with variable to be forecast on the left hand side
+
+251
+00:13:08,960 --> 00:13:12,060
+and only known observations on the right hand side.
+
+252
+00:13:12,060 --> 00:13:13,850
+So let's do this for AR MA 2, 2.
+
+253
+00:13:13,850 --> 00:13:15,880
+So it just has--
+
+254
+00:13:15,880 --> 00:13:18,870
+it's little bit more complicated at least initially.
+
+255
+00:13:18,870 --> 00:13:29,570
+So it looks like C0 plus C1 Xt minus 1 plus C2 Xt minus 2
+
+256
+00:13:29,570 --> 00:13:32,390
+plus our old friend sigma Zt.
+
+257
+00:13:32,390 --> 00:13:38,870
+And now let's add some phi terms plus phi 1, Z of t minus 1
+
+258
+00:13:38,870 --> 00:13:42,920
+plus phi 2, Z of t minus 2.
+
+259
+00:13:42,920 --> 00:13:45,957
+And you can see how it would go for a general ARMA PQ.
+
+260
+00:13:45,957 --> 00:13:47,540
+I'm going to write it in concrete form
+
+261
+00:13:47,540 --> 00:13:49,332
+so we don't have summations running around.
+
+262
+00:13:49,332 --> 00:13:51,410
+And when we shift, it gets a little messy
+
+263
+00:13:51,410 --> 00:13:53,480
+keeping track of the indices, but you can do it.
+
+264
+00:13:53,480 --> 00:13:55,938
+And you can take a look at the literature as well for that.
+
+265
+00:13:55,938 --> 00:13:58,050
+So what's our expectation in this case?
+
+266
+00:13:58,050 --> 00:14:03,410
+So mu is the expectation of Xt.
+
+267
+00:14:03,410 --> 00:14:11,360
+And now that's going to be C0 plus C1 mu plus C2 mu.
+
+268
+00:14:11,360 --> 00:14:13,700
+And that tells us that mu is actually
+
+269
+00:14:13,700 --> 00:14:23,130
+equal to C0 divided by 1 minus 1 minus 2.
+
+270
+00:14:23,130 --> 00:14:24,930
+And you can guess how this generalizes
+
+271
+00:14:24,930 --> 00:14:26,790
+for the general ARMA PQ model, we
+
+272
+00:14:26,790 --> 00:14:31,140
+get the generalization of this expression.
+
+273
+00:14:31,140 --> 00:14:34,020
+And then we can write our equation
+
+274
+00:14:34,020 --> 00:14:42,950
+as Xt is equal to C1 of Xt minus 1 minus mu
+
+275
+00:14:42,950 --> 00:14:47,670
+plus C2 Xt minus 2 minus mu.
+
+276
+00:14:47,670 --> 00:14:49,560
+And we start to recognize some patterns.
+
+277
+00:14:49,560 --> 00:14:55,110
+And we get the hang of it, plus phi 1 Ct minus 1
+
+278
+00:14:55,110 --> 00:14:59,100
+plus phi 2 Ct minus 2.
+
+279
+00:14:59,100 --> 00:15:04,470
+And let's not forget our sigma, Zt, which we can put over here,
+
+280
+00:15:04,470 --> 00:15:06,240
+let's do some forecasting, shall we?
+
+281
+00:15:06,240 --> 00:15:10,660
+Oh, excuse me, this should also have on the left hand side,
+
+282
+00:15:10,660 --> 00:15:18,370
+this should be Xt minus mu.
+
+283
+00:15:18,370 --> 00:15:20,470
+You should notice that each of the terms that I've
+
+284
+00:15:20,470 --> 00:15:22,918
+written down is a way that it has 0 mean.
+
+285
+00:15:22,918 --> 00:15:25,210
+That just makes it a bit easier to see what's going on,
+
+286
+00:15:25,210 --> 00:15:28,510
+to see what the dynamics are, and to do some calculations.
+
+287
+00:15:28,510 --> 00:15:30,390
+You can also, if you want to clean it up,
+
+288
+00:15:30,390 --> 00:15:34,370
+you can find a new variable y to be Xt minus mu and shift things
+
+289
+00:15:34,370 --> 00:15:34,870
+back.
+
+290
+00:15:34,870 --> 00:15:36,880
+So you can do any rescaling things you like.
+
+291
+00:15:36,880 --> 00:15:39,213
+The end results are going to be the same if they're just
+
+292
+00:15:39,213 --> 00:15:41,960
+redefinitions of the parameters and rescalings
+
+293
+00:15:41,960 --> 00:15:42,790
+of the variables.
+
+294
+00:15:42,790 --> 00:15:45,800
+
+
+295
+00:15:45,800 --> 00:15:49,630
+So let's take a look for time T plus 1.
+
+296
+00:15:49,630 --> 00:15:53,950
+So for time T plus 1 minus mu, we're
+
+297
+00:15:53,950 --> 00:16:08,950
+going to C1 of Xt minus mu plus C2 of Xt minus 1 minus mu
+
+298
+00:16:08,950 --> 00:16:21,890
+plus sigma Zt plus 1 plus phi 1 Zt plus phi 2 Zt minus 1.
+
+299
+00:16:21,890 --> 00:16:23,610
+So that one is pretty easy.
+
+300
+00:16:23,610 --> 00:16:25,560
+It looks like the expression that we just
+
+301
+00:16:25,560 --> 00:16:27,980
+did before for the AR MA 1, 1.
+
+302
+00:16:27,980 --> 00:16:32,180
+That is everything on the right hand side has an index of--
+
+303
+00:16:32,180 --> 00:16:36,260
+all of the X's are taken at time T or T minus 1.
+
+304
+00:16:36,260 --> 00:16:39,150
+And the Z's are mostly in the past.
+
+305
+00:16:39,150 --> 00:16:41,180
+We have these two with coefficients
+
+306
+00:16:41,180 --> 00:16:42,650
+of phi's both in the past.
+
+307
+00:16:42,650 --> 00:16:46,280
+And this is the only one that's still a random variable,
+
+308
+00:16:46,280 --> 00:16:49,350
+but at time 2, things change.
+
+309
+00:16:49,350 --> 00:16:52,230
+So let's look one more time step ahead.
+
+310
+00:16:52,230 --> 00:16:54,360
+Let's contrast a little bit.
+
+311
+00:16:54,360 --> 00:16:59,810
+So if we write this as Xt plus 2 minus mu,
+
+312
+00:16:59,810 --> 00:17:06,380
+we see that we have C1 Xt plus 1 minus mu.
+
+313
+00:17:06,380 --> 00:17:07,910
+And that is going to be something
+
+314
+00:17:07,910 --> 00:17:10,980
+we're going to need to replace.
+
+315
+00:17:10,980 --> 00:17:12,569
+And then plus the other terms are not
+
+316
+00:17:12,569 --> 00:17:14,250
+going to give us any major problems.
+
+317
+00:17:14,250 --> 00:17:20,880
+And this is going to be Ct times Xt minus mu plus sigma
+
+318
+00:17:20,880 --> 00:17:31,980
+plus T plus 2 plus phi 1 Zt plus 1 plus phi 2 Zt.
+
+319
+00:17:31,980 --> 00:17:36,450
+So all I've done is I shifted T to T plus 1 again.
+
+320
+00:17:36,450 --> 00:17:39,420
+And the terms that are in orange are the things that--
+
+321
+00:17:39,420 --> 00:17:42,240
+well, let me put the other one in orange-- so a little
+
+322
+00:17:42,240 --> 00:17:45,390
+more consistent.
+
+323
+00:17:45,390 --> 00:17:49,925
+So let's put in orange things that pertain to the future.
+
+324
+00:17:49,925 --> 00:18:06,110
+
+
+325
+00:18:06,110 --> 00:18:09,310
+So I have two of the terms on the right hand side
+
+326
+00:18:09,310 --> 00:18:11,740
+involve the present or the past.
+
+327
+00:18:11,740 --> 00:18:12,430
+And that's OK.
+
+328
+00:18:12,430 --> 00:18:16,220
+Those are known quantities, but I have these other expressions.
+
+329
+00:18:16,220 --> 00:18:19,090
+So I can't just directly compute the expectation
+
+330
+00:18:19,090 --> 00:18:20,030
+on the left hand side.
+
+331
+00:18:20,030 --> 00:18:22,390
+Now I could take the previous work I did before
+
+332
+00:18:22,390 --> 00:18:24,050
+and substitute that would be fine.
+
+333
+00:18:24,050 --> 00:18:26,410
+But if I want to see the general approach for doing it
+
+334
+00:18:26,410 --> 00:18:29,020
+at a particular time step, what I'm going to say
+
+335
+00:18:29,020 --> 00:18:34,060
+is that the expressions here and here, I can leave alone,
+
+336
+00:18:34,060 --> 00:18:35,440
+because those are both fine.
+
+337
+00:18:35,440 --> 00:18:36,940
+These just involves Z's.
+
+338
+00:18:36,940 --> 00:18:39,370
+And I know their expectations, but I
+
+339
+00:18:39,370 --> 00:18:41,530
+don't want the recursive structure for Xt
+
+340
+00:18:41,530 --> 00:18:45,100
+plus 1, because remember this is saying that the value two
+
+341
+00:18:45,100 --> 00:18:48,250
+days from now depends on the value tomorrow, which
+
+342
+00:18:48,250 --> 00:18:50,060
+I haven't yet observed.
+
+343
+00:18:50,060 --> 00:18:53,650
+So the value today, the value yesterday, those are all known,
+
+344
+00:18:53,650 --> 00:18:55,480
+but rather than expressing it this way,
+
+345
+00:18:55,480 --> 00:18:57,620
+I'd like to do my recursions, get it out.
+
+346
+00:18:57,620 --> 00:19:01,210
+And then I can take clean ordinary simple expectations
+
+347
+00:19:01,210 --> 00:19:03,370
+and get an answer.
+
+348
+00:19:03,370 --> 00:19:04,640
+So let's do that.
+
+349
+00:19:04,640 --> 00:19:08,150
+And we just need to substitute one more time and put that in.
+
+350
+00:19:08,150 --> 00:19:10,180
+So which term are we going to substitute--
+
+351
+00:19:10,180 --> 00:19:12,910
+we're going to substitute in?
+
+352
+00:19:12,910 --> 00:19:19,700
+We'll have Xt plus 2 minus mu is going
+
+353
+00:19:19,700 --> 00:19:26,840
+to be C1 times this entire expression above.
+
+354
+00:19:26,840 --> 00:19:29,020
+So let's just write that out.
+
+355
+00:19:29,020 --> 00:19:37,130
+This is going to times C1 Xt minus mu plus C2.
+
+356
+00:19:37,130 --> 00:19:40,060
+
+
+357
+00:19:40,060 --> 00:19:43,320
+Xt minus 1 minus mu and so on.
+
+358
+00:19:43,320 --> 00:19:46,730
+
+
+359
+00:19:46,730 --> 00:19:58,000
+Sigma Zt plus 1 plus phi 1 Zt plus phi 2 Zt minus 1.
+
+360
+00:19:58,000 --> 00:20:02,600
+
+
+361
+00:20:02,600 --> 00:20:09,580
+And then plus the other terms, plus C2 Xt minus 2
+
+362
+00:20:09,580 --> 00:20:22,530
+plus sigma Zt plus 2 plus phi 1 Zt plus 1 plus phi 2 Zt.
+
+363
+00:20:22,530 --> 00:20:24,090
+So what have we got?
+
+364
+00:20:24,090 --> 00:20:26,540
+We finally have an expression, where--
+
+365
+00:20:26,540 --> 00:20:28,725
+and actually, let's do one more thing.
+
+366
+00:20:28,725 --> 00:20:32,460
+Let's just kick mu to the other side of the equation.
+
+367
+00:20:32,460 --> 00:20:42,180
+
+
+368
+00:20:42,180 --> 00:20:44,485
+So I now have an expression for X of t
+
+369
+00:20:44,485 --> 00:20:47,160
+plus 2, where on the right hand side,
+
+370
+00:20:47,160 --> 00:20:49,950
+everything depends on known quantities.
+
+371
+00:20:49,950 --> 00:20:51,920
+So we put it in.
+
+372
+00:20:51,920 --> 00:20:53,030
+We turn the crank.
+
+373
+00:20:53,030 --> 00:20:57,470
+We compute the expectation two-time steps ahead.
+
+374
+00:20:57,470 --> 00:21:03,200
+That will give us our forecast today for two-time steps ahead.
+
+375
+00:21:03,200 --> 00:21:06,290
+When tomorrow is realized, that forecast
+
+376
+00:21:06,290 --> 00:21:09,920
+for what will then be one more day ahead is going to change.
+
+377
+00:21:09,920 --> 00:21:10,970
+And how will it change?
+
+378
+00:21:10,970 --> 00:21:13,770
+It will be updated by the new observation.
+
+379
+00:21:13,770 --> 00:21:16,370
+So if today is Monday and I'd like
+
+380
+00:21:16,370 --> 00:21:18,320
+to know about Wednesday's weather,
+
+381
+00:21:18,320 --> 00:21:20,150
+I would make a forecast today.
+
+382
+00:21:20,150 --> 00:21:22,545
+Tomorrow I'll have a new forecast for Wednesday.
+
+383
+00:21:22,545 --> 00:21:23,420
+And that will change.
+
+384
+00:21:23,420 --> 00:21:27,200
+It will change by my knowledge of what happened on Tuesday.
+
+385
+00:21:27,200 --> 00:21:29,270
+But from a mathematical point of view,
+
+386
+00:21:29,270 --> 00:21:32,450
+we separated things into the form that we want.
+
+387
+00:21:32,450 --> 00:21:34,490
+We can first take the expectation
+
+388
+00:21:34,490 --> 00:21:36,140
+with the appropriate conditions.
+
+389
+00:21:36,140 --> 00:21:40,010
+And second, we can compute forecast error in advance.
+
+390
+00:21:40,010 --> 00:21:42,560
+And we can compute the mean squared forecast
+
+391
+00:21:42,560 --> 00:21:44,060
+two steps ahead.
+
+392
+00:21:44,060 --> 00:21:46,400
+And so that's looking ahead for what
+
+393
+00:21:46,400 --> 00:21:48,540
+our expected forecast error.
+
+394
+00:21:48,540 --> 00:21:50,390
+The reason that that's important is
+
+395
+00:21:50,390 --> 00:21:53,330
+that we want to think not only about distributions.
+
+396
+00:21:53,330 --> 00:21:54,620
+What's the exact value?
+
+397
+00:21:54,620 --> 00:21:57,080
+Because that exact value probably won't be realized.
+
+398
+00:21:57,080 --> 00:22:01,490
+It gives us characteristics of the full distribution
+
+399
+00:22:01,490 --> 00:22:04,010
+of the actual outcome.
+
+400
+00:22:04,010 --> 00:22:06,320
+And it lets us have a sense as to how we
+
+401
+00:22:06,320 --> 00:22:08,030
+should evaluate our forecasts.
+
+402
+00:22:08,030 --> 00:22:10,400
+So that's an expectation.
+
+403
+00:22:10,400 --> 00:22:13,640
+Once Wednesday is realized, then we'd like to go back.
+
+404
+00:22:13,640 --> 00:22:17,000
+And then our Xt plus 2 will be a known quantity.
+
+405
+00:22:17,000 --> 00:22:18,990
+We can compare it with our forecast.
+
+406
+00:22:18,990 --> 00:22:20,990
+And, of course, this will differ by some amount,
+
+407
+00:22:20,990 --> 00:22:23,480
+but if we'd like to improve our forecasting techniques,
+
+408
+00:22:23,480 --> 00:22:26,600
+our forecasting methodology, and our forecasting quality,
+
+409
+00:22:26,600 --> 00:22:28,070
+what we do is we look over time.
+
+410
+00:22:28,070 --> 00:22:31,520
+We take a large collection of forecasts and outcomes.
+
+411
+00:22:31,520 --> 00:22:34,680
+And we study the statistics of the forecast errors.
+
+412
+00:22:34,680 --> 00:22:38,270
+So we use forecast errors both in expectation going forward
+
+413
+00:22:38,270 --> 00:22:41,510
+and to assess forecast quality and look
+
+414
+00:22:41,510 --> 00:22:44,150
+for improvements going backward once we've
+
+415
+00:22:44,150 --> 00:22:46,690
+collected the relevant data.
+

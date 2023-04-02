@@ -1,0 +1,86 @@
+PROFESSOR: Here's our first exercise.
+Suppose I have a function, which is just a function of t and B
+explicitly.
+And it's t cubed plus B cubed.
+Can you find dF?
+So please pause the video, take a minute
+to see what you can do.
+And then come back if you need a hint.
+And then I'll give you another chance
+to solve the problem, with or without the hint.
+
+OK, just a hint in case you're stuck on things
+because this looks a little bit different,
+but it's actually a trivial special case.
+We wrote down Ito's lemma in terms of x,
+but this is just a special case.
+So we have here--
+
+this is really just a special case, where dx is equal to dB.
+And that means, in terms of our general expression,
+if I write this as adt plus bdB, that
+implies that a is equal to 0 and little b is equal to 1.
+So I find it sometimes helpful to write the assumptions out
+explicitly.
+And that means that we can write Ito's lemma in this form.
+We can say that Ito's lemma is dF, is going to be partial of F
+with respect to t dt plus partial of F--
+now normally I would have written with partial of F
+with respect to x.
+But in this case, because d--
+sorry-- dx and dB are the same thing,
+we can write this just in terms of dB.
+So let's write this as partial dB plus the Ito term, which
+is normally little b squared.
+But again, because we have that b is equal to 1,
+we can simplify this.
+And we can write this as 1/2 second partial of F
+with respect to B squared times dt.
+And now let's combine the first and last terms to get us
+something that we can use easily.
+So this is going to be partial of F
+with respect to t plus 1/2 second partial of F
+with respect to B squared.
+It doesn't matter whether you do this
+before or after, of course, because addition
+is commutative.
+This is times dt plus partial of F with respect to B dB.
+So take a moment now, and see if you
+can compute dF for our function F, which
+is t cubed plus B cubed.
+
+OK, let's take a look.
+
+We have that F is t cubed, plus B cubed.
+So let's just compute the partial derivatives.
+Partial of F with respect to t is 3t squared.
+Partial of F with respect to B is 3B squared.
+In the second partial derivative of F with respect to B
+squared is going to be 6B.
+So let's take those results, plug them into our formulas.
+And we're going to have here-- this
+is going to be 3t squared plus 1/2
+of the second partial derivative.
+That's going to be 6B divided by 2.
+That's going to give us plus 3B, all times dt,
+plus our last term just has a single partial, partial of F
+with respect to B, which is 3B squared times dB.
+So that's our answer.
+So we have a big 3 out in front, and we
+could write this as 3 times t squared
+plus B dt plus B squared dB.
+Question?
+Is this an Ito process?
+Answer.
+
+What do you think?
+If it is an Ito process, write down little a and little b.
+If it's not an Ito process, why not?
+Well it is an Ito process because we have
+something dt plus something dB.
+And in this case, let me call it a--
+maybe we'll call it a sub F. It's
+going to be 3t squared plus 3B.
+So notice that's of the form function of t and B.
+And similarly, b F is going to be 3B squared.
+So that's our answer for this exercise.

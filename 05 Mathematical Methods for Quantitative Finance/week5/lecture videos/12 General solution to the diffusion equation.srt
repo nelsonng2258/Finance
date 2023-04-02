@@ -1,0 +1,180 @@
+0
+00:00:00,000 --> 00:00:01,030
+
+
+1
+00:00:01,030 --> 00:00:03,220
+PROFESSOR: Now here is an integral formula
+
+2
+00:00:03,220 --> 00:00:06,040
+that tells us how to use the special function
+
+3
+00:00:06,040 --> 00:00:11,050
+p0 to get a general solution to the differential equation that
+
+4
+00:00:11,050 --> 00:00:14,690
+satisfies arbitrary initial conditions.
+
+5
+00:00:14,690 --> 00:00:20,850
+So imagine that at time t equals 0, we want our function p of z
+
+6
+00:00:20,850 --> 00:00:23,080
+and t that satisfies the diffusion
+
+7
+00:00:23,080 --> 00:00:27,220
+equation to have some particular functional form f of z.
+
+8
+00:00:27,220 --> 00:00:29,890
+It could be something like f of z equals z squared.
+
+9
+00:00:29,890 --> 00:00:31,470
+It could be a cosine.
+
+10
+00:00:31,470 --> 00:00:34,840
+So you pick a function f of z, and the question
+
+11
+00:00:34,840 --> 00:00:38,260
+is, can we find a time dependent function that
+
+12
+00:00:38,260 --> 00:00:43,750
+satisfies the diffusion equation such that when t is equal to 0,
+
+13
+00:00:43,750 --> 00:00:47,190
+it takes the particular form that we want.
+
+14
+00:00:47,190 --> 00:00:49,550
+If we can do that, getting the solution
+
+15
+00:00:49,550 --> 00:00:52,770
+to the Black-Scholes equation is going to be a piece of cake.
+
+16
+00:00:52,770 --> 00:00:54,650
+And here's how it works.
+
+17
+00:00:54,650 --> 00:00:57,560
+We put in our function p0 where we take
+
+18
+00:00:57,560 --> 00:00:58,772
+a difference of the variable.
+
+19
+00:00:58,772 --> 00:01:00,980
+That is, we're going to have an integration variable.
+
+20
+00:01:00,980 --> 00:01:03,860
+We're going to integrate over all possible z
+
+21
+00:01:03,860 --> 00:01:07,580
+primes of our special function for our initial conditions
+
+22
+00:01:07,580 --> 00:01:09,020
+f of z prime.
+
+23
+00:01:09,020 --> 00:01:12,260
+And then we're going to multiply that against a kernel function
+
+24
+00:01:12,260 --> 00:01:14,510
+against what's known as a Green's function
+
+25
+00:01:14,510 --> 00:01:17,300
+our special p0 where we're substituting
+
+26
+00:01:17,300 --> 00:01:20,000
+for z the difference between z and z
+
+27
+00:01:20,000 --> 00:01:22,520
+prime where z is the outside variable
+
+28
+00:01:22,520 --> 00:01:25,530
+and z prime is the variable of integration.
+
+29
+00:01:25,530 --> 00:01:29,690
+So if we were to differentiate this with respect to z,
+
+30
+00:01:29,690 --> 00:01:33,230
+the only z appears here, and it's not integrated over.
+
+31
+00:01:33,230 --> 00:01:36,170
+So we can bring a derivative inside the equation.
+
+32
+00:01:36,170 --> 00:01:39,960
+Similarly, if we want to integrate with respect to time,
+
+33
+00:01:39,960 --> 00:01:41,880
+this integral is not over time.
+
+34
+00:01:41,880 --> 00:01:44,420
+z prime is a dummy variable for integration.
+
+35
+00:01:44,420 --> 00:01:47,910
+If we want to differentiate this with respect to time,
+
+36
+00:01:47,910 --> 00:01:50,180
+this is the only place where time appears.
+
+37
+00:01:50,180 --> 00:01:52,490
+So let's take a look at a couple examples,
+
+38
+00:01:52,490 --> 00:01:55,700
+and you can check that this actually works.
+
+39
+00:01:55,700 --> 00:02:00,650
+If we substitute in our particular expression for p0,
+
+40
+00:02:00,650 --> 00:02:01,970
+here's our rule.
+
+41
+00:02:01,970 --> 00:02:04,623
+We've got 1 over square root of 2 pi t, which
+
+42
+00:02:04,623 --> 00:02:06,290
+I put in front because it doesn't depend
+
+43
+00:02:06,290 --> 00:02:10,280
+on z prime, exponential of minus z minus z
+
+44
+00:02:10,280 --> 00:02:17,560
+prime quantity squared over 2t times f of z prime dz prime.
+

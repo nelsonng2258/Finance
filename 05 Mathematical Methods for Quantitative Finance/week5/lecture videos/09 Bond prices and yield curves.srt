@@ -1,0 +1,252 @@
+0
+00:00:00,000 --> 00:00:00,746
+
+
+1
+00:00:00,746 --> 00:00:02,380
+PROFESSOR: So let's put it together
+
+2
+00:00:02,380 --> 00:00:04,420
+and see what we can say about bond prices
+
+3
+00:00:04,420 --> 00:00:06,350
+and about yield curves.
+
+4
+00:00:06,350 --> 00:00:08,620
+So the bond pricing equation we have now,
+
+5
+00:00:08,620 --> 00:00:10,270
+under the set of assumptions we have,
+
+6
+00:00:10,270 --> 00:00:12,910
+takes this general form, where we
+
+7
+00:00:12,910 --> 00:00:15,970
+have some unknown parameters, alpha and y bar, that we
+
+8
+00:00:15,970 --> 00:00:17,470
+might fit from the data.
+
+9
+00:00:17,470 --> 00:00:20,080
+Let's assume that we've got this particular form.
+
+10
+00:00:20,080 --> 00:00:22,210
+And to solve this equation, we look
+
+11
+00:00:22,210 --> 00:00:23,340
+at separation of variables.
+
+12
+00:00:23,340 --> 00:00:25,090
+And we're going to try Ansatz, which
+
+13
+00:00:25,090 --> 00:00:26,548
+means that we're just going to take
+
+14
+00:00:26,548 --> 00:00:28,360
+we're going to guess a particular form
+
+15
+00:00:28,360 --> 00:00:31,720
+as a starting point and then see if we can refine what
+
+16
+00:00:31,720 --> 00:00:33,130
+those choices are.
+
+17
+00:00:33,130 --> 00:00:36,160
+The formal pick is inspired by the general idea
+
+18
+00:00:36,160 --> 00:00:39,610
+that bonds, if there were no randomness
+
+19
+00:00:39,610 --> 00:00:41,140
+and things were constant, should see
+
+20
+00:00:41,140 --> 00:00:45,660
+an exponential behavior in time and a linear dependence
+
+21
+00:00:45,660 --> 00:00:48,980
+in the exponent on the risk-free rate.
+
+22
+00:00:48,980 --> 00:00:51,010
+So let's assume that the function
+
+23
+00:00:51,010 --> 00:00:55,120
+y is in the form e to the f of t that depends only on t
+
+24
+00:00:55,120 --> 00:00:57,040
+and a term that's linear and y.
+
+25
+00:00:57,040 --> 00:00:58,930
+So we have a time-dependent function,
+
+26
+00:00:58,930 --> 00:01:03,100
+which is independent of y, minus y times another function
+
+27
+00:01:03,100 --> 00:01:04,780
+that's also independent of y.
+
+28
+00:01:04,780 --> 00:01:07,410
+And what we're going to do is apply the boundary conditions.
+
+29
+00:01:07,410 --> 00:01:09,100
+So the question we can ask is, in
+
+30
+00:01:09,100 --> 00:01:13,330
+this simple one-factor model, what kind of prices do we get?
+
+31
+00:01:13,330 --> 00:01:15,910
+What kind of term structures do we get?
+
+32
+00:01:15,910 --> 00:01:18,988
+Do we only get a rigid term structure?
+
+33
+00:01:18,988 --> 00:01:20,530
+Do we have different parameters where
+
+34
+00:01:20,530 --> 00:01:22,322
+we can have things that are upward sloping,
+
+35
+00:01:22,322 --> 00:01:24,700
+inverted curves, oscillating?
+
+36
+00:01:24,700 --> 00:01:26,000
+So what's possible?
+
+37
+00:01:26,000 --> 00:01:27,320
+What's not allowed?
+
+38
+00:01:27,320 --> 00:01:29,020
+That would be especially interesting.
+
+39
+00:01:29,020 --> 00:01:33,040
+And do we have enough degrees of freedom in our parameter
+
+40
+00:01:33,040 --> 00:01:35,500
+choices and in our model specification
+
+41
+00:01:35,500 --> 00:01:36,790
+to fit the market?
+
+42
+00:01:36,790 --> 00:01:38,960
+Well, in this particular example,
+
+43
+00:01:38,960 --> 00:01:43,270
+we can take a look at fit for some particular numerical
+
+44
+00:01:43,270 --> 00:01:43,900
+examples.
+
+45
+00:01:43,900 --> 00:01:46,150
+And depending on how we tune the parameters,
+
+46
+00:01:46,150 --> 00:01:48,670
+we can get a variety of behaviors.
+
+47
+00:01:48,670 --> 00:01:52,000
+We can get a curve which is upward sloping.
+
+48
+00:01:52,000 --> 00:01:55,150
+We can also generate a curve which is downward sloping.
+
+49
+00:01:55,150 --> 00:01:59,320
+And we can even generate a curve which is inverted,
+
+50
+00:01:59,320 --> 00:02:03,130
+which begins by being convex, rising,
+
+51
+00:02:03,130 --> 00:02:05,620
+and then becomes downward sloping.
+
+52
+00:02:05,620 --> 00:02:08,259
+So there are a variety of behaviors we can have.
+
+53
+00:02:08,259 --> 00:02:09,520
+This is the simplest model.
+
+54
+00:02:09,520 --> 00:02:12,250
+And it's a bit too simple for applying to the real world.
+
+55
+00:02:12,250 --> 00:02:18,430
+But this shows you how we can apply these techniques to match
+
+56
+00:02:18,430 --> 00:02:21,220
+different kinds of assumptions about processes
+
+57
+00:02:21,220 --> 00:02:25,870
+to observable bond prices and their yields in the marketplace
+
+58
+00:02:25,870 --> 00:02:29,140
+and then use what we observe in the marketplace in turn
+
+59
+00:02:29,140 --> 00:02:33,490
+to go back and try to find what might be appropriate not
+
+60
+00:02:33,490 --> 00:02:35,770
+only Ito process for the short rate
+
+61
+00:02:35,770 --> 00:02:38,860
+but how many other factors might be required
+
+62
+00:02:38,860 --> 00:02:42,630
+or advisable to include in our modeling.
+

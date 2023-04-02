@@ -1,0 +1,170 @@
+PROFESSOR: Let's take a look at Ito processes and Ito's lemma.
+Let's do a few examples.
+So an Ito process has two parts.
+It has a deterministic part and a random part.
+And of course, random part is the one
+that we're particularly interested in.
+This is directly analogous to what we did when
+we looked at discrete time.
+If we think about our old friend the generalized random walk,
+we had a term r, which represented
+the change, the difference in variables,
+in this case, logarithms and prices,
+over a particular interval.
+That's going to be one way you can think about dx.
+The next term, mu, was just a constant.
+It was something by which in every period r would increase.
+The same kind of thing with the term adt.
+We think of it as being a deterministic term.
+And in fact, if a were a constant mu,
+and we were to integrate this over a time interval of length
+1, we would see that we'd get the same result.
+We would just get a constant.
+And then the last term has two parts, a little b and a big B.
+The big dB plays the role of our standardized random variable
+Z. That is, it has zero mean instead of unit variance.
+Because it's an infinitesimal, it has the next best thing.
+It has variance dt.
+And the coefficient function in front of it, little b,
+plays the same role as sigma.
+The difference is that our coefficient functions a and b,
+might just be that.
+They might be functions.
+So a and b can be functions of t and of x itself, all right?
+So we do have that a can be a function in general of t and x.
+And b could be a function of t and x as well.
+But certainly, the special cases where little a and little b
+are constant, are going to be interesting.
+Now the question that we ask in applying
+Ito's lemma is, suppose I'm given an Ito process dx,
+and I have some function of x.
+What's its differential?
+If it were an ordinary function, an ordinary deterministic
+function, then the answer would be given by the chain rule.
+And if you don't remember the chain rule,
+now would be an excellent time to go brush up
+because we're going to be using it a lot.
+And what I want you to focus on are the differences
+between the ordinary chain rule and the Ito rule.
+So the first two terms tell us for a function of t and x
+how differentials behave.
+They depend on the evolution with respect
+to time, the partial derivative with respect
+to time times dt plus the partial with respect to x times
+dx.
+And this piece over here is genuinely new.
+And that's going to be the source
+of a lot of the interesting things
+that we'll see when we look at continuous time finance.
+Our strategy is going to be the same
+though, that we saw in looking at time series models,
+namely, to build complex models and interesting phenomenon
+relationships out of very simple building blocks.
+So our simple building block here, is going to be dB.
+That's it.
+So we want to know the properties of dB,
+either in differential or integral form.
+And we're going to be combining those in different ways
+and solving some interesting financial problems.
+So the idea is that economic variables of interest,
+like a stock price, like an interest rate,
+like a yield or a wide variety of other variables,
+will be described by stochastic processes that can be built out
+of Brownian motion, who is in infinitesimal form, our dB.
+Then we're going to apply our usual tools, which we linearity
+expectations plus a new tool, Ito's lemma,
+for evaluating functions for looking at changes in variable
+to get interesting results.
+
+Now in general, our goal is going
+to be to apply Ito's lemma to functions of the form F of t
+and x, and--
+sorry, let's scrawl that up slightly.
+So we're going to apply Ito's lemma
+to things that are of the form function of t
+and a function of x.
+In the classic case, and one will be thinking most about--
+it's going to be the case of pricing derivative securities.
+So a derivative security is a security
+whose value depends on, is derived from,
+the value of something else.
+So the classic example would be a stock option,
+where x would be the stock price or possibly
+the logarithm of the stock price,
+but x is related to the value of the underlying,
+t is ordinary time, and F is the value
+of the derivative security.
+And what Ito's lemma tells us is,
+how changes in the value of the underlying
+translate into changes in the value
+of the derivative security.
+We'll look at this as we do often
+in differential equations, by taking
+what happened that infinitesimal time,
+and then solving for what happens in the general case
+as we apply boundary conditions.
+So, what I'd like to do now is give a few examples,
+where we can just use some of the basic calculus
+and get used to computing Ito differentials.
+And there are a few things I'd like you to pay attention to.
+The first one is to look at the structure.
+So the basic structure of an Ito process
+is that, in an Ito process, it's always
+of the form for an Ito process that we have--
+an Ito process is something times dt
+plus something else times dB.
+And we might need to massage things
+or move some terms around, or regroup or rewrite things.
+But if we can do that, then we'll be all set.
+That means that it's an Ito process.
+And the reason that Ito processes
+are interesting as a class is that, Ito's lemma tells us
+that the differential of an Ito process
+is itself an Ito process.
+So that's what's going to be helpful.
+So what we want to do is, we want to look at the structure
+that we have, in terms of the different differentials.
+We want to keep in mind which pieces are stochastic
+and which pieces are deterministic,
+which pieces are functions of time only,
+so they can evolve in time but in a non-random way.
+We want to see which things depend on what.
+Are there functions that are constant?
+Do they depend on t?
+Do they depend on B?
+Do they depend on both?
+If I'm computing differentials, notice
+that in the formula for dF, that I have b, appears here,
+but a doesn't appear at all.
+So does that mean the dF is independent of a?
+Well certainly not independent of b.
+So when I've written little a and little b, remember,
+those are just the coefficients of these things.
+So we'll use different variables,
+I'll take different forms.
+I might even re-use letters a and b from time to time.
+But in this formula, in Ito's formula,
+this b squared means the coefficient
+of whatever is in the defining formula for dx,
+which is the variable with respect to which we're
+differentiating.
+So does this mean that dF is independent of a?
+Well, it looks like it in this form,
+but not really, because remember,
+this expression, which is a standard form Ito's lemma,
+contains a dx.
+So then this term is a dt, this term is a dt.
+We could group them together.
+The reason it's often written like this is so that we can
+say, chain rule plus new guy.
+But in addition to that, we do have dx,
+which I could substitute in.
+It has a dt and a dB.
+And that of course, contains a.
+So even though the a isn't explicitly visible,
+we might think of it as being there.
+And you'll want to keep an eye on these
+because they'll show up in interesting ways
+in different applications, whether things are explicitly
+visible or implicit in the language,
+or whether they're gone entirely.

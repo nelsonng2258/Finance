@@ -1,0 +1,163 @@
+
+PROFESSOR: Let's try exercising a little bit more control
+over the way in which delta t goes to zero
+and the step size goes to zero so that we can
+get a limit which has a finite variance instead of one that's
+infinite or zero.
+So consider the following.
+Let's let delta t be T/n as before.
+This time, let's take our step size
+to go as square root of delta t.
+That is, let's let lambda, which is the step
+size that we're going to have in our process,
+be square root of T/n.
+The important part isn't the T. It's the square root of 1/n
+that we have here.
+So as before, we construct our series B delta t,
+T as consisting of a number of steps
+to represent the entire time horizon of length big T.
+That's our overall duration in macroscopic time.
+And we're going to have n infinitesimal steps epsilon t.
+Those steps are going to have this scaling.
+They're going to be square root of delta t times zt.
+And what about the variance?
+Well, the expectation is zero as always,
+but now the variance is n times the variance
+of the epsilon variables of our scaled step sizes.
+That means that the variance is n delta
+t times the variance of z.
+This variance is just equal to one,
+and this here is equal to big T because n delta
+t is being held fixed.
+We saw that up here.
+So what we get is the variance is equal to T, which is finite.
+So by scaling our steps in a particular way,
+by letting the step size go to zero as 1
+over square root of n, or as the square root of delta t,
+we can achieve a continuous limit
+where delta t goes to zero and we still
+end up with finite variance, not zero and not infinite.
+This defines Brownian motion.
+So Brownian motion is a process where
+it's the limit we obtain by letting
+delta t go to zero where we find that, relative to our starting
+point, the endpoint is a Gaussian randomly distributed
+variable with zero mean and a variance
+equal to the length of time elapsed,
+no matter what that time is.
+Now, there are a lot of interesting properties
+of Brownian motion, and we're not
+going to derive all of them.
+We're just going to work with the processes
+to see the things that are most useful for finance.
+The paths that we get that we obtain by taking this limit
+are fractal in nature.
+They're continuous paths, but they're nowhere differentiable,
+so we're going to need to modify our rules for taking
+derivatives to deal with these new paths.
+Instead of looking at our usual definitions
+for taking derivatives for doing calculus,
+we're going to have to think about things probabilistically
+and replace our usual limits by a kind of convergence
+for probability distributions.
+Now, we could have defined this abstractly from the beginning,
+but it's useful for a lot of practical and conceptual
+reasons to think about taking the limit in this way.
+One of the interesting things is that this limit really
+is universal.
+We could have started with steps, remember,
+that are drawn from any IID distribution that satisfies
+the properties that we have for just our general things
+for a standardized random variable.
+So we're going to end up with something which has a Gaussian
+distribution, regardless of where we started,
+due to the central limit theorem.
+Interestingly, we'll see that when
+we want to do numerical approximations,
+we want to do Monte Carlo option pricing, for example,
+we're going to re-discretize, and it'll
+look like we've come full circle,
+and then we're going back to where we started.
+Now, there is more than one limit possible,
+and there's a literature on this, which
+we're not going to go into.
+I want to point out that the essential ingredient
+for finance is that we have non-anticipating processes.
+That is, we're taking a limit as t evolves
+where we don't know what's in the future.
+It's possible to take things that are symmetric,
+that are agnostic between past and future,
+or even things that go the other way and that anticipate
+the future.
+So there are some mathematical subtleties
+in those different limits.
+I'll point out what the rules are for the limit
+that we're interested in, which is defined in just the way
+that we went through right now.
+So what are some of the properties of Brownian paths?
+Well, we started by taking a finite path,
+we broke it into infinitesimals, and we came up
+with some properties that are true
+of the finite macroscopic path.
+So one of them is that the properties of the path
+depend only on the time differences.
+So if we think of X of t1 and t2 as being Brownian motion that
+goes between time t1 and t2, we can think of it
+as the difference between the endpoints, all right?
+So the initial point doesn't matter.
+The results that we have are a function
+only of the elapsed time between the two.
+It doesn't matter what the origin of time is.
+So if we shift time forward or backward by any constant,
+the properties that we have are the same.
+The distribution is the same.
+The variance only depends on the elapsed time
+between the endpoints.
+But that being said, the endpoints
+don't need to be separated by a finite amount of time.
+We could bring them back to where big T gets smaller
+and smaller and smaller and to the point where
+we get a new infinitesimal.
+So we started by taking a finite path,
+we chopped it into infinitesimals,
+we got properties of that finite path,
+and now I'm going to shrink the length of that path back
+to delta t.
+So this might seem as though we've done nothing
+and we're going full circle, but I remind you
+that our initial discrete process for any finite size
+delta t could have had non-Gaussian distribution,
+and the Brownian paths are Gaussian at all scales.
+So if I look at a small chunk, a small piece
+of infinitesimal time evolution in Brownian motion
+for a Brownian path, and I'll call
+that interval dB sub t just to remind you
+of the time dependence.
+Little subscript t is notation you'll see sometimes.
+It's not particularly meaningful.
+It's just a reminder of the time dependence.
+This is going to be normally distributed
+with mean zero, of course, and variance equal to the time
+interval, which is delta t.
+So if we'd started with something
+that, for example, was a discrete random variable, maybe
+with plus or minus one, we wouldn't
+have had this property at all.
+At small scales our granular thing
+would have recovered the building blocks that we had.
+So here we do have this universal behavior
+for Brownian paths, that they're Gaussian at all time scales,
+big and small.
+They also are independent.
+So if I look at the covariance taken
+at two different times for two different infinitesimal time
+intervals, I find that they're equal to zero if the times are
+different, or the variance of the process
+is dt if t and t prime are equal.
+We can also talk about integrating the process
+to go from an infinitesimal back to the finite values.
+And sometimes we'll write this in integral form
+as saying that BT minus B0, or I can
+put the B0 on the right-hand side,
+is the integral from time zero to time
+big T of our infinitesimal.

@@ -1,0 +1,216 @@
+
+PROFESSOR: We have all the tools we need now
+to derive the Black-Scholes equation for option pricing
+and for derivative pricing generally.
+And the method in this case is just
+as interesting as the result. We're
+going to use the tools that we have with Ito's lemma,
+and we're going to take stochastic differential
+equations and reduce them to partial differential equations.
+And the technique that we use is,
+instead of trying to solve for the randomness,
+we're going to eliminate it completely.
+Let's see how that works.
+Suppose we've got a function V, which,
+think of V as standing for the value of a derivative function.
+So let's let the underlying-- so for concreteness,
+we can think of a stock option, say a standard call
+or a put option.
+So let V be the value of the option,
+let S the value of the stock, generically
+called the underlying, and a derivative is
+something whose value depends on the value of something else.
+So S is the stock price value, V is the value of our derivative,
+t is our old friend time, and let's suppose
+that the stock price follows geometric Brownian
+motion, which we just solved.
+So dS/S over S is mu dt plus sigma dB,
+or if I multiply through by S, I have this expression here.
+What about V?
+Well let's write d--
+So that's dS.
+Let's write dV using Ito's lemma,
+where we think of V as being a function of S,
+and then S is this function of time and of randomness.
+So applying Ito's lemma, we have dV is something times dt.
+Now, I've grouped the Ito term here as a coefficient of dt,
+so I have partial of V with respect
+to t plus this term here, this sigma S, quantity
+squared over 2.
+That comes because of this sigma S,
+so that shows up in the coefficient in the Ito term,
+divided by 2, second partial of V with respect to S,
+all of that times dt, plus partial of V with respect to S,
+dS.
+So that's just Ito's lemma applied to a generic function
+V.
+Now, let's combine the two in a portfolio.
+So specifically, let's imagine that we're looking at the value
+where we buy one option, and maybe we're
+going to go short a certain number of shares.
+Let's give that number a name.
+Let's call it delta.
+So the value of the portfolio is going
+to be V, the value of the option,
+plus the quantity of shares times the value of the shares.
+Our quantity is going to be a negative quantity, so
+minus delta, times the value of the shares.
+So my portfolio value, which I'll designate by pi,
+is V minus delta S. Now, I'm going
+to start shifting around my portfolio a bit,
+and the thing I'm going to change
+is the amount of stock I own.
+It's a lot easier to trade stock and a lot cheaper
+and the market is much more liquid.
+So I'm going to imagine I'm going to hold V fixed.
+I'm going to hold the single option fixed.
+If we had a different number, we could multiply this
+all by some overall constant.
+But I have one option which I'm long,
+and I'm going to be short delta shares.
+And therefore, the value of the portfolio
+is going to be V minus delta S.
+Let's look at this in differential form.
+What happens as the stock price changes?
+Well, the change in value of the portfolio, d pi,
+is going to be dV minus delta dS.
+So what do we know about dV and dS?
+Well, for dV, we take this expression
+that we have up here, and let's write it down below.
+Notice that I have my dt term come straight down.
+And then I have this extra term, partial of V with respect
+to S times dS.
+That comes over here.
+And then I have this other term, which is much simpler
+because it's stock itself.
+It doesn't need any other partials.
+So I have minus delta times dS.
+So I've written the change in portfolio value
+as an Ito process with something times dt plus something times
+dS.
+I don't need-- I could expand this dS out in terms of dB
+if I wanted to, but it's actually
+going to be a bit more convenient to leave it
+right here.
+So notice that the first term is deterministic.
+The second term is stochastic because of the dS.
+And gee, wouldn't it be nice if we could make that go away?
+Well, we can.
+Suppose that instead of dS vanishing, which
+we can't do because it does obey this stochastic differential
+equation, suppose we just multiply at time 0.
+That is, suppose we choose delta to match dV/dS in such a way
+that the coefficient is 0.
+
+The stochastic term vanishes if we choose delta equals dV/dS.
+That is-- that says that if we knew
+the sensitivity of the price of the option
+as the stock price changed, that would tell us
+the number of shares to own.
+So the right-hand side, in general, varies with time,
+and so is going to be delta.
+So there's no risk that's left over.
+We've canceled out all of the risk,
+but at the cost of having to keep
+readjusting the number of shares that we have.
+So as the market price changes, the exact number of shares
+delta that we need changes.
+And this is a strategy that's known as dynamic hedging.
+So dynamic hedging means that we hold
+a number of shares in relation to our option that's specified
+in a very, very specific way.
+Given all the values, I will know exactly how many shares
+I need to trade.
+But when things change, I will need to update those.
+Having done that, though, there's
+no risk in the portfolio because this term here vanishes
+and d pi is just something times dt.
+If there's no risk in the portfolio,
+then the portfolio should earn the risk-free rate,
+under penalty of arbitrage.
+So it should be the case, then, that d pi should
+grow at a rate r dt times pi.
+So it's proportional to the value
+of the portfolio times the risk-free rate times dt.
+Well, let's see what that gives us.
+So this is r dt times pi, but after all, pi
+is the portfolio value, V minus delta S.
+So I have that d pi should be r times v minus delta S dt,
+and that's equal to what we had on the previous screen,
+which is rV minus our expression for delta.
+So that's going to be minus r, this r here.
+So I have minus, I have the r in front,
+I have delta is this partial of V with respect to S,
+times S, dt.
+So now if I want to equate the coefficients of dt
+on the left-hand side and the right-hand side,
+or I should say, on this screen and the previous one,
+so here I have one expression for d pi,
+and I have this other expression for d pi that just consists
+of the first term here.
+The second term we've arranged carefully have vanished.
+So let's say that this expression for d pi
+has to be equal to this expression for d pi,
+and let's drop the dt's because all of the coefficients
+are the same.
+And then we have this expression,
+that the partial of V with respect to t plus sigma squared
+S squared over 2 d2 V dS squared has to be rV minus rS dV/dS.
+So notice the right-hand side is proportional to r.
+The left-hand side doesn't have any r's.
+Each term has a V or some derivatives of V in it.
+So let's put everything over on one side of the equation
+and clean things up.
+And now we have a partial differential equation
+with no randomness left in it.
+This equation is the Black-Scholes equation.
+Partial of V with respect to t, the time variation
+in the derivative, plus rS times partial of V with respect to S,
+plus sigma squared S squared over 2 d2 V dS squared minus rV
+is all equal to 0.
+Notice that we have our two terms here and here
+that are proportional to r.
+And everything contains V, so this
+is a homogeneous equation, linear in V,
+of first and second partial derivatives,
+plus a term with no derivatives here, this term here.
+So we're going to talk about solving the equation,
+but what can we say about the equation before we solve it?
+Well, we know it's linear in V. Therefore,
+we know it obeys superposition.
+That is, if we were to have two or more solutions,
+we could add them together and get another solution.
+So any linear combination of solutions is also a solution.
+For equations of this from, we know
+that we find the exact unique solution to our problem
+from the boundary conditions.
+So we'll need to find some general solutions
+to this equation.
+But then to get the exact ones of interest to us for finance,
+we'll need to apply boundary conditions.
+What are the parameters in the model?
+Well, there's some explicit parameters.
+We have r and we have sigma.
+Sigma is the volatility and r is the risk-free rate.
+But wait a minute.
+We started with three parameters, didn't we?
+We introduced r at the end because we had a risk-free rate
+because we'd eliminated risk by canceling out
+the stochastic term.
+We have the volatility that we would expect
+because of the randomness.
+Notice the special cases gets rather trivial
+if we set sigma equal to 0.
+But we had a third parameter mu.
+Where did that go?
+
+And there are some parameters here
+that are implicit that come from the boundary conditions.
+So if we're thinking about an option,
+we need to give an expiration date,
+we need to give a strike price, we
+need to say whether it's a call or a put,
+and all of those things are not part of the equation.
+They're not part of the general solutions.
+They will be part of the boundary conditions
+and determine the specific solution that we have.

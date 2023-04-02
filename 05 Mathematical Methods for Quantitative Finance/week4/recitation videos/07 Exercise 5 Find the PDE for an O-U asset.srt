@@ -1,0 +1,260 @@
+0
+00:00:00,000 --> 00:00:05,530
+PROFESSOR: An asset follows the Ornstein-Uhlenbeck process,
+
+1
+00:00:05,530 --> 00:00:09,550
+which is a continuous time, mean reverting process if it's
+
+2
+00:00:09,550 --> 00:00:12,280
+given by the expression, dS equals
+
+3
+00:00:12,280 --> 00:00:16,360
+lambda, which is a constant, times S
+
+4
+00:00:16,360 --> 00:00:22,020
+bar, another constant, nimus S dt plus sigma dB.
+
+5
+00:00:22,020 --> 00:00:26,250
+This is in the continuous time analog of an AR1 process.
+
+6
+00:00:26,250 --> 00:00:30,060
+This is the standardized Brownian motion, sigma dB,
+
+7
+00:00:30,060 --> 00:00:32,640
+where sigma is a scale factor for the randomness.
+
+8
+00:00:32,640 --> 00:00:35,100
+Over here, we see I've got mean reversion, where
+
+9
+00:00:35,100 --> 00:00:37,350
+if lambda's a positive constant, this
+
+10
+00:00:37,350 --> 00:00:40,530
+tells me that if S is below S bar, this is positive.
+
+11
+00:00:40,530 --> 00:00:44,170
+If this S is above S bar, this is negative.
+
+12
+00:00:44,170 --> 00:00:47,160
+So this gives me a mean reversion force,
+
+13
+00:00:47,160 --> 00:00:50,470
+and this gives me a random shock as time has evolved.
+
+14
+00:00:50,470 --> 00:00:52,830
+So, just given this description, which
+
+15
+00:00:52,830 --> 00:00:58,200
+is quite different from the log normal, geometric Brownian
+
+16
+00:00:58,200 --> 00:01:01,830
+motion that was part of the original Black-Scholes-Merton
+
+17
+00:01:01,830 --> 00:01:04,110
+derivation, this is a different process.
+
+18
+00:01:04,110 --> 00:01:08,340
+What PDE is satisfied by derivatives of this asset?
+
+19
+00:01:08,340 --> 00:01:10,500
+Take a moment, and then we'll check together.
+
+20
+00:01:10,500 --> 00:01:25,830
+
+
+21
+00:01:25,830 --> 00:01:27,720
+What did you find?
+
+22
+00:01:27,720 --> 00:01:30,738
+Did you rederive using Ito's Lemma?
+
+23
+00:01:30,738 --> 00:01:32,780
+We don't even need to work that hard, we can just
+
+24
+00:01:32,780 --> 00:01:34,940
+plug into our last result. We know
+
+25
+00:01:34,940 --> 00:01:37,970
+it looks exactly like the Black-Scholes equation,
+
+26
+00:01:37,970 --> 00:01:40,550
+with exactly one change.
+
+27
+00:01:40,550 --> 00:01:44,790
+We identify, in terms of our standard form,
+
+28
+00:01:44,790 --> 00:01:53,180
+if we want to write dS of the form a dt plus b dB.
+
+29
+00:01:53,180 --> 00:01:59,150
+That implies that we have a is equal to lambda, S bar
+
+30
+00:01:59,150 --> 00:02:02,600
+minus S, which doesn't appear in the differential equation
+
+31
+00:02:02,600 --> 00:02:03,590
+we want.
+
+32
+00:02:03,590 --> 00:02:06,980
+And we have b is equal to sigma.
+
+33
+00:02:06,980 --> 00:02:08,900
+In the Black-Scholes equation, it
+
+34
+00:02:08,900 --> 00:02:12,140
+would have been sigma times S.
+
+35
+00:02:12,140 --> 00:02:19,320
+So the equation we want is partial of V with respect
+
+36
+00:02:19,320 --> 00:02:28,700
+to t plus sigma squared over 2 second partial of V
+
+37
+00:02:28,700 --> 00:02:34,550
+with respect to S squared plus rS partial of V
+
+38
+00:02:34,550 --> 00:02:40,490
+with respect to S minus rV equals 0 and we're done.
+
+39
+00:02:40,490 --> 00:02:47,870
+
+
+40
+00:02:47,870 --> 00:02:49,640
+That's it.
+
+41
+00:02:49,640 --> 00:02:52,610
+So the only difference between this and Black-Scholes
+
+42
+00:02:52,610 --> 00:02:56,480
+is that-- the coefficient function here in front
+
+43
+00:02:56,480 --> 00:02:58,790
+would have had an S squared in Black-Scholes.
+
+44
+00:02:58,790 --> 00:03:00,710
+Here, it only has a sigma.
+
+45
+00:03:00,710 --> 00:03:06,200
+The a function, which was mu S in the case of Black-Scholes.
+
+46
+00:03:06,200 --> 00:03:08,090
+And here, it's something linear and S.
+
+47
+00:03:08,090 --> 00:03:09,710
+It could have been cubic.
+
+48
+00:03:09,710 --> 00:03:12,860
+It could have been any polynomial function or a more
+
+49
+00:03:12,860 --> 00:03:15,020
+complicated function in S.
+
+50
+00:03:15,020 --> 00:03:16,470
+It wouldn't make any difference.
+
+51
+00:03:16,470 --> 00:03:20,060
+It wouldn't show up as part of the differential equation.
+
+52
+00:03:20,060 --> 00:03:21,500
+It might show up elsewhere.
+
+53
+00:03:21,500 --> 00:03:23,210
+And it certainly shows up if we want
+
+54
+00:03:23,210 --> 00:03:26,370
+to understand the dynamics of the underlying itself.
+
+55
+00:03:26,370 --> 00:03:28,730
+But if we want to know about the derivatives,
+
+56
+00:03:28,730 --> 00:03:31,130
+given the behavior of the underlying,
+
+57
+00:03:31,130 --> 00:03:34,670
+our expression is easy to derive.
+
+58
+00:03:34,670 --> 00:03:38,030
+And all we needed to do was, in our derivation,
+
+59
+00:03:38,030 --> 00:03:40,460
+once we canceled the risk, the only part that
+
+60
+00:03:40,460 --> 00:03:44,300
+retained an explicit memory of the Ito process,
+
+61
+00:03:44,300 --> 00:03:48,630
+was the Ito term, which had the coefficient B squared,
+
+62
+00:03:48,630 --> 00:03:51,680
+the coefficient of the randomness in the original we
+
+63
+00:03:51,680 --> 00:03:53,719
+defined process.
+
+64
+00:03:53,719 --> 00:03:54,219
+
+

@@ -1,0 +1,760 @@
+0
+00:00:00,000 --> 00:00:00,940
+
+
+1
+00:00:00,940 --> 00:00:02,620
+PROFESSOR: So let's try a few examples
+
+2
+00:00:02,620 --> 00:00:05,810
+to check that this trick really looks like it should work.
+
+3
+00:00:05,810 --> 00:00:08,890
+And then we'll be all set to take a look both at
+
+4
+00:00:08,890 --> 00:00:12,130
+how and why it works, and how we can apply it to solving
+
+5
+00:00:12,130 --> 00:00:13,760
+the Black-Scholes equation.
+
+6
+00:00:13,760 --> 00:00:16,000
+Let's try a couple of examples.
+
+7
+00:00:16,000 --> 00:00:24,570
+If we take a look f of z equal to z squared,
+
+8
+00:00:24,570 --> 00:00:33,770
+then what our rule says is we should have p of zt
+
+9
+00:00:33,770 --> 00:00:42,240
+should be the integral of 1 over square root 2 pi t
+
+10
+00:00:42,240 --> 00:00:50,630
+e to the minus z minus z prime squared, z prime--
+
+11
+00:00:50,630 --> 00:00:51,900
+oops.
+
+12
+00:00:51,900 --> 00:00:53,780
+Let's leave it in red.
+
+13
+00:00:53,780 --> 00:00:59,780
+z prime squared dz prime.
+
+14
+00:00:59,780 --> 00:01:03,140
+And if we do that Gaussian integral we find the result.
+
+15
+00:01:03,140 --> 00:01:13,970
+This is equal to z squared plus t.
+
+16
+00:01:13,970 --> 00:01:15,720
+And let's check that.
+
+17
+00:01:15,720 --> 00:01:24,080
+Well, p of z at t equals 0 is z squared.
+
+18
+00:01:24,080 --> 00:01:25,810
+So that part works.
+
+19
+00:01:25,810 --> 00:01:28,850
+This part matches this part.
+
+20
+00:01:28,850 --> 00:01:29,960
+That's good.
+
+21
+00:01:29,960 --> 00:01:32,300
+Does it satisfy the differential equation?
+
+22
+00:01:32,300 --> 00:01:34,310
+What does the differential equation say?
+
+23
+00:01:34,310 --> 00:01:37,280
+The differential equation says that partial
+
+24
+00:01:37,280 --> 00:01:44,780
+of p with respect to t minus 1/2 second partial of p
+
+25
+00:01:44,780 --> 00:01:48,110
+with respect to z squared should be equal to 0.
+
+26
+00:01:48,110 --> 00:01:48,800
+Is it?
+
+27
+00:01:48,800 --> 00:01:54,170
+Well, partial of-- here's our expression.
+
+28
+00:01:54,170 --> 00:01:59,360
+The partial with respect to t is 1 minus 1/2 times
+
+29
+00:01:59,360 --> 00:02:02,450
+the second partial with respect to z.
+
+30
+00:02:02,450 --> 00:02:07,250
+First partial is 2z, the second partial is 2,
+
+31
+00:02:07,250 --> 00:02:09,539
+and it's equal to 0.
+
+32
+00:02:09,539 --> 00:02:12,080
+Shall we do another one?
+
+33
+00:02:12,080 --> 00:02:21,760
+Let's try f of z equals cosine of lambda
+
+34
+00:02:21,760 --> 00:02:24,410
+z, where lambda is a constant.
+
+35
+00:02:24,410 --> 00:02:27,460
+So then we do the integral.
+
+36
+00:02:27,460 --> 00:02:30,850
+We find the p of z, t by doing the Gaussian integral.
+
+37
+00:02:30,850 --> 00:02:34,150
+And you can do this by looking it up in a table book,
+
+38
+00:02:34,150 --> 00:02:37,150
+you can use Mathematica, or you can
+
+39
+00:02:37,150 --> 00:02:40,893
+break the cosine into complex exponentials
+
+40
+00:02:40,893 --> 00:02:41,935
+and complete the squared.
+
+41
+00:02:41,935 --> 00:02:44,440
+There are a variety of techniques for doing this.
+
+42
+00:02:44,440 --> 00:02:46,870
+When you do the integral, we find that this
+
+43
+00:02:46,870 --> 00:02:48,130
+is equal to-- let's see.
+
+44
+00:02:48,130 --> 00:02:55,720
+We have-- this is the integral of p0 of z minus z prime t.
+
+45
+00:02:55,720 --> 00:02:59,020
+That's our old friend, the Gaussian.
+
+46
+00:02:59,020 --> 00:03:03,510
+Times cosine of lambda z.
+
+47
+00:03:03,510 --> 00:03:06,020
+Of course, my integrals, unless specified otherwise,
+
+48
+00:03:06,020 --> 00:03:08,030
+go from minus infinity to infinity.
+
+49
+00:03:08,030 --> 00:03:09,770
+That's a z prime.
+
+50
+00:03:09,770 --> 00:03:10,910
+dz prime.
+
+51
+00:03:10,910 --> 00:03:12,620
+And this integral, when we do it,
+
+52
+00:03:12,620 --> 00:03:18,920
+is equal to e to the minus lambda squared t, or 2 times
+
+53
+00:03:18,920 --> 00:03:21,560
+cosine lambda z.
+
+54
+00:03:21,560 --> 00:03:25,190
+
+
+55
+00:03:25,190 --> 00:03:28,460
+So let's take a look at this expression and see,
+
+56
+00:03:28,460 --> 00:03:30,350
+does it satisfy the differential equation?
+
+57
+00:03:30,350 --> 00:03:34,890
+Does it satisfy the initial conditions?
+
+58
+00:03:34,890 --> 00:03:45,735
+p of z, t as t goes to 0 equal to cosine lambda z.
+
+59
+00:03:45,735 --> 00:03:47,040
+So that checks.
+
+60
+00:03:47,040 --> 00:03:48,670
+And how about the derivatives?
+
+61
+00:03:48,670 --> 00:03:53,320
+Well, the partial of p with respect
+
+62
+00:03:53,320 --> 00:04:00,310
+to t minus 1/2 partial of p with respect to z squared.
+
+63
+00:04:00,310 --> 00:04:03,400
+Partial of this expression with respect to t
+
+64
+00:04:03,400 --> 00:04:08,013
+gives us from this exponential, e is here.
+
+65
+00:04:08,013 --> 00:04:09,680
+When we differentiate with respect to t,
+
+66
+00:04:09,680 --> 00:04:15,050
+we're going to get a minus lambda squared over 2,
+
+67
+00:04:15,050 --> 00:04:15,830
+going to get--
+
+68
+00:04:15,830 --> 00:04:20,040
+
+
+69
+00:04:20,040 --> 00:04:24,710
+it's going to be minus lambda squared over 2 times
+
+70
+00:04:24,710 --> 00:04:31,440
+the function itself, times p of z, t, and minus 1/2
+
+71
+00:04:31,440 --> 00:04:34,920
+times the second partial with respect to z.
+
+72
+00:04:34,920 --> 00:04:37,500
+Well, the derivative, the first derivative
+
+73
+00:04:37,500 --> 00:04:39,570
+of that function with respect to z
+
+74
+00:04:39,570 --> 00:04:46,980
+is e to the minus lambda squared t/2 times lambda minus sine.
+
+75
+00:04:46,980 --> 00:04:49,830
+And the second one is going to bring down another lambda,
+
+76
+00:04:49,830 --> 00:04:51,840
+and the sine will turn into a cosine,
+
+77
+00:04:51,840 --> 00:05:00,260
+and we'll be left with minus 1/2 times minus lambda squared
+
+78
+00:05:00,260 --> 00:05:05,970
+times the function itself, p of z, t, all of which
+
+79
+00:05:05,970 --> 00:05:07,530
+is equal to 0.
+
+80
+00:05:07,530 --> 00:05:09,870
+So those are two instances that we've
+
+81
+00:05:09,870 --> 00:05:13,920
+checked so far in which doing our integral formula
+
+82
+00:05:13,920 --> 00:05:17,220
+generates something which is a completely reasonable function.
+
+83
+00:05:17,220 --> 00:05:19,410
+It has the desired properties that we
+
+84
+00:05:19,410 --> 00:05:22,140
+wanted when t is equal to 0, and it's
+
+85
+00:05:22,140 --> 00:05:24,840
+got some time dependence for t greater than 0 for what
+
+86
+00:05:24,840 --> 00:05:26,160
+goes on.
+
+87
+00:05:26,160 --> 00:05:28,140
+Finally, let's look at one more example
+
+88
+00:05:28,140 --> 00:05:31,020
+that's actually relevant for option pricing, that's
+
+89
+00:05:31,020 --> 00:05:32,830
+a closer example.
+
+90
+00:05:32,830 --> 00:05:38,700
+So let's take a look now at what happens if we have f of z
+
+91
+00:05:38,700 --> 00:05:43,380
+is equal to what we'll call the step function, theta z
+
+92
+00:05:43,380 --> 00:06:05,690
+minus kappa, where theta z is defined to be 1 for z
+
+93
+00:06:05,690 --> 00:06:10,695
+greater than zero and z for z less than zero.
+
+94
+00:06:10,695 --> 00:06:11,570
+It's a step function.
+
+95
+00:06:11,570 --> 00:06:14,000
+It goes long for 0, and then it goes up,
+
+96
+00:06:14,000 --> 00:06:15,050
+and then it's equal to 1.
+
+97
+00:06:15,050 --> 00:06:19,770
+So it's 0 for negative numbers, it's 1 for positive numbers.
+
+98
+00:06:19,770 --> 00:06:24,930
+That's what we'd like to have as t goes to 0.
+
+99
+00:06:24,930 --> 00:06:27,360
+And in this case then, that means
+
+100
+00:06:27,360 --> 00:06:29,640
+that our integration, our integrand,
+
+101
+00:06:29,640 --> 00:06:33,180
+is going to be our Gaussian times the function 1,
+
+102
+00:06:33,180 --> 00:06:34,920
+but the integral's going to be cut off.
+
+103
+00:06:34,920 --> 00:06:40,140
+So this says that p of z, t which
+
+104
+00:06:40,140 --> 00:06:45,570
+is going to be the integral, remember, of p0 of z minus z
+
+105
+00:06:45,570 --> 00:06:54,230
+prime t times f of z prime dz prime,
+
+106
+00:06:54,230 --> 00:06:59,000
+is going to be equal to 1 over square root of 2 pi
+
+107
+00:06:59,000 --> 00:07:14,410
+t times the integral of e the minus z minus z prime squared
+
+108
+00:07:14,410 --> 00:07:23,162
+over 2t times dz prime.
+
+109
+00:07:23,162 --> 00:07:24,870
+And what about our limits of integration?
+
+110
+00:07:24,870 --> 00:07:27,800
+Well, this is only going to be nonzero for,
+
+111
+00:07:27,800 --> 00:07:30,500
+and this is the part I wanted to have in yellow,
+
+112
+00:07:30,500 --> 00:07:35,420
+starting from kappa to infinity, not from minus infinity
+
+113
+00:07:35,420 --> 00:07:37,100
+to infinity.
+
+114
+00:07:37,100 --> 00:07:41,630
+So we can rewrite this in terms of a variable.
+
+115
+00:07:41,630 --> 00:07:43,970
+Let's define a new variable.
+
+116
+00:07:43,970 --> 00:07:53,745
+Let's let u equal z minus z prime over square root of t.
+
+117
+00:07:53,745 --> 00:07:56,850
+
+
+118
+00:07:56,850 --> 00:08:03,990
+So du is going to be minus dz prime over square root of t.
+
+119
+00:08:03,990 --> 00:08:06,370
+Remember that inside the integral, z and t
+
+120
+00:08:06,370 --> 00:08:08,470
+are both constant.
+
+121
+00:08:08,470 --> 00:08:13,310
+So now I can write this integral as the integral is going to be
+
+122
+00:08:13,310 --> 00:08:19,830
+equal to 1 over square root of 2 pi, which is a constant,
+
+123
+00:08:19,830 --> 00:08:26,440
+from minus infinity to a value we'll call u*,
+
+124
+00:08:26,440 --> 00:08:32,260
+of e to the minus u squared over 2 du.
+
+125
+00:08:32,260 --> 00:08:35,650
+Now, this expression is the cumulative distribution
+
+126
+00:08:35,650 --> 00:08:37,845
+function, or the Gauss integral.
+
+127
+00:08:37,845 --> 00:08:39,970
+That is, instead of integrating from minus infinity
+
+128
+00:08:39,970 --> 00:08:42,370
+to infinity, where we get 1, we're
+
+129
+00:08:42,370 --> 00:08:46,360
+integrating from minus infinity up to some particular value.
+
+130
+00:08:46,360 --> 00:08:48,920
+And this function, this definite integral
+
+131
+00:08:48,920 --> 00:08:52,210
+which doesn't go to infinity, has a name.
+
+132
+00:08:52,210 --> 00:08:55,210
+And well call it, we'll give it a notation
+
+133
+00:08:55,210 --> 00:08:57,040
+that we'll be calling this phi.
+
+134
+00:08:57,040 --> 00:09:11,480
+So we will define this to be phi of u*.
+
+135
+00:09:11,480 --> 00:09:14,510
+And when we substitute back to our original variables,
+
+136
+00:09:14,510 --> 00:09:22,630
+we find that this is going to be equal to phi z minus kappa
+
+137
+00:09:22,630 --> 00:09:27,140
+over square root of t.
+
+138
+00:09:27,140 --> 00:09:30,080
+So phi is this incomplete integral.
+
+139
+00:09:30,080 --> 00:09:32,420
+It's the thing which when we differentiate it,
+
+140
+00:09:32,420 --> 00:09:34,460
+we get the probability density, because we
+
+141
+00:09:34,460 --> 00:09:37,070
+differentiate with respect to the upper limit
+
+142
+00:09:37,070 --> 00:09:38,160
+of the integral.
+
+143
+00:09:38,160 --> 00:09:40,760
+And in this case, what we get is an integral that's
+
+144
+00:09:40,760 --> 00:09:45,860
+cut off at the lower bound where we have the cutoff in our step
+
+145
+00:09:45,860 --> 00:09:49,595
+function, our initial function here.
+
+146
+00:09:49,595 --> 00:09:55,170
+Our function-- excuse me, forgot my pointer--
+
+147
+00:09:55,170 --> 00:09:57,940
+our initial function right here.
+
+148
+00:09:57,940 --> 00:10:00,540
+So our initial function says that we've
+
+149
+00:10:00,540 --> 00:10:03,840
+got theta is 1 where z in excess of kappa
+
+150
+00:10:03,840 --> 00:10:05,910
+and it's 0 below kappa.
+
+151
+00:10:05,910 --> 00:10:09,430
+
+
+152
+00:10:09,430 --> 00:10:11,520
+So that's the solution when t equals 0,
+
+153
+00:10:11,520 --> 00:10:17,230
+and the solution for arbitrary times is given here.
+
+154
+00:10:17,230 --> 00:10:18,900
+Now, this one we need to be careful.
+
+155
+00:10:18,900 --> 00:10:22,710
+Because in the limit where t goes to 0,
+
+156
+00:10:22,710 --> 00:10:25,530
+we need to be quite careful about how this behaves.
+
+157
+00:10:25,530 --> 00:10:28,620
+Because the function is a smooth function,
+
+158
+00:10:28,620 --> 00:10:30,970
+but it's going to approach a step function.
+
+159
+00:10:30,970 --> 00:10:33,660
+So what happens is this function is going to behave
+
+160
+00:10:33,660 --> 00:10:39,020
+more or less like this--
+
+161
+00:10:39,020 --> 00:10:40,440
+if we can draw this.
+
+162
+00:10:40,440 --> 00:10:45,550
+Then we're going to go from minus 1 to 1
+
+163
+00:10:45,550 --> 00:10:46,690
+for the phi function.
+
+164
+00:10:46,690 --> 00:10:50,750
+But as t goes to 0, this function
+
+165
+00:10:50,750 --> 00:10:53,990
+is going to become steeper and steeper,
+
+166
+00:10:53,990 --> 00:10:59,240
+and eventually approach a step function, which
+
+167
+00:10:59,240 --> 00:11:02,000
+has a discontinuity that we put in at the beginning.
+
+168
+00:11:02,000 --> 00:11:05,030
+But for larger values of t, it's a completely reasonable
+
+169
+00:11:05,030 --> 00:11:08,520
+function and a very smooth function.
+
+170
+00:11:08,520 --> 00:11:13,730
+So we've done three examples of our basic rule
+
+171
+00:11:13,730 --> 00:11:16,070
+from our equation, which says that we
+
+172
+00:11:16,070 --> 00:11:20,720
+can use our special Gaussian solution to generate arbitrary
+
+173
+00:11:20,720 --> 00:11:21,590
+solutions.
+
+174
+00:11:21,590 --> 00:11:23,090
+And how are we going to apply that
+
+175
+00:11:23,090 --> 00:11:27,290
+for option pricing given the kernel that we have,
+
+176
+00:11:27,290 --> 00:11:28,940
+given this function p0?
+
+177
+00:11:28,940 --> 00:11:30,710
+And we'll find the correct version of it
+
+178
+00:11:30,710 --> 00:11:32,700
+for the Black-Scholes equation.
+
+179
+00:11:32,700 --> 00:11:35,390
+It says if you want a price not just a call option,
+
+180
+00:11:35,390 --> 00:11:37,970
+but a put option or a straddle or something
+
+181
+00:11:37,970 --> 00:11:41,180
+with some exotic pay-off, all you need to do
+
+182
+00:11:41,180 --> 00:11:43,820
+is take the same integrand, change
+
+183
+00:11:43,820 --> 00:11:46,935
+the function-- the payoff function-- do the integral,
+
+184
+00:11:46,935 --> 00:11:47,810
+and then you're done.
+
+185
+00:11:47,810 --> 00:11:50,600
+And this will generate all possible solutions
+
+186
+00:11:50,600 --> 00:11:52,640
+to the differential equation for the values
+
+187
+00:11:52,640 --> 00:11:57,560
+of option prices, derivative prices that
+
+188
+00:11:57,560 --> 00:12:01,500
+are consistent with these financial principles.
+
+189
+00:12:01,500 --> 00:12:02,000
+
+

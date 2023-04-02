@@ -1,0 +1,211 @@
+
+The real world exists in continuous time,
+and we need models that evolve in continuous time as well.
+We've looked at discrete-time processes
+and discrete-time models, and they're great for what they do.
+If we think about making discrete observations
+or approximating time as being a series of discrete intervals,
+then we can have a structure where we write down
+models that show how information and other econometric variables
+propagate forward in time.
+We can do a lot of calculations, we
+can solve some of those models in closed form,
+and we can extend and generalize them in a variety of ways.
+But time is continuous.
+So while we might think of approximating time
+as, say, each individual day is a separate point in time,
+decisions are made in continuous time,
+and we want some variables that do so as well.
+Now, we want to distinguish between time
+being continuous or discrete versus variables
+being continuous or discrete.
+We could have variables like pricing variables
+that are continuous or near continuous
+in both discrete time and in continuous time.
+We'll see that although the world evolves
+in continuous time, the mathematics
+has some interesting twists, and it's more complex.
+So many times we might want to use a simpler setting
+as an approximation of discrete time.
+When we want to put things on a computer,
+we'll see the computers don't handle continuous variables
+at all, and we'll need to discretize time.
+So in a certain sense, we'll going back where we started,
+but we'll pick up some new tools and intuition along the way.
+
+So what we're going to do is we're
+going to scale our random walk.
+So we talked about our basic random walk
+as being a series of steps of a stochastic process that evolves
+in time where, with each new step,
+the time window over which our walk has existed
+gets longer and longer and longer.
+What we're going to do now is keep the overall length fixed,
+but let the time steps get smaller and smaller.
+So rather than going farther and farther into the future,
+we're going to be taking smaller and smaller steps.
+We'll take advantage of linearity, our basic tool,
+and expectations, one of our basic tools
+for analyzing discrete processes.
+But now we're going to take a limit where
+we'll assign an interval delta t to the width of time
+between two steps.
+And we'll see that by scaling delta t and possibly the step
+size, we come up with a new notion known
+as Brownian motion that will be the basis for Ito processes
+in finance in continuous time.
+So let's begin with a standardized random variable z
+with the usual properties, that its expectation is 0 and that
+its variance is equal to , and that the covariance of any two
+z's taken at different times is 0 unless they're at the same
+point.
+That is, zt and zs are independent unless t
+is equal to s.
+So we're going to construct a sum of z's and the origin
+of time is not going to be important.
+So if I let it be, say, t0, I can construct a set of steps,
+and what I'm going to do is I'm going
+to write this now as B because eventually it's
+going to turn into Brownian motion,
+so B will be for Brownian.
+1 represents the size of the time step,
+and big T represents the overall length of the path.
+So if I'm taking unit steps on my path, then I take t steps,
+so this should be t0 plus 1, t0 plus 2, t0 plus three.
+So t0 is an arbitrary origin.
+We could let it equal 0.
+But it's important that things only
+depend on time differences.
+So what's the expectation?
+Well, normally we would say that the expectation is equal to 0,
+but we need to be careful about when
+we're taking the expectation.
+If we take an expectation after some of the steps
+have been realized, then it's only the future steps
+that have expected value 0, as we've seen.
+So in the event that we take an expectation prior
+to the start of our path, which I will designate in this way,
+as E with a subscript t, meaning that's the time at which
+the expectation is taken, provided that t is prior to t0,
+then the expectation is 0.
+It's just that the expectation of each of the z's is
+0, 0 plus 0 plus 0 plus 0 is 0, and that's it.
+Similarly, the variance is equal to big T.
+But if I start computing variances
+when I'm in the middle of the process, that
+is, some time between the initial point
+and the final point, then the only things
+that contribute to the variance are things that are ahead
+of my observation point.
+Those are the points that have not yet been observed.
+So the variance is equal to T minus the amount of time
+that's already been elapsed.
+So it's shortened by the amount of time elapsed.
+The variance depends on the amount
+of time remaining in the walk.
+So whenever we take any limiting process,
+whenever we do any limit, we should always
+ask a few basic questions.
+First, does the limit converge?
+Second, if it does converge, in what sense
+does the result that we obtain represent the thing that we
+are starting with?
+That is, how is the result representative
+of the same dynamics that we started with?
+And is it unique?
+Might there be more than limit depending
+on the way in which we take limits, particularly
+in cases that might have multiple variables
+or parameters?
+Could there be different limits that
+are obtained by taking limits in different ways?
+Could we get different kinds of results?
+
+So let's take a look at our random walk.
+And I'd like to consider a few different cases,
+show you a few different ways that we might
+think about taking the limit.
+So the first thing that we would do
+is, let's just start with the most obvious.
+Let delta t go to 0.
+So what's delta t?
+Well, let's let there be n steps.
+We're going to hold big T fixed.
+Big T is the overall length of time that we're interested in.
+We're going to let there be n steps,
+and we're going to let each step be of length delta t.
+It's going to be t divided by n, the number of steps.
+So if I want to let delta t go to 0, I can hold t fixed
+and let n go to infinity.
+Those will be equivalent.
+Now, let's construct a B path, but now as I told you before,
+instead of B1, T, I have the first argument here is delta t.
+This is going to consist of a path of steps that represent
+interval delta t in time, and there
+are going to be n of them to get to my horizon.
+So I'm going to let t go from to n,
+and I'm going to take these z's.
+What's the expectation of that sum?
+0.
+The expectation of each term is 0, and the sum of the 0's is 0.
+What's the variance?
+Well, they're going to be as usual
+because these are independent.
+The variance of the sum is going to be
+n times the variance of an individual z.
+So n times the variance of the z, the z's are standardized,
+is going to give me n.
+So what happens as n goes to infinity?
+The variance becomes infinite.
+Not too useful.
+Let's try again.
+Suppose we rescale the time step in the step size,
+because it's easy to see what went wrong before.
+We took an infinite number of steps, each of which was size ,
+so of course the variance blew up.
+So we should think about it, and instead of just varying
+the time interval, we should, as we
+let delta t get smaller and smaller,
+we should also let the step size approach 0.
+So let's see if we can do that.
+Let's let delta t equal T/n as before,
+and let's define epsilon to be our variable for our step size,
+and let's let it be lambda times our unit variable
+so that we can, instead of changing our beloved z's,
+this way we can let lambda go to 0 to let the step size go to 0.
+So what do we have?
+Well, we construct a sum of n variables.
+But this time, the n variables are the epsilons.
+Each epsilon is lambda times z, so the lambdas
+pull out in front of the sum.
+So what do we have for the variance?
+Well, the expectation is 0, as before.
+The variance is going to be n times the variance
+of the single step.
+The variance of a constant times a variable
+is the constant squared times the variance of the variable.
+So we have n lambda squared times the variance of z,
+and that gives us n lambda squared
+for the variance of this process.
+Now, we want the step size to go to 0,
+so suppose lambda goes as 1/n, the same way
+that delta t goes as 1/n.
+Then we let n go to infinity.
+What do we get?
+Well, now we get that the variance of our process
+is going to be n lambda squared.
+That's going to be n over n squared.
+That's going to vanish.
+That is, as we let n go to 0 [CORRECTION: infinity],
+it takes delta t to 0 and it takes the step size to 0
+in such a way that the variance also goes to 0.
+Variance 0 means it's deterministic.
+There's no randomness at all.
+And that would be nice, but it's not
+going to be too useful for formulating
+continuous-time finance.
+So the problem here was the relative rate
+of change of the time step and the step size, that is,
+the spacing in the size of the step that we take
+and how we interpret them as evolving in time.
+Take a moment and see where you think we might go next.

@@ -1,0 +1,828 @@
+0
+00:00:00,000 --> 00:00:02,180
+PROFESSOR: What kinds of Ito processes
+
+1
+00:00:02,180 --> 00:00:04,670
+might we use for looking at the short rate?
+
+2
+00:00:04,670 --> 00:00:08,210
+So we've seen how given an Ito process for the short rate,
+
+3
+00:00:08,210 --> 00:00:10,640
+we can get a differential equation,
+
+4
+00:00:10,640 --> 00:00:13,670
+a partial differential equation for bond prices
+
+5
+00:00:13,670 --> 00:00:16,850
+in terms of this unknown market price at risk.
+
+6
+00:00:16,850 --> 00:00:18,950
+But we do have a whole bunch of relationships
+
+7
+00:00:18,950 --> 00:00:22,370
+that hold in order to avoid arbitrage among the bonds,
+
+8
+00:00:22,370 --> 00:00:25,640
+and it gives some hope of seeing a structure for the yield
+
+9
+00:00:25,640 --> 00:00:26,550
+curve.
+
+10
+00:00:26,550 --> 00:00:28,850
+So there's a huge literature on different kinds
+
+11
+00:00:28,850 --> 00:00:34,210
+of models for the spot rate, and here are a few examples.
+
+12
+00:00:34,210 --> 00:00:36,270
+So just to take a look at a few of them,
+
+13
+00:00:36,270 --> 00:00:40,650
+the Ho and Lee model starts with an arbitrary function of dt
+
+14
+00:00:40,650 --> 00:00:44,590
+plus a constant Brownian term.
+
+15
+00:00:44,590 --> 00:00:49,170
+So there's a time-dependent, deterministic first term
+
+16
+00:00:49,170 --> 00:00:51,210
+that corresponds to the drift part,
+
+17
+00:00:51,210 --> 00:00:53,610
+to the return part of an Ito process,
+
+18
+00:00:53,610 --> 00:00:56,830
+and a random part fixed volatility.
+
+19
+00:00:56,830 --> 00:01:00,030
+So we can determine new arbitrage prices.
+
+20
+00:01:00,030 --> 00:01:04,050
+And then by picking different functional forms of psi,
+
+21
+00:01:04,050 --> 00:01:07,200
+we can try to fit observed market prices if we think
+
+22
+00:01:07,200 --> 00:01:09,330
+that the markets are efficient in our pricing
+
+23
+00:01:09,330 --> 00:01:12,430
+and taking into account these relationships correctly.
+
+24
+00:01:12,430 --> 00:01:14,580
+So one way that we might do that is
+
+25
+00:01:14,580 --> 00:01:18,000
+to take a look at observed market prices
+
+26
+00:01:18,000 --> 00:01:21,930
+and then try to fit a curve through this,
+
+27
+00:01:21,930 --> 00:01:24,720
+take some derivatives of this in such a way
+
+28
+00:01:24,720 --> 00:01:29,340
+that we can determine a psi of t that yields prices--
+
+29
+00:01:29,340 --> 00:01:32,130
+no pun intended-- that yields prices
+
+30
+00:01:32,130 --> 00:01:37,030
+that hopefully, fit the yield curve reasonably well.
+
+31
+00:01:37,030 --> 00:01:41,310
+So that's a way to kind of match existing market data.
+
+32
+00:01:41,310 --> 00:01:45,630
+The Vasicek model is a single-factor model
+
+33
+00:01:45,630 --> 00:01:48,540
+that has mean reversion built into it.
+
+34
+00:01:48,540 --> 00:01:52,740
+And you'll recognize this as being the Ornstein-Uhlenbeck
+
+35
+00:01:52,740 --> 00:01:54,990
+process that we looked at in the continuous time
+
+36
+00:01:54,990 --> 00:01:58,480
+analog of an autoregressive time series model.
+
+37
+00:01:58,480 --> 00:02:02,580
+So in this model, there's also a constant term,
+
+38
+00:02:02,580 --> 00:02:07,200
+but there's a definite specific form for the coefficient of dt.
+
+39
+00:02:07,200 --> 00:02:09,419
+It's not some arbitrary function psi.
+
+40
+00:02:09,419 --> 00:02:12,450
+It's a particular form, and it says that interest rates
+
+41
+00:02:12,450 --> 00:02:14,240
+are mean reverting.
+
+42
+00:02:14,240 --> 00:02:17,240
+The Hull and White model kind of tries
+
+43
+00:02:17,240 --> 00:02:20,940
+to combine the best of both of the above.
+
+44
+00:02:20,940 --> 00:02:24,560
+So it has a mean reversion term plus an arbitrary function,
+
+45
+00:02:24,560 --> 00:02:27,200
+and it lets us model the yield curve
+
+46
+00:02:27,200 --> 00:02:29,930
+and have some structure for volatility.
+
+47
+00:02:29,930 --> 00:02:35,600
+The CIR model, the Cox-Ingersoll-Ross model,
+
+48
+00:02:35,600 --> 00:02:40,490
+takes a different twist by modifying the dB term
+
+49
+00:02:40,490 --> 00:02:45,650
+and taking a look at how the effective volatility may
+
+50
+00:02:45,650 --> 00:02:49,760
+depend on the levels of interest rates.
+
+51
+00:02:49,760 --> 00:02:51,100
+So how do we proceed?
+
+52
+00:02:51,100 --> 00:02:54,220
+You pick your model, you pick your Ito process,
+
+53
+00:02:54,220 --> 00:02:56,540
+and then you solve your bond pricing equation.
+
+54
+00:02:56,540 --> 00:02:57,520
+You look at the market.
+
+55
+00:02:57,520 --> 00:02:58,510
+You see what you like.
+
+56
+00:02:58,510 --> 00:03:00,010
+If you don't like it, you come back here,
+
+57
+00:03:00,010 --> 00:03:01,670
+you pick another one, and you start again.
+
+58
+00:03:01,670 --> 00:03:03,460
+And if you don't like any of these models,
+
+59
+00:03:03,460 --> 00:03:05,180
+you can start with your own.
+
+60
+00:03:05,180 --> 00:03:06,970
+So the methodology goes this way.
+
+61
+00:03:06,970 --> 00:03:12,070
+We're connecting a particular postulate for an Ito process
+
+62
+00:03:12,070 --> 00:03:14,860
+that drives one of the random factors--
+
+63
+00:03:14,860 --> 00:03:17,170
+in this case, these are single-factor models--
+
+64
+00:03:17,170 --> 00:03:20,710
+and then we solve for prices consistent with principles
+
+65
+00:03:20,710 --> 00:03:23,260
+of no arbitrage.
+
+66
+00:03:23,260 --> 00:03:26,880
+So for example, if the spot rate follows an OU process,
+
+67
+00:03:26,880 --> 00:03:29,580
+and the market price of risk is assumed
+
+68
+00:03:29,580 --> 00:03:32,410
+to be constant or linear--
+
+69
+00:03:32,410 --> 00:03:36,720
+so this eta function, I'm just putting an arbitrary, c0 or c1,
+
+70
+00:03:36,720 --> 00:03:39,540
+you can set one or the other of them to 0 if you'd like.
+
+71
+00:03:39,540 --> 00:03:41,790
+We can do a little bit of arithmetic with the function
+
+72
+00:03:41,790 --> 00:03:45,660
+f in terms of the a and b parameters for the structure
+
+73
+00:03:45,660 --> 00:03:48,840
+of our Ito process from our bond-pricing equation,
+
+74
+00:03:48,840 --> 00:03:52,310
+and we can see what kind of equation that we get.
+
+75
+00:03:52,310 --> 00:03:54,450
+We can look at estimating the model parameters
+
+76
+00:03:54,450 --> 00:03:57,690
+either from looking at dynamics of the short rate
+
+77
+00:03:57,690 --> 00:04:00,310
+or by taking a look at observed bond prices.
+
+78
+00:04:00,310 --> 00:04:03,690
+So here, I've introduced the a prime and a y prime
+
+79
+00:04:03,690 --> 00:04:05,910
+just to be rescaled parameters based
+
+80
+00:04:05,910 --> 00:04:07,913
+on some estimates we might do.
+
+81
+00:04:07,913 --> 00:04:09,330
+The details aren't that important.
+
+82
+00:04:09,330 --> 00:04:12,750
+It's just to show you that the overall structure that I get
+
+83
+00:04:12,750 --> 00:04:17,220
+can have a form that's of the same overall form, something
+
+84
+00:04:17,220 --> 00:04:21,149
+that's linear in the spot rate, which is the same structure
+
+85
+00:04:21,149 --> 00:04:24,510
+that we have up here in our original process.
+
+86
+00:04:24,510 --> 00:04:28,800
+So the reason we do this as opposed to something simpler,
+
+87
+00:04:28,800 --> 00:04:31,830
+like Brownian motion or geometric Brownian motion,
+
+88
+00:04:31,830 --> 00:04:35,640
+is that interest rates, unlike stock prices, don't diffuse.
+
+89
+00:04:35,640 --> 00:04:37,150
+They don't go all over the place.
+
+90
+00:04:37,150 --> 00:04:39,460
+In fact, they don't vary that much at all.
+
+91
+00:04:39,460 --> 00:04:41,890
+So mean reversion is an interesting starting place.
+
+92
+00:04:41,890 --> 00:04:43,920
+The idea is the rates might change,
+
+93
+00:04:43,920 --> 00:04:47,010
+but maybe they stay in a given neighborhood for a while.
+
+94
+00:04:47,010 --> 00:04:48,990
+Certainly, over the last long period of time,
+
+95
+00:04:48,990 --> 00:04:50,910
+the rates have been pretty close to 0.
+
+96
+00:04:50,910 --> 00:04:55,170
+But the idea is that instead of having a strict bound--
+
+97
+00:04:55,170 --> 00:04:58,260
+say, a zero bound for interest rates or an upper bound
+
+98
+00:04:58,260 --> 00:05:00,180
+beyond which they can't go--
+
+99
+00:05:00,180 --> 00:05:02,820
+we see that the diffusion model isn't a good model.
+
+100
+00:05:02,820 --> 00:05:07,780
+But by having a mean reversion factor, like the Vasicek model,
+
+101
+00:05:07,780 --> 00:05:09,870
+it's the dynamics that keep it from going.
+
+102
+00:05:09,870 --> 00:05:12,300
+There's something always pulling the interest rates back.
+
+103
+00:05:12,300 --> 00:05:14,670
+Now, that does mean that we need an estimate for what
+
+104
+00:05:14,670 --> 00:05:18,420
+the parameters are for this mean to which they're reverting.
+
+105
+00:05:18,420 --> 00:05:20,662
+Is there some long-term average that we should use?
+
+106
+00:05:20,662 --> 00:05:22,620
+Is there a different way we can think about it?
+
+107
+00:05:22,620 --> 00:05:25,230
+So those are part of the estimation
+
+108
+00:05:25,230 --> 00:05:26,670
+question for this model.
+
+109
+00:05:26,670 --> 00:05:29,520
+And we can ask if we're thinking about what things should
+
+110
+00:05:29,520 --> 00:05:32,190
+be long-term, or if we're thinking about empirically,
+
+111
+00:05:32,190 --> 00:05:34,650
+what works best in terms of the set of option
+
+112
+00:05:34,650 --> 00:05:38,070
+prices and the yield curve that the model produces.
+
+113
+00:05:38,070 --> 00:05:39,930
+But suppose we do take this structure,
+
+114
+00:05:39,930 --> 00:05:41,550
+and we just want to do the mathematics
+
+115
+00:05:41,550 --> 00:05:43,800
+and see what we can get by applying the Ito
+
+116
+00:05:43,800 --> 00:05:45,490
+calculus to this setting.
+
+117
+00:05:45,490 --> 00:05:46,960
+So let's take a look.
+
+118
+00:05:46,960 --> 00:05:49,000
+So we've got this general structure.
+
+119
+00:05:49,000 --> 00:05:54,750
+So we have that dy is some constant times y bar minus y--
+
+120
+00:05:54,750 --> 00:05:56,310
+that's our mean reversion term--
+
+121
+00:05:56,310 --> 00:05:58,110
+plus sigma dB.
+
+122
+00:05:58,110 --> 00:06:00,780
+Now, one of the things that we can do that's convenient
+
+123
+00:06:00,780 --> 00:06:03,110
+is to transform the variables.
+
+124
+00:06:03,110 --> 00:06:06,630
+So let's use Ito's lemma to change from variable y
+
+125
+00:06:06,630 --> 00:06:10,350
+to variable z where we'll put in an exponential dependence.
+
+126
+00:06:10,350 --> 00:06:12,990
+And we're not surprised by that, because we would think
+
+127
+00:06:12,990 --> 00:06:15,570
+that if the model were purely deterministic,
+
+128
+00:06:15,570 --> 00:06:20,830
+we would have a long-term average interest rate,
+
+129
+00:06:20,830 --> 00:06:25,010
+and we might expect to see exponential behavior.
+
+130
+00:06:25,010 --> 00:06:28,540
+So if we just plug that in and turn the crank,
+
+131
+00:06:28,540 --> 00:06:31,320
+we see that we get this expression for dy.
+
+132
+00:06:31,320 --> 00:06:34,210
+We make this substitution for y and z.
+
+133
+00:06:34,210 --> 00:06:36,370
+And then we see that we can write dz
+
+134
+00:06:36,370 --> 00:06:39,250
+in terms of an exponential prefactor
+
+135
+00:06:39,250 --> 00:06:42,880
+out in front, times something that looks like a random walk
+
+136
+00:06:42,880 --> 00:06:44,720
+with constant coefficients.
+
+137
+00:06:44,720 --> 00:06:47,560
+So this is not a random walk.
+
+138
+00:06:47,560 --> 00:06:49,480
+But in terms of the z variable, we've
+
+139
+00:06:49,480 --> 00:06:51,640
+turned it into something that looks like it
+
+140
+00:06:51,640 --> 00:06:53,230
+has some similar properties.
+
+141
+00:06:53,230 --> 00:06:55,300
+And the advantage of this is not that we're
+
+142
+00:06:55,300 --> 00:06:58,000
+going to get diffusion where we didn't have any before.
+
+143
+00:06:58,000 --> 00:07:01,780
+The point here is that by having this be an exact differential
+
+144
+00:07:01,780 --> 00:07:03,550
+and this have constant coefficients,
+
+145
+00:07:03,550 --> 00:07:09,060
+we have a chance of integrating the last integral.
+
+146
+00:07:09,060 --> 00:07:11,790
+So if we integrate that SDE, what
+
+147
+00:07:11,790 --> 00:07:14,530
+do we find for the behavior?
+
+148
+00:07:14,530 --> 00:07:19,138
+We find that z can be written-- the evolution of z
+
+149
+00:07:19,138 --> 00:07:20,680
+from an initial starting point that's
+
+150
+00:07:20,680 --> 00:07:25,990
+an arbitrary constant, z0, can be written in this form where
+
+151
+00:07:25,990 --> 00:07:30,850
+we can now study what happens as t goes to 0
+
+152
+00:07:30,850 --> 00:07:33,800
+and as t goes to infinity for a long time.
+
+153
+00:07:33,800 --> 00:07:36,880
+So what we see is when we turn things, we solve for z,
+
+154
+00:07:36,880 --> 00:07:39,100
+we do the integral in terms of z.
+
+155
+00:07:39,100 --> 00:07:41,528
+And then we substitute back to get y.
+
+156
+00:07:41,528 --> 00:07:42,320
+And what do we see?
+
+157
+00:07:42,320 --> 00:07:45,640
+We see one term, initially y0, and this term
+
+158
+00:07:45,640 --> 00:07:48,700
+decreases exponentially with time.
+
+159
+00:07:48,700 --> 00:07:53,140
+This term here, as time goes on, the e to the minus
+
+160
+00:07:53,140 --> 00:07:56,230
+at goes to 0, and this approaches y bar.
+
+161
+00:07:56,230 --> 00:07:59,050
+And now we see that by combining these two terms,
+
+162
+00:07:59,050 --> 00:08:01,030
+that if sigma were equal to 0, we
+
+163
+00:08:01,030 --> 00:08:03,880
+would have something that would begin at any y0,
+
+164
+00:08:03,880 --> 00:08:07,120
+and it would relax over time to reach
+
+165
+00:08:07,120 --> 00:08:09,550
+y bar as t goes to infinity, which
+
+166
+00:08:09,550 --> 00:08:12,340
+is what we would expect for our mean reversion process
+
+167
+00:08:12,340 --> 00:08:14,350
+in the absence of volatility.
+
+168
+00:08:14,350 --> 00:08:16,060
+There is volatility, though.
+
+169
+00:08:16,060 --> 00:08:19,990
+And we have this term in dB, which is
+
+170
+00:08:19,990 --> 00:08:21,610
+a sequence of random variables.
+
+171
+00:08:21,610 --> 00:08:23,973
+And therefore, writing it out in this way,
+
+172
+00:08:23,973 --> 00:08:25,390
+it looks like it's in closed form.
+
+173
+00:08:25,390 --> 00:08:27,640
+But, of course, that interval over dB
+
+174
+00:08:27,640 --> 00:08:29,440
+is itself a random variable.
+
+175
+00:08:29,440 --> 00:08:32,770
+It says that dB's need to be weighted
+
+176
+00:08:32,770 --> 00:08:37,309
+by the exponential prefactor at different steps along the way.
+
+177
+00:08:37,309 --> 00:08:39,820
+So this is an expression for y.
+
+178
+00:08:39,820 --> 00:08:42,200
+We can ask about the moments of its distribution.
+
+179
+00:08:42,200 --> 00:08:43,929
+That's the full y.
+
+180
+00:08:43,929 --> 00:08:46,030
+We know it's related to a Gaussian,
+
+181
+00:08:46,030 --> 00:08:49,570
+because the infinitesimal dB's are Gaussian,
+
+182
+00:08:49,570 --> 00:08:54,340
+but we have this time-weighted average of dB's.
+
+183
+00:08:54,340 --> 00:08:56,830
+But we certainly can compute the mean and variance
+
+184
+00:08:56,830 --> 00:08:58,010
+of that expression.
+
+185
+00:08:58,010 --> 00:09:01,130
+So if we take the mean for the long-term value,
+
+186
+00:09:01,130 --> 00:09:04,330
+we see that because the expectation is linear,
+
+187
+00:09:04,330 --> 00:09:08,020
+the dB term goes away, and we're just left with this expression
+
+188
+00:09:08,020 --> 00:09:12,610
+that I mentioned before for how the long-term average behaves
+
+189
+00:09:12,610 --> 00:09:17,080
+and how it starts at y0, and it relaxes as t goes to infinity,
+
+190
+00:09:17,080 --> 00:09:19,050
+to reach y bar.
+
+191
+00:09:19,050 --> 00:09:23,590
+In terms of the variance, we apply our definition.
+
+192
+00:09:23,590 --> 00:09:28,740
+The variance is the expectation of y minus its own expectation,
+
+193
+00:09:28,740 --> 00:09:30,090
+quantity squared.
+
+194
+00:09:30,090 --> 00:09:31,860
+We multiply it out.
+
+195
+00:09:31,860 --> 00:09:35,100
+We end up with double integrals of our products of dB.
+
+196
+00:09:35,100 --> 00:09:39,330
+We use our Ito rule, which says that dB
+
+197
+00:09:39,330 --> 00:09:43,680
+at time s and dB at time s prime are uncorrelated
+
+198
+00:09:43,680 --> 00:09:46,890
+with each other, unless their times coincide,
+
+199
+00:09:46,890 --> 00:09:49,680
+in which case, their variance is dt.
+
+200
+00:09:49,680 --> 00:09:51,780
+So we can do the integrals, and we
+
+201
+00:09:51,780 --> 00:09:54,540
+find a time-dependent variance.
+
+202
+00:09:54,540 --> 00:09:58,980
+And t goes to infinity, we're left with the constant result
+
+203
+00:09:58,980 --> 00:10:01,380
+in terms of the initial parameters of the model,
+
+204
+00:10:01,380 --> 00:10:04,650
+sigma squared-- remember, sigma was the coefficient
+
+205
+00:10:04,650 --> 00:10:06,030
+of our Brownian term--
+
+206
+00:10:06,030 --> 00:10:09,590
+sigma squared over 2 alpha.
+

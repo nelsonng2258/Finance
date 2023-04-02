@@ -1,0 +1,154 @@
+
+PROFESSOR: Now we're almost ready to do Black-Scholes.
+Let's consider our portfolio.
+But now we're going to augment pi by including cash.
+So before I wrote down that pi was V minus delta S.
+And that was partly to lure you toward the answer.
+Let's be much more open minded about what the number of shares
+is, and just leave it as a generic q,
+and yet put in a plus sign here for Q.
+So we're going to have to solve for everything.
+So my general rule for the portfolio
+is, I have the value of 1 option plus the number of shares
+times the value per share plus the amount of cash
+times the value of the cash, and that's
+the value of a portfolio.
+So what happens to this portfolio as we rebalance?
+Well, we think of our picture.
+And we've got the rebalancing.
+And we have the dynamics between two different periods.
+So the rebalancing, we know that the value doesn't
+change by accounting rules.
+We're just changing one asset for another.
+So what happens between two rebalancings,
+that is, over the time scale of one market day?
+Well, we're holding-- remember our picture,
+over the market day, we're holding our quantities fixed,
+and the prices are changing.
+So the change in value in the portfolio
+is a change in value of the option
+plus this quantity is held fixed, the stock changes value,
+the cash balance is held fixed, and possibly
+the money changes value where we're earning interest.
+If we go to the continuous time limit, and go to differentials,
+we see that we can write that as d pi, as dV
+plus d of qS plus CM.
+That is, I'm just taking the differential of my top line.
+Now, let's expand it out.
+This is dV plus--
+and let's keep everything from our product rule.
+I have qdS plus Sdq, which I've put out here.
+I have C plus dqdS.
+I have CdM plus MdC plus dCdM.
+And I've grouped these this way for a reason.
+These four terms are just a self-financing condition
+that we saw previously.
+So these four terms together are all
+present on the right-hand side, but collectively they equal 0.
+So our expression gets a lot simpler.
+d pi is dV plus qdS plus CdM.
+Now we recognize that dM, the change in the value of money,
+is just our rMdt.
+That's the risk-free rate.
+Finally, we can take CM--
+which, we don't really want to see money
+in our equation anyways.
+Come back up here, and we can replace CM
+by pi minus V minus qS, which I've done right here.
+So now I have an expression for d pi.
+dV plus qdS plus r times this quantity times dt.
+Now we want to look for a dynamic trading strategy
+where the number of shares that we have, q, not only
+is we're not going to assume it's constant.
+We expect it to be changing.
+In fact, that's going to give us to rule for how
+we can execute these hedges.
+That's going to give us the rule for how we can actually
+eliminate risk.
+So the reason we can do this, and we
+would expect this to work, is there's
+only one stochastic driver in the entire problem,
+and that's the stock.
+So we have that dS term.
+And we know that the stock moves,
+but the value of the derivative is random, the value of V
+random through its dependence on S. So we've got one driver.
+We have two, possibly three instruments.
+Maybe we can cancel it out in a dynamic way.
+So let's take a look.
+I'm going to take my previous expression.
+And all I'm going to do is, in place of dV,
+I'm going to use Ito's lemma.
+So I'm going to have this set of terms, dt plus partial of V
+with respect to S times dS.
+And this term over here comes along
+from the ride from the previous slide.
+Notice that, if I group my dS terms together--
+OK, I have this is a dt term, this is a dt term,
+I've got my dS terms here.
+Can I make this coefficient go away?
+Yes, we can.
+If we define q to be minus partial of V with respect to S.
+And that corresponds to what we called minus delta before.
+But now, notice that we're not assuming
+that anything is constant.
+In fact, we're requiring that we trade such that q always
+is equal to partial of V with respect to S
+so that the risk is always balanced.
+We can do that instantaneously.
+When the prices change, we might need to retrade.
+So this dynamic rehedging lets us eliminate risk
+at the cost of possibly doing a lot of trading
+over very small intervals.
+
+Finally, with this choice, we can go through and simplify.
+And we'll find that we get the same Black-Scholes.
+Equation again.
+This term here goes away.
+Everything else we group together, has a dt in it.
+We look for the coefficient of dt and set
+that equal to 0 because we've said d pi is not changing.
+And we finally have-- because remember
+d pi is not changing now because pi includes the cash.
+And the interest is all incorporated
+as part of our portfolio.
+So we started with a portfolio with initial value 0.
+It's self-financing.
+There's no money coming in or out.
+There's no risk.
+So it began with value 0.
+It stays 0.
+The rate of change is 0.
+And that tells us that this big expression in parentheses
+has to be 0 for all time and for all values of S
+where the option is alive.
+That's prior to expiration.
+And that gives us the Black-Scholes.
+Partial differential equation once again,
+this time without cheating.
+So the lesson to take away from this, apart
+from two different derivations for getting Black-Scholes.
+Equation is this notion of, number one,
+that we have a self-financing portfolio, that this
+is a self-contained closed world where we're able to rebalance.
+And because we have these multiple instruments and only
+one source of risk, we're able to cancel out the risk.
+By looking at the rebalancing, though,
+even though we're back continuous time,
+by having broken it into two parts--
+the rebalancing where we hold prices fixed and change
+quantities and the evolution period
+where we hold the quantities fixed
+and the prices can change--
+that becomes hard to distinguish if we do everything
+immediately in continuous time.
+But it is important that we do things in a nonparticipating
+way.
+So these are discrete.
+That is, we need to observe, and then trade, observe,
+and then trade, no matter how small the time intervals.
+We can't do it in the opposite order.
+If we could see the future prices and then trade on them,
+that would be a terrific source of riches.
+Unfortunately, real markets don't work that way.
+And our mathematics needs to respect that.

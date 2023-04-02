@@ -1,0 +1,170 @@
+
+PROFESSOR: We use these to estimate parameters.
+So for example.
+In the random walk model that we wrote down,
+we had two parameters.
+The generalized random walk, we had two parameters--
+mu and sigma.
+When we did Monte Carlo simulation,
+we picked values of mu and sigma and generated
+a bunch of concrete numbers on the computer.
+But suppose we start from data and we'd like to know.
+What should we use for mu sigma if the data
+were generated from, say, the random walk model.
+What would be the right mu and sigma
+that would correspondent that would have generated the data?
+And the answer to that, we can find from usual statistics.
+For maximum likelihood estimation, and in this case,
+we find the mu from the average and the variance
+from computing the sample variance
+of our set of observations.
+
+Now a quick aside on some things about doing financial returns
+in particular, because that's the dominant case where we're
+interested in finance where we're looking at time series
+analysis.
+The usual things that we would see in investment reporting
+are going to involve simple returns--
+simple returns, monthly returns, annual returns.
+And variances or volatilities may be computed
+using the simple returns.
+But often, mathematically, it's better
+to work with logarithmic returns,
+continuously compounded returns, rather than simple returns.
+Now it's easy-- they're one-to-one
+connected because the simple return is
+just so I can exponentiate the logarithmic return
+and subtract 1 and get the value that I need there.
+And for a lot of applications, numerically, the values
+are really, really close.
+For example, if I'm looking at the equity markets
+and I'm looking at returns over a one day time scale,
+the numbers, the typical size of the returns, is very small.
+And mathematically, these will be quite similar.
+But if we want to do things right,
+we need to use the correct formula.
+These have exactly the same information.
+And we can compute the expectations
+by changing variables in whichever form is
+more natural for us to compute.
+To show you the point I made just a moment ago,
+if we look at a Taylor expansion of big R in terms
+of little r, of simple returns, in terms of log returns,
+or if we turn it around the other way,
+we can see that the leading order, big R and little r,
+they're the same.
+However, there are two things we want to keep in mind.
+One of them is, deviations can be economically significant.
+So if we take a look at things like a typical 10% return
+with 30% volatility on an annualized basis,
+if we look at the formulas, we can
+see that there are deviations depending
+on which of the formulas we use to compute them.
+The other thing to keep in mind is,
+this is great when the values are small, which
+they are most of the time.
+But when they're not, they're not.
+So when we have a day like the stock market crash in October
+of 1987 where the market fell by a quarter in a single day,
+whether you're using logarithmic returns or simple returns
+makes a big deal, and the higher order terms
+in the Taylor series matter.
+So it's always better to do it right.
+In practice, we can sometimes get away
+by not taking a look at the difference
+depending on what the applications are.
+When we're thinking about volatility, though,
+and we'll see this when we get to the Black-Scholes equation
+when we think about option pricing,
+one of the important parameters in the model
+is the volatility of the underlying.
+And that is something that we need to estimate from data.
+So what should we use for our estimator?
+Our idea is that we ultimately need to have a good model.
+So there are a lot of different possible ways of estimating.
+And what we really want the real test
+is whether the procedure that we use
+produces good applications of the model that ultimately
+fit the data in the markets properly.
+The typical approach, though, is to use logarithmic returns, not
+simple returns, because they're consistent with the formulation
+of the model.
+That is, within the option pricing models, as we'll see,
+there's an assumption that the returns are log
+normally distributed, or, in other words,
+that the log returns are normally distributed.
+If we start from the parameters of the price process,
+that if we think of the price as being
+the price from the previous day times the exponential
+of some logarithmic return, and then we
+think about iterating that, that's
+consistent with our random walk model here.
+Now the drift coefficient cancels out
+of the definition of the variance.
+But it is required for our estimation of the volatility.
+Remember that computing the volatility or computing
+variance requires looking at the deviations around the mean.
+And the only mean that we have, we're
+going to need to estimate from the data.
+There are in the literature lots of alternative estimates
+that have different benefits.
+They have improved efficiency and they take into account
+some things we might not see simply from looking
+at close-to-close returns.
+And a couple of them, like the Parkinson and Garman-Klass
+estimators, take into account additional information that
+sort of interpolates between the discrete observations that are
+usually made for computing returns from the close of one
+market day to the next, including, did the price--
+where did it achieve a high or a low during the day, intraday,
+and do we take into account the open, close, high,
+and low during the day.
+And that additional information can be helpful.
+So ultimately, these are modeling choices
+we need to see, but the starting point usually
+is the traditional estimator that we looked at before.
+Now when we look at hypothesis testing,
+the simplest case is taking a model, like the random walk
+model, and asking whether it's right or wrong.
+So hypothesis testing is the simplest case.
+We start with two hypotheses, a null hypothesis
+and a alternate, and we define a test statistic
+to see if we can reject the null hypothesis.
+This test statistic is a random variable.
+So we often do this probabilistically.
+In classical statistical inference,
+we think about a p-value or we look at a z-statistic.
+And we say if the null hypothesis were true,
+what's the likelihood that we would observe a test
+statistic like this or that's this extreme or more.
+That is, we look to see how small the p-value is
+for evidence to reject the null.
+And we compare it to some significance level
+that we've hopefully agreed at in advance.
+Because the test statistic is a random variable,
+it's drawn from a probability distribution.
+And if we have a lot of observations to make,
+we can re-scale things so that it
+looks close to a normal distribution or a related
+distribution.
+Just to keep in mind, a simple example
+before we turn to the random walk--
+imagine that we're flipping a coin
+to see if it's a fair coin.
+So we take a coin, we flip it 10 times,
+and we observe a bunch of heads.
+And we ask, is the coin fair or biased.
+If we don't know in advance whether it's fair or biased,
+we might imagine that there's a particular probability
+of observing heads.
+And we could ask, what's the value of p
+and what's the best estimate for p.
+And if we do have an estimate for the bias,
+how precise is it, how much confidence do we have.
+But simple hypothesis testing starts with two hypotheses--
+H0, the null hypothesis that the coin is fair,
+that the probability is 1/2, the alternate hypothesis that it's
+anything other than 1/2.
+Question to think about in any of these cases--
+what are the appropriate test statistics
+that we might choose from.

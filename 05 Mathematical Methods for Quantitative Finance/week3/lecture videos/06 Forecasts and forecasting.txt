@@ -1,0 +1,156 @@
+
+PROFESSOR: Forecasts with time series models
+are predictions about future observations,
+future realizations of our random variables
+that are conditioned on information that's known
+at the time of the forecast.
+Now, what is a forecast?
+Well, the output could be one of a number of different things.
+It could be a point forecast, for example,
+the price of Tesla's stock in 30 days, the specific number.
+It could be a probability forecast.
+Probability of rain this weekend is 30%.
+It could be a full distribution, that
+is we might say the probability of stock XYZ,
+its return distribution over the next year
+is log normally distributed with a mu of 10% and a sigma of 30%.
+So any of those could be the output
+of a forecasting process.
+And, of course, we'll want to evaluate
+the quality of forecasts.
+And in many ways it's less dramatic or mysterious
+than it might seem.
+One of the attributes of a forecast
+is that it has a horizon or it may have multiple horizons.
+That is, a forecast is framed in terms
+of two points, the point at which we make the forecast--
+and that we need to know so that we
+know what information is available
+on which to base the forecast--
+and the future date when the realization will be known.
+Clearly, we can't judge the quality of a forecast
+until that date passes.
+And then we can compare our predictions
+with the subsequent observations.
+So we usually think of a horizon.
+And as time progresses between now and the horizon,
+unless the horizon is five minutes from now
+or the next day, if there are multiple steps in which we
+could update our horizons based on new information evolving,
+the forecast could change.
+We may have rolling forecasts.
+We may have forecast where we move both the current time
+and the deadline, or very commonly, we
+have forecasts for a particular date, an earnings release date,
+and end of the fiscal year, or picnic weather for this Sunday.
+Where as time evolves we may be interested in the same terminal
+date which may be fixed on the calendar,
+but we have new information that arises
+and we can update our forecasts.
+So if I said that our chance of rain for Sunday is 30%,
+perhaps yesterday I made a forecast
+based on what I knew at the time and I said it was 0,
+it wasn't going to rain.
+And tomorrow my forecast might change again.
+Perhaps it goes to 50% as new information comes along.
+
+In time series models we want to know what's available,
+what's the information set.
+And now we're going to use the same machinery that we
+did in solving models in closed form unconditionally,
+but now we're going to condition on information
+that's available at a particular point in time.
+And here's where the lag structure
+of models such AR and MA models, and RM models more
+generally come in.
+So let's take a look at an example.
+Let's look at AR1 model.
+So here for convenience, I've simplified our usual AR1 model
+by defining a new variable y which is
+Rt minus mu divided by sigma.
+So I've taken our usual defining equation
+and I just divided it through by sigma.
+Now, this looks like a normalized random variable.
+But, remember, that's not necessarily the case.
+Sigma is not the standard deviation of R,
+it's just the coefficient we put in front of Z in our model.
+So this is scaled to be dimensionless.
+It certainly looks like it might have 0 mean and some unit 1
+size variance, but that's something
+that we would need to compute.
+We can't just infer that from here.
+The reason I defined it this way was
+to clean up and reduce some of the parameters
+so that we really only have one parameter left
+in our model, lambda.
+And we can put the others back by re-substituting for y
+using this expression.
+So in terms of these variables, the AR1 model
+takes a simple form.
+Y sub t is a new random term.
+Z sub t which would be all we'd have if it were random walk.
+And if it's autoregressive of order 1,
+we have a coefficient which here is
+called minus lambda times the previous observation
+Y of t minus 1.
+If we're forecasting, it's helpful to shift our thinking
+from looking backward to looking forward.
+So let's just add 1 to t and write it
+in this way, which is more a little bit more suggestive
+if not more informative.
+Let's say that Yt plus 1, the next observation we're
+going to have is the next realization
+of the random variable Z minus lambda times
+the last known observation Y sub t.
+Now, suppose we were to compute the conditional expectation
+based on the information set available
+at time t, which I'm going to denote
+just I sub t for the information set.
+In this case, it only consists of the past realizations of Y,
+because those are the only variables in our problem.
+But it might exist of a bunch of auxiliary financial or other
+econometric variables.
+So, in this case, what I wanted to do
+is take an expected value assuming
+that I know all of the realizations up through time t
+so that Y sub t no longer a random variable.
+But everything, Yt plus 1, Yt plus 2, Yt plus 3,
+and so on into the future, those have not yet been observed
+and they are random variables.
+So exactly how I denote this is a matter of convention,
+but and these are my conventions.
+So hopefully the idea is clear.
+Let's take a look at what the consequences are.
+When I take expectations of both sides of the equation,
+on the left-hand side I have the expectation of Y,
+condition on the information set I sub t.
+On the right-hand side the expectation of Z
+is 0 because it's the standardized random variable.
+Its value, its expectation is always 0.
+And this term now is a constant because it's already
+been observed.
+So it's expectation is just equal to itself.
+So it's minus lambda times Y sub t.
+How do we find the forecast or an expectation two steps
+in the future?
+We iterate.
+So Y sub t plus 2 from the defining equation
+for AR1 process, I can just take the previous equation
+and write t--
+the same way I replace by t plus 1, I'll replace t plus 1
+by t plus 2.
+So I have this defining equation Y of t plus 2 is Zt plus 2
+minus lambda Yt plus 1.
+Now, I'm going to substitute my previous equation
+for Yt plus 1.
+And I can-- just by substitution I can now express Yt plus 2
+as Z of t plus 2 which is in the future, minus lambda of Zt
+plus 1 which is also in the future,
+plus lambda squared times Yt, which is a known quantity.
+And now I'll stop.
+Take expectations of both sides.
+The first two terms vanish because they're Z's.
+They have mean 0.
+And the expectation for two steps ahead in our process
+conditioned on the information available at time t
+is equals a lambda squared Y sub t.

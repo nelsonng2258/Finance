@@ -1,0 +1,1308 @@
+0
+00:00:00,000 --> 00:00:00,865
+
+
+1
+00:00:00,865 --> 00:00:03,240
+PROFESSOR: There's a problem in the classical probability
+
+2
+00:00:03,240 --> 00:00:05,820
+literature known as Gambler's Ruin that's
+
+3
+00:00:05,820 --> 00:00:09,640
+a discrete time stochastic process that's
+
+4
+00:00:09,640 --> 00:00:10,980
+solved in a different way.
+
+5
+00:00:10,980 --> 00:00:13,960
+And it would be interesting for us to take a look at it.
+
+6
+00:00:13,960 --> 00:00:15,690
+So here's the idea.
+
+7
+00:00:15,690 --> 00:00:18,960
+The idea is, suppose that you and I are gambling.
+
+8
+00:00:18,960 --> 00:00:21,600
+And we begin with the total amount of wealth,
+
+9
+00:00:21,600 --> 00:00:22,680
+total amount of assets.
+
+10
+00:00:22,680 --> 00:00:23,850
+Let's call it a.
+
+11
+00:00:23,850 --> 00:00:25,890
+And in this example on the right hand side,
+
+12
+00:00:25,890 --> 00:00:28,680
+imagine that there's $10 that we have between us.
+
+13
+00:00:28,680 --> 00:00:32,130
+And we start with you have $5 and I have $5.
+
+14
+00:00:32,130 --> 00:00:35,400
+And the idea is, we play a sequence of games.
+
+15
+00:00:35,400 --> 00:00:39,150
+At each step, if you win, you get $1-- if I win,
+
+16
+00:00:39,150 --> 00:00:42,660
+I get $1, the total amount of wealth is conserved.
+
+17
+00:00:42,660 --> 00:00:45,090
+And we play until one of us is ruined--
+
+18
+00:00:45,090 --> 00:00:49,170
+that is, until either your capital goes to 0 or mine does.
+
+19
+00:00:49,170 --> 00:00:53,020
+So from your perspective, either you get all the wealth,
+
+20
+00:00:53,020 --> 00:00:56,160
+or your wealth goes to 0, at which point it stops.
+
+21
+00:00:56,160 --> 00:00:58,350
+Now, I've shown on the right a picture
+
+22
+00:00:58,350 --> 00:01:02,070
+that illustrates some possible ways this game might come out
+
+23
+00:01:02,070 --> 00:01:03,630
+with these starting conditions.
+
+24
+00:01:03,630 --> 00:01:06,270
+And each color represents a different path.
+
+25
+00:01:06,270 --> 00:01:09,900
+You'll notice that of the five paths that are shown here,
+
+26
+00:01:09,900 --> 00:01:12,540
+three of them finish with the player winning--
+
+27
+00:01:12,540 --> 00:01:15,910
+that is, capturing all $10 that are available.
+
+28
+00:01:15,910 --> 00:01:18,420
+One of them finishes with ruin--
+
+29
+00:01:18,420 --> 00:01:20,250
+that is at $0.
+
+30
+00:01:20,250 --> 00:01:21,300
+And then, it stays there.
+
+31
+00:01:21,300 --> 00:01:23,940
+Once you're ruined, you're not allowed to make any more bets.
+
+32
+00:01:23,940 --> 00:01:25,920
+And in the green path, one of them
+
+33
+00:01:25,920 --> 00:01:27,870
+has not yet hit either end.
+
+34
+00:01:27,870 --> 00:01:30,430
+It hasn't yet hit 0 or $10.
+
+35
+00:01:30,430 --> 00:01:33,390
+And we might even wonder if it could just
+
+36
+00:01:33,390 --> 00:01:35,620
+keep going indefinitely.
+
+37
+00:01:35,620 --> 00:01:39,660
+So in this kind of game, we have a repeated set of gambles.
+
+38
+00:01:39,660 --> 00:01:41,160
+And to keep it general, we're going
+
+39
+00:01:41,160 --> 00:01:44,670
+to allow the probability of success or failure--
+
+40
+00:01:44,670 --> 00:01:47,460
+our Bernoulli trials-- be asymmetric.
+
+41
+00:01:47,460 --> 00:01:50,430
+So let's let p represent the probability of success.
+
+42
+00:01:50,430 --> 00:01:53,520
+q is 1 minus p is the probability of failure.
+
+43
+00:01:53,520 --> 00:01:57,390
+You start with some initial capital, x greater than 0.
+
+44
+00:01:57,390 --> 00:02:02,700
+And we have these two classic stopping points,
+
+45
+00:02:02,700 --> 00:02:05,820
+which are either when you're capital x is equal to 0,
+
+46
+00:02:05,820 --> 00:02:08,949
+or x is equal to a.
+
+47
+00:02:08,949 --> 00:02:12,760
+Now, there are two kinds of things that this typifies--
+
+48
+00:02:12,760 --> 00:02:14,680
+two classes of problems, known as stopping
+
+49
+00:02:14,680 --> 00:02:16,510
+problems and boundary problems.
+
+50
+00:02:16,510 --> 00:02:18,115
+The boundary case is pretty obvious.
+
+51
+00:02:18,115 --> 00:02:21,700
+We have these two cases where our wealth either hits 0
+
+52
+00:02:21,700 --> 00:02:24,970
+or it hits a, at which point we stop.
+
+53
+00:02:24,970 --> 00:02:28,450
+So we can ask, unlike us unlike our previous case where
+
+54
+00:02:28,450 --> 00:02:30,310
+we looked at time series and just said,
+
+55
+00:02:30,310 --> 00:02:31,810
+you give initial conditions.
+
+56
+00:02:31,810 --> 00:02:33,790
+What happens in the future?
+
+57
+00:02:33,790 --> 00:02:35,590
+Here, we have boundary conditions
+
+58
+00:02:35,590 --> 00:02:38,830
+that specify something specific that occurs
+
+59
+00:02:38,830 --> 00:02:40,270
+if and when we hit them.
+
+60
+00:02:40,270 --> 00:02:43,130
+And of course, there are obvious financial applications.
+
+61
+00:02:43,130 --> 00:02:47,140
+These are things that represent bankruptcy, that's
+
+62
+00:02:47,140 --> 00:02:49,390
+the classic definition of ruin.
+
+63
+00:02:49,390 --> 00:02:50,950
+But they might be other events.
+
+64
+00:02:50,950 --> 00:02:54,280
+For example, hitting a capital reserve requirement,
+
+65
+00:02:54,280 --> 00:02:58,210
+hitting a credit default trigger, hitting your stop loss
+
+66
+00:02:58,210 --> 00:02:59,500
+limit.
+
+67
+00:02:59,500 --> 00:03:02,290
+And we could think of things on the upper limit as well.
+
+68
+00:03:02,290 --> 00:03:06,160
+We might have a strategy where we terminate an investment
+
+69
+00:03:06,160 --> 00:03:08,530
+once we reach a desired goal.
+
+70
+00:03:08,530 --> 00:03:11,180
+The stopping problems are a little bit different.
+
+71
+00:03:11,180 --> 00:03:13,430
+Those are cases where we want to know,
+
+72
+00:03:13,430 --> 00:03:15,560
+does a given process stop?
+
+73
+00:03:15,560 --> 00:03:17,350
+Does it ever reach the condition?
+
+74
+00:03:17,350 --> 00:03:19,540
+And if it does reach the condition, what
+
+75
+00:03:19,540 --> 00:03:21,280
+would be an expected time or what
+
+76
+00:03:21,280 --> 00:03:23,740
+would be the distribution of stopping times?
+
+77
+00:03:23,740 --> 00:03:26,535
+We might also think about this strategically.
+
+78
+00:03:26,535 --> 00:03:27,910
+We could have a question where we
+
+79
+00:03:27,910 --> 00:03:32,350
+ask, what would be the optimal way to say, run a business,
+
+80
+00:03:32,350 --> 00:03:35,830
+if we wanted to minimize its default probability
+
+81
+00:03:35,830 --> 00:03:38,420
+or its bankruptcy probability.
+
+82
+00:03:38,420 --> 00:03:40,930
+So let's look at the math and see how we can do this.
+
+83
+00:03:40,930 --> 00:03:43,420
+What we'll see is, we have a recursion relation.
+
+84
+00:03:43,420 --> 00:03:45,430
+But this recursion is not in time.
+
+85
+00:03:45,430 --> 00:03:47,200
+This recursion is in money.
+
+86
+00:03:47,200 --> 00:03:48,760
+So here's what we do.
+
+87
+00:03:48,760 --> 00:03:54,280
+Let's let q sub x denote the probability of ruin--
+
+88
+00:03:54,280 --> 00:03:57,640
+that is, the probability that we'll eventually hit 0
+
+89
+00:03:57,640 --> 00:04:03,363
+before x equals a, starting from an initial capital level x.
+
+90
+00:04:03,363 --> 00:04:04,780
+Now, the interesting thing here is
+
+91
+00:04:04,780 --> 00:04:07,540
+it does have a Markov structure, because it doesn't matter
+
+92
+00:04:07,540 --> 00:04:08,920
+what's happened in the past.
+
+93
+00:04:08,920 --> 00:04:12,070
+All the matters for our probability of surviving
+
+94
+00:04:12,070 --> 00:04:16,050
+is how much capital we have at the present time.
+
+95
+00:04:16,050 --> 00:04:18,700
+Probability is obviously conserved.
+
+96
+00:04:18,700 --> 00:04:22,440
+So the probability of ruin now we
+
+97
+00:04:22,440 --> 00:04:24,930
+can relate to what happens after our next game.
+
+98
+00:04:24,930 --> 00:04:26,970
+After the next game, we could win
+
+99
+00:04:26,970 --> 00:04:29,110
+with probability p, in which case
+
+100
+00:04:29,110 --> 00:04:31,770
+our capital would be x plus 1.
+
+101
+00:04:31,770 --> 00:04:35,040
+And that would give us p times qx plus 1.
+
+102
+00:04:35,040 --> 00:04:37,320
+Or we could lose and end up with capital
+
+103
+00:04:37,320 --> 00:04:39,750
+x minus 1, in which case, this would
+
+104
+00:04:39,750 --> 00:04:41,340
+be our probability of ruin.
+
+105
+00:04:41,340 --> 00:04:43,620
+And adding together these two mutually
+
+106
+00:04:43,620 --> 00:04:47,790
+exclusive possibilities gives us our original probability.
+
+107
+00:04:47,790 --> 00:04:51,750
+Now, you can see that this is a recursion relationship in x.
+
+108
+00:04:51,750 --> 00:04:53,730
+This kind of difference equation where
+
+109
+00:04:53,730 --> 00:04:58,020
+we have a relation between x minus 1, x, and x plus 1
+
+110
+00:04:58,020 --> 00:05:00,690
+is similar to differential equations
+
+111
+00:05:00,690 --> 00:05:01,860
+that are second order.
+
+112
+00:05:01,860 --> 00:05:04,410
+This is a second order difference equation.
+
+113
+00:05:04,410 --> 00:05:06,330
+Like the differential equation case,
+
+114
+00:05:06,330 --> 00:05:08,620
+there are two independent solutions.
+
+115
+00:05:08,620 --> 00:05:10,380
+And we fix the boundary conditions
+
+116
+00:05:10,380 --> 00:05:14,460
+by imposing-- we fix the final solution by imposing boundary
+
+117
+00:05:14,460 --> 00:05:16,950
+conditions on the general linear combination of the two
+
+118
+00:05:16,950 --> 00:05:18,070
+solutions.
+
+119
+00:05:18,070 --> 00:05:20,920
+So there's a special case when the probabilities are equal.
+
+120
+00:05:20,920 --> 00:05:22,410
+Let's do the general case.
+
+121
+00:05:22,410 --> 00:05:26,160
+In the general case, where p is not equal to q,
+
+122
+00:05:26,160 --> 00:05:28,530
+you can check by substitution that these
+
+123
+00:05:28,530 --> 00:05:30,070
+are two different solutions.
+
+124
+00:05:30,070 --> 00:05:32,070
+One of them is the trivial solution,
+
+125
+00:05:32,070 --> 00:05:34,380
+that q sub x equals 1.
+
+126
+00:05:34,380 --> 00:05:38,190
+And that's not an interesting solution to our problem,
+
+127
+00:05:38,190 --> 00:05:40,860
+saying the probability of ruin is equal to 1,
+
+128
+00:05:40,860 --> 00:05:42,480
+because we start out not being ruined.
+
+129
+00:05:42,480 --> 00:05:45,360
+But mathematically, leaving aside the boundary conditions,
+
+130
+00:05:45,360 --> 00:05:51,120
+it does solve this equation, because p plus q is equal to 1.
+
+131
+00:05:51,120 --> 00:05:55,200
+The other one is this form here, q over p to the x.
+
+132
+00:05:55,200 --> 00:05:57,720
+And remember, q is equal to 1 minus p.
+
+133
+00:05:57,720 --> 00:06:00,160
+And if you substitute this into the equation,
+
+134
+00:06:00,160 --> 00:06:03,370
+you can check that it works.
+
+135
+00:06:03,370 --> 00:06:06,160
+Now therefore, the most general solution
+
+136
+00:06:06,160 --> 00:06:09,160
+is a linear combination of these two special solutions.
+
+137
+00:06:09,160 --> 00:06:10,420
+So we have two constants.
+
+138
+00:06:10,420 --> 00:06:11,920
+Let's call them a and b.
+
+139
+00:06:11,920 --> 00:06:14,620
+So our general solution is of the form
+
+140
+00:06:14,620 --> 00:06:18,580
+constant plus another constant, times q over p to the x power.
+
+141
+00:06:18,580 --> 00:06:22,660
+And we fix a and b by imposing boundary conditions--
+
+142
+00:06:22,660 --> 00:06:24,520
+two obvious boundary conditions.
+
+143
+00:06:24,520 --> 00:06:27,700
+When x equals 0, we are ruined.
+
+144
+00:06:27,700 --> 00:06:30,040
+If we have no money, the probability of ruin
+
+145
+00:06:30,040 --> 00:06:32,020
+is 1, because we're already ruined.
+
+146
+00:06:32,020 --> 00:06:34,630
+And similarly, if we have all the money,
+
+147
+00:06:34,630 --> 00:06:38,260
+if our capital is equal to a, our probability of ruin
+
+148
+00:06:38,260 --> 00:06:40,840
+is 0, because the game is already ended.
+
+149
+00:06:40,840 --> 00:06:44,440
+So if we impose these, we can solve for a and b,
+
+150
+00:06:44,440 --> 00:06:48,940
+and we get this result for the probability of ruin--
+
+151
+00:06:48,940 --> 00:06:51,370
+this expression in the box down here.
+
+152
+00:06:51,370 --> 00:06:55,090
+This tells us, as a function of a, x, and p
+
+153
+00:06:55,090 --> 00:06:58,480
+what our probability of ruin is starting from any given
+
+154
+00:06:58,480 --> 00:06:59,800
+level of capital x.
+
+155
+00:06:59,800 --> 00:07:04,600
+
+
+156
+00:07:04,600 --> 00:07:08,610
+Now, we can ask a variety of questions
+
+157
+00:07:08,610 --> 00:07:12,220
+about what happens under these absorbing boundary conditions.
+
+158
+00:07:12,220 --> 00:07:14,520
+For example, we could ask, can the sequence
+
+159
+00:07:14,520 --> 00:07:15,910
+continue without terminating?
+
+160
+00:07:15,910 --> 00:07:21,960
+That is, does the probability of reaching neither x equals a
+
+161
+00:07:21,960 --> 00:07:27,540
+or x equals 0 in an arbitrary amount of time,
+
+162
+00:07:27,540 --> 00:07:29,250
+is that some positive number?
+
+163
+00:07:29,250 --> 00:07:30,690
+Is it equal to 0, which would mean
+
+164
+00:07:30,690 --> 00:07:33,040
+that we do hit one of the other two boundaries.
+
+165
+00:07:33,040 --> 00:07:35,970
+We could ask with the expected time is to hit.
+
+166
+00:07:35,970 --> 00:07:39,090
+If we allowed ourselves to stop differently,
+
+167
+00:07:39,090 --> 00:07:41,970
+what kind of strategy might we employ, and could we
+
+168
+00:07:41,970 --> 00:07:44,050
+do something better?
+
+169
+00:07:44,050 --> 00:07:47,077
+How do we take advantage of unequal odds?
+
+170
+00:07:47,077 --> 00:07:48,660
+For the case where the odds are equal,
+
+171
+00:07:48,660 --> 00:07:50,290
+we can do it in one of two ways.
+
+172
+00:07:50,290 --> 00:07:52,830
+We can either check that 1 and x over a
+
+173
+00:07:52,830 --> 00:07:54,960
+are special solutions to the equation.
+
+174
+00:07:54,960 --> 00:07:58,230
+Or we can take the limit, where q approaches p,
+
+175
+00:07:58,230 --> 00:08:02,200
+using L'Hopital's rule and just taking our general solution.
+
+176
+00:08:02,200 --> 00:08:05,010
+What do we see about actual numerical values
+
+177
+00:08:05,010 --> 00:08:08,370
+to get some intuition about what's going on?
+
+178
+00:08:08,370 --> 00:08:10,920
+Well, one interesting fact about this,
+
+179
+00:08:10,920 --> 00:08:15,510
+is that if we start very close to taking all the money,
+
+180
+00:08:15,510 --> 00:08:16,890
+we have a good chance of winning.
+
+181
+00:08:16,890 --> 00:08:17,970
+Which isn't surprising.
+
+182
+00:08:17,970 --> 00:08:21,600
+For example, suppose that there's $100 between us,
+
+183
+00:08:21,600 --> 00:08:24,780
+and we start with $99, and we're playing the house.
+
+184
+00:08:24,780 --> 00:08:26,700
+And suppose the odds are equal, then
+
+185
+00:08:26,700 --> 00:08:28,830
+you can check by the previous formula,
+
+186
+00:08:28,830 --> 00:08:31,980
+we have a 99% chance of winning one more dollar
+
+187
+00:08:31,980 --> 00:08:34,470
+before we lose all 99% that we have.
+
+188
+00:08:34,470 --> 00:08:35,429
+Not surprising.
+
+189
+00:08:35,429 --> 00:08:37,890
+We're close to owning all of the money.
+
+190
+00:08:37,890 --> 00:08:43,620
+But what's less obvious, is that if the odds are against us,
+
+191
+00:08:43,620 --> 00:08:48,540
+we still have a very good chance of winning all the money
+
+192
+00:08:48,540 --> 00:08:50,580
+before we lose what we have.
+
+193
+00:08:50,580 --> 00:08:53,700
+That is, even when the odds are stacked against us,
+
+194
+00:08:53,700 --> 00:08:57,120
+if we have sufficient capital reserves, the odds
+
+195
+00:08:57,120 --> 00:08:59,800
+of attaining a finite goal--
+
+196
+00:08:59,800 --> 00:09:04,230
+and in this case, a relatively modest goal--
+
+197
+00:09:04,230 --> 00:09:09,300
+can look very attractive even when the odds are against us.
+
+198
+00:09:09,300 --> 00:09:11,790
+So the odds are against us, we typically
+
+199
+00:09:11,790 --> 00:09:13,800
+think it's a game that we shouldn't play.
+
+200
+00:09:13,800 --> 00:09:16,530
+The expected value's negative, stay away.
+
+201
+00:09:16,530 --> 00:09:18,120
+We want to look for opportunities
+
+202
+00:09:18,120 --> 00:09:20,940
+where we have positive expected value in a gamble.
+
+203
+00:09:20,940 --> 00:09:24,550
+And furthermore, where we give adequate compensation for risk.
+
+204
+00:09:24,550 --> 00:09:26,970
+If the expected return is negative,
+
+205
+00:09:26,970 --> 00:09:29,340
+normally we would say, let's leave it alone,
+
+206
+00:09:29,340 --> 00:09:33,030
+provided there are some other better opportunities available.
+
+207
+00:09:33,030 --> 00:09:36,990
+But all that changes when we limit our objective,
+
+208
+00:09:36,990 --> 00:09:39,960
+and we say, suppose I only want a fixed amount of money,
+
+209
+00:09:39,960 --> 00:09:42,840
+and I'm not going to play the game indefinitely.
+
+210
+00:09:42,840 --> 00:09:45,240
+In fact, we can go a bit further.
+
+211
+00:09:45,240 --> 00:09:48,180
+Not only does this sometimes give us
+
+212
+00:09:48,180 --> 00:09:52,290
+a positive chance for achieving a goal before we get ruined,
+
+213
+00:09:52,290 --> 00:09:56,520
+but it says, that when the odds are against us, sometimes
+
+214
+00:09:56,520 --> 00:09:59,430
+we should take even more risk.
+
+215
+00:09:59,430 --> 00:10:01,740
+What if we change the stakes?
+
+216
+00:10:01,740 --> 00:10:05,280
+Suppose we increase the bet size from 1 to b,
+
+217
+00:10:05,280 --> 00:10:10,050
+and let's suppose that b evenly divides a and x,
+
+218
+00:10:10,050 --> 00:10:11,830
+just for simplicity.
+
+219
+00:10:11,830 --> 00:10:15,870
+So if we change our bet size, then we update our recursion.
+
+220
+00:10:15,870 --> 00:10:18,210
+The problem has the same structure,
+
+221
+00:10:18,210 --> 00:10:21,810
+it's just the individual steps are chunkier.
+
+222
+00:10:21,810 --> 00:10:23,430
+When we substitute in--
+
+223
+00:10:23,430 --> 00:10:25,470
+we play the same game as before.
+
+224
+00:10:25,470 --> 00:10:29,610
+We solve for our formula, we get a new result. And what we find
+
+225
+00:10:29,610 --> 00:10:34,200
+is, that when the stakes are increased, that if the odds are
+
+226
+00:10:34,200 --> 00:10:38,400
+against us, we have a lower ruin probability-- that
+
+227
+00:10:38,400 --> 00:10:41,190
+is, a greater chance of winning all the money
+
+228
+00:10:41,190 --> 00:10:44,890
+and hitting the upper boundary, than we did before.
+
+229
+00:10:44,890 --> 00:10:46,410
+So if the odds are against you it
+
+230
+00:10:46,410 --> 00:10:50,220
+can be advantageous to swing for the fences, so to speak.
+
+231
+00:10:50,220 --> 00:10:55,260
+That is, you can think of this intuitively
+
+232
+00:10:55,260 --> 00:10:57,720
+as being kind of a complement to the law of large numbers.
+
+233
+00:10:57,720 --> 00:11:00,570
+In a game where we play indefinitely,
+
+234
+00:11:00,570 --> 00:11:03,550
+we know that our expected return is going to be negative.
+
+235
+00:11:03,550 --> 00:11:06,300
+We of course need to worry about the fluctuations.
+
+236
+00:11:06,300 --> 00:11:10,830
+But this says, that if there's a definite stopping point,
+
+237
+00:11:10,830 --> 00:11:13,260
+the fluctuations can be to our advantage
+
+238
+00:11:13,260 --> 00:11:15,780
+if we stop when we get a fluctuation that's
+
+239
+00:11:15,780 --> 00:11:18,030
+sufficient for us to hit our upper boundary.
+
+240
+00:11:18,030 --> 00:11:20,880
+That is, the longer we play, the more likely
+
+241
+00:11:20,880 --> 00:11:23,220
+we are to grind down and end up ruined.
+
+242
+00:11:23,220 --> 00:11:25,590
+But if we take larger bets, we're
+
+243
+00:11:25,590 --> 00:11:30,420
+more likely to have an instance where
+
+244
+00:11:30,420 --> 00:11:32,020
+we hit our upper boundary.
+
+245
+00:11:32,020 --> 00:11:35,245
+So lower ruin probability means greater overall chance
+
+246
+00:11:35,245 --> 00:11:35,745
+of success.
+
+247
+00:11:35,745 --> 00:11:38,550
+
+
+248
+00:11:38,550 --> 00:11:42,960
+What if our appetite for risk is unbounded.
+
+249
+00:11:42,960 --> 00:11:47,400
+That is, suppose that a is infinite,
+
+250
+00:11:47,400 --> 00:11:49,200
+and we want to keep playing, and just
+
+251
+00:11:49,200 --> 00:11:51,210
+see how much money we could get.
+
+252
+00:11:51,210 --> 00:11:56,217
+Well, it's pretty clear that if the odds are unfavorable,
+
+253
+00:11:56,217 --> 00:11:58,050
+that we're never going to get all the money.
+
+254
+00:11:58,050 --> 00:12:00,390
+We've set ourselves an impossible task.
+
+255
+00:12:00,390 --> 00:12:05,220
+And in fact, our probability of ruin goes to 1.
+
+256
+00:12:05,220 --> 00:12:10,050
+In the case where the odds are in our favor,
+
+257
+00:12:10,050 --> 00:12:12,390
+we can compute what the ruin probability is
+
+258
+00:12:12,390 --> 00:12:15,210
+and get something potentially that's less than 1.
+
+259
+00:12:15,210 --> 00:12:17,730
+
+
+260
+00:12:17,730 --> 00:12:19,530
+How long does the game last?
+
+261
+00:12:19,530 --> 00:12:21,780
+Well, we could ask about its expected duration
+
+262
+00:12:21,780 --> 00:12:22,980
+in the same way.
+
+263
+00:12:22,980 --> 00:12:24,930
+But now, things are slightly different,
+
+264
+00:12:24,930 --> 00:12:27,480
+because now we have a generalization
+
+265
+00:12:27,480 --> 00:12:28,860
+of our previous equation.
+
+266
+00:12:28,860 --> 00:12:31,360
+But now we have an inhomogeneous equation.
+
+267
+00:12:31,360 --> 00:12:33,720
+So let d be the duration of the game.
+
+268
+00:12:33,720 --> 00:12:37,050
+Then d of x plus 1 is the duration of the game,
+
+269
+00:12:37,050 --> 00:12:39,720
+starting from x plus $1.
+
+270
+00:12:39,720 --> 00:12:43,470
+And d x minus 1 is the duration of the game starting
+
+271
+00:12:43,470 --> 00:12:45,000
+from x minus $1.
+
+272
+00:12:45,000 --> 00:12:46,740
+And we need to find out d of x is,
+
+273
+00:12:46,740 --> 00:12:51,600
+that is, what's the expected return as a function of x.
+
+274
+00:12:51,600 --> 00:12:56,010
+So in our recursion, before we equated this to what's
+
+275
+00:12:56,010 --> 00:12:57,360
+on the left hand side.
+
+276
+00:12:57,360 --> 00:12:59,970
+But now, we know that these are related
+
+277
+00:12:59,970 --> 00:13:02,910
+to one more play of the game, so we add 1
+
+278
+00:13:02,910 --> 00:13:04,600
+on the right hand side.
+
+279
+00:13:04,600 --> 00:13:07,020
+So instead of the previous homogeneous equation
+
+280
+00:13:07,020 --> 00:13:10,290
+where every term involved the d, here we have this plus 1,
+
+281
+00:13:10,290 --> 00:13:12,030
+where you can check that this gives
+
+282
+00:13:12,030 --> 00:13:14,550
+a solution to the equation.
+
+283
+00:13:14,550 --> 00:13:17,610
+Here it's a slightly more complicated formula for p
+
+284
+00:13:17,610 --> 00:13:20,160
+not equal to q, for p equals q.
+
+285
+00:13:20,160 --> 00:13:22,650
+This simplifies it to a nice quadratic form.
+
+286
+00:13:22,650 --> 00:13:27,630
+a x minus x squared for p equals q.
+
+287
+00:13:27,630 --> 00:13:29,830
+So that tells us, that for example,
+
+288
+00:13:29,830 --> 00:13:34,440
+in a fair game, if you and I each start with $100--
+
+289
+00:13:34,440 --> 00:13:38,250
+$200 total, the expected duration of the game
+
+290
+00:13:38,250 --> 00:13:40,635
+is 10,000--
+
+291
+00:13:40,635 --> 00:13:42,630
+100 times 100.
+
+292
+00:13:42,630 --> 00:13:48,960
+And it grows as the square when the stakes are equal.
+
+293
+00:13:48,960 --> 00:13:54,740
+
+
+294
+00:13:54,740 --> 00:13:56,320
+So let's summarize.
+
+295
+00:13:56,320 --> 00:13:58,270
+Gambler's Ruin is a problem which
+
+296
+00:13:58,270 --> 00:14:00,070
+has a recursive structure.
+
+297
+00:14:00,070 --> 00:14:04,180
+It's a discrete time process in money rather than in time.
+
+298
+00:14:04,180 --> 00:14:06,310
+And it's subject to boundary conditions.
+
+299
+00:14:06,310 --> 00:14:09,880
+The boundary conditions tell us when the process terminates.
+
+300
+00:14:09,880 --> 00:14:12,850
+It's got applications to gambling, obviously,
+
+301
+00:14:12,850 --> 00:14:16,270
+to insurance where the ruin problem in the insurance
+
+302
+00:14:16,270 --> 00:14:19,930
+literature is finding the probability that you have
+
+303
+00:14:19,930 --> 00:14:23,500
+adequate capital to never get ruined
+
+304
+00:14:23,500 --> 00:14:27,340
+by random processes which represent
+
+305
+00:14:27,340 --> 00:14:30,670
+the arrival of insurable claims or losses.
+
+306
+00:14:30,670 --> 00:14:33,910
+It has applications to thinking about bankruptcy likelihood,
+
+307
+00:14:33,910 --> 00:14:38,080
+credit default, and to bet sizing in investment strategies
+
+308
+00:14:38,080 --> 00:14:40,480
+or in gambling strategies.
+
+309
+00:14:40,480 --> 00:14:42,850
+The stopping problems that we consider
+
+310
+00:14:42,850 --> 00:14:45,700
+are things that could be defined by economic conditions,
+
+311
+00:14:45,700 --> 00:14:48,970
+such as a company in distress, beating
+
+312
+00:14:48,970 --> 00:14:55,480
+a particular term in a covenant, or a bank loan being called
+
+313
+00:14:55,480 --> 00:14:57,310
+subject to certain terms.
+
+314
+00:14:57,310 --> 00:15:00,370
+We can think about optimal stopping problems, where
+
+315
+00:15:00,370 --> 00:15:03,310
+we might have different kinds of objective functions
+
+316
+00:15:03,310 --> 00:15:05,710
+rather than maximizing expected return,
+
+317
+00:15:05,710 --> 00:15:08,950
+rather than thinking of maximizing Sharpe ratio,
+
+318
+00:15:08,950 --> 00:15:10,450
+we might think of a business venture
+
+319
+00:15:10,450 --> 00:15:14,800
+where what we'd like to do as business owners, and investors,
+
+320
+00:15:14,800 --> 00:15:17,170
+and entrepreneurs is, sure, we might
+
+321
+00:15:17,170 --> 00:15:18,910
+like to maximize our profit.
+
+322
+00:15:18,910 --> 00:15:20,650
+But maybe what we'd really like to do
+
+323
+00:15:20,650 --> 00:15:24,340
+would be to maximize the lifetime of our business
+
+324
+00:15:24,340 --> 00:15:27,370
+or minimize the probability that we go bankrupt.
+
+325
+00:15:27,370 --> 00:15:31,500
+And those will not be exactly the same calculation.
+
+326
+00:15:31,500 --> 00:15:32,000
+
+

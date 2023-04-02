@@ -1,0 +1,888 @@
+0
+00:00:00,000 --> 00:00:01,020
+
+
+1
+00:00:01,020 --> 00:00:04,320
+PROFESSOR: An Ito process is like a generalized random walk,
+
+2
+00:00:04,320 --> 00:00:08,430
+and Ito's lemma will give us a formula for doing calculus
+
+3
+00:00:08,430 --> 00:00:11,050
+with Ito processes.
+
+4
+00:00:11,050 --> 00:00:15,660
+So an Ito process is defined to be a differential that's
+
+5
+00:00:15,660 --> 00:00:20,790
+a linear combination of dB, our Gaussian Brownian
+
+6
+00:00:20,790 --> 00:00:25,860
+random variable, plus possibly times a scale factor little b,
+
+7
+00:00:25,860 --> 00:00:29,790
+plus some deterministic part I'll call a dt.
+
+8
+00:00:29,790 --> 00:00:31,470
+If the second term were absent, this
+
+9
+00:00:31,470 --> 00:00:34,770
+would just be an ordinary differential,
+
+10
+00:00:34,770 --> 00:00:38,280
+and we could look about ordinary ways of integrating it.
+
+11
+00:00:38,280 --> 00:00:40,620
+But dB is going to be random, and that's going
+
+12
+00:00:40,620 --> 00:00:42,370
+to give us something different.
+
+13
+00:00:42,370 --> 00:00:45,540
+In particular, because the Brownian path
+
+14
+00:00:45,540 --> 00:00:50,190
+itself is not differentiable, X won't be differentiable,
+
+15
+00:00:50,190 --> 00:00:53,700
+and we can't take derivatives in the usual way.
+
+16
+00:00:53,700 --> 00:01:00,300
+If we had a function of X and t where X were a normal variable,
+
+17
+00:01:00,300 --> 00:01:02,700
+the usual chain rule would say that we compute
+
+18
+00:01:02,700 --> 00:01:05,790
+the differential of our function F of t and X
+
+19
+00:01:05,790 --> 00:01:08,280
+as partial of F with respect to t times
+
+20
+00:01:08,280 --> 00:01:11,910
+dt plus partial with respect to X dX,
+
+21
+00:01:11,910 --> 00:01:15,030
+and that would be it for our ordinary chain rule.
+
+22
+00:01:15,030 --> 00:01:17,280
+But we're going to see that there's an extra term that
+
+23
+00:01:17,280 --> 00:01:20,820
+gets added when we're dealing with Ito processes,
+
+24
+00:01:20,820 --> 00:01:24,720
+and that comes about because we can't use this rule because we
+
+25
+00:01:24,720 --> 00:01:31,060
+can't differentiate directly for Brownian paths.
+
+26
+00:01:31,060 --> 00:01:33,150
+So the idea behind the proof is we're
+
+27
+00:01:33,150 --> 00:01:37,740
+going to try to rewrite our familiar ideas from calculus
+
+28
+00:01:37,740 --> 00:01:40,800
+in a way that makes sense probabilistically.
+
+29
+00:01:40,800 --> 00:01:42,570
+Let me tell you up front that, number one,
+
+30
+00:01:42,570 --> 00:01:44,070
+I'm going to sketch out the proof
+
+31
+00:01:44,070 --> 00:01:45,630
+and it's not going to be rigorous.
+
+32
+00:01:45,630 --> 00:01:47,970
+This is going to be a somewhat heuristic proof.
+
+33
+00:01:47,970 --> 00:01:50,910
+And number two, the results actually
+
+34
+00:01:50,910 --> 00:01:52,270
+matter more than the proof.
+
+35
+00:01:52,270 --> 00:01:54,520
+So I'll be upfront about this.
+
+36
+00:01:54,520 --> 00:01:56,490
+I want you to see where it comes from.
+
+37
+00:01:56,490 --> 00:02:00,060
+I'd like you to see where the probability arises and the Ito
+
+38
+00:02:00,060 --> 00:02:03,390
+term in the modified chain rule, but this
+
+39
+00:02:03,390 --> 00:02:05,520
+is an area where even if you don't remember
+
+40
+00:02:05,520 --> 00:02:09,000
+how to derive it, if you start with Ito's lemma, the rule
+
+41
+00:02:09,000 --> 00:02:11,760
+that we're going to have, you can apply it successfully
+
+42
+00:02:11,760 --> 00:02:14,380
+without really needing to come back to the derivation.
+
+43
+00:02:14,380 --> 00:02:17,140
+So with a little bit of chagrin, I will admit that.
+
+44
+00:02:17,140 --> 00:02:19,590
+But I hope it gives you confidence that you can--
+
+45
+00:02:19,590 --> 00:02:22,170
+if you don't follow every detail in what we're doing,
+
+46
+00:02:22,170 --> 00:02:24,550
+it's not going to make any difference for the result.
+
+47
+00:02:24,550 --> 00:02:29,460
+So the idea is we'd like to capture the expression up here
+
+48
+00:02:29,460 --> 00:02:31,960
+in a case where we're dealing with probabilities.
+
+49
+00:02:31,960 --> 00:02:34,380
+So you can think of this as we construct
+
+50
+00:02:34,380 --> 00:02:38,490
+the object on the right by taking finite changes
+
+51
+00:02:38,490 --> 00:02:41,340
+dx, where I've written it here as delta x.
+
+52
+00:02:41,340 --> 00:02:45,840
+I construct this ratio F of x plus delta
+
+53
+00:02:45,840 --> 00:02:49,380
+x minus F of x over delta x, and then I take a limit.
+
+54
+00:02:49,380 --> 00:02:52,440
+And that defines the object that's on the left-hand side
+
+55
+00:02:52,440 --> 00:02:54,360
+that we typically call the derivative of F,
+
+56
+00:02:54,360 --> 00:02:56,200
+or in this case, F prime.
+
+57
+00:02:56,200 --> 00:02:57,660
+So what I'd like to do is I'd like
+
+58
+00:02:57,660 --> 00:03:00,540
+to say in probability, because the result
+
+59
+00:03:00,540 --> 00:03:03,270
+on the right-hand side is going to be different every time I
+
+60
+00:03:03,270 --> 00:03:05,910
+compute it, because x is a random variable,
+
+61
+00:03:05,910 --> 00:03:07,970
+F is going to be random.
+
+62
+00:03:07,970 --> 00:03:11,370
+I'm not going to get a concrete, definite result for F.
+
+63
+00:03:11,370 --> 00:03:13,650
+The sense in which I'm going to define it
+
+64
+00:03:13,650 --> 00:03:19,590
+is to say that I have found a sensible definition for F prime
+
+65
+00:03:19,590 --> 00:03:23,280
+if the probability that this function deviates
+
+66
+00:03:23,280 --> 00:03:27,270
+from the right-hand side goes to 0 as delta x goes to 0.
+
+67
+00:03:27,270 --> 00:03:30,060
+So I can write this in the following two ways.
+
+68
+00:03:30,060 --> 00:03:33,810
+I can write it either as saying that the probability
+
+69
+00:03:33,810 --> 00:03:36,750
+of a deviation-- so I've written this
+
+70
+00:03:36,750 --> 00:03:40,620
+as being the difference between the left and right-hand sides
+
+71
+00:03:40,620 --> 00:03:44,700
+above me, quantity squared, so that it's always
+
+72
+00:03:44,700 --> 00:03:46,140
+a positive quantity.
+
+73
+00:03:46,140 --> 00:03:49,200
+The probability that that's greater than 0
+
+74
+00:03:49,200 --> 00:03:51,480
+goes to 0 as delta x goes to 0.
+
+75
+00:03:51,480 --> 00:03:54,610
+In other words, they're equal.
+
+76
+00:03:54,610 --> 00:03:59,550
+So if a construct, F prime of x, satisfies this,
+
+77
+00:03:59,550 --> 00:04:01,440
+I would say I've found the derivatives.
+
+78
+00:04:01,440 --> 00:04:03,480
+You notice that's the same flavor,
+
+79
+00:04:03,480 --> 00:04:06,480
+same result in the non-probabilistic case
+
+80
+00:04:06,480 --> 00:04:08,280
+as the traditional formula.
+
+81
+00:04:08,280 --> 00:04:10,500
+I can also state it in terms of expectations.
+
+82
+00:04:10,500 --> 00:04:15,390
+I can say that the expectation that the squared difference
+
+83
+00:04:15,390 --> 00:04:20,595
+will be non-zero goes to 0.
+
+84
+00:04:20,595 --> 00:04:21,720
+So what are we going to do?
+
+85
+00:04:21,720 --> 00:04:23,790
+Well, we're going to start by writing things out,
+
+86
+00:04:23,790 --> 00:04:25,600
+a differential for a Taylor series,
+
+87
+00:04:25,600 --> 00:04:27,820
+including lots of higher-order terms,
+
+88
+00:04:27,820 --> 00:04:30,150
+and then we're going to only keep
+
+89
+00:04:30,150 --> 00:04:32,160
+terms that are of order dt.
+
+90
+00:04:32,160 --> 00:04:35,400
+Anything that vanishes as dt or delta t
+
+91
+00:04:35,400 --> 00:04:39,480
+goes to 0 faster than dt, we're going to toss out.
+
+92
+00:04:39,480 --> 00:04:41,880
+But what we'll need to do is keep a couple extra terms
+
+93
+00:04:41,880 --> 00:04:44,640
+because a few things that we might have thought
+
+94
+00:04:44,640 --> 00:04:47,790
+would vanish actually, it turns out, stick around.
+
+95
+00:04:47,790 --> 00:04:51,300
+So we're going to start with our definition of our Ito process
+
+96
+00:04:51,300 --> 00:04:52,720
+and just plug it in.
+
+97
+00:04:52,720 --> 00:04:55,500
+So I start by writing out an ordinary Taylor expansion
+
+98
+00:04:55,500 --> 00:04:57,298
+for a differential in terms of all
+
+99
+00:04:57,298 --> 00:04:58,590
+these higher-order derivatives.
+
+100
+00:04:58,590 --> 00:05:00,007
+There will be cross terms, partial
+
+101
+00:05:00,007 --> 00:05:03,910
+of F with respect to X and t, dX/dt, term in dt squared,
+
+102
+00:05:03,910 --> 00:05:07,695
+terms in dX cubed, dX squared, dt, and so on.
+
+103
+00:05:07,695 --> 00:05:09,445
+And what I'm going to do for each of these
+
+104
+00:05:09,445 --> 00:05:13,660
+is I can substitute in my expression here for dX, here
+
+105
+00:05:13,660 --> 00:05:15,880
+for dX squared, and so on.
+
+106
+00:05:15,880 --> 00:05:17,560
+And then what I'd like to do is think
+
+107
+00:05:17,560 --> 00:05:20,770
+about taking expectations of the left side
+
+108
+00:05:20,770 --> 00:05:22,870
+and the right-hand side and see which
+
+109
+00:05:22,870 --> 00:05:28,480
+terms survive as we think of dt as being an infinitesimal.
+
+110
+00:05:28,480 --> 00:05:31,280
+So to do that, we want to look at our basic building block.
+
+111
+00:05:31,280 --> 00:05:35,930
+Remember that dB is a Gaussian random variable.
+
+112
+00:05:35,930 --> 00:05:39,880
+So it has mean 0, it has no skewness for its third moment,
+
+113
+00:05:39,880 --> 00:05:41,200
+its square.
+
+114
+00:05:41,200 --> 00:05:45,860
+We know its variance is dt, the length of the time interval,
+
+115
+00:05:45,860 --> 00:05:47,200
+which is infinitesimal.
+
+116
+00:05:47,200 --> 00:05:49,900
+And if we want the fourth power, we
+
+117
+00:05:49,900 --> 00:05:53,350
+get-- whereas a normal random variable, the fourth moment is
+
+118
+00:05:53,350 --> 00:05:55,900
+equal to 3, that's the reason we subtract off
+
+119
+00:05:55,900 --> 00:05:59,470
+3 for our excess kurtosis, in the case of infinitesimals,
+
+120
+00:05:59,470 --> 00:06:01,390
+when you put it in the dt's, I get the result
+
+121
+00:06:01,390 --> 00:06:02,780
+for the fourth power.
+
+122
+00:06:02,780 --> 00:06:04,750
+This is the same as the usual 3 times
+
+123
+00:06:04,750 --> 00:06:07,720
+dt squared, which we get just on dimensional grounds.
+
+124
+00:06:07,720 --> 00:06:11,140
+So if I take those building blocks for dB
+
+125
+00:06:11,140 --> 00:06:13,270
+and I apply them to Ito processes
+
+126
+00:06:13,270 --> 00:06:16,900
+and ask about expectation and mean and variance and so on,
+
+127
+00:06:16,900 --> 00:06:17,830
+do the usual thing.
+
+128
+00:06:17,830 --> 00:06:19,360
+I apply linearity.
+
+129
+00:06:19,360 --> 00:06:23,980
+So dX is just a dt plus b dB.
+
+130
+00:06:23,980 --> 00:06:27,730
+Apply linearity, so it's the expectation of a sum
+
+131
+00:06:27,730 --> 00:06:29,470
+is the sum of the expectations.
+
+132
+00:06:29,470 --> 00:06:31,210
+a dt is deterministic.
+
+133
+00:06:31,210 --> 00:06:32,690
+It's like a constant.
+
+134
+00:06:32,690 --> 00:06:34,930
+So I get a dt out here.
+
+135
+00:06:34,930 --> 00:06:38,080
+The mean of dB is 0, so all I get
+
+136
+00:06:38,080 --> 00:06:40,540
+for the mean of my Ito process is
+
+137
+00:06:40,540 --> 00:06:43,700
+a dt, which is deterministic.
+
+138
+00:06:43,700 --> 00:06:45,340
+What about the square?
+
+139
+00:06:45,340 --> 00:06:50,860
+Well, for the square, I put in the square,
+
+140
+00:06:50,860 --> 00:06:56,140
+take the second power, expand it out, do the exponentials using
+
+141
+00:06:56,140 --> 00:06:58,450
+the formulas on the top of the screen,
+
+142
+00:06:58,450 --> 00:07:02,110
+and I get a squared dt plus b squared dt.
+
+143
+00:07:02,110 --> 00:07:04,000
+When I compute the variance, remembering
+
+144
+00:07:04,000 --> 00:07:06,460
+that the variance is always the expectation
+
+145
+00:07:06,460 --> 00:07:09,070
+of the square minus the square of the expectation,
+
+146
+00:07:09,070 --> 00:07:13,430
+I find that the variance of dt is just little b squared dt,
+
+147
+00:07:13,430 --> 00:07:14,120
+and so on.
+
+148
+00:07:14,120 --> 00:07:16,080
+And I can compute higher moments as well.
+
+149
+00:07:16,080 --> 00:07:18,650
+
+
+150
+00:07:18,650 --> 00:07:22,750
+So let's go back to our formula for dF,
+
+151
+00:07:22,750 --> 00:07:26,140
+and remember that we're going to be interested in terms
+
+152
+00:07:26,140 --> 00:07:28,030
+that are of order dt.
+
+153
+00:07:28,030 --> 00:07:30,130
+The key thing to keep in mind that's
+
+154
+00:07:30,130 --> 00:07:33,910
+going to drive our results is that because the expectation
+
+155
+00:07:33,910 --> 00:07:38,890
+of dB squared is dt and the variance
+
+156
+00:07:38,890 --> 00:07:44,920
+or the expectation of dX squared has a dt in it
+
+157
+00:07:44,920 --> 00:07:49,360
+for the variance, that we can think of dB as being
+
+158
+00:07:49,360 --> 00:07:51,580
+like a square root of dt.
+
+159
+00:07:51,580 --> 00:07:55,240
+And remember, as dt goes to 0, the square root of dt
+
+160
+00:07:55,240 --> 00:07:58,178
+is going to be bigger than dt.
+
+161
+00:07:58,178 --> 00:08:00,720
+But let's just put in the terms, we'll group things together,
+
+162
+00:08:00,720 --> 00:08:02,990
+and then we'll take the limit and see what vanishes.
+
+163
+00:08:02,990 --> 00:08:05,465
+So first I've got my expression for dF.
+
+164
+00:08:05,465 --> 00:08:07,980
+
+
+165
+00:08:07,980 --> 00:08:12,160
+Next we're going to substitute in for dX, for dX squared,
+
+166
+00:08:12,160 --> 00:08:15,180
+and so on, where we're thinking about expectations.
+
+167
+00:08:15,180 --> 00:08:21,870
+And the higher-order terms are going to be non-stochastic.
+
+168
+00:08:21,870 --> 00:08:24,090
+We can group things together, where I can now
+
+169
+00:08:24,090 --> 00:08:26,730
+group together coefficients of dt.
+
+170
+00:08:26,730 --> 00:08:34,890
+Notice that I have a dt over here, a dt here, and a dt here.
+
+171
+00:08:34,890 --> 00:08:37,590
+Let me take the first and last terms and group
+
+172
+00:08:37,590 --> 00:08:40,424
+them together here, and I'll take the middle term,
+
+173
+00:08:40,424 --> 00:08:42,549
+and let's just keep it in this form for the moment,
+
+174
+00:08:42,549 --> 00:08:46,320
+bring it down here, partial of F with respect to X times dX.
+
+175
+00:08:46,320 --> 00:08:49,140
+Alternatively, instead of writing things
+
+176
+00:08:49,140 --> 00:08:52,710
+as a function of dt and dX, I can write them
+
+177
+00:08:52,710 --> 00:08:56,130
+as a function of dt and dB simply
+
+178
+00:08:56,130 --> 00:08:58,930
+by using the definition of dX.
+
+179
+00:08:58,930 --> 00:09:03,450
+So either way, in either this form or in the bottom form,
+
+180
+00:09:03,450 --> 00:09:07,990
+I have an expression for dF that I can work with.
+
+181
+00:09:07,990 --> 00:09:10,770
+So either of these two forms, depending on our applications,
+
+182
+00:09:10,770 --> 00:09:12,000
+will be useful.
+
+183
+00:09:12,000 --> 00:09:14,580
+The point about looking at the last one
+
+184
+00:09:14,580 --> 00:09:15,870
+is look at its structure.
+
+185
+00:09:15,870 --> 00:09:22,570
+You notice that it's of the form something times dt
+
+186
+00:09:22,570 --> 00:09:25,360
+plus something else times dB.
+
+187
+00:09:25,360 --> 00:09:27,280
+That's just an Ito process.
+
+188
+00:09:27,280 --> 00:09:33,010
+So the differential of F when F is a function of an Ito process
+
+189
+00:09:33,010 --> 00:09:36,610
+is also an Ito process, and that's why these are useful,
+
+190
+00:09:36,610 --> 00:09:39,130
+because they're closed when we take differentials.
+
+191
+00:09:39,130 --> 00:09:42,890
+We get more Ito processes.
+
+192
+00:09:42,890 --> 00:09:44,050
+Here's the heuristic.
+
+193
+00:09:44,050 --> 00:09:46,090
+It's the easy way to keep track of things
+
+194
+00:09:46,090 --> 00:09:48,490
+without doing a lot of Taylor expansions.
+
+195
+00:09:48,490 --> 00:09:51,100
+If every time you see a dB squared,
+
+196
+00:09:51,100 --> 00:09:54,460
+you think of it as being a dt and every time you
+
+197
+00:09:54,460 --> 00:09:57,370
+see a dX squared, you think of it-- remember,
+
+198
+00:09:57,370 --> 00:10:01,120
+this is the pure, standardized random variable.
+
+199
+00:10:01,120 --> 00:10:03,460
+This is with a scale factor in it.
+
+200
+00:10:03,460 --> 00:10:06,130
+If every time you see a dX squared, you replace it
+
+201
+00:10:06,130 --> 00:10:09,160
+by little b squared dt, you'll basically
+
+202
+00:10:09,160 --> 00:10:10,910
+get the right answers.
+
+203
+00:10:10,910 --> 00:10:15,310
+So the differential that we have has one extra term
+
+204
+00:10:15,310 --> 00:10:17,800
+beyond the usual chain rule, OK?
+
+205
+00:10:17,800 --> 00:10:20,410
+So this is our result from the previous page.
+
+206
+00:10:20,410 --> 00:10:22,900
+When we take a look at this expression here,
+
+207
+00:10:22,900 --> 00:10:26,120
+we see that this term dt--
+
+208
+00:10:26,120 --> 00:10:29,600
+this term-- get my pointer working.
+
+209
+00:10:29,600 --> 00:10:33,530
+This term dt and this term dX are the usual chain rule,
+
+210
+00:10:33,530 --> 00:10:36,720
+but this one here is something new.
+
+211
+00:10:36,720 --> 00:10:40,970
+So writing it in standard form, we have Ito's lemma in the box,
+
+212
+00:10:40,970 --> 00:10:44,060
+and I'll circle it again in red.
+
+213
+00:10:44,060 --> 00:10:47,300
+So this is worth getting to know very, very well.
+
+214
+00:10:47,300 --> 00:10:50,970
+It says that the differential of a function of X,
+
+215
+00:10:50,970 --> 00:10:55,120
+where X is an Ito process, is partial of F with respect
+
+216
+00:10:55,120 --> 00:10:59,930
+to t dt, plus partial of F with respect to X dX
+
+217
+00:10:59,930 --> 00:11:05,120
+plus a new term that involves the second partial derivative
+
+218
+00:11:05,120 --> 00:11:10,760
+with respect to X squared, but it's multiplied by dt.
+
+219
+00:11:10,760 --> 00:11:13,400
+So we've seen that the differential
+
+220
+00:11:13,400 --> 00:11:17,600
+of a function of an Ito process is itself an Ito process.
+
+221
+00:11:17,600 --> 00:11:21,440
+And this formula is Ito's lemma.
+

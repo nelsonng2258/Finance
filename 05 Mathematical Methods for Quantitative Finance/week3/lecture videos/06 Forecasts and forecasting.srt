@@ -1,0 +1,628 @@
+0
+00:00:00,000 --> 00:00:00,930
+
+
+1
+00:00:00,930 --> 00:00:03,120
+PROFESSOR: Forecasts with time series models
+
+2
+00:00:03,120 --> 00:00:05,880
+are predictions about future observations,
+
+3
+00:00:05,880 --> 00:00:08,640
+future realizations of our random variables
+
+4
+00:00:08,640 --> 00:00:11,940
+that are conditioned on information that's known
+
+5
+00:00:11,940 --> 00:00:13,630
+at the time of the forecast.
+
+6
+00:00:13,630 --> 00:00:15,180
+Now, what is a forecast?
+
+7
+00:00:15,180 --> 00:00:18,250
+Well, the output could be one of a number of different things.
+
+8
+00:00:18,250 --> 00:00:20,860
+It could be a point forecast, for example,
+
+9
+00:00:20,860 --> 00:00:25,510
+the price of Tesla's stock in 30 days, the specific number.
+
+10
+00:00:25,510 --> 00:00:27,660
+It could be a probability forecast.
+
+11
+00:00:27,660 --> 00:00:31,110
+Probability of rain this weekend is 30%.
+
+12
+00:00:31,110 --> 00:00:33,690
+It could be a full distribution, that
+
+13
+00:00:33,690 --> 00:00:37,950
+is we might say the probability of stock XYZ,
+
+14
+00:00:37,950 --> 00:00:40,830
+its return distribution over the next year
+
+15
+00:00:40,830 --> 00:00:46,960
+is log normally distributed with a mu of 10% and a sigma of 30%.
+
+16
+00:00:46,960 --> 00:00:49,500
+So any of those could be the output
+
+17
+00:00:49,500 --> 00:00:51,547
+of a forecasting process.
+
+18
+00:00:51,547 --> 00:00:53,130
+And, of course, we'll want to evaluate
+
+19
+00:00:53,130 --> 00:00:54,750
+the quality of forecasts.
+
+20
+00:00:54,750 --> 00:00:57,990
+And in many ways it's less dramatic or mysterious
+
+21
+00:00:57,990 --> 00:00:59,580
+than it might seem.
+
+22
+00:00:59,580 --> 00:01:01,650
+One of the attributes of a forecast
+
+23
+00:01:01,650 --> 00:01:04,319
+is that it has a horizon or it may have multiple horizons.
+
+24
+00:01:04,319 --> 00:01:06,720
+That is, a forecast is framed in terms
+
+25
+00:01:06,720 --> 00:01:10,240
+of two points, the point at which we make the forecast--
+
+26
+00:01:10,240 --> 00:01:11,760
+and that we need to know so that we
+
+27
+00:01:11,760 --> 00:01:13,980
+know what information is available
+
+28
+00:01:13,980 --> 00:01:15,780
+on which to base the forecast--
+
+29
+00:01:15,780 --> 00:01:19,620
+and the future date when the realization will be known.
+
+30
+00:01:19,620 --> 00:01:22,710
+Clearly, we can't judge the quality of a forecast
+
+31
+00:01:22,710 --> 00:01:24,720
+until that date passes.
+
+32
+00:01:24,720 --> 00:01:27,870
+And then we can compare our predictions
+
+33
+00:01:27,870 --> 00:01:30,850
+with the subsequent observations.
+
+34
+00:01:30,850 --> 00:01:33,010
+So we usually think of a horizon.
+
+35
+00:01:33,010 --> 00:01:36,300
+And as time progresses between now and the horizon,
+
+36
+00:01:36,300 --> 00:01:39,180
+unless the horizon is five minutes from now
+
+37
+00:01:39,180 --> 00:01:42,300
+or the next day, if there are multiple steps in which we
+
+38
+00:01:42,300 --> 00:01:45,810
+could update our horizons based on new information evolving,
+
+39
+00:01:45,810 --> 00:01:47,670
+the forecast could change.
+
+40
+00:01:47,670 --> 00:01:49,590
+We may have rolling forecasts.
+
+41
+00:01:49,590 --> 00:01:53,760
+We may have forecast where we move both the current time
+
+42
+00:01:53,760 --> 00:01:57,000
+and the deadline, or very commonly, we
+
+43
+00:01:57,000 --> 00:02:01,080
+have forecasts for a particular date, an earnings release date,
+
+44
+00:02:01,080 --> 00:02:05,490
+and end of the fiscal year, or picnic weather for this Sunday.
+
+45
+00:02:05,490 --> 00:02:09,360
+Where as time evolves we may be interested in the same terminal
+
+46
+00:02:09,360 --> 00:02:12,150
+date which may be fixed on the calendar,
+
+47
+00:02:12,150 --> 00:02:14,580
+but we have new information that arises
+
+48
+00:02:14,580 --> 00:02:16,320
+and we can update our forecasts.
+
+49
+00:02:16,320 --> 00:02:20,190
+So if I said that our chance of rain for Sunday is 30%,
+
+50
+00:02:20,190 --> 00:02:22,230
+perhaps yesterday I made a forecast
+
+51
+00:02:22,230 --> 00:02:25,110
+based on what I knew at the time and I said it was 0,
+
+52
+00:02:25,110 --> 00:02:26,400
+it wasn't going to rain.
+
+53
+00:02:26,400 --> 00:02:28,590
+And tomorrow my forecast might change again.
+
+54
+00:02:28,590 --> 00:02:32,310
+Perhaps it goes to 50% as new information comes along.
+
+55
+00:02:32,310 --> 00:02:35,830
+
+
+56
+00:02:35,830 --> 00:02:40,280
+In time series models we want to know what's available,
+
+57
+00:02:40,280 --> 00:02:41,740
+what's the information set.
+
+58
+00:02:41,740 --> 00:02:44,830
+And now we're going to use the same machinery that we
+
+59
+00:02:44,830 --> 00:02:48,550
+did in solving models in closed form unconditionally,
+
+60
+00:02:48,550 --> 00:02:51,040
+but now we're going to condition on information
+
+61
+00:02:51,040 --> 00:02:53,900
+that's available at a particular point in time.
+
+62
+00:02:53,900 --> 00:02:55,960
+And here's where the lag structure
+
+63
+00:02:55,960 --> 00:02:59,380
+of models such AR and MA models, and RM models more
+
+64
+00:02:59,380 --> 00:03:01,220
+generally come in.
+
+65
+00:03:01,220 --> 00:03:02,880
+So let's take a look at an example.
+
+66
+00:03:02,880 --> 00:03:04,910
+Let's look at AR1 model.
+
+67
+00:03:04,910 --> 00:03:09,190
+So here for convenience, I've simplified our usual AR1 model
+
+68
+00:03:09,190 --> 00:03:12,400
+by defining a new variable y which is
+
+69
+00:03:12,400 --> 00:03:15,270
+Rt minus mu divided by sigma.
+
+70
+00:03:15,270 --> 00:03:17,530
+So I've taken our usual defining equation
+
+71
+00:03:17,530 --> 00:03:19,690
+and I just divided it through by sigma.
+
+72
+00:03:19,690 --> 00:03:22,240
+Now, this looks like a normalized random variable.
+
+73
+00:03:22,240 --> 00:03:25,150
+But, remember, that's not necessarily the case.
+
+74
+00:03:25,150 --> 00:03:29,230
+Sigma is not the standard deviation of R,
+
+75
+00:03:29,230 --> 00:03:32,750
+it's just the coefficient we put in front of Z in our model.
+
+76
+00:03:32,750 --> 00:03:35,140
+So this is scaled to be dimensionless.
+
+77
+00:03:35,140 --> 00:03:40,600
+It certainly looks like it might have 0 mean and some unit 1
+
+78
+00:03:40,600 --> 00:03:42,590
+size variance, but that's something
+
+79
+00:03:42,590 --> 00:03:43,840
+that we would need to compute.
+
+80
+00:03:43,840 --> 00:03:45,790
+We can't just infer that from here.
+
+81
+00:03:45,790 --> 00:03:47,740
+The reason I defined it this way was
+
+82
+00:03:47,740 --> 00:03:49,963
+to clean up and reduce some of the parameters
+
+83
+00:03:49,963 --> 00:03:51,880
+so that we really only have one parameter left
+
+84
+00:03:51,880 --> 00:03:53,710
+in our model, lambda.
+
+85
+00:03:53,710 --> 00:03:56,920
+And we can put the others back by re-substituting for y
+
+86
+00:03:56,920 --> 00:03:59,150
+using this expression.
+
+87
+00:03:59,150 --> 00:04:02,020
+So in terms of these variables, the AR1 model
+
+88
+00:04:02,020 --> 00:04:03,160
+takes a simple form.
+
+89
+00:04:03,160 --> 00:04:06,700
+Y sub t is a new random term.
+
+90
+00:04:06,700 --> 00:04:09,820
+Z sub t which would be all we'd have if it were random walk.
+
+91
+00:04:09,820 --> 00:04:11,962
+And if it's autoregressive of order 1,
+
+92
+00:04:11,962 --> 00:04:13,420
+we have a coefficient which here is
+
+93
+00:04:13,420 --> 00:04:16,420
+called minus lambda times the previous observation
+
+94
+00:04:16,420 --> 00:04:19,180
+Y of t minus 1.
+
+95
+00:04:19,180 --> 00:04:23,230
+If we're forecasting, it's helpful to shift our thinking
+
+96
+00:04:23,230 --> 00:04:26,240
+from looking backward to looking forward.
+
+97
+00:04:26,240 --> 00:04:29,140
+So let's just add 1 to t and write it
+
+98
+00:04:29,140 --> 00:04:32,350
+in this way, which is more a little bit more suggestive
+
+99
+00:04:32,350 --> 00:04:34,240
+if not more informative.
+
+100
+00:04:34,240 --> 00:04:38,200
+Let's say that Yt plus 1, the next observation we're
+
+101
+00:04:38,200 --> 00:04:41,170
+going to have is the next realization
+
+102
+00:04:41,170 --> 00:04:44,470
+of the random variable Z minus lambda times
+
+103
+00:04:44,470 --> 00:04:49,318
+the last known observation Y sub t.
+
+104
+00:04:49,318 --> 00:04:53,710
+Now, suppose we were to compute the conditional expectation
+
+105
+00:04:53,710 --> 00:04:56,290
+based on the information set available
+
+106
+00:04:56,290 --> 00:04:58,630
+at time t, which I'm going to denote
+
+107
+00:04:58,630 --> 00:05:02,320
+just I sub t for the information set.
+
+108
+00:05:02,320 --> 00:05:05,980
+In this case, it only consists of the past realizations of Y,
+
+109
+00:05:05,980 --> 00:05:08,230
+because those are the only variables in our problem.
+
+110
+00:05:08,230 --> 00:05:11,530
+But it might exist of a bunch of auxiliary financial or other
+
+111
+00:05:11,530 --> 00:05:13,220
+econometric variables.
+
+112
+00:05:13,220 --> 00:05:15,190
+So, in this case, what I wanted to do
+
+113
+00:05:15,190 --> 00:05:18,370
+is take an expected value assuming
+
+114
+00:05:18,370 --> 00:05:22,570
+that I know all of the realizations up through time t
+
+115
+00:05:22,570 --> 00:05:25,600
+so that Y sub t no longer a random variable.
+
+116
+00:05:25,600 --> 00:05:28,990
+But everything, Yt plus 1, Yt plus 2, Yt plus 3,
+
+117
+00:05:28,990 --> 00:05:32,380
+and so on into the future, those have not yet been observed
+
+118
+00:05:32,380 --> 00:05:34,160
+and they are random variables.
+
+119
+00:05:34,160 --> 00:05:37,750
+So exactly how I denote this is a matter of convention,
+
+120
+00:05:37,750 --> 00:05:40,480
+but and these are my conventions.
+
+121
+00:05:40,480 --> 00:05:43,040
+So hopefully the idea is clear.
+
+122
+00:05:43,040 --> 00:05:45,400
+Let's take a look at what the consequences are.
+
+123
+00:05:45,400 --> 00:05:49,010
+When I take expectations of both sides of the equation,
+
+124
+00:05:49,010 --> 00:05:52,150
+on the left-hand side I have the expectation of Y,
+
+125
+00:05:52,150 --> 00:05:55,060
+condition on the information set I sub t.
+
+126
+00:05:55,060 --> 00:05:57,178
+On the right-hand side the expectation of Z
+
+127
+00:05:57,178 --> 00:06:00,310
+is 0 because it's the standardized random variable.
+
+128
+00:06:00,310 --> 00:06:02,830
+Its value, its expectation is always 0.
+
+129
+00:06:02,830 --> 00:06:07,390
+And this term now is a constant because it's already
+
+130
+00:06:07,390 --> 00:06:08,420
+been observed.
+
+131
+00:06:08,420 --> 00:06:11,150
+So it's expectation is just equal to itself.
+
+132
+00:06:11,150 --> 00:06:14,860
+So it's minus lambda times Y sub t.
+
+133
+00:06:14,860 --> 00:06:21,220
+How do we find the forecast or an expectation two steps
+
+134
+00:06:21,220 --> 00:06:22,480
+in the future?
+
+135
+00:06:22,480 --> 00:06:23,500
+We iterate.
+
+136
+00:06:23,500 --> 00:06:27,640
+So Y sub t plus 2 from the defining equation
+
+137
+00:06:27,640 --> 00:06:31,270
+for AR1 process, I can just take the previous equation
+
+138
+00:06:31,270 --> 00:06:32,260
+and write t--
+
+139
+00:06:32,260 --> 00:06:35,230
+the same way I replace by t plus 1, I'll replace t plus 1
+
+140
+00:06:35,230 --> 00:06:36,490
+by t plus 2.
+
+141
+00:06:36,490 --> 00:06:41,080
+So I have this defining equation Y of t plus 2 is Zt plus 2
+
+142
+00:06:41,080 --> 00:06:43,750
+minus lambda Yt plus 1.
+
+143
+00:06:43,750 --> 00:06:46,720
+Now, I'm going to substitute my previous equation
+
+144
+00:06:46,720 --> 00:06:48,580
+for Yt plus 1.
+
+145
+00:06:48,580 --> 00:06:53,380
+And I can-- just by substitution I can now express Yt plus 2
+
+146
+00:06:53,380 --> 00:06:58,630
+as Z of t plus 2 which is in the future, minus lambda of Zt
+
+147
+00:06:58,630 --> 00:07:01,300
+plus 1 which is also in the future,
+
+148
+00:07:01,300 --> 00:07:06,380
+plus lambda squared times Yt, which is a known quantity.
+
+149
+00:07:06,380 --> 00:07:08,200
+And now I'll stop.
+
+150
+00:07:08,200 --> 00:07:10,210
+Take expectations of both sides.
+
+151
+00:07:10,210 --> 00:07:12,940
+The first two terms vanish because they're Z's.
+
+152
+00:07:12,940 --> 00:07:14,350
+They have mean 0.
+
+153
+00:07:14,350 --> 00:07:18,640
+And the expectation for two steps ahead in our process
+
+154
+00:07:18,640 --> 00:07:22,060
+conditioned on the information available at time t
+
+155
+00:07:22,060 --> 00:07:26,220
+is equals a lambda squared Y sub t.
+
+156
+00:07:26,220 --> 00:07:28,000
+
+

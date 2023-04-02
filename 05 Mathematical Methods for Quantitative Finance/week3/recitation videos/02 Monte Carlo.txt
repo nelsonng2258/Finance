@@ -1,0 +1,254 @@
+
+PROFESSOR: We saw in lecture how to use Monte Carlo
+techniques to simulate price paths,
+for example, for asset prices.
+For example, behind me I have some sample prices
+for a stock that might follow a log-normal process.
+That is, its logarithmic returns are normally distributed.
+And the parameters over here are that I have 252 time steps.
+I have 10,000 simulations of which
+I have plotted the first 10.
+I have an initial price of $100.
+I have a mu of 0.6.
+And I've got a sigma of 0.42.
+So this shows a particular set of realizations.
+But there's more than we can do than just
+look at pretty pictures.
+Monte Carlo methods give us a powerful approximation tool.
+And they give us some direct computation tools when
+it comes to derivative pricing.
+So how are they a powerful computation tool?
+Well, if we know the exact probability distribution,
+then if we want to compute some expectations of operators,
+we end up doing some intervals.
+So even for something as simple as the Gaussian distribution,
+we might be interested in some transforms, some exponentials,
+some other complex functions.
+We'd have to do a bunch of Gaussian integrals, which
+is fine if you like integrals.
+But there's another way to do it,
+which is we can simulate price paths on the computer,
+and then we replace the exact expectation operator,
+the mathematical operator, where we
+take a probability weighted average of our function
+or variable of interest.
+And we replace it by an average, just an ordinary arithmetic
+average, of the quantities that are
+observed within our ensemble.
+What makes this work is the fact that all of our paths
+are equally likely.
+So we don't need to write down the explicit probability
+measure.
+What we do is we generate the paths
+because each one is as likely to be drawn as any other.
+The weights will come up, and they will
+sample the probability measure.
+And they'll sample the space with appropriate weights
+and appropriate frequencies.
+So this is a very good approximation technique
+for problems where it might be difficult to do
+the integrals in closed form, or we might not even
+have an explicit expression for the probability measure.
+There are two things to keep in mind regarding the accuracy,
+and you should try out these examples.
+So there are things on problem sets.
+But you should go beyond that.
+Try changing the parameters.
+In particular, two things to take a look at to
+see how they affect the accuracy--
+one of them is the number of simulations.
+I typically use 10,000 pounds to start
+with because in general, the accuracy of the result
+goes like 1 over the square root of the number of paths.
+So if I have 10,000 paths, that should give me things
+that are accurate to around 1%.
+What's more important-- the number might be different,
+but the scaling is important.
+If I want to get it 10 times better,
+I need to do 100 times more simulations.
+If I do only 1/100 of the number of simulations,
+my answers are going to degrade by a factor of 10.
+The other thing that you might want to experiment with,
+though, is the size of the time step.
+How does dt make a difference?
+Does it matter?
+For example, if we're looking at approximating
+a log-normal price process by breaking it up
+using a binomial random walk, by using
+steps that are plus or minus 1 scaled appropriately
+to the mean and volatility of the process
+that we're interested in, how does that affect the answer?
+So a useful thing to do is to start
+with a known example, something that you
+could do in closed form, where you could look up
+the answer, where you could compute the integral.
+And you can do the interval for this set of parameters
+if you'd like and then compare with what
+you get in Monte Carlo
+Now, keep in mind when doing problem sets,
+because the numbers are randomly generated,
+your answer might not exactly match.
+It's going to be within some range.
+And in fact, as you rerun your Monte Carlo,
+you'll see the answers change.
+So what you might want to do is take
+an average of your own answers.
+In fact, what you might want to do
+is not only run an ensemble of 10,000 paths,
+compute the approximate analytics using the rules
+that I mentioned before--
+we approximate an expectation by taking an average
+over the results--
+but you could go further and run those 10,000 paths maybe
+100 times and take the average of those,
+or at least look at what their distribution is.
+That tells you something about the confidence interval
+within which your estimate lies.
+Now, that's true in general for doing statistical analytics.
+What about financial applications?
+So one of the interesting things that we can do
+is, when we've got these stock price paths,
+is think about the behavior of financial derivatives.
+Derivatives are securities like stock options
+whose value depends on the value of another security.
+And one of the important constructions
+in applications and quantitative finance
+and in derivative pricing is to compute expected values that
+are functions of stock prices.
+So the value of an option is a function
+of the value of the stock underlying the option.
+And in a Monte Carlo setting, we can compute plots
+of functions of our variable.
+So here's how we plot our paths initially.
+And if we wanted to plot a function, say, s squared,
+we can go into the code and change s to s squared
+and take a look.
+So if I had a derivative whose value
+is equal to the square of the stock price,
+these are simulations of what its value would be
+Now, we're often interested in the terminal values,
+especially for derivatives like options that expire.
+So what we sometimes want to do is compute the terminal
+or the final value of the stock price
+and then the final value of a derivative.
+So if we do that, I've plotted here
+or I've computed S.terminal to be the final row of S.
+And if I look at a histogram of S.terminal,
+we can see what the distribution is.
+If we want to take a look at the distribution
+of our s squared values, because it follows the value all
+the way along, we could just compute the histogram
+of this quantity squared, but typically we'd
+like to know of the entire lifetime of the option.
+Now, let's take a look at an interesting example
+is to take a look at a call or a put option.
+And in those cases, the derivative
+has a value along the entire trajectory of the option,
+but the valuation techniques that we often look at
+involve separate considerations for the interior
+prior to expiration and at expiration.
+So if we consider a European-type option,
+which has nothing to do with Europe--
+it's just the name of the option--
+it's something that can only be exercised at expiration,
+at no time prior.
+If it can be exercised early, it's typically
+known as an American option.
+So if we consider a European call option
+on a stock with strike price K, and we'd
+like to know what its distribution of terminal values
+is, that would be an interesting question.
+So for example, suppose we go back to our--
+let's go back and look at our previous graph--
+our original graph right here.
+And suppose we have an option--
+a stock option that gives us the right but not the obligation
+to buy the stock if the price exceeds, say, $150.
+So it starts at 100.
+And we want to know a year later,
+is it going to be in excess of $150 or not?
+If yes, we will make money on our option.
+If not, we would not exercise the option.
+So one of the interesting questions we might ask
+is, how likely is it that the value of the stock
+will exceed a particular threshold?
+And that's something we can answer with Monte Carlo.
+Let's take a look at that.
+So let's define a strike price K. Let's let it be 150.
+And now let's define the value of our call option.
+And we'll define it at all points
+in time relative to the value of our stock price.
+So let's say C is S minus K. Now, that's partly true.
+That's good for all the points where S is greater than K
+but not where it's less than K.
+So what we'll do-- this is an r-specific construct.
+You can do the same kind of thing
+in different ways in other languages.
+But I'm going to multiply this times
+the expression S greater than K, which is a Boolean expression.
+So it's equal to 1 if S is greater than K,
+0 if S is equal to or less than K.
+And it multiplies these point by point.
+So this expression for C should give me
+the value of the option when it's
+in the money, when the stock price exceeds the strike price.
+And it'll give me 0 otherwise.
+So let's take a look at what some of those paths look like.
+And I'm going to go back to my plotting function.
+And I'm going to change S to C, and let's plot those.
+Now, we notice the value never goes below zero, which is good.
+So the options-- you cannot lose money apart from the premium
+that you paid for the option.
+So all the places where the paths hit 0 or don't even
+show up, those are cases where the value was below the strike
+price, and the other ones are above.
+Now, we could ask-- this is just for the first 10 paths.
+We could look at what happens over 100 paths.
+But if we do that, we're still not getting the whole flavor.
+Because we don't know what fraction of paths
+are ending up above versus the number that we
+don't see that are below.
+So let's take a look.
+We can look at the histogram of the terminal values, which is
+going to be C of 252 comma 0--
+
+excuse me-- 252 comma.
+So we get all of the columns in our simulation.
+And what we see is that of our 10,000 simulations,
+6,000 of them ended up at 0.
+So what we saw was the distribution
+of the values above the strike price, but most of the values
+are below the strike price.
+So we have a very asymmetric distribution.
+60% of the paths are worthless.
+They finish below the strike price.
+Of those that are above some of them go to quite large values.
+In fact, that highest point that we can see in the pixel range--
+600 is above the strike price of 150.
+So that would be a very fortunate outcome.
+Unfortunately, it's quite unlikely to happen.
+So when we are working with derivatives,
+we often create a sample of paths for the underlying.
+We then compute functions of the underlying that
+are appropriate to the value of the derivative,
+and then we look at the analytics of interest.
+One of the analytics of interest is
+going to be the distribution of terminal values
+and maybe some moments of its distribution,
+such as the mean and the variance.
+In this case, because the distribution
+is so skewed and so unusual, we might
+want to ask conditionally, for example,
+conditioned on having a positive value, what is the mean?
+And in other cases, such as options,
+and it might have early exercise opportunities
+where early exercise could be optimal
+or where there may be barrier options whose value could
+go to 0, say if it hits a particular value
+during its lifetime prior to expiration, in those cases,
+we want to work not just by averaging over
+the entire ensemble of paths.
+We might look path by path at which paths
+meet certain conditions either at different points in time
+in the case of early exercise or at different points in space
+and in stock price in the case of barrier options.

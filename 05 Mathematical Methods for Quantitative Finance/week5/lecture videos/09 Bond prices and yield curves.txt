@@ -1,0 +1,63 @@
+
+PROFESSOR: So let's put it together
+and see what we can say about bond prices
+and about yield curves.
+So the bond pricing equation we have now,
+under the set of assumptions we have,
+takes this general form, where we
+have some unknown parameters, alpha and y bar, that we
+might fit from the data.
+Let's assume that we've got this particular form.
+And to solve this equation, we look
+at separation of variables.
+And we're going to try Ansatz, which
+means that we're just going to take
+we're going to guess a particular form
+as a starting point and then see if we can refine what
+those choices are.
+The formal pick is inspired by the general idea
+that bonds, if there were no randomness
+and things were constant, should see
+an exponential behavior in time and a linear dependence
+in the exponent on the risk-free rate.
+So let's assume that the function
+y is in the form e to the f of t that depends only on t
+and a term that's linear and y.
+So we have a time-dependent function,
+which is independent of y, minus y times another function
+that's also independent of y.
+And what we're going to do is apply the boundary conditions.
+So the question we can ask is, in
+this simple one-factor model, what kind of prices do we get?
+What kind of term structures do we get?
+Do we only get a rigid term structure?
+Do we have different parameters where
+we can have things that are upward sloping,
+inverted curves, oscillating?
+So what's possible?
+What's not allowed?
+That would be especially interesting.
+And do we have enough degrees of freedom in our parameter
+choices and in our model specification
+to fit the market?
+Well, in this particular example,
+we can take a look at fit for some particular numerical
+examples.
+And depending on how we tune the parameters,
+we can get a variety of behaviors.
+We can get a curve which is upward sloping.
+We can also generate a curve which is downward sloping.
+And we can even generate a curve which is inverted,
+which begins by being convex, rising,
+and then becomes downward sloping.
+So there are a variety of behaviors we can have.
+This is the simplest model.
+And it's a bit too simple for applying to the real world.
+But this shows you how we can apply these techniques to match
+different kinds of assumptions about processes
+to observable bond prices and their yields in the marketplace
+and then use what we observe in the marketplace in turn
+to go back and try to find what might be appropriate not
+only Ito process for the short rate
+but how many other factors might be required
+or advisable to include in our modeling.

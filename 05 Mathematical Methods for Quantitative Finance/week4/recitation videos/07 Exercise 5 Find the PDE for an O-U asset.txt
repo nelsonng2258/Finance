@@ -1,0 +1,64 @@
+PROFESSOR: An asset follows the Ornstein-Uhlenbeck process,
+which is a continuous time, mean reverting process if it's
+given by the expression, dS equals
+lambda, which is a constant, times S
+bar, another constant, nimus S dt plus sigma dB.
+This is in the continuous time analog of an AR1 process.
+This is the standardized Brownian motion, sigma dB,
+where sigma is a scale factor for the randomness.
+Over here, we see I've got mean reversion, where
+if lambda's a positive constant, this
+tells me that if S is below S bar, this is positive.
+If this S is above S bar, this is negative.
+So this gives me a mean reversion force,
+and this gives me a random shock as time has evolved.
+So, just given this description, which
+is quite different from the log normal, geometric Brownian
+motion that was part of the original Black-Scholes-Merton
+derivation, this is a different process.
+What PDE is satisfied by derivatives of this asset?
+Take a moment, and then we'll check together.
+
+What did you find?
+Did you rederive using Ito's Lemma?
+We don't even need to work that hard, we can just
+plug into our last result. We know
+it looks exactly like the Black-Scholes equation,
+with exactly one change.
+We identify, in terms of our standard form,
+if we want to write dS of the form a dt plus b dB.
+That implies that we have a is equal to lambda, S bar
+minus S, which doesn't appear in the differential equation
+we want.
+And we have b is equal to sigma.
+In the Black-Scholes equation, it
+would have been sigma times S.
+So the equation we want is partial of V with respect
+to t plus sigma squared over 2 second partial of V
+with respect to S squared plus rS partial of V
+with respect to S minus rV equals 0 and we're done.
+
+That's it.
+So the only difference between this and Black-Scholes
+is that-- the coefficient function here in front
+would have had an S squared in Black-Scholes.
+Here, it only has a sigma.
+The a function, which was mu S in the case of Black-Scholes.
+And here, it's something linear and S.
+It could have been cubic.
+It could have been any polynomial function or a more
+complicated function in S.
+It wouldn't make any difference.
+It wouldn't show up as part of the differential equation.
+It might show up elsewhere.
+And it certainly shows up if we want
+to understand the dynamics of the underlying itself.
+But if we want to know about the derivatives,
+given the behavior of the underlying,
+our expression is easy to derive.
+And all we needed to do was, in our derivation,
+once we canceled the risk, the only part that
+retained an explicit memory of the Ito process,
+was the Ito term, which had the coefficient B squared,
+the coefficient of the randomness in the original we
+defined process.

@@ -1,0 +1,179 @@
+
+PROFESSOR: Let's look at alternatives
+to the random walk.
+If we analyze market data for example for stock prices
+in the style of Lo and McKinley doing a variance ratio test,
+one of the ways that we can see that the random walk model is
+not a good fit for the data is the presence
+of serial correlation in returns.
+That is, we see that the returns are not in fact independent.
+If they were independent, the scaling behavior
+as we add together more and more terms would grow.
+The variance would grow linearly with time.
+And if we observed departures from that,
+that doesn't just mean that we reject the random walk.
+It gives us a clue as to what we might
+want to use to replace it.
+So if we're constructing aggregating returns,
+say q terms at a time, if they're not independent,
+then when we compute the variance the cross terms don't
+vanish when we take expectations.
+And that's telling us something important.
+That's telling us that information is propagating
+from one step to the next.
+So we want to think about autocovariance
+and autocorrelations, which measure the relationship
+of the time series with itself.
+That's what the auto means.
+And we just shift in time by k time steps.
+So we want to do this in two ways.
+One of them is an expectation for looking
+at unrealized, unobserved variables in the future.
+And the other is we'd like to look
+at estimators for these properties based on past data.
+And, of course, we'd expect these to be related.
+So the definitions that we have are going to be--
+and our notation will be gamma k for the covariance between two
+r's of different lags.
+When we have a stationary process,
+the key thing is it should only depend on the difference
+between the time indices.
+So t minus t minus k is k.
+And that's why I put the label over here.
+Notice the gamma k doesn't depend on t.
+It only depends on the time difference
+on the number of steps between the two arguments,
+in this case rt and rt minus k.
+Gamma 0 is when I said k equals 0.
+And that's the covariance of rt with itself.
+And rho sub k is just a normalized version
+divided by the variance.
+In the same way that we usually compute the correlation of two
+random variables by dividing by the square root of the product
+of the variances, if it's the same variable,
+if it's an autocovariance and we want
+to get the autocorrelation, we divide
+by the square root of the variance twice, variance times
+variance, of the same series.
+The series is stationary.
+That's equivalent to just gamma k divided by gamma 0.
+And this will be normalized.
+This will be a pure number, whereas gamma
+has units of r squared if r has dimensions.
+So for instance, if we think about a sum of two
+one-day returns, the variance, if they were uncorrelated,
+would be twice the variance of the one day returns.
+But if they are correlated there's an extra term.
+So the variance of a two-day return, which is--
+see if I can get my pointer back--
+well, if not we'll use our pen.
+The variance of a two-day return,
+which is just the variance of two consecutive days,
+is going to be twice the variance.
+It's going to be the variance of rt
+plus the variance of rt minus 1-- it's stationary,
+so those are identical-- plus twice
+the cross term in expectation.
+And that's going to be the covariance r1 and r2.
+So we can write that is twice the variance times 1
+plus rho 1, where row 1 is the lag 1 autocorrelation function.
+That is, it's the correlation of rt with rt minus 1.
+
+So this is going to be bigger or smaller than twice the variance
+of a single period return depending
+on whether the autocorrelation is positive or negative,
+depending on whether the return in one period
+is more likely to have the same sign or the opposite sign
+of the return in the previous period.
+So in order to estimate and compute,
+we use our usual formulas for computing covariances
+of statistical data and for computing correlations
+and statistical data with one caveat.
+Normally, we take two time series of equal length.
+And to compute their covariance, we subtract off
+the mean of each one.
+We compute their products and each time period,
+and we sum over the time periods.
+We have a little bit of an issue when
+we look at finite length observations
+from actual historical data.
+And that suppose we have a series of 100 days.
+If we shift by 1, they'll only have 99% days in common.
+That will be one off the front and one off the back.
+So we need to adjust.
+And as we increase the lag s for a given dataset,
+we're going to have shorter and shorter lengths in common.
+So we need to be careful of that that we don't run out of data
+and that we look at the common period.
+Usually we make sure that we have a series that
+are long enough that the end points won't matter,
+that they'll just be small deviations.
+But we do need to check that.
+Alternatively, we can require that we
+have data of a certain minimum length
+by saying that we need to have a certain number
+of common points.
+And then we can account for the overhang for the lag.
+So if we want to go up to lag 20, which we would rarely need,
+we'd want to make sure that we have enough for 20 points
+overhanging at the beginning and enough points in the middle
+after we chop off those points.
+So the formula we have really is just a--
+very much like the formula for computing the covariance of two
+random variables.
+Subtract the mean, subtract the estimate of the mean.
+These should be the same, but we usually
+want to compute them appropriately for the length
+of the series it enters.
+So that because we're not using exactly the same data
+series because of the offset because some points are
+missing, we want to use the mean for each series.
+So it's removed-- we subtract off
+the sample mean for the dataset that's there and we compute.
+Now, we expect in general to see convergence
+depending on the details.
+So as t goes to infinity, or as we take a very large number
+of points, this estimate should converge to the true gamma k.
+And the sampling distributions we can see convergence
+in square root of t by choosing to resample things
+like-- excuse me, to rescale things.
+So that if we want we can think of the errors or the deviations
+appropriately scaled by powers of t
+so that they are drawn from a standard and 0, 1 distribution,
+if we'd like to apply that in a hypothesis testing case,
+and we want to take a look at usual confidence,
+or significant levels like plus or minus 2.
+Now, when we observe autocovariance
+what we're looking for is the direction
+and the magnitude of departures from a random walk.
+And we'd like to know how large the correlation is
+from one period to the next.
+So serial correlation is a typical analytic and statistic
+that we'll run when we get a time series of returns.
+It's an important attribute.
+After we've computed the mean and the variance,
+one of the next things we'll almost always want
+to take a look at to characterize what's going on
+is the autocorrelation or autocovariance functions.
+So in our example of two time steps for lag 1,
+we compute this.
+We have this expression.
+And what we can do is we can compute a variance ratio where
+we can compare our variance over two times steps
+to what we would have expected had it been a random walk.
+This would be 1 under the hypothesis
+that it is a random walk.
+And deviations from 1 means we have deviations
+from random walk behavior.
+If it's greater than 1 we have positive serial correlation.
+If it's less than 1 we have negative serial correlation.
+And we can generalize this to higher steps,
+and we can get an expression we can
+show with a little bit of algebra
+that we can express things as a sum, weighted sum
+of the different autocorrelation functions at different
+lags all the way up to value q, if we're looking at aggregating
+q steps at a time.
+So we'll typically look at all lags.
+Usually the first one is the one most of interest.
+But in principle we can look at any lag at any separation.

@@ -1,0 +1,1128 @@
+0
+00:00:00,000 --> 00:00:01,050
+
+
+1
+00:00:01,050 --> 00:00:03,810
+PROFESSOR: Let's look at a few examples of Ito processes.
+
+2
+00:00:03,810 --> 00:00:08,340
+Our first example is going to be a Brownian motion with drift.
+
+3
+00:00:08,340 --> 00:00:11,100
+Could this be a possible model for stock prices?
+
+4
+00:00:11,100 --> 00:00:12,030
+Let's take a look.
+
+5
+00:00:12,030 --> 00:00:16,200
+We'll define dS to be mu dt plus sigma dB,
+
+6
+00:00:16,200 --> 00:00:19,240
+where mu and sigma are both constants.
+
+7
+00:00:19,240 --> 00:00:21,190
+This is easy to integrate.
+
+8
+00:00:21,190 --> 00:00:23,770
+So suppose we start with this expression,
+
+9
+00:00:23,770 --> 00:00:29,010
+and now, let's just integrate each term, keeping in mind
+
+10
+00:00:29,010 --> 00:00:32,229
+that mu and sigma are constant.
+
+11
+00:00:32,229 --> 00:00:36,140
+So this will be from t equals 0 to big T.
+
+12
+00:00:36,140 --> 00:00:38,820
+And if we integrate on the left-hand side,
+
+13
+00:00:38,820 --> 00:00:45,830
+we just get St minus S at time 0 is equal to mu times
+
+14
+00:00:45,830 --> 00:00:52,560
+T plus sigma times BT, or, to be precise,
+
+15
+00:00:52,560 --> 00:00:55,220
+if we might have had some non-zero constant,
+
+16
+00:00:55,220 --> 00:00:56,850
+we could have this here.
+
+17
+00:00:56,850 --> 00:01:00,920
+So that's-- we've integrated an Ito process, and there we go.
+
+18
+00:01:00,920 --> 00:01:03,440
+We see that it has a linear growth with time
+
+19
+00:01:03,440 --> 00:01:07,460
+from the first term, and the second term
+
+20
+00:01:07,460 --> 00:01:11,460
+represents-- this term here represents a random variable,
+
+21
+00:01:11,460 --> 00:01:16,340
+so that the final destination of ST is unknown,
+
+22
+00:01:16,340 --> 00:01:19,490
+but BT, as we know, is drawn-- or this difference
+
+23
+00:01:19,490 --> 00:01:23,210
+is drawn from a Gaussian distribution.
+
+24
+00:01:23,210 --> 00:01:29,200
+
+
+25
+00:01:29,200 --> 00:01:31,300
+Now, this model has been considered
+
+26
+00:01:31,300 --> 00:01:35,530
+and generally rejected for purposes of stock prices.
+
+27
+00:01:35,530 --> 00:01:38,620
+It was the first model considered by Bachelier in 1900
+
+28
+00:01:38,620 --> 00:01:40,780
+for a theory for option pricing.
+
+29
+00:01:40,780 --> 00:01:43,120
+But the biggest complaint about it,
+
+30
+00:01:43,120 --> 00:01:45,460
+generally, is that it allows prices
+
+31
+00:01:45,460 --> 00:01:48,100
+to go negative with positive probability, something
+
+32
+00:01:48,100 --> 00:01:53,820
+that stocks can't do since stocks have limited liability.
+
+33
+00:01:53,820 --> 00:01:56,510
+So this is generally the preferred model.
+
+34
+00:01:56,510 --> 00:01:59,330
+And this geometric Brownian motion,
+
+35
+00:01:59,330 --> 00:02:03,260
+this continuous-time version of our log-normal process,
+
+36
+00:02:03,260 --> 00:02:06,342
+is the standard model for stock prices.
+
+37
+00:02:06,342 --> 00:02:07,550
+That doesn't mean it's right.
+
+38
+00:02:07,550 --> 00:02:09,175
+It means that it's the reference model.
+
+39
+00:02:09,175 --> 00:02:11,420
+Whether it's right or not, how well it works,
+
+40
+00:02:11,420 --> 00:02:13,025
+remains to be seen by looking at data
+
+41
+00:02:13,025 --> 00:02:14,845
+and by looking at applications.
+
+42
+00:02:14,845 --> 00:02:16,220
+But let's take a look at this now
+
+43
+00:02:16,220 --> 00:02:18,500
+as an application of Ito's lemma.
+
+44
+00:02:18,500 --> 00:02:21,290
+So we begin with this form, where
+
+45
+00:02:21,290 --> 00:02:24,290
+this looks similar to what we had before, but notice
+
+46
+00:02:24,290 --> 00:02:26,060
+I've multiplied through--
+
+47
+00:02:26,060 --> 00:02:29,780
+on the right-hand side, each of these terms has an extra S.
+
+48
+00:02:29,780 --> 00:02:33,920
+So my coefficient function a, little a and little b,
+
+49
+00:02:33,920 --> 00:02:39,450
+is mu S over here and sigma S over here.
+
+50
+00:02:39,450 --> 00:02:44,900
+So let's take a look at this as an application of Ito's lemma.
+
+51
+00:02:44,900 --> 00:02:46,730
+So here's our expression where I've
+
+52
+00:02:46,730 --> 00:02:49,680
+divided through by S. In this form,
+
+53
+00:02:49,680 --> 00:02:51,020
+we can see that what's a--
+
+54
+00:02:51,020 --> 00:02:54,480
+
+
+55
+00:02:54,480 --> 00:02:59,080
+Brownian motion generalized is the quantity dS over S.
+
+56
+00:02:59,080 --> 00:03:02,550
+But notice we can't integrate that immediately because it's
+
+57
+00:03:02,550 --> 00:03:04,410
+not an exact differential.
+
+58
+00:03:04,410 --> 00:03:08,350
+It's a differential divided by S. If it were d of something,
+
+59
+00:03:08,350 --> 00:03:10,930
+then we'd be done, and that's our goal.
+
+60
+00:03:10,930 --> 00:03:25,510
+So I got this by taking dS is mu S dt plus sigma S
+
+61
+00:03:25,510 --> 00:03:28,850
+dB, which is of the form, of course,
+
+62
+00:03:28,850 --> 00:03:42,830
+a dt plus sigma, excuse me, plus b dB.
+
+63
+00:03:42,830 --> 00:03:56,900
+So we have that a, in this case, is mu S and b is sigma S.
+
+64
+00:03:56,900 --> 00:03:58,880
+And now we'd like to apply Ito's lemma.
+
+65
+00:03:58,880 --> 00:04:00,770
+So it would be convenient to have that.
+
+66
+00:04:00,770 --> 00:04:03,470
+Luckily, it's right up here.
+
+67
+00:04:03,470 --> 00:04:05,190
+Let's bring it down.
+
+68
+00:04:05,190 --> 00:04:08,240
+So here's Ito's lemma, and let's take a look
+
+69
+00:04:08,240 --> 00:04:10,280
+at how we can apply it to this situation.
+
+70
+00:04:10,280 --> 00:04:14,570
+Notice that the B squared here is
+
+71
+00:04:14,570 --> 00:04:21,660
+going to be replaced by this value here, by sigma S squared.
+
+72
+00:04:21,660 --> 00:04:26,870
+So I've written this in terms of S down here instead of x,
+
+73
+00:04:26,870 --> 00:04:29,030
+and what should we use for F?
+
+74
+00:04:29,030 --> 00:04:31,010
+The f that we're going to be interested in
+
+75
+00:04:31,010 --> 00:04:33,667
+is the logarithm of the stock price for the same reasons
+
+76
+00:04:33,667 --> 00:04:35,750
+that we've talked about earlier and when we looked
+
+77
+00:04:35,750 --> 00:04:38,310
+at discrete-time processes.
+
+78
+00:04:38,310 --> 00:04:41,280
+So let's go.
+
+79
+00:04:41,280 --> 00:04:52,110
+We have that F is equal to log S. Therefore,
+
+80
+00:04:52,110 --> 00:04:56,520
+the partial of F with respect to t is 0.
+
+81
+00:04:56,520 --> 00:04:58,230
+That was easy.
+
+82
+00:04:58,230 --> 00:05:05,010
+Partial of F with respect to S is 1/S.
+
+83
+00:05:05,010 --> 00:05:13,170
+And the second partial of F with respect to S squared is minus 1
+
+84
+00:05:13,170 --> 00:05:15,360
+over S squared.
+
+85
+00:05:15,360 --> 00:05:17,370
+What does Ito's lemma say?
+
+86
+00:05:17,370 --> 00:05:25,230
+It says that dF, d of log S, is going to be, well, let's see.
+
+87
+00:05:25,230 --> 00:05:32,490
+Partial of F-- partial of F with respect to t is zero,
+
+88
+00:05:32,490 --> 00:05:35,200
+so I'm not going to have an immediate dt term.
+
+89
+00:05:35,200 --> 00:05:42,390
+I'm going to have a term which will be partial of F
+
+90
+00:05:42,390 --> 00:05:45,300
+with respect to S dS.
+
+91
+00:05:45,300 --> 00:05:47,280
+But that's going to be--
+
+92
+00:05:47,280 --> 00:05:49,720
+well, here, let's write it out in two steps.
+
+93
+00:05:49,720 --> 00:05:57,340
+This is going to be dF dS dS, plus our Ito term, which
+
+94
+00:05:57,340 --> 00:05:59,890
+is going to be little b squared, which
+
+95
+00:05:59,890 --> 00:06:06,760
+is sigma S over 2, second partial of F with respect
+
+96
+00:06:06,760 --> 00:06:10,030
+to S squared, times dt.
+
+97
+00:06:10,030 --> 00:06:13,300
+Now, let's substitute.
+
+98
+00:06:13,300 --> 00:06:22,730
+This is going to be 1/S dS plus sigma S
+
+99
+00:06:22,730 --> 00:06:26,270
+quantity squared over 2 times minus 1
+
+100
+00:06:26,270 --> 00:06:31,160
+over s squared times dt.
+
+101
+00:06:31,160 --> 00:06:36,260
+Now, remember that this first term right here
+
+102
+00:06:36,260 --> 00:06:39,750
+is dS/S, which is what we started with.
+
+103
+00:06:39,750 --> 00:06:44,360
+I think we have it way back here, dS/S. There it is,
+
+104
+00:06:44,360 --> 00:06:44,930
+right here.
+
+105
+00:06:44,930 --> 00:06:48,900
+
+
+106
+00:06:48,900 --> 00:06:52,310
+So let's take this value for dS/S,
+
+107
+00:06:52,310 --> 00:06:56,690
+which is mu dt plus sigma B, and substitute it
+
+108
+00:06:56,690 --> 00:07:00,350
+in right over here, shall we?
+
+109
+00:07:00,350 --> 00:07:18,270
+So this is equal to mu dt plus sigma dB.
+
+110
+00:07:18,270 --> 00:07:21,710
+That's from this first term.
+
+111
+00:07:21,710 --> 00:07:24,950
+And now we have this second term where
+
+112
+00:07:24,950 --> 00:07:29,140
+I'm going to have an S squared and a minus 1 over S squared.
+
+113
+00:07:29,140 --> 00:07:37,100
+So that's going to give me minus sigma squared over 2 times dt.
+
+114
+00:07:37,100 --> 00:07:40,220
+So let's combine these and clean this all up.
+
+115
+00:07:40,220 --> 00:07:48,880
+This tells us that d of log S is equal to mu
+
+116
+00:07:48,880 --> 00:07:52,000
+minus sigma squared over 2.
+
+117
+00:07:52,000 --> 00:07:54,670
+
+
+118
+00:07:54,670 --> 00:07:56,110
+Oops, changed our colors.
+
+119
+00:07:56,110 --> 00:07:59,540
+
+
+120
+00:07:59,540 --> 00:08:04,235
+dt plus sigma dB.
+
+121
+00:08:04,235 --> 00:08:10,160
+
+
+122
+00:08:10,160 --> 00:08:11,820
+So what have we done?
+
+123
+00:08:11,820 --> 00:08:14,000
+What we've accomplished right here
+
+124
+00:08:14,000 --> 00:08:18,530
+is that we've taken our original Ito process
+
+125
+00:08:18,530 --> 00:08:21,020
+and we've rewritten it.
+
+126
+00:08:21,020 --> 00:08:24,590
+Where we had dS/S, which was not an exact differential,
+
+127
+00:08:24,590 --> 00:08:28,550
+we've now been able to take the function log S and show
+
+128
+00:08:28,550 --> 00:08:30,424
+that it's an exact differential.
+
+129
+00:08:30,424 --> 00:08:32,299
+And on the right-hand side, we have something
+
+130
+00:08:32,299 --> 00:08:34,470
+which we can integrate.
+
+131
+00:08:34,470 --> 00:08:42,610
+So what we have is, if we do the integration, we have log ST/S0.
+
+132
+00:08:42,610 --> 00:08:47,890
+Since a difference of logs is the log of the ratio,
+
+133
+00:08:47,890 --> 00:08:52,390
+this is going to be mu minus sigma squared
+
+134
+00:08:52,390 --> 00:09:04,670
+over 2 times t plus sigma times BT minus B0,
+
+135
+00:09:04,670 --> 00:09:06,950
+just as we had before, if we want to integrate it.
+
+136
+00:09:06,950 --> 00:09:10,780
+
+
+137
+00:09:10,780 --> 00:09:13,470
+So if we compare with our notes, we
+
+138
+00:09:13,470 --> 00:09:17,395
+see that we've taken this format here
+
+139
+00:09:17,395 --> 00:09:22,170
+and we've shown that log S is an exact differential.
+
+140
+00:09:22,170 --> 00:09:27,720
+It looks like a Brownian motion, so that the logarithm of S
+
+141
+00:09:27,720 --> 00:09:32,310
+behaves as a Brownian motion with the same volatility.
+
+142
+00:09:32,310 --> 00:09:41,440
+Notice that sigma is unchanged here, but we have sigma dB.
+
+143
+00:09:41,440 --> 00:09:44,800
+And over here, compared to our previous example
+
+144
+00:09:44,800 --> 00:09:49,120
+of an ordinary arithmetic Brownian motion with drift,
+
+145
+00:09:49,120 --> 00:09:51,610
+the sigma dB term is the same, and the
+
+146
+00:09:51,610 --> 00:09:53,290
+left-- on the first term, rather,
+
+147
+00:09:53,290 --> 00:09:55,420
+on the deterministic term, we have mu
+
+148
+00:09:55,420 --> 00:09:57,730
+shifted by sigma squared over 2.
+
+149
+00:09:57,730 --> 00:10:01,015
+So this piece here, mu minus sigma squared over 2--
+
+150
+00:10:01,015 --> 00:10:03,640
+we'll be seeing a bunch of minus sigma squared over 2's running
+
+151
+00:10:03,640 --> 00:10:05,920
+around in some other formulas.
+
+152
+00:10:05,920 --> 00:10:07,160
+This is where it comes from.
+
+153
+00:10:07,160 --> 00:10:10,570
+It comes from the Ito term in doing this change of variables.
+
+154
+00:10:10,570 --> 00:10:12,760
+Then finally, if we want to integrate things up
+
+155
+00:10:12,760 --> 00:10:15,110
+in finite form, we just exponentiate
+
+156
+00:10:15,110 --> 00:10:19,190
+the last expression that I wrote down.
+
+157
+00:10:19,190 --> 00:10:24,270
+This model has the virtue that it excludes negative prices.
+
+158
+00:10:24,270 --> 00:10:28,470
+So because the logarithm goes from minus infinity to infinity
+
+159
+00:10:28,470 --> 00:10:30,560
+and we're exponentiating the result,
+
+160
+00:10:30,560 --> 00:10:32,110
+we never get negative numbers.
+
+161
+00:10:32,110 --> 00:10:34,290
+The exponential is always positive.
+
+162
+00:10:34,290 --> 00:10:36,800
+This is potentially-- it has the opposite problem.
+
+163
+00:10:36,800 --> 00:10:39,860
+We don't get negative prices, but also,
+
+164
+00:10:39,860 --> 00:10:42,710
+prices that obey this can never reach 0,
+
+165
+00:10:42,710 --> 00:10:45,260
+and unfortunately, real companies sometimes do
+
+166
+00:10:45,260 --> 00:10:46,572
+have stock prices that go to 0.
+
+167
+00:10:46,572 --> 00:10:48,530
+So that's something that we should think about,
+
+168
+00:10:48,530 --> 00:10:51,470
+whether it's a good approximation or a good model
+
+169
+00:10:51,470 --> 00:10:54,210
+to apply to real-world prices.
+
+170
+00:10:54,210 --> 00:10:59,200
+The thing that we see in our original model,
+
+171
+00:10:59,200 --> 00:11:01,480
+we can actually see that without solving it.
+
+172
+00:11:01,480 --> 00:11:02,740
+How do we see that?
+
+173
+00:11:02,740 --> 00:11:05,200
+We noticed that because these coefficient functions
+
+174
+00:11:05,200 --> 00:11:10,300
+have an S on the right-hand side, that as S approaches 0,
+
+175
+00:11:10,300 --> 00:11:13,910
+the coefficients of dt and dB are going to 0.
+
+176
+00:11:13,910 --> 00:11:15,760
+That means that there's not a lot of motion
+
+177
+00:11:15,760 --> 00:11:18,190
+either deterministically or randomly.
+
+178
+00:11:18,190 --> 00:11:22,000
+As the stock price goes to 0, everything quiets down,
+
+179
+00:11:22,000 --> 00:11:26,730
+and that's partly how it avoids the origin.
+
+180
+00:11:26,730 --> 00:11:31,500
+Another common model is the Ornstein-Uhlenbeck process,
+
+181
+00:11:31,500 --> 00:11:34,890
+which is a continuous-time analog of the mean reversion
+
+182
+00:11:34,890 --> 00:11:37,800
+process that we saw in discrete time that
+
+183
+00:11:37,800 --> 00:11:40,140
+looks like the AR 1 process.
+
+184
+00:11:40,140 --> 00:11:42,360
+Now, here's a case where we can learn
+
+185
+00:11:42,360 --> 00:11:45,300
+a lot about the solution to the equation
+
+186
+00:11:45,300 --> 00:11:47,580
+without actually solving anything.
+
+187
+00:11:47,580 --> 00:11:49,230
+Let's take a look.
+
+188
+00:11:49,230 --> 00:11:54,390
+First thing we notice is that if the lambda term were 0,
+
+189
+00:11:54,390 --> 00:11:56,950
+we would just have an ordinary random walk.
+
+190
+00:11:56,950 --> 00:12:02,670
+So the stochastic term is very, very simple.
+
+191
+00:12:02,670 --> 00:12:04,840
+What about the deterministic term?
+
+192
+00:12:04,840 --> 00:12:06,760
+Well, this is a restoring force.
+
+193
+00:12:06,760 --> 00:12:12,120
+So I've suggestively called the constant here lambda times
+
+194
+00:12:12,120 --> 00:12:14,460
+S bar.
+
+195
+00:12:14,460 --> 00:12:17,620
+And here's an S. This is our dynamic random variable,
+
+196
+00:12:17,620 --> 00:12:20,290
+the same one that appears in the left-hand side.
+
+197
+00:12:20,290 --> 00:12:22,650
+So how can we think about this equation?
+
+198
+00:12:22,650 --> 00:12:30,060
+This says that the change in S, dS, has a random component.
+
+199
+00:12:30,060 --> 00:12:33,270
+This is the shock here, which is unconnected with anything.
+
+200
+00:12:33,270 --> 00:12:41,110
+But if S is below S bar and lambda is positive,
+
+201
+00:12:41,110 --> 00:12:43,660
+then this will be a positive value.
+
+202
+00:12:43,660 --> 00:12:50,290
+And if S is above S bar, then this will be a negative value.
+
+203
+00:12:50,290 --> 00:12:53,920
+So depending on the sign of lambda, if it's positive,
+
+204
+00:12:53,920 --> 00:12:56,460
+we basically have the mean-reverting dynamics
+
+205
+00:12:56,460 --> 00:13:00,360
+that we saw before, that we move toward the mean value,
+
+206
+00:13:00,360 --> 00:13:02,850
+and we would expect that the long-term mean value is
+
+207
+00:13:02,850 --> 00:13:05,800
+going to be S bar.
+
+208
+00:13:05,800 --> 00:13:09,070
+Now, can we use this as a model for stock prices?
+
+209
+00:13:09,070 --> 00:13:12,730
+Well, on the one hand, it's got a random component that
+
+210
+00:13:12,730 --> 00:13:15,910
+allows drift, and there's no boundedness on S,
+
+211
+00:13:15,910 --> 00:13:18,220
+so S could get to be infinitely large.
+
+212
+00:13:18,220 --> 00:13:19,810
+It could get to be negative.
+
+213
+00:13:19,810 --> 00:13:22,720
+On the other hand, the first term acts as a restoring force.
+
+214
+00:13:22,720 --> 00:13:25,720
+It keeps things relatively tight near S bar.
+
+215
+00:13:25,720 --> 00:13:28,360
+So depending on the magnitude of lambda compared
+
+216
+00:13:28,360 --> 00:13:30,610
+to the magnitude of sigma, it might
+
+217
+00:13:30,610 --> 00:13:34,480
+be OK for certain periods of time as a good approximation,
+
+218
+00:13:34,480 --> 00:13:38,320
+but it does allow the possibility,
+
+219
+00:13:38,320 --> 00:13:41,980
+with finite probability, that prices could go negative.
+
+220
+00:13:41,980 --> 00:13:43,870
+It's not strictly forbidden.
+
+221
+00:13:43,870 --> 00:13:45,790
+So this is a model that's commonly
+
+222
+00:13:45,790 --> 00:13:48,130
+used for many processes.
+
+223
+00:13:48,130 --> 00:13:49,840
+Most notably, we'll take a look when
+
+224
+00:13:49,840 --> 00:13:54,700
+we think about models for interest rates.
+
+225
+00:13:54,700 --> 00:13:58,250
+
+
+226
+00:13:58,250 --> 00:13:59,930
+Another model used for interest rates
+
+227
+00:13:59,930 --> 00:14:02,840
+is the Cox-Ingersoll-Ross process,
+
+228
+00:14:02,840 --> 00:14:04,500
+which looks a lot more complicated,
+
+229
+00:14:04,500 --> 00:14:07,970
+but really it's just one small modification
+
+230
+00:14:07,970 --> 00:14:12,420
+to the previous one, to the Ornstein-Uhlenbeck process.
+
+231
+00:14:12,420 --> 00:14:15,890
+So if I take a look here, I see this is the mean reversion
+
+232
+00:14:15,890 --> 00:14:18,000
+term.
+
+233
+00:14:18,000 --> 00:14:22,170
+But now, notice that the volatility term
+
+234
+00:14:22,170 --> 00:14:25,590
+is modified by this square root of rho that's here.
+
+235
+00:14:25,590 --> 00:14:29,760
+So think of rho as being a rate, an interest rate type variable.
+
+236
+00:14:29,760 --> 00:14:32,400
+And what does the square root of rho do here?
+
+237
+00:14:32,400 --> 00:14:35,370
+Well, I have a restoring force near rho bar,
+
+238
+00:14:35,370 --> 00:14:39,960
+but this does say that if rho approaches 0
+
+239
+00:14:39,960 --> 00:14:44,190
+from above, that the volatility term gets very small.
+
+240
+00:14:44,190 --> 00:14:47,730
+So maybe we have a chance of avoiding the origin.
+
+241
+00:14:47,730 --> 00:14:50,550
+Notice that we absolutely can't have negative values of rho
+
+242
+00:14:50,550 --> 00:14:51,457
+in this model.
+
+243
+00:14:51,457 --> 00:14:53,040
+The first term doesn't have a problem,
+
+244
+00:14:53,040 --> 00:14:55,420
+but taking square roots of negative numbers
+
+245
+00:14:55,420 --> 00:14:58,050
+now gives us not just a financial problem because it's
+
+246
+00:14:58,050 --> 00:14:59,790
+a mathematical one too because we're not
+
+247
+00:14:59,790 --> 00:15:02,790
+going to find or want to find solutions
+
+248
+00:15:02,790 --> 00:15:04,412
+in the complex numbers.
+
+249
+00:15:04,412 --> 00:15:06,870
+So we can sometimes break this down by a little bit further
+
+250
+00:15:06,870 --> 00:15:09,390
+manipulation, and here's one more application
+
+251
+00:15:09,390 --> 00:15:10,440
+of Ito's lemma.
+
+252
+00:15:10,440 --> 00:15:14,400
+We can transform things to simplify the stochastic term
+
+253
+00:15:14,400 --> 00:15:19,350
+and move all of the complexity into the deterministic term.
+
+254
+00:15:19,350 --> 00:15:22,170
+The stochastic terms are the ones
+
+255
+00:15:22,170 --> 00:15:24,360
+that are genuinely new for what we're doing.
+
+256
+00:15:24,360 --> 00:15:27,060
+They're the ones we might want to Monte Carlo model.
+
+257
+00:15:27,060 --> 00:15:31,080
+The coefficients of dt, as complicated as they might be,
+
+258
+00:15:31,080 --> 00:15:34,600
+follow the domain of usual kinds of differentials
+
+259
+00:15:34,600 --> 00:15:39,300
+that we would look at and standard analytic functions we
+
+260
+00:15:39,300 --> 00:15:40,270
+might consider.
+
+261
+00:15:40,270 --> 00:15:43,090
+So let's just see what happens if we have this transformation.
+
+262
+00:15:43,090 --> 00:15:45,240
+So we compute the necessary derivatives.
+
+263
+00:15:45,240 --> 00:15:47,760
+If F is equal to the square root of rho,
+
+264
+00:15:47,760 --> 00:15:50,700
+the partial of F with respect to t vanishes.
+
+265
+00:15:50,700 --> 00:15:53,340
+The first partial of F with respect to rho
+
+266
+00:15:53,340 --> 00:15:56,220
+is 1 over 2 square root of rho.
+
+267
+00:15:56,220 --> 00:16:02,010
+The next partial derivative is minus 1/4 rho to the minus 3/2.
+
+268
+00:16:02,010 --> 00:16:06,270
+We substitute that into Ito's lemma,
+
+269
+00:16:06,270 --> 00:16:09,270
+and we find that we can write the result in this form.
+
+270
+00:16:09,270 --> 00:16:12,990
+dF has this expression, this coefficient function for dt,
+
+271
+00:16:12,990 --> 00:16:18,510
+plus now a newly simplified coefficient function for dB.
+
+272
+00:16:18,510 --> 00:16:21,630
+So now if we want to see about avoiding behavior
+
+273
+00:16:21,630 --> 00:16:23,790
+on the origin, we just need to study
+
+274
+00:16:23,790 --> 00:16:25,590
+the behavior of this term.
+
+275
+00:16:25,590 --> 00:16:27,730
+The stochastic term is constant.
+
+276
+00:16:27,730 --> 00:16:29,760
+So we have mean reversion dynamics
+
+277
+00:16:29,760 --> 00:16:31,920
+for an appropriate range of parameters.
+
+278
+00:16:31,920 --> 00:16:34,440
+We do avoid the origin.
+
+279
+00:16:34,440 --> 00:16:36,180
+And this model is one that's used
+
+280
+00:16:36,180 --> 00:16:41,804
+for taking a look at interest rates and at term structure.
+
+281
+00:16:41,804 --> 00:16:42,304
+
+

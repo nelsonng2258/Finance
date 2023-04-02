@@ -1,0 +1,110 @@
+
+PROFESSOR: Now, the Black-Scholes equation
+that we just derived is one of the most important equations
+in modern finance, and the derivation only took us
+two slides.
+But I pulled a fast one.
+Can you tell where?
+The derivation, remember, assumed
+that the number of shares was constant, right?
+But then we found that the number of shares that we needed
+for delta in order to do our hedge
+was partial to V with respect to S.
+But when we solve the equation, we
+find out that V depends on S and on time,
+and therefore, delta is going to depend on S and time.
+And therefore, delta actually isn't constant at all.
+So this contradicts something that
+was an essential assumption of our derivation.
+Now, we're going to do a little bit of a digression
+here, and let me give you the short version
+so that you know our result is OK.
+The derivation was a little shaky.
+So we're going to go through it more carefully,
+and we'll be much more solid ground,
+but the end result is the same.
+So the derivation I showed you was very quick,
+it was very slick, but it a cheat.
+It was wrong.
+The intuition was right, and you can apply similar intuition
+in other cases.
+But there's some deeper mechanisms going on
+that we should take a look at, and actually, it's
+pretty nice too.
+So what was the problem?
+The problem was that when we had a differential that we should
+have taken, the differential of delta S,
+we just said, oh, that's delta dS.
+That is, we treated the delta as being constant.
+What we should have said is, hm, maybe we
+need a generalized chain rule to apply to cases where
+we have a product rule, where we have
+a product of two processes or two random variables.
+So at a minimum, we should have been cautious
+and at least written the differential of delta S
+is delta dS plus Sd delta plus maybe a higher order
+term, d delta dS.
+And then we'd have to figure out what each of those things
+means.
+
+So to do this right, we're going to bring in one
+extra financial instrument.
+We started with an underlying, the stock,
+and we had options, or our general derivative V,
+and now we're going to include cash
+because if you think about it, I said things are growing
+at the risk-free rate, and we're dynamically
+rebalancing our portfolio, but we're doing it with what money?
+We need some cash to be able to buy and sell shares
+to execute our delta hedge.
+So our dynamic trading strategy that we're going to look at
+is as follows.
+We're going to buy and hold our derivative.
+We're going to rebalance our stock position,
+but it's going to be self-financing,
+so we're going to start out with no money, but a lot of credit.
+We're going to assume that we could lend and borrow
+at the risk-free rate, an arbitrary amount,
+and that the stock purchases and sales are funded directly
+from that account.
+So if I'm going to short sell shares worth $10,000,
+I take in $10,000 to the cash account,
+and I've sold short the shares.
+If I need to buy long $20,000 worth of stock, I buy it,
+and my account balance in the cash account
+goes down by $20,000.
+And if I'm earning interest at the risk-free rate,
+that accrues to the cash account.
+And if I'm borrowing money, if the balance in my cash account
+is negative, then I need to pay interest.
+But interest, either way, regardless of the sign,
+it's always going to be the risk-free rate times
+dt times the quantity in the cash account.
+Now, I've made a bunch of assumptions,
+so let's be explicit about what they are.
+These are all idealizations for the real world.
+First, I assume I have unlimited credit,
+so I can lend or borrow as much as I want.
+I'm assuming that I lend and borrow at the same rate,
+at the risk-free rate.
+In reality, it costs a little more to borrow,
+and you earn a little bit less when you lend.
+I'm assuming that the stock can be traded
+in fractional quantities, so I'm not
+going to restrict delta to be an integer.
+On the other hand, so is that a bad assumption?
+Sure, because we can't really trade fractional shares easily,
+but in an institutional setting, we're
+not buying a single option.
+In fact, a single option contract in the United States
+is on 100 shares of stock, and we might buy many contracts.
+So we can be concerned about rounding errors,
+but generally, this won't be an issue because we're not
+doing this for a single option.
+We're assuming that we have full use
+of the proceeds of short sales, something
+that is actually limited because we have to keep collateral.
+We're assuming that there are no dividends for this,
+no transaction costs, no delays, no market impact.
+So a whole bunch of frictionless trading assumptions, just
+for purposes of our derivation.

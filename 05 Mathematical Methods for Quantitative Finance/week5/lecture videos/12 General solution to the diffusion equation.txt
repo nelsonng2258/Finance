@@ -1,0 +1,45 @@
+
+PROFESSOR: Now here is an integral formula
+that tells us how to use the special function
+p0 to get a general solution to the differential equation that
+satisfies arbitrary initial conditions.
+So imagine that at time t equals 0, we want our function p of z
+and t that satisfies the diffusion
+equation to have some particular functional form f of z.
+It could be something like f of z equals z squared.
+It could be a cosine.
+So you pick a function f of z, and the question
+is, can we find a time dependent function that
+satisfies the diffusion equation such that when t is equal to 0,
+it takes the particular form that we want.
+If we can do that, getting the solution
+to the Black-Scholes equation is going to be a piece of cake.
+And here's how it works.
+We put in our function p0 where we take
+a difference of the variable.
+That is, we're going to have an integration variable.
+We're going to integrate over all possible z
+primes of our special function for our initial conditions
+f of z prime.
+And then we're going to multiply that against a kernel function
+against what's known as a Green's function
+our special p0 where we're substituting
+for z the difference between z and z
+prime where z is the outside variable
+and z prime is the variable of integration.
+So if we were to differentiate this with respect to z,
+the only z appears here, and it's not integrated over.
+So we can bring a derivative inside the equation.
+Similarly, if we want to integrate with respect to time,
+this integral is not over time.
+z prime is a dummy variable for integration.
+If we want to differentiate this with respect to time,
+this is the only place where time appears.
+So let's take a look at a couple examples,
+and you can check that this actually works.
+If we substitute in our particular expression for p0,
+here's our rule.
+We've got 1 over square root of 2 pi t, which
+I put in front because it doesn't depend
+on z prime, exponential of minus z minus z
+prime quantity squared over 2t times f of z prime dz prime.

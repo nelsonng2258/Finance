@@ -1,0 +1,293 @@
+
+PROFESSOR: When we look at forecasting,
+there are a number of different elements that come into play.
+And I would just like to lay them out for you.
+But we're only going to take a look at a small subset of them.
+Forecasting is a very big subject.
+We're just going to touch on it in the context of time series
+modeling applications, so that we
+can see how we take the structure of our time series
+model and construct specific forecasts based
+on given information sets.
+So what are the elements of forecasting generally?
+Well first, we'd like to know the nature of the process.
+Is it something deterministic?
+If it's given by a known curve, a sine wave or parabola,
+we can predict exactly where something is going to be.
+We can tell exactly when the next eclipse of the sun
+is going to be.
+We know exactly when the next eclipse of the moon
+is going to be.
+We can even send spaceships to land very precisely,
+or send them through the solar system,
+because we have deterministic processes that we can solve.
+If we have random processes, we don't expect
+to get that kind of precision.
+We're going to have necessarily probabilistic forecasts.
+The processes could be stationary,
+they could be non-stationary.
+We're going to have very different tools for predicting
+them in those cases.
+And are they laws of nature or are they human behavior?
+They're laws of nature, at least we
+know that the process itself doesn't depend
+on circumstances around it--
+human behavior could change at any time.
+How much do we know about the process?
+Do we know the process, or do we not know
+what the underlying process is?
+Perhaps we know the process.
+We know what it is, let's say, an AR(1) process,
+or an ARMA(1,2) process, but we don't know what the parameters
+are.
+So in one case, we have to figure out
+what model to work with.
+In the other case, we may have uncertain estimates
+of the parameters which we'd like to apply.
+And that will be an additional source
+of uncertainty in our forecasts compared to the case where
+we know the parameters.
+And is this a theoretical model that's
+based on some financial or economic ideas?
+Or is it an empirical model that's just fit to the data,
+and it seems to work.
+Or is it a theoretical model that should work?
+We have the sort of normative and positive views of things.
+And although the approach is going
+to be the same, in the way in which we'll
+think about evaluating the model quality will be different,
+because to the extent that we observe deviations,
+it will tell us something about our assumptions
+and what we would need to revisit,
+and how we would then refine things.
+If it's an empirical model, we may
+need to get more data or a better data set,
+or we might need to find a better model to fit it.
+If we have a mismatch with a theoretical model,
+perhaps we need new ideas.
+Perhaps the ideas that we thought controlled
+the processes to produce the variables
+were just wrong or in need of some extension
+and generalization.
+How complex is the model?
+The examples we're doing are mostly
+going to be univariate models or bivariate models.
+So we could have a very large number of variables.
+And they could be coupled.
+Typically, when we think about multivariate models,
+we look for ways that we can simplify them and reduce them
+to previous cases.
+So it's often possible by taking linear combinations,
+to take a multivariate process, particularly if it's
+a linear model, and reduce it to a series
+of uncoupled separate linear models that then we can solve.
+But the techniques will depend.
+And linear is usually a fairly straightforward category
+with some reliable tools that we can regularly deploy.
+Non-linear is kind of an open category where there's
+no guarantee of success, and there's not necessarily
+a general approach.
+Those are not the most common models
+that we'll see in finance.
+And those will not be among the things
+we'll be looking at in our future discussions
+or in any of the problems and applications.
+We do want to think about what the horizon is.
+Do we need one step ahead?
+Do we need multiple steps ahead?
+That is, would we like to produce
+at every possible future horizon?
+Does it go off to infinity?
+Do we need asymptotic results as t goes to infinity?
+Or perhaps, as many financial applications,
+we have a finite date.
+We have the maturity date for a bond.
+We have the ending period for a loan.
+We have the expiration date for an option.
+And in those cases, we might be interested in forecasts
+over only a multiple steps, but maybe only
+over a particular horizon, which decreases as time evolves.
+
+What are the forecast criteria?
+Are we actually forecasting observable variables or not?
+That might seem strange.
+You might think, of course we forecast observable variables.
+But keep in mind, that one of the things we've already seen
+is models where we introduce volatility as a parameter.
+We have sigma.
+And if we take a model of time varying volatility,
+we need to keep in mind that volatility--
+while it can be a parameter in a model--
+is not an observable quantity.
+We can ask what the price of an asset is.
+We can't ask what it's instantaneous volatility is.
+To know it's volatility, we need to observe it
+over a period of time.
+We measure the random fluctuations.
+And that quantifies what the volatility is.
+But if we have a model of dynamic volatility,
+where the volatility changes over time--
+there are many such models, they're
+very important in finance--
+but we can't directly observe the volatility.
+So we need to do some extra work to be
+able to connect the predictions of the model with things
+that we can observe so that we can compare predictions
+to outcomes, so that we can compare forecasts
+to observations.
+We'll want to think about measures of forecast accuracy.
+How close is close enough?
+If we insist on a point forecast being exactly right,
+most of our predictions are going to be exactly wrong.
+But usually, we'd like to have some measure.
+And one of the important things to keep in mind in finance
+compared to other areas where we use statistical methods,
+and we make predictions, and we make forecasts,
+is that we often have a very real cost associated
+with error.
+So the usual things in literature,
+like mean squared forecast error,
+are convenient mathematically.
+They're somewhat intuitive.
+But in finance, we often have other numbers in mind,
+like the loss in a particular scenario--
+the financial loss, which might not be the same easy
+to use mathematical expression.
+But we do want to keep track of the fact that the economic cost
+of an error, or a deviation, or the benefit--
+if it's deviations on the upside--
+is something that we can directly
+measure and is directly related to issues of valuation.
+So we'll often want to think about forecast accuracy--
+weighting things by their financial importance,
+not just taking an equal weighted average
+across all possible kinds of errors.
+We might want to weight more heavily the kinds of errors
+that we're most interested in avoiding.
+
+Models don't stay the same.
+Models change.
+Models need to be replaced.
+So we want to think about what kind of model evolution
+we might expect.
+We can have static parameters that stay fixed,
+or we might think about having adjustable parameters
+that maybe we change over time.
+We might think about models where, when we see errors,
+we update our parameters, so that we
+can make gradual changes to our model as our dataset increases.
+As we make more observations, we can improve
+our estimates of parameters.
+And we may need to think also about identifying situations
+where we would declare our model to be broken.
+There's some fundamental change in the market,
+sometimes called a regime shift or a break
+in time series, that's telling us,
+hey, that model is not working.
+There's something new generating the data.
+Someone swapped out one roulette wheel for us,
+and they put in another one.
+So those are kind of things we want to be aware of.
+There's a question, is the model completely static?
+Is it somewhat dynamic where the parameters get updated?
+And if so, how and when?
+And then, when is it time to go shopping for a new model?
+
+How do we set up forecasts?
+Well, typically we start with observations up
+to some particular time t.
+Now, we can't really go for the infinite past.
+And hopefully, none of our results
+would depend on the series existing in the infinite past.
+But what we usually think about for forecasting
+is there is some amount of history
+up to a particular point.
+And maybe we have some set of observations x0, x1, x2, x3,
+up to the time xt.
+And my convention for forecasting
+will be t will be the time at which we're
+making our forecast about future values for t
+plus 1, t plus 2, all the way up through t plus h, where
+h stands for the horizon.
+And we assume, that we have the information set
+available of everything that happened before and possibly
+including the current observation.
+And we want to know what happens next.
+The probabilities that we're interested in computing
+are going to be conditional probabilities.
+But it's really the same thing we've already seen.
+We're taking expectations.
+The only difference is, we need to look at the time index
+and not apply stationarity directly.
+We can apply stationarity for things
+that are random variables.
+That is, we can say that the probability
+distributions of future realizations are the same.
+But that does not mean the past draws from the distribution
+are the same.
+Even though a head and a tail are equally likely,
+or one of the six sides of a die are equally likely,
+on our next five random occurrences,
+the last five are fixed, because they are what they are.
+So that's our distinction between past and future.
+We can look at making point forecasts,
+and we can think about whether we can have enough information
+to generate a full probability distribution for future events,
+or perhaps somewhere in between.
+Not just a number, but perhaps moments
+of the future distribution.
+What's the mean?
+What's the variance?
+And that could tell us something about what our confidence is
+and what a confidence interval is around
+a forecast for future values.
+We can sometimes include subjective information
+as well in a Bayesian approach, where
+we take information about what our prior beliefs are
+as a starting point.
+And then, we iteratively update our forecasts
+as new information becomes available.
+And we do it in a way that's consistent with the laws
+of probability.
+
+The optimal forecast we can think
+of from a result of Granger as simply
+being the forecast at horizon, h,
+is the conditional mean of the forecast.
+That's our best forecast, provided that the cost function
+is symmetric and convex.
+So this says that the forecast for a future variable
+is, we take its expectation based on what we know now.
+We can also compute other moments around it.
+But for the point forecast, this is the best forecast
+that we can do in terms of minimizing different error
+criteria.
+So for a given model, we can use the optimal forecast.
+And for a given set of data, we're
+tasked with finding what the optimal model is.
+If we think of a typical kind of random walk-- in this case,
+an arithmetic random walk--
+where I have a price, and each time
+is the previous price plus some new innovation, some new event
+that comes along, something with step
+size sigma where z is a normalized random variable.
+Sigma is the scale of the volatility.
+And we ask, what's my forecast h steps
+ahead for the value of the price that follows this forecast?
+What I do is, I iterate this out to solve for p t plus h
+in terms of the previous t's.
+I take expectations.
+And because all I'm going to do is add together
+more z's, and those all have 0 mean,
+the expectation of p of t plus h-- given
+the information I have available--
+is the current price.
+That is, the forecast for the price h steps in the future
+is the current price.
+Now, for a symmetric random walk, that makes sense.
+We're equally likely to have disease go up or down.
+They will in general diffuse.
+They will move around.
+They're very unlikely to be exactly back where
+we started at p.
+Nevertheless, that is the optimal forecast.

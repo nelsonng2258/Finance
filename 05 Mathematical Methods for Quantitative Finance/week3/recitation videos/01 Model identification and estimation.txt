@@ -1,0 +1,452 @@
+
+PROFESSOR: Estimating the parameters of model
+is pretty easy and relatively straightforward
+when we're given this data set.
+Finding the right model or choosing among a set of models
+can be much harder.
+And there might not even be a right answer.
+So let's take a look at a few examples.
+We're going to start with the Monte Carlo example.
+And the reason is that it helps to know that your data actually
+comes from a model.
+So we'll start from a case that has a known answer.
+That way, we'll have some confidence when we start
+looking at other data sets.
+It's tough.
+And there may not always be a clear decision
+that you can make.
+And it requires judgment-- not only in selecting the model,
+but in understanding what the practical consequences are
+of having the wrong model.
+Is it just a good approximation?
+Or is it missing some essential components
+of the dynamics of the system and data generating
+process that you want to study?
+There's no easy way to know.
+And you need to constantly be on guard
+for things that might go wrong, and keep
+going back and refining your techniques.
+So let's start with an AR(2) example.
+Now remember that autoregressive models
+have the property that they do have
+correlations-- autocorrelations-- across time.
+And typically those autocorrelation functions
+drop off over time, but they exist at all lags.
+This is in contrast with MA models
+that are also defined recursively.
+But they're defined recursively in terms of the innovations
+that are localized in time.
+So at a sufficient separation in any given MA(q) model,
+the autocorrelation will go to zero.
+So that already helps us differentiate between the two.
+So let's look at our example.
+I'll generate some data here.
+You can download the notebook-- in fact,
+pause the video and do this now if you'd like--
+so you can follow along and tweak the parameters
+and try your own examples.
+Obviously the random numbers you generate will be different.
+But if you'd like to see the same random numbers, actually,
+why don't we set this up so that we
+can look at the same random numbers together.
+I'm going to add a command in our notebook
+which will make sure that we get the same random numbers
+by setting the seed 2021.
+Now, your computers may come up with a different set
+of random numbers.
+What this guarantees is, within a given setting,
+you will get on each one the same random numbers.
+So obviously in actual applications,
+this is the last thing you want to do.
+Because you want the random numbers to be random.
+Not just a single draw of random numbers to be reused.
+But for debugging purposes you might find it helpful.
+So you can put this in, comment it out or delete it afterwards.
+So here are the parameters of the model.
+We've got c_0 is 0.001.
+So it's a small intercept.
+It's close to zero.
+C_1, the first autoregressive parameter
+that is the coefficient of the lag 1 observation,
+is going to be minus 0.1.
+And c_2 is going to be larger and opposite sign.
+0.4.
+So let's take 1,000 times steps.
+We'll organize them in a column vector
+and set this up so that it generalizes
+for the case where you want to do an ensemble of paths
+together.
+But we'll run this forward.
+Now, one thing we need to be careful of when
+we start with time series models that are simulated--
+they obviously can't go infinitely far in the past.
+So we usually bootstrap them by setting the initial values off
+into zero.
+And we do need to make sure that our results don't
+depend on that.
+Those need to be a good approximation
+for larger values.
+So that's why I've initialized my variable r
+to be full of zeros, and I've started
+my recursion at time step 3.
+Because it needs to go back to previous time steps.
+So if we run this-- so we can see
+that I've defined a set of space placeholder for my variables.
+And I could set that to be plus 1 if I were doing market data.
+So I have a time 0, but here it's all simulated.
+It doesn't matter.
+I pick a bunch of random numbers.
+Which, in this case, I'm choosing
+from a N (0,1) distribution.
+These are normally distributed.
+And then I have a for loop where this is
+the basic line of my recursion.
+So notice I do need to iterate it forward.
+I can't do this with some clever algebraic tricks
+because I need to know what the values are at time t
+to know what they are for the next time step at t equals 1.
+So let's run this chunk of code, plot the results
+and see what we get.
+So the first graph that we have is going
+to be the AR(2) sample path.
+So it wanders.
+It looks random.
+Can you tell that it's autoregressive from looking
+at it?
+I can't.
+Let's look at the autocorrelation function.
+Well, here we see we're getting out what
+we expected when we put it in.
+That is, the first coefficient is nothing to do with c_0.
+That's normalized to equal to 1.
+That's the correlation of the series with itself.
+At lag 1 we have a negative number.
+And at lag 2 we have a positive number.
+And all the others look like they're
+at the limits of statistical significance.
+So that's about what we would have expected.
+Here's the partial ACF.
+Now remember what the partial ACF does.
+What it does is, it fits-- for each lag--
+it fits an autoregressive model of that number of terms.
+And the partial autocorrelation coefficient
+is the coefficient of the highest lag term.
+So what we would expect is that we're
+going to get non-zero results for each coefficient
+up to the order of our model.
+In an AR(p) model for the first p terms, in an AR(2) model
+for the first two terms.
+And everything above that should be close to zero.
+And that's exactly what we see here.
+So this would give us confidence that what we're looking at
+is an AR(2) model if we didn't know what the data was.
+Now let's go and remove this seed parameter and rerun it.
+Let's do a new set of random numbers.
+So I will run this chunk again.
+And let's take a look.
+This is a different process.
+We'll move over here, click on the second box.
+Here are its autocorrelation coefficients.
+You notice that the third and fourth are still showing up.
+But we do see the expected alternating signs and decay.
+And when we look at the partial ACF,
+we, again, see the lag 1 and 2 coefficients looking large,
+and all the others being small.
+And, of course, this plot out 30.
+And for 30 things to within 5% significance,
+we might expect a couple to be up.
+So these are things to do iteratively.
+If you see something suspicious, go dig in and investigate
+a little bit further.
+How do we estimate?
+So suppose we've decided, great, that data set is
+generated from an AR(2) model.
+It's looking good.
+Let's find the parameters of the AR(2) model.
+So once we settle on a model, really what we're doing
+is applying standard estimation techniques.
+There's nothing very special.
+In R there are some functions that help streamline it.
+But the basic idea is that we can do linear regression
+techniques.
+The only difference is that the variables
+on the right-hand side that normally would
+be independent variables are just
+lag versions of the variables on the left-hand side.
+So we can use ordinary least squares, maximum likelihood
+estimation, usual ways.
+And we can do that if we take the series
+and create lagged versions of it.
+Or R happens to provide-- and other languages do, too--
+packages that have some of these functions already built in.
+So let's take a look.
+In this case, let's define.
+Let's first write it--
+we'll do it in two methods.
+First we'll write it as an ordinary least squares.
+And then we'll do it using an special case
+of the built-in ARIMA function, where
+we'll look at the AR(2) as a special case of that.
+So the first thing is, I can define my variables.
+y is an independent variable in x1 and x2.
+Excuse me, y is a dependent variable.
+x1 and x2 is independent variables.
+But, of course, there are all from the time
+series of r, which we generated synthetically.
+Notice the time offset.
+Because we're looking at the correlation series with itself
+as the lags move, I'm going to end up
+with some non-matching points-- either at the beginning
+or at the end.
+And I need to trim those off so that I have
+data series of equal length.
+If the number of points you trim is significant,
+then your data series is too short.
+Or you're looking at--
+this is not a good model for what you want to be doing,
+if it's too sensitive.
+So the two ways we can look at it
+are we can run in R the lm function.
+Builds a linear model.
+It just runs linear regression.
+And you can do this in any language.
+You can do it in Excel.
+Alternatively, we can run the ARIMA function in R
+and fit this to a series where the order is
+given by the first parameter is the autoregressive part.
+The second is an integration level.
+And the third one is moving average part.
+So let's take a look and see what we get.
+So if we fit this by ordinarily least squares,
+we get the usual results in r.
+So we have an intercept.
+We have an x1 and an x2.
+We see that the intercept is close to zero.
+It's 0.034 with the standard error of 0.032.
+So that's close to zero.
+We didn't exactly pick out our carefully set c_0.
+But the x1 and x2 values are within the standard errors.
+So for that given the data series.
+That is, we have minus 0.07.
+And there's an approximation to minus 0.1.
+And we have, for the second coefficient,
+we've got plus 0.41, 0.42, no, 0.41.
+It's an approximation 0.4.
+So we got out what we expected going in.
+And we can take a look at the significance
+of the different values.
+Now, if we run this second method, this ARIMA function,
+we also get the coefficients here.
+It's laid out a little bit differently,
+but these are the same numbers.
+And it's just to show you that this is dressed up.
+It's really just doing an ordinary regression.
+So that's where we have the order correct.
+And we fit the parameters.
+So we decide what the model is.
+In this case, we generated the data, then we set that aside.
+We ran the data, we identified the order.
+We said that looks like it's order 2.
+We ran a fit to AR(2) model.
+We have estimates for the coefficients.
+They're noisy estimates because we have some noisy data,
+but then we can proceed with that estimated model
+with that set of parameters.
+Now, what if we got the order incorrect?
+That is, what if we thought--
+suppose there had been a spike, just a random jump, at order 5.
+And we said, ah, we've got an AR(5) model.
+Well, let's try running that.
+And in that case we find a set of coefficients here.
+And we can, again, take a look at what the estimates are.
+And we see that the standard errors show us
+that the errors are much larger than the coefficients
+themselves for the higher order terms.
+For AR(4) and AR(5).
+And even the third term is not statistically significant.
+So if we go too far, we can pull back
+and refit the model and retune for what we're doing.
+Try it yourself on some other data.
+See how well the quality of the estimates
+depends on the length of the series.
+That we can then turn around and think
+about how much data is required to get a good
+handle on the models.
+Let's take a look at this for an MA(2) model.
+So here is a model, which is MA(2).
+So it's got two lagged parameters.
+But those lag parameters this time are
+the z's on the right-hand side, not the r's.
+Not our random variable that we're
+observing, but the innovations.
+The shocks that occur in each time period.
+So I need to bootstrap this a little bit.
+Because at the beginning, again, we're
+not going infinitely far back in the past.
+So we're going to do this with our first two innovations.
+And then from time 3 forward to the end of the series
+we'll run this recursively.
+So our recursive definition is terrific for programmability.
+And let's run this model with a set of parameters.
+So if we take a look at what we get.
+Here's an MA(2) sample path.
+Does it look different from an AR(2) sample path?
+I can't say so.
+It looks like a noisy bunch of data to me.
+We did pick a very large value for sigma
+in relative terms for financial applications.
+But that's OK.
+Finance things are noisy.
+And you can try scaling these to different sizes
+to see how they look.
+How about our ACF and PACF functions?
+Well, here remember for the MA(2),
+we expect the ACF function to tell us when to stop.
+That is, the autocorrelation functions are only going
+to exist through the value q.
+And we see that here.
+We see that we've got autocorrelation functions
+and autocovariances, non-varnishing, for lags 1
+and 2.
+And then everything drops off.
+So that as we would expect.
+If we look at the PACF, the partial autocorrelation
+function, that's not much help here.
+So if this isn't showing us much,
+the reason is not that we've applied it incorrectly.
+It's because it's not the right tool
+for doing this identification.
+So when we pick our tools, you can throw everything
+at every dime series you have and you might
+see some interesting stuff.
+But think about the question you want to answer
+and specifically what it is we're looking for.
+Suppose we now want to estimate the parameters.
+Let's do that this time.
+We can run in R. You can repeat the ordinary least squares.
+Or we'll do it this way, using this notation.
+So (0,0,2) means it's only a moving average model.
+And as we run this, we get our coefficients.
+And we see our intercept is consistent with zero.
+And our MA(1) and MA(2) are lag 1 and lag 2.
+Coefficients for the phi's in the right-hand side
+are given by the results here.
+And again, try it out for longer data
+sets, for shorter data sets.
+And then for some real-world data.
+Speaking of real-world data.
+It's much harder.
+First of all, it typically doesn't
+fit any particular model.
+So if we're going to pick a model
+we'd like to estimate something that
+captures the important features of the data.
+And we don't even know what those necessarily are.
+So let's take a look at a data set.
+In this case, we'll grab some data
+from Yahoo Finance using the tidyquant package.
+And we'll get it for Tootsie Roll stock.
+So if you haven't used tidyquant before,
+you can uncomment this line and install it.
+We load it with the library command.
+And we'll define a ticker, a start, and an end date.
+And then this tq_get function grabs data from Yahoo Finance.
+Or you can just load it from a flat file yourself.
+So what does the data look like over time?
+Let's take a look at a chart.
+So that looks pretty noisy, too.
+This is more data points than we had before.
+There's an upward drift, which is definitely significant.
+Notice I set the drift term close to zero
+in both of our previous two examples.
+But here's the data.
+Now let's take a look at the time series of returns
+by taking the difference of the logarithms
+of the successive prices.
+And here's the return series.
+Now, when we get data for a stock or an asset,
+usually what we do-- in fact, what I almost always do--
+is I'll take the price data.
+I will turn it into returns like this.
+I'll use adjusted prices so I account for corporate actions
+and splits and dividends and so on.
+I'll take the adjusted series.
+And what I want to know is, what are the basic descriptive
+statistics for it?
+Which we can do on any data set.
+What is the mean?
+What is the standard deviation?
+Or, in financial terms, if we annualize numbers,
+what's the return and what's the risk?
+What are the parameters?
+Now, one of the things-- so we can do that
+anyways for anything.
+Those are just descriptive statistics for a set of data.
+They don't have anything to do with models.
+But if, in addition, we think about the generalized random
+walk model and we wanted to fit the data to that,
+well, mu and sigma are given by the same formulas
+that we have for the descriptive statistics--
+the mean and the standard deviation.
+So we would be in great shape.
+So we could ask.
+Is the generalized random walk a good fit for this data?
+Well, the answer is no.
+But what do you think?
+What do you think the reason is?
+So one of the things that I look at is the feature--
+there are a couple of features that
+are important-- of the random walk model.
+One of them is the lack of serial correlation.
+So we ought to immediately take a look at a plot of the ACF.
+Because if it's a random walk, there's
+no information propagating from one time period to the next.
+But before that, even at the level
+of the descriptive statistics, even before we compute them,
+we can see visually here that this does not
+look like a stationary process.
+So remember that stationarity means
+that we have time independent probability distributions.
+And it can be a very difficult thing to nail down, exactly.
+But certainly in the case of the random walk model,
+one of the things that we know is that in a stationary model,
+if the probability distributions are the same,
+then that necessarily means that if we estimate parameters
+from different subsets of the data,
+we ought to get the same values.
+At least, to within sampling errors.
+That means that there ought to be a given mean and a given
+standard deviation that we could sample over time.
+Now, a model that looks like this, if I run a Monte Carlo to
+simulate data that has matching statistics of the Tootsie Roll
+data, it looks like this.
+This is a white noise process that has a constant mean--
+zero, in this case--
+and a standard deviation that is constant over time.
+So we see that the data is time varying.
+But the probability distribution is not.
+On the other hand, the data that we see here for Tootsie Roll
+just, without running any fancy statistics,
+we can see that it's very, very unlikely
+to come from a generalized random walk
+model because of the presence of extreme spikes and outliers.
+So depending on what assumptions we
+would make for the distribution, this
+is unlikely to come from a single model
+with fixed parameters of the type
+of the generalized random walk over the entire period.
+The model that might fit much better
+is something that combines many of the elements we have here,
+but I'm not going to go into in this video.
+Something that's a model, for example, that has a time
+varying volatility parameter that
+would explain the difference between this and this.
+So this data, you can take.
+And I encourage you to try it and fit it
+to each of the models and answer these questions.
+Which of the models is the best fit?
+If you're looking for a model of autoregressive
+moving average or ARIMA type model, which is the best one?
+And what would be the parameters in those case?
+And what's the significance of the parameters?
+And do you think that the time series is stationary?

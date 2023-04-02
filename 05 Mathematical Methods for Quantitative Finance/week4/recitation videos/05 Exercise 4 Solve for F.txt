@@ -1,0 +1,144 @@
+
+PROFESSOR: Suppose x is a stochastic process
+that's defined by the expression dx
+over x equals mu dt plus sigma dB,
+where mu and sigma are both constants,
+and we'd like to find a function F
+in terms of which dF is an Ito process
+with constant coefficients.
+So take a moment to think about it.
+Think about how you'd approach it,
+if you can set it up, and then let's take a look at it
+together.
+
+I'd like to do this systematically.
+So you might have gotten it by inspection
+or had a clever guess, or maybe you've seen it before.
+But let's see how we can work through this systematically.
+What we'd like to do is use the different ways
+that we can write dF to solve systematically
+for such a function.
+And we're going to do it by deriving some equations that F
+has to satisfy in order that the coefficients aF and BF would
+be constant.
+So two things we want to do-- first of all,
+let's just identify our-- the parts of our function,
+our function dx, by writing dx is
+equal to mu x times dt plus sigma x time dB.
+So in our usual notation for an Ito process,
+we have a is the function mu x.
+B is the function sigma x.
+So that all just comes from here.
+That's direct.
+Now, let's apply Ito to dF using the expressions
+that we have worked out earlier.
+So let's say that dF is equal to something times dt.
+Well, what's the coefficient of dt?
+
+We have the partial of F with respect
+to t plus we have the Ito term, B squared over 2,
+which, in our case, is sigma x squared over 2 times
+the second partial of F dx squared plus we have a term
+a dF dx.
+So this is going to be mu x times partial of F
+with respect to x.
+And this whole thing times dt plus another term,
+which is going to be a little bit simpler--
+this is going to be sigma x, which
+is little b, partial of F with respect to x, times dB.
+So this is the form of Ito's lemma
+where we combine terms into something times
+dt for something times dB rather than something times dt
+plus something times dx.
+So in this term, what we'd like is
+we'd like the things in these brackets.
+Let me make these red brackets now.
+This should be a constant, and so should this.
+Now, the second one has only one term.
+The first one has three.
+So why don't we work in the easy one first?
+So we need a function F so that this expression here
+is a constant.
+
+That is, we need F t and x such that sigma
+x partial of F with respect to x is a constant.
+
+Well, I can easily move the-- we can divide both sides
+of this equation by sigma.
+Divide that by sigma over here.
+And in the left, we'll do division by erasure.
+So I have this expression.
+That's just another constant.
+The sigma is a nonzero constant.
+So this says, what is the function
+such that x-- partial of F with respect to x is a constant?
+Well, if F were a function of x only, that would be easy.
+So suppose if t and x is just F of x.
+Then we would have x partial of F with respect
+to x is some constant.
+Let's call it c.
+It's our old constant, which was unspecified, divided by sigma.
+In this equation, we can integrate.
+This just says that dF is equal to c
+dx over x, which tells us that F is equal to c times log x.
+So let's check this expression and see
+that it satisfies at least giving a constant coefficient
+of our second term.
+We notice that if we come back up over here,
+we have x partial of F with respect to x, in this case,
+is going to be x times d over x.
+And it's equal to c, which is, indeed, a constant.
+And that's the term that went here.
+So, in fact, we would find that this
+would have coefficient sigma c, where c
+is our constant of integration.
+What about our term above?
+Well, let's continue with this form of x.
+So if F of x-- let me move out of the way--
+is the expression that we had here.
+
+And, in fact-- so it's something times the logarithm of x.
+The first partial derivative here is going to vanish.
+The second partial derivative is going
+to give minus c over x squared.
+The x squared will cancel this x squared.
+And this will be a constant.
+There won't be any more x's.
+And over here, similarly, partial of F with respect to x
+gives me c over x.
+And the x multiplies this x.
+And those cancel out.
+And I'm left with a constant.
+So what we find is--
+
+so we find that the specific choice F of x
+equals c log x gives dF.
+It's going to be equal to c sigma
+squared over 2 with a minus sign in front
+from the second derivative term plus c
+mu, all times dt plus c sigma dB.
+
+And now let's let c equals 1.
+It's a little bit simpler.
+Since these are constants, anyways,
+we'll come back to our old friend.
+So this is equal to--
+let's just write this as C in front times u minus sigma
+squared over 2 dt plus sigma dB.
+
+And this is the differential of F.
+So in the lecture, I wrote down the choice
+of a function that was the logarithm of a stock price.
+And we derived this equation as a result--
+that we said that this equation for the logarithm of F was,
+in fact, integrable because both the left-hand sides--
+left- and right-hand sides were differentials.
+Now we see that we come to the same expression
+if we ask a different question.
+That's how we got it to be differentiable
+in the first place.
+If we said, what functions are there
+such that the expressions we get are going
+to be integrable with constant coefficients,
+the answer to that equation is the function
+we need is the logarithm.

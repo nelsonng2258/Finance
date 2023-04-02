@@ -1,0 +1,848 @@
+0
+00:00:00,000 --> 00:00:00,660
+
+
+1
+00:00:00,660 --> 00:00:02,970
+The real world exists in continuous time,
+
+2
+00:00:02,970 --> 00:00:06,840
+and we need models that evolve in continuous time as well.
+
+3
+00:00:06,840 --> 00:00:08,970
+We've looked at discrete-time processes
+
+4
+00:00:08,970 --> 00:00:12,450
+and discrete-time models, and they're great for what they do.
+
+5
+00:00:12,450 --> 00:00:15,060
+If we think about making discrete observations
+
+6
+00:00:15,060 --> 00:00:19,500
+or approximating time as being a series of discrete intervals,
+
+7
+00:00:19,500 --> 00:00:22,020
+then we can have a structure where we write down
+
+8
+00:00:22,020 --> 00:00:27,030
+models that show how information and other econometric variables
+
+9
+00:00:27,030 --> 00:00:29,350
+propagate forward in time.
+
+10
+00:00:29,350 --> 00:00:30,900
+We can do a lot of calculations, we
+
+11
+00:00:30,900 --> 00:00:33,390
+can solve some of those models in closed form,
+
+12
+00:00:33,390 --> 00:00:36,990
+and we can extend and generalize them in a variety of ways.
+
+13
+00:00:36,990 --> 00:00:38,830
+But time is continuous.
+
+14
+00:00:38,830 --> 00:00:42,480
+So while we might think of approximating time
+
+15
+00:00:42,480 --> 00:00:48,480
+as, say, each individual day is a separate point in time,
+
+16
+00:00:48,480 --> 00:00:51,180
+decisions are made in continuous time,
+
+17
+00:00:51,180 --> 00:00:53,740
+and we want some variables that do so as well.
+
+18
+00:00:53,740 --> 00:00:56,070
+Now, we want to distinguish between time
+
+19
+00:00:56,070 --> 00:00:59,490
+being continuous or discrete versus variables
+
+20
+00:00:59,490 --> 00:01:01,110
+being continuous or discrete.
+
+21
+00:01:01,110 --> 00:01:03,270
+We could have variables like pricing variables
+
+22
+00:01:03,270 --> 00:01:05,250
+that are continuous or near continuous
+
+23
+00:01:05,250 --> 00:01:10,460
+in both discrete time and in continuous time.
+
+24
+00:01:10,460 --> 00:01:13,760
+We'll see that although the world evolves
+
+25
+00:01:13,760 --> 00:01:16,970
+in continuous time, the mathematics
+
+26
+00:01:16,970 --> 00:01:20,280
+has some interesting twists, and it's more complex.
+
+27
+00:01:20,280 --> 00:01:23,150
+So many times we might want to use a simpler setting
+
+28
+00:01:23,150 --> 00:01:25,250
+as an approximation of discrete time.
+
+29
+00:01:25,250 --> 00:01:26,990
+When we want to put things on a computer,
+
+30
+00:01:26,990 --> 00:01:29,510
+we'll see the computers don't handle continuous variables
+
+31
+00:01:29,510 --> 00:01:32,310
+at all, and we'll need to discretize time.
+
+32
+00:01:32,310 --> 00:01:35,030
+So in a certain sense, we'll going back where we started,
+
+33
+00:01:35,030 --> 00:01:38,200
+but we'll pick up some new tools and intuition along the way.
+
+34
+00:01:38,200 --> 00:01:43,070
+
+
+35
+00:01:43,070 --> 00:01:44,860
+So what we're going to do is we're
+
+36
+00:01:44,860 --> 00:01:47,630
+going to scale our random walk.
+
+37
+00:01:47,630 --> 00:01:50,110
+So we talked about our basic random walk
+
+38
+00:01:50,110 --> 00:01:54,310
+as being a series of steps of a stochastic process that evolves
+
+39
+00:01:54,310 --> 00:01:57,400
+in time where, with each new step,
+
+40
+00:01:57,400 --> 00:02:02,710
+the time window over which our walk has existed
+
+41
+00:02:02,710 --> 00:02:04,500
+gets longer and longer and longer.
+
+42
+00:02:04,500 --> 00:02:09,009
+What we're going to do now is keep the overall length fixed,
+
+43
+00:02:09,009 --> 00:02:12,430
+but let the time steps get smaller and smaller.
+
+44
+00:02:12,430 --> 00:02:16,970
+So rather than going farther and farther into the future,
+
+45
+00:02:16,970 --> 00:02:19,870
+we're going to be taking smaller and smaller steps.
+
+46
+00:02:19,870 --> 00:02:22,720
+We'll take advantage of linearity, our basic tool,
+
+47
+00:02:22,720 --> 00:02:24,850
+and expectations, one of our basic tools
+
+48
+00:02:24,850 --> 00:02:26,830
+for analyzing discrete processes.
+
+49
+00:02:26,830 --> 00:02:28,900
+But now we're going to take a limit where
+
+50
+00:02:28,900 --> 00:02:32,440
+we'll assign an interval delta t to the width of time
+
+51
+00:02:32,440 --> 00:02:33,940
+between two steps.
+
+52
+00:02:33,940 --> 00:02:37,300
+And we'll see that by scaling delta t and possibly the step
+
+53
+00:02:37,300 --> 00:02:39,880
+size, we come up with a new notion known
+
+54
+00:02:39,880 --> 00:02:43,480
+as Brownian motion that will be the basis for Ito processes
+
+55
+00:02:43,480 --> 00:02:47,560
+in finance in continuous time.
+
+56
+00:02:47,560 --> 00:02:51,390
+So let's begin with a standardized random variable z
+
+57
+00:02:51,390 --> 00:02:56,010
+with the usual properties, that its expectation is 0 and that
+
+58
+00:02:56,010 --> 00:03:00,382
+its variance is equal to , and that the covariance of any two
+
+59
+00:03:00,382 --> 00:03:03,700
+z's taken at different times is 0 unless they're at the same
+
+60
+00:03:03,700 --> 00:03:04,200
+point.
+
+61
+00:03:04,200 --> 00:03:10,710
+That is, zt and zs are independent unless t
+
+62
+00:03:10,710 --> 00:03:11,970
+is equal to s.
+
+63
+00:03:11,970 --> 00:03:17,670
+So we're going to construct a sum of z's and the origin
+
+64
+00:03:17,670 --> 00:03:19,510
+of time is not going to be important.
+
+65
+00:03:19,510 --> 00:03:26,658
+So if I let it be, say, t0, I can construct a set of steps,
+
+66
+00:03:26,658 --> 00:03:28,200
+and what I'm going to do is I'm going
+
+67
+00:03:28,200 --> 00:03:30,690
+to write this now as B because eventually it's
+
+68
+00:03:30,690 --> 00:03:32,250
+going to turn into Brownian motion,
+
+69
+00:03:32,250 --> 00:03:34,230
+so B will be for Brownian.
+
+70
+00:03:34,230 --> 00:03:37,080
+1 represents the size of the time step,
+
+71
+00:03:37,080 --> 00:03:40,990
+and big T represents the overall length of the path.
+
+72
+00:03:40,990 --> 00:03:46,440
+So if I'm taking unit steps on my path, then I take t steps,
+
+73
+00:03:46,440 --> 00:03:51,960
+so this should be t0 plus 1, t0 plus 2, t0 plus three.
+
+74
+00:03:51,960 --> 00:03:54,570
+So t0 is an arbitrary origin.
+
+75
+00:03:54,570 --> 00:03:56,130
+We could let it equal 0.
+
+76
+00:03:56,130 --> 00:03:57,870
+But it's important that things only
+
+77
+00:03:57,870 --> 00:04:00,160
+depend on time differences.
+
+78
+00:04:00,160 --> 00:04:02,310
+So what's the expectation?
+
+79
+00:04:02,310 --> 00:04:06,480
+Well, normally we would say that the expectation is equal to 0,
+
+80
+00:04:06,480 --> 00:04:08,280
+but we need to be careful about when
+
+81
+00:04:08,280 --> 00:04:09,780
+we're taking the expectation.
+
+82
+00:04:09,780 --> 00:04:12,420
+If we take an expectation after some of the steps
+
+83
+00:04:12,420 --> 00:04:15,750
+have been realized, then it's only the future steps
+
+84
+00:04:15,750 --> 00:04:18,970
+that have expected value 0, as we've seen.
+
+85
+00:04:18,970 --> 00:04:22,950
+So in the event that we take an expectation prior
+
+86
+00:04:22,950 --> 00:04:26,910
+to the start of our path, which I will designate in this way,
+
+87
+00:04:26,910 --> 00:04:30,990
+as E with a subscript t, meaning that's the time at which
+
+88
+00:04:30,990 --> 00:04:36,240
+the expectation is taken, provided that t is prior to t0,
+
+89
+00:04:36,240 --> 00:04:37,860
+then the expectation is 0.
+
+90
+00:04:37,860 --> 00:04:40,050
+It's just that the expectation of each of the z's is
+
+91
+00:04:40,050 --> 00:04:43,980
+0, 0 plus 0 plus 0 plus 0 is 0, and that's it.
+
+92
+00:04:43,980 --> 00:04:47,490
+Similarly, the variance is equal to big T.
+
+93
+00:04:47,490 --> 00:04:51,750
+But if I start computing variances
+
+94
+00:04:51,750 --> 00:04:53,910
+when I'm in the middle of the process, that
+
+95
+00:04:53,910 --> 00:04:56,250
+is, some time between the initial point
+
+96
+00:04:56,250 --> 00:04:58,680
+and the final point, then the only things
+
+97
+00:04:58,680 --> 00:05:02,760
+that contribute to the variance are things that are ahead
+
+98
+00:05:02,760 --> 00:05:04,440
+of my observation point.
+
+99
+00:05:04,440 --> 00:05:07,720
+Those are the points that have not yet been observed.
+
+100
+00:05:07,720 --> 00:05:12,870
+So the variance is equal to T minus the amount of time
+
+101
+00:05:12,870 --> 00:05:14,170
+that's already been elapsed.
+
+102
+00:05:14,170 --> 00:05:18,000
+So it's shortened by the amount of time elapsed.
+
+103
+00:05:18,000 --> 00:05:19,860
+The variance depends on the amount
+
+104
+00:05:19,860 --> 00:05:24,350
+of time remaining in the walk.
+
+105
+00:05:24,350 --> 00:05:26,680
+So whenever we take any limiting process,
+
+106
+00:05:26,680 --> 00:05:28,430
+whenever we do any limit, we should always
+
+107
+00:05:28,430 --> 00:05:30,300
+ask a few basic questions.
+
+108
+00:05:30,300 --> 00:05:33,080
+First, does the limit converge?
+
+109
+00:05:33,080 --> 00:05:36,650
+Second, if it does converge, in what sense
+
+110
+00:05:36,650 --> 00:05:41,450
+does the result that we obtain represent the thing that we
+
+111
+00:05:41,450 --> 00:05:42,350
+are starting with?
+
+112
+00:05:42,350 --> 00:05:45,180
+That is, how is the result representative
+
+113
+00:05:45,180 --> 00:05:47,330
+of the same dynamics that we started with?
+
+114
+00:05:47,330 --> 00:05:48,380
+And is it unique?
+
+115
+00:05:48,380 --> 00:05:50,930
+Might there be more than limit depending
+
+116
+00:05:50,930 --> 00:05:53,000
+on the way in which we take limits, particularly
+
+117
+00:05:53,000 --> 00:05:55,070
+in cases that might have multiple variables
+
+118
+00:05:55,070 --> 00:05:56,180
+or parameters?
+
+119
+00:05:56,180 --> 00:05:57,860
+Could there be different limits that
+
+120
+00:05:57,860 --> 00:06:01,648
+are obtained by taking limits in different ways?
+
+121
+00:06:01,648 --> 00:06:03,315
+Could we get different kinds of results?
+
+122
+00:06:03,315 --> 00:06:06,273
+
+
+123
+00:06:06,273 --> 00:06:07,940
+So let's take a look at our random walk.
+
+124
+00:06:07,940 --> 00:06:10,220
+And I'd like to consider a few different cases,
+
+125
+00:06:10,220 --> 00:06:12,590
+show you a few different ways that we might
+
+126
+00:06:12,590 --> 00:06:14,550
+think about taking the limit.
+
+127
+00:06:14,550 --> 00:06:16,070
+So the first thing that we would do
+
+128
+00:06:16,070 --> 00:06:18,530
+is, let's just start with the most obvious.
+
+129
+00:06:18,530 --> 00:06:20,600
+Let delta t go to 0.
+
+130
+00:06:20,600 --> 00:06:21,860
+So what's delta t?
+
+131
+00:06:21,860 --> 00:06:24,110
+Well, let's let there be n steps.
+
+132
+00:06:24,110 --> 00:06:25,880
+We're going to hold big T fixed.
+
+133
+00:06:25,880 --> 00:06:28,880
+Big T is the overall length of time that we're interested in.
+
+134
+00:06:28,880 --> 00:06:30,590
+We're going to let there be n steps,
+
+135
+00:06:30,590 --> 00:06:35,540
+and we're going to let each step be of length delta t.
+
+136
+00:06:35,540 --> 00:06:38,700
+It's going to be t divided by n, the number of steps.
+
+137
+00:06:38,700 --> 00:06:43,790
+So if I want to let delta t go to 0, I can hold t fixed
+
+138
+00:06:43,790 --> 00:06:46,010
+and let n go to infinity.
+
+139
+00:06:46,010 --> 00:06:47,870
+Those will be equivalent.
+
+140
+00:06:47,870 --> 00:06:52,430
+Now, let's construct a B path, but now as I told you before,
+
+141
+00:06:52,430 --> 00:06:56,880
+instead of B1, T, I have the first argument here is delta t.
+
+142
+00:06:56,880 --> 00:07:00,860
+This is going to consist of a path of steps that represent
+
+143
+00:07:00,860 --> 00:07:03,455
+interval delta t in time, and there
+
+144
+00:07:03,455 --> 00:07:06,000
+are going to be n of them to get to my horizon.
+
+145
+00:07:06,000 --> 00:07:08,090
+So I'm going to let t go from to n,
+
+146
+00:07:08,090 --> 00:07:10,010
+and I'm going to take these z's.
+
+147
+00:07:10,010 --> 00:07:12,680
+What's the expectation of that sum?
+
+148
+00:07:12,680 --> 00:07:13,280
+0.
+
+149
+00:07:13,280 --> 00:07:18,230
+The expectation of each term is 0, and the sum of the 0's is 0.
+
+150
+00:07:18,230 --> 00:07:19,910
+What's the variance?
+
+151
+00:07:19,910 --> 00:07:22,550
+Well, they're going to be as usual
+
+152
+00:07:22,550 --> 00:07:24,200
+because these are independent.
+
+153
+00:07:24,200 --> 00:07:26,990
+The variance of the sum is going to be
+
+154
+00:07:26,990 --> 00:07:32,000
+n times the variance of an individual z.
+
+155
+00:07:32,000 --> 00:07:36,590
+So n times the variance of the z, the z's are standardized,
+
+156
+00:07:36,590 --> 00:07:38,540
+is going to give me n.
+
+157
+00:07:38,540 --> 00:07:42,120
+So what happens as n goes to infinity?
+
+158
+00:07:42,120 --> 00:07:46,280
+The variance becomes infinite.
+
+159
+00:07:46,280 --> 00:07:48,720
+Not too useful.
+
+160
+00:07:48,720 --> 00:07:51,180
+Let's try again.
+
+161
+00:07:51,180 --> 00:07:55,140
+Suppose we rescale the time step in the step size,
+
+162
+00:07:55,140 --> 00:07:57,930
+because it's easy to see what went wrong before.
+
+163
+00:07:57,930 --> 00:08:01,680
+We took an infinite number of steps, each of which was size ,
+
+164
+00:08:01,680 --> 00:08:04,480
+so of course the variance blew up.
+
+165
+00:08:04,480 --> 00:08:08,370
+So we should think about it, and instead of just varying
+
+166
+00:08:08,370 --> 00:08:10,590
+the time interval, we should, as we
+
+167
+00:08:10,590 --> 00:08:12,480
+let delta t get smaller and smaller,
+
+168
+00:08:12,480 --> 00:08:15,960
+we should also let the step size approach 0.
+
+169
+00:08:15,960 --> 00:08:18,070
+So let's see if we can do that.
+
+170
+00:08:18,070 --> 00:08:22,110
+Let's let delta t equal T/n as before,
+
+171
+00:08:22,110 --> 00:08:27,960
+and let's define epsilon to be our variable for our step size,
+
+172
+00:08:27,960 --> 00:08:31,680
+and let's let it be lambda times our unit variable
+
+173
+00:08:31,680 --> 00:08:35,370
+so that we can, instead of changing our beloved z's,
+
+174
+00:08:35,370 --> 00:08:39,510
+this way we can let lambda go to 0 to let the step size go to 0.
+
+175
+00:08:39,510 --> 00:08:40,570
+So what do we have?
+
+176
+00:08:40,570 --> 00:08:43,539
+Well, we construct a sum of n variables.
+
+177
+00:08:43,539 --> 00:08:46,590
+But this time, the n variables are the epsilons.
+
+178
+00:08:46,590 --> 00:08:49,650
+Each epsilon is lambda times z, so the lambdas
+
+179
+00:08:49,650 --> 00:08:51,630
+pull out in front of the sum.
+
+180
+00:08:51,630 --> 00:08:54,700
+So what do we have for the variance?
+
+181
+00:08:54,700 --> 00:08:57,580
+Well, the expectation is 0, as before.
+
+182
+00:08:57,580 --> 00:09:01,120
+The variance is going to be n times the variance
+
+183
+00:09:01,120 --> 00:09:02,660
+of the single step.
+
+184
+00:09:02,660 --> 00:09:05,860
+The variance of a constant times a variable
+
+185
+00:09:05,860 --> 00:09:09,740
+is the constant squared times the variance of the variable.
+
+186
+00:09:09,740 --> 00:09:13,330
+So we have n lambda squared times the variance of z,
+
+187
+00:09:13,330 --> 00:09:16,030
+and that gives us n lambda squared
+
+188
+00:09:16,030 --> 00:09:19,060
+for the variance of this process.
+
+189
+00:09:19,060 --> 00:09:21,740
+Now, we want the step size to go to 0,
+
+190
+00:09:21,740 --> 00:09:24,610
+so suppose lambda goes as 1/n, the same way
+
+191
+00:09:24,610 --> 00:09:26,740
+that delta t goes as 1/n.
+
+192
+00:09:26,740 --> 00:09:29,630
+Then we let n go to infinity.
+
+193
+00:09:29,630 --> 00:09:30,800
+What do we get?
+
+194
+00:09:30,800 --> 00:09:33,760
+Well, now we get that the variance of our process
+
+195
+00:09:33,760 --> 00:09:36,160
+is going to be n lambda squared.
+
+196
+00:09:36,160 --> 00:09:39,460
+That's going to be n over n squared.
+
+197
+00:09:39,460 --> 00:09:41,080
+That's going to vanish.
+
+198
+00:09:41,080 --> 00:09:44,870
+That is, as we let n go to 0 [CORRECTION: infinity],
+
+199
+00:09:44,870 --> 00:09:48,470
+it takes delta t to 0 and it takes the step size to 0
+
+200
+00:09:48,470 --> 00:09:51,590
+in such a way that the variance also goes to 0.
+
+201
+00:09:51,590 --> 00:09:54,210
+Variance 0 means it's deterministic.
+
+202
+00:09:54,210 --> 00:09:55,880
+There's no randomness at all.
+
+203
+00:09:55,880 --> 00:09:57,860
+And that would be nice, but it's not
+
+204
+00:09:57,860 --> 00:09:59,600
+going to be too useful for formulating
+
+205
+00:09:59,600 --> 00:10:01,770
+continuous-time finance.
+
+206
+00:10:01,770 --> 00:10:04,790
+So the problem here was the relative rate
+
+207
+00:10:04,790 --> 00:10:13,070
+of change of the time step and the step size, that is,
+
+208
+00:10:13,070 --> 00:10:16,400
+the spacing in the size of the step that we take
+
+209
+00:10:16,400 --> 00:10:21,110
+and how we interpret them as evolving in time.
+
+210
+00:10:21,110 --> 00:10:24,738
+Take a moment and see where you think we might go next.
+
+211
+00:10:24,738 --> 00:10:25,238
+
+

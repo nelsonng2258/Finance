@@ -1,0 +1,744 @@
+0
+00:00:00,000 --> 00:00:00,682
+
+
+1
+00:00:00,682 --> 00:00:02,890
+PROFESSOR: When we derived the Black-Scholes equation
+
+2
+00:00:02,890 --> 00:00:05,280
+in lecture, it had two parts.
+
+3
+00:00:05,280 --> 00:00:09,040
+An expression for the stock dynamics is an Ito process
+
+4
+00:00:09,040 --> 00:00:11,000
+and then an expression for the derivative the
+
+5
+00:00:11,000 --> 00:00:12,340
+used Ito's lemma.
+
+6
+00:00:12,340 --> 00:00:16,090
+And then we combine the two in a portfolio, canceled the risk,
+
+7
+00:00:16,090 --> 00:00:19,390
+and found a partial differential equation, which
+
+8
+00:00:19,390 --> 00:00:21,820
+had no risk in it, and then we can solve that
+
+9
+00:00:21,820 --> 00:00:23,350
+by ordinary techniques.
+
+10
+00:00:23,350 --> 00:00:25,700
+Now one thing that we might ask is,
+
+11
+00:00:25,700 --> 00:00:28,390
+what if stocks don't follow random walks?
+
+12
+00:00:28,390 --> 00:00:31,990
+What if stocks don't follow geometric Brownian motion?
+
+13
+00:00:31,990 --> 00:00:33,310
+How important is that?
+
+14
+00:00:33,310 --> 00:00:36,460
+Does the whole option-pricing relationship fall apart?
+
+15
+00:00:36,460 --> 00:00:38,000
+Quite the opposite.
+
+16
+00:00:38,000 --> 00:00:38,930
+So let's take a look.
+
+17
+00:00:38,930 --> 00:00:43,450
+Suppose we have a general Ito process, where we have dS,
+
+18
+00:00:43,450 --> 00:00:47,320
+is given by any function, a times
+
+19
+00:00:47,320 --> 00:00:53,050
+dt plus any other function b of t and S times dB,
+
+20
+00:00:53,050 --> 00:00:54,640
+times the random part.
+
+21
+00:00:54,640 --> 00:00:56,620
+Let's see what happens in our derivation.
+
+22
+00:00:56,620 --> 00:00:59,110
+Which parts go through and which parts change.
+
+23
+00:00:59,110 --> 00:01:04,420
+So remember when we did it before, we had previously,
+
+24
+00:01:04,420 --> 00:01:16,560
+this was dS was equal to uSdt plus sigma S dB.
+
+25
+00:01:16,560 --> 00:01:21,036
+So these were very special forms of coefficient functions. a
+
+26
+00:01:21,036 --> 00:01:23,010
+and b in particular, they're time independent,
+
+27
+00:01:23,010 --> 00:01:25,103
+they're linear in S. And that's it.
+
+28
+00:01:25,103 --> 00:01:27,270
+So those were quite special, but let's leave a and b
+
+29
+00:01:27,270 --> 00:01:29,160
+completely general.
+
+30
+00:01:29,160 --> 00:01:31,480
+So that was one part.
+
+31
+00:01:31,480 --> 00:01:33,410
+The other part we're going to leave identical.
+
+32
+00:01:33,410 --> 00:01:39,570
+So let's let V is going to be a general function of t and S, is
+
+33
+00:01:39,570 --> 00:01:48,070
+the value of the derivative security
+
+34
+00:01:48,070 --> 00:01:52,000
+on the underlying security whose price is given by S.
+
+35
+00:01:52,000 --> 00:01:55,630
+And you notice some places, I've had little subscripts, t,
+
+36
+00:01:55,630 --> 00:01:56,650
+on my variables.
+
+37
+00:01:56,650 --> 00:01:58,270
+From now on, generally, I'm going
+
+38
+00:01:58,270 --> 00:02:01,000
+to assume that we know that our capital letters are
+
+39
+00:02:01,000 --> 00:02:03,610
+random variables, they're stochastic processes,
+
+40
+00:02:03,610 --> 00:02:05,140
+and that they're time dependent.
+
+41
+00:02:05,140 --> 00:02:09,820
+In our coefficient functions, a and b and F and V,
+
+42
+00:02:09,820 --> 00:02:12,550
+our value functions, are going to be ordinary functions
+
+43
+00:02:12,550 --> 00:02:14,840
+but they're functions of random variables.
+
+44
+00:02:14,840 --> 00:02:20,650
+So sometimes it was convenient to put a little subscript, t,
+
+45
+00:02:20,650 --> 00:02:24,550
+down here and over here, to remind us that these
+
+46
+00:02:24,550 --> 00:02:26,480
+are the random variables.
+
+47
+00:02:26,480 --> 00:02:33,160
+But by now it should be clear in context that S or x or V
+
+48
+00:02:33,160 --> 00:02:35,800
+are always going to be functions, possibly
+
+49
+00:02:35,800 --> 00:02:38,650
+explicitly of time, but they're going to be random variables.
+
+50
+00:02:38,650 --> 00:02:42,250
+And those random variables are time dependent.
+
+51
+00:02:42,250 --> 00:02:43,060
+OK.
+
+52
+00:02:43,060 --> 00:02:45,160
+So what did we have for dV?
+
+53
+00:02:45,160 --> 00:02:48,320
+Well, dV was given because it's a derivative,
+
+54
+00:02:48,320 --> 00:02:49,780
+it doesn't have any choice.
+
+55
+00:02:49,780 --> 00:02:54,690
+It depends on S. And what it depends on also is Ito's lemma
+
+56
+00:02:54,690 --> 00:02:56,090
+and that's just math.
+
+57
+00:02:56,090 --> 00:02:58,420
+So it's given by--
+
+58
+00:02:58,420 --> 00:03:01,300
+excuse me, we're working in v instead of f.
+
+59
+00:03:01,300 --> 00:03:04,300
+Just a different part of the alphabet for a change.
+
+60
+00:03:04,300 --> 00:03:06,160
+And it's conventional in literature,
+
+61
+00:03:06,160 --> 00:03:08,650
+when we're talking about derivatives,
+
+62
+00:03:08,650 --> 00:03:11,260
+that you can pick your favorite letter.
+
+63
+00:03:11,260 --> 00:03:16,630
+So this is going to be partial of v with respect to tdt.
+
+64
+00:03:16,630 --> 00:03:18,805
+Partial of v with respect to SdS.
+
+65
+00:03:18,805 --> 00:03:21,505
+
+
+66
+00:03:21,505 --> 00:03:23,710
+And then, plus the Ito term, which
+
+67
+00:03:23,710 --> 00:03:29,110
+will be b squared over 2, second partial of F with respect to S
+
+68
+00:03:29,110 --> 00:03:32,020
+squared dt.
+
+69
+00:03:32,020 --> 00:03:32,920
+OK.
+
+70
+00:03:32,920 --> 00:03:39,100
+So this b over here is the same one as this coefficient there.
+
+71
+00:03:39,100 --> 00:03:43,060
+So all I've done is I've just left us in more general form.
+
+72
+00:03:43,060 --> 00:03:45,680
+Let's follow the same steps.
+
+73
+00:03:45,680 --> 00:03:48,140
+So this is, just to mark this up a little bit,
+
+74
+00:03:48,140 --> 00:03:53,700
+this defines dynamics of the underlying.
+
+75
+00:03:53,700 --> 00:04:00,290
+
+
+76
+00:04:00,290 --> 00:04:04,676
+This is just Ito's lemma.
+
+77
+00:04:04,676 --> 00:04:11,020
+We'll call it Ito's formula for V.
+
+78
+00:04:11,020 --> 00:04:13,260
+And now we'd like to build a portfolio.
+
+79
+00:04:13,260 --> 00:04:17,940
+
+
+80
+00:04:17,940 --> 00:04:22,450
+In our portfolio, pi will consist
+
+81
+00:04:22,450 --> 00:04:27,490
+of being long one derivative and minus a quantity, q,
+
+82
+00:04:27,490 --> 00:04:32,500
+that I'll give the name delta, in this case.
+
+83
+00:04:32,500 --> 00:04:34,220
+Think of them as shares of stock.
+
+84
+00:04:34,220 --> 00:04:37,720
+So I have delta shares of stock with value S.
+
+85
+00:04:37,720 --> 00:04:40,000
+So this is the value of the portfolio,
+
+86
+00:04:40,000 --> 00:04:42,610
+and then we'd like to ask about its change of value,
+
+87
+00:04:42,610 --> 00:04:43,900
+its differential.
+
+88
+00:04:43,900 --> 00:04:50,380
+So we have d pi, is going to be dV minus delta dS.
+
+89
+00:04:50,380 --> 00:04:53,050
+And when we combined terms, we saw
+
+90
+00:04:53,050 --> 00:05:00,630
+that this was terms with a dt times partial of V
+
+91
+00:05:00,630 --> 00:05:02,280
+with respect to t.
+
+92
+00:05:02,280 --> 00:05:04,590
+That comes from up here.
+
+93
+00:05:04,590 --> 00:05:15,510
+| have my Ito term, it's going to be plus b squared over 2.
+
+94
+00:05:15,510 --> 00:05:19,440
+Second partial of V with respect to S squared.
+
+95
+00:05:19,440 --> 00:05:24,500
+
+
+96
+00:05:24,500 --> 00:05:27,510
+And then I'm going to have a term, which
+
+97
+00:05:27,510 --> 00:05:34,890
+is going to be plus dS, and it's going to have partial of V
+
+98
+00:05:34,890 --> 00:05:39,610
+with respect to S from right here.
+
+99
+00:05:39,610 --> 00:05:44,910
+And it's going to have a delta term
+
+100
+00:05:44,910 --> 00:05:47,040
+from here, which is delta dS.
+
+101
+00:05:47,040 --> 00:05:49,950
+And because it's written in that form I really
+
+102
+00:05:49,950 --> 00:05:55,440
+don't want to go to the trouble of expanding out this dS,
+
+103
+00:05:55,440 --> 00:05:59,100
+writing it in terms of its original defining parts, do I?
+
+104
+00:05:59,100 --> 00:06:02,850
+Because I can cancel it out right there where it sits.
+
+105
+00:06:02,850 --> 00:06:06,670
+So our strategy was let's let delta equal partial
+
+106
+00:06:06,670 --> 00:06:08,880
+of V with respect to S. That makes
+
+107
+00:06:08,880 --> 00:06:12,000
+the risky term on the right, on the second term
+
+108
+00:06:12,000 --> 00:06:13,980
+of the right hand side, vanish.
+
+109
+00:06:13,980 --> 00:06:15,510
+And then we can have an expression
+
+110
+00:06:15,510 --> 00:06:19,330
+for a risk free portfolio.
+
+111
+00:06:19,330 --> 00:06:33,670
+So if we set delta equal to partial of V with respect to S.
+
+112
+00:06:33,670 --> 00:06:38,150
+If we do this, then two things happen.
+
+113
+00:06:38,150 --> 00:06:48,545
+That risky term in dS vanishes.
+
+114
+00:06:48,545 --> 00:06:56,430
+
+
+115
+00:06:56,430 --> 00:06:58,110
+So that's one.
+
+116
+00:06:58,110 --> 00:07:05,130
+And two, we would say that pi earns the risk free rate.
+
+117
+00:07:05,130 --> 00:07:09,827
+
+
+118
+00:07:09,827 --> 00:07:10,535
+Rate of interest.
+
+119
+00:07:10,535 --> 00:07:14,950
+
+
+120
+00:07:14,950 --> 00:07:17,330
+Because otherwise it would be arbitrage.
+
+121
+00:07:17,330 --> 00:07:23,720
+So in that case, we have the d pi is going to be equal,
+
+122
+00:07:23,720 --> 00:07:28,010
+on the one hand, dt times the first term and that's it.
+
+123
+00:07:28,010 --> 00:07:29,450
+The second one will drop out.
+
+124
+00:07:29,450 --> 00:07:38,420
+
+
+125
+00:07:38,420 --> 00:07:43,960
+And this has to be equal to the risk
+
+126
+00:07:43,960 --> 00:07:51,080
+free rate of growth, which will be r pi dt infinitesimally.
+
+127
+00:07:51,080 --> 00:07:53,000
+And that's our basic expression.
+
+128
+00:07:53,000 --> 00:07:56,420
+Now, I'm going to do a little bit more elaboration on it.
+
+129
+00:07:56,420 --> 00:08:01,520
+But up to here, what depended on the particular choice
+
+130
+00:08:01,520 --> 00:08:03,800
+of stock dynamics?
+
+131
+00:08:03,800 --> 00:08:06,740
+So the answer is almost nothing.
+
+132
+00:08:06,740 --> 00:08:10,040
+But the only thing that shows up, it depends on the form
+
+133
+00:08:10,040 --> 00:08:12,540
+that we began with up here.
+
+134
+00:08:12,540 --> 00:08:15,770
+It does not depend on the sigma S.
+
+135
+00:08:15,770 --> 00:08:19,250
+The sigma S does mean that when we get expressions like this
+
+136
+00:08:19,250 --> 00:08:23,120
+here, this would be sigma squared S squared over 2
+
+137
+00:08:23,120 --> 00:08:24,620
+in the Black-Scholes equation.
+
+138
+00:08:24,620 --> 00:08:25,790
+Here it's general.
+
+139
+00:08:25,790 --> 00:08:27,530
+It's b squared over 2.
+
+140
+00:08:27,530 --> 00:08:30,020
+What about the a term?
+
+141
+00:08:30,020 --> 00:08:32,659
+The a term goes away.
+
+142
+00:08:32,659 --> 00:08:34,070
+Nothing depends on it.
+
+143
+00:08:34,070 --> 00:08:35,570
+It's dropped out completely.
+
+144
+00:08:35,570 --> 00:08:37,909
+Well it's not completely dropped out.
+
+145
+00:08:37,909 --> 00:08:41,419
+In a sense, the a term is part of dS,
+
+146
+00:08:41,419 --> 00:08:43,429
+but we canceled the dS term.
+
+147
+00:08:43,429 --> 00:08:47,010
+So whatever relationship there is between the
+
+148
+00:08:47,010 --> 00:08:51,200
+a function in the stock, and the subsequent behavior
+
+149
+00:08:51,200 --> 00:08:54,020
+of the derivative, it's already been taken care of
+
+150
+00:08:54,020 --> 00:08:56,930
+or it's already been canceled out of the equation.
+
+151
+00:08:56,930 --> 00:08:59,930
+It no longer matters when we have a portfolio that
+
+152
+00:08:59,930 --> 00:09:01,850
+balances exactly the right amount
+
+153
+00:09:01,850 --> 00:09:04,250
+of the derivative security in the right amount
+
+154
+00:09:04,250 --> 00:09:05,510
+of the underlying.
+
+155
+00:09:05,510 --> 00:09:08,570
+So we still have a b, which we haven't specified.
+
+156
+00:09:08,570 --> 00:09:10,460
+So the only difference at this point,
+
+157
+00:09:10,460 --> 00:09:14,280
+from our Black-Scholes equation, is that instead of b squared,
+
+158
+00:09:14,280 --> 00:09:16,430
+we would have had sigma squared S squared.
+
+159
+00:09:16,430 --> 00:09:19,160
+And then we expanded out and we have the same thing
+
+160
+00:09:19,160 --> 00:09:20,630
+that we had before.
+
+161
+00:09:20,630 --> 00:09:34,850
+We simply write this as r times V minus delta S times dt.
+
+162
+00:09:34,850 --> 00:09:37,980
+And now we notice that on the left hand, right hand sides,
+
+163
+00:09:37,980 --> 00:09:40,490
+I have everything in dt.
+
+164
+00:09:40,490 --> 00:09:43,730
+Moving everything to the same side
+
+165
+00:09:43,730 --> 00:09:46,070
+or if you'd like, dividing by dt,
+
+166
+00:09:46,070 --> 00:09:58,620
+because there are no more stochastic differentials,
+
+167
+00:09:58,620 --> 00:10:06,460
+we can put in our dt times partial of V with respect to t
+
+168
+00:10:06,460 --> 00:10:09,250
+plus b squared over 2.
+
+169
+00:10:09,250 --> 00:10:23,220
+d2 of V squared plus r partial of V with respect to S--
+
+170
+00:10:23,220 --> 00:10:24,960
+should be rS--
+
+171
+00:10:24,960 --> 00:10:27,190
+minus rV.
+
+172
+00:10:27,190 --> 00:10:30,480
+And this whole thing is equal to zero.
+
+173
+00:10:30,480 --> 00:10:32,970
+And therefore the coefficient, the thing in the brackets,
+
+174
+00:10:32,970 --> 00:10:34,530
+has to be equal to zero.
+
+175
+00:10:34,530 --> 00:10:38,430
+The thing that is the coefficient of dt.
+
+176
+00:10:38,430 --> 00:10:39,300
+So that's it.
+
+177
+00:10:39,300 --> 00:10:41,350
+That's our generalization.
+
+178
+00:10:41,350 --> 00:10:44,670
+So given an Ito process, a general Ito
+
+179
+00:10:44,670 --> 00:10:49,020
+process up here, in terms of anything
+
+180
+00:10:49,020 --> 00:10:52,200
+with any coefficient a and any coefficient
+
+181
+00:10:52,200 --> 00:10:55,980
+b, we've got the Black-Scholes equation, with the only thing
+
+182
+00:10:55,980 --> 00:10:57,890
+that we need to do is to substitute
+
+183
+00:10:57,890 --> 00:10:59,770
+in the appropriate b.
+
+184
+00:10:59,770 --> 00:11:03,470
+So here's your chance to try it out.
+
+185
+00:11:03,470 --> 00:11:04,214
+
+

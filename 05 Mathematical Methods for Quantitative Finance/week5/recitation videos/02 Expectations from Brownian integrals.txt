@@ -1,0 +1,197 @@
+
+PROFESSOR: Let's look at more expectations involving
+our stochastic processes.
+We know that db is a Gaussian random variable
+with a mean 0 and variance dt.
+We also know that if we integrate
+db from, say, 0 to time t--
+And for convenience, I can write this as bt minus b0.
+Let's agree that b0 is going to be 0.
+It will simplify our notation.
+So this I'll just write is bt.
+And we know that this is distributed as n 0t, that
+is, it has variance t.
+So since that is the case, we have an easy way
+that we can write things.
+We know that the expectation of d is going to be 0.
+We know that its variance is going to be t.
+So let's just replace the random variable bt, or really,
+bt minus b0, by square root of t times
+z, where z doesn't have any time dependence.
+z is just n 01.
+So that's just simplifying things and putting everything
+in an even more standard form.
+But it also makes explicit the time dependent.
+And it's the scaling with time that's
+going to be important for a lot of financial applications,
+and for risk management.
+So, what that means is that any time
+where we see a bt, or a bt minus b0,
+we can replace it by that function.
+So if we want to compute the expectation of some function
+of bt minus b0, we can just write
+that the expectation of square root of t times
+z, our function of square root of t and z, and compute that.
+OK.
+And remember these are our Gaussian intervals.
+So we just need to do an integral.
+That's all it is.
+So this is equal to 1 over square root of 2 pi integral
+from minus infinity to infinity of e
+to the minus z squared over 2 times
+f of square root of t times z.
+Easy.
+
+So for example, suppose we wanted
+to compute the fourth power.
+The expectation of the fourth power.
+So suppose that we had f of x is the function x to the fourth.
+So we'd like to compute.
+This is an example.
+
+So we'd like to compute f of et minus e0.
+That's going to be the expectation of bt minus b0
+is to the fourth power.
+That's the same thing as expectation
+of square root of tz raised to the fourth power.
+
+We can pull out square root of t,
+which is nonstochastic to get t squared
+times the expectation of z to the 4th, which
+is a well-known Gaussian integal that we use in the kurtosis.
+It's just equal to 3.
+3t squared.
+All right.
+So this way of standardizing things and writing things
+in terms of z when we work in the integral form,
+when we integrate our processes, is very convenient.
+Let's do an example, and I want to review
+a very useful trick with you.
+So let's take a look.
+So, for example, suppose we do another example.
+
+Suppose we wanted to compute the expectation of e to the 6x
+where dx, let's just say it's ordinary Brownian motion, udt
+plus sigma db.
+So because it's in this form, we can
+integrate x, like xt minus x0.
+
+OK, it's going to be mu times t plus square root of t times z.
+So if we go to compute the expectation of e to the 6 times
+ut plus square root of tz.
+
+We could also-- you might see it sometimes in the form
+before it's been replaced.
+It's just e to the 6 times mu t plus b.
+
+Either way, we'd like to do an integral.
+Looking at the first form, obviously e to the six mu t
+is just a factor.
+It's a scalar, so we can write that-- we can pull that out
+in front.
+6 mu t times the expectation of e to the 6
+square root of t times z.
+Now in this case, this is a form that we'll see a lot.
+I'd like to give you a useful general formula.
+That if we'd like to take the expectation of e
+to the something, linear and z.
+And in fact, we already know what this is.
+Because we already did, in our first lecture,
+the characteristic function.
+And it's also related to the moment generating function,
+e to the something times z.
+But let me just connect it with the Gaussian intervals
+and remind you of where we got that.
+And let's get a useful formula.
+So, a useful formula.
+
+Suppose that we have e to the, let's say, alpha
+z plus b, plus beta.
+So, some linear function.
+So, I would like to compute the expectation of some exponential
+of a linear function of z.
+And this shows up a lot in particular in asset
+pricing formulas.
+So this is clearly equal to e to the beta,
+because that's just a pre factor.
+Times e to the alpha z.
+And this we do by doing the Gaussian integral,
+with the trick of completing the square in the exponent.
+So this is 1 over 2 pi e to the minus z squared over 2 times
+e to the alpha z dz.
+That's just our definition for the expectation operator.
+And of course I had the e to the beta in front,
+so let's not lose that.
+So inside the integral, what I can
+do in the integrand is I can write this as,
+let's keep our prefactory e to the beta
+over square root of 2 pi.
+And I can write this as e to the minus z minus alpha
+to the quantity squared over 2.
+Now you notice if we expand this, I'll get minus e
+squared over 2.
+I'll get minus minus alpha z times 2
+over 2, which is exactly the coefficient with the weighting
+that I need over here.
+But then there's an extra piece.
+There's an alpha squared over 2.
+So let's correct for that.
+Let's put in our integral, and let's write this as plus alpha
+squared over 2 times dz.
+But this expression is e to the beta plus alpha squared over
+2 times 1 over square root of 2 pi integral
+e to the minus z minus alpha quantity squared over 2 dz.
+
+And because the integral goes from minus infinity
+to infinity, the difference in the exponential between z
+and z minus alpha makes no difference at all.
+If you'd like, you can shift the variable of integration.
+The integral inside the square brackets
+with 1 over square root of 2 pi in front is equal to 1.
+So our final result, our final useful formula,
+is that the expectation of e to the alpha z plus beta,
+for any alpha and beta that are constant,
+is going to be e to the alpha squared over 2 plus beta.
+Now, let's apply that to our example.
+We had-- this is our useful formula.
+
+And our example was the exponential of e
+to the 6x was expectation of e to the 6 mu t
+plus 6 square root of t times z.
+So applying our formula, this is going
+to give me e to the 6 mu t plus the square
+of the coefficient of z.
+That's going to be 6 times square root of t divided by 2.
+So 6 squared over 2.
+6 squared Is 36, over 2 is 18.
+And square root of t squared is t.
+
+And there's my answer for my expectation.
+Yes, except we left out one coefficient,
+which was the sigma squared.
+
+So, this is my mistake.
+If you didn't catch the sigma squared, I hope you did.
+Because t should always come in with the sigma
+squared in front of it.
+But let's go back and fix my formulas.
+There should have been a--
+we began here with mu t plus sigma, square root of t.
+There should have been a sigma square root of t there.
+We have a sigma b here.
+This should have had a sigma here.
+
+And then as we come down here, we needed a sigma here.
+And then keep in mind that our expression
+was to take this quantity in the red parentheses squared
+divided by 2.
+That's our alpha that we see over here.
+So I apologize for the typo, but I hope
+you caught it before I did.
+So this is 6 squared over 2 is 18.
+Square root of t is t.
+And sigma squared is sigma squared.
+So there's our answer for finding this expectation.
+And this works, generally, for a larger class
+of functions that show up for different kinds of Ito
+processes.

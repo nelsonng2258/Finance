@@ -1,0 +1,580 @@
+0
+00:00:00,000 --> 00:00:01,000
+
+
+1
+00:00:01,000 --> 00:00:03,490
+PROFESSOR: Suppose x is a stochastic process
+
+2
+00:00:03,490 --> 00:00:06,160
+that's defined by the expression dx
+
+3
+00:00:06,160 --> 00:00:10,090
+over x equals mu dt plus sigma dB,
+
+4
+00:00:10,090 --> 00:00:13,330
+where mu and sigma are both constants,
+
+5
+00:00:13,330 --> 00:00:15,340
+and we'd like to find a function F
+
+6
+00:00:15,340 --> 00:00:19,480
+in terms of which dF is an Ito process
+
+7
+00:00:19,480 --> 00:00:23,170
+with constant coefficients.
+
+8
+00:00:23,170 --> 00:00:25,420
+So take a moment to think about it.
+
+9
+00:00:25,420 --> 00:00:27,540
+Think about how you'd approach it,
+
+10
+00:00:27,540 --> 00:00:30,070
+if you can set it up, and then let's take a look at it
+
+11
+00:00:30,070 --> 00:00:30,570
+together.
+
+12
+00:00:30,570 --> 00:00:39,650
+
+
+13
+00:00:39,650 --> 00:00:41,480
+I'd like to do this systematically.
+
+14
+00:00:41,480 --> 00:00:43,720
+So you might have gotten it by inspection
+
+15
+00:00:43,720 --> 00:00:47,080
+or had a clever guess, or maybe you've seen it before.
+
+16
+00:00:47,080 --> 00:00:49,540
+But let's see how we can work through this systematically.
+
+17
+00:00:49,540 --> 00:00:53,950
+What we'd like to do is use the different ways
+
+18
+00:00:53,950 --> 00:00:57,430
+that we can write dF to solve systematically
+
+19
+00:00:57,430 --> 00:00:58,580
+for such a function.
+
+20
+00:00:58,580 --> 00:01:01,030
+And we're going to do it by deriving some equations that F
+
+21
+00:01:01,030 --> 00:01:05,650
+has to satisfy in order that the coefficients aF and BF would
+
+22
+00:01:05,650 --> 00:01:06,710
+be constant.
+
+23
+00:01:06,710 --> 00:01:09,440
+So two things we want to do-- first of all,
+
+24
+00:01:09,440 --> 00:01:13,360
+let's just identify our-- the parts of our function,
+
+25
+00:01:13,360 --> 00:01:19,300
+our function dx, by writing dx is
+
+26
+00:01:19,300 --> 00:01:30,230
+equal to mu x times dt plus sigma x time dB.
+
+27
+00:01:30,230 --> 00:01:33,050
+So in our usual notation for an Ito process,
+
+28
+00:01:33,050 --> 00:01:37,100
+we have a is the function mu x.
+
+29
+00:01:37,100 --> 00:01:41,350
+B is the function sigma x.
+
+30
+00:01:41,350 --> 00:01:42,940
+So that all just comes from here.
+
+31
+00:01:42,940 --> 00:01:44,020
+That's direct.
+
+32
+00:01:44,020 --> 00:01:47,470
+Now, let's apply Ito to dF using the expressions
+
+33
+00:01:47,470 --> 00:01:49,520
+that we have worked out earlier.
+
+34
+00:01:49,520 --> 00:01:55,310
+So let's say that dF is equal to something times dt.
+
+35
+00:01:55,310 --> 00:01:56,875
+Well, what's the coefficient of dt?
+
+36
+00:01:56,875 --> 00:02:02,160
+
+
+37
+00:02:02,160 --> 00:02:05,370
+We have the partial of F with respect
+
+38
+00:02:05,370 --> 00:02:11,510
+to t plus we have the Ito term, B squared over 2,
+
+39
+00:02:11,510 --> 00:02:16,520
+which, in our case, is sigma x squared over 2 times
+
+40
+00:02:16,520 --> 00:02:22,890
+the second partial of F dx squared plus we have a term
+
+41
+00:02:22,890 --> 00:02:26,110
+a dF dx.
+
+42
+00:02:26,110 --> 00:02:32,690
+So this is going to be mu x times partial of F
+
+43
+00:02:32,690 --> 00:02:34,640
+with respect to x.
+
+44
+00:02:34,640 --> 00:02:44,970
+And this whole thing times dt plus another term,
+
+45
+00:02:44,970 --> 00:02:47,390
+which is going to be a little bit simpler--
+
+46
+00:02:47,390 --> 00:02:50,920
+this is going to be sigma x, which
+
+47
+00:02:50,920 --> 00:02:59,000
+is little b, partial of F with respect to x, times dB.
+
+48
+00:02:59,000 --> 00:03:02,060
+So this is the form of Ito's lemma
+
+49
+00:03:02,060 --> 00:03:04,610
+where we combine terms into something times
+
+50
+00:03:04,610 --> 00:03:09,080
+dt for something times dB rather than something times dt
+
+51
+00:03:09,080 --> 00:03:11,060
+plus something times dx.
+
+52
+00:03:11,060 --> 00:03:13,100
+So in this term, what we'd like is
+
+53
+00:03:13,100 --> 00:03:16,130
+we'd like the things in these brackets.
+
+54
+00:03:16,130 --> 00:03:19,340
+Let me make these red brackets now.
+
+55
+00:03:19,340 --> 00:03:25,570
+This should be a constant, and so should this.
+
+56
+00:03:25,570 --> 00:03:27,710
+Now, the second one has only one term.
+
+57
+00:03:27,710 --> 00:03:29,200
+The first one has three.
+
+58
+00:03:29,200 --> 00:03:32,300
+So why don't we work in the easy one first?
+
+59
+00:03:32,300 --> 00:03:37,330
+So we need a function F so that this expression here
+
+60
+00:03:37,330 --> 00:03:38,035
+is a constant.
+
+61
+00:03:38,035 --> 00:03:41,370
+
+
+62
+00:03:41,370 --> 00:03:58,300
+That is, we need F t and x such that sigma
+
+63
+00:03:58,300 --> 00:04:04,725
+x partial of F with respect to x is a constant.
+
+64
+00:04:04,725 --> 00:04:07,950
+
+
+65
+00:04:07,950 --> 00:04:11,100
+Well, I can easily move the-- we can divide both sides
+
+66
+00:04:11,100 --> 00:04:13,720
+of this equation by sigma.
+
+67
+00:04:13,720 --> 00:04:16,269
+Divide that by sigma over here.
+
+68
+00:04:16,269 --> 00:04:19,180
+And in the left, we'll do division by erasure.
+
+69
+00:04:19,180 --> 00:04:21,339
+So I have this expression.
+
+70
+00:04:21,339 --> 00:04:22,810
+That's just another constant.
+
+71
+00:04:22,810 --> 00:04:24,710
+The sigma is a nonzero constant.
+
+72
+00:04:24,710 --> 00:04:27,070
+So this says, what is the function
+
+73
+00:04:27,070 --> 00:04:32,290
+such that x-- partial of F with respect to x is a constant?
+
+74
+00:04:32,290 --> 00:04:37,810
+Well, if F were a function of x only, that would be easy.
+
+75
+00:04:37,810 --> 00:04:51,890
+So suppose if t and x is just F of x.
+
+76
+00:04:51,890 --> 00:04:59,710
+Then we would have x partial of F with respect
+
+77
+00:04:59,710 --> 00:05:01,870
+to x is some constant.
+
+78
+00:05:01,870 --> 00:05:03,490
+Let's call it c.
+
+79
+00:05:03,490 --> 00:05:07,960
+It's our old constant, which was unspecified, divided by sigma.
+
+80
+00:05:07,960 --> 00:05:10,660
+In this equation, we can integrate.
+
+81
+00:05:10,660 --> 00:05:18,640
+This just says that dF is equal to c
+
+82
+00:05:18,640 --> 00:05:30,580
+dx over x, which tells us that F is equal to c times log x.
+
+83
+00:05:30,580 --> 00:05:32,860
+So let's check this expression and see
+
+84
+00:05:32,860 --> 00:05:37,120
+that it satisfies at least giving a constant coefficient
+
+85
+00:05:37,120 --> 00:05:38,950
+of our second term.
+
+86
+00:05:38,950 --> 00:05:45,980
+We notice that if we come back up over here,
+
+87
+00:05:45,980 --> 00:05:53,340
+we have x partial of F with respect to x, in this case,
+
+88
+00:05:53,340 --> 00:05:59,260
+is going to be x times d over x.
+
+89
+00:05:59,260 --> 00:06:01,900
+And it's equal to c, which is, indeed, a constant.
+
+90
+00:06:01,900 --> 00:06:05,680
+And that's the term that went here.
+
+91
+00:06:05,680 --> 00:06:07,450
+So, in fact, we would find that this
+
+92
+00:06:07,450 --> 00:06:13,960
+would have coefficient sigma c, where c
+
+93
+00:06:13,960 --> 00:06:16,270
+is our constant of integration.
+
+94
+00:06:16,270 --> 00:06:18,870
+What about our term above?
+
+95
+00:06:18,870 --> 00:06:22,360
+Well, let's continue with this form of x.
+
+96
+00:06:22,360 --> 00:06:25,480
+So if F of x-- let me move out of the way--
+
+97
+00:06:25,480 --> 00:06:27,340
+is the expression that we had here.
+
+98
+00:06:27,340 --> 00:06:31,340
+
+
+99
+00:06:31,340 --> 00:06:37,130
+And, in fact-- so it's something times the logarithm of x.
+
+100
+00:06:37,130 --> 00:06:42,800
+The first partial derivative here is going to vanish.
+
+101
+00:06:42,800 --> 00:06:45,290
+The second partial derivative is going
+
+102
+00:06:45,290 --> 00:06:50,120
+to give minus c over x squared.
+
+103
+00:06:50,120 --> 00:06:53,210
+The x squared will cancel this x squared.
+
+104
+00:06:53,210 --> 00:06:54,680
+And this will be a constant.
+
+105
+00:06:54,680 --> 00:06:56,540
+There won't be any more x's.
+
+106
+00:06:56,540 --> 00:07:00,710
+And over here, similarly, partial of F with respect to x
+
+107
+00:07:00,710 --> 00:07:03,380
+gives me c over x.
+
+108
+00:07:03,380 --> 00:07:07,160
+And the x multiplies this x.
+
+109
+00:07:07,160 --> 00:07:08,390
+And those cancel out.
+
+110
+00:07:08,390 --> 00:07:10,890
+And I'm left with a constant.
+
+111
+00:07:10,890 --> 00:07:12,230
+So what we find is--
+
+112
+00:07:12,230 --> 00:07:22,850
+
+
+113
+00:07:22,850 --> 00:07:34,630
+so we find that the specific choice F of x
+
+114
+00:07:34,630 --> 00:07:45,370
+equals c log x gives dF.
+
+115
+00:07:45,370 --> 00:07:50,400
+It's going to be equal to c sigma
+
+116
+00:07:50,400 --> 00:07:55,900
+squared over 2 with a minus sign in front
+
+117
+00:07:55,900 --> 00:08:01,030
+from the second derivative term plus c
+
+118
+00:08:01,030 --> 00:08:12,805
+mu, all times dt plus c sigma dB.
+
+119
+00:08:12,805 --> 00:08:16,510
+
+
+120
+00:08:16,510 --> 00:08:18,100
+And now let's let c equals 1.
+
+121
+00:08:18,100 --> 00:08:19,210
+It's a little bit simpler.
+
+122
+00:08:19,210 --> 00:08:20,950
+Since these are constants, anyways,
+
+123
+00:08:20,950 --> 00:08:22,870
+we'll come back to our old friend.
+
+124
+00:08:22,870 --> 00:08:25,390
+So this is equal to--
+
+125
+00:08:25,390 --> 00:08:34,350
+let's just write this as C in front times u minus sigma
+
+126
+00:08:34,350 --> 00:08:41,235
+squared over 2 dt plus sigma dB.
+
+127
+00:08:41,235 --> 00:08:44,320
+
+
+128
+00:08:44,320 --> 00:08:51,700
+And this is the differential of F.
+
+129
+00:08:51,700 --> 00:08:55,120
+So in the lecture, I wrote down the choice
+
+130
+00:08:55,120 --> 00:09:00,140
+of a function that was the logarithm of a stock price.
+
+131
+00:09:00,140 --> 00:09:02,900
+And we derived this equation as a result--
+
+132
+00:09:02,900 --> 00:09:06,470
+that we said that this equation for the logarithm of F was,
+
+133
+00:09:06,470 --> 00:09:09,380
+in fact, integrable because both the left-hand sides--
+
+134
+00:09:09,380 --> 00:09:11,630
+left- and right-hand sides were differentials.
+
+135
+00:09:11,630 --> 00:09:13,790
+Now we see that we come to the same expression
+
+136
+00:09:13,790 --> 00:09:15,442
+if we ask a different question.
+
+137
+00:09:15,442 --> 00:09:17,150
+That's how we got it to be differentiable
+
+138
+00:09:17,150 --> 00:09:18,270
+in the first place.
+
+139
+00:09:18,270 --> 00:09:21,140
+If we said, what functions are there
+
+140
+00:09:21,140 --> 00:09:24,350
+such that the expressions we get are going
+
+141
+00:09:24,350 --> 00:09:26,810
+to be integrable with constant coefficients,
+
+142
+00:09:26,810 --> 00:09:30,200
+the answer to that equation is the function
+
+143
+00:09:30,200 --> 00:09:32,500
+we need is the logarithm.
+
+144
+00:09:32,500 --> 00:09:33,000
+
+

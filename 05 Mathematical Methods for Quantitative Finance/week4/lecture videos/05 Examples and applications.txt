@@ -1,0 +1,281 @@
+
+PROFESSOR: Let's look at a few examples of Ito processes.
+Our first example is going to be a Brownian motion with drift.
+Could this be a possible model for stock prices?
+Let's take a look.
+We'll define dS to be mu dt plus sigma dB,
+where mu and sigma are both constants.
+This is easy to integrate.
+So suppose we start with this expression,
+and now, let's just integrate each term, keeping in mind
+that mu and sigma are constant.
+So this will be from t equals 0 to big T.
+And if we integrate on the left-hand side,
+we just get St minus S at time 0 is equal to mu times
+T plus sigma times BT, or, to be precise,
+if we might have had some non-zero constant,
+we could have this here.
+So that's-- we've integrated an Ito process, and there we go.
+We see that it has a linear growth with time
+from the first term, and the second term
+represents-- this term here represents a random variable,
+so that the final destination of ST is unknown,
+but BT, as we know, is drawn-- or this difference
+is drawn from a Gaussian distribution.
+
+Now, this model has been considered
+and generally rejected for purposes of stock prices.
+It was the first model considered by Bachelier in 1900
+for a theory for option pricing.
+But the biggest complaint about it,
+generally, is that it allows prices
+to go negative with positive probability, something
+that stocks can't do since stocks have limited liability.
+So this is generally the preferred model.
+And this geometric Brownian motion,
+this continuous-time version of our log-normal process,
+is the standard model for stock prices.
+That doesn't mean it's right.
+It means that it's the reference model.
+Whether it's right or not, how well it works,
+remains to be seen by looking at data
+and by looking at applications.
+But let's take a look at this now
+as an application of Ito's lemma.
+So we begin with this form, where
+this looks similar to what we had before, but notice
+I've multiplied through--
+on the right-hand side, each of these terms has an extra S.
+So my coefficient function a, little a and little b,
+is mu S over here and sigma S over here.
+So let's take a look at this as an application of Ito's lemma.
+So here's our expression where I've
+divided through by S. In this form,
+we can see that what's a--
+
+Brownian motion generalized is the quantity dS over S.
+But notice we can't integrate that immediately because it's
+not an exact differential.
+It's a differential divided by S. If it were d of something,
+then we'd be done, and that's our goal.
+So I got this by taking dS is mu S dt plus sigma S
+dB, which is of the form, of course,
+a dt plus sigma, excuse me, plus b dB.
+So we have that a, in this case, is mu S and b is sigma S.
+And now we'd like to apply Ito's lemma.
+So it would be convenient to have that.
+Luckily, it's right up here.
+Let's bring it down.
+So here's Ito's lemma, and let's take a look
+at how we can apply it to this situation.
+Notice that the B squared here is
+going to be replaced by this value here, by sigma S squared.
+So I've written this in terms of S down here instead of x,
+and what should we use for F?
+The f that we're going to be interested in
+is the logarithm of the stock price for the same reasons
+that we've talked about earlier and when we looked
+at discrete-time processes.
+So let's go.
+We have that F is equal to log S. Therefore,
+the partial of F with respect to t is 0.
+That was easy.
+Partial of F with respect to S is 1/S.
+And the second partial of F with respect to S squared is minus 1
+over S squared.
+What does Ito's lemma say?
+It says that dF, d of log S, is going to be, well, let's see.
+Partial of F-- partial of F with respect to t is zero,
+so I'm not going to have an immediate dt term.
+I'm going to have a term which will be partial of F
+with respect to S dS.
+But that's going to be--
+well, here, let's write it out in two steps.
+This is going to be dF dS dS, plus our Ito term, which
+is going to be little b squared, which
+is sigma S over 2, second partial of F with respect
+to S squared, times dt.
+Now, let's substitute.
+This is going to be 1/S dS plus sigma S
+quantity squared over 2 times minus 1
+over s squared times dt.
+Now, remember that this first term right here
+is dS/S, which is what we started with.
+I think we have it way back here, dS/S. There it is,
+right here.
+
+So let's take this value for dS/S,
+which is mu dt plus sigma B, and substitute it
+in right over here, shall we?
+So this is equal to mu dt plus sigma dB.
+That's from this first term.
+And now we have this second term where
+I'm going to have an S squared and a minus 1 over S squared.
+So that's going to give me minus sigma squared over 2 times dt.
+So let's combine these and clean this all up.
+This tells us that d of log S is equal to mu
+minus sigma squared over 2.
+
+Oops, changed our colors.
+
+dt plus sigma dB.
+
+So what have we done?
+What we've accomplished right here
+is that we've taken our original Ito process
+and we've rewritten it.
+Where we had dS/S, which was not an exact differential,
+we've now been able to take the function log S and show
+that it's an exact differential.
+And on the right-hand side, we have something
+which we can integrate.
+So what we have is, if we do the integration, we have log ST/S0.
+Since a difference of logs is the log of the ratio,
+this is going to be mu minus sigma squared
+over 2 times t plus sigma times BT minus B0,
+just as we had before, if we want to integrate it.
+
+So if we compare with our notes, we
+see that we've taken this format here
+and we've shown that log S is an exact differential.
+It looks like a Brownian motion, so that the logarithm of S
+behaves as a Brownian motion with the same volatility.
+Notice that sigma is unchanged here, but we have sigma dB.
+And over here, compared to our previous example
+of an ordinary arithmetic Brownian motion with drift,
+the sigma dB term is the same, and the
+left-- on the first term, rather,
+on the deterministic term, we have mu
+shifted by sigma squared over 2.
+So this piece here, mu minus sigma squared over 2--
+we'll be seeing a bunch of minus sigma squared over 2's running
+around in some other formulas.
+This is where it comes from.
+It comes from the Ito term in doing this change of variables.
+Then finally, if we want to integrate things up
+in finite form, we just exponentiate
+the last expression that I wrote down.
+This model has the virtue that it excludes negative prices.
+So because the logarithm goes from minus infinity to infinity
+and we're exponentiating the result,
+we never get negative numbers.
+The exponential is always positive.
+This is potentially-- it has the opposite problem.
+We don't get negative prices, but also,
+prices that obey this can never reach 0,
+and unfortunately, real companies sometimes do
+have stock prices that go to 0.
+So that's something that we should think about,
+whether it's a good approximation or a good model
+to apply to real-world prices.
+The thing that we see in our original model,
+we can actually see that without solving it.
+How do we see that?
+We noticed that because these coefficient functions
+have an S on the right-hand side, that as S approaches 0,
+the coefficients of dt and dB are going to 0.
+That means that there's not a lot of motion
+either deterministically or randomly.
+As the stock price goes to 0, everything quiets down,
+and that's partly how it avoids the origin.
+Another common model is the Ornstein-Uhlenbeck process,
+which is a continuous-time analog of the mean reversion
+process that we saw in discrete time that
+looks like the AR 1 process.
+Now, here's a case where we can learn
+a lot about the solution to the equation
+without actually solving anything.
+Let's take a look.
+First thing we notice is that if the lambda term were 0,
+we would just have an ordinary random walk.
+So the stochastic term is very, very simple.
+What about the deterministic term?
+Well, this is a restoring force.
+So I've suggestively called the constant here lambda times
+S bar.
+And here's an S. This is our dynamic random variable,
+the same one that appears in the left-hand side.
+So how can we think about this equation?
+This says that the change in S, dS, has a random component.
+This is the shock here, which is unconnected with anything.
+But if S is below S bar and lambda is positive,
+then this will be a positive value.
+And if S is above S bar, then this will be a negative value.
+So depending on the sign of lambda, if it's positive,
+we basically have the mean-reverting dynamics
+that we saw before, that we move toward the mean value,
+and we would expect that the long-term mean value is
+going to be S bar.
+Now, can we use this as a model for stock prices?
+Well, on the one hand, it's got a random component that
+allows drift, and there's no boundedness on S,
+so S could get to be infinitely large.
+It could get to be negative.
+On the other hand, the first term acts as a restoring force.
+It keeps things relatively tight near S bar.
+So depending on the magnitude of lambda compared
+to the magnitude of sigma, it might
+be OK for certain periods of time as a good approximation,
+but it does allow the possibility,
+with finite probability, that prices could go negative.
+It's not strictly forbidden.
+So this is a model that's commonly
+used for many processes.
+Most notably, we'll take a look when
+we think about models for interest rates.
+
+Another model used for interest rates
+is the Cox-Ingersoll-Ross process,
+which looks a lot more complicated,
+but really it's just one small modification
+to the previous one, to the Ornstein-Uhlenbeck process.
+So if I take a look here, I see this is the mean reversion
+term.
+But now, notice that the volatility term
+is modified by this square root of rho that's here.
+So think of rho as being a rate, an interest rate type variable.
+And what does the square root of rho do here?
+Well, I have a restoring force near rho bar,
+but this does say that if rho approaches 0
+from above, that the volatility term gets very small.
+So maybe we have a chance of avoiding the origin.
+Notice that we absolutely can't have negative values of rho
+in this model.
+The first term doesn't have a problem,
+but taking square roots of negative numbers
+now gives us not just a financial problem because it's
+a mathematical one too because we're not
+going to find or want to find solutions
+in the complex numbers.
+So we can sometimes break this down by a little bit further
+manipulation, and here's one more application
+of Ito's lemma.
+We can transform things to simplify the stochastic term
+and move all of the complexity into the deterministic term.
+The stochastic terms are the ones
+that are genuinely new for what we're doing.
+They're the ones we might want to Monte Carlo model.
+The coefficients of dt, as complicated as they might be,
+follow the domain of usual kinds of differentials
+that we would look at and standard analytic functions we
+might consider.
+So let's just see what happens if we have this transformation.
+So we compute the necessary derivatives.
+If F is equal to the square root of rho,
+the partial of F with respect to t vanishes.
+The first partial of F with respect to rho
+is 1 over 2 square root of rho.
+The next partial derivative is minus 1/4 rho to the minus 3/2.
+We substitute that into Ito's lemma,
+and we find that we can write the result in this form.
+dF has this expression, this coefficient function for dt,
+plus now a newly simplified coefficient function for dB.
+So now if we want to see about avoiding behavior
+on the origin, we just need to study
+the behavior of this term.
+The stochastic term is constant.
+So we have mean reversion dynamics
+for an appropriate range of parameters.
+We do avoid the origin.
+And this model is one that's used
+for taking a look at interest rates and at term structure.

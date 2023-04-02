@@ -1,0 +1,380 @@
+0
+00:00:00,000 --> 00:00:01,190
+
+
+1
+00:00:01,190 --> 00:00:04,680
+PROFESSOR: Models we study for applications in finance
+
+2
+00:00:04,680 --> 00:00:07,000
+are not just mathematical constructs,
+
+3
+00:00:07,000 --> 00:00:10,500
+they're tools that we use as approximations to reality
+
+4
+00:00:10,500 --> 00:00:14,250
+and that we use for interpreting data and understanding
+
+5
+00:00:14,250 --> 00:00:15,490
+the world around us.
+
+6
+00:00:15,490 --> 00:00:17,460
+Now in finance, the problem we have
+
+7
+00:00:17,460 --> 00:00:20,890
+is quite different from that we have in the physical sciences,
+
+8
+00:00:20,890 --> 00:00:23,520
+even though some of the mathematical tools
+
+9
+00:00:23,520 --> 00:00:25,200
+are quite similar.
+
+10
+00:00:25,200 --> 00:00:27,630
+Rutherford once said that if your experiment needs
+
+11
+00:00:27,630 --> 00:00:30,750
+statistics, you should have done a better experiment.
+
+12
+00:00:30,750 --> 00:00:33,810
+But in finance, we're really quite different from laboratory
+
+13
+00:00:33,810 --> 00:00:34,720
+sciences.
+
+14
+00:00:34,720 --> 00:00:37,260
+Most of our data is noisy.
+
+15
+00:00:37,260 --> 00:00:39,435
+We need statistics, we need tools
+
+16
+00:00:39,435 --> 00:00:40,560
+to get to the bottom of it.
+
+17
+00:00:40,560 --> 00:00:43,560
+Furthermore, we can't repeat an experiment,
+
+18
+00:00:43,560 --> 00:00:45,480
+not in a true laboratory sense.
+
+19
+00:00:45,480 --> 00:00:48,060
+Actually, we have an interesting dichotomy.
+
+20
+00:00:48,060 --> 00:00:50,610
+We've got on the one hand, that we often
+
+21
+00:00:50,610 --> 00:00:53,100
+deal with market data and historical market data.
+
+22
+00:00:53,100 --> 00:00:55,500
+And that is almost by definition reproducible.
+
+23
+00:00:55,500 --> 00:00:57,117
+If we plug-in the same numbers, we
+
+24
+00:00:57,117 --> 00:00:58,950
+should get exactly the same answer no matter
+
+25
+00:00:58,950 --> 00:01:00,450
+who does the calculation.
+
+26
+00:01:00,450 --> 00:01:03,660
+That's a good reason why it's interesting exercise
+
+27
+00:01:03,660 --> 00:01:05,519
+to pick up previously published papers
+
+28
+00:01:05,519 --> 00:01:07,530
+and work and reproduce their results.
+
+29
+00:01:07,530 --> 00:01:09,360
+Unlike a laboratory result, you should
+
+30
+00:01:09,360 --> 00:01:11,220
+be able to get exactly the same thing if you
+
+31
+00:01:11,220 --> 00:01:13,680
+can get your hands on the same historical market
+
+32
+00:01:13,680 --> 00:01:17,250
+data on which some empirical studies were based.
+
+33
+00:01:17,250 --> 00:01:19,320
+On the other hand, markets change.
+
+34
+00:01:19,320 --> 00:01:20,910
+We can't go back in time.
+
+35
+00:01:20,910 --> 00:01:24,420
+And all of our results are going to generally be provisional.
+
+36
+00:01:24,420 --> 00:01:28,800
+So this leads to a different perspective on modeling,
+
+37
+00:01:28,800 --> 00:01:31,680
+and often to the difficulty in settling questions.
+
+38
+00:01:31,680 --> 00:01:33,240
+And one that we'll take a look at
+
+39
+00:01:33,240 --> 00:01:36,300
+is going to be the role of the random walk
+
+40
+00:01:36,300 --> 00:01:39,910
+model and the so-called random walk hypothesis.
+
+41
+00:01:39,910 --> 00:01:42,150
+What does it say and can we test it?
+
+42
+00:01:42,150 --> 00:01:45,090
+More generally when we're looking at models,
+
+43
+00:01:45,090 --> 00:01:47,148
+we have a bunch of questions that we want to ask.
+
+44
+00:01:47,148 --> 00:01:48,690
+And I'll talk about a few of them now
+
+45
+00:01:48,690 --> 00:01:52,440
+and will develop more of them over the course of this lecture
+
+46
+00:01:52,440 --> 00:01:54,950
+and beyond.
+
+47
+00:01:54,950 --> 00:01:57,540
+We'd really like to know would be,
+
+48
+00:01:57,540 --> 00:01:59,760
+what's the model that generates the data that
+
+49
+00:01:59,760 --> 00:02:03,340
+determines how prices move, how variables evolve and so on.
+
+50
+00:02:03,340 --> 00:02:06,360
+But nobody tells us that there is such a thing.
+
+51
+00:02:06,360 --> 00:02:07,720
+There might not be such a thing.
+
+52
+00:02:07,720 --> 00:02:11,550
+If there is, it might change and we can't look it up in a book
+
+53
+00:02:11,550 --> 00:02:12,752
+exactly.
+
+54
+00:02:12,752 --> 00:02:15,210
+What we're typically faced with when it comes to real world
+
+55
+00:02:15,210 --> 00:02:18,840
+problems is data, and maybe a whole bunch of different models
+
+56
+00:02:18,840 --> 00:02:20,080
+and some candidate models.
+
+57
+00:02:20,080 --> 00:02:22,710
+So the questions we ask includes these, and not
+
+58
+00:02:22,710 --> 00:02:24,670
+necessarily in this order.
+
+59
+00:02:24,670 --> 00:02:26,790
+What's the model that best fits the data?
+
+60
+00:02:26,790 --> 00:02:28,470
+If we have a choice of models.
+
+61
+00:02:28,470 --> 00:02:31,020
+If the models have adjustable parameters,
+
+62
+00:02:31,020 --> 00:02:34,200
+how should we find the best values for those parameters?
+
+63
+00:02:34,200 --> 00:02:36,540
+How do we decide among the better of two models?
+
+64
+00:02:36,540 --> 00:02:40,230
+It might have a different number of adjustable parameters.
+
+65
+00:02:40,230 --> 00:02:42,030
+Do the models of a stationarity?
+
+66
+00:02:42,030 --> 00:02:45,900
+That is, do they describe the evolution
+
+67
+00:02:45,900 --> 00:02:48,600
+of our variables of interest in a way
+
+68
+00:02:48,600 --> 00:02:51,150
+that the models themselves don't change over time?
+
+69
+00:02:51,150 --> 00:02:53,310
+That is the probability distributions
+
+70
+00:02:53,310 --> 00:02:56,310
+are stationary over time, the so-called time's translation
+
+71
+00:02:56,310 --> 00:02:58,950
+invariance.
+
+72
+00:02:58,950 --> 00:03:00,960
+How should we be estimating our parameters?
+
+73
+00:03:00,960 --> 00:03:06,450
+How can we take a look at what's going on with data?
+
+74
+00:03:06,450 --> 00:03:09,013
+Before we build models and test them,
+
+75
+00:03:09,013 --> 00:03:10,680
+we might want to take a look at the data
+
+76
+00:03:10,680 --> 00:03:13,440
+and see if there's some general attributes that
+
+77
+00:03:13,440 --> 00:03:16,020
+suggest the kind of models that might or might not
+
+78
+00:03:16,020 --> 00:03:16,900
+be appropriate.
+
+79
+00:03:16,900 --> 00:03:19,320
+So we often do some initial exploration.
+
+80
+00:03:19,320 --> 00:03:22,140
+And sometimes we do this with the same statistical tools
+
+81
+00:03:22,140 --> 00:03:25,030
+that show up in other settings as well.
+
+82
+00:03:25,030 --> 00:03:27,390
+We often want to test hypotheses.
+
+83
+00:03:27,390 --> 00:03:29,430
+Is this model correct or is it not?
+
+84
+00:03:29,430 --> 00:03:31,290
+That's our simplest version.
+
+85
+00:03:31,290 --> 00:03:34,680
+Or if we have a bunch of models, which of the models
+
+86
+00:03:34,680 --> 00:03:36,970
+is the best?
+
+87
+00:03:36,970 --> 00:03:39,000
+And finally, we'll take a look when
+
+88
+00:03:39,000 --> 00:03:44,730
+we look at structured models of information propagation
+
+89
+00:03:44,730 --> 00:03:48,600
+in time series models as to how we can decide about what
+
+90
+00:03:48,600 --> 00:03:50,370
+the appropriate correlation links are,
+
+91
+00:03:50,370 --> 00:03:53,340
+what the distances are, what the order and class
+
+92
+00:03:53,340 --> 00:03:54,970
+of an appropriate model is.
+
+93
+00:03:54,970 --> 00:03:57,340
+There's not always an easy answer.
+
+94
+00:03:57,340 --> 00:04:01,910
+So let's review for a moment, just a couple of the basics.
+

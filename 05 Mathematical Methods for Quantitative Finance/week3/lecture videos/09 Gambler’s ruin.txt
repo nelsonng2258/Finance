@@ -1,0 +1,326 @@
+
+PROFESSOR: There's a problem in the classical probability
+literature known as Gambler's Ruin that's
+a discrete time stochastic process that's
+solved in a different way.
+And it would be interesting for us to take a look at it.
+So here's the idea.
+The idea is, suppose that you and I are gambling.
+And we begin with the total amount of wealth,
+total amount of assets.
+Let's call it a.
+And in this example on the right hand side,
+imagine that there's $10 that we have between us.
+And we start with you have $5 and I have $5.
+And the idea is, we play a sequence of games.
+At each step, if you win, you get $1-- if I win,
+I get $1, the total amount of wealth is conserved.
+And we play until one of us is ruined--
+that is, until either your capital goes to 0 or mine does.
+So from your perspective, either you get all the wealth,
+or your wealth goes to 0, at which point it stops.
+Now, I've shown on the right a picture
+that illustrates some possible ways this game might come out
+with these starting conditions.
+And each color represents a different path.
+You'll notice that of the five paths that are shown here,
+three of them finish with the player winning--
+that is, capturing all $10 that are available.
+One of them finishes with ruin--
+that is at $0.
+And then, it stays there.
+Once you're ruined, you're not allowed to make any more bets.
+And in the green path, one of them
+has not yet hit either end.
+It hasn't yet hit 0 or $10.
+And we might even wonder if it could just
+keep going indefinitely.
+So in this kind of game, we have a repeated set of gambles.
+And to keep it general, we're going
+to allow the probability of success or failure--
+our Bernoulli trials-- be asymmetric.
+So let's let p represent the probability of success.
+q is 1 minus p is the probability of failure.
+You start with some initial capital, x greater than 0.
+And we have these two classic stopping points,
+which are either when you're capital x is equal to 0,
+or x is equal to a.
+Now, there are two kinds of things that this typifies--
+two classes of problems, known as stopping
+problems and boundary problems.
+The boundary case is pretty obvious.
+We have these two cases where our wealth either hits 0
+or it hits a, at which point we stop.
+So we can ask, unlike us unlike our previous case where
+we looked at time series and just said,
+you give initial conditions.
+What happens in the future?
+Here, we have boundary conditions
+that specify something specific that occurs
+if and when we hit them.
+And of course, there are obvious financial applications.
+These are things that represent bankruptcy, that's
+the classic definition of ruin.
+But they might be other events.
+For example, hitting a capital reserve requirement,
+hitting a credit default trigger, hitting your stop loss
+limit.
+And we could think of things on the upper limit as well.
+We might have a strategy where we terminate an investment
+once we reach a desired goal.
+The stopping problems are a little bit different.
+Those are cases where we want to know,
+does a given process stop?
+Does it ever reach the condition?
+And if it does reach the condition, what
+would be an expected time or what
+would be the distribution of stopping times?
+We might also think about this strategically.
+We could have a question where we
+ask, what would be the optimal way to say, run a business,
+if we wanted to minimize its default probability
+or its bankruptcy probability.
+So let's look at the math and see how we can do this.
+What we'll see is, we have a recursion relation.
+But this recursion is not in time.
+This recursion is in money.
+So here's what we do.
+Let's let q sub x denote the probability of ruin--
+that is, the probability that we'll eventually hit 0
+before x equals a, starting from an initial capital level x.
+Now, the interesting thing here is
+it does have a Markov structure, because it doesn't matter
+what's happened in the past.
+All the matters for our probability of surviving
+is how much capital we have at the present time.
+Probability is obviously conserved.
+So the probability of ruin now we
+can relate to what happens after our next game.
+After the next game, we could win
+with probability p, in which case
+our capital would be x plus 1.
+And that would give us p times qx plus 1.
+Or we could lose and end up with capital
+x minus 1, in which case, this would
+be our probability of ruin.
+And adding together these two mutually
+exclusive possibilities gives us our original probability.
+Now, you can see that this is a recursion relationship in x.
+This kind of difference equation where
+we have a relation between x minus 1, x, and x plus 1
+is similar to differential equations
+that are second order.
+This is a second order difference equation.
+Like the differential equation case,
+there are two independent solutions.
+And we fix the boundary conditions
+by imposing-- we fix the final solution by imposing boundary
+conditions on the general linear combination of the two
+solutions.
+So there's a special case when the probabilities are equal.
+Let's do the general case.
+In the general case, where p is not equal to q,
+you can check by substitution that these
+are two different solutions.
+One of them is the trivial solution,
+that q sub x equals 1.
+And that's not an interesting solution to our problem,
+saying the probability of ruin is equal to 1,
+because we start out not being ruined.
+But mathematically, leaving aside the boundary conditions,
+it does solve this equation, because p plus q is equal to 1.
+The other one is this form here, q over p to the x.
+And remember, q is equal to 1 minus p.
+And if you substitute this into the equation,
+you can check that it works.
+Now therefore, the most general solution
+is a linear combination of these two special solutions.
+So we have two constants.
+Let's call them a and b.
+So our general solution is of the form
+constant plus another constant, times q over p to the x power.
+And we fix a and b by imposing boundary conditions--
+two obvious boundary conditions.
+When x equals 0, we are ruined.
+If we have no money, the probability of ruin
+is 1, because we're already ruined.
+And similarly, if we have all the money,
+if our capital is equal to a, our probability of ruin
+is 0, because the game is already ended.
+So if we impose these, we can solve for a and b,
+and we get this result for the probability of ruin--
+this expression in the box down here.
+This tells us, as a function of a, x, and p
+what our probability of ruin is starting from any given
+level of capital x.
+
+Now, we can ask a variety of questions
+about what happens under these absorbing boundary conditions.
+For example, we could ask, can the sequence
+continue without terminating?
+That is, does the probability of reaching neither x equals a
+or x equals 0 in an arbitrary amount of time,
+is that some positive number?
+Is it equal to 0, which would mean
+that we do hit one of the other two boundaries.
+We could ask with the expected time is to hit.
+If we allowed ourselves to stop differently,
+what kind of strategy might we employ, and could we
+do something better?
+How do we take advantage of unequal odds?
+For the case where the odds are equal,
+we can do it in one of two ways.
+We can either check that 1 and x over a
+are special solutions to the equation.
+Or we can take the limit, where q approaches p,
+using L'Hopital's rule and just taking our general solution.
+What do we see about actual numerical values
+to get some intuition about what's going on?
+Well, one interesting fact about this,
+is that if we start very close to taking all the money,
+we have a good chance of winning.
+Which isn't surprising.
+For example, suppose that there's $100 between us,
+and we start with $99, and we're playing the house.
+And suppose the odds are equal, then
+you can check by the previous formula,
+we have a 99% chance of winning one more dollar
+before we lose all 99% that we have.
+Not surprising.
+We're close to owning all of the money.
+But what's less obvious, is that if the odds are against us,
+we still have a very good chance of winning all the money
+before we lose what we have.
+That is, even when the odds are stacked against us,
+if we have sufficient capital reserves, the odds
+of attaining a finite goal--
+and in this case, a relatively modest goal--
+can look very attractive even when the odds are against us.
+So the odds are against us, we typically
+think it's a game that we shouldn't play.
+The expected value's negative, stay away.
+We want to look for opportunities
+where we have positive expected value in a gamble.
+And furthermore, where we give adequate compensation for risk.
+If the expected return is negative,
+normally we would say, let's leave it alone,
+provided there are some other better opportunities available.
+But all that changes when we limit our objective,
+and we say, suppose I only want a fixed amount of money,
+and I'm not going to play the game indefinitely.
+In fact, we can go a bit further.
+Not only does this sometimes give us
+a positive chance for achieving a goal before we get ruined,
+but it says, that when the odds are against us, sometimes
+we should take even more risk.
+What if we change the stakes?
+Suppose we increase the bet size from 1 to b,
+and let's suppose that b evenly divides a and x,
+just for simplicity.
+So if we change our bet size, then we update our recursion.
+The problem has the same structure,
+it's just the individual steps are chunkier.
+When we substitute in--
+we play the same game as before.
+We solve for our formula, we get a new result. And what we find
+is, that when the stakes are increased, that if the odds are
+against us, we have a lower ruin probability-- that
+is, a greater chance of winning all the money
+and hitting the upper boundary, than we did before.
+So if the odds are against you it
+can be advantageous to swing for the fences, so to speak.
+That is, you can think of this intuitively
+as being kind of a complement to the law of large numbers.
+In a game where we play indefinitely,
+we know that our expected return is going to be negative.
+We of course need to worry about the fluctuations.
+But this says, that if there's a definite stopping point,
+the fluctuations can be to our advantage
+if we stop when we get a fluctuation that's
+sufficient for us to hit our upper boundary.
+That is, the longer we play, the more likely
+we are to grind down and end up ruined.
+But if we take larger bets, we're
+more likely to have an instance where
+we hit our upper boundary.
+So lower ruin probability means greater overall chance
+of success.
+
+What if our appetite for risk is unbounded.
+That is, suppose that a is infinite,
+and we want to keep playing, and just
+see how much money we could get.
+Well, it's pretty clear that if the odds are unfavorable,
+that we're never going to get all the money.
+We've set ourselves an impossible task.
+And in fact, our probability of ruin goes to 1.
+In the case where the odds are in our favor,
+we can compute what the ruin probability is
+and get something potentially that's less than 1.
+
+How long does the game last?
+Well, we could ask about its expected duration
+in the same way.
+But now, things are slightly different,
+because now we have a generalization
+of our previous equation.
+But now we have an inhomogeneous equation.
+So let d be the duration of the game.
+Then d of x plus 1 is the duration of the game,
+starting from x plus $1.
+And d x minus 1 is the duration of the game starting
+from x minus $1.
+And we need to find out d of x is,
+that is, what's the expected return as a function of x.
+So in our recursion, before we equated this to what's
+on the left hand side.
+But now, we know that these are related
+to one more play of the game, so we add 1
+on the right hand side.
+So instead of the previous homogeneous equation
+where every term involved the d, here we have this plus 1,
+where you can check that this gives
+a solution to the equation.
+Here it's a slightly more complicated formula for p
+not equal to q, for p equals q.
+This simplifies it to a nice quadratic form.
+a x minus x squared for p equals q.
+So that tells us, that for example,
+in a fair game, if you and I each start with $100--
+$200 total, the expected duration of the game
+is 10,000--
+100 times 100.
+And it grows as the square when the stakes are equal.
+
+So let's summarize.
+Gambler's Ruin is a problem which
+has a recursive structure.
+It's a discrete time process in money rather than in time.
+And it's subject to boundary conditions.
+The boundary conditions tell us when the process terminates.
+It's got applications to gambling, obviously,
+to insurance where the ruin problem in the insurance
+literature is finding the probability that you have
+adequate capital to never get ruined
+by random processes which represent
+the arrival of insurable claims or losses.
+It has applications to thinking about bankruptcy likelihood,
+credit default, and to bet sizing in investment strategies
+or in gambling strategies.
+The stopping problems that we consider
+are things that could be defined by economic conditions,
+such as a company in distress, beating
+a particular term in a covenant, or a bank loan being called
+subject to certain terms.
+We can think about optimal stopping problems, where
+we might have different kinds of objective functions
+rather than maximizing expected return,
+rather than thinking of maximizing Sharpe ratio,
+we might think of a business venture
+where what we'd like to do as business owners, and investors,
+and entrepreneurs is, sure, we might
+like to maximize our profit.
+But maybe what we'd really like to do
+would be to maximize the lifetime of our business
+or minimize the probability that we go bankrupt.
+And those will not be exactly the same calculation.

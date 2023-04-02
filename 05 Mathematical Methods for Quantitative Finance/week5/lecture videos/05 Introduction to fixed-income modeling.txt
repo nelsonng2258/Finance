@@ -1,0 +1,191 @@
+
+PROFESSOR: Now let's look at using the Ito calculus
+and the tools of continuous time finance in setting
+of fixed-income modeling.
+So far, we've looked mostly at the classic examples of stock
+as a random continuous time process,
+looking at the evolution of the stock price,
+and we've looked at derivative pricing in terms
+of an option on the stock.
+When we go to the world of bonds,
+we'll find a bunch of interesting things.
+First of all, interest rates are dynamic.
+Now, when we saw interest rates in looking at stock options
+and deriving the Black-Scholes equation,
+there was a single variable r, which
+was held to be a constant, the risk-free rate.
+In fact, interest rates change over time,
+and interest rates change over time unpredictably.
+So they're in fact random variables, not just parameters.
+Interest rates aren't tradable.
+So although we'll have a random driver that, in many ways,
+will have the same properties and same kind of Ito
+description as we had for stock prices,
+our hedging arguments won't necessarily
+go through the same way, because we can't trade
+interest rates themselves.
+Interest rates are the term structure.
+That is, there are different interest rates associated
+with different maturities of bonds and, of course,
+different levels of creditworthiness.
+So even if we're looking at risk-free bonds that
+have no default risk, they may still have risk in the sense
+that market rates, interest rates can vary.
+There's a term structure.
+So we don't find the same interest rate
+on a one-year bond, a two-year bond, and a 30-year bond.
+These term structures themselves change over time.
+And they're a very important subject for modeling.
+And they not only change over time,
+but they do so in ways that are unpredictable.
+So it's natural to model the entire curve not just
+a single point or a single interest rate
+as being stochastic.
+The bond prices are determined in relation
+to these interest rates.
+But there may be a lot of bonds associated with a single rate
+or with a particular set of rates.
+So there are many interrelationships
+among the different interest rates
+and across the entire yield curve.
+And interest rate derivatives on futures, bond options, interest
+rate swaps--
+a whole variety of other derivative contracts
+depend on all of these features.
+So here's a snapshot just taken from Bloomberg
+of a bunch of US securities.
+And we see that there are securities that trade.
+They have different interest rates.
+They're quoted in price.
+They're quoted in yield terms.
+They're quoted with different expirations.
+And we can find this across various sovereign debt markets.
+And of course, the corporate market is even larger.
+Here's an example of what I meant by the yield curve.
+We're looking at the interest rate, the yield to maturity,
+for US bonds.
+And this curve shows us the interest rate
+in percent on the y-axis against the term
+or tenor on the x-axis.
+So we see a characteristic shape where
+things are rising over time.
+We get higher interest rates if we go farther out.
+But also notice, there's some curvage area here.
+We're convex here, and we become concave.
+There's a point of inflection.
+If I look at a different point in time--
+for example, I look at a point one year prior
+or a month prior, I might see a different shape
+and a different level.
+So this curve up here, notice, is downward-sloping.
+It's an inverted curve at the beginning, and then it rises.
+So all of these rates are higher than the ones down below.
+So the curve is moved up.
+But it's also changed in shape, and it's changed in direction.
+So what are some features that are
+consistent with basic principles of finance?
+What are the mathematical tools we have to describe them?
+And then, what kinds of predictions can we make?
+That's a subject of fixed-income modeling.
+And we can pick different kinds of variables,
+which may be closely associated, but may
+have different interpretations.
+Now, suppose we want to take a look at how to price bonds
+in the same way that we looked at how
+to price stock options already.
+Now, the pricing of bonds has a few twists.
+First of all, which interest rate should we use?
+What should they depend on?
+There's not a single risk-free rate
+that showed up in our calculations
+before that we could use for discounting
+or for risk-neutral pricing.
+Now, risk-free bonds of different maturities
+all could lay an equal claim to being the risk-free rate.
+It's tempting to take a look at the short rate, the shortest
+maturity bonds, but--
+because they seem to be special because they're
+at one end of the curve rather than some arbitrary
+point in the middle.
+But really, between any two points in the curve,
+we can ask what a view that represents for how rates
+might evolve in the future.
+And they all contribute to our notion
+of what we should think about as being
+the relevant risk-free rate, especially when we
+have multi-period problems or multiple time horizons.
+We can't just content ourselves with picking
+a short overnight rate saying that's it;
+let's be done with it.
+So interest rates aren't constant in time.
+They're not deterministic.
+We do need to model them as random variables.
+But we also need to keep in mind that what
+gets traded are bonds, are generally bonds, or derivatives
+on bonds or on interest rates, but not the interest rates
+themselves.
+Those can't be traded.
+So the bonds come in-- and I'll talk mostly about bonds.
+But bonds come in a variety of maturities.
+And because we have multiple instruments all trading based
+on the same kind of principles, we
+might expect there to be some no-arbitrage constraints
+on the relative prices of bond.
+So here's an idea.
+What we'd like to do is look for a way to price all bonds,
+or all bonds from a particular class,
+of all maturities in a way that avoids arbitrage and that
+minimizes or leads to a fixed number of stochastic factors.
+We could try to model each bond independently,
+but that would not be a great description of reality
+because they do have commonalities.
+But also, we really want to be able to take advantage
+in thinking about portfolios and thinking about possibilities
+for arbitrage and how no arbitrage
+can inform pricing relationships, about how
+the bonds that are connected to common rates,
+they have relationships among them.
+So let's take a look at the simplest example.
+We're going to imagine that we have bonds that do depend
+on a single, random variable.
+And that random variable, we'll say
+will be what we call the short rate, which
+is a-- think of not just as being an overnight rate,
+but as being an instantaneous spot interest
+rate, the rate we can get right now for infinitesimal duration.
+So this isn't tradable.
+You can't buy it.
+You can't buy a bond for that.
+You can't invest in it.
+But it's kind of clear that it might be approximately
+equal to what we would see for very short-term, say,
+overnight rates.
+So let's think that that might be
+one of the variables of interest in describing our yield curve
+and describing bonds, certainly, what
+they're worth a very short period of time
+would inform arbitrages.
+So let's imagine that we have a variable
+that we'll call y for the short term--
+this short instantaneous rate.
+So let's think that we want to have a pricing formula where
+we have the price of a bond; let's call it V.
+It depends on time.
+It depends on the current time.
+It depends on big T--
+I'll let it be the maturity of the bond.
+So let's think of that as being a fixed time in the future.
+It's a parameter of the bond; it's not a variable.
+And y, little y where I've written a subscript t
+to remind us that it's time dependent-- to be
+our random variable.
+And let's let y be described by an Ito process.
+So dy is something of the form a dt plus bdB.
+So in this structure, what we're doing is
+we're imagining that the short rate, y,
+which is an observable, is nevertheless
+described by an Ito process, and the value
+of bonds of all maturities depend on that variable.
+It might depend on other things too.
+But let's start with the one-factor picture.
+And let's see where that leads us.

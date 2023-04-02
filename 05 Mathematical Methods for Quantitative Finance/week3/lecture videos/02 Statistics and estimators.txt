@@ -1,0 +1,77 @@
+
+PROFESSOR: You know from statistics
+that a statistic is a function of the data.
+It's a formula into which we can plug numbers and get out
+another number.
+And the classic examples in two of the most useful ones
+in finance are the mean and the variance.
+So the mean, we take a bunch of numbers,
+compute their arithmetical average.
+That's a function.
+We could have taken other functions.
+We could have taken their sum.
+We could have taken different weighted averages.
+This is a particular statistic that gives us a summary number
+given a time series-- or a collection, actually,
+not necessarily ordered--
+values R sub t.
+Same thing for the variance.
+We can compute this.
+Now, descriptive statistics don't require a model.
+And one thing they do is they reduce
+a large number of values down to a small number of values.
+So these two numbers mu and sigma
+can characterize a set of r's of arbitrary size.
+So that obviously means that we're
+throwing away information.
+We're going from a large number of values down to two.
+For these to be useful, we should in some sense
+capture values that matter to us for what we're
+doing in the sense that if we had two different collections
+of r's, two different samples that were taken
+and they had the same summary statistics,
+we've got a good collection of summary statistics
+if we feel about the same.
+In this case, we often think of mu and sigma
+as being the mean return and risk associated
+with an investment or an asset.
+And two assets that had similar mu and similar sigma might be
+things that we would feel similarly about,
+whereas if one had twice the return of the other for a given
+level of risk we would differentiate them without
+needing to dive into the details of the r's.
+So that's a sign of well-chosen and well-behaved statistics.
+But this is purely descriptive, and it
+doesn't require any kind of model or anything further.
+An estimator is a random variable.
+And the formulas for estimators look quite familiar,
+these formulas here.
+For an estimate for the mean and for the variance
+take a form that is mathematically
+identical to what we saw on the previous page.
+However, we think about them differently.
+In this case, we don't yet have the data.
+We think about them being a function
+of future observations.
+So they're random variables in the sense
+that given a particular set of realizations,
+particular set of draws from a distribution,
+we'll get different values.
+So mu hat and sigma squared hat may take different values based
+on different observations.
+So as a random variable, an estimator
+has a distribution that's known as the sampling distribution.
+And the first and second moments are easy to compute and derive.
+And because of the central limit theorem,
+if we've got well-behaved estimators,
+then we run into the situation that we
+might expect where the distribution,
+the sampling distribution can approach
+a Gaussian as the number of observations gets very large.
+So that's one of the reasons we like large statistical samples.
+We have good statistics, it gives us
+not just the narrow distribution,
+but it also gives us one that has a well-known shape
+and approaches the Gaussian.
+An estimate is a number that we get from the same formulas
+by applying it to a particular set of realizations.

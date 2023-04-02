@@ -1,0 +1,146 @@
+
+PROFESSOR: Now, to get from Black-Scholes to the diffusion
+equation, we make a few changes of variables,
+which are not obvious at all.
+And I'm going to show them to you,
+and you're free to check them out
+or you can take my word for them.
+I'll explain where each of them comes from.
+The first change of variables that we have
+is to replace V by a present value factor in front
+and to change the value.
+That is, instead of writing things for the derivative,
+we can express things in terms of its forward or future value.
+So we know that there's discounting
+should take place, at least for people who've taken 15415.
+You know how that works, how we look at present value.
+And one of the ways that we can simplify our equation
+by combining terms is simply to put
+in a discount factor in terms of the derivative itself.
+And if we do that, we eliminate the one
+term in the Black-Scholes equation
+they didn't have any derivatives, the minus rV term,
+and we can have this expression here in terms of U.
+The next thing we can do is substitute for time
+and for the stock price.
+In terms of the stock price, what we're going to do
+is we're going to introduce a logarithmic variable.
+And we've already seen that in many ways rather than price,
+the logarithm of price or the differences of logarithms
+of price are much more natural variables.
+Because what matters from an investment point of view,
+from an informational point of view
+is how stock prices change, not with the absolute levels are.
+And the natural variable for capturing
+those in a continuous time setting
+is a logarithm of the price.
+But this is just a change of variables.
+So we'll call S. We'll replace it by E to the xi
+or we'll let xi equal the logarithm of S.
+And that will help simplify the equation.
+The tip off that we might see that when
+we look at the structure of our differential equation
+is to notice the structure of these terms here.
+Where this is an S d by dS and this
+has an S squared with a second partial with respect to S
+squared.
+Because this has an S and a derivative with respect to S,
+this is two S's and two derivatives, those behave
+like logarithmic derivatives.
+So the logarithmic derivatives simplify things,
+and they'll transform this so that instead
+of having this pre-factor S and this pre-factor S squared,
+we won't have anything.
+We'll just get an equation with constant coefficients.
+The other change we'd like to make at the same time
+is in our time variable.
+And instead of measuring time forward,
+we're going to measure time backwards
+counting back from potentially an option expiration.
+And the tip off for that is the relative sign
+that we have between the time derivative
+and the second derivative with respect
+to the independent variable with respect to the underlying.
+Now, notice that if I change S to minus S,
+not only to negative prices not make sense financially,
+but this equation, this part wouldn't change.
+But there's a single time derivative here.
+So changing the direction of time matters a lot.
+Now, this actually works out fantastically well for us.
+Normally for partial differential equations,
+we look at how things evolve forward
+and the relative sign that we would want
+would be a minus sign.
+Here there's a plus sign, which would
+make it much more difficult to interpret and to solve.
+But it turns out that the conditions we want
+are the backward conditions.
+We know the terminal values.
+We want to find out what happens before.
+So let's make this substitution.
+We'll let tau equal t minus big T some fixed constant minus t.
+Because this is a constant and we're making derivatives,
+the big T isn't going to matter.
+It's not going to show up.
+And in fact, big T really will only
+reappear when we impose boundary conditions on our equations.
+So if we make those changes to variables,
+we find that we get this expression.
+We now have a derivative with respect
+to a timelike variable, a relative minus sign,
+a second derivative term with constant coefficients,
+and then this piece over here with our interesting minus
+sigma squared over 2 that we've seen
+before times the first derivative piece.
+And we can make that part go away as well.
+So let's clean it up.
+Finally, with one more change that
+will absorb a single derivative term in our change of variable,
+and let's introduce this variable x.
+You'll notice that this logarithm, this log of S
+plus this other piece in tau, if we were to exponentiate it,
+if we were to exponentiate this whole expression,
+you'll notice this should look familiar from the form
+that we saw for the geometric Brownian motion.
+And we looked at the integral of the stochastic differential
+equation.
+We had an expression just like that.
+So it's not that the natural variable
+is log S. Really the natural variable looks
+like logarithm of S, E to the R tau minus sigma
+squared tau over 2.
+So either way, whether you like cleaning up the mathematics
+or whether you're inspired by the form of the SDE
+that we saw earlier, if we make that change a variable,
+we're left with this expression now
+which looks exactly like our diffusion equation
+with a diffusion constant.
+This is standard in literature sometimes
+to have the constant sigma squared
+that's here known as the diffusion constant.
+We can make that go away as well by absorbing it into tau so
+that the combination that always will appear would be sigma
+squared tau.
+And by redefining that, we could make it go away.
+So there would be no extra coefficients at all.
+
+We can check that this particular form
+does satisfy that equation.
+So let's take a look at this special solution.
+This is like the p0 that I showed you before.
+Again, it's an exercise in differentiation.
+If you didn't do the earlier one,
+you can follow along with this one.
+So here's my definition of U. The only difference
+is the sigma squared that shows up, and as I said,
+always in this combination, sigma squared tau.
+So we take one partial derivative
+and we see it brings down a pre-factor with respect
+to U, because it's exponential.
+The second partial derivative with respect
+to x, partial derivative with respect to tau,
+and then we can equate these expressions.
+So we see that the partial with respect to tau
+is sigma squared over 2 times the second partial with respect
+to x.
+That's our diffusion equation.

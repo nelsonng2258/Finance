@@ -1,0 +1,143 @@
+
+PROFESSOR: Now, I'd like you to give you a picture
+and have you keep this picture in mind, because it's
+a discrete picture, and then we're
+going to let delta t go to 0 again.
+But in many ways, a discrete picture
+is important and gives us some insight
+into what's going on in the Black-Scholes world.
+So what I'd like to do is think of each of these segments
+as being related to a given trading period.
+And we'll think of this as being a trading day.
+And in fact, this is how many option traders and market
+makers do trade.
+They think of re-hedging, let's say, once per period
+or that might be once per day.
+So what I want to do is I want to think
+about opening an initial position here at the beginning.
+And then there's intraday period and then the end of the day
+comes and we observe the closing prices at the end of the day.
+I'm going to assume that very close to the end,
+let's say a minute 30 seconds before the equity markets
+close, that there's a lot of activity and liquidity
+in the markets and that without waiting for the shares
+to close, they're not going to move very much
+but that I can buy or sell shares
+to set a new delta position to have for the following day.
+So here's what I assume.
+At the end of each day, I'm going
+to observe the price of the underlying,
+but I'm also going to use that information to construct
+a new hedge position.
+And then I'll wait for the next trading day
+and at the end of that day, I'll repeat the process.
+So I've broken this set of steps into two parts.
+One of them is that when the market is open,
+the quantities that we have are held fixed,
+but the prices change as the market moves.
+So prices change, but we're not doing any trading
+during the day.
+At the end of the day, the prices no longer move.
+I'm assuming they move very, very little during the time
+it takes us to do this.
+At the end of the day, as I rebalance,
+the prices are held fixed, but the quantities change.
+So from an accounting perspective,
+the rebalancing is just exchanging
+one asset for another.
+We're exchanging cash for stock of equal value.
+OK.
+So we've got two things.
+We've got the end of day rebalancing and fixed price
+and we have the intraday market evolution dynamic stock price
+evolution, dynamic option price evolution while we're holding
+the quantities constant.
+And when we look at the real world prices,
+we see this is an example, a screenshot taken from Bloomberg
+where we can see the price in Spotify
+over several intraday periods.
+You can see that on some days, the movements are jagged
+and look stochastic.
+And I've left out the overnight period.
+And the next day begins more or less
+where the other one started.
+But that's not always the case.
+Sometimes we do observe jumps and there are very big changes
+from the close on one day to the beginning of the next day.
+And we're either going to be excluding that
+or it won't really matter because we're
+going to be jumping from one end of day close
+to the next end of day close.
+So whether this dropped immediately on the open
+or at some point during the day, the main driver for our results
+is going to be where it ends up on the following day.
+
+So
+Let's leave the derivatives out of it for a moment
+and look at a rebalancing condition
+for this self-financing portfolio.
+So let's let x be a portfolio that initially has value 0.
+But again, I've got a lot of credit.
+So it can have stocks and bonds.
+And I'm going to just call our interest bearing instruments
+cash.
+Instead of money market, instead of a bond,
+I'll refer to it as cash.
+So let's assume that I have a portfolio x.
+X is the value of the portfolio.
+And I can have stock in quantity q
+and I can have cash in quantity C. S is the value of the stock.
+M is the value of money, which will
+grow with the risk free rate.
+So when I initially set up my portfolio,
+I started with no money.
+I'm going to end up with no money.
+So my initial setup doesn't require any money.
+And subsequent rebalancing never changes the portfolio value.
+That is, if I want to be long stock at a positive price,
+I'm going to need to have a negative cash
+balance to finance it.
+If I'm going to be short stock and this is negative,
+I'll have positive cash.
+And the amount of cash is determined
+as C is going to equal minus qS over M, the value of money.
+So it's as simple as that.
+When we look at rebalancing at the end of a day, so
+at the end of a day, the prices aren't changing.
+And I look at the value from post re-hedging
+compared to pre re-hedging where I changed
+the quantities of stock.
+What do I get?
+Well, simple arithmetic.
+So I've got S times the change in quantity
+for the trade I do for re-hedging plus M times
+the change in quantity in cash.
+That's the change in value of the portfolio.
+But because everything-- none of the prices are changing,
+we're just shifting one asset into another.
+That value is equal to 0.
+Now, let me just rewrite that.
+Because what I'd like to do is I'd
+like to shift the end points a little bit.
+So instead of ST and MT here, I'd
+really like to have ST minus 1 and MT minus 1.
+Because these represent a change in value
+in the future from T minus 1 to T. And I'd like this to be--
+I like to think of this as being a random variable,
+and I want this to be non-anticipating.
+So I'd like this to be at the beginning of my end point
+rather than at the end of the end point over here.
+So I can do that at the cost of adding two new terms just
+to cancel the stuff I added.
+And that gives me these terms down below.
+And this is just arithmetic.
+This is an exact equality.
+Now if we think about turning this into infinitesimals
+in continuous time and we recognize
+that this whole thing is 0, we have the following equation
+that represents self-financing.
+Sdq, which is up here, plus MdC plus dSdq plus dMdC
+now is equal to 0.
+So this equation here holds when our rebalancing
+is self-financing, when there's no new money coming in or going
+out.

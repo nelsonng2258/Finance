@@ -1,0 +1,576 @@
+0
+00:00:00,000 --> 00:00:00,745
+
+
+1
+00:00:00,745 --> 00:00:02,370
+PROFESSOR: So we have integral formulas
+
+2
+00:00:02,370 --> 00:00:04,500
+and we have differential formulas.
+
+3
+00:00:04,500 --> 00:00:05,550
+What are we going to do?
+
+4
+00:00:05,550 --> 00:00:06,930
+What are we going to use?
+
+5
+00:00:06,930 --> 00:00:08,850
+The answer is we're going to use them both.
+
+6
+00:00:08,850 --> 00:00:12,510
+Most of the time we're going to be working in differential form
+
+7
+00:00:12,510 --> 00:00:15,330
+and constructing what are known as stochastic differential
+
+8
+00:00:15,330 --> 00:00:19,740
+equations that involve things like that infinitesimal dB
+
+9
+00:00:19,740 --> 00:00:21,900
+that I showed you on the previous slide.
+
+10
+00:00:21,900 --> 00:00:26,190
+That's the small time limit of our finite Brownian motion
+
+11
+00:00:26,190 --> 00:00:26,760
+path.
+
+12
+00:00:26,760 --> 00:00:28,830
+And we'll see these stochastic differentials
+
+13
+00:00:28,830 --> 00:00:32,100
+involve these Gaussian random variables.
+
+14
+00:00:32,100 --> 00:00:34,110
+And under certain circumstances, we
+
+15
+00:00:34,110 --> 00:00:36,810
+can reduce them to partial differential equations,
+
+16
+00:00:36,810 --> 00:00:41,460
+familiar from calculus, that don't have any randomness.
+
+17
+00:00:41,460 --> 00:00:43,510
+And then we can apply normal techniques
+
+18
+00:00:43,510 --> 00:00:46,530
+that we have from the theory of partial differential equations.
+
+19
+00:00:46,530 --> 00:00:49,980
+However, we also sometimes use the integral form,
+
+20
+00:00:49,980 --> 00:00:52,710
+where we want to take a differential version
+
+21
+00:00:52,710 --> 00:00:54,010
+and integrate it up.
+
+22
+00:00:54,010 --> 00:00:56,610
+That's something that we need to think
+
+23
+00:00:56,610 --> 00:00:58,950
+about a little bit differently from doing integrals
+
+24
+00:00:58,950 --> 00:01:01,620
+in ordinary single or multiple-variable calculus
+
+25
+00:01:01,620 --> 00:01:03,450
+because the thing that we're integrating
+
+26
+00:01:03,450 --> 00:01:06,300
+is a random variable, and its randomness
+
+27
+00:01:06,300 --> 00:01:08,710
+depends on where it is in time.
+
+28
+00:01:08,710 --> 00:01:12,102
+So we can't just do a straightforward integration.
+
+29
+00:01:12,102 --> 00:01:14,310
+We need to think about the results of the integration
+
+30
+00:01:14,310 --> 00:01:17,700
+as themselves representing a probability distribution.
+
+31
+00:01:17,700 --> 00:01:19,680
+But an important example of where
+
+32
+00:01:19,680 --> 00:01:23,040
+we think about things, these integral forms
+
+33
+00:01:23,040 --> 00:01:27,630
+for finite values, is in doing option pricing,
+
+34
+00:01:27,630 --> 00:01:32,070
+and a discrete approximation to that on a computer
+
+35
+00:01:32,070 --> 00:01:36,100
+that we'll be seeing where we do Monte Carlo simulations.
+
+36
+00:01:36,100 --> 00:01:37,590
+So we might like to--
+
+37
+00:01:37,590 --> 00:01:41,310
+it turns out that we can define the price of an option
+
+38
+00:01:41,310 --> 00:01:45,720
+as an expectation over a bunch of Brownian paths
+
+39
+00:01:45,720 --> 00:01:49,450
+that are integrated over a finite time period.
+
+40
+00:01:49,450 --> 00:01:53,340
+And for that, we'll want to have our integral representation
+
+41
+00:01:53,340 --> 00:01:56,520
+of what the paths are and what their probability
+
+42
+00:01:56,520 --> 00:01:57,600
+distribution is.
+
+43
+00:01:57,600 --> 00:02:00,440
+
+
+44
+00:02:00,440 --> 00:02:02,570
+Finally, let's do a quick version
+
+45
+00:02:02,570 --> 00:02:06,650
+of our generalized random walk because just pure Brownian
+
+46
+00:02:06,650 --> 00:02:08,370
+motion is a bit boring.
+
+47
+00:02:08,370 --> 00:02:11,762
+It's like a standardized random variable.
+
+48
+00:02:11,762 --> 00:02:13,220
+There's not a whole lot that we can
+
+49
+00:02:13,220 --> 00:02:15,710
+do with it if it only depends on time
+
+50
+00:02:15,710 --> 00:02:17,510
+and it doesn't have any parameters.
+
+51
+00:02:17,510 --> 00:02:19,070
+We'd like to include something that
+
+52
+00:02:19,070 --> 00:02:22,530
+could represent our old friends, return and risk.
+
+53
+00:02:22,530 --> 00:02:26,630
+So remember what we did with our basic random walk
+
+54
+00:02:26,630 --> 00:02:28,520
+to get to the generalized random walk.
+
+55
+00:02:28,520 --> 00:02:30,980
+We introduced parameters.
+
+56
+00:02:30,980 --> 00:02:34,970
+So we started with a return variable
+
+57
+00:02:34,970 --> 00:02:37,820
+for our log-normal process where we
+
+58
+00:02:37,820 --> 00:02:41,490
+took our variable z, our standardized random variable,
+
+59
+00:02:41,490 --> 00:02:43,520
+we multiplied it times a constant,
+
+60
+00:02:43,520 --> 00:02:45,620
+sigma, to represent the step size,
+
+61
+00:02:45,620 --> 00:02:48,530
+and we possibly added another constant mu that
+
+62
+00:02:48,530 --> 00:02:50,000
+represented the drift.
+
+63
+00:02:50,000 --> 00:02:52,400
+So I've written this as mu 0 and sigma 0
+
+64
+00:02:52,400 --> 00:02:54,350
+because I don't exactly know right now what
+
+65
+00:02:54,350 --> 00:02:55,760
+scale I want to use.
+
+66
+00:02:55,760 --> 00:02:58,310
+And let's think of those as being the bare parameters
+
+67
+00:02:58,310 --> 00:03:02,010
+for constructing a process where the time interval was fixed.
+
+68
+00:03:02,010 --> 00:03:05,880
+So when delta t was equal to 1, this was how we set things up.
+
+69
+00:03:05,880 --> 00:03:09,650
+We said that if I had bare parameters mu 0 and sigma 0,
+
+70
+00:03:09,650 --> 00:03:13,210
+then the random variable constructed in this way, r sub
+
+71
+00:03:13,210 --> 00:03:19,220
+t, was normally distributed with mean mu and variance
+
+72
+00:03:19,220 --> 00:03:20,560
+sigma squared.
+
+73
+00:03:20,560 --> 00:03:22,910
+Then, if I added a whole bunch of them
+
+74
+00:03:22,910 --> 00:03:26,630
+together to get some finite-length path
+
+75
+00:03:26,630 --> 00:03:29,780
+of multiple steps, I could go from 0
+
+76
+00:03:29,780 --> 00:03:33,170
+to a value of, let's say, big T, letting big T be an integer
+
+77
+00:03:33,170 --> 00:03:37,280
+number, by aggregating a bunch of individual time steps,
+
+78
+00:03:37,280 --> 00:03:38,720
+mostly T of them.
+
+79
+00:03:38,720 --> 00:03:41,300
+And because the logarithm of a product
+
+80
+00:03:41,300 --> 00:03:45,200
+is the sum of the logarithms and because the variances add
+
+81
+00:03:45,200 --> 00:03:50,720
+and all our usual rules, we see that by adding together big T
+
+82
+00:03:50,720 --> 00:03:55,550
+variables, I could get a process that was normally distributed
+
+83
+00:03:55,550 --> 00:03:59,930
+with parameter mu 0 t, variance sigma 0
+
+84
+00:03:59,930 --> 00:04:03,920
+squared T relative to the bare parameters.
+
+85
+00:04:03,920 --> 00:04:06,770
+Well, now we'd like to let delta t go to 0.
+
+86
+00:04:06,770 --> 00:04:08,340
+So how are we going to do it?
+
+87
+00:04:08,340 --> 00:04:10,640
+What we'd like to do is find a way
+
+88
+00:04:10,640 --> 00:04:13,760
+that we can pick a scaling for our parameters
+
+89
+00:04:13,760 --> 00:04:16,490
+such that we get finite values that we
+
+90
+00:04:16,490 --> 00:04:19,910
+can interpret financially when we get our Brownian motion
+
+91
+00:04:19,910 --> 00:04:20,720
+limit.
+
+92
+00:04:20,720 --> 00:04:25,430
+So we'd like to think about getting the same kind of value,
+
+93
+00:04:25,430 --> 00:04:30,230
+a finite path, logarithm of ST over S0, same
+
+94
+00:04:30,230 --> 00:04:34,430
+as we had up here, by taking the limit as delta t goes to 0.
+
+95
+00:04:34,430 --> 00:04:35,640
+How are we going to do that?
+
+96
+00:04:35,640 --> 00:04:38,600
+Well, we're going to have our path consist
+
+97
+00:04:38,600 --> 00:04:40,790
+of a bunch of steps, but now we're
+
+98
+00:04:40,790 --> 00:04:44,280
+going to let our parameters scale in the following way.
+
+99
+00:04:44,280 --> 00:04:48,140
+We're going to let the drift term go as mu delta t
+
+100
+00:04:48,140 --> 00:04:49,820
+and we're going to let the step size
+
+101
+00:04:49,820 --> 00:04:53,540
+term go as sigma square root of delta t.
+
+102
+00:04:53,540 --> 00:04:57,320
+And with that particular scaling, when we take n steps,
+
+103
+00:04:57,320 --> 00:05:02,480
+where n is t over delta t, as we saw before,
+
+104
+00:05:02,480 --> 00:05:05,210
+we'll get a finite result. So it's the same thing
+
+105
+00:05:05,210 --> 00:05:05,930
+that we saw.
+
+106
+00:05:05,930 --> 00:05:09,350
+The part that's random is the square root of delta t.
+
+107
+00:05:09,350 --> 00:05:15,210
+The part that's deterministic, a 1/n result is just fine.
+
+108
+00:05:15,210 --> 00:05:23,120
+So if we do these sums, I've got n terms here, mu delta t times,
+
+109
+00:05:23,120 --> 00:05:25,550
+each term is going to be identical,
+
+110
+00:05:25,550 --> 00:05:29,390
+times t over delta t.
+
+111
+00:05:29,390 --> 00:05:32,210
+That's going to give me mu times t.
+
+112
+00:05:32,210 --> 00:05:36,200
+Over here, I can scale out in front a sigma square root
+
+113
+00:05:36,200 --> 00:05:39,170
+of delta t times the sum of the z's.
+
+114
+00:05:39,170 --> 00:05:42,140
+But the square root of delta t grouped
+
+115
+00:05:42,140 --> 00:05:45,590
+with the z, if I only pull the sigma out in front,
+
+116
+00:05:45,590 --> 00:05:49,370
+then I have exactly my definition of my Brownian path.
+
+117
+00:05:49,370 --> 00:05:53,330
+So with this scaling, by introducing mu and sigma
+
+118
+00:05:53,330 --> 00:05:59,090
+in precisely this way where the drift and the volatility
+
+119
+00:05:59,090 --> 00:06:02,810
+of a process as we let delta t go to 0,
+
+120
+00:06:02,810 --> 00:06:04,790
+we get the finite result that we can
+
+121
+00:06:04,790 --> 00:06:07,880
+have stock price evolution, let's say,
+
+122
+00:06:07,880 --> 00:06:10,970
+represented by a random path that
+
+123
+00:06:10,970 --> 00:06:15,140
+has mean mu times the length of time.
+
+124
+00:06:15,140 --> 00:06:18,500
+And sigma integral dB is going to give us
+
+125
+00:06:18,500 --> 00:06:20,960
+something which is finite--
+
+126
+00:06:20,960 --> 00:06:23,600
+for finite times, is a random variable
+
+127
+00:06:23,600 --> 00:06:25,790
+that's drawn from mu of--
+
+128
+00:06:25,790 --> 00:06:29,810
+excuse me, from N of mu, t sigma squared t.
+
+129
+00:06:29,810 --> 00:06:33,890
+That is, it is going to have a mean that
+
+130
+00:06:33,890 --> 00:06:36,440
+grows with time linearly and a variance that
+
+131
+00:06:36,440 --> 00:06:39,650
+grows with time linearly and a volatility that grows
+
+132
+00:06:39,650 --> 00:06:41,810
+with the square root of time.
+
+133
+00:06:41,810 --> 00:06:46,640
+More generally, we don't need to let mu and sigma be constant.
+
+134
+00:06:46,640 --> 00:06:51,230
+If they depend on time, if they're deterministic functions
+
+135
+00:06:51,230 --> 00:06:54,470
+of time, then we could think about letting
+
+136
+00:06:54,470 --> 00:06:56,180
+them change slowly in time.
+
+137
+00:06:56,180 --> 00:06:57,860
+If they're smooth functions of time,
+
+138
+00:06:57,860 --> 00:07:00,700
+or actually just integrable functions of time,
+
+139
+00:07:00,700 --> 00:07:03,780
+we can have this general result, but provided that they're not
+
+140
+00:07:03,780 --> 00:07:05,170
+random variables.
+
+141
+00:07:05,170 --> 00:07:08,310
+So the typical case is mu and sigma are constant,
+
+142
+00:07:08,310 --> 00:07:11,220
+but we'll see shortly that we can generalize even
+
+143
+00:07:11,220 --> 00:07:15,440
+further when we introduce Ito processes.
+

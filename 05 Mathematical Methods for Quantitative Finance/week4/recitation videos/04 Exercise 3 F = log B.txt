@@ -1,0 +1,29 @@
+
+PROFESSOR: Exercise-- let F be the natural logarithm of B.
+Find dF by using Ito's lemma.
+Pause the video, take a moment to do it on your own,
+then come back, and we'll do it together.
+
+This case is especially simple.
+So we have that dX is dB.
+So we only need to worry about taking partial derivatives
+with respect to B. There's no dt term in our underlying Ito
+process.
+And F depends on B only, not on time.
+So we have that the partial of F with respect to time
+is equal to 0.
+The first partial of F with respect to B is 1 over B.
+And the second partial derivative
+of F with respect to B squared is minus 1 over B squared.
+So let's compute dF.
+Well, dF is partial of F with respect to t dt.
+That doesn't exist.
+Then, we're going to have partial of F
+with respect to B times dB.
+Plus, we have the Ito term, which,
+because we've got this specially simple form for our Ito
+process, is going to involve just 1/2 times
+the second partial derivative minus 1 over B squared
+times dt.
+So we're done.
+This is dB over B minus 1 over 2B squared dt.

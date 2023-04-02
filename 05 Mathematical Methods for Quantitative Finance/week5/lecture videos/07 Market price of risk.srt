@@ -1,0 +1,248 @@
+0
+00:00:00,000 --> 00:00:01,816
+
+
+1
+00:00:01,816 --> 00:00:05,690
+PROFESSOR: Is there a financial interpretation to the mystery
+
+2
+00:00:05,690 --> 00:00:07,670
+function f of t and y?
+
+3
+00:00:07,670 --> 00:00:09,380
+Well, here's one.
+
+4
+00:00:09,380 --> 00:00:13,230
+We can think of it in terms of the risk premium on the bond.
+
+5
+00:00:13,230 --> 00:00:18,170
+So the bond's Ito process can be written as usual.
+
+6
+00:00:18,170 --> 00:00:22,340
+From Ito's Lemma is dV something times dt plus something
+
+7
+00:00:22,340 --> 00:00:24,060
+times dy.
+
+8
+00:00:24,060 --> 00:00:25,760
+And let's put it in standard form.
+
+9
+00:00:25,760 --> 00:00:29,570
+We will rewrite it as something times dt plus something times
+
+10
+00:00:29,570 --> 00:00:30,740
+dB.
+
+11
+00:00:30,740 --> 00:00:34,460
+So the coefficient of dB is what we usually think of
+
+12
+00:00:34,460 --> 00:00:35,930
+is being the volatility.
+
+13
+00:00:35,930 --> 00:00:38,240
+And it's associated with the randomness.
+
+14
+00:00:38,240 --> 00:00:40,380
+If that coefficient were to go to 0,
+
+15
+00:00:40,380 --> 00:00:42,680
+the equation would be deterministic.
+
+16
+00:00:42,680 --> 00:00:44,120
+It would only depend.
+
+17
+00:00:44,120 --> 00:00:46,610
+It would have time evolution determined by dt.
+
+18
+00:00:46,610 --> 00:00:49,530
+But there wouldn't be any randomness associated with it.
+
+19
+00:00:49,530 --> 00:00:52,010
+So we can think of the deterministic piece
+
+20
+00:00:52,010 --> 00:00:56,420
+as telling us about the growth rate in the absence of risk
+
+21
+00:00:56,420 --> 00:01:00,270
+and this piece being associated with the risk.
+
+22
+00:01:00,270 --> 00:01:03,050
+So if we ask about the amount of excess
+
+23
+00:01:03,050 --> 00:01:06,410
+risk there is and the amount of--
+
+24
+00:01:06,410 --> 00:01:07,910
+excuse me-- the amount of risk there
+
+25
+00:01:07,910 --> 00:01:10,910
+is relative to the amount of excess return
+
+26
+00:01:10,910 --> 00:01:13,190
+above the risk-free rate, we can take
+
+27
+00:01:13,190 --> 00:01:17,690
+the value, the return on the bond, dV in a given period,
+
+28
+00:01:17,690 --> 00:01:22,770
+relative to what it would earn if it were risk free.
+
+29
+00:01:22,770 --> 00:01:25,760
+So if it were risk free, this would be equal to 0.
+
+30
+00:01:25,760 --> 00:01:27,500
+And then we divide it by the risk
+
+31
+00:01:27,500 --> 00:01:32,130
+to get the ratio of excess return per unit of risk.
+
+32
+00:01:32,130 --> 00:01:34,400
+And we have this expression.
+
+33
+00:01:34,400 --> 00:01:39,110
+And the coefficient of dt, in this case, in terms of a and b,
+
+34
+00:01:39,110 --> 00:01:41,150
+the coefficients from the Ito process,
+
+35
+00:01:41,150 --> 00:01:44,990
+and f, our unknown function, that particular combination
+
+36
+00:01:44,990 --> 00:01:47,710
+a plus f over b is given a name.
+
+37
+00:01:47,710 --> 00:01:52,230
+And it's called the market price of risk.
+
+38
+00:01:52,230 --> 00:01:53,540
+Now, we give it a symbol.
+
+39
+00:01:53,540 --> 00:01:54,560
+We'll call it eta.
+
+40
+00:01:54,560 --> 00:01:56,928
+So we can track it through some further manipulations
+
+41
+00:01:56,928 --> 00:01:57,470
+if we'd like.
+
+42
+00:01:57,470 --> 00:01:58,637
+But what are its properties?
+
+43
+00:01:58,637 --> 00:02:00,890
+Well, first of all, it doesn't depend on which bond
+
+44
+00:02:00,890 --> 00:02:01,400
+we look at.
+
+45
+00:02:01,400 --> 00:02:04,520
+It's going to be the same thing for all of the bonds.
+
+46
+00:02:04,520 --> 00:02:07,130
+And it represents the extra return
+
+47
+00:02:07,130 --> 00:02:10,039
+that we get per unit of randomness,
+
+48
+00:02:10,039 --> 00:02:12,710
+per extra coefficient of dB.
+
+49
+00:02:12,710 --> 00:02:14,750
+Unfortunately, it's not observable.
+
+50
+00:02:14,750 --> 00:02:17,810
+And it ends up being a fudge factor in lots of models.
+
+51
+00:02:17,810 --> 00:02:21,530
+This happens whenever the stochastic driver is not
+
+52
+00:02:21,530 --> 00:02:23,480
+something that's directly tradable.
+
+53
+00:02:23,480 --> 00:02:26,610
+That's where this uncertainty comes from.
+
+54
+00:02:26,610 --> 00:02:29,240
+In the case of our stock and our stock option,
+
+55
+00:02:29,240 --> 00:02:31,670
+the stock price was directly observable.
+
+56
+00:02:31,670 --> 00:02:34,310
+And we didn't have any ambiguity.
+
+57
+00:02:34,310 --> 00:02:38,180
+So common approaches are either to figure out
+
+58
+00:02:38,180 --> 00:02:39,920
+something that seems like it ought to be
+
+59
+00:02:39,920 --> 00:02:41,450
+a reasonable functional form.
+
+60
+00:02:41,450 --> 00:02:44,960
+We'd make or look for something that can be solved analytically
+
+61
+00:02:44,960 --> 00:02:50,020
+or to try to make empirical fits to market data.
+
