@@ -1,0 +1,980 @@
+0
+00:00:00,000 --> 00:00:01,115
+
+
+1
+00:00:01,115 --> 00:00:02,740
+PROFESSOR: Let's look at two approaches
+
+2
+00:00:02,740 --> 00:00:05,770
+to the question of optimal trading, where
+
+3
+00:00:05,770 --> 00:00:09,550
+we'd like to minimize execution costs in a trading
+
+4
+00:00:09,550 --> 00:00:13,210
+setting, where we need to deal with randomness, and possibly
+
+5
+00:00:13,210 --> 00:00:14,740
+market impact.
+
+6
+00:00:14,740 --> 00:00:18,550
+First solution, the dynamic programming solution,
+
+7
+00:00:18,550 --> 00:00:21,310
+is described by Bertsimas and Lo.
+
+8
+00:00:21,310 --> 00:00:23,080
+So here is the question.
+
+9
+00:00:23,080 --> 00:00:26,710
+We have fixed quantity of shares-- let's call it big Q--
+
+10
+00:00:26,710 --> 00:00:30,010
+that we need to buy in a particular period of time
+
+11
+00:00:30,010 --> 00:00:31,780
+or a horizon, t.
+
+12
+00:00:31,780 --> 00:00:33,730
+And the optimal trading policy is
+
+13
+00:00:33,730 --> 00:00:37,360
+to find the best sequence of trades that satisfies
+
+14
+00:00:37,360 --> 00:00:38,780
+the boundary conditions.
+
+15
+00:00:38,780 --> 00:00:41,790
+So what we'd like to do is we need the set of trades.
+
+16
+00:00:41,790 --> 00:00:45,190
+Let qt be the trade quantity at each period.
+
+17
+00:00:45,190 --> 00:00:46,480
+And I have t periods.
+
+18
+00:00:46,480 --> 00:00:50,410
+So the sum of q sub t from one to big T
+
+19
+00:00:50,410 --> 00:00:52,720
+needs to add up to the total number of shares.
+
+20
+00:00:52,720 --> 00:00:55,820
+And what we'd like to do is minimize the cost
+
+21
+00:00:55,820 --> 00:00:58,340
+when we bought, and this is the market value.
+
+22
+00:00:58,340 --> 00:01:01,880
+So you notice the qt is going to vary in each time period.
+
+23
+00:01:01,880 --> 00:01:04,629
+And we have control over the q's, but we do not
+
+24
+00:01:04,629 --> 00:01:05,980
+have control over the prices.
+
+25
+00:01:05,980 --> 00:01:08,170
+Those are in the market, and those
+
+26
+00:01:08,170 --> 00:01:10,720
+may be subject to random fluctuations,
+
+27
+00:01:10,720 --> 00:01:13,330
+and they may be subject to feedback effects
+
+28
+00:01:13,330 --> 00:01:14,350
+from our trading.
+
+29
+00:01:14,350 --> 00:01:19,720
+But here the objective is to minimize this function subject
+
+30
+00:01:19,720 --> 00:01:21,610
+to this constraint.
+
+31
+00:01:21,610 --> 00:01:25,580
+
+
+32
+00:01:25,580 --> 00:01:35,190
+So in each trade period, we'll model the price process
+
+33
+00:01:35,190 --> 00:01:37,710
+as being arithmetic Brownian motion,
+
+34
+00:01:37,710 --> 00:01:39,780
+so rather than log normal motion.
+
+35
+00:01:39,780 --> 00:01:42,250
+And that's so that we can solve the problem analytically.
+
+36
+00:01:42,250 --> 00:01:45,690
+But also, these typical trading problems, the overall time
+
+37
+00:01:45,690 --> 00:01:47,640
+horizons are fairly short.
+
+38
+00:01:47,640 --> 00:01:50,620
+They might be a matter of days.
+
+39
+00:01:50,620 --> 00:01:54,370
+And this is not a terrible model for price movements.
+
+40
+00:01:54,370 --> 00:01:56,670
+So here's our model for the price movement.
+
+41
+00:01:56,670 --> 00:01:58,110
+This is price, not return.
+
+42
+00:01:58,110 --> 00:02:01,470
+The price in period t is the previous price
+
+43
+00:02:01,470 --> 00:02:04,680
+plus our random increment, that's going to be 0 mean,
+
+44
+00:02:04,680 --> 00:02:09,240
+and a term that depends on the amount that we traded.
+
+45
+00:02:09,240 --> 00:02:11,009
+So this is a market impact term.
+
+46
+00:02:11,009 --> 00:02:13,620
+We're going to assume it's proportional to the size.
+
+47
+00:02:13,620 --> 00:02:15,630
+So theta is a coefficient.
+
+48
+00:02:15,630 --> 00:02:19,470
+And this says that if we make a trade if we're buying,
+
+49
+00:02:19,470 --> 00:02:21,690
+and we buy a large quantity, the price
+
+50
+00:02:21,690 --> 00:02:22,950
+goes up by a large amount.
+
+51
+00:02:22,950 --> 00:02:26,010
+Now you might think that that's good.
+
+52
+00:02:26,010 --> 00:02:27,930
+Your trades became more valuable.
+
+53
+00:02:27,930 --> 00:02:30,180
+But what's happened is the price went here
+
+54
+00:02:30,180 --> 00:02:33,510
+after you executed your trade and makes your future trades
+
+55
+00:02:33,510 --> 00:02:35,260
+even more expensive.
+
+56
+00:02:35,260 --> 00:02:37,110
+So we're going to hold theta fixed.
+
+57
+00:02:37,110 --> 00:02:39,750
+And we're going to assume that this is a linear function.
+
+58
+00:02:39,750 --> 00:02:41,833
+And we'll see that's actually pretty conservative.
+
+59
+00:02:41,833 --> 00:02:43,740
+In the real world, transaction costs
+
+60
+00:02:43,740 --> 00:02:47,940
+tend to be for large quantities, a faster varying function,
+
+61
+00:02:47,940 --> 00:02:49,950
+possibly quadratic as a function of q.
+
+62
+00:02:49,950 --> 00:02:52,350
+But for purposes of this model, this is nice.
+
+63
+00:02:52,350 --> 00:02:53,620
+It's easy to describe.
+
+64
+00:02:53,620 --> 00:02:55,000
+And it's easy to solve.
+
+65
+00:02:55,000 --> 00:02:58,110
+So epsilon is going to be a 0 mean process.
+
+66
+00:02:58,110 --> 00:03:01,500
+And we want to think about which of the variables we control
+
+67
+00:03:01,500 --> 00:03:04,720
+and which are the ones we have to observe in the environment.
+
+68
+00:03:04,720 --> 00:03:07,380
+So p is the price.
+
+69
+00:03:07,380 --> 00:03:10,440
+And we unfortunately cannot determine the prices.
+
+70
+00:03:10,440 --> 00:03:11,920
+We have to take the prices we get.
+
+71
+00:03:11,920 --> 00:03:13,440
+So we can observe them, and they're
+
+72
+00:03:13,440 --> 00:03:15,480
+going to have a random component.
+
+73
+00:03:15,480 --> 00:03:17,730
+The other state variable is the number of shares
+
+74
+00:03:17,730 --> 00:03:18,990
+that we have remaining.
+
+75
+00:03:18,990 --> 00:03:21,900
+And we'll designate that by W. W is
+
+76
+00:03:21,900 --> 00:03:24,870
+going to be the total quantity at time t,
+
+77
+00:03:24,870 --> 00:03:27,970
+minus the number of shares that have been done previously.
+
+78
+00:03:27,970 --> 00:03:30,420
+So this decrements the number of shares.
+
+79
+00:03:30,420 --> 00:03:32,010
+W is the inventory.
+
+80
+00:03:32,010 --> 00:03:34,120
+It's the number of shares that we have remaining.
+
+81
+00:03:34,120 --> 00:03:37,200
+So at a given point in time at a point t,
+
+82
+00:03:37,200 --> 00:03:39,420
+we have two things that describe the state.
+
+83
+00:03:39,420 --> 00:03:40,920
+What's the current price?
+
+84
+00:03:40,920 --> 00:03:43,150
+How many shares do we have left to trade?
+
+85
+00:03:43,150 --> 00:03:46,080
+And this is a Markov decision process.
+
+86
+00:03:46,080 --> 00:03:48,630
+It's in the family decision problems,
+
+87
+00:03:48,630 --> 00:03:50,670
+where the future decisions depend
+
+88
+00:03:50,670 --> 00:03:52,920
+only on what the current state variables are,
+
+89
+00:03:52,920 --> 00:03:55,620
+not on the history for how we got there.
+
+90
+00:03:55,620 --> 00:03:57,280
+Q is a control variable.
+
+91
+00:03:57,280 --> 00:03:58,050
+We get to pick.
+
+92
+00:03:58,050 --> 00:04:00,240
+At least we get some control over something.
+
+93
+00:04:00,240 --> 00:04:03,420
+And what we get to do is choose a sequence
+
+94
+00:04:03,420 --> 00:04:06,420
+of q's to find the optimal sequence
+
+95
+00:04:06,420 --> 00:04:09,570
+to minimize our overall result for the overall transaction
+
+96
+00:04:09,570 --> 00:04:10,600
+costs.
+
+97
+00:04:10,600 --> 00:04:13,260
+So our goal is to find a sequence
+
+98
+00:04:13,260 --> 00:04:15,750
+of cues that minimize the cost.
+
+99
+00:04:15,750 --> 00:04:17,610
+And this is a policy.
+
+100
+00:04:17,610 --> 00:04:21,570
+So the optimal policy is the one that minimizes
+
+101
+00:04:21,570 --> 00:04:23,550
+the total expected cost.
+
+102
+00:04:23,550 --> 00:04:25,410
+The dynamic programming principle
+
+103
+00:04:25,410 --> 00:04:30,250
+says let's frame our decisions as a recursive set of problems,
+
+104
+00:04:30,250 --> 00:04:33,810
+so that the optimal decision and the optimal sequence
+
+105
+00:04:33,810 --> 00:04:37,690
+at each step is also optimal for all the remaining shares.
+
+106
+00:04:37,690 --> 00:04:40,890
+So if we can have a set of sub-problems, each of which
+
+107
+00:04:40,890 --> 00:04:43,560
+is of the same structure, then when we solve one,
+
+108
+00:04:43,560 --> 00:04:46,290
+we can solve them all and recurse our way back
+
+109
+00:04:46,290 --> 00:04:48,960
+from a definite point, usually the terminal point,
+
+110
+00:04:48,960 --> 00:04:52,300
+back to the beginning, and find the optimal solution.
+
+111
+00:04:52,300 --> 00:04:55,410
+So the optimal policy satisfies this.
+
+112
+00:04:55,410 --> 00:04:57,600
+Now we are going to solve it from the end.
+
+113
+00:04:57,600 --> 00:05:00,510
+But we need to frame each decision with respect
+
+114
+00:05:00,510 --> 00:05:02,980
+to uncertainty that occurs in the future.
+
+115
+00:05:02,980 --> 00:05:07,410
+So in one step what we would say is that our value function is
+
+116
+00:05:07,410 --> 00:05:11,850
+going to be given the prices available through t minus 1,
+
+117
+00:05:11,850 --> 00:05:13,680
+and given the number of shares we
+
+118
+00:05:13,680 --> 00:05:16,260
+have available that we need to move W sub t.
+
+119
+00:05:16,260 --> 00:05:21,540
+Having completed all the trades through q of t minus 1,
+
+120
+00:05:21,540 --> 00:05:24,630
+we want to minimize over all possible trades
+
+121
+00:05:24,630 --> 00:05:30,090
+in the next period, the expected value of our final cost.
+
+122
+00:05:30,090 --> 00:05:33,750
+And that's going to be equal to the trade in the next period,
+
+123
+00:05:33,750 --> 00:05:37,860
+qt, whatever it is, times the price in the next period,
+
+124
+00:05:37,860 --> 00:05:41,340
+plus whatever is left over after we do our next trade.
+
+125
+00:05:41,340 --> 00:05:44,310
+And that's going to be whatever is left over having not
+
+126
+00:05:44,310 --> 00:05:47,700
+done this at time t plus 1 for the next period,
+
+127
+00:05:47,700 --> 00:05:49,350
+involving a new price.
+
+128
+00:05:49,350 --> 00:05:51,790
+The new starting price will be p sub t.
+
+129
+00:05:51,790 --> 00:05:55,222
+And The new starting quantity is W of t plus 1.
+
+130
+00:05:55,222 --> 00:05:57,180
+But these quantities are unknown at this point,
+
+131
+00:05:57,180 --> 00:05:58,890
+because we haven't picked a q yet.
+
+132
+00:05:58,890 --> 00:06:01,980
+And that's why these are all inside the expectation value.
+
+133
+00:06:01,980 --> 00:06:04,770
+And the expectation value is taken at time t.
+
+134
+00:06:04,770 --> 00:06:09,780
+So I have a recursive problem, where I don't know what V is.
+
+135
+00:06:09,780 --> 00:06:12,210
+But I have the same unknown function on the left
+
+136
+00:06:12,210 --> 00:06:13,260
+and on the right.
+
+137
+00:06:13,260 --> 00:06:15,270
+It's in the expected value on the right,
+
+138
+00:06:15,270 --> 00:06:17,490
+because these are future values.
+
+139
+00:06:17,490 --> 00:06:21,450
+Over here, these are taken at present values,
+
+140
+00:06:21,450 --> 00:06:22,650
+which are taken to be known.
+
+141
+00:06:22,650 --> 00:06:25,050
+I know what the last observed price is.
+
+142
+00:06:25,050 --> 00:06:27,270
+I know what the inventory remaining is.
+
+143
+00:06:27,270 --> 00:06:33,310
+And I'm going to minimize with respect to my control variable,
+
+144
+00:06:33,310 --> 00:06:37,660
+the average over all possible outcomes for what the price
+
+145
+00:06:37,660 --> 00:06:39,610
+the expected future price might be,
+
+146
+00:06:39,610 --> 00:06:44,320
+so that I can minimize the expected total cost of trading.
+
+147
+00:06:44,320 --> 00:06:46,720
+So we can't solve this, because it's
+
+148
+00:06:46,720 --> 00:06:48,640
+got a V on the left and a V on the right.
+
+149
+00:06:48,640 --> 00:06:52,480
+But what we can do is we can set it up recursively and work
+
+150
+00:06:52,480 --> 00:06:56,840
+our way backwards from a known point back to the beginning.
+
+151
+00:06:56,840 --> 00:06:59,362
+So the easy place to start is at the end.
+
+152
+00:06:59,362 --> 00:07:00,820
+And the reason it's easy at the end
+
+153
+00:07:00,820 --> 00:07:04,690
+is in our very last trading period, we have no choice.
+
+154
+00:07:04,690 --> 00:07:06,940
+Whatever we've got left, we have to sell.
+
+155
+00:07:06,940 --> 00:07:09,030
+That's the importance of the terminal condition.
+
+156
+00:07:09,030 --> 00:07:10,780
+And we've seen that in many other settings
+
+157
+00:07:10,780 --> 00:07:12,760
+for boundary value problems that we've done.
+
+158
+00:07:12,760 --> 00:07:14,260
+If you know the terminal conditions,
+
+159
+00:07:14,260 --> 00:07:17,202
+it helps fix many other aspects of the problem.
+
+160
+00:07:17,202 --> 00:07:18,910
+So if you get your last period and you've
+
+161
+00:07:18,910 --> 00:07:21,200
+got some shares left over you haven't traded yet,
+
+162
+00:07:21,200 --> 00:07:22,430
+you've got to trade them.
+
+163
+00:07:22,430 --> 00:07:23,980
+So that is not a random variable.
+
+164
+00:07:23,980 --> 00:07:26,290
+In the final period left, we need
+
+165
+00:07:26,290 --> 00:07:28,480
+to trade the number of shares remaining.
+
+166
+00:07:28,480 --> 00:07:32,740
+So therefore, the terminal condition at time t
+
+167
+00:07:32,740 --> 00:07:35,890
+is that this expectation where we're
+
+168
+00:07:35,890 --> 00:07:38,710
+going to minimize the final price
+
+169
+00:07:38,710 --> 00:07:40,690
+and there's not going to be anything left over,
+
+170
+00:07:40,690 --> 00:07:43,720
+because there won't be any additional quantity,
+
+171
+00:07:43,720 --> 00:07:48,940
+is going to be the expectation over qt times the final price.
+
+172
+00:07:48,940 --> 00:07:51,040
+And that's something that we can write down
+
+173
+00:07:51,040 --> 00:07:53,780
+this way in terms of our price process.
+
+174
+00:07:53,780 --> 00:07:55,930
+So this piece is from our equation
+
+175
+00:07:55,930 --> 00:07:57,370
+for how the price evolves.
+
+176
+00:07:57,370 --> 00:07:59,830
+And there's no more V because we're in the final period.
+
+177
+00:07:59,830 --> 00:08:01,370
+There is nothing left over.
+
+178
+00:08:01,370 --> 00:08:04,130
+Everything has been liquidated at this point.
+
+179
+00:08:04,130 --> 00:08:06,370
+So let's take expectations of this.
+
+180
+00:08:06,370 --> 00:08:07,382
+That's pretty easy.
+
+181
+00:08:07,382 --> 00:08:08,590
+Where is our random variable?
+
+182
+00:08:08,590 --> 00:08:11,530
+Well, there's a random variable here in terms of epsilon.
+
+183
+00:08:11,530 --> 00:08:13,270
+Everything else is actually known.
+
+184
+00:08:13,270 --> 00:08:14,710
+We know the previous price.
+
+185
+00:08:14,710 --> 00:08:17,290
+And we know we know what q sub t is when
+
+186
+00:08:17,290 --> 00:08:18,950
+we're in that final period.
+
+187
+00:08:18,950 --> 00:08:21,670
+So we're going to get the expectation
+
+188
+00:08:21,670 --> 00:08:26,690
+is going to be qt times the previous price plus theta times
+
+189
+00:08:26,690 --> 00:08:27,970
+q sub t.
+
+190
+00:08:27,970 --> 00:08:30,280
+We don't minimize with respect to qt,
+
+191
+00:08:30,280 --> 00:08:31,990
+because we don't have any choice.
+
+192
+00:08:31,990 --> 00:08:32,840
+It's fixed.
+
+193
+00:08:32,840 --> 00:08:35,150
+We have to dump all the shares we have left.
+
+194
+00:08:35,150 --> 00:08:37,780
+So in the final period we can re express this
+
+195
+00:08:37,780 --> 00:08:41,990
+as a function of W, because Wt and qt are the same thing.
+
+196
+00:08:41,990 --> 00:08:45,220
+And we've got this expression, that our value
+
+197
+00:08:45,220 --> 00:08:47,440
+for the final period is going to be
+
+198
+00:08:47,440 --> 00:08:51,670
+W sub t times the price plus theta times Wt.
+
+199
+00:08:51,670 --> 00:08:55,060
+And this is a quadratic function of Wt.
+
+200
+00:08:55,060 --> 00:08:57,650
+And it's a linear function in the price.
+
+201
+00:08:57,650 --> 00:09:00,940
+So no more expectations, no minimizations.
+
+202
+00:09:00,940 --> 00:09:04,030
+This is an explicit formula for V
+
+203
+00:09:04,030 --> 00:09:06,820
+in terms of the state variables, p and W.
+
+204
+00:09:06,820 --> 00:09:10,630
+That's what we mean by describing the state in terms
+
+205
+00:09:10,630 --> 00:09:12,830
+of a value function.
+
+206
+00:09:12,830 --> 00:09:16,860
+What about one period previously?
+
+207
+00:09:16,860 --> 00:09:20,580
+In the next to last period, we can take this result
+
+208
+00:09:20,580 --> 00:09:23,100
+and substitute it into our recursion.
+
+209
+00:09:23,100 --> 00:09:26,160
+So our recursion-- we're going to put this result
+
+210
+00:09:26,160 --> 00:09:27,600
+from the previous slide, which is
+
+211
+00:09:27,600 --> 00:09:33,900
+a definite, non-stochastic form of known form.
+
+212
+00:09:33,900 --> 00:09:35,400
+We're going to put that function in,
+
+213
+00:09:35,400 --> 00:09:38,220
+and here it is in closed form.
+
+214
+00:09:38,220 --> 00:09:40,290
+And now we're going to think about this,
+
+215
+00:09:40,290 --> 00:09:43,530
+where we haven't yet realized the next to last trade.
+
+216
+00:09:43,530 --> 00:09:47,610
+So we'd like to solve for what is qt minus 1
+
+217
+00:09:47,610 --> 00:09:50,670
+in order to minimize the expected cost.
+
+218
+00:09:50,670 --> 00:09:53,730
+Well, the expected cost of our total trading program
+
+219
+00:09:53,730 --> 00:09:56,850
+is going to be the cost in the next to last period
+
+220
+00:09:56,850 --> 00:09:59,970
+plus whatever the cost is in the final period that's dumping
+
+221
+00:09:59,970 --> 00:10:01,500
+whatever shares are there.
+
+222
+00:10:01,500 --> 00:10:03,840
+The reason we have expectations now,
+
+223
+00:10:03,840 --> 00:10:05,490
+compared to the previous case, is
+
+224
+00:10:05,490 --> 00:10:08,040
+we haven't done yet, our next to last trade.
+
+225
+00:10:08,040 --> 00:10:09,240
+We have some choice.
+
+226
+00:10:09,240 --> 00:10:12,000
+That is we're going to pick q some t minus 1.
+
+227
+00:10:12,000 --> 00:10:13,710
+That's going to affect the final period.
+
+228
+00:10:13,710 --> 00:10:15,940
+So whatever is left over, we have to pick.
+
+229
+00:10:15,940 --> 00:10:18,330
+But this is in the next to last period.
+
+230
+00:10:18,330 --> 00:10:22,390
+It's the last discretionary choice that we have to make.
+
+231
+00:10:22,390 --> 00:10:23,950
+So that's OK.
+
+232
+00:10:23,950 --> 00:10:25,590
+Let's just expand things out.
+
+233
+00:10:25,590 --> 00:10:28,830
+And inside the expectation, we now
+
+234
+00:10:28,830 --> 00:10:34,740
+can write this out in terms of our known variables
+
+235
+00:10:34,740 --> 00:10:36,060
+with this expression.
+
+236
+00:10:36,060 --> 00:10:38,410
+And then, what are we going to do with this expression?
+
+237
+00:10:38,410 --> 00:10:41,580
+Well, we're going to compute the expectation.
+
+238
+00:10:41,580 --> 00:10:45,090
+We're going to minimize the result for all possible values
+
+239
+00:10:45,090 --> 00:10:47,490
+of q or control variable.
+
+240
+00:10:47,490 --> 00:10:50,520
+And then we're going to re express things
+
+241
+00:10:50,520 --> 00:10:53,220
+in terms of the state variables as they
+
+242
+00:10:53,220 --> 00:10:55,710
+were known at time t minus 1.
+
+243
+00:10:55,710 --> 00:10:57,960
+And then we're going to do this again and again
+
+244
+00:10:57,960 --> 00:11:01,580
+and again until we get back to the beginning.
+

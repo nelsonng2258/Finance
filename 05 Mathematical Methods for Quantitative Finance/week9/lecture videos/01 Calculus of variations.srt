@@ -1,0 +1,1112 @@
+0
+00:00:00,000 --> 00:00:01,105
+
+
+1
+00:00:01,105 --> 00:00:03,730
+PROFESSOR: So let's take a look at another kind of optimization
+
+2
+00:00:03,730 --> 00:00:06,460
+through what's called the calculus of variations, that
+
+3
+00:00:06,460 --> 00:00:10,060
+is actually behind ideas like dynamic programming,
+
+4
+00:00:10,060 --> 00:00:12,520
+even though it doesn't always get credited that way.
+
+5
+00:00:12,520 --> 00:00:15,640
+And it's a global view and often gets
+
+6
+00:00:15,640 --> 00:00:19,240
+discretized in things like Bellman's principle
+
+7
+00:00:19,240 --> 00:00:21,920
+of optimality for dynamic programming.
+
+8
+00:00:21,920 --> 00:00:23,410
+So here's the idea.
+
+9
+00:00:23,410 --> 00:00:27,130
+The idea is suppose that we've got some function that's
+
+10
+00:00:27,130 --> 00:00:29,350
+going to represent a kind of policy, something
+
+11
+00:00:29,350 --> 00:00:31,060
+that we decide over time.
+
+12
+00:00:31,060 --> 00:00:32,800
+For concreteness, the examples that we're
+
+13
+00:00:32,800 --> 00:00:36,070
+going to be looking at are going to involve trading policy.
+
+14
+00:00:36,070 --> 00:00:38,110
+So imagine that you're a trader.
+
+15
+00:00:38,110 --> 00:00:42,920
+Your job is to trade a large block of shares.
+
+16
+00:00:42,920 --> 00:00:45,350
+So you've got 100,000 or a million shares of stock,
+
+17
+00:00:45,350 --> 00:00:48,110
+and you need to trade them over a given period of time.
+
+18
+00:00:48,110 --> 00:00:50,250
+So the amount you trade at a given point in time
+
+19
+00:00:50,250 --> 00:00:52,750
+or the amount perhaps, that you have an inventory in a given
+
+20
+00:00:52,750 --> 00:00:55,510
+amount of time might be a quantity q,
+
+21
+00:00:55,510 --> 00:00:57,380
+which is some function of time.
+
+22
+00:00:57,380 --> 00:01:00,310
+And the idea is how should you vary q
+
+23
+00:01:00,310 --> 00:01:02,800
+as a function of time in an optimal way.
+
+24
+00:01:02,800 --> 00:01:04,300
+What are the considerations?
+
+25
+00:01:04,300 --> 00:01:06,190
+Well, if you dump all your shares at once,
+
+26
+00:01:06,190 --> 00:01:07,690
+you're going to get a worse price.
+
+27
+00:01:07,690 --> 00:01:09,273
+Because people will know you're there.
+
+28
+00:01:09,273 --> 00:01:11,230
+There's not enough liquidity in the market.
+
+29
+00:01:11,230 --> 00:01:13,570
+If you go really slowly on the other hand,
+
+30
+00:01:13,570 --> 00:01:15,440
+you'll incur a lot of risk.
+
+31
+00:01:15,440 --> 00:01:17,350
+So if there are different trade offs,
+
+32
+00:01:17,350 --> 00:01:20,020
+we can capture those in a function that
+
+33
+00:01:20,020 --> 00:01:22,060
+involves penalties for the different things that
+
+34
+00:01:22,060 --> 00:01:24,760
+might go wrong, and ask about solving
+
+35
+00:01:24,760 --> 00:01:26,930
+for a policy as a function of time.
+
+36
+00:01:26,930 --> 00:01:30,700
+This is very different from solving for a single scalar
+
+37
+00:01:30,700 --> 00:01:32,110
+variable at a point.
+
+38
+00:01:32,110 --> 00:01:35,140
+What we're doing is we're asking about something
+
+39
+00:01:35,140 --> 00:01:39,160
+that we're varying with respect to a function, a function
+
+40
+00:01:39,160 --> 00:01:39,970
+of time.
+
+41
+00:01:39,970 --> 00:01:42,590
+And we want to solve for a function.
+
+42
+00:01:42,590 --> 00:01:45,760
+So how do you differentiate with respect to a function?
+
+43
+00:01:45,760 --> 00:01:47,350
+This is a classical problem, and I'd
+
+44
+00:01:47,350 --> 00:01:52,330
+like to show you a simple example in just
+
+45
+00:01:52,330 --> 00:01:53,890
+a couple of pictures.
+
+46
+00:01:53,890 --> 00:01:56,410
+And as I said, we're not going to be using this directly.
+
+47
+00:01:56,410 --> 00:01:58,600
+But you will see the flavor of this
+
+48
+00:01:58,600 --> 00:02:01,130
+in some of the applied problems if we look at,
+
+49
+00:02:01,130 --> 00:02:03,980
+for solutions to the problem of optimal trading.
+
+50
+00:02:03,980 --> 00:02:05,500
+So the first thing is to consider
+
+51
+00:02:05,500 --> 00:02:08,380
+that we have a function, q of t, which
+
+52
+00:02:08,380 --> 00:02:11,270
+is what we're going to control and what we want to solve for.
+
+53
+00:02:11,270 --> 00:02:14,290
+And we're going to let the Lagrangian now, be
+
+54
+00:02:14,290 --> 00:02:18,010
+a function of q and of its first time derivative,
+
+55
+00:02:18,010 --> 00:02:19,320
+which I'll call q dot.
+
+56
+00:02:19,320 --> 00:02:22,330
+So q dot represents dq/dt.
+
+57
+00:02:22,330 --> 00:02:26,200
+OK, and we're going to construct a function called the action,
+
+58
+00:02:26,200 --> 00:02:27,550
+but that's just the name.
+
+59
+00:02:27,550 --> 00:02:29,650
+It's a S. And we're going to integrate
+
+60
+00:02:29,650 --> 00:02:33,160
+this function across time.
+
+61
+00:02:33,160 --> 00:02:37,640
+And we're going to consider S as a function of functions.
+
+62
+00:02:37,640 --> 00:02:40,150
+So S is a function of different q's.
+
+63
+00:02:40,150 --> 00:02:43,120
+If you pick a different trajectory, q of t,
+
+64
+00:02:43,120 --> 00:02:46,690
+stuff it into L, along with a time derivative,
+
+65
+00:02:46,690 --> 00:02:48,770
+q dot, you'll get a different number.
+
+66
+00:02:48,770 --> 00:02:52,240
+So what we want to ask is, given a particular functional form
+
+67
+00:02:52,240 --> 00:02:59,350
+of L. And given an arbitrary function of q, I can compute S.
+
+68
+00:02:59,350 --> 00:03:03,910
+And I want to know what function q,
+
+69
+00:03:03,910 --> 00:03:06,730
+gives me the minimum value of S.
+
+70
+00:03:06,730 --> 00:03:08,290
+So here's how we're going to do it.
+
+71
+00:03:08,290 --> 00:03:11,080
+First, we're going to characterize our deviations.
+
+72
+00:03:11,080 --> 00:03:13,960
+How do we average over all possible functions?
+
+73
+00:03:13,960 --> 00:03:15,620
+Well, here's one way we could do it.
+
+74
+00:03:15,620 --> 00:03:19,300
+Let's start with the particular q
+
+75
+00:03:19,300 --> 00:03:23,450
+and look at it as a one parameter family of deviations.
+
+76
+00:03:23,450 --> 00:03:26,230
+So let's let the alpha just be a parameter scalar
+
+77
+00:03:26,230 --> 00:03:27,440
+that we can vary.
+
+78
+00:03:27,440 --> 00:03:29,530
+And we'll say that when alpha is 0,
+
+79
+00:03:29,530 --> 00:03:31,140
+we have our starting function.
+
+80
+00:03:31,140 --> 00:03:32,980
+And we're going to vary it in proportion
+
+81
+00:03:32,980 --> 00:03:36,130
+to some other unknown function, x of t.
+
+82
+00:03:36,130 --> 00:03:38,710
+So x of t is arbitrary, but what we'd like
+
+83
+00:03:38,710 --> 00:03:40,810
+is at the endpoints of the integration, when
+
+84
+00:03:40,810 --> 00:03:45,040
+t is equal to 0 or big T, at the initial or the terminal point,
+
+85
+00:03:45,040 --> 00:03:49,720
+that this deviation part, alpha xt should vanish.
+
+86
+00:03:49,720 --> 00:03:54,850
+So for arbitrary alpha, we're changing q
+
+87
+00:03:54,850 --> 00:03:57,130
+in the direction of the function x.
+
+88
+00:03:57,130 --> 00:03:59,380
+But we're leaving the endpoints fixed.
+
+89
+00:03:59,380 --> 00:04:01,630
+Now you could say, well, you just move the problem
+
+90
+00:04:01,630 --> 00:04:03,910
+from an unknown q into an unknown x.
+
+91
+00:04:03,910 --> 00:04:05,890
+And that's true, but what we're going to see
+
+92
+00:04:05,890 --> 00:04:08,530
+is it's not going to depend on which x we pick.
+
+93
+00:04:08,530 --> 00:04:11,050
+So let's just substitute this informally.
+
+94
+00:04:11,050 --> 00:04:12,970
+Let's see what we get for our results.
+
+95
+00:04:12,970 --> 00:04:16,160
+And then we'll apply to a couple of simple examples.
+
+96
+00:04:16,160 --> 00:04:18,850
+So I'm going to substitute, this expression,
+
+97
+00:04:18,850 --> 00:04:23,440
+this alpha-dependent expression for q into my integral for S.
+
+98
+00:04:23,440 --> 00:04:27,640
+And I'm going to say that an optimal solution would
+
+99
+00:04:27,640 --> 00:04:31,570
+be when the derivative of S with respect to alpha varnishes.
+
+100
+00:04:31,570 --> 00:04:34,870
+That is, at least over this particular direction
+
+101
+00:04:34,870 --> 00:04:38,230
+for varying q, I'm varying q in the direction
+
+102
+00:04:38,230 --> 00:04:40,420
+of a particular deviation x of t--
+
+103
+00:04:40,420 --> 00:04:42,010
+It's a time-dependent function.
+
+104
+00:04:42,010 --> 00:04:43,250
+I don't know what it is.
+
+105
+00:04:43,250 --> 00:04:46,060
+But certainly, if this is going to be stationary,
+
+106
+00:04:46,060 --> 00:04:49,240
+if it's going to be a critical point, then as I very alpha,
+
+107
+00:04:49,240 --> 00:04:50,920
+this should be equal to 0.
+
+108
+00:04:50,920 --> 00:04:53,440
+So I'm going to take dS d alpha.
+
+109
+00:04:53,440 --> 00:04:55,450
+And I'm going to apply the ordinary chain rule.
+
+110
+00:04:55,450 --> 00:04:57,283
+That's going to be partial of L with respect
+
+111
+00:04:57,283 --> 00:05:01,440
+to q times partial of q with respect to alpha, plus it also
+
+112
+00:05:01,440 --> 00:05:05,110
+depends q dot, partial of L with respect to q dot,
+
+113
+00:05:05,110 --> 00:05:07,320
+times partial of q dot with respect to alpha.
+
+114
+00:05:07,320 --> 00:05:09,300
+And the whole thing is integrated dt.
+
+115
+00:05:09,300 --> 00:05:12,540
+And in more general cases, L might be more complex.
+
+116
+00:05:12,540 --> 00:05:15,600
+And sometimes it's given an explicit time dependence.
+
+117
+00:05:15,600 --> 00:05:17,540
+We're just going to look at this simple form.
+
+118
+00:05:17,540 --> 00:05:19,140
+It's just a function of q and q dot.
+
+119
+00:05:19,140 --> 00:05:23,470
+And we're q and q dot as being independent for the moment.
+
+120
+00:05:23,470 --> 00:05:25,770
+Now, let's substitute.
+
+121
+00:05:25,770 --> 00:05:29,110
+We know that the partial of u with respect to alpha.
+
+122
+00:05:29,110 --> 00:05:30,150
+Here's q.
+
+123
+00:05:30,150 --> 00:05:32,340
+So I take the partial with respect to alpha.
+
+124
+00:05:32,340 --> 00:05:33,810
+It's just x of t.
+
+125
+00:05:33,810 --> 00:05:37,830
+So this first line, I have partial L with respect
+
+126
+00:05:37,830 --> 00:05:42,600
+to q times dq d alpha, is just partial
+
+127
+00:05:42,600 --> 00:05:44,520
+of L with respect to q times x.
+
+128
+00:05:44,520 --> 00:05:47,310
+And in the second term, the partial of q
+
+129
+00:05:47,310 --> 00:05:52,140
+dot with respect to alpha, well, q dot is dq/dt.
+
+130
+00:05:52,140 --> 00:05:55,650
+So the partial is just going to be dx/dt.
+
+131
+00:05:55,650 --> 00:05:59,190
+It's going to be the derivative of x with respect to time,
+
+132
+00:05:59,190 --> 00:06:02,400
+times this part is unchanged that's in front.
+
+133
+00:06:02,400 --> 00:06:04,570
+Now let's do an integration by parts.
+
+134
+00:06:04,570 --> 00:06:07,350
+Let's take the second term, integrate by parts,
+
+135
+00:06:07,350 --> 00:06:10,390
+and move the t derivative over to the left-hand side.
+
+136
+00:06:10,390 --> 00:06:12,930
+So instead of t acting on x, I'm going
+
+137
+00:06:12,930 --> 00:06:16,170
+to get d by dt acting on the first term.
+
+138
+00:06:16,170 --> 00:06:19,950
+As usual, when I do integration by parts, I have a minus sign.
+
+139
+00:06:19,950 --> 00:06:21,360
+And I have a boundary term I need
+
+140
+00:06:21,360 --> 00:06:24,390
+to consider as well, which has this form-- partial of L
+
+141
+00:06:24,390 --> 00:06:27,090
+with respect q dot times x, evaluated
+
+142
+00:06:27,090 --> 00:06:30,570
+at the end point the integral, t equals big T to t equals 0.
+
+143
+00:06:30,570 --> 00:06:33,240
+Now the boundary term for my integration by parts
+
+144
+00:06:33,240 --> 00:06:36,030
+vanishes, because x vanishes when t
+
+145
+00:06:36,030 --> 00:06:37,560
+is that either the end points.
+
+146
+00:06:37,560 --> 00:06:39,450
+That's the condition I add here.
+
+147
+00:06:39,450 --> 00:06:42,450
+And now this term the remains has
+
+148
+00:06:42,450 --> 00:06:47,500
+the quantity in square brackets, all multiplied times x of t.
+
+149
+00:06:47,500 --> 00:06:51,190
+Integrated dt is equal to 0, and in this equation,
+
+150
+00:06:51,190 --> 00:06:54,410
+has to hold for any function, x of t
+
+151
+00:06:54,410 --> 00:06:56,590
+that you might choose to consider.
+
+152
+00:06:56,590 --> 00:07:00,460
+Well, the only way that can be true for any x of t
+
+153
+00:07:00,460 --> 00:07:03,370
+is if the quantity of square brackets vanishes.
+
+154
+00:07:03,370 --> 00:07:04,870
+And that gives us what are called
+
+155
+00:07:04,870 --> 00:07:08,830
+Euler-Lagrange equations.
+
+156
+00:07:08,830 --> 00:07:12,840
+So the Euler Lagrange equations satisfy the condition
+
+157
+00:07:12,840 --> 00:07:18,540
+that the action is stationary when q is such
+
+158
+00:07:18,540 --> 00:07:21,480
+that it satisfies this equation-- partial of L
+
+159
+00:07:21,480 --> 00:07:25,350
+with respect to q minus the derivative with respect
+
+160
+00:07:25,350 --> 00:07:27,860
+to time, the total derivative with respect
+
+161
+00:07:27,860 --> 00:07:29,610
+to time with the partial of L with respect
+
+162
+00:07:29,610 --> 00:07:31,525
+to q dot needs to vanish.
+
+163
+00:07:31,525 --> 00:07:33,150
+And this is well known to people who've
+
+164
+00:07:33,150 --> 00:07:34,980
+studied classical mechanics.
+
+165
+00:07:34,980 --> 00:07:37,140
+For example, this gives a different way
+
+166
+00:07:37,140 --> 00:07:40,320
+of formulating Newton's second law, F equals Ma,
+
+167
+00:07:40,320 --> 00:07:43,080
+force is equal to mass times acceleration.
+
+168
+00:07:43,080 --> 00:07:44,830
+Here's how we do it.
+
+169
+00:07:44,830 --> 00:07:47,070
+We take a look at constructing Lagrange here.
+
+170
+00:07:47,070 --> 00:07:51,360
+We think of q as representing the position of a particle,
+
+171
+00:07:51,360 --> 00:07:53,940
+q dot is representing its velocity.
+
+172
+00:07:53,940 --> 00:07:56,460
+And q double dot, the second derivative with respect
+
+173
+00:07:56,460 --> 00:07:59,370
+to time, as representing the acceleration.
+
+174
+00:07:59,370 --> 00:08:05,150
+Here is our functional form for L. It looks like the energy.
+
+175
+00:08:05,150 --> 00:08:06,890
+We'll that V be the potential energy.
+
+176
+00:08:06,890 --> 00:08:09,770
+But notice, this term looks like kinetic energy--
+
+177
+00:08:09,770 --> 00:08:14,180
+1/2 m q dot squared, minus some function of q
+
+178
+00:08:14,180 --> 00:08:15,470
+that's independent of q dot.
+
+179
+00:08:15,470 --> 00:08:18,680
+If this were the energy, there would be a plus sign here.
+
+180
+00:08:18,680 --> 00:08:20,003
+And it has a minus sign.
+
+181
+00:08:20,003 --> 00:08:21,920
+In any event, if you're not familiar with this
+
+182
+00:08:21,920 --> 00:08:23,990
+in classical mechanics, just take it
+
+183
+00:08:23,990 --> 00:08:26,390
+as a particular functional example.
+
+184
+00:08:26,390 --> 00:08:27,770
+Let's apply the rules.
+
+185
+00:08:27,770 --> 00:08:32,007
+Partial of L with respect to q dot is going to be just--
+
+186
+00:08:32,007 --> 00:08:33,799
+this is the only term with the q dot in it.
+
+187
+00:08:33,799 --> 00:08:35,480
+It's going to be m times q dot.
+
+188
+00:08:35,480 --> 00:08:38,539
+Partial of L with respect to q it's
+
+189
+00:08:38,539 --> 00:08:40,880
+going to give me minus derivative of V
+
+190
+00:08:40,880 --> 00:08:43,219
+with respect to q.
+
+191
+00:08:43,219 --> 00:08:45,230
+And that tells us, when I substitute it
+
+192
+00:08:45,230 --> 00:08:48,890
+into this equation, that m q dot, which is mass times
+
+193
+00:08:48,890 --> 00:08:52,430
+acceleration, is minus the prime of q,
+
+194
+00:08:52,430 --> 00:08:55,730
+which in classical mechanics, is equal to the force.
+
+195
+00:08:55,730 --> 00:08:59,375
+Specifically, if we take a problem where V of q
+
+196
+00:08:59,375 --> 00:09:02,630
+is quadratic in q, this represents a harmonic
+
+197
+00:09:02,630 --> 00:09:03,320
+oscillator.
+
+198
+00:09:03,320 --> 00:09:06,080
+We have that the force is minus kq.
+
+199
+00:09:06,080 --> 00:09:08,000
+It represents restoring force.
+
+200
+00:09:08,000 --> 00:09:10,130
+If q gets large and positive, the force
+
+201
+00:09:10,130 --> 00:09:11,810
+is in the negative direction.
+
+202
+00:09:11,810 --> 00:09:14,960
+And I'm going to get this very concrete differential equation
+
+203
+00:09:14,960 --> 00:09:18,740
+and q double dot minus kq.
+
+204
+00:09:18,740 --> 00:09:22,130
+And the solutions to this are sines and cosines,
+
+205
+00:09:22,130 --> 00:09:25,550
+which you can check, satisfy the equation, with the frequency
+
+206
+00:09:25,550 --> 00:09:29,240
+given by square root of k/m where k and m are
+
+207
+00:09:29,240 --> 00:09:30,680
+primary for the problem.
+
+208
+00:09:30,680 --> 00:09:33,410
+K showed up in the potential, V. M showed up
+
+209
+00:09:33,410 --> 00:09:36,720
+in our original Lagrange function here, as m.
+
+210
+00:09:36,720 --> 00:09:38,420
+So that's an example as to how we
+
+211
+00:09:38,420 --> 00:09:42,450
+can get a differential equation out of this general principle.
+
+212
+00:09:42,450 --> 00:09:44,780
+But what it tells us is not just this
+
+213
+00:09:44,780 --> 00:09:46,940
+is how a harmonic oscillator behaves.
+
+214
+00:09:46,940 --> 00:09:50,720
+It tells us that of all possible things that a harmonic
+
+215
+00:09:50,720 --> 00:09:54,320
+oscillator could do, not the ones that actually does,
+
+216
+00:09:54,320 --> 00:09:57,155
+all the things that could do, the correct solution--
+
+217
+00:09:57,155 --> 00:10:00,050
+the one the Newton tells us is the right solution--
+
+218
+00:10:00,050 --> 00:10:03,650
+also happens to be the one that minimizes
+
+219
+00:10:03,650 --> 00:10:06,210
+this interesting integral here.
+
+220
+00:10:06,210 --> 00:10:08,660
+So it turns out that while Newton's equations
+
+221
+00:10:08,660 --> 00:10:12,140
+are pretty good, that we can generalize this principle
+
+222
+00:10:12,140 --> 00:10:15,170
+to many, many more problems than the specific differential
+
+223
+00:10:15,170 --> 00:10:17,180
+equations that Newton came up with.
+
+224
+00:10:17,180 --> 00:10:19,900
+
+
+225
+00:10:19,900 --> 00:10:21,578
+Here's another example.
+
+226
+00:10:21,578 --> 00:10:23,495
+This is from the paper from Almgren and Chriss
+
+227
+00:10:23,495 --> 00:10:25,150
+that we'll look at more, which is
+
+228
+00:10:25,150 --> 00:10:28,450
+about optimal ways of dividing a trading solution.
+
+229
+00:10:28,450 --> 00:10:32,500
+Their key idea is to take a look at penalizing both trading
+
+230
+00:10:32,500 --> 00:10:34,858
+fast, because of the high market impact that
+
+231
+00:10:34,858 --> 00:10:36,400
+would be incurred if you try to trade
+
+232
+00:10:36,400 --> 00:10:40,090
+a large block of shares too quickly, and inventory risk--
+
+233
+00:10:40,090 --> 00:10:42,970
+that is if you hang on to your shares for too long,
+
+234
+00:10:42,970 --> 00:10:45,860
+there's market risk that they might change in value.
+
+235
+00:10:45,860 --> 00:10:48,100
+Now in their solution, they end up
+
+236
+00:10:48,100 --> 00:10:49,660
+with something which is discrete.
+
+237
+00:10:49,660 --> 00:10:51,830
+They do a multi-period problem.
+
+238
+00:10:51,830 --> 00:10:54,850
+But if we were to take the continuous time limit,
+
+239
+00:10:54,850 --> 00:10:56,740
+we could replace their discrete sum
+
+240
+00:10:56,740 --> 00:10:59,860
+by the integral that would have this general form, which
+
+241
+00:10:59,860 --> 00:11:03,100
+looks an awful lot like the harmonic oscillators solution
+
+242
+00:11:03,100 --> 00:11:05,660
+we just saw that looks like Newton's equations.
+
+243
+00:11:05,660 --> 00:11:08,620
+So they have a term in delta q, which represents
+
+244
+00:11:08,620 --> 00:11:10,600
+the change in the quantity.
+
+245
+00:11:10,600 --> 00:11:13,240
+It represents the speed of trading.
+
+246
+00:11:13,240 --> 00:11:16,510
+And they have a term that ends on q squared, which depends
+
+247
+00:11:16,510 --> 00:11:18,290
+on the quantity that's left.
+
+248
+00:11:18,290 --> 00:11:20,980
+So we see we have an action term in this interval.
+
+249
+00:11:20,980 --> 00:11:23,320
+We have something that depends on q dot squared,
+
+250
+00:11:23,320 --> 00:11:25,450
+something that depends on q squared,
+
+251
+00:11:25,450 --> 00:11:28,570
+just as we did in our example from Newtonian mechanics.
+
+252
+00:11:28,570 --> 00:11:31,690
+So it's very similar, except that the harmonic oscillator
+
+253
+00:11:31,690 --> 00:11:32,960
+would have the wrong sign.
+
+254
+00:11:32,960 --> 00:11:34,940
+This would be a repulsive force.
+
+255
+00:11:34,940 --> 00:11:36,940
+So it wouldn't be a very sensible for a harmonic
+
+256
+00:11:36,940 --> 00:11:37,880
+oscillator.
+
+257
+00:11:37,880 --> 00:11:40,700
+But the mathematics goes through almost the same way.
+
+258
+00:11:40,700 --> 00:11:43,120
+The difference is that the solutions instead
+
+259
+00:11:43,120 --> 00:11:46,480
+of being sines and cosines, are exponential with a plus
+
+260
+00:11:46,480 --> 00:11:47,620
+or minus sign.
+
+261
+00:11:47,620 --> 00:11:50,360
+And when we impose boundary conditions,
+
+262
+00:11:50,360 --> 00:11:53,230
+we find a particular linear combination of them
+
+263
+00:11:53,230 --> 00:11:56,860
+that involves a plus sign an a minus sign in this form that
+
+264
+00:11:56,860 --> 00:11:59,560
+involves hyperbolic functions.
+
+265
+00:11:59,560 --> 00:12:01,510
+But it's basically a linear combination
+
+266
+00:12:01,510 --> 00:12:02,960
+of the two solutions.
+
+267
+00:12:02,960 --> 00:12:07,210
+So in this picture, we have a problem
+
+268
+00:12:07,210 --> 00:12:11,110
+that was formulated initially as a recursive problem, very
+
+269
+00:12:11,110 --> 00:12:14,780
+discretely, about what happens over small periods of time.
+
+270
+00:12:14,780 --> 00:12:17,740
+But we have a trade-off between the desire
+
+271
+00:12:17,740 --> 00:12:23,290
+to minimize risk and improve speed at a short distance,
+
+272
+00:12:23,290 --> 00:12:27,010
+with a global problem where we need an optimal global solution
+
+273
+00:12:27,010 --> 00:12:29,950
+that might not necessarily be an iterated set
+
+274
+00:12:29,950 --> 00:12:32,470
+of myopic, short-term solutions.
+
+275
+00:12:32,470 --> 00:12:35,000
+And the calculus of variations tells us how to do that.
+
+276
+00:12:35,000 --> 00:12:39,170
+It says solve the entire trajectory all at once.
+
+277
+00:12:39,170 --> 00:12:43,260
+And these are examples of what those solutions look like.
+

@@ -1,0 +1,159 @@
+
+PROFESSOR: So we take a look at the minimum cost solution.
+And we find in this case, that we
+do get a solution for dividing things
+into equal cost for the moment.
+But hang on, we'll generalize this in a bit.
+So for that very special set where all we want to do
+is to minimize the expected cost,
+we do have a solution where the trade we with each size
+is 1 Nth of the total fraction.
+So this is a linear trajectory that minimizes the squares that
+we had, that sum of delta Q's.
+And we can substitute it in.
+We get an expression for what the expected cost is
+under this program that minimizes the total cost.
+The variance of this though, can be very big.
+So given our program for equal size,
+we get a very large variance.
+And again, this variance is going
+to persist even in the limit where N goes to infinity
+and we have a large number of trading periods.
+As N goes to infinity, we've got a finite cost,
+which now is linear in Q. And we have a variance,
+which is quadratic in Q. Excuse me,
+the expected cost is determined it's linear and quadratic in Q
+, and a finite variance, even as we spread our trades out
+infinitely far.
+Suppose we wanted a minimum variance strategy.
+Well, we'd dump all our shares at once.
+We'd incur an immediate cost.
+And here, our variances 0.
+Our market impact is going to be very big. .
+And our associated cost is very large.
+Suppose we like an optimal strategy
+that balances those two.
+Suppose we'd like to include some compensation
+and multi-function so that a risk-averse trader is not just
+going to be indifferent to the trading speed.
+So let's make it so that it's advantageous to not
+delay an infinitely long amount of time.
+Let's assume that it's not good to allow fluctuations,
+even if they're equally likely to be positive or negative.
+And what we'd like to do is we'd like to have a lower cost,
+but we don't want to let the variance be arbitrarily large.
+So one way we could do that is we
+could introduce utility function of this form.
+It could be the expected cost plus some function,
+some constant lambda, times the variance.
+So we get two special cases--
+the minimum impact response to letting lambda equals 0.
+We want the lowest cost.
+We don't care about the variance.
+Or we have the minimum variance by letting
+lambda go to infinity, and we don't
+care about what the cost is.
+So for intermediate values of lambda,
+we're going to have a one-parameter family
+of optimal trading strategies.
+And those are going to form an efficient trading frontier.
+
+We can solve this in closed form in, the case, linear functions,
+for g and h.
+Let's take a look at the form that those have.
+Our function, U, our utility function
+that we're going to extremize, is
+going to have the form of some constant times delta Q squared
+plus some other constant involving
+the constants of the problem, and proportional to lambda
+times Q squared.
+So we're going to take a minimum with respect to Q
+and set it equal to 0.
+And we have this set of difference equations
+that comes about from the fact that we've
+got these delta Q's here in addition to the q's over here.
+So this is of the form of a second difference equation.
+This is a discrete equation, but it's
+a discrete analog to something that looks like a second order
+differential equation.
+So we've got this general form.
+We'd like to find a functional form
+that solves this recursive equation
+and that satisfies these boundary conditions.
+Well, I'll tell you what it is, and you can substitute it in.
+You can solve for this by taking a look at guesses
+of particular forms or by looking
+at the similar kind of cases that we have
+for differential equations.
+But you can check the solution here,
+which is a linear combination of positive and negative
+exponentials satisfies this second order difference
+equation.
+And it satisfies the boundary conditions.
+So when t goes to 0, this is 0.
+When t goes to big T, this satisfies the condition
+that we have our property boundary condition.
+So because we're selling, when i is equal to 0,
+we've got N minus i is equal to N
+and delta t is equal to big T, the numerator and denominator
+are equal and we get Q.
+And we get to our terminal value,
+i increases linearly here.
+But it's not a linear function.
+It's inside this parabolic sine.
+But when we do approach not continuously,
+but we approach gradually, the terminal value,
+where the final trading value at the end, quantity
+that we have left at the final value
+is going to be 0, where i is equal to N and then
+the numerator is equal to 0.
+I've redefined the parameters because we
+had this eta hat that from one of our trading functions
+and lambda, which is our preference parameter.
+And I've wrapped those all up into a single new parameter
+called kappa.
+It's defined by this equation.
+So kappa is defined through this equation,
+but you can see it's just a constant here.
+And qualitatively, we can ask what
+this trajectory looks like.
+So is it a set of linear slices?
+Do we just end up dividing our trades equally?
+The answer is no.
+We end up with something that looks a little bit differently.
+The trajectories are defined for each period in each lambda.
+And depending on whether we have positive or negative risk
+aversion, in this case, depending on the values
+that we have for lambda, if we have positive risk aversion,
+then we'll find this lower curve,
+something that looks like this.
+That cinch function tells us that
+instead of a risk-neutral idea, where
+we would have equal trading strategies,
+we want to start out big and then gradually decrease
+our trade size.
+So it turns out that there's a particular shape to this curve.
+It does satisfy this endpoint.
+So we end up with 0 at this point in time.
+And the speed of trading depends on the amount of risk aversion
+that's in the value of lambda.
+So for a given set of parameters and a given
+set of risk preferences, we solve an optimization problem.
+It gives us how we should trade over time in order
+to balance the market impact that lowers
+or that it increases our cost of trading.
+And the balance is not against the risk, the uncertainty
+of doing things for a longer period of time
+if we were to stretch things out to try
+to minimize our market impact.
+Finally, because this is a one-parameter family of curves,
+we can take a look at this.
+Almgren and Chriss plotted this is an efficient frontier
+for trading.
+But we can say as a function of our parameter lambda,
+where do we want to be?
+The naive strategy at B, the equal slicing strategy,
+has the lowest total cost.
+But the efficient frontier is this one-parameter family
+of strategies where there's an optimal strategy
+for each value of lambda that you might choose to consider.

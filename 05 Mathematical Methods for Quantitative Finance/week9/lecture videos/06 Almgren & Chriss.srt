@@ -1,0 +1,1644 @@
+0
+00:00:00,000 --> 00:00:01,110
+
+
+1
+00:00:01,110 --> 00:00:03,870
+PROFESSOR: Techniques for finding optimal policies can
+
+2
+00:00:03,870 --> 00:00:07,770
+be broadly applied for finding optimal strategies
+
+3
+00:00:07,770 --> 00:00:10,120
+in a wide variety of settings.
+
+4
+00:00:10,120 --> 00:00:13,680
+The space of optimal trading strategies
+
+5
+00:00:13,680 --> 00:00:18,060
+looks at how we might devise trading in a world
+
+6
+00:00:18,060 --> 00:00:21,330
+where there's some uncertainty about the environment, where
+
+7
+00:00:21,330 --> 00:00:24,090
+there may be adversaries on the other side who are trying
+
+8
+00:00:24,090 --> 00:00:27,930
+to thwart our optimal methods, and where
+
+9
+00:00:27,930 --> 00:00:30,990
+we may try to define an optimal policy
+
+10
+00:00:30,990 --> 00:00:33,000
+subject to a number of things that are
+
+11
+00:00:33,000 --> 00:00:34,960
+unknown about the environment.
+
+12
+00:00:34,960 --> 00:00:38,820
+So what we'd like to do is come up with an optimal policy.
+
+13
+00:00:38,820 --> 00:00:41,610
+But these models are also helpful for exploring
+
+14
+00:00:41,610 --> 00:00:44,310
+how marketplaces work and how there's
+
+15
+00:00:44,310 --> 00:00:48,570
+an interplay between, possibly, different kinds of agents,
+
+16
+00:00:48,570 --> 00:00:50,340
+different kinds of actors who might have
+
+17
+00:00:50,340 --> 00:00:53,310
+different sets of preferences, different information sets,
+
+18
+00:00:53,310 --> 00:00:54,180
+and so on.
+
+19
+00:00:54,180 --> 00:00:56,580
+So we can use strategic models to take
+
+20
+00:00:56,580 --> 00:00:59,160
+a look at market structure to look
+
+21
+00:00:59,160 --> 00:01:02,070
+at even features of developing models for market
+
+22
+00:01:02,070 --> 00:01:03,210
+microstructure.
+
+23
+00:01:03,210 --> 00:01:04,530
+Where does liquidity come?
+
+24
+00:01:04,530 --> 00:01:07,120
+From where do bid offer spreads come from?
+
+25
+00:01:07,120 --> 00:01:11,070
+How do prices actually come to incorporate information?
+
+26
+00:01:11,070 --> 00:01:13,950
+When it comes to practical strategies for a trader
+
+27
+00:01:13,950 --> 00:01:16,860
+or portfolio manager, the starting point
+
+28
+00:01:16,860 --> 00:01:18,900
+is to think of what your objective is.
+
+29
+00:01:18,900 --> 00:01:20,880
+What is it you would like to optimize?
+
+30
+00:01:20,880 --> 00:01:22,890
+Do you want to minimize your costs?
+
+31
+00:01:22,890 --> 00:01:28,770
+Maybe if you're a trader acting as an agent for a client,
+
+32
+00:01:28,770 --> 00:01:30,390
+that should be your objective.
+
+33
+00:01:30,390 --> 00:01:32,460
+If you're trading on your own account,
+
+34
+00:01:32,460 --> 00:01:34,000
+you might have a concern where you
+
+35
+00:01:34,000 --> 00:01:35,740
+would like to minimize your costs,
+
+36
+00:01:35,740 --> 00:01:38,580
+but you also don't want to give up opportunity costs if you're
+
+37
+00:01:38,580 --> 00:01:41,280
+trading for a reason, and you might have a trading signal
+
+38
+00:01:41,280 --> 00:01:42,510
+that decay, for some reason.
+
+39
+00:01:42,510 --> 00:01:44,750
+Do you want to minimize your risk?
+
+40
+00:01:44,750 --> 00:01:46,710
+Do you want to maximize your utility?
+
+41
+00:01:46,710 --> 00:01:49,230
+What are the constraints that you're subject to?
+
+42
+00:01:49,230 --> 00:01:52,800
+So we need to think about what it is we want to extremize,
+
+43
+00:01:52,800 --> 00:01:56,040
+and then we want to define policy variables we have
+
+44
+00:01:56,040 --> 00:01:58,500
+under our control, state variables
+
+45
+00:01:58,500 --> 00:02:01,170
+that we need to monitor that would affect our decision,
+
+46
+00:02:01,170 --> 00:02:04,170
+and we need models for how the state variables would evolve
+
+47
+00:02:04,170 --> 00:02:08,280
+in time on their own, absent our participation, just
+
+48
+00:02:08,280 --> 00:02:12,030
+in the general environment and how they respond to the control
+
+49
+00:02:12,030 --> 00:02:13,870
+decisions that we make.
+
+50
+00:02:13,870 --> 00:02:16,380
+So one common way to approach this
+
+51
+00:02:16,380 --> 00:02:20,850
+is to look at minimizing the cost for a given level of risk
+
+52
+00:02:20,850 --> 00:02:24,390
+subject to, perhaps, the expected utility function that
+
+53
+00:02:24,390 --> 00:02:26,898
+reflects what our risk preferences are so
+
+54
+00:02:26,898 --> 00:02:28,440
+that it could be a general class that
+
+55
+00:02:28,440 --> 00:02:30,330
+might be different for different people
+
+56
+00:02:30,330 --> 00:02:33,700
+with different preferences.
+
+57
+00:02:33,700 --> 00:02:35,280
+So let's consider this case, where
+
+58
+00:02:35,280 --> 00:02:39,105
+we want to buy or sell a block of shares for little quantity q
+
+59
+00:02:39,105 --> 00:02:41,540
+and at time t.
+
+60
+00:02:41,540 --> 00:02:46,070
+Let's divide the total trade horizon into n sub-periods.
+
+61
+00:02:46,070 --> 00:02:49,430
+Let's allow it to be invisible, possibly without the t
+
+62
+00:02:49,430 --> 00:02:50,210
+going to 0.
+
+63
+00:02:50,210 --> 00:02:53,060
+But let's think of this as being finite because we typically
+
+64
+00:02:53,060 --> 00:02:55,760
+are trading in finite periods.
+
+65
+00:02:55,760 --> 00:02:56,818
+Trades are discrete.
+
+66
+00:02:56,818 --> 00:02:58,610
+The time periods don't need to be discrete.
+
+67
+00:02:58,610 --> 00:03:01,220
+But let's imagine that we're at least re-evaluating
+
+68
+00:03:01,220 --> 00:03:04,460
+the possibility of trading at regular intervals delta t.
+
+69
+00:03:04,460 --> 00:03:06,650
+We can always choose not to trade.
+
+70
+00:03:06,650 --> 00:03:09,560
+Trade quantity in a given period could be 0.
+
+71
+00:03:09,560 --> 00:03:13,850
+But the available trading times we'll denote by t sub k,
+
+72
+00:03:13,850 --> 00:03:16,790
+which are going to be at k delta t in clock time,
+
+73
+00:03:16,790 --> 00:03:19,870
+where k will go from 0 up through n.
+
+74
+00:03:19,870 --> 00:03:24,400
+Let's let q sub k be the amount that we hold at time k.
+
+75
+00:03:24,400 --> 00:03:25,990
+And we'll have boundary conditions
+
+76
+00:03:25,990 --> 00:03:28,360
+that-- let's say that we're selling a block of shares
+
+77
+00:03:28,360 --> 00:03:29,200
+this time.
+
+78
+00:03:29,200 --> 00:03:32,890
+And in this case, we're going to start with initial value big Q.
+
+79
+00:03:32,890 --> 00:03:34,450
+And we're going to decrement until we
+
+80
+00:03:34,450 --> 00:03:39,370
+get to a terminal value in our final period at-- of 0.
+
+81
+00:03:39,370 --> 00:03:42,640
+So the amount that we trade in a given period of time
+
+82
+00:03:42,640 --> 00:03:44,410
+is going to be delta qk.
+
+83
+00:03:44,410 --> 00:03:47,050
+It's just going to be the change in shares between one
+
+84
+00:03:47,050 --> 00:03:48,470
+period and the next.
+
+85
+00:03:48,470 --> 00:03:50,170
+And that's where we get to decide.
+
+86
+00:03:50,170 --> 00:03:52,870
+So part of our strategy, part of our policy,
+
+87
+00:03:52,870 --> 00:03:55,780
+part of our optimal solution and program
+
+88
+00:03:55,780 --> 00:03:58,450
+is going to be to determine sequence delta
+
+89
+00:03:58,450 --> 00:04:02,660
+k so that the shares add up to the total number q
+
+90
+00:04:02,660 --> 00:04:05,180
+that we sell over this period of time.
+
+91
+00:04:05,180 --> 00:04:09,700
+So a strategy, a solution, to this optimization problem
+
+92
+00:04:09,700 --> 00:04:15,700
+is find an algorithm that assigns values delta qk based
+
+93
+00:04:15,700 --> 00:04:18,730
+on, at each time stop, the information that's available
+
+94
+00:04:18,730 --> 00:04:20,300
+up to that point in time.
+
+95
+00:04:20,300 --> 00:04:22,900
+So what we need to do is devise a set of rules
+
+96
+00:04:22,900 --> 00:04:24,550
+you could hand off to someone.
+
+97
+00:04:24,550 --> 00:04:26,518
+You don't know what the future prices are.
+
+98
+00:04:26,518 --> 00:04:28,810
+You do have a model for what their stochastic evolution
+
+99
+00:04:28,810 --> 00:04:29,530
+might be.
+
+100
+00:04:29,530 --> 00:04:33,400
+But that way, someone could take your set of instructions.
+
+101
+00:04:33,400 --> 00:04:35,740
+At any point in time, they could say, aha,
+
+102
+00:04:35,740 --> 00:04:37,330
+I've got this many shares left.
+
+103
+00:04:37,330 --> 00:04:39,250
+Here's the price that I observe.
+
+104
+00:04:39,250 --> 00:04:40,420
+What should I do?
+
+105
+00:04:40,420 --> 00:04:42,760
+In the example of Bertsimas and Lo,
+
+106
+00:04:42,760 --> 00:04:45,250
+we saw that, actually, the optimal program
+
+107
+00:04:45,250 --> 00:04:46,780
+didn't depend on the prices.
+
+108
+00:04:46,780 --> 00:04:49,060
+It didn't-- it was the same thing no matter what.
+
+109
+00:04:49,060 --> 00:04:50,920
+It was just due to equal trading.
+
+110
+00:04:50,920 --> 00:04:53,890
+So that was a very stylized example.
+
+111
+00:04:53,890 --> 00:04:56,090
+More generally, it could depend on things
+
+112
+00:04:56,090 --> 00:04:58,900
+that evolve that are not yet known at the beginning,
+
+113
+00:04:58,900 --> 00:05:01,930
+and that's what we want to do when we devise a strategy.
+
+114
+00:05:01,930 --> 00:05:05,190
+
+
+115
+00:05:05,190 --> 00:05:08,070
+So what price process might we use for trading?
+
+116
+00:05:08,070 --> 00:05:10,110
+We're going to look at a specific example.
+
+117
+00:05:10,110 --> 00:05:14,700
+It was developed by Almgren and Chris optimal trading policies.
+
+118
+00:05:14,700 --> 00:05:16,550
+So let's take a look at their assumptions.
+
+119
+00:05:16,550 --> 00:05:19,910
+And I encourage you to take a look at their original paper.
+
+120
+00:05:19,910 --> 00:05:24,170
+So for the drift rate, the--
+
+121
+00:05:24,170 --> 00:05:26,240
+during the price period, we're going
+
+122
+00:05:26,240 --> 00:05:28,580
+to think about this as a short-term trading
+
+123
+00:05:28,580 --> 00:05:30,350
+example, where the drift rate is going
+
+124
+00:05:30,350 --> 00:05:34,200
+to be taken to 0 as an initial approximation.
+
+125
+00:05:34,200 --> 00:05:36,740
+So we're not going to include the opportunity costs.
+
+126
+00:05:36,740 --> 00:05:38,390
+Those could be added later.
+
+127
+00:05:38,390 --> 00:05:40,380
+That might be a reasonable example.
+
+128
+00:05:40,380 --> 00:05:41,270
+It might not.
+
+129
+00:05:41,270 --> 00:05:43,920
+But we're going to do this to simplify the mathematics.
+
+130
+00:05:43,920 --> 00:05:46,430
+So one immediate specialization we're making
+
+131
+00:05:46,430 --> 00:05:49,040
+is to have no draft, just randomness.
+
+132
+00:05:49,040 --> 00:05:51,240
+And this is an obvious generalization
+
+133
+00:05:51,240 --> 00:05:55,990
+that you can make and redo the derivation to take a look at.
+
+134
+00:05:55,990 --> 00:05:58,900
+We're going to let the price process diffuse so
+
+135
+00:05:58,900 --> 00:06:00,550
+that there will be randomness.
+
+136
+00:06:00,550 --> 00:06:02,830
+And we're going to allow there to be market impact so
+
+137
+00:06:02,830 --> 00:06:05,290
+that our trading affects the final price.
+
+138
+00:06:05,290 --> 00:06:08,440
+So really, if we're setting up typical elements
+
+139
+00:06:08,440 --> 00:06:11,560
+of an optimization problem, we like
+
+140
+00:06:11,560 --> 00:06:12,820
+to get the realistic details.
+
+141
+00:06:12,820 --> 00:06:14,830
+But the minimum ingredients that we need
+
+142
+00:06:14,830 --> 00:06:17,530
+are two things that we want to minimize,
+
+143
+00:06:17,530 --> 00:06:19,790
+which are at odds with each other.
+
+144
+00:06:19,790 --> 00:06:21,590
+That's the basic feature we have.
+
+145
+00:06:21,590 --> 00:06:23,960
+So in this case, we're not minimizing the opportunity
+
+146
+00:06:23,960 --> 00:06:24,460
+cost.
+
+147
+00:06:24,460 --> 00:06:26,320
+We're leaving out that one leg.
+
+148
+00:06:26,320 --> 00:06:28,690
+But we do have two other legs that will give us
+
+149
+00:06:28,690 --> 00:06:30,110
+a non-trivial problem.
+
+150
+00:06:30,110 --> 00:06:32,360
+One of them is that we want to minimize risk.
+
+151
+00:06:32,360 --> 00:06:35,140
+The other is we want to minimize cost.
+
+152
+00:06:35,140 --> 00:06:37,370
+And those two are going to conflict with each other.
+
+153
+00:06:37,370 --> 00:06:40,210
+So we're going to assume that there is a speed of trading
+
+154
+00:06:40,210 --> 00:06:41,290
+that we could define.
+
+155
+00:06:41,290 --> 00:06:44,440
+Let's think of a variable delta q over delta t.
+
+156
+00:06:44,440 --> 00:06:47,800
+And we're going to assume that our market impact is a function
+
+157
+00:06:47,800 --> 00:06:49,310
+of the trading speed.
+
+158
+00:06:49,310 --> 00:06:52,670
+The more we trade in a given time period,
+
+159
+00:06:52,670 --> 00:06:54,830
+the higher the market impact.
+
+160
+00:06:54,830 --> 00:06:58,360
+We're also going to allow for a two-part market impact model.
+
+161
+00:06:58,360 --> 00:07:00,460
+We're going to think of there being permanent,
+
+162
+00:07:00,460 --> 00:07:02,980
+as well as temporary, market impact.
+
+163
+00:07:02,980 --> 00:07:06,310
+A permanent impact affects all future trades.
+
+164
+00:07:06,310 --> 00:07:09,070
+And a temporary impact affects the price
+
+165
+00:07:09,070 --> 00:07:10,870
+that you get in that period.
+
+166
+00:07:10,870 --> 00:07:13,540
+You might think of it as being due to order book structure,
+
+167
+00:07:13,540 --> 00:07:16,300
+due to the fact that you need to cross the bid offer spread
+
+168
+00:07:16,300 --> 00:07:19,150
+and go deeper in the order book than the initial price.
+
+169
+00:07:19,150 --> 00:07:21,400
+But it won't affect the next trading period
+
+170
+00:07:21,400 --> 00:07:23,810
+because liquidity might be replenished.
+
+171
+00:07:23,810 --> 00:07:25,600
+So there are two possible things.
+
+172
+00:07:25,600 --> 00:07:27,700
+Obviously, you can specialize, where you set
+
+173
+00:07:27,700 --> 00:07:29,670
+one or the other of these to 0.
+
+174
+00:07:29,670 --> 00:07:32,530
+But let's include a two-part model market impact.
+
+175
+00:07:32,530 --> 00:07:35,420
+
+
+176
+00:07:35,420 --> 00:07:40,300
+So the market impact shows up in the pricing evolution
+
+177
+00:07:40,300 --> 00:07:42,290
+with a model that looks like this.
+
+178
+00:07:42,290 --> 00:07:44,710
+Let's assume that the price in one period
+
+179
+00:07:44,710 --> 00:07:48,470
+is given by the price in another period plus two components.
+
+180
+00:07:48,470 --> 00:07:50,600
+One of them is a random movement.
+
+181
+00:07:50,600 --> 00:07:53,200
+So zk is going to be a random variable.
+
+182
+00:07:53,200 --> 00:07:56,140
+Sigma is going to be the volatility associated
+
+183
+00:07:56,140 --> 00:07:58,780
+with the change in delta square root of delta t--
+
+184
+00:07:58,780 --> 00:08:02,740
+so what we'd expect for sigma square root of delta t--
+
+185
+00:08:02,740 --> 00:08:05,470
+to be the size of the shock that we would get
+
+186
+00:08:05,470 --> 00:08:07,960
+during a time period delta t.
+
+187
+00:08:07,960 --> 00:08:10,505
+And that's the diffusive part.
+
+188
+00:08:10,505 --> 00:08:12,880
+And we're going to assume that we have a permanent market
+
+189
+00:08:12,880 --> 00:08:15,360
+impact that's some function g.
+
+190
+00:08:15,360 --> 00:08:19,000
+And our assumption is it only depends on the rate of trading.
+
+191
+00:08:19,000 --> 00:08:21,670
+It doesn't necessarily depend on the number of shares
+
+192
+00:08:21,670 --> 00:08:23,650
+that we have in inventory because that's not
+
+193
+00:08:23,650 --> 00:08:24,850
+known by the market.
+
+194
+00:08:24,850 --> 00:08:28,480
+The amount that we push into the market in a given time period
+
+195
+00:08:28,480 --> 00:08:30,760
+will be seen by the market.
+
+196
+00:08:30,760 --> 00:08:32,650
+Those are the shares that we expose.
+
+197
+00:08:32,650 --> 00:08:35,110
+And those might realistically be modeled
+
+198
+00:08:35,110 --> 00:08:37,030
+as affecting future periods.
+
+199
+00:08:37,030 --> 00:08:39,520
+And the impact that we have is going
+
+200
+00:08:39,520 --> 00:08:42,280
+to be some function that depends on the rate at which we're
+
+201
+00:08:42,280 --> 00:08:45,740
+trading times the size of the time period
+
+202
+00:08:45,740 --> 00:08:48,550
+if we have the same rate over a longer time interval.
+
+203
+00:08:48,550 --> 00:08:51,070
+We're going to have a larger market impact.
+
+204
+00:08:51,070 --> 00:08:52,660
+And we'll also include that there
+
+205
+00:08:52,660 --> 00:08:56,080
+might be a temporary market impact that just affects
+
+206
+00:08:56,080 --> 00:08:59,410
+the price during a particular period that affects
+
+207
+00:08:59,410 --> 00:09:02,710
+our execution costs for one set of trades,
+
+208
+00:09:02,710 --> 00:09:05,220
+but not for the subsequent time periods.
+
+209
+00:09:05,220 --> 00:09:08,800
+So we have g represents a function of arbitrary form.
+
+210
+00:09:08,800 --> 00:09:11,600
+We'll pick some examples so we can solve this later on.
+
+211
+00:09:11,600 --> 00:09:13,810
+But g represents permanent market impact.
+
+212
+00:09:13,810 --> 00:09:16,960
+h represents temporary market impact
+
+213
+00:09:16,960 --> 00:09:20,620
+that we might have for the short term.
+
+214
+00:09:20,620 --> 00:09:23,160
+So we like to look at the total trading cost.
+
+215
+00:09:23,160 --> 00:09:25,710
+And obviously, we'd like to minimize
+
+216
+00:09:25,710 --> 00:09:29,640
+what we lose relative to a frictionless set of trading.
+
+217
+00:09:29,640 --> 00:09:31,110
+So in the case where we're selling,
+
+218
+00:09:31,110 --> 00:09:32,910
+we'd like to maximize the cost.
+
+219
+00:09:32,910 --> 00:09:34,410
+And we can think of what's sometimes
+
+220
+00:09:34,410 --> 00:09:36,720
+called the implementation shortfall as being
+
+221
+00:09:36,720 --> 00:09:39,690
+the difference between a frictionless trade
+
+222
+00:09:39,690 --> 00:09:41,850
+and the real-world frictions where we're always
+
+223
+00:09:41,850 --> 00:09:43,240
+going to lose something.
+
+224
+00:09:43,240 --> 00:09:44,530
+So what do we have?
+
+225
+00:09:44,530 --> 00:09:47,730
+Well, we've got our frictionless price is quantity
+
+226
+00:09:47,730 --> 00:09:49,080
+times the initial price.
+
+227
+00:09:49,080 --> 00:09:51,380
+That's what we'd have if there were no impact at all.
+
+228
+00:09:51,380 --> 00:09:53,340
+We could implement everything all at once.
+
+229
+00:09:53,340 --> 00:09:56,430
+And we're going to have subtracted
+
+230
+00:09:56,430 --> 00:09:59,190
+from that what the actual impact is
+
+231
+00:09:59,190 --> 00:10:03,540
+of the price changes over the trades that we actually do.
+
+232
+00:10:03,540 --> 00:10:06,090
+So if we break this into parts, we
+
+233
+00:10:06,090 --> 00:10:09,210
+have one piece that comes from the diffusivity terms
+
+234
+00:10:09,210 --> 00:10:11,430
+from all of our trades and we have
+
+235
+00:10:11,430 --> 00:10:15,330
+another part that comes from the permanent market impact term.
+
+236
+00:10:15,330 --> 00:10:17,850
+And we're summing this over all periods,
+
+237
+00:10:17,850 --> 00:10:19,770
+with delta q being the quantity that we
+
+238
+00:10:19,770 --> 00:10:24,180
+do in each period times the impact time in each period
+
+239
+00:10:24,180 --> 00:10:30,820
+and the piece that's left over that is non-transient
+
+240
+00:10:30,820 --> 00:10:34,130
+that affects only the parts that are done within each period.
+
+241
+00:10:34,130 --> 00:10:36,280
+So this part here, this final term
+
+242
+00:10:36,280 --> 00:10:40,030
+that's the temporary increase is multiplied by delta q.
+
+243
+00:10:40,030 --> 00:10:42,160
+It's only the change that we have.
+
+244
+00:10:42,160 --> 00:10:46,300
+This part here depends on q, the decreasing balance
+
+245
+00:10:46,300 --> 00:10:50,920
+for the number of shares, even though this term here depends
+
+246
+00:10:50,920 --> 00:10:54,127
+only on the trading velocity.
+
+247
+00:10:54,127 --> 00:10:55,710
+But we've taken something that-- where
+
+248
+00:10:55,710 --> 00:10:58,500
+we have initial variables big Q and P0,
+
+249
+00:10:58,500 --> 00:11:00,840
+initially known price and quantity.
+
+250
+00:11:00,840 --> 00:11:03,880
+We have unknowns, which are the q's and delta q's.
+
+251
+00:11:03,880 --> 00:11:07,170
+And we need to determine-- find the optimal policy.
+
+252
+00:11:07,170 --> 00:11:10,170
+And we've substituted p tilde k, which
+
+253
+00:11:10,170 --> 00:11:12,420
+is the price we receive in each period.
+
+254
+00:11:12,420 --> 00:11:15,540
+And we've expressed it in terms of these other variables, some
+
+255
+00:11:15,540 --> 00:11:19,440
+of which are unknown, including this random variable, z sub
+
+256
+00:11:19,440 --> 00:11:24,330
+k, others of which are functions of the yet to be determined
+
+257
+00:11:24,330 --> 00:11:25,540
+policy.
+
+258
+00:11:25,540 --> 00:11:30,240
+So this is g of delta q and h of delta q.
+
+259
+00:11:30,240 --> 00:11:36,140
+So this is the expression that we'd like to optimize.
+
+260
+00:11:36,140 --> 00:11:38,660
+So implementation shortfall we can think about
+
+261
+00:11:38,660 --> 00:11:40,520
+as something that we measure after we're
+
+262
+00:11:40,520 --> 00:11:41,990
+done with our program--
+
+263
+00:11:41,990 --> 00:11:43,730
+that if we're selling a bunch of shares,
+
+264
+00:11:43,730 --> 00:11:46,850
+our effective final price is less than p0--
+
+265
+00:11:46,850 --> 00:11:48,420
+and we hope to receive.
+
+266
+00:11:48,420 --> 00:11:50,360
+So the final price could actually be less
+
+267
+00:11:50,360 --> 00:11:53,660
+or could be greater due to the randomness of the diffusion.
+
+268
+00:11:53,660 --> 00:11:56,010
+We're not taking that into account here.
+
+269
+00:11:56,010 --> 00:11:58,790
+So let's assume that all the trades are executed.
+
+270
+00:11:58,790 --> 00:12:01,310
+So it's not always the case in markets
+
+271
+00:12:01,310 --> 00:12:05,270
+that, when you send in a quantity--
+
+272
+00:12:05,270 --> 00:12:07,640
+when you observe a price, you send in the quantity
+
+273
+00:12:07,640 --> 00:12:08,450
+that you want.
+
+274
+00:12:08,450 --> 00:12:10,937
+Depending on whether you do market orders or limit orders,
+
+275
+00:12:10,937 --> 00:12:12,770
+you're necessarily going to get the quantity
+
+276
+00:12:12,770 --> 00:12:15,103
+you want at the price you thought you were going to get.
+
+277
+00:12:15,103 --> 00:12:17,840
+But let's assume that all the trades are filled regardless
+
+278
+00:12:17,840 --> 00:12:18,960
+of the price movement.
+
+279
+00:12:18,960 --> 00:12:21,200
+Let's not consider unfulfilled orders.
+
+280
+00:12:21,200 --> 00:12:24,980
+And let's note that before we start trading,
+
+281
+00:12:24,980 --> 00:12:28,110
+the realized effective price is a random variable.
+
+282
+00:12:28,110 --> 00:12:30,560
+So we're going to need to take expectations,
+
+283
+00:12:30,560 --> 00:12:33,750
+and we want to optimize the expectations.
+
+284
+00:12:33,750 --> 00:12:36,800
+So we're going to optimize either the expected cost
+
+285
+00:12:36,800 --> 00:12:40,923
+or the variance or both or maybe some linear combination.
+
+286
+00:12:40,923 --> 00:12:41,715
+So what do we have?
+
+287
+00:12:41,715 --> 00:12:44,810
+Well, let's look at what the expected cost and variance are.
+
+288
+00:12:44,810 --> 00:12:47,720
+The expected cost-- I take the expectation of the previous
+
+289
+00:12:47,720 --> 00:12:50,515
+result. I have the expectation of my random variable
+
+290
+00:12:50,515 --> 00:12:51,715
+in the z's.
+
+291
+00:12:51,715 --> 00:12:53,090
+It's going to drop out because it
+
+292
+00:12:53,090 --> 00:12:55,220
+was arithmetic Brownian motion and 0 mean,
+
+293
+00:12:55,220 --> 00:12:56,760
+and we didn't have a drift term.
+
+294
+00:12:56,760 --> 00:13:01,070
+So the expected cost that we have has these two terms, which
+
+295
+00:13:01,070 --> 00:13:02,570
+are written in terms of my function
+
+296
+00:13:02,570 --> 00:13:05,360
+h and j in terms of the permanent and temporary market
+
+297
+00:13:05,360 --> 00:13:06,260
+impact.
+
+298
+00:13:06,260 --> 00:13:09,120
+And the algebraic structure is a little bit different.
+
+299
+00:13:09,120 --> 00:13:12,020
+We're going to massage those so they have a common form.
+
+300
+00:13:12,020 --> 00:13:17,360
+This has a qk because this depends on the total amount,
+
+301
+00:13:17,360 --> 00:13:19,790
+and this depends on the incremental amount.
+
+302
+00:13:19,790 --> 00:13:21,650
+And then if we compute the variance,
+
+303
+00:13:21,650 --> 00:13:24,170
+the variance does depend on the diffusive term.
+
+304
+00:13:24,170 --> 00:13:26,990
+This expected cost term is independent of sigma
+
+305
+00:13:26,990 --> 00:13:30,410
+because the fluctuations were equally likely to help us out
+
+306
+00:13:30,410 --> 00:13:31,310
+as to hurt us.
+
+307
+00:13:31,310 --> 00:13:34,040
+But the variance absolutely depends on sigma.
+
+308
+00:13:34,040 --> 00:13:35,450
+That will only hurt us.
+
+309
+00:13:35,450 --> 00:13:37,310
+So this depends on sigma squared.
+
+310
+00:13:37,310 --> 00:13:38,910
+And it's a positive quantity.
+
+311
+00:13:38,910 --> 00:13:40,925
+It depends on the sum of the q squareds.
+
+312
+00:13:40,925 --> 00:13:44,520
+
+
+313
+00:13:44,520 --> 00:13:48,180
+To look at a concrete example, let's make some assumptions
+
+314
+00:13:48,180 --> 00:13:50,820
+for the market impact functions.
+
+315
+00:13:50,820 --> 00:13:53,490
+If we take the permanent impact function
+
+316
+00:13:53,490 --> 00:13:55,780
+g to be of linear form--
+
+317
+00:13:55,780 --> 00:13:58,510
+so it's something proportional to the trading speed.
+
+318
+00:13:58,510 --> 00:14:01,710
+Let's call it gamma times v, where v is the trading speed
+
+319
+00:14:01,710 --> 00:14:03,420
+delta q over delta t.
+
+320
+00:14:03,420 --> 00:14:07,140
+We'll find that the final permanent change depends
+
+321
+00:14:07,140 --> 00:14:08,760
+on the total amount that we have, q.
+
+322
+00:14:08,760 --> 00:14:12,360
+And what's going on is that when we have this kind of market
+
+323
+00:14:12,360 --> 00:14:14,580
+impact function, the early trades
+
+324
+00:14:14,580 --> 00:14:17,170
+are going to push down the price on the later trades.
+
+325
+00:14:17,170 --> 00:14:18,210
+So it's permanent.
+
+326
+00:14:18,210 --> 00:14:21,780
+The more we trade early, the more it hurts us later on.
+
+327
+00:14:21,780 --> 00:14:24,060
+If we trade more slowly at the beginning,
+
+328
+00:14:24,060 --> 00:14:26,070
+there's less impact on the later trades,
+
+329
+00:14:26,070 --> 00:14:27,860
+but there will be greater variance.
+
+330
+00:14:27,860 --> 00:14:30,030
+So we're going to need to find an optimal balance
+
+331
+00:14:30,030 --> 00:14:33,220
+between those two features.
+
+332
+00:14:33,220 --> 00:14:35,470
+So there's a bunch of algebra where
+
+333
+00:14:35,470 --> 00:14:39,730
+the contribution from the expected shortfall that
+
+334
+00:14:39,730 --> 00:14:41,630
+comes from the permanent impact function--
+
+335
+00:14:41,630 --> 00:14:45,100
+and with this identity above me, we can simplify some of that.
+
+336
+00:14:45,100 --> 00:14:47,980
+I can rewrite this sum of the delta q's
+
+337
+00:14:47,980 --> 00:14:49,510
+by writing it this way.
+
+338
+00:14:49,510 --> 00:14:53,020
+I can expand it out, expand out this square,
+
+339
+00:14:53,020 --> 00:14:55,630
+regroup some of the terms, and I can pull out
+
+340
+00:14:55,630 --> 00:14:58,480
+an overall factor of the-- from-- this is
+
+341
+00:14:58,480 --> 00:15:00,850
+the sum of squared differences.
+
+342
+00:15:00,850 --> 00:15:04,780
+I can get the total value of q, quantity
+
+343
+00:15:04,780 --> 00:15:08,620
+squared, by completing the square minus another term here
+
+344
+00:15:08,620 --> 00:15:10,480
+that just depends on the differences
+
+345
+00:15:10,480 --> 00:15:12,850
+and shows up here in the second term,
+
+346
+00:15:12,850 --> 00:15:14,860
+where I have q times the differences.
+
+347
+00:15:14,860 --> 00:15:16,870
+And then I can re-express this term
+
+348
+00:15:16,870 --> 00:15:20,440
+in terms of q, which is a constant and something which
+
+349
+00:15:20,440 --> 00:15:24,970
+is quadratic in the trading velocity.
+
+350
+00:15:24,970 --> 00:15:27,990
+
+
+351
+00:15:27,990 --> 00:15:28,790
+What about h?
+
+352
+00:15:28,790 --> 00:15:31,820
+Well, let's let that be linear as well.
+
+353
+00:15:31,820 --> 00:15:34,040
+And the choice chosen by Almgren and Chris
+
+354
+00:15:34,040 --> 00:15:35,330
+is one we can stick with.
+
+355
+00:15:35,330 --> 00:15:37,670
+Let's let there be something that depends on-- maybe
+
+356
+00:15:37,670 --> 00:15:39,240
+on the absolute value.
+
+357
+00:15:39,240 --> 00:15:41,300
+So we'll let it depend on the sign.
+
+358
+00:15:41,300 --> 00:15:43,550
+We're going to-- not going to assume that we ever
+
+359
+00:15:43,550 --> 00:15:45,380
+get helped out by trades.
+
+360
+00:15:45,380 --> 00:15:48,050
+So there's never any positive benefit to trading.
+
+361
+00:15:48,050 --> 00:15:50,870
+If you're a market maker and you are providing liquidity
+
+362
+00:15:50,870 --> 00:15:53,820
+to the markets, then you can make money on your trades.
+
+363
+00:15:53,820 --> 00:15:59,640
+We're going to assume that that's not the case here.
+
+364
+00:15:59,640 --> 00:16:03,650
+So remember that h is going to be multiplied times the trade
+
+365
+00:16:03,650 --> 00:16:05,040
+that we do in a given size.
+
+366
+00:16:05,040 --> 00:16:07,010
+So that's why the constant term--
+
+367
+00:16:07,010 --> 00:16:09,900
+we want to make sure it's going to have the appropriate sign.
+
+368
+00:16:09,900 --> 00:16:13,490
+So it's-- we are going to lose money regardless of whether
+
+369
+00:16:13,490 --> 00:16:14,968
+we're buying or selling.
+
+370
+00:16:14,968 --> 00:16:16,760
+That's why we have the sign function there.
+
+371
+00:16:16,760 --> 00:16:17,968
+And the other term is linear.
+
+372
+00:16:17,968 --> 00:16:19,910
+And it's going to multiply a delta q.
+
+373
+00:16:19,910 --> 00:16:21,710
+So we have that down here, when we
+
+374
+00:16:21,710 --> 00:16:24,770
+substitute in that linear expression in the top.
+
+375
+00:16:24,770 --> 00:16:26,330
+This is just an assumption.
+
+376
+00:16:26,330 --> 00:16:29,060
+Eta and c1 are constant coefficients.
+
+377
+00:16:29,060 --> 00:16:31,490
+And when we substitute that general form,
+
+378
+00:16:31,490 --> 00:16:33,570
+we're going to get something in expression,
+
+379
+00:16:33,570 --> 00:16:35,840
+which is the contribution to the expected cost--
+
+380
+00:16:35,840 --> 00:16:37,880
+is something that depends on the absolute value
+
+381
+00:16:37,880 --> 00:16:39,440
+of the number of shares that we trade
+
+382
+00:16:39,440 --> 00:16:42,220
+and something that's quadratic.
+
+383
+00:16:42,220 --> 00:16:45,660
+So if we combine those terms from the h and the g,
+
+384
+00:16:45,660 --> 00:16:47,550
+from the temporary and the permanent,
+
+385
+00:16:47,550 --> 00:16:50,430
+we find that our expected cost is
+
+386
+00:16:50,430 --> 00:16:54,340
+going to have term that's going to be constant
+
+387
+00:16:54,340 --> 00:16:57,000
+plus a term that's linear with an absolute value
+
+388
+00:16:57,000 --> 00:16:58,890
+plus a term that's quadratic.
+
+389
+00:16:58,890 --> 00:17:01,140
+If all the terms have the same sign,
+
+390
+00:17:01,140 --> 00:17:03,270
+then we can drop the absolute value.
+
+391
+00:17:03,270 --> 00:17:06,430
+That's assuming, as in the little grid example
+
+392
+00:17:06,430 --> 00:17:08,819
+we had, that we're not changing directions--
+
+393
+00:17:08,819 --> 00:17:11,460
+that if we want to sell shares, our strategy is not to buy some
+
+394
+00:17:11,460 --> 00:17:13,290
+back and then resell them.
+
+395
+00:17:13,290 --> 00:17:14,579
+That might be possible.
+
+396
+00:17:14,579 --> 00:17:17,618
+You could imagine a scenario with asymmetric market impact
+
+397
+00:17:17,618 --> 00:17:19,410
+where, if you go in the opposite direction,
+
+398
+00:17:19,410 --> 00:17:22,530
+you fake out the market, induce a price change that's
+
+399
+00:17:22,530 --> 00:17:25,530
+in your favor, and then you turn around on the other side.
+
+400
+00:17:25,530 --> 00:17:28,450
+We're going to assume that the markets don't respond that way
+
+401
+00:17:28,450 --> 00:17:30,990
+and you are not trying to manipulate them in such a way.
+
+402
+00:17:30,990 --> 00:17:33,270
+So we'll remove the absolute value.
+
+403
+00:17:33,270 --> 00:17:35,790
+And then we'll have a term which is--
+
+404
+00:17:35,790 --> 00:17:37,320
+which now simplifies.
+
+405
+00:17:37,320 --> 00:17:39,830
+If all of the delta q's have the same value,
+
+406
+00:17:39,830 --> 00:17:41,220
+then we can sum them up.
+
+407
+00:17:41,220 --> 00:17:44,520
+We get big Q. So we have a constant term in front.
+
+408
+00:17:44,520 --> 00:17:46,650
+We've got some parameter here whose sign
+
+409
+00:17:46,650 --> 00:17:49,470
+is going to depend on the chosen parameters in the problem.
+
+410
+00:17:49,470 --> 00:17:53,210
+And we've got something which is quadratic in delta q.
+

@@ -1,0 +1,411 @@
+
+PROFESSOR: Techniques for finding optimal policies can
+be broadly applied for finding optimal strategies
+in a wide variety of settings.
+The space of optimal trading strategies
+looks at how we might devise trading in a world
+where there's some uncertainty about the environment, where
+there may be adversaries on the other side who are trying
+to thwart our optimal methods, and where
+we may try to define an optimal policy
+subject to a number of things that are
+unknown about the environment.
+So what we'd like to do is come up with an optimal policy.
+But these models are also helpful for exploring
+how marketplaces work and how there's
+an interplay between, possibly, different kinds of agents,
+different kinds of actors who might have
+different sets of preferences, different information sets,
+and so on.
+So we can use strategic models to take
+a look at market structure to look
+at even features of developing models for market
+microstructure.
+Where does liquidity come?
+From where do bid offer spreads come from?
+How do prices actually come to incorporate information?
+When it comes to practical strategies for a trader
+or portfolio manager, the starting point
+is to think of what your objective is.
+What is it you would like to optimize?
+Do you want to minimize your costs?
+Maybe if you're a trader acting as an agent for a client,
+that should be your objective.
+If you're trading on your own account,
+you might have a concern where you
+would like to minimize your costs,
+but you also don't want to give up opportunity costs if you're
+trading for a reason, and you might have a trading signal
+that decay, for some reason.
+Do you want to minimize your risk?
+Do you want to maximize your utility?
+What are the constraints that you're subject to?
+So we need to think about what it is we want to extremize,
+and then we want to define policy variables we have
+under our control, state variables
+that we need to monitor that would affect our decision,
+and we need models for how the state variables would evolve
+in time on their own, absent our participation, just
+in the general environment and how they respond to the control
+decisions that we make.
+So one common way to approach this
+is to look at minimizing the cost for a given level of risk
+subject to, perhaps, the expected utility function that
+reflects what our risk preferences are so
+that it could be a general class that
+might be different for different people
+with different preferences.
+So let's consider this case, where
+we want to buy or sell a block of shares for little quantity q
+and at time t.
+Let's divide the total trade horizon into n sub-periods.
+Let's allow it to be invisible, possibly without the t
+going to 0.
+But let's think of this as being finite because we typically
+are trading in finite periods.
+Trades are discrete.
+The time periods don't need to be discrete.
+But let's imagine that we're at least re-evaluating
+the possibility of trading at regular intervals delta t.
+We can always choose not to trade.
+Trade quantity in a given period could be 0.
+But the available trading times we'll denote by t sub k,
+which are going to be at k delta t in clock time,
+where k will go from 0 up through n.
+Let's let q sub k be the amount that we hold at time k.
+And we'll have boundary conditions
+that-- let's say that we're selling a block of shares
+this time.
+And in this case, we're going to start with initial value big Q.
+And we're going to decrement until we
+get to a terminal value in our final period at-- of 0.
+So the amount that we trade in a given period of time
+is going to be delta qk.
+It's just going to be the change in shares between one
+period and the next.
+And that's where we get to decide.
+So part of our strategy, part of our policy,
+part of our optimal solution and program
+is going to be to determine sequence delta
+k so that the shares add up to the total number q
+that we sell over this period of time.
+So a strategy, a solution, to this optimization problem
+is find an algorithm that assigns values delta qk based
+on, at each time stop, the information that's available
+up to that point in time.
+So what we need to do is devise a set of rules
+you could hand off to someone.
+You don't know what the future prices are.
+You do have a model for what their stochastic evolution
+might be.
+But that way, someone could take your set of instructions.
+At any point in time, they could say, aha,
+I've got this many shares left.
+Here's the price that I observe.
+What should I do?
+In the example of Bertsimas and Lo,
+we saw that, actually, the optimal program
+didn't depend on the prices.
+It didn't-- it was the same thing no matter what.
+It was just due to equal trading.
+So that was a very stylized example.
+More generally, it could depend on things
+that evolve that are not yet known at the beginning,
+and that's what we want to do when we devise a strategy.
+
+So what price process might we use for trading?
+We're going to look at a specific example.
+It was developed by Almgren and Chris optimal trading policies.
+So let's take a look at their assumptions.
+And I encourage you to take a look at their original paper.
+So for the drift rate, the--
+during the price period, we're going
+to think about this as a short-term trading
+example, where the drift rate is going
+to be taken to 0 as an initial approximation.
+So we're not going to include the opportunity costs.
+Those could be added later.
+That might be a reasonable example.
+It might not.
+But we're going to do this to simplify the mathematics.
+So one immediate specialization we're making
+is to have no draft, just randomness.
+And this is an obvious generalization
+that you can make and redo the derivation to take a look at.
+We're going to let the price process diffuse so
+that there will be randomness.
+And we're going to allow there to be market impact so
+that our trading affects the final price.
+So really, if we're setting up typical elements
+of an optimization problem, we like
+to get the realistic details.
+But the minimum ingredients that we need
+are two things that we want to minimize,
+which are at odds with each other.
+That's the basic feature we have.
+So in this case, we're not minimizing the opportunity
+cost.
+We're leaving out that one leg.
+But we do have two other legs that will give us
+a non-trivial problem.
+One of them is that we want to minimize risk.
+The other is we want to minimize cost.
+And those two are going to conflict with each other.
+So we're going to assume that there is a speed of trading
+that we could define.
+Let's think of a variable delta q over delta t.
+And we're going to assume that our market impact is a function
+of the trading speed.
+The more we trade in a given time period,
+the higher the market impact.
+We're also going to allow for a two-part market impact model.
+We're going to think of there being permanent,
+as well as temporary, market impact.
+A permanent impact affects all future trades.
+And a temporary impact affects the price
+that you get in that period.
+You might think of it as being due to order book structure,
+due to the fact that you need to cross the bid offer spread
+and go deeper in the order book than the initial price.
+But it won't affect the next trading period
+because liquidity might be replenished.
+So there are two possible things.
+Obviously, you can specialize, where you set
+one or the other of these to 0.
+But let's include a two-part model market impact.
+
+So the market impact shows up in the pricing evolution
+with a model that looks like this.
+Let's assume that the price in one period
+is given by the price in another period plus two components.
+One of them is a random movement.
+So zk is going to be a random variable.
+Sigma is going to be the volatility associated
+with the change in delta square root of delta t--
+so what we'd expect for sigma square root of delta t--
+to be the size of the shock that we would get
+during a time period delta t.
+And that's the diffusive part.
+And we're going to assume that we have a permanent market
+impact that's some function g.
+And our assumption is it only depends on the rate of trading.
+It doesn't necessarily depend on the number of shares
+that we have in inventory because that's not
+known by the market.
+The amount that we push into the market in a given time period
+will be seen by the market.
+Those are the shares that we expose.
+And those might realistically be modeled
+as affecting future periods.
+And the impact that we have is going
+to be some function that depends on the rate at which we're
+trading times the size of the time period
+if we have the same rate over a longer time interval.
+We're going to have a larger market impact.
+And we'll also include that there
+might be a temporary market impact that just affects
+the price during a particular period that affects
+our execution costs for one set of trades,
+but not for the subsequent time periods.
+So we have g represents a function of arbitrary form.
+We'll pick some examples so we can solve this later on.
+But g represents permanent market impact.
+h represents temporary market impact
+that we might have for the short term.
+So we like to look at the total trading cost.
+And obviously, we'd like to minimize
+what we lose relative to a frictionless set of trading.
+So in the case where we're selling,
+we'd like to maximize the cost.
+And we can think of what's sometimes
+called the implementation shortfall as being
+the difference between a frictionless trade
+and the real-world frictions where we're always
+going to lose something.
+So what do we have?
+Well, we've got our frictionless price is quantity
+times the initial price.
+That's what we'd have if there were no impact at all.
+We could implement everything all at once.
+And we're going to have subtracted
+from that what the actual impact is
+of the price changes over the trades that we actually do.
+So if we break this into parts, we
+have one piece that comes from the diffusivity terms
+from all of our trades and we have
+another part that comes from the permanent market impact term.
+And we're summing this over all periods,
+with delta q being the quantity that we
+do in each period times the impact time in each period
+and the piece that's left over that is non-transient
+that affects only the parts that are done within each period.
+So this part here, this final term
+that's the temporary increase is multiplied by delta q.
+It's only the change that we have.
+This part here depends on q, the decreasing balance
+for the number of shares, even though this term here depends
+only on the trading velocity.
+But we've taken something that-- where
+we have initial variables big Q and P0,
+initially known price and quantity.
+We have unknowns, which are the q's and delta q's.
+And we need to determine-- find the optimal policy.
+And we've substituted p tilde k, which
+is the price we receive in each period.
+And we've expressed it in terms of these other variables, some
+of which are unknown, including this random variable, z sub
+k, others of which are functions of the yet to be determined
+policy.
+So this is g of delta q and h of delta q.
+So this is the expression that we'd like to optimize.
+So implementation shortfall we can think about
+as something that we measure after we're
+done with our program--
+that if we're selling a bunch of shares,
+our effective final price is less than p0--
+and we hope to receive.
+So the final price could actually be less
+or could be greater due to the randomness of the diffusion.
+We're not taking that into account here.
+So let's assume that all the trades are executed.
+So it's not always the case in markets
+that, when you send in a quantity--
+when you observe a price, you send in the quantity
+that you want.
+Depending on whether you do market orders or limit orders,
+you're necessarily going to get the quantity
+you want at the price you thought you were going to get.
+But let's assume that all the trades are filled regardless
+of the price movement.
+Let's not consider unfulfilled orders.
+And let's note that before we start trading,
+the realized effective price is a random variable.
+So we're going to need to take expectations,
+and we want to optimize the expectations.
+So we're going to optimize either the expected cost
+or the variance or both or maybe some linear combination.
+So what do we have?
+Well, let's look at what the expected cost and variance are.
+The expected cost-- I take the expectation of the previous
+result. I have the expectation of my random variable
+in the z's.
+It's going to drop out because it
+was arithmetic Brownian motion and 0 mean,
+and we didn't have a drift term.
+So the expected cost that we have has these two terms, which
+are written in terms of my function
+h and j in terms of the permanent and temporary market
+impact.
+And the algebraic structure is a little bit different.
+We're going to massage those so they have a common form.
+This has a qk because this depends on the total amount,
+and this depends on the incremental amount.
+And then if we compute the variance,
+the variance does depend on the diffusive term.
+This expected cost term is independent of sigma
+because the fluctuations were equally likely to help us out
+as to hurt us.
+But the variance absolutely depends on sigma.
+That will only hurt us.
+So this depends on sigma squared.
+And it's a positive quantity.
+It depends on the sum of the q squareds.
+
+To look at a concrete example, let's make some assumptions
+for the market impact functions.
+If we take the permanent impact function
+g to be of linear form--
+so it's something proportional to the trading speed.
+Let's call it gamma times v, where v is the trading speed
+delta q over delta t.
+We'll find that the final permanent change depends
+on the total amount that we have, q.
+And what's going on is that when we have this kind of market
+impact function, the early trades
+are going to push down the price on the later trades.
+So it's permanent.
+The more we trade early, the more it hurts us later on.
+If we trade more slowly at the beginning,
+there's less impact on the later trades,
+but there will be greater variance.
+So we're going to need to find an optimal balance
+between those two features.
+So there's a bunch of algebra where
+the contribution from the expected shortfall that
+comes from the permanent impact function--
+and with this identity above me, we can simplify some of that.
+I can rewrite this sum of the delta q's
+by writing it this way.
+I can expand it out, expand out this square,
+regroup some of the terms, and I can pull out
+an overall factor of the-- from-- this is
+the sum of squared differences.
+I can get the total value of q, quantity
+squared, by completing the square minus another term here
+that just depends on the differences
+and shows up here in the second term,
+where I have q times the differences.
+And then I can re-express this term
+in terms of q, which is a constant and something which
+is quadratic in the trading velocity.
+
+What about h?
+Well, let's let that be linear as well.
+And the choice chosen by Almgren and Chris
+is one we can stick with.
+Let's let there be something that depends on-- maybe
+on the absolute value.
+So we'll let it depend on the sign.
+We're going to-- not going to assume that we ever
+get helped out by trades.
+So there's never any positive benefit to trading.
+If you're a market maker and you are providing liquidity
+to the markets, then you can make money on your trades.
+We're going to assume that that's not the case here.
+So remember that h is going to be multiplied times the trade
+that we do in a given size.
+So that's why the constant term--
+we want to make sure it's going to have the appropriate sign.
+So it's-- we are going to lose money regardless of whether
+we're buying or selling.
+That's why we have the sign function there.
+And the other term is linear.
+And it's going to multiply a delta q.
+So we have that down here, when we
+substitute in that linear expression in the top.
+This is just an assumption.
+Eta and c1 are constant coefficients.
+And when we substitute that general form,
+we're going to get something in expression,
+which is the contribution to the expected cost--
+is something that depends on the absolute value
+of the number of shares that we trade
+and something that's quadratic.
+So if we combine those terms from the h and the g,
+from the temporary and the permanent,
+we find that our expected cost is
+going to have term that's going to be constant
+plus a term that's linear with an absolute value
+plus a term that's quadratic.
+If all the terms have the same sign,
+then we can drop the absolute value.
+That's assuming, as in the little grid example
+we had, that we're not changing directions--
+that if we want to sell shares, our strategy is not to buy some
+back and then resell them.
+That might be possible.
+You could imagine a scenario with asymmetric market impact
+where, if you go in the opposite direction,
+you fake out the market, induce a price change that's
+in your favor, and then you turn around on the other side.
+We're going to assume that the markets don't respond that way
+and you are not trying to manipulate them in such a way.
+So we'll remove the absolute value.
+And then we'll have a term which is--
+which now simplifies.
+If all of the delta q's have the same value,
+then we can sum them up.
+We get big Q. So we have a constant term in front.
+We've got some parameter here whose sign
+is going to depend on the chosen parameters in the problem.
+And we've got something which is quadratic in delta q.

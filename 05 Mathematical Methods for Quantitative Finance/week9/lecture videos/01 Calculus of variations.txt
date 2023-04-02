@@ -1,0 +1,278 @@
+
+PROFESSOR: So let's take a look at another kind of optimization
+through what's called the calculus of variations, that
+is actually behind ideas like dynamic programming,
+even though it doesn't always get credited that way.
+And it's a global view and often gets
+discretized in things like Bellman's principle
+of optimality for dynamic programming.
+So here's the idea.
+The idea is suppose that we've got some function that's
+going to represent a kind of policy, something
+that we decide over time.
+For concreteness, the examples that we're
+going to be looking at are going to involve trading policy.
+So imagine that you're a trader.
+Your job is to trade a large block of shares.
+So you've got 100,000 or a million shares of stock,
+and you need to trade them over a given period of time.
+So the amount you trade at a given point in time
+or the amount perhaps, that you have an inventory in a given
+amount of time might be a quantity q,
+which is some function of time.
+And the idea is how should you vary q
+as a function of time in an optimal way.
+What are the considerations?
+Well, if you dump all your shares at once,
+you're going to get a worse price.
+Because people will know you're there.
+There's not enough liquidity in the market.
+If you go really slowly on the other hand,
+you'll incur a lot of risk.
+So if there are different trade offs,
+we can capture those in a function that
+involves penalties for the different things that
+might go wrong, and ask about solving
+for a policy as a function of time.
+This is very different from solving for a single scalar
+variable at a point.
+What we're doing is we're asking about something
+that we're varying with respect to a function, a function
+of time.
+And we want to solve for a function.
+So how do you differentiate with respect to a function?
+This is a classical problem, and I'd
+like to show you a simple example in just
+a couple of pictures.
+And as I said, we're not going to be using this directly.
+But you will see the flavor of this
+in some of the applied problems if we look at,
+for solutions to the problem of optimal trading.
+So the first thing is to consider
+that we have a function, q of t, which
+is what we're going to control and what we want to solve for.
+And we're going to let the Lagrangian now, be
+a function of q and of its first time derivative,
+which I'll call q dot.
+So q dot represents dq/dt.
+OK, and we're going to construct a function called the action,
+but that's just the name.
+It's a S. And we're going to integrate
+this function across time.
+And we're going to consider S as a function of functions.
+So S is a function of different q's.
+If you pick a different trajectory, q of t,
+stuff it into L, along with a time derivative,
+q dot, you'll get a different number.
+So what we want to ask is, given a particular functional form
+of L. And given an arbitrary function of q, I can compute S.
+And I want to know what function q,
+gives me the minimum value of S.
+So here's how we're going to do it.
+First, we're going to characterize our deviations.
+How do we average over all possible functions?
+Well, here's one way we could do it.
+Let's start with the particular q
+and look at it as a one parameter family of deviations.
+So let's let the alpha just be a parameter scalar
+that we can vary.
+And we'll say that when alpha is 0,
+we have our starting function.
+And we're going to vary it in proportion
+to some other unknown function, x of t.
+So x of t is arbitrary, but what we'd like
+is at the endpoints of the integration, when
+t is equal to 0 or big T, at the initial or the terminal point,
+that this deviation part, alpha xt should vanish.
+So for arbitrary alpha, we're changing q
+in the direction of the function x.
+But we're leaving the endpoints fixed.
+Now you could say, well, you just move the problem
+from an unknown q into an unknown x.
+And that's true, but what we're going to see
+is it's not going to depend on which x we pick.
+So let's just substitute this informally.
+Let's see what we get for our results.
+And then we'll apply to a couple of simple examples.
+So I'm going to substitute, this expression,
+this alpha-dependent expression for q into my integral for S.
+And I'm going to say that an optimal solution would
+be when the derivative of S with respect to alpha varnishes.
+That is, at least over this particular direction
+for varying q, I'm varying q in the direction
+of a particular deviation x of t--
+It's a time-dependent function.
+I don't know what it is.
+But certainly, if this is going to be stationary,
+if it's going to be a critical point, then as I very alpha,
+this should be equal to 0.
+So I'm going to take dS d alpha.
+And I'm going to apply the ordinary chain rule.
+That's going to be partial of L with respect
+to q times partial of q with respect to alpha, plus it also
+depends q dot, partial of L with respect to q dot,
+times partial of q dot with respect to alpha.
+And the whole thing is integrated dt.
+And in more general cases, L might be more complex.
+And sometimes it's given an explicit time dependence.
+We're just going to look at this simple form.
+It's just a function of q and q dot.
+And we're q and q dot as being independent for the moment.
+Now, let's substitute.
+We know that the partial of u with respect to alpha.
+Here's q.
+So I take the partial with respect to alpha.
+It's just x of t.
+So this first line, I have partial L with respect
+to q times dq d alpha, is just partial
+of L with respect to q times x.
+And in the second term, the partial of q
+dot with respect to alpha, well, q dot is dq/dt.
+So the partial is just going to be dx/dt.
+It's going to be the derivative of x with respect to time,
+times this part is unchanged that's in front.
+Now let's do an integration by parts.
+Let's take the second term, integrate by parts,
+and move the t derivative over to the left-hand side.
+So instead of t acting on x, I'm going
+to get d by dt acting on the first term.
+As usual, when I do integration by parts, I have a minus sign.
+And I have a boundary term I need
+to consider as well, which has this form-- partial of L
+with respect q dot times x, evaluated
+at the end point the integral, t equals big T to t equals 0.
+Now the boundary term for my integration by parts
+vanishes, because x vanishes when t
+is that either the end points.
+That's the condition I add here.
+And now this term the remains has
+the quantity in square brackets, all multiplied times x of t.
+Integrated dt is equal to 0, and in this equation,
+has to hold for any function, x of t
+that you might choose to consider.
+Well, the only way that can be true for any x of t
+is if the quantity of square brackets vanishes.
+And that gives us what are called
+Euler-Lagrange equations.
+So the Euler Lagrange equations satisfy the condition
+that the action is stationary when q is such
+that it satisfies this equation-- partial of L
+with respect to q minus the derivative with respect
+to time, the total derivative with respect
+to time with the partial of L with respect
+to q dot needs to vanish.
+And this is well known to people who've
+studied classical mechanics.
+For example, this gives a different way
+of formulating Newton's second law, F equals Ma,
+force is equal to mass times acceleration.
+Here's how we do it.
+We take a look at constructing Lagrange here.
+We think of q as representing the position of a particle,
+q dot is representing its velocity.
+And q double dot, the second derivative with respect
+to time, as representing the acceleration.
+Here is our functional form for L. It looks like the energy.
+We'll that V be the potential energy.
+But notice, this term looks like kinetic energy--
+1/2 m q dot squared, minus some function of q
+that's independent of q dot.
+If this were the energy, there would be a plus sign here.
+And it has a minus sign.
+In any event, if you're not familiar with this
+in classical mechanics, just take it
+as a particular functional example.
+Let's apply the rules.
+Partial of L with respect to q dot is going to be just--
+this is the only term with the q dot in it.
+It's going to be m times q dot.
+Partial of L with respect to q it's
+going to give me minus derivative of V
+with respect to q.
+And that tells us, when I substitute it
+into this equation, that m q dot, which is mass times
+acceleration, is minus the prime of q,
+which in classical mechanics, is equal to the force.
+Specifically, if we take a problem where V of q
+is quadratic in q, this represents a harmonic
+oscillator.
+We have that the force is minus kq.
+It represents restoring force.
+If q gets large and positive, the force
+is in the negative direction.
+And I'm going to get this very concrete differential equation
+and q double dot minus kq.
+And the solutions to this are sines and cosines,
+which you can check, satisfy the equation, with the frequency
+given by square root of k/m where k and m are
+primary for the problem.
+K showed up in the potential, V. M showed up
+in our original Lagrange function here, as m.
+So that's an example as to how we
+can get a differential equation out of this general principle.
+But what it tells us is not just this
+is how a harmonic oscillator behaves.
+It tells us that of all possible things that a harmonic
+oscillator could do, not the ones that actually does,
+all the things that could do, the correct solution--
+the one the Newton tells us is the right solution--
+also happens to be the one that minimizes
+this interesting integral here.
+So it turns out that while Newton's equations
+are pretty good, that we can generalize this principle
+to many, many more problems than the specific differential
+equations that Newton came up with.
+
+Here's another example.
+This is from the paper from Almgren and Chriss
+that we'll look at more, which is
+about optimal ways of dividing a trading solution.
+Their key idea is to take a look at penalizing both trading
+fast, because of the high market impact that
+would be incurred if you try to trade
+a large block of shares too quickly, and inventory risk--
+that is if you hang on to your shares for too long,
+there's market risk that they might change in value.
+Now in their solution, they end up
+with something which is discrete.
+They do a multi-period problem.
+But if we were to take the continuous time limit,
+we could replace their discrete sum
+by the integral that would have this general form, which
+looks an awful lot like the harmonic oscillators solution
+we just saw that looks like Newton's equations.
+So they have a term in delta q, which represents
+the change in the quantity.
+It represents the speed of trading.
+And they have a term that ends on q squared, which depends
+on the quantity that's left.
+So we see we have an action term in this interval.
+We have something that depends on q dot squared,
+something that depends on q squared,
+just as we did in our example from Newtonian mechanics.
+So it's very similar, except that the harmonic oscillator
+would have the wrong sign.
+This would be a repulsive force.
+So it wouldn't be a very sensible for a harmonic
+oscillator.
+But the mathematics goes through almost the same way.
+The difference is that the solutions instead
+of being sines and cosines, are exponential with a plus
+or minus sign.
+And when we impose boundary conditions,
+we find a particular linear combination of them
+that involves a plus sign an a minus sign in this form that
+involves hyperbolic functions.
+But it's basically a linear combination
+of the two solutions.
+So in this picture, we have a problem
+that was formulated initially as a recursive problem, very
+discretely, about what happens over small periods of time.
+But we have a trade-off between the desire
+to minimize risk and improve speed at a short distance,
+with a global problem where we need an optimal global solution
+that might not necessarily be an iterated set
+of myopic, short-term solutions.
+And the calculus of variations tells us how to do that.
+It says solve the entire trajectory all at once.
+And these are examples of what those solutions look like.

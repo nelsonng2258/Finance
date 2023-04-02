@@ -1,0 +1,272 @@
+
+PROFESSOR: In order to express things
+in terms of known quantities, we used recursion relations
+for the price and for the inventory remaining, which
+are pretty simple.
+So if I've got a Wt and a future point
+I don't know that necessarily.
+But I can express it certainly, in terms of Wt minus 1
+and qt minus 1, which is the thing that I
+wanted to vary and choose.
+And similarly for the price, I can
+express the relationship between p of t minus 1 and t minus 2
+in this way, using the recursion relation for the price
+evolution.
+So if we substitute that into the results
+from the previous slide, you get a whole bunch of algebra to do.
+But when we combine the terms--
+so what we're going to do is we're
+going to substitute that in.
+We're going to compute the expectation.
+Computing the expectation, we're always
+going to track where the random variables appear,
+the only randomness that's going to appear
+in the epsilons, which appear in the price coefficients
+So we're going to look everywhere
+where there's a price it appears with an uncertainty for what
+the future price variation is.
+That's going to contribute non-trivially
+to the expectation.
+Once we've computed the expectation,
+there's no more randomness.
+But there is dependence on the control variable,
+in this case, q of t minus 1.
+We minimize that.
+And here, we can see that we're going to minimize this.
+And this has a quadratic form plus some constant that's
+leftover.
+So the minimization term is going
+to involve minimizing a quadratic form.
+The reason it's quadratic does come
+from our choice of a linear cost impact function
+at the beginning.
+So for more complicated functions,
+the algebra in the derivatives get a little bit more
+complicated.
+But the general idea is what we see here.
+So we want to minimize that quadratic function
+and find our decision variable.
+When we do that, the constant doesn't matter.
+And what we find is our decision variable for our next
+to last period, is that what we should do
+is we should trade half the remaining shares.
+So that's the solution.
+That's an output.
+That's not a guess.
+So we've got that this should be half the remaining shares that
+minimizes the function that we saw on the previous slide.
+We take this result, and we plug it in to evaluate the function,
+assuming that we've made that optimal choice.
+And we get a new expression for the value function
+in terms of state variables that are known at time t minus 1.
+We know what the previous observed price was.
+We know what the inventory was.
+And now by substituting in our optimal solution for q hat,
+we can express things this way.
+And this is the value that we'll have
+a time t minus 1 under the assumption
+that we're going to follow an optimal policy
+for the remaining two time periods.
+So this is the desired closed form expression.
+It depends only on the two things I've written here--
+the price and on the inventory, which we know.
+Well, let's keep going.
+So there's going to be more algebra.
+But it's going to be the same idea
+until we get to the beginning.
+We use one more step.
+We do a substitution for our inventory.
+We write out our expectation.
+We do the expectation by identifying each occurrence
+of the random variable.
+We regroup terms so that we can group things in terms
+of W times something with p.
+So we group the W's together.
+We group the p's together.
+We minimize by varying the q's for the next time period.
+We find that this also gives us a quadratic function.
+The solution to this quadratic function
+is going to be that the optimal trade at time t minus 2,
+two periods before the terminal value,
+is going to be 1/3 of the remaining inventory.
+We keep going.
+We substituted it in.
+We get our new value function at this point.
+Again, it's a function of p.
+It's a function of W that are known.
+And as a term that's linear in p,
+terms that are linear and quadratic and W,
+it's just the coefficients that change.
+So as Bellman set out and as we hoped we would find,
+the structure of the problem is the same in each period.
+In each time period, we have to do the same thing--
+compute an expectation, minimize,
+and substitute variables.
+And in each time period, we have a formula
+that's got the same structural form as the one before.
+So we know how to solve it each time.
+It's just the details that change
+a little bit in each period.
+So we keep going.
+And we find that at each time step,
+we have the same solution.
+We get a quadratic in every period.
+And each time, we got some fraction
+of the remaining shares that's going to decrease linearly
+with the number of time steps that are remaining.
+We take that value.
+We substitute it in.
+And for our arbitrary k, we find that we get this result.
+It's something that's quadratic in W. It's linear and p.
+The only thing that's changing is this k dependent coefficient
+as we go.
+We keep going all the way back to the beginning
+to where k is the t minus 1.
+And we're back in the initial period.
+And for the initial period, we solve that.
+We find that q hat in first period
+is W1, which is our whole inventory divided by t.
+In that's just Q/T. So what our solution has told us--
+and here's our optimal value that we have here,
+again is the same structural reform that we had before,
+something that's linear in p.
+It's quadratic in W1.
+And therefore we found the first trade
+size is 1/T for the total.
+The second trade size is 1/(T-1) of the remainder.
+So the optimal solution that we found
+is we should divide up our trade quantity into equal slices.
+And you might have guessed that as a starting point.
+Why don't we start equal?
+But here, we've shown that there's
+a balancing between the uncertainty
+that we have in the time periods and the market
+impact that we have.
+So the market impact that we have--
+remember, if we trade too fast, we're
+going to incur a high market impact that
+then is going to affect the subsequent trades.
+And we're looking for the balance between them.
+In this particular case, with this special choice
+of market impact function, we've gone
+through these steps are the same steps you would do.
+If you'd like, you can try it out,
+going through with a more complex market impact function.
+For example, a quadratic market impact
+function instead of a linear.
+The expected cost at the initial time--
+therefore, we can go, and now we can substitute back in.
+Because we know what the expected quantities
+are going to be.
+We know what the quantities traded
+are going to be in each period.
+We don't know what the prices will be.
+But we do know what the market impact is.
+So if we substitute that in, we find
+that we're going to get the expected value of Q/T
+times the sum of the prices.
+This comes out because our trade quantities are actually
+constant.
+And then we can move the expectation inside
+and look at the sum of the expected prices.
+If we do that, we're going to get sum over little t
+from 1 to big T.
+We can do this sum explicitly.
+It's just T(T+1)/2 .
+And we got our final result, which
+is that the term involves what we would have
+had if there were no frictions.
+If theta were equal to 0, we would have just
+had the total quantity times the initial price
+plus an expected part that's due to the transaction costs.
+And this piece is quadratic in Q, in the total quantity,
+not in the quantity done individual period.
+So it's proportional to theta, which
+is our market cost parameter.
+And its quadratic in the number of shares.
+So under this solution, the minimum cost solution
+is to trade equal slices to divide up our trade.
+If it's over 10 days, we do 1/10 per day.
+But we find that the market impact,
+relative to a frictionless trade,
+relative to the mark to market value of a portfolio
+is going to be quadratic in the number of shares.
+Market to market is a standard way
+of accounting for the value of an investment, where
+we look at what the quantity is that we hold in an account.
+And we multiply times the market price.
+And that means the value on a market to market basis
+assumes that it could be liquidated with no impact
+costs.
+And that's not a fair assumption for almost
+any non-trivial investment.
+So this tells us there's a significant deviation
+between the actual expected liquidation cost
+and/or acquisition cost in this case, where we're buying--
+this it's q squared.
+This would be the same if we're market to market or selling.
+But the expected acquisition cost
+is going to be a function that's quadratic in Q.
+And that's going to differ from what the market to market cost
+would be, which would simply be the first term this expression.
+So we can compute with the expected transaction costs are.
+It does depend on the number of time periods.
+So if we were to spread this out over more time periods,
+t, the longer we spread it out, the lower we
+can make the transaction costs but even the limit
+where we do it over an infinite number of time periods,
+the total transaction cost is going to be finite.
+And it is going to be proportional to Q squared.
+If we compare with say, trading everything
+in the initial period, we can see
+that we would have incurred a higher transaction costs.
+So if we doped all our shares in period one,
+we would have ended up with a cost that would have also
+been proportional to Q squared, but without the factor of 1/2.
+So by this particular case, by slicing our trades
+and spreading them out over time, we can lower the costs.
+And we can lower them as much as by a factor of 2, but not more
+than that.
+So in both cases, we have market impact.
+But by optimally executing our, trades
+we can cut the transaction costs in half.
+So to summarize what we've seen for the Bertsimas and Lo
+solution for optimal trading, the cost of optimal execution
+is half the cost of immediate execution.
+The cost is quadratic in the total trade quantity.
+If the quantity is small, then Q squared might be small.
+But the impact is permanent.
+So the idea is that each trade we do
+leaves its mark on the subsequent trades.
+And that's why these quantities build up
+and why it's important to work from the end
+back to the beginning.
+There are a lot of things that we left out of this analysis.
+So this model is quite specialized.
+And you can generalize it to more realistic cases.
+It doesn't account for things like a temporary market
+impact that might go away.
+That's often the case in markets where we're looking dynamically
+over multiple time scales.
+It doesn't penalize the opportunity costs of delay.
+After all, if we're buying the shares,
+maybe we're not just buying them for liquidity reasons.
+Perhaps we're buying shares because we have a signal.
+We know we have good forecast for the future price.
+We think that the value is going to go up.
+And the longer we wait, yeah, we might get a lower cost.
+But we might lose out of the expected gain in the returns.
+So perhaps we should include that in our trade
+off as well, the opportunity cost of waiting.
+We're not penalizing for risk, for volatility
+in the final value.
+And we're not really asking about
+whether this particular trader or investor has
+different preferences, different risk tolerances that
+might favor faster or slower execution.
+But it is an example of using dynamic programming
+to get a recursive structure for the problem,
+finding an optimal policy so that we know before we even
+begin what our actions will be in the future,
+subject to all of the conditions that we might find along
+the way.

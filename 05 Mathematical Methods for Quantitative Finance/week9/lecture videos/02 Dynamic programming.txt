@@ -1,0 +1,151 @@
+
+PROFESSOR: Dynamic programming is
+the name given to a set of techniques
+that help us recursively formulate an optimal solution
+to a multi-period problem.
+When we looked at our initial portfolio optimization problem,
+for example, we looked at it as a single period problem.
+But often we have multiple problems.
+And it may be the case that the solution
+to the multiple problem is not just
+a sequence of short-term solutions
+to one period problems.
+So the idea is that's due to Bellman
+and draws on a lot of classical mathematics
+that's much earlier, is to think about a sequence of decisions.
+And we'd like to minimize some overall objective function
+by the time we've completed our assigned task, which
+could be on a finite horizon.
+As it often is, it might be an indefinite task that goes on.
+And then we need to minimize the long range running average.
+The observation that's key for dynamic programming
+is that we can set up problems recursively
+so that in each time period, the decision that
+needs to be made, based on the information
+set and the state variables where we currently are
+and the problem to be solved over the remaining
+period of time has the same structural form in each time
+period.
+So that as we evolve forward in time,
+we get to solve the same problem again and again and again.
+And a typical solution to that is
+obtained by starting at the end where
+we have to complete our task and working our way backwards,
+taking advantage of this common structure in each time period.
+We might think of this applying this is to problem say,
+in portfolio re-balancing.
+We might have a particular period
+where we set up an optimal portfolio,
+say for the next month or the next quarter.
+At the end of the quarter, we find out
+that our portfolio is no longer optimal.
+Either our forecasts have changed for future expected
+returns and variances.
+Or simply, the market prices have moved.
+And our weight allocations aren't where
+they were initially.
+So should we re-balance while there are
+costs associated with doing so?
+And should we have known better?
+Maybe if we knew that the costs were going to move,
+we could have taken that into account ahead of time
+and managed our positions a bit better so
+that we don't incur repeated transaction costs where we're
+constantly catching up if some of that
+might have been foreseeable.
+So what we'd like to do is have a balance
+between these short term decisions, where
+we could re-optimize step by step in a global perspective.
+What we really want to solve is the optimal long term problem.
+We're particularly interested in the case
+with a solution to the global problem
+might differ from taking a short term perspective.
+
+So here's a simple example.
+Suppose I have a grid and I want to start at one point
+and finish at another.
+I want to start at the green point.
+I want to finish the red point.
+And let's assume that I'm allowed to move along the grid
+and I would like to find the path of minimum length.
+And in fact, it might not be unique.
+So let's see if we could find the number of minimum length
+paths that are available on this graph.
+And we'd like to do it with a recursive setup.
+It's typical of the way in which we'll
+set up our dynamic programming problems.
+Now let's assume that because we want
+to get from S to F, that we probably don't want
+paths to retrace our steps.
+So let's assume just to simplify that, we're
+going to require our paths either to go up or do
+the right, that there's not going to be
+any backtracking involved.
+And you can show of course, it's not hard
+in this case see that that should be true.
+So how do we set this up/ Well, first of all,
+we'd like to think of a one-step relationship that at any given
+node on this graph, given by coordinates i and j,
+the number of paths to reach that node say a point here--
+let's see if we can get our pointer--
+our point here let's say, is equal to the number of paths
+that enter from below plus the number that
+enter from the left.
+So there are two ways that we could get to a given point.
+So however many ways that we're here, these paths
+could all move into the node over here.
+And I can get to this point by coming from the left
+or by coming up from below.
+So that's characterized here as a number of paths
+into a given point, is the number
+that come from below plus the number that come from the left.
+
+Next we have a boundary condition.
+So on the edges of the graph, defined
+by my starting and ending points,
+there's only one way to get there.
+That is by not allowing backtracking.
+So if on the left edge, I just came up from below-- not
+allowed to come from above from anywhere else,
+and similarly on the left-hand side
+and on the top of the graph.
+So these provide boundary conditions.
+So here's the procedure that we have to solve.
+First, let's label each boundary node with a 1.
+Because there's only one way to get there.
+So each of these points has only one path
+from the start to get there.
+Because they're on the boundaries.
+I can only go up, or I can move to the right.
+I'm not allowed to go down.
+I'm not allowed to go to the left.
+So these have only one point to get.
+There then for each interior node,
+as I move into the interior, I assign
+to each node the sum of the values that come from the point
+to the left and from the point below.
+And as I fill in the graph in this way,
+I can find what the total number of paths
+is that lead to my terminal point.
+And in this case, it's equal to 15.
+Here's another example.
+Suppose that we want to go from the top of this graph
+down to the bottom.
+And we can take a path.
+At each point, we can move either to the left or the right
+as we move down.
+Each node is associated with a number.
+And like a typical game of this type,
+let's assume that we collect a score that's
+associated with the number of points on each node.
+So let's assume that we have a path that as we traverse
+it and go down, we are entitled to collect
+the sum of the points along the different nodes
+that we encounter.
+So here's your chance.
+Why don't you pause the video right here,
+and see if you can find what's the optimal number that you can
+find going from top to bottom.
+What's the largest sum that you can find in parts where
+you add up the values that you encounter
+as you move from top to bottom?

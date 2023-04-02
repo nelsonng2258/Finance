@@ -1,0 +1,245 @@
+
+PROFESSOR: Let's look at two approaches
+to the question of optimal trading, where
+we'd like to minimize execution costs in a trading
+setting, where we need to deal with randomness, and possibly
+market impact.
+First solution, the dynamic programming solution,
+is described by Bertsimas and Lo.
+So here is the question.
+We have fixed quantity of shares-- let's call it big Q--
+that we need to buy in a particular period of time
+or a horizon, t.
+And the optimal trading policy is
+to find the best sequence of trades that satisfies
+the boundary conditions.
+So what we'd like to do is we need the set of trades.
+Let qt be the trade quantity at each period.
+And I have t periods.
+So the sum of q sub t from one to big T
+needs to add up to the total number of shares.
+And what we'd like to do is minimize the cost
+when we bought, and this is the market value.
+So you notice the qt is going to vary in each time period.
+And we have control over the q's, but we do not
+have control over the prices.
+Those are in the market, and those
+may be subject to random fluctuations,
+and they may be subject to feedback effects
+from our trading.
+But here the objective is to minimize this function subject
+to this constraint.
+
+So in each trade period, we'll model the price process
+as being arithmetic Brownian motion,
+so rather than log normal motion.
+And that's so that we can solve the problem analytically.
+But also, these typical trading problems, the overall time
+horizons are fairly short.
+They might be a matter of days.
+And this is not a terrible model for price movements.
+So here's our model for the price movement.
+This is price, not return.
+The price in period t is the previous price
+plus our random increment, that's going to be 0 mean,
+and a term that depends on the amount that we traded.
+So this is a market impact term.
+We're going to assume it's proportional to the size.
+So theta is a coefficient.
+And this says that if we make a trade if we're buying,
+and we buy a large quantity, the price
+goes up by a large amount.
+Now you might think that that's good.
+Your trades became more valuable.
+But what's happened is the price went here
+after you executed your trade and makes your future trades
+even more expensive.
+So we're going to hold theta fixed.
+And we're going to assume that this is a linear function.
+And we'll see that's actually pretty conservative.
+In the real world, transaction costs
+tend to be for large quantities, a faster varying function,
+possibly quadratic as a function of q.
+But for purposes of this model, this is nice.
+It's easy to describe.
+And it's easy to solve.
+So epsilon is going to be a 0 mean process.
+And we want to think about which of the variables we control
+and which are the ones we have to observe in the environment.
+So p is the price.
+And we unfortunately cannot determine the prices.
+We have to take the prices we get.
+So we can observe them, and they're
+going to have a random component.
+The other state variable is the number of shares
+that we have remaining.
+And we'll designate that by W. W is
+going to be the total quantity at time t,
+minus the number of shares that have been done previously.
+So this decrements the number of shares.
+W is the inventory.
+It's the number of shares that we have remaining.
+So at a given point in time at a point t,
+we have two things that describe the state.
+What's the current price?
+How many shares do we have left to trade?
+And this is a Markov decision process.
+It's in the family decision problems,
+where the future decisions depend
+only on what the current state variables are,
+not on the history for how we got there.
+Q is a control variable.
+We get to pick.
+At least we get some control over something.
+And what we get to do is choose a sequence
+of q's to find the optimal sequence
+to minimize our overall result for the overall transaction
+costs.
+So our goal is to find a sequence
+of cues that minimize the cost.
+And this is a policy.
+So the optimal policy is the one that minimizes
+the total expected cost.
+The dynamic programming principle
+says let's frame our decisions as a recursive set of problems,
+so that the optimal decision and the optimal sequence
+at each step is also optimal for all the remaining shares.
+So if we can have a set of sub-problems, each of which
+is of the same structure, then when we solve one,
+we can solve them all and recurse our way back
+from a definite point, usually the terminal point,
+back to the beginning, and find the optimal solution.
+So the optimal policy satisfies this.
+Now we are going to solve it from the end.
+But we need to frame each decision with respect
+to uncertainty that occurs in the future.
+So in one step what we would say is that our value function is
+going to be given the prices available through t minus 1,
+and given the number of shares we
+have available that we need to move W sub t.
+Having completed all the trades through q of t minus 1,
+we want to minimize over all possible trades
+in the next period, the expected value of our final cost.
+And that's going to be equal to the trade in the next period,
+qt, whatever it is, times the price in the next period,
+plus whatever is left over after we do our next trade.
+And that's going to be whatever is left over having not
+done this at time t plus 1 for the next period,
+involving a new price.
+The new starting price will be p sub t.
+And The new starting quantity is W of t plus 1.
+But these quantities are unknown at this point,
+because we haven't picked a q yet.
+And that's why these are all inside the expectation value.
+And the expectation value is taken at time t.
+So I have a recursive problem, where I don't know what V is.
+But I have the same unknown function on the left
+and on the right.
+It's in the expected value on the right,
+because these are future values.
+Over here, these are taken at present values,
+which are taken to be known.
+I know what the last observed price is.
+I know what the inventory remaining is.
+And I'm going to minimize with respect to my control variable,
+the average over all possible outcomes for what the price
+the expected future price might be,
+so that I can minimize the expected total cost of trading.
+So we can't solve this, because it's
+got a V on the left and a V on the right.
+But what we can do is we can set it up recursively and work
+our way backwards from a known point back to the beginning.
+So the easy place to start is at the end.
+And the reason it's easy at the end
+is in our very last trading period, we have no choice.
+Whatever we've got left, we have to sell.
+That's the importance of the terminal condition.
+And we've seen that in many other settings
+for boundary value problems that we've done.
+If you know the terminal conditions,
+it helps fix many other aspects of the problem.
+So if you get your last period and you've
+got some shares left over you haven't traded yet,
+you've got to trade them.
+So that is not a random variable.
+In the final period left, we need
+to trade the number of shares remaining.
+So therefore, the terminal condition at time t
+is that this expectation where we're
+going to minimize the final price
+and there's not going to be anything left over,
+because there won't be any additional quantity,
+is going to be the expectation over qt times the final price.
+And that's something that we can write down
+this way in terms of our price process.
+So this piece is from our equation
+for how the price evolves.
+And there's no more V because we're in the final period.
+There is nothing left over.
+Everything has been liquidated at this point.
+So let's take expectations of this.
+That's pretty easy.
+Where is our random variable?
+Well, there's a random variable here in terms of epsilon.
+Everything else is actually known.
+We know the previous price.
+And we know we know what q sub t is when
+we're in that final period.
+So we're going to get the expectation
+is going to be qt times the previous price plus theta times
+q sub t.
+We don't minimize with respect to qt,
+because we don't have any choice.
+It's fixed.
+We have to dump all the shares we have left.
+So in the final period we can re express this
+as a function of W, because Wt and qt are the same thing.
+And we've got this expression, that our value
+for the final period is going to be
+W sub t times the price plus theta times Wt.
+And this is a quadratic function of Wt.
+And it's a linear function in the price.
+So no more expectations, no minimizations.
+This is an explicit formula for V
+in terms of the state variables, p and W.
+That's what we mean by describing the state in terms
+of a value function.
+What about one period previously?
+In the next to last period, we can take this result
+and substitute it into our recursion.
+So our recursion-- we're going to put this result
+from the previous slide, which is
+a definite, non-stochastic form of known form.
+We're going to put that function in,
+and here it is in closed form.
+And now we're going to think about this,
+where we haven't yet realized the next to last trade.
+So we'd like to solve for what is qt minus 1
+in order to minimize the expected cost.
+Well, the expected cost of our total trading program
+is going to be the cost in the next to last period
+plus whatever the cost is in the final period that's dumping
+whatever shares are there.
+The reason we have expectations now,
+compared to the previous case, is
+we haven't done yet, our next to last trade.
+We have some choice.
+That is we're going to pick q some t minus 1.
+That's going to affect the final period.
+So whatever is left over, we have to pick.
+But this is in the next to last period.
+It's the last discretionary choice that we have to make.
+So that's OK.
+Let's just expand things out.
+And inside the expectation, we now
+can write this out in terms of our known variables
+with this expression.
+And then, what are we going to do with this expression?
+Well, we're going to compute the expectation.
+We're going to minimize the result for all possible values
+of q or control variable.
+And then we're going to re express things
+in terms of the state variables as they
+were known at time t minus 1.
+And then we're going to do this again and again
+and again until we get back to the beginning.

@@ -1,0 +1,752 @@
+0
+00:00:00,000 --> 00:00:01,090
+
+
+1
+00:00:01,090 --> 00:00:02,590
+PROFESSOR: Well, one way we could do
+
+2
+00:00:02,590 --> 00:00:04,810
+it is with a greedy algorithm.
+
+3
+00:00:04,810 --> 00:00:09,550
+A greedy algorithm is one where we do what's optimally local.
+
+4
+00:00:09,550 --> 00:00:11,650
+We take a look at the next time step
+
+5
+00:00:11,650 --> 00:00:13,520
+and we pick the best value.
+
+6
+00:00:13,520 --> 00:00:16,000
+So for example, I would start at 9.
+
+7
+00:00:16,000 --> 00:00:18,620
+My choices are to go either to 2 or to 3.
+
+8
+00:00:18,620 --> 00:00:19,730
+3 is bigger.
+
+9
+00:00:19,730 --> 00:00:21,980
+So I'm going to take 3.
+
+10
+00:00:21,980 --> 00:00:24,170
+My next choice, given that I'm at 3,
+
+11
+00:00:24,170 --> 00:00:26,270
+is I can either get 8 or 10.
+
+12
+00:00:26,270 --> 00:00:27,950
+I'm going to take 10.
+
+13
+00:00:27,950 --> 00:00:30,470
+From 10, my choices are 1 or 5.
+
+14
+00:00:30,470 --> 00:00:32,900
+And I'm going to take 5.
+
+15
+00:00:32,900 --> 00:00:36,410
+And, here, my final choice is between 11 or 12.
+
+16
+00:00:36,410 --> 00:00:37,610
+And I'll take 12.
+
+17
+00:00:37,610 --> 00:00:40,490
+And my sum is equal to 39.
+
+18
+00:00:40,490 --> 00:00:44,750
+So did you get something higher or lower?
+
+19
+00:00:44,750 --> 00:00:48,580
+If you got something equal or lower,
+
+20
+00:00:48,580 --> 00:00:51,820
+take a moment to see if you could do even better.
+
+21
+00:00:51,820 --> 00:00:54,370
+Pause the video and see what you can find.
+
+22
+00:00:54,370 --> 00:00:55,495
+There is a better solution.
+
+23
+00:00:55,495 --> 00:01:01,940
+
+
+24
+00:01:01,940 --> 00:01:05,190
+Let's try this.
+
+25
+00:01:05,190 --> 00:01:09,610
+Let's take a look now and build in our graph
+
+26
+00:01:09,610 --> 00:01:14,280
+a set of interior values where we'll start from the top.
+
+27
+00:01:14,280 --> 00:01:16,920
+Let's at each point on the top--
+
+28
+00:01:16,920 --> 00:01:18,690
+from the top going down--
+
+29
+00:01:18,690 --> 00:01:20,970
+let's add each node that we might
+
+30
+00:01:20,970 --> 00:01:23,610
+be able to encounter the sum of the values
+
+31
+00:01:23,610 --> 00:01:26,560
+that we would reach if we got to that node.
+
+32
+00:01:26,560 --> 00:01:30,300
+So you can see that if we're at this point over here,
+
+33
+00:01:30,300 --> 00:01:33,150
+we would have had 9 plus 3 in the original graph.
+
+34
+00:01:33,150 --> 00:01:34,650
+If we were to have made this choice,
+
+35
+00:01:34,650 --> 00:01:36,480
+we would have ended up with 11.
+
+36
+00:01:36,480 --> 00:01:40,380
+So by proceeding in this way, where we take each node
+
+37
+00:01:40,380 --> 00:01:44,610
+and we add all the values above that would have led to reaching
+
+38
+00:01:44,610 --> 00:01:50,040
+this node for getting here the best choice,
+
+39
+00:01:50,040 --> 00:01:53,490
+we can build a tree with a set of nodes
+
+40
+00:01:53,490 --> 00:01:55,410
+that represent the best choices we could
+
+41
+00:01:55,410 --> 00:01:57,430
+have gotten as we go down here.
+
+42
+00:01:57,430 --> 00:01:59,520
+And then when we reach the terminal values,
+
+43
+00:01:59,520 --> 00:02:01,140
+we pick the ones that's the best.
+
+44
+00:02:01,140 --> 00:02:03,250
+And here's one that says 42.
+
+45
+00:02:03,250 --> 00:02:07,260
+To find out how to get 42, we reclimb the tree.
+
+46
+00:02:07,260 --> 00:02:10,500
+We say, well, the way we got to 42 was coming from this place
+
+47
+00:02:10,500 --> 00:02:21,760
+here where we added 11 to get there and then from this point
+
+48
+00:02:21,760 --> 00:02:24,670
+here where we would have added points
+
+49
+00:02:24,670 --> 00:02:30,120
+to get there taking this 11 and all the way back up.
+
+50
+00:02:30,120 --> 00:02:31,700
+And what you'll notice is not only
+
+51
+00:02:31,700 --> 00:02:37,260
+is 42, special number as being the ultimate answer--
+
+52
+00:02:37,260 --> 00:02:39,020
+it's bigger than 39.
+
+53
+00:02:39,020 --> 00:02:40,460
+But, also, you'll notice that what
+
+54
+00:02:40,460 --> 00:02:42,530
+happened is we did some things that
+
+55
+00:02:42,530 --> 00:02:46,040
+were suboptimal locally but still were optimal globally.
+
+56
+00:02:46,040 --> 00:02:50,270
+That is, when we came to this point here at 3,
+
+57
+00:02:50,270 --> 00:02:52,820
+we chose to go for 8 in this solution,
+
+58
+00:02:52,820 --> 00:02:54,950
+whereas before we went for 10, which would
+
+59
+00:02:54,950 --> 00:02:56,640
+have been the greedy solution.
+
+60
+00:02:56,640 --> 00:02:59,480
+Once we were over here in 10, we no longer
+
+61
+00:02:59,480 --> 00:03:02,550
+had access to some better solutions.
+
+62
+00:03:02,550 --> 00:03:04,190
+So this is typical.
+
+63
+00:03:04,190 --> 00:03:09,200
+We often might take things that are short-term optimal that
+
+64
+00:03:09,200 --> 00:03:12,650
+lead us to no longer having access
+
+65
+00:03:12,650 --> 00:03:15,840
+to states that might be much more profitable in the future.
+
+66
+00:03:15,840 --> 00:03:17,720
+So we'd like to have a systematic way
+
+67
+00:03:17,720 --> 00:03:20,420
+to avoid that happening and to make sure
+
+68
+00:03:20,420 --> 00:03:25,255
+that we end up with a globally optimal solution.
+
+69
+00:03:25,255 --> 00:03:26,630
+But there are a number of aspects
+
+70
+00:03:26,630 --> 00:03:29,540
+that are common to dynamical programming problems.
+
+71
+00:03:29,540 --> 00:03:32,720
+And these also show up in modern machine learning methods
+
+72
+00:03:32,720 --> 00:03:33,990
+as well.
+
+73
+00:03:33,990 --> 00:03:37,610
+First, we have state variables that tell us how things behave
+
+74
+00:03:37,610 --> 00:03:41,180
+and where we are given a particular set of evolution
+
+75
+00:03:41,180 --> 00:03:43,080
+in a particular place.
+
+76
+00:03:43,080 --> 00:03:44,900
+Usually, at a given point in time
+
+77
+00:03:44,900 --> 00:03:46,790
+or a given point in our process, we
+
+78
+00:03:46,790 --> 00:03:48,830
+have a number of actions we can take,
+
+79
+00:03:48,830 --> 00:03:52,410
+a number of control variables that we have under our control,
+
+80
+00:03:52,410 --> 00:03:55,075
+such as the number of shares that we might choose to trade.
+
+81
+00:03:55,075 --> 00:03:57,870
+There are stochastic factors that are involved.
+
+82
+00:03:57,870 --> 00:04:00,860
+We're typically looking at Markov processes that
+
+83
+00:04:00,860 --> 00:04:04,317
+are evolving in time so that because they're Markov,
+
+84
+00:04:04,317 --> 00:04:05,900
+we only need to know the current state
+
+85
+00:04:05,900 --> 00:04:08,150
+variables not how we got here.
+
+86
+00:04:08,150 --> 00:04:11,570
+But that doesn't mean we're safe from being trapped or having
+
+87
+00:04:11,570 --> 00:04:13,430
+different actions cut out from us.
+
+88
+00:04:13,430 --> 00:04:16,079
+We need to be able to reach things in the future.
+
+89
+00:04:16,079 --> 00:04:19,430
+The effects of the actions in the environment
+
+90
+00:04:19,430 --> 00:04:21,200
+might be fully known.
+
+91
+00:04:21,200 --> 00:04:24,470
+Typically, they are in dynamical programming problems.
+
+92
+00:04:24,470 --> 00:04:26,990
+That is, we know how the environment works.
+
+93
+00:04:26,990 --> 00:04:29,580
+We have a complete model for the environment.
+
+94
+00:04:29,580 --> 00:04:32,780
+Many realistic cases, and certainly in financial markets,
+
+95
+00:04:32,780 --> 00:04:34,860
+that's not necessarily true.
+
+96
+00:04:34,860 --> 00:04:37,010
+And methods like reinforcement learning
+
+97
+00:04:37,010 --> 00:04:39,650
+are able to generalize and deal with cases
+
+98
+00:04:39,650 --> 00:04:42,500
+where we may have only incomplete information
+
+99
+00:04:42,500 --> 00:04:46,687
+or a probabilistic understanding of what happens in the future.
+
+100
+00:04:46,687 --> 00:04:48,020
+And we have boundary conditions.
+
+101
+00:04:48,020 --> 00:04:50,330
+And, typically, these are terminal conditions
+
+102
+00:04:50,330 --> 00:04:53,300
+that we have, and they permit us to work backwards.
+
+103
+00:04:53,300 --> 00:04:56,600
+We often have rewards that are associated
+
+104
+00:04:56,600 --> 00:04:58,640
+with the optimal value.
+
+105
+00:04:58,640 --> 00:05:01,040
+We'd like to maximize our rewards.
+
+106
+00:05:01,040 --> 00:05:03,020
+We would like to minimize our costs.
+
+107
+00:05:03,020 --> 00:05:04,790
+So there may be penalty functions
+
+108
+00:05:04,790 --> 00:05:06,650
+for taking suboptimal actions.
+
+109
+00:05:06,650 --> 00:05:07,910
+And there may be discounting.
+
+110
+00:05:07,910 --> 00:05:11,300
+That is, in the same way that we discount present value
+
+111
+00:05:11,300 --> 00:05:14,060
+in accounting and in finance, we might
+
+112
+00:05:14,060 --> 00:05:17,180
+discount the value of a future reward
+
+113
+00:05:17,180 --> 00:05:19,130
+relative to an immediate reward.
+
+114
+00:05:19,130 --> 00:05:22,580
+We might say that a reward that takes place far in the future
+
+115
+00:05:22,580 --> 00:05:24,980
+is less valuable, not equally valuable,
+
+116
+00:05:24,980 --> 00:05:27,290
+to a reward in the next time period.
+
+117
+00:05:27,290 --> 00:05:30,090
+That's a trade-off between long-term and short-term costs.
+
+118
+00:05:30,090 --> 00:05:32,510
+It might say that if we need to defer gratification
+
+119
+00:05:32,510 --> 00:05:36,050
+to get a reward sometime in the far future,
+
+120
+00:05:36,050 --> 00:05:37,640
+it should be a bigger reward.
+
+121
+00:05:37,640 --> 00:05:39,140
+But those are problems that we could
+
+122
+00:05:39,140 --> 00:05:42,020
+choose to include or not include in our specification
+
+123
+00:05:42,020 --> 00:05:42,980
+of the problem.
+
+124
+00:05:42,980 --> 00:05:46,310
+And what we're looking for is an optimal policy.
+
+125
+00:05:46,310 --> 00:05:49,670
+That is, we're looking for a set of rules that tell us
+
+126
+00:05:49,670 --> 00:05:52,790
+in any situation we might find in the future
+
+127
+00:05:52,790 --> 00:05:55,040
+with any given set of state variables
+
+128
+00:05:55,040 --> 00:05:57,710
+at a given point in time what is the best
+
+129
+00:05:57,710 --> 00:06:01,130
+action we should take at that time to move us forward.
+
+130
+00:06:01,130 --> 00:06:03,120
+And those actions do two things.
+
+131
+00:06:03,120 --> 00:06:05,870
+One of them is they might get us immediate rewards.
+
+132
+00:06:05,870 --> 00:06:09,140
+But they also position our state variables such
+
+133
+00:06:09,140 --> 00:06:14,010
+that we have access to future rewards as well.
+
+134
+00:06:14,010 --> 00:06:17,040
+The general kind of problem that we're trying to solve
+
+135
+00:06:17,040 --> 00:06:19,170
+could be formulated like this.
+
+136
+00:06:19,170 --> 00:06:22,630
+And I'll leave out the notation and some of the jargon.
+
+137
+00:06:22,630 --> 00:06:25,200
+Let's imagine that we start in a particular state.
+
+138
+00:06:25,200 --> 00:06:26,970
+Let's call it state 0.
+
+139
+00:06:26,970 --> 00:06:29,520
+So we've got something in our environment.
+
+140
+00:06:29,520 --> 00:06:31,500
+We then take an action.
+
+141
+00:06:31,500 --> 00:06:35,100
+And that action earns a reward, which we can keep.
+
+142
+00:06:35,100 --> 00:06:37,650
+And we find ourselves in a different state.
+
+143
+00:06:37,650 --> 00:06:41,190
+That is, we may have had some impact on our environment.
+
+144
+00:06:41,190 --> 00:06:42,870
+When we looked at examples before
+
+145
+00:06:42,870 --> 00:06:45,690
+of say algorithmic trading, we assumed
+
+146
+00:06:45,690 --> 00:06:48,510
+that the markets were the same after we participated
+
+147
+00:06:48,510 --> 00:06:50,350
+in them as when we came.
+
+148
+00:06:50,350 --> 00:06:52,800
+But that's often not the case and certainly not
+
+149
+00:06:52,800 --> 00:06:55,110
+for significant financial transactions
+
+150
+00:06:55,110 --> 00:06:58,710
+and for significant financial intermediaries.
+
+151
+00:06:58,710 --> 00:07:01,740
+So let's assume that our action did change the world.
+
+152
+00:07:01,740 --> 00:07:04,240
+And now we have to deal with the world that's been changed.
+
+153
+00:07:04,240 --> 00:07:06,580
+And that's part of the problem that we need to solve.
+
+154
+00:07:06,580 --> 00:07:08,100
+We then take a new action.
+
+155
+00:07:08,100 --> 00:07:09,900
+It earns a new reward.
+
+156
+00:07:09,900 --> 00:07:12,000
+And it puts us in another state.
+
+157
+00:07:12,000 --> 00:07:15,300
+And these are going to be iterated forward.
+
+158
+00:07:15,300 --> 00:07:18,450
+And we want to solve for the best policy.
+
+159
+00:07:18,450 --> 00:07:20,820
+And the complications that we may have
+
+160
+00:07:20,820 --> 00:07:23,760
+are that the evolution might be stochastic.
+
+161
+00:07:23,760 --> 00:07:25,890
+That is, maybe we don't exactly know
+
+162
+00:07:25,890 --> 00:07:27,420
+what state we'll end up with.
+
+163
+00:07:27,420 --> 00:07:30,390
+Maybe the best we have is a probability distribution
+
+164
+00:07:30,390 --> 00:07:32,730
+telling us what state we would end up in next.
+
+165
+00:07:32,730 --> 00:07:34,980
+Maybe the rewards are stochastic.
+
+166
+00:07:34,980 --> 00:07:36,480
+Maybe we don't know what the return
+
+167
+00:07:36,480 --> 00:07:38,100
+is we receive on an investment.
+
+168
+00:07:38,100 --> 00:07:40,860
+But we only understand-- we're only given it's probability
+
+169
+00:07:40,860 --> 00:07:43,320
+distribution.
+
+170
+00:07:43,320 --> 00:07:45,720
+Maybe the environment itself is unknown,
+
+171
+00:07:45,720 --> 00:07:48,870
+and maybe the optimal policy to deal with that environment
+
+172
+00:07:48,870 --> 00:07:50,130
+is unknown as well.
+
+173
+00:07:50,130 --> 00:07:54,030
+Maybe at certain points in time we should flip a coin
+
+174
+00:07:54,030 --> 00:07:56,650
+and randomize our own decisions.
+
+175
+00:07:56,650 --> 00:07:58,530
+So all of these are things that we
+
+176
+00:07:58,530 --> 00:08:01,590
+might consider as being within the scope of solving
+
+177
+00:08:01,590 --> 00:08:03,750
+for finding an optimal policy.
+
+178
+00:08:03,750 --> 00:08:07,560
+And let's take a look at some applications
+
+179
+00:08:07,560 --> 00:08:10,650
+where we can start very concrete and then look at expanding out
+
+180
+00:08:10,650 --> 00:08:14,700
+and think about different places where they might be applied.
+
+181
+00:08:14,700 --> 00:08:17,580
+Needless to say, this is a very big topic.
+
+182
+00:08:17,580 --> 00:08:21,000
+And we're just going to introduce it, show
+
+183
+00:08:21,000 --> 00:08:24,010
+what some of the thought processes
+
+184
+00:08:24,010 --> 00:08:26,110
+are, what some of the characteristics
+
+185
+00:08:26,110 --> 00:08:28,210
+are that show up in typical problems,
+
+186
+00:08:28,210 --> 00:08:31,630
+and see where they might be helpful, reformulating them
+
+187
+00:08:31,630 --> 00:08:35,910
+for solving different kinds of financial problems.
+

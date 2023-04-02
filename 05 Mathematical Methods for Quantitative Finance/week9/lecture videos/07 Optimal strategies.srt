@@ -1,0 +1,640 @@
+0
+00:00:00,000 --> 00:00:00,860
+
+
+1
+00:00:00,860 --> 00:00:05,090
+PROFESSOR: So we take a look at the minimum cost solution.
+
+2
+00:00:05,090 --> 00:00:07,130
+And we find in this case, that we
+
+3
+00:00:07,130 --> 00:00:09,530
+do get a solution for dividing things
+
+4
+00:00:09,530 --> 00:00:11,760
+into equal cost for the moment.
+
+5
+00:00:11,760 --> 00:00:14,610
+But hang on, we'll generalize this in a bit.
+
+6
+00:00:14,610 --> 00:00:16,970
+So for that very special set where all we want to do
+
+7
+00:00:16,970 --> 00:00:18,950
+is to minimize the expected cost,
+
+8
+00:00:18,950 --> 00:00:23,390
+we do have a solution where the trade we with each size
+
+9
+00:00:23,390 --> 00:00:25,530
+is 1 Nth of the total fraction.
+
+10
+00:00:25,530 --> 00:00:29,300
+So this is a linear trajectory that minimizes the squares that
+
+11
+00:00:29,300 --> 00:00:31,190
+we had, that sum of delta Q's.
+
+12
+00:00:31,190 --> 00:00:33,650
+And we can substitute it in.
+
+13
+00:00:33,650 --> 00:00:36,740
+We get an expression for what the expected cost is
+
+14
+00:00:36,740 --> 00:00:40,696
+under this program that minimizes the total cost.
+
+15
+00:00:40,696 --> 00:00:43,360
+The variance of this though, can be very big.
+
+16
+00:00:43,360 --> 00:00:45,900
+So given our program for equal size,
+
+17
+00:00:45,900 --> 00:00:47,820
+we get a very large variance.
+
+18
+00:00:47,820 --> 00:00:49,290
+And again, this variance is going
+
+19
+00:00:49,290 --> 00:00:53,880
+to persist even in the limit where N goes to infinity
+
+20
+00:00:53,880 --> 00:00:57,710
+and we have a large number of trading periods.
+
+21
+00:00:57,710 --> 00:01:00,600
+As N goes to infinity, we've got a finite cost,
+
+22
+00:01:00,600 --> 00:01:04,330
+which now is linear in Q. And we have a variance,
+
+23
+00:01:04,330 --> 00:01:06,030
+which is quadratic in Q. Excuse me,
+
+24
+00:01:06,030 --> 00:01:10,680
+the expected cost is determined it's linear and quadratic in Q
+
+25
+00:01:10,680 --> 00:01:14,400
+, and a finite variance, even as we spread our trades out
+
+26
+00:01:14,400 --> 00:01:17,600
+infinitely far.
+
+27
+00:01:17,600 --> 00:01:19,965
+Suppose we wanted a minimum variance strategy.
+
+28
+00:01:19,965 --> 00:01:21,590
+Well, we'd dump all our shares at once.
+
+29
+00:01:21,590 --> 00:01:23,660
+We'd incur an immediate cost.
+
+30
+00:01:23,660 --> 00:01:25,760
+And here, our variances 0.
+
+31
+00:01:25,760 --> 00:01:27,980
+Our market impact is going to be very big. .
+
+32
+00:01:27,980 --> 00:01:32,610
+And our associated cost is very large.
+
+33
+00:01:32,610 --> 00:01:35,140
+Suppose we like an optimal strategy
+
+34
+00:01:35,140 --> 00:01:37,180
+that balances those two.
+
+35
+00:01:37,180 --> 00:01:40,990
+Suppose we'd like to include some compensation
+
+36
+00:01:40,990 --> 00:01:45,460
+and multi-function so that a risk-averse trader is not just
+
+37
+00:01:45,460 --> 00:01:49,190
+going to be indifferent to the trading speed.
+
+38
+00:01:49,190 --> 00:01:52,720
+So let's make it so that it's advantageous to not
+
+39
+00:01:52,720 --> 00:01:54,910
+delay an infinitely long amount of time.
+
+40
+00:01:54,910 --> 00:01:58,360
+Let's assume that it's not good to allow fluctuations,
+
+41
+00:01:58,360 --> 00:02:01,490
+even if they're equally likely to be positive or negative.
+
+42
+00:02:01,490 --> 00:02:04,660
+And what we'd like to do is we'd like to have a lower cost,
+
+43
+00:02:04,660 --> 00:02:08,930
+but we don't want to let the variance be arbitrarily large.
+
+44
+00:02:08,930 --> 00:02:10,360
+So one way we could do that is we
+
+45
+00:02:10,360 --> 00:02:13,750
+could introduce utility function of this form.
+
+46
+00:02:13,750 --> 00:02:17,080
+It could be the expected cost plus some function,
+
+47
+00:02:17,080 --> 00:02:20,720
+some constant lambda, times the variance.
+
+48
+00:02:20,720 --> 00:02:22,990
+So we get two special cases--
+
+49
+00:02:22,990 --> 00:02:26,240
+the minimum impact response to letting lambda equals 0.
+
+50
+00:02:26,240 --> 00:02:27,430
+We want the lowest cost.
+
+51
+00:02:27,430 --> 00:02:28,930
+We don't care about the variance.
+
+52
+00:02:28,930 --> 00:02:31,750
+Or we have the minimum variance by letting
+
+53
+00:02:31,750 --> 00:02:34,300
+lambda go to infinity, and we don't
+
+54
+00:02:34,300 --> 00:02:35,860
+care about what the cost is.
+
+55
+00:02:35,860 --> 00:02:38,560
+So for intermediate values of lambda,
+
+56
+00:02:38,560 --> 00:02:40,540
+we're going to have a one-parameter family
+
+57
+00:02:40,540 --> 00:02:42,310
+of optimal trading strategies.
+
+58
+00:02:42,310 --> 00:02:45,235
+And those are going to form an efficient trading frontier.
+
+59
+00:02:45,235 --> 00:02:48,290
+
+
+60
+00:02:48,290 --> 00:02:51,650
+We can solve this in closed form in, the case, linear functions,
+
+61
+00:02:51,650 --> 00:02:52,850
+for g and h.
+
+62
+00:02:52,850 --> 00:02:55,160
+Let's take a look at the form that those have.
+
+63
+00:02:55,160 --> 00:02:57,470
+Our function, U, our utility function
+
+64
+00:02:57,470 --> 00:03:00,290
+that we're going to extremize, is
+
+65
+00:03:00,290 --> 00:03:04,550
+going to have the form of some constant times delta Q squared
+
+66
+00:03:04,550 --> 00:03:07,670
+plus some other constant involving
+
+67
+00:03:07,670 --> 00:03:10,760
+the constants of the problem, and proportional to lambda
+
+68
+00:03:10,760 --> 00:03:12,630
+times Q squared.
+
+69
+00:03:12,630 --> 00:03:15,730
+So we're going to take a minimum with respect to Q
+
+70
+00:03:15,730 --> 00:03:17,630
+and set it equal to 0.
+
+71
+00:03:17,630 --> 00:03:20,212
+And we have this set of difference equations
+
+72
+00:03:20,212 --> 00:03:21,920
+that comes about from the fact that we've
+
+73
+00:03:21,920 --> 00:03:25,770
+got these delta Q's here in addition to the q's over here.
+
+74
+00:03:25,770 --> 00:03:29,870
+So this is of the form of a second difference equation.
+
+75
+00:03:29,870 --> 00:03:31,670
+This is a discrete equation, but it's
+
+76
+00:03:31,670 --> 00:03:35,090
+a discrete analog to something that looks like a second order
+
+77
+00:03:35,090 --> 00:03:38,310
+differential equation.
+
+78
+00:03:38,310 --> 00:03:41,270
+So we've got this general form.
+
+79
+00:03:41,270 --> 00:03:43,430
+We'd like to find a functional form
+
+80
+00:03:43,430 --> 00:03:46,910
+that solves this recursive equation
+
+81
+00:03:46,910 --> 00:03:49,700
+and that satisfies these boundary conditions.
+
+82
+00:03:49,700 --> 00:03:53,390
+Well, I'll tell you what it is, and you can substitute it in.
+
+83
+00:03:53,390 --> 00:03:55,910
+You can solve for this by taking a look at guesses
+
+84
+00:03:55,910 --> 00:03:58,040
+of particular forms or by looking
+
+85
+00:03:58,040 --> 00:04:01,290
+at the similar kind of cases that we have
+
+86
+00:04:01,290 --> 00:04:03,920
+for differential equations.
+
+87
+00:04:03,920 --> 00:04:06,390
+But you can check the solution here,
+
+88
+00:04:06,390 --> 00:04:08,930
+which is a linear combination of positive and negative
+
+89
+00:04:08,930 --> 00:04:11,990
+exponentials satisfies this second order difference
+
+90
+00:04:11,990 --> 00:04:12,800
+equation.
+
+91
+00:04:12,800 --> 00:04:15,090
+And it satisfies the boundary conditions.
+
+92
+00:04:15,090 --> 00:04:17,750
+So when t goes to 0, this is 0.
+
+93
+00:04:17,750 --> 00:04:23,700
+When t goes to big T, this satisfies the condition
+
+94
+00:04:23,700 --> 00:04:33,020
+that we have our property boundary condition.
+
+95
+00:04:33,020 --> 00:04:40,250
+So because we're selling, when i is equal to 0,
+
+96
+00:04:40,250 --> 00:04:42,610
+we've got N minus i is equal to N
+
+97
+00:04:42,610 --> 00:04:46,180
+and delta t is equal to big T, the numerator and denominator
+
+98
+00:04:46,180 --> 00:04:48,270
+are equal and we get Q.
+
+99
+00:04:48,270 --> 00:04:51,070
+And we get to our terminal value,
+
+100
+00:04:51,070 --> 00:04:53,140
+i increases linearly here.
+
+101
+00:04:53,140 --> 00:04:54,490
+But it's not a linear function.
+
+102
+00:04:54,490 --> 00:04:56,530
+It's inside this parabolic sine.
+
+103
+00:04:56,530 --> 00:05:01,060
+But when we do approach not continuously,
+
+104
+00:05:01,060 --> 00:05:04,150
+but we approach gradually, the terminal value,
+
+105
+00:05:04,150 --> 00:05:07,030
+where the final trading value at the end, quantity
+
+106
+00:05:07,030 --> 00:05:09,040
+that we have left at the final value
+
+107
+00:05:09,040 --> 00:05:13,030
+is going to be 0, where i is equal to N and then
+
+108
+00:05:13,030 --> 00:05:14,710
+the numerator is equal to 0.
+
+109
+00:05:14,710 --> 00:05:17,440
+I've redefined the parameters because we
+
+110
+00:05:17,440 --> 00:05:20,770
+had this eta hat that from one of our trading functions
+
+111
+00:05:20,770 --> 00:05:23,440
+and lambda, which is our preference parameter.
+
+112
+00:05:23,440 --> 00:05:26,080
+And I've wrapped those all up into a single new parameter
+
+113
+00:05:26,080 --> 00:05:27,160
+called kappa.
+
+114
+00:05:27,160 --> 00:05:29,300
+It's defined by this equation.
+
+115
+00:05:29,300 --> 00:05:32,140
+So kappa is defined through this equation,
+
+116
+00:05:32,140 --> 00:05:34,450
+but you can see it's just a constant here.
+
+117
+00:05:34,450 --> 00:05:36,340
+And qualitatively, we can ask what
+
+118
+00:05:36,340 --> 00:05:38,060
+this trajectory looks like.
+
+119
+00:05:38,060 --> 00:05:40,270
+So is it a set of linear slices?
+
+120
+00:05:40,270 --> 00:05:44,490
+Do we just end up dividing our trades equally?
+
+121
+00:05:44,490 --> 00:05:45,960
+The answer is no.
+
+122
+00:05:45,960 --> 00:05:48,900
+We end up with something that looks a little bit differently.
+
+123
+00:05:48,900 --> 00:05:52,320
+The trajectories are defined for each period in each lambda.
+
+124
+00:05:52,320 --> 00:05:55,680
+And depending on whether we have positive or negative risk
+
+125
+00:05:55,680 --> 00:05:58,350
+aversion, in this case, depending on the values
+
+126
+00:05:58,350 --> 00:06:01,830
+that we have for lambda, if we have positive risk aversion,
+
+127
+00:06:01,830 --> 00:06:03,690
+then we'll find this lower curve,
+
+128
+00:06:03,690 --> 00:06:05,280
+something that looks like this.
+
+129
+00:06:05,280 --> 00:06:07,590
+That cinch function tells us that
+
+130
+00:06:07,590 --> 00:06:09,990
+instead of a risk-neutral idea, where
+
+131
+00:06:09,990 --> 00:06:12,030
+we would have equal trading strategies,
+
+132
+00:06:12,030 --> 00:06:15,060
+we want to start out big and then gradually decrease
+
+133
+00:06:15,060 --> 00:06:16,260
+our trade size.
+
+134
+00:06:16,260 --> 00:06:19,860
+So it turns out that there's a particular shape to this curve.
+
+135
+00:06:19,860 --> 00:06:22,170
+It does satisfy this endpoint.
+
+136
+00:06:22,170 --> 00:06:24,870
+So we end up with 0 at this point in time.
+
+137
+00:06:24,870 --> 00:06:28,950
+And the speed of trading depends on the amount of risk aversion
+
+138
+00:06:28,950 --> 00:06:30,960
+that's in the value of lambda.
+
+139
+00:06:30,960 --> 00:06:34,290
+So for a given set of parameters and a given
+
+140
+00:06:34,290 --> 00:06:38,040
+set of risk preferences, we solve an optimization problem.
+
+141
+00:06:38,040 --> 00:06:41,850
+It gives us how we should trade over time in order
+
+142
+00:06:41,850 --> 00:06:45,240
+to balance the market impact that lowers
+
+143
+00:06:45,240 --> 00:06:51,720
+or that it increases our cost of trading.
+
+144
+00:06:51,720 --> 00:06:55,920
+And the balance is not against the risk, the uncertainty
+
+145
+00:06:55,920 --> 00:06:58,285
+of doing things for a longer period of time
+
+146
+00:06:58,285 --> 00:06:59,910
+if we were to stretch things out to try
+
+147
+00:06:59,910 --> 00:07:02,730
+to minimize our market impact.
+
+148
+00:07:02,730 --> 00:07:06,320
+Finally, because this is a one-parameter family of curves,
+
+149
+00:07:06,320 --> 00:07:08,630
+we can take a look at this.
+
+150
+00:07:08,630 --> 00:07:11,600
+Almgren and Chriss plotted this is an efficient frontier
+
+151
+00:07:11,600 --> 00:07:12,530
+for trading.
+
+152
+00:07:12,530 --> 00:07:15,950
+But we can say as a function of our parameter lambda,
+
+153
+00:07:15,950 --> 00:07:17,090
+where do we want to be?
+
+154
+00:07:17,090 --> 00:07:22,700
+The naive strategy at B, the equal slicing strategy,
+
+155
+00:07:22,700 --> 00:07:25,490
+has the lowest total cost.
+
+156
+00:07:25,490 --> 00:07:28,880
+But the efficient frontier is this one-parameter family
+
+157
+00:07:28,880 --> 00:07:31,790
+of strategies where there's an optimal strategy
+
+158
+00:07:31,790 --> 00:07:36,430
+for each value of lambda that you might choose to consider.
+
+159
+00:07:36,430 --> 00:07:38,000
+
+

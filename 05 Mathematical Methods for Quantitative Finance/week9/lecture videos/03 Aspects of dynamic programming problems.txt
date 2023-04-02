@@ -1,0 +1,188 @@
+
+PROFESSOR: Well, one way we could do
+it is with a greedy algorithm.
+A greedy algorithm is one where we do what's optimally local.
+We take a look at the next time step
+and we pick the best value.
+So for example, I would start at 9.
+My choices are to go either to 2 or to 3.
+3 is bigger.
+So I'm going to take 3.
+My next choice, given that I'm at 3,
+is I can either get 8 or 10.
+I'm going to take 10.
+From 10, my choices are 1 or 5.
+And I'm going to take 5.
+And, here, my final choice is between 11 or 12.
+And I'll take 12.
+And my sum is equal to 39.
+So did you get something higher or lower?
+If you got something equal or lower,
+take a moment to see if you could do even better.
+Pause the video and see what you can find.
+There is a better solution.
+
+Let's try this.
+Let's take a look now and build in our graph
+a set of interior values where we'll start from the top.
+Let's at each point on the top--
+from the top going down--
+let's add each node that we might
+be able to encounter the sum of the values
+that we would reach if we got to that node.
+So you can see that if we're at this point over here,
+we would have had 9 plus 3 in the original graph.
+If we were to have made this choice,
+we would have ended up with 11.
+So by proceeding in this way, where we take each node
+and we add all the values above that would have led to reaching
+this node for getting here the best choice,
+we can build a tree with a set of nodes
+that represent the best choices we could
+have gotten as we go down here.
+And then when we reach the terminal values,
+we pick the ones that's the best.
+And here's one that says 42.
+To find out how to get 42, we reclimb the tree.
+We say, well, the way we got to 42 was coming from this place
+here where we added 11 to get there and then from this point
+here where we would have added points
+to get there taking this 11 and all the way back up.
+And what you'll notice is not only
+is 42, special number as being the ultimate answer--
+it's bigger than 39.
+But, also, you'll notice that what
+happened is we did some things that
+were suboptimal locally but still were optimal globally.
+That is, when we came to this point here at 3,
+we chose to go for 8 in this solution,
+whereas before we went for 10, which would
+have been the greedy solution.
+Once we were over here in 10, we no longer
+had access to some better solutions.
+So this is typical.
+We often might take things that are short-term optimal that
+lead us to no longer having access
+to states that might be much more profitable in the future.
+So we'd like to have a systematic way
+to avoid that happening and to make sure
+that we end up with a globally optimal solution.
+But there are a number of aspects
+that are common to dynamical programming problems.
+And these also show up in modern machine learning methods
+as well.
+First, we have state variables that tell us how things behave
+and where we are given a particular set of evolution
+in a particular place.
+Usually, at a given point in time
+or a given point in our process, we
+have a number of actions we can take,
+a number of control variables that we have under our control,
+such as the number of shares that we might choose to trade.
+There are stochastic factors that are involved.
+We're typically looking at Markov processes that
+are evolving in time so that because they're Markov,
+we only need to know the current state
+variables not how we got here.
+But that doesn't mean we're safe from being trapped or having
+different actions cut out from us.
+We need to be able to reach things in the future.
+The effects of the actions in the environment
+might be fully known.
+Typically, they are in dynamical programming problems.
+That is, we know how the environment works.
+We have a complete model for the environment.
+Many realistic cases, and certainly in financial markets,
+that's not necessarily true.
+And methods like reinforcement learning
+are able to generalize and deal with cases
+where we may have only incomplete information
+or a probabilistic understanding of what happens in the future.
+And we have boundary conditions.
+And, typically, these are terminal conditions
+that we have, and they permit us to work backwards.
+We often have rewards that are associated
+with the optimal value.
+We'd like to maximize our rewards.
+We would like to minimize our costs.
+So there may be penalty functions
+for taking suboptimal actions.
+And there may be discounting.
+That is, in the same way that we discount present value
+in accounting and in finance, we might
+discount the value of a future reward
+relative to an immediate reward.
+We might say that a reward that takes place far in the future
+is less valuable, not equally valuable,
+to a reward in the next time period.
+That's a trade-off between long-term and short-term costs.
+It might say that if we need to defer gratification
+to get a reward sometime in the far future,
+it should be a bigger reward.
+But those are problems that we could
+choose to include or not include in our specification
+of the problem.
+And what we're looking for is an optimal policy.
+That is, we're looking for a set of rules that tell us
+in any situation we might find in the future
+with any given set of state variables
+at a given point in time what is the best
+action we should take at that time to move us forward.
+And those actions do two things.
+One of them is they might get us immediate rewards.
+But they also position our state variables such
+that we have access to future rewards as well.
+The general kind of problem that we're trying to solve
+could be formulated like this.
+And I'll leave out the notation and some of the jargon.
+Let's imagine that we start in a particular state.
+Let's call it state 0.
+So we've got something in our environment.
+We then take an action.
+And that action earns a reward, which we can keep.
+And we find ourselves in a different state.
+That is, we may have had some impact on our environment.
+When we looked at examples before
+of say algorithmic trading, we assumed
+that the markets were the same after we participated
+in them as when we came.
+But that's often not the case and certainly not
+for significant financial transactions
+and for significant financial intermediaries.
+So let's assume that our action did change the world.
+And now we have to deal with the world that's been changed.
+And that's part of the problem that we need to solve.
+We then take a new action.
+It earns a new reward.
+And it puts us in another state.
+And these are going to be iterated forward.
+And we want to solve for the best policy.
+And the complications that we may have
+are that the evolution might be stochastic.
+That is, maybe we don't exactly know
+what state we'll end up with.
+Maybe the best we have is a probability distribution
+telling us what state we would end up in next.
+Maybe the rewards are stochastic.
+Maybe we don't know what the return
+is we receive on an investment.
+But we only understand-- we're only given it's probability
+distribution.
+Maybe the environment itself is unknown,
+and maybe the optimal policy to deal with that environment
+is unknown as well.
+Maybe at certain points in time we should flip a coin
+and randomize our own decisions.
+So all of these are things that we
+might consider as being within the scope of solving
+for finding an optimal policy.
+And let's take a look at some applications
+where we can start very concrete and then look at expanding out
+and think about different places where they might be applied.
+Needless to say, this is a very big topic.
+And we're just going to introduce it, show
+what some of the thought processes
+are, what some of the characteristics
+are that show up in typical problems,
+and see where they might be helpful, reformulating them
+for solving different kinds of financial problems.
